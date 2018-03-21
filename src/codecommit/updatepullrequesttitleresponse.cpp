@@ -19,3 +19,85 @@
 
 #include "updatepullrequesttitleresponse.h"
 #include "updatepullrequesttitleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdatePullRequestTitleResponse
+ *
+ * @brief  Handles CodeCommit UpdatePullRequestTitle responses.
+ *
+ * @see    CodeCommitClient::updatePullRequestTitle
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdatePullRequestTitleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new UpdatePullRequestTitleResponsePrivate(this), parent)
+{
+    setRequest(new UpdatePullRequestTitleRequest(request));
+    setReply(reply);
+}
+
+const UpdatePullRequestTitleRequest * UpdatePullRequestTitleResponse::request() const
+{
+    Q_D(const UpdatePullRequestTitleResponse);
+    return static_cast<const UpdatePullRequestTitleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit UpdatePullRequestTitle response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdatePullRequestTitleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdatePullRequestTitleResponsePrivate
+ *
+ * @brief  Private implementation for UpdatePullRequestTitleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePullRequestTitleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdatePullRequestTitleResponse instance.
+ */
+UpdatePullRequestTitleResponsePrivate::UpdatePullRequestTitleResponsePrivate(
+    UpdatePullRequestTitleQueueResponse * const q) : UpdatePullRequestTitlePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit UpdatePullRequestTitleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdatePullRequestTitleResponsePrivate::UpdatePullRequestTitleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdatePullRequestTitleResponse"));
+    /// @todo
+}

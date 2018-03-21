@@ -19,3 +19,85 @@
 
 #include "describeorganizationalunitresponse.h"
 #include "describeorganizationalunitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DescribeOrganizationalUnitResponse
+ *
+ * @brief  Handles Organizations DescribeOrganizationalUnit responses.
+ *
+ * @see    OrganizationsClient::describeOrganizationalUnit
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOrganizationalUnitResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new DescribeOrganizationalUnitResponsePrivate(this), parent)
+{
+    setRequest(new DescribeOrganizationalUnitRequest(request));
+    setReply(reply);
+}
+
+const DescribeOrganizationalUnitRequest * DescribeOrganizationalUnitResponse::request() const
+{
+    Q_D(const DescribeOrganizationalUnitResponse);
+    return static_cast<const DescribeOrganizationalUnitRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations DescribeOrganizationalUnit response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeOrganizationalUnitResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOrganizationalUnitResponsePrivate
+ *
+ * @brief  Private implementation for DescribeOrganizationalUnitResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrganizationalUnitResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeOrganizationalUnitResponse instance.
+ */
+DescribeOrganizationalUnitResponsePrivate::DescribeOrganizationalUnitResponsePrivate(
+    DescribeOrganizationalUnitQueueResponse * const q) : DescribeOrganizationalUnitPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations DescribeOrganizationalUnitResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeOrganizationalUnitResponsePrivate::DescribeOrganizationalUnitResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeOrganizationalUnitResponse"));
+    /// @todo
+}

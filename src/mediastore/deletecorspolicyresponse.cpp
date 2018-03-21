@@ -19,3 +19,85 @@
 
 #include "deletecorspolicyresponse.h"
 #include "deletecorspolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  DeleteCorsPolicyResponse
+ *
+ * @brief  Handles MediaStore DeleteCorsPolicy responses.
+ *
+ * @see    MediaStoreClient::deleteCorsPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCorsPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreResponse(new DeleteCorsPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCorsPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteCorsPolicyRequest * DeleteCorsPolicyResponse::request() const
+{
+    Q_D(const DeleteCorsPolicyResponse);
+    return static_cast<const DeleteCorsPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStore DeleteCorsPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCorsPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCorsPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCorsPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCorsPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCorsPolicyResponse instance.
+ */
+DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponsePrivate(
+    DeleteCorsPolicyQueueResponse * const q) : DeleteCorsPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStore DeleteCorsPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCorsPolicyResponse"));
+    /// @todo
+}

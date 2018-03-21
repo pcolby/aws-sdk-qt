@@ -19,3 +19,85 @@
 
 #include "describedeliverychannelsresponse.h"
 #include "describedeliverychannelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DescribeDeliveryChannelsResponse
+ *
+ * @brief  Handles ConfigService DescribeDeliveryChannels responses.
+ *
+ * @see    ConfigServiceClient::describeDeliveryChannels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDeliveryChannelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DescribeDeliveryChannelsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDeliveryChannelsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDeliveryChannelsRequest * DescribeDeliveryChannelsResponse::request() const
+{
+    Q_D(const DescribeDeliveryChannelsResponse);
+    return static_cast<const DescribeDeliveryChannelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DescribeDeliveryChannels response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDeliveryChannelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDeliveryChannelsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDeliveryChannelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDeliveryChannelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDeliveryChannelsResponse instance.
+ */
+DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponsePrivate(
+    DescribeDeliveryChannelsQueueResponse * const q) : DescribeDeliveryChannelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DescribeDeliveryChannelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDeliveryChannelsResponse"));
+    /// @todo
+}

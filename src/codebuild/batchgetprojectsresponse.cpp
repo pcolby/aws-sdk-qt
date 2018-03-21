@@ -19,3 +19,85 @@
 
 #include "batchgetprojectsresponse.h"
 #include "batchgetprojectsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  BatchGetProjectsResponse
+ *
+ * @brief  Handles CodeBuild BatchGetProjects responses.
+ *
+ * @see    CodeBuildClient::batchGetProjects
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetProjectsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new BatchGetProjectsResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetProjectsRequest(request));
+    setReply(reply);
+}
+
+const BatchGetProjectsRequest * BatchGetProjectsResponse::request() const
+{
+    Q_D(const BatchGetProjectsResponse);
+    return static_cast<const BatchGetProjectsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild BatchGetProjects response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetProjectsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetProjectsResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetProjectsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetProjectsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetProjectsResponse instance.
+ */
+BatchGetProjectsResponsePrivate::BatchGetProjectsResponsePrivate(
+    BatchGetProjectsQueueResponse * const q) : BatchGetProjectsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild BatchGetProjectsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetProjectsResponsePrivate::BatchGetProjectsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetProjectsResponse"));
+    /// @todo
+}

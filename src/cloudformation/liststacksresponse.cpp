@@ -19,3 +19,85 @@
 
 #include "liststacksresponse.h"
 #include "liststacksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListStacksResponse
+ *
+ * @brief  Handles CloudFormation ListStacks responses.
+ *
+ * @see    CloudFormationClient::listStacks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStacksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ListStacksResponsePrivate(this), parent)
+{
+    setRequest(new ListStacksRequest(request));
+    setReply(reply);
+}
+
+const ListStacksRequest * ListStacksResponse::request() const
+{
+    Q_D(const ListStacksResponse);
+    return static_cast<const ListStacksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ListStacks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListStacksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStacksResponsePrivate
+ *
+ * @brief  Private implementation for ListStacksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStacksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListStacksResponse instance.
+ */
+ListStacksResponsePrivate::ListStacksResponsePrivate(
+    ListStacksQueueResponse * const q) : ListStacksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ListStacksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListStacksResponsePrivate::ListStacksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListStacksResponse"));
+    /// @todo
+}

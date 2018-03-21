@@ -19,3 +19,85 @@
 
 #include "describethingtyperesponse.h"
 #include "describethingtyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeThingTypeResponse
+ *
+ * @brief  Handles IoT DescribeThingType responses.
+ *
+ * @see    IoTClient::describeThingType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeThingTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DescribeThingTypeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeThingTypeRequest(request));
+    setReply(reply);
+}
+
+const DescribeThingTypeRequest * DescribeThingTypeResponse::request() const
+{
+    Q_D(const DescribeThingTypeResponse);
+    return static_cast<const DescribeThingTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DescribeThingType response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeThingTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeThingTypeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeThingTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeThingTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeThingTypeResponse instance.
+ */
+DescribeThingTypeResponsePrivate::DescribeThingTypeResponsePrivate(
+    DescribeThingTypeQueueResponse * const q) : DescribeThingTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DescribeThingTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeThingTypeResponsePrivate::DescribeThingTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeThingTypeResponse"));
+    /// @todo
+}

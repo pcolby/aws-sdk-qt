@@ -19,3 +19,85 @@
 
 #include "startreplicationtaskresponse.h"
 #include "startreplicationtaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  StartReplicationTaskResponse
+ *
+ * @brief  Handles DatabaseMigrationService StartReplicationTask responses.
+ *
+ * @see    DatabaseMigrationServiceClient::startReplicationTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartReplicationTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new StartReplicationTaskResponsePrivate(this), parent)
+{
+    setRequest(new StartReplicationTaskRequest(request));
+    setReply(reply);
+}
+
+const StartReplicationTaskRequest * StartReplicationTaskResponse::request() const
+{
+    Q_D(const StartReplicationTaskResponse);
+    return static_cast<const StartReplicationTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService StartReplicationTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartReplicationTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartReplicationTaskResponsePrivate
+ *
+ * @brief  Private implementation for StartReplicationTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartReplicationTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartReplicationTaskResponse instance.
+ */
+StartReplicationTaskResponsePrivate::StartReplicationTaskResponsePrivate(
+    StartReplicationTaskQueueResponse * const q) : StartReplicationTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService StartReplicationTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartReplicationTaskResponsePrivate::StartReplicationTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartReplicationTaskResponse"));
+    /// @todo
+}

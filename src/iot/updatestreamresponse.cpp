@@ -19,3 +19,85 @@
 
 #include "updatestreamresponse.h"
 #include "updatestreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateStreamResponse
+ *
+ * @brief  Handles IoT UpdateStream responses.
+ *
+ * @see    IoTClient::updateStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new UpdateStreamResponsePrivate(this), parent)
+{
+    setRequest(new UpdateStreamRequest(request));
+    setReply(reply);
+}
+
+const UpdateStreamRequest * UpdateStreamResponse::request() const
+{
+    Q_D(const UpdateStreamResponse);
+    return static_cast<const UpdateStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT UpdateStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStreamResponsePrivate
+ *
+ * @brief  Private implementation for UpdateStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateStreamResponse instance.
+ */
+UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
+    UpdateStreamQueueResponse * const q) : UpdateStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT UpdateStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateStreamResponsePrivate::UpdateStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateStreamResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listobjectversionsresponse.h"
 #include "listobjectversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  ListObjectVersionsResponse
+ *
+ * @brief  Handles S3 ListObjectVersions responses.
+ *
+ * @see    S3Client::listObjectVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new ListObjectVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListObjectVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListObjectVersionsRequest * ListObjectVersionsResponse::request() const
+{
+    Q_D(const ListObjectVersionsResponse);
+    return static_cast<const ListObjectVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 ListObjectVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListObjectVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListObjectVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListObjectVersionsResponse instance.
+ */
+ListObjectVersionsResponsePrivate::ListObjectVersionsResponsePrivate(
+    ListObjectVersionsQueueResponse * const q) : ListObjectVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 ListObjectVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListObjectVersionsResponsePrivate::ListObjectVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListObjectVersionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletegeomatchsetresponse.h"
 #include "deletegeomatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  DeleteGeoMatchSetResponse
+ *
+ * @brief  Handles WAFRegional DeleteGeoMatchSet responses.
+ *
+ * @see    WAFRegionalClient::deleteGeoMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGeoMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteGeoMatchSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteGeoMatchSetRequest * DeleteGeoMatchSetResponse::request() const
+{
+    Q_D(const DeleteGeoMatchSetResponse);
+    return static_cast<const DeleteGeoMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional DeleteGeoMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGeoMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteGeoMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGeoMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteGeoMatchSetResponse instance.
+ */
+DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
+    DeleteGeoMatchSetQueueResponse * const q) : DeleteGeoMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional DeleteGeoMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteGeoMatchSetResponse"));
+    /// @todo
+}

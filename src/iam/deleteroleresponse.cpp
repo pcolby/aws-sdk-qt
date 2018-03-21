@@ -19,3 +19,85 @@
 
 #include "deleteroleresponse.h"
 #include "deleteroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteRoleResponse
+ *
+ * @brief  Handles IAM DeleteRole responses.
+ *
+ * @see    IAMClient::deleteRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteRoleResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRoleRequest(request));
+    setReply(reply);
+}
+
+const DeleteRoleRequest * DeleteRoleResponse::request() const
+{
+    Q_D(const DeleteRoleResponse);
+    return static_cast<const DeleteRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRoleResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRoleResponse instance.
+ */
+DeleteRoleResponsePrivate::DeleteRoleResponsePrivate(
+    DeleteRoleQueueResponse * const q) : DeleteRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRoleResponsePrivate::DeleteRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRoleResponse"));
+    /// @todo
+}

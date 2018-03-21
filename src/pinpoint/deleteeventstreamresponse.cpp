@@ -19,3 +19,85 @@
 
 #include "deleteeventstreamresponse.h"
 #include "deleteeventstreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteEventStreamResponse
+ *
+ * @brief  Handles Pinpoint DeleteEventStream responses.
+ *
+ * @see    PinpointClient::deleteEventStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEventStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteEventStreamResponsePrivate(this), parent)
+{
+    setRequest(new DeleteEventStreamRequest(request));
+    setReply(reply);
+}
+
+const DeleteEventStreamRequest * DeleteEventStreamResponse::request() const
+{
+    Q_D(const DeleteEventStreamResponse);
+    return static_cast<const DeleteEventStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteEventStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteEventStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEventStreamResponsePrivate
+ *
+ * @brief  Private implementation for DeleteEventStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEventStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteEventStreamResponse instance.
+ */
+DeleteEventStreamResponsePrivate::DeleteEventStreamResponsePrivate(
+    DeleteEventStreamQueueResponse * const q) : DeleteEventStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteEventStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteEventStreamResponsePrivate::DeleteEventStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteEventStreamResponse"));
+    /// @todo
+}

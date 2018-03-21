@@ -19,3 +19,85 @@
 
 #include "stoploggingresponse.h"
 #include "stoploggingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  StopLoggingResponse
+ *
+ * @brief  Handles CloudTrail StopLogging responses.
+ *
+ * @see    CloudTrailClient::stopLogging
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopLoggingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudTrailResponse(new StopLoggingResponsePrivate(this), parent)
+{
+    setRequest(new StopLoggingRequest(request));
+    setReply(reply);
+}
+
+const StopLoggingRequest * StopLoggingResponse::request() const
+{
+    Q_D(const StopLoggingResponse);
+    return static_cast<const StopLoggingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudTrail StopLogging response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopLoggingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopLoggingResponsePrivate
+ *
+ * @brief  Private implementation for StopLoggingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopLoggingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopLoggingResponse instance.
+ */
+StopLoggingResponsePrivate::StopLoggingResponsePrivate(
+    StopLoggingQueueResponse * const q) : StopLoggingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudTrail StopLoggingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopLoggingResponsePrivate::StopLoggingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopLoggingResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createbucketresponse.h"
 #include "createbucketresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  CreateBucketResponse
+ *
+ * @brief  Handles S3 CreateBucket responses.
+ *
+ * @see    S3Client::createBucket
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBucketResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new CreateBucketResponsePrivate(this), parent)
+{
+    setRequest(new CreateBucketRequest(request));
+    setReply(reply);
+}
+
+const CreateBucketRequest * CreateBucketResponse::request() const
+{
+    Q_D(const CreateBucketResponse);
+    return static_cast<const CreateBucketRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 CreateBucket response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateBucketResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBucketResponsePrivate
+ *
+ * @brief  Private implementation for CreateBucketResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBucketResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateBucketResponse instance.
+ */
+CreateBucketResponsePrivate::CreateBucketResponsePrivate(
+    CreateBucketQueueResponse * const q) : CreateBucketPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 CreateBucketResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateBucketResponsePrivate::CreateBucketResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateBucketResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describespotdatafeedsubscriptionresponse.h"
 #include "describespotdatafeedsubscriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSpotDatafeedSubscriptionResponse
+ *
+ * @brief  Handles EC2 DescribeSpotDatafeedSubscription responses.
+ *
+ * @see    EC2Client::describeSpotDatafeedSubscription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSpotDatafeedSubscriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeSpotDatafeedSubscriptionResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSpotDatafeedSubscriptionRequest(request));
+    setReply(reply);
+}
+
+const DescribeSpotDatafeedSubscriptionRequest * DescribeSpotDatafeedSubscriptionResponse::request() const
+{
+    Q_D(const DescribeSpotDatafeedSubscriptionResponse);
+    return static_cast<const DescribeSpotDatafeedSubscriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeSpotDatafeedSubscription response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSpotDatafeedSubscriptionResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSpotDatafeedSubscriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotDatafeedSubscriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSpotDatafeedSubscriptionResponse instance.
+ */
+DescribeSpotDatafeedSubscriptionResponsePrivate::DescribeSpotDatafeedSubscriptionResponsePrivate(
+    DescribeSpotDatafeedSubscriptionQueueResponse * const q) : DescribeSpotDatafeedSubscriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeSpotDatafeedSubscriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSpotDatafeedSubscriptionResponsePrivate::DescribeSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSpotDatafeedSubscriptionResponse"));
+    /// @todo
+}

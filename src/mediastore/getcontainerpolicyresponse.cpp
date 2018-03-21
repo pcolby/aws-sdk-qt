@@ -19,3 +19,85 @@
 
 #include "getcontainerpolicyresponse.h"
 #include "getcontainerpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  GetContainerPolicyResponse
+ *
+ * @brief  Handles MediaStore GetContainerPolicy responses.
+ *
+ * @see    MediaStoreClient::getContainerPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetContainerPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreResponse(new GetContainerPolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetContainerPolicyRequest(request));
+    setReply(reply);
+}
+
+const GetContainerPolicyRequest * GetContainerPolicyResponse::request() const
+{
+    Q_D(const GetContainerPolicyResponse);
+    return static_cast<const GetContainerPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStore GetContainerPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetContainerPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetContainerPolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetContainerPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContainerPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetContainerPolicyResponse instance.
+ */
+GetContainerPolicyResponsePrivate::GetContainerPolicyResponsePrivate(
+    GetContainerPolicyQueueResponse * const q) : GetContainerPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStore GetContainerPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetContainerPolicyResponsePrivate::GetContainerPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetContainerPolicyResponse"));
+    /// @todo
+}

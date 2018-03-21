@@ -19,3 +19,85 @@
 
 #include "describeworkspacesresponse.h"
 #include "describeworkspacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  DescribeWorkspacesResponse
+ *
+ * @brief  Handles WorkSpaces DescribeWorkspaces responses.
+ *
+ * @see    WorkSpacesClient::describeWorkspaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeWorkspacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new DescribeWorkspacesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeWorkspacesRequest(request));
+    setReply(reply);
+}
+
+const DescribeWorkspacesRequest * DescribeWorkspacesResponse::request() const
+{
+    Q_D(const DescribeWorkspacesResponse);
+    return static_cast<const DescribeWorkspacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces DescribeWorkspaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeWorkspacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeWorkspacesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeWorkspacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkspacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeWorkspacesResponse instance.
+ */
+DescribeWorkspacesResponsePrivate::DescribeWorkspacesResponsePrivate(
+    DescribeWorkspacesQueueResponse * const q) : DescribeWorkspacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces DescribeWorkspacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeWorkspacesResponsePrivate::DescribeWorkspacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspacesResponse"));
+    /// @todo
+}

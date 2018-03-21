@@ -19,3 +19,85 @@
 
 #include "removerolefromdbclusterresponse.h"
 #include "removerolefromdbclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  RemoveRoleFromDBClusterResponse
+ *
+ * @brief  Handles RDS RemoveRoleFromDBCluster responses.
+ *
+ * @see    RDSClient::removeRoleFromDBCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveRoleFromDBClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new RemoveRoleFromDBClusterResponsePrivate(this), parent)
+{
+    setRequest(new RemoveRoleFromDBClusterRequest(request));
+    setReply(reply);
+}
+
+const RemoveRoleFromDBClusterRequest * RemoveRoleFromDBClusterResponse::request() const
+{
+    Q_D(const RemoveRoleFromDBClusterResponse);
+    return static_cast<const RemoveRoleFromDBClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS RemoveRoleFromDBCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveRoleFromDBClusterResponsePrivate
+ *
+ * @brief  Private implementation for RemoveRoleFromDBClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveRoleFromDBClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveRoleFromDBClusterResponse instance.
+ */
+RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponsePrivate(
+    RemoveRoleFromDBClusterQueueResponse * const q) : RemoveRoleFromDBClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS RemoveRoleFromDBClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveRoleFromDBClusterResponse"));
+    /// @todo
+}

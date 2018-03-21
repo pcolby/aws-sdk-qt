@@ -19,3 +19,85 @@
 
 #include "liststepsresponse.h"
 #include "liststepsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ListStepsResponse
+ *
+ * @brief  Handles EMR ListSteps responses.
+ *
+ * @see    EMRClient::listSteps
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStepsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new ListStepsResponsePrivate(this), parent)
+{
+    setRequest(new ListStepsRequest(request));
+    setReply(reply);
+}
+
+const ListStepsRequest * ListStepsResponse::request() const
+{
+    Q_D(const ListStepsResponse);
+    return static_cast<const ListStepsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR ListSteps response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListStepsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStepsResponsePrivate
+ *
+ * @brief  Private implementation for ListStepsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStepsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListStepsResponse instance.
+ */
+ListStepsResponsePrivate::ListStepsResponsePrivate(
+    ListStepsQueueResponse * const q) : ListStepsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR ListStepsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListStepsResponsePrivate::ListStepsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListStepsResponse"));
+    /// @todo
+}

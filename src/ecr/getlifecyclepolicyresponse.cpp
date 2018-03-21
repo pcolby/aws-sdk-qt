@@ -19,3 +19,85 @@
 
 #include "getlifecyclepolicyresponse.h"
 #include "getlifecyclepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  GetLifecyclePolicyResponse
+ *
+ * @brief  Handles ECR GetLifecyclePolicy responses.
+ *
+ * @see    ECRClient::getLifecyclePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLifecyclePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new GetLifecyclePolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetLifecyclePolicyRequest(request));
+    setReply(reply);
+}
+
+const GetLifecyclePolicyRequest * GetLifecyclePolicyResponse::request() const
+{
+    Q_D(const GetLifecyclePolicyResponse);
+    return static_cast<const GetLifecyclePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR GetLifecyclePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLifecyclePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLifecyclePolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetLifecyclePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLifecyclePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLifecyclePolicyResponse instance.
+ */
+GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponsePrivate(
+    GetLifecyclePolicyQueueResponse * const q) : GetLifecyclePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR GetLifecyclePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLifecyclePolicyResponse"));
+    /// @todo
+}

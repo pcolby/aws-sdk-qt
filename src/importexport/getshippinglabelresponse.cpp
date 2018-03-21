@@ -19,3 +19,85 @@
 
 #include "getshippinglabelresponse.h"
 #include "getshippinglabelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ImportExport {
+
+/**
+ * @class  GetShippingLabelResponse
+ *
+ * @brief  Handles ImportExport GetShippingLabel responses.
+ *
+ * @see    ImportExportClient::getShippingLabel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetShippingLabelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ImportExportResponse(new GetShippingLabelResponsePrivate(this), parent)
+{
+    setRequest(new GetShippingLabelRequest(request));
+    setReply(reply);
+}
+
+const GetShippingLabelRequest * GetShippingLabelResponse::request() const
+{
+    Q_D(const GetShippingLabelResponse);
+    return static_cast<const GetShippingLabelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ImportExport GetShippingLabel response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetShippingLabelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetShippingLabelResponsePrivate
+ *
+ * @brief  Private implementation for GetShippingLabelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetShippingLabelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetShippingLabelResponse instance.
+ */
+GetShippingLabelResponsePrivate::GetShippingLabelResponsePrivate(
+    GetShippingLabelQueueResponse * const q) : GetShippingLabelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ImportExport GetShippingLabelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetShippingLabelResponsePrivate::GetShippingLabelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetShippingLabelResponse"));
+    /// @todo
+}

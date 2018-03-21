@@ -19,3 +19,85 @@
 
 #include "rejectassignmentresponse.h"
 #include "rejectassignmentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  RejectAssignmentResponse
+ *
+ * @brief  Handles MTurk RejectAssignment responses.
+ *
+ * @see    MTurkClient::rejectAssignment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RejectAssignmentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new RejectAssignmentResponsePrivate(this), parent)
+{
+    setRequest(new RejectAssignmentRequest(request));
+    setReply(reply);
+}
+
+const RejectAssignmentRequest * RejectAssignmentResponse::request() const
+{
+    Q_D(const RejectAssignmentResponse);
+    return static_cast<const RejectAssignmentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk RejectAssignment response.
+ *
+ * @param  response  Response to parse.
+ */
+void RejectAssignmentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RejectAssignmentResponsePrivate
+ *
+ * @brief  Private implementation for RejectAssignmentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RejectAssignmentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RejectAssignmentResponse instance.
+ */
+RejectAssignmentResponsePrivate::RejectAssignmentResponsePrivate(
+    RejectAssignmentQueueResponse * const q) : RejectAssignmentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk RejectAssignmentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RejectAssignmentResponsePrivate::RejectAssignmentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RejectAssignmentResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "gettagkeysresponse.h"
 #include "gettagkeysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroupsTaggingAPI {
+
+/**
+ * @class  GetTagKeysResponse
+ *
+ * @brief  Handles ResourceGroupsTaggingAPI GetTagKeys responses.
+ *
+ * @see    ResourceGroupsTaggingAPIClient::getTagKeys
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTagKeysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsTaggingAPIResponse(new GetTagKeysResponsePrivate(this), parent)
+{
+    setRequest(new GetTagKeysRequest(request));
+    setReply(reply);
+}
+
+const GetTagKeysRequest * GetTagKeysResponse::request() const
+{
+    Q_D(const GetTagKeysResponse);
+    return static_cast<const GetTagKeysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroupsTaggingAPI GetTagKeys response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTagKeysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTagKeysResponsePrivate
+ *
+ * @brief  Private implementation for GetTagKeysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTagKeysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTagKeysResponse instance.
+ */
+GetTagKeysResponsePrivate::GetTagKeysResponsePrivate(
+    GetTagKeysQueueResponse * const q) : GetTagKeysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroupsTaggingAPI GetTagKeysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTagKeysResponsePrivate::GetTagKeysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTagKeysResponse"));
+    /// @todo
+}

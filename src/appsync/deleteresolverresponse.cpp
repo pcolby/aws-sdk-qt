@@ -19,3 +19,85 @@
 
 #include "deleteresolverresponse.h"
 #include "deleteresolverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  DeleteResolverResponse
+ *
+ * @brief  Handles AppSync DeleteResolver responses.
+ *
+ * @see    AppSyncClient::deleteResolver
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteResolverResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new DeleteResolverResponsePrivate(this), parent)
+{
+    setRequest(new DeleteResolverRequest(request));
+    setReply(reply);
+}
+
+const DeleteResolverRequest * DeleteResolverResponse::request() const
+{
+    Q_D(const DeleteResolverResponse);
+    return static_cast<const DeleteResolverRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync DeleteResolver response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteResolverResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteResolverResponsePrivate
+ *
+ * @brief  Private implementation for DeleteResolverResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResolverResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteResolverResponse instance.
+ */
+DeleteResolverResponsePrivate::DeleteResolverResponsePrivate(
+    DeleteResolverQueueResponse * const q) : DeleteResolverPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync DeleteResolverResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteResolverResponsePrivate::DeleteResolverResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteResolverResponse"));
+    /// @todo
+}

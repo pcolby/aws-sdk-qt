@@ -19,3 +19,85 @@
 
 #include "describeinstanceattributeresponse.h"
 #include "describeinstanceattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeInstanceAttributeResponse
+ *
+ * @brief  Handles EC2 DescribeInstanceAttribute responses.
+ *
+ * @see    EC2Client::describeInstanceAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstanceAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeInstanceAttributeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInstanceAttributeRequest(request));
+    setReply(reply);
+}
+
+const DescribeInstanceAttributeRequest * DescribeInstanceAttributeResponse::request() const
+{
+    Q_D(const DescribeInstanceAttributeResponse);
+    return static_cast<const DescribeInstanceAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeInstanceAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInstanceAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstanceAttributeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInstanceAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInstanceAttributeResponse instance.
+ */
+DescribeInstanceAttributeResponsePrivate::DescribeInstanceAttributeResponsePrivate(
+    DescribeInstanceAttributeQueueResponse * const q) : DescribeInstanceAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeInstanceAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInstanceAttributeResponsePrivate::DescribeInstanceAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceAttributeResponse"));
+    /// @todo
+}

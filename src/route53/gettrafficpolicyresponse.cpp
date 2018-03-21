@@ -19,3 +19,85 @@
 
 #include "gettrafficpolicyresponse.h"
 #include "gettrafficpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetTrafficPolicyResponse
+ *
+ * @brief  Handles Route53 GetTrafficPolicy responses.
+ *
+ * @see    Route53Client::getTrafficPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTrafficPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new GetTrafficPolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetTrafficPolicyRequest(request));
+    setReply(reply);
+}
+
+const GetTrafficPolicyRequest * GetTrafficPolicyResponse::request() const
+{
+    Q_D(const GetTrafficPolicyResponse);
+    return static_cast<const GetTrafficPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 GetTrafficPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTrafficPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTrafficPolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetTrafficPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTrafficPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTrafficPolicyResponse instance.
+ */
+GetTrafficPolicyResponsePrivate::GetTrafficPolicyResponsePrivate(
+    GetTrafficPolicyQueueResponse * const q) : GetTrafficPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 GetTrafficPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTrafficPolicyResponsePrivate::GetTrafficPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTrafficPolicyResponse"));
+    /// @todo
+}

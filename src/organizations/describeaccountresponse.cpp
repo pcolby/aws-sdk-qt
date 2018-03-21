@@ -19,3 +19,85 @@
 
 #include "describeaccountresponse.h"
 #include "describeaccountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DescribeAccountResponse
+ *
+ * @brief  Handles Organizations DescribeAccount responses.
+ *
+ * @see    OrganizationsClient::describeAccount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAccountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new DescribeAccountResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAccountRequest(request));
+    setReply(reply);
+}
+
+const DescribeAccountRequest * DescribeAccountResponse::request() const
+{
+    Q_D(const DescribeAccountResponse);
+    return static_cast<const DescribeAccountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations DescribeAccount response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAccountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAccountResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAccountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAccountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAccountResponse instance.
+ */
+DescribeAccountResponsePrivate::DescribeAccountResponsePrivate(
+    DescribeAccountQueueResponse * const q) : DescribeAccountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations DescribeAccountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAccountResponsePrivate::DescribeAccountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAccountResponse"));
+    /// @todo
+}

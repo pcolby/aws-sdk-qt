@@ -19,3 +19,85 @@
 
 #include "createstageresponse.h"
 #include "createstageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateStageResponse
+ *
+ * @brief  Handles APIGateway CreateStage responses.
+ *
+ * @see    APIGatewayClient::createStage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateStageResponsePrivate(this), parent)
+{
+    setRequest(new CreateStageRequest(request));
+    setReply(reply);
+}
+
+const CreateStageRequest * CreateStageResponse::request() const
+{
+    Q_D(const CreateStageResponse);
+    return static_cast<const CreateStageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateStage response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStageResponsePrivate
+ *
+ * @brief  Private implementation for CreateStageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStageResponse instance.
+ */
+CreateStageResponsePrivate::CreateStageResponsePrivate(
+    CreateStageQueueResponse * const q) : CreateStagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateStageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStageResponsePrivate::CreateStageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStageResponse"));
+    /// @todo
+}

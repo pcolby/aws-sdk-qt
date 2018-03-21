@@ -19,3 +19,85 @@
 
 #include "describeagentversionsresponse.h"
 #include "describeagentversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeAgentVersionsResponse
+ *
+ * @brief  Handles OpsWorks DescribeAgentVersions responses.
+ *
+ * @see    OpsWorksClient::describeAgentVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAgentVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeAgentVersionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAgentVersionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeAgentVersionsRequest * DescribeAgentVersionsResponse::request() const
+{
+    Q_D(const DescribeAgentVersionsResponse);
+    return static_cast<const DescribeAgentVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeAgentVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAgentVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAgentVersionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAgentVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAgentVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAgentVersionsResponse instance.
+ */
+DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponsePrivate(
+    DescribeAgentVersionsQueueResponse * const q) : DescribeAgentVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeAgentVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAgentVersionsResponse"));
+    /// @todo
+}

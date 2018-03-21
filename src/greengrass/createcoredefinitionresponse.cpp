@@ -19,3 +19,85 @@
 
 #include "createcoredefinitionresponse.h"
 #include "createcoredefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateCoreDefinitionResponse
+ *
+ * @brief  Handles Greengrass CreateCoreDefinition responses.
+ *
+ * @see    GreengrassClient::createCoreDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCoreDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new CreateCoreDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new CreateCoreDefinitionRequest(request));
+    setReply(reply);
+}
+
+const CreateCoreDefinitionRequest * CreateCoreDefinitionResponse::request() const
+{
+    Q_D(const CreateCoreDefinitionResponse);
+    return static_cast<const CreateCoreDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass CreateCoreDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCoreDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCoreDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for CreateCoreDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCoreDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCoreDefinitionResponse instance.
+ */
+CreateCoreDefinitionResponsePrivate::CreateCoreDefinitionResponsePrivate(
+    CreateCoreDefinitionQueueResponse * const q) : CreateCoreDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass CreateCoreDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCoreDefinitionResponsePrivate::CreateCoreDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCoreDefinitionResponse"));
+    /// @todo
+}

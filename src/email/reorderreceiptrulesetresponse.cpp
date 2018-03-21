@@ -19,3 +19,85 @@
 
 #include "reorderreceiptrulesetresponse.h"
 #include "reorderreceiptrulesetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ReorderReceiptRuleSetResponse
+ *
+ * @brief  Handles SES ReorderReceiptRuleSet responses.
+ *
+ * @see    SESClient::reorderReceiptRuleSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReorderReceiptRuleSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new ReorderReceiptRuleSetResponsePrivate(this), parent)
+{
+    setRequest(new ReorderReceiptRuleSetRequest(request));
+    setReply(reply);
+}
+
+const ReorderReceiptRuleSetRequest * ReorderReceiptRuleSetResponse::request() const
+{
+    Q_D(const ReorderReceiptRuleSetResponse);
+    return static_cast<const ReorderReceiptRuleSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES ReorderReceiptRuleSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReorderReceiptRuleSetResponsePrivate
+ *
+ * @brief  Private implementation for ReorderReceiptRuleSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReorderReceiptRuleSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReorderReceiptRuleSetResponse instance.
+ */
+ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
+    ReorderReceiptRuleSetQueueResponse * const q) : ReorderReceiptRuleSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES ReorderReceiptRuleSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReorderReceiptRuleSetResponse"));
+    /// @todo
+}

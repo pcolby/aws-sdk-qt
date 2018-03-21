@@ -19,3 +19,85 @@
 
 #include "listwebaclsresponse.h"
 #include "listwebaclsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListWebACLsResponse
+ *
+ * @brief  Handles WAFRegional ListWebACLs responses.
+ *
+ * @see    WAFRegionalClient::listWebACLs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListWebACLsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new ListWebACLsResponsePrivate(this), parent)
+{
+    setRequest(new ListWebACLsRequest(request));
+    setReply(reply);
+}
+
+const ListWebACLsRequest * ListWebACLsResponse::request() const
+{
+    Q_D(const ListWebACLsResponse);
+    return static_cast<const ListWebACLsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional ListWebACLs response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListWebACLsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListWebACLsResponsePrivate
+ *
+ * @brief  Private implementation for ListWebACLsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListWebACLsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListWebACLsResponse instance.
+ */
+ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
+    ListWebACLsQueueResponse * const q) : ListWebACLsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional ListWebACLsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListWebACLsResponsePrivate::ListWebACLsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListWebACLsResponse"));
+    /// @todo
+}

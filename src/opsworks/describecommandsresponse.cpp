@@ -19,3 +19,85 @@
 
 #include "describecommandsresponse.h"
 #include "describecommandsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeCommandsResponse
+ *
+ * @brief  Handles OpsWorks DescribeCommands responses.
+ *
+ * @see    OpsWorksClient::describeCommands
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCommandsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeCommandsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCommandsRequest(request));
+    setReply(reply);
+}
+
+const DescribeCommandsRequest * DescribeCommandsResponse::request() const
+{
+    Q_D(const DescribeCommandsResponse);
+    return static_cast<const DescribeCommandsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeCommands response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCommandsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCommandsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCommandsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCommandsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCommandsResponse instance.
+ */
+DescribeCommandsResponsePrivate::DescribeCommandsResponsePrivate(
+    DescribeCommandsQueueResponse * const q) : DescribeCommandsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeCommandsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCommandsResponsePrivate::DescribeCommandsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCommandsResponse"));
+    /// @todo
+}

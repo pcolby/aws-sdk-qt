@@ -19,3 +19,85 @@
 
 #include "describeserviceerrorsresponse.h"
 #include "describeserviceerrorsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeServiceErrorsResponse
+ *
+ * @brief  Handles OpsWorks DescribeServiceErrors responses.
+ *
+ * @see    OpsWorksClient::describeServiceErrors
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeServiceErrorsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeServiceErrorsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeServiceErrorsRequest(request));
+    setReply(reply);
+}
+
+const DescribeServiceErrorsRequest * DescribeServiceErrorsResponse::request() const
+{
+    Q_D(const DescribeServiceErrorsResponse);
+    return static_cast<const DescribeServiceErrorsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeServiceErrors response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeServiceErrorsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeServiceErrorsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeServiceErrorsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServiceErrorsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeServiceErrorsResponse instance.
+ */
+DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponsePrivate(
+    DescribeServiceErrorsQueueResponse * const q) : DescribeServiceErrorsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeServiceErrorsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeServiceErrorsResponse"));
+    /// @todo
+}

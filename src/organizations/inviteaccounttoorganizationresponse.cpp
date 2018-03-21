@@ -19,3 +19,85 @@
 
 #include "inviteaccounttoorganizationresponse.h"
 #include "inviteaccounttoorganizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  InviteAccountToOrganizationResponse
+ *
+ * @brief  Handles Organizations InviteAccountToOrganization responses.
+ *
+ * @see    OrganizationsClient::inviteAccountToOrganization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InviteAccountToOrganizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new InviteAccountToOrganizationResponsePrivate(this), parent)
+{
+    setRequest(new InviteAccountToOrganizationRequest(request));
+    setReply(reply);
+}
+
+const InviteAccountToOrganizationRequest * InviteAccountToOrganizationResponse::request() const
+{
+    Q_D(const InviteAccountToOrganizationResponse);
+    return static_cast<const InviteAccountToOrganizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations InviteAccountToOrganization response.
+ *
+ * @param  response  Response to parse.
+ */
+void InviteAccountToOrganizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InviteAccountToOrganizationResponsePrivate
+ *
+ * @brief  Private implementation for InviteAccountToOrganizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InviteAccountToOrganizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InviteAccountToOrganizationResponse instance.
+ */
+InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponsePrivate(
+    InviteAccountToOrganizationQueueResponse * const q) : InviteAccountToOrganizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations InviteAccountToOrganizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InviteAccountToOrganizationResponse"));
+    /// @todo
+}

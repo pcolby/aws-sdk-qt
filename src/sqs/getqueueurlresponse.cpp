@@ -19,3 +19,85 @@
 
 #include "getqueueurlresponse.h"
 #include "getqueueurlresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  GetQueueUrlResponse
+ *
+ * @brief  Handles SQS GetQueueUrl responses.
+ *
+ * @see    SQSClient::getQueueUrl
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQueueUrlResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new GetQueueUrlResponsePrivate(this), parent)
+{
+    setRequest(new GetQueueUrlRequest(request));
+    setReply(reply);
+}
+
+const GetQueueUrlRequest * GetQueueUrlResponse::request() const
+{
+    Q_D(const GetQueueUrlResponse);
+    return static_cast<const GetQueueUrlRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS GetQueueUrl response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetQueueUrlResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQueueUrlResponsePrivate
+ *
+ * @brief  Private implementation for GetQueueUrlResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueueUrlResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetQueueUrlResponse instance.
+ */
+GetQueueUrlResponsePrivate::GetQueueUrlResponsePrivate(
+    GetQueueUrlQueueResponse * const q) : GetQueueUrlPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS GetQueueUrlResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetQueueUrlResponsePrivate::GetQueueUrlResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetQueueUrlResponse"));
+    /// @todo
+}

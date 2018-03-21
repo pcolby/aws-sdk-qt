@@ -19,3 +19,85 @@
 
 #include "resetnetworkinterfaceattributeresponse.h"
 #include "resetnetworkinterfaceattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ResetNetworkInterfaceAttributeResponse
+ *
+ * @brief  Handles EC2 ResetNetworkInterfaceAttribute responses.
+ *
+ * @see    EC2Client::resetNetworkInterfaceAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetNetworkInterfaceAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ResetNetworkInterfaceAttributeResponsePrivate(this), parent)
+{
+    setRequest(new ResetNetworkInterfaceAttributeRequest(request));
+    setReply(reply);
+}
+
+const ResetNetworkInterfaceAttributeRequest * ResetNetworkInterfaceAttributeResponse::request() const
+{
+    Q_D(const ResetNetworkInterfaceAttributeResponse);
+    return static_cast<const ResetNetworkInterfaceAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ResetNetworkInterfaceAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetNetworkInterfaceAttributeResponsePrivate
+ *
+ * @brief  Private implementation for ResetNetworkInterfaceAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetNetworkInterfaceAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetNetworkInterfaceAttributeResponse instance.
+ */
+ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeResponsePrivate(
+    ResetNetworkInterfaceAttributeQueueResponse * const q) : ResetNetworkInterfaceAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ResetNetworkInterfaceAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetNetworkInterfaceAttributeResponse"));
+    /// @todo
+}

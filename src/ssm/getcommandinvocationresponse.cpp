@@ -19,3 +19,85 @@
 
 #include "getcommandinvocationresponse.h"
 #include "getcommandinvocationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetCommandInvocationResponse
+ *
+ * @brief  Handles SSM GetCommandInvocation responses.
+ *
+ * @see    SSMClient::getCommandInvocation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCommandInvocationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetCommandInvocationResponsePrivate(this), parent)
+{
+    setRequest(new GetCommandInvocationRequest(request));
+    setReply(reply);
+}
+
+const GetCommandInvocationRequest * GetCommandInvocationResponse::request() const
+{
+    Q_D(const GetCommandInvocationResponse);
+    return static_cast<const GetCommandInvocationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetCommandInvocation response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCommandInvocationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCommandInvocationResponsePrivate
+ *
+ * @brief  Private implementation for GetCommandInvocationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCommandInvocationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCommandInvocationResponse instance.
+ */
+GetCommandInvocationResponsePrivate::GetCommandInvocationResponsePrivate(
+    GetCommandInvocationQueueResponse * const q) : GetCommandInvocationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetCommandInvocationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCommandInvocationResponsePrivate::GetCommandInvocationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCommandInvocationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "disassociateconfigurationitemsfromapplicationresponse.h"
 #include "disassociateconfigurationitemsfromapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  DisassociateConfigurationItemsFromApplicationResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::disassociateConfigurationItemsFromApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateConfigurationItemsFromApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new DisassociateConfigurationItemsFromApplicationResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateConfigurationItemsFromApplicationRequest(request));
+    setReply(reply);
+}
+
+const DisassociateConfigurationItemsFromApplicationRequest * DisassociateConfigurationItemsFromApplicationResponse::request() const
+{
+    Q_D(const DisassociateConfigurationItemsFromApplicationResponse);
+    return static_cast<const DisassociateConfigurationItemsFromApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateConfigurationItemsFromApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateConfigurationItemsFromApplicationResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateConfigurationItemsFromApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateConfigurationItemsFromApplicationResponse instance.
+ */
+DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfigurationItemsFromApplicationResponsePrivate(
+    DisassociateConfigurationItemsFromApplicationQueueResponse * const q) : DisassociateConfigurationItemsFromApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService DisassociateConfigurationItemsFromApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateConfigurationItemsFromApplicationResponse"));
+    /// @todo
+}

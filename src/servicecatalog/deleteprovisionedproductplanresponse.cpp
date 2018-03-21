@@ -19,3 +19,85 @@
 
 #include "deleteprovisionedproductplanresponse.h"
 #include "deleteprovisionedproductplanresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DeleteProvisionedProductPlanResponse
+ *
+ * @brief  Handles ServiceCatalog DeleteProvisionedProductPlan responses.
+ *
+ * @see    ServiceCatalogClient::deleteProvisionedProductPlan
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteProvisionedProductPlanResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DeleteProvisionedProductPlanResponsePrivate(this), parent)
+{
+    setRequest(new DeleteProvisionedProductPlanRequest(request));
+    setReply(reply);
+}
+
+const DeleteProvisionedProductPlanRequest * DeleteProvisionedProductPlanResponse::request() const
+{
+    Q_D(const DeleteProvisionedProductPlanResponse);
+    return static_cast<const DeleteProvisionedProductPlanRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DeleteProvisionedProductPlan response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteProvisionedProductPlanResponsePrivate
+ *
+ * @brief  Private implementation for DeleteProvisionedProductPlanResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProvisionedProductPlanResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteProvisionedProductPlanResponse instance.
+ */
+DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanResponsePrivate(
+    DeleteProvisionedProductPlanQueueResponse * const q) : DeleteProvisionedProductPlanPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DeleteProvisionedProductPlanResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteProvisionedProductPlanResponse"));
+    /// @todo
+}

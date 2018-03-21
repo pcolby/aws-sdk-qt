@@ -19,3 +19,85 @@
 
 #include "describedbsnapshotsresponse.h"
 #include "describedbsnapshotsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBSnapshotsResponse
+ *
+ * @brief  Handles RDS DescribeDBSnapshots responses.
+ *
+ * @see    RDSClient::describeDBSnapshots
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBSnapshotsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeDBSnapshotsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDBSnapshotsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDBSnapshotsRequest * DescribeDBSnapshotsResponse::request() const
+{
+    Q_D(const DescribeDBSnapshotsResponse);
+    return static_cast<const DescribeDBSnapshotsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeDBSnapshots response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDBSnapshotsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBSnapshotsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDBSnapshotsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSnapshotsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDBSnapshotsResponse instance.
+ */
+DescribeDBSnapshotsResponsePrivate::DescribeDBSnapshotsResponsePrivate(
+    DescribeDBSnapshotsQueueResponse * const q) : DescribeDBSnapshotsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeDBSnapshotsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDBSnapshotsResponsePrivate::DescribeDBSnapshotsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDBSnapshotsResponse"));
+    /// @todo
+}

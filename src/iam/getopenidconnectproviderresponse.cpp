@@ -19,3 +19,85 @@
 
 #include "getopenidconnectproviderresponse.h"
 #include "getopenidconnectproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetOpenIDConnectProviderResponse
+ *
+ * @brief  Handles IAM GetOpenIDConnectProvider responses.
+ *
+ * @see    IAMClient::getOpenIDConnectProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOpenIDConnectProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetOpenIDConnectProviderResponsePrivate(this), parent)
+{
+    setRequest(new GetOpenIDConnectProviderRequest(request));
+    setReply(reply);
+}
+
+const GetOpenIDConnectProviderRequest * GetOpenIDConnectProviderResponse::request() const
+{
+    Q_D(const GetOpenIDConnectProviderResponse);
+    return static_cast<const GetOpenIDConnectProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetOpenIDConnectProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOpenIDConnectProviderResponsePrivate
+ *
+ * @brief  Private implementation for GetOpenIDConnectProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOpenIDConnectProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetOpenIDConnectProviderResponse instance.
+ */
+GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate(
+    GetOpenIDConnectProviderQueueResponse * const q) : GetOpenIDConnectProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetOpenIDConnectProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetOpenIDConnectProviderResponse"));
+    /// @todo
+}

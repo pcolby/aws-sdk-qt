@@ -19,3 +19,85 @@
 
 #include "updateresourceresponse.h"
 #include "updateresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  UpdateResourceResponse
+ *
+ * @brief  Handles WorkMail UpdateResource responses.
+ *
+ * @see    WorkMailClient::updateResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new UpdateResourceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateResourceRequest(request));
+    setReply(reply);
+}
+
+const UpdateResourceRequest * UpdateResourceResponse::request() const
+{
+    Q_D(const UpdateResourceResponse);
+    return static_cast<const UpdateResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail UpdateResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateResourceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateResourceResponse instance.
+ */
+UpdateResourceResponsePrivate::UpdateResourceResponsePrivate(
+    UpdateResourceQueueResponse * const q) : UpdateResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail UpdateResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateResourceResponsePrivate::UpdateResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateResourceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getfindingsstatisticsresponse.h"
 #include "getfindingsstatisticsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetFindingsStatisticsResponse
+ *
+ * @brief  Handles GuardDuty GetFindingsStatistics responses.
+ *
+ * @see    GuardDutyClient::getFindingsStatistics
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFindingsStatisticsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new GetFindingsStatisticsResponsePrivate(this), parent)
+{
+    setRequest(new GetFindingsStatisticsRequest(request));
+    setReply(reply);
+}
+
+const GetFindingsStatisticsRequest * GetFindingsStatisticsResponse::request() const
+{
+    Q_D(const GetFindingsStatisticsResponse);
+    return static_cast<const GetFindingsStatisticsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty GetFindingsStatistics response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFindingsStatisticsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFindingsStatisticsResponsePrivate
+ *
+ * @brief  Private implementation for GetFindingsStatisticsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFindingsStatisticsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFindingsStatisticsResponse instance.
+ */
+GetFindingsStatisticsResponsePrivate::GetFindingsStatisticsResponsePrivate(
+    GetFindingsStatisticsQueueResponse * const q) : GetFindingsStatisticsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty GetFindingsStatisticsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFindingsStatisticsResponsePrivate::GetFindingsStatisticsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFindingsStatisticsResponse"));
+    /// @todo
+}

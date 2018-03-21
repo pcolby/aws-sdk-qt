@@ -19,3 +19,85 @@
 
 #include "detachinternetgatewayresponse.h"
 #include "detachinternetgatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DetachInternetGatewayResponse
+ *
+ * @brief  Handles EC2 DetachInternetGateway responses.
+ *
+ * @see    EC2Client::detachInternetGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachInternetGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DetachInternetGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DetachInternetGatewayRequest(request));
+    setReply(reply);
+}
+
+const DetachInternetGatewayRequest * DetachInternetGatewayResponse::request() const
+{
+    Q_D(const DetachInternetGatewayResponse);
+    return static_cast<const DetachInternetGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DetachInternetGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachInternetGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachInternetGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DetachInternetGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachInternetGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachInternetGatewayResponse instance.
+ */
+DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
+    DetachInternetGatewayQueueResponse * const q) : DetachInternetGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DetachInternetGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachInternetGatewayResponse"));
+    /// @todo
+}

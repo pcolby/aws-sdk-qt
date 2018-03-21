@@ -19,3 +19,85 @@
 
 #include "getbucketwebsiteresponse.h"
 #include "getbucketwebsiteresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketWebsiteResponse
+ *
+ * @brief  Handles S3 GetBucketWebsite responses.
+ *
+ * @see    S3Client::getBucketWebsite
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketWebsiteResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketWebsiteResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketWebsiteRequest(request));
+    setReply(reply);
+}
+
+const GetBucketWebsiteRequest * GetBucketWebsiteResponse::request() const
+{
+    Q_D(const GetBucketWebsiteResponse);
+    return static_cast<const GetBucketWebsiteRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketWebsite response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketWebsiteResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketWebsiteResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketWebsiteResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketWebsiteResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketWebsiteResponse instance.
+ */
+GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponsePrivate(
+    GetBucketWebsiteQueueResponse * const q) : GetBucketWebsitePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketWebsiteResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketWebsiteResponse"));
+    /// @todo
+}

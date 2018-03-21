@@ -19,3 +19,85 @@
 
 #include "deleteloadbalancerresponse.h"
 #include "deleteloadbalancerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteLoadBalancerResponse
+ *
+ * @brief  Handles Lightsail DeleteLoadBalancer responses.
+ *
+ * @see    LightsailClient::deleteLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoadBalancerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DeleteLoadBalancerResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLoadBalancerRequest(request));
+    setReply(reply);
+}
+
+const DeleteLoadBalancerRequest * DeleteLoadBalancerResponse::request() const
+{
+    Q_D(const DeleteLoadBalancerResponse);
+    return static_cast<const DeleteLoadBalancerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DeleteLoadBalancer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLoadBalancerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoadBalancerResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLoadBalancerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLoadBalancerResponse instance.
+ */
+DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponsePrivate(
+    DeleteLoadBalancerQueueResponse * const q) : DeleteLoadBalancerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DeleteLoadBalancerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerResponse"));
+    /// @todo
+}

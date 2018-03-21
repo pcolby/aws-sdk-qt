@@ -19,3 +19,85 @@
 
 #include "describeenvironmenthealthresponse.h"
 #include "describeenvironmenthealthresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeEnvironmentHealthResponse
+ *
+ * @brief  Handles ElasticBeanstalk DescribeEnvironmentHealth responses.
+ *
+ * @see    ElasticBeanstalkClient::describeEnvironmentHealth
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentHealthResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DescribeEnvironmentHealthResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEnvironmentHealthRequest(request));
+    setReply(reply);
+}
+
+const DescribeEnvironmentHealthRequest * DescribeEnvironmentHealthResponse::request() const
+{
+    Q_D(const DescribeEnvironmentHealthResponse);
+    return static_cast<const DescribeEnvironmentHealthRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DescribeEnvironmentHealth response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEnvironmentHealthResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentHealthResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentHealthResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentHealthResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEnvironmentHealthResponse instance.
+ */
+DescribeEnvironmentHealthResponsePrivate::DescribeEnvironmentHealthResponsePrivate(
+    DescribeEnvironmentHealthQueueResponse * const q) : DescribeEnvironmentHealthPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DescribeEnvironmentHealthResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEnvironmentHealthResponsePrivate::DescribeEnvironmentHealthResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentHealthResponse"));
+    /// @todo
+}

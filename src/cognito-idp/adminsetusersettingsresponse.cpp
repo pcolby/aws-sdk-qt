@@ -19,3 +19,85 @@
 
 #include "adminsetusersettingsresponse.h"
 #include "adminsetusersettingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminSetUserSettingsResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminSetUserSettings responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminSetUserSettings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminSetUserSettingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminSetUserSettingsResponsePrivate(this), parent)
+{
+    setRequest(new AdminSetUserSettingsRequest(request));
+    setReply(reply);
+}
+
+const AdminSetUserSettingsRequest * AdminSetUserSettingsResponse::request() const
+{
+    Q_D(const AdminSetUserSettingsResponse);
+    return static_cast<const AdminSetUserSettingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminSetUserSettings response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminSetUserSettingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminSetUserSettingsResponsePrivate
+ *
+ * @brief  Private implementation for AdminSetUserSettingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminSetUserSettingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminSetUserSettingsResponse instance.
+ */
+AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponsePrivate(
+    AdminSetUserSettingsQueueResponse * const q) : AdminSetUserSettingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminSetUserSettingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminSetUserSettingsResponse"));
+    /// @todo
+}

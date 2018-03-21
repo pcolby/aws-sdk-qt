@@ -19,3 +19,85 @@
 
 #include "resetclusterparametergroupresponse.h"
 #include "resetclusterparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  ResetClusterParameterGroupResponse
+ *
+ * @brief  Handles Redshift ResetClusterParameterGroup responses.
+ *
+ * @see    RedshiftClient::resetClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetClusterParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new ResetClusterParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new ResetClusterParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const ResetClusterParameterGroupRequest * ResetClusterParameterGroupResponse::request() const
+{
+    Q_D(const ResetClusterParameterGroupResponse);
+    return static_cast<const ResetClusterParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift ResetClusterParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetClusterParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetClusterParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for ResetClusterParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetClusterParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetClusterParameterGroupResponse instance.
+ */
+ResetClusterParameterGroupResponsePrivate::ResetClusterParameterGroupResponsePrivate(
+    ResetClusterParameterGroupQueueResponse * const q) : ResetClusterParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift ResetClusterParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetClusterParameterGroupResponsePrivate::ResetClusterParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetClusterParameterGroupResponse"));
+    /// @todo
+}

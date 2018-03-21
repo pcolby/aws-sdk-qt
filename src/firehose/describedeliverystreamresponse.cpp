@@ -19,3 +19,85 @@
 
 #include "describedeliverystreamresponse.h"
 #include "describedeliverystreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  DescribeDeliveryStreamResponse
+ *
+ * @brief  Handles Firehose DescribeDeliveryStream responses.
+ *
+ * @see    FirehoseClient::describeDeliveryStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDeliveryStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : FirehoseResponse(new DescribeDeliveryStreamResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDeliveryStreamRequest(request));
+    setReply(reply);
+}
+
+const DescribeDeliveryStreamRequest * DescribeDeliveryStreamResponse::request() const
+{
+    Q_D(const DescribeDeliveryStreamResponse);
+    return static_cast<const DescribeDeliveryStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Firehose DescribeDeliveryStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDeliveryStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDeliveryStreamResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDeliveryStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDeliveryStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDeliveryStreamResponse instance.
+ */
+DescribeDeliveryStreamResponsePrivate::DescribeDeliveryStreamResponsePrivate(
+    DescribeDeliveryStreamQueueResponse * const q) : DescribeDeliveryStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Firehose DescribeDeliveryStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDeliveryStreamResponsePrivate::DescribeDeliveryStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDeliveryStreamResponse"));
+    /// @todo
+}

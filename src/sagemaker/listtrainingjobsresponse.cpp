@@ -19,3 +19,85 @@
 
 #include "listtrainingjobsresponse.h"
 #include "listtrainingjobsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListTrainingJobsResponse
+ *
+ * @brief  Handles SageMaker ListTrainingJobs responses.
+ *
+ * @see    SageMakerClient::listTrainingJobs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTrainingJobsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new ListTrainingJobsResponsePrivate(this), parent)
+{
+    setRequest(new ListTrainingJobsRequest(request));
+    setReply(reply);
+}
+
+const ListTrainingJobsRequest * ListTrainingJobsResponse::request() const
+{
+    Q_D(const ListTrainingJobsResponse);
+    return static_cast<const ListTrainingJobsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker ListTrainingJobs response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTrainingJobsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTrainingJobsResponsePrivate
+ *
+ * @brief  Private implementation for ListTrainingJobsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTrainingJobsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTrainingJobsResponse instance.
+ */
+ListTrainingJobsResponsePrivate::ListTrainingJobsResponsePrivate(
+    ListTrainingJobsQueueResponse * const q) : ListTrainingJobsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker ListTrainingJobsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTrainingJobsResponsePrivate::ListTrainingJobsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTrainingJobsResponse"));
+    /// @todo
+}

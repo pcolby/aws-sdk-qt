@@ -19,3 +19,85 @@
 
 #include "admincreateuserresponse.h"
 #include "admincreateuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminCreateUserResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminCreateUser responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminCreateUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminCreateUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminCreateUserResponsePrivate(this), parent)
+{
+    setRequest(new AdminCreateUserRequest(request));
+    setReply(reply);
+}
+
+const AdminCreateUserRequest * AdminCreateUserResponse::request() const
+{
+    Q_D(const AdminCreateUserResponse);
+    return static_cast<const AdminCreateUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminCreateUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminCreateUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminCreateUserResponsePrivate
+ *
+ * @brief  Private implementation for AdminCreateUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminCreateUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminCreateUserResponse instance.
+ */
+AdminCreateUserResponsePrivate::AdminCreateUserResponsePrivate(
+    AdminCreateUserQueueResponse * const q) : AdminCreateUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminCreateUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminCreateUserResponsePrivate::AdminCreateUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminCreateUserResponse"));
+    /// @todo
+}

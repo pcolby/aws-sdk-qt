@@ -19,3 +19,85 @@
 
 #include "listsamplesresponse.h"
 #include "listsamplesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListSamplesResponse
+ *
+ * @brief  Handles DeviceFarm ListSamples responses.
+ *
+ * @see    DeviceFarmClient::listSamples
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSamplesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new ListSamplesResponsePrivate(this), parent)
+{
+    setRequest(new ListSamplesRequest(request));
+    setReply(reply);
+}
+
+const ListSamplesRequest * ListSamplesResponse::request() const
+{
+    Q_D(const ListSamplesResponse);
+    return static_cast<const ListSamplesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm ListSamples response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSamplesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSamplesResponsePrivate
+ *
+ * @brief  Private implementation for ListSamplesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSamplesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSamplesResponse instance.
+ */
+ListSamplesResponsePrivate::ListSamplesResponsePrivate(
+    ListSamplesQueueResponse * const q) : ListSamplesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm ListSamplesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSamplesResponsePrivate::ListSamplesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSamplesResponse"));
+    /// @todo
+}

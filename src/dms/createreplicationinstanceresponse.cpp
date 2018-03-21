@@ -19,3 +19,85 @@
 
 #include "createreplicationinstanceresponse.h"
 #include "createreplicationinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  CreateReplicationInstanceResponse
+ *
+ * @brief  Handles DatabaseMigrationService CreateReplicationInstance responses.
+ *
+ * @see    DatabaseMigrationServiceClient::createReplicationInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReplicationInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new CreateReplicationInstanceResponsePrivate(this), parent)
+{
+    setRequest(new CreateReplicationInstanceRequest(request));
+    setReply(reply);
+}
+
+const CreateReplicationInstanceRequest * CreateReplicationInstanceResponse::request() const
+{
+    Q_D(const CreateReplicationInstanceResponse);
+    return static_cast<const CreateReplicationInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService CreateReplicationInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateReplicationInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReplicationInstanceResponsePrivate
+ *
+ * @brief  Private implementation for CreateReplicationInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateReplicationInstanceResponse instance.
+ */
+CreateReplicationInstanceResponsePrivate::CreateReplicationInstanceResponsePrivate(
+    CreateReplicationInstanceQueueResponse * const q) : CreateReplicationInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService CreateReplicationInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateReplicationInstanceResponsePrivate::CreateReplicationInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateReplicationInstanceResponse"));
+    /// @todo
+}

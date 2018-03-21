@@ -19,3 +19,85 @@
 
 #include "restoredbclusterfromsnapshotresponse.h"
 #include "restoredbclusterfromsnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  RestoreDBClusterFromSnapshotResponse
+ *
+ * @brief  Handles RDS RestoreDBClusterFromSnapshot responses.
+ *
+ * @see    RDSClient::restoreDBClusterFromSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreDBClusterFromSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new RestoreDBClusterFromSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new RestoreDBClusterFromSnapshotRequest(request));
+    setReply(reply);
+}
+
+const RestoreDBClusterFromSnapshotRequest * RestoreDBClusterFromSnapshotResponse::request() const
+{
+    Q_D(const RestoreDBClusterFromSnapshotResponse);
+    return static_cast<const RestoreDBClusterFromSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS RestoreDBClusterFromSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void RestoreDBClusterFromSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreDBClusterFromSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for RestoreDBClusterFromSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreDBClusterFromSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RestoreDBClusterFromSnapshotResponse instance.
+ */
+RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotResponsePrivate(
+    RestoreDBClusterFromSnapshotQueueResponse * const q) : RestoreDBClusterFromSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS RestoreDBClusterFromSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterFromSnapshotResponse"));
+    /// @todo
+}

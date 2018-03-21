@@ -19,3 +19,85 @@
 
 #include "listlunaclientsresponse.h"
 #include "listlunaclientsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  ListLunaClientsResponse
+ *
+ * @brief  Handles CloudHSM ListLunaClients responses.
+ *
+ * @see    CloudHSMClient::listLunaClients
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListLunaClientsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new ListLunaClientsResponsePrivate(this), parent)
+{
+    setRequest(new ListLunaClientsRequest(request));
+    setReply(reply);
+}
+
+const ListLunaClientsRequest * ListLunaClientsResponse::request() const
+{
+    Q_D(const ListLunaClientsResponse);
+    return static_cast<const ListLunaClientsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM ListLunaClients response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListLunaClientsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListLunaClientsResponsePrivate
+ *
+ * @brief  Private implementation for ListLunaClientsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLunaClientsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListLunaClientsResponse instance.
+ */
+ListLunaClientsResponsePrivate::ListLunaClientsResponsePrivate(
+    ListLunaClientsQueueResponse * const q) : ListLunaClientsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM ListLunaClientsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListLunaClientsResponsePrivate::ListLunaClientsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListLunaClientsResponse"));
+    /// @todo
+}

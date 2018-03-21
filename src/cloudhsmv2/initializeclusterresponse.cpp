@@ -19,3 +19,85 @@
 
 #include "initializeclusterresponse.h"
 #include "initializeclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSMV2 {
+
+/**
+ * @class  InitializeClusterResponse
+ *
+ * @brief  Handles CloudHSMV2 InitializeCluster responses.
+ *
+ * @see    CloudHSMV2Client::initializeCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitializeClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMV2Response(new InitializeClusterResponsePrivate(this), parent)
+{
+    setRequest(new InitializeClusterRequest(request));
+    setReply(reply);
+}
+
+const InitializeClusterRequest * InitializeClusterResponse::request() const
+{
+    Q_D(const InitializeClusterResponse);
+    return static_cast<const InitializeClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSMV2 InitializeCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void InitializeClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InitializeClusterResponsePrivate
+ *
+ * @brief  Private implementation for InitializeClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitializeClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InitializeClusterResponse instance.
+ */
+InitializeClusterResponsePrivate::InitializeClusterResponsePrivate(
+    InitializeClusterQueueResponse * const q) : InitializeClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSMV2 InitializeClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InitializeClusterResponsePrivate::InitializeClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InitializeClusterResponse"));
+    /// @todo
+}

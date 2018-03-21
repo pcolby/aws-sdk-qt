@@ -19,3 +19,85 @@
 
 #include "exportprojectresponse.h"
 #include "exportprojectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Mobile {
+
+/**
+ * @class  ExportProjectResponse
+ *
+ * @brief  Handles Mobile ExportProject responses.
+ *
+ * @see    MobileClient::exportProject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExportProjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MobileResponse(new ExportProjectResponsePrivate(this), parent)
+{
+    setRequest(new ExportProjectRequest(request));
+    setReply(reply);
+}
+
+const ExportProjectRequest * ExportProjectResponse::request() const
+{
+    Q_D(const ExportProjectResponse);
+    return static_cast<const ExportProjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Mobile ExportProject response.
+ *
+ * @param  response  Response to parse.
+ */
+void ExportProjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ExportProjectResponsePrivate
+ *
+ * @brief  Private implementation for ExportProjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExportProjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ExportProjectResponse instance.
+ */
+ExportProjectResponsePrivate::ExportProjectResponsePrivate(
+    ExportProjectQueueResponse * const q) : ExportProjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Mobile ExportProjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ExportProjectResponsePrivate::ExportProjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ExportProjectResponse"));
+    /// @todo
+}

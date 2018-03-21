@@ -19,3 +19,85 @@
 
 #include "discoverinputschemaresponse.h"
 #include "discoverinputschemaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DiscoverInputSchemaResponse
+ *
+ * @brief  Handles KinesisAnalytics DiscoverInputSchema responses.
+ *
+ * @see    KinesisAnalyticsClient::discoverInputSchema
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DiscoverInputSchemaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new DiscoverInputSchemaResponsePrivate(this), parent)
+{
+    setRequest(new DiscoverInputSchemaRequest(request));
+    setReply(reply);
+}
+
+const DiscoverInputSchemaRequest * DiscoverInputSchemaResponse::request() const
+{
+    Q_D(const DiscoverInputSchemaResponse);
+    return static_cast<const DiscoverInputSchemaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics DiscoverInputSchema response.
+ *
+ * @param  response  Response to parse.
+ */
+void DiscoverInputSchemaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DiscoverInputSchemaResponsePrivate
+ *
+ * @brief  Private implementation for DiscoverInputSchemaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DiscoverInputSchemaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DiscoverInputSchemaResponse instance.
+ */
+DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponsePrivate(
+    DiscoverInputSchemaQueueResponse * const q) : DiscoverInputSchemaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics DiscoverInputSchemaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DiscoverInputSchemaResponse"));
+    /// @todo
+}

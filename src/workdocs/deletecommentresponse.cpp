@@ -19,3 +19,85 @@
 
 #include "deletecommentresponse.h"
 #include "deletecommentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DeleteCommentResponse
+ *
+ * @brief  Handles WorkDocs DeleteComment responses.
+ *
+ * @see    WorkDocsClient::deleteComment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCommentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DeleteCommentResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCommentRequest(request));
+    setReply(reply);
+}
+
+const DeleteCommentRequest * DeleteCommentResponse::request() const
+{
+    Q_D(const DeleteCommentResponse);
+    return static_cast<const DeleteCommentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DeleteComment response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCommentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCommentResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCommentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCommentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCommentResponse instance.
+ */
+DeleteCommentResponsePrivate::DeleteCommentResponsePrivate(
+    DeleteCommentQueueResponse * const q) : DeleteCommentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DeleteCommentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCommentResponsePrivate::DeleteCommentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCommentResponse"));
+    /// @todo
+}

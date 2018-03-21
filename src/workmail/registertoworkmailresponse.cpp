@@ -19,3 +19,85 @@
 
 #include "registertoworkmailresponse.h"
 #include "registertoworkmailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  RegisterToWorkMailResponse
+ *
+ * @brief  Handles WorkMail RegisterToWorkMail responses.
+ *
+ * @see    WorkMailClient::registerToWorkMail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterToWorkMailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new RegisterToWorkMailResponsePrivate(this), parent)
+{
+    setRequest(new RegisterToWorkMailRequest(request));
+    setReply(reply);
+}
+
+const RegisterToWorkMailRequest * RegisterToWorkMailResponse::request() const
+{
+    Q_D(const RegisterToWorkMailResponse);
+    return static_cast<const RegisterToWorkMailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail RegisterToWorkMail response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterToWorkMailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterToWorkMailResponsePrivate
+ *
+ * @brief  Private implementation for RegisterToWorkMailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterToWorkMailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterToWorkMailResponse instance.
+ */
+RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponsePrivate(
+    RegisterToWorkMailQueueResponse * const q) : RegisterToWorkMailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail RegisterToWorkMailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterToWorkMailResponse"));
+    /// @todo
+}

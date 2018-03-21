@@ -19,3 +19,85 @@
 
 #include "checkdomaintransferabilityresponse.h"
 #include "checkdomaintransferabilityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  CheckDomainTransferabilityResponse
+ *
+ * @brief  Handles Route53Domains CheckDomainTransferability responses.
+ *
+ * @see    Route53DomainsClient::checkDomainTransferability
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CheckDomainTransferabilityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new CheckDomainTransferabilityResponsePrivate(this), parent)
+{
+    setRequest(new CheckDomainTransferabilityRequest(request));
+    setReply(reply);
+}
+
+const CheckDomainTransferabilityRequest * CheckDomainTransferabilityResponse::request() const
+{
+    Q_D(const CheckDomainTransferabilityResponse);
+    return static_cast<const CheckDomainTransferabilityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains CheckDomainTransferability response.
+ *
+ * @param  response  Response to parse.
+ */
+void CheckDomainTransferabilityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CheckDomainTransferabilityResponsePrivate
+ *
+ * @brief  Private implementation for CheckDomainTransferabilityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckDomainTransferabilityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CheckDomainTransferabilityResponse instance.
+ */
+CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponsePrivate(
+    CheckDomainTransferabilityQueueResponse * const q) : CheckDomainTransferabilityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains CheckDomainTransferabilityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CheckDomainTransferabilityResponse"));
+    /// @todo
+}

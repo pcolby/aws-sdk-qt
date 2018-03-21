@@ -19,3 +19,85 @@
 
 #include "deleteexpressionresponse.h"
 #include "deleteexpressionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DeleteExpressionResponse
+ *
+ * @brief  Handles CloudSearch DeleteExpression responses.
+ *
+ * @see    CloudSearchClient::deleteExpression
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteExpressionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DeleteExpressionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteExpressionRequest(request));
+    setReply(reply);
+}
+
+const DeleteExpressionRequest * DeleteExpressionResponse::request() const
+{
+    Q_D(const DeleteExpressionResponse);
+    return static_cast<const DeleteExpressionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DeleteExpression response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteExpressionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteExpressionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteExpressionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteExpressionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteExpressionResponse instance.
+ */
+DeleteExpressionResponsePrivate::DeleteExpressionResponsePrivate(
+    DeleteExpressionQueueResponse * const q) : DeleteExpressionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DeleteExpressionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteExpressionResponsePrivate::DeleteExpressionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteExpressionResponse"));
+    /// @todo
+}

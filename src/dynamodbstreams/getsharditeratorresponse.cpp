@@ -19,3 +19,85 @@
 
 #include "getsharditeratorresponse.h"
 #include "getsharditeratorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDBStreams {
+
+/**
+ * @class  GetShardIteratorResponse
+ *
+ * @brief  Handles DynamoDBStreams GetShardIterator responses.
+ *
+ * @see    DynamoDBStreamsClient::getShardIterator
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetShardIteratorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBStreamsResponse(new GetShardIteratorResponsePrivate(this), parent)
+{
+    setRequest(new GetShardIteratorRequest(request));
+    setReply(reply);
+}
+
+const GetShardIteratorRequest * GetShardIteratorResponse::request() const
+{
+    Q_D(const GetShardIteratorResponse);
+    return static_cast<const GetShardIteratorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDBStreams GetShardIterator response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetShardIteratorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetShardIteratorResponsePrivate
+ *
+ * @brief  Private implementation for GetShardIteratorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetShardIteratorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetShardIteratorResponse instance.
+ */
+GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
+    GetShardIteratorQueueResponse * const q) : GetShardIteratorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDBStreams GetShardIteratorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetShardIteratorResponsePrivate::GetShardIteratorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetShardIteratorResponse"));
+    /// @todo
+}

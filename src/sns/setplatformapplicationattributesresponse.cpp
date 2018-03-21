@@ -19,3 +19,85 @@
 
 #include "setplatformapplicationattributesresponse.h"
 #include "setplatformapplicationattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  SetPlatformApplicationAttributesResponse
+ *
+ * @brief  Handles SNS SetPlatformApplicationAttributes responses.
+ *
+ * @see    SNSClient::setPlatformApplicationAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetPlatformApplicationAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new SetPlatformApplicationAttributesResponsePrivate(this), parent)
+{
+    setRequest(new SetPlatformApplicationAttributesRequest(request));
+    setReply(reply);
+}
+
+const SetPlatformApplicationAttributesRequest * SetPlatformApplicationAttributesResponse::request() const
+{
+    Q_D(const SetPlatformApplicationAttributesResponse);
+    return static_cast<const SetPlatformApplicationAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS SetPlatformApplicationAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetPlatformApplicationAttributesResponsePrivate
+ *
+ * @brief  Private implementation for SetPlatformApplicationAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetPlatformApplicationAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetPlatformApplicationAttributesResponse instance.
+ */
+SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttributesResponsePrivate(
+    SetPlatformApplicationAttributesQueueResponse * const q) : SetPlatformApplicationAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS SetPlatformApplicationAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetPlatformApplicationAttributesResponse"));
+    /// @todo
+}

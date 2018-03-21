@@ -19,3 +19,85 @@
 
 #include "updateregexmatchsetresponse.h"
 #include "updateregexmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  UpdateRegexMatchSetResponse
+ *
+ * @brief  Handles WAFRegional UpdateRegexMatchSet responses.
+ *
+ * @see    WAFRegionalClient::updateRegexMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRegexMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new UpdateRegexMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRegexMatchSetRequest(request));
+    setReply(reply);
+}
+
+const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
+{
+    Q_D(const UpdateRegexMatchSetResponse);
+    return static_cast<const UpdateRegexMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional UpdateRegexMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRegexMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRegexMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRegexMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRegexMatchSetResponse instance.
+ */
+UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
+    UpdateRegexMatchSetQueueResponse * const q) : UpdateRegexMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional UpdateRegexMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRegexMatchSetResponse"));
+    /// @todo
+}

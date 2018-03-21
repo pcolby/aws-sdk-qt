@@ -19,3 +19,85 @@
 
 #include "resetcacheresponse.h"
 #include "resetcacheresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ResetCacheResponse
+ *
+ * @brief  Handles StorageGateway ResetCache responses.
+ *
+ * @see    StorageGatewayClient::resetCache
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetCacheResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new ResetCacheResponsePrivate(this), parent)
+{
+    setRequest(new ResetCacheRequest(request));
+    setReply(reply);
+}
+
+const ResetCacheRequest * ResetCacheResponse::request() const
+{
+    Q_D(const ResetCacheResponse);
+    return static_cast<const ResetCacheRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway ResetCache response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetCacheResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetCacheResponsePrivate
+ *
+ * @brief  Private implementation for ResetCacheResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetCacheResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetCacheResponse instance.
+ */
+ResetCacheResponsePrivate::ResetCacheResponsePrivate(
+    ResetCacheQueueResponse * const q) : ResetCachePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway ResetCacheResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetCacheResponsePrivate::ResetCacheResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetCacheResponse"));
+    /// @todo
+}

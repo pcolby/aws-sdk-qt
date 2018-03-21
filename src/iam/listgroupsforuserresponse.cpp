@@ -19,3 +19,85 @@
 
 #include "listgroupsforuserresponse.h"
 #include "listgroupsforuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListGroupsForUserResponse
+ *
+ * @brief  Handles IAM ListGroupsForUser responses.
+ *
+ * @see    IAMClient::listGroupsForUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupsForUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListGroupsForUserResponsePrivate(this), parent)
+{
+    setRequest(new ListGroupsForUserRequest(request));
+    setReply(reply);
+}
+
+const ListGroupsForUserRequest * ListGroupsForUserResponse::request() const
+{
+    Q_D(const ListGroupsForUserResponse);
+    return static_cast<const ListGroupsForUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListGroupsForUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGroupsForUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupsForUserResponsePrivate
+ *
+ * @brief  Private implementation for ListGroupsForUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupsForUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGroupsForUserResponse instance.
+ */
+ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
+    ListGroupsForUserQueueResponse * const q) : ListGroupsForUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListGroupsForUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGroupsForUserResponsePrivate::ListGroupsForUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGroupsForUserResponse"));
+    /// @todo
+}

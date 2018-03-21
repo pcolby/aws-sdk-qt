@@ -19,3 +19,85 @@
 
 #include "getsendquotaresponse.h"
 #include "getsendquotaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetSendQuotaResponse
+ *
+ * @brief  Handles SES GetSendQuota responses.
+ *
+ * @see    SESClient::getSendQuota
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSendQuotaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new GetSendQuotaResponsePrivate(this), parent)
+{
+    setRequest(new GetSendQuotaRequest(request));
+    setReply(reply);
+}
+
+const GetSendQuotaRequest * GetSendQuotaResponse::request() const
+{
+    Q_D(const GetSendQuotaResponse);
+    return static_cast<const GetSendQuotaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES GetSendQuota response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSendQuotaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSendQuotaResponsePrivate
+ *
+ * @brief  Private implementation for GetSendQuotaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSendQuotaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSendQuotaResponse instance.
+ */
+GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
+    GetSendQuotaQueueResponse * const q) : GetSendQuotaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES GetSendQuotaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSendQuotaResponsePrivate::GetSendQuotaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSendQuotaResponse"));
+    /// @todo
+}

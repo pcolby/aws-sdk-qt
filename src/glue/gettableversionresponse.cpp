@@ -19,3 +19,85 @@
 
 #include "gettableversionresponse.h"
 #include "gettableversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetTableVersionResponse
+ *
+ * @brief  Handles Glue GetTableVersion responses.
+ *
+ * @see    GlueClient::getTableVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTableVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetTableVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetTableVersionRequest(request));
+    setReply(reply);
+}
+
+const GetTableVersionRequest * GetTableVersionResponse::request() const
+{
+    Q_D(const GetTableVersionResponse);
+    return static_cast<const GetTableVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetTableVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTableVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTableVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetTableVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTableVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTableVersionResponse instance.
+ */
+GetTableVersionResponsePrivate::GetTableVersionResponsePrivate(
+    GetTableVersionQueueResponse * const q) : GetTableVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetTableVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTableVersionResponsePrivate::GetTableVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTableVersionResponse"));
+    /// @todo
+}

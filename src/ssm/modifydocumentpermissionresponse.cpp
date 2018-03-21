@@ -19,3 +19,85 @@
 
 #include "modifydocumentpermissionresponse.h"
 #include "modifydocumentpermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ModifyDocumentPermissionResponse
+ *
+ * @brief  Handles SSM ModifyDocumentPermission responses.
+ *
+ * @see    SSMClient::modifyDocumentPermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDocumentPermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ModifyDocumentPermissionResponsePrivate(this), parent)
+{
+    setRequest(new ModifyDocumentPermissionRequest(request));
+    setReply(reply);
+}
+
+const ModifyDocumentPermissionRequest * ModifyDocumentPermissionResponse::request() const
+{
+    Q_D(const ModifyDocumentPermissionResponse);
+    return static_cast<const ModifyDocumentPermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ModifyDocumentPermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyDocumentPermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDocumentPermissionResponsePrivate
+ *
+ * @brief  Private implementation for ModifyDocumentPermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDocumentPermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyDocumentPermissionResponse instance.
+ */
+ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponsePrivate(
+    ModifyDocumentPermissionQueueResponse * const q) : ModifyDocumentPermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ModifyDocumentPermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyDocumentPermissionResponse"));
+    /// @todo
+}

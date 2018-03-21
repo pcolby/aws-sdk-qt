@@ -19,3 +19,85 @@
 
 #include "liststacksetsresponse.h"
 #include "liststacksetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListStackSetsResponse
+ *
+ * @brief  Handles CloudFormation ListStackSets responses.
+ *
+ * @see    CloudFormationClient::listStackSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStackSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ListStackSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListStackSetsRequest(request));
+    setReply(reply);
+}
+
+const ListStackSetsRequest * ListStackSetsResponse::request() const
+{
+    Q_D(const ListStackSetsResponse);
+    return static_cast<const ListStackSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ListStackSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListStackSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStackSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListStackSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStackSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListStackSetsResponse instance.
+ */
+ListStackSetsResponsePrivate::ListStackSetsResponsePrivate(
+    ListStackSetsQueueResponse * const q) : ListStackSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ListStackSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListStackSetsResponsePrivate::ListStackSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListStackSetsResponse"));
+    /// @todo
+}

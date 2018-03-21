@@ -19,3 +19,85 @@
 
 #include "getconsolescreenshotresponse.h"
 #include "getconsolescreenshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  GetConsoleScreenshotResponse
+ *
+ * @brief  Handles EC2 GetConsoleScreenshot responses.
+ *
+ * @see    EC2Client::getConsoleScreenshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConsoleScreenshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new GetConsoleScreenshotResponsePrivate(this), parent)
+{
+    setRequest(new GetConsoleScreenshotRequest(request));
+    setReply(reply);
+}
+
+const GetConsoleScreenshotRequest * GetConsoleScreenshotResponse::request() const
+{
+    Q_D(const GetConsoleScreenshotResponse);
+    return static_cast<const GetConsoleScreenshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 GetConsoleScreenshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetConsoleScreenshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConsoleScreenshotResponsePrivate
+ *
+ * @brief  Private implementation for GetConsoleScreenshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConsoleScreenshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetConsoleScreenshotResponse instance.
+ */
+GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
+    GetConsoleScreenshotQueueResponse * const q) : GetConsoleScreenshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 GetConsoleScreenshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetConsoleScreenshotResponse"));
+    /// @todo
+}

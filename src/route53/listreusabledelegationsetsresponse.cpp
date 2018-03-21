@@ -19,3 +19,85 @@
 
 #include "listreusabledelegationsetsresponse.h"
 #include "listreusabledelegationsetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListReusableDelegationSetsResponse
+ *
+ * @brief  Handles Route53 ListReusableDelegationSets responses.
+ *
+ * @see    Route53Client::listReusableDelegationSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListReusableDelegationSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new ListReusableDelegationSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListReusableDelegationSetsRequest(request));
+    setReply(reply);
+}
+
+const ListReusableDelegationSetsRequest * ListReusableDelegationSetsResponse::request() const
+{
+    Q_D(const ListReusableDelegationSetsResponse);
+    return static_cast<const ListReusableDelegationSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 ListReusableDelegationSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListReusableDelegationSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListReusableDelegationSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListReusableDelegationSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReusableDelegationSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListReusableDelegationSetsResponse instance.
+ */
+ListReusableDelegationSetsResponsePrivate::ListReusableDelegationSetsResponsePrivate(
+    ListReusableDelegationSetsQueueResponse * const q) : ListReusableDelegationSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 ListReusableDelegationSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListReusableDelegationSetsResponsePrivate::ListReusableDelegationSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListReusableDelegationSetsResponse"));
+    /// @todo
+}

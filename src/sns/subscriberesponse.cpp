@@ -19,3 +19,85 @@
 
 #include "subscriberesponse.h"
 #include "subscriberesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  SubscribeResponse
+ *
+ * @brief  Handles SNS Subscribe responses.
+ *
+ * @see    SNSClient::subscribe
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubscribeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new SubscribeResponsePrivate(this), parent)
+{
+    setRequest(new SubscribeRequest(request));
+    setReply(reply);
+}
+
+const SubscribeRequest * SubscribeResponse::request() const
+{
+    Q_D(const SubscribeResponse);
+    return static_cast<const SubscribeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS Subscribe response.
+ *
+ * @param  response  Response to parse.
+ */
+void SubscribeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SubscribeResponsePrivate
+ *
+ * @brief  Private implementation for SubscribeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubscribeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SubscribeResponse instance.
+ */
+SubscribeResponsePrivate::SubscribeResponsePrivate(
+    SubscribeQueueResponse * const q) : SubscribePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS SubscribeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SubscribeResponsePrivate::SubscribeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SubscribeResponse"));
+    /// @todo
+}

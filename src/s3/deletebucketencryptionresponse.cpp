@@ -19,3 +19,85 @@
 
 #include "deletebucketencryptionresponse.h"
 #include "deletebucketencryptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteBucketEncryptionResponse
+ *
+ * @brief  Handles S3 DeleteBucketEncryption responses.
+ *
+ * @see    S3Client::deleteBucketEncryption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBucketEncryptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new DeleteBucketEncryptionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBucketEncryptionRequest(request));
+    setReply(reply);
+}
+
+const DeleteBucketEncryptionRequest * DeleteBucketEncryptionResponse::request() const
+{
+    Q_D(const DeleteBucketEncryptionResponse);
+    return static_cast<const DeleteBucketEncryptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 DeleteBucketEncryption response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBucketEncryptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBucketEncryptionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBucketEncryptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketEncryptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBucketEncryptionResponse instance.
+ */
+DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponsePrivate(
+    DeleteBucketEncryptionQueueResponse * const q) : DeleteBucketEncryptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 DeleteBucketEncryptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBucketEncryptionResponse"));
+    /// @todo
+}

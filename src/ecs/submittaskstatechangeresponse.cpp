@@ -19,3 +19,85 @@
 
 #include "submittaskstatechangeresponse.h"
 #include "submittaskstatechangeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  SubmitTaskStateChangeResponse
+ *
+ * @brief  Handles ECS SubmitTaskStateChange responses.
+ *
+ * @see    ECSClient::submitTaskStateChange
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubmitTaskStateChangeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new SubmitTaskStateChangeResponsePrivate(this), parent)
+{
+    setRequest(new SubmitTaskStateChangeRequest(request));
+    setReply(reply);
+}
+
+const SubmitTaskStateChangeRequest * SubmitTaskStateChangeResponse::request() const
+{
+    Q_D(const SubmitTaskStateChangeResponse);
+    return static_cast<const SubmitTaskStateChangeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS SubmitTaskStateChange response.
+ *
+ * @param  response  Response to parse.
+ */
+void SubmitTaskStateChangeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SubmitTaskStateChangeResponsePrivate
+ *
+ * @brief  Private implementation for SubmitTaskStateChangeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubmitTaskStateChangeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SubmitTaskStateChangeResponse instance.
+ */
+SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponsePrivate(
+    SubmitTaskStateChangeQueueResponse * const q) : SubmitTaskStateChangePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS SubmitTaskStateChangeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SubmitTaskStateChangeResponse"));
+    /// @todo
+}

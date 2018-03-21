@@ -19,3 +19,85 @@
 
 #include "describevaultresponse.h"
 #include "describevaultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  DescribeVaultResponse
+ *
+ * @brief  Handles Glacier DescribeVault responses.
+ *
+ * @see    GlacierClient::describeVault
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVaultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new DescribeVaultResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVaultRequest(request));
+    setReply(reply);
+}
+
+const DescribeVaultRequest * DescribeVaultResponse::request() const
+{
+    Q_D(const DescribeVaultResponse);
+    return static_cast<const DescribeVaultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier DescribeVault response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVaultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVaultResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVaultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVaultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVaultResponse instance.
+ */
+DescribeVaultResponsePrivate::DescribeVaultResponsePrivate(
+    DescribeVaultQueueResponse * const q) : DescribeVaultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier DescribeVaultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVaultResponsePrivate::DescribeVaultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVaultResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putcontainerpolicyresponse.h"
 #include "putcontainerpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  PutContainerPolicyResponse
+ *
+ * @brief  Handles MediaStore PutContainerPolicy responses.
+ *
+ * @see    MediaStoreClient::putContainerPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutContainerPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreResponse(new PutContainerPolicyResponsePrivate(this), parent)
+{
+    setRequest(new PutContainerPolicyRequest(request));
+    setReply(reply);
+}
+
+const PutContainerPolicyRequest * PutContainerPolicyResponse::request() const
+{
+    Q_D(const PutContainerPolicyResponse);
+    return static_cast<const PutContainerPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStore PutContainerPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutContainerPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutContainerPolicyResponsePrivate
+ *
+ * @brief  Private implementation for PutContainerPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutContainerPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutContainerPolicyResponse instance.
+ */
+PutContainerPolicyResponsePrivate::PutContainerPolicyResponsePrivate(
+    PutContainerPolicyQueueResponse * const q) : PutContainerPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStore PutContainerPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutContainerPolicyResponsePrivate::PutContainerPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutContainerPolicyResponse"));
+    /// @todo
+}

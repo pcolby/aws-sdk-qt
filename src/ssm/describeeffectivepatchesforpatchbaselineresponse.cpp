@@ -19,3 +19,85 @@
 
 #include "describeeffectivepatchesforpatchbaselineresponse.h"
 #include "describeeffectivepatchesforpatchbaselineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeEffectivePatchesForPatchBaselineResponse
+ *
+ * @brief  Handles SSM DescribeEffectivePatchesForPatchBaseline responses.
+ *
+ * @see    SSMClient::describeEffectivePatchesForPatchBaseline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEffectivePatchesForPatchBaselineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeEffectivePatchesForPatchBaselineResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEffectivePatchesForPatchBaselineRequest(request));
+    setReply(reply);
+}
+
+const DescribeEffectivePatchesForPatchBaselineRequest * DescribeEffectivePatchesForPatchBaselineResponse::request() const
+{
+    Q_D(const DescribeEffectivePatchesForPatchBaselineResponse);
+    return static_cast<const DescribeEffectivePatchesForPatchBaselineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeEffectivePatchesForPatchBaseline response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEffectivePatchesForPatchBaselineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEffectivePatchesForPatchBaselineResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEffectivePatchesForPatchBaselineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEffectivePatchesForPatchBaselineResponse instance.
+ */
+DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatchesForPatchBaselineResponsePrivate(
+    DescribeEffectivePatchesForPatchBaselineQueueResponse * const q) : DescribeEffectivePatchesForPatchBaselinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeEffectivePatchesForPatchBaselineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatchesForPatchBaselineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEffectivePatchesForPatchBaselineResponse"));
+    /// @todo
+}

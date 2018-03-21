@@ -19,3 +19,85 @@
 
 #include "getoperationdetailresponse.h"
 #include "getoperationdetailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  GetOperationDetailResponse
+ *
+ * @brief  Handles Route53Domains GetOperationDetail responses.
+ *
+ * @see    Route53DomainsClient::getOperationDetail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOperationDetailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new GetOperationDetailResponsePrivate(this), parent)
+{
+    setRequest(new GetOperationDetailRequest(request));
+    setReply(reply);
+}
+
+const GetOperationDetailRequest * GetOperationDetailResponse::request() const
+{
+    Q_D(const GetOperationDetailResponse);
+    return static_cast<const GetOperationDetailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains GetOperationDetail response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetOperationDetailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOperationDetailResponsePrivate
+ *
+ * @brief  Private implementation for GetOperationDetailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationDetailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetOperationDetailResponse instance.
+ */
+GetOperationDetailResponsePrivate::GetOperationDetailResponsePrivate(
+    GetOperationDetailQueueResponse * const q) : GetOperationDetailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains GetOperationDetailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetOperationDetailResponsePrivate::GetOperationDetailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetOperationDetailResponse"));
+    /// @todo
+}

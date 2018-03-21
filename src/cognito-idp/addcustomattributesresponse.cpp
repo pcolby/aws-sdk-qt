@@ -19,3 +19,85 @@
 
 #include "addcustomattributesresponse.h"
 #include "addcustomattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AddCustomAttributesResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AddCustomAttributes responses.
+ *
+ * @see    CognitoIdentityProviderClient::addCustomAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddCustomAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AddCustomAttributesResponsePrivate(this), parent)
+{
+    setRequest(new AddCustomAttributesRequest(request));
+    setReply(reply);
+}
+
+const AddCustomAttributesRequest * AddCustomAttributesResponse::request() const
+{
+    Q_D(const AddCustomAttributesResponse);
+    return static_cast<const AddCustomAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AddCustomAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddCustomAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddCustomAttributesResponsePrivate
+ *
+ * @brief  Private implementation for AddCustomAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddCustomAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddCustomAttributesResponse instance.
+ */
+AddCustomAttributesResponsePrivate::AddCustomAttributesResponsePrivate(
+    AddCustomAttributesQueueResponse * const q) : AddCustomAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AddCustomAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddCustomAttributesResponsePrivate::AddCustomAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddCustomAttributesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createclustersnapshotresponse.h"
 #include "createclustersnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateClusterSnapshotResponse
+ *
+ * @brief  Handles Redshift CreateClusterSnapshot responses.
+ *
+ * @see    RedshiftClient::createClusterSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateClusterSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new CreateClusterSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new CreateClusterSnapshotRequest(request));
+    setReply(reply);
+}
+
+const CreateClusterSnapshotRequest * CreateClusterSnapshotResponse::request() const
+{
+    Q_D(const CreateClusterSnapshotResponse);
+    return static_cast<const CreateClusterSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift CreateClusterSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateClusterSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateClusterSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for CreateClusterSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateClusterSnapshotResponse instance.
+ */
+CreateClusterSnapshotResponsePrivate::CreateClusterSnapshotResponsePrivate(
+    CreateClusterSnapshotQueueResponse * const q) : CreateClusterSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift CreateClusterSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateClusterSnapshotResponsePrivate::CreateClusterSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateClusterSnapshotResponse"));
+    /// @todo
+}

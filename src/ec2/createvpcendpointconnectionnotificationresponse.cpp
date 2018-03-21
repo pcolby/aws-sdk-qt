@@ -19,3 +19,85 @@
 
 #include "createvpcendpointconnectionnotificationresponse.h"
 #include "createvpcendpointconnectionnotificationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpcEndpointConnectionNotificationResponse
+ *
+ * @brief  Handles EC2 CreateVpcEndpointConnectionNotification responses.
+ *
+ * @see    EC2Client::createVpcEndpointConnectionNotification
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpcEndpointConnectionNotificationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateVpcEndpointConnectionNotificationResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpcEndpointConnectionNotificationRequest(request));
+    setReply(reply);
+}
+
+const CreateVpcEndpointConnectionNotificationRequest * CreateVpcEndpointConnectionNotificationResponse::request() const
+{
+    Q_D(const CreateVpcEndpointConnectionNotificationResponse);
+    return static_cast<const CreateVpcEndpointConnectionNotificationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateVpcEndpointConnectionNotification response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpcEndpointConnectionNotificationResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpcEndpointConnectionNotificationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpcEndpointConnectionNotificationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpcEndpointConnectionNotificationResponse instance.
+ */
+CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointConnectionNotificationResponsePrivate(
+    CreateVpcEndpointConnectionNotificationQueueResponse * const q) : CreateVpcEndpointConnectionNotificationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateVpcEndpointConnectionNotificationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointConnectionNotificationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpcEndpointConnectionNotificationResponse"));
+    /// @todo
+}

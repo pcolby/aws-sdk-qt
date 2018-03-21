@@ -19,3 +19,85 @@
 
 #include "deletereplicationsubnetgroupresponse.h"
 #include "deletereplicationsubnetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DeleteReplicationSubnetGroupResponse
+ *
+ * @brief  Handles DatabaseMigrationService DeleteReplicationSubnetGroup responses.
+ *
+ * @see    DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationSubnetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DeleteReplicationSubnetGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteReplicationSubnetGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteReplicationSubnetGroupRequest * DeleteReplicationSubnetGroupResponse::request() const
+{
+    Q_D(const DeleteReplicationSubnetGroupResponse);
+    return static_cast<const DeleteReplicationSubnetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DeleteReplicationSubnetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationSubnetGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteReplicationSubnetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationSubnetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteReplicationSubnetGroupResponse instance.
+ */
+DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupResponsePrivate(
+    DeleteReplicationSubnetGroupQueueResponse * const q) : DeleteReplicationSubnetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DeleteReplicationSubnetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationSubnetGroupResponse"));
+    /// @todo
+}

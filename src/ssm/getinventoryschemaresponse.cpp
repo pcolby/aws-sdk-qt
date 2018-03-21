@@ -19,3 +19,85 @@
 
 #include "getinventoryschemaresponse.h"
 #include "getinventoryschemaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetInventorySchemaResponse
+ *
+ * @brief  Handles SSM GetInventorySchema responses.
+ *
+ * @see    SSMClient::getInventorySchema
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInventorySchemaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetInventorySchemaResponsePrivate(this), parent)
+{
+    setRequest(new GetInventorySchemaRequest(request));
+    setReply(reply);
+}
+
+const GetInventorySchemaRequest * GetInventorySchemaResponse::request() const
+{
+    Q_D(const GetInventorySchemaResponse);
+    return static_cast<const GetInventorySchemaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetInventorySchema response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInventorySchemaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInventorySchemaResponsePrivate
+ *
+ * @brief  Private implementation for GetInventorySchemaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInventorySchemaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInventorySchemaResponse instance.
+ */
+GetInventorySchemaResponsePrivate::GetInventorySchemaResponsePrivate(
+    GetInventorySchemaQueueResponse * const q) : GetInventorySchemaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetInventorySchemaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInventorySchemaResponsePrivate::GetInventorySchemaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInventorySchemaResponse"));
+    /// @todo
+}

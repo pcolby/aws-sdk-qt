@@ -19,3 +19,85 @@
 
 #include "createsamplefindingsresponse.h"
 #include "createsamplefindingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  CreateSampleFindingsResponse
+ *
+ * @brief  Handles GuardDuty CreateSampleFindings responses.
+ *
+ * @see    GuardDutyClient::createSampleFindings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSampleFindingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new CreateSampleFindingsResponsePrivate(this), parent)
+{
+    setRequest(new CreateSampleFindingsRequest(request));
+    setReply(reply);
+}
+
+const CreateSampleFindingsRequest * CreateSampleFindingsResponse::request() const
+{
+    Q_D(const CreateSampleFindingsResponse);
+    return static_cast<const CreateSampleFindingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty CreateSampleFindings response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSampleFindingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSampleFindingsResponsePrivate
+ *
+ * @brief  Private implementation for CreateSampleFindingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSampleFindingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSampleFindingsResponse instance.
+ */
+CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponsePrivate(
+    CreateSampleFindingsQueueResponse * const q) : CreateSampleFindingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty CreateSampleFindingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSampleFindingsResponse"));
+    /// @todo
+}

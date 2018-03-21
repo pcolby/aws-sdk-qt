@@ -19,3 +19,85 @@
 
 #include "gettableversionsresponse.h"
 #include "gettableversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetTableVersionsResponse
+ *
+ * @brief  Handles Glue GetTableVersions responses.
+ *
+ * @see    GlueClient::getTableVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTableVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetTableVersionsResponsePrivate(this), parent)
+{
+    setRequest(new GetTableVersionsRequest(request));
+    setReply(reply);
+}
+
+const GetTableVersionsRequest * GetTableVersionsResponse::request() const
+{
+    Q_D(const GetTableVersionsResponse);
+    return static_cast<const GetTableVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetTableVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTableVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTableVersionsResponsePrivate
+ *
+ * @brief  Private implementation for GetTableVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTableVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTableVersionsResponse instance.
+ */
+GetTableVersionsResponsePrivate::GetTableVersionsResponsePrivate(
+    GetTableVersionsQueueResponse * const q) : GetTableVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetTableVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTableVersionsResponsePrivate::GetTableVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTableVersionsResponse"));
+    /// @todo
+}

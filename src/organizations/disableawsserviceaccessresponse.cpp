@@ -19,3 +19,85 @@
 
 #include "disableawsserviceaccessresponse.h"
 #include "disableawsserviceaccessresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DisableAWSServiceAccessResponse
+ *
+ * @brief  Handles Organizations DisableAWSServiceAccess responses.
+ *
+ * @see    OrganizationsClient::disableAWSServiceAccess
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableAWSServiceAccessResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new DisableAWSServiceAccessResponsePrivate(this), parent)
+{
+    setRequest(new DisableAWSServiceAccessRequest(request));
+    setReply(reply);
+}
+
+const DisableAWSServiceAccessRequest * DisableAWSServiceAccessResponse::request() const
+{
+    Q_D(const DisableAWSServiceAccessResponse);
+    return static_cast<const DisableAWSServiceAccessRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations DisableAWSServiceAccess response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableAWSServiceAccessResponsePrivate
+ *
+ * @brief  Private implementation for DisableAWSServiceAccessResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableAWSServiceAccessResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableAWSServiceAccessResponse instance.
+ */
+DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponsePrivate(
+    DisableAWSServiceAccessQueueResponse * const q) : DisableAWSServiceAccessPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations DisableAWSServiceAccessResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableAWSServiceAccessResponse"));
+    /// @todo
+}

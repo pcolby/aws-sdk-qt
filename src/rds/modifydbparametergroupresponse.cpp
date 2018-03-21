@@ -19,3 +19,85 @@
 
 #include "modifydbparametergroupresponse.h"
 #include "modifydbparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBParameterGroupResponse
+ *
+ * @brief  Handles RDS ModifyDBParameterGroup responses.
+ *
+ * @see    RDSClient::modifyDBParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ModifyDBParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new ModifyDBParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const ModifyDBParameterGroupRequest * ModifyDBParameterGroupResponse::request() const
+{
+    Q_D(const ModifyDBParameterGroupResponse);
+    return static_cast<const ModifyDBParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ModifyDBParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyDBParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for ModifyDBParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyDBParameterGroupResponse instance.
+ */
+ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponsePrivate(
+    ModifyDBParameterGroupQueueResponse * const q) : ModifyDBParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ModifyDBParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyDBParameterGroupResponse"));
+    /// @todo
+}

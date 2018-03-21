@@ -19,3 +19,85 @@
 
 #include "describecacheparametersresponse.h"
 #include "describecacheparametersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeCacheParametersResponse
+ *
+ * @brief  Handles ElastiCache DescribeCacheParameters responses.
+ *
+ * @see    ElastiCacheClient::describeCacheParameters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCacheParametersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DescribeCacheParametersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCacheParametersRequest(request));
+    setReply(reply);
+}
+
+const DescribeCacheParametersRequest * DescribeCacheParametersResponse::request() const
+{
+    Q_D(const DescribeCacheParametersResponse);
+    return static_cast<const DescribeCacheParametersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DescribeCacheParameters response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCacheParametersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCacheParametersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCacheParametersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCacheParametersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCacheParametersResponse instance.
+ */
+DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponsePrivate(
+    DescribeCacheParametersQueueResponse * const q) : DescribeCacheParametersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DescribeCacheParametersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCacheParametersResponse"));
+    /// @todo
+}

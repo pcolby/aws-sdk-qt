@@ -19,3 +19,85 @@
 
 #include "indexdocumentsresponse.h"
 #include "indexdocumentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  IndexDocumentsResponse
+ *
+ * @brief  Handles CloudSearch IndexDocuments responses.
+ *
+ * @see    CloudSearchClient::indexDocuments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IndexDocumentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new IndexDocumentsResponsePrivate(this), parent)
+{
+    setRequest(new IndexDocumentsRequest(request));
+    setReply(reply);
+}
+
+const IndexDocumentsRequest * IndexDocumentsResponse::request() const
+{
+    Q_D(const IndexDocumentsResponse);
+    return static_cast<const IndexDocumentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch IndexDocuments response.
+ *
+ * @param  response  Response to parse.
+ */
+void IndexDocumentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  IndexDocumentsResponsePrivate
+ *
+ * @brief  Private implementation for IndexDocumentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IndexDocumentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public IndexDocumentsResponse instance.
+ */
+IndexDocumentsResponsePrivate::IndexDocumentsResponsePrivate(
+    IndexDocumentsQueueResponse * const q) : IndexDocumentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch IndexDocumentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void IndexDocumentsResponsePrivate::IndexDocumentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("IndexDocumentsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describenodeassociationstatusresponse.h"
 #include "describenodeassociationstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  DescribeNodeAssociationStatusResponse
+ *
+ * @brief  Handles OpsWorksCM DescribeNodeAssociationStatus responses.
+ *
+ * @see    OpsWorksCMClient::describeNodeAssociationStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNodeAssociationStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksCMResponse(new DescribeNodeAssociationStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeNodeAssociationStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeNodeAssociationStatusRequest * DescribeNodeAssociationStatusResponse::request() const
+{
+    Q_D(const DescribeNodeAssociationStatusResponse);
+    return static_cast<const DescribeNodeAssociationStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorksCM DescribeNodeAssociationStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeNodeAssociationStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNodeAssociationStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeNodeAssociationStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNodeAssociationStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeNodeAssociationStatusResponse instance.
+ */
+DescribeNodeAssociationStatusResponsePrivate::DescribeNodeAssociationStatusResponsePrivate(
+    DescribeNodeAssociationStatusQueueResponse * const q) : DescribeNodeAssociationStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorksCM DescribeNodeAssociationStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeNodeAssociationStatusResponsePrivate::DescribeNodeAssociationStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeNodeAssociationStatusResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "gettelemetrymetadataresponse.h"
 #include "gettelemetrymetadataresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  GetTelemetryMetadataResponse
+ *
+ * @brief  Handles Inspector GetTelemetryMetadata responses.
+ *
+ * @see    InspectorClient::getTelemetryMetadata
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTelemetryMetadataResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new GetTelemetryMetadataResponsePrivate(this), parent)
+{
+    setRequest(new GetTelemetryMetadataRequest(request));
+    setReply(reply);
+}
+
+const GetTelemetryMetadataRequest * GetTelemetryMetadataResponse::request() const
+{
+    Q_D(const GetTelemetryMetadataResponse);
+    return static_cast<const GetTelemetryMetadataRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector GetTelemetryMetadata response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTelemetryMetadataResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTelemetryMetadataResponsePrivate
+ *
+ * @brief  Private implementation for GetTelemetryMetadataResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTelemetryMetadataResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTelemetryMetadataResponse instance.
+ */
+GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponsePrivate(
+    GetTelemetryMetadataQueueResponse * const q) : GetTelemetryMetadataPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector GetTelemetryMetadataResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTelemetryMetadataResponse"));
+    /// @todo
+}

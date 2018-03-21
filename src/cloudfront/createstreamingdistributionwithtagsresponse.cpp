@@ -19,3 +19,85 @@
 
 #include "createstreamingdistributionwithtagsresponse.h"
 #include "createstreamingdistributionwithtagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  CreateStreamingDistributionWithTagsResponse
+ *
+ * @brief  Handles CloudFront CreateStreamingDistributionWithTags responses.
+ *
+ * @see    CloudFrontClient::createStreamingDistributionWithTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStreamingDistributionWithTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new CreateStreamingDistributionWithTagsResponsePrivate(this), parent)
+{
+    setRequest(new CreateStreamingDistributionWithTagsRequest(request));
+    setReply(reply);
+}
+
+const CreateStreamingDistributionWithTagsRequest * CreateStreamingDistributionWithTagsResponse::request() const
+{
+    Q_D(const CreateStreamingDistributionWithTagsResponse);
+    return static_cast<const CreateStreamingDistributionWithTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront CreateStreamingDistributionWithTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStreamingDistributionWithTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStreamingDistributionWithTagsResponsePrivate
+ *
+ * @brief  Private implementation for CreateStreamingDistributionWithTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStreamingDistributionWithTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStreamingDistributionWithTagsResponse instance.
+ */
+CreateStreamingDistributionWithTagsResponsePrivate::CreateStreamingDistributionWithTagsResponsePrivate(
+    CreateStreamingDistributionWithTagsQueueResponse * const q) : CreateStreamingDistributionWithTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront CreateStreamingDistributionWithTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStreamingDistributionWithTagsResponsePrivate::CreateStreamingDistributionWithTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStreamingDistributionWithTagsResponse"));
+    /// @todo
+}

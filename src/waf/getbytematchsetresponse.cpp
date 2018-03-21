@@ -19,3 +19,85 @@
 
 #include "getbytematchsetresponse.h"
 #include "getbytematchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetByteMatchSetResponse
+ *
+ * @brief  Handles WAF GetByteMatchSet responses.
+ *
+ * @see    WAFClient::getByteMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetByteMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new GetByteMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new GetByteMatchSetRequest(request));
+    setReply(reply);
+}
+
+const GetByteMatchSetRequest * GetByteMatchSetResponse::request() const
+{
+    Q_D(const GetByteMatchSetResponse);
+    return static_cast<const GetByteMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF GetByteMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetByteMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for GetByteMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetByteMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetByteMatchSetResponse instance.
+ */
+GetByteMatchSetResponsePrivate::GetByteMatchSetResponsePrivate(
+    GetByteMatchSetQueueResponse * const q) : GetByteMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF GetByteMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetByteMatchSetResponsePrivate::GetByteMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetByteMatchSetResponse"));
+    /// @todo
+}

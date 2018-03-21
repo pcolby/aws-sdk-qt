@@ -19,3 +19,85 @@
 
 #include "listmetricsresponse.h"
 #include "listmetricsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  ListMetricsResponse
+ *
+ * @brief  Handles CloudWatch ListMetrics responses.
+ *
+ * @see    CloudWatchClient::listMetrics
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListMetricsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new ListMetricsResponsePrivate(this), parent)
+{
+    setRequest(new ListMetricsRequest(request));
+    setReply(reply);
+}
+
+const ListMetricsRequest * ListMetricsResponse::request() const
+{
+    Q_D(const ListMetricsResponse);
+    return static_cast<const ListMetricsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch ListMetrics response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListMetricsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListMetricsResponsePrivate
+ *
+ * @brief  Private implementation for ListMetricsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMetricsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListMetricsResponse instance.
+ */
+ListMetricsResponsePrivate::ListMetricsResponsePrivate(
+    ListMetricsQueueResponse * const q) : ListMetricsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch ListMetricsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListMetricsResponsePrivate::ListMetricsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListMetricsResponse"));
+    /// @todo
+}

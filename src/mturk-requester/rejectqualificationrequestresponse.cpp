@@ -19,3 +19,85 @@
 
 #include "rejectqualificationrequestresponse.h"
 #include "rejectqualificationrequestresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  RejectQualificationRequestResponse
+ *
+ * @brief  Handles MTurk RejectQualificationRequest responses.
+ *
+ * @see    MTurkClient::rejectQualificationRequest
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RejectQualificationRequestResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new RejectQualificationRequestResponsePrivate(this), parent)
+{
+    setRequest(new RejectQualificationRequestRequest(request));
+    setReply(reply);
+}
+
+const RejectQualificationRequestRequest * RejectQualificationRequestResponse::request() const
+{
+    Q_D(const RejectQualificationRequestResponse);
+    return static_cast<const RejectQualificationRequestRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk RejectQualificationRequest response.
+ *
+ * @param  response  Response to parse.
+ */
+void RejectQualificationRequestResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RejectQualificationRequestResponsePrivate
+ *
+ * @brief  Private implementation for RejectQualificationRequestResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RejectQualificationRequestResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RejectQualificationRequestResponse instance.
+ */
+RejectQualificationRequestResponsePrivate::RejectQualificationRequestResponsePrivate(
+    RejectQualificationRequestQueueResponse * const q) : RejectQualificationRequestPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk RejectQualificationRequestResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RejectQualificationRequestResponsePrivate::RejectQualificationRequestResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RejectQualificationRequestResponse"));
+    /// @todo
+}

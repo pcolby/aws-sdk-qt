@@ -19,3 +19,85 @@
 
 #include "updateuserpoolresponse.h"
 #include "updateuserpoolresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateUserPoolResponse
+ *
+ * @brief  Handles CognitoIdentityProvider UpdateUserPool responses.
+ *
+ * @see    CognitoIdentityProviderClient::updateUserPool
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserPoolResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new UpdateUserPoolResponsePrivate(this), parent)
+{
+    setRequest(new UpdateUserPoolRequest(request));
+    setReply(reply);
+}
+
+const UpdateUserPoolRequest * UpdateUserPoolResponse::request() const
+{
+    Q_D(const UpdateUserPoolResponse);
+    return static_cast<const UpdateUserPoolRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider UpdateUserPool response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateUserPoolResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserPoolResponsePrivate
+ *
+ * @brief  Private implementation for UpdateUserPoolResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserPoolResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateUserPoolResponse instance.
+ */
+UpdateUserPoolResponsePrivate::UpdateUserPoolResponsePrivate(
+    UpdateUserPoolQueueResponse * const q) : UpdateUserPoolPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider UpdateUserPoolResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateUserPoolResponsePrivate::UpdateUserPoolResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateUserPoolResponse"));
+    /// @todo
+}

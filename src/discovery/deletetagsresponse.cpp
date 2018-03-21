@@ -19,3 +19,85 @@
 
 #include "deletetagsresponse.h"
 #include "deletetagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  DeleteTagsResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService DeleteTags responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::deleteTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new DeleteTagsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTagsRequest(request));
+    setReply(reply);
+}
+
+const DeleteTagsRequest * DeleteTagsResponse::request() const
+{
+    Q_D(const DeleteTagsResponse);
+    return static_cast<const DeleteTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService DeleteTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTagsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTagsResponse instance.
+ */
+DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
+    DeleteTagsQueueResponse * const q) : DeleteTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService DeleteTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTagsResponsePrivate::DeleteTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTagsResponse"));
+    /// @todo
+}

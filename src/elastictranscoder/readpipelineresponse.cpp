@@ -19,3 +19,85 @@
 
 #include "readpipelineresponse.h"
 #include "readpipelineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  ReadPipelineResponse
+ *
+ * @brief  Handles ElasticTranscoder ReadPipeline responses.
+ *
+ * @see    ElasticTranscoderClient::readPipeline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReadPipelineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticTranscoderResponse(new ReadPipelineResponsePrivate(this), parent)
+{
+    setRequest(new ReadPipelineRequest(request));
+    setReply(reply);
+}
+
+const ReadPipelineRequest * ReadPipelineResponse::request() const
+{
+    Q_D(const ReadPipelineResponse);
+    return static_cast<const ReadPipelineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticTranscoder ReadPipeline response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReadPipelineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReadPipelineResponsePrivate
+ *
+ * @brief  Private implementation for ReadPipelineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReadPipelineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReadPipelineResponse instance.
+ */
+ReadPipelineResponsePrivate::ReadPipelineResponsePrivate(
+    ReadPipelineQueueResponse * const q) : ReadPipelinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticTranscoder ReadPipelineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReadPipelineResponsePrivate::ReadPipelineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReadPipelineResponse"));
+    /// @todo
+}

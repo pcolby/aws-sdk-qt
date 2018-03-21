@@ -19,3 +19,85 @@
 
 #include "downloaddefaultkeypairresponse.h"
 #include "downloaddefaultkeypairresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DownloadDefaultKeyPairResponse
+ *
+ * @brief  Handles Lightsail DownloadDefaultKeyPair responses.
+ *
+ * @see    LightsailClient::downloadDefaultKeyPair
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DownloadDefaultKeyPairResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DownloadDefaultKeyPairResponsePrivate(this), parent)
+{
+    setRequest(new DownloadDefaultKeyPairRequest(request));
+    setReply(reply);
+}
+
+const DownloadDefaultKeyPairRequest * DownloadDefaultKeyPairResponse::request() const
+{
+    Q_D(const DownloadDefaultKeyPairResponse);
+    return static_cast<const DownloadDefaultKeyPairRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DownloadDefaultKeyPair response.
+ *
+ * @param  response  Response to parse.
+ */
+void DownloadDefaultKeyPairResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DownloadDefaultKeyPairResponsePrivate
+ *
+ * @brief  Private implementation for DownloadDefaultKeyPairResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DownloadDefaultKeyPairResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DownloadDefaultKeyPairResponse instance.
+ */
+DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponsePrivate(
+    DownloadDefaultKeyPairQueueResponse * const q) : DownloadDefaultKeyPairPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DownloadDefaultKeyPairResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DownloadDefaultKeyPairResponse"));
+    /// @todo
+}

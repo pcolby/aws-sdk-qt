@@ -19,3 +19,85 @@
 
 #include "listclustersresponse.h"
 #include "listclustersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  ListClustersResponse
+ *
+ * @brief  Handles Snowball ListClusters responses.
+ *
+ * @see    SnowballClient::listClusters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListClustersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SnowballResponse(new ListClustersResponsePrivate(this), parent)
+{
+    setRequest(new ListClustersRequest(request));
+    setReply(reply);
+}
+
+const ListClustersRequest * ListClustersResponse::request() const
+{
+    Q_D(const ListClustersResponse);
+    return static_cast<const ListClustersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Snowball ListClusters response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListClustersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListClustersResponsePrivate
+ *
+ * @brief  Private implementation for ListClustersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListClustersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListClustersResponse instance.
+ */
+ListClustersResponsePrivate::ListClustersResponsePrivate(
+    ListClustersQueueResponse * const q) : ListClustersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Snowball ListClustersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListClustersResponsePrivate::ListClustersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListClustersResponse"));
+    /// @todo
+}

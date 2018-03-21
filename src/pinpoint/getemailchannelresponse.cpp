@@ -19,3 +19,85 @@
 
 #include "getemailchannelresponse.h"
 #include "getemailchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetEmailChannelResponse
+ *
+ * @brief  Handles Pinpoint GetEmailChannel responses.
+ *
+ * @see    PinpointClient::getEmailChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEmailChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetEmailChannelResponsePrivate(this), parent)
+{
+    setRequest(new GetEmailChannelRequest(request));
+    setReply(reply);
+}
+
+const GetEmailChannelRequest * GetEmailChannelResponse::request() const
+{
+    Q_D(const GetEmailChannelResponse);
+    return static_cast<const GetEmailChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetEmailChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetEmailChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEmailChannelResponsePrivate
+ *
+ * @brief  Private implementation for GetEmailChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEmailChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetEmailChannelResponse instance.
+ */
+GetEmailChannelResponsePrivate::GetEmailChannelResponsePrivate(
+    GetEmailChannelQueueResponse * const q) : GetEmailChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetEmailChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetEmailChannelResponsePrivate::GetEmailChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetEmailChannelResponse"));
+    /// @todo
+}

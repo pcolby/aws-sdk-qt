@@ -19,3 +19,85 @@
 
 #include "describelistenercertificatesresponse.h"
 #include "describelistenercertificatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeListenerCertificatesResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 DescribeListenerCertificates responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeListenerCertificates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeListenerCertificatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new DescribeListenerCertificatesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeListenerCertificatesRequest(request));
+    setReply(reply);
+}
+
+const DescribeListenerCertificatesRequest * DescribeListenerCertificatesResponse::request() const
+{
+    Q_D(const DescribeListenerCertificatesResponse);
+    return static_cast<const DescribeListenerCertificatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 DescribeListenerCertificates response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeListenerCertificatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeListenerCertificatesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeListenerCertificatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeListenerCertificatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeListenerCertificatesResponse instance.
+ */
+DescribeListenerCertificatesResponsePrivate::DescribeListenerCertificatesResponsePrivate(
+    DescribeListenerCertificatesQueueResponse * const q) : DescribeListenerCertificatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 DescribeListenerCertificatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeListenerCertificatesResponsePrivate::DescribeListenerCertificatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeListenerCertificatesResponse"));
+    /// @todo
+}

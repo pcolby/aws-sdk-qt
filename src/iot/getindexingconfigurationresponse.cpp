@@ -19,3 +19,85 @@
 
 #include "getindexingconfigurationresponse.h"
 #include "getindexingconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetIndexingConfigurationResponse
+ *
+ * @brief  Handles IoT GetIndexingConfiguration responses.
+ *
+ * @see    IoTClient::getIndexingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIndexingConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new GetIndexingConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new GetIndexingConfigurationRequest(request));
+    setReply(reply);
+}
+
+const GetIndexingConfigurationRequest * GetIndexingConfigurationResponse::request() const
+{
+    Q_D(const GetIndexingConfigurationResponse);
+    return static_cast<const GetIndexingConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT GetIndexingConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIndexingConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIndexingConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for GetIndexingConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIndexingConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIndexingConfigurationResponse instance.
+ */
+GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponsePrivate(
+    GetIndexingConfigurationQueueResponse * const q) : GetIndexingConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT GetIndexingConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIndexingConfigurationResponse"));
+    /// @todo
+}

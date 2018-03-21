@@ -19,3 +19,85 @@
 
 #include "updatethingshadowresponse.h"
 #include "updatethingshadowresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoTDataPlane {
+
+/**
+ * @class  UpdateThingShadowResponse
+ *
+ * @brief  Handles IoTDataPlane UpdateThingShadow responses.
+ *
+ * @see    IoTDataPlaneClient::updateThingShadow
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateThingShadowResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTDataPlaneResponse(new UpdateThingShadowResponsePrivate(this), parent)
+{
+    setRequest(new UpdateThingShadowRequest(request));
+    setReply(reply);
+}
+
+const UpdateThingShadowRequest * UpdateThingShadowResponse::request() const
+{
+    Q_D(const UpdateThingShadowResponse);
+    return static_cast<const UpdateThingShadowRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoTDataPlane UpdateThingShadow response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateThingShadowResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateThingShadowResponsePrivate
+ *
+ * @brief  Private implementation for UpdateThingShadowResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThingShadowResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateThingShadowResponse instance.
+ */
+UpdateThingShadowResponsePrivate::UpdateThingShadowResponsePrivate(
+    UpdateThingShadowQueueResponse * const q) : UpdateThingShadowPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoTDataPlane UpdateThingShadowResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateThingShadowResponsePrivate::UpdateThingShadowResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateThingShadowResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listtagsforresourceresponse.h"
 #include "listtagsforresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListTagsForResourceResponse
+ *
+ * @brief  Handles SSM ListTagsForResource responses.
+ *
+ * @see    SSMClient::listTagsForResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListTagsForResourceResponsePrivate(this), parent)
+{
+    setRequest(new ListTagsForResourceRequest(request));
+    setReply(reply);
+}
+
+const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
+{
+    Q_D(const ListTagsForResourceResponse);
+    return static_cast<const ListTagsForResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListTagsForResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForResourceResponsePrivate
+ *
+ * @brief  Private implementation for ListTagsForResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTagsForResourceResponse instance.
+ */
+ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
+    ListTagsForResourceQueueResponse * const q) : ListTagsForResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListTagsForResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTagsForResourceResponsePrivate::ListTagsForResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTagsForResourceResponse"));
+    /// @todo
+}

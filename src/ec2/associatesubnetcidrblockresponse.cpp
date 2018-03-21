@@ -19,3 +19,85 @@
 
 #include "associatesubnetcidrblockresponse.h"
 #include "associatesubnetcidrblockresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AssociateSubnetCidrBlockResponse
+ *
+ * @brief  Handles EC2 AssociateSubnetCidrBlock responses.
+ *
+ * @see    EC2Client::associateSubnetCidrBlock
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateSubnetCidrBlockResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AssociateSubnetCidrBlockResponsePrivate(this), parent)
+{
+    setRequest(new AssociateSubnetCidrBlockRequest(request));
+    setReply(reply);
+}
+
+const AssociateSubnetCidrBlockRequest * AssociateSubnetCidrBlockResponse::request() const
+{
+    Q_D(const AssociateSubnetCidrBlockResponse);
+    return static_cast<const AssociateSubnetCidrBlockRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AssociateSubnetCidrBlock response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateSubnetCidrBlockResponsePrivate
+ *
+ * @brief  Private implementation for AssociateSubnetCidrBlockResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateSubnetCidrBlockResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateSubnetCidrBlockResponse instance.
+ */
+AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate(
+    AssociateSubnetCidrBlockQueueResponse * const q) : AssociateSubnetCidrBlockPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AssociateSubnetCidrBlockResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateSubnetCidrBlockResponse"));
+    /// @todo
+}

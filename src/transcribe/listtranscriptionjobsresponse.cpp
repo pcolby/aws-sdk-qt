@@ -19,3 +19,85 @@
 
 #include "listtranscriptionjobsresponse.h"
 #include "listtranscriptionjobsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace TranscribeService {
+
+/**
+ * @class  ListTranscriptionJobsResponse
+ *
+ * @brief  Handles TranscribeService ListTranscriptionJobs responses.
+ *
+ * @see    TranscribeServiceClient::listTranscriptionJobs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTranscriptionJobsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : TranscribeServiceResponse(new ListTranscriptionJobsResponsePrivate(this), parent)
+{
+    setRequest(new ListTranscriptionJobsRequest(request));
+    setReply(reply);
+}
+
+const ListTranscriptionJobsRequest * ListTranscriptionJobsResponse::request() const
+{
+    Q_D(const ListTranscriptionJobsResponse);
+    return static_cast<const ListTranscriptionJobsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a TranscribeService ListTranscriptionJobs response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTranscriptionJobsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTranscriptionJobsResponsePrivate
+ *
+ * @brief  Private implementation for ListTranscriptionJobsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTranscriptionJobsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTranscriptionJobsResponse instance.
+ */
+ListTranscriptionJobsResponsePrivate::ListTranscriptionJobsResponsePrivate(
+    ListTranscriptionJobsQueueResponse * const q) : ListTranscriptionJobsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an TranscribeService ListTranscriptionJobsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTranscriptionJobsResponsePrivate::ListTranscriptionJobsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTranscriptionJobsResponse"));
+    /// @todo
+}

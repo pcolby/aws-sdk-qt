@@ -19,3 +19,85 @@
 
 #include "updateassociationstatusresponse.h"
 #include "updateassociationstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  UpdateAssociationStatusResponse
+ *
+ * @brief  Handles SSM UpdateAssociationStatus responses.
+ *
+ * @see    SSMClient::updateAssociationStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAssociationStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new UpdateAssociationStatusResponsePrivate(this), parent)
+{
+    setRequest(new UpdateAssociationStatusRequest(request));
+    setReply(reply);
+}
+
+const UpdateAssociationStatusRequest * UpdateAssociationStatusResponse::request() const
+{
+    Q_D(const UpdateAssociationStatusResponse);
+    return static_cast<const UpdateAssociationStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM UpdateAssociationStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateAssociationStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAssociationStatusResponsePrivate
+ *
+ * @brief  Private implementation for UpdateAssociationStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAssociationStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateAssociationStatusResponse instance.
+ */
+UpdateAssociationStatusResponsePrivate::UpdateAssociationStatusResponsePrivate(
+    UpdateAssociationStatusQueueResponse * const q) : UpdateAssociationStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM UpdateAssociationStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateAssociationStatusResponsePrivate::UpdateAssociationStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateAssociationStatusResponse"));
+    /// @todo
+}

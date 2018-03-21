@@ -19,3 +19,85 @@
 
 #include "createvpcpeeringconnectionresponse.h"
 #include "createvpcpeeringconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateVpcPeeringConnectionResponse
+ *
+ * @brief  Handles GameLift CreateVpcPeeringConnection responses.
+ *
+ * @see    GameLiftClient::createVpcPeeringConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpcPeeringConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new CreateVpcPeeringConnectionResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpcPeeringConnectionRequest(request));
+    setReply(reply);
+}
+
+const CreateVpcPeeringConnectionRequest * CreateVpcPeeringConnectionResponse::request() const
+{
+    Q_D(const CreateVpcPeeringConnectionResponse);
+    return static_cast<const CreateVpcPeeringConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift CreateVpcPeeringConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpcPeeringConnectionResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpcPeeringConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpcPeeringConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpcPeeringConnectionResponse instance.
+ */
+CreateVpcPeeringConnectionResponsePrivate::CreateVpcPeeringConnectionResponsePrivate(
+    CreateVpcPeeringConnectionQueueResponse * const q) : CreateVpcPeeringConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift CreateVpcPeeringConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpcPeeringConnectionResponsePrivate::CreateVpcPeeringConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpcPeeringConnectionResponse"));
+    /// @todo
+}

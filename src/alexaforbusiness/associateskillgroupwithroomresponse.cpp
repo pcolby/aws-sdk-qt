@@ -19,3 +19,85 @@
 
 #include "associateskillgroupwithroomresponse.h"
 #include "associateskillgroupwithroomresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  AssociateSkillGroupWithRoomResponse
+ *
+ * @brief  Handles AlexaForBusiness AssociateSkillGroupWithRoom responses.
+ *
+ * @see    AlexaForBusinessClient::associateSkillGroupWithRoom
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateSkillGroupWithRoomResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new AssociateSkillGroupWithRoomResponsePrivate(this), parent)
+{
+    setRequest(new AssociateSkillGroupWithRoomRequest(request));
+    setReply(reply);
+}
+
+const AssociateSkillGroupWithRoomRequest * AssociateSkillGroupWithRoomResponse::request() const
+{
+    Q_D(const AssociateSkillGroupWithRoomResponse);
+    return static_cast<const AssociateSkillGroupWithRoomRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness AssociateSkillGroupWithRoom response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateSkillGroupWithRoomResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateSkillGroupWithRoomResponsePrivate
+ *
+ * @brief  Private implementation for AssociateSkillGroupWithRoomResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateSkillGroupWithRoomResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateSkillGroupWithRoomResponse instance.
+ */
+AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponsePrivate(
+    AssociateSkillGroupWithRoomQueueResponse * const q) : AssociateSkillGroupWithRoomPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness AssociateSkillGroupWithRoomResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateSkillGroupWithRoomResponse"));
+    /// @todo
+}

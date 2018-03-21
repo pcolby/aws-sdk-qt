@@ -19,3 +19,85 @@
 
 #include "describeidformatresponse.h"
 #include "describeidformatresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeIdFormatResponse
+ *
+ * @brief  Handles EC2 DescribeIdFormat responses.
+ *
+ * @see    EC2Client::describeIdFormat
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIdFormatResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeIdFormatResponsePrivate(this), parent)
+{
+    setRequest(new DescribeIdFormatRequest(request));
+    setReply(reply);
+}
+
+const DescribeIdFormatRequest * DescribeIdFormatResponse::request() const
+{
+    Q_D(const DescribeIdFormatResponse);
+    return static_cast<const DescribeIdFormatRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeIdFormat response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeIdFormatResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIdFormatResponsePrivate
+ *
+ * @brief  Private implementation for DescribeIdFormatResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdFormatResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeIdFormatResponse instance.
+ */
+DescribeIdFormatResponsePrivate::DescribeIdFormatResponsePrivate(
+    DescribeIdFormatQueueResponse * const q) : DescribeIdFormatPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeIdFormatResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeIdFormatResponsePrivate::DescribeIdFormatResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeIdFormatResponse"));
+    /// @todo
+}

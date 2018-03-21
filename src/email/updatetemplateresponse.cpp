@@ -19,3 +19,85 @@
 
 #include "updatetemplateresponse.h"
 #include "updatetemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateTemplateResponse
+ *
+ * @brief  Handles SES UpdateTemplate responses.
+ *
+ * @see    SESClient::updateTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new UpdateTemplateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTemplateRequest(request));
+    setReply(reply);
+}
+
+const UpdateTemplateRequest * UpdateTemplateResponse::request() const
+{
+    Q_D(const UpdateTemplateResponse);
+    return static_cast<const UpdateTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES UpdateTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTemplateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTemplateResponse instance.
+ */
+UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
+    UpdateTemplateQueueResponse * const q) : UpdateTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES UpdateTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTemplateResponsePrivate::UpdateTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTemplateResponse"));
+    /// @todo
+}

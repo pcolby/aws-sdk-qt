@@ -19,3 +19,85 @@
 
 #include "describeelasticipsresponse.h"
 #include "describeelasticipsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeElasticIpsResponse
+ *
+ * @brief  Handles OpsWorks DescribeElasticIps responses.
+ *
+ * @see    OpsWorksClient::describeElasticIps
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeElasticIpsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeElasticIpsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeElasticIpsRequest(request));
+    setReply(reply);
+}
+
+const DescribeElasticIpsRequest * DescribeElasticIpsResponse::request() const
+{
+    Q_D(const DescribeElasticIpsResponse);
+    return static_cast<const DescribeElasticIpsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeElasticIps response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeElasticIpsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeElasticIpsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeElasticIpsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticIpsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeElasticIpsResponse instance.
+ */
+DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponsePrivate(
+    DescribeElasticIpsQueueResponse * const q) : DescribeElasticIpsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeElasticIpsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeElasticIpsResponse"));
+    /// @todo
+}

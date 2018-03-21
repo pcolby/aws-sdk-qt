@@ -19,3 +19,85 @@
 
 #include "terminatejobresponse.h"
 #include "terminatejobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  TerminateJobResponse
+ *
+ * @brief  Handles Batch TerminateJob responses.
+ *
+ * @see    BatchClient::terminateJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new TerminateJobResponsePrivate(this), parent)
+{
+    setRequest(new TerminateJobRequest(request));
+    setReply(reply);
+}
+
+const TerminateJobRequest * TerminateJobResponse::request() const
+{
+    Q_D(const TerminateJobResponse);
+    return static_cast<const TerminateJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch TerminateJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void TerminateJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateJobResponsePrivate
+ *
+ * @brief  Private implementation for TerminateJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TerminateJobResponse instance.
+ */
+TerminateJobResponsePrivate::TerminateJobResponsePrivate(
+    TerminateJobQueueResponse * const q) : TerminateJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch TerminateJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TerminateJobResponsePrivate::TerminateJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TerminateJobResponse"));
+    /// @todo
+}

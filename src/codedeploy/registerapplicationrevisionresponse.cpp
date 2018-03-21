@@ -19,3 +19,85 @@
 
 #include "registerapplicationrevisionresponse.h"
 #include "registerapplicationrevisionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  RegisterApplicationRevisionResponse
+ *
+ * @brief  Handles CodeDeploy RegisterApplicationRevision responses.
+ *
+ * @see    CodeDeployClient::registerApplicationRevision
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterApplicationRevisionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new RegisterApplicationRevisionResponsePrivate(this), parent)
+{
+    setRequest(new RegisterApplicationRevisionRequest(request));
+    setReply(reply);
+}
+
+const RegisterApplicationRevisionRequest * RegisterApplicationRevisionResponse::request() const
+{
+    Q_D(const RegisterApplicationRevisionResponse);
+    return static_cast<const RegisterApplicationRevisionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy RegisterApplicationRevision response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterApplicationRevisionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterApplicationRevisionResponsePrivate
+ *
+ * @brief  Private implementation for RegisterApplicationRevisionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterApplicationRevisionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterApplicationRevisionResponse instance.
+ */
+RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponsePrivate(
+    RegisterApplicationRevisionQueueResponse * const q) : RegisterApplicationRevisionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy RegisterApplicationRevisionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterApplicationRevisionResponse"));
+    /// @todo
+}

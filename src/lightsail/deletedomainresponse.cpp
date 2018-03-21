@@ -19,3 +19,85 @@
 
 #include "deletedomainresponse.h"
 #include "deletedomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteDomainResponse
+ *
+ * @brief  Handles Lightsail DeleteDomain responses.
+ *
+ * @see    LightsailClient::deleteDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DeleteDomainResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDomainRequest(request));
+    setReply(reply);
+}
+
+const DeleteDomainRequest * DeleteDomainResponse::request() const
+{
+    Q_D(const DeleteDomainResponse);
+    return static_cast<const DeleteDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DeleteDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDomainResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDomainResponse instance.
+ */
+DeleteDomainResponsePrivate::DeleteDomainResponsePrivate(
+    DeleteDomainQueueResponse * const q) : DeleteDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DeleteDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDomainResponsePrivate::DeleteDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDomainResponse"));
+    /// @todo
+}

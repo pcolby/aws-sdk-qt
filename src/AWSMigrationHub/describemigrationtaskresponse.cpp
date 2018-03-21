@@ -19,3 +19,85 @@
 
 #include "describemigrationtaskresponse.h"
 #include "describemigrationtaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DescribeMigrationTaskResponse
+ *
+ * @brief  Handles MigrationHub DescribeMigrationTask responses.
+ *
+ * @see    MigrationHubClient::describeMigrationTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMigrationTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new DescribeMigrationTaskResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMigrationTaskRequest(request));
+    setReply(reply);
+}
+
+const DescribeMigrationTaskRequest * DescribeMigrationTaskResponse::request() const
+{
+    Q_D(const DescribeMigrationTaskResponse);
+    return static_cast<const DescribeMigrationTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub DescribeMigrationTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMigrationTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMigrationTaskResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMigrationTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMigrationTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMigrationTaskResponse instance.
+ */
+DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponsePrivate(
+    DescribeMigrationTaskQueueResponse * const q) : DescribeMigrationTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub DescribeMigrationTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMigrationTaskResponse"));
+    /// @todo
+}

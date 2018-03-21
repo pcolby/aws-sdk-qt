@@ -19,3 +19,85 @@
 
 #include "confirmsignupresponse.h"
 #include "confirmsignupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ConfirmSignUpResponse
+ *
+ * @brief  Handles CognitoIdentityProvider ConfirmSignUp responses.
+ *
+ * @see    CognitoIdentityProviderClient::confirmSignUp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmSignUpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new ConfirmSignUpResponsePrivate(this), parent)
+{
+    setRequest(new ConfirmSignUpRequest(request));
+    setReply(reply);
+}
+
+const ConfirmSignUpRequest * ConfirmSignUpResponse::request() const
+{
+    Q_D(const ConfirmSignUpResponse);
+    return static_cast<const ConfirmSignUpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider ConfirmSignUp response.
+ *
+ * @param  response  Response to parse.
+ */
+void ConfirmSignUpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmSignUpResponsePrivate
+ *
+ * @brief  Private implementation for ConfirmSignUpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmSignUpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ConfirmSignUpResponse instance.
+ */
+ConfirmSignUpResponsePrivate::ConfirmSignUpResponsePrivate(
+    ConfirmSignUpQueueResponse * const q) : ConfirmSignUpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider ConfirmSignUpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ConfirmSignUpResponsePrivate::ConfirmSignUpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ConfirmSignUpResponse"));
+    /// @todo
+}

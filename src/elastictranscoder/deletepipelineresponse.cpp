@@ -19,3 +19,85 @@
 
 #include "deletepipelineresponse.h"
 #include "deletepipelineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  DeletePipelineResponse
+ *
+ * @brief  Handles ElasticTranscoder DeletePipeline responses.
+ *
+ * @see    ElasticTranscoderClient::deletePipeline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePipelineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticTranscoderResponse(new DeletePipelineResponsePrivate(this), parent)
+{
+    setRequest(new DeletePipelineRequest(request));
+    setReply(reply);
+}
+
+const DeletePipelineRequest * DeletePipelineResponse::request() const
+{
+    Q_D(const DeletePipelineResponse);
+    return static_cast<const DeletePipelineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticTranscoder DeletePipeline response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePipelineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePipelineResponsePrivate
+ *
+ * @brief  Private implementation for DeletePipelineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePipelineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePipelineResponse instance.
+ */
+DeletePipelineResponsePrivate::DeletePipelineResponsePrivate(
+    DeletePipelineQueueResponse * const q) : DeletePipelinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticTranscoder DeletePipelineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePipelineResponsePrivate::DeletePipelineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePipelineResponse"));
+    /// @todo
+}

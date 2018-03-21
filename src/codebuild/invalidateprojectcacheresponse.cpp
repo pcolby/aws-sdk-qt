@@ -19,3 +19,85 @@
 
 #include "invalidateprojectcacheresponse.h"
 #include "invalidateprojectcacheresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  InvalidateProjectCacheResponse
+ *
+ * @brief  Handles CodeBuild InvalidateProjectCache responses.
+ *
+ * @see    CodeBuildClient::invalidateProjectCache
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InvalidateProjectCacheResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new InvalidateProjectCacheResponsePrivate(this), parent)
+{
+    setRequest(new InvalidateProjectCacheRequest(request));
+    setReply(reply);
+}
+
+const InvalidateProjectCacheRequest * InvalidateProjectCacheResponse::request() const
+{
+    Q_D(const InvalidateProjectCacheResponse);
+    return static_cast<const InvalidateProjectCacheRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild InvalidateProjectCache response.
+ *
+ * @param  response  Response to parse.
+ */
+void InvalidateProjectCacheResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InvalidateProjectCacheResponsePrivate
+ *
+ * @brief  Private implementation for InvalidateProjectCacheResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InvalidateProjectCacheResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InvalidateProjectCacheResponse instance.
+ */
+InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponsePrivate(
+    InvalidateProjectCacheQueueResponse * const q) : InvalidateProjectCachePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild InvalidateProjectCacheResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InvalidateProjectCacheResponse"));
+    /// @todo
+}

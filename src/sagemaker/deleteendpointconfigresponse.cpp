@@ -19,3 +19,85 @@
 
 #include "deleteendpointconfigresponse.h"
 #include "deleteendpointconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DeleteEndpointConfigResponse
+ *
+ * @brief  Handles SageMaker DeleteEndpointConfig responses.
+ *
+ * @see    SageMakerClient::deleteEndpointConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEndpointConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new DeleteEndpointConfigResponsePrivate(this), parent)
+{
+    setRequest(new DeleteEndpointConfigRequest(request));
+    setReply(reply);
+}
+
+const DeleteEndpointConfigRequest * DeleteEndpointConfigResponse::request() const
+{
+    Q_D(const DeleteEndpointConfigResponse);
+    return static_cast<const DeleteEndpointConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker DeleteEndpointConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteEndpointConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEndpointConfigResponsePrivate
+ *
+ * @brief  Private implementation for DeleteEndpointConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEndpointConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteEndpointConfigResponse instance.
+ */
+DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponsePrivate(
+    DeleteEndpointConfigQueueResponse * const q) : DeleteEndpointConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker DeleteEndpointConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteEndpointConfigResponse"));
+    /// @todo
+}

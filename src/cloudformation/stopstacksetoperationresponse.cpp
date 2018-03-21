@@ -19,3 +19,85 @@
 
 #include "stopstacksetoperationresponse.h"
 #include "stopstacksetoperationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  StopStackSetOperationResponse
+ *
+ * @brief  Handles CloudFormation StopStackSetOperation responses.
+ *
+ * @see    CloudFormationClient::stopStackSetOperation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStackSetOperationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new StopStackSetOperationResponsePrivate(this), parent)
+{
+    setRequest(new StopStackSetOperationRequest(request));
+    setReply(reply);
+}
+
+const StopStackSetOperationRequest * StopStackSetOperationResponse::request() const
+{
+    Q_D(const StopStackSetOperationResponse);
+    return static_cast<const StopStackSetOperationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation StopStackSetOperation response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopStackSetOperationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStackSetOperationResponsePrivate
+ *
+ * @brief  Private implementation for StopStackSetOperationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStackSetOperationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopStackSetOperationResponse instance.
+ */
+StopStackSetOperationResponsePrivate::StopStackSetOperationResponsePrivate(
+    StopStackSetOperationQueueResponse * const q) : StopStackSetOperationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation StopStackSetOperationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopStackSetOperationResponsePrivate::StopStackSetOperationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopStackSetOperationResponse"));
+    /// @todo
+}

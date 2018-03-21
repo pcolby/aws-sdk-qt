@@ -19,3 +19,85 @@
 
 #include "verifyemailaddressresponse.h"
 #include "verifyemailaddressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  VerifyEmailAddressResponse
+ *
+ * @brief  Handles SES VerifyEmailAddress responses.
+ *
+ * @see    SESClient::verifyEmailAddress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyEmailAddressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new VerifyEmailAddressResponsePrivate(this), parent)
+{
+    setRequest(new VerifyEmailAddressRequest(request));
+    setReply(reply);
+}
+
+const VerifyEmailAddressRequest * VerifyEmailAddressResponse::request() const
+{
+    Q_D(const VerifyEmailAddressResponse);
+    return static_cast<const VerifyEmailAddressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES VerifyEmailAddress response.
+ *
+ * @param  response  Response to parse.
+ */
+void VerifyEmailAddressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyEmailAddressResponsePrivate
+ *
+ * @brief  Private implementation for VerifyEmailAddressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyEmailAddressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public VerifyEmailAddressResponse instance.
+ */
+VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponsePrivate(
+    VerifyEmailAddressQueueResponse * const q) : VerifyEmailAddressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES VerifyEmailAddressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("VerifyEmailAddressResponse"));
+    /// @todo
+}

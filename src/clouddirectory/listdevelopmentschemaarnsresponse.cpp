@@ -19,3 +19,85 @@
 
 #include "listdevelopmentschemaarnsresponse.h"
 #include "listdevelopmentschemaarnsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListDevelopmentSchemaArnsResponse
+ *
+ * @brief  Handles CloudDirectory ListDevelopmentSchemaArns responses.
+ *
+ * @see    CloudDirectoryClient::listDevelopmentSchemaArns
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDevelopmentSchemaArnsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListDevelopmentSchemaArnsResponsePrivate(this), parent)
+{
+    setRequest(new ListDevelopmentSchemaArnsRequest(request));
+    setReply(reply);
+}
+
+const ListDevelopmentSchemaArnsRequest * ListDevelopmentSchemaArnsResponse::request() const
+{
+    Q_D(const ListDevelopmentSchemaArnsResponse);
+    return static_cast<const ListDevelopmentSchemaArnsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListDevelopmentSchemaArns response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDevelopmentSchemaArnsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDevelopmentSchemaArnsResponsePrivate
+ *
+ * @brief  Private implementation for ListDevelopmentSchemaArnsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDevelopmentSchemaArnsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDevelopmentSchemaArnsResponse instance.
+ */
+ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponsePrivate(
+    ListDevelopmentSchemaArnsQueueResponse * const q) : ListDevelopmentSchemaArnsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListDevelopmentSchemaArnsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDevelopmentSchemaArnsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "uploadarchiveresponse.h"
 #include "uploadarchiveresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  UploadArchiveResponse
+ *
+ * @brief  Handles Glacier UploadArchive responses.
+ *
+ * @see    GlacierClient::uploadArchive
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UploadArchiveResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new UploadArchiveResponsePrivate(this), parent)
+{
+    setRequest(new UploadArchiveRequest(request));
+    setReply(reply);
+}
+
+const UploadArchiveRequest * UploadArchiveResponse::request() const
+{
+    Q_D(const UploadArchiveResponse);
+    return static_cast<const UploadArchiveRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier UploadArchive response.
+ *
+ * @param  response  Response to parse.
+ */
+void UploadArchiveResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UploadArchiveResponsePrivate
+ *
+ * @brief  Private implementation for UploadArchiveResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadArchiveResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UploadArchiveResponse instance.
+ */
+UploadArchiveResponsePrivate::UploadArchiveResponsePrivate(
+    UploadArchiveQueueResponse * const q) : UploadArchivePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier UploadArchiveResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UploadArchiveResponsePrivate::UploadArchiveResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UploadArchiveResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "testeventpatternresponse.h"
 #include "testeventpatternresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  TestEventPatternResponse
+ *
+ * @brief  Handles CloudWatchEvents TestEventPattern responses.
+ *
+ * @see    CloudWatchEventsClient::testEventPattern
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestEventPatternResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new TestEventPatternResponsePrivate(this), parent)
+{
+    setRequest(new TestEventPatternRequest(request));
+    setReply(reply);
+}
+
+const TestEventPatternRequest * TestEventPatternResponse::request() const
+{
+    Q_D(const TestEventPatternResponse);
+    return static_cast<const TestEventPatternRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents TestEventPattern response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestEventPatternResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestEventPatternResponsePrivate
+ *
+ * @brief  Private implementation for TestEventPatternResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestEventPatternResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestEventPatternResponse instance.
+ */
+TestEventPatternResponsePrivate::TestEventPatternResponsePrivate(
+    TestEventPatternQueueResponse * const q) : TestEventPatternPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents TestEventPatternResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestEventPatternResponsePrivate::TestEventPatternResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestEventPatternResponse"));
+    /// @todo
+}

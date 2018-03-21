@@ -19,3 +19,85 @@
 
 #include "getconnectionresponse.h"
 #include "getconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetConnectionResponse
+ *
+ * @brief  Handles Glue GetConnection responses.
+ *
+ * @see    GlueClient::getConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetConnectionResponsePrivate(this), parent)
+{
+    setRequest(new GetConnectionRequest(request));
+    setReply(reply);
+}
+
+const GetConnectionRequest * GetConnectionResponse::request() const
+{
+    Q_D(const GetConnectionResponse);
+    return static_cast<const GetConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConnectionResponsePrivate
+ *
+ * @brief  Private implementation for GetConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetConnectionResponse instance.
+ */
+GetConnectionResponsePrivate::GetConnectionResponsePrivate(
+    GetConnectionQueueResponse * const q) : GetConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetConnectionResponsePrivate::GetConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetConnectionResponse"));
+    /// @todo
+}

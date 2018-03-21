@@ -19,3 +19,85 @@
 
 #include "deletefileshareresponse.h"
 #include "deletefileshareresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteFileShareResponse
+ *
+ * @brief  Handles StorageGateway DeleteFileShare responses.
+ *
+ * @see    StorageGatewayClient::deleteFileShare
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFileShareResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DeleteFileShareResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFileShareRequest(request));
+    setReply(reply);
+}
+
+const DeleteFileShareRequest * DeleteFileShareResponse::request() const
+{
+    Q_D(const DeleteFileShareResponse);
+    return static_cast<const DeleteFileShareRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DeleteFileShare response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFileShareResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFileShareResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFileShareResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFileShareResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFileShareResponse instance.
+ */
+DeleteFileShareResponsePrivate::DeleteFileShareResponsePrivate(
+    DeleteFileShareQueueResponse * const q) : DeleteFileSharePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DeleteFileShareResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFileShareResponsePrivate::DeleteFileShareResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFileShareResponse"));
+    /// @todo
+}

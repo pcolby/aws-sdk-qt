@@ -19,3 +19,85 @@
 
 #include "deletesamlproviderresponse.h"
 #include "deletesamlproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteSAMLProviderResponse
+ *
+ * @brief  Handles IAM DeleteSAMLProvider responses.
+ *
+ * @see    IAMClient::deleteSAMLProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSAMLProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteSAMLProviderResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSAMLProviderRequest(request));
+    setReply(reply);
+}
+
+const DeleteSAMLProviderRequest * DeleteSAMLProviderResponse::request() const
+{
+    Q_D(const DeleteSAMLProviderResponse);
+    return static_cast<const DeleteSAMLProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteSAMLProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSAMLProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSAMLProviderResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSAMLProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSAMLProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSAMLProviderResponse instance.
+ */
+DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponsePrivate(
+    DeleteSAMLProviderQueueResponse * const q) : DeleteSAMLProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteSAMLProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSAMLProviderResponse"));
+    /// @todo
+}

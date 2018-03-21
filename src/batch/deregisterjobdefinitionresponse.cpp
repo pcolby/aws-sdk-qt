@@ -19,3 +19,85 @@
 
 #include "deregisterjobdefinitionresponse.h"
 #include "deregisterjobdefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  DeregisterJobDefinitionResponse
+ *
+ * @brief  Handles Batch DeregisterJobDefinition responses.
+ *
+ * @see    BatchClient::deregisterJobDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterJobDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new DeregisterJobDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterJobDefinitionRequest(request));
+    setReply(reply);
+}
+
+const DeregisterJobDefinitionRequest * DeregisterJobDefinitionResponse::request() const
+{
+    Q_D(const DeregisterJobDefinitionResponse);
+    return static_cast<const DeregisterJobDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch DeregisterJobDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterJobDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterJobDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterJobDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterJobDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterJobDefinitionResponse instance.
+ */
+DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponsePrivate(
+    DeregisterJobDefinitionQueueResponse * const q) : DeregisterJobDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch DeregisterJobDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterJobDefinitionResponse"));
+    /// @todo
+}

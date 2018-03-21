@@ -19,3 +19,85 @@
 
 #include "listtagsforstreamresponse.h"
 #include "listtagsforstreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisVideo {
+
+/**
+ * @class  ListTagsForStreamResponse
+ *
+ * @brief  Handles KinesisVideo ListTagsForStream responses.
+ *
+ * @see    KinesisVideoClient::listTagsForStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisVideoResponse(new ListTagsForStreamResponsePrivate(this), parent)
+{
+    setRequest(new ListTagsForStreamRequest(request));
+    setReply(reply);
+}
+
+const ListTagsForStreamRequest * ListTagsForStreamResponse::request() const
+{
+    Q_D(const ListTagsForStreamResponse);
+    return static_cast<const ListTagsForStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisVideo ListTagsForStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTagsForStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForStreamResponsePrivate
+ *
+ * @brief  Private implementation for ListTagsForStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTagsForStreamResponse instance.
+ */
+ListTagsForStreamResponsePrivate::ListTagsForStreamResponsePrivate(
+    ListTagsForStreamQueueResponse * const q) : ListTagsForStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisVideo ListTagsForStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTagsForStreamResponsePrivate::ListTagsForStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTagsForStreamResponse"));
+    /// @todo
+}

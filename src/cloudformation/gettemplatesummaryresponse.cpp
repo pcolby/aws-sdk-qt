@@ -19,3 +19,85 @@
 
 #include "gettemplatesummaryresponse.h"
 #include "gettemplatesummaryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  GetTemplateSummaryResponse
+ *
+ * @brief  Handles CloudFormation GetTemplateSummary responses.
+ *
+ * @see    CloudFormationClient::getTemplateSummary
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTemplateSummaryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new GetTemplateSummaryResponsePrivate(this), parent)
+{
+    setRequest(new GetTemplateSummaryRequest(request));
+    setReply(reply);
+}
+
+const GetTemplateSummaryRequest * GetTemplateSummaryResponse::request() const
+{
+    Q_D(const GetTemplateSummaryResponse);
+    return static_cast<const GetTemplateSummaryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation GetTemplateSummary response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTemplateSummaryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTemplateSummaryResponsePrivate
+ *
+ * @brief  Private implementation for GetTemplateSummaryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTemplateSummaryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTemplateSummaryResponse instance.
+ */
+GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponsePrivate(
+    GetTemplateSummaryQueueResponse * const q) : GetTemplateSummaryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation GetTemplateSummaryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTemplateSummaryResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "associateconfigurationitemstoapplicationresponse.h"
 #include "associateconfigurationitemstoapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  AssociateConfigurationItemsToApplicationResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService AssociateConfigurationItemsToApplication responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateConfigurationItemsToApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new AssociateConfigurationItemsToApplicationResponsePrivate(this), parent)
+{
+    setRequest(new AssociateConfigurationItemsToApplicationRequest(request));
+    setReply(reply);
+}
+
+const AssociateConfigurationItemsToApplicationRequest * AssociateConfigurationItemsToApplicationResponse::request() const
+{
+    Q_D(const AssociateConfigurationItemsToApplicationResponse);
+    return static_cast<const AssociateConfigurationItemsToApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService AssociateConfigurationItemsToApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateConfigurationItemsToApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateConfigurationItemsToApplicationResponsePrivate
+ *
+ * @brief  Private implementation for AssociateConfigurationItemsToApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateConfigurationItemsToApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateConfigurationItemsToApplicationResponse instance.
+ */
+AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationItemsToApplicationResponsePrivate(
+    AssociateConfigurationItemsToApplicationQueueResponse * const q) : AssociateConfigurationItemsToApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService AssociateConfigurationItemsToApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationItemsToApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateConfigurationItemsToApplicationResponse"));
+    /// @todo
+}

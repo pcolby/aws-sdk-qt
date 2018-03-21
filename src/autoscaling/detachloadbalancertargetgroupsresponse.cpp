@@ -19,3 +19,85 @@
 
 #include "detachloadbalancertargetgroupsresponse.h"
 #include "detachloadbalancertargetgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DetachLoadBalancerTargetGroupsResponse
+ *
+ * @brief  Handles AutoScaling DetachLoadBalancerTargetGroups responses.
+ *
+ * @see    AutoScalingClient::detachLoadBalancerTargetGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachLoadBalancerTargetGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DetachLoadBalancerTargetGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DetachLoadBalancerTargetGroupsRequest(request));
+    setReply(reply);
+}
+
+const DetachLoadBalancerTargetGroupsRequest * DetachLoadBalancerTargetGroupsResponse::request() const
+{
+    Q_D(const DetachLoadBalancerTargetGroupsResponse);
+    return static_cast<const DetachLoadBalancerTargetGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DetachLoadBalancerTargetGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachLoadBalancerTargetGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DetachLoadBalancerTargetGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachLoadBalancerTargetGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachLoadBalancerTargetGroupsResponse instance.
+ */
+DetachLoadBalancerTargetGroupsResponsePrivate::DetachLoadBalancerTargetGroupsResponsePrivate(
+    DetachLoadBalancerTargetGroupsQueueResponse * const q) : DetachLoadBalancerTargetGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DetachLoadBalancerTargetGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachLoadBalancerTargetGroupsResponsePrivate::DetachLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancerTargetGroupsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "runtaskresponse.h"
 #include "runtaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  RunTaskResponse
+ *
+ * @brief  Handles ECS RunTask responses.
+ *
+ * @see    ECSClient::runTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RunTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new RunTaskResponsePrivate(this), parent)
+{
+    setRequest(new RunTaskRequest(request));
+    setReply(reply);
+}
+
+const RunTaskRequest * RunTaskResponse::request() const
+{
+    Q_D(const RunTaskResponse);
+    return static_cast<const RunTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS RunTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void RunTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RunTaskResponsePrivate
+ *
+ * @brief  Private implementation for RunTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RunTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RunTaskResponse instance.
+ */
+RunTaskResponsePrivate::RunTaskResponsePrivate(
+    RunTaskQueueResponse * const q) : RunTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS RunTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RunTaskResponsePrivate::RunTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RunTaskResponse"));
+    /// @todo
+}

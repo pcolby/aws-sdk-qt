@@ -19,3 +19,85 @@
 
 #include "updatequeueresponse.h"
 #include "updatequeueresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  UpdateQueueResponse
+ *
+ * @brief  Handles MediaConvert UpdateQueue responses.
+ *
+ * @see    MediaConvertClient::updateQueue
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateQueueResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new UpdateQueueResponsePrivate(this), parent)
+{
+    setRequest(new UpdateQueueRequest(request));
+    setReply(reply);
+}
+
+const UpdateQueueRequest * UpdateQueueResponse::request() const
+{
+    Q_D(const UpdateQueueResponse);
+    return static_cast<const UpdateQueueRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert UpdateQueue response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateQueueResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateQueueResponsePrivate
+ *
+ * @brief  Private implementation for UpdateQueueResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateQueueResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateQueueResponse instance.
+ */
+UpdateQueueResponsePrivate::UpdateQueueResponsePrivate(
+    UpdateQueueQueueResponse * const q) : UpdateQueuePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert UpdateQueueResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateQueueResponsePrivate::UpdateQueueResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateQueueResponse"));
+    /// @todo
+}

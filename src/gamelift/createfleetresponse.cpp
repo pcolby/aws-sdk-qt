@@ -19,3 +19,85 @@
 
 #include "createfleetresponse.h"
 #include "createfleetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateFleetResponse
+ *
+ * @brief  Handles GameLift CreateFleet responses.
+ *
+ * @see    GameLiftClient::createFleet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFleetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new CreateFleetResponsePrivate(this), parent)
+{
+    setRequest(new CreateFleetRequest(request));
+    setReply(reply);
+}
+
+const CreateFleetRequest * CreateFleetResponse::request() const
+{
+    Q_D(const CreateFleetResponse);
+    return static_cast<const CreateFleetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift CreateFleet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateFleetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFleetResponsePrivate
+ *
+ * @brief  Private implementation for CreateFleetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFleetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateFleetResponse instance.
+ */
+CreateFleetResponsePrivate::CreateFleetResponsePrivate(
+    CreateFleetQueueResponse * const q) : CreateFleetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift CreateFleetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateFleetResponsePrivate::CreateFleetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateFleetResponse"));
+    /// @todo
+}

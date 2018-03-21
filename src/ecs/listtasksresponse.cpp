@@ -19,3 +19,85 @@
 
 #include "listtasksresponse.h"
 #include "listtasksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  ListTasksResponse
+ *
+ * @brief  Handles ECS ListTasks responses.
+ *
+ * @see    ECSClient::listTasks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTasksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new ListTasksResponsePrivate(this), parent)
+{
+    setRequest(new ListTasksRequest(request));
+    setReply(reply);
+}
+
+const ListTasksRequest * ListTasksResponse::request() const
+{
+    Q_D(const ListTasksResponse);
+    return static_cast<const ListTasksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS ListTasks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTasksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTasksResponsePrivate
+ *
+ * @brief  Private implementation for ListTasksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTasksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTasksResponse instance.
+ */
+ListTasksResponsePrivate::ListTasksResponsePrivate(
+    ListTasksQueueResponse * const q) : ListTasksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS ListTasksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTasksResponsePrivate::ListTasksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTasksResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteidentitypolicyresponse.h"
 #include "deleteidentitypolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteIdentityPolicyResponse
+ *
+ * @brief  Handles SES DeleteIdentityPolicy responses.
+ *
+ * @see    SESClient::deleteIdentityPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIdentityPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DeleteIdentityPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteIdentityPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteIdentityPolicyRequest * DeleteIdentityPolicyResponse::request() const
+{
+    Q_D(const DeleteIdentityPolicyResponse);
+    return static_cast<const DeleteIdentityPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DeleteIdentityPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteIdentityPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIdentityPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteIdentityPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentityPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteIdentityPolicyResponse instance.
+ */
+DeleteIdentityPolicyResponsePrivate::DeleteIdentityPolicyResponsePrivate(
+    DeleteIdentityPolicyQueueResponse * const q) : DeleteIdentityPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DeleteIdentityPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteIdentityPolicyResponsePrivate::DeleteIdentityPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteIdentityPolicyResponse"));
+    /// @todo
+}

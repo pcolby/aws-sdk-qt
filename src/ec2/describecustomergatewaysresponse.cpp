@@ -19,3 +19,85 @@
 
 #include "describecustomergatewaysresponse.h"
 #include "describecustomergatewaysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeCustomerGatewaysResponse
+ *
+ * @brief  Handles EC2 DescribeCustomerGateways responses.
+ *
+ * @see    EC2Client::describeCustomerGateways
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCustomerGatewaysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeCustomerGatewaysResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCustomerGatewaysRequest(request));
+    setReply(reply);
+}
+
+const DescribeCustomerGatewaysRequest * DescribeCustomerGatewaysResponse::request() const
+{
+    Q_D(const DescribeCustomerGatewaysResponse);
+    return static_cast<const DescribeCustomerGatewaysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeCustomerGateways response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCustomerGatewaysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCustomerGatewaysResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCustomerGatewaysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCustomerGatewaysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCustomerGatewaysResponse instance.
+ */
+DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponsePrivate(
+    DescribeCustomerGatewaysQueueResponse * const q) : DescribeCustomerGatewaysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeCustomerGatewaysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCustomerGatewaysResponse"));
+    /// @todo
+}

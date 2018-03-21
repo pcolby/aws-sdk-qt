@@ -19,3 +19,85 @@
 
 #include "putjobsuccessresultresponse.h"
 #include "putjobsuccessresultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PutJobSuccessResultResponse
+ *
+ * @brief  Handles CodePipeline PutJobSuccessResult responses.
+ *
+ * @see    CodePipelineClient::putJobSuccessResult
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutJobSuccessResultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new PutJobSuccessResultResponsePrivate(this), parent)
+{
+    setRequest(new PutJobSuccessResultRequest(request));
+    setReply(reply);
+}
+
+const PutJobSuccessResultRequest * PutJobSuccessResultResponse::request() const
+{
+    Q_D(const PutJobSuccessResultResponse);
+    return static_cast<const PutJobSuccessResultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline PutJobSuccessResult response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutJobSuccessResultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutJobSuccessResultResponsePrivate
+ *
+ * @brief  Private implementation for PutJobSuccessResultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutJobSuccessResultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutJobSuccessResultResponse instance.
+ */
+PutJobSuccessResultResponsePrivate::PutJobSuccessResultResponsePrivate(
+    PutJobSuccessResultQueueResponse * const q) : PutJobSuccessResultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline PutJobSuccessResultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutJobSuccessResultResponsePrivate::PutJobSuccessResultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutJobSuccessResultResponse"));
+    /// @todo
+}

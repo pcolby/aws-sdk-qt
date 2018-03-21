@@ -19,3 +19,85 @@
 
 #include "createlistenerresponse.h"
 #include "createlistenerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  CreateListenerResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 CreateListener responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::createListener
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateListenerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new CreateListenerResponsePrivate(this), parent)
+{
+    setRequest(new CreateListenerRequest(request));
+    setReply(reply);
+}
+
+const CreateListenerRequest * CreateListenerResponse::request() const
+{
+    Q_D(const CreateListenerResponse);
+    return static_cast<const CreateListenerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 CreateListener response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateListenerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateListenerResponsePrivate
+ *
+ * @brief  Private implementation for CreateListenerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateListenerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateListenerResponse instance.
+ */
+CreateListenerResponsePrivate::CreateListenerResponsePrivate(
+    CreateListenerQueueResponse * const q) : CreateListenerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 CreateListenerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateListenerResponsePrivate::CreateListenerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateListenerResponse"));
+    /// @todo
+}

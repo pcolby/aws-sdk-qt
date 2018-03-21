@@ -19,3 +19,85 @@
 
 #include "getcampaignversionsresponse.h"
 #include "getcampaignversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetCampaignVersionsResponse
+ *
+ * @brief  Handles Pinpoint GetCampaignVersions responses.
+ *
+ * @see    PinpointClient::getCampaignVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCampaignVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetCampaignVersionsResponsePrivate(this), parent)
+{
+    setRequest(new GetCampaignVersionsRequest(request));
+    setReply(reply);
+}
+
+const GetCampaignVersionsRequest * GetCampaignVersionsResponse::request() const
+{
+    Q_D(const GetCampaignVersionsResponse);
+    return static_cast<const GetCampaignVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetCampaignVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCampaignVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCampaignVersionsResponsePrivate
+ *
+ * @brief  Private implementation for GetCampaignVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCampaignVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCampaignVersionsResponse instance.
+ */
+GetCampaignVersionsResponsePrivate::GetCampaignVersionsResponsePrivate(
+    GetCampaignVersionsQueueResponse * const q) : GetCampaignVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetCampaignVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCampaignVersionsResponsePrivate::GetCampaignVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCampaignVersionsResponse"));
+    /// @todo
+}

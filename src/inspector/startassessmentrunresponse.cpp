@@ -19,3 +19,85 @@
 
 #include "startassessmentrunresponse.h"
 #include "startassessmentrunresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  StartAssessmentRunResponse
+ *
+ * @brief  Handles Inspector StartAssessmentRun responses.
+ *
+ * @see    InspectorClient::startAssessmentRun
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartAssessmentRunResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new StartAssessmentRunResponsePrivate(this), parent)
+{
+    setRequest(new StartAssessmentRunRequest(request));
+    setReply(reply);
+}
+
+const StartAssessmentRunRequest * StartAssessmentRunResponse::request() const
+{
+    Q_D(const StartAssessmentRunResponse);
+    return static_cast<const StartAssessmentRunRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector StartAssessmentRun response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartAssessmentRunResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartAssessmentRunResponsePrivate
+ *
+ * @brief  Private implementation for StartAssessmentRunResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartAssessmentRunResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartAssessmentRunResponse instance.
+ */
+StartAssessmentRunResponsePrivate::StartAssessmentRunResponsePrivate(
+    StartAssessmentRunQueueResponse * const q) : StartAssessmentRunPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector StartAssessmentRunResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartAssessmentRunResponsePrivate::StartAssessmentRunResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartAssessmentRunResponse"));
+    /// @todo
+}

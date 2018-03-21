@@ -19,3 +19,85 @@
 
 #include "isvpcpeeredresponse.h"
 #include "isvpcpeeredresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  IsVpcPeeredResponse
+ *
+ * @brief  Handles Lightsail IsVpcPeered responses.
+ *
+ * @see    LightsailClient::isVpcPeered
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IsVpcPeeredResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new IsVpcPeeredResponsePrivate(this), parent)
+{
+    setRequest(new IsVpcPeeredRequest(request));
+    setReply(reply);
+}
+
+const IsVpcPeeredRequest * IsVpcPeeredResponse::request() const
+{
+    Q_D(const IsVpcPeeredResponse);
+    return static_cast<const IsVpcPeeredRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail IsVpcPeered response.
+ *
+ * @param  response  Response to parse.
+ */
+void IsVpcPeeredResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  IsVpcPeeredResponsePrivate
+ *
+ * @brief  Private implementation for IsVpcPeeredResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IsVpcPeeredResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public IsVpcPeeredResponse instance.
+ */
+IsVpcPeeredResponsePrivate::IsVpcPeeredResponsePrivate(
+    IsVpcPeeredQueueResponse * const q) : IsVpcPeeredPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail IsVpcPeeredResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void IsVpcPeeredResponsePrivate::IsVpcPeeredResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("IsVpcPeeredResponse"));
+    /// @todo
+}

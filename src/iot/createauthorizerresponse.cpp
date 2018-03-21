@@ -19,3 +19,85 @@
 
 #include "createauthorizerresponse.h"
 #include "createauthorizerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateAuthorizerResponse
+ *
+ * @brief  Handles IoT CreateAuthorizer responses.
+ *
+ * @see    IoTClient::createAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAuthorizerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreateAuthorizerResponsePrivate(this), parent)
+{
+    setRequest(new CreateAuthorizerRequest(request));
+    setReply(reply);
+}
+
+const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
+{
+    Q_D(const CreateAuthorizerResponse);
+    return static_cast<const CreateAuthorizerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreateAuthorizer response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAuthorizerResponsePrivate
+ *
+ * @brief  Private implementation for CreateAuthorizerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAuthorizerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAuthorizerResponse instance.
+ */
+CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
+    CreateAuthorizerQueueResponse * const q) : CreateAuthorizerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreateAuthorizerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAuthorizerResponsePrivate::CreateAuthorizerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAuthorizerResponse"));
+    /// @todo
+}

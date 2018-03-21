@@ -19,3 +19,85 @@
 
 #include "getobjectresponse.h"
 #include "getobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStoreData {
+
+/**
+ * @class  GetObjectResponse
+ *
+ * @brief  Handles MediaStoreData GetObject responses.
+ *
+ * @see    MediaStoreDataClient::getObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreDataResponse(new GetObjectResponsePrivate(this), parent)
+{
+    setRequest(new GetObjectRequest(request));
+    setReply(reply);
+}
+
+const GetObjectRequest * GetObjectResponse::request() const
+{
+    Q_D(const GetObjectResponse);
+    return static_cast<const GetObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStoreData GetObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetObjectResponsePrivate
+ *
+ * @brief  Private implementation for GetObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetObjectResponse instance.
+ */
+GetObjectResponsePrivate::GetObjectResponsePrivate(
+    GetObjectQueueResponse * const q) : GetObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStoreData GetObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetObjectResponsePrivate::GetObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetObjectResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updateindexingconfigurationresponse.h"
 #include "updateindexingconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateIndexingConfigurationResponse
+ *
+ * @brief  Handles IoT UpdateIndexingConfiguration responses.
+ *
+ * @see    IoTClient::updateIndexingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateIndexingConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new UpdateIndexingConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateIndexingConfigurationRequest(request));
+    setReply(reply);
+}
+
+const UpdateIndexingConfigurationRequest * UpdateIndexingConfigurationResponse::request() const
+{
+    Q_D(const UpdateIndexingConfigurationResponse);
+    return static_cast<const UpdateIndexingConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT UpdateIndexingConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateIndexingConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateIndexingConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateIndexingConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIndexingConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateIndexingConfigurationResponse instance.
+ */
+UpdateIndexingConfigurationResponsePrivate::UpdateIndexingConfigurationResponsePrivate(
+    UpdateIndexingConfigurationQueueResponse * const q) : UpdateIndexingConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT UpdateIndexingConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateIndexingConfigurationResponsePrivate::UpdateIndexingConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateIndexingConfigurationResponse"));
+    /// @todo
+}

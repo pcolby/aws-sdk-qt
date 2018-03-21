@@ -19,3 +19,85 @@
 
 #include "deletestacksetresponse.h"
 #include "deletestacksetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DeleteStackSetResponse
+ *
+ * @brief  Handles CloudFormation DeleteStackSet responses.
+ *
+ * @see    CloudFormationClient::deleteStackSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStackSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new DeleteStackSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteStackSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteStackSetRequest * DeleteStackSetResponse::request() const
+{
+    Q_D(const DeleteStackSetResponse);
+    return static_cast<const DeleteStackSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation DeleteStackSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteStackSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStackSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteStackSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStackSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteStackSetResponse instance.
+ */
+DeleteStackSetResponsePrivate::DeleteStackSetResponsePrivate(
+    DeleteStackSetQueueResponse * const q) : DeleteStackSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation DeleteStackSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteStackSetResponsePrivate::DeleteStackSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteStackSetResponse"));
+    /// @todo
+}

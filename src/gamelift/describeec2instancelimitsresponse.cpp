@@ -19,3 +19,85 @@
 
 #include "describeec2instancelimitsresponse.h"
 #include "describeec2instancelimitsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeEC2InstanceLimitsResponse
+ *
+ * @brief  Handles GameLift DescribeEC2InstanceLimits responses.
+ *
+ * @see    GameLiftClient::describeEC2InstanceLimits
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEC2InstanceLimitsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeEC2InstanceLimitsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEC2InstanceLimitsRequest(request));
+    setReply(reply);
+}
+
+const DescribeEC2InstanceLimitsRequest * DescribeEC2InstanceLimitsResponse::request() const
+{
+    Q_D(const DescribeEC2InstanceLimitsResponse);
+    return static_cast<const DescribeEC2InstanceLimitsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeEC2InstanceLimits response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEC2InstanceLimitsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEC2InstanceLimitsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEC2InstanceLimitsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEC2InstanceLimitsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEC2InstanceLimitsResponse instance.
+ */
+DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponsePrivate(
+    DescribeEC2InstanceLimitsQueueResponse * const q) : DescribeEC2InstanceLimitsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeEC2InstanceLimitsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEC2InstanceLimitsResponse"));
+    /// @todo
+}

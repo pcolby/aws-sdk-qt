@@ -19,3 +19,85 @@
 
 #include "deletewebhookresponse.h"
 #include "deletewebhookresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  DeleteWebhookResponse
+ *
+ * @brief  Handles CodeBuild DeleteWebhook responses.
+ *
+ * @see    CodeBuildClient::deleteWebhook
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteWebhookResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new DeleteWebhookResponsePrivate(this), parent)
+{
+    setRequest(new DeleteWebhookRequest(request));
+    setReply(reply);
+}
+
+const DeleteWebhookRequest * DeleteWebhookResponse::request() const
+{
+    Q_D(const DeleteWebhookResponse);
+    return static_cast<const DeleteWebhookRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild DeleteWebhook response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteWebhookResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteWebhookResponsePrivate
+ *
+ * @brief  Private implementation for DeleteWebhookResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteWebhookResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteWebhookResponse instance.
+ */
+DeleteWebhookResponsePrivate::DeleteWebhookResponsePrivate(
+    DeleteWebhookQueueResponse * const q) : DeleteWebhookPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild DeleteWebhookResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteWebhookResponsePrivate::DeleteWebhookResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteWebhookResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listsubscribedrulegroupsresponse.h"
 #include "listsubscribedrulegroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListSubscribedRuleGroupsResponse
+ *
+ * @brief  Handles WAF ListSubscribedRuleGroups responses.
+ *
+ * @see    WAFClient::listSubscribedRuleGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSubscribedRuleGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)
+{
+    setRequest(new ListSubscribedRuleGroupsRequest(request));
+    setReply(reply);
+}
+
+const ListSubscribedRuleGroupsRequest * ListSubscribedRuleGroupsResponse::request() const
+{
+    Q_D(const ListSubscribedRuleGroupsResponse);
+    return static_cast<const ListSubscribedRuleGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF ListSubscribedRuleGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSubscribedRuleGroupsResponsePrivate
+ *
+ * @brief  Private implementation for ListSubscribedRuleGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscribedRuleGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSubscribedRuleGroupsResponse instance.
+ */
+ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate(
+    ListSubscribedRuleGroupsQueueResponse * const q) : ListSubscribedRuleGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF ListSubscribedRuleGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSubscribedRuleGroupsResponse"));
+    /// @todo
+}

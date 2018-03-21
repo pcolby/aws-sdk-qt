@@ -19,3 +19,85 @@
 
 #include "updatelagresponse.h"
 #include "updatelagresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  UpdateLagResponse
+ *
+ * @brief  Handles DirectConnect UpdateLag responses.
+ *
+ * @see    DirectConnectClient::updateLag
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateLagResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new UpdateLagResponsePrivate(this), parent)
+{
+    setRequest(new UpdateLagRequest(request));
+    setReply(reply);
+}
+
+const UpdateLagRequest * UpdateLagResponse::request() const
+{
+    Q_D(const UpdateLagResponse);
+    return static_cast<const UpdateLagRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect UpdateLag response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateLagResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateLagResponsePrivate
+ *
+ * @brief  Private implementation for UpdateLagResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLagResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateLagResponse instance.
+ */
+UpdateLagResponsePrivate::UpdateLagResponsePrivate(
+    UpdateLagQueueResponse * const q) : UpdateLagPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect UpdateLagResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateLagResponsePrivate::UpdateLagResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateLagResponse"));
+    /// @todo
+}

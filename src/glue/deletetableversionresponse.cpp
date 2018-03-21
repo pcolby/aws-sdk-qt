@@ -19,3 +19,85 @@
 
 #include "deletetableversionresponse.h"
 #include "deletetableversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteTableVersionResponse
+ *
+ * @brief  Handles Glue DeleteTableVersion responses.
+ *
+ * @see    GlueClient::deleteTableVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTableVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new DeleteTableVersionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTableVersionRequest(request));
+    setReply(reply);
+}
+
+const DeleteTableVersionRequest * DeleteTableVersionResponse::request() const
+{
+    Q_D(const DeleteTableVersionResponse);
+    return static_cast<const DeleteTableVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue DeleteTableVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTableVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTableVersionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTableVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTableVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTableVersionResponse instance.
+ */
+DeleteTableVersionResponsePrivate::DeleteTableVersionResponsePrivate(
+    DeleteTableVersionQueueResponse * const q) : DeleteTableVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue DeleteTableVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTableVersionResponsePrivate::DeleteTableVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTableVersionResponse"));
+    /// @todo
+}

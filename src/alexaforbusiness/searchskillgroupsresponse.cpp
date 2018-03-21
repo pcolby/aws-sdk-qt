@@ -19,3 +19,85 @@
 
 #include "searchskillgroupsresponse.h"
 #include "searchskillgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  SearchSkillGroupsResponse
+ *
+ * @brief  Handles AlexaForBusiness SearchSkillGroups responses.
+ *
+ * @see    AlexaForBusinessClient::searchSkillGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchSkillGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new SearchSkillGroupsResponsePrivate(this), parent)
+{
+    setRequest(new SearchSkillGroupsRequest(request));
+    setReply(reply);
+}
+
+const SearchSkillGroupsRequest * SearchSkillGroupsResponse::request() const
+{
+    Q_D(const SearchSkillGroupsResponse);
+    return static_cast<const SearchSkillGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness SearchSkillGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchSkillGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchSkillGroupsResponsePrivate
+ *
+ * @brief  Private implementation for SearchSkillGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchSkillGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchSkillGroupsResponse instance.
+ */
+SearchSkillGroupsResponsePrivate::SearchSkillGroupsResponsePrivate(
+    SearchSkillGroupsQueueResponse * const q) : SearchSkillGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness SearchSkillGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchSkillGroupsResponsePrivate::SearchSkillGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchSkillGroupsResponse"));
+    /// @todo
+}

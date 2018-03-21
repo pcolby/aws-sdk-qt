@@ -19,3 +19,85 @@
 
 #include "describeresourcepermissionsresponse.h"
 #include "describeresourcepermissionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeResourcePermissionsResponse
+ *
+ * @brief  Handles WorkDocs DescribeResourcePermissions responses.
+ *
+ * @see    WorkDocsClient::describeResourcePermissions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeResourcePermissionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DescribeResourcePermissionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeResourcePermissionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeResourcePermissionsRequest * DescribeResourcePermissionsResponse::request() const
+{
+    Q_D(const DescribeResourcePermissionsResponse);
+    return static_cast<const DescribeResourcePermissionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DescribeResourcePermissions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeResourcePermissionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeResourcePermissionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeResourcePermissionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResourcePermissionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeResourcePermissionsResponse instance.
+ */
+DescribeResourcePermissionsResponsePrivate::DescribeResourcePermissionsResponsePrivate(
+    DescribeResourcePermissionsQueueResponse * const q) : DescribeResourcePermissionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DescribeResourcePermissionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeResourcePermissionsResponsePrivate::DescribeResourcePermissionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeResourcePermissionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createdevendpointresponse.h"
 #include "createdevendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateDevEndpointResponse
+ *
+ * @brief  Handles Glue CreateDevEndpoint responses.
+ *
+ * @see    GlueClient::createDevEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDevEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new CreateDevEndpointResponsePrivate(this), parent)
+{
+    setRequest(new CreateDevEndpointRequest(request));
+    setReply(reply);
+}
+
+const CreateDevEndpointRequest * CreateDevEndpointResponse::request() const
+{
+    Q_D(const CreateDevEndpointResponse);
+    return static_cast<const CreateDevEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue CreateDevEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDevEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDevEndpointResponsePrivate
+ *
+ * @brief  Private implementation for CreateDevEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDevEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDevEndpointResponse instance.
+ */
+CreateDevEndpointResponsePrivate::CreateDevEndpointResponsePrivate(
+    CreateDevEndpointQueueResponse * const q) : CreateDevEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue CreateDevEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDevEndpointResponsePrivate::CreateDevEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDevEndpointResponse"));
+    /// @todo
+}

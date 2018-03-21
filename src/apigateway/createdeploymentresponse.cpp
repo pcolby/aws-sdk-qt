@@ -19,3 +19,85 @@
 
 #include "createdeploymentresponse.h"
 #include "createdeploymentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateDeploymentResponse
+ *
+ * @brief  Handles APIGateway CreateDeployment responses.
+ *
+ * @see    APIGatewayClient::createDeployment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDeploymentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateDeploymentResponsePrivate(this), parent)
+{
+    setRequest(new CreateDeploymentRequest(request));
+    setReply(reply);
+}
+
+const CreateDeploymentRequest * CreateDeploymentResponse::request() const
+{
+    Q_D(const CreateDeploymentResponse);
+    return static_cast<const CreateDeploymentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateDeployment response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDeploymentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDeploymentResponsePrivate
+ *
+ * @brief  Private implementation for CreateDeploymentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeploymentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDeploymentResponse instance.
+ */
+CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
+    CreateDeploymentQueueResponse * const q) : CreateDeploymentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateDeploymentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDeploymentResponsePrivate::CreateDeploymentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentResponse"));
+    /// @todo
+}

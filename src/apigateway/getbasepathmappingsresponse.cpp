@@ -19,3 +19,85 @@
 
 #include "getbasepathmappingsresponse.h"
 #include "getbasepathmappingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetBasePathMappingsResponse
+ *
+ * @brief  Handles APIGateway GetBasePathMappings responses.
+ *
+ * @see    APIGatewayClient::getBasePathMappings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBasePathMappingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetBasePathMappingsResponsePrivate(this), parent)
+{
+    setRequest(new GetBasePathMappingsRequest(request));
+    setReply(reply);
+}
+
+const GetBasePathMappingsRequest * GetBasePathMappingsResponse::request() const
+{
+    Q_D(const GetBasePathMappingsResponse);
+    return static_cast<const GetBasePathMappingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetBasePathMappings response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBasePathMappingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBasePathMappingsResponsePrivate
+ *
+ * @brief  Private implementation for GetBasePathMappingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBasePathMappingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBasePathMappingsResponse instance.
+ */
+GetBasePathMappingsResponsePrivate::GetBasePathMappingsResponsePrivate(
+    GetBasePathMappingsQueueResponse * const q) : GetBasePathMappingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetBasePathMappingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBasePathMappingsResponsePrivate::GetBasePathMappingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBasePathMappingsResponse"));
+    /// @todo
+}

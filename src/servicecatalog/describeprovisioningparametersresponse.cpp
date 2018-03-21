@@ -19,3 +19,85 @@
 
 #include "describeprovisioningparametersresponse.h"
 #include "describeprovisioningparametersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeProvisioningParametersResponse
+ *
+ * @brief  Handles ServiceCatalog DescribeProvisioningParameters responses.
+ *
+ * @see    ServiceCatalogClient::describeProvisioningParameters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProvisioningParametersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DescribeProvisioningParametersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeProvisioningParametersRequest(request));
+    setReply(reply);
+}
+
+const DescribeProvisioningParametersRequest * DescribeProvisioningParametersResponse::request() const
+{
+    Q_D(const DescribeProvisioningParametersResponse);
+    return static_cast<const DescribeProvisioningParametersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DescribeProvisioningParameters response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeProvisioningParametersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProvisioningParametersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeProvisioningParametersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProvisioningParametersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeProvisioningParametersResponse instance.
+ */
+DescribeProvisioningParametersResponsePrivate::DescribeProvisioningParametersResponsePrivate(
+    DescribeProvisioningParametersQueueResponse * const q) : DescribeProvisioningParametersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DescribeProvisioningParametersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeProvisioningParametersResponsePrivate::DescribeProvisioningParametersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeProvisioningParametersResponse"));
+    /// @todo
+}

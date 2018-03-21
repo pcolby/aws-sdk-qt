@@ -19,3 +19,85 @@
 
 #include "releaseaddressresponse.h"
 #include "releaseaddressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ReleaseAddressResponse
+ *
+ * @brief  Handles EC2 ReleaseAddress responses.
+ *
+ * @see    EC2Client::releaseAddress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReleaseAddressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ReleaseAddressResponsePrivate(this), parent)
+{
+    setRequest(new ReleaseAddressRequest(request));
+    setReply(reply);
+}
+
+const ReleaseAddressRequest * ReleaseAddressResponse::request() const
+{
+    Q_D(const ReleaseAddressResponse);
+    return static_cast<const ReleaseAddressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ReleaseAddress response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReleaseAddressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReleaseAddressResponsePrivate
+ *
+ * @brief  Private implementation for ReleaseAddressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReleaseAddressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReleaseAddressResponse instance.
+ */
+ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
+    ReleaseAddressQueueResponse * const q) : ReleaseAddressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ReleaseAddressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReleaseAddressResponsePrivate::ReleaseAddressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReleaseAddressResponse"));
+    /// @todo
+}

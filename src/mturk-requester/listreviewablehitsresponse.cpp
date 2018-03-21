@@ -19,3 +19,85 @@
 
 #include "listreviewablehitsresponse.h"
 #include "listreviewablehitsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListReviewableHITsResponse
+ *
+ * @brief  Handles MTurk ListReviewableHITs responses.
+ *
+ * @see    MTurkClient::listReviewableHITs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListReviewableHITsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListReviewableHITsResponsePrivate(this), parent)
+{
+    setRequest(new ListReviewableHITsRequest(request));
+    setReply(reply);
+}
+
+const ListReviewableHITsRequest * ListReviewableHITsResponse::request() const
+{
+    Q_D(const ListReviewableHITsResponse);
+    return static_cast<const ListReviewableHITsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListReviewableHITs response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListReviewableHITsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListReviewableHITsResponsePrivate
+ *
+ * @brief  Private implementation for ListReviewableHITsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReviewableHITsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListReviewableHITsResponse instance.
+ */
+ListReviewableHITsResponsePrivate::ListReviewableHITsResponsePrivate(
+    ListReviewableHITsQueueResponse * const q) : ListReviewableHITsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListReviewableHITsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListReviewableHITsResponsePrivate::ListReviewableHITsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListReviewableHITsResponse"));
+    /// @todo
+}

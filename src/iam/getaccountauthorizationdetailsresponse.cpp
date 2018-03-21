@@ -19,3 +19,85 @@
 
 #include "getaccountauthorizationdetailsresponse.h"
 #include "getaccountauthorizationdetailsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetAccountAuthorizationDetailsResponse
+ *
+ * @brief  Handles IAM GetAccountAuthorizationDetails responses.
+ *
+ * @see    IAMClient::getAccountAuthorizationDetails
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAccountAuthorizationDetailsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetAccountAuthorizationDetailsResponsePrivate(this), parent)
+{
+    setRequest(new GetAccountAuthorizationDetailsRequest(request));
+    setReply(reply);
+}
+
+const GetAccountAuthorizationDetailsRequest * GetAccountAuthorizationDetailsResponse::request() const
+{
+    Q_D(const GetAccountAuthorizationDetailsResponse);
+    return static_cast<const GetAccountAuthorizationDetailsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetAccountAuthorizationDetails response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAccountAuthorizationDetailsResponsePrivate
+ *
+ * @brief  Private implementation for GetAccountAuthorizationDetailsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountAuthorizationDetailsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAccountAuthorizationDetailsResponse instance.
+ */
+GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsResponsePrivate(
+    GetAccountAuthorizationDetailsQueueResponse * const q) : GetAccountAuthorizationDetailsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetAccountAuthorizationDetailsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAccountAuthorizationDetailsResponse"));
+    /// @todo
+}

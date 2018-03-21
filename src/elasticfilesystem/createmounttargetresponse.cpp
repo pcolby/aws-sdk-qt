@@ -19,3 +19,85 @@
 
 #include "createmounttargetresponse.h"
 #include "createmounttargetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  CreateMountTargetResponse
+ *
+ * @brief  Handles EFS CreateMountTarget responses.
+ *
+ * @see    EFSClient::createMountTarget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMountTargetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EFSResponse(new CreateMountTargetResponsePrivate(this), parent)
+{
+    setRequest(new CreateMountTargetRequest(request));
+    setReply(reply);
+}
+
+const CreateMountTargetRequest * CreateMountTargetResponse::request() const
+{
+    Q_D(const CreateMountTargetResponse);
+    return static_cast<const CreateMountTargetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EFS CreateMountTarget response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateMountTargetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMountTargetResponsePrivate
+ *
+ * @brief  Private implementation for CreateMountTargetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMountTargetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateMountTargetResponse instance.
+ */
+CreateMountTargetResponsePrivate::CreateMountTargetResponsePrivate(
+    CreateMountTargetQueueResponse * const q) : CreateMountTargetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EFS CreateMountTargetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateMountTargetResponsePrivate::CreateMountTargetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateMountTargetResponse"));
+    /// @todo
+}

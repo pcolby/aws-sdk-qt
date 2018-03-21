@@ -19,3 +19,85 @@
 
 #include "modifycacheclusterresponse.h"
 #include "modifycacheclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ModifyCacheClusterResponse
+ *
+ * @brief  Handles ElastiCache ModifyCacheCluster responses.
+ *
+ * @see    ElastiCacheClient::modifyCacheCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyCacheClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new ModifyCacheClusterResponsePrivate(this), parent)
+{
+    setRequest(new ModifyCacheClusterRequest(request));
+    setReply(reply);
+}
+
+const ModifyCacheClusterRequest * ModifyCacheClusterResponse::request() const
+{
+    Q_D(const ModifyCacheClusterResponse);
+    return static_cast<const ModifyCacheClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache ModifyCacheCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyCacheClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyCacheClusterResponsePrivate
+ *
+ * @brief  Private implementation for ModifyCacheClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyCacheClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyCacheClusterResponse instance.
+ */
+ModifyCacheClusterResponsePrivate::ModifyCacheClusterResponsePrivate(
+    ModifyCacheClusterQueueResponse * const q) : ModifyCacheClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache ModifyCacheClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyCacheClusterResponsePrivate::ModifyCacheClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyCacheClusterResponse"));
+    /// @todo
+}

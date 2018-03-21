@@ -19,3 +19,85 @@
 
 #include "listgeomatchsetsresponse.h"
 #include "listgeomatchsetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListGeoMatchSetsResponse
+ *
+ * @brief  Handles WAFRegional ListGeoMatchSets responses.
+ *
+ * @see    WAFRegionalClient::listGeoMatchSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGeoMatchSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new ListGeoMatchSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListGeoMatchSetsRequest(request));
+    setReply(reply);
+}
+
+const ListGeoMatchSetsRequest * ListGeoMatchSetsResponse::request() const
+{
+    Q_D(const ListGeoMatchSetsResponse);
+    return static_cast<const ListGeoMatchSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional ListGeoMatchSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGeoMatchSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListGeoMatchSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGeoMatchSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGeoMatchSetsResponse instance.
+ */
+ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
+    ListGeoMatchSetsQueueResponse * const q) : ListGeoMatchSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional ListGeoMatchSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGeoMatchSetsResponse"));
+    /// @todo
+}

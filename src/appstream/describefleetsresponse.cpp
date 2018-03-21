@@ -19,3 +19,85 @@
 
 #include "describefleetsresponse.h"
 #include "describefleetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DescribeFleetsResponse
+ *
+ * @brief  Handles AppStream DescribeFleets responses.
+ *
+ * @see    AppStreamClient::describeFleets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new DescribeFleetsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeFleetsRequest(request));
+    setReply(reply);
+}
+
+const DescribeFleetsRequest * DescribeFleetsResponse::request() const
+{
+    Q_D(const DescribeFleetsResponse);
+    return static_cast<const DescribeFleetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream DescribeFleets response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeFleetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeFleetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeFleetsResponse instance.
+ */
+DescribeFleetsResponsePrivate::DescribeFleetsResponsePrivate(
+    DescribeFleetsQueueResponse * const q) : DescribeFleetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream DescribeFleetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeFleetsResponsePrivate::DescribeFleetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeFleetsResponse"));
+    /// @todo
+}

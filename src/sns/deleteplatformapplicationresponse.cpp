@@ -19,3 +19,85 @@
 
 #include "deleteplatformapplicationresponse.h"
 #include "deleteplatformapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  DeletePlatformApplicationResponse
+ *
+ * @brief  Handles SNS DeletePlatformApplication responses.
+ *
+ * @see    SNSClient::deletePlatformApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePlatformApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new DeletePlatformApplicationResponsePrivate(this), parent)
+{
+    setRequest(new DeletePlatformApplicationRequest(request));
+    setReply(reply);
+}
+
+const DeletePlatformApplicationRequest * DeletePlatformApplicationResponse::request() const
+{
+    Q_D(const DeletePlatformApplicationResponse);
+    return static_cast<const DeletePlatformApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS DeletePlatformApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePlatformApplicationResponsePrivate
+ *
+ * @brief  Private implementation for DeletePlatformApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePlatformApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePlatformApplicationResponse instance.
+ */
+DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponsePrivate(
+    DeletePlatformApplicationQueueResponse * const q) : DeletePlatformApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS DeletePlatformApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePlatformApplicationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getrepositoryresponse.h"
 #include "getrepositoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetRepositoryResponse
+ *
+ * @brief  Handles CodeCommit GetRepository responses.
+ *
+ * @see    CodeCommitClient::getRepository
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRepositoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new GetRepositoryResponsePrivate(this), parent)
+{
+    setRequest(new GetRepositoryRequest(request));
+    setReply(reply);
+}
+
+const GetRepositoryRequest * GetRepositoryResponse::request() const
+{
+    Q_D(const GetRepositoryResponse);
+    return static_cast<const GetRepositoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit GetRepository response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRepositoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRepositoryResponsePrivate
+ *
+ * @brief  Private implementation for GetRepositoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRepositoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRepositoryResponse instance.
+ */
+GetRepositoryResponsePrivate::GetRepositoryResponsePrivate(
+    GetRepositoryQueueResponse * const q) : GetRepositoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit GetRepositoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRepositoryResponsePrivate::GetRepositoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRepositoryResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describetargetgroupattributesresponse.h"
 #include "describetargetgroupattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeTargetGroupAttributesResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 DescribeTargetGroupAttributes responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeTargetGroupAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTargetGroupAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new DescribeTargetGroupAttributesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTargetGroupAttributesRequest(request));
+    setReply(reply);
+}
+
+const DescribeTargetGroupAttributesRequest * DescribeTargetGroupAttributesResponse::request() const
+{
+    Q_D(const DescribeTargetGroupAttributesResponse);
+    return static_cast<const DescribeTargetGroupAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 DescribeTargetGroupAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTargetGroupAttributesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTargetGroupAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTargetGroupAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTargetGroupAttributesResponse instance.
+ */
+DescribeTargetGroupAttributesResponsePrivate::DescribeTargetGroupAttributesResponsePrivate(
+    DescribeTargetGroupAttributesQueueResponse * const q) : DescribeTargetGroupAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 DescribeTargetGroupAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTargetGroupAttributesResponsePrivate::DescribeTargetGroupAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTargetGroupAttributesResponse"));
+    /// @todo
+}

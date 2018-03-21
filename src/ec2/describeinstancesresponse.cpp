@@ -19,3 +19,85 @@
 
 #include "describeinstancesresponse.h"
 #include "describeinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeInstancesResponse
+ *
+ * @brief  Handles EC2 DescribeInstances responses.
+ *
+ * @see    EC2Client::describeInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeInstancesRequest * DescribeInstancesResponse::request() const
+{
+    Q_D(const DescribeInstancesResponse);
+    return static_cast<const DescribeInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInstancesResponse instance.
+ */
+DescribeInstancesResponsePrivate::DescribeInstancesResponsePrivate(
+    DescribeInstancesQueueResponse * const q) : DescribeInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInstancesResponsePrivate::DescribeInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInstancesResponse"));
+    /// @todo
+}

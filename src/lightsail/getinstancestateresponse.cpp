@@ -19,3 +19,85 @@
 
 #include "getinstancestateresponse.h"
 #include "getinstancestateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceStateResponse
+ *
+ * @brief  Handles Lightsail GetInstanceState responses.
+ *
+ * @see    LightsailClient::getInstanceState
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceStateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetInstanceStateResponsePrivate(this), parent)
+{
+    setRequest(new GetInstanceStateRequest(request));
+    setReply(reply);
+}
+
+const GetInstanceStateRequest * GetInstanceStateResponse::request() const
+{
+    Q_D(const GetInstanceStateResponse);
+    return static_cast<const GetInstanceStateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetInstanceState response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInstanceStateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceStateResponsePrivate
+ *
+ * @brief  Private implementation for GetInstanceStateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceStateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInstanceStateResponse instance.
+ */
+GetInstanceStateResponsePrivate::GetInstanceStateResponsePrivate(
+    GetInstanceStateQueueResponse * const q) : GetInstanceStatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetInstanceStateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInstanceStateResponsePrivate::GetInstanceStateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInstanceStateResponse"));
+    /// @todo
+}

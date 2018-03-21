@@ -19,3 +19,85 @@
 
 #include "importapikeysresponse.h"
 #include "importapikeysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  ImportApiKeysResponse
+ *
+ * @brief  Handles APIGateway ImportApiKeys responses.
+ *
+ * @see    APIGatewayClient::importApiKeys
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportApiKeysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new ImportApiKeysResponsePrivate(this), parent)
+{
+    setRequest(new ImportApiKeysRequest(request));
+    setReply(reply);
+}
+
+const ImportApiKeysRequest * ImportApiKeysResponse::request() const
+{
+    Q_D(const ImportApiKeysResponse);
+    return static_cast<const ImportApiKeysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway ImportApiKeys response.
+ *
+ * @param  response  Response to parse.
+ */
+void ImportApiKeysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportApiKeysResponsePrivate
+ *
+ * @brief  Private implementation for ImportApiKeysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportApiKeysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ImportApiKeysResponse instance.
+ */
+ImportApiKeysResponsePrivate::ImportApiKeysResponsePrivate(
+    ImportApiKeysQueueResponse * const q) : ImportApiKeysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway ImportApiKeysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ImportApiKeysResponsePrivate::ImportApiKeysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ImportApiKeysResponse"));
+    /// @todo
+}

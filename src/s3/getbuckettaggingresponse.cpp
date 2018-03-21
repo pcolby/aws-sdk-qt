@@ -19,3 +19,85 @@
 
 #include "getbuckettaggingresponse.h"
 #include "getbuckettaggingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketTaggingResponse
+ *
+ * @brief  Handles S3 GetBucketTagging responses.
+ *
+ * @see    S3Client::getBucketTagging
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketTaggingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketTaggingResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketTaggingRequest(request));
+    setReply(reply);
+}
+
+const GetBucketTaggingRequest * GetBucketTaggingResponse::request() const
+{
+    Q_D(const GetBucketTaggingResponse);
+    return static_cast<const GetBucketTaggingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketTagging response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketTaggingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketTaggingResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketTaggingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketTaggingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketTaggingResponse instance.
+ */
+GetBucketTaggingResponsePrivate::GetBucketTaggingResponsePrivate(
+    GetBucketTaggingQueueResponse * const q) : GetBucketTaggingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketTaggingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketTaggingResponsePrivate::GetBucketTaggingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketTaggingResponse"));
+    /// @todo
+}

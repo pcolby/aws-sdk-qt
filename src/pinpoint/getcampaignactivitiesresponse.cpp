@@ -19,3 +19,85 @@
 
 #include "getcampaignactivitiesresponse.h"
 #include "getcampaignactivitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetCampaignActivitiesResponse
+ *
+ * @brief  Handles Pinpoint GetCampaignActivities responses.
+ *
+ * @see    PinpointClient::getCampaignActivities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCampaignActivitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetCampaignActivitiesResponsePrivate(this), parent)
+{
+    setRequest(new GetCampaignActivitiesRequest(request));
+    setReply(reply);
+}
+
+const GetCampaignActivitiesRequest * GetCampaignActivitiesResponse::request() const
+{
+    Q_D(const GetCampaignActivitiesResponse);
+    return static_cast<const GetCampaignActivitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetCampaignActivities response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCampaignActivitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCampaignActivitiesResponsePrivate
+ *
+ * @brief  Private implementation for GetCampaignActivitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCampaignActivitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCampaignActivitiesResponse instance.
+ */
+GetCampaignActivitiesResponsePrivate::GetCampaignActivitiesResponsePrivate(
+    GetCampaignActivitiesQueueResponse * const q) : GetCampaignActivitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetCampaignActivitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCampaignActivitiesResponsePrivate::GetCampaignActivitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCampaignActivitiesResponse"));
+    /// @todo
+}

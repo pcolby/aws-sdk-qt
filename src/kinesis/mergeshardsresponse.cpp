@@ -19,3 +19,85 @@
 
 #include "mergeshardsresponse.h"
 #include "mergeshardsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  MergeShardsResponse
+ *
+ * @brief  Handles Kinesis MergeShards responses.
+ *
+ * @see    KinesisClient::mergeShards
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+MergeShardsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new MergeShardsResponsePrivate(this), parent)
+{
+    setRequest(new MergeShardsRequest(request));
+    setReply(reply);
+}
+
+const MergeShardsRequest * MergeShardsResponse::request() const
+{
+    Q_D(const MergeShardsResponse);
+    return static_cast<const MergeShardsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis MergeShards response.
+ *
+ * @param  response  Response to parse.
+ */
+void MergeShardsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  MergeShardsResponsePrivate
+ *
+ * @brief  Private implementation for MergeShardsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MergeShardsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public MergeShardsResponse instance.
+ */
+MergeShardsResponsePrivate::MergeShardsResponsePrivate(
+    MergeShardsQueueResponse * const q) : MergeShardsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis MergeShardsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void MergeShardsResponsePrivate::MergeShardsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("MergeShardsResponse"));
+    /// @todo
+}

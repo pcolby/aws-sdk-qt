@@ -19,3 +19,85 @@
 
 #include "putscalingpolicyresponse.h"
 #include "putscalingpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  PutScalingPolicyResponse
+ *
+ * @brief  Handles GameLift PutScalingPolicy responses.
+ *
+ * @see    GameLiftClient::putScalingPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutScalingPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new PutScalingPolicyResponsePrivate(this), parent)
+{
+    setRequest(new PutScalingPolicyRequest(request));
+    setReply(reply);
+}
+
+const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
+{
+    Q_D(const PutScalingPolicyResponse);
+    return static_cast<const PutScalingPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift PutScalingPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutScalingPolicyResponsePrivate
+ *
+ * @brief  Private implementation for PutScalingPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutScalingPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutScalingPolicyResponse instance.
+ */
+PutScalingPolicyResponsePrivate::PutScalingPolicyResponsePrivate(
+    PutScalingPolicyQueueResponse * const q) : PutScalingPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift PutScalingPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutScalingPolicyResponsePrivate::PutScalingPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutScalingPolicyResponse"));
+    /// @todo
+}

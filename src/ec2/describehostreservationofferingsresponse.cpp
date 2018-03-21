@@ -19,3 +19,85 @@
 
 #include "describehostreservationofferingsresponse.h"
 #include "describehostreservationofferingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeHostReservationOfferingsResponse
+ *
+ * @brief  Handles EC2 DescribeHostReservationOfferings responses.
+ *
+ * @see    EC2Client::describeHostReservationOfferings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHostReservationOfferingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeHostReservationOfferingsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeHostReservationOfferingsRequest(request));
+    setReply(reply);
+}
+
+const DescribeHostReservationOfferingsRequest * DescribeHostReservationOfferingsResponse::request() const
+{
+    Q_D(const DescribeHostReservationOfferingsResponse);
+    return static_cast<const DescribeHostReservationOfferingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeHostReservationOfferings response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeHostReservationOfferingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHostReservationOfferingsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeHostReservationOfferingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHostReservationOfferingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeHostReservationOfferingsResponse instance.
+ */
+DescribeHostReservationOfferingsResponsePrivate::DescribeHostReservationOfferingsResponsePrivate(
+    DescribeHostReservationOfferingsQueueResponse * const q) : DescribeHostReservationOfferingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeHostReservationOfferingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeHostReservationOfferingsResponsePrivate::DescribeHostReservationOfferingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeHostReservationOfferingsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getusageplankeysresponse.h"
 #include "getusageplankeysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetUsagePlanKeysResponse
+ *
+ * @brief  Handles APIGateway GetUsagePlanKeys responses.
+ *
+ * @see    APIGatewayClient::getUsagePlanKeys
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUsagePlanKeysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetUsagePlanKeysResponsePrivate(this), parent)
+{
+    setRequest(new GetUsagePlanKeysRequest(request));
+    setReply(reply);
+}
+
+const GetUsagePlanKeysRequest * GetUsagePlanKeysResponse::request() const
+{
+    Q_D(const GetUsagePlanKeysResponse);
+    return static_cast<const GetUsagePlanKeysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetUsagePlanKeys response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUsagePlanKeysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUsagePlanKeysResponsePrivate
+ *
+ * @brief  Private implementation for GetUsagePlanKeysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUsagePlanKeysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUsagePlanKeysResponse instance.
+ */
+GetUsagePlanKeysResponsePrivate::GetUsagePlanKeysResponsePrivate(
+    GetUsagePlanKeysQueueResponse * const q) : GetUsagePlanKeysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetUsagePlanKeysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUsagePlanKeysResponsePrivate::GetUsagePlanKeysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUsagePlanKeysResponse"));
+    /// @todo
+}

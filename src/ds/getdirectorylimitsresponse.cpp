@@ -19,3 +19,85 @@
 
 #include "getdirectorylimitsresponse.h"
 #include "getdirectorylimitsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  GetDirectoryLimitsResponse
+ *
+ * @brief  Handles DirectoryService GetDirectoryLimits responses.
+ *
+ * @see    DirectoryServiceClient::getDirectoryLimits
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDirectoryLimitsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new GetDirectoryLimitsResponsePrivate(this), parent)
+{
+    setRequest(new GetDirectoryLimitsRequest(request));
+    setReply(reply);
+}
+
+const GetDirectoryLimitsRequest * GetDirectoryLimitsResponse::request() const
+{
+    Q_D(const GetDirectoryLimitsResponse);
+    return static_cast<const GetDirectoryLimitsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService GetDirectoryLimits response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDirectoryLimitsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDirectoryLimitsResponsePrivate
+ *
+ * @brief  Private implementation for GetDirectoryLimitsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDirectoryLimitsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDirectoryLimitsResponse instance.
+ */
+GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponsePrivate(
+    GetDirectoryLimitsQueueResponse * const q) : GetDirectoryLimitsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService GetDirectoryLimitsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDirectoryLimitsResponse"));
+    /// @todo
+}

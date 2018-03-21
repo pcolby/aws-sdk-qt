@@ -19,3 +19,85 @@
 
 #include "disassociateaddressresponse.h"
 #include "disassociateaddressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisassociateAddressResponse
+ *
+ * @brief  Handles EC2 DisassociateAddress responses.
+ *
+ * @see    EC2Client::disassociateAddress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateAddressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DisassociateAddressResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateAddressRequest(request));
+    setReply(reply);
+}
+
+const DisassociateAddressRequest * DisassociateAddressResponse::request() const
+{
+    Q_D(const DisassociateAddressResponse);
+    return static_cast<const DisassociateAddressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DisassociateAddress response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateAddressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateAddressResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateAddressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateAddressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateAddressResponse instance.
+ */
+DisassociateAddressResponsePrivate::DisassociateAddressResponsePrivate(
+    DisassociateAddressQueueResponse * const q) : DisassociateAddressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DisassociateAddressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateAddressResponsePrivate::DisassociateAddressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateAddressResponse"));
+    /// @todo
+}

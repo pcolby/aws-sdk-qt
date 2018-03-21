@@ -19,3 +19,85 @@
 
 #include "countpendingactivitytasksresponse.h"
 #include "countpendingactivitytasksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  CountPendingActivityTasksResponse
+ *
+ * @brief  Handles SWF CountPendingActivityTasks responses.
+ *
+ * @see    SWFClient::countPendingActivityTasks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CountPendingActivityTasksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new CountPendingActivityTasksResponsePrivate(this), parent)
+{
+    setRequest(new CountPendingActivityTasksRequest(request));
+    setReply(reply);
+}
+
+const CountPendingActivityTasksRequest * CountPendingActivityTasksResponse::request() const
+{
+    Q_D(const CountPendingActivityTasksResponse);
+    return static_cast<const CountPendingActivityTasksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF CountPendingActivityTasks response.
+ *
+ * @param  response  Response to parse.
+ */
+void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CountPendingActivityTasksResponsePrivate
+ *
+ * @brief  Private implementation for CountPendingActivityTasksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CountPendingActivityTasksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CountPendingActivityTasksResponse instance.
+ */
+CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePrivate(
+    CountPendingActivityTasksQueueResponse * const q) : CountPendingActivityTasksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF CountPendingActivityTasksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CountPendingActivityTasksResponse"));
+    /// @todo
+}

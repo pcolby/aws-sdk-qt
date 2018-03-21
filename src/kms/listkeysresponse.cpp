@@ -19,3 +19,85 @@
 
 #include "listkeysresponse.h"
 #include "listkeysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  ListKeysResponse
+ *
+ * @brief  Handles KMS ListKeys responses.
+ *
+ * @see    KMSClient::listKeys
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListKeysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new ListKeysResponsePrivate(this), parent)
+{
+    setRequest(new ListKeysRequest(request));
+    setReply(reply);
+}
+
+const ListKeysRequest * ListKeysResponse::request() const
+{
+    Q_D(const ListKeysResponse);
+    return static_cast<const ListKeysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS ListKeys response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListKeysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListKeysResponsePrivate
+ *
+ * @brief  Private implementation for ListKeysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListKeysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListKeysResponse instance.
+ */
+ListKeysResponsePrivate::ListKeysResponsePrivate(
+    ListKeysQueueResponse * const q) : ListKeysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS ListKeysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListKeysResponsePrivate::ListKeysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListKeysResponse"));
+    /// @todo
+}

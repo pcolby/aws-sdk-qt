@@ -19,3 +19,85 @@
 
 #include "unsubscribefromdatasetresponse.h"
 #include "unsubscribefromdatasetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  UnsubscribeFromDatasetResponse
+ *
+ * @brief  Handles CognitoSync UnsubscribeFromDataset responses.
+ *
+ * @see    CognitoSyncClient::unsubscribeFromDataset
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnsubscribeFromDatasetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new UnsubscribeFromDatasetResponsePrivate(this), parent)
+{
+    setRequest(new UnsubscribeFromDatasetRequest(request));
+    setReply(reply);
+}
+
+const UnsubscribeFromDatasetRequest * UnsubscribeFromDatasetResponse::request() const
+{
+    Q_D(const UnsubscribeFromDatasetResponse);
+    return static_cast<const UnsubscribeFromDatasetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync UnsubscribeFromDataset response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnsubscribeFromDatasetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnsubscribeFromDatasetResponsePrivate
+ *
+ * @brief  Private implementation for UnsubscribeFromDatasetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnsubscribeFromDatasetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnsubscribeFromDatasetResponse instance.
+ */
+UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponsePrivate(
+    UnsubscribeFromDatasetQueueResponse * const q) : UnsubscribeFromDatasetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync UnsubscribeFromDatasetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromDatasetResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "detectsentimentresponse.h"
 #include "detectsentimentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  DetectSentimentResponse
+ *
+ * @brief  Handles Comprehend DetectSentiment responses.
+ *
+ * @see    ComprehendClient::detectSentiment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectSentimentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ComprehendResponse(new DetectSentimentResponsePrivate(this), parent)
+{
+    setRequest(new DetectSentimentRequest(request));
+    setReply(reply);
+}
+
+const DetectSentimentRequest * DetectSentimentResponse::request() const
+{
+    Q_D(const DetectSentimentResponse);
+    return static_cast<const DetectSentimentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Comprehend DetectSentiment response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetectSentimentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectSentimentResponsePrivate
+ *
+ * @brief  Private implementation for DetectSentimentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectSentimentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetectSentimentResponse instance.
+ */
+DetectSentimentResponsePrivate::DetectSentimentResponsePrivate(
+    DetectSentimentQueueResponse * const q) : DetectSentimentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Comprehend DetectSentimentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetectSentimentResponsePrivate::DetectSentimentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetectSentimentResponse"));
+    /// @todo
+}

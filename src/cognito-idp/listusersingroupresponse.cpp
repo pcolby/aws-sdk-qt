@@ -19,3 +19,85 @@
 
 #include "listusersingroupresponse.h"
 #include "listusersingroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListUsersInGroupResponse
+ *
+ * @brief  Handles CognitoIdentityProvider ListUsersInGroup responses.
+ *
+ * @see    CognitoIdentityProviderClient::listUsersInGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListUsersInGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new ListUsersInGroupResponsePrivate(this), parent)
+{
+    setRequest(new ListUsersInGroupRequest(request));
+    setReply(reply);
+}
+
+const ListUsersInGroupRequest * ListUsersInGroupResponse::request() const
+{
+    Q_D(const ListUsersInGroupResponse);
+    return static_cast<const ListUsersInGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider ListUsersInGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListUsersInGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListUsersInGroupResponsePrivate
+ *
+ * @brief  Private implementation for ListUsersInGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUsersInGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListUsersInGroupResponse instance.
+ */
+ListUsersInGroupResponsePrivate::ListUsersInGroupResponsePrivate(
+    ListUsersInGroupQueueResponse * const q) : ListUsersInGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider ListUsersInGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListUsersInGroupResponsePrivate::ListUsersInGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListUsersInGroupResponse"));
+    /// @todo
+}

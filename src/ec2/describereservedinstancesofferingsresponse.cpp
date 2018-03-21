@@ -19,3 +19,85 @@
 
 #include "describereservedinstancesofferingsresponse.h"
 #include "describereservedinstancesofferingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeReservedInstancesOfferingsResponse
+ *
+ * @brief  Handles EC2 DescribeReservedInstancesOfferings responses.
+ *
+ * @see    EC2Client::describeReservedInstancesOfferings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedInstancesOfferingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeReservedInstancesOfferingsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReservedInstancesOfferingsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReservedInstancesOfferingsRequest * DescribeReservedInstancesOfferingsResponse::request() const
+{
+    Q_D(const DescribeReservedInstancesOfferingsResponse);
+    return static_cast<const DescribeReservedInstancesOfferingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeReservedInstancesOfferings response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReservedInstancesOfferingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedInstancesOfferingsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReservedInstancesOfferingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedInstancesOfferingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReservedInstancesOfferingsResponse instance.
+ */
+DescribeReservedInstancesOfferingsResponsePrivate::DescribeReservedInstancesOfferingsResponsePrivate(
+    DescribeReservedInstancesOfferingsQueueResponse * const q) : DescribeReservedInstancesOfferingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeReservedInstancesOfferingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReservedInstancesOfferingsResponsePrivate::DescribeReservedInstancesOfferingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReservedInstancesOfferingsResponse"));
+    /// @todo
+}

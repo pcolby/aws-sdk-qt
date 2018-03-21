@@ -19,3 +19,85 @@
 
 #include "enabletopicruleresponse.h"
 #include "enabletopicruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  EnableTopicRuleResponse
+ *
+ * @brief  Handles IoT EnableTopicRule responses.
+ *
+ * @see    IoTClient::enableTopicRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableTopicRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new EnableTopicRuleResponsePrivate(this), parent)
+{
+    setRequest(new EnableTopicRuleRequest(request));
+    setReply(reply);
+}
+
+const EnableTopicRuleRequest * EnableTopicRuleResponse::request() const
+{
+    Q_D(const EnableTopicRuleResponse);
+    return static_cast<const EnableTopicRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT EnableTopicRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableTopicRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableTopicRuleResponsePrivate
+ *
+ * @brief  Private implementation for EnableTopicRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableTopicRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableTopicRuleResponse instance.
+ */
+EnableTopicRuleResponsePrivate::EnableTopicRuleResponsePrivate(
+    EnableTopicRuleQueueResponse * const q) : EnableTopicRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT EnableTopicRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableTopicRuleResponsePrivate::EnableTopicRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableTopicRuleResponse"));
+    /// @todo
+}

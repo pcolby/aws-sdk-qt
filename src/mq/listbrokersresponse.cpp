@@ -19,3 +19,85 @@
 
 #include "listbrokersresponse.h"
 #include "listbrokersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  ListBrokersResponse
+ *
+ * @brief  Handles MQ ListBrokers responses.
+ *
+ * @see    MQClient::listBrokers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBrokersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new ListBrokersResponsePrivate(this), parent)
+{
+    setRequest(new ListBrokersRequest(request));
+    setReply(reply);
+}
+
+const ListBrokersRequest * ListBrokersResponse::request() const
+{
+    Q_D(const ListBrokersResponse);
+    return static_cast<const ListBrokersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ ListBrokers response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBrokersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBrokersResponsePrivate
+ *
+ * @brief  Private implementation for ListBrokersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBrokersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBrokersResponse instance.
+ */
+ListBrokersResponsePrivate::ListBrokersResponsePrivate(
+    ListBrokersQueueResponse * const q) : ListBrokersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ ListBrokersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBrokersResponsePrivate::ListBrokersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBrokersResponse"));
+    /// @todo
+}

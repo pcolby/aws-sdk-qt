@@ -19,3 +19,85 @@
 
 #include "describescalingplanresourcesresponse.h"
 #include "describescalingplanresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScalingPlans {
+
+/**
+ * @class  DescribeScalingPlanResourcesResponse
+ *
+ * @brief  Handles AutoScalingPlans DescribeScalingPlanResources responses.
+ *
+ * @see    AutoScalingPlansClient::describeScalingPlanResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingPlanResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingPlansResponse(new DescribeScalingPlanResourcesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeScalingPlanResourcesRequest(request));
+    setReply(reply);
+}
+
+const DescribeScalingPlanResourcesRequest * DescribeScalingPlanResourcesResponse::request() const
+{
+    Q_D(const DescribeScalingPlanResourcesResponse);
+    return static_cast<const DescribeScalingPlanResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScalingPlans DescribeScalingPlanResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeScalingPlanResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingPlanResourcesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeScalingPlanResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingPlanResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeScalingPlanResourcesResponse instance.
+ */
+DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesResponsePrivate(
+    DescribeScalingPlanResourcesQueueResponse * const q) : DescribeScalingPlanResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScalingPlans DescribeScalingPlanResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeScalingPlanResourcesResponse"));
+    /// @todo
+}

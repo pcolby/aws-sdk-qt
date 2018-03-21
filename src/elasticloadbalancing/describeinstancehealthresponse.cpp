@@ -19,3 +19,85 @@
 
 #include "describeinstancehealthresponse.h"
 #include "describeinstancehealthresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  DescribeInstanceHealthResponse
+ *
+ * @brief  Handles ElasticLoadBalancing DescribeInstanceHealth responses.
+ *
+ * @see    ElasticLoadBalancingClient::describeInstanceHealth
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstanceHealthResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new DescribeInstanceHealthResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInstanceHealthRequest(request));
+    setReply(reply);
+}
+
+const DescribeInstanceHealthRequest * DescribeInstanceHealthResponse::request() const
+{
+    Q_D(const DescribeInstanceHealthResponse);
+    return static_cast<const DescribeInstanceHealthRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing DescribeInstanceHealth response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInstanceHealthResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstanceHealthResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInstanceHealthResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceHealthResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInstanceHealthResponse instance.
+ */
+DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponsePrivate(
+    DescribeInstanceHealthQueueResponse * const q) : DescribeInstanceHealthPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing DescribeInstanceHealthResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceHealthResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "creategeomatchsetresponse.h"
 #include "creategeomatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  CreateGeoMatchSetResponse
+ *
+ * @brief  Handles WAFRegional CreateGeoMatchSet responses.
+ *
+ * @see    WAFRegionalClient::createGeoMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGeoMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new CreateGeoMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateGeoMatchSetRequest(request));
+    setReply(reply);
+}
+
+const CreateGeoMatchSetRequest * CreateGeoMatchSetResponse::request() const
+{
+    Q_D(const CreateGeoMatchSetResponse);
+    return static_cast<const CreateGeoMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional CreateGeoMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGeoMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateGeoMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGeoMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateGeoMatchSetResponse instance.
+ */
+CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponsePrivate(
+    CreateGeoMatchSetQueueResponse * const q) : CreateGeoMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional CreateGeoMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateGeoMatchSetResponse"));
+    /// @todo
+}

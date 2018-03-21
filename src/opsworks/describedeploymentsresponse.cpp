@@ -19,3 +19,85 @@
 
 #include "describedeploymentsresponse.h"
 #include "describedeploymentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeDeploymentsResponse
+ *
+ * @brief  Handles OpsWorks DescribeDeployments responses.
+ *
+ * @see    OpsWorksClient::describeDeployments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDeploymentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeDeploymentsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDeploymentsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDeploymentsRequest * DescribeDeploymentsResponse::request() const
+{
+    Q_D(const DescribeDeploymentsResponse);
+    return static_cast<const DescribeDeploymentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeDeployments response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDeploymentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDeploymentsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDeploymentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDeploymentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDeploymentsResponse instance.
+ */
+DescribeDeploymentsResponsePrivate::DescribeDeploymentsResponsePrivate(
+    DescribeDeploymentsQueueResponse * const q) : DescribeDeploymentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeDeploymentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDeploymentsResponsePrivate::DescribeDeploymentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDeploymentsResponse"));
+    /// @todo
+}

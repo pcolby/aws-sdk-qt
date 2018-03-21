@@ -19,3 +19,85 @@
 
 #include "addtagsresponse.h"
 #include "addtagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  AddTagsResponse
+ *
+ * @brief  Handles ElasticsearchService AddTags responses.
+ *
+ * @see    ElasticsearchServiceClient::addTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticsearchServiceResponse(new AddTagsResponsePrivate(this), parent)
+{
+    setRequest(new AddTagsRequest(request));
+    setReply(reply);
+}
+
+const AddTagsRequest * AddTagsResponse::request() const
+{
+    Q_D(const AddTagsResponse);
+    return static_cast<const AddTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticsearchService AddTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsResponsePrivate
+ *
+ * @brief  Private implementation for AddTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddTagsResponse instance.
+ */
+AddTagsResponsePrivate::AddTagsResponsePrivate(
+    AddTagsQueueResponse * const q) : AddTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticsearchService AddTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddTagsResponsePrivate::AddTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddTagsResponse"));
+    /// @todo
+}

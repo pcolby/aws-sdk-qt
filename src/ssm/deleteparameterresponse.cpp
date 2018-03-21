@@ -19,3 +19,85 @@
 
 #include "deleteparameterresponse.h"
 #include "deleteparameterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeleteParameterResponse
+ *
+ * @brief  Handles SSM DeleteParameter responses.
+ *
+ * @see    SSMClient::deleteParameter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteParameterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DeleteParameterResponsePrivate(this), parent)
+{
+    setRequest(new DeleteParameterRequest(request));
+    setReply(reply);
+}
+
+const DeleteParameterRequest * DeleteParameterResponse::request() const
+{
+    Q_D(const DeleteParameterResponse);
+    return static_cast<const DeleteParameterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DeleteParameter response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteParameterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteParameterResponsePrivate
+ *
+ * @brief  Private implementation for DeleteParameterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteParameterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteParameterResponse instance.
+ */
+DeleteParameterResponsePrivate::DeleteParameterResponsePrivate(
+    DeleteParameterQueueResponse * const q) : DeleteParameterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DeleteParameterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteParameterResponsePrivate::DeleteParameterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteParameterResponse"));
+    /// @todo
+}

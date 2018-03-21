@@ -19,3 +19,85 @@
 
 #include "createpolicyversionresponse.h"
 #include "createpolicyversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreatePolicyVersionResponse
+ *
+ * @brief  Handles IoT CreatePolicyVersion responses.
+ *
+ * @see    IoTClient::createPolicyVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePolicyVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreatePolicyVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreatePolicyVersionRequest(request));
+    setReply(reply);
+}
+
+const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
+{
+    Q_D(const CreatePolicyVersionResponse);
+    return static_cast<const CreatePolicyVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreatePolicyVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePolicyVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreatePolicyVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePolicyVersionResponse instance.
+ */
+CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
+    CreatePolicyVersionQueueResponse * const q) : CreatePolicyVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreatePolicyVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePolicyVersionResponse"));
+    /// @todo
+}

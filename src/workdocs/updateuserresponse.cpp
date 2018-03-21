@@ -19,3 +19,85 @@
 
 #include "updateuserresponse.h"
 #include "updateuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  UpdateUserResponse
+ *
+ * @brief  Handles WorkDocs UpdateUser responses.
+ *
+ * @see    WorkDocsClient::updateUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new UpdateUserResponsePrivate(this), parent)
+{
+    setRequest(new UpdateUserRequest(request));
+    setReply(reply);
+}
+
+const UpdateUserRequest * UpdateUserResponse::request() const
+{
+    Q_D(const UpdateUserResponse);
+    return static_cast<const UpdateUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs UpdateUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserResponsePrivate
+ *
+ * @brief  Private implementation for UpdateUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateUserResponse instance.
+ */
+UpdateUserResponsePrivate::UpdateUserResponsePrivate(
+    UpdateUserQueueResponse * const q) : UpdateUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs UpdateUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateUserResponsePrivate::UpdateUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateUserResponse"));
+    /// @todo
+}

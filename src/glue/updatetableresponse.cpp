@@ -19,3 +19,85 @@
 
 #include "updatetableresponse.h"
 #include "updatetableresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateTableResponse
+ *
+ * @brief  Handles Glue UpdateTable responses.
+ *
+ * @see    GlueClient::updateTable
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTableResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new UpdateTableResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTableRequest(request));
+    setReply(reply);
+}
+
+const UpdateTableRequest * UpdateTableResponse::request() const
+{
+    Q_D(const UpdateTableResponse);
+    return static_cast<const UpdateTableRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue UpdateTable response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTableResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTableResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTableResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTableResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTableResponse instance.
+ */
+UpdateTableResponsePrivate::UpdateTableResponsePrivate(
+    UpdateTableQueueResponse * const q) : UpdateTablePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue UpdateTableResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTableResponsePrivate::UpdateTableResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTableResponse"));
+    /// @todo
+}

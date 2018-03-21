@@ -19,3 +19,85 @@
 
 #include "deletedocumentationpartresponse.h"
 #include "deletedocumentationpartresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteDocumentationPartResponse
+ *
+ * @brief  Handles APIGateway DeleteDocumentationPart responses.
+ *
+ * @see    APIGatewayClient::deleteDocumentationPart
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDocumentationPartResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteDocumentationPartResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDocumentationPartRequest(request));
+    setReply(reply);
+}
+
+const DeleteDocumentationPartRequest * DeleteDocumentationPartResponse::request() const
+{
+    Q_D(const DeleteDocumentationPartResponse);
+    return static_cast<const DeleteDocumentationPartRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteDocumentationPart response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDocumentationPartResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDocumentationPartResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDocumentationPartResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDocumentationPartResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDocumentationPartResponse instance.
+ */
+DeleteDocumentationPartResponsePrivate::DeleteDocumentationPartResponsePrivate(
+    DeleteDocumentationPartQueueResponse * const q) : DeleteDocumentationPartPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteDocumentationPartResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDocumentationPartResponsePrivate::DeleteDocumentationPartResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDocumentationPartResponse"));
+    /// @todo
+}

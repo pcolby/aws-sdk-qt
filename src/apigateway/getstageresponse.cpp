@@ -19,3 +19,85 @@
 
 #include "getstageresponse.h"
 #include "getstageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetStageResponse
+ *
+ * @brief  Handles APIGateway GetStage responses.
+ *
+ * @see    APIGatewayClient::getStage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetStageResponsePrivate(this), parent)
+{
+    setRequest(new GetStageRequest(request));
+    setReply(reply);
+}
+
+const GetStageRequest * GetStageResponse::request() const
+{
+    Q_D(const GetStageResponse);
+    return static_cast<const GetStageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetStage response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetStageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStageResponsePrivate
+ *
+ * @brief  Private implementation for GetStageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetStageResponse instance.
+ */
+GetStageResponsePrivate::GetStageResponsePrivate(
+    GetStageQueueResponse * const q) : GetStagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetStageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetStageResponsePrivate::GetStageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetStageResponse"));
+    /// @todo
+}

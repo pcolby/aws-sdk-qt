@@ -19,3 +19,85 @@
 
 #include "creategraphqlapiresponse.h"
 #include "creategraphqlapiresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  CreateGraphqlApiResponse
+ *
+ * @brief  Handles AppSync CreateGraphqlApi responses.
+ *
+ * @see    AppSyncClient::createGraphqlApi
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGraphqlApiResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new CreateGraphqlApiResponsePrivate(this), parent)
+{
+    setRequest(new CreateGraphqlApiRequest(request));
+    setReply(reply);
+}
+
+const CreateGraphqlApiRequest * CreateGraphqlApiResponse::request() const
+{
+    Q_D(const CreateGraphqlApiResponse);
+    return static_cast<const CreateGraphqlApiRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync CreateGraphqlApi response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateGraphqlApiResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGraphqlApiResponsePrivate
+ *
+ * @brief  Private implementation for CreateGraphqlApiResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGraphqlApiResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateGraphqlApiResponse instance.
+ */
+CreateGraphqlApiResponsePrivate::CreateGraphqlApiResponsePrivate(
+    CreateGraphqlApiQueueResponse * const q) : CreateGraphqlApiPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync CreateGraphqlApiResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateGraphqlApiResponsePrivate::CreateGraphqlApiResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateGraphqlApiResponse"));
+    /// @todo
+}

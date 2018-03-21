@@ -19,3 +19,85 @@
 
 #include "listbootstrapactionsresponse.h"
 #include "listbootstrapactionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ListBootstrapActionsResponse
+ *
+ * @brief  Handles EMR ListBootstrapActions responses.
+ *
+ * @see    EMRClient::listBootstrapActions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBootstrapActionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new ListBootstrapActionsResponsePrivate(this), parent)
+{
+    setRequest(new ListBootstrapActionsRequest(request));
+    setReply(reply);
+}
+
+const ListBootstrapActionsRequest * ListBootstrapActionsResponse::request() const
+{
+    Q_D(const ListBootstrapActionsResponse);
+    return static_cast<const ListBootstrapActionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR ListBootstrapActions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBootstrapActionsResponsePrivate
+ *
+ * @brief  Private implementation for ListBootstrapActionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBootstrapActionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBootstrapActionsResponse instance.
+ */
+ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
+    ListBootstrapActionsQueueResponse * const q) : ListBootstrapActionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR ListBootstrapActionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBootstrapActionsResponse"));
+    /// @todo
+}

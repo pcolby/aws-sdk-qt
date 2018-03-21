@@ -19,3 +19,85 @@
 
 #include "verifysoftwaretokenresponse.h"
 #include "verifysoftwaretokenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  VerifySoftwareTokenResponse
+ *
+ * @brief  Handles CognitoIdentityProvider VerifySoftwareToken responses.
+ *
+ * @see    CognitoIdentityProviderClient::verifySoftwareToken
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifySoftwareTokenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new VerifySoftwareTokenResponsePrivate(this), parent)
+{
+    setRequest(new VerifySoftwareTokenRequest(request));
+    setReply(reply);
+}
+
+const VerifySoftwareTokenRequest * VerifySoftwareTokenResponse::request() const
+{
+    Q_D(const VerifySoftwareTokenResponse);
+    return static_cast<const VerifySoftwareTokenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider VerifySoftwareToken response.
+ *
+ * @param  response  Response to parse.
+ */
+void VerifySoftwareTokenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifySoftwareTokenResponsePrivate
+ *
+ * @brief  Private implementation for VerifySoftwareTokenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifySoftwareTokenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public VerifySoftwareTokenResponse instance.
+ */
+VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponsePrivate(
+    VerifySoftwareTokenQueueResponse * const q) : VerifySoftwareTokenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider VerifySoftwareTokenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("VerifySoftwareTokenResponse"));
+    /// @todo
+}

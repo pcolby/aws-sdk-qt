@@ -19,3 +19,85 @@
 
 #include "getcommentsforcomparedcommitresponse.h"
 #include "getcommentsforcomparedcommitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetCommentsForComparedCommitResponse
+ *
+ * @brief  Handles CodeCommit GetCommentsForComparedCommit responses.
+ *
+ * @see    CodeCommitClient::getCommentsForComparedCommit
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCommentsForComparedCommitResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new GetCommentsForComparedCommitResponsePrivate(this), parent)
+{
+    setRequest(new GetCommentsForComparedCommitRequest(request));
+    setReply(reply);
+}
+
+const GetCommentsForComparedCommitRequest * GetCommentsForComparedCommitResponse::request() const
+{
+    Q_D(const GetCommentsForComparedCommitResponse);
+    return static_cast<const GetCommentsForComparedCommitRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit GetCommentsForComparedCommit response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCommentsForComparedCommitResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCommentsForComparedCommitResponsePrivate
+ *
+ * @brief  Private implementation for GetCommentsForComparedCommitResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCommentsForComparedCommitResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCommentsForComparedCommitResponse instance.
+ */
+GetCommentsForComparedCommitResponsePrivate::GetCommentsForComparedCommitResponsePrivate(
+    GetCommentsForComparedCommitQueueResponse * const q) : GetCommentsForComparedCommitPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit GetCommentsForComparedCommitResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCommentsForComparedCommitResponsePrivate::GetCommentsForComparedCommitResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCommentsForComparedCommitResponse"));
+    /// @todo
+}

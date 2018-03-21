@@ -19,3 +19,85 @@
 
 #include "attachobjectresponse.h"
 #include "attachobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AttachObjectResponse
+ *
+ * @brief  Handles CloudDirectory AttachObject responses.
+ *
+ * @see    CloudDirectoryClient::attachObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new AttachObjectResponsePrivate(this), parent)
+{
+    setRequest(new AttachObjectRequest(request));
+    setReply(reply);
+}
+
+const AttachObjectRequest * AttachObjectResponse::request() const
+{
+    Q_D(const AttachObjectResponse);
+    return static_cast<const AttachObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory AttachObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachObjectResponsePrivate
+ *
+ * @brief  Private implementation for AttachObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachObjectResponse instance.
+ */
+AttachObjectResponsePrivate::AttachObjectResponsePrivate(
+    AttachObjectQueueResponse * const q) : AttachObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory AttachObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachObjectResponsePrivate::AttachObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachObjectResponse"));
+    /// @todo
+}

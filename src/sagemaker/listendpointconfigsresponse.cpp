@@ -19,3 +19,85 @@
 
 #include "listendpointconfigsresponse.h"
 #include "listendpointconfigsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListEndpointConfigsResponse
+ *
+ * @brief  Handles SageMaker ListEndpointConfigs responses.
+ *
+ * @see    SageMakerClient::listEndpointConfigs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEndpointConfigsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new ListEndpointConfigsResponsePrivate(this), parent)
+{
+    setRequest(new ListEndpointConfigsRequest(request));
+    setReply(reply);
+}
+
+const ListEndpointConfigsRequest * ListEndpointConfigsResponse::request() const
+{
+    Q_D(const ListEndpointConfigsResponse);
+    return static_cast<const ListEndpointConfigsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker ListEndpointConfigs response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListEndpointConfigsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEndpointConfigsResponsePrivate
+ *
+ * @brief  Private implementation for ListEndpointConfigsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEndpointConfigsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListEndpointConfigsResponse instance.
+ */
+ListEndpointConfigsResponsePrivate::ListEndpointConfigsResponsePrivate(
+    ListEndpointConfigsQueueResponse * const q) : ListEndpointConfigsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker ListEndpointConfigsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListEndpointConfigsResponsePrivate::ListEndpointConfigsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListEndpointConfigsResponse"));
+    /// @todo
+}

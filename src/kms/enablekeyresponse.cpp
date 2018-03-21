@@ -19,3 +19,85 @@
 
 #include "enablekeyresponse.h"
 #include "enablekeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  EnableKeyResponse
+ *
+ * @brief  Handles KMS EnableKey responses.
+ *
+ * @see    KMSClient::enableKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new EnableKeyResponsePrivate(this), parent)
+{
+    setRequest(new EnableKeyRequest(request));
+    setReply(reply);
+}
+
+const EnableKeyRequest * EnableKeyResponse::request() const
+{
+    Q_D(const EnableKeyResponse);
+    return static_cast<const EnableKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS EnableKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableKeyResponsePrivate
+ *
+ * @brief  Private implementation for EnableKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableKeyResponse instance.
+ */
+EnableKeyResponsePrivate::EnableKeyResponsePrivate(
+    EnableKeyQueueResponse * const q) : EnableKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS EnableKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableKeyResponsePrivate::EnableKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableKeyResponse"));
+    /// @todo
+}

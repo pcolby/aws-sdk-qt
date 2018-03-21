@@ -19,3 +19,85 @@
 
 #include "listskillsresponse.h"
 #include "listskillsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  ListSkillsResponse
+ *
+ * @brief  Handles AlexaForBusiness ListSkills responses.
+ *
+ * @see    AlexaForBusinessClient::listSkills
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSkillsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new ListSkillsResponsePrivate(this), parent)
+{
+    setRequest(new ListSkillsRequest(request));
+    setReply(reply);
+}
+
+const ListSkillsRequest * ListSkillsResponse::request() const
+{
+    Q_D(const ListSkillsResponse);
+    return static_cast<const ListSkillsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness ListSkills response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSkillsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSkillsResponsePrivate
+ *
+ * @brief  Private implementation for ListSkillsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSkillsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSkillsResponse instance.
+ */
+ListSkillsResponsePrivate::ListSkillsResponsePrivate(
+    ListSkillsQueueResponse * const q) : ListSkillsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness ListSkillsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSkillsResponsePrivate::ListSkillsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSkillsResponse"));
+    /// @todo
+}

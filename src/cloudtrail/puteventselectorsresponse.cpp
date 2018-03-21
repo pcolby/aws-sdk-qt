@@ -19,3 +19,85 @@
 
 #include "puteventselectorsresponse.h"
 #include "puteventselectorsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  PutEventSelectorsResponse
+ *
+ * @brief  Handles CloudTrail PutEventSelectors responses.
+ *
+ * @see    CloudTrailClient::putEventSelectors
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutEventSelectorsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudTrailResponse(new PutEventSelectorsResponsePrivate(this), parent)
+{
+    setRequest(new PutEventSelectorsRequest(request));
+    setReply(reply);
+}
+
+const PutEventSelectorsRequest * PutEventSelectorsResponse::request() const
+{
+    Q_D(const PutEventSelectorsResponse);
+    return static_cast<const PutEventSelectorsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudTrail PutEventSelectors response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutEventSelectorsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutEventSelectorsResponsePrivate
+ *
+ * @brief  Private implementation for PutEventSelectorsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutEventSelectorsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutEventSelectorsResponse instance.
+ */
+PutEventSelectorsResponsePrivate::PutEventSelectorsResponsePrivate(
+    PutEventSelectorsQueueResponse * const q) : PutEventSelectorsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudTrail PutEventSelectorsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutEventSelectorsResponsePrivate::PutEventSelectorsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutEventSelectorsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteconfigurationtemplateresponse.h"
 #include "deleteconfigurationtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DeleteConfigurationTemplateResponse
+ *
+ * @brief  Handles ElasticBeanstalk DeleteConfigurationTemplate responses.
+ *
+ * @see    ElasticBeanstalkClient::deleteConfigurationTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigurationTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DeleteConfigurationTemplateResponsePrivate(this), parent)
+{
+    setRequest(new DeleteConfigurationTemplateRequest(request));
+    setReply(reply);
+}
+
+const DeleteConfigurationTemplateRequest * DeleteConfigurationTemplateResponse::request() const
+{
+    Q_D(const DeleteConfigurationTemplateResponse);
+    return static_cast<const DeleteConfigurationTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DeleteConfigurationTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteConfigurationTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigurationTemplateResponsePrivate
+ *
+ * @brief  Private implementation for DeleteConfigurationTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteConfigurationTemplateResponse instance.
+ */
+DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResponsePrivate(
+    DeleteConfigurationTemplateQueueResponse * const q) : DeleteConfigurationTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DeleteConfigurationTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationTemplateResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeconfigurationrevisionresponse.h"
 #include "describeconfigurationrevisionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DescribeConfigurationRevisionResponse
+ *
+ * @brief  Handles MQ DescribeConfigurationRevision responses.
+ *
+ * @see    MQClient::describeConfigurationRevision
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigurationRevisionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new DescribeConfigurationRevisionResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConfigurationRevisionRequest(request));
+    setReply(reply);
+}
+
+const DescribeConfigurationRevisionRequest * DescribeConfigurationRevisionResponse::request() const
+{
+    Q_D(const DescribeConfigurationRevisionResponse);
+    return static_cast<const DescribeConfigurationRevisionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ DescribeConfigurationRevision response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConfigurationRevisionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigurationRevisionResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConfigurationRevisionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationRevisionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConfigurationRevisionResponse instance.
+ */
+DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevisionResponsePrivate(
+    DescribeConfigurationRevisionQueueResponse * const q) : DescribeConfigurationRevisionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ DescribeConfigurationRevisionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevisionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationRevisionResponse"));
+    /// @todo
+}

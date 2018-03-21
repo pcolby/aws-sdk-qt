@@ -19,3 +19,85 @@
 
 #include "liststreamprocessorsresponse.h"
 #include "liststreamprocessorsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  ListStreamProcessorsResponse
+ *
+ * @brief  Handles Rekognition ListStreamProcessors responses.
+ *
+ * @see    RekognitionClient::listStreamProcessors
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStreamProcessorsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new ListStreamProcessorsResponsePrivate(this), parent)
+{
+    setRequest(new ListStreamProcessorsRequest(request));
+    setReply(reply);
+}
+
+const ListStreamProcessorsRequest * ListStreamProcessorsResponse::request() const
+{
+    Q_D(const ListStreamProcessorsResponse);
+    return static_cast<const ListStreamProcessorsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition ListStreamProcessors response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListStreamProcessorsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStreamProcessorsResponsePrivate
+ *
+ * @brief  Private implementation for ListStreamProcessorsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStreamProcessorsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListStreamProcessorsResponse instance.
+ */
+ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponsePrivate(
+    ListStreamProcessorsQueueResponse * const q) : ListStreamProcessorsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition ListStreamProcessorsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListStreamProcessorsResponse"));
+    /// @todo
+}

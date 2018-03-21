@@ -19,3 +19,85 @@
 
 #include "addinstancegroupsresponse.h"
 #include "addinstancegroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  AddInstanceGroupsResponse
+ *
+ * @brief  Handles EMR AddInstanceGroups responses.
+ *
+ * @see    EMRClient::addInstanceGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddInstanceGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new AddInstanceGroupsResponsePrivate(this), parent)
+{
+    setRequest(new AddInstanceGroupsRequest(request));
+    setReply(reply);
+}
+
+const AddInstanceGroupsRequest * AddInstanceGroupsResponse::request() const
+{
+    Q_D(const AddInstanceGroupsResponse);
+    return static_cast<const AddInstanceGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR AddInstanceGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddInstanceGroupsResponsePrivate
+ *
+ * @brief  Private implementation for AddInstanceGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddInstanceGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddInstanceGroupsResponse instance.
+ */
+AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponsePrivate(
+    AddInstanceGroupsQueueResponse * const q) : AddInstanceGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR AddInstanceGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddInstanceGroupsResponse"));
+    /// @todo
+}

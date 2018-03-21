@@ -19,3 +19,85 @@
 
 #include "settimebasedautoscalingresponse.h"
 #include "settimebasedautoscalingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  SetTimeBasedAutoScalingResponse
+ *
+ * @brief  Handles OpsWorks SetTimeBasedAutoScaling responses.
+ *
+ * @see    OpsWorksClient::setTimeBasedAutoScaling
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetTimeBasedAutoScalingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new SetTimeBasedAutoScalingResponsePrivate(this), parent)
+{
+    setRequest(new SetTimeBasedAutoScalingRequest(request));
+    setReply(reply);
+}
+
+const SetTimeBasedAutoScalingRequest * SetTimeBasedAutoScalingResponse::request() const
+{
+    Q_D(const SetTimeBasedAutoScalingResponse);
+    return static_cast<const SetTimeBasedAutoScalingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks SetTimeBasedAutoScaling response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetTimeBasedAutoScalingResponsePrivate
+ *
+ * @brief  Private implementation for SetTimeBasedAutoScalingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTimeBasedAutoScalingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetTimeBasedAutoScalingResponse instance.
+ */
+SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponsePrivate(
+    SetTimeBasedAutoScalingQueueResponse * const q) : SetTimeBasedAutoScalingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks SetTimeBasedAutoScalingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetTimeBasedAutoScalingResponse"));
+    /// @todo
+}

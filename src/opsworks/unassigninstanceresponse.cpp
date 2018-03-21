@@ -19,3 +19,85 @@
 
 #include "unassigninstanceresponse.h"
 #include "unassigninstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UnassignInstanceResponse
+ *
+ * @brief  Handles OpsWorks UnassignInstance responses.
+ *
+ * @see    OpsWorksClient::unassignInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnassignInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UnassignInstanceResponsePrivate(this), parent)
+{
+    setRequest(new UnassignInstanceRequest(request));
+    setReply(reply);
+}
+
+const UnassignInstanceRequest * UnassignInstanceResponse::request() const
+{
+    Q_D(const UnassignInstanceResponse);
+    return static_cast<const UnassignInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UnassignInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnassignInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnassignInstanceResponsePrivate
+ *
+ * @brief  Private implementation for UnassignInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnassignInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnassignInstanceResponse instance.
+ */
+UnassignInstanceResponsePrivate::UnassignInstanceResponsePrivate(
+    UnassignInstanceQueueResponse * const q) : UnassignInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UnassignInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnassignInstanceResponsePrivate::UnassignInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnassignInstanceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listgithubaccounttokennamesresponse.h"
 #include "listgithubaccounttokennamesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListGitHubAccountTokenNamesResponse
+ *
+ * @brief  Handles CodeDeploy ListGitHubAccountTokenNames responses.
+ *
+ * @see    CodeDeployClient::listGitHubAccountTokenNames
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGitHubAccountTokenNamesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new ListGitHubAccountTokenNamesResponsePrivate(this), parent)
+{
+    setRequest(new ListGitHubAccountTokenNamesRequest(request));
+    setReply(reply);
+}
+
+const ListGitHubAccountTokenNamesRequest * ListGitHubAccountTokenNamesResponse::request() const
+{
+    Q_D(const ListGitHubAccountTokenNamesResponse);
+    return static_cast<const ListGitHubAccountTokenNamesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy ListGitHubAccountTokenNames response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGitHubAccountTokenNamesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGitHubAccountTokenNamesResponsePrivate
+ *
+ * @brief  Private implementation for ListGitHubAccountTokenNamesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGitHubAccountTokenNamesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGitHubAccountTokenNamesResponse instance.
+ */
+ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponsePrivate(
+    ListGitHubAccountTokenNamesQueueResponse * const q) : ListGitHubAccountTokenNamesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy ListGitHubAccountTokenNamesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGitHubAccountTokenNamesResponse"));
+    /// @todo
+}

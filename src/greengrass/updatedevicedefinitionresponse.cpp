@@ -19,3 +19,85 @@
 
 #include "updatedevicedefinitionresponse.h"
 #include "updatedevicedefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  UpdateDeviceDefinitionResponse
+ *
+ * @brief  Handles Greengrass UpdateDeviceDefinition responses.
+ *
+ * @see    GreengrassClient::updateDeviceDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDeviceDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new UpdateDeviceDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDeviceDefinitionRequest(request));
+    setReply(reply);
+}
+
+const UpdateDeviceDefinitionRequest * UpdateDeviceDefinitionResponse::request() const
+{
+    Q_D(const UpdateDeviceDefinitionResponse);
+    return static_cast<const UpdateDeviceDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass UpdateDeviceDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDeviceDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDeviceDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDeviceDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeviceDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDeviceDefinitionResponse instance.
+ */
+UpdateDeviceDefinitionResponsePrivate::UpdateDeviceDefinitionResponsePrivate(
+    UpdateDeviceDefinitionQueueResponse * const q) : UpdateDeviceDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass UpdateDeviceDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDeviceDefinitionResponsePrivate::UpdateDeviceDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDeviceDefinitionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "disassociatemembersresponse.h"
 #include "disassociatemembersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DisassociateMembersResponse
+ *
+ * @brief  Handles GuardDuty DisassociateMembers responses.
+ *
+ * @see    GuardDutyClient::disassociateMembers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateMembersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new DisassociateMembersResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateMembersRequest(request));
+    setReply(reply);
+}
+
+const DisassociateMembersRequest * DisassociateMembersResponse::request() const
+{
+    Q_D(const DisassociateMembersResponse);
+    return static_cast<const DisassociateMembersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty DisassociateMembers response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateMembersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateMembersResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateMembersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateMembersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateMembersResponse instance.
+ */
+DisassociateMembersResponsePrivate::DisassociateMembersResponsePrivate(
+    DisassociateMembersQueueResponse * const q) : DisassociateMembersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty DisassociateMembersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateMembersResponsePrivate::DisassociateMembersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateMembersResponse"));
+    /// @todo
+}

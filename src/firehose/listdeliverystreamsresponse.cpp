@@ -19,3 +19,85 @@
 
 #include "listdeliverystreamsresponse.h"
 #include "listdeliverystreamsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  ListDeliveryStreamsResponse
+ *
+ * @brief  Handles Firehose ListDeliveryStreams responses.
+ *
+ * @see    FirehoseClient::listDeliveryStreams
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeliveryStreamsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : FirehoseResponse(new ListDeliveryStreamsResponsePrivate(this), parent)
+{
+    setRequest(new ListDeliveryStreamsRequest(request));
+    setReply(reply);
+}
+
+const ListDeliveryStreamsRequest * ListDeliveryStreamsResponse::request() const
+{
+    Q_D(const ListDeliveryStreamsResponse);
+    return static_cast<const ListDeliveryStreamsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Firehose ListDeliveryStreams response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDeliveryStreamsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeliveryStreamsResponsePrivate
+ *
+ * @brief  Private implementation for ListDeliveryStreamsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeliveryStreamsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDeliveryStreamsResponse instance.
+ */
+ListDeliveryStreamsResponsePrivate::ListDeliveryStreamsResponsePrivate(
+    ListDeliveryStreamsQueueResponse * const q) : ListDeliveryStreamsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Firehose ListDeliveryStreamsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDeliveryStreamsResponsePrivate::ListDeliveryStreamsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDeliveryStreamsResponse"));
+    /// @todo
+}

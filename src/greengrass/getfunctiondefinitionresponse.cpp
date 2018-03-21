@@ -19,3 +19,85 @@
 
 #include "getfunctiondefinitionresponse.h"
 #include "getfunctiondefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetFunctionDefinitionResponse
+ *
+ * @brief  Handles Greengrass GetFunctionDefinition responses.
+ *
+ * @see    GreengrassClient::getFunctionDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFunctionDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetFunctionDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new GetFunctionDefinitionRequest(request));
+    setReply(reply);
+}
+
+const GetFunctionDefinitionRequest * GetFunctionDefinitionResponse::request() const
+{
+    Q_D(const GetFunctionDefinitionResponse);
+    return static_cast<const GetFunctionDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetFunctionDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFunctionDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFunctionDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for GetFunctionDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFunctionDefinitionResponse instance.
+ */
+GetFunctionDefinitionResponsePrivate::GetFunctionDefinitionResponsePrivate(
+    GetFunctionDefinitionQueueResponse * const q) : GetFunctionDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetFunctionDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFunctionDefinitionResponsePrivate::GetFunctionDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFunctionDefinitionResponse"));
+    /// @todo
+}

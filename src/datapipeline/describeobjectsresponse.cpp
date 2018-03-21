@@ -19,3 +19,85 @@
 
 #include "describeobjectsresponse.h"
 #include "describeobjectsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  DescribeObjectsResponse
+ *
+ * @brief  Handles DataPipeline DescribeObjects responses.
+ *
+ * @see    DataPipelineClient::describeObjects
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeObjectsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DataPipelineResponse(new DescribeObjectsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeObjectsRequest(request));
+    setReply(reply);
+}
+
+const DescribeObjectsRequest * DescribeObjectsResponse::request() const
+{
+    Q_D(const DescribeObjectsResponse);
+    return static_cast<const DescribeObjectsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DataPipeline DescribeObjects response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeObjectsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeObjectsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeObjectsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeObjectsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeObjectsResponse instance.
+ */
+DescribeObjectsResponsePrivate::DescribeObjectsResponsePrivate(
+    DescribeObjectsQueueResponse * const q) : DescribeObjectsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DataPipeline DescribeObjectsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeObjectsResponsePrivate::DescribeObjectsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeObjectsResponse"));
+    /// @todo
+}

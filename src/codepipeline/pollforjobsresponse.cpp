@@ -19,3 +19,85 @@
 
 #include "pollforjobsresponse.h"
 #include "pollforjobsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PollForJobsResponse
+ *
+ * @brief  Handles CodePipeline PollForJobs responses.
+ *
+ * @see    CodePipelineClient::pollForJobs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PollForJobsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new PollForJobsResponsePrivate(this), parent)
+{
+    setRequest(new PollForJobsRequest(request));
+    setReply(reply);
+}
+
+const PollForJobsRequest * PollForJobsResponse::request() const
+{
+    Q_D(const PollForJobsResponse);
+    return static_cast<const PollForJobsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline PollForJobs response.
+ *
+ * @param  response  Response to parse.
+ */
+void PollForJobsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PollForJobsResponsePrivate
+ *
+ * @brief  Private implementation for PollForJobsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForJobsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PollForJobsResponse instance.
+ */
+PollForJobsResponsePrivate::PollForJobsResponsePrivate(
+    PollForJobsQueueResponse * const q) : PollForJobsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline PollForJobsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PollForJobsResponsePrivate::PollForJobsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PollForJobsResponse"));
+    /// @todo
+}

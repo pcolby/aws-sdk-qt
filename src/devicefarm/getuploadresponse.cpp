@@ -19,3 +19,85 @@
 
 #include "getuploadresponse.h"
 #include "getuploadresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  GetUploadResponse
+ *
+ * @brief  Handles DeviceFarm GetUpload responses.
+ *
+ * @see    DeviceFarmClient::getUpload
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUploadResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new GetUploadResponsePrivate(this), parent)
+{
+    setRequest(new GetUploadRequest(request));
+    setReply(reply);
+}
+
+const GetUploadRequest * GetUploadResponse::request() const
+{
+    Q_D(const GetUploadResponse);
+    return static_cast<const GetUploadRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm GetUpload response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUploadResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUploadResponsePrivate
+ *
+ * @brief  Private implementation for GetUploadResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUploadResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUploadResponse instance.
+ */
+GetUploadResponsePrivate::GetUploadResponsePrivate(
+    GetUploadQueueResponse * const q) : GetUploadPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm GetUploadResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUploadResponsePrivate::GetUploadResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUploadResponse"));
+    /// @todo
+}

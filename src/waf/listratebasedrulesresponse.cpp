@@ -19,3 +19,85 @@
 
 #include "listratebasedrulesresponse.h"
 #include "listratebasedrulesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListRateBasedRulesResponse
+ *
+ * @brief  Handles WAF ListRateBasedRules responses.
+ *
+ * @see    WAFClient::listRateBasedRules
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRateBasedRulesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new ListRateBasedRulesResponsePrivate(this), parent)
+{
+    setRequest(new ListRateBasedRulesRequest(request));
+    setReply(reply);
+}
+
+const ListRateBasedRulesRequest * ListRateBasedRulesResponse::request() const
+{
+    Q_D(const ListRateBasedRulesResponse);
+    return static_cast<const ListRateBasedRulesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF ListRateBasedRules response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRateBasedRulesResponsePrivate
+ *
+ * @brief  Private implementation for ListRateBasedRulesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRateBasedRulesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRateBasedRulesResponse instance.
+ */
+ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
+    ListRateBasedRulesQueueResponse * const q) : ListRateBasedRulesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF ListRateBasedRulesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRateBasedRulesResponse"));
+    /// @todo
+}

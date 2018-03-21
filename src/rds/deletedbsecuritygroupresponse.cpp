@@ -19,3 +19,85 @@
 
 #include "deletedbsecuritygroupresponse.h"
 #include "deletedbsecuritygroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteDBSecurityGroupResponse
+ *
+ * @brief  Handles RDS DeleteDBSecurityGroup responses.
+ *
+ * @see    RDSClient::deleteDBSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDBSecurityGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DeleteDBSecurityGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDBSecurityGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteDBSecurityGroupRequest * DeleteDBSecurityGroupResponse::request() const
+{
+    Q_D(const DeleteDBSecurityGroupResponse);
+    return static_cast<const DeleteDBSecurityGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DeleteDBSecurityGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDBSecurityGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDBSecurityGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBSecurityGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDBSecurityGroupResponse instance.
+ */
+DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponsePrivate(
+    DeleteDBSecurityGroupQueueResponse * const q) : DeleteDBSecurityGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DeleteDBSecurityGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDBSecurityGroupResponse"));
+    /// @todo
+}

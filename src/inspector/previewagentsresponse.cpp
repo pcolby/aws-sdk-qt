@@ -19,3 +19,85 @@
 
 #include "previewagentsresponse.h"
 #include "previewagentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  PreviewAgentsResponse
+ *
+ * @brief  Handles Inspector PreviewAgents responses.
+ *
+ * @see    InspectorClient::previewAgents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PreviewAgentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new PreviewAgentsResponsePrivate(this), parent)
+{
+    setRequest(new PreviewAgentsRequest(request));
+    setReply(reply);
+}
+
+const PreviewAgentsRequest * PreviewAgentsResponse::request() const
+{
+    Q_D(const PreviewAgentsResponse);
+    return static_cast<const PreviewAgentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector PreviewAgents response.
+ *
+ * @param  response  Response to parse.
+ */
+void PreviewAgentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PreviewAgentsResponsePrivate
+ *
+ * @brief  Private implementation for PreviewAgentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PreviewAgentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PreviewAgentsResponse instance.
+ */
+PreviewAgentsResponsePrivate::PreviewAgentsResponsePrivate(
+    PreviewAgentsQueueResponse * const q) : PreviewAgentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector PreviewAgentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PreviewAgentsResponsePrivate::PreviewAgentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PreviewAgentsResponse"));
+    /// @todo
+}

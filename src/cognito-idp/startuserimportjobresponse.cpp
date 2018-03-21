@@ -19,3 +19,85 @@
 
 #include "startuserimportjobresponse.h"
 #include "startuserimportjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  StartUserImportJobResponse
+ *
+ * @brief  Handles CognitoIdentityProvider StartUserImportJob responses.
+ *
+ * @see    CognitoIdentityProviderClient::startUserImportJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartUserImportJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new StartUserImportJobResponsePrivate(this), parent)
+{
+    setRequest(new StartUserImportJobRequest(request));
+    setReply(reply);
+}
+
+const StartUserImportJobRequest * StartUserImportJobResponse::request() const
+{
+    Q_D(const StartUserImportJobResponse);
+    return static_cast<const StartUserImportJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider StartUserImportJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartUserImportJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartUserImportJobResponsePrivate
+ *
+ * @brief  Private implementation for StartUserImportJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartUserImportJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartUserImportJobResponse instance.
+ */
+StartUserImportJobResponsePrivate::StartUserImportJobResponsePrivate(
+    StartUserImportJobQueueResponse * const q) : StartUserImportJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider StartUserImportJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartUserImportJobResponsePrivate::StartUserImportJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartUserImportJobResponse"));
+    /// @todo
+}

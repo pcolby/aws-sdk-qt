@@ -19,3 +19,85 @@
 
 #include "deregistermanagedinstanceresponse.h"
 #include "deregistermanagedinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeregisterManagedInstanceResponse
+ *
+ * @brief  Handles SSM DeregisterManagedInstance responses.
+ *
+ * @see    SSMClient::deregisterManagedInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterManagedInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DeregisterManagedInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterManagedInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeregisterManagedInstanceRequest * DeregisterManagedInstanceResponse::request() const
+{
+    Q_D(const DeregisterManagedInstanceResponse);
+    return static_cast<const DeregisterManagedInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DeregisterManagedInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterManagedInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterManagedInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterManagedInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterManagedInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterManagedInstanceResponse instance.
+ */
+DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponsePrivate(
+    DeregisterManagedInstanceQueueResponse * const q) : DeregisterManagedInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DeregisterManagedInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterManagedInstanceResponse"));
+    /// @todo
+}

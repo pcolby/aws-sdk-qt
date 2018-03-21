@@ -19,3 +19,85 @@
 
 #include "publishresponse.h"
 #include "publishresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  PublishResponse
+ *
+ * @brief  Handles SNS Publish responses.
+ *
+ * @see    SNSClient::publish
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PublishResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new PublishResponsePrivate(this), parent)
+{
+    setRequest(new PublishRequest(request));
+    setReply(reply);
+}
+
+const PublishRequest * PublishResponse::request() const
+{
+    Q_D(const PublishResponse);
+    return static_cast<const PublishRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS Publish response.
+ *
+ * @param  response  Response to parse.
+ */
+void PublishResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PublishResponsePrivate
+ *
+ * @brief  Private implementation for PublishResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PublishResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PublishResponse instance.
+ */
+PublishResponsePrivate::PublishResponsePrivate(
+    PublishQueueResponse * const q) : PublishPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS PublishResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PublishResponsePrivate::PublishResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PublishResponse"));
+    /// @todo
+}

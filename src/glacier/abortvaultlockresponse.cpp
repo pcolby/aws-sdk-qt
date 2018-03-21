@@ -19,3 +19,85 @@
 
 #include "abortvaultlockresponse.h"
 #include "abortvaultlockresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  AbortVaultLockResponse
+ *
+ * @brief  Handles Glacier AbortVaultLock responses.
+ *
+ * @see    GlacierClient::abortVaultLock
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AbortVaultLockResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new AbortVaultLockResponsePrivate(this), parent)
+{
+    setRequest(new AbortVaultLockRequest(request));
+    setReply(reply);
+}
+
+const AbortVaultLockRequest * AbortVaultLockResponse::request() const
+{
+    Q_D(const AbortVaultLockResponse);
+    return static_cast<const AbortVaultLockRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier AbortVaultLock response.
+ *
+ * @param  response  Response to parse.
+ */
+void AbortVaultLockResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AbortVaultLockResponsePrivate
+ *
+ * @brief  Private implementation for AbortVaultLockResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AbortVaultLockResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AbortVaultLockResponse instance.
+ */
+AbortVaultLockResponsePrivate::AbortVaultLockResponsePrivate(
+    AbortVaultLockQueueResponse * const q) : AbortVaultLockPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier AbortVaultLockResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AbortVaultLockResponsePrivate::AbortVaultLockResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AbortVaultLockResponse"));
+    /// @todo
+}

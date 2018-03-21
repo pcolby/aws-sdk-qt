@@ -19,3 +19,85 @@
 
 #include "exitstandbyresponse.h"
 #include "exitstandbyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  ExitStandbyResponse
+ *
+ * @brief  Handles AutoScaling ExitStandby responses.
+ *
+ * @see    AutoScalingClient::exitStandby
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExitStandbyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new ExitStandbyResponsePrivate(this), parent)
+{
+    setRequest(new ExitStandbyRequest(request));
+    setReply(reply);
+}
+
+const ExitStandbyRequest * ExitStandbyResponse::request() const
+{
+    Q_D(const ExitStandbyResponse);
+    return static_cast<const ExitStandbyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling ExitStandby response.
+ *
+ * @param  response  Response to parse.
+ */
+void ExitStandbyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ExitStandbyResponsePrivate
+ *
+ * @brief  Private implementation for ExitStandbyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExitStandbyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ExitStandbyResponse instance.
+ */
+ExitStandbyResponsePrivate::ExitStandbyResponsePrivate(
+    ExitStandbyQueueResponse * const q) : ExitStandbyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling ExitStandbyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ExitStandbyResponsePrivate::ExitStandbyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ExitStandbyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "mergepullrequestbyfastforwardresponse.h"
 #include "mergepullrequestbyfastforwardresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  MergePullRequestByFastForwardResponse
+ *
+ * @brief  Handles CodeCommit MergePullRequestByFastForward responses.
+ *
+ * @see    CodeCommitClient::mergePullRequestByFastForward
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+MergePullRequestByFastForwardResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new MergePullRequestByFastForwardResponsePrivate(this), parent)
+{
+    setRequest(new MergePullRequestByFastForwardRequest(request));
+    setReply(reply);
+}
+
+const MergePullRequestByFastForwardRequest * MergePullRequestByFastForwardResponse::request() const
+{
+    Q_D(const MergePullRequestByFastForwardResponse);
+    return static_cast<const MergePullRequestByFastForwardRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit MergePullRequestByFastForward response.
+ *
+ * @param  response  Response to parse.
+ */
+void MergePullRequestByFastForwardResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  MergePullRequestByFastForwardResponsePrivate
+ *
+ * @brief  Private implementation for MergePullRequestByFastForwardResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MergePullRequestByFastForwardResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public MergePullRequestByFastForwardResponse instance.
+ */
+MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardResponsePrivate(
+    MergePullRequestByFastForwardQueueResponse * const q) : MergePullRequestByFastForwardPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit MergePullRequestByFastForwardResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("MergePullRequestByFastForwardResponse"));
+    /// @todo
+}

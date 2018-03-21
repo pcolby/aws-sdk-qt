@@ -19,3 +19,85 @@
 
 #include "deletevaultnotificationsresponse.h"
 #include "deletevaultnotificationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  DeleteVaultNotificationsResponse
+ *
+ * @brief  Handles Glacier DeleteVaultNotifications responses.
+ *
+ * @see    GlacierClient::deleteVaultNotifications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVaultNotificationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new DeleteVaultNotificationsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVaultNotificationsRequest(request));
+    setReply(reply);
+}
+
+const DeleteVaultNotificationsRequest * DeleteVaultNotificationsResponse::request() const
+{
+    Q_D(const DeleteVaultNotificationsResponse);
+    return static_cast<const DeleteVaultNotificationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier DeleteVaultNotifications response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVaultNotificationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVaultNotificationsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVaultNotificationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVaultNotificationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVaultNotificationsResponse instance.
+ */
+DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponsePrivate(
+    DeleteVaultNotificationsQueueResponse * const q) : DeleteVaultNotificationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier DeleteVaultNotificationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVaultNotificationsResponse"));
+    /// @todo
+}

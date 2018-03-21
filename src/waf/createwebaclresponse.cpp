@@ -19,3 +19,85 @@
 
 #include "createwebaclresponse.h"
 #include "createwebaclresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  CreateWebACLResponse
+ *
+ * @brief  Handles WAF CreateWebACL responses.
+ *
+ * @see    WAFClient::createWebACL
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateWebACLResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new CreateWebACLResponsePrivate(this), parent)
+{
+    setRequest(new CreateWebACLRequest(request));
+    setReply(reply);
+}
+
+const CreateWebACLRequest * CreateWebACLResponse::request() const
+{
+    Q_D(const CreateWebACLResponse);
+    return static_cast<const CreateWebACLRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF CreateWebACL response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateWebACLResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateWebACLResponsePrivate
+ *
+ * @brief  Private implementation for CreateWebACLResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateWebACLResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateWebACLResponse instance.
+ */
+CreateWebACLResponsePrivate::CreateWebACLResponsePrivate(
+    CreateWebACLQueueResponse * const q) : CreateWebACLPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF CreateWebACLResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateWebACLResponsePrivate::CreateWebACLResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateWebACLResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createstreamingdistributionresponse.h"
 #include "createstreamingdistributionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  CreateStreamingDistributionResponse
+ *
+ * @brief  Handles CloudFront CreateStreamingDistribution responses.
+ *
+ * @see    CloudFrontClient::createStreamingDistribution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStreamingDistributionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new CreateStreamingDistributionResponsePrivate(this), parent)
+{
+    setRequest(new CreateStreamingDistributionRequest(request));
+    setReply(reply);
+}
+
+const CreateStreamingDistributionRequest * CreateStreamingDistributionResponse::request() const
+{
+    Q_D(const CreateStreamingDistributionResponse);
+    return static_cast<const CreateStreamingDistributionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront CreateStreamingDistribution response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStreamingDistributionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStreamingDistributionResponsePrivate
+ *
+ * @brief  Private implementation for CreateStreamingDistributionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStreamingDistributionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStreamingDistributionResponse instance.
+ */
+CreateStreamingDistributionResponsePrivate::CreateStreamingDistributionResponsePrivate(
+    CreateStreamingDistributionQueueResponse * const q) : CreateStreamingDistributionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront CreateStreamingDistributionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStreamingDistributionResponsePrivate::CreateStreamingDistributionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStreamingDistributionResponse"));
+    /// @todo
+}

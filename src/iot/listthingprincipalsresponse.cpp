@@ -19,3 +19,85 @@
 
 #include "listthingprincipalsresponse.h"
 #include "listthingprincipalsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListThingPrincipalsResponse
+ *
+ * @brief  Handles IoT ListThingPrincipals responses.
+ *
+ * @see    IoTClient::listThingPrincipals
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThingPrincipalsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListThingPrincipalsResponsePrivate(this), parent)
+{
+    setRequest(new ListThingPrincipalsRequest(request));
+    setReply(reply);
+}
+
+const ListThingPrincipalsRequest * ListThingPrincipalsResponse::request() const
+{
+    Q_D(const ListThingPrincipalsResponse);
+    return static_cast<const ListThingPrincipalsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListThingPrincipals response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListThingPrincipalsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThingPrincipalsResponsePrivate
+ *
+ * @brief  Private implementation for ListThingPrincipalsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingPrincipalsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListThingPrincipalsResponse instance.
+ */
+ListThingPrincipalsResponsePrivate::ListThingPrincipalsResponsePrivate(
+    ListThingPrincipalsQueueResponse * const q) : ListThingPrincipalsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListThingPrincipalsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListThingPrincipalsResponsePrivate::ListThingPrincipalsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListThingPrincipalsResponse"));
+    /// @todo
+}

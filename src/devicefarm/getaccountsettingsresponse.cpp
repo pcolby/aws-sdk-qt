@@ -19,3 +19,85 @@
 
 #include "getaccountsettingsresponse.h"
 #include "getaccountsettingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  GetAccountSettingsResponse
+ *
+ * @brief  Handles DeviceFarm GetAccountSettings responses.
+ *
+ * @see    DeviceFarmClient::getAccountSettings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAccountSettingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new GetAccountSettingsResponsePrivate(this), parent)
+{
+    setRequest(new GetAccountSettingsRequest(request));
+    setReply(reply);
+}
+
+const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
+{
+    Q_D(const GetAccountSettingsResponse);
+    return static_cast<const GetAccountSettingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm GetAccountSettings response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAccountSettingsResponsePrivate
+ *
+ * @brief  Private implementation for GetAccountSettingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountSettingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAccountSettingsResponse instance.
+ */
+GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
+    GetAccountSettingsQueueResponse * const q) : GetAccountSettingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm GetAccountSettingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAccountSettingsResponsePrivate::GetAccountSettingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAccountSettingsResponse"));
+    /// @todo
+}

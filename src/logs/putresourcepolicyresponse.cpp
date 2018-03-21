@@ -19,3 +19,85 @@
 
 #include "putresourcepolicyresponse.h"
 #include "putresourcepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  PutResourcePolicyResponse
+ *
+ * @brief  Handles CloudWatchLogs PutResourcePolicy responses.
+ *
+ * @see    CloudWatchLogsClient::putResourcePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutResourcePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new PutResourcePolicyResponsePrivate(this), parent)
+{
+    setRequest(new PutResourcePolicyRequest(request));
+    setReply(reply);
+}
+
+const PutResourcePolicyRequest * PutResourcePolicyResponse::request() const
+{
+    Q_D(const PutResourcePolicyResponse);
+    return static_cast<const PutResourcePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs PutResourcePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutResourcePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutResourcePolicyResponsePrivate
+ *
+ * @brief  Private implementation for PutResourcePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutResourcePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutResourcePolicyResponse instance.
+ */
+PutResourcePolicyResponsePrivate::PutResourcePolicyResponsePrivate(
+    PutResourcePolicyQueueResponse * const q) : PutResourcePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs PutResourcePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutResourcePolicyResponsePrivate::PutResourcePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutResourcePolicyResponse"));
+    /// @todo
+}

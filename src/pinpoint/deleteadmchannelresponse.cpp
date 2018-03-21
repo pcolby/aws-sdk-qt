@@ -19,3 +19,85 @@
 
 #include "deleteadmchannelresponse.h"
 #include "deleteadmchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteAdmChannelResponse
+ *
+ * @brief  Handles Pinpoint DeleteAdmChannel responses.
+ *
+ * @see    PinpointClient::deleteAdmChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAdmChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteAdmChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAdmChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteAdmChannelRequest * DeleteAdmChannelResponse::request() const
+{
+    Q_D(const DeleteAdmChannelResponse);
+    return static_cast<const DeleteAdmChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteAdmChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAdmChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAdmChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAdmChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAdmChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAdmChannelResponse instance.
+ */
+DeleteAdmChannelResponsePrivate::DeleteAdmChannelResponsePrivate(
+    DeleteAdmChannelQueueResponse * const q) : DeleteAdmChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteAdmChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAdmChannelResponsePrivate::DeleteAdmChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAdmChannelResponse"));
+    /// @todo
+}

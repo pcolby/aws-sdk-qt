@@ -19,3 +19,85 @@
 
 #include "deletealarmsresponse.h"
 #include "deletealarmsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  DeleteAlarmsResponse
+ *
+ * @brief  Handles CloudWatch DeleteAlarms responses.
+ *
+ * @see    CloudWatchClient::deleteAlarms
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAlarmsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new DeleteAlarmsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAlarmsRequest(request));
+    setReply(reply);
+}
+
+const DeleteAlarmsRequest * DeleteAlarmsResponse::request() const
+{
+    Q_D(const DeleteAlarmsResponse);
+    return static_cast<const DeleteAlarmsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch DeleteAlarms response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAlarmsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAlarmsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAlarmsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAlarmsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAlarmsResponse instance.
+ */
+DeleteAlarmsResponsePrivate::DeleteAlarmsResponsePrivate(
+    DeleteAlarmsQueueResponse * const q) : DeleteAlarmsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch DeleteAlarmsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAlarmsResponsePrivate::DeleteAlarmsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAlarmsResponse"));
+    /// @todo
+}

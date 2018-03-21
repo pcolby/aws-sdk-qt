@@ -19,3 +19,85 @@
 
 #include "putattributesresponse.h"
 #include "putattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  PutAttributesResponse
+ *
+ * @brief  Handles ECS PutAttributes responses.
+ *
+ * @see    ECSClient::putAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new PutAttributesResponsePrivate(this), parent)
+{
+    setRequest(new PutAttributesRequest(request));
+    setReply(reply);
+}
+
+const PutAttributesRequest * PutAttributesResponse::request() const
+{
+    Q_D(const PutAttributesResponse);
+    return static_cast<const PutAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS PutAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutAttributesResponsePrivate
+ *
+ * @brief  Private implementation for PutAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutAttributesResponse instance.
+ */
+PutAttributesResponsePrivate::PutAttributesResponsePrivate(
+    PutAttributesQueueResponse * const q) : PutAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS PutAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutAttributesResponsePrivate::PutAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutAttributesResponse"));
+    /// @todo
+}

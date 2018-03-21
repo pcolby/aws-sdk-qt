@@ -19,3 +19,85 @@
 
 #include "deletedbparametergroupresponse.h"
 #include "deletedbparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteDBParameterGroupResponse
+ *
+ * @brief  Handles RDS DeleteDBParameterGroup responses.
+ *
+ * @see    RDSClient::deleteDBParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDBParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DeleteDBParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDBParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteDBParameterGroupRequest * DeleteDBParameterGroupResponse::request() const
+{
+    Q_D(const DeleteDBParameterGroupResponse);
+    return static_cast<const DeleteDBParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DeleteDBParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDBParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDBParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDBParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDBParameterGroupResponse instance.
+ */
+DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponsePrivate(
+    DeleteDBParameterGroupQueueResponse * const q) : DeleteDBParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DeleteDBParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDBParameterGroupResponse"));
+    /// @todo
+}

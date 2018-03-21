@@ -19,3 +19,85 @@
 
 #include "updateconfigurationsetsendingenabledresponse.h"
 #include "updateconfigurationsetsendingenabledresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateConfigurationSetSendingEnabledResponse
+ *
+ * @brief  Handles SES UpdateConfigurationSetSendingEnabled responses.
+ *
+ * @see    SESClient::updateConfigurationSetSendingEnabled
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConfigurationSetSendingEnabledResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new UpdateConfigurationSetSendingEnabledResponsePrivate(this), parent)
+{
+    setRequest(new UpdateConfigurationSetSendingEnabledRequest(request));
+    setReply(reply);
+}
+
+const UpdateConfigurationSetSendingEnabledRequest * UpdateConfigurationSetSendingEnabledResponse::request() const
+{
+    Q_D(const UpdateConfigurationSetSendingEnabledResponse);
+    return static_cast<const UpdateConfigurationSetSendingEnabledRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES UpdateConfigurationSetSendingEnabled response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateConfigurationSetSendingEnabledResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConfigurationSetSendingEnabledResponsePrivate
+ *
+ * @brief  Private implementation for UpdateConfigurationSetSendingEnabledResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationSetSendingEnabledResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateConfigurationSetSendingEnabledResponse instance.
+ */
+UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendingEnabledResponsePrivate(
+    UpdateConfigurationSetSendingEnabledQueueResponse * const q) : UpdateConfigurationSetSendingEnabledPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES UpdateConfigurationSetSendingEnabledResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendingEnabledResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetSendingEnabledResponse"));
+    /// @todo
+}

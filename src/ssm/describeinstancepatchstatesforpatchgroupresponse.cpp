@@ -19,3 +19,85 @@
 
 #include "describeinstancepatchstatesforpatchgroupresponse.h"
 #include "describeinstancepatchstatesforpatchgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeInstancePatchStatesForPatchGroupResponse
+ *
+ * @brief  Handles SSM DescribeInstancePatchStatesForPatchGroup responses.
+ *
+ * @see    SSMClient::describeInstancePatchStatesForPatchGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstancePatchStatesForPatchGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeInstancePatchStatesForPatchGroupResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInstancePatchStatesForPatchGroupRequest(request));
+    setReply(reply);
+}
+
+const DescribeInstancePatchStatesForPatchGroupRequest * DescribeInstancePatchStatesForPatchGroupResponse::request() const
+{
+    Q_D(const DescribeInstancePatchStatesForPatchGroupResponse);
+    return static_cast<const DescribeInstancePatchStatesForPatchGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeInstancePatchStatesForPatchGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInstancePatchStatesForPatchGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstancePatchStatesForPatchGroupResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInstancePatchStatesForPatchGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancePatchStatesForPatchGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInstancePatchStatesForPatchGroupResponse instance.
+ */
+DescribeInstancePatchStatesForPatchGroupResponsePrivate::DescribeInstancePatchStatesForPatchGroupResponsePrivate(
+    DescribeInstancePatchStatesForPatchGroupQueueResponse * const q) : DescribeInstancePatchStatesForPatchGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeInstancePatchStatesForPatchGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInstancePatchStatesForPatchGroupResponsePrivate::DescribeInstancePatchStatesForPatchGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInstancePatchStatesForPatchGroupResponse"));
+    /// @todo
+}

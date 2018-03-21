@@ -19,3 +19,85 @@
 
 #include "describemetriccollectiontypesresponse.h"
 #include "describemetriccollectiontypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeMetricCollectionTypesResponse
+ *
+ * @brief  Handles AutoScaling DescribeMetricCollectionTypes responses.
+ *
+ * @see    AutoScalingClient::describeMetricCollectionTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMetricCollectionTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeMetricCollectionTypesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMetricCollectionTypesRequest(request));
+    setReply(reply);
+}
+
+const DescribeMetricCollectionTypesRequest * DescribeMetricCollectionTypesResponse::request() const
+{
+    Q_D(const DescribeMetricCollectionTypesResponse);
+    return static_cast<const DescribeMetricCollectionTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeMetricCollectionTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMetricCollectionTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMetricCollectionTypesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMetricCollectionTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMetricCollectionTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMetricCollectionTypesResponse instance.
+ */
+DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesResponsePrivate(
+    DescribeMetricCollectionTypesQueueResponse * const q) : DescribeMetricCollectionTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeMetricCollectionTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMetricCollectionTypesResponse"));
+    /// @todo
+}

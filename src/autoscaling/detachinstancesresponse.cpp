@@ -19,3 +19,85 @@
 
 #include "detachinstancesresponse.h"
 #include "detachinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DetachInstancesResponse
+ *
+ * @brief  Handles AutoScaling DetachInstances responses.
+ *
+ * @see    AutoScalingClient::detachInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DetachInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DetachInstancesRequest(request));
+    setReply(reply);
+}
+
+const DetachInstancesRequest * DetachInstancesResponse::request() const
+{
+    Q_D(const DetachInstancesResponse);
+    return static_cast<const DetachInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DetachInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DetachInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachInstancesResponse instance.
+ */
+DetachInstancesResponsePrivate::DetachInstancesResponsePrivate(
+    DetachInstancesQueueResponse * const q) : DetachInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DetachInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachInstancesResponsePrivate::DetachInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachInstancesResponse"));
+    /// @todo
+}

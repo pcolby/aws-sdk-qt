@@ -19,3 +19,85 @@
 
 #include "createskillgroupresponse.h"
 #include "createskillgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  CreateSkillGroupResponse
+ *
+ * @brief  Handles AlexaForBusiness CreateSkillGroup responses.
+ *
+ * @see    AlexaForBusinessClient::createSkillGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSkillGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new CreateSkillGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateSkillGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateSkillGroupRequest * CreateSkillGroupResponse::request() const
+{
+    Q_D(const CreateSkillGroupResponse);
+    return static_cast<const CreateSkillGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness CreateSkillGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSkillGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSkillGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateSkillGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSkillGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSkillGroupResponse instance.
+ */
+CreateSkillGroupResponsePrivate::CreateSkillGroupResponsePrivate(
+    CreateSkillGroupQueueResponse * const q) : CreateSkillGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness CreateSkillGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSkillGroupResponsePrivate::CreateSkillGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSkillGroupResponse"));
+    /// @todo
+}

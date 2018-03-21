@@ -19,3 +19,85 @@
 
 #include "stopstreamencryptionresponse.h"
 #include "stopstreamencryptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  StopStreamEncryptionResponse
+ *
+ * @brief  Handles Kinesis StopStreamEncryption responses.
+ *
+ * @see    KinesisClient::stopStreamEncryption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStreamEncryptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new StopStreamEncryptionResponsePrivate(this), parent)
+{
+    setRequest(new StopStreamEncryptionRequest(request));
+    setReply(reply);
+}
+
+const StopStreamEncryptionRequest * StopStreamEncryptionResponse::request() const
+{
+    Q_D(const StopStreamEncryptionResponse);
+    return static_cast<const StopStreamEncryptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis StopStreamEncryption response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopStreamEncryptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStreamEncryptionResponsePrivate
+ *
+ * @brief  Private implementation for StopStreamEncryptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStreamEncryptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopStreamEncryptionResponse instance.
+ */
+StopStreamEncryptionResponsePrivate::StopStreamEncryptionResponsePrivate(
+    StopStreamEncryptionQueueResponse * const q) : StopStreamEncryptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis StopStreamEncryptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopStreamEncryptionResponsePrivate::StopStreamEncryptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopStreamEncryptionResponse"));
+    /// @todo
+}

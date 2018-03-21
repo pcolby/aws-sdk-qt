@@ -19,3 +19,85 @@
 
 #include "deleterepositorypolicyresponse.h"
 #include "deleterepositorypolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  DeleteRepositoryPolicyResponse
+ *
+ * @brief  Handles ECR DeleteRepositoryPolicy responses.
+ *
+ * @see    ECRClient::deleteRepositoryPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRepositoryPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new DeleteRepositoryPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRepositoryPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteRepositoryPolicyRequest * DeleteRepositoryPolicyResponse::request() const
+{
+    Q_D(const DeleteRepositoryPolicyResponse);
+    return static_cast<const DeleteRepositoryPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR DeleteRepositoryPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRepositoryPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRepositoryPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRepositoryPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRepositoryPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRepositoryPolicyResponse instance.
+ */
+DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponsePrivate(
+    DeleteRepositoryPolicyQueueResponse * const q) : DeleteRepositoryPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR DeleteRepositoryPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRepositoryPolicyResponse"));
+    /// @todo
+}

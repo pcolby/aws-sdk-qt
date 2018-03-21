@@ -19,3 +19,85 @@
 
 #include "createorganizationresponse.h"
 #include "createorganizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  CreateOrganizationResponse
+ *
+ * @brief  Handles Organizations CreateOrganization responses.
+ *
+ * @see    OrganizationsClient::createOrganization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateOrganizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new CreateOrganizationResponsePrivate(this), parent)
+{
+    setRequest(new CreateOrganizationRequest(request));
+    setReply(reply);
+}
+
+const CreateOrganizationRequest * CreateOrganizationResponse::request() const
+{
+    Q_D(const CreateOrganizationResponse);
+    return static_cast<const CreateOrganizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations CreateOrganization response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateOrganizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateOrganizationResponsePrivate
+ *
+ * @brief  Private implementation for CreateOrganizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOrganizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateOrganizationResponse instance.
+ */
+CreateOrganizationResponsePrivate::CreateOrganizationResponsePrivate(
+    CreateOrganizationQueueResponse * const q) : CreateOrganizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations CreateOrganizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateOrganizationResponsePrivate::CreateOrganizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateOrganizationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletebaiduchannelresponse.h"
 #include "deletebaiduchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteBaiduChannelResponse
+ *
+ * @brief  Handles Pinpoint DeleteBaiduChannel responses.
+ *
+ * @see    PinpointClient::deleteBaiduChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBaiduChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteBaiduChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBaiduChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteBaiduChannelRequest * DeleteBaiduChannelResponse::request() const
+{
+    Q_D(const DeleteBaiduChannelResponse);
+    return static_cast<const DeleteBaiduChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteBaiduChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBaiduChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBaiduChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBaiduChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBaiduChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBaiduChannelResponse instance.
+ */
+DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponsePrivate(
+    DeleteBaiduChannelQueueResponse * const q) : DeleteBaiduChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteBaiduChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBaiduChannelResponse"));
+    /// @todo
+}

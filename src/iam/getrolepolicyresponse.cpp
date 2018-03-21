@@ -19,3 +19,85 @@
 
 #include "getrolepolicyresponse.h"
 #include "getrolepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetRolePolicyResponse
+ *
+ * @brief  Handles IAM GetRolePolicy responses.
+ *
+ * @see    IAMClient::getRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRolePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetRolePolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetRolePolicyRequest(request));
+    setReply(reply);
+}
+
+const GetRolePolicyRequest * GetRolePolicyResponse::request() const
+{
+    Q_D(const GetRolePolicyResponse);
+    return static_cast<const GetRolePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetRolePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRolePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRolePolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetRolePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRolePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRolePolicyResponse instance.
+ */
+GetRolePolicyResponsePrivate::GetRolePolicyResponsePrivate(
+    GetRolePolicyQueueResponse * const q) : GetRolePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetRolePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRolePolicyResponsePrivate::GetRolePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRolePolicyResponse"));
+    /// @todo
+}

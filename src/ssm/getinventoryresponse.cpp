@@ -19,3 +19,85 @@
 
 #include "getinventoryresponse.h"
 #include "getinventoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetInventoryResponse
+ *
+ * @brief  Handles SSM GetInventory responses.
+ *
+ * @see    SSMClient::getInventory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInventoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetInventoryResponsePrivate(this), parent)
+{
+    setRequest(new GetInventoryRequest(request));
+    setReply(reply);
+}
+
+const GetInventoryRequest * GetInventoryResponse::request() const
+{
+    Q_D(const GetInventoryResponse);
+    return static_cast<const GetInventoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetInventory response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInventoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInventoryResponsePrivate
+ *
+ * @brief  Private implementation for GetInventoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInventoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInventoryResponse instance.
+ */
+GetInventoryResponsePrivate::GetInventoryResponsePrivate(
+    GetInventoryQueueResponse * const q) : GetInventoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetInventoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInventoryResponsePrivate::GetInventoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInventoryResponse"));
+    /// @todo
+}

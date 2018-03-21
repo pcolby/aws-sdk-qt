@@ -19,3 +19,85 @@
 
 #include "attachpolicyresponse.h"
 #include "attachpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AttachPolicyResponse
+ *
+ * @brief  Handles CloudDirectory AttachPolicy responses.
+ *
+ * @see    CloudDirectoryClient::attachPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new AttachPolicyResponsePrivate(this), parent)
+{
+    setRequest(new AttachPolicyRequest(request));
+    setReply(reply);
+}
+
+const AttachPolicyRequest * AttachPolicyResponse::request() const
+{
+    Q_D(const AttachPolicyResponse);
+    return static_cast<const AttachPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory AttachPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachPolicyResponsePrivate
+ *
+ * @brief  Private implementation for AttachPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachPolicyResponse instance.
+ */
+AttachPolicyResponsePrivate::AttachPolicyResponsePrivate(
+    AttachPolicyQueueResponse * const q) : AttachPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory AttachPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachPolicyResponsePrivate::AttachPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachPolicyResponse"));
+    /// @todo
+}

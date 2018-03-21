@@ -19,3 +19,85 @@
 
 #include "deletepartitionresponse.h"
 #include "deletepartitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeletePartitionResponse
+ *
+ * @brief  Handles Glue DeletePartition responses.
+ *
+ * @see    GlueClient::deletePartition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePartitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new DeletePartitionResponsePrivate(this), parent)
+{
+    setRequest(new DeletePartitionRequest(request));
+    setReply(reply);
+}
+
+const DeletePartitionRequest * DeletePartitionResponse::request() const
+{
+    Q_D(const DeletePartitionResponse);
+    return static_cast<const DeletePartitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue DeletePartition response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePartitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePartitionResponsePrivate
+ *
+ * @brief  Private implementation for DeletePartitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePartitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePartitionResponse instance.
+ */
+DeletePartitionResponsePrivate::DeletePartitionResponsePrivate(
+    DeletePartitionQueueResponse * const q) : DeletePartitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue DeletePartitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePartitionResponsePrivate::DeletePartitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePartitionResponse"));
+    /// @todo
+}

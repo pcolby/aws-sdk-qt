@@ -19,3 +19,85 @@
 
 #include "sendtesteventnotificationresponse.h"
 #include "sendtesteventnotificationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  SendTestEventNotificationResponse
+ *
+ * @brief  Handles MTurk SendTestEventNotification responses.
+ *
+ * @see    MTurkClient::sendTestEventNotification
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendTestEventNotificationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new SendTestEventNotificationResponsePrivate(this), parent)
+{
+    setRequest(new SendTestEventNotificationRequest(request));
+    setReply(reply);
+}
+
+const SendTestEventNotificationRequest * SendTestEventNotificationResponse::request() const
+{
+    Q_D(const SendTestEventNotificationResponse);
+    return static_cast<const SendTestEventNotificationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk SendTestEventNotification response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendTestEventNotificationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendTestEventNotificationResponsePrivate
+ *
+ * @brief  Private implementation for SendTestEventNotificationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendTestEventNotificationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendTestEventNotificationResponse instance.
+ */
+SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponsePrivate(
+    SendTestEventNotificationQueueResponse * const q) : SendTestEventNotificationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk SendTestEventNotificationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendTestEventNotificationResponse"));
+    /// @todo
+}

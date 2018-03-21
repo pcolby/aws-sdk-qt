@@ -19,3 +19,85 @@
 
 #include "continuedeploymentresponse.h"
 #include "continuedeploymentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ContinueDeploymentResponse
+ *
+ * @brief  Handles CodeDeploy ContinueDeployment responses.
+ *
+ * @see    CodeDeployClient::continueDeployment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ContinueDeploymentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new ContinueDeploymentResponsePrivate(this), parent)
+{
+    setRequest(new ContinueDeploymentRequest(request));
+    setReply(reply);
+}
+
+const ContinueDeploymentRequest * ContinueDeploymentResponse::request() const
+{
+    Q_D(const ContinueDeploymentResponse);
+    return static_cast<const ContinueDeploymentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy ContinueDeployment response.
+ *
+ * @param  response  Response to parse.
+ */
+void ContinueDeploymentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ContinueDeploymentResponsePrivate
+ *
+ * @brief  Private implementation for ContinueDeploymentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ContinueDeploymentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ContinueDeploymentResponse instance.
+ */
+ContinueDeploymentResponsePrivate::ContinueDeploymentResponsePrivate(
+    ContinueDeploymentQueueResponse * const q) : ContinueDeploymentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy ContinueDeploymentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ContinueDeploymentResponsePrivate::ContinueDeploymentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ContinueDeploymentResponse"));
+    /// @todo
+}

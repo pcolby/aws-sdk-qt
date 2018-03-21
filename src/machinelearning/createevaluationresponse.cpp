@@ -19,3 +19,85 @@
 
 #include "createevaluationresponse.h"
 #include "createevaluationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateEvaluationResponse
+ *
+ * @brief  Handles MachineLearning CreateEvaluation responses.
+ *
+ * @see    MachineLearningClient::createEvaluation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEvaluationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new CreateEvaluationResponsePrivate(this), parent)
+{
+    setRequest(new CreateEvaluationRequest(request));
+    setReply(reply);
+}
+
+const CreateEvaluationRequest * CreateEvaluationResponse::request() const
+{
+    Q_D(const CreateEvaluationResponse);
+    return static_cast<const CreateEvaluationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning CreateEvaluation response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateEvaluationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEvaluationResponsePrivate
+ *
+ * @brief  Private implementation for CreateEvaluationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEvaluationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateEvaluationResponse instance.
+ */
+CreateEvaluationResponsePrivate::CreateEvaluationResponsePrivate(
+    CreateEvaluationQueueResponse * const q) : CreateEvaluationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning CreateEvaluationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateEvaluationResponsePrivate::CreateEvaluationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateEvaluationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "cancelupdatestackresponse.h"
 #include "cancelupdatestackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  CancelUpdateStackResponse
+ *
+ * @brief  Handles CloudFormation CancelUpdateStack responses.
+ *
+ * @see    CloudFormationClient::cancelUpdateStack
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelUpdateStackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new CancelUpdateStackResponsePrivate(this), parent)
+{
+    setRequest(new CancelUpdateStackRequest(request));
+    setReply(reply);
+}
+
+const CancelUpdateStackRequest * CancelUpdateStackResponse::request() const
+{
+    Q_D(const CancelUpdateStackResponse);
+    return static_cast<const CancelUpdateStackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation CancelUpdateStack response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelUpdateStackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelUpdateStackResponsePrivate
+ *
+ * @brief  Private implementation for CancelUpdateStackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelUpdateStackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelUpdateStackResponse instance.
+ */
+CancelUpdateStackResponsePrivate::CancelUpdateStackResponsePrivate(
+    CancelUpdateStackQueueResponse * const q) : CancelUpdateStackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation CancelUpdateStackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelUpdateStackResponsePrivate::CancelUpdateStackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelUpdateStackResponse"));
+    /// @todo
+}

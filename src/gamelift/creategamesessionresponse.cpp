@@ -19,3 +19,85 @@
 
 #include "creategamesessionresponse.h"
 #include "creategamesessionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateGameSessionResponse
+ *
+ * @brief  Handles GameLift CreateGameSession responses.
+ *
+ * @see    GameLiftClient::createGameSession
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGameSessionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new CreateGameSessionResponsePrivate(this), parent)
+{
+    setRequest(new CreateGameSessionRequest(request));
+    setReply(reply);
+}
+
+const CreateGameSessionRequest * CreateGameSessionResponse::request() const
+{
+    Q_D(const CreateGameSessionResponse);
+    return static_cast<const CreateGameSessionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift CreateGameSession response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateGameSessionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGameSessionResponsePrivate
+ *
+ * @brief  Private implementation for CreateGameSessionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGameSessionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateGameSessionResponse instance.
+ */
+CreateGameSessionResponsePrivate::CreateGameSessionResponsePrivate(
+    CreateGameSessionQueueResponse * const q) : CreateGameSessionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift CreateGameSessionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateGameSessionResponsePrivate::CreateGameSessionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateGameSessionResponse"));
+    /// @todo
+}

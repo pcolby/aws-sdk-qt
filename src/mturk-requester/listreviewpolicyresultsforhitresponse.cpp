@@ -19,3 +19,85 @@
 
 #include "listreviewpolicyresultsforhitresponse.h"
 #include "listreviewpolicyresultsforhitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListReviewPolicyResultsForHITResponse
+ *
+ * @brief  Handles MTurk ListReviewPolicyResultsForHIT responses.
+ *
+ * @see    MTurkClient::listReviewPolicyResultsForHIT
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListReviewPolicyResultsForHITResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListReviewPolicyResultsForHITResponsePrivate(this), parent)
+{
+    setRequest(new ListReviewPolicyResultsForHITRequest(request));
+    setReply(reply);
+}
+
+const ListReviewPolicyResultsForHITRequest * ListReviewPolicyResultsForHITResponse::request() const
+{
+    Q_D(const ListReviewPolicyResultsForHITResponse);
+    return static_cast<const ListReviewPolicyResultsForHITRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListReviewPolicyResultsForHIT response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListReviewPolicyResultsForHITResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListReviewPolicyResultsForHITResponsePrivate
+ *
+ * @brief  Private implementation for ListReviewPolicyResultsForHITResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReviewPolicyResultsForHITResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListReviewPolicyResultsForHITResponse instance.
+ */
+ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITResponsePrivate(
+    ListReviewPolicyResultsForHITQueueResponse * const q) : ListReviewPolicyResultsForHITPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListReviewPolicyResultsForHITResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListReviewPolicyResultsForHITResponse"));
+    /// @todo
+}

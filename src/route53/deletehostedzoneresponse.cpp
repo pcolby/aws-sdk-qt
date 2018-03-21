@@ -19,3 +19,85 @@
 
 #include "deletehostedzoneresponse.h"
 #include "deletehostedzoneresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  DeleteHostedZoneResponse
+ *
+ * @brief  Handles Route53 DeleteHostedZone responses.
+ *
+ * @see    Route53Client::deleteHostedZone
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHostedZoneResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new DeleteHostedZoneResponsePrivate(this), parent)
+{
+    setRequest(new DeleteHostedZoneRequest(request));
+    setReply(reply);
+}
+
+const DeleteHostedZoneRequest * DeleteHostedZoneResponse::request() const
+{
+    Q_D(const DeleteHostedZoneResponse);
+    return static_cast<const DeleteHostedZoneRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 DeleteHostedZone response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteHostedZoneResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHostedZoneResponsePrivate
+ *
+ * @brief  Private implementation for DeleteHostedZoneResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHostedZoneResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteHostedZoneResponse instance.
+ */
+DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponsePrivate(
+    DeleteHostedZoneQueueResponse * const q) : DeleteHostedZonePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 DeleteHostedZoneResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteHostedZoneResponse"));
+    /// @todo
+}

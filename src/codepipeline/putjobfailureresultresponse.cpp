@@ -19,3 +19,85 @@
 
 #include "putjobfailureresultresponse.h"
 #include "putjobfailureresultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PutJobFailureResultResponse
+ *
+ * @brief  Handles CodePipeline PutJobFailureResult responses.
+ *
+ * @see    CodePipelineClient::putJobFailureResult
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutJobFailureResultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new PutJobFailureResultResponsePrivate(this), parent)
+{
+    setRequest(new PutJobFailureResultRequest(request));
+    setReply(reply);
+}
+
+const PutJobFailureResultRequest * PutJobFailureResultResponse::request() const
+{
+    Q_D(const PutJobFailureResultResponse);
+    return static_cast<const PutJobFailureResultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline PutJobFailureResult response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutJobFailureResultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutJobFailureResultResponsePrivate
+ *
+ * @brief  Private implementation for PutJobFailureResultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutJobFailureResultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutJobFailureResultResponse instance.
+ */
+PutJobFailureResultResponsePrivate::PutJobFailureResultResponsePrivate(
+    PutJobFailureResultQueueResponse * const q) : PutJobFailureResultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline PutJobFailureResultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutJobFailureResultResponsePrivate::PutJobFailureResultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutJobFailureResultResponse"));
+    /// @todo
+}

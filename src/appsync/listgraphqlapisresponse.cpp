@@ -19,3 +19,85 @@
 
 #include "listgraphqlapisresponse.h"
 #include "listgraphqlapisresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  ListGraphqlApisResponse
+ *
+ * @brief  Handles AppSync ListGraphqlApis responses.
+ *
+ * @see    AppSyncClient::listGraphqlApis
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGraphqlApisResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new ListGraphqlApisResponsePrivate(this), parent)
+{
+    setRequest(new ListGraphqlApisRequest(request));
+    setReply(reply);
+}
+
+const ListGraphqlApisRequest * ListGraphqlApisResponse::request() const
+{
+    Q_D(const ListGraphqlApisResponse);
+    return static_cast<const ListGraphqlApisRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync ListGraphqlApis response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGraphqlApisResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGraphqlApisResponsePrivate
+ *
+ * @brief  Private implementation for ListGraphqlApisResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGraphqlApisResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGraphqlApisResponse instance.
+ */
+ListGraphqlApisResponsePrivate::ListGraphqlApisResponsePrivate(
+    ListGraphqlApisQueueResponse * const q) : ListGraphqlApisPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync ListGraphqlApisResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGraphqlApisResponsePrivate::ListGraphqlApisResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGraphqlApisResponse"));
+    /// @todo
+}

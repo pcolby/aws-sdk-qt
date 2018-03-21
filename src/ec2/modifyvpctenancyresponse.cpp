@@ -19,3 +19,85 @@
 
 #include "modifyvpctenancyresponse.h"
 #include "modifyvpctenancyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcTenancyResponse
+ *
+ * @brief  Handles EC2 ModifyVpcTenancy responses.
+ *
+ * @see    EC2Client::modifyVpcTenancy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcTenancyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyVpcTenancyResponsePrivate(this), parent)
+{
+    setRequest(new ModifyVpcTenancyRequest(request));
+    setReply(reply);
+}
+
+const ModifyVpcTenancyRequest * ModifyVpcTenancyResponse::request() const
+{
+    Q_D(const ModifyVpcTenancyResponse);
+    return static_cast<const ModifyVpcTenancyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyVpcTenancy response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyVpcTenancyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcTenancyResponsePrivate
+ *
+ * @brief  Private implementation for ModifyVpcTenancyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcTenancyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyVpcTenancyResponse instance.
+ */
+ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
+    ModifyVpcTenancyQueueResponse * const q) : ModifyVpcTenancyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyVpcTenancyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyVpcTenancyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createinstancesfromsnapshotresponse.h"
 #include "createinstancesfromsnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateInstancesFromSnapshotResponse
+ *
+ * @brief  Handles Lightsail CreateInstancesFromSnapshot responses.
+ *
+ * @see    LightsailClient::createInstancesFromSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstancesFromSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new CreateInstancesFromSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new CreateInstancesFromSnapshotRequest(request));
+    setReply(reply);
+}
+
+const CreateInstancesFromSnapshotRequest * CreateInstancesFromSnapshotResponse::request() const
+{
+    Q_D(const CreateInstancesFromSnapshotResponse);
+    return static_cast<const CreateInstancesFromSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail CreateInstancesFromSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateInstancesFromSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstancesFromSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for CreateInstancesFromSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstancesFromSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateInstancesFromSnapshotResponse instance.
+ */
+CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResponsePrivate(
+    CreateInstancesFromSnapshotQueueResponse * const q) : CreateInstancesFromSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail CreateInstancesFromSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateInstancesFromSnapshotResponse"));
+    /// @todo
+}

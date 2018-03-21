@@ -19,3 +19,85 @@
 
 #include "deleteclassifierresponse.h"
 #include "deleteclassifierresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteClassifierResponse
+ *
+ * @brief  Handles Glue DeleteClassifier responses.
+ *
+ * @see    GlueClient::deleteClassifier
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteClassifierResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new DeleteClassifierResponsePrivate(this), parent)
+{
+    setRequest(new DeleteClassifierRequest(request));
+    setReply(reply);
+}
+
+const DeleteClassifierRequest * DeleteClassifierResponse::request() const
+{
+    Q_D(const DeleteClassifierResponse);
+    return static_cast<const DeleteClassifierRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue DeleteClassifier response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteClassifierResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteClassifierResponsePrivate
+ *
+ * @brief  Private implementation for DeleteClassifierResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteClassifierResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteClassifierResponse instance.
+ */
+DeleteClassifierResponsePrivate::DeleteClassifierResponsePrivate(
+    DeleteClassifierQueueResponse * const q) : DeleteClassifierPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue DeleteClassifierResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteClassifierResponsePrivate::DeleteClassifierResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteClassifierResponse"));
+    /// @todo
+}

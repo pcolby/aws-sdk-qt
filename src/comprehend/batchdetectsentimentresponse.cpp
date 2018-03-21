@@ -19,3 +19,85 @@
 
 #include "batchdetectsentimentresponse.h"
 #include "batchdetectsentimentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  BatchDetectSentimentResponse
+ *
+ * @brief  Handles Comprehend BatchDetectSentiment responses.
+ *
+ * @see    ComprehendClient::batchDetectSentiment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDetectSentimentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ComprehendResponse(new BatchDetectSentimentResponsePrivate(this), parent)
+{
+    setRequest(new BatchDetectSentimentRequest(request));
+    setReply(reply);
+}
+
+const BatchDetectSentimentRequest * BatchDetectSentimentResponse::request() const
+{
+    Q_D(const BatchDetectSentimentResponse);
+    return static_cast<const BatchDetectSentimentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Comprehend BatchDetectSentiment response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDetectSentimentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDetectSentimentResponsePrivate
+ *
+ * @brief  Private implementation for BatchDetectSentimentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDetectSentimentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDetectSentimentResponse instance.
+ */
+BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponsePrivate(
+    BatchDetectSentimentQueueResponse * const q) : BatchDetectSentimentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Comprehend BatchDetectSentimentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDetectSentimentResponse"));
+    /// @todo
+}

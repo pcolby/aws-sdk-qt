@@ -19,3 +19,85 @@
 
 #include "deletepolicyresponse.h"
 #include "deletepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeletePolicyResponse
+ *
+ * @brief  Handles IoT DeletePolicy responses.
+ *
+ * @see    IoTClient::deletePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeletePolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeletePolicyRequest(request));
+    setReply(reply);
+}
+
+const DeletePolicyRequest * DeletePolicyResponse::request() const
+{
+    Q_D(const DeletePolicyResponse);
+    return static_cast<const DeletePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeletePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeletePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePolicyResponse instance.
+ */
+DeletePolicyResponsePrivate::DeletePolicyResponsePrivate(
+    DeletePolicyQueueResponse * const q) : DeletePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeletePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePolicyResponsePrivate::DeletePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePolicyResponse"));
+    /// @todo
+}

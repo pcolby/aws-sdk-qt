@@ -19,3 +19,85 @@
 
 #include "createcomputerresponse.h"
 #include "createcomputerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateComputerResponse
+ *
+ * @brief  Handles DirectoryService CreateComputer responses.
+ *
+ * @see    DirectoryServiceClient::createComputer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateComputerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new CreateComputerResponsePrivate(this), parent)
+{
+    setRequest(new CreateComputerRequest(request));
+    setReply(reply);
+}
+
+const CreateComputerRequest * CreateComputerResponse::request() const
+{
+    Q_D(const CreateComputerResponse);
+    return static_cast<const CreateComputerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService CreateComputer response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateComputerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateComputerResponsePrivate
+ *
+ * @brief  Private implementation for CreateComputerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateComputerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateComputerResponse instance.
+ */
+CreateComputerResponsePrivate::CreateComputerResponsePrivate(
+    CreateComputerQueueResponse * const q) : CreateComputerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService CreateComputerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateComputerResponsePrivate::CreateComputerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateComputerResponse"));
+    /// @todo
+}

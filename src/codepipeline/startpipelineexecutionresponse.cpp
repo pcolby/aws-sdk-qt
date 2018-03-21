@@ -19,3 +19,85 @@
 
 #include "startpipelineexecutionresponse.h"
 #include "startpipelineexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  StartPipelineExecutionResponse
+ *
+ * @brief  Handles CodePipeline StartPipelineExecution responses.
+ *
+ * @see    CodePipelineClient::startPipelineExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartPipelineExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new StartPipelineExecutionResponsePrivate(this), parent)
+{
+    setRequest(new StartPipelineExecutionRequest(request));
+    setReply(reply);
+}
+
+const StartPipelineExecutionRequest * StartPipelineExecutionResponse::request() const
+{
+    Q_D(const StartPipelineExecutionResponse);
+    return static_cast<const StartPipelineExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline StartPipelineExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartPipelineExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartPipelineExecutionResponsePrivate
+ *
+ * @brief  Private implementation for StartPipelineExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartPipelineExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartPipelineExecutionResponse instance.
+ */
+StartPipelineExecutionResponsePrivate::StartPipelineExecutionResponsePrivate(
+    StartPipelineExecutionQueueResponse * const q) : StartPipelineExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline StartPipelineExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartPipelineExecutionResponsePrivate::StartPipelineExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartPipelineExecutionResponse"));
+    /// @todo
+}

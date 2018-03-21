@@ -19,3 +19,85 @@
 
 #include "getmembersresponse.h"
 #include "getmembersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetMembersResponse
+ *
+ * @brief  Handles GuardDuty GetMembers responses.
+ *
+ * @see    GuardDutyClient::getMembers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMembersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new GetMembersResponsePrivate(this), parent)
+{
+    setRequest(new GetMembersRequest(request));
+    setReply(reply);
+}
+
+const GetMembersRequest * GetMembersResponse::request() const
+{
+    Q_D(const GetMembersResponse);
+    return static_cast<const GetMembersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty GetMembers response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetMembersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMembersResponsePrivate
+ *
+ * @brief  Private implementation for GetMembersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMembersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetMembersResponse instance.
+ */
+GetMembersResponsePrivate::GetMembersResponsePrivate(
+    GetMembersQueueResponse * const q) : GetMembersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty GetMembersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetMembersResponsePrivate::GetMembersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetMembersResponse"));
+    /// @todo
+}

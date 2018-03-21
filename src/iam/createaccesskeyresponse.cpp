@@ -19,3 +19,85 @@
 
 #include "createaccesskeyresponse.h"
 #include "createaccesskeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateAccessKeyResponse
+ *
+ * @brief  Handles IAM CreateAccessKey responses.
+ *
+ * @see    IAMClient::createAccessKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAccessKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new CreateAccessKeyResponsePrivate(this), parent)
+{
+    setRequest(new CreateAccessKeyRequest(request));
+    setReply(reply);
+}
+
+const CreateAccessKeyRequest * CreateAccessKeyResponse::request() const
+{
+    Q_D(const CreateAccessKeyResponse);
+    return static_cast<const CreateAccessKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM CreateAccessKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAccessKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAccessKeyResponsePrivate
+ *
+ * @brief  Private implementation for CreateAccessKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAccessKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAccessKeyResponse instance.
+ */
+CreateAccessKeyResponsePrivate::CreateAccessKeyResponsePrivate(
+    CreateAccessKeyQueueResponse * const q) : CreateAccessKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM CreateAccessKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAccessKeyResponsePrivate::CreateAccessKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAccessKeyResponse"));
+    /// @todo
+}

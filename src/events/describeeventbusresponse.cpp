@@ -19,3 +19,85 @@
 
 #include "describeeventbusresponse.h"
 #include "describeeventbusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  DescribeEventBusResponse
+ *
+ * @brief  Handles CloudWatchEvents DescribeEventBus responses.
+ *
+ * @see    CloudWatchEventsClient::describeEventBus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventBusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new DescribeEventBusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEventBusRequest(request));
+    setReply(reply);
+}
+
+const DescribeEventBusRequest * DescribeEventBusResponse::request() const
+{
+    Q_D(const DescribeEventBusResponse);
+    return static_cast<const DescribeEventBusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents DescribeEventBus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEventBusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventBusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEventBusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventBusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEventBusResponse instance.
+ */
+DescribeEventBusResponsePrivate::DescribeEventBusResponsePrivate(
+    DescribeEventBusQueueResponse * const q) : DescribeEventBusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents DescribeEventBusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEventBusResponsePrivate::DescribeEventBusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEventBusResponse"));
+    /// @todo
+}

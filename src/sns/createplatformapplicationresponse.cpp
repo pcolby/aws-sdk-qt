@@ -19,3 +19,85 @@
 
 #include "createplatformapplicationresponse.h"
 #include "createplatformapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  CreatePlatformApplicationResponse
+ *
+ * @brief  Handles SNS CreatePlatformApplication responses.
+ *
+ * @see    SNSClient::createPlatformApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePlatformApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new CreatePlatformApplicationResponsePrivate(this), parent)
+{
+    setRequest(new CreatePlatformApplicationRequest(request));
+    setReply(reply);
+}
+
+const CreatePlatformApplicationRequest * CreatePlatformApplicationResponse::request() const
+{
+    Q_D(const CreatePlatformApplicationResponse);
+    return static_cast<const CreatePlatformApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS CreatePlatformApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePlatformApplicationResponsePrivate
+ *
+ * @brief  Private implementation for CreatePlatformApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePlatformApplicationResponse instance.
+ */
+CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePrivate(
+    CreatePlatformApplicationQueueResponse * const q) : CreatePlatformApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS CreatePlatformApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePlatformApplicationResponse"));
+    /// @todo
+}

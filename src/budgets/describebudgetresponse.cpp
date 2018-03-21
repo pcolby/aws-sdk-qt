@@ -19,3 +19,85 @@
 
 #include "describebudgetresponse.h"
 #include "describebudgetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DescribeBudgetResponse
+ *
+ * @brief  Handles Budgets DescribeBudget responses.
+ *
+ * @see    BudgetsClient::describeBudget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBudgetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new DescribeBudgetResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBudgetRequest(request));
+    setReply(reply);
+}
+
+const DescribeBudgetRequest * DescribeBudgetResponse::request() const
+{
+    Q_D(const DescribeBudgetResponse);
+    return static_cast<const DescribeBudgetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets DescribeBudget response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBudgetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBudgetResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBudgetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBudgetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBudgetResponse instance.
+ */
+DescribeBudgetResponsePrivate::DescribeBudgetResponsePrivate(
+    DescribeBudgetQueueResponse * const q) : DescribeBudgetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets DescribeBudgetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBudgetResponsePrivate::DescribeBudgetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBudgetResponse"));
+    /// @todo
+}

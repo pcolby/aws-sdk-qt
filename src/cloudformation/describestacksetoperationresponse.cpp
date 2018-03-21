@@ -19,3 +19,85 @@
 
 #include "describestacksetoperationresponse.h"
 #include "describestacksetoperationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DescribeStackSetOperationResponse
+ *
+ * @brief  Handles CloudFormation DescribeStackSetOperation responses.
+ *
+ * @see    CloudFormationClient::describeStackSetOperation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackSetOperationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new DescribeStackSetOperationResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStackSetOperationRequest(request));
+    setReply(reply);
+}
+
+const DescribeStackSetOperationRequest * DescribeStackSetOperationResponse::request() const
+{
+    Q_D(const DescribeStackSetOperationResponse);
+    return static_cast<const DescribeStackSetOperationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation DescribeStackSetOperation response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStackSetOperationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackSetOperationResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStackSetOperationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackSetOperationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStackSetOperationResponse instance.
+ */
+DescribeStackSetOperationResponsePrivate::DescribeStackSetOperationResponsePrivate(
+    DescribeStackSetOperationQueueResponse * const q) : DescribeStackSetOperationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation DescribeStackSetOperationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStackSetOperationResponsePrivate::DescribeStackSetOperationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStackSetOperationResponse"));
+    /// @todo
+}

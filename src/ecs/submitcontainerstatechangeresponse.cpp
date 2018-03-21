@@ -19,3 +19,85 @@
 
 #include "submitcontainerstatechangeresponse.h"
 #include "submitcontainerstatechangeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  SubmitContainerStateChangeResponse
+ *
+ * @brief  Handles ECS SubmitContainerStateChange responses.
+ *
+ * @see    ECSClient::submitContainerStateChange
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubmitContainerStateChangeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new SubmitContainerStateChangeResponsePrivate(this), parent)
+{
+    setRequest(new SubmitContainerStateChangeRequest(request));
+    setReply(reply);
+}
+
+const SubmitContainerStateChangeRequest * SubmitContainerStateChangeResponse::request() const
+{
+    Q_D(const SubmitContainerStateChangeResponse);
+    return static_cast<const SubmitContainerStateChangeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS SubmitContainerStateChange response.
+ *
+ * @param  response  Response to parse.
+ */
+void SubmitContainerStateChangeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SubmitContainerStateChangeResponsePrivate
+ *
+ * @brief  Private implementation for SubmitContainerStateChangeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubmitContainerStateChangeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SubmitContainerStateChangeResponse instance.
+ */
+SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponsePrivate(
+    SubmitContainerStateChangeQueueResponse * const q) : SubmitContainerStateChangePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS SubmitContainerStateChangeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SubmitContainerStateChangeResponse"));
+    /// @todo
+}

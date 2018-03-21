@@ -19,3 +19,85 @@
 
 #include "listdeploymentinstancesresponse.h"
 #include "listdeploymentinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListDeploymentInstancesResponse
+ *
+ * @brief  Handles CodeDeploy ListDeploymentInstances responses.
+ *
+ * @see    CodeDeployClient::listDeploymentInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeploymentInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new ListDeploymentInstancesResponsePrivate(this), parent)
+{
+    setRequest(new ListDeploymentInstancesRequest(request));
+    setReply(reply);
+}
+
+const ListDeploymentInstancesRequest * ListDeploymentInstancesResponse::request() const
+{
+    Q_D(const ListDeploymentInstancesResponse);
+    return static_cast<const ListDeploymentInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy ListDeploymentInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDeploymentInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeploymentInstancesResponsePrivate
+ *
+ * @brief  Private implementation for ListDeploymentInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeploymentInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDeploymentInstancesResponse instance.
+ */
+ListDeploymentInstancesResponsePrivate::ListDeploymentInstancesResponsePrivate(
+    ListDeploymentInstancesQueueResponse * const q) : ListDeploymentInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy ListDeploymentInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDeploymentInstancesResponsePrivate::ListDeploymentInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDeploymentInstancesResponse"));
+    /// @todo
+}

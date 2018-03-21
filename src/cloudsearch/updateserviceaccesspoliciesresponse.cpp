@@ -19,3 +19,85 @@
 
 #include "updateserviceaccesspoliciesresponse.h"
 #include "updateserviceaccesspoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  UpdateServiceAccessPoliciesResponse
+ *
+ * @brief  Handles CloudSearch UpdateServiceAccessPolicies responses.
+ *
+ * @see    CloudSearchClient::updateServiceAccessPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServiceAccessPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new UpdateServiceAccessPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new UpdateServiceAccessPoliciesRequest(request));
+    setReply(reply);
+}
+
+const UpdateServiceAccessPoliciesRequest * UpdateServiceAccessPoliciesResponse::request() const
+{
+    Q_D(const UpdateServiceAccessPoliciesResponse);
+    return static_cast<const UpdateServiceAccessPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch UpdateServiceAccessPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServiceAccessPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for UpdateServiceAccessPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServiceAccessPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateServiceAccessPoliciesResponse instance.
+ */
+UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponsePrivate(
+    UpdateServiceAccessPoliciesQueueResponse * const q) : UpdateServiceAccessPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch UpdateServiceAccessPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateServiceAccessPoliciesResponse"));
+    /// @todo
+}

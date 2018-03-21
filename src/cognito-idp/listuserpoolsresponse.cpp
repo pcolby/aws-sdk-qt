@@ -19,3 +19,85 @@
 
 #include "listuserpoolsresponse.h"
 #include "listuserpoolsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListUserPoolsResponse
+ *
+ * @brief  Handles CognitoIdentityProvider ListUserPools responses.
+ *
+ * @see    CognitoIdentityProviderClient::listUserPools
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListUserPoolsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new ListUserPoolsResponsePrivate(this), parent)
+{
+    setRequest(new ListUserPoolsRequest(request));
+    setReply(reply);
+}
+
+const ListUserPoolsRequest * ListUserPoolsResponse::request() const
+{
+    Q_D(const ListUserPoolsResponse);
+    return static_cast<const ListUserPoolsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider ListUserPools response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListUserPoolsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListUserPoolsResponsePrivate
+ *
+ * @brief  Private implementation for ListUserPoolsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUserPoolsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListUserPoolsResponse instance.
+ */
+ListUserPoolsResponsePrivate::ListUserPoolsResponsePrivate(
+    ListUserPoolsQueueResponse * const q) : ListUserPoolsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider ListUserPoolsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListUserPoolsResponsePrivate::ListUserPoolsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListUserPoolsResponse"));
+    /// @todo
+}

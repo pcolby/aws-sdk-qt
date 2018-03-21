@@ -19,3 +19,85 @@
 
 #include "testinvokeauthorizerresponse.h"
 #include "testinvokeauthorizerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  TestInvokeAuthorizerResponse
+ *
+ * @brief  Handles IoT TestInvokeAuthorizer responses.
+ *
+ * @see    IoTClient::testInvokeAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestInvokeAuthorizerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new TestInvokeAuthorizerResponsePrivate(this), parent)
+{
+    setRequest(new TestInvokeAuthorizerRequest(request));
+    setReply(reply);
+}
+
+const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() const
+{
+    Q_D(const TestInvokeAuthorizerResponse);
+    return static_cast<const TestInvokeAuthorizerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT TestInvokeAuthorizer response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestInvokeAuthorizerResponsePrivate
+ *
+ * @brief  Private implementation for TestInvokeAuthorizerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestInvokeAuthorizerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestInvokeAuthorizerResponse instance.
+ */
+TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
+    TestInvokeAuthorizerQueueResponse * const q) : TestInvokeAuthorizerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT TestInvokeAuthorizerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestInvokeAuthorizerResponse"));
+    /// @todo
+}

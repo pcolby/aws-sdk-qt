@@ -19,3 +19,85 @@
 
 #include "getfunctionresponse.h"
 #include "getfunctionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  GetFunctionResponse
+ *
+ * @brief  Handles Lambda GetFunction responses.
+ *
+ * @see    LambdaClient::getFunction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFunctionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new GetFunctionResponsePrivate(this), parent)
+{
+    setRequest(new GetFunctionRequest(request));
+    setReply(reply);
+}
+
+const GetFunctionRequest * GetFunctionResponse::request() const
+{
+    Q_D(const GetFunctionResponse);
+    return static_cast<const GetFunctionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda GetFunction response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFunctionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFunctionResponsePrivate
+ *
+ * @brief  Private implementation for GetFunctionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFunctionResponse instance.
+ */
+GetFunctionResponsePrivate::GetFunctionResponsePrivate(
+    GetFunctionQueueResponse * const q) : GetFunctionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda GetFunctionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFunctionResponsePrivate::GetFunctionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFunctionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listpublishedschemaarnsresponse.h"
 #include "listpublishedschemaarnsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListPublishedSchemaArnsResponse
+ *
+ * @brief  Handles CloudDirectory ListPublishedSchemaArns responses.
+ *
+ * @see    CloudDirectoryClient::listPublishedSchemaArns
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPublishedSchemaArnsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListPublishedSchemaArnsResponsePrivate(this), parent)
+{
+    setRequest(new ListPublishedSchemaArnsRequest(request));
+    setReply(reply);
+}
+
+const ListPublishedSchemaArnsRequest * ListPublishedSchemaArnsResponse::request() const
+{
+    Q_D(const ListPublishedSchemaArnsResponse);
+    return static_cast<const ListPublishedSchemaArnsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListPublishedSchemaArns response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPublishedSchemaArnsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPublishedSchemaArnsResponsePrivate
+ *
+ * @brief  Private implementation for ListPublishedSchemaArnsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPublishedSchemaArnsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPublishedSchemaArnsResponse instance.
+ */
+ListPublishedSchemaArnsResponsePrivate::ListPublishedSchemaArnsResponsePrivate(
+    ListPublishedSchemaArnsQueueResponse * const q) : ListPublishedSchemaArnsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListPublishedSchemaArnsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPublishedSchemaArnsResponsePrivate::ListPublishedSchemaArnsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPublishedSchemaArnsResponse"));
+    /// @todo
+}

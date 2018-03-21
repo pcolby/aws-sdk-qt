@@ -19,3 +19,85 @@
 
 #include "deletekeypairresponse.h"
 #include "deletekeypairresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteKeyPairResponse
+ *
+ * @brief  Handles EC2 DeleteKeyPair responses.
+ *
+ * @see    EC2Client::deleteKeyPair
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteKeyPairResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteKeyPairResponsePrivate(this), parent)
+{
+    setRequest(new DeleteKeyPairRequest(request));
+    setReply(reply);
+}
+
+const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
+{
+    Q_D(const DeleteKeyPairResponse);
+    return static_cast<const DeleteKeyPairRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteKeyPair response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteKeyPairResponsePrivate
+ *
+ * @brief  Private implementation for DeleteKeyPairResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteKeyPairResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteKeyPairResponse instance.
+ */
+DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
+    DeleteKeyPairQueueResponse * const q) : DeleteKeyPairPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteKeyPairResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteKeyPairResponsePrivate::DeleteKeyPairResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteKeyPairResponse"));
+    /// @todo
+}

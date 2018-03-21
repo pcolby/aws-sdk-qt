@@ -19,3 +19,85 @@
 
 #include "copydbclusterparametergroupresponse.h"
 #include "copydbclusterparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CopyDBClusterParameterGroupResponse
+ *
+ * @brief  Handles RDS CopyDBClusterParameterGroup responses.
+ *
+ * @see    RDSClient::copyDBClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyDBClusterParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CopyDBClusterParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new CopyDBClusterParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const CopyDBClusterParameterGroupRequest * CopyDBClusterParameterGroupResponse::request() const
+{
+    Q_D(const CopyDBClusterParameterGroupResponse);
+    return static_cast<const CopyDBClusterParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CopyDBClusterParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyDBClusterParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for CopyDBClusterParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBClusterParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CopyDBClusterParameterGroupResponse instance.
+ */
+CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponsePrivate(
+    CopyDBClusterParameterGroupQueueResponse * const q) : CopyDBClusterParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CopyDBClusterParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CopyDBClusterParameterGroupResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updategcmchannelresponse.h"
 #include "updategcmchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateGcmChannelResponse
+ *
+ * @brief  Handles Pinpoint UpdateGcmChannel responses.
+ *
+ * @see    PinpointClient::updateGcmChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateGcmChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateGcmChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateGcmChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateGcmChannelRequest * UpdateGcmChannelResponse::request() const
+{
+    Q_D(const UpdateGcmChannelResponse);
+    return static_cast<const UpdateGcmChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateGcmChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateGcmChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateGcmChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateGcmChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateGcmChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateGcmChannelResponse instance.
+ */
+UpdateGcmChannelResponsePrivate::UpdateGcmChannelResponsePrivate(
+    UpdateGcmChannelQueueResponse * const q) : UpdateGcmChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateGcmChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateGcmChannelResponsePrivate::UpdateGcmChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateGcmChannelResponse"));
+    /// @todo
+}

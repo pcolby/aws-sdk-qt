@@ -19,3 +19,85 @@
 
 #include "describeorderablereplicationinstancesresponse.h"
 #include "describeorderablereplicationinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeOrderableReplicationInstancesResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeOrderableReplicationInstances responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeOrderableReplicationInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOrderableReplicationInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeOrderableReplicationInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeOrderableReplicationInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeOrderableReplicationInstancesRequest * DescribeOrderableReplicationInstancesResponse::request() const
+{
+    Q_D(const DescribeOrderableReplicationInstancesResponse);
+    return static_cast<const DescribeOrderableReplicationInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeOrderableReplicationInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeOrderableReplicationInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOrderableReplicationInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeOrderableReplicationInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrderableReplicationInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeOrderableReplicationInstancesResponse instance.
+ */
+DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableReplicationInstancesResponsePrivate(
+    DescribeOrderableReplicationInstancesQueueResponse * const q) : DescribeOrderableReplicationInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeOrderableReplicationInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableReplicationInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableReplicationInstancesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeexporttasksresponse.h"
 #include "describeexporttasksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeExportTasksResponse
+ *
+ * @brief  Handles EC2 DescribeExportTasks responses.
+ *
+ * @see    EC2Client::describeExportTasks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeExportTasksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeExportTasksResponsePrivate(this), parent)
+{
+    setRequest(new DescribeExportTasksRequest(request));
+    setReply(reply);
+}
+
+const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
+{
+    Q_D(const DescribeExportTasksResponse);
+    return static_cast<const DescribeExportTasksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeExportTasks response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeExportTasksResponsePrivate
+ *
+ * @brief  Private implementation for DescribeExportTasksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExportTasksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeExportTasksResponse instance.
+ */
+DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
+    DescribeExportTasksQueueResponse * const q) : DescribeExportTasksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeExportTasksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeExportTasksResponsePrivate::DescribeExportTasksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeExportTasksResponse"));
+    /// @todo
+}

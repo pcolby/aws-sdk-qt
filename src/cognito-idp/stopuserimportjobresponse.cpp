@@ -19,3 +19,85 @@
 
 #include "stopuserimportjobresponse.h"
 #include "stopuserimportjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  StopUserImportJobResponse
+ *
+ * @brief  Handles CognitoIdentityProvider StopUserImportJob responses.
+ *
+ * @see    CognitoIdentityProviderClient::stopUserImportJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopUserImportJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new StopUserImportJobResponsePrivate(this), parent)
+{
+    setRequest(new StopUserImportJobRequest(request));
+    setReply(reply);
+}
+
+const StopUserImportJobRequest * StopUserImportJobResponse::request() const
+{
+    Q_D(const StopUserImportJobResponse);
+    return static_cast<const StopUserImportJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider StopUserImportJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopUserImportJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopUserImportJobResponsePrivate
+ *
+ * @brief  Private implementation for StopUserImportJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopUserImportJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopUserImportJobResponse instance.
+ */
+StopUserImportJobResponsePrivate::StopUserImportJobResponsePrivate(
+    StopUserImportJobQueueResponse * const q) : StopUserImportJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider StopUserImportJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopUserImportJobResponsePrivate::StopUserImportJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopUserImportJobResponse"));
+    /// @todo
+}

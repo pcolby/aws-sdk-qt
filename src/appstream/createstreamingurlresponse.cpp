@@ -19,3 +19,85 @@
 
 #include "createstreamingurlresponse.h"
 #include "createstreamingurlresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  CreateStreamingURLResponse
+ *
+ * @brief  Handles AppStream CreateStreamingURL responses.
+ *
+ * @see    AppStreamClient::createStreamingURL
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStreamingURLResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new CreateStreamingURLResponsePrivate(this), parent)
+{
+    setRequest(new CreateStreamingURLRequest(request));
+    setReply(reply);
+}
+
+const CreateStreamingURLRequest * CreateStreamingURLResponse::request() const
+{
+    Q_D(const CreateStreamingURLResponse);
+    return static_cast<const CreateStreamingURLRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream CreateStreamingURL response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStreamingURLResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStreamingURLResponsePrivate
+ *
+ * @brief  Private implementation for CreateStreamingURLResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStreamingURLResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStreamingURLResponse instance.
+ */
+CreateStreamingURLResponsePrivate::CreateStreamingURLResponsePrivate(
+    CreateStreamingURLQueueResponse * const q) : CreateStreamingURLPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream CreateStreamingURLResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStreamingURLResponsePrivate::CreateStreamingURLResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStreamingURLResponse"));
+    /// @todo
+}

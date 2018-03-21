@@ -19,3 +19,85 @@
 
 #include "deletetopicruleresponse.h"
 #include "deletetopicruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteTopicRuleResponse
+ *
+ * @brief  Handles IoT DeleteTopicRule responses.
+ *
+ * @see    IoTClient::deleteTopicRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTopicRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeleteTopicRuleResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTopicRuleRequest(request));
+    setReply(reply);
+}
+
+const DeleteTopicRuleRequest * DeleteTopicRuleResponse::request() const
+{
+    Q_D(const DeleteTopicRuleResponse);
+    return static_cast<const DeleteTopicRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeleteTopicRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTopicRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTopicRuleResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTopicRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTopicRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTopicRuleResponse instance.
+ */
+DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponsePrivate(
+    DeleteTopicRuleQueueResponse * const q) : DeleteTopicRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeleteTopicRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTopicRuleResponse"));
+    /// @todo
+}

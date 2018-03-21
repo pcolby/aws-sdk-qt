@@ -19,3 +19,85 @@
 
 #include "deletesqlinjectionmatchsetresponse.h"
 #include "deletesqlinjectionmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  DeleteSqlInjectionMatchSetResponse
+ *
+ * @brief  Handles WAFRegional DeleteSqlInjectionMatchSet responses.
+ *
+ * @see    WAFRegionalClient::deleteSqlInjectionMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSqlInjectionMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new DeleteSqlInjectionMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSqlInjectionMatchSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::request() const
+{
+    Q_D(const DeleteSqlInjectionMatchSetResponse);
+    return static_cast<const DeleteSqlInjectionMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional DeleteSqlInjectionMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSqlInjectionMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSqlInjectionMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSqlInjectionMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSqlInjectionMatchSetResponse instance.
+ */
+DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePrivate(
+    DeleteSqlInjectionMatchSetQueueResponse * const q) : DeleteSqlInjectionMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional DeleteSqlInjectionMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSqlInjectionMatchSetResponse"));
+    /// @todo
+}

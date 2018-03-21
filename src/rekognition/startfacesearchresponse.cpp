@@ -19,3 +19,85 @@
 
 #include "startfacesearchresponse.h"
 #include "startfacesearchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartFaceSearchResponse
+ *
+ * @brief  Handles Rekognition StartFaceSearch responses.
+ *
+ * @see    RekognitionClient::startFaceSearch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartFaceSearchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new StartFaceSearchResponsePrivate(this), parent)
+{
+    setRequest(new StartFaceSearchRequest(request));
+    setReply(reply);
+}
+
+const StartFaceSearchRequest * StartFaceSearchResponse::request() const
+{
+    Q_D(const StartFaceSearchResponse);
+    return static_cast<const StartFaceSearchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition StartFaceSearch response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartFaceSearchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartFaceSearchResponsePrivate
+ *
+ * @brief  Private implementation for StartFaceSearchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartFaceSearchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartFaceSearchResponse instance.
+ */
+StartFaceSearchResponsePrivate::StartFaceSearchResponsePrivate(
+    StartFaceSearchQueueResponse * const q) : StartFaceSearchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition StartFaceSearchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartFaceSearchResponsePrivate::StartFaceSearchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartFaceSearchResponse"));
+    /// @todo
+}

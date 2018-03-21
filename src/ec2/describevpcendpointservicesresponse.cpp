@@ -19,3 +19,85 @@
 
 #include "describevpcendpointservicesresponse.h"
 #include "describevpcendpointservicesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcEndpointServicesResponse
+ *
+ * @brief  Handles EC2 DescribeVpcEndpointServices responses.
+ *
+ * @see    EC2Client::describeVpcEndpointServices
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcEndpointServicesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeVpcEndpointServicesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVpcEndpointServicesRequest(request));
+    setReply(reply);
+}
+
+const DescribeVpcEndpointServicesRequest * DescribeVpcEndpointServicesResponse::request() const
+{
+    Q_D(const DescribeVpcEndpointServicesResponse);
+    return static_cast<const DescribeVpcEndpointServicesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeVpcEndpointServices response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVpcEndpointServicesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcEndpointServicesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVpcEndpointServicesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcEndpointServicesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVpcEndpointServicesResponse instance.
+ */
+DescribeVpcEndpointServicesResponsePrivate::DescribeVpcEndpointServicesResponsePrivate(
+    DescribeVpcEndpointServicesQueueResponse * const q) : DescribeVpcEndpointServicesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeVpcEndpointServicesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVpcEndpointServicesResponsePrivate::DescribeVpcEndpointServicesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVpcEndpointServicesResponse"));
+    /// @todo
+}

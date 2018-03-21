@@ -19,3 +19,85 @@
 
 #include "updatesegmentresponse.h"
 #include "updatesegmentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateSegmentResponse
+ *
+ * @brief  Handles Pinpoint UpdateSegment responses.
+ *
+ * @see    PinpointClient::updateSegment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSegmentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateSegmentResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSegmentRequest(request));
+    setReply(reply);
+}
+
+const UpdateSegmentRequest * UpdateSegmentResponse::request() const
+{
+    Q_D(const UpdateSegmentResponse);
+    return static_cast<const UpdateSegmentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateSegment response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSegmentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSegmentResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSegmentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSegmentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSegmentResponse instance.
+ */
+UpdateSegmentResponsePrivate::UpdateSegmentResponsePrivate(
+    UpdateSegmentQueueResponse * const q) : UpdateSegmentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateSegmentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSegmentResponsePrivate::UpdateSegmentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSegmentResponse"));
+    /// @todo
+}

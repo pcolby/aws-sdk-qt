@@ -19,3 +19,85 @@
 
 #include "deleteloadbalancertlscertificateresponse.h"
 #include "deleteloadbalancertlscertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteLoadBalancerTlsCertificateResponse
+ *
+ * @brief  Handles Lightsail DeleteLoadBalancerTlsCertificate responses.
+ *
+ * @see    LightsailClient::deleteLoadBalancerTlsCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoadBalancerTlsCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DeleteLoadBalancerTlsCertificateResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLoadBalancerTlsCertificateRequest(request));
+    setReply(reply);
+}
+
+const DeleteLoadBalancerTlsCertificateRequest * DeleteLoadBalancerTlsCertificateResponse::request() const
+{
+    Q_D(const DeleteLoadBalancerTlsCertificateResponse);
+    return static_cast<const DeleteLoadBalancerTlsCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DeleteLoadBalancerTlsCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoadBalancerTlsCertificateResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLoadBalancerTlsCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerTlsCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLoadBalancerTlsCertificateResponse instance.
+ */
+DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCertificateResponsePrivate(
+    DeleteLoadBalancerTlsCertificateQueueResponse * const q) : DeleteLoadBalancerTlsCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DeleteLoadBalancerTlsCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerTlsCertificateResponse"));
+    /// @todo
+}

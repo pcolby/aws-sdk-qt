@@ -19,3 +19,85 @@
 
 #include "putscheduledupdategroupactionresponse.h"
 #include "putscheduledupdategroupactionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  PutScheduledUpdateGroupActionResponse
+ *
+ * @brief  Handles AutoScaling PutScheduledUpdateGroupAction responses.
+ *
+ * @see    AutoScalingClient::putScheduledUpdateGroupAction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutScheduledUpdateGroupActionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new PutScheduledUpdateGroupActionResponsePrivate(this), parent)
+{
+    setRequest(new PutScheduledUpdateGroupActionRequest(request));
+    setReply(reply);
+}
+
+const PutScheduledUpdateGroupActionRequest * PutScheduledUpdateGroupActionResponse::request() const
+{
+    Q_D(const PutScheduledUpdateGroupActionResponse);
+    return static_cast<const PutScheduledUpdateGroupActionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling PutScheduledUpdateGroupAction response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutScheduledUpdateGroupActionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutScheduledUpdateGroupActionResponsePrivate
+ *
+ * @brief  Private implementation for PutScheduledUpdateGroupActionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutScheduledUpdateGroupActionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutScheduledUpdateGroupActionResponse instance.
+ */
+PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionResponsePrivate(
+    PutScheduledUpdateGroupActionQueueResponse * const q) : PutScheduledUpdateGroupActionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling PutScheduledUpdateGroupActionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutScheduledUpdateGroupActionResponse"));
+    /// @todo
+}

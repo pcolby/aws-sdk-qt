@@ -19,3 +19,85 @@
 
 #include "deletegcmchannelresponse.h"
 #include "deletegcmchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteGcmChannelResponse
+ *
+ * @brief  Handles Pinpoint DeleteGcmChannel responses.
+ *
+ * @see    PinpointClient::deleteGcmChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGcmChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteGcmChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteGcmChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteGcmChannelRequest * DeleteGcmChannelResponse::request() const
+{
+    Q_D(const DeleteGcmChannelResponse);
+    return static_cast<const DeleteGcmChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteGcmChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteGcmChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGcmChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteGcmChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGcmChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteGcmChannelResponse instance.
+ */
+DeleteGcmChannelResponsePrivate::DeleteGcmChannelResponsePrivate(
+    DeleteGcmChannelQueueResponse * const q) : DeleteGcmChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteGcmChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteGcmChannelResponsePrivate::DeleteGcmChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteGcmChannelResponse"));
+    /// @todo
+}

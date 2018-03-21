@@ -19,3 +19,85 @@
 
 #include "getexportresponse.h"
 #include "getexportresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetExportResponse
+ *
+ * @brief  Handles APIGateway GetExport responses.
+ *
+ * @see    APIGatewayClient::getExport
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetExportResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetExportResponsePrivate(this), parent)
+{
+    setRequest(new GetExportRequest(request));
+    setReply(reply);
+}
+
+const GetExportRequest * GetExportResponse::request() const
+{
+    Q_D(const GetExportResponse);
+    return static_cast<const GetExportRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetExport response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetExportResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetExportResponsePrivate
+ *
+ * @brief  Private implementation for GetExportResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetExportResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetExportResponse instance.
+ */
+GetExportResponsePrivate::GetExportResponsePrivate(
+    GetExportQueueResponse * const q) : GetExportPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetExportResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetExportResponsePrivate::GetExportResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetExportResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getloadbalancerresponse.h"
 #include "getloadbalancerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetLoadBalancerResponse
+ *
+ * @brief  Handles Lightsail GetLoadBalancer responses.
+ *
+ * @see    LightsailClient::getLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoadBalancerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetLoadBalancerResponsePrivate(this), parent)
+{
+    setRequest(new GetLoadBalancerRequest(request));
+    setReply(reply);
+}
+
+const GetLoadBalancerRequest * GetLoadBalancerResponse::request() const
+{
+    Q_D(const GetLoadBalancerResponse);
+    return static_cast<const GetLoadBalancerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetLoadBalancer response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLoadBalancerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoadBalancerResponsePrivate
+ *
+ * @brief  Private implementation for GetLoadBalancerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoadBalancerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLoadBalancerResponse instance.
+ */
+GetLoadBalancerResponsePrivate::GetLoadBalancerResponsePrivate(
+    GetLoadBalancerQueueResponse * const q) : GetLoadBalancerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetLoadBalancerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLoadBalancerResponsePrivate::GetLoadBalancerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLoadBalancerResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "initiateauthresponse.h"
 #include "initiateauthresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  InitiateAuthResponse
+ *
+ * @brief  Handles CognitoIdentityProvider InitiateAuth responses.
+ *
+ * @see    CognitoIdentityProviderClient::initiateAuth
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateAuthResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new InitiateAuthResponsePrivate(this), parent)
+{
+    setRequest(new InitiateAuthRequest(request));
+    setReply(reply);
+}
+
+const InitiateAuthRequest * InitiateAuthResponse::request() const
+{
+    Q_D(const InitiateAuthResponse);
+    return static_cast<const InitiateAuthRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider InitiateAuth response.
+ *
+ * @param  response  Response to parse.
+ */
+void InitiateAuthResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateAuthResponsePrivate
+ *
+ * @brief  Private implementation for InitiateAuthResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateAuthResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InitiateAuthResponse instance.
+ */
+InitiateAuthResponsePrivate::InitiateAuthResponsePrivate(
+    InitiateAuthQueueResponse * const q) : InitiateAuthPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider InitiateAuthResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InitiateAuthResponsePrivate::InitiateAuthResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InitiateAuthResponse"));
+    /// @todo
+}

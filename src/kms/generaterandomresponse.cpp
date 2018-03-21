@@ -19,3 +19,85 @@
 
 #include "generaterandomresponse.h"
 #include "generaterandomresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  GenerateRandomResponse
+ *
+ * @brief  Handles KMS GenerateRandom responses.
+ *
+ * @see    KMSClient::generateRandom
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GenerateRandomResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new GenerateRandomResponsePrivate(this), parent)
+{
+    setRequest(new GenerateRandomRequest(request));
+    setReply(reply);
+}
+
+const GenerateRandomRequest * GenerateRandomResponse::request() const
+{
+    Q_D(const GenerateRandomResponse);
+    return static_cast<const GenerateRandomRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS GenerateRandom response.
+ *
+ * @param  response  Response to parse.
+ */
+void GenerateRandomResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GenerateRandomResponsePrivate
+ *
+ * @brief  Private implementation for GenerateRandomResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GenerateRandomResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GenerateRandomResponse instance.
+ */
+GenerateRandomResponsePrivate::GenerateRandomResponsePrivate(
+    GenerateRandomQueueResponse * const q) : GenerateRandomPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS GenerateRandomResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GenerateRandomResponsePrivate::GenerateRandomResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GenerateRandomResponse"));
+    /// @todo
+}

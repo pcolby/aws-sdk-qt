@@ -19,3 +19,85 @@
 
 #include "deletecloudfrontoriginaccessidentityresponse.h"
 #include "deletecloudfrontoriginaccessidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  DeleteCloudFrontOriginAccessIdentityResponse
+ *
+ * @brief  Handles CloudFront DeleteCloudFrontOriginAccessIdentity responses.
+ *
+ * @see    CloudFrontClient::deleteCloudFrontOriginAccessIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCloudFrontOriginAccessIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new DeleteCloudFrontOriginAccessIdentityResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCloudFrontOriginAccessIdentityRequest(request));
+    setReply(reply);
+}
+
+const DeleteCloudFrontOriginAccessIdentityRequest * DeleteCloudFrontOriginAccessIdentityResponse::request() const
+{
+    Q_D(const DeleteCloudFrontOriginAccessIdentityResponse);
+    return static_cast<const DeleteCloudFrontOriginAccessIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront DeleteCloudFrontOriginAccessIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCloudFrontOriginAccessIdentityResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCloudFrontOriginAccessIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCloudFrontOriginAccessIdentityResponse instance.
+ */
+DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAccessIdentityResponsePrivate(
+    DeleteCloudFrontOriginAccessIdentityQueueResponse * const q) : DeleteCloudFrontOriginAccessIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront DeleteCloudFrontOriginAccessIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCloudFrontOriginAccessIdentityResponse"));
+    /// @todo
+}

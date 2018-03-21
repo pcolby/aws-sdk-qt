@@ -19,3 +19,85 @@
 
 #include "confirmforgotpasswordresponse.h"
 #include "confirmforgotpasswordresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ConfirmForgotPasswordResponse
+ *
+ * @brief  Handles CognitoIdentityProvider ConfirmForgotPassword responses.
+ *
+ * @see    CognitoIdentityProviderClient::confirmForgotPassword
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmForgotPasswordResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new ConfirmForgotPasswordResponsePrivate(this), parent)
+{
+    setRequest(new ConfirmForgotPasswordRequest(request));
+    setReply(reply);
+}
+
+const ConfirmForgotPasswordRequest * ConfirmForgotPasswordResponse::request() const
+{
+    Q_D(const ConfirmForgotPasswordResponse);
+    return static_cast<const ConfirmForgotPasswordRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider ConfirmForgotPassword response.
+ *
+ * @param  response  Response to parse.
+ */
+void ConfirmForgotPasswordResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmForgotPasswordResponsePrivate
+ *
+ * @brief  Private implementation for ConfirmForgotPasswordResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmForgotPasswordResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ConfirmForgotPasswordResponse instance.
+ */
+ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponsePrivate(
+    ConfirmForgotPasswordQueueResponse * const q) : ConfirmForgotPasswordPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider ConfirmForgotPasswordResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ConfirmForgotPasswordResponse"));
+    /// @todo
+}

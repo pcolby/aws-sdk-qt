@@ -19,3 +19,85 @@
 
 #include "getgrouppolicyresponse.h"
 #include "getgrouppolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetGroupPolicyResponse
+ *
+ * @brief  Handles IAM GetGroupPolicy responses.
+ *
+ * @see    IAMClient::getGroupPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGroupPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetGroupPolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetGroupPolicyRequest(request));
+    setReply(reply);
+}
+
+const GetGroupPolicyRequest * GetGroupPolicyResponse::request() const
+{
+    Q_D(const GetGroupPolicyResponse);
+    return static_cast<const GetGroupPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetGroupPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGroupPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGroupPolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetGroupPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGroupPolicyResponse instance.
+ */
+GetGroupPolicyResponsePrivate::GetGroupPolicyResponsePrivate(
+    GetGroupPolicyQueueResponse * const q) : GetGroupPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetGroupPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGroupPolicyResponsePrivate::GetGroupPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGroupPolicyResponse"));
+    /// @todo
+}

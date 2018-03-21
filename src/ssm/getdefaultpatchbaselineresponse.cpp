@@ -19,3 +19,85 @@
 
 #include "getdefaultpatchbaselineresponse.h"
 #include "getdefaultpatchbaselineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetDefaultPatchBaselineResponse
+ *
+ * @brief  Handles SSM GetDefaultPatchBaseline responses.
+ *
+ * @see    SSMClient::getDefaultPatchBaseline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDefaultPatchBaselineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetDefaultPatchBaselineResponsePrivate(this), parent)
+{
+    setRequest(new GetDefaultPatchBaselineRequest(request));
+    setReply(reply);
+}
+
+const GetDefaultPatchBaselineRequest * GetDefaultPatchBaselineResponse::request() const
+{
+    Q_D(const GetDefaultPatchBaselineResponse);
+    return static_cast<const GetDefaultPatchBaselineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetDefaultPatchBaseline response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDefaultPatchBaselineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDefaultPatchBaselineResponsePrivate
+ *
+ * @brief  Private implementation for GetDefaultPatchBaselineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDefaultPatchBaselineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDefaultPatchBaselineResponse instance.
+ */
+GetDefaultPatchBaselineResponsePrivate::GetDefaultPatchBaselineResponsePrivate(
+    GetDefaultPatchBaselineQueueResponse * const q) : GetDefaultPatchBaselinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetDefaultPatchBaselineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDefaultPatchBaselineResponsePrivate::GetDefaultPatchBaselineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDefaultPatchBaselineResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updatenumberofdomaincontrollersresponse.h"
 #include "updatenumberofdomaincontrollersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  UpdateNumberOfDomainControllersResponse
+ *
+ * @brief  Handles DirectoryService UpdateNumberOfDomainControllers responses.
+ *
+ * @see    DirectoryServiceClient::updateNumberOfDomainControllers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateNumberOfDomainControllersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new UpdateNumberOfDomainControllersResponsePrivate(this), parent)
+{
+    setRequest(new UpdateNumberOfDomainControllersRequest(request));
+    setReply(reply);
+}
+
+const UpdateNumberOfDomainControllersRequest * UpdateNumberOfDomainControllersResponse::request() const
+{
+    Q_D(const UpdateNumberOfDomainControllersResponse);
+    return static_cast<const UpdateNumberOfDomainControllersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService UpdateNumberOfDomainControllers response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateNumberOfDomainControllersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateNumberOfDomainControllersResponsePrivate
+ *
+ * @brief  Private implementation for UpdateNumberOfDomainControllersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNumberOfDomainControllersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateNumberOfDomainControllersResponse instance.
+ */
+UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersResponsePrivate(
+    UpdateNumberOfDomainControllersQueueResponse * const q) : UpdateNumberOfDomainControllersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService UpdateNumberOfDomainControllersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateNumberOfDomainControllersResponse"));
+    /// @todo
+}

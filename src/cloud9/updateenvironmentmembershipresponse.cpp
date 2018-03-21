@@ -19,3 +19,85 @@
 
 #include "updateenvironmentmembershipresponse.h"
 #include "updateenvironmentmembershipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  UpdateEnvironmentMembershipResponse
+ *
+ * @brief  Handles Cloud9 UpdateEnvironmentMembership responses.
+ *
+ * @see    Cloud9Client::updateEnvironmentMembership
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEnvironmentMembershipResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Cloud9Response(new UpdateEnvironmentMembershipResponsePrivate(this), parent)
+{
+    setRequest(new UpdateEnvironmentMembershipRequest(request));
+    setReply(reply);
+}
+
+const UpdateEnvironmentMembershipRequest * UpdateEnvironmentMembershipResponse::request() const
+{
+    Q_D(const UpdateEnvironmentMembershipResponse);
+    return static_cast<const UpdateEnvironmentMembershipRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Cloud9 UpdateEnvironmentMembership response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEnvironmentMembershipResponsePrivate
+ *
+ * @brief  Private implementation for UpdateEnvironmentMembershipResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEnvironmentMembershipResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateEnvironmentMembershipResponse instance.
+ */
+UpdateEnvironmentMembershipResponsePrivate::UpdateEnvironmentMembershipResponsePrivate(
+    UpdateEnvironmentMembershipQueueResponse * const q) : UpdateEnvironmentMembershipPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Cloud9 UpdateEnvironmentMembershipResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateEnvironmentMembershipResponsePrivate::UpdateEnvironmentMembershipResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateEnvironmentMembershipResponse"));
+    /// @todo
+}

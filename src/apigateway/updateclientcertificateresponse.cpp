@@ -19,3 +19,85 @@
 
 #include "updateclientcertificateresponse.h"
 #include "updateclientcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateClientCertificateResponse
+ *
+ * @brief  Handles APIGateway UpdateClientCertificate responses.
+ *
+ * @see    APIGatewayClient::updateClientCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateClientCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new UpdateClientCertificateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateClientCertificateRequest(request));
+    setReply(reply);
+}
+
+const UpdateClientCertificateRequest * UpdateClientCertificateResponse::request() const
+{
+    Q_D(const UpdateClientCertificateResponse);
+    return static_cast<const UpdateClientCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway UpdateClientCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateClientCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateClientCertificateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateClientCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateClientCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateClientCertificateResponse instance.
+ */
+UpdateClientCertificateResponsePrivate::UpdateClientCertificateResponsePrivate(
+    UpdateClientCertificateQueueResponse * const q) : UpdateClientCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway UpdateClientCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateClientCertificateResponsePrivate::UpdateClientCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateClientCertificateResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "disassociateconnectorresponse.h"
 #include "disassociateconnectorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  DisassociateConnectorResponse
+ *
+ * @brief  Handles SMS DisassociateConnector responses.
+ *
+ * @see    SMSClient::disassociateConnector
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateConnectorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SMSResponse(new DisassociateConnectorResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateConnectorRequest(request));
+    setReply(reply);
+}
+
+const DisassociateConnectorRequest * DisassociateConnectorResponse::request() const
+{
+    Q_D(const DisassociateConnectorResponse);
+    return static_cast<const DisassociateConnectorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SMS DisassociateConnector response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateConnectorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateConnectorResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateConnectorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateConnectorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateConnectorResponse instance.
+ */
+DisassociateConnectorResponsePrivate::DisassociateConnectorResponsePrivate(
+    DisassociateConnectorQueueResponse * const q) : DisassociateConnectorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SMS DisassociateConnectorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateConnectorResponsePrivate::DisassociateConnectorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateConnectorResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getbranchresponse.h"
 #include "getbranchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetBranchResponse
+ *
+ * @brief  Handles CodeCommit GetBranch responses.
+ *
+ * @see    CodeCommitClient::getBranch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBranchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new GetBranchResponsePrivate(this), parent)
+{
+    setRequest(new GetBranchRequest(request));
+    setReply(reply);
+}
+
+const GetBranchRequest * GetBranchResponse::request() const
+{
+    Q_D(const GetBranchResponse);
+    return static_cast<const GetBranchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit GetBranch response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBranchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBranchResponsePrivate
+ *
+ * @brief  Private implementation for GetBranchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBranchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBranchResponse instance.
+ */
+GetBranchResponsePrivate::GetBranchResponsePrivate(
+    GetBranchQueueResponse * const q) : GetBranchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit GetBranchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBranchResponsePrivate::GetBranchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBranchResponse"));
+    /// @todo
+}

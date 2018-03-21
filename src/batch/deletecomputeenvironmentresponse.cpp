@@ -19,3 +19,85 @@
 
 #include "deletecomputeenvironmentresponse.h"
 #include "deletecomputeenvironmentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  DeleteComputeEnvironmentResponse
+ *
+ * @brief  Handles Batch DeleteComputeEnvironment responses.
+ *
+ * @see    BatchClient::deleteComputeEnvironment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteComputeEnvironmentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new DeleteComputeEnvironmentResponsePrivate(this), parent)
+{
+    setRequest(new DeleteComputeEnvironmentRequest(request));
+    setReply(reply);
+}
+
+const DeleteComputeEnvironmentRequest * DeleteComputeEnvironmentResponse::request() const
+{
+    Q_D(const DeleteComputeEnvironmentResponse);
+    return static_cast<const DeleteComputeEnvironmentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch DeleteComputeEnvironment response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteComputeEnvironmentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteComputeEnvironmentResponsePrivate
+ *
+ * @brief  Private implementation for DeleteComputeEnvironmentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteComputeEnvironmentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteComputeEnvironmentResponse instance.
+ */
+DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponsePrivate(
+    DeleteComputeEnvironmentQueueResponse * const q) : DeleteComputeEnvironmentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch DeleteComputeEnvironmentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteComputeEnvironmentResponse"));
+    /// @todo
+}

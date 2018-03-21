@@ -19,3 +19,85 @@
 
 #include "putbucketencryptionresponse.h"
 #include "putbucketencryptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketEncryptionResponse
+ *
+ * @brief  Handles S3 PutBucketEncryption responses.
+ *
+ * @see    S3Client::putBucketEncryption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketEncryptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketEncryptionResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketEncryptionRequest(request));
+    setReply(reply);
+}
+
+const PutBucketEncryptionRequest * PutBucketEncryptionResponse::request() const
+{
+    Q_D(const PutBucketEncryptionResponse);
+    return static_cast<const PutBucketEncryptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketEncryption response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketEncryptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketEncryptionResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketEncryptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketEncryptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketEncryptionResponse instance.
+ */
+PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponsePrivate(
+    PutBucketEncryptionQueueResponse * const q) : PutBucketEncryptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketEncryptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketEncryptionResponse"));
+    /// @todo
+}

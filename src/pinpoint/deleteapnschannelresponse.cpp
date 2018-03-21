@@ -19,3 +19,85 @@
 
 #include "deleteapnschannelresponse.h"
 #include "deleteapnschannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteApnsChannelResponse
+ *
+ * @brief  Handles Pinpoint DeleteApnsChannel responses.
+ *
+ * @see    PinpointClient::deleteApnsChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApnsChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteApnsChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApnsChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteApnsChannelRequest * DeleteApnsChannelResponse::request() const
+{
+    Q_D(const DeleteApnsChannelResponse);
+    return static_cast<const DeleteApnsChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteApnsChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApnsChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApnsChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApnsChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApnsChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApnsChannelResponse instance.
+ */
+DeleteApnsChannelResponsePrivate::DeleteApnsChannelResponsePrivate(
+    DeleteApnsChannelQueueResponse * const q) : DeleteApnsChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteApnsChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApnsChannelResponsePrivate::DeleteApnsChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApnsChannelResponse"));
+    /// @todo
+}

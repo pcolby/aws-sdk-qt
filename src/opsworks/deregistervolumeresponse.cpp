@@ -19,3 +19,85 @@
 
 #include "deregistervolumeresponse.h"
 #include "deregistervolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeregisterVolumeResponse
+ *
+ * @brief  Handles OpsWorks DeregisterVolume responses.
+ *
+ * @see    OpsWorksClient::deregisterVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DeregisterVolumeResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterVolumeRequest(request));
+    setReply(reply);
+}
+
+const DeregisterVolumeRequest * DeregisterVolumeResponse::request() const
+{
+    Q_D(const DeregisterVolumeResponse);
+    return static_cast<const DeregisterVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DeregisterVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterVolumeResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterVolumeResponse instance.
+ */
+DeregisterVolumeResponsePrivate::DeregisterVolumeResponsePrivate(
+    DeregisterVolumeQueueResponse * const q) : DeregisterVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DeregisterVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterVolumeResponsePrivate::DeregisterVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterVolumeResponse"));
+    /// @todo
+}

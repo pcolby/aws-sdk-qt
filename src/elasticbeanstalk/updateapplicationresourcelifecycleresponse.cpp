@@ -19,3 +19,85 @@
 
 #include "updateapplicationresourcelifecycleresponse.h"
 #include "updateapplicationresourcelifecycleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  UpdateApplicationResourceLifecycleResponse
+ *
+ * @brief  Handles ElasticBeanstalk UpdateApplicationResourceLifecycle responses.
+ *
+ * @see    ElasticBeanstalkClient::updateApplicationResourceLifecycle
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApplicationResourceLifecycleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new UpdateApplicationResourceLifecycleResponsePrivate(this), parent)
+{
+    setRequest(new UpdateApplicationResourceLifecycleRequest(request));
+    setReply(reply);
+}
+
+const UpdateApplicationResourceLifecycleRequest * UpdateApplicationResourceLifecycleResponse::request() const
+{
+    Q_D(const UpdateApplicationResourceLifecycleResponse);
+    return static_cast<const UpdateApplicationResourceLifecycleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk UpdateApplicationResourceLifecycle response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateApplicationResourceLifecycleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApplicationResourceLifecycleResponsePrivate
+ *
+ * @brief  Private implementation for UpdateApplicationResourceLifecycleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApplicationResourceLifecycleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateApplicationResourceLifecycleResponse instance.
+ */
+UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourceLifecycleResponsePrivate(
+    UpdateApplicationResourceLifecycleQueueResponse * const q) : UpdateApplicationResourceLifecyclePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk UpdateApplicationResourceLifecycleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourceLifecycleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationResourceLifecycleResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletedestinationresponse.h"
 #include "deletedestinationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteDestinationResponse
+ *
+ * @brief  Handles CloudWatchLogs DeleteDestination responses.
+ *
+ * @see    CloudWatchLogsClient::deleteDestination
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDestinationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DeleteDestinationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDestinationRequest(request));
+    setReply(reply);
+}
+
+const DeleteDestinationRequest * DeleteDestinationResponse::request() const
+{
+    Q_D(const DeleteDestinationResponse);
+    return static_cast<const DeleteDestinationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DeleteDestination response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDestinationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDestinationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDestinationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDestinationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDestinationResponse instance.
+ */
+DeleteDestinationResponsePrivate::DeleteDestinationResponsePrivate(
+    DeleteDestinationQueueResponse * const q) : DeleteDestinationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DeleteDestinationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDestinationResponsePrivate::DeleteDestinationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDestinationResponse"));
+    /// @todo
+}

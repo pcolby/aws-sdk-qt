@@ -19,3 +19,85 @@
 
 #include "deletesubnetgroupresponse.h"
 #include "deletesubnetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DeleteSubnetGroupResponse
+ *
+ * @brief  Handles DAX DeleteSubnetGroup responses.
+ *
+ * @see    DAXClient::deleteSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSubnetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new DeleteSubnetGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSubnetGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteSubnetGroupRequest * DeleteSubnetGroupResponse::request() const
+{
+    Q_D(const DeleteSubnetGroupResponse);
+    return static_cast<const DeleteSubnetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX DeleteSubnetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSubnetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSubnetGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSubnetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSubnetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSubnetGroupResponse instance.
+ */
+DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponsePrivate(
+    DeleteSubnetGroupQueueResponse * const q) : DeleteSubnetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX DeleteSubnetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSubnetGroupResponse"));
+    /// @todo
+}

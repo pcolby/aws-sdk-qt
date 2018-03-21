@@ -19,3 +19,85 @@
 
 #include "deletechannelresponse.h"
 #include "deletechannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  DeleteChannelResponse
+ *
+ * @brief  Handles MediaLive DeleteChannel responses.
+ *
+ * @see    MediaLiveClient::deleteChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaLiveResponse(new DeleteChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteChannelRequest * DeleteChannelResponse::request() const
+{
+    Q_D(const DeleteChannelResponse);
+    return static_cast<const DeleteChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaLive DeleteChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteChannelResponse instance.
+ */
+DeleteChannelResponsePrivate::DeleteChannelResponsePrivate(
+    DeleteChannelQueueResponse * const q) : DeleteChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaLive DeleteChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteChannelResponsePrivate::DeleteChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteChannelResponse"));
+    /// @todo
+}

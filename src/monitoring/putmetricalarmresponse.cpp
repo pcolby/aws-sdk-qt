@@ -19,3 +19,85 @@
 
 #include "putmetricalarmresponse.h"
 #include "putmetricalarmresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  PutMetricAlarmResponse
+ *
+ * @brief  Handles CloudWatch PutMetricAlarm responses.
+ *
+ * @see    CloudWatchClient::putMetricAlarm
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutMetricAlarmResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new PutMetricAlarmResponsePrivate(this), parent)
+{
+    setRequest(new PutMetricAlarmRequest(request));
+    setReply(reply);
+}
+
+const PutMetricAlarmRequest * PutMetricAlarmResponse::request() const
+{
+    Q_D(const PutMetricAlarmResponse);
+    return static_cast<const PutMetricAlarmRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch PutMetricAlarm response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutMetricAlarmResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutMetricAlarmResponsePrivate
+ *
+ * @brief  Private implementation for PutMetricAlarmResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutMetricAlarmResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutMetricAlarmResponse instance.
+ */
+PutMetricAlarmResponsePrivate::PutMetricAlarmResponsePrivate(
+    PutMetricAlarmQueueResponse * const q) : PutMetricAlarmPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch PutMetricAlarmResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutMetricAlarmResponsePrivate::PutMetricAlarmResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutMetricAlarmResponse"));
+    /// @todo
+}

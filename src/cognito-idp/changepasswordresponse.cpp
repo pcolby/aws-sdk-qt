@@ -19,3 +19,85 @@
 
 #include "changepasswordresponse.h"
 #include "changepasswordresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ChangePasswordResponse
+ *
+ * @brief  Handles CognitoIdentityProvider ChangePassword responses.
+ *
+ * @see    CognitoIdentityProviderClient::changePassword
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ChangePasswordResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new ChangePasswordResponsePrivate(this), parent)
+{
+    setRequest(new ChangePasswordRequest(request));
+    setReply(reply);
+}
+
+const ChangePasswordRequest * ChangePasswordResponse::request() const
+{
+    Q_D(const ChangePasswordResponse);
+    return static_cast<const ChangePasswordRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider ChangePassword response.
+ *
+ * @param  response  Response to parse.
+ */
+void ChangePasswordResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ChangePasswordResponsePrivate
+ *
+ * @brief  Private implementation for ChangePasswordResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ChangePasswordResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ChangePasswordResponse instance.
+ */
+ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
+    ChangePasswordQueueResponse * const q) : ChangePasswordPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider ChangePasswordResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ChangePasswordResponsePrivate::ChangePasswordResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ChangePasswordResponse"));
+    /// @todo
+}

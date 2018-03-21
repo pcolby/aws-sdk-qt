@@ -19,3 +19,85 @@
 
 #include "describeorderableclusteroptionsresponse.h"
 #include "describeorderableclusteroptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeOrderableClusterOptionsResponse
+ *
+ * @brief  Handles Redshift DescribeOrderableClusterOptions responses.
+ *
+ * @see    RedshiftClient::describeOrderableClusterOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOrderableClusterOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeOrderableClusterOptionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeOrderableClusterOptionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeOrderableClusterOptionsRequest * DescribeOrderableClusterOptionsResponse::request() const
+{
+    Q_D(const DescribeOrderableClusterOptionsResponse);
+    return static_cast<const DescribeOrderableClusterOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeOrderableClusterOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeOrderableClusterOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOrderableClusterOptionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeOrderableClusterOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrderableClusterOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeOrderableClusterOptionsResponse instance.
+ */
+DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsResponsePrivate(
+    DescribeOrderableClusterOptionsQueueResponse * const q) : DescribeOrderableClusterOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeOrderableClusterOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableClusterOptionsResponse"));
+    /// @todo
+}

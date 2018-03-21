@@ -19,3 +19,85 @@
 
 #include "createreplicationsubnetgroupresponse.h"
 #include "createreplicationsubnetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  CreateReplicationSubnetGroupResponse
+ *
+ * @brief  Handles DatabaseMigrationService CreateReplicationSubnetGroup responses.
+ *
+ * @see    DatabaseMigrationServiceClient::createReplicationSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReplicationSubnetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new CreateReplicationSubnetGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateReplicationSubnetGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateReplicationSubnetGroupRequest * CreateReplicationSubnetGroupResponse::request() const
+{
+    Q_D(const CreateReplicationSubnetGroupResponse);
+    return static_cast<const CreateReplicationSubnetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService CreateReplicationSubnetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReplicationSubnetGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateReplicationSubnetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationSubnetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateReplicationSubnetGroupResponse instance.
+ */
+CreateReplicationSubnetGroupResponsePrivate::CreateReplicationSubnetGroupResponsePrivate(
+    CreateReplicationSubnetGroupQueueResponse * const q) : CreateReplicationSubnetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService CreateReplicationSubnetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateReplicationSubnetGroupResponsePrivate::CreateReplicationSubnetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateReplicationSubnetGroupResponse"));
+    /// @todo
+}

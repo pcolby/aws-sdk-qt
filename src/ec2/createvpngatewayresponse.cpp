@@ -19,3 +19,85 @@
 
 #include "createvpngatewayresponse.h"
 #include "createvpngatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpnGatewayResponse
+ *
+ * @brief  Handles EC2 CreateVpnGateway responses.
+ *
+ * @see    EC2Client::createVpnGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpnGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateVpnGatewayResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpnGatewayRequest(request));
+    setReply(reply);
+}
+
+const CreateVpnGatewayRequest * CreateVpnGatewayResponse::request() const
+{
+    Q_D(const CreateVpnGatewayResponse);
+    return static_cast<const CreateVpnGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateVpnGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpnGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpnGatewayResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpnGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpnGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpnGatewayResponse instance.
+ */
+CreateVpnGatewayResponsePrivate::CreateVpnGatewayResponsePrivate(
+    CreateVpnGatewayQueueResponse * const q) : CreateVpnGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateVpnGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpnGatewayResponsePrivate::CreateVpnGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpnGatewayResponse"));
+    /// @todo
+}

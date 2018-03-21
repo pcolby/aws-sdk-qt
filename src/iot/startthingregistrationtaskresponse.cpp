@@ -19,3 +19,85 @@
 
 #include "startthingregistrationtaskresponse.h"
 #include "startthingregistrationtaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  StartThingRegistrationTaskResponse
+ *
+ * @brief  Handles IoT StartThingRegistrationTask responses.
+ *
+ * @see    IoTClient::startThingRegistrationTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartThingRegistrationTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new StartThingRegistrationTaskResponsePrivate(this), parent)
+{
+    setRequest(new StartThingRegistrationTaskRequest(request));
+    setReply(reply);
+}
+
+const StartThingRegistrationTaskRequest * StartThingRegistrationTaskResponse::request() const
+{
+    Q_D(const StartThingRegistrationTaskResponse);
+    return static_cast<const StartThingRegistrationTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT StartThingRegistrationTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartThingRegistrationTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartThingRegistrationTaskResponsePrivate
+ *
+ * @brief  Private implementation for StartThingRegistrationTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartThingRegistrationTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartThingRegistrationTaskResponse instance.
+ */
+StartThingRegistrationTaskResponsePrivate::StartThingRegistrationTaskResponsePrivate(
+    StartThingRegistrationTaskQueueResponse * const q) : StartThingRegistrationTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT StartThingRegistrationTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartThingRegistrationTaskResponsePrivate::StartThingRegistrationTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartThingRegistrationTaskResponse"));
+    /// @todo
+}

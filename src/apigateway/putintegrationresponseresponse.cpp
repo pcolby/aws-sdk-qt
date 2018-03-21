@@ -19,3 +19,85 @@
 
 #include "putintegrationresponseresponse.h"
 #include "putintegrationresponseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  PutIntegrationResponseResponse
+ *
+ * @brief  Handles APIGateway PutIntegrationResponse responses.
+ *
+ * @see    APIGatewayClient::putIntegrationResponse
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutIntegrationResponseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new PutIntegrationResponseResponsePrivate(this), parent)
+{
+    setRequest(new PutIntegrationResponseRequest(request));
+    setReply(reply);
+}
+
+const PutIntegrationResponseRequest * PutIntegrationResponseResponse::request() const
+{
+    Q_D(const PutIntegrationResponseResponse);
+    return static_cast<const PutIntegrationResponseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway PutIntegrationResponse response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutIntegrationResponseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutIntegrationResponseResponsePrivate
+ *
+ * @brief  Private implementation for PutIntegrationResponseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutIntegrationResponseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutIntegrationResponseResponse instance.
+ */
+PutIntegrationResponseResponsePrivate::PutIntegrationResponseResponsePrivate(
+    PutIntegrationResponseQueueResponse * const q) : PutIntegrationResponsePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway PutIntegrationResponseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutIntegrationResponseResponsePrivate::PutIntegrationResponseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutIntegrationResponseResponse"));
+    /// @todo
+}

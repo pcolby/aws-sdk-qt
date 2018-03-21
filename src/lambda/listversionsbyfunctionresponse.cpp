@@ -19,3 +19,85 @@
 
 #include "listversionsbyfunctionresponse.h"
 #include "listversionsbyfunctionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  ListVersionsByFunctionResponse
+ *
+ * @brief  Handles Lambda ListVersionsByFunction responses.
+ *
+ * @see    LambdaClient::listVersionsByFunction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListVersionsByFunctionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new ListVersionsByFunctionResponsePrivate(this), parent)
+{
+    setRequest(new ListVersionsByFunctionRequest(request));
+    setReply(reply);
+}
+
+const ListVersionsByFunctionRequest * ListVersionsByFunctionResponse::request() const
+{
+    Q_D(const ListVersionsByFunctionResponse);
+    return static_cast<const ListVersionsByFunctionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda ListVersionsByFunction response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListVersionsByFunctionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListVersionsByFunctionResponsePrivate
+ *
+ * @brief  Private implementation for ListVersionsByFunctionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVersionsByFunctionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListVersionsByFunctionResponse instance.
+ */
+ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponsePrivate(
+    ListVersionsByFunctionQueueResponse * const q) : ListVersionsByFunctionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda ListVersionsByFunctionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListVersionsByFunctionResponse"));
+    /// @todo
+}

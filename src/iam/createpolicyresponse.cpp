@@ -19,3 +19,85 @@
 
 #include "createpolicyresponse.h"
 #include "createpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreatePolicyResponse
+ *
+ * @brief  Handles IAM CreatePolicy responses.
+ *
+ * @see    IAMClient::createPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new CreatePolicyResponsePrivate(this), parent)
+{
+    setRequest(new CreatePolicyRequest(request));
+    setReply(reply);
+}
+
+const CreatePolicyRequest * CreatePolicyResponse::request() const
+{
+    Q_D(const CreatePolicyResponse);
+    return static_cast<const CreatePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM CreatePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePolicyResponsePrivate
+ *
+ * @brief  Private implementation for CreatePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePolicyResponse instance.
+ */
+CreatePolicyResponsePrivate::CreatePolicyResponsePrivate(
+    CreatePolicyQueueResponse * const q) : CreatePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM CreatePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePolicyResponsePrivate::CreatePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePolicyResponse"));
+    /// @todo
+}

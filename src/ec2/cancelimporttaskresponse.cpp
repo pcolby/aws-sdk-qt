@@ -19,3 +19,85 @@
 
 #include "cancelimporttaskresponse.h"
 #include "cancelimporttaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CancelImportTaskResponse
+ *
+ * @brief  Handles EC2 CancelImportTask responses.
+ *
+ * @see    EC2Client::cancelImportTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelImportTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CancelImportTaskResponsePrivate(this), parent)
+{
+    setRequest(new CancelImportTaskRequest(request));
+    setReply(reply);
+}
+
+const CancelImportTaskRequest * CancelImportTaskResponse::request() const
+{
+    Q_D(const CancelImportTaskResponse);
+    return static_cast<const CancelImportTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CancelImportTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelImportTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelImportTaskResponsePrivate
+ *
+ * @brief  Private implementation for CancelImportTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelImportTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelImportTaskResponse instance.
+ */
+CancelImportTaskResponsePrivate::CancelImportTaskResponsePrivate(
+    CancelImportTaskQueueResponse * const q) : CancelImportTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CancelImportTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelImportTaskResponsePrivate::CancelImportTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelImportTaskResponse"));
+    /// @todo
+}

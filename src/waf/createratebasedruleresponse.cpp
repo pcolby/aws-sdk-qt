@@ -19,3 +19,85 @@
 
 #include "createratebasedruleresponse.h"
 #include "createratebasedruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  CreateRateBasedRuleResponse
+ *
+ * @brief  Handles WAF CreateRateBasedRule responses.
+ *
+ * @see    WAFClient::createRateBasedRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRateBasedRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new CreateRateBasedRuleResponsePrivate(this), parent)
+{
+    setRequest(new CreateRateBasedRuleRequest(request));
+    setReply(reply);
+}
+
+const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
+{
+    Q_D(const CreateRateBasedRuleResponse);
+    return static_cast<const CreateRateBasedRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF CreateRateBasedRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRateBasedRuleResponsePrivate
+ *
+ * @brief  Private implementation for CreateRateBasedRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRateBasedRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateRateBasedRuleResponse instance.
+ */
+CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponsePrivate(
+    CreateRateBasedRuleQueueResponse * const q) : CreateRateBasedRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF CreateRateBasedRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateRateBasedRuleResponse"));
+    /// @todo
+}

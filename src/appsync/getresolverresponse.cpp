@@ -19,3 +19,85 @@
 
 #include "getresolverresponse.h"
 #include "getresolverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  GetResolverResponse
+ *
+ * @brief  Handles AppSync GetResolver responses.
+ *
+ * @see    AppSyncClient::getResolver
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetResolverResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new GetResolverResponsePrivate(this), parent)
+{
+    setRequest(new GetResolverRequest(request));
+    setReply(reply);
+}
+
+const GetResolverRequest * GetResolverResponse::request() const
+{
+    Q_D(const GetResolverResponse);
+    return static_cast<const GetResolverRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync GetResolver response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetResolverResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetResolverResponsePrivate
+ *
+ * @brief  Private implementation for GetResolverResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResolverResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetResolverResponse instance.
+ */
+GetResolverResponsePrivate::GetResolverResponsePrivate(
+    GetResolverQueueResponse * const q) : GetResolverPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync GetResolverResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetResolverResponsePrivate::GetResolverResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetResolverResponse"));
+    /// @todo
+}

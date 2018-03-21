@@ -19,3 +19,85 @@
 
 #include "deletereplicationjobresponse.h"
 #include "deletereplicationjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  DeleteReplicationJobResponse
+ *
+ * @brief  Handles SMS DeleteReplicationJob responses.
+ *
+ * @see    SMSClient::deleteReplicationJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SMSResponse(new DeleteReplicationJobResponsePrivate(this), parent)
+{
+    setRequest(new DeleteReplicationJobRequest(request));
+    setReply(reply);
+}
+
+const DeleteReplicationJobRequest * DeleteReplicationJobResponse::request() const
+{
+    Q_D(const DeleteReplicationJobResponse);
+    return static_cast<const DeleteReplicationJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SMS DeleteReplicationJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteReplicationJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationJobResponsePrivate
+ *
+ * @brief  Private implementation for DeleteReplicationJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteReplicationJobResponse instance.
+ */
+DeleteReplicationJobResponsePrivate::DeleteReplicationJobResponsePrivate(
+    DeleteReplicationJobQueueResponse * const q) : DeleteReplicationJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SMS DeleteReplicationJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteReplicationJobResponsePrivate::DeleteReplicationJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationJobResponse"));
+    /// @todo
+}

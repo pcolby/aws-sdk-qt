@@ -19,3 +19,85 @@
 
 #include "getuserpolicyresponse.h"
 #include "getuserpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetUserPolicyResponse
+ *
+ * @brief  Handles IAM GetUserPolicy responses.
+ *
+ * @see    IAMClient::getUserPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetUserPolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetUserPolicyRequest(request));
+    setReply(reply);
+}
+
+const GetUserPolicyRequest * GetUserPolicyResponse::request() const
+{
+    Q_D(const GetUserPolicyResponse);
+    return static_cast<const GetUserPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetUserPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUserPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserPolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetUserPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUserPolicyResponse instance.
+ */
+GetUserPolicyResponsePrivate::GetUserPolicyResponsePrivate(
+    GetUserPolicyQueueResponse * const q) : GetUserPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetUserPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUserPolicyResponsePrivate::GetUserPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUserPolicyResponse"));
+    /// @todo
+}

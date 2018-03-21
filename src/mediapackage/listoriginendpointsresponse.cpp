@@ -19,3 +19,85 @@
 
 #include "listoriginendpointsresponse.h"
 #include "listoriginendpointsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  ListOriginEndpointsResponse
+ *
+ * @brief  Handles MediaPackage ListOriginEndpoints responses.
+ *
+ * @see    MediaPackageClient::listOriginEndpoints
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOriginEndpointsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaPackageResponse(new ListOriginEndpointsResponsePrivate(this), parent)
+{
+    setRequest(new ListOriginEndpointsRequest(request));
+    setReply(reply);
+}
+
+const ListOriginEndpointsRequest * ListOriginEndpointsResponse::request() const
+{
+    Q_D(const ListOriginEndpointsResponse);
+    return static_cast<const ListOriginEndpointsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaPackage ListOriginEndpoints response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOriginEndpointsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOriginEndpointsResponsePrivate
+ *
+ * @brief  Private implementation for ListOriginEndpointsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOriginEndpointsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOriginEndpointsResponse instance.
+ */
+ListOriginEndpointsResponsePrivate::ListOriginEndpointsResponsePrivate(
+    ListOriginEndpointsQueueResponse * const q) : ListOriginEndpointsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaPackage ListOriginEndpointsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOriginEndpointsResponsePrivate::ListOriginEndpointsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOriginEndpointsResponse"));
+    /// @todo
+}

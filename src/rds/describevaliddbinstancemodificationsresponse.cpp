@@ -19,3 +19,85 @@
 
 #include "describevaliddbinstancemodificationsresponse.h"
 #include "describevaliddbinstancemodificationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeValidDBInstanceModificationsResponse
+ *
+ * @brief  Handles RDS DescribeValidDBInstanceModifications responses.
+ *
+ * @see    RDSClient::describeValidDBInstanceModifications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeValidDBInstanceModificationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeValidDBInstanceModificationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeValidDBInstanceModificationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeValidDBInstanceModificationsRequest * DescribeValidDBInstanceModificationsResponse::request() const
+{
+    Q_D(const DescribeValidDBInstanceModificationsResponse);
+    return static_cast<const DescribeValidDBInstanceModificationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeValidDBInstanceModifications response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeValidDBInstanceModificationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeValidDBInstanceModificationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeValidDBInstanceModificationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeValidDBInstanceModificationsResponse instance.
+ */
+DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModificationsResponsePrivate(
+    DescribeValidDBInstanceModificationsQueueResponse * const q) : DescribeValidDBInstanceModificationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeValidDBInstanceModificationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeValidDBInstanceModificationsResponse"));
+    /// @todo
+}

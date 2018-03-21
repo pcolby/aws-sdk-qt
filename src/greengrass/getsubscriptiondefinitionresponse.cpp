@@ -19,3 +19,85 @@
 
 #include "getsubscriptiondefinitionresponse.h"
 #include "getsubscriptiondefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetSubscriptionDefinitionResponse
+ *
+ * @brief  Handles Greengrass GetSubscriptionDefinition responses.
+ *
+ * @see    GreengrassClient::getSubscriptionDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSubscriptionDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetSubscriptionDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new GetSubscriptionDefinitionRequest(request));
+    setReply(reply);
+}
+
+const GetSubscriptionDefinitionRequest * GetSubscriptionDefinitionResponse::request() const
+{
+    Q_D(const GetSubscriptionDefinitionResponse);
+    return static_cast<const GetSubscriptionDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetSubscriptionDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSubscriptionDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for GetSubscriptionDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSubscriptionDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSubscriptionDefinitionResponse instance.
+ */
+GetSubscriptionDefinitionResponsePrivate::GetSubscriptionDefinitionResponsePrivate(
+    GetSubscriptionDefinitionQueueResponse * const q) : GetSubscriptionDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetSubscriptionDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSubscriptionDefinitionResponsePrivate::GetSubscriptionDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSubscriptionDefinitionResponse"));
+    /// @todo
+}

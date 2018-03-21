@@ -19,3 +19,85 @@
 
 #include "initiatedocumentversionuploadresponse.h"
 #include "initiatedocumentversionuploadresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  InitiateDocumentVersionUploadResponse
+ *
+ * @brief  Handles WorkDocs InitiateDocumentVersionUpload responses.
+ *
+ * @see    WorkDocsClient::initiateDocumentVersionUpload
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateDocumentVersionUploadResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new InitiateDocumentVersionUploadResponsePrivate(this), parent)
+{
+    setRequest(new InitiateDocumentVersionUploadRequest(request));
+    setReply(reply);
+}
+
+const InitiateDocumentVersionUploadRequest * InitiateDocumentVersionUploadResponse::request() const
+{
+    Q_D(const InitiateDocumentVersionUploadResponse);
+    return static_cast<const InitiateDocumentVersionUploadRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs InitiateDocumentVersionUpload response.
+ *
+ * @param  response  Response to parse.
+ */
+void InitiateDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateDocumentVersionUploadResponsePrivate
+ *
+ * @brief  Private implementation for InitiateDocumentVersionUploadResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateDocumentVersionUploadResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InitiateDocumentVersionUploadResponse instance.
+ */
+InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadResponsePrivate(
+    InitiateDocumentVersionUploadQueueResponse * const q) : InitiateDocumentVersionUploadPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs InitiateDocumentVersionUploadResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InitiateDocumentVersionUploadResponse"));
+    /// @todo
+}

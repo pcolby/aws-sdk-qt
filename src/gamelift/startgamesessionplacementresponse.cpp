@@ -19,3 +19,85 @@
 
 #include "startgamesessionplacementresponse.h"
 #include "startgamesessionplacementresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  StartGameSessionPlacementResponse
+ *
+ * @brief  Handles GameLift StartGameSessionPlacement responses.
+ *
+ * @see    GameLiftClient::startGameSessionPlacement
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartGameSessionPlacementResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new StartGameSessionPlacementResponsePrivate(this), parent)
+{
+    setRequest(new StartGameSessionPlacementRequest(request));
+    setReply(reply);
+}
+
+const StartGameSessionPlacementRequest * StartGameSessionPlacementResponse::request() const
+{
+    Q_D(const StartGameSessionPlacementResponse);
+    return static_cast<const StartGameSessionPlacementRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift StartGameSessionPlacement response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartGameSessionPlacementResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartGameSessionPlacementResponsePrivate
+ *
+ * @brief  Private implementation for StartGameSessionPlacementResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartGameSessionPlacementResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartGameSessionPlacementResponse instance.
+ */
+StartGameSessionPlacementResponsePrivate::StartGameSessionPlacementResponsePrivate(
+    StartGameSessionPlacementQueueResponse * const q) : StartGameSessionPlacementPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift StartGameSessionPlacementResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartGameSessionPlacementResponsePrivate::StartGameSessionPlacementResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartGameSessionPlacementResponse"));
+    /// @todo
+}

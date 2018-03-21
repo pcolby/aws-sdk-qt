@@ -19,3 +19,85 @@
 
 #include "associateiaminstanceprofileresponse.h"
 #include "associateiaminstanceprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AssociateIamInstanceProfileResponse
+ *
+ * @brief  Handles EC2 AssociateIamInstanceProfile responses.
+ *
+ * @see    EC2Client::associateIamInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateIamInstanceProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AssociateIamInstanceProfileResponsePrivate(this), parent)
+{
+    setRequest(new AssociateIamInstanceProfileRequest(request));
+    setReply(reply);
+}
+
+const AssociateIamInstanceProfileRequest * AssociateIamInstanceProfileResponse::request() const
+{
+    Q_D(const AssociateIamInstanceProfileResponse);
+    return static_cast<const AssociateIamInstanceProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AssociateIamInstanceProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateIamInstanceProfileResponsePrivate
+ *
+ * @brief  Private implementation for AssociateIamInstanceProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateIamInstanceProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateIamInstanceProfileResponse instance.
+ */
+AssociateIamInstanceProfileResponsePrivate::AssociateIamInstanceProfileResponsePrivate(
+    AssociateIamInstanceProfileQueueResponse * const q) : AssociateIamInstanceProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AssociateIamInstanceProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateIamInstanceProfileResponsePrivate::AssociateIamInstanceProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateIamInstanceProfileResponse"));
+    /// @todo
+}

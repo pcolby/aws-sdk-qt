@@ -19,3 +19,85 @@
 
 #include "getloginprofileresponse.h"
 #include "getloginprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetLoginProfileResponse
+ *
+ * @brief  Handles IAM GetLoginProfile responses.
+ *
+ * @see    IAMClient::getLoginProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoginProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetLoginProfileResponsePrivate(this), parent)
+{
+    setRequest(new GetLoginProfileRequest(request));
+    setReply(reply);
+}
+
+const GetLoginProfileRequest * GetLoginProfileResponse::request() const
+{
+    Q_D(const GetLoginProfileResponse);
+    return static_cast<const GetLoginProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetLoginProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLoginProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoginProfileResponsePrivate
+ *
+ * @brief  Private implementation for GetLoginProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoginProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLoginProfileResponse instance.
+ */
+GetLoginProfileResponsePrivate::GetLoginProfileResponsePrivate(
+    GetLoginProfileQueueResponse * const q) : GetLoginProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetLoginProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLoginProfileResponsePrivate::GetLoginProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLoginProfileResponse"));
+    /// @todo
+}

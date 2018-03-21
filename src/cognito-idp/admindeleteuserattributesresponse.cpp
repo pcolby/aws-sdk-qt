@@ -19,3 +19,85 @@
 
 #include "admindeleteuserattributesresponse.h"
 #include "admindeleteuserattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminDeleteUserAttributesResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminDeleteUserAttributes responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminDeleteUserAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminDeleteUserAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminDeleteUserAttributesResponsePrivate(this), parent)
+{
+    setRequest(new AdminDeleteUserAttributesRequest(request));
+    setReply(reply);
+}
+
+const AdminDeleteUserAttributesRequest * AdminDeleteUserAttributesResponse::request() const
+{
+    Q_D(const AdminDeleteUserAttributesResponse);
+    return static_cast<const AdminDeleteUserAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminDeleteUserAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminDeleteUserAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminDeleteUserAttributesResponsePrivate
+ *
+ * @brief  Private implementation for AdminDeleteUserAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminDeleteUserAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminDeleteUserAttributesResponse instance.
+ */
+AdminDeleteUserAttributesResponsePrivate::AdminDeleteUserAttributesResponsePrivate(
+    AdminDeleteUserAttributesQueueResponse * const q) : AdminDeleteUserAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminDeleteUserAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminDeleteUserAttributesResponsePrivate::AdminDeleteUserAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminDeleteUserAttributesResponse"));
+    /// @todo
+}

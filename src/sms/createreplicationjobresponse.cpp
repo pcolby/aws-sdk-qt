@@ -19,3 +19,85 @@
 
 #include "createreplicationjobresponse.h"
 #include "createreplicationjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  CreateReplicationJobResponse
+ *
+ * @brief  Handles SMS CreateReplicationJob responses.
+ *
+ * @see    SMSClient::createReplicationJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReplicationJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SMSResponse(new CreateReplicationJobResponsePrivate(this), parent)
+{
+    setRequest(new CreateReplicationJobRequest(request));
+    setReply(reply);
+}
+
+const CreateReplicationJobRequest * CreateReplicationJobResponse::request() const
+{
+    Q_D(const CreateReplicationJobResponse);
+    return static_cast<const CreateReplicationJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SMS CreateReplicationJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateReplicationJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReplicationJobResponsePrivate
+ *
+ * @brief  Private implementation for CreateReplicationJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateReplicationJobResponse instance.
+ */
+CreateReplicationJobResponsePrivate::CreateReplicationJobResponsePrivate(
+    CreateReplicationJobQueueResponse * const q) : CreateReplicationJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SMS CreateReplicationJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateReplicationJobResponsePrivate::CreateReplicationJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateReplicationJobResponse"));
+    /// @todo
+}

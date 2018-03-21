@@ -19,3 +19,85 @@
 
 #include "getlifecyclepolicypreviewresponse.h"
 #include "getlifecyclepolicypreviewresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  GetLifecyclePolicyPreviewResponse
+ *
+ * @brief  Handles ECR GetLifecyclePolicyPreview responses.
+ *
+ * @see    ECRClient::getLifecyclePolicyPreview
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLifecyclePolicyPreviewResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new GetLifecyclePolicyPreviewResponsePrivate(this), parent)
+{
+    setRequest(new GetLifecyclePolicyPreviewRequest(request));
+    setReply(reply);
+}
+
+const GetLifecyclePolicyPreviewRequest * GetLifecyclePolicyPreviewResponse::request() const
+{
+    Q_D(const GetLifecyclePolicyPreviewResponse);
+    return static_cast<const GetLifecyclePolicyPreviewRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR GetLifecyclePolicyPreview response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLifecyclePolicyPreviewResponsePrivate
+ *
+ * @brief  Private implementation for GetLifecyclePolicyPreviewResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLifecyclePolicyPreviewResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLifecyclePolicyPreviewResponse instance.
+ */
+GetLifecyclePolicyPreviewResponsePrivate::GetLifecyclePolicyPreviewResponsePrivate(
+    GetLifecyclePolicyPreviewQueueResponse * const q) : GetLifecyclePolicyPreviewPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR GetLifecyclePolicyPreviewResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLifecyclePolicyPreviewResponsePrivate::GetLifecyclePolicyPreviewResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLifecyclePolicyPreviewResponse"));
+    /// @todo
+}

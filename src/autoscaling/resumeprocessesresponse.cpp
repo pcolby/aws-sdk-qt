@@ -19,3 +19,85 @@
 
 #include "resumeprocessesresponse.h"
 #include "resumeprocessesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  ResumeProcessesResponse
+ *
+ * @brief  Handles AutoScaling ResumeProcesses responses.
+ *
+ * @see    AutoScalingClient::resumeProcesses
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResumeProcessesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new ResumeProcessesResponsePrivate(this), parent)
+{
+    setRequest(new ResumeProcessesRequest(request));
+    setReply(reply);
+}
+
+const ResumeProcessesRequest * ResumeProcessesResponse::request() const
+{
+    Q_D(const ResumeProcessesResponse);
+    return static_cast<const ResumeProcessesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling ResumeProcesses response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResumeProcessesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResumeProcessesResponsePrivate
+ *
+ * @brief  Private implementation for ResumeProcessesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResumeProcessesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResumeProcessesResponse instance.
+ */
+ResumeProcessesResponsePrivate::ResumeProcessesResponsePrivate(
+    ResumeProcessesQueueResponse * const q) : ResumeProcessesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling ResumeProcessesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResumeProcessesResponsePrivate::ResumeProcessesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResumeProcessesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getgeolocationresponse.h"
 #include "getgeolocationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetGeoLocationResponse
+ *
+ * @brief  Handles Route53 GetGeoLocation responses.
+ *
+ * @see    Route53Client::getGeoLocation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGeoLocationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new GetGeoLocationResponsePrivate(this), parent)
+{
+    setRequest(new GetGeoLocationRequest(request));
+    setReply(reply);
+}
+
+const GetGeoLocationRequest * GetGeoLocationResponse::request() const
+{
+    Q_D(const GetGeoLocationResponse);
+    return static_cast<const GetGeoLocationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 GetGeoLocation response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGeoLocationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGeoLocationResponsePrivate
+ *
+ * @brief  Private implementation for GetGeoLocationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGeoLocationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGeoLocationResponse instance.
+ */
+GetGeoLocationResponsePrivate::GetGeoLocationResponsePrivate(
+    GetGeoLocationQueueResponse * const q) : GetGeoLocationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 GetGeoLocationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGeoLocationResponsePrivate::GetGeoLocationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGeoLocationResponse"));
+    /// @todo
+}

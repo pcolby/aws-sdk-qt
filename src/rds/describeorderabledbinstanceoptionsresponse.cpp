@@ -19,3 +19,85 @@
 
 #include "describeorderabledbinstanceoptionsresponse.h"
 #include "describeorderabledbinstanceoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeOrderableDBInstanceOptionsResponse
+ *
+ * @brief  Handles RDS DescribeOrderableDBInstanceOptions responses.
+ *
+ * @see    RDSClient::describeOrderableDBInstanceOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOrderableDBInstanceOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeOrderableDBInstanceOptionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeOrderableDBInstanceOptionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeOrderableDBInstanceOptionsRequest * DescribeOrderableDBInstanceOptionsResponse::request() const
+{
+    Q_D(const DescribeOrderableDBInstanceOptionsResponse);
+    return static_cast<const DescribeOrderableDBInstanceOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeOrderableDBInstanceOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOrderableDBInstanceOptionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeOrderableDBInstanceOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrderableDBInstanceOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeOrderableDBInstanceOptionsResponse instance.
+ */
+DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOptionsResponsePrivate(
+    DescribeOrderableDBInstanceOptionsQueueResponse * const q) : DescribeOrderableDBInstanceOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeOrderableDBInstanceOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableDBInstanceOptionsResponse"));
+    /// @todo
+}

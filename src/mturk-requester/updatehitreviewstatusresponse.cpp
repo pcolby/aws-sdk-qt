@@ -19,3 +19,85 @@
 
 #include "updatehitreviewstatusresponse.h"
 #include "updatehitreviewstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  UpdateHITReviewStatusResponse
+ *
+ * @brief  Handles MTurk UpdateHITReviewStatus responses.
+ *
+ * @see    MTurkClient::updateHITReviewStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateHITReviewStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new UpdateHITReviewStatusResponsePrivate(this), parent)
+{
+    setRequest(new UpdateHITReviewStatusRequest(request));
+    setReply(reply);
+}
+
+const UpdateHITReviewStatusRequest * UpdateHITReviewStatusResponse::request() const
+{
+    Q_D(const UpdateHITReviewStatusResponse);
+    return static_cast<const UpdateHITReviewStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk UpdateHITReviewStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateHITReviewStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateHITReviewStatusResponsePrivate
+ *
+ * @brief  Private implementation for UpdateHITReviewStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateHITReviewStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateHITReviewStatusResponse instance.
+ */
+UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponsePrivate(
+    UpdateHITReviewStatusQueueResponse * const q) : UpdateHITReviewStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk UpdateHITReviewStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateHITReviewStatusResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listdeadlettersourcequeuesresponse.h"
 #include "listdeadlettersourcequeuesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  ListDeadLetterSourceQueuesResponse
+ *
+ * @brief  Handles SQS ListDeadLetterSourceQueues responses.
+ *
+ * @see    SQSClient::listDeadLetterSourceQueues
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeadLetterSourceQueuesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new ListDeadLetterSourceQueuesResponsePrivate(this), parent)
+{
+    setRequest(new ListDeadLetterSourceQueuesRequest(request));
+    setReply(reply);
+}
+
+const ListDeadLetterSourceQueuesRequest * ListDeadLetterSourceQueuesResponse::request() const
+{
+    Q_D(const ListDeadLetterSourceQueuesResponse);
+    return static_cast<const ListDeadLetterSourceQueuesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS ListDeadLetterSourceQueues response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDeadLetterSourceQueuesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeadLetterSourceQueuesResponsePrivate
+ *
+ * @brief  Private implementation for ListDeadLetterSourceQueuesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeadLetterSourceQueuesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDeadLetterSourceQueuesResponse instance.
+ */
+ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesResponsePrivate(
+    ListDeadLetterSourceQueuesQueueResponse * const q) : ListDeadLetterSourceQueuesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS ListDeadLetterSourceQueuesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDeadLetterSourceQueuesResponse"));
+    /// @todo
+}

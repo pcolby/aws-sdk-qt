@@ -19,3 +19,85 @@
 
 #include "updatecertificateresponse.h"
 #include "updatecertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateCertificateResponse
+ *
+ * @brief  Handles IoT UpdateCertificate responses.
+ *
+ * @see    IoTClient::updateCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new UpdateCertificateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateCertificateRequest(request));
+    setReply(reply);
+}
+
+const UpdateCertificateRequest * UpdateCertificateResponse::request() const
+{
+    Q_D(const UpdateCertificateResponse);
+    return static_cast<const UpdateCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT UpdateCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCertificateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateCertificateResponse instance.
+ */
+UpdateCertificateResponsePrivate::UpdateCertificateResponsePrivate(
+    UpdateCertificateQueueResponse * const q) : UpdateCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT UpdateCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateCertificateResponsePrivate::UpdateCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateCertificateResponse"));
+    /// @todo
+}

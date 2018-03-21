@@ -19,3 +19,85 @@
 
 #include "updatedocumentationversionresponse.h"
 #include "updatedocumentationversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateDocumentationVersionResponse
+ *
+ * @brief  Handles APIGateway UpdateDocumentationVersion responses.
+ *
+ * @see    APIGatewayClient::updateDocumentationVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDocumentationVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new UpdateDocumentationVersionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDocumentationVersionRequest(request));
+    setReply(reply);
+}
+
+const UpdateDocumentationVersionRequest * UpdateDocumentationVersionResponse::request() const
+{
+    Q_D(const UpdateDocumentationVersionResponse);
+    return static_cast<const UpdateDocumentationVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway UpdateDocumentationVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDocumentationVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDocumentationVersionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDocumentationVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDocumentationVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDocumentationVersionResponse instance.
+ */
+UpdateDocumentationVersionResponsePrivate::UpdateDocumentationVersionResponsePrivate(
+    UpdateDocumentationVersionQueueResponse * const q) : UpdateDocumentationVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway UpdateDocumentationVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDocumentationVersionResponsePrivate::UpdateDocumentationVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentationVersionResponse"));
+    /// @todo
+}

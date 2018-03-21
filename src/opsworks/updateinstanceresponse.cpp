@@ -19,3 +19,85 @@
 
 #include "updateinstanceresponse.h"
 #include "updateinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateInstanceResponse
+ *
+ * @brief  Handles OpsWorks UpdateInstance responses.
+ *
+ * @see    OpsWorksClient::updateInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UpdateInstanceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateInstanceRequest(request));
+    setReply(reply);
+}
+
+const UpdateInstanceRequest * UpdateInstanceResponse::request() const
+{
+    Q_D(const UpdateInstanceResponse);
+    return static_cast<const UpdateInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UpdateInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateInstanceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateInstanceResponse instance.
+ */
+UpdateInstanceResponsePrivate::UpdateInstanceResponsePrivate(
+    UpdateInstanceQueueResponse * const q) : UpdateInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UpdateInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateInstanceResponsePrivate::UpdateInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateInstanceResponse"));
+    /// @todo
+}

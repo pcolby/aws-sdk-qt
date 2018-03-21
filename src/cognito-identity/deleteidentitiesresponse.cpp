@@ -19,3 +19,85 @@
 
 #include "deleteidentitiesresponse.h"
 #include "deleteidentitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  DeleteIdentitiesResponse
+ *
+ * @brief  Handles CognitoIdentity DeleteIdentities responses.
+ *
+ * @see    CognitoIdentityClient::deleteIdentities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIdentitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new DeleteIdentitiesResponsePrivate(this), parent)
+{
+    setRequest(new DeleteIdentitiesRequest(request));
+    setReply(reply);
+}
+
+const DeleteIdentitiesRequest * DeleteIdentitiesResponse::request() const
+{
+    Q_D(const DeleteIdentitiesResponse);
+    return static_cast<const DeleteIdentitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity DeleteIdentities response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteIdentitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIdentitiesResponsePrivate
+ *
+ * @brief  Private implementation for DeleteIdentitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteIdentitiesResponse instance.
+ */
+DeleteIdentitiesResponsePrivate::DeleteIdentitiesResponsePrivate(
+    DeleteIdentitiesQueueResponse * const q) : DeleteIdentitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity DeleteIdentitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteIdentitiesResponsePrivate::DeleteIdentitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteIdentitiesResponse"));
+    /// @todo
+}

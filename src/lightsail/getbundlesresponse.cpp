@@ -19,3 +19,85 @@
 
 #include "getbundlesresponse.h"
 #include "getbundlesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetBundlesResponse
+ *
+ * @brief  Handles Lightsail GetBundles responses.
+ *
+ * @see    LightsailClient::getBundles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBundlesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetBundlesResponsePrivate(this), parent)
+{
+    setRequest(new GetBundlesRequest(request));
+    setReply(reply);
+}
+
+const GetBundlesRequest * GetBundlesResponse::request() const
+{
+    Q_D(const GetBundlesResponse);
+    return static_cast<const GetBundlesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetBundles response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBundlesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBundlesResponsePrivate
+ *
+ * @brief  Private implementation for GetBundlesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBundlesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBundlesResponse instance.
+ */
+GetBundlesResponsePrivate::GetBundlesResponsePrivate(
+    GetBundlesQueueResponse * const q) : GetBundlesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetBundlesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBundlesResponsePrivate::GetBundlesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBundlesResponse"));
+    /// @todo
+}

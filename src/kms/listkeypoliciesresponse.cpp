@@ -19,3 +19,85 @@
 
 #include "listkeypoliciesresponse.h"
 #include "listkeypoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  ListKeyPoliciesResponse
+ *
+ * @brief  Handles KMS ListKeyPolicies responses.
+ *
+ * @see    KMSClient::listKeyPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListKeyPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new ListKeyPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListKeyPoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListKeyPoliciesRequest * ListKeyPoliciesResponse::request() const
+{
+    Q_D(const ListKeyPoliciesResponse);
+    return static_cast<const ListKeyPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS ListKeyPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListKeyPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListKeyPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListKeyPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListKeyPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListKeyPoliciesResponse instance.
+ */
+ListKeyPoliciesResponsePrivate::ListKeyPoliciesResponsePrivate(
+    ListKeyPoliciesQueueResponse * const q) : ListKeyPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS ListKeyPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListKeyPoliciesResponsePrivate::ListKeyPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListKeyPoliciesResponse"));
+    /// @todo
+}

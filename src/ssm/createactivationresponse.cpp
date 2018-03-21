@@ -19,3 +19,85 @@
 
 #include "createactivationresponse.h"
 #include "createactivationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  CreateActivationResponse
+ *
+ * @brief  Handles SSM CreateActivation responses.
+ *
+ * @see    SSMClient::createActivation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateActivationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new CreateActivationResponsePrivate(this), parent)
+{
+    setRequest(new CreateActivationRequest(request));
+    setReply(reply);
+}
+
+const CreateActivationRequest * CreateActivationResponse::request() const
+{
+    Q_D(const CreateActivationResponse);
+    return static_cast<const CreateActivationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM CreateActivation response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateActivationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateActivationResponsePrivate
+ *
+ * @brief  Private implementation for CreateActivationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateActivationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateActivationResponse instance.
+ */
+CreateActivationResponsePrivate::CreateActivationResponsePrivate(
+    CreateActivationQueueResponse * const q) : CreateActivationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM CreateActivationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateActivationResponsePrivate::CreateActivationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateActivationResponse"));
+    /// @todo
+}

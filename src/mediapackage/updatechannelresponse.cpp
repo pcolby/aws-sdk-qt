@@ -19,3 +19,85 @@
 
 #include "updatechannelresponse.h"
 #include "updatechannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  UpdateChannelResponse
+ *
+ * @brief  Handles MediaPackage UpdateChannel responses.
+ *
+ * @see    MediaPackageClient::updateChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaPackageResponse(new UpdateChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateChannelRequest * UpdateChannelResponse::request() const
+{
+    Q_D(const UpdateChannelResponse);
+    return static_cast<const UpdateChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaPackage UpdateChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateChannelResponse instance.
+ */
+UpdateChannelResponsePrivate::UpdateChannelResponsePrivate(
+    UpdateChannelQueueResponse * const q) : UpdateChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaPackage UpdateChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateChannelResponsePrivate::UpdateChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateChannelResponse"));
+    /// @todo
+}

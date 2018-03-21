@@ -19,3 +19,85 @@
 
 #include "modifymounttargetsecuritygroupsresponse.h"
 #include "modifymounttargetsecuritygroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  ModifyMountTargetSecurityGroupsResponse
+ *
+ * @brief  Handles EFS ModifyMountTargetSecurityGroups responses.
+ *
+ * @see    EFSClient::modifyMountTargetSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyMountTargetSecurityGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EFSResponse(new ModifyMountTargetSecurityGroupsResponsePrivate(this), parent)
+{
+    setRequest(new ModifyMountTargetSecurityGroupsRequest(request));
+    setReply(reply);
+}
+
+const ModifyMountTargetSecurityGroupsRequest * ModifyMountTargetSecurityGroupsResponse::request() const
+{
+    Q_D(const ModifyMountTargetSecurityGroupsResponse);
+    return static_cast<const ModifyMountTargetSecurityGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EFS ModifyMountTargetSecurityGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyMountTargetSecurityGroupsResponsePrivate
+ *
+ * @brief  Private implementation for ModifyMountTargetSecurityGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyMountTargetSecurityGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyMountTargetSecurityGroupsResponse instance.
+ */
+ModifyMountTargetSecurityGroupsResponsePrivate::ModifyMountTargetSecurityGroupsResponsePrivate(
+    ModifyMountTargetSecurityGroupsQueueResponse * const q) : ModifyMountTargetSecurityGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EFS ModifyMountTargetSecurityGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyMountTargetSecurityGroupsResponsePrivate::ModifyMountTargetSecurityGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyMountTargetSecurityGroupsResponse"));
+    /// @todo
+}

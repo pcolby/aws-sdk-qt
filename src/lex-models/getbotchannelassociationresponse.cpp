@@ -19,3 +19,85 @@
 
 #include "getbotchannelassociationresponse.h"
 #include "getbotchannelassociationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBotChannelAssociationResponse
+ *
+ * @brief  Handles LexModelBuildingService GetBotChannelAssociation responses.
+ *
+ * @see    LexModelBuildingServiceClient::getBotChannelAssociation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBotChannelAssociationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetBotChannelAssociationResponsePrivate(this), parent)
+{
+    setRequest(new GetBotChannelAssociationRequest(request));
+    setReply(reply);
+}
+
+const GetBotChannelAssociationRequest * GetBotChannelAssociationResponse::request() const
+{
+    Q_D(const GetBotChannelAssociationResponse);
+    return static_cast<const GetBotChannelAssociationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetBotChannelAssociation response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBotChannelAssociationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBotChannelAssociationResponsePrivate
+ *
+ * @brief  Private implementation for GetBotChannelAssociationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBotChannelAssociationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBotChannelAssociationResponse instance.
+ */
+GetBotChannelAssociationResponsePrivate::GetBotChannelAssociationResponsePrivate(
+    GetBotChannelAssociationQueueResponse * const q) : GetBotChannelAssociationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetBotChannelAssociationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBotChannelAssociationResponsePrivate::GetBotChannelAssociationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBotChannelAssociationResponse"));
+    /// @todo
+}

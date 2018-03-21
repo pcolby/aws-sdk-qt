@@ -19,3 +19,85 @@
 
 #include "deletenotebookinstancelifecycleconfigresponse.h"
 #include "deletenotebookinstancelifecycleconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DeleteNotebookInstanceLifecycleConfigResponse
+ *
+ * @brief  Handles SageMaker DeleteNotebookInstanceLifecycleConfig responses.
+ *
+ * @see    SageMakerClient::deleteNotebookInstanceLifecycleConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNotebookInstanceLifecycleConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new DeleteNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNotebookInstanceLifecycleConfigRequest(request));
+    setReply(reply);
+}
+
+const DeleteNotebookInstanceLifecycleConfigRequest * DeleteNotebookInstanceLifecycleConfigResponse::request() const
+{
+    Q_D(const DeleteNotebookInstanceLifecycleConfigResponse);
+    return static_cast<const DeleteNotebookInstanceLifecycleConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker DeleteNotebookInstanceLifecycleConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNotebookInstanceLifecycleConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNotebookInstanceLifecycleConfigResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNotebookInstanceLifecycleConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNotebookInstanceLifecycleConfigResponse instance.
+ */
+DeleteNotebookInstanceLifecycleConfigResponsePrivate::DeleteNotebookInstanceLifecycleConfigResponsePrivate(
+    DeleteNotebookInstanceLifecycleConfigQueueResponse * const q) : DeleteNotebookInstanceLifecycleConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker DeleteNotebookInstanceLifecycleConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNotebookInstanceLifecycleConfigResponsePrivate::DeleteNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNotebookInstanceLifecycleConfigResponse"));
+    /// @todo
+}

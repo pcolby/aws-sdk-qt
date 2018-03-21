@@ -19,3 +19,85 @@
 
 #include "registercontainerinstanceresponse.h"
 #include "registercontainerinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  RegisterContainerInstanceResponse
+ *
+ * @brief  Handles ECS RegisterContainerInstance responses.
+ *
+ * @see    ECSClient::registerContainerInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterContainerInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new RegisterContainerInstanceResponsePrivate(this), parent)
+{
+    setRequest(new RegisterContainerInstanceRequest(request));
+    setReply(reply);
+}
+
+const RegisterContainerInstanceRequest * RegisterContainerInstanceResponse::request() const
+{
+    Q_D(const RegisterContainerInstanceResponse);
+    return static_cast<const RegisterContainerInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS RegisterContainerInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterContainerInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterContainerInstanceResponsePrivate
+ *
+ * @brief  Private implementation for RegisterContainerInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterContainerInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterContainerInstanceResponse instance.
+ */
+RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponsePrivate(
+    RegisterContainerInstanceQueueResponse * const q) : RegisterContainerInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS RegisterContainerInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterContainerInstanceResponse"));
+    /// @todo
+}

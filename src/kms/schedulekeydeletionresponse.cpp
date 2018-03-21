@@ -19,3 +19,85 @@
 
 #include "schedulekeydeletionresponse.h"
 #include "schedulekeydeletionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  ScheduleKeyDeletionResponse
+ *
+ * @brief  Handles KMS ScheduleKeyDeletion responses.
+ *
+ * @see    KMSClient::scheduleKeyDeletion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ScheduleKeyDeletionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new ScheduleKeyDeletionResponsePrivate(this), parent)
+{
+    setRequest(new ScheduleKeyDeletionRequest(request));
+    setReply(reply);
+}
+
+const ScheduleKeyDeletionRequest * ScheduleKeyDeletionResponse::request() const
+{
+    Q_D(const ScheduleKeyDeletionResponse);
+    return static_cast<const ScheduleKeyDeletionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS ScheduleKeyDeletion response.
+ *
+ * @param  response  Response to parse.
+ */
+void ScheduleKeyDeletionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ScheduleKeyDeletionResponsePrivate
+ *
+ * @brief  Private implementation for ScheduleKeyDeletionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ScheduleKeyDeletionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ScheduleKeyDeletionResponse instance.
+ */
+ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponsePrivate(
+    ScheduleKeyDeletionQueueResponse * const q) : ScheduleKeyDeletionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS ScheduleKeyDeletionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ScheduleKeyDeletionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteretentionpolicyresponse.h"
 #include "deleteretentionpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteRetentionPolicyResponse
+ *
+ * @brief  Handles CloudWatchLogs DeleteRetentionPolicy responses.
+ *
+ * @see    CloudWatchLogsClient::deleteRetentionPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRetentionPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DeleteRetentionPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRetentionPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteRetentionPolicyRequest * DeleteRetentionPolicyResponse::request() const
+{
+    Q_D(const DeleteRetentionPolicyResponse);
+    return static_cast<const DeleteRetentionPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DeleteRetentionPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRetentionPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRetentionPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRetentionPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRetentionPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRetentionPolicyResponse instance.
+ */
+DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponsePrivate(
+    DeleteRetentionPolicyQueueResponse * const q) : DeleteRetentionPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DeleteRetentionPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRetentionPolicyResponse"));
+    /// @todo
+}

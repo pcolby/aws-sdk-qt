@@ -19,3 +19,85 @@
 
 #include "getattributevaluesresponse.h"
 #include "getattributevaluesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pricing {
+
+/**
+ * @class  GetAttributeValuesResponse
+ *
+ * @brief  Handles Pricing GetAttributeValues responses.
+ *
+ * @see    PricingClient::getAttributeValues
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAttributeValuesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PricingResponse(new GetAttributeValuesResponsePrivate(this), parent)
+{
+    setRequest(new GetAttributeValuesRequest(request));
+    setReply(reply);
+}
+
+const GetAttributeValuesRequest * GetAttributeValuesResponse::request() const
+{
+    Q_D(const GetAttributeValuesResponse);
+    return static_cast<const GetAttributeValuesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pricing GetAttributeValues response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAttributeValuesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAttributeValuesResponsePrivate
+ *
+ * @brief  Private implementation for GetAttributeValuesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAttributeValuesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAttributeValuesResponse instance.
+ */
+GetAttributeValuesResponsePrivate::GetAttributeValuesResponsePrivate(
+    GetAttributeValuesQueueResponse * const q) : GetAttributeValuesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pricing GetAttributeValuesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAttributeValuesResponsePrivate::GetAttributeValuesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAttributeValuesResponse"));
+    /// @todo
+}

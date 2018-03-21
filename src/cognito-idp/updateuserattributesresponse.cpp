@@ -19,3 +19,85 @@
 
 #include "updateuserattributesresponse.h"
 #include "updateuserattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateUserAttributesResponse
+ *
+ * @brief  Handles CognitoIdentityProvider UpdateUserAttributes responses.
+ *
+ * @see    CognitoIdentityProviderClient::updateUserAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new UpdateUserAttributesResponsePrivate(this), parent)
+{
+    setRequest(new UpdateUserAttributesRequest(request));
+    setReply(reply);
+}
+
+const UpdateUserAttributesRequest * UpdateUserAttributesResponse::request() const
+{
+    Q_D(const UpdateUserAttributesResponse);
+    return static_cast<const UpdateUserAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider UpdateUserAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateUserAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserAttributesResponsePrivate
+ *
+ * @brief  Private implementation for UpdateUserAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateUserAttributesResponse instance.
+ */
+UpdateUserAttributesResponsePrivate::UpdateUserAttributesResponsePrivate(
+    UpdateUserAttributesQueueResponse * const q) : UpdateUserAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider UpdateUserAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateUserAttributesResponsePrivate::UpdateUserAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateUserAttributesResponse"));
+    /// @todo
+}

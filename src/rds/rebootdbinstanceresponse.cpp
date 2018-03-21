@@ -19,3 +19,85 @@
 
 #include "rebootdbinstanceresponse.h"
 #include "rebootdbinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  RebootDBInstanceResponse
+ *
+ * @brief  Handles RDS RebootDBInstance responses.
+ *
+ * @see    RDSClient::rebootDBInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebootDBInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new RebootDBInstanceResponsePrivate(this), parent)
+{
+    setRequest(new RebootDBInstanceRequest(request));
+    setReply(reply);
+}
+
+const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
+{
+    Q_D(const RebootDBInstanceResponse);
+    return static_cast<const RebootDBInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS RebootDBInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RebootDBInstanceResponsePrivate
+ *
+ * @brief  Private implementation for RebootDBInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootDBInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RebootDBInstanceResponse instance.
+ */
+RebootDBInstanceResponsePrivate::RebootDBInstanceResponsePrivate(
+    RebootDBInstanceQueueResponse * const q) : RebootDBInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS RebootDBInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RebootDBInstanceResponsePrivate::RebootDBInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RebootDBInstanceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listgroupversionsresponse.h"
 #include "listgroupversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListGroupVersionsResponse
+ *
+ * @brief  Handles Greengrass ListGroupVersions responses.
+ *
+ * @see    GreengrassClient::listGroupVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListGroupVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListGroupVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListGroupVersionsRequest * ListGroupVersionsResponse::request() const
+{
+    Q_D(const ListGroupVersionsResponse);
+    return static_cast<const ListGroupVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListGroupVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGroupVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListGroupVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGroupVersionsResponse instance.
+ */
+ListGroupVersionsResponsePrivate::ListGroupVersionsResponsePrivate(
+    ListGroupVersionsQueueResponse * const q) : ListGroupVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListGroupVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGroupVersionsResponsePrivate::ListGroupVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGroupVersionsResponse"));
+    /// @todo
+}

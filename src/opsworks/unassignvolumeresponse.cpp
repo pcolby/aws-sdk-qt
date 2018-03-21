@@ -19,3 +19,85 @@
 
 #include "unassignvolumeresponse.h"
 #include "unassignvolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UnassignVolumeResponse
+ *
+ * @brief  Handles OpsWorks UnassignVolume responses.
+ *
+ * @see    OpsWorksClient::unassignVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnassignVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UnassignVolumeResponsePrivate(this), parent)
+{
+    setRequest(new UnassignVolumeRequest(request));
+    setReply(reply);
+}
+
+const UnassignVolumeRequest * UnassignVolumeResponse::request() const
+{
+    Q_D(const UnassignVolumeResponse);
+    return static_cast<const UnassignVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UnassignVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnassignVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnassignVolumeResponsePrivate
+ *
+ * @brief  Private implementation for UnassignVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnassignVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnassignVolumeResponse instance.
+ */
+UnassignVolumeResponsePrivate::UnassignVolumeResponsePrivate(
+    UnassignVolumeQueueResponse * const q) : UnassignVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UnassignVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnassignVolumeResponsePrivate::UnassignVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnassignVolumeResponse"));
+    /// @todo
+}

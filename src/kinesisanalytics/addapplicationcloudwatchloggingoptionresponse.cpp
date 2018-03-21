@@ -19,3 +19,85 @@
 
 #include "addapplicationcloudwatchloggingoptionresponse.h"
 #include "addapplicationcloudwatchloggingoptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  AddApplicationCloudWatchLoggingOptionResponse
+ *
+ * @brief  Handles KinesisAnalytics AddApplicationCloudWatchLoggingOption responses.
+ *
+ * @see    KinesisAnalyticsClient::addApplicationCloudWatchLoggingOption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddApplicationCloudWatchLoggingOptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new AddApplicationCloudWatchLoggingOptionResponsePrivate(this), parent)
+{
+    setRequest(new AddApplicationCloudWatchLoggingOptionRequest(request));
+    setReply(reply);
+}
+
+const AddApplicationCloudWatchLoggingOptionRequest * AddApplicationCloudWatchLoggingOptionResponse::request() const
+{
+    Q_D(const AddApplicationCloudWatchLoggingOptionResponse);
+    return static_cast<const AddApplicationCloudWatchLoggingOptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics AddApplicationCloudWatchLoggingOption response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddApplicationCloudWatchLoggingOptionResponsePrivate
+ *
+ * @brief  Private implementation for AddApplicationCloudWatchLoggingOptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddApplicationCloudWatchLoggingOptionResponse instance.
+ */
+AddApplicationCloudWatchLoggingOptionResponsePrivate::AddApplicationCloudWatchLoggingOptionResponsePrivate(
+    AddApplicationCloudWatchLoggingOptionQueueResponse * const q) : AddApplicationCloudWatchLoggingOptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics AddApplicationCloudWatchLoggingOptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddApplicationCloudWatchLoggingOptionResponsePrivate::AddApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddApplicationCloudWatchLoggingOptionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletebudgetresponse.h"
 #include "deletebudgetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DeleteBudgetResponse
+ *
+ * @brief  Handles Budgets DeleteBudget responses.
+ *
+ * @see    BudgetsClient::deleteBudget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBudgetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new DeleteBudgetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBudgetRequest(request));
+    setReply(reply);
+}
+
+const DeleteBudgetRequest * DeleteBudgetResponse::request() const
+{
+    Q_D(const DeleteBudgetResponse);
+    return static_cast<const DeleteBudgetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets DeleteBudget response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBudgetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBudgetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBudgetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBudgetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBudgetResponse instance.
+ */
+DeleteBudgetResponsePrivate::DeleteBudgetResponsePrivate(
+    DeleteBudgetQueueResponse * const q) : DeleteBudgetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets DeleteBudgetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBudgetResponsePrivate::DeleteBudgetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBudgetResponse"));
+    /// @todo
+}

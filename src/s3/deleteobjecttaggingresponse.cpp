@@ -19,3 +19,85 @@
 
 #include "deleteobjecttaggingresponse.h"
 #include "deleteobjecttaggingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteObjectTaggingResponse
+ *
+ * @brief  Handles S3 DeleteObjectTagging responses.
+ *
+ * @see    S3Client::deleteObjectTagging
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteObjectTaggingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new DeleteObjectTaggingResponsePrivate(this), parent)
+{
+    setRequest(new DeleteObjectTaggingRequest(request));
+    setReply(reply);
+}
+
+const DeleteObjectTaggingRequest * DeleteObjectTaggingResponse::request() const
+{
+    Q_D(const DeleteObjectTaggingResponse);
+    return static_cast<const DeleteObjectTaggingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 DeleteObjectTagging response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteObjectTaggingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteObjectTaggingResponsePrivate
+ *
+ * @brief  Private implementation for DeleteObjectTaggingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteObjectTaggingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteObjectTaggingResponse instance.
+ */
+DeleteObjectTaggingResponsePrivate::DeleteObjectTaggingResponsePrivate(
+    DeleteObjectTaggingQueueResponse * const q) : DeleteObjectTaggingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 DeleteObjectTaggingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteObjectTaggingResponsePrivate::DeleteObjectTaggingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteObjectTaggingResponse"));
+    /// @todo
+}

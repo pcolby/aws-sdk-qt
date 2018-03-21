@@ -19,3 +19,85 @@
 
 #include "deleteuserresponse.h"
 #include "deleteuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DeleteUserResponse
+ *
+ * @brief  Handles MQ DeleteUser responses.
+ *
+ * @see    MQClient::deleteUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new DeleteUserResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUserRequest(request));
+    setReply(reply);
+}
+
+const DeleteUserRequest * DeleteUserResponse::request() const
+{
+    Q_D(const DeleteUserResponse);
+    return static_cast<const DeleteUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ DeleteUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUserResponse instance.
+ */
+DeleteUserResponsePrivate::DeleteUserResponsePrivate(
+    DeleteUserQueueResponse * const q) : DeleteUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ DeleteUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUserResponsePrivate::DeleteUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUserResponse"));
+    /// @todo
+}

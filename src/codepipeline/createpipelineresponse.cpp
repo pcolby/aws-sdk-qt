@@ -19,3 +19,85 @@
 
 #include "createpipelineresponse.h"
 #include "createpipelineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  CreatePipelineResponse
+ *
+ * @brief  Handles CodePipeline CreatePipeline responses.
+ *
+ * @see    CodePipelineClient::createPipeline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePipelineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new CreatePipelineResponsePrivate(this), parent)
+{
+    setRequest(new CreatePipelineRequest(request));
+    setReply(reply);
+}
+
+const CreatePipelineRequest * CreatePipelineResponse::request() const
+{
+    Q_D(const CreatePipelineResponse);
+    return static_cast<const CreatePipelineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline CreatePipeline response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePipelineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePipelineResponsePrivate
+ *
+ * @brief  Private implementation for CreatePipelineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePipelineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePipelineResponse instance.
+ */
+CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
+    CreatePipelineQueueResponse * const q) : CreatePipelinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline CreatePipelineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePipelineResponsePrivate::CreatePipelineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePipelineResponse"));
+    /// @todo
+}

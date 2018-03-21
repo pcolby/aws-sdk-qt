@@ -19,3 +19,85 @@
 
 #include "deletebackupresponse.h"
 #include "deletebackupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  DeleteBackupResponse
+ *
+ * @brief  Handles OpsWorksCM DeleteBackup responses.
+ *
+ * @see    OpsWorksCMClient::deleteBackup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBackupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksCMResponse(new DeleteBackupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBackupRequest(request));
+    setReply(reply);
+}
+
+const DeleteBackupRequest * DeleteBackupResponse::request() const
+{
+    Q_D(const DeleteBackupResponse);
+    return static_cast<const DeleteBackupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorksCM DeleteBackup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBackupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBackupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBackupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBackupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBackupResponse instance.
+ */
+DeleteBackupResponsePrivate::DeleteBackupResponsePrivate(
+    DeleteBackupQueueResponse * const q) : DeleteBackupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorksCM DeleteBackupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBackupResponsePrivate::DeleteBackupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBackupResponse"));
+    /// @todo
+}

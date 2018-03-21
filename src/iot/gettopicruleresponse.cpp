@@ -19,3 +19,85 @@
 
 #include "gettopicruleresponse.h"
 #include "gettopicruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetTopicRuleResponse
+ *
+ * @brief  Handles IoT GetTopicRule responses.
+ *
+ * @see    IoTClient::getTopicRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTopicRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new GetTopicRuleResponsePrivate(this), parent)
+{
+    setRequest(new GetTopicRuleRequest(request));
+    setReply(reply);
+}
+
+const GetTopicRuleRequest * GetTopicRuleResponse::request() const
+{
+    Q_D(const GetTopicRuleResponse);
+    return static_cast<const GetTopicRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT GetTopicRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTopicRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTopicRuleResponsePrivate
+ *
+ * @brief  Private implementation for GetTopicRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTopicRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTopicRuleResponse instance.
+ */
+GetTopicRuleResponsePrivate::GetTopicRuleResponsePrivate(
+    GetTopicRuleQueueResponse * const q) : GetTopicRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT GetTopicRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTopicRuleResponsePrivate::GetTopicRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTopicRuleResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "puttracesegmentsresponse.h"
 #include "puttracesegmentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace XRay {
+
+/**
+ * @class  PutTraceSegmentsResponse
+ *
+ * @brief  Handles XRay PutTraceSegments responses.
+ *
+ * @see    XRayClient::putTraceSegments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutTraceSegmentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : XRayResponse(new PutTraceSegmentsResponsePrivate(this), parent)
+{
+    setRequest(new PutTraceSegmentsRequest(request));
+    setReply(reply);
+}
+
+const PutTraceSegmentsRequest * PutTraceSegmentsResponse::request() const
+{
+    Q_D(const PutTraceSegmentsResponse);
+    return static_cast<const PutTraceSegmentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a XRay PutTraceSegments response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutTraceSegmentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutTraceSegmentsResponsePrivate
+ *
+ * @brief  Private implementation for PutTraceSegmentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutTraceSegmentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutTraceSegmentsResponse instance.
+ */
+PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponsePrivate(
+    PutTraceSegmentsQueueResponse * const q) : PutTraceSegmentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an XRay PutTraceSegmentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutTraceSegmentsResponse"));
+    /// @todo
+}

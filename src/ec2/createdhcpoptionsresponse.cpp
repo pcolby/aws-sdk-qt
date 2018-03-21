@@ -19,3 +19,85 @@
 
 #include "createdhcpoptionsresponse.h"
 #include "createdhcpoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateDhcpOptionsResponse
+ *
+ * @brief  Handles EC2 CreateDhcpOptions responses.
+ *
+ * @see    EC2Client::createDhcpOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDhcpOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateDhcpOptionsResponsePrivate(this), parent)
+{
+    setRequest(new CreateDhcpOptionsRequest(request));
+    setReply(reply);
+}
+
+const CreateDhcpOptionsRequest * CreateDhcpOptionsResponse::request() const
+{
+    Q_D(const CreateDhcpOptionsResponse);
+    return static_cast<const CreateDhcpOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateDhcpOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDhcpOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDhcpOptionsResponsePrivate
+ *
+ * @brief  Private implementation for CreateDhcpOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDhcpOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDhcpOptionsResponse instance.
+ */
+CreateDhcpOptionsResponsePrivate::CreateDhcpOptionsResponsePrivate(
+    CreateDhcpOptionsQueueResponse * const q) : CreateDhcpOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateDhcpOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDhcpOptionsResponsePrivate::CreateDhcpOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDhcpOptionsResponse"));
+    /// @todo
+}

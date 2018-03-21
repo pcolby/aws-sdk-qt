@@ -19,3 +19,85 @@
 
 #include "deletepermissionpolicyresponse.h"
 #include "deletepermissionpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  DeletePermissionPolicyResponse
+ *
+ * @brief  Handles WAF DeletePermissionPolicy responses.
+ *
+ * @see    WAFClient::deletePermissionPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePermissionPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new DeletePermissionPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeletePermissionPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeletePermissionPolicyRequest * DeletePermissionPolicyResponse::request() const
+{
+    Q_D(const DeletePermissionPolicyResponse);
+    return static_cast<const DeletePermissionPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF DeletePermissionPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePermissionPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeletePermissionPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePermissionPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePermissionPolicyResponse instance.
+ */
+DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
+    DeletePermissionPolicyQueueResponse * const q) : DeletePermissionPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF DeletePermissionPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePermissionPolicyResponse"));
+    /// @todo
+}

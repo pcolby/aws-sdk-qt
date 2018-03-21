@@ -19,3 +19,85 @@
 
 #include "listtagsresponse.h"
 #include "listtagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  ListTagsResponse
+ *
+ * @brief  Handles DAX ListTags responses.
+ *
+ * @see    DAXClient::listTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new ListTagsResponsePrivate(this), parent)
+{
+    setRequest(new ListTagsRequest(request));
+    setReply(reply);
+}
+
+const ListTagsRequest * ListTagsResponse::request() const
+{
+    Q_D(const ListTagsResponse);
+    return static_cast<const ListTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX ListTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsResponsePrivate
+ *
+ * @brief  Private implementation for ListTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTagsResponse instance.
+ */
+ListTagsResponsePrivate::ListTagsResponsePrivate(
+    ListTagsQueueResponse * const q) : ListTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX ListTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTagsResponsePrivate::ListTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTagsResponse"));
+    /// @todo
+}

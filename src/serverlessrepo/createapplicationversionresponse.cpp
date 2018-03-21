@@ -19,3 +19,85 @@
 
 #include "createapplicationversionresponse.h"
 #include "createapplicationversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  CreateApplicationVersionResponse
+ *
+ * @brief  Handles ServerlessApplicationRepository CreateApplicationVersion responses.
+ *
+ * @see    ServerlessApplicationRepositoryClient::createApplicationVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateApplicationVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServerlessApplicationRepositoryResponse(new CreateApplicationVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreateApplicationVersionRequest(request));
+    setReply(reply);
+}
+
+const CreateApplicationVersionRequest * CreateApplicationVersionResponse::request() const
+{
+    Q_D(const CreateApplicationVersionResponse);
+    return static_cast<const CreateApplicationVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServerlessApplicationRepository CreateApplicationVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateApplicationVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateApplicationVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreateApplicationVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateApplicationVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateApplicationVersionResponse instance.
+ */
+CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponsePrivate(
+    CreateApplicationVersionQueueResponse * const q) : CreateApplicationVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServerlessApplicationRepository CreateApplicationVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateApplicationVersionResponse"));
+    /// @todo
+}

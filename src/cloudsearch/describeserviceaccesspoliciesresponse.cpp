@@ -19,3 +19,85 @@
 
 #include "describeserviceaccesspoliciesresponse.h"
 #include "describeserviceaccesspoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeServiceAccessPoliciesResponse
+ *
+ * @brief  Handles CloudSearch DescribeServiceAccessPolicies responses.
+ *
+ * @see    CloudSearchClient::describeServiceAccessPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeServiceAccessPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DescribeServiceAccessPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeServiceAccessPoliciesRequest(request));
+    setReply(reply);
+}
+
+const DescribeServiceAccessPoliciesRequest * DescribeServiceAccessPoliciesResponse::request() const
+{
+    Q_D(const DescribeServiceAccessPoliciesResponse);
+    return static_cast<const DescribeServiceAccessPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DescribeServiceAccessPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeServiceAccessPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeServiceAccessPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServiceAccessPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeServiceAccessPoliciesResponse instance.
+ */
+DescribeServiceAccessPoliciesResponsePrivate::DescribeServiceAccessPoliciesResponsePrivate(
+    DescribeServiceAccessPoliciesQueueResponse * const q) : DescribeServiceAccessPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DescribeServiceAccessPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeServiceAccessPoliciesResponsePrivate::DescribeServiceAccessPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeServiceAccessPoliciesResponse"));
+    /// @todo
+}

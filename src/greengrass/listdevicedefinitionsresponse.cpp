@@ -19,3 +19,85 @@
 
 #include "listdevicedefinitionsresponse.h"
 #include "listdevicedefinitionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListDeviceDefinitionsResponse
+ *
+ * @brief  Handles Greengrass ListDeviceDefinitions responses.
+ *
+ * @see    GreengrassClient::listDeviceDefinitions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeviceDefinitionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListDeviceDefinitionsResponsePrivate(this), parent)
+{
+    setRequest(new ListDeviceDefinitionsRequest(request));
+    setReply(reply);
+}
+
+const ListDeviceDefinitionsRequest * ListDeviceDefinitionsResponse::request() const
+{
+    Q_D(const ListDeviceDefinitionsResponse);
+    return static_cast<const ListDeviceDefinitionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListDeviceDefinitions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDeviceDefinitionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeviceDefinitionsResponsePrivate
+ *
+ * @brief  Private implementation for ListDeviceDefinitionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeviceDefinitionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDeviceDefinitionsResponse instance.
+ */
+ListDeviceDefinitionsResponsePrivate::ListDeviceDefinitionsResponsePrivate(
+    ListDeviceDefinitionsQueueResponse * const q) : ListDeviceDefinitionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListDeviceDefinitionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDeviceDefinitionsResponsePrivate::ListDeviceDefinitionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDeviceDefinitionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletegamesessionqueueresponse.h"
 #include "deletegamesessionqueueresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DeleteGameSessionQueueResponse
+ *
+ * @brief  Handles GameLift DeleteGameSessionQueue responses.
+ *
+ * @see    GameLiftClient::deleteGameSessionQueue
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGameSessionQueueResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DeleteGameSessionQueueResponsePrivate(this), parent)
+{
+    setRequest(new DeleteGameSessionQueueRequest(request));
+    setReply(reply);
+}
+
+const DeleteGameSessionQueueRequest * DeleteGameSessionQueueResponse::request() const
+{
+    Q_D(const DeleteGameSessionQueueResponse);
+    return static_cast<const DeleteGameSessionQueueRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DeleteGameSessionQueue response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteGameSessionQueueResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGameSessionQueueResponsePrivate
+ *
+ * @brief  Private implementation for DeleteGameSessionQueueResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGameSessionQueueResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteGameSessionQueueResponse instance.
+ */
+DeleteGameSessionQueueResponsePrivate::DeleteGameSessionQueueResponsePrivate(
+    DeleteGameSessionQueueQueueResponse * const q) : DeleteGameSessionQueuePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DeleteGameSessionQueueResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteGameSessionQueueResponsePrivate::DeleteGameSessionQueueResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteGameSessionQueueResponse"));
+    /// @todo
+}

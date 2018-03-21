@@ -19,3 +19,85 @@
 
 #include "createfpgaimageresponse.h"
 #include "createfpgaimageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateFpgaImageResponse
+ *
+ * @brief  Handles EC2 CreateFpgaImage responses.
+ *
+ * @see    EC2Client::createFpgaImage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFpgaImageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateFpgaImageResponsePrivate(this), parent)
+{
+    setRequest(new CreateFpgaImageRequest(request));
+    setReply(reply);
+}
+
+const CreateFpgaImageRequest * CreateFpgaImageResponse::request() const
+{
+    Q_D(const CreateFpgaImageResponse);
+    return static_cast<const CreateFpgaImageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateFpgaImage response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateFpgaImageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFpgaImageResponsePrivate
+ *
+ * @brief  Private implementation for CreateFpgaImageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFpgaImageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateFpgaImageResponse instance.
+ */
+CreateFpgaImageResponsePrivate::CreateFpgaImageResponsePrivate(
+    CreateFpgaImageQueueResponse * const q) : CreateFpgaImagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateFpgaImageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateFpgaImageResponsePrivate::CreateFpgaImageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateFpgaImageResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describefleetcapacityresponse.h"
 #include "describefleetcapacityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeFleetCapacityResponse
+ *
+ * @brief  Handles GameLift DescribeFleetCapacity responses.
+ *
+ * @see    GameLiftClient::describeFleetCapacity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetCapacityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeFleetCapacityResponsePrivate(this), parent)
+{
+    setRequest(new DescribeFleetCapacityRequest(request));
+    setReply(reply);
+}
+
+const DescribeFleetCapacityRequest * DescribeFleetCapacityResponse::request() const
+{
+    Q_D(const DescribeFleetCapacityResponse);
+    return static_cast<const DescribeFleetCapacityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeFleetCapacity response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeFleetCapacityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetCapacityResponsePrivate
+ *
+ * @brief  Private implementation for DescribeFleetCapacityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetCapacityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeFleetCapacityResponse instance.
+ */
+DescribeFleetCapacityResponsePrivate::DescribeFleetCapacityResponsePrivate(
+    DescribeFleetCapacityQueueResponse * const q) : DescribeFleetCapacityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeFleetCapacityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeFleetCapacityResponsePrivate::DescribeFleetCapacityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeFleetCapacityResponse"));
+    /// @todo
+}

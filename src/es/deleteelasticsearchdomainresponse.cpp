@@ -19,3 +19,85 @@
 
 #include "deleteelasticsearchdomainresponse.h"
 #include "deleteelasticsearchdomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  DeleteElasticsearchDomainResponse
+ *
+ * @brief  Handles ElasticsearchService DeleteElasticsearchDomain responses.
+ *
+ * @see    ElasticsearchServiceClient::deleteElasticsearchDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteElasticsearchDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticsearchServiceResponse(new DeleteElasticsearchDomainResponsePrivate(this), parent)
+{
+    setRequest(new DeleteElasticsearchDomainRequest(request));
+    setReply(reply);
+}
+
+const DeleteElasticsearchDomainRequest * DeleteElasticsearchDomainResponse::request() const
+{
+    Q_D(const DeleteElasticsearchDomainResponse);
+    return static_cast<const DeleteElasticsearchDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticsearchService DeleteElasticsearchDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteElasticsearchDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteElasticsearchDomainResponsePrivate
+ *
+ * @brief  Private implementation for DeleteElasticsearchDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteElasticsearchDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteElasticsearchDomainResponse instance.
+ */
+DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponsePrivate(
+    DeleteElasticsearchDomainQueueResponse * const q) : DeleteElasticsearchDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticsearchService DeleteElasticsearchDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteElasticsearchDomainResponse"));
+    /// @todo
+}

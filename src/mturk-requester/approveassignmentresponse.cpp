@@ -19,3 +19,85 @@
 
 #include "approveassignmentresponse.h"
 #include "approveassignmentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ApproveAssignmentResponse
+ *
+ * @brief  Handles MTurk ApproveAssignment responses.
+ *
+ * @see    MTurkClient::approveAssignment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ApproveAssignmentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ApproveAssignmentResponsePrivate(this), parent)
+{
+    setRequest(new ApproveAssignmentRequest(request));
+    setReply(reply);
+}
+
+const ApproveAssignmentRequest * ApproveAssignmentResponse::request() const
+{
+    Q_D(const ApproveAssignmentResponse);
+    return static_cast<const ApproveAssignmentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ApproveAssignment response.
+ *
+ * @param  response  Response to parse.
+ */
+void ApproveAssignmentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ApproveAssignmentResponsePrivate
+ *
+ * @brief  Private implementation for ApproveAssignmentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApproveAssignmentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ApproveAssignmentResponse instance.
+ */
+ApproveAssignmentResponsePrivate::ApproveAssignmentResponsePrivate(
+    ApproveAssignmentQueueResponse * const q) : ApproveAssignmentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ApproveAssignmentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ApproveAssignmentResponsePrivate::ApproveAssignmentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ApproveAssignmentResponse"));
+    /// @todo
+}

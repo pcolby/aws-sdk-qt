@@ -19,3 +19,85 @@
 
 #include "admindisableproviderforuserresponse.h"
 #include "admindisableproviderforuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminDisableProviderForUserResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminDisableProviderForUser responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminDisableProviderForUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminDisableProviderForUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminDisableProviderForUserResponsePrivate(this), parent)
+{
+    setRequest(new AdminDisableProviderForUserRequest(request));
+    setReply(reply);
+}
+
+const AdminDisableProviderForUserRequest * AdminDisableProviderForUserResponse::request() const
+{
+    Q_D(const AdminDisableProviderForUserResponse);
+    return static_cast<const AdminDisableProviderForUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminDisableProviderForUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminDisableProviderForUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminDisableProviderForUserResponsePrivate
+ *
+ * @brief  Private implementation for AdminDisableProviderForUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminDisableProviderForUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminDisableProviderForUserResponse instance.
+ */
+AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponsePrivate(
+    AdminDisableProviderForUserQueueResponse * const q) : AdminDisableProviderForUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminDisableProviderForUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminDisableProviderForUserResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeportfolioresponse.h"
 #include "describeportfolioresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribePortfolioResponse
+ *
+ * @brief  Handles ServiceCatalog DescribePortfolio responses.
+ *
+ * @see    ServiceCatalogClient::describePortfolio
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePortfolioResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DescribePortfolioResponsePrivate(this), parent)
+{
+    setRequest(new DescribePortfolioRequest(request));
+    setReply(reply);
+}
+
+const DescribePortfolioRequest * DescribePortfolioResponse::request() const
+{
+    Q_D(const DescribePortfolioResponse);
+    return static_cast<const DescribePortfolioRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DescribePortfolio response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePortfolioResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePortfolioResponsePrivate
+ *
+ * @brief  Private implementation for DescribePortfolioResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePortfolioResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePortfolioResponse instance.
+ */
+DescribePortfolioResponsePrivate::DescribePortfolioResponsePrivate(
+    DescribePortfolioQueueResponse * const q) : DescribePortfolioPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DescribePortfolioResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePortfolioResponsePrivate::DescribePortfolioResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePortfolioResponse"));
+    /// @todo
+}

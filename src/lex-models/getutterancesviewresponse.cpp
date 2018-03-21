@@ -19,3 +19,85 @@
 
 #include "getutterancesviewresponse.h"
 #include "getutterancesviewresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetUtterancesViewResponse
+ *
+ * @brief  Handles LexModelBuildingService GetUtterancesView responses.
+ *
+ * @see    LexModelBuildingServiceClient::getUtterancesView
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUtterancesViewResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetUtterancesViewResponsePrivate(this), parent)
+{
+    setRequest(new GetUtterancesViewRequest(request));
+    setReply(reply);
+}
+
+const GetUtterancesViewRequest * GetUtterancesViewResponse::request() const
+{
+    Q_D(const GetUtterancesViewResponse);
+    return static_cast<const GetUtterancesViewRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetUtterancesView response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUtterancesViewResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUtterancesViewResponsePrivate
+ *
+ * @brief  Private implementation for GetUtterancesViewResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUtterancesViewResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUtterancesViewResponse instance.
+ */
+GetUtterancesViewResponsePrivate::GetUtterancesViewResponsePrivate(
+    GetUtterancesViewQueueResponse * const q) : GetUtterancesViewPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetUtterancesViewResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUtterancesViewResponsePrivate::GetUtterancesViewResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUtterancesViewResponse"));
+    /// @todo
+}

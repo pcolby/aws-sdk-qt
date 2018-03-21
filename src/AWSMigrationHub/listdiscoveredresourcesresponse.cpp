@@ -19,3 +19,85 @@
 
 #include "listdiscoveredresourcesresponse.h"
 #include "listdiscoveredresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  ListDiscoveredResourcesResponse
+ *
+ * @brief  Handles MigrationHub ListDiscoveredResources responses.
+ *
+ * @see    MigrationHubClient::listDiscoveredResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDiscoveredResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new ListDiscoveredResourcesResponsePrivate(this), parent)
+{
+    setRequest(new ListDiscoveredResourcesRequest(request));
+    setReply(reply);
+}
+
+const ListDiscoveredResourcesRequest * ListDiscoveredResourcesResponse::request() const
+{
+    Q_D(const ListDiscoveredResourcesResponse);
+    return static_cast<const ListDiscoveredResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub ListDiscoveredResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDiscoveredResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDiscoveredResourcesResponsePrivate
+ *
+ * @brief  Private implementation for ListDiscoveredResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDiscoveredResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDiscoveredResourcesResponse instance.
+ */
+ListDiscoveredResourcesResponsePrivate::ListDiscoveredResourcesResponsePrivate(
+    ListDiscoveredResourcesQueueResponse * const q) : ListDiscoveredResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub ListDiscoveredResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDiscoveredResourcesResponsePrivate::ListDiscoveredResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDiscoveredResourcesResponse"));
+    /// @todo
+}

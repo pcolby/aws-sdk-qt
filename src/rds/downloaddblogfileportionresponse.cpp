@@ -19,3 +19,85 @@
 
 #include "downloaddblogfileportionresponse.h"
 #include "downloaddblogfileportionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DownloadDBLogFilePortionResponse
+ *
+ * @brief  Handles RDS DownloadDBLogFilePortion responses.
+ *
+ * @see    RDSClient::downloadDBLogFilePortion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DownloadDBLogFilePortionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DownloadDBLogFilePortionResponsePrivate(this), parent)
+{
+    setRequest(new DownloadDBLogFilePortionRequest(request));
+    setReply(reply);
+}
+
+const DownloadDBLogFilePortionRequest * DownloadDBLogFilePortionResponse::request() const
+{
+    Q_D(const DownloadDBLogFilePortionResponse);
+    return static_cast<const DownloadDBLogFilePortionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DownloadDBLogFilePortion response.
+ *
+ * @param  response  Response to parse.
+ */
+void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DownloadDBLogFilePortionResponsePrivate
+ *
+ * @brief  Private implementation for DownloadDBLogFilePortionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DownloadDBLogFilePortionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DownloadDBLogFilePortionResponse instance.
+ */
+DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate(
+    DownloadDBLogFilePortionQueueResponse * const q) : DownloadDBLogFilePortionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DownloadDBLogFilePortionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DownloadDBLogFilePortionResponse"));
+    /// @todo
+}

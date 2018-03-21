@@ -19,3 +19,85 @@
 
 #include "getbotaliasesresponse.h"
 #include "getbotaliasesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBotAliasesResponse
+ *
+ * @brief  Handles LexModelBuildingService GetBotAliases responses.
+ *
+ * @see    LexModelBuildingServiceClient::getBotAliases
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBotAliasesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetBotAliasesResponsePrivate(this), parent)
+{
+    setRequest(new GetBotAliasesRequest(request));
+    setReply(reply);
+}
+
+const GetBotAliasesRequest * GetBotAliasesResponse::request() const
+{
+    Q_D(const GetBotAliasesResponse);
+    return static_cast<const GetBotAliasesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetBotAliases response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBotAliasesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBotAliasesResponsePrivate
+ *
+ * @brief  Private implementation for GetBotAliasesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBotAliasesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBotAliasesResponse instance.
+ */
+GetBotAliasesResponsePrivate::GetBotAliasesResponsePrivate(
+    GetBotAliasesQueueResponse * const q) : GetBotAliasesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetBotAliasesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBotAliasesResponsePrivate::GetBotAliasesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBotAliasesResponse"));
+    /// @todo
+}

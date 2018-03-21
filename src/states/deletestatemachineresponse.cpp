@@ -19,3 +19,85 @@
 
 #include "deletestatemachineresponse.h"
 #include "deletestatemachineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DeleteStateMachineResponse
+ *
+ * @brief  Handles SFN DeleteStateMachine responses.
+ *
+ * @see    SFNClient::deleteStateMachine
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStateMachineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new DeleteStateMachineResponsePrivate(this), parent)
+{
+    setRequest(new DeleteStateMachineRequest(request));
+    setReply(reply);
+}
+
+const DeleteStateMachineRequest * DeleteStateMachineResponse::request() const
+{
+    Q_D(const DeleteStateMachineResponse);
+    return static_cast<const DeleteStateMachineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN DeleteStateMachine response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStateMachineResponsePrivate
+ *
+ * @brief  Private implementation for DeleteStateMachineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStateMachineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteStateMachineResponse instance.
+ */
+DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
+    DeleteStateMachineQueueResponse * const q) : DeleteStateMachinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN DeleteStateMachineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteStateMachineResponsePrivate::DeleteStateMachineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteStateMachineResponse"));
+    /// @todo
+}

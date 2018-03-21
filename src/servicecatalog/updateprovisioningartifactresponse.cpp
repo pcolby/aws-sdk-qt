@@ -19,3 +19,85 @@
 
 #include "updateprovisioningartifactresponse.h"
 #include "updateprovisioningartifactresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  UpdateProvisioningArtifactResponse
+ *
+ * @brief  Handles ServiceCatalog UpdateProvisioningArtifact responses.
+ *
+ * @see    ServiceCatalogClient::updateProvisioningArtifact
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateProvisioningArtifactResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new UpdateProvisioningArtifactResponsePrivate(this), parent)
+{
+    setRequest(new UpdateProvisioningArtifactRequest(request));
+    setReply(reply);
+}
+
+const UpdateProvisioningArtifactRequest * UpdateProvisioningArtifactResponse::request() const
+{
+    Q_D(const UpdateProvisioningArtifactResponse);
+    return static_cast<const UpdateProvisioningArtifactRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog UpdateProvisioningArtifact response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateProvisioningArtifactResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateProvisioningArtifactResponsePrivate
+ *
+ * @brief  Private implementation for UpdateProvisioningArtifactResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateProvisioningArtifactResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateProvisioningArtifactResponse instance.
+ */
+UpdateProvisioningArtifactResponsePrivate::UpdateProvisioningArtifactResponsePrivate(
+    UpdateProvisioningArtifactQueueResponse * const q) : UpdateProvisioningArtifactPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog UpdateProvisioningArtifactResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateProvisioningArtifactResponsePrivate::UpdateProvisioningArtifactResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateProvisioningArtifactResponse"));
+    /// @todo
+}

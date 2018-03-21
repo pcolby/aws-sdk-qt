@@ -19,3 +19,85 @@
 
 #include "declineinvitationsresponse.h"
 #include "declineinvitationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DeclineInvitationsResponse
+ *
+ * @brief  Handles GuardDuty DeclineInvitations responses.
+ *
+ * @see    GuardDutyClient::declineInvitations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeclineInvitationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new DeclineInvitationsResponsePrivate(this), parent)
+{
+    setRequest(new DeclineInvitationsRequest(request));
+    setReply(reply);
+}
+
+const DeclineInvitationsRequest * DeclineInvitationsResponse::request() const
+{
+    Q_D(const DeclineInvitationsResponse);
+    return static_cast<const DeclineInvitationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty DeclineInvitations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeclineInvitationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeclineInvitationsResponsePrivate
+ *
+ * @brief  Private implementation for DeclineInvitationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeclineInvitationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeclineInvitationsResponse instance.
+ */
+DeclineInvitationsResponsePrivate::DeclineInvitationsResponsePrivate(
+    DeclineInvitationsQueueResponse * const q) : DeclineInvitationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty DeclineInvitationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeclineInvitationsResponsePrivate::DeclineInvitationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeclineInvitationsResponse"));
+    /// @todo
+}

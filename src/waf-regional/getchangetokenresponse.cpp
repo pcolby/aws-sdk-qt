@@ -19,3 +19,85 @@
 
 #include "getchangetokenresponse.h"
 #include "getchangetokenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetChangeTokenResponse
+ *
+ * @brief  Handles WAFRegional GetChangeToken responses.
+ *
+ * @see    WAFRegionalClient::getChangeToken
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetChangeTokenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new GetChangeTokenResponsePrivate(this), parent)
+{
+    setRequest(new GetChangeTokenRequest(request));
+    setReply(reply);
+}
+
+const GetChangeTokenRequest * GetChangeTokenResponse::request() const
+{
+    Q_D(const GetChangeTokenResponse);
+    return static_cast<const GetChangeTokenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional GetChangeToken response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetChangeTokenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetChangeTokenResponsePrivate
+ *
+ * @brief  Private implementation for GetChangeTokenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetChangeTokenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetChangeTokenResponse instance.
+ */
+GetChangeTokenResponsePrivate::GetChangeTokenResponsePrivate(
+    GetChangeTokenQueueResponse * const q) : GetChangeTokenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional GetChangeTokenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetChangeTokenResponsePrivate::GetChangeTokenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetChangeTokenResponse"));
+    /// @todo
+}

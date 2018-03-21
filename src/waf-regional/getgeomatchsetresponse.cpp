@@ -19,3 +19,85 @@
 
 #include "getgeomatchsetresponse.h"
 #include "getgeomatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetGeoMatchSetResponse
+ *
+ * @brief  Handles WAFRegional GetGeoMatchSet responses.
+ *
+ * @see    WAFRegionalClient::getGeoMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGeoMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new GetGeoMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new GetGeoMatchSetRequest(request));
+    setReply(reply);
+}
+
+const GetGeoMatchSetRequest * GetGeoMatchSetResponse::request() const
+{
+    Q_D(const GetGeoMatchSetResponse);
+    return static_cast<const GetGeoMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional GetGeoMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGeoMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGeoMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for GetGeoMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGeoMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGeoMatchSetResponse instance.
+ */
+GetGeoMatchSetResponsePrivate::GetGeoMatchSetResponsePrivate(
+    GetGeoMatchSetQueueResponse * const q) : GetGeoMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional GetGeoMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGeoMatchSetResponsePrivate::GetGeoMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGeoMatchSetResponse"));
+    /// @todo
+}

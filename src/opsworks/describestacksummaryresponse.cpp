@@ -19,3 +19,85 @@
 
 #include "describestacksummaryresponse.h"
 #include "describestacksummaryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeStackSummaryResponse
+ *
+ * @brief  Handles OpsWorks DescribeStackSummary responses.
+ *
+ * @see    OpsWorksClient::describeStackSummary
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackSummaryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeStackSummaryResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStackSummaryRequest(request));
+    setReply(reply);
+}
+
+const DescribeStackSummaryRequest * DescribeStackSummaryResponse::request() const
+{
+    Q_D(const DescribeStackSummaryResponse);
+    return static_cast<const DescribeStackSummaryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeStackSummary response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStackSummaryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackSummaryResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStackSummaryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackSummaryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStackSummaryResponse instance.
+ */
+DescribeStackSummaryResponsePrivate::DescribeStackSummaryResponsePrivate(
+    DescribeStackSummaryQueueResponse * const q) : DescribeStackSummaryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeStackSummaryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStackSummaryResponsePrivate::DescribeStackSummaryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStackSummaryResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describechangesetresponse.h"
 #include "describechangesetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DescribeChangeSetResponse
+ *
+ * @brief  Handles CloudFormation DescribeChangeSet responses.
+ *
+ * @see    CloudFormationClient::describeChangeSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeChangeSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new DescribeChangeSetResponsePrivate(this), parent)
+{
+    setRequest(new DescribeChangeSetRequest(request));
+    setReply(reply);
+}
+
+const DescribeChangeSetRequest * DescribeChangeSetResponse::request() const
+{
+    Q_D(const DescribeChangeSetResponse);
+    return static_cast<const DescribeChangeSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation DescribeChangeSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeChangeSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeChangeSetResponsePrivate
+ *
+ * @brief  Private implementation for DescribeChangeSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeChangeSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeChangeSetResponse instance.
+ */
+DescribeChangeSetResponsePrivate::DescribeChangeSetResponsePrivate(
+    DescribeChangeSetQueueResponse * const q) : DescribeChangeSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation DescribeChangeSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeChangeSetResponsePrivate::DescribeChangeSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeChangeSetResponse"));
+    /// @todo
+}

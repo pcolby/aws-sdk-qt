@@ -19,3 +19,85 @@
 
 #include "createfolderresponse.h"
 #include "createfolderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  CreateFolderResponse
+ *
+ * @brief  Handles WorkDocs CreateFolder responses.
+ *
+ * @see    WorkDocsClient::createFolder
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFolderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new CreateFolderResponsePrivate(this), parent)
+{
+    setRequest(new CreateFolderRequest(request));
+    setReply(reply);
+}
+
+const CreateFolderRequest * CreateFolderResponse::request() const
+{
+    Q_D(const CreateFolderResponse);
+    return static_cast<const CreateFolderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs CreateFolder response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateFolderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFolderResponsePrivate
+ *
+ * @brief  Private implementation for CreateFolderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFolderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateFolderResponse instance.
+ */
+CreateFolderResponsePrivate::CreateFolderResponsePrivate(
+    CreateFolderQueueResponse * const q) : CreateFolderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs CreateFolderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateFolderResponsePrivate::CreateFolderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateFolderResponse"));
+    /// @todo
+}

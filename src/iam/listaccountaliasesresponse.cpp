@@ -19,3 +19,85 @@
 
 #include "listaccountaliasesresponse.h"
 #include "listaccountaliasesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListAccountAliasesResponse
+ *
+ * @brief  Handles IAM ListAccountAliases responses.
+ *
+ * @see    IAMClient::listAccountAliases
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAccountAliasesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListAccountAliasesResponsePrivate(this), parent)
+{
+    setRequest(new ListAccountAliasesRequest(request));
+    setReply(reply);
+}
+
+const ListAccountAliasesRequest * ListAccountAliasesResponse::request() const
+{
+    Q_D(const ListAccountAliasesResponse);
+    return static_cast<const ListAccountAliasesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListAccountAliases response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAccountAliasesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAccountAliasesResponsePrivate
+ *
+ * @brief  Private implementation for ListAccountAliasesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAccountAliasesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAccountAliasesResponse instance.
+ */
+ListAccountAliasesResponsePrivate::ListAccountAliasesResponsePrivate(
+    ListAccountAliasesQueueResponse * const q) : ListAccountAliasesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListAccountAliasesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAccountAliasesResponsePrivate::ListAccountAliasesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAccountAliasesResponse"));
+    /// @todo
+}

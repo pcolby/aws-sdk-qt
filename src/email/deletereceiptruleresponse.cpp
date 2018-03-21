@@ -19,3 +19,85 @@
 
 #include "deletereceiptruleresponse.h"
 #include "deletereceiptruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteReceiptRuleResponse
+ *
+ * @brief  Handles SES DeleteReceiptRule responses.
+ *
+ * @see    SESClient::deleteReceiptRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReceiptRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DeleteReceiptRuleResponsePrivate(this), parent)
+{
+    setRequest(new DeleteReceiptRuleRequest(request));
+    setReply(reply);
+}
+
+const DeleteReceiptRuleRequest * DeleteReceiptRuleResponse::request() const
+{
+    Q_D(const DeleteReceiptRuleResponse);
+    return static_cast<const DeleteReceiptRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DeleteReceiptRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteReceiptRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReceiptRuleResponsePrivate
+ *
+ * @brief  Private implementation for DeleteReceiptRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReceiptRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteReceiptRuleResponse instance.
+ */
+DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponsePrivate(
+    DeleteReceiptRuleQueueResponse * const q) : DeleteReceiptRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DeleteReceiptRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteReceiptRuleResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletedocumentationversionresponse.h"
 #include "deletedocumentationversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteDocumentationVersionResponse
+ *
+ * @brief  Handles APIGateway DeleteDocumentationVersion responses.
+ *
+ * @see    APIGatewayClient::deleteDocumentationVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDocumentationVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteDocumentationVersionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDocumentationVersionRequest(request));
+    setReply(reply);
+}
+
+const DeleteDocumentationVersionRequest * DeleteDocumentationVersionResponse::request() const
+{
+    Q_D(const DeleteDocumentationVersionResponse);
+    return static_cast<const DeleteDocumentationVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteDocumentationVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDocumentationVersionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDocumentationVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDocumentationVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDocumentationVersionResponse instance.
+ */
+DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponsePrivate(
+    DeleteDocumentationVersionQueueResponse * const q) : DeleteDocumentationVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteDocumentationVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDocumentationVersionResponse"));
+    /// @todo
+}

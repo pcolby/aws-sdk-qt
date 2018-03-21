@@ -19,3 +19,85 @@
 
 #include "describeclustersubnetgroupsresponse.h"
 #include "describeclustersubnetgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeClusterSubnetGroupsResponse
+ *
+ * @brief  Handles Redshift DescribeClusterSubnetGroups responses.
+ *
+ * @see    RedshiftClient::describeClusterSubnetGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClusterSubnetGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeClusterSubnetGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeClusterSubnetGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeClusterSubnetGroupsRequest * DescribeClusterSubnetGroupsResponse::request() const
+{
+    Q_D(const DescribeClusterSubnetGroupsResponse);
+    return static_cast<const DescribeClusterSubnetGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeClusterSubnetGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeClusterSubnetGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClusterSubnetGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeClusterSubnetGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterSubnetGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeClusterSubnetGroupsResponse instance.
+ */
+DescribeClusterSubnetGroupsResponsePrivate::DescribeClusterSubnetGroupsResponsePrivate(
+    DescribeClusterSubnetGroupsQueueResponse * const q) : DescribeClusterSubnetGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeClusterSubnetGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeClusterSubnetGroupsResponsePrivate::DescribeClusterSubnetGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeClusterSubnetGroupsResponse"));
+    /// @todo
+}

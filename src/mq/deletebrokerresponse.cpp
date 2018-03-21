@@ -19,3 +19,85 @@
 
 #include "deletebrokerresponse.h"
 #include "deletebrokerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DeleteBrokerResponse
+ *
+ * @brief  Handles MQ DeleteBroker responses.
+ *
+ * @see    MQClient::deleteBroker
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBrokerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new DeleteBrokerResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBrokerRequest(request));
+    setReply(reply);
+}
+
+const DeleteBrokerRequest * DeleteBrokerResponse::request() const
+{
+    Q_D(const DeleteBrokerResponse);
+    return static_cast<const DeleteBrokerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ DeleteBroker response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBrokerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBrokerResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBrokerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBrokerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBrokerResponse instance.
+ */
+DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
+    DeleteBrokerQueueResponse * const q) : DeleteBrokerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ DeleteBrokerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBrokerResponsePrivate::DeleteBrokerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBrokerResponse"));
+    /// @todo
+}

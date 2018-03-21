@@ -19,3 +19,85 @@
 
 #include "deleteuserpoolresponse.h"
 #include "deleteuserpoolresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DeleteUserPoolResponse
+ *
+ * @brief  Handles CognitoIdentityProvider DeleteUserPool responses.
+ *
+ * @see    CognitoIdentityProviderClient::deleteUserPool
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserPoolResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new DeleteUserPoolResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUserPoolRequest(request));
+    setReply(reply);
+}
+
+const DeleteUserPoolRequest * DeleteUserPoolResponse::request() const
+{
+    Q_D(const DeleteUserPoolResponse);
+    return static_cast<const DeleteUserPoolRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider DeleteUserPool response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUserPoolResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserPoolResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUserPoolResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserPoolResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUserPoolResponse instance.
+ */
+DeleteUserPoolResponsePrivate::DeleteUserPoolResponsePrivate(
+    DeleteUserPoolQueueResponse * const q) : DeleteUserPoolPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider DeleteUserPoolResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUserPoolResponsePrivate::DeleteUserPoolResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUserPoolResponse"));
+    /// @todo
+}

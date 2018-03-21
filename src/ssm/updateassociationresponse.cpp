@@ -19,3 +19,85 @@
 
 #include "updateassociationresponse.h"
 #include "updateassociationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  UpdateAssociationResponse
+ *
+ * @brief  Handles SSM UpdateAssociation responses.
+ *
+ * @see    SSMClient::updateAssociation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAssociationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new UpdateAssociationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateAssociationRequest(request));
+    setReply(reply);
+}
+
+const UpdateAssociationRequest * UpdateAssociationResponse::request() const
+{
+    Q_D(const UpdateAssociationResponse);
+    return static_cast<const UpdateAssociationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM UpdateAssociation response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateAssociationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAssociationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateAssociationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAssociationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateAssociationResponse instance.
+ */
+UpdateAssociationResponsePrivate::UpdateAssociationResponsePrivate(
+    UpdateAssociationQueueResponse * const q) : UpdateAssociationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM UpdateAssociationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateAssociationResponsePrivate::UpdateAssociationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateAssociationResponse"));
+    /// @todo
+}

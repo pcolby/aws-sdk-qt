@@ -19,3 +19,85 @@
 
 #include "copydbparametergroupresponse.h"
 #include "copydbparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CopyDBParameterGroupResponse
+ *
+ * @brief  Handles RDS CopyDBParameterGroup responses.
+ *
+ * @see    RDSClient::copyDBParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyDBParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CopyDBParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new CopyDBParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const CopyDBParameterGroupRequest * CopyDBParameterGroupResponse::request() const
+{
+    Q_D(const CopyDBParameterGroupResponse);
+    return static_cast<const CopyDBParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CopyDBParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyDBParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for CopyDBParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CopyDBParameterGroupResponse instance.
+ */
+CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
+    CopyDBParameterGroupQueueResponse * const q) : CopyDBParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CopyDBParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CopyDBParameterGroupResponse"));
+    /// @todo
+}

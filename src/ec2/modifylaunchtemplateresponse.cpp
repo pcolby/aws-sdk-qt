@@ -19,3 +19,85 @@
 
 #include "modifylaunchtemplateresponse.h"
 #include "modifylaunchtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyLaunchTemplateResponse
+ *
+ * @brief  Handles EC2 ModifyLaunchTemplate responses.
+ *
+ * @see    EC2Client::modifyLaunchTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyLaunchTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyLaunchTemplateResponsePrivate(this), parent)
+{
+    setRequest(new ModifyLaunchTemplateRequest(request));
+    setReply(reply);
+}
+
+const ModifyLaunchTemplateRequest * ModifyLaunchTemplateResponse::request() const
+{
+    Q_D(const ModifyLaunchTemplateResponse);
+    return static_cast<const ModifyLaunchTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyLaunchTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyLaunchTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyLaunchTemplateResponsePrivate
+ *
+ * @brief  Private implementation for ModifyLaunchTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyLaunchTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyLaunchTemplateResponse instance.
+ */
+ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponsePrivate(
+    ModifyLaunchTemplateQueueResponse * const q) : ModifyLaunchTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyLaunchTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyLaunchTemplateResponse"));
+    /// @todo
+}

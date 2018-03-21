@@ -19,3 +19,85 @@
 
 #include "detachtypedlinkresponse.h"
 #include "detachtypedlinkresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DetachTypedLinkResponse
+ *
+ * @brief  Handles CloudDirectory DetachTypedLink responses.
+ *
+ * @see    CloudDirectoryClient::detachTypedLink
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachTypedLinkResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new DetachTypedLinkResponsePrivate(this), parent)
+{
+    setRequest(new DetachTypedLinkRequest(request));
+    setReply(reply);
+}
+
+const DetachTypedLinkRequest * DetachTypedLinkResponse::request() const
+{
+    Q_D(const DetachTypedLinkResponse);
+    return static_cast<const DetachTypedLinkRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory DetachTypedLink response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachTypedLinkResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachTypedLinkResponsePrivate
+ *
+ * @brief  Private implementation for DetachTypedLinkResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachTypedLinkResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachTypedLinkResponse instance.
+ */
+DetachTypedLinkResponsePrivate::DetachTypedLinkResponsePrivate(
+    DetachTypedLinkQueueResponse * const q) : DetachTypedLinkPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory DetachTypedLinkResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachTypedLinkResponsePrivate::DetachTypedLinkResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachTypedLinkResponse"));
+    /// @todo
+}

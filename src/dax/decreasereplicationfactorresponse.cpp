@@ -19,3 +19,85 @@
 
 #include "decreasereplicationfactorresponse.h"
 #include "decreasereplicationfactorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DecreaseReplicationFactorResponse
+ *
+ * @brief  Handles DAX DecreaseReplicationFactor responses.
+ *
+ * @see    DAXClient::decreaseReplicationFactor
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DecreaseReplicationFactorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new DecreaseReplicationFactorResponsePrivate(this), parent)
+{
+    setRequest(new DecreaseReplicationFactorRequest(request));
+    setReply(reply);
+}
+
+const DecreaseReplicationFactorRequest * DecreaseReplicationFactorResponse::request() const
+{
+    Q_D(const DecreaseReplicationFactorResponse);
+    return static_cast<const DecreaseReplicationFactorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX DecreaseReplicationFactor response.
+ *
+ * @param  response  Response to parse.
+ */
+void DecreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DecreaseReplicationFactorResponsePrivate
+ *
+ * @brief  Private implementation for DecreaseReplicationFactorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecreaseReplicationFactorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DecreaseReplicationFactorResponse instance.
+ */
+DecreaseReplicationFactorResponsePrivate::DecreaseReplicationFactorResponsePrivate(
+    DecreaseReplicationFactorQueueResponse * const q) : DecreaseReplicationFactorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX DecreaseReplicationFactorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DecreaseReplicationFactorResponsePrivate::DecreaseReplicationFactorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DecreaseReplicationFactorResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "stopcrawlerscheduleresponse.h"
 #include "stopcrawlerscheduleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StopCrawlerScheduleResponse
+ *
+ * @brief  Handles Glue StopCrawlerSchedule responses.
+ *
+ * @see    GlueClient::stopCrawlerSchedule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopCrawlerScheduleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new StopCrawlerScheduleResponsePrivate(this), parent)
+{
+    setRequest(new StopCrawlerScheduleRequest(request));
+    setReply(reply);
+}
+
+const StopCrawlerScheduleRequest * StopCrawlerScheduleResponse::request() const
+{
+    Q_D(const StopCrawlerScheduleResponse);
+    return static_cast<const StopCrawlerScheduleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue StopCrawlerSchedule response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopCrawlerScheduleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopCrawlerScheduleResponsePrivate
+ *
+ * @brief  Private implementation for StopCrawlerScheduleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopCrawlerScheduleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopCrawlerScheduleResponse instance.
+ */
+StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponsePrivate(
+    StopCrawlerScheduleQueueResponse * const q) : StopCrawlerSchedulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue StopCrawlerScheduleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopCrawlerScheduleResponse"));
+    /// @todo
+}

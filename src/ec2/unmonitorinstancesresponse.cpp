@@ -19,3 +19,85 @@
 
 #include "unmonitorinstancesresponse.h"
 #include "unmonitorinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  UnmonitorInstancesResponse
+ *
+ * @brief  Handles EC2 UnmonitorInstances responses.
+ *
+ * @see    EC2Client::unmonitorInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnmonitorInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new UnmonitorInstancesResponsePrivate(this), parent)
+{
+    setRequest(new UnmonitorInstancesRequest(request));
+    setReply(reply);
+}
+
+const UnmonitorInstancesRequest * UnmonitorInstancesResponse::request() const
+{
+    Q_D(const UnmonitorInstancesResponse);
+    return static_cast<const UnmonitorInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 UnmonitorInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnmonitorInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnmonitorInstancesResponsePrivate
+ *
+ * @brief  Private implementation for UnmonitorInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnmonitorInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnmonitorInstancesResponse instance.
+ */
+UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponsePrivate(
+    UnmonitorInstancesQueueResponse * const q) : UnmonitorInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 UnmonitorInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnmonitorInstancesResponse"));
+    /// @todo
+}

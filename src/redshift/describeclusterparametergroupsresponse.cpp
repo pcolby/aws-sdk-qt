@@ -19,3 +19,85 @@
 
 #include "describeclusterparametergroupsresponse.h"
 #include "describeclusterparametergroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeClusterParameterGroupsResponse
+ *
+ * @brief  Handles Redshift DescribeClusterParameterGroups responses.
+ *
+ * @see    RedshiftClient::describeClusterParameterGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClusterParameterGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeClusterParameterGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeClusterParameterGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeClusterParameterGroupsRequest * DescribeClusterParameterGroupsResponse::request() const
+{
+    Q_D(const DescribeClusterParameterGroupsResponse);
+    return static_cast<const DescribeClusterParameterGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeClusterParameterGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClusterParameterGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeClusterParameterGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterParameterGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeClusterParameterGroupsResponse instance.
+ */
+DescribeClusterParameterGroupsResponsePrivate::DescribeClusterParameterGroupsResponsePrivate(
+    DescribeClusterParameterGroupsQueueResponse * const q) : DescribeClusterParameterGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeClusterParameterGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeClusterParameterGroupsResponsePrivate::DescribeClusterParameterGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeClusterParameterGroupsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getcalleridentityresponse.h"
 #include "getcalleridentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  GetCallerIdentityResponse
+ *
+ * @brief  Handles STS GetCallerIdentity responses.
+ *
+ * @see    STSClient::getCallerIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCallerIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : STSResponse(new GetCallerIdentityResponsePrivate(this), parent)
+{
+    setRequest(new GetCallerIdentityRequest(request));
+    setReply(reply);
+}
+
+const GetCallerIdentityRequest * GetCallerIdentityResponse::request() const
+{
+    Q_D(const GetCallerIdentityResponse);
+    return static_cast<const GetCallerIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a STS GetCallerIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCallerIdentityResponsePrivate
+ *
+ * @brief  Private implementation for GetCallerIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCallerIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCallerIdentityResponse instance.
+ */
+GetCallerIdentityResponsePrivate::GetCallerIdentityResponsePrivate(
+    GetCallerIdentityQueueResponse * const q) : GetCallerIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an STS GetCallerIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCallerIdentityResponsePrivate::GetCallerIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCallerIdentityResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updateloginprofileresponse.h"
 #include "updateloginprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateLoginProfileResponse
+ *
+ * @brief  Handles IAM UpdateLoginProfile responses.
+ *
+ * @see    IAMClient::updateLoginProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateLoginProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateLoginProfileResponsePrivate(this), parent)
+{
+    setRequest(new UpdateLoginProfileRequest(request));
+    setReply(reply);
+}
+
+const UpdateLoginProfileRequest * UpdateLoginProfileResponse::request() const
+{
+    Q_D(const UpdateLoginProfileResponse);
+    return static_cast<const UpdateLoginProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateLoginProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateLoginProfileResponsePrivate
+ *
+ * @brief  Private implementation for UpdateLoginProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLoginProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateLoginProfileResponse instance.
+ */
+UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponsePrivate(
+    UpdateLoginProfileQueueResponse * const q) : UpdateLoginProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateLoginProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateLoginProfileResponse"));
+    /// @todo
+}

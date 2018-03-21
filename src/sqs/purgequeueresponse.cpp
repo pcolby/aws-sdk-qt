@@ -19,3 +19,85 @@
 
 #include "purgequeueresponse.h"
 #include "purgequeueresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  PurgeQueueResponse
+ *
+ * @brief  Handles SQS PurgeQueue responses.
+ *
+ * @see    SQSClient::purgeQueue
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurgeQueueResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new PurgeQueueResponsePrivate(this), parent)
+{
+    setRequest(new PurgeQueueRequest(request));
+    setReply(reply);
+}
+
+const PurgeQueueRequest * PurgeQueueResponse::request() const
+{
+    Q_D(const PurgeQueueResponse);
+    return static_cast<const PurgeQueueRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS PurgeQueue response.
+ *
+ * @param  response  Response to parse.
+ */
+void PurgeQueueResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PurgeQueueResponsePrivate
+ *
+ * @brief  Private implementation for PurgeQueueResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurgeQueueResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PurgeQueueResponse instance.
+ */
+PurgeQueueResponsePrivate::PurgeQueueResponsePrivate(
+    PurgeQueueQueueResponse * const q) : PurgeQueuePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS PurgeQueueResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PurgeQueueResponsePrivate::PurgeQueueResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PurgeQueueResponse"));
+    /// @todo
+}

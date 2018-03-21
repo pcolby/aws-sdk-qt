@@ -19,3 +19,85 @@
 
 #include "describeapplicationresponse.h"
 #include "describeapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DescribeApplicationResponse
+ *
+ * @brief  Handles KinesisAnalytics DescribeApplication responses.
+ *
+ * @see    KinesisAnalyticsClient::describeApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new DescribeApplicationResponsePrivate(this), parent)
+{
+    setRequest(new DescribeApplicationRequest(request));
+    setReply(reply);
+}
+
+const DescribeApplicationRequest * DescribeApplicationResponse::request() const
+{
+    Q_D(const DescribeApplicationResponse);
+    return static_cast<const DescribeApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics DescribeApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeApplicationResponsePrivate
+ *
+ * @brief  Private implementation for DescribeApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeApplicationResponse instance.
+ */
+DescribeApplicationResponsePrivate::DescribeApplicationResponsePrivate(
+    DescribeApplicationQueueResponse * const q) : DescribeApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics DescribeApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeApplicationResponsePrivate::DescribeApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationResponse"));
+    /// @todo
+}

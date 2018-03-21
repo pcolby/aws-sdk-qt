@@ -19,3 +19,85 @@
 
 #include "geteventsourcemappingresponse.h"
 #include "geteventsourcemappingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  GetEventSourceMappingResponse
+ *
+ * @brief  Handles Lambda GetEventSourceMapping responses.
+ *
+ * @see    LambdaClient::getEventSourceMapping
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEventSourceMappingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new GetEventSourceMappingResponsePrivate(this), parent)
+{
+    setRequest(new GetEventSourceMappingRequest(request));
+    setReply(reply);
+}
+
+const GetEventSourceMappingRequest * GetEventSourceMappingResponse::request() const
+{
+    Q_D(const GetEventSourceMappingResponse);
+    return static_cast<const GetEventSourceMappingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda GetEventSourceMapping response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetEventSourceMappingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEventSourceMappingResponsePrivate
+ *
+ * @brief  Private implementation for GetEventSourceMappingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEventSourceMappingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetEventSourceMappingResponse instance.
+ */
+GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponsePrivate(
+    GetEventSourceMappingQueueResponse * const q) : GetEventSourceMappingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda GetEventSourceMappingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetEventSourceMappingResponse"));
+    /// @todo
+}

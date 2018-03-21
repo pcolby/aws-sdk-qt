@@ -19,3 +19,85 @@
 
 #include "createnotificationsubscriptionresponse.h"
 #include "createnotificationsubscriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  CreateNotificationSubscriptionResponse
+ *
+ * @brief  Handles WorkDocs CreateNotificationSubscription responses.
+ *
+ * @see    WorkDocsClient::createNotificationSubscription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNotificationSubscriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new CreateNotificationSubscriptionResponsePrivate(this), parent)
+{
+    setRequest(new CreateNotificationSubscriptionRequest(request));
+    setReply(reply);
+}
+
+const CreateNotificationSubscriptionRequest * CreateNotificationSubscriptionResponse::request() const
+{
+    Q_D(const CreateNotificationSubscriptionResponse);
+    return static_cast<const CreateNotificationSubscriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs CreateNotificationSubscription response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNotificationSubscriptionResponsePrivate
+ *
+ * @brief  Private implementation for CreateNotificationSubscriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNotificationSubscriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateNotificationSubscriptionResponse instance.
+ */
+CreateNotificationSubscriptionResponsePrivate::CreateNotificationSubscriptionResponsePrivate(
+    CreateNotificationSubscriptionQueueResponse * const q) : CreateNotificationSubscriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs CreateNotificationSubscriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateNotificationSubscriptionResponsePrivate::CreateNotificationSubscriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateNotificationSubscriptionResponse"));
+    /// @todo
+}

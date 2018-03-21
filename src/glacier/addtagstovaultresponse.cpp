@@ -19,3 +19,85 @@
 
 #include "addtagstovaultresponse.h"
 #include "addtagstovaultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  AddTagsToVaultResponse
+ *
+ * @brief  Handles Glacier AddTagsToVault responses.
+ *
+ * @see    GlacierClient::addTagsToVault
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsToVaultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new AddTagsToVaultResponsePrivate(this), parent)
+{
+    setRequest(new AddTagsToVaultRequest(request));
+    setReply(reply);
+}
+
+const AddTagsToVaultRequest * AddTagsToVaultResponse::request() const
+{
+    Q_D(const AddTagsToVaultResponse);
+    return static_cast<const AddTagsToVaultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier AddTagsToVault response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddTagsToVaultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsToVaultResponsePrivate
+ *
+ * @brief  Private implementation for AddTagsToVaultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToVaultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddTagsToVaultResponse instance.
+ */
+AddTagsToVaultResponsePrivate::AddTagsToVaultResponsePrivate(
+    AddTagsToVaultQueueResponse * const q) : AddTagsToVaultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier AddTagsToVaultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddTagsToVaultResponsePrivate::AddTagsToVaultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddTagsToVaultResponse"));
+    /// @todo
+}

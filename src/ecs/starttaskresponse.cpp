@@ -19,3 +19,85 @@
 
 #include "starttaskresponse.h"
 #include "starttaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  StartTaskResponse
+ *
+ * @brief  Handles ECS StartTask responses.
+ *
+ * @see    ECSClient::startTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new StartTaskResponsePrivate(this), parent)
+{
+    setRequest(new StartTaskRequest(request));
+    setReply(reply);
+}
+
+const StartTaskRequest * StartTaskResponse::request() const
+{
+    Q_D(const StartTaskResponse);
+    return static_cast<const StartTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS StartTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartTaskResponsePrivate
+ *
+ * @brief  Private implementation for StartTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartTaskResponse instance.
+ */
+StartTaskResponsePrivate::StartTaskResponsePrivate(
+    StartTaskQueueResponse * const q) : StartTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS StartTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartTaskResponsePrivate::StartTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartTaskResponse"));
+    /// @todo
+}

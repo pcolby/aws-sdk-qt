@@ -19,3 +19,85 @@
 
 #include "listofferingtransactionsresponse.h"
 #include "listofferingtransactionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListOfferingTransactionsResponse
+ *
+ * @brief  Handles DeviceFarm ListOfferingTransactions responses.
+ *
+ * @see    DeviceFarmClient::listOfferingTransactions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOfferingTransactionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new ListOfferingTransactionsResponsePrivate(this), parent)
+{
+    setRequest(new ListOfferingTransactionsRequest(request));
+    setReply(reply);
+}
+
+const ListOfferingTransactionsRequest * ListOfferingTransactionsResponse::request() const
+{
+    Q_D(const ListOfferingTransactionsResponse);
+    return static_cast<const ListOfferingTransactionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm ListOfferingTransactions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOfferingTransactionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOfferingTransactionsResponsePrivate
+ *
+ * @brief  Private implementation for ListOfferingTransactionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOfferingTransactionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOfferingTransactionsResponse instance.
+ */
+ListOfferingTransactionsResponsePrivate::ListOfferingTransactionsResponsePrivate(
+    ListOfferingTransactionsQueueResponse * const q) : ListOfferingTransactionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm ListOfferingTransactionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOfferingTransactionsResponsePrivate::ListOfferingTransactionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOfferingTransactionsResponse"));
+    /// @todo
+}

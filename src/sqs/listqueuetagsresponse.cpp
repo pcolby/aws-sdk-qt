@@ -19,3 +19,85 @@
 
 #include "listqueuetagsresponse.h"
 #include "listqueuetagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  ListQueueTagsResponse
+ *
+ * @brief  Handles SQS ListQueueTags responses.
+ *
+ * @see    SQSClient::listQueueTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListQueueTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new ListQueueTagsResponsePrivate(this), parent)
+{
+    setRequest(new ListQueueTagsRequest(request));
+    setReply(reply);
+}
+
+const ListQueueTagsRequest * ListQueueTagsResponse::request() const
+{
+    Q_D(const ListQueueTagsResponse);
+    return static_cast<const ListQueueTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS ListQueueTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListQueueTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListQueueTagsResponsePrivate
+ *
+ * @brief  Private implementation for ListQueueTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListQueueTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListQueueTagsResponse instance.
+ */
+ListQueueTagsResponsePrivate::ListQueueTagsResponsePrivate(
+    ListQueueTagsQueueResponse * const q) : ListQueueTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS ListQueueTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListQueueTagsResponsePrivate::ListQueueTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListQueueTagsResponse"));
+    /// @todo
+}

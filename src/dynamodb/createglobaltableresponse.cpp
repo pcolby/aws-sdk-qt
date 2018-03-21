@@ -19,3 +19,85 @@
 
 #include "createglobaltableresponse.h"
 #include "createglobaltableresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  CreateGlobalTableResponse
+ *
+ * @brief  Handles DynamoDB CreateGlobalTable responses.
+ *
+ * @see    DynamoDBClient::createGlobalTable
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGlobalTableResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new CreateGlobalTableResponsePrivate(this), parent)
+{
+    setRequest(new CreateGlobalTableRequest(request));
+    setReply(reply);
+}
+
+const CreateGlobalTableRequest * CreateGlobalTableResponse::request() const
+{
+    Q_D(const CreateGlobalTableResponse);
+    return static_cast<const CreateGlobalTableRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB CreateGlobalTable response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateGlobalTableResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGlobalTableResponsePrivate
+ *
+ * @brief  Private implementation for CreateGlobalTableResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGlobalTableResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateGlobalTableResponse instance.
+ */
+CreateGlobalTableResponsePrivate::CreateGlobalTableResponsePrivate(
+    CreateGlobalTableQueueResponse * const q) : CreateGlobalTablePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB CreateGlobalTableResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateGlobalTableResponsePrivate::CreateGlobalTableResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateGlobalTableResponse"));
+    /// @todo
+}

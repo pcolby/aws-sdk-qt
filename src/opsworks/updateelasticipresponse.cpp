@@ -19,3 +19,85 @@
 
 #include "updateelasticipresponse.h"
 #include "updateelasticipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateElasticIpResponse
+ *
+ * @brief  Handles OpsWorks UpdateElasticIp responses.
+ *
+ * @see    OpsWorksClient::updateElasticIp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateElasticIpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UpdateElasticIpResponsePrivate(this), parent)
+{
+    setRequest(new UpdateElasticIpRequest(request));
+    setReply(reply);
+}
+
+const UpdateElasticIpRequest * UpdateElasticIpResponse::request() const
+{
+    Q_D(const UpdateElasticIpResponse);
+    return static_cast<const UpdateElasticIpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UpdateElasticIp response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateElasticIpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateElasticIpResponsePrivate
+ *
+ * @brief  Private implementation for UpdateElasticIpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateElasticIpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateElasticIpResponse instance.
+ */
+UpdateElasticIpResponsePrivate::UpdateElasticIpResponsePrivate(
+    UpdateElasticIpQueueResponse * const q) : UpdateElasticIpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UpdateElasticIpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateElasticIpResponsePrivate::UpdateElasticIpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateElasticIpResponse"));
+    /// @todo
+}

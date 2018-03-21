@@ -19,3 +19,85 @@
 
 #include "suggestresponse.h"
 #include "suggestresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearchDomain {
+
+/**
+ * @class  SuggestResponse
+ *
+ * @brief  Handles CloudSearchDomain Suggest responses.
+ *
+ * @see    CloudSearchDomainClient::suggest
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SuggestResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchDomainResponse(new SuggestResponsePrivate(this), parent)
+{
+    setRequest(new SuggestRequest(request));
+    setReply(reply);
+}
+
+const SuggestRequest * SuggestResponse::request() const
+{
+    Q_D(const SuggestResponse);
+    return static_cast<const SuggestRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearchDomain Suggest response.
+ *
+ * @param  response  Response to parse.
+ */
+void SuggestResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SuggestResponsePrivate
+ *
+ * @brief  Private implementation for SuggestResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SuggestResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SuggestResponse instance.
+ */
+SuggestResponsePrivate::SuggestResponsePrivate(
+    SuggestQueueResponse * const q) : SuggestPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearchDomain SuggestResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SuggestResponsePrivate::SuggestResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SuggestResponse"));
+    /// @todo
+}

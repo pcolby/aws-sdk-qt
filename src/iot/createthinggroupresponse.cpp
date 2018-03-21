@@ -19,3 +19,85 @@
 
 #include "createthinggroupresponse.h"
 #include "createthinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateThingGroupResponse
+ *
+ * @brief  Handles IoT CreateThingGroup responses.
+ *
+ * @see    IoTClient::createThingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateThingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreateThingGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateThingGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateThingGroupRequest * CreateThingGroupResponse::request() const
+{
+    Q_D(const CreateThingGroupResponse);
+    return static_cast<const CreateThingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreateThingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateThingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateThingGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateThingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateThingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateThingGroupResponse instance.
+ */
+CreateThingGroupResponsePrivate::CreateThingGroupResponsePrivate(
+    CreateThingGroupQueueResponse * const q) : CreateThingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreateThingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateThingGroupResponsePrivate::CreateThingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateThingGroupResponse"));
+    /// @todo
+}

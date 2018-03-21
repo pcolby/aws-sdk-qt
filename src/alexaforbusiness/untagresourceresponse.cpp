@@ -19,3 +19,85 @@
 
 #include "untagresourceresponse.h"
 #include "untagresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UntagResourceResponse
+ *
+ * @brief  Handles AlexaForBusiness UntagResource responses.
+ *
+ * @see    AlexaForBusinessClient::untagResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new UntagResourceResponsePrivate(this), parent)
+{
+    setRequest(new UntagResourceRequest(request));
+    setReply(reply);
+}
+
+const UntagResourceRequest * UntagResourceResponse::request() const
+{
+    Q_D(const UntagResourceResponse);
+    return static_cast<const UntagResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness UntagResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void UntagResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagResourceResponsePrivate
+ *
+ * @brief  Private implementation for UntagResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UntagResourceResponse instance.
+ */
+UntagResourceResponsePrivate::UntagResourceResponsePrivate(
+    UntagResourceQueueResponse * const q) : UntagResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness UntagResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UntagResourceResponsePrivate::UntagResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UntagResourceResponse"));
+    /// @todo
+}

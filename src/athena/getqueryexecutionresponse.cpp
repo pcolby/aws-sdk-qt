@@ -19,3 +19,85 @@
 
 #include "getqueryexecutionresponse.h"
 #include "getqueryexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  GetQueryExecutionResponse
+ *
+ * @brief  Handles Athena GetQueryExecution responses.
+ *
+ * @see    AthenaClient::getQueryExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQueryExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new GetQueryExecutionResponsePrivate(this), parent)
+{
+    setRequest(new GetQueryExecutionRequest(request));
+    setReply(reply);
+}
+
+const GetQueryExecutionRequest * GetQueryExecutionResponse::request() const
+{
+    Q_D(const GetQueryExecutionResponse);
+    return static_cast<const GetQueryExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena GetQueryExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetQueryExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQueryExecutionResponsePrivate
+ *
+ * @brief  Private implementation for GetQueryExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueryExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetQueryExecutionResponse instance.
+ */
+GetQueryExecutionResponsePrivate::GetQueryExecutionResponsePrivate(
+    GetQueryExecutionQueueResponse * const q) : GetQueryExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena GetQueryExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetQueryExecutionResponsePrivate::GetQueryExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetQueryExecutionResponse"));
+    /// @todo
+}

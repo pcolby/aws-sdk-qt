@@ -19,3 +19,85 @@
 
 #include "submitjobresponse.h"
 #include "submitjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  SubmitJobResponse
+ *
+ * @brief  Handles Batch SubmitJob responses.
+ *
+ * @see    BatchClient::submitJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubmitJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new SubmitJobResponsePrivate(this), parent)
+{
+    setRequest(new SubmitJobRequest(request));
+    setReply(reply);
+}
+
+const SubmitJobRequest * SubmitJobResponse::request() const
+{
+    Q_D(const SubmitJobResponse);
+    return static_cast<const SubmitJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch SubmitJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void SubmitJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SubmitJobResponsePrivate
+ *
+ * @brief  Private implementation for SubmitJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubmitJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SubmitJobResponse instance.
+ */
+SubmitJobResponsePrivate::SubmitJobResponsePrivate(
+    SubmitJobQueueResponse * const q) : SubmitJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch SubmitJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SubmitJobResponsePrivate::SubmitJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SubmitJobResponse"));
+    /// @todo
+}

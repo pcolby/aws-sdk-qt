@@ -19,3 +19,85 @@
 
 #include "searchproductsasadminresponse.h"
 #include "searchproductsasadminresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  SearchProductsAsAdminResponse
+ *
+ * @brief  Handles ServiceCatalog SearchProductsAsAdmin responses.
+ *
+ * @see    ServiceCatalogClient::searchProductsAsAdmin
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchProductsAsAdminResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new SearchProductsAsAdminResponsePrivate(this), parent)
+{
+    setRequest(new SearchProductsAsAdminRequest(request));
+    setReply(reply);
+}
+
+const SearchProductsAsAdminRequest * SearchProductsAsAdminResponse::request() const
+{
+    Q_D(const SearchProductsAsAdminResponse);
+    return static_cast<const SearchProductsAsAdminRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog SearchProductsAsAdmin response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchProductsAsAdminResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchProductsAsAdminResponsePrivate
+ *
+ * @brief  Private implementation for SearchProductsAsAdminResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchProductsAsAdminResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchProductsAsAdminResponse instance.
+ */
+SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponsePrivate(
+    SearchProductsAsAdminQueueResponse * const q) : SearchProductsAsAdminPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog SearchProductsAsAdminResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchProductsAsAdminResponse"));
+    /// @todo
+}

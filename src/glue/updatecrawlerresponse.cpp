@@ -19,3 +19,85 @@
 
 #include "updatecrawlerresponse.h"
 #include "updatecrawlerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateCrawlerResponse
+ *
+ * @brief  Handles Glue UpdateCrawler responses.
+ *
+ * @see    GlueClient::updateCrawler
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCrawlerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new UpdateCrawlerResponsePrivate(this), parent)
+{
+    setRequest(new UpdateCrawlerRequest(request));
+    setReply(reply);
+}
+
+const UpdateCrawlerRequest * UpdateCrawlerResponse::request() const
+{
+    Q_D(const UpdateCrawlerResponse);
+    return static_cast<const UpdateCrawlerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue UpdateCrawler response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateCrawlerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCrawlerResponsePrivate
+ *
+ * @brief  Private implementation for UpdateCrawlerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCrawlerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateCrawlerResponse instance.
+ */
+UpdateCrawlerResponsePrivate::UpdateCrawlerResponsePrivate(
+    UpdateCrawlerQueueResponse * const q) : UpdateCrawlerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue UpdateCrawlerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateCrawlerResponsePrivate::UpdateCrawlerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateCrawlerResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletestackinstancesresponse.h"
 #include "deletestackinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DeleteStackInstancesResponse
+ *
+ * @brief  Handles CloudFormation DeleteStackInstances responses.
+ *
+ * @see    CloudFormationClient::deleteStackInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStackInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new DeleteStackInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DeleteStackInstancesRequest(request));
+    setReply(reply);
+}
+
+const DeleteStackInstancesRequest * DeleteStackInstancesResponse::request() const
+{
+    Q_D(const DeleteStackInstancesResponse);
+    return static_cast<const DeleteStackInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation DeleteStackInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteStackInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStackInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DeleteStackInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStackInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteStackInstancesResponse instance.
+ */
+DeleteStackInstancesResponsePrivate::DeleteStackInstancesResponsePrivate(
+    DeleteStackInstancesQueueResponse * const q) : DeleteStackInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation DeleteStackInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteStackInstancesResponsePrivate::DeleteStackInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteStackInstancesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getfederationtokenresponse.h"
 #include "getfederationtokenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  GetFederationTokenResponse
+ *
+ * @brief  Handles STS GetFederationToken responses.
+ *
+ * @see    STSClient::getFederationToken
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFederationTokenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : STSResponse(new GetFederationTokenResponsePrivate(this), parent)
+{
+    setRequest(new GetFederationTokenRequest(request));
+    setReply(reply);
+}
+
+const GetFederationTokenRequest * GetFederationTokenResponse::request() const
+{
+    Q_D(const GetFederationTokenResponse);
+    return static_cast<const GetFederationTokenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a STS GetFederationToken response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFederationTokenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFederationTokenResponsePrivate
+ *
+ * @brief  Private implementation for GetFederationTokenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFederationTokenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFederationTokenResponse instance.
+ */
+GetFederationTokenResponsePrivate::GetFederationTokenResponsePrivate(
+    GetFederationTokenQueueResponse * const q) : GetFederationTokenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an STS GetFederationTokenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFederationTokenResponsePrivate::GetFederationTokenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFederationTokenResponse"));
+    /// @todo
+}

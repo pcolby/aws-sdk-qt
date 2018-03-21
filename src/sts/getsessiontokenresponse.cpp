@@ -19,3 +19,85 @@
 
 #include "getsessiontokenresponse.h"
 #include "getsessiontokenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  GetSessionTokenResponse
+ *
+ * @brief  Handles STS GetSessionToken responses.
+ *
+ * @see    STSClient::getSessionToken
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSessionTokenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : STSResponse(new GetSessionTokenResponsePrivate(this), parent)
+{
+    setRequest(new GetSessionTokenRequest(request));
+    setReply(reply);
+}
+
+const GetSessionTokenRequest * GetSessionTokenResponse::request() const
+{
+    Q_D(const GetSessionTokenResponse);
+    return static_cast<const GetSessionTokenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a STS GetSessionToken response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSessionTokenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSessionTokenResponsePrivate
+ *
+ * @brief  Private implementation for GetSessionTokenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSessionTokenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSessionTokenResponse instance.
+ */
+GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
+    GetSessionTokenQueueResponse * const q) : GetSessionTokenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an STS GetSessionTokenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSessionTokenResponsePrivate::GetSessionTokenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSessionTokenResponse"));
+    /// @todo
+}

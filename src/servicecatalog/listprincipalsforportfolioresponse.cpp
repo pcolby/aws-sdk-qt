@@ -19,3 +19,85 @@
 
 #include "listprincipalsforportfolioresponse.h"
 #include "listprincipalsforportfolioresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListPrincipalsForPortfolioResponse
+ *
+ * @brief  Handles ServiceCatalog ListPrincipalsForPortfolio responses.
+ *
+ * @see    ServiceCatalogClient::listPrincipalsForPortfolio
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPrincipalsForPortfolioResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListPrincipalsForPortfolioResponsePrivate(this), parent)
+{
+    setRequest(new ListPrincipalsForPortfolioRequest(request));
+    setReply(reply);
+}
+
+const ListPrincipalsForPortfolioRequest * ListPrincipalsForPortfolioResponse::request() const
+{
+    Q_D(const ListPrincipalsForPortfolioResponse);
+    return static_cast<const ListPrincipalsForPortfolioRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListPrincipalsForPortfolio response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPrincipalsForPortfolioResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPrincipalsForPortfolioResponsePrivate
+ *
+ * @brief  Private implementation for ListPrincipalsForPortfolioResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPrincipalsForPortfolioResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPrincipalsForPortfolioResponse instance.
+ */
+ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponsePrivate(
+    ListPrincipalsForPortfolioQueueResponse * const q) : ListPrincipalsForPortfolioPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListPrincipalsForPortfolioResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPrincipalsForPortfolioResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createenvironmentmembershipresponse.h"
 #include "createenvironmentmembershipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  CreateEnvironmentMembershipResponse
+ *
+ * @brief  Handles Cloud9 CreateEnvironmentMembership responses.
+ *
+ * @see    Cloud9Client::createEnvironmentMembership
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEnvironmentMembershipResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Cloud9Response(new CreateEnvironmentMembershipResponsePrivate(this), parent)
+{
+    setRequest(new CreateEnvironmentMembershipRequest(request));
+    setReply(reply);
+}
+
+const CreateEnvironmentMembershipRequest * CreateEnvironmentMembershipResponse::request() const
+{
+    Q_D(const CreateEnvironmentMembershipResponse);
+    return static_cast<const CreateEnvironmentMembershipRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Cloud9 CreateEnvironmentMembership response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEnvironmentMembershipResponsePrivate
+ *
+ * @brief  Private implementation for CreateEnvironmentMembershipResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEnvironmentMembershipResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateEnvironmentMembershipResponse instance.
+ */
+CreateEnvironmentMembershipResponsePrivate::CreateEnvironmentMembershipResponsePrivate(
+    CreateEnvironmentMembershipQueueResponse * const q) : CreateEnvironmentMembershipPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Cloud9 CreateEnvironmentMembershipResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateEnvironmentMembershipResponsePrivate::CreateEnvironmentMembershipResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentMembershipResponse"));
+    /// @todo
+}

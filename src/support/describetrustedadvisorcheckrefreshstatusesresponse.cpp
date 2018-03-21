@@ -19,3 +19,85 @@
 
 #include "describetrustedadvisorcheckrefreshstatusesresponse.h"
 #include "describetrustedadvisorcheckrefreshstatusesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  DescribeTrustedAdvisorCheckRefreshStatusesResponse
+ *
+ * @brief  Handles Support DescribeTrustedAdvisorCheckRefreshStatuses responses.
+ *
+ * @see    SupportClient::describeTrustedAdvisorCheckRefreshStatuses
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrustedAdvisorCheckRefreshStatusesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTrustedAdvisorCheckRefreshStatusesRequest(request));
+    setReply(reply);
+}
+
+const DescribeTrustedAdvisorCheckRefreshStatusesRequest * DescribeTrustedAdvisorCheckRefreshStatusesResponse::request() const
+{
+    Q_D(const DescribeTrustedAdvisorCheckRefreshStatusesResponse);
+    return static_cast<const DescribeTrustedAdvisorCheckRefreshStatusesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support DescribeTrustedAdvisorCheckRefreshStatuses response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTrustedAdvisorCheckRefreshStatusesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTrustedAdvisorCheckRefreshStatusesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTrustedAdvisorCheckRefreshStatusesResponse instance.
+ */
+DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate::DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate(
+    DescribeTrustedAdvisorCheckRefreshStatusesQueueResponse * const q) : DescribeTrustedAdvisorCheckRefreshStatusesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support DescribeTrustedAdvisorCheckRefreshStatusesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate::DescribeTrustedAdvisorCheckRefreshStatusesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTrustedAdvisorCheckRefreshStatusesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describetrailsresponse.h"
 #include "describetrailsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  DescribeTrailsResponse
+ *
+ * @brief  Handles CloudTrail DescribeTrails responses.
+ *
+ * @see    CloudTrailClient::describeTrails
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrailsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudTrailResponse(new DescribeTrailsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTrailsRequest(request));
+    setReply(reply);
+}
+
+const DescribeTrailsRequest * DescribeTrailsResponse::request() const
+{
+    Q_D(const DescribeTrailsResponse);
+    return static_cast<const DescribeTrailsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudTrail DescribeTrails response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTrailsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrailsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTrailsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrailsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTrailsResponse instance.
+ */
+DescribeTrailsResponsePrivate::DescribeTrailsResponsePrivate(
+    DescribeTrailsQueueResponse * const q) : DescribeTrailsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudTrail DescribeTrailsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTrailsResponsePrivate::DescribeTrailsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTrailsResponse"));
+    /// @todo
+}

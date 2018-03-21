@@ -19,3 +19,85 @@
 
 #include "registerdomainresponse.h"
 #include "registerdomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  RegisterDomainResponse
+ *
+ * @brief  Handles Route53Domains RegisterDomain responses.
+ *
+ * @see    Route53DomainsClient::registerDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new RegisterDomainResponsePrivate(this), parent)
+{
+    setRequest(new RegisterDomainRequest(request));
+    setReply(reply);
+}
+
+const RegisterDomainRequest * RegisterDomainResponse::request() const
+{
+    Q_D(const RegisterDomainResponse);
+    return static_cast<const RegisterDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains RegisterDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterDomainResponsePrivate
+ *
+ * @brief  Private implementation for RegisterDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterDomainResponse instance.
+ */
+RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
+    RegisterDomainQueueResponse * const q) : RegisterDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains RegisterDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterDomainResponsePrivate::RegisterDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterDomainResponse"));
+    /// @todo
+}

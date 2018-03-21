@@ -19,3 +19,85 @@
 
 #include "describeloggroupsresponse.h"
 #include "describeloggroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DescribeLogGroupsResponse
+ *
+ * @brief  Handles CloudWatchLogs DescribeLogGroups responses.
+ *
+ * @see    CloudWatchLogsClient::describeLogGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLogGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DescribeLogGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLogGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeLogGroupsRequest * DescribeLogGroupsResponse::request() const
+{
+    Q_D(const DescribeLogGroupsResponse);
+    return static_cast<const DescribeLogGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DescribeLogGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLogGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLogGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLogGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLogGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLogGroupsResponse instance.
+ */
+DescribeLogGroupsResponsePrivate::DescribeLogGroupsResponsePrivate(
+    DescribeLogGroupsQueueResponse * const q) : DescribeLogGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DescribeLogGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLogGroupsResponsePrivate::DescribeLogGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLogGroupsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "stopassessmentrunresponse.h"
 #include "stopassessmentrunresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  StopAssessmentRunResponse
+ *
+ * @brief  Handles Inspector StopAssessmentRun responses.
+ *
+ * @see    InspectorClient::stopAssessmentRun
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopAssessmentRunResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new StopAssessmentRunResponsePrivate(this), parent)
+{
+    setRequest(new StopAssessmentRunRequest(request));
+    setReply(reply);
+}
+
+const StopAssessmentRunRequest * StopAssessmentRunResponse::request() const
+{
+    Q_D(const StopAssessmentRunResponse);
+    return static_cast<const StopAssessmentRunRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector StopAssessmentRun response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopAssessmentRunResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopAssessmentRunResponsePrivate
+ *
+ * @brief  Private implementation for StopAssessmentRunResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopAssessmentRunResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopAssessmentRunResponse instance.
+ */
+StopAssessmentRunResponsePrivate::StopAssessmentRunResponsePrivate(
+    StopAssessmentRunQueueResponse * const q) : StopAssessmentRunPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector StopAssessmentRunResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopAssessmentRunResponsePrivate::StopAssessmentRunResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopAssessmentRunResponse"));
+    /// @todo
+}

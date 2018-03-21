@@ -19,3 +19,85 @@
 
 #include "getcontextkeysforprincipalpolicyresponse.h"
 #include "getcontextkeysforprincipalpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetContextKeysForPrincipalPolicyResponse
+ *
+ * @brief  Handles IAM GetContextKeysForPrincipalPolicy responses.
+ *
+ * @see    IAMClient::getContextKeysForPrincipalPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetContextKeysForPrincipalPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetContextKeysForPrincipalPolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetContextKeysForPrincipalPolicyRequest(request));
+    setReply(reply);
+}
+
+const GetContextKeysForPrincipalPolicyRequest * GetContextKeysForPrincipalPolicyResponse::request() const
+{
+    Q_D(const GetContextKeysForPrincipalPolicyResponse);
+    return static_cast<const GetContextKeysForPrincipalPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetContextKeysForPrincipalPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetContextKeysForPrincipalPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetContextKeysForPrincipalPolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetContextKeysForPrincipalPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContextKeysForPrincipalPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetContextKeysForPrincipalPolicyResponse instance.
+ */
+GetContextKeysForPrincipalPolicyResponsePrivate::GetContextKeysForPrincipalPolicyResponsePrivate(
+    GetContextKeysForPrincipalPolicyQueueResponse * const q) : GetContextKeysForPrincipalPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetContextKeysForPrincipalPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetContextKeysForPrincipalPolicyResponsePrivate::GetContextKeysForPrincipalPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetContextKeysForPrincipalPolicyResponse"));
+    /// @todo
+}

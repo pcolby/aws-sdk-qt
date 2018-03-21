@@ -19,3 +19,85 @@
 
 #include "putbucketwebsiteresponse.h"
 #include "putbucketwebsiteresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketWebsiteResponse
+ *
+ * @brief  Handles S3 PutBucketWebsite responses.
+ *
+ * @see    S3Client::putBucketWebsite
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketWebsiteResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketWebsiteResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketWebsiteRequest(request));
+    setReply(reply);
+}
+
+const PutBucketWebsiteRequest * PutBucketWebsiteResponse::request() const
+{
+    Q_D(const PutBucketWebsiteResponse);
+    return static_cast<const PutBucketWebsiteRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketWebsite response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketWebsiteResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketWebsiteResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketWebsiteResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketWebsiteResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketWebsiteResponse instance.
+ */
+PutBucketWebsiteResponsePrivate::PutBucketWebsiteResponsePrivate(
+    PutBucketWebsiteQueueResponse * const q) : PutBucketWebsitePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketWebsiteResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketWebsiteResponsePrivate::PutBucketWebsiteResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketWebsiteResponse"));
+    /// @todo
+}

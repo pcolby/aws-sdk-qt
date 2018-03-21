@@ -19,3 +19,85 @@
 
 #include "removetagsresponse.h"
 #include "removetagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  RemoveTagsResponse
+ *
+ * @brief  Handles EMR RemoveTags responses.
+ *
+ * @see    EMRClient::removeTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new RemoveTagsResponsePrivate(this), parent)
+{
+    setRequest(new RemoveTagsRequest(request));
+    setReply(reply);
+}
+
+const RemoveTagsRequest * RemoveTagsResponse::request() const
+{
+    Q_D(const RemoveTagsResponse);
+    return static_cast<const RemoveTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR RemoveTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsResponsePrivate
+ *
+ * @brief  Private implementation for RemoveTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveTagsResponse instance.
+ */
+RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
+    RemoveTagsQueueResponse * const q) : RemoveTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR RemoveTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveTagsResponsePrivate::RemoveTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveTagsResponse"));
+    /// @todo
+}

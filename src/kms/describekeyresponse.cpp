@@ -19,3 +19,85 @@
 
 #include "describekeyresponse.h"
 #include "describekeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DescribeKeyResponse
+ *
+ * @brief  Handles KMS DescribeKey responses.
+ *
+ * @see    KMSClient::describeKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new DescribeKeyResponsePrivate(this), parent)
+{
+    setRequest(new DescribeKeyRequest(request));
+    setReply(reply);
+}
+
+const DescribeKeyRequest * DescribeKeyResponse::request() const
+{
+    Q_D(const DescribeKeyResponse);
+    return static_cast<const DescribeKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS DescribeKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeKeyResponsePrivate
+ *
+ * @brief  Private implementation for DescribeKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeKeyResponse instance.
+ */
+DescribeKeyResponsePrivate::DescribeKeyResponsePrivate(
+    DescribeKeyQueueResponse * const q) : DescribeKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS DescribeKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeKeyResponsePrivate::DescribeKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeKeyResponse"));
+    /// @todo
+}

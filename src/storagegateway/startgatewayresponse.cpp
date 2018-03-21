@@ -19,3 +19,85 @@
 
 #include "startgatewayresponse.h"
 #include "startgatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  StartGatewayResponse
+ *
+ * @brief  Handles StorageGateway StartGateway responses.
+ *
+ * @see    StorageGatewayClient::startGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new StartGatewayResponsePrivate(this), parent)
+{
+    setRequest(new StartGatewayRequest(request));
+    setReply(reply);
+}
+
+const StartGatewayRequest * StartGatewayResponse::request() const
+{
+    Q_D(const StartGatewayResponse);
+    return static_cast<const StartGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway StartGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartGatewayResponsePrivate
+ *
+ * @brief  Private implementation for StartGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartGatewayResponse instance.
+ */
+StartGatewayResponsePrivate::StartGatewayResponsePrivate(
+    StartGatewayQueueResponse * const q) : StartGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway StartGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartGatewayResponsePrivate::StartGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartGatewayResponse"));
+    /// @todo
+}

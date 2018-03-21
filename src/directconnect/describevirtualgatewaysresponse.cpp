@@ -19,3 +19,85 @@
 
 #include "describevirtualgatewaysresponse.h"
 #include "describevirtualgatewaysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeVirtualGatewaysResponse
+ *
+ * @brief  Handles DirectConnect DescribeVirtualGateways responses.
+ *
+ * @see    DirectConnectClient::describeVirtualGateways
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVirtualGatewaysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeVirtualGatewaysResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVirtualGatewaysRequest(request));
+    setReply(reply);
+}
+
+const DescribeVirtualGatewaysRequest * DescribeVirtualGatewaysResponse::request() const
+{
+    Q_D(const DescribeVirtualGatewaysResponse);
+    return static_cast<const DescribeVirtualGatewaysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeVirtualGateways response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVirtualGatewaysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVirtualGatewaysResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVirtualGatewaysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVirtualGatewaysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVirtualGatewaysResponse instance.
+ */
+DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponsePrivate(
+    DescribeVirtualGatewaysQueueResponse * const q) : DescribeVirtualGatewaysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeVirtualGatewaysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVirtualGatewaysResponse"));
+    /// @todo
+}

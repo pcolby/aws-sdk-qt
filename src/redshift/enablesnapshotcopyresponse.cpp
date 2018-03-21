@@ -19,3 +19,85 @@
 
 #include "enablesnapshotcopyresponse.h"
 #include "enablesnapshotcopyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  EnableSnapshotCopyResponse
+ *
+ * @brief  Handles Redshift EnableSnapshotCopy responses.
+ *
+ * @see    RedshiftClient::enableSnapshotCopy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableSnapshotCopyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new EnableSnapshotCopyResponsePrivate(this), parent)
+{
+    setRequest(new EnableSnapshotCopyRequest(request));
+    setReply(reply);
+}
+
+const EnableSnapshotCopyRequest * EnableSnapshotCopyResponse::request() const
+{
+    Q_D(const EnableSnapshotCopyResponse);
+    return static_cast<const EnableSnapshotCopyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift EnableSnapshotCopy response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableSnapshotCopyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableSnapshotCopyResponsePrivate
+ *
+ * @brief  Private implementation for EnableSnapshotCopyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableSnapshotCopyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableSnapshotCopyResponse instance.
+ */
+EnableSnapshotCopyResponsePrivate::EnableSnapshotCopyResponsePrivate(
+    EnableSnapshotCopyQueueResponse * const q) : EnableSnapshotCopyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift EnableSnapshotCopyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableSnapshotCopyResponsePrivate::EnableSnapshotCopyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableSnapshotCopyResponse"));
+    /// @todo
+}

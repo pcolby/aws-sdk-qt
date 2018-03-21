@@ -19,3 +19,85 @@
 
 #include "listendpointsbyplatformapplicationresponse.h"
 #include "listendpointsbyplatformapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  ListEndpointsByPlatformApplicationResponse
+ *
+ * @brief  Handles SNS ListEndpointsByPlatformApplication responses.
+ *
+ * @see    SNSClient::listEndpointsByPlatformApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEndpointsByPlatformApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new ListEndpointsByPlatformApplicationResponsePrivate(this), parent)
+{
+    setRequest(new ListEndpointsByPlatformApplicationRequest(request));
+    setReply(reply);
+}
+
+const ListEndpointsByPlatformApplicationRequest * ListEndpointsByPlatformApplicationResponse::request() const
+{
+    Q_D(const ListEndpointsByPlatformApplicationResponse);
+    return static_cast<const ListEndpointsByPlatformApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS ListEndpointsByPlatformApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListEndpointsByPlatformApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEndpointsByPlatformApplicationResponsePrivate
+ *
+ * @brief  Private implementation for ListEndpointsByPlatformApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEndpointsByPlatformApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListEndpointsByPlatformApplicationResponse instance.
+ */
+ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplicationResponsePrivate(
+    ListEndpointsByPlatformApplicationQueueResponse * const q) : ListEndpointsByPlatformApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS ListEndpointsByPlatformApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListEndpointsByPlatformApplicationResponse"));
+    /// @todo
+}

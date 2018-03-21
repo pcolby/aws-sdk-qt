@@ -19,3 +19,85 @@
 
 #include "createprivatednsnamespaceresponse.h"
 #include "createprivatednsnamespaceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  CreatePrivateDnsNamespaceResponse
+ *
+ * @brief  Handles ServiceDiscovery CreatePrivateDnsNamespace responses.
+ *
+ * @see    ServiceDiscoveryClient::createPrivateDnsNamespace
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePrivateDnsNamespaceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceDiscoveryResponse(new CreatePrivateDnsNamespaceResponsePrivate(this), parent)
+{
+    setRequest(new CreatePrivateDnsNamespaceRequest(request));
+    setReply(reply);
+}
+
+const CreatePrivateDnsNamespaceRequest * CreatePrivateDnsNamespaceResponse::request() const
+{
+    Q_D(const CreatePrivateDnsNamespaceResponse);
+    return static_cast<const CreatePrivateDnsNamespaceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceDiscovery CreatePrivateDnsNamespace response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePrivateDnsNamespaceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePrivateDnsNamespaceResponsePrivate
+ *
+ * @brief  Private implementation for CreatePrivateDnsNamespaceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePrivateDnsNamespaceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePrivateDnsNamespaceResponse instance.
+ */
+CreatePrivateDnsNamespaceResponsePrivate::CreatePrivateDnsNamespaceResponsePrivate(
+    CreatePrivateDnsNamespaceQueueResponse * const q) : CreatePrivateDnsNamespacePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceDiscovery CreatePrivateDnsNamespaceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePrivateDnsNamespaceResponsePrivate::CreatePrivateDnsNamespaceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePrivateDnsNamespaceResponse"));
+    /// @todo
+}

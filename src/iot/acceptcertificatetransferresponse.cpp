@@ -19,3 +19,85 @@
 
 #include "acceptcertificatetransferresponse.h"
 #include "acceptcertificatetransferresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  AcceptCertificateTransferResponse
+ *
+ * @brief  Handles IoT AcceptCertificateTransfer responses.
+ *
+ * @see    IoTClient::acceptCertificateTransfer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcceptCertificateTransferResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new AcceptCertificateTransferResponsePrivate(this), parent)
+{
+    setRequest(new AcceptCertificateTransferRequest(request));
+    setReply(reply);
+}
+
+const AcceptCertificateTransferRequest * AcceptCertificateTransferResponse::request() const
+{
+    Q_D(const AcceptCertificateTransferResponse);
+    return static_cast<const AcceptCertificateTransferRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT AcceptCertificateTransfer response.
+ *
+ * @param  response  Response to parse.
+ */
+void AcceptCertificateTransferResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AcceptCertificateTransferResponsePrivate
+ *
+ * @brief  Private implementation for AcceptCertificateTransferResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptCertificateTransferResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AcceptCertificateTransferResponse instance.
+ */
+AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponsePrivate(
+    AcceptCertificateTransferQueueResponse * const q) : AcceptCertificateTransferPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT AcceptCertificateTransferResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AcceptCertificateTransferResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getinstancemetricdataresponse.h"
 #include "getinstancemetricdataresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceMetricDataResponse
+ *
+ * @brief  Handles Lightsail GetInstanceMetricData responses.
+ *
+ * @see    LightsailClient::getInstanceMetricData
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceMetricDataResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetInstanceMetricDataResponsePrivate(this), parent)
+{
+    setRequest(new GetInstanceMetricDataRequest(request));
+    setReply(reply);
+}
+
+const GetInstanceMetricDataRequest * GetInstanceMetricDataResponse::request() const
+{
+    Q_D(const GetInstanceMetricDataResponse);
+    return static_cast<const GetInstanceMetricDataRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetInstanceMetricData response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInstanceMetricDataResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceMetricDataResponsePrivate
+ *
+ * @brief  Private implementation for GetInstanceMetricDataResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceMetricDataResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInstanceMetricDataResponse instance.
+ */
+GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponsePrivate(
+    GetInstanceMetricDataQueueResponse * const q) : GetInstanceMetricDataPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetInstanceMetricDataResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInstanceMetricDataResponse"));
+    /// @todo
+}

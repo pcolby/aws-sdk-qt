@@ -19,3 +19,85 @@
 
 #include "getcloudfrontoriginaccessidentityconfigresponse.h"
 #include "getcloudfrontoriginaccessidentityconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetCloudFrontOriginAccessIdentityConfigResponse
+ *
+ * @brief  Handles CloudFront GetCloudFrontOriginAccessIdentityConfig responses.
+ *
+ * @see    CloudFrontClient::getCloudFrontOriginAccessIdentityConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCloudFrontOriginAccessIdentityConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new GetCloudFrontOriginAccessIdentityConfigResponsePrivate(this), parent)
+{
+    setRequest(new GetCloudFrontOriginAccessIdentityConfigRequest(request));
+    setReply(reply);
+}
+
+const GetCloudFrontOriginAccessIdentityConfigRequest * GetCloudFrontOriginAccessIdentityConfigResponse::request() const
+{
+    Q_D(const GetCloudFrontOriginAccessIdentityConfigResponse);
+    return static_cast<const GetCloudFrontOriginAccessIdentityConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront GetCloudFrontOriginAccessIdentityConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCloudFrontOriginAccessIdentityConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCloudFrontOriginAccessIdentityConfigResponsePrivate
+ *
+ * @brief  Private implementation for GetCloudFrontOriginAccessIdentityConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCloudFrontOriginAccessIdentityConfigResponse instance.
+ */
+GetCloudFrontOriginAccessIdentityConfigResponsePrivate::GetCloudFrontOriginAccessIdentityConfigResponsePrivate(
+    GetCloudFrontOriginAccessIdentityConfigQueueResponse * const q) : GetCloudFrontOriginAccessIdentityConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront GetCloudFrontOriginAccessIdentityConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCloudFrontOriginAccessIdentityConfigResponsePrivate::GetCloudFrontOriginAccessIdentityConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCloudFrontOriginAccessIdentityConfigResponse"));
+    /// @todo
+}

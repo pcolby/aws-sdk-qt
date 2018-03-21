@@ -19,3 +19,85 @@
 
 #include "updateinstancecustomhealthstatusresponse.h"
 #include "updateinstancecustomhealthstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  UpdateInstanceCustomHealthStatusResponse
+ *
+ * @brief  Handles ServiceDiscovery UpdateInstanceCustomHealthStatus responses.
+ *
+ * @see    ServiceDiscoveryClient::updateInstanceCustomHealthStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateInstanceCustomHealthStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceDiscoveryResponse(new UpdateInstanceCustomHealthStatusResponsePrivate(this), parent)
+{
+    setRequest(new UpdateInstanceCustomHealthStatusRequest(request));
+    setReply(reply);
+}
+
+const UpdateInstanceCustomHealthStatusRequest * UpdateInstanceCustomHealthStatusResponse::request() const
+{
+    Q_D(const UpdateInstanceCustomHealthStatusResponse);
+    return static_cast<const UpdateInstanceCustomHealthStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceDiscovery UpdateInstanceCustomHealthStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateInstanceCustomHealthStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateInstanceCustomHealthStatusResponsePrivate
+ *
+ * @brief  Private implementation for UpdateInstanceCustomHealthStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateInstanceCustomHealthStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateInstanceCustomHealthStatusResponse instance.
+ */
+UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatusResponsePrivate(
+    UpdateInstanceCustomHealthStatusQueueResponse * const q) : UpdateInstanceCustomHealthStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceDiscovery UpdateInstanceCustomHealthStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateInstanceCustomHealthStatusResponse"));
+    /// @todo
+}

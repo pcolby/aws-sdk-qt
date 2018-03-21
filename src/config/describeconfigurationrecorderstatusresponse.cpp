@@ -19,3 +19,85 @@
 
 #include "describeconfigurationrecorderstatusresponse.h"
 #include "describeconfigurationrecorderstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DescribeConfigurationRecorderStatusResponse
+ *
+ * @brief  Handles ConfigService DescribeConfigurationRecorderStatus responses.
+ *
+ * @see    ConfigServiceClient::describeConfigurationRecorderStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigurationRecorderStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DescribeConfigurationRecorderStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConfigurationRecorderStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeConfigurationRecorderStatusRequest * DescribeConfigurationRecorderStatusResponse::request() const
+{
+    Q_D(const DescribeConfigurationRecorderStatusResponse);
+    return static_cast<const DescribeConfigurationRecorderStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DescribeConfigurationRecorderStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConfigurationRecorderStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigurationRecorderStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConfigurationRecorderStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationRecorderStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConfigurationRecorderStatusResponse instance.
+ */
+DescribeConfigurationRecorderStatusResponsePrivate::DescribeConfigurationRecorderStatusResponsePrivate(
+    DescribeConfigurationRecorderStatusQueueResponse * const q) : DescribeConfigurationRecorderStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DescribeConfigurationRecorderStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConfigurationRecorderStatusResponsePrivate::DescribeConfigurationRecorderStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationRecorderStatusResponse"));
+    /// @todo
+}

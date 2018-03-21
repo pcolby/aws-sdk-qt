@@ -19,3 +19,85 @@
 
 #include "deleteloggerdefinitionresponse.h"
 #include "deleteloggerdefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteLoggerDefinitionResponse
+ *
+ * @brief  Handles Greengrass DeleteLoggerDefinition responses.
+ *
+ * @see    GreengrassClient::deleteLoggerDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoggerDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DeleteLoggerDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLoggerDefinitionRequest(request));
+    setReply(reply);
+}
+
+const DeleteLoggerDefinitionRequest * DeleteLoggerDefinitionResponse::request() const
+{
+    Q_D(const DeleteLoggerDefinitionResponse);
+    return static_cast<const DeleteLoggerDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DeleteLoggerDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLoggerDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoggerDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLoggerDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoggerDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLoggerDefinitionResponse instance.
+ */
+DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponsePrivate(
+    DeleteLoggerDefinitionQueueResponse * const q) : DeleteLoggerDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DeleteLoggerDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLoggerDefinitionResponse"));
+    /// @todo
+}

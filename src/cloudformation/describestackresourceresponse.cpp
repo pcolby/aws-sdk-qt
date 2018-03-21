@@ -19,3 +19,85 @@
 
 #include "describestackresourceresponse.h"
 #include "describestackresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DescribeStackResourceResponse
+ *
+ * @brief  Handles CloudFormation DescribeStackResource responses.
+ *
+ * @see    CloudFormationClient::describeStackResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new DescribeStackResourceResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStackResourceRequest(request));
+    setReply(reply);
+}
+
+const DescribeStackResourceRequest * DescribeStackResourceResponse::request() const
+{
+    Q_D(const DescribeStackResourceResponse);
+    return static_cast<const DescribeStackResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation DescribeStackResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStackResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackResourceResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStackResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStackResourceResponse instance.
+ */
+DescribeStackResourceResponsePrivate::DescribeStackResourceResponsePrivate(
+    DescribeStackResourceQueueResponse * const q) : DescribeStackResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation DescribeStackResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStackResourceResponsePrivate::DescribeStackResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStackResourceResponse"));
+    /// @todo
+}

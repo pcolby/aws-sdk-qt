@@ -19,3 +19,85 @@
 
 #include "getroomskillparameterresponse.h"
 #include "getroomskillparameterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  GetRoomSkillParameterResponse
+ *
+ * @brief  Handles AlexaForBusiness GetRoomSkillParameter responses.
+ *
+ * @see    AlexaForBusinessClient::getRoomSkillParameter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRoomSkillParameterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new GetRoomSkillParameterResponsePrivate(this), parent)
+{
+    setRequest(new GetRoomSkillParameterRequest(request));
+    setReply(reply);
+}
+
+const GetRoomSkillParameterRequest * GetRoomSkillParameterResponse::request() const
+{
+    Q_D(const GetRoomSkillParameterResponse);
+    return static_cast<const GetRoomSkillParameterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness GetRoomSkillParameter response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRoomSkillParameterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRoomSkillParameterResponsePrivate
+ *
+ * @brief  Private implementation for GetRoomSkillParameterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoomSkillParameterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRoomSkillParameterResponse instance.
+ */
+GetRoomSkillParameterResponsePrivate::GetRoomSkillParameterResponsePrivate(
+    GetRoomSkillParameterQueueResponse * const q) : GetRoomSkillParameterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness GetRoomSkillParameterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRoomSkillParameterResponsePrivate::GetRoomSkillParameterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRoomSkillParameterResponse"));
+    /// @todo
+}

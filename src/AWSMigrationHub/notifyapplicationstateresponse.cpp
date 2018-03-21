@@ -19,3 +19,85 @@
 
 #include "notifyapplicationstateresponse.h"
 #include "notifyapplicationstateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  NotifyApplicationStateResponse
+ *
+ * @brief  Handles MigrationHub NotifyApplicationState responses.
+ *
+ * @see    MigrationHubClient::notifyApplicationState
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+NotifyApplicationStateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new NotifyApplicationStateResponsePrivate(this), parent)
+{
+    setRequest(new NotifyApplicationStateRequest(request));
+    setReply(reply);
+}
+
+const NotifyApplicationStateRequest * NotifyApplicationStateResponse::request() const
+{
+    Q_D(const NotifyApplicationStateResponse);
+    return static_cast<const NotifyApplicationStateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub NotifyApplicationState response.
+ *
+ * @param  response  Response to parse.
+ */
+void NotifyApplicationStateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  NotifyApplicationStateResponsePrivate
+ *
+ * @brief  Private implementation for NotifyApplicationStateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new NotifyApplicationStateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public NotifyApplicationStateResponse instance.
+ */
+NotifyApplicationStateResponsePrivate::NotifyApplicationStateResponsePrivate(
+    NotifyApplicationStateQueueResponse * const q) : NotifyApplicationStatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub NotifyApplicationStateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void NotifyApplicationStateResponsePrivate::NotifyApplicationStateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("NotifyApplicationStateResponse"));
+    /// @todo
+}

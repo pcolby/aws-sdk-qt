@@ -19,3 +19,85 @@
 
 #include "addapplicationreferencedatasourceresponse.h"
 #include "addapplicationreferencedatasourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  AddApplicationReferenceDataSourceResponse
+ *
+ * @brief  Handles KinesisAnalytics AddApplicationReferenceDataSource responses.
+ *
+ * @see    KinesisAnalyticsClient::addApplicationReferenceDataSource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddApplicationReferenceDataSourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new AddApplicationReferenceDataSourceResponsePrivate(this), parent)
+{
+    setRequest(new AddApplicationReferenceDataSourceRequest(request));
+    setReply(reply);
+}
+
+const AddApplicationReferenceDataSourceRequest * AddApplicationReferenceDataSourceResponse::request() const
+{
+    Q_D(const AddApplicationReferenceDataSourceResponse);
+    return static_cast<const AddApplicationReferenceDataSourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics AddApplicationReferenceDataSource response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddApplicationReferenceDataSourceResponsePrivate
+ *
+ * @brief  Private implementation for AddApplicationReferenceDataSourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddApplicationReferenceDataSourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddApplicationReferenceDataSourceResponse instance.
+ */
+AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDataSourceResponsePrivate(
+    AddApplicationReferenceDataSourceQueueResponse * const q) : AddApplicationReferenceDataSourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics AddApplicationReferenceDataSourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDataSourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddApplicationReferenceDataSourceResponse"));
+    /// @todo
+}

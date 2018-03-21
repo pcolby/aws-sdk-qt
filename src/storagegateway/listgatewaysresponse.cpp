@@ -19,3 +19,85 @@
 
 #include "listgatewaysresponse.h"
 #include "listgatewaysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ListGatewaysResponse
+ *
+ * @brief  Handles StorageGateway ListGateways responses.
+ *
+ * @see    StorageGatewayClient::listGateways
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGatewaysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new ListGatewaysResponsePrivate(this), parent)
+{
+    setRequest(new ListGatewaysRequest(request));
+    setReply(reply);
+}
+
+const ListGatewaysRequest * ListGatewaysResponse::request() const
+{
+    Q_D(const ListGatewaysResponse);
+    return static_cast<const ListGatewaysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway ListGateways response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGatewaysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGatewaysResponsePrivate
+ *
+ * @brief  Private implementation for ListGatewaysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGatewaysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGatewaysResponse instance.
+ */
+ListGatewaysResponsePrivate::ListGatewaysResponsePrivate(
+    ListGatewaysQueueResponse * const q) : ListGatewaysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway ListGatewaysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGatewaysResponsePrivate::ListGatewaysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGatewaysResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createvpclinkresponse.h"
 #include "createvpclinkresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateVpcLinkResponse
+ *
+ * @brief  Handles APIGateway CreateVpcLink responses.
+ *
+ * @see    APIGatewayClient::createVpcLink
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpcLinkResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateVpcLinkResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpcLinkRequest(request));
+    setReply(reply);
+}
+
+const CreateVpcLinkRequest * CreateVpcLinkResponse::request() const
+{
+    Q_D(const CreateVpcLinkResponse);
+    return static_cast<const CreateVpcLinkRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateVpcLink response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpcLinkResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpcLinkResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpcLinkResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpcLinkResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpcLinkResponse instance.
+ */
+CreateVpcLinkResponsePrivate::CreateVpcLinkResponsePrivate(
+    CreateVpcLinkQueueResponse * const q) : CreateVpcLinkPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateVpcLinkResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpcLinkResponsePrivate::CreateVpcLinkResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpcLinkResponse"));
+    /// @todo
+}

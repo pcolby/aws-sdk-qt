@@ -19,3 +19,85 @@
 
 #include "listretirablegrantsresponse.h"
 #include "listretirablegrantsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  ListRetirableGrantsResponse
+ *
+ * @brief  Handles KMS ListRetirableGrants responses.
+ *
+ * @see    KMSClient::listRetirableGrants
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRetirableGrantsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new ListRetirableGrantsResponsePrivate(this), parent)
+{
+    setRequest(new ListRetirableGrantsRequest(request));
+    setReply(reply);
+}
+
+const ListRetirableGrantsRequest * ListRetirableGrantsResponse::request() const
+{
+    Q_D(const ListRetirableGrantsResponse);
+    return static_cast<const ListRetirableGrantsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS ListRetirableGrants response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRetirableGrantsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRetirableGrantsResponsePrivate
+ *
+ * @brief  Private implementation for ListRetirableGrantsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRetirableGrantsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRetirableGrantsResponse instance.
+ */
+ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponsePrivate(
+    ListRetirableGrantsQueueResponse * const q) : ListRetirableGrantsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS ListRetirableGrantsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRetirableGrantsResponse"));
+    /// @todo
+}

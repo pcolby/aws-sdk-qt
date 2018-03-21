@@ -19,3 +19,85 @@
 
 #include "gettrailstatusresponse.h"
 #include "gettrailstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  GetTrailStatusResponse
+ *
+ * @brief  Handles CloudTrail GetTrailStatus responses.
+ *
+ * @see    CloudTrailClient::getTrailStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTrailStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudTrailResponse(new GetTrailStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetTrailStatusRequest(request));
+    setReply(reply);
+}
+
+const GetTrailStatusRequest * GetTrailStatusResponse::request() const
+{
+    Q_D(const GetTrailStatusResponse);
+    return static_cast<const GetTrailStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudTrail GetTrailStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTrailStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTrailStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetTrailStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTrailStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTrailStatusResponse instance.
+ */
+GetTrailStatusResponsePrivate::GetTrailStatusResponsePrivate(
+    GetTrailStatusQueueResponse * const q) : GetTrailStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudTrail GetTrailStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTrailStatusResponsePrivate::GetTrailStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTrailStatusResponse"));
+    /// @todo
+}

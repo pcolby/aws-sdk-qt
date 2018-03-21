@@ -19,3 +19,85 @@
 
 #include "registerworkflowtyperesponse.h"
 #include "registerworkflowtyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RegisterWorkflowTypeResponse
+ *
+ * @brief  Handles SWF RegisterWorkflowType responses.
+ *
+ * @see    SWFClient::registerWorkflowType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterWorkflowTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new RegisterWorkflowTypeResponsePrivate(this), parent)
+{
+    setRequest(new RegisterWorkflowTypeRequest(request));
+    setReply(reply);
+}
+
+const RegisterWorkflowTypeRequest * RegisterWorkflowTypeResponse::request() const
+{
+    Q_D(const RegisterWorkflowTypeResponse);
+    return static_cast<const RegisterWorkflowTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF RegisterWorkflowType response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterWorkflowTypeResponsePrivate
+ *
+ * @brief  Private implementation for RegisterWorkflowTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterWorkflowTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterWorkflowTypeResponse instance.
+ */
+RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
+    RegisterWorkflowTypeQueueResponse * const q) : RegisterWorkflowTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF RegisterWorkflowTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterWorkflowTypeResponse"));
+    /// @todo
+}

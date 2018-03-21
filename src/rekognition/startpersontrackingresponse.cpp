@@ -19,3 +19,85 @@
 
 #include "startpersontrackingresponse.h"
 #include "startpersontrackingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartPersonTrackingResponse
+ *
+ * @brief  Handles Rekognition StartPersonTracking responses.
+ *
+ * @see    RekognitionClient::startPersonTracking
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartPersonTrackingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new StartPersonTrackingResponsePrivate(this), parent)
+{
+    setRequest(new StartPersonTrackingRequest(request));
+    setReply(reply);
+}
+
+const StartPersonTrackingRequest * StartPersonTrackingResponse::request() const
+{
+    Q_D(const StartPersonTrackingResponse);
+    return static_cast<const StartPersonTrackingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition StartPersonTracking response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartPersonTrackingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartPersonTrackingResponsePrivate
+ *
+ * @brief  Private implementation for StartPersonTrackingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartPersonTrackingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartPersonTrackingResponse instance.
+ */
+StartPersonTrackingResponsePrivate::StartPersonTrackingResponsePrivate(
+    StartPersonTrackingQueueResponse * const q) : StartPersonTrackingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition StartPersonTrackingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartPersonTrackingResponsePrivate::StartPersonTrackingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartPersonTrackingResponse"));
+    /// @todo
+}

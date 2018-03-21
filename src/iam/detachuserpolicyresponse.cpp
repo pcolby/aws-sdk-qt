@@ -19,3 +19,85 @@
 
 #include "detachuserpolicyresponse.h"
 #include "detachuserpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DetachUserPolicyResponse
+ *
+ * @brief  Handles IAM DetachUserPolicy responses.
+ *
+ * @see    IAMClient::detachUserPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachUserPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DetachUserPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DetachUserPolicyRequest(request));
+    setReply(reply);
+}
+
+const DetachUserPolicyRequest * DetachUserPolicyResponse::request() const
+{
+    Q_D(const DetachUserPolicyResponse);
+    return static_cast<const DetachUserPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DetachUserPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachUserPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachUserPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DetachUserPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachUserPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachUserPolicyResponse instance.
+ */
+DetachUserPolicyResponsePrivate::DetachUserPolicyResponsePrivate(
+    DetachUserPolicyQueueResponse * const q) : DetachUserPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DetachUserPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachUserPolicyResponsePrivate::DetachUserPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachUserPolicyResponse"));
+    /// @todo
+}

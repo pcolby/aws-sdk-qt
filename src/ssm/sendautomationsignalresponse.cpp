@@ -19,3 +19,85 @@
 
 #include "sendautomationsignalresponse.h"
 #include "sendautomationsignalresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  SendAutomationSignalResponse
+ *
+ * @brief  Handles SSM SendAutomationSignal responses.
+ *
+ * @see    SSMClient::sendAutomationSignal
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendAutomationSignalResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new SendAutomationSignalResponsePrivate(this), parent)
+{
+    setRequest(new SendAutomationSignalRequest(request));
+    setReply(reply);
+}
+
+const SendAutomationSignalRequest * SendAutomationSignalResponse::request() const
+{
+    Q_D(const SendAutomationSignalResponse);
+    return static_cast<const SendAutomationSignalRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM SendAutomationSignal response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendAutomationSignalResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendAutomationSignalResponsePrivate
+ *
+ * @brief  Private implementation for SendAutomationSignalResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendAutomationSignalResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendAutomationSignalResponse instance.
+ */
+SendAutomationSignalResponsePrivate::SendAutomationSignalResponsePrivate(
+    SendAutomationSignalQueueResponse * const q) : SendAutomationSignalPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM SendAutomationSignalResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendAutomationSignalResponsePrivate::SendAutomationSignalResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendAutomationSignalResponse"));
+    /// @todo
+}

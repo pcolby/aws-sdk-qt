@@ -19,3 +19,85 @@
 
 #include "createbasepathmappingresponse.h"
 #include "createbasepathmappingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateBasePathMappingResponse
+ *
+ * @brief  Handles APIGateway CreateBasePathMapping responses.
+ *
+ * @see    APIGatewayClient::createBasePathMapping
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBasePathMappingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateBasePathMappingResponsePrivate(this), parent)
+{
+    setRequest(new CreateBasePathMappingRequest(request));
+    setReply(reply);
+}
+
+const CreateBasePathMappingRequest * CreateBasePathMappingResponse::request() const
+{
+    Q_D(const CreateBasePathMappingResponse);
+    return static_cast<const CreateBasePathMappingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateBasePathMapping response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateBasePathMappingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBasePathMappingResponsePrivate
+ *
+ * @brief  Private implementation for CreateBasePathMappingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBasePathMappingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateBasePathMappingResponse instance.
+ */
+CreateBasePathMappingResponsePrivate::CreateBasePathMappingResponsePrivate(
+    CreateBasePathMappingQueueResponse * const q) : CreateBasePathMappingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateBasePathMappingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateBasePathMappingResponsePrivate::CreateBasePathMappingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateBasePathMappingResponse"));
+    /// @todo
+}

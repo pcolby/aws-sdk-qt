@@ -19,3 +19,85 @@
 
 #include "cancelretrievalresponse.h"
 #include "cancelretrievalresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CancelRetrievalResponse
+ *
+ * @brief  Handles StorageGateway CancelRetrieval responses.
+ *
+ * @see    StorageGatewayClient::cancelRetrieval
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelRetrievalResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new CancelRetrievalResponsePrivate(this), parent)
+{
+    setRequest(new CancelRetrievalRequest(request));
+    setReply(reply);
+}
+
+const CancelRetrievalRequest * CancelRetrievalResponse::request() const
+{
+    Q_D(const CancelRetrievalResponse);
+    return static_cast<const CancelRetrievalRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway CancelRetrieval response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelRetrievalResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelRetrievalResponsePrivate
+ *
+ * @brief  Private implementation for CancelRetrievalResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelRetrievalResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelRetrievalResponse instance.
+ */
+CancelRetrievalResponsePrivate::CancelRetrievalResponsePrivate(
+    CancelRetrievalQueueResponse * const q) : CancelRetrievalPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway CancelRetrievalResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelRetrievalResponsePrivate::CancelRetrievalResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelRetrievalResponse"));
+    /// @todo
+}

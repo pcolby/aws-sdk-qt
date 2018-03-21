@@ -19,3 +19,85 @@
 
 #include "gethostedzonelimitresponse.h"
 #include "gethostedzonelimitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetHostedZoneLimitResponse
+ *
+ * @brief  Handles Route53 GetHostedZoneLimit responses.
+ *
+ * @see    Route53Client::getHostedZoneLimit
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHostedZoneLimitResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new GetHostedZoneLimitResponsePrivate(this), parent)
+{
+    setRequest(new GetHostedZoneLimitRequest(request));
+    setReply(reply);
+}
+
+const GetHostedZoneLimitRequest * GetHostedZoneLimitResponse::request() const
+{
+    Q_D(const GetHostedZoneLimitResponse);
+    return static_cast<const GetHostedZoneLimitRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 GetHostedZoneLimit response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetHostedZoneLimitResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHostedZoneLimitResponsePrivate
+ *
+ * @brief  Private implementation for GetHostedZoneLimitResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostedZoneLimitResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetHostedZoneLimitResponse instance.
+ */
+GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponsePrivate(
+    GetHostedZoneLimitQueueResponse * const q) : GetHostedZoneLimitPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 GetHostedZoneLimitResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetHostedZoneLimitResponse"));
+    /// @todo
+}

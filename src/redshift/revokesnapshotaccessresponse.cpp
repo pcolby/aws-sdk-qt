@@ -19,3 +19,85 @@
 
 #include "revokesnapshotaccessresponse.h"
 #include "revokesnapshotaccessresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  RevokeSnapshotAccessResponse
+ *
+ * @brief  Handles Redshift RevokeSnapshotAccess responses.
+ *
+ * @see    RedshiftClient::revokeSnapshotAccess
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeSnapshotAccessResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new RevokeSnapshotAccessResponsePrivate(this), parent)
+{
+    setRequest(new RevokeSnapshotAccessRequest(request));
+    setReply(reply);
+}
+
+const RevokeSnapshotAccessRequest * RevokeSnapshotAccessResponse::request() const
+{
+    Q_D(const RevokeSnapshotAccessResponse);
+    return static_cast<const RevokeSnapshotAccessRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift RevokeSnapshotAccess response.
+ *
+ * @param  response  Response to parse.
+ */
+void RevokeSnapshotAccessResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeSnapshotAccessResponsePrivate
+ *
+ * @brief  Private implementation for RevokeSnapshotAccessResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeSnapshotAccessResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RevokeSnapshotAccessResponse instance.
+ */
+RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponsePrivate(
+    RevokeSnapshotAccessQueueResponse * const q) : RevokeSnapshotAccessPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift RevokeSnapshotAccessResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RevokeSnapshotAccessResponse"));
+    /// @todo
+}

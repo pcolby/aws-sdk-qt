@@ -19,3 +19,85 @@
 
 #include "getcompliancedetailsbyresourceresponse.h"
 #include "getcompliancedetailsbyresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  GetComplianceDetailsByResourceResponse
+ *
+ * @brief  Handles ConfigService GetComplianceDetailsByResource responses.
+ *
+ * @see    ConfigServiceClient::getComplianceDetailsByResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetComplianceDetailsByResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new GetComplianceDetailsByResourceResponsePrivate(this), parent)
+{
+    setRequest(new GetComplianceDetailsByResourceRequest(request));
+    setReply(reply);
+}
+
+const GetComplianceDetailsByResourceRequest * GetComplianceDetailsByResourceResponse::request() const
+{
+    Q_D(const GetComplianceDetailsByResourceResponse);
+    return static_cast<const GetComplianceDetailsByResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService GetComplianceDetailsByResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetComplianceDetailsByResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetComplianceDetailsByResourceResponsePrivate
+ *
+ * @brief  Private implementation for GetComplianceDetailsByResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetComplianceDetailsByResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetComplianceDetailsByResourceResponse instance.
+ */
+GetComplianceDetailsByResourceResponsePrivate::GetComplianceDetailsByResourceResponsePrivate(
+    GetComplianceDetailsByResourceQueueResponse * const q) : GetComplianceDetailsByResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService GetComplianceDetailsByResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetComplianceDetailsByResourceResponsePrivate::GetComplianceDetailsByResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetComplianceDetailsByResourceResponse"));
+    /// @todo
+}

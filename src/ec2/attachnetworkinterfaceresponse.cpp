@@ -19,3 +19,85 @@
 
 #include "attachnetworkinterfaceresponse.h"
 #include "attachnetworkinterfaceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AttachNetworkInterfaceResponse
+ *
+ * @brief  Handles EC2 AttachNetworkInterface responses.
+ *
+ * @see    EC2Client::attachNetworkInterface
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachNetworkInterfaceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AttachNetworkInterfaceResponsePrivate(this), parent)
+{
+    setRequest(new AttachNetworkInterfaceRequest(request));
+    setReply(reply);
+}
+
+const AttachNetworkInterfaceRequest * AttachNetworkInterfaceResponse::request() const
+{
+    Q_D(const AttachNetworkInterfaceResponse);
+    return static_cast<const AttachNetworkInterfaceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AttachNetworkInterface response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachNetworkInterfaceResponsePrivate
+ *
+ * @brief  Private implementation for AttachNetworkInterfaceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachNetworkInterfaceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachNetworkInterfaceResponse instance.
+ */
+AttachNetworkInterfaceResponsePrivate::AttachNetworkInterfaceResponsePrivate(
+    AttachNetworkInterfaceQueueResponse * const q) : AttachNetworkInterfacePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AttachNetworkInterfaceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachNetworkInterfaceResponsePrivate::AttachNetworkInterfaceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachNetworkInterfaceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletenotificationresponse.h"
 #include "deletenotificationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DeleteNotificationResponse
+ *
+ * @brief  Handles Budgets DeleteNotification responses.
+ *
+ * @see    BudgetsClient::deleteNotification
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNotificationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new DeleteNotificationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNotificationRequest(request));
+    setReply(reply);
+}
+
+const DeleteNotificationRequest * DeleteNotificationResponse::request() const
+{
+    Q_D(const DeleteNotificationResponse);
+    return static_cast<const DeleteNotificationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets DeleteNotification response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNotificationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNotificationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNotificationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotificationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNotificationResponse instance.
+ */
+DeleteNotificationResponsePrivate::DeleteNotificationResponsePrivate(
+    DeleteNotificationQueueResponse * const q) : DeleteNotificationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets DeleteNotificationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNotificationResponsePrivate::DeleteNotificationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationResponse"));
+    /// @todo
+}

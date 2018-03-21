@@ -19,3 +19,85 @@
 
 #include "deprecatedomainresponse.h"
 #include "deprecatedomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DeprecateDomainResponse
+ *
+ * @brief  Handles SWF DeprecateDomain responses.
+ *
+ * @see    SWFClient::deprecateDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeprecateDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new DeprecateDomainResponsePrivate(this), parent)
+{
+    setRequest(new DeprecateDomainRequest(request));
+    setReply(reply);
+}
+
+const DeprecateDomainRequest * DeprecateDomainResponse::request() const
+{
+    Q_D(const DeprecateDomainResponse);
+    return static_cast<const DeprecateDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF DeprecateDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeprecateDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeprecateDomainResponsePrivate
+ *
+ * @brief  Private implementation for DeprecateDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeprecateDomainResponse instance.
+ */
+DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
+    DeprecateDomainQueueResponse * const q) : DeprecateDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF DeprecateDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeprecateDomainResponsePrivate::DeprecateDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeprecateDomainResponse"));
+    /// @todo
+}

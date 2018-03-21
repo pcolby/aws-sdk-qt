@@ -19,3 +19,85 @@
 
 #include "deletevpngatewayresponse.h"
 #include "deletevpngatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpnGatewayResponse
+ *
+ * @brief  Handles EC2 DeleteVpnGateway responses.
+ *
+ * @see    EC2Client::deleteVpnGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpnGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteVpnGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVpnGatewayRequest(request));
+    setReply(reply);
+}
+
+const DeleteVpnGatewayRequest * DeleteVpnGatewayResponse::request() const
+{
+    Q_D(const DeleteVpnGatewayResponse);
+    return static_cast<const DeleteVpnGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteVpnGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVpnGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpnGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVpnGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpnGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVpnGatewayResponse instance.
+ */
+DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponsePrivate(
+    DeleteVpnGatewayQueueResponse * const q) : DeleteVpnGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteVpnGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVpnGatewayResponse"));
+    /// @todo
+}

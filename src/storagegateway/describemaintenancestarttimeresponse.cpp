@@ -19,3 +19,85 @@
 
 #include "describemaintenancestarttimeresponse.h"
 #include "describemaintenancestarttimeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeMaintenanceStartTimeResponse
+ *
+ * @brief  Handles StorageGateway DescribeMaintenanceStartTime responses.
+ *
+ * @see    StorageGatewayClient::describeMaintenanceStartTime
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMaintenanceStartTimeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeMaintenanceStartTimeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMaintenanceStartTimeRequest(request));
+    setReply(reply);
+}
+
+const DescribeMaintenanceStartTimeRequest * DescribeMaintenanceStartTimeResponse::request() const
+{
+    Q_D(const DescribeMaintenanceStartTimeResponse);
+    return static_cast<const DescribeMaintenanceStartTimeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeMaintenanceStartTime response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMaintenanceStartTimeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMaintenanceStartTimeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceStartTimeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMaintenanceStartTimeResponse instance.
+ */
+DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeResponsePrivate(
+    DescribeMaintenanceStartTimeQueueResponse * const q) : DescribeMaintenanceStartTimePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeMaintenanceStartTimeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceStartTimeResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "resetdbparametergroupresponse.h"
 #include "resetdbparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ResetDBParameterGroupResponse
+ *
+ * @brief  Handles RDS ResetDBParameterGroup responses.
+ *
+ * @see    RDSClient::resetDBParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetDBParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ResetDBParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new ResetDBParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const ResetDBParameterGroupRequest * ResetDBParameterGroupResponse::request() const
+{
+    Q_D(const ResetDBParameterGroupResponse);
+    return static_cast<const ResetDBParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ResetDBParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetDBParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for ResetDBParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetDBParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetDBParameterGroupResponse instance.
+ */
+ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
+    ResetDBParameterGroupQueueResponse * const q) : ResetDBParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ResetDBParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetDBParameterGroupResponse"));
+    /// @todo
+}

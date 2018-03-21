@@ -19,3 +19,85 @@
 
 #include "createnetworkinterfacepermissionresponse.h"
 #include "createnetworkinterfacepermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateNetworkInterfacePermissionResponse
+ *
+ * @brief  Handles EC2 CreateNetworkInterfacePermission responses.
+ *
+ * @see    EC2Client::createNetworkInterfacePermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNetworkInterfacePermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateNetworkInterfacePermissionResponsePrivate(this), parent)
+{
+    setRequest(new CreateNetworkInterfacePermissionRequest(request));
+    setReply(reply);
+}
+
+const CreateNetworkInterfacePermissionRequest * CreateNetworkInterfacePermissionResponse::request() const
+{
+    Q_D(const CreateNetworkInterfacePermissionResponse);
+    return static_cast<const CreateNetworkInterfacePermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateNetworkInterfacePermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNetworkInterfacePermissionResponsePrivate
+ *
+ * @brief  Private implementation for CreateNetworkInterfacePermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkInterfacePermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateNetworkInterfacePermissionResponse instance.
+ */
+CreateNetworkInterfacePermissionResponsePrivate::CreateNetworkInterfacePermissionResponsePrivate(
+    CreateNetworkInterfacePermissionQueueResponse * const q) : CreateNetworkInterfacePermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateNetworkInterfacePermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateNetworkInterfacePermissionResponsePrivate::CreateNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateNetworkInterfacePermissionResponse"));
+    /// @todo
+}

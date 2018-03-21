@@ -19,3 +19,85 @@
 
 #include "describeeventsubscriptionsresponse.h"
 #include "describeeventsubscriptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeEventSubscriptionsResponse
+ *
+ * @brief  Handles RDS DescribeEventSubscriptions responses.
+ *
+ * @see    RDSClient::describeEventSubscriptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventSubscriptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeEventSubscriptionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEventSubscriptionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::request() const
+{
+    Q_D(const DescribeEventSubscriptionsResponse);
+    return static_cast<const DescribeEventSubscriptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeEventSubscriptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventSubscriptionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEventSubscriptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventSubscriptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEventSubscriptionsResponse instance.
+ */
+DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePrivate(
+    DescribeEventSubscriptionsQueueResponse * const q) : DescribeEventSubscriptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeEventSubscriptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEventSubscriptionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getregexmatchsetresponse.h"
 #include "getregexmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetRegexMatchSetResponse
+ *
+ * @brief  Handles WAF GetRegexMatchSet responses.
+ *
+ * @see    WAFClient::getRegexMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRegexMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new GetRegexMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new GetRegexMatchSetRequest(request));
+    setReply(reply);
+}
+
+const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
+{
+    Q_D(const GetRegexMatchSetResponse);
+    return static_cast<const GetRegexMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF GetRegexMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRegexMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRegexMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for GetRegexMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRegexMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRegexMatchSetResponse instance.
+ */
+GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponsePrivate(
+    GetRegexMatchSetQueueResponse * const q) : GetRegexMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF GetRegexMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRegexMatchSetResponse"));
+    /// @todo
+}

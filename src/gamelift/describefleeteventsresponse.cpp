@@ -19,3 +19,85 @@
 
 #include "describefleeteventsresponse.h"
 #include "describefleeteventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeFleetEventsResponse
+ *
+ * @brief  Handles GameLift DescribeFleetEvents responses.
+ *
+ * @see    GameLiftClient::describeFleetEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeFleetEventsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeFleetEventsRequest(request));
+    setReply(reply);
+}
+
+const DescribeFleetEventsRequest * DescribeFleetEventsResponse::request() const
+{
+    Q_D(const DescribeFleetEventsResponse);
+    return static_cast<const DescribeFleetEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeFleetEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeFleetEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetEventsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeFleetEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeFleetEventsResponse instance.
+ */
+DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponsePrivate(
+    DescribeFleetEventsQueueResponse * const q) : DescribeFleetEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeFleetEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeFleetEventsResponse"));
+    /// @todo
+}

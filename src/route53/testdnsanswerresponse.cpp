@@ -19,3 +19,85 @@
 
 #include "testdnsanswerresponse.h"
 #include "testdnsanswerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  TestDNSAnswerResponse
+ *
+ * @brief  Handles Route53 TestDNSAnswer responses.
+ *
+ * @see    Route53Client::testDNSAnswer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestDNSAnswerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new TestDNSAnswerResponsePrivate(this), parent)
+{
+    setRequest(new TestDNSAnswerRequest(request));
+    setReply(reply);
+}
+
+const TestDNSAnswerRequest * TestDNSAnswerResponse::request() const
+{
+    Q_D(const TestDNSAnswerResponse);
+    return static_cast<const TestDNSAnswerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 TestDNSAnswer response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestDNSAnswerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestDNSAnswerResponsePrivate
+ *
+ * @brief  Private implementation for TestDNSAnswerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestDNSAnswerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestDNSAnswerResponse instance.
+ */
+TestDNSAnswerResponsePrivate::TestDNSAnswerResponsePrivate(
+    TestDNSAnswerQueueResponse * const q) : TestDNSAnswerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 TestDNSAnswerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestDNSAnswerResponsePrivate::TestDNSAnswerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestDNSAnswerResponse"));
+    /// @todo
+}

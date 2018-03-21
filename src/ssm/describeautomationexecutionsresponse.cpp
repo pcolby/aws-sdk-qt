@@ -19,3 +19,85 @@
 
 #include "describeautomationexecutionsresponse.h"
 #include "describeautomationexecutionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeAutomationExecutionsResponse
+ *
+ * @brief  Handles SSM DescribeAutomationExecutions responses.
+ *
+ * @see    SSMClient::describeAutomationExecutions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAutomationExecutionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeAutomationExecutionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAutomationExecutionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeAutomationExecutionsRequest * DescribeAutomationExecutionsResponse::request() const
+{
+    Q_D(const DescribeAutomationExecutionsResponse);
+    return static_cast<const DescribeAutomationExecutionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeAutomationExecutions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAutomationExecutionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAutomationExecutionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAutomationExecutionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAutomationExecutionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAutomationExecutionsResponse instance.
+ */
+DescribeAutomationExecutionsResponsePrivate::DescribeAutomationExecutionsResponsePrivate(
+    DescribeAutomationExecutionsQueueResponse * const q) : DescribeAutomationExecutionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeAutomationExecutionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAutomationExecutionsResponsePrivate::DescribeAutomationExecutionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAutomationExecutionsResponse"));
+    /// @todo
+}

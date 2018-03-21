@@ -19,3 +19,85 @@
 
 #include "modifyvpcendpointservicepermissionsresponse.h"
 #include "modifyvpcendpointservicepermissionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcEndpointServicePermissionsResponse
+ *
+ * @brief  Handles EC2 ModifyVpcEndpointServicePermissions responses.
+ *
+ * @see    EC2Client::modifyVpcEndpointServicePermissions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcEndpointServicePermissionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyVpcEndpointServicePermissionsResponsePrivate(this), parent)
+{
+    setRequest(new ModifyVpcEndpointServicePermissionsRequest(request));
+    setReply(reply);
+}
+
+const ModifyVpcEndpointServicePermissionsRequest * ModifyVpcEndpointServicePermissionsResponse::request() const
+{
+    Q_D(const ModifyVpcEndpointServicePermissionsResponse);
+    return static_cast<const ModifyVpcEndpointServicePermissionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyVpcEndpointServicePermissions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcEndpointServicePermissionsResponsePrivate
+ *
+ * @brief  Private implementation for ModifyVpcEndpointServicePermissionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcEndpointServicePermissionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyVpcEndpointServicePermissionsResponse instance.
+ */
+ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePermissionsResponsePrivate(
+    ModifyVpcEndpointServicePermissionsQueueResponse * const q) : ModifyVpcEndpointServicePermissionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyVpcEndpointServicePermissionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePermissionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointServicePermissionsResponse"));
+    /// @todo
+}

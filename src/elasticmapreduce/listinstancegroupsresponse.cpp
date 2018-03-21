@@ -19,3 +19,85 @@
 
 #include "listinstancegroupsresponse.h"
 #include "listinstancegroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ListInstanceGroupsResponse
+ *
+ * @brief  Handles EMR ListInstanceGroups responses.
+ *
+ * @see    EMRClient::listInstanceGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInstanceGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new ListInstanceGroupsResponsePrivate(this), parent)
+{
+    setRequest(new ListInstanceGroupsRequest(request));
+    setReply(reply);
+}
+
+const ListInstanceGroupsRequest * ListInstanceGroupsResponse::request() const
+{
+    Q_D(const ListInstanceGroupsResponse);
+    return static_cast<const ListInstanceGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR ListInstanceGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListInstanceGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInstanceGroupsResponsePrivate
+ *
+ * @brief  Private implementation for ListInstanceGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListInstanceGroupsResponse instance.
+ */
+ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponsePrivate(
+    ListInstanceGroupsQueueResponse * const q) : ListInstanceGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR ListInstanceGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListInstanceGroupsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getidentitydkimattributesresponse.h"
 #include "getidentitydkimattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetIdentityDkimAttributesResponse
+ *
+ * @brief  Handles SES GetIdentityDkimAttributes responses.
+ *
+ * @see    SESClient::getIdentityDkimAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityDkimAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new GetIdentityDkimAttributesResponsePrivate(this), parent)
+{
+    setRequest(new GetIdentityDkimAttributesRequest(request));
+    setReply(reply);
+}
+
+const GetIdentityDkimAttributesRequest * GetIdentityDkimAttributesResponse::request() const
+{
+    Q_D(const GetIdentityDkimAttributesResponse);
+    return static_cast<const GetIdentityDkimAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES GetIdentityDkimAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIdentityDkimAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityDkimAttributesResponsePrivate
+ *
+ * @brief  Private implementation for GetIdentityDkimAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityDkimAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIdentityDkimAttributesResponse instance.
+ */
+GetIdentityDkimAttributesResponsePrivate::GetIdentityDkimAttributesResponsePrivate(
+    GetIdentityDkimAttributesQueueResponse * const q) : GetIdentityDkimAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES GetIdentityDkimAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIdentityDkimAttributesResponsePrivate::GetIdentityDkimAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIdentityDkimAttributesResponse"));
+    /// @todo
+}

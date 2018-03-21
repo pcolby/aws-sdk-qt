@@ -19,3 +19,85 @@
 
 #include "listassessmentrunagentsresponse.h"
 #include "listassessmentrunagentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  ListAssessmentRunAgentsResponse
+ *
+ * @brief  Handles Inspector ListAssessmentRunAgents responses.
+ *
+ * @see    InspectorClient::listAssessmentRunAgents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssessmentRunAgentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new ListAssessmentRunAgentsResponsePrivate(this), parent)
+{
+    setRequest(new ListAssessmentRunAgentsRequest(request));
+    setReply(reply);
+}
+
+const ListAssessmentRunAgentsRequest * ListAssessmentRunAgentsResponse::request() const
+{
+    Q_D(const ListAssessmentRunAgentsResponse);
+    return static_cast<const ListAssessmentRunAgentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector ListAssessmentRunAgents response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAssessmentRunAgentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssessmentRunAgentsResponsePrivate
+ *
+ * @brief  Private implementation for ListAssessmentRunAgentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssessmentRunAgentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAssessmentRunAgentsResponse instance.
+ */
+ListAssessmentRunAgentsResponsePrivate::ListAssessmentRunAgentsResponsePrivate(
+    ListAssessmentRunAgentsQueueResponse * const q) : ListAssessmentRunAgentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector ListAssessmentRunAgentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAssessmentRunAgentsResponsePrivate::ListAssessmentRunAgentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAssessmentRunAgentsResponse"));
+    /// @todo
+}

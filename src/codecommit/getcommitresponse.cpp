@@ -19,3 +19,85 @@
 
 #include "getcommitresponse.h"
 #include "getcommitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetCommitResponse
+ *
+ * @brief  Handles CodeCommit GetCommit responses.
+ *
+ * @see    CodeCommitClient::getCommit
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCommitResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new GetCommitResponsePrivate(this), parent)
+{
+    setRequest(new GetCommitRequest(request));
+    setReply(reply);
+}
+
+const GetCommitRequest * GetCommitResponse::request() const
+{
+    Q_D(const GetCommitResponse);
+    return static_cast<const GetCommitRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit GetCommit response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCommitResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCommitResponsePrivate
+ *
+ * @brief  Private implementation for GetCommitResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCommitResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCommitResponse instance.
+ */
+GetCommitResponsePrivate::GetCommitResponsePrivate(
+    GetCommitQueueResponse * const q) : GetCommitPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit GetCommitResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCommitResponsePrivate::GetCommitResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCommitResponse"));
+    /// @todo
+}

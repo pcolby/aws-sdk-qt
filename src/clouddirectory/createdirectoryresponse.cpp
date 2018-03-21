@@ -19,3 +19,85 @@
 
 #include "createdirectoryresponse.h"
 #include "createdirectoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  CreateDirectoryResponse
+ *
+ * @brief  Handles CloudDirectory CreateDirectory responses.
+ *
+ * @see    CloudDirectoryClient::createDirectory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDirectoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new CreateDirectoryResponsePrivate(this), parent)
+{
+    setRequest(new CreateDirectoryRequest(request));
+    setReply(reply);
+}
+
+const CreateDirectoryRequest * CreateDirectoryResponse::request() const
+{
+    Q_D(const CreateDirectoryResponse);
+    return static_cast<const CreateDirectoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory CreateDirectory response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDirectoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDirectoryResponsePrivate
+ *
+ * @brief  Private implementation for CreateDirectoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDirectoryResponse instance.
+ */
+CreateDirectoryResponsePrivate::CreateDirectoryResponsePrivate(
+    CreateDirectoryQueueResponse * const q) : CreateDirectoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory CreateDirectoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDirectoryResponsePrivate::CreateDirectoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDirectoryResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "attachrolepolicyresponse.h"
 #include "attachrolepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  AttachRolePolicyResponse
+ *
+ * @brief  Handles IAM AttachRolePolicy responses.
+ *
+ * @see    IAMClient::attachRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachRolePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new AttachRolePolicyResponsePrivate(this), parent)
+{
+    setRequest(new AttachRolePolicyRequest(request));
+    setReply(reply);
+}
+
+const AttachRolePolicyRequest * AttachRolePolicyResponse::request() const
+{
+    Q_D(const AttachRolePolicyResponse);
+    return static_cast<const AttachRolePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM AttachRolePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachRolePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachRolePolicyResponsePrivate
+ *
+ * @brief  Private implementation for AttachRolePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachRolePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachRolePolicyResponse instance.
+ */
+AttachRolePolicyResponsePrivate::AttachRolePolicyResponsePrivate(
+    AttachRolePolicyQueueResponse * const q) : AttachRolePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM AttachRolePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachRolePolicyResponsePrivate::AttachRolePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachRolePolicyResponse"));
+    /// @todo
+}

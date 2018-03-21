@@ -19,3 +19,85 @@
 
 #include "createresolverresponse.h"
 #include "createresolverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  CreateResolverResponse
+ *
+ * @brief  Handles AppSync CreateResolver responses.
+ *
+ * @see    AppSyncClient::createResolver
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateResolverResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new CreateResolverResponsePrivate(this), parent)
+{
+    setRequest(new CreateResolverRequest(request));
+    setReply(reply);
+}
+
+const CreateResolverRequest * CreateResolverResponse::request() const
+{
+    Q_D(const CreateResolverResponse);
+    return static_cast<const CreateResolverRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync CreateResolver response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateResolverResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateResolverResponsePrivate
+ *
+ * @brief  Private implementation for CreateResolverResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateResolverResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateResolverResponse instance.
+ */
+CreateResolverResponsePrivate::CreateResolverResponsePrivate(
+    CreateResolverQueueResponse * const q) : CreateResolverPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync CreateResolverResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateResolverResponsePrivate::CreateResolverResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateResolverResponse"));
+    /// @todo
+}

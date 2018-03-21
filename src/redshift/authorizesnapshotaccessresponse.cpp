@@ -19,3 +19,85 @@
 
 #include "authorizesnapshotaccessresponse.h"
 #include "authorizesnapshotaccessresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  AuthorizeSnapshotAccessResponse
+ *
+ * @brief  Handles Redshift AuthorizeSnapshotAccess responses.
+ *
+ * @see    RedshiftClient::authorizeSnapshotAccess
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AuthorizeSnapshotAccessResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new AuthorizeSnapshotAccessResponsePrivate(this), parent)
+{
+    setRequest(new AuthorizeSnapshotAccessRequest(request));
+    setReply(reply);
+}
+
+const AuthorizeSnapshotAccessRequest * AuthorizeSnapshotAccessResponse::request() const
+{
+    Q_D(const AuthorizeSnapshotAccessResponse);
+    return static_cast<const AuthorizeSnapshotAccessRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift AuthorizeSnapshotAccess response.
+ *
+ * @param  response  Response to parse.
+ */
+void AuthorizeSnapshotAccessResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AuthorizeSnapshotAccessResponsePrivate
+ *
+ * @brief  Private implementation for AuthorizeSnapshotAccessResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeSnapshotAccessResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AuthorizeSnapshotAccessResponse instance.
+ */
+AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponsePrivate(
+    AuthorizeSnapshotAccessQueueResponse * const q) : AuthorizeSnapshotAccessPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift AuthorizeSnapshotAccessResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AuthorizeSnapshotAccessResponse"));
+    /// @todo
+}

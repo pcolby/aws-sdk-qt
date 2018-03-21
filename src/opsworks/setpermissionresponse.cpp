@@ -19,3 +19,85 @@
 
 #include "setpermissionresponse.h"
 #include "setpermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  SetPermissionResponse
+ *
+ * @brief  Handles OpsWorks SetPermission responses.
+ *
+ * @see    OpsWorksClient::setPermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetPermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new SetPermissionResponsePrivate(this), parent)
+{
+    setRequest(new SetPermissionRequest(request));
+    setReply(reply);
+}
+
+const SetPermissionRequest * SetPermissionResponse::request() const
+{
+    Q_D(const SetPermissionResponse);
+    return static_cast<const SetPermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks SetPermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetPermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetPermissionResponsePrivate
+ *
+ * @brief  Private implementation for SetPermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetPermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetPermissionResponse instance.
+ */
+SetPermissionResponsePrivate::SetPermissionResponsePrivate(
+    SetPermissionQueueResponse * const q) : SetPermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks SetPermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetPermissionResponsePrivate::SetPermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetPermissionResponse"));
+    /// @todo
+}

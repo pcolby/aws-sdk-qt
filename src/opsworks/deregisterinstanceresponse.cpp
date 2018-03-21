@@ -19,3 +19,85 @@
 
 #include "deregisterinstanceresponse.h"
 #include "deregisterinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeregisterInstanceResponse
+ *
+ * @brief  Handles OpsWorks DeregisterInstance responses.
+ *
+ * @see    OpsWorksClient::deregisterInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DeregisterInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
+{
+    Q_D(const DeregisterInstanceResponse);
+    return static_cast<const DeregisterInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DeregisterInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterInstanceResponse instance.
+ */
+DeregisterInstanceResponsePrivate::DeregisterInstanceResponsePrivate(
+    DeregisterInstanceQueueResponse * const q) : DeregisterInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DeregisterInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterInstanceResponsePrivate::DeregisterInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterInstanceResponse"));
+    /// @todo
+}

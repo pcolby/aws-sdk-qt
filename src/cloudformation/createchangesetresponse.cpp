@@ -19,3 +19,85 @@
 
 #include "createchangesetresponse.h"
 #include "createchangesetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  CreateChangeSetResponse
+ *
+ * @brief  Handles CloudFormation CreateChangeSet responses.
+ *
+ * @see    CloudFormationClient::createChangeSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateChangeSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new CreateChangeSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateChangeSetRequest(request));
+    setReply(reply);
+}
+
+const CreateChangeSetRequest * CreateChangeSetResponse::request() const
+{
+    Q_D(const CreateChangeSetResponse);
+    return static_cast<const CreateChangeSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation CreateChangeSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateChangeSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateChangeSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateChangeSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateChangeSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateChangeSetResponse instance.
+ */
+CreateChangeSetResponsePrivate::CreateChangeSetResponsePrivate(
+    CreateChangeSetQueueResponse * const q) : CreateChangeSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation CreateChangeSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateChangeSetResponsePrivate::CreateChangeSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateChangeSetResponse"));
+    /// @todo
+}

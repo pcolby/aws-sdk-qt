@@ -19,3 +19,85 @@
 
 #include "createuserresponse.h"
 #include "createuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  CreateUserResponse
+ *
+ * @brief  Handles AlexaForBusiness CreateUser responses.
+ *
+ * @see    AlexaForBusinessClient::createUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new CreateUserResponsePrivate(this), parent)
+{
+    setRequest(new CreateUserRequest(request));
+    setReply(reply);
+}
+
+const CreateUserRequest * CreateUserResponse::request() const
+{
+    Q_D(const CreateUserResponse);
+    return static_cast<const CreateUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness CreateUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUserResponsePrivate
+ *
+ * @brief  Private implementation for CreateUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateUserResponse instance.
+ */
+CreateUserResponsePrivate::CreateUserResponsePrivate(
+    CreateUserQueueResponse * const q) : CreateUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness CreateUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateUserResponsePrivate::CreateUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateUserResponse"));
+    /// @todo
+}

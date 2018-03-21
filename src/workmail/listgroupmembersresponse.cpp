@@ -19,3 +19,85 @@
 
 #include "listgroupmembersresponse.h"
 #include "listgroupmembersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  ListGroupMembersResponse
+ *
+ * @brief  Handles WorkMail ListGroupMembers responses.
+ *
+ * @see    WorkMailClient::listGroupMembers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupMembersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new ListGroupMembersResponsePrivate(this), parent)
+{
+    setRequest(new ListGroupMembersRequest(request));
+    setReply(reply);
+}
+
+const ListGroupMembersRequest * ListGroupMembersResponse::request() const
+{
+    Q_D(const ListGroupMembersResponse);
+    return static_cast<const ListGroupMembersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail ListGroupMembers response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGroupMembersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupMembersResponsePrivate
+ *
+ * @brief  Private implementation for ListGroupMembersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupMembersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGroupMembersResponse instance.
+ */
+ListGroupMembersResponsePrivate::ListGroupMembersResponsePrivate(
+    ListGroupMembersQueueResponse * const q) : ListGroupMembersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail ListGroupMembersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGroupMembersResponsePrivate::ListGroupMembersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGroupMembersResponse"));
+    /// @todo
+}

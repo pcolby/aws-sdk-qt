@@ -19,3 +19,85 @@
 
 #include "deletejobresponse.h"
 #include "deletejobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteJobResponse
+ *
+ * @brief  Handles Glue DeleteJob responses.
+ *
+ * @see    GlueClient::deleteJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new DeleteJobResponsePrivate(this), parent)
+{
+    setRequest(new DeleteJobRequest(request));
+    setReply(reply);
+}
+
+const DeleteJobRequest * DeleteJobResponse::request() const
+{
+    Q_D(const DeleteJobResponse);
+    return static_cast<const DeleteJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue DeleteJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteJobResponsePrivate
+ *
+ * @brief  Private implementation for DeleteJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteJobResponse instance.
+ */
+DeleteJobResponsePrivate::DeleteJobResponsePrivate(
+    DeleteJobQueueResponse * const q) : DeleteJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue DeleteJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteJobResponsePrivate::DeleteJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteJobResponse"));
+    /// @todo
+}

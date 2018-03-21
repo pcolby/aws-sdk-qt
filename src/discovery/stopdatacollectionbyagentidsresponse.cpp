@@ -19,3 +19,85 @@
 
 #include "stopdatacollectionbyagentidsresponse.h"
 #include "stopdatacollectionbyagentidsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  StopDataCollectionByAgentIdsResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService StopDataCollectionByAgentIds responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopDataCollectionByAgentIdsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new StopDataCollectionByAgentIdsResponsePrivate(this), parent)
+{
+    setRequest(new StopDataCollectionByAgentIdsRequest(request));
+    setReply(reply);
+}
+
+const StopDataCollectionByAgentIdsRequest * StopDataCollectionByAgentIdsResponse::request() const
+{
+    Q_D(const StopDataCollectionByAgentIdsResponse);
+    return static_cast<const StopDataCollectionByAgentIdsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService StopDataCollectionByAgentIds response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopDataCollectionByAgentIdsResponsePrivate
+ *
+ * @brief  Private implementation for StopDataCollectionByAgentIdsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopDataCollectionByAgentIdsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopDataCollectionByAgentIdsResponse instance.
+ */
+StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsResponsePrivate(
+    StopDataCollectionByAgentIdsQueueResponse * const q) : StopDataCollectionByAgentIdsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService StopDataCollectionByAgentIdsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopDataCollectionByAgentIdsResponse"));
+    /// @todo
+}

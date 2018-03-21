@@ -19,3 +19,85 @@
 
 #include "batchgetqueryexecutionresponse.h"
 #include "batchgetqueryexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  BatchGetQueryExecutionResponse
+ *
+ * @brief  Handles Athena BatchGetQueryExecution responses.
+ *
+ * @see    AthenaClient::batchGetQueryExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetQueryExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new BatchGetQueryExecutionResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetQueryExecutionRequest(request));
+    setReply(reply);
+}
+
+const BatchGetQueryExecutionRequest * BatchGetQueryExecutionResponse::request() const
+{
+    Q_D(const BatchGetQueryExecutionResponse);
+    return static_cast<const BatchGetQueryExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena BatchGetQueryExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetQueryExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetQueryExecutionResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetQueryExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetQueryExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetQueryExecutionResponse instance.
+ */
+BatchGetQueryExecutionResponsePrivate::BatchGetQueryExecutionResponsePrivate(
+    BatchGetQueryExecutionQueueResponse * const q) : BatchGetQueryExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena BatchGetQueryExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetQueryExecutionResponsePrivate::BatchGetQueryExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetQueryExecutionResponse"));
+    /// @todo
+}

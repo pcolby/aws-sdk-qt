@@ -19,3 +19,85 @@
 
 #include "listtapesresponse.h"
 #include "listtapesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ListTapesResponse
+ *
+ * @brief  Handles StorageGateway ListTapes responses.
+ *
+ * @see    StorageGatewayClient::listTapes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTapesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new ListTapesResponsePrivate(this), parent)
+{
+    setRequest(new ListTapesRequest(request));
+    setReply(reply);
+}
+
+const ListTapesRequest * ListTapesResponse::request() const
+{
+    Q_D(const ListTapesResponse);
+    return static_cast<const ListTapesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway ListTapes response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTapesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTapesResponsePrivate
+ *
+ * @brief  Private implementation for ListTapesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTapesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTapesResponse instance.
+ */
+ListTapesResponsePrivate::ListTapesResponsePrivate(
+    ListTapesQueueResponse * const q) : ListTapesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway ListTapesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTapesResponsePrivate::ListTapesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTapesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describedirectconnectgatewayassociationsresponse.h"
 #include "describedirectconnectgatewayassociationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeDirectConnectGatewayAssociationsResponse
+ *
+ * @brief  Handles DirectConnect DescribeDirectConnectGatewayAssociations responses.
+ *
+ * @see    DirectConnectClient::describeDirectConnectGatewayAssociations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDirectConnectGatewayAssociationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeDirectConnectGatewayAssociationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDirectConnectGatewayAssociationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDirectConnectGatewayAssociationsRequest * DescribeDirectConnectGatewayAssociationsResponse::request() const
+{
+    Q_D(const DescribeDirectConnectGatewayAssociationsResponse);
+    return static_cast<const DescribeDirectConnectGatewayAssociationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeDirectConnectGatewayAssociations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDirectConnectGatewayAssociationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDirectConnectGatewayAssociationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDirectConnectGatewayAssociationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDirectConnectGatewayAssociationsResponse instance.
+ */
+DescribeDirectConnectGatewayAssociationsResponsePrivate::DescribeDirectConnectGatewayAssociationsResponsePrivate(
+    DescribeDirectConnectGatewayAssociationsQueueResponse * const q) : DescribeDirectConnectGatewayAssociationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeDirectConnectGatewayAssociationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDirectConnectGatewayAssociationsResponsePrivate::DescribeDirectConnectGatewayAssociationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDirectConnectGatewayAssociationsResponse"));
+    /// @todo
+}

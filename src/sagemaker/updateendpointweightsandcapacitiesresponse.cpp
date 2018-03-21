@@ -19,3 +19,85 @@
 
 #include "updateendpointweightsandcapacitiesresponse.h"
 #include "updateendpointweightsandcapacitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  UpdateEndpointWeightsAndCapacitiesResponse
+ *
+ * @brief  Handles SageMaker UpdateEndpointWeightsAndCapacities responses.
+ *
+ * @see    SageMakerClient::updateEndpointWeightsAndCapacities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEndpointWeightsAndCapacitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new UpdateEndpointWeightsAndCapacitiesResponsePrivate(this), parent)
+{
+    setRequest(new UpdateEndpointWeightsAndCapacitiesRequest(request));
+    setReply(reply);
+}
+
+const UpdateEndpointWeightsAndCapacitiesRequest * UpdateEndpointWeightsAndCapacitiesResponse::request() const
+{
+    Q_D(const UpdateEndpointWeightsAndCapacitiesResponse);
+    return static_cast<const UpdateEndpointWeightsAndCapacitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker UpdateEndpointWeightsAndCapacities response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateEndpointWeightsAndCapacitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEndpointWeightsAndCapacitiesResponsePrivate
+ *
+ * @brief  Private implementation for UpdateEndpointWeightsAndCapacitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateEndpointWeightsAndCapacitiesResponse instance.
+ */
+UpdateEndpointWeightsAndCapacitiesResponsePrivate::UpdateEndpointWeightsAndCapacitiesResponsePrivate(
+    UpdateEndpointWeightsAndCapacitiesQueueResponse * const q) : UpdateEndpointWeightsAndCapacitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker UpdateEndpointWeightsAndCapacitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateEndpointWeightsAndCapacitiesResponsePrivate::UpdateEndpointWeightsAndCapacitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointWeightsAndCapacitiesResponse"));
+    /// @todo
+}

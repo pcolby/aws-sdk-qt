@@ -19,3 +19,85 @@
 
 #include "setqueueattributesresponse.h"
 #include "setqueueattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  SetQueueAttributesResponse
+ *
+ * @brief  Handles SQS SetQueueAttributes responses.
+ *
+ * @see    SQSClient::setQueueAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetQueueAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new SetQueueAttributesResponsePrivate(this), parent)
+{
+    setRequest(new SetQueueAttributesRequest(request));
+    setReply(reply);
+}
+
+const SetQueueAttributesRequest * SetQueueAttributesResponse::request() const
+{
+    Q_D(const SetQueueAttributesResponse);
+    return static_cast<const SetQueueAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS SetQueueAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetQueueAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetQueueAttributesResponsePrivate
+ *
+ * @brief  Private implementation for SetQueueAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetQueueAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetQueueAttributesResponse instance.
+ */
+SetQueueAttributesResponsePrivate::SetQueueAttributesResponsePrivate(
+    SetQueueAttributesQueueResponse * const q) : SetQueueAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS SetQueueAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetQueueAttributesResponsePrivate::SetQueueAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetQueueAttributesResponse"));
+    /// @todo
+}

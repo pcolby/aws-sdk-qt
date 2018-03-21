@@ -19,3 +19,85 @@
 
 #include "adminlistuserautheventsresponse.h"
 #include "adminlistuserautheventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminListUserAuthEventsResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminListUserAuthEvents responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminListUserAuthEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminListUserAuthEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminListUserAuthEventsResponsePrivate(this), parent)
+{
+    setRequest(new AdminListUserAuthEventsRequest(request));
+    setReply(reply);
+}
+
+const AdminListUserAuthEventsRequest * AdminListUserAuthEventsResponse::request() const
+{
+    Q_D(const AdminListUserAuthEventsResponse);
+    return static_cast<const AdminListUserAuthEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminListUserAuthEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminListUserAuthEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminListUserAuthEventsResponsePrivate
+ *
+ * @brief  Private implementation for AdminListUserAuthEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListUserAuthEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminListUserAuthEventsResponse instance.
+ */
+AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponsePrivate(
+    AdminListUserAuthEventsQueueResponse * const q) : AdminListUserAuthEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminListUserAuthEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminListUserAuthEventsResponse"));
+    /// @todo
+}

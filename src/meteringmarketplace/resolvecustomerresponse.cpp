@@ -19,3 +19,85 @@
 
 #include "resolvecustomerresponse.h"
 #include "resolvecustomerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MarketplaceMetering {
+
+/**
+ * @class  ResolveCustomerResponse
+ *
+ * @brief  Handles MarketplaceMetering ResolveCustomer responses.
+ *
+ * @see    MarketplaceMeteringClient::resolveCustomer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResolveCustomerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MarketplaceMeteringResponse(new ResolveCustomerResponsePrivate(this), parent)
+{
+    setRequest(new ResolveCustomerRequest(request));
+    setReply(reply);
+}
+
+const ResolveCustomerRequest * ResolveCustomerResponse::request() const
+{
+    Q_D(const ResolveCustomerResponse);
+    return static_cast<const ResolveCustomerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MarketplaceMetering ResolveCustomer response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResolveCustomerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResolveCustomerResponsePrivate
+ *
+ * @brief  Private implementation for ResolveCustomerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResolveCustomerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResolveCustomerResponse instance.
+ */
+ResolveCustomerResponsePrivate::ResolveCustomerResponsePrivate(
+    ResolveCustomerQueueResponse * const q) : ResolveCustomerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MarketplaceMetering ResolveCustomerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResolveCustomerResponsePrivate::ResolveCustomerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResolveCustomerResponse"));
+    /// @todo
+}

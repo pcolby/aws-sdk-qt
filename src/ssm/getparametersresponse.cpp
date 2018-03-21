@@ -19,3 +19,85 @@
 
 #include "getparametersresponse.h"
 #include "getparametersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetParametersResponse
+ *
+ * @brief  Handles SSM GetParameters responses.
+ *
+ * @see    SSMClient::getParameters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetParametersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetParametersResponsePrivate(this), parent)
+{
+    setRequest(new GetParametersRequest(request));
+    setReply(reply);
+}
+
+const GetParametersRequest * GetParametersResponse::request() const
+{
+    Q_D(const GetParametersResponse);
+    return static_cast<const GetParametersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetParameters response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetParametersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetParametersResponsePrivate
+ *
+ * @brief  Private implementation for GetParametersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetParametersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetParametersResponse instance.
+ */
+GetParametersResponsePrivate::GetParametersResponsePrivate(
+    GetParametersQueueResponse * const q) : GetParametersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetParametersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetParametersResponsePrivate::GetParametersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetParametersResponse"));
+    /// @todo
+}

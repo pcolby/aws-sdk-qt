@@ -19,3 +19,85 @@
 
 #include "createcacheclusterresponse.h"
 #include "createcacheclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  CreateCacheClusterResponse
+ *
+ * @brief  Handles ElastiCache CreateCacheCluster responses.
+ *
+ * @see    ElastiCacheClient::createCacheCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCacheClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new CreateCacheClusterResponsePrivate(this), parent)
+{
+    setRequest(new CreateCacheClusterRequest(request));
+    setReply(reply);
+}
+
+const CreateCacheClusterRequest * CreateCacheClusterResponse::request() const
+{
+    Q_D(const CreateCacheClusterResponse);
+    return static_cast<const CreateCacheClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache CreateCacheCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCacheClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCacheClusterResponsePrivate
+ *
+ * @brief  Private implementation for CreateCacheClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCacheClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCacheClusterResponse instance.
+ */
+CreateCacheClusterResponsePrivate::CreateCacheClusterResponsePrivate(
+    CreateCacheClusterQueueResponse * const q) : CreateCacheClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache CreateCacheClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCacheClusterResponsePrivate::CreateCacheClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCacheClusterResponse"));
+    /// @todo
+}

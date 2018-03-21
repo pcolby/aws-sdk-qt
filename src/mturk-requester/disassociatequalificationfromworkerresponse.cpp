@@ -19,3 +19,85 @@
 
 #include "disassociatequalificationfromworkerresponse.h"
 #include "disassociatequalificationfromworkerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  DisassociateQualificationFromWorkerResponse
+ *
+ * @brief  Handles MTurk DisassociateQualificationFromWorker responses.
+ *
+ * @see    MTurkClient::disassociateQualificationFromWorker
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateQualificationFromWorkerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new DisassociateQualificationFromWorkerResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateQualificationFromWorkerRequest(request));
+    setReply(reply);
+}
+
+const DisassociateQualificationFromWorkerRequest * DisassociateQualificationFromWorkerResponse::request() const
+{
+    Q_D(const DisassociateQualificationFromWorkerResponse);
+    return static_cast<const DisassociateQualificationFromWorkerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk DisassociateQualificationFromWorker response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateQualificationFromWorkerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateQualificationFromWorkerResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateQualificationFromWorkerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateQualificationFromWorkerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateQualificationFromWorkerResponse instance.
+ */
+DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFromWorkerResponsePrivate(
+    DisassociateQualificationFromWorkerQueueResponse * const q) : DisassociateQualificationFromWorkerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk DisassociateQualificationFromWorkerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFromWorkerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateQualificationFromWorkerResponse"));
+    /// @todo
+}

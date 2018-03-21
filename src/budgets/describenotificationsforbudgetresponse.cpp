@@ -19,3 +19,85 @@
 
 #include "describenotificationsforbudgetresponse.h"
 #include "describenotificationsforbudgetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DescribeNotificationsForBudgetResponse
+ *
+ * @brief  Handles Budgets DescribeNotificationsForBudget responses.
+ *
+ * @see    BudgetsClient::describeNotificationsForBudget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNotificationsForBudgetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new DescribeNotificationsForBudgetResponsePrivate(this), parent)
+{
+    setRequest(new DescribeNotificationsForBudgetRequest(request));
+    setReply(reply);
+}
+
+const DescribeNotificationsForBudgetRequest * DescribeNotificationsForBudgetResponse::request() const
+{
+    Q_D(const DescribeNotificationsForBudgetResponse);
+    return static_cast<const DescribeNotificationsForBudgetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets DescribeNotificationsForBudget response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeNotificationsForBudgetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNotificationsForBudgetResponsePrivate
+ *
+ * @brief  Private implementation for DescribeNotificationsForBudgetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotificationsForBudgetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeNotificationsForBudgetResponse instance.
+ */
+DescribeNotificationsForBudgetResponsePrivate::DescribeNotificationsForBudgetResponsePrivate(
+    DescribeNotificationsForBudgetQueueResponse * const q) : DescribeNotificationsForBudgetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets DescribeNotificationsForBudgetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeNotificationsForBudgetResponsePrivate::DescribeNotificationsForBudgetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeNotificationsForBudgetResponse"));
+    /// @todo
+}

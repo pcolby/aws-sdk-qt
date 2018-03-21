@@ -19,3 +19,85 @@
 
 #include "listrepositoriesresponse.h"
 #include "listrepositoriesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  ListRepositoriesResponse
+ *
+ * @brief  Handles CodeCommit ListRepositories responses.
+ *
+ * @see    CodeCommitClient::listRepositories
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRepositoriesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new ListRepositoriesResponsePrivate(this), parent)
+{
+    setRequest(new ListRepositoriesRequest(request));
+    setReply(reply);
+}
+
+const ListRepositoriesRequest * ListRepositoriesResponse::request() const
+{
+    Q_D(const ListRepositoriesResponse);
+    return static_cast<const ListRepositoriesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit ListRepositories response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRepositoriesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRepositoriesResponsePrivate
+ *
+ * @brief  Private implementation for ListRepositoriesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRepositoriesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRepositoriesResponse instance.
+ */
+ListRepositoriesResponsePrivate::ListRepositoriesResponsePrivate(
+    ListRepositoriesQueueResponse * const q) : ListRepositoriesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit ListRepositoriesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRepositoriesResponsePrivate::ListRepositoriesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRepositoriesResponse"));
+    /// @todo
+}

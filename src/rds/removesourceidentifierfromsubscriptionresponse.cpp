@@ -19,3 +19,85 @@
 
 #include "removesourceidentifierfromsubscriptionresponse.h"
 #include "removesourceidentifierfromsubscriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  RemoveSourceIdentifierFromSubscriptionResponse
+ *
+ * @brief  Handles RDS RemoveSourceIdentifierFromSubscription responses.
+ *
+ * @see    RDSClient::removeSourceIdentifierFromSubscription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveSourceIdentifierFromSubscriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new RemoveSourceIdentifierFromSubscriptionResponsePrivate(this), parent)
+{
+    setRequest(new RemoveSourceIdentifierFromSubscriptionRequest(request));
+    setReply(reply);
+}
+
+const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFromSubscriptionResponse::request() const
+{
+    Q_D(const RemoveSourceIdentifierFromSubscriptionResponse);
+    return static_cast<const RemoveSourceIdentifierFromSubscriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS RemoveSourceIdentifierFromSubscription response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveSourceIdentifierFromSubscriptionResponsePrivate
+ *
+ * @brief  Private implementation for RemoveSourceIdentifierFromSubscriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveSourceIdentifierFromSubscriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveSourceIdentifierFromSubscriptionResponse instance.
+ */
+RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFromSubscriptionResponsePrivate(
+    RemoveSourceIdentifierFromSubscriptionQueueResponse * const q) : RemoveSourceIdentifierFromSubscriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS RemoveSourceIdentifierFromSubscriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveSourceIdentifierFromSubscriptionResponse"));
+    /// @todo
+}

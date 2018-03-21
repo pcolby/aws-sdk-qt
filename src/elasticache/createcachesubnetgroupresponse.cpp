@@ -19,3 +19,85 @@
 
 #include "createcachesubnetgroupresponse.h"
 #include "createcachesubnetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  CreateCacheSubnetGroupResponse
+ *
+ * @brief  Handles ElastiCache CreateCacheSubnetGroup responses.
+ *
+ * @see    ElastiCacheClient::createCacheSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCacheSubnetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new CreateCacheSubnetGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateCacheSubnetGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateCacheSubnetGroupRequest * CreateCacheSubnetGroupResponse::request() const
+{
+    Q_D(const CreateCacheSubnetGroupResponse);
+    return static_cast<const CreateCacheSubnetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache CreateCacheSubnetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCacheSubnetGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateCacheSubnetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCacheSubnetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCacheSubnetGroupResponse instance.
+ */
+CreateCacheSubnetGroupResponsePrivate::CreateCacheSubnetGroupResponsePrivate(
+    CreateCacheSubnetGroupQueueResponse * const q) : CreateCacheSubnetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache CreateCacheSubnetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCacheSubnetGroupResponsePrivate::CreateCacheSubnetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCacheSubnetGroupResponse"));
+    /// @todo
+}

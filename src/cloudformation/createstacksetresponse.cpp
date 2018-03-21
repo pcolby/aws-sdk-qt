@@ -19,3 +19,85 @@
 
 #include "createstacksetresponse.h"
 #include "createstacksetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  CreateStackSetResponse
+ *
+ * @brief  Handles CloudFormation CreateStackSet responses.
+ *
+ * @see    CloudFormationClient::createStackSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStackSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new CreateStackSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateStackSetRequest(request));
+    setReply(reply);
+}
+
+const CreateStackSetRequest * CreateStackSetResponse::request() const
+{
+    Q_D(const CreateStackSetResponse);
+    return static_cast<const CreateStackSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation CreateStackSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStackSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStackSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateStackSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStackSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStackSetResponse instance.
+ */
+CreateStackSetResponsePrivate::CreateStackSetResponsePrivate(
+    CreateStackSetQueueResponse * const q) : CreateStackSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation CreateStackSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStackSetResponsePrivate::CreateStackSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStackSetResponse"));
+    /// @todo
+}

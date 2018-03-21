@@ -19,3 +19,85 @@
 
 #include "getmodelsresponse.h"
 #include "getmodelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetModelsResponse
+ *
+ * @brief  Handles APIGateway GetModels responses.
+ *
+ * @see    APIGatewayClient::getModels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetModelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetModelsResponsePrivate(this), parent)
+{
+    setRequest(new GetModelsRequest(request));
+    setReply(reply);
+}
+
+const GetModelsRequest * GetModelsResponse::request() const
+{
+    Q_D(const GetModelsResponse);
+    return static_cast<const GetModelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetModels response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetModelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetModelsResponsePrivate
+ *
+ * @brief  Private implementation for GetModelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetModelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetModelsResponse instance.
+ */
+GetModelsResponsePrivate::GetModelsResponsePrivate(
+    GetModelsQueueResponse * const q) : GetModelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetModelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetModelsResponsePrivate::GetModelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetModelsResponse"));
+    /// @todo
+}

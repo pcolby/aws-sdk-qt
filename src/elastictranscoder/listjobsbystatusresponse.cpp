@@ -19,3 +19,85 @@
 
 #include "listjobsbystatusresponse.h"
 #include "listjobsbystatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  ListJobsByStatusResponse
+ *
+ * @brief  Handles ElasticTranscoder ListJobsByStatus responses.
+ *
+ * @see    ElasticTranscoderClient::listJobsByStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobsByStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticTranscoderResponse(new ListJobsByStatusResponsePrivate(this), parent)
+{
+    setRequest(new ListJobsByStatusRequest(request));
+    setReply(reply);
+}
+
+const ListJobsByStatusRequest * ListJobsByStatusResponse::request() const
+{
+    Q_D(const ListJobsByStatusResponse);
+    return static_cast<const ListJobsByStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticTranscoder ListJobsByStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListJobsByStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobsByStatusResponsePrivate
+ *
+ * @brief  Private implementation for ListJobsByStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobsByStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListJobsByStatusResponse instance.
+ */
+ListJobsByStatusResponsePrivate::ListJobsByStatusResponsePrivate(
+    ListJobsByStatusQueueResponse * const q) : ListJobsByStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticTranscoder ListJobsByStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListJobsByStatusResponsePrivate::ListJobsByStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListJobsByStatusResponse"));
+    /// @todo
+}

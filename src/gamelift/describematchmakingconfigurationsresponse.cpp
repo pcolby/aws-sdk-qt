@@ -19,3 +19,85 @@
 
 #include "describematchmakingconfigurationsresponse.h"
 #include "describematchmakingconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeMatchmakingConfigurationsResponse
+ *
+ * @brief  Handles GameLift DescribeMatchmakingConfigurations responses.
+ *
+ * @see    GameLiftClient::describeMatchmakingConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMatchmakingConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeMatchmakingConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMatchmakingConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeMatchmakingConfigurationsRequest * DescribeMatchmakingConfigurationsResponse::request() const
+{
+    Q_D(const DescribeMatchmakingConfigurationsResponse);
+    return static_cast<const DescribeMatchmakingConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeMatchmakingConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMatchmakingConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMatchmakingConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMatchmakingConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMatchmakingConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMatchmakingConfigurationsResponse instance.
+ */
+DescribeMatchmakingConfigurationsResponsePrivate::DescribeMatchmakingConfigurationsResponsePrivate(
+    DescribeMatchmakingConfigurationsQueueResponse * const q) : DescribeMatchmakingConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeMatchmakingConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMatchmakingConfigurationsResponsePrivate::DescribeMatchmakingConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMatchmakingConfigurationsResponse"));
+    /// @todo
+}

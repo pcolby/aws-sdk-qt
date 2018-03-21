@@ -19,3 +19,85 @@
 
 #include "describerefreshschemasstatusresponse.h"
 #include "describerefreshschemasstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeRefreshSchemasStatusResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeRefreshSchemasStatus responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeRefreshSchemasStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRefreshSchemasStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeRefreshSchemasStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRefreshSchemasStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeRefreshSchemasStatusRequest * DescribeRefreshSchemasStatusResponse::request() const
+{
+    Q_D(const DescribeRefreshSchemasStatusResponse);
+    return static_cast<const DescribeRefreshSchemasStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeRefreshSchemasStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRefreshSchemasStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRefreshSchemasStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRefreshSchemasStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRefreshSchemasStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRefreshSchemasStatusResponse instance.
+ */
+DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusResponsePrivate(
+    DescribeRefreshSchemasStatusQueueResponse * const q) : DescribeRefreshSchemasStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeRefreshSchemasStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRefreshSchemasStatusResponse"));
+    /// @todo
+}

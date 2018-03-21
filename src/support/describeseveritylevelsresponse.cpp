@@ -19,3 +19,85 @@
 
 #include "describeseveritylevelsresponse.h"
 #include "describeseveritylevelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  DescribeSeverityLevelsResponse
+ *
+ * @brief  Handles Support DescribeSeverityLevels responses.
+ *
+ * @see    SupportClient::describeSeverityLevels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSeverityLevelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new DescribeSeverityLevelsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSeverityLevelsRequest(request));
+    setReply(reply);
+}
+
+const DescribeSeverityLevelsRequest * DescribeSeverityLevelsResponse::request() const
+{
+    Q_D(const DescribeSeverityLevelsResponse);
+    return static_cast<const DescribeSeverityLevelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support DescribeSeverityLevels response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSeverityLevelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSeverityLevelsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSeverityLevelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSeverityLevelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSeverityLevelsResponse instance.
+ */
+DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponsePrivate(
+    DescribeSeverityLevelsQueueResponse * const q) : DescribeSeverityLevelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support DescribeSeverityLevelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSeverityLevelsResponse"));
+    /// @todo
+}

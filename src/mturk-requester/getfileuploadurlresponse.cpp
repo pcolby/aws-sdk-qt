@@ -19,3 +19,85 @@
 
 #include "getfileuploadurlresponse.h"
 #include "getfileuploadurlresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  GetFileUploadURLResponse
+ *
+ * @brief  Handles MTurk GetFileUploadURL responses.
+ *
+ * @see    MTurkClient::getFileUploadURL
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFileUploadURLResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new GetFileUploadURLResponsePrivate(this), parent)
+{
+    setRequest(new GetFileUploadURLRequest(request));
+    setReply(reply);
+}
+
+const GetFileUploadURLRequest * GetFileUploadURLResponse::request() const
+{
+    Q_D(const GetFileUploadURLResponse);
+    return static_cast<const GetFileUploadURLRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk GetFileUploadURL response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFileUploadURLResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFileUploadURLResponsePrivate
+ *
+ * @brief  Private implementation for GetFileUploadURLResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFileUploadURLResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFileUploadURLResponse instance.
+ */
+GetFileUploadURLResponsePrivate::GetFileUploadURLResponsePrivate(
+    GetFileUploadURLQueueResponse * const q) : GetFileUploadURLPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk GetFileUploadURLResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFileUploadURLResponsePrivate::GetFileUploadURLResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFileUploadURLResponse"));
+    /// @todo
+}

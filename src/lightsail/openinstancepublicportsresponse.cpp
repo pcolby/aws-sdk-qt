@@ -19,3 +19,85 @@
 
 #include "openinstancepublicportsresponse.h"
 #include "openinstancepublicportsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  OpenInstancePublicPortsResponse
+ *
+ * @brief  Handles Lightsail OpenInstancePublicPorts responses.
+ *
+ * @see    LightsailClient::openInstancePublicPorts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+OpenInstancePublicPortsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new OpenInstancePublicPortsResponsePrivate(this), parent)
+{
+    setRequest(new OpenInstancePublicPortsRequest(request));
+    setReply(reply);
+}
+
+const OpenInstancePublicPortsRequest * OpenInstancePublicPortsResponse::request() const
+{
+    Q_D(const OpenInstancePublicPortsResponse);
+    return static_cast<const OpenInstancePublicPortsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail OpenInstancePublicPorts response.
+ *
+ * @param  response  Response to parse.
+ */
+void OpenInstancePublicPortsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  OpenInstancePublicPortsResponsePrivate
+ *
+ * @brief  Private implementation for OpenInstancePublicPortsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new OpenInstancePublicPortsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public OpenInstancePublicPortsResponse instance.
+ */
+OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponsePrivate(
+    OpenInstancePublicPortsQueueResponse * const q) : OpenInstancePublicPortsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail OpenInstancePublicPortsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("OpenInstancePublicPortsResponse"));
+    /// @todo
+}

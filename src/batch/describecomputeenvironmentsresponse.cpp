@@ -19,3 +19,85 @@
 
 #include "describecomputeenvironmentsresponse.h"
 #include "describecomputeenvironmentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  DescribeComputeEnvironmentsResponse
+ *
+ * @brief  Handles Batch DescribeComputeEnvironments responses.
+ *
+ * @see    BatchClient::describeComputeEnvironments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeComputeEnvironmentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new DescribeComputeEnvironmentsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeComputeEnvironmentsRequest(request));
+    setReply(reply);
+}
+
+const DescribeComputeEnvironmentsRequest * DescribeComputeEnvironmentsResponse::request() const
+{
+    Q_D(const DescribeComputeEnvironmentsResponse);
+    return static_cast<const DescribeComputeEnvironmentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch DescribeComputeEnvironments response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeComputeEnvironmentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeComputeEnvironmentsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeComputeEnvironmentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeComputeEnvironmentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeComputeEnvironmentsResponse instance.
+ */
+DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponsePrivate(
+    DescribeComputeEnvironmentsQueueResponse * const q) : DescribeComputeEnvironmentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch DescribeComputeEnvironmentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeComputeEnvironmentsResponse"));
+    /// @todo
+}

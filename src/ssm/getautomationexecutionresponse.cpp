@@ -19,3 +19,85 @@
 
 #include "getautomationexecutionresponse.h"
 #include "getautomationexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetAutomationExecutionResponse
+ *
+ * @brief  Handles SSM GetAutomationExecution responses.
+ *
+ * @see    SSMClient::getAutomationExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAutomationExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetAutomationExecutionResponsePrivate(this), parent)
+{
+    setRequest(new GetAutomationExecutionRequest(request));
+    setReply(reply);
+}
+
+const GetAutomationExecutionRequest * GetAutomationExecutionResponse::request() const
+{
+    Q_D(const GetAutomationExecutionResponse);
+    return static_cast<const GetAutomationExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetAutomationExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAutomationExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAutomationExecutionResponsePrivate
+ *
+ * @brief  Private implementation for GetAutomationExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAutomationExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAutomationExecutionResponse instance.
+ */
+GetAutomationExecutionResponsePrivate::GetAutomationExecutionResponsePrivate(
+    GetAutomationExecutionQueueResponse * const q) : GetAutomationExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetAutomationExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAutomationExecutionResponsePrivate::GetAutomationExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAutomationExecutionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putintentresponse.h"
 #include "putintentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  PutIntentResponse
+ *
+ * @brief  Handles LexModelBuildingService PutIntent responses.
+ *
+ * @see    LexModelBuildingServiceClient::putIntent
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutIntentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new PutIntentResponsePrivate(this), parent)
+{
+    setRequest(new PutIntentRequest(request));
+    setReply(reply);
+}
+
+const PutIntentRequest * PutIntentResponse::request() const
+{
+    Q_D(const PutIntentResponse);
+    return static_cast<const PutIntentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService PutIntent response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutIntentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutIntentResponsePrivate
+ *
+ * @brief  Private implementation for PutIntentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutIntentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutIntentResponse instance.
+ */
+PutIntentResponsePrivate::PutIntentResponsePrivate(
+    PutIntentQueueResponse * const q) : PutIntentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService PutIntentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutIntentResponsePrivate::PutIntentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutIntentResponse"));
+    /// @todo
+}

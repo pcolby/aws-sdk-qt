@@ -19,3 +19,85 @@
 
 #include "setlocalconsolepasswordresponse.h"
 #include "setlocalconsolepasswordresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  SetLocalConsolePasswordResponse
+ *
+ * @brief  Handles StorageGateway SetLocalConsolePassword responses.
+ *
+ * @see    StorageGatewayClient::setLocalConsolePassword
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLocalConsolePasswordResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new SetLocalConsolePasswordResponsePrivate(this), parent)
+{
+    setRequest(new SetLocalConsolePasswordRequest(request));
+    setReply(reply);
+}
+
+const SetLocalConsolePasswordRequest * SetLocalConsolePasswordResponse::request() const
+{
+    Q_D(const SetLocalConsolePasswordResponse);
+    return static_cast<const SetLocalConsolePasswordRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway SetLocalConsolePassword response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetLocalConsolePasswordResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLocalConsolePasswordResponsePrivate
+ *
+ * @brief  Private implementation for SetLocalConsolePasswordResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLocalConsolePasswordResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetLocalConsolePasswordResponse instance.
+ */
+SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponsePrivate(
+    SetLocalConsolePasswordQueueResponse * const q) : SetLocalConsolePasswordPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway SetLocalConsolePasswordResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetLocalConsolePasswordResponse"));
+    /// @todo
+}

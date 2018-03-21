@@ -19,3 +19,85 @@
 
 #include "deleteeventsourcemappingresponse.h"
 #include "deleteeventsourcemappingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  DeleteEventSourceMappingResponse
+ *
+ * @brief  Handles Lambda DeleteEventSourceMapping responses.
+ *
+ * @see    LambdaClient::deleteEventSourceMapping
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEventSourceMappingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new DeleteEventSourceMappingResponsePrivate(this), parent)
+{
+    setRequest(new DeleteEventSourceMappingRequest(request));
+    setReply(reply);
+}
+
+const DeleteEventSourceMappingRequest * DeleteEventSourceMappingResponse::request() const
+{
+    Q_D(const DeleteEventSourceMappingResponse);
+    return static_cast<const DeleteEventSourceMappingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda DeleteEventSourceMapping response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteEventSourceMappingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEventSourceMappingResponsePrivate
+ *
+ * @brief  Private implementation for DeleteEventSourceMappingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEventSourceMappingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteEventSourceMappingResponse instance.
+ */
+DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponsePrivate(
+    DeleteEventSourceMappingQueueResponse * const q) : DeleteEventSourceMappingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda DeleteEventSourceMappingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteEventSourceMappingResponse"));
+    /// @todo
+}

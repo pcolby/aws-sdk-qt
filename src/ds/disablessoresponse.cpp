@@ -19,3 +19,85 @@
 
 #include "disablessoresponse.h"
 #include "disablessoresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DisableSsoResponse
+ *
+ * @brief  Handles DirectoryService DisableSso responses.
+ *
+ * @see    DirectoryServiceClient::disableSso
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableSsoResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new DisableSsoResponsePrivate(this), parent)
+{
+    setRequest(new DisableSsoRequest(request));
+    setReply(reply);
+}
+
+const DisableSsoRequest * DisableSsoResponse::request() const
+{
+    Q_D(const DisableSsoResponse);
+    return static_cast<const DisableSsoRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService DisableSso response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableSsoResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableSsoResponsePrivate
+ *
+ * @brief  Private implementation for DisableSsoResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableSsoResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableSsoResponse instance.
+ */
+DisableSsoResponsePrivate::DisableSsoResponsePrivate(
+    DisableSsoQueueResponse * const q) : DisableSsoPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService DisableSsoResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableSsoResponsePrivate::DisableSsoResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableSsoResponse"));
+    /// @todo
+}

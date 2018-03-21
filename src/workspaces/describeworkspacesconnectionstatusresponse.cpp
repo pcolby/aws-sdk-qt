@@ -19,3 +19,85 @@
 
 #include "describeworkspacesconnectionstatusresponse.h"
 #include "describeworkspacesconnectionstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  DescribeWorkspacesConnectionStatusResponse
+ *
+ * @brief  Handles WorkSpaces DescribeWorkspacesConnectionStatus responses.
+ *
+ * @see    WorkSpacesClient::describeWorkspacesConnectionStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeWorkspacesConnectionStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new DescribeWorkspacesConnectionStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeWorkspacesConnectionStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeWorkspacesConnectionStatusRequest * DescribeWorkspacesConnectionStatusResponse::request() const
+{
+    Q_D(const DescribeWorkspacesConnectionStatusResponse);
+    return static_cast<const DescribeWorkspacesConnectionStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces DescribeWorkspacesConnectionStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeWorkspacesConnectionStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeWorkspacesConnectionStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeWorkspacesConnectionStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkspacesConnectionStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeWorkspacesConnectionStatusResponse instance.
+ */
+DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnectionStatusResponsePrivate(
+    DescribeWorkspacesConnectionStatusQueueResponse * const q) : DescribeWorkspacesConnectionStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces DescribeWorkspacesConnectionStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnectionStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspacesConnectionStatusResponse"));
+    /// @todo
+}

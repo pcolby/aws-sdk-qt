@@ -19,3 +19,85 @@
 
 #include "gethostreservationpurchasepreviewresponse.h"
 #include "gethostreservationpurchasepreviewresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  GetHostReservationPurchasePreviewResponse
+ *
+ * @brief  Handles EC2 GetHostReservationPurchasePreview responses.
+ *
+ * @see    EC2Client::getHostReservationPurchasePreview
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHostReservationPurchasePreviewResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new GetHostReservationPurchasePreviewResponsePrivate(this), parent)
+{
+    setRequest(new GetHostReservationPurchasePreviewRequest(request));
+    setReply(reply);
+}
+
+const GetHostReservationPurchasePreviewRequest * GetHostReservationPurchasePreviewResponse::request() const
+{
+    Q_D(const GetHostReservationPurchasePreviewResponse);
+    return static_cast<const GetHostReservationPurchasePreviewRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 GetHostReservationPurchasePreview response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetHostReservationPurchasePreviewResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHostReservationPurchasePreviewResponsePrivate
+ *
+ * @brief  Private implementation for GetHostReservationPurchasePreviewResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostReservationPurchasePreviewResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetHostReservationPurchasePreviewResponse instance.
+ */
+GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePreviewResponsePrivate(
+    GetHostReservationPurchasePreviewQueueResponse * const q) : GetHostReservationPurchasePreviewPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 GetHostReservationPurchasePreviewResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePreviewResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetHostReservationPurchasePreviewResponse"));
+    /// @todo
+}

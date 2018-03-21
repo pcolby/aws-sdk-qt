@@ -19,3 +19,85 @@
 
 #include "describejobsresponse.h"
 #include "describejobsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  DescribeJobsResponse
+ *
+ * @brief  Handles Batch DescribeJobs responses.
+ *
+ * @see    BatchClient::describeJobs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeJobsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new DescribeJobsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeJobsRequest(request));
+    setReply(reply);
+}
+
+const DescribeJobsRequest * DescribeJobsResponse::request() const
+{
+    Q_D(const DescribeJobsResponse);
+    return static_cast<const DescribeJobsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch DescribeJobs response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeJobsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeJobsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeJobsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeJobsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeJobsResponse instance.
+ */
+DescribeJobsResponsePrivate::DescribeJobsResponsePrivate(
+    DescribeJobsQueueResponse * const q) : DescribeJobsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch DescribeJobsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeJobsResponsePrivate::DescribeJobsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeJobsResponse"));
+    /// @todo
+}

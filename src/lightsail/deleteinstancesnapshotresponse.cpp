@@ -19,3 +19,85 @@
 
 #include "deleteinstancesnapshotresponse.h"
 #include "deleteinstancesnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteInstanceSnapshotResponse
+ *
+ * @brief  Handles Lightsail DeleteInstanceSnapshot responses.
+ *
+ * @see    LightsailClient::deleteInstanceSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInstanceSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DeleteInstanceSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new DeleteInstanceSnapshotRequest(request));
+    setReply(reply);
+}
+
+const DeleteInstanceSnapshotRequest * DeleteInstanceSnapshotResponse::request() const
+{
+    Q_D(const DeleteInstanceSnapshotResponse);
+    return static_cast<const DeleteInstanceSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DeleteInstanceSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteInstanceSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInstanceSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for DeleteInstanceSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInstanceSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteInstanceSnapshotResponse instance.
+ */
+DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponsePrivate(
+    DeleteInstanceSnapshotQueueResponse * const q) : DeleteInstanceSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DeleteInstanceSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceSnapshotResponse"));
+    /// @todo
+}

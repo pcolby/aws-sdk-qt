@@ -19,3 +19,85 @@
 
 #include "listremoteaccesssessionsresponse.h"
 #include "listremoteaccesssessionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListRemoteAccessSessionsResponse
+ *
+ * @brief  Handles DeviceFarm ListRemoteAccessSessions responses.
+ *
+ * @see    DeviceFarmClient::listRemoteAccessSessions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRemoteAccessSessionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new ListRemoteAccessSessionsResponsePrivate(this), parent)
+{
+    setRequest(new ListRemoteAccessSessionsRequest(request));
+    setReply(reply);
+}
+
+const ListRemoteAccessSessionsRequest * ListRemoteAccessSessionsResponse::request() const
+{
+    Q_D(const ListRemoteAccessSessionsResponse);
+    return static_cast<const ListRemoteAccessSessionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm ListRemoteAccessSessions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRemoteAccessSessionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRemoteAccessSessionsResponsePrivate
+ *
+ * @brief  Private implementation for ListRemoteAccessSessionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRemoteAccessSessionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRemoteAccessSessionsResponse instance.
+ */
+ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponsePrivate(
+    ListRemoteAccessSessionsQueueResponse * const q) : ListRemoteAccessSessionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm ListRemoteAccessSessionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRemoteAccessSessionsResponse"));
+    /// @todo
+}

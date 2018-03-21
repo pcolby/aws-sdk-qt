@@ -19,3 +19,85 @@
 
 #include "createdirectconnectgatewayassociationresponse.h"
 #include "createdirectconnectgatewayassociationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateDirectConnectGatewayAssociationResponse
+ *
+ * @brief  Handles DirectConnect CreateDirectConnectGatewayAssociation responses.
+ *
+ * @see    DirectConnectClient::createDirectConnectGatewayAssociation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDirectConnectGatewayAssociationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new CreateDirectConnectGatewayAssociationResponsePrivate(this), parent)
+{
+    setRequest(new CreateDirectConnectGatewayAssociationRequest(request));
+    setReply(reply);
+}
+
+const CreateDirectConnectGatewayAssociationRequest * CreateDirectConnectGatewayAssociationResponse::request() const
+{
+    Q_D(const CreateDirectConnectGatewayAssociationResponse);
+    return static_cast<const CreateDirectConnectGatewayAssociationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect CreateDirectConnectGatewayAssociation response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDirectConnectGatewayAssociationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDirectConnectGatewayAssociationResponsePrivate
+ *
+ * @brief  Private implementation for CreateDirectConnectGatewayAssociationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectConnectGatewayAssociationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDirectConnectGatewayAssociationResponse instance.
+ */
+CreateDirectConnectGatewayAssociationResponsePrivate::CreateDirectConnectGatewayAssociationResponsePrivate(
+    CreateDirectConnectGatewayAssociationQueueResponse * const q) : CreateDirectConnectGatewayAssociationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect CreateDirectConnectGatewayAssociationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDirectConnectGatewayAssociationResponsePrivate::CreateDirectConnectGatewayAssociationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDirectConnectGatewayAssociationResponse"));
+    /// @todo
+}

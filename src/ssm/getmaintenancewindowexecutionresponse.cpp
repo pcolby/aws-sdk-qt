@@ -19,3 +19,85 @@
 
 #include "getmaintenancewindowexecutionresponse.h"
 #include "getmaintenancewindowexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetMaintenanceWindowExecutionResponse
+ *
+ * @brief  Handles SSM GetMaintenanceWindowExecution responses.
+ *
+ * @see    SSMClient::getMaintenanceWindowExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMaintenanceWindowExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetMaintenanceWindowExecutionResponsePrivate(this), parent)
+{
+    setRequest(new GetMaintenanceWindowExecutionRequest(request));
+    setReply(reply);
+}
+
+const GetMaintenanceWindowExecutionRequest * GetMaintenanceWindowExecutionResponse::request() const
+{
+    Q_D(const GetMaintenanceWindowExecutionResponse);
+    return static_cast<const GetMaintenanceWindowExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetMaintenanceWindowExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetMaintenanceWindowExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMaintenanceWindowExecutionResponsePrivate
+ *
+ * @brief  Private implementation for GetMaintenanceWindowExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMaintenanceWindowExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetMaintenanceWindowExecutionResponse instance.
+ */
+GetMaintenanceWindowExecutionResponsePrivate::GetMaintenanceWindowExecutionResponsePrivate(
+    GetMaintenanceWindowExecutionQueueResponse * const q) : GetMaintenanceWindowExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetMaintenanceWindowExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetMaintenanceWindowExecutionResponsePrivate::GetMaintenanceWindowExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetMaintenanceWindowExecutionResponse"));
+    /// @todo
+}

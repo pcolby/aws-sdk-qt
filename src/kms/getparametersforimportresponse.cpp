@@ -19,3 +19,85 @@
 
 #include "getparametersforimportresponse.h"
 #include "getparametersforimportresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  GetParametersForImportResponse
+ *
+ * @brief  Handles KMS GetParametersForImport responses.
+ *
+ * @see    KMSClient::getParametersForImport
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetParametersForImportResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new GetParametersForImportResponsePrivate(this), parent)
+{
+    setRequest(new GetParametersForImportRequest(request));
+    setReply(reply);
+}
+
+const GetParametersForImportRequest * GetParametersForImportResponse::request() const
+{
+    Q_D(const GetParametersForImportResponse);
+    return static_cast<const GetParametersForImportRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS GetParametersForImport response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetParametersForImportResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetParametersForImportResponsePrivate
+ *
+ * @brief  Private implementation for GetParametersForImportResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetParametersForImportResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetParametersForImportResponse instance.
+ */
+GetParametersForImportResponsePrivate::GetParametersForImportResponsePrivate(
+    GetParametersForImportQueueResponse * const q) : GetParametersForImportPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS GetParametersForImportResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetParametersForImportResponsePrivate::GetParametersForImportResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetParametersForImportResponse"));
+    /// @todo
+}

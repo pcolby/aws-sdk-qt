@@ -19,3 +19,85 @@
 
 #include "listsubscriptiondefinitionversionsresponse.h"
 #include "listsubscriptiondefinitionversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListSubscriptionDefinitionVersionsResponse
+ *
+ * @brief  Handles Greengrass ListSubscriptionDefinitionVersions responses.
+ *
+ * @see    GreengrassClient::listSubscriptionDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSubscriptionDefinitionVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListSubscriptionDefinitionVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListSubscriptionDefinitionVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListSubscriptionDefinitionVersionsRequest * ListSubscriptionDefinitionVersionsResponse::request() const
+{
+    Q_D(const ListSubscriptionDefinitionVersionsResponse);
+    return static_cast<const ListSubscriptionDefinitionVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListSubscriptionDefinitionVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSubscriptionDefinitionVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSubscriptionDefinitionVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListSubscriptionDefinitionVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionDefinitionVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSubscriptionDefinitionVersionsResponse instance.
+ */
+ListSubscriptionDefinitionVersionsResponsePrivate::ListSubscriptionDefinitionVersionsResponsePrivate(
+    ListSubscriptionDefinitionVersionsQueueResponse * const q) : ListSubscriptionDefinitionVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListSubscriptionDefinitionVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSubscriptionDefinitionVersionsResponsePrivate::ListSubscriptionDefinitionVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionDefinitionVersionsResponse"));
+    /// @todo
+}

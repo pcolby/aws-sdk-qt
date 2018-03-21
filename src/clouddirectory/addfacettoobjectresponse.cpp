@@ -19,3 +19,85 @@
 
 #include "addfacettoobjectresponse.h"
 #include "addfacettoobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AddFacetToObjectResponse
+ *
+ * @brief  Handles CloudDirectory AddFacetToObject responses.
+ *
+ * @see    CloudDirectoryClient::addFacetToObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddFacetToObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new AddFacetToObjectResponsePrivate(this), parent)
+{
+    setRequest(new AddFacetToObjectRequest(request));
+    setReply(reply);
+}
+
+const AddFacetToObjectRequest * AddFacetToObjectResponse::request() const
+{
+    Q_D(const AddFacetToObjectResponse);
+    return static_cast<const AddFacetToObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory AddFacetToObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddFacetToObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddFacetToObjectResponsePrivate
+ *
+ * @brief  Private implementation for AddFacetToObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddFacetToObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddFacetToObjectResponse instance.
+ */
+AddFacetToObjectResponsePrivate::AddFacetToObjectResponsePrivate(
+    AddFacetToObjectQueueResponse * const q) : AddFacetToObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory AddFacetToObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddFacetToObjectResponsePrivate::AddFacetToObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddFacetToObjectResponse"));
+    /// @todo
+}

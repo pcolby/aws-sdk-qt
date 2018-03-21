@@ -19,3 +19,85 @@
 
 #include "listinvalidationsresponse.h"
 #include "listinvalidationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  ListInvalidationsResponse
+ *
+ * @brief  Handles CloudFront ListInvalidations responses.
+ *
+ * @see    CloudFrontClient::listInvalidations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInvalidationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new ListInvalidationsResponsePrivate(this), parent)
+{
+    setRequest(new ListInvalidationsRequest(request));
+    setReply(reply);
+}
+
+const ListInvalidationsRequest * ListInvalidationsResponse::request() const
+{
+    Q_D(const ListInvalidationsResponse);
+    return static_cast<const ListInvalidationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront ListInvalidations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListInvalidationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInvalidationsResponsePrivate
+ *
+ * @brief  Private implementation for ListInvalidationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInvalidationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListInvalidationsResponse instance.
+ */
+ListInvalidationsResponsePrivate::ListInvalidationsResponsePrivate(
+    ListInvalidationsQueueResponse * const q) : ListInvalidationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront ListInvalidationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListInvalidationsResponsePrivate::ListInvalidationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListInvalidationsResponse"));
+    /// @todo
+}

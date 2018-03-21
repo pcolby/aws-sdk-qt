@@ -19,3 +19,85 @@
 
 #include "listportfoliosforproductresponse.h"
 #include "listportfoliosforproductresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListPortfoliosForProductResponse
+ *
+ * @brief  Handles ServiceCatalog ListPortfoliosForProduct responses.
+ *
+ * @see    ServiceCatalogClient::listPortfoliosForProduct
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPortfoliosForProductResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListPortfoliosForProductResponsePrivate(this), parent)
+{
+    setRequest(new ListPortfoliosForProductRequest(request));
+    setReply(reply);
+}
+
+const ListPortfoliosForProductRequest * ListPortfoliosForProductResponse::request() const
+{
+    Q_D(const ListPortfoliosForProductResponse);
+    return static_cast<const ListPortfoliosForProductRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListPortfoliosForProduct response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPortfoliosForProductResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPortfoliosForProductResponsePrivate
+ *
+ * @brief  Private implementation for ListPortfoliosForProductResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPortfoliosForProductResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPortfoliosForProductResponse instance.
+ */
+ListPortfoliosForProductResponsePrivate::ListPortfoliosForProductResponsePrivate(
+    ListPortfoliosForProductQueueResponse * const q) : ListPortfoliosForProductPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListPortfoliosForProductResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPortfoliosForProductResponsePrivate::ListPortfoliosForProductResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPortfoliosForProductResponse"));
+    /// @todo
+}

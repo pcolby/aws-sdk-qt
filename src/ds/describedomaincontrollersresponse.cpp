@@ -19,3 +19,85 @@
 
 #include "describedomaincontrollersresponse.h"
 #include "describedomaincontrollersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeDomainControllersResponse
+ *
+ * @brief  Handles DirectoryService DescribeDomainControllers responses.
+ *
+ * @see    DirectoryServiceClient::describeDomainControllers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDomainControllersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new DescribeDomainControllersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDomainControllersRequest(request));
+    setReply(reply);
+}
+
+const DescribeDomainControllersRequest * DescribeDomainControllersResponse::request() const
+{
+    Q_D(const DescribeDomainControllersResponse);
+    return static_cast<const DescribeDomainControllersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService DescribeDomainControllers response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDomainControllersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDomainControllersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDomainControllersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDomainControllersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDomainControllersResponse instance.
+ */
+DescribeDomainControllersResponsePrivate::DescribeDomainControllersResponsePrivate(
+    DescribeDomainControllersQueueResponse * const q) : DescribeDomainControllersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService DescribeDomainControllersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDomainControllersResponsePrivate::DescribeDomainControllersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDomainControllersResponse"));
+    /// @todo
+}

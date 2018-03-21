@@ -19,3 +19,85 @@
 
 #include "setalarmstateresponse.h"
 #include "setalarmstateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  SetAlarmStateResponse
+ *
+ * @brief  Handles CloudWatch SetAlarmState responses.
+ *
+ * @see    CloudWatchClient::setAlarmState
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetAlarmStateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new SetAlarmStateResponsePrivate(this), parent)
+{
+    setRequest(new SetAlarmStateRequest(request));
+    setReply(reply);
+}
+
+const SetAlarmStateRequest * SetAlarmStateResponse::request() const
+{
+    Q_D(const SetAlarmStateResponse);
+    return static_cast<const SetAlarmStateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch SetAlarmState response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetAlarmStateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetAlarmStateResponsePrivate
+ *
+ * @brief  Private implementation for SetAlarmStateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetAlarmStateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetAlarmStateResponse instance.
+ */
+SetAlarmStateResponsePrivate::SetAlarmStateResponsePrivate(
+    SetAlarmStateQueueResponse * const q) : SetAlarmStatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch SetAlarmStateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetAlarmStateResponsePrivate::SetAlarmStateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetAlarmStateResponse"));
+    /// @todo
+}

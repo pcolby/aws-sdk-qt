@@ -19,3 +19,85 @@
 
 #include "deleteobjectresponse.h"
 #include "deleteobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DeleteObjectResponse
+ *
+ * @brief  Handles CloudDirectory DeleteObject responses.
+ *
+ * @see    CloudDirectoryClient::deleteObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new DeleteObjectResponsePrivate(this), parent)
+{
+    setRequest(new DeleteObjectRequest(request));
+    setReply(reply);
+}
+
+const DeleteObjectRequest * DeleteObjectResponse::request() const
+{
+    Q_D(const DeleteObjectResponse);
+    return static_cast<const DeleteObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory DeleteObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteObjectResponsePrivate
+ *
+ * @brief  Private implementation for DeleteObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteObjectResponse instance.
+ */
+DeleteObjectResponsePrivate::DeleteObjectResponsePrivate(
+    DeleteObjectQueueResponse * const q) : DeleteObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory DeleteObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteObjectResponsePrivate::DeleteObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteObjectResponse"));
+    /// @todo
+}

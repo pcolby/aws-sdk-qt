@@ -19,3 +19,85 @@
 
 #include "describeidentityusageresponse.h"
 #include "describeidentityusageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  DescribeIdentityUsageResponse
+ *
+ * @brief  Handles CognitoSync DescribeIdentityUsage responses.
+ *
+ * @see    CognitoSyncClient::describeIdentityUsage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIdentityUsageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new DescribeIdentityUsageResponsePrivate(this), parent)
+{
+    setRequest(new DescribeIdentityUsageRequest(request));
+    setReply(reply);
+}
+
+const DescribeIdentityUsageRequest * DescribeIdentityUsageResponse::request() const
+{
+    Q_D(const DescribeIdentityUsageResponse);
+    return static_cast<const DescribeIdentityUsageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync DescribeIdentityUsage response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeIdentityUsageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIdentityUsageResponsePrivate
+ *
+ * @brief  Private implementation for DescribeIdentityUsageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdentityUsageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeIdentityUsageResponse instance.
+ */
+DescribeIdentityUsageResponsePrivate::DescribeIdentityUsageResponsePrivate(
+    DescribeIdentityUsageQueueResponse * const q) : DescribeIdentityUsagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync DescribeIdentityUsageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeIdentityUsageResponsePrivate::DescribeIdentityUsageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeIdentityUsageResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listtargetsforpolicyresponse.h"
 #include "listtargetsforpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListTargetsForPolicyResponse
+ *
+ * @brief  Handles IoT ListTargetsForPolicy responses.
+ *
+ * @see    IoTClient::listTargetsForPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTargetsForPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListTargetsForPolicyResponsePrivate(this), parent)
+{
+    setRequest(new ListTargetsForPolicyRequest(request));
+    setReply(reply);
+}
+
+const ListTargetsForPolicyRequest * ListTargetsForPolicyResponse::request() const
+{
+    Q_D(const ListTargetsForPolicyResponse);
+    return static_cast<const ListTargetsForPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListTargetsForPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTargetsForPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTargetsForPolicyResponsePrivate
+ *
+ * @brief  Private implementation for ListTargetsForPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTargetsForPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTargetsForPolicyResponse instance.
+ */
+ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponsePrivate(
+    ListTargetsForPolicyQueueResponse * const q) : ListTargetsForPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListTargetsForPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTargetsForPolicyResponse"));
+    /// @todo
+}

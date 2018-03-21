@@ -19,3 +19,85 @@
 
 #include "getaliasresponse.h"
 #include "getaliasresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  GetAliasResponse
+ *
+ * @brief  Handles Lambda GetAlias responses.
+ *
+ * @see    LambdaClient::getAlias
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAliasResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new GetAliasResponsePrivate(this), parent)
+{
+    setRequest(new GetAliasRequest(request));
+    setReply(reply);
+}
+
+const GetAliasRequest * GetAliasResponse::request() const
+{
+    Q_D(const GetAliasResponse);
+    return static_cast<const GetAliasRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda GetAlias response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAliasResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAliasResponsePrivate
+ *
+ * @brief  Private implementation for GetAliasResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAliasResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAliasResponse instance.
+ */
+GetAliasResponsePrivate::GetAliasResponsePrivate(
+    GetAliasQueueResponse * const q) : GetAliasPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda GetAliasResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAliasResponsePrivate::GetAliasResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAliasResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteapplicationsresponse.h"
 #include "deleteapplicationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  DeleteApplicationsResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService DeleteApplications responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::deleteApplications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApplicationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new DeleteApplicationsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApplicationsRequest(request));
+    setReply(reply);
+}
+
+const DeleteApplicationsRequest * DeleteApplicationsResponse::request() const
+{
+    Q_D(const DeleteApplicationsResponse);
+    return static_cast<const DeleteApplicationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService DeleteApplications response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApplicationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApplicationsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApplicationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApplicationsResponse instance.
+ */
+DeleteApplicationsResponsePrivate::DeleteApplicationsResponsePrivate(
+    DeleteApplicationsQueueResponse * const q) : DeleteApplicationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService DeleteApplicationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApplicationsResponsePrivate::DeleteApplicationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putschemafromjsonresponse.h"
 #include "putschemafromjsonresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  PutSchemaFromJsonResponse
+ *
+ * @brief  Handles CloudDirectory PutSchemaFromJson responses.
+ *
+ * @see    CloudDirectoryClient::putSchemaFromJson
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutSchemaFromJsonResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new PutSchemaFromJsonResponsePrivate(this), parent)
+{
+    setRequest(new PutSchemaFromJsonRequest(request));
+    setReply(reply);
+}
+
+const PutSchemaFromJsonRequest * PutSchemaFromJsonResponse::request() const
+{
+    Q_D(const PutSchemaFromJsonResponse);
+    return static_cast<const PutSchemaFromJsonRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory PutSchemaFromJson response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutSchemaFromJsonResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutSchemaFromJsonResponsePrivate
+ *
+ * @brief  Private implementation for PutSchemaFromJsonResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutSchemaFromJsonResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutSchemaFromJsonResponse instance.
+ */
+PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponsePrivate(
+    PutSchemaFromJsonQueueResponse * const q) : PutSchemaFromJsonPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory PutSchemaFromJsonResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutSchemaFromJsonResponse"));
+    /// @todo
+}

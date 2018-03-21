@@ -19,3 +19,85 @@
 
 #include "deletenetworkinterfacepermissionresponse.h"
 #include "deletenetworkinterfacepermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteNetworkInterfacePermissionResponse
+ *
+ * @brief  Handles EC2 DeleteNetworkInterfacePermission responses.
+ *
+ * @see    EC2Client::deleteNetworkInterfacePermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNetworkInterfacePermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteNetworkInterfacePermissionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNetworkInterfacePermissionRequest(request));
+    setReply(reply);
+}
+
+const DeleteNetworkInterfacePermissionRequest * DeleteNetworkInterfacePermissionResponse::request() const
+{
+    Q_D(const DeleteNetworkInterfacePermissionResponse);
+    return static_cast<const DeleteNetworkInterfacePermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteNetworkInterfacePermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNetworkInterfacePermissionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNetworkInterfacePermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNetworkInterfacePermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNetworkInterfacePermissionResponse instance.
+ */
+DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissionResponsePrivate(
+    DeleteNetworkInterfacePermissionQueueResponse * const q) : DeleteNetworkInterfacePermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteNetworkInterfacePermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkInterfacePermissionResponse"));
+    /// @todo
+}

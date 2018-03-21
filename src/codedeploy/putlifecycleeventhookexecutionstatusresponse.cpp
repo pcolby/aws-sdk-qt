@@ -19,3 +19,85 @@
 
 #include "putlifecycleeventhookexecutionstatusresponse.h"
 #include "putlifecycleeventhookexecutionstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  PutLifecycleEventHookExecutionStatusResponse
+ *
+ * @brief  Handles CodeDeploy PutLifecycleEventHookExecutionStatus responses.
+ *
+ * @see    CodeDeployClient::putLifecycleEventHookExecutionStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutLifecycleEventHookExecutionStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new PutLifecycleEventHookExecutionStatusResponsePrivate(this), parent)
+{
+    setRequest(new PutLifecycleEventHookExecutionStatusRequest(request));
+    setReply(reply);
+}
+
+const PutLifecycleEventHookExecutionStatusRequest * PutLifecycleEventHookExecutionStatusResponse::request() const
+{
+    Q_D(const PutLifecycleEventHookExecutionStatusResponse);
+    return static_cast<const PutLifecycleEventHookExecutionStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy PutLifecycleEventHookExecutionStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutLifecycleEventHookExecutionStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutLifecycleEventHookExecutionStatusResponsePrivate
+ *
+ * @brief  Private implementation for PutLifecycleEventHookExecutionStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutLifecycleEventHookExecutionStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutLifecycleEventHookExecutionStatusResponse instance.
+ */
+PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecutionStatusResponsePrivate(
+    PutLifecycleEventHookExecutionStatusQueueResponse * const q) : PutLifecycleEventHookExecutionStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy PutLifecycleEventHookExecutionStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecutionStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutLifecycleEventHookExecutionStatusResponse"));
+    /// @todo
+}

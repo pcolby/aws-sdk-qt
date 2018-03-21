@@ -19,3 +19,85 @@
 
 #include "batchdetectkeyphrasesresponse.h"
 #include "batchdetectkeyphrasesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  BatchDetectKeyPhrasesResponse
+ *
+ * @brief  Handles Comprehend BatchDetectKeyPhrases responses.
+ *
+ * @see    ComprehendClient::batchDetectKeyPhrases
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDetectKeyPhrasesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ComprehendResponse(new BatchDetectKeyPhrasesResponsePrivate(this), parent)
+{
+    setRequest(new BatchDetectKeyPhrasesRequest(request));
+    setReply(reply);
+}
+
+const BatchDetectKeyPhrasesRequest * BatchDetectKeyPhrasesResponse::request() const
+{
+    Q_D(const BatchDetectKeyPhrasesResponse);
+    return static_cast<const BatchDetectKeyPhrasesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Comprehend BatchDetectKeyPhrases response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDetectKeyPhrasesResponsePrivate
+ *
+ * @brief  Private implementation for BatchDetectKeyPhrasesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDetectKeyPhrasesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDetectKeyPhrasesResponse instance.
+ */
+BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponsePrivate(
+    BatchDetectKeyPhrasesQueueResponse * const q) : BatchDetectKeyPhrasesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Comprehend BatchDetectKeyPhrasesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDetectKeyPhrasesResponse"));
+    /// @todo
+}

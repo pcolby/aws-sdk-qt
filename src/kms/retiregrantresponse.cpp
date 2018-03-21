@@ -19,3 +19,85 @@
 
 #include "retiregrantresponse.h"
 #include "retiregrantresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  RetireGrantResponse
+ *
+ * @brief  Handles KMS RetireGrant responses.
+ *
+ * @see    KMSClient::retireGrant
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RetireGrantResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new RetireGrantResponsePrivate(this), parent)
+{
+    setRequest(new RetireGrantRequest(request));
+    setReply(reply);
+}
+
+const RetireGrantRequest * RetireGrantResponse::request() const
+{
+    Q_D(const RetireGrantResponse);
+    return static_cast<const RetireGrantRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS RetireGrant response.
+ *
+ * @param  response  Response to parse.
+ */
+void RetireGrantResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RetireGrantResponsePrivate
+ *
+ * @brief  Private implementation for RetireGrantResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetireGrantResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RetireGrantResponse instance.
+ */
+RetireGrantResponsePrivate::RetireGrantResponsePrivate(
+    RetireGrantQueueResponse * const q) : RetireGrantPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS RetireGrantResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RetireGrantResponsePrivate::RetireGrantResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RetireGrantResponse"));
+    /// @todo
+}

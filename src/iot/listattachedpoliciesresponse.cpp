@@ -19,3 +19,85 @@
 
 #include "listattachedpoliciesresponse.h"
 #include "listattachedpoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListAttachedPoliciesResponse
+ *
+ * @brief  Handles IoT ListAttachedPolicies responses.
+ *
+ * @see    IoTClient::listAttachedPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAttachedPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListAttachedPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListAttachedPoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListAttachedPoliciesRequest * ListAttachedPoliciesResponse::request() const
+{
+    Q_D(const ListAttachedPoliciesResponse);
+    return static_cast<const ListAttachedPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListAttachedPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAttachedPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAttachedPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListAttachedPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAttachedPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAttachedPoliciesResponse instance.
+ */
+ListAttachedPoliciesResponsePrivate::ListAttachedPoliciesResponsePrivate(
+    ListAttachedPoliciesQueueResponse * const q) : ListAttachedPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListAttachedPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAttachedPoliciesResponsePrivate::ListAttachedPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAttachedPoliciesResponse"));
+    /// @todo
+}

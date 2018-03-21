@@ -19,3 +19,85 @@
 
 #include "describeautoscalinginstancesresponse.h"
 #include "describeautoscalinginstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeAutoScalingInstancesResponse
+ *
+ * @brief  Handles AutoScaling DescribeAutoScalingInstances responses.
+ *
+ * @see    AutoScalingClient::describeAutoScalingInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAutoScalingInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeAutoScalingInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAutoScalingInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeAutoScalingInstancesRequest * DescribeAutoScalingInstancesResponse::request() const
+{
+    Q_D(const DescribeAutoScalingInstancesResponse);
+    return static_cast<const DescribeAutoScalingInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeAutoScalingInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAutoScalingInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAutoScalingInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAutoScalingInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAutoScalingInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAutoScalingInstancesResponse instance.
+ */
+DescribeAutoScalingInstancesResponsePrivate::DescribeAutoScalingInstancesResponsePrivate(
+    DescribeAutoScalingInstancesQueueResponse * const q) : DescribeAutoScalingInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeAutoScalingInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAutoScalingInstancesResponsePrivate::DescribeAutoScalingInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAutoScalingInstancesResponse"));
+    /// @todo
+}

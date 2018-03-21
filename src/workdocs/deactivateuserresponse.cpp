@@ -19,3 +19,85 @@
 
 #include "deactivateuserresponse.h"
 #include "deactivateuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DeactivateUserResponse
+ *
+ * @brief  Handles WorkDocs DeactivateUser responses.
+ *
+ * @see    WorkDocsClient::deactivateUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeactivateUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DeactivateUserResponsePrivate(this), parent)
+{
+    setRequest(new DeactivateUserRequest(request));
+    setReply(reply);
+}
+
+const DeactivateUserRequest * DeactivateUserResponse::request() const
+{
+    Q_D(const DeactivateUserResponse);
+    return static_cast<const DeactivateUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DeactivateUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeactivateUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeactivateUserResponsePrivate
+ *
+ * @brief  Private implementation for DeactivateUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeactivateUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeactivateUserResponse instance.
+ */
+DeactivateUserResponsePrivate::DeactivateUserResponsePrivate(
+    DeactivateUserQueueResponse * const q) : DeactivateUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DeactivateUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeactivateUserResponsePrivate::DeactivateUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeactivateUserResponse"));
+    /// @todo
+}

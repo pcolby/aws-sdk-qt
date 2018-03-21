@@ -19,3 +19,85 @@
 
 #include "gethostnamesuggestionresponse.h"
 #include "gethostnamesuggestionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  GetHostnameSuggestionResponse
+ *
+ * @brief  Handles OpsWorks GetHostnameSuggestion responses.
+ *
+ * @see    OpsWorksClient::getHostnameSuggestion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHostnameSuggestionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new GetHostnameSuggestionResponsePrivate(this), parent)
+{
+    setRequest(new GetHostnameSuggestionRequest(request));
+    setReply(reply);
+}
+
+const GetHostnameSuggestionRequest * GetHostnameSuggestionResponse::request() const
+{
+    Q_D(const GetHostnameSuggestionResponse);
+    return static_cast<const GetHostnameSuggestionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks GetHostnameSuggestion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetHostnameSuggestionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHostnameSuggestionResponsePrivate
+ *
+ * @brief  Private implementation for GetHostnameSuggestionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostnameSuggestionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetHostnameSuggestionResponse instance.
+ */
+GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponsePrivate(
+    GetHostnameSuggestionQueueResponse * const q) : GetHostnameSuggestionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks GetHostnameSuggestionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetHostnameSuggestionResponse"));
+    /// @todo
+}

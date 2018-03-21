@@ -19,3 +19,85 @@
 
 #include "getstreamingdistributionconfigresponse.h"
 #include "getstreamingdistributionconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetStreamingDistributionConfigResponse
+ *
+ * @brief  Handles CloudFront GetStreamingDistributionConfig responses.
+ *
+ * @see    CloudFrontClient::getStreamingDistributionConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStreamingDistributionConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new GetStreamingDistributionConfigResponsePrivate(this), parent)
+{
+    setRequest(new GetStreamingDistributionConfigRequest(request));
+    setReply(reply);
+}
+
+const GetStreamingDistributionConfigRequest * GetStreamingDistributionConfigResponse::request() const
+{
+    Q_D(const GetStreamingDistributionConfigResponse);
+    return static_cast<const GetStreamingDistributionConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront GetStreamingDistributionConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetStreamingDistributionConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStreamingDistributionConfigResponsePrivate
+ *
+ * @brief  Private implementation for GetStreamingDistributionConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStreamingDistributionConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetStreamingDistributionConfigResponse instance.
+ */
+GetStreamingDistributionConfigResponsePrivate::GetStreamingDistributionConfigResponsePrivate(
+    GetStreamingDistributionConfigQueueResponse * const q) : GetStreamingDistributionConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront GetStreamingDistributionConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetStreamingDistributionConfigResponsePrivate::GetStreamingDistributionConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetStreamingDistributionConfigResponse"));
+    /// @todo
+}

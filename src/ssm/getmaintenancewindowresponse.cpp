@@ -19,3 +19,85 @@
 
 #include "getmaintenancewindowresponse.h"
 #include "getmaintenancewindowresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetMaintenanceWindowResponse
+ *
+ * @brief  Handles SSM GetMaintenanceWindow responses.
+ *
+ * @see    SSMClient::getMaintenanceWindow
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMaintenanceWindowResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetMaintenanceWindowResponsePrivate(this), parent)
+{
+    setRequest(new GetMaintenanceWindowRequest(request));
+    setReply(reply);
+}
+
+const GetMaintenanceWindowRequest * GetMaintenanceWindowResponse::request() const
+{
+    Q_D(const GetMaintenanceWindowResponse);
+    return static_cast<const GetMaintenanceWindowRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetMaintenanceWindow response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetMaintenanceWindowResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMaintenanceWindowResponsePrivate
+ *
+ * @brief  Private implementation for GetMaintenanceWindowResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMaintenanceWindowResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetMaintenanceWindowResponse instance.
+ */
+GetMaintenanceWindowResponsePrivate::GetMaintenanceWindowResponsePrivate(
+    GetMaintenanceWindowQueueResponse * const q) : GetMaintenanceWindowPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetMaintenanceWindowResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetMaintenanceWindowResponsePrivate::GetMaintenanceWindowResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetMaintenanceWindowResponse"));
+    /// @todo
+}

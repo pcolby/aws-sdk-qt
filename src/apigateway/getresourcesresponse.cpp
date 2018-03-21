@@ -19,3 +19,85 @@
 
 #include "getresourcesresponse.h"
 #include "getresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetResourcesResponse
+ *
+ * @brief  Handles APIGateway GetResources responses.
+ *
+ * @see    APIGatewayClient::getResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetResourcesResponsePrivate(this), parent)
+{
+    setRequest(new GetResourcesRequest(request));
+    setReply(reply);
+}
+
+const GetResourcesRequest * GetResourcesResponse::request() const
+{
+    Q_D(const GetResourcesResponse);
+    return static_cast<const GetResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetResourcesResponsePrivate
+ *
+ * @brief  Private implementation for GetResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetResourcesResponse instance.
+ */
+GetResourcesResponsePrivate::GetResourcesResponsePrivate(
+    GetResourcesQueueResponse * const q) : GetResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetResourcesResponsePrivate::GetResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetResourcesResponse"));
+    /// @todo
+}

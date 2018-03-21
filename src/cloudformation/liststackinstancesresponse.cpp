@@ -19,3 +19,85 @@
 
 #include "liststackinstancesresponse.h"
 #include "liststackinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListStackInstancesResponse
+ *
+ * @brief  Handles CloudFormation ListStackInstances responses.
+ *
+ * @see    CloudFormationClient::listStackInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStackInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ListStackInstancesResponsePrivate(this), parent)
+{
+    setRequest(new ListStackInstancesRequest(request));
+    setReply(reply);
+}
+
+const ListStackInstancesRequest * ListStackInstancesResponse::request() const
+{
+    Q_D(const ListStackInstancesResponse);
+    return static_cast<const ListStackInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ListStackInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListStackInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStackInstancesResponsePrivate
+ *
+ * @brief  Private implementation for ListStackInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStackInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListStackInstancesResponse instance.
+ */
+ListStackInstancesResponsePrivate::ListStackInstancesResponsePrivate(
+    ListStackInstancesQueueResponse * const q) : ListStackInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ListStackInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListStackInstancesResponsePrivate::ListStackInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListStackInstancesResponse"));
+    /// @todo
+}

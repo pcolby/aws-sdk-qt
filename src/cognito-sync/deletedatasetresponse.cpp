@@ -19,3 +19,85 @@
 
 #include "deletedatasetresponse.h"
 #include "deletedatasetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  DeleteDatasetResponse
+ *
+ * @brief  Handles CognitoSync DeleteDataset responses.
+ *
+ * @see    CognitoSyncClient::deleteDataset
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDatasetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new DeleteDatasetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDatasetRequest(request));
+    setReply(reply);
+}
+
+const DeleteDatasetRequest * DeleteDatasetResponse::request() const
+{
+    Q_D(const DeleteDatasetResponse);
+    return static_cast<const DeleteDatasetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync DeleteDataset response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDatasetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDatasetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDatasetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDatasetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDatasetResponse instance.
+ */
+DeleteDatasetResponsePrivate::DeleteDatasetResponsePrivate(
+    DeleteDatasetQueueResponse * const q) : DeleteDatasetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync DeleteDatasetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDatasetResponsePrivate::DeleteDatasetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDatasetResponse"));
+    /// @todo
+}

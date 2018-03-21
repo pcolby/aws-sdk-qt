@@ -19,3 +19,85 @@
 
 #include "accepthandshakeresponse.h"
 #include "accepthandshakeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  AcceptHandshakeResponse
+ *
+ * @brief  Handles Organizations AcceptHandshake responses.
+ *
+ * @see    OrganizationsClient::acceptHandshake
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcceptHandshakeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new AcceptHandshakeResponsePrivate(this), parent)
+{
+    setRequest(new AcceptHandshakeRequest(request));
+    setReply(reply);
+}
+
+const AcceptHandshakeRequest * AcceptHandshakeResponse::request() const
+{
+    Q_D(const AcceptHandshakeResponse);
+    return static_cast<const AcceptHandshakeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations AcceptHandshake response.
+ *
+ * @param  response  Response to parse.
+ */
+void AcceptHandshakeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AcceptHandshakeResponsePrivate
+ *
+ * @brief  Private implementation for AcceptHandshakeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptHandshakeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AcceptHandshakeResponse instance.
+ */
+AcceptHandshakeResponsePrivate::AcceptHandshakeResponsePrivate(
+    AcceptHandshakeQueueResponse * const q) : AcceptHandshakePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations AcceptHandshakeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AcceptHandshakeResponsePrivate::AcceptHandshakeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AcceptHandshakeResponse"));
+    /// @todo
+}

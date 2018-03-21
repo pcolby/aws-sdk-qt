@@ -19,3 +19,85 @@
 
 #include "describeinputsecuritygroupresponse.h"
 #include "describeinputsecuritygroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  DescribeInputSecurityGroupResponse
+ *
+ * @brief  Handles MediaLive DescribeInputSecurityGroup responses.
+ *
+ * @see    MediaLiveClient::describeInputSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInputSecurityGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaLiveResponse(new DescribeInputSecurityGroupResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInputSecurityGroupRequest(request));
+    setReply(reply);
+}
+
+const DescribeInputSecurityGroupRequest * DescribeInputSecurityGroupResponse::request() const
+{
+    Q_D(const DescribeInputSecurityGroupResponse);
+    return static_cast<const DescribeInputSecurityGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaLive DescribeInputSecurityGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInputSecurityGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInputSecurityGroupResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInputSecurityGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInputSecurityGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInputSecurityGroupResponse instance.
+ */
+DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponsePrivate(
+    DescribeInputSecurityGroupQueueResponse * const q) : DescribeInputSecurityGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaLive DescribeInputSecurityGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInputSecurityGroupResponse"));
+    /// @todo
+}

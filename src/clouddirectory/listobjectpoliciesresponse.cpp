@@ -19,3 +19,85 @@
 
 #include "listobjectpoliciesresponse.h"
 #include "listobjectpoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListObjectPoliciesResponse
+ *
+ * @brief  Handles CloudDirectory ListObjectPolicies responses.
+ *
+ * @see    CloudDirectoryClient::listObjectPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListObjectPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListObjectPoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListObjectPoliciesRequest * ListObjectPoliciesResponse::request() const
+{
+    Q_D(const ListObjectPoliciesResponse);
+    return static_cast<const ListObjectPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListObjectPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListObjectPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListObjectPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListObjectPoliciesResponse instance.
+ */
+ListObjectPoliciesResponsePrivate::ListObjectPoliciesResponsePrivate(
+    ListObjectPoliciesQueueResponse * const q) : ListObjectPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListObjectPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListObjectPoliciesResponsePrivate::ListObjectPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListObjectPoliciesResponse"));
+    /// @todo
+}

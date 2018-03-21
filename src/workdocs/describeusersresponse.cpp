@@ -19,3 +19,85 @@
 
 #include "describeusersresponse.h"
 #include "describeusersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeUsersResponse
+ *
+ * @brief  Handles WorkDocs DescribeUsers responses.
+ *
+ * @see    WorkDocsClient::describeUsers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUsersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DescribeUsersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeUsersRequest(request));
+    setReply(reply);
+}
+
+const DescribeUsersRequest * DescribeUsersResponse::request() const
+{
+    Q_D(const DescribeUsersResponse);
+    return static_cast<const DescribeUsersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DescribeUsers response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeUsersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUsersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeUsersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUsersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeUsersResponse instance.
+ */
+DescribeUsersResponsePrivate::DescribeUsersResponsePrivate(
+    DescribeUsersQueueResponse * const q) : DescribeUsersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DescribeUsersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeUsersResponsePrivate::DescribeUsersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeUsersResponse"));
+    /// @todo
+}

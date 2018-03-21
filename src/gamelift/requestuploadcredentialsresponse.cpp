@@ -19,3 +19,85 @@
 
 #include "requestuploadcredentialsresponse.h"
 #include "requestuploadcredentialsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  RequestUploadCredentialsResponse
+ *
+ * @brief  Handles GameLift RequestUploadCredentials responses.
+ *
+ * @see    GameLiftClient::requestUploadCredentials
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RequestUploadCredentialsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new RequestUploadCredentialsResponsePrivate(this), parent)
+{
+    setRequest(new RequestUploadCredentialsRequest(request));
+    setReply(reply);
+}
+
+const RequestUploadCredentialsRequest * RequestUploadCredentialsResponse::request() const
+{
+    Q_D(const RequestUploadCredentialsResponse);
+    return static_cast<const RequestUploadCredentialsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift RequestUploadCredentials response.
+ *
+ * @param  response  Response to parse.
+ */
+void RequestUploadCredentialsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RequestUploadCredentialsResponsePrivate
+ *
+ * @brief  Private implementation for RequestUploadCredentialsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestUploadCredentialsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RequestUploadCredentialsResponse instance.
+ */
+RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponsePrivate(
+    RequestUploadCredentialsQueueResponse * const q) : RequestUploadCredentialsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift RequestUploadCredentialsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RequestUploadCredentialsResponse"));
+    /// @todo
+}

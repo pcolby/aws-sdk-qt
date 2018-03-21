@@ -19,3 +19,85 @@
 
 #include "batchgetdeploymentsresponse.h"
 #include "batchgetdeploymentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetDeploymentsResponse
+ *
+ * @brief  Handles CodeDeploy BatchGetDeployments responses.
+ *
+ * @see    CodeDeployClient::batchGetDeployments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetDeploymentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new BatchGetDeploymentsResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetDeploymentsRequest(request));
+    setReply(reply);
+}
+
+const BatchGetDeploymentsRequest * BatchGetDeploymentsResponse::request() const
+{
+    Q_D(const BatchGetDeploymentsResponse);
+    return static_cast<const BatchGetDeploymentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy BatchGetDeployments response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetDeploymentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetDeploymentsResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetDeploymentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetDeploymentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetDeploymentsResponse instance.
+ */
+BatchGetDeploymentsResponsePrivate::BatchGetDeploymentsResponsePrivate(
+    BatchGetDeploymentsQueueResponse * const q) : BatchGetDeploymentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy BatchGetDeploymentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetDeploymentsResponsePrivate::BatchGetDeploymentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetDeploymentsResponse"));
+    /// @todo
+}

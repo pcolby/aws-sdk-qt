@@ -19,3 +19,85 @@
 
 #include "deleteinstanceprofileresponse.h"
 #include "deleteinstanceprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteInstanceProfileResponse
+ *
+ * @brief  Handles IAM DeleteInstanceProfile responses.
+ *
+ * @see    IAMClient::deleteInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInstanceProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteInstanceProfileResponsePrivate(this), parent)
+{
+    setRequest(new DeleteInstanceProfileRequest(request));
+    setReply(reply);
+}
+
+const DeleteInstanceProfileRequest * DeleteInstanceProfileResponse::request() const
+{
+    Q_D(const DeleteInstanceProfileResponse);
+    return static_cast<const DeleteInstanceProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteInstanceProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteInstanceProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInstanceProfileResponsePrivate
+ *
+ * @brief  Private implementation for DeleteInstanceProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInstanceProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteInstanceProfileResponse instance.
+ */
+DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponsePrivate(
+    DeleteInstanceProfileQueueResponse * const q) : DeleteInstanceProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteInstanceProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceProfileResponse"));
+    /// @todo
+}

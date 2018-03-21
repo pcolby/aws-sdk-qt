@@ -19,3 +19,85 @@
 
 #include "createexportjobresponse.h"
 #include "createexportjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  CreateExportJobResponse
+ *
+ * @brief  Handles Pinpoint CreateExportJob responses.
+ *
+ * @see    PinpointClient::createExportJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateExportJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new CreateExportJobResponsePrivate(this), parent)
+{
+    setRequest(new CreateExportJobRequest(request));
+    setReply(reply);
+}
+
+const CreateExportJobRequest * CreateExportJobResponse::request() const
+{
+    Q_D(const CreateExportJobResponse);
+    return static_cast<const CreateExportJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint CreateExportJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateExportJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateExportJobResponsePrivate
+ *
+ * @brief  Private implementation for CreateExportJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateExportJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateExportJobResponse instance.
+ */
+CreateExportJobResponsePrivate::CreateExportJobResponsePrivate(
+    CreateExportJobQueueResponse * const q) : CreateExportJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint CreateExportJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateExportJobResponsePrivate::CreateExportJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateExportJobResponse"));
+    /// @todo
+}

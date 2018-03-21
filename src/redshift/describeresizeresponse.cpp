@@ -19,3 +19,85 @@
 
 #include "describeresizeresponse.h"
 #include "describeresizeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeResizeResponse
+ *
+ * @brief  Handles Redshift DescribeResize responses.
+ *
+ * @see    RedshiftClient::describeResize
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeResizeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeResizeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeResizeRequest(request));
+    setReply(reply);
+}
+
+const DescribeResizeRequest * DescribeResizeResponse::request() const
+{
+    Q_D(const DescribeResizeResponse);
+    return static_cast<const DescribeResizeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeResize response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeResizeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeResizeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeResizeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResizeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeResizeResponse instance.
+ */
+DescribeResizeResponsePrivate::DescribeResizeResponsePrivate(
+    DescribeResizeQueueResponse * const q) : DescribeResizePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeResizeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeResizeResponsePrivate::DescribeResizeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeResizeResponse"));
+    /// @todo
+}

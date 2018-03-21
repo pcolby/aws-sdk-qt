@@ -19,3 +19,85 @@
 
 #include "describeproductviewresponse.h"
 #include "describeproductviewresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeProductViewResponse
+ *
+ * @brief  Handles ServiceCatalog DescribeProductView responses.
+ *
+ * @see    ServiceCatalogClient::describeProductView
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProductViewResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DescribeProductViewResponsePrivate(this), parent)
+{
+    setRequest(new DescribeProductViewRequest(request));
+    setReply(reply);
+}
+
+const DescribeProductViewRequest * DescribeProductViewResponse::request() const
+{
+    Q_D(const DescribeProductViewResponse);
+    return static_cast<const DescribeProductViewRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DescribeProductView response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeProductViewResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProductViewResponsePrivate
+ *
+ * @brief  Private implementation for DescribeProductViewResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProductViewResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeProductViewResponse instance.
+ */
+DescribeProductViewResponsePrivate::DescribeProductViewResponsePrivate(
+    DescribeProductViewQueueResponse * const q) : DescribeProductViewPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DescribeProductViewResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeProductViewResponsePrivate::DescribeProductViewResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeProductViewResponse"));
+    /// @todo
+}

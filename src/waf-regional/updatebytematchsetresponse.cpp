@@ -19,3 +19,85 @@
 
 #include "updatebytematchsetresponse.h"
 #include "updatebytematchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  UpdateByteMatchSetResponse
+ *
+ * @brief  Handles WAFRegional UpdateByteMatchSet responses.
+ *
+ * @see    WAFRegionalClient::updateByteMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateByteMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new UpdateByteMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateByteMatchSetRequest(request));
+    setReply(reply);
+}
+
+const UpdateByteMatchSetRequest * UpdateByteMatchSetResponse::request() const
+{
+    Q_D(const UpdateByteMatchSetResponse);
+    return static_cast<const UpdateByteMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional UpdateByteMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateByteMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateByteMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateByteMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateByteMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateByteMatchSetResponse instance.
+ */
+UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponsePrivate(
+    UpdateByteMatchSetQueueResponse * const q) : UpdateByteMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional UpdateByteMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateByteMatchSetResponse"));
+    /// @todo
+}

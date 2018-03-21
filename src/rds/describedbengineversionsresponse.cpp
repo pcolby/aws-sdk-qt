@@ -19,3 +19,85 @@
 
 #include "describedbengineversionsresponse.h"
 #include "describedbengineversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBEngineVersionsResponse
+ *
+ * @brief  Handles RDS DescribeDBEngineVersions responses.
+ *
+ * @see    RDSClient::describeDBEngineVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBEngineVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeDBEngineVersionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDBEngineVersionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::request() const
+{
+    Q_D(const DescribeDBEngineVersionsResponse);
+    return static_cast<const DescribeDBEngineVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeDBEngineVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBEngineVersionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDBEngineVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBEngineVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDBEngineVersionsResponse instance.
+ */
+DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate(
+    DescribeDBEngineVersionsQueueResponse * const q) : DescribeDBEngineVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeDBEngineVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDBEngineVersionsResponse"));
+    /// @todo
+}

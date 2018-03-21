@@ -19,3 +19,85 @@
 
 #include "createvpcresponse.h"
 #include "createvpcresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpcResponse
+ *
+ * @brief  Handles EC2 CreateVpc responses.
+ *
+ * @see    EC2Client::createVpc
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpcResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateVpcResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpcRequest(request));
+    setReply(reply);
+}
+
+const CreateVpcRequest * CreateVpcResponse::request() const
+{
+    Q_D(const CreateVpcResponse);
+    return static_cast<const CreateVpcRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateVpc response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpcResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpcResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpcResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpcResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpcResponse instance.
+ */
+CreateVpcResponsePrivate::CreateVpcResponsePrivate(
+    CreateVpcQueueResponse * const q) : CreateVpcPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateVpcResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpcResponsePrivate::CreateVpcResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpcResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getsshpublickeyresponse.h"
 #include "getsshpublickeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetSSHPublicKeyResponse
+ *
+ * @brief  Handles IAM GetSSHPublicKey responses.
+ *
+ * @see    IAMClient::getSSHPublicKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSSHPublicKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetSSHPublicKeyResponsePrivate(this), parent)
+{
+    setRequest(new GetSSHPublicKeyRequest(request));
+    setReply(reply);
+}
+
+const GetSSHPublicKeyRequest * GetSSHPublicKeyResponse::request() const
+{
+    Q_D(const GetSSHPublicKeyResponse);
+    return static_cast<const GetSSHPublicKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetSSHPublicKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSSHPublicKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSSHPublicKeyResponsePrivate
+ *
+ * @brief  Private implementation for GetSSHPublicKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSSHPublicKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSSHPublicKeyResponse instance.
+ */
+GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponsePrivate(
+    GetSSHPublicKeyQueueResponse * const q) : GetSSHPublicKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetSSHPublicKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSSHPublicKeyResponse"));
+    /// @todo
+}

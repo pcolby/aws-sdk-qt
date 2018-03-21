@@ -19,3 +19,85 @@
 
 #include "deleteintegrationresponseresponse.h"
 #include "deleteintegrationresponseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteIntegrationResponseResponse
+ *
+ * @brief  Handles APIGateway DeleteIntegrationResponse responses.
+ *
+ * @see    APIGatewayClient::deleteIntegrationResponse
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIntegrationResponseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteIntegrationResponseResponsePrivate(this), parent)
+{
+    setRequest(new DeleteIntegrationResponseRequest(request));
+    setReply(reply);
+}
+
+const DeleteIntegrationResponseRequest * DeleteIntegrationResponseResponse::request() const
+{
+    Q_D(const DeleteIntegrationResponseResponse);
+    return static_cast<const DeleteIntegrationResponseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteIntegrationResponse response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteIntegrationResponseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIntegrationResponseResponsePrivate
+ *
+ * @brief  Private implementation for DeleteIntegrationResponseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntegrationResponseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteIntegrationResponseResponse instance.
+ */
+DeleteIntegrationResponseResponsePrivate::DeleteIntegrationResponseResponsePrivate(
+    DeleteIntegrationResponseQueueResponse * const q) : DeleteIntegrationResponsePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteIntegrationResponseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteIntegrationResponseResponsePrivate::DeleteIntegrationResponseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteIntegrationResponseResponse"));
+    /// @todo
+}

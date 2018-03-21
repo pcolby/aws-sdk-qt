@@ -19,3 +19,85 @@
 
 #include "describereplicationsubnetgroupsresponse.h"
 #include "describereplicationsubnetgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeReplicationSubnetGroupsResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeReplicationSubnetGroups responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeReplicationSubnetGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReplicationSubnetGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeReplicationSubnetGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReplicationSubnetGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReplicationSubnetGroupsRequest * DescribeReplicationSubnetGroupsResponse::request() const
+{
+    Q_D(const DescribeReplicationSubnetGroupsResponse);
+    return static_cast<const DescribeReplicationSubnetGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeReplicationSubnetGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReplicationSubnetGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReplicationSubnetGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReplicationSubnetGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationSubnetGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReplicationSubnetGroupsResponse instance.
+ */
+DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsResponsePrivate(
+    DescribeReplicationSubnetGroupsQueueResponse * const q) : DescribeReplicationSubnetGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeReplicationSubnetGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationSubnetGroupsResponse"));
+    /// @todo
+}

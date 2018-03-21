@@ -19,3 +19,85 @@
 
 #include "batchdeleteconnectionresponse.h"
 #include "batchdeleteconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchDeleteConnectionResponse
+ *
+ * @brief  Handles Glue BatchDeleteConnection responses.
+ *
+ * @see    GlueClient::batchDeleteConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDeleteConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new BatchDeleteConnectionResponsePrivate(this), parent)
+{
+    setRequest(new BatchDeleteConnectionRequest(request));
+    setReply(reply);
+}
+
+const BatchDeleteConnectionRequest * BatchDeleteConnectionResponse::request() const
+{
+    Q_D(const BatchDeleteConnectionResponse);
+    return static_cast<const BatchDeleteConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue BatchDeleteConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDeleteConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDeleteConnectionResponsePrivate
+ *
+ * @brief  Private implementation for BatchDeleteConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeleteConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDeleteConnectionResponse instance.
+ */
+BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponsePrivate(
+    BatchDeleteConnectionQueueResponse * const q) : BatchDeleteConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue BatchDeleteConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDeleteConnectionResponse"));
+    /// @todo
+}

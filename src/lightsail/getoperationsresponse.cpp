@@ -19,3 +19,85 @@
 
 #include "getoperationsresponse.h"
 #include "getoperationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetOperationsResponse
+ *
+ * @brief  Handles Lightsail GetOperations responses.
+ *
+ * @see    LightsailClient::getOperations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOperationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetOperationsResponsePrivate(this), parent)
+{
+    setRequest(new GetOperationsRequest(request));
+    setReply(reply);
+}
+
+const GetOperationsRequest * GetOperationsResponse::request() const
+{
+    Q_D(const GetOperationsResponse);
+    return static_cast<const GetOperationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetOperations response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetOperationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOperationsResponsePrivate
+ *
+ * @brief  Private implementation for GetOperationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetOperationsResponse instance.
+ */
+GetOperationsResponsePrivate::GetOperationsResponsePrivate(
+    GetOperationsQueueResponse * const q) : GetOperationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetOperationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetOperationsResponsePrivate::GetOperationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetOperationsResponse"));
+    /// @todo
+}

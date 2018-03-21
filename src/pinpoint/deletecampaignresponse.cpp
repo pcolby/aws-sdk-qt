@@ -19,3 +19,85 @@
 
 #include "deletecampaignresponse.h"
 #include "deletecampaignresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteCampaignResponse
+ *
+ * @brief  Handles Pinpoint DeleteCampaign responses.
+ *
+ * @see    PinpointClient::deleteCampaign
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCampaignResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteCampaignResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCampaignRequest(request));
+    setReply(reply);
+}
+
+const DeleteCampaignRequest * DeleteCampaignResponse::request() const
+{
+    Q_D(const DeleteCampaignResponse);
+    return static_cast<const DeleteCampaignRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteCampaign response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCampaignResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCampaignResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCampaignResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCampaignResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCampaignResponse instance.
+ */
+DeleteCampaignResponsePrivate::DeleteCampaignResponsePrivate(
+    DeleteCampaignQueueResponse * const q) : DeleteCampaignPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteCampaignResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCampaignResponsePrivate::DeleteCampaignResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCampaignResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "addworkingstorageresponse.h"
 #include "addworkingstorageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  AddWorkingStorageResponse
+ *
+ * @brief  Handles StorageGateway AddWorkingStorage responses.
+ *
+ * @see    StorageGatewayClient::addWorkingStorage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddWorkingStorageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new AddWorkingStorageResponsePrivate(this), parent)
+{
+    setRequest(new AddWorkingStorageRequest(request));
+    setReply(reply);
+}
+
+const AddWorkingStorageRequest * AddWorkingStorageResponse::request() const
+{
+    Q_D(const AddWorkingStorageResponse);
+    return static_cast<const AddWorkingStorageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway AddWorkingStorage response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddWorkingStorageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddWorkingStorageResponsePrivate
+ *
+ * @brief  Private implementation for AddWorkingStorageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddWorkingStorageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddWorkingStorageResponse instance.
+ */
+AddWorkingStorageResponsePrivate::AddWorkingStorageResponsePrivate(
+    AddWorkingStorageQueueResponse * const q) : AddWorkingStoragePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway AddWorkingStorageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddWorkingStorageResponsePrivate::AddWorkingStorageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddWorkingStorageResponse"));
+    /// @todo
+}

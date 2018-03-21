@@ -19,3 +19,85 @@
 
 #include "listdocumentversionsresponse.h"
 #include "listdocumentversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListDocumentVersionsResponse
+ *
+ * @brief  Handles SSM ListDocumentVersions responses.
+ *
+ * @see    SSMClient::listDocumentVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDocumentVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListDocumentVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListDocumentVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListDocumentVersionsRequest * ListDocumentVersionsResponse::request() const
+{
+    Q_D(const ListDocumentVersionsResponse);
+    return static_cast<const ListDocumentVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListDocumentVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDocumentVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDocumentVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListDocumentVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDocumentVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDocumentVersionsResponse instance.
+ */
+ListDocumentVersionsResponsePrivate::ListDocumentVersionsResponsePrivate(
+    ListDocumentVersionsQueueResponse * const q) : ListDocumentVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListDocumentVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDocumentVersionsResponsePrivate::ListDocumentVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDocumentVersionsResponse"));
+    /// @todo
+}

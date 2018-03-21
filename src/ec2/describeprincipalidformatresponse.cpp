@@ -19,3 +19,85 @@
 
 #include "describeprincipalidformatresponse.h"
 #include "describeprincipalidformatresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribePrincipalIdFormatResponse
+ *
+ * @brief  Handles EC2 DescribePrincipalIdFormat responses.
+ *
+ * @see    EC2Client::describePrincipalIdFormat
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePrincipalIdFormatResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribePrincipalIdFormatResponsePrivate(this), parent)
+{
+    setRequest(new DescribePrincipalIdFormatRequest(request));
+    setReply(reply);
+}
+
+const DescribePrincipalIdFormatRequest * DescribePrincipalIdFormatResponse::request() const
+{
+    Q_D(const DescribePrincipalIdFormatResponse);
+    return static_cast<const DescribePrincipalIdFormatRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribePrincipalIdFormat response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePrincipalIdFormatResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePrincipalIdFormatResponsePrivate
+ *
+ * @brief  Private implementation for DescribePrincipalIdFormatResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePrincipalIdFormatResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePrincipalIdFormatResponse instance.
+ */
+DescribePrincipalIdFormatResponsePrivate::DescribePrincipalIdFormatResponsePrivate(
+    DescribePrincipalIdFormatQueueResponse * const q) : DescribePrincipalIdFormatPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribePrincipalIdFormatResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePrincipalIdFormatResponsePrivate::DescribePrincipalIdFormatResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePrincipalIdFormatResponse"));
+    /// @todo
+}

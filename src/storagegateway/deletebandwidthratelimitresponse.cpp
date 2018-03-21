@@ -19,3 +19,85 @@
 
 #include "deletebandwidthratelimitresponse.h"
 #include "deletebandwidthratelimitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteBandwidthRateLimitResponse
+ *
+ * @brief  Handles StorageGateway DeleteBandwidthRateLimit responses.
+ *
+ * @see    StorageGatewayClient::deleteBandwidthRateLimit
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBandwidthRateLimitResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DeleteBandwidthRateLimitResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBandwidthRateLimitRequest(request));
+    setReply(reply);
+}
+
+const DeleteBandwidthRateLimitRequest * DeleteBandwidthRateLimitResponse::request() const
+{
+    Q_D(const DeleteBandwidthRateLimitResponse);
+    return static_cast<const DeleteBandwidthRateLimitRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DeleteBandwidthRateLimit response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBandwidthRateLimitResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBandwidthRateLimitResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBandwidthRateLimitResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBandwidthRateLimitResponse instance.
+ */
+DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponsePrivate(
+    DeleteBandwidthRateLimitQueueResponse * const q) : DeleteBandwidthRateLimitPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DeleteBandwidthRateLimitResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBandwidthRateLimitResponse"));
+    /// @todo
+}

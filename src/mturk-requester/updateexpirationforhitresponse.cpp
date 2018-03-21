@@ -19,3 +19,85 @@
 
 #include "updateexpirationforhitresponse.h"
 #include "updateexpirationforhitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  UpdateExpirationForHITResponse
+ *
+ * @brief  Handles MTurk UpdateExpirationForHIT responses.
+ *
+ * @see    MTurkClient::updateExpirationForHIT
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateExpirationForHITResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new UpdateExpirationForHITResponsePrivate(this), parent)
+{
+    setRequest(new UpdateExpirationForHITRequest(request));
+    setReply(reply);
+}
+
+const UpdateExpirationForHITRequest * UpdateExpirationForHITResponse::request() const
+{
+    Q_D(const UpdateExpirationForHITResponse);
+    return static_cast<const UpdateExpirationForHITRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk UpdateExpirationForHIT response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateExpirationForHITResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateExpirationForHITResponsePrivate
+ *
+ * @brief  Private implementation for UpdateExpirationForHITResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateExpirationForHITResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateExpirationForHITResponse instance.
+ */
+UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponsePrivate(
+    UpdateExpirationForHITQueueResponse * const q) : UpdateExpirationForHITPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk UpdateExpirationForHITResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateExpirationForHITResponse"));
+    /// @todo
+}

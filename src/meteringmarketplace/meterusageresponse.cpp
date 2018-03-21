@@ -19,3 +19,85 @@
 
 #include "meterusageresponse.h"
 #include "meterusageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MarketplaceMetering {
+
+/**
+ * @class  MeterUsageResponse
+ *
+ * @brief  Handles MarketplaceMetering MeterUsage responses.
+ *
+ * @see    MarketplaceMeteringClient::meterUsage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+MeterUsageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MarketplaceMeteringResponse(new MeterUsageResponsePrivate(this), parent)
+{
+    setRequest(new MeterUsageRequest(request));
+    setReply(reply);
+}
+
+const MeterUsageRequest * MeterUsageResponse::request() const
+{
+    Q_D(const MeterUsageResponse);
+    return static_cast<const MeterUsageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MarketplaceMetering MeterUsage response.
+ *
+ * @param  response  Response to parse.
+ */
+void MeterUsageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  MeterUsageResponsePrivate
+ *
+ * @brief  Private implementation for MeterUsageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MeterUsageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public MeterUsageResponse instance.
+ */
+MeterUsageResponsePrivate::MeterUsageResponsePrivate(
+    MeterUsageQueueResponse * const q) : MeterUsagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MarketplaceMetering MeterUsageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void MeterUsageResponsePrivate::MeterUsageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("MeterUsageResponse"));
+    /// @todo
+}

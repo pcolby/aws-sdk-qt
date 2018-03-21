@@ -19,3 +19,85 @@
 
 #include "listjobtemplatesresponse.h"
 #include "listjobtemplatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  ListJobTemplatesResponse
+ *
+ * @brief  Handles MediaConvert ListJobTemplates responses.
+ *
+ * @see    MediaConvertClient::listJobTemplates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobTemplatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new ListJobTemplatesResponsePrivate(this), parent)
+{
+    setRequest(new ListJobTemplatesRequest(request));
+    setReply(reply);
+}
+
+const ListJobTemplatesRequest * ListJobTemplatesResponse::request() const
+{
+    Q_D(const ListJobTemplatesResponse);
+    return static_cast<const ListJobTemplatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert ListJobTemplates response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListJobTemplatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobTemplatesResponsePrivate
+ *
+ * @brief  Private implementation for ListJobTemplatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobTemplatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListJobTemplatesResponse instance.
+ */
+ListJobTemplatesResponsePrivate::ListJobTemplatesResponsePrivate(
+    ListJobTemplatesQueueResponse * const q) : ListJobTemplatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert ListJobTemplatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListJobTemplatesResponsePrivate::ListJobTemplatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListJobTemplatesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "startdbinstanceresponse.h"
 #include "startdbinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  StartDBInstanceResponse
+ *
+ * @brief  Handles RDS StartDBInstance responses.
+ *
+ * @see    RDSClient::startDBInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartDBInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new StartDBInstanceResponsePrivate(this), parent)
+{
+    setRequest(new StartDBInstanceRequest(request));
+    setReply(reply);
+}
+
+const StartDBInstanceRequest * StartDBInstanceResponse::request() const
+{
+    Q_D(const StartDBInstanceResponse);
+    return static_cast<const StartDBInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS StartDBInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartDBInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartDBInstanceResponsePrivate
+ *
+ * @brief  Private implementation for StartDBInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartDBInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartDBInstanceResponse instance.
+ */
+StartDBInstanceResponsePrivate::StartDBInstanceResponsePrivate(
+    StartDBInstanceQueueResponse * const q) : StartDBInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS StartDBInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartDBInstanceResponsePrivate::StartDBInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartDBInstanceResponse"));
+    /// @todo
+}

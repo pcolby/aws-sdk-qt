@@ -19,3 +19,85 @@
 
 #include "createhitresponse.h"
 #include "createhitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  CreateHITResponse
+ *
+ * @brief  Handles MTurk CreateHIT responses.
+ *
+ * @see    MTurkClient::createHIT
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHITResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new CreateHITResponsePrivate(this), parent)
+{
+    setRequest(new CreateHITRequest(request));
+    setReply(reply);
+}
+
+const CreateHITRequest * CreateHITResponse::request() const
+{
+    Q_D(const CreateHITResponse);
+    return static_cast<const CreateHITRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk CreateHIT response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateHITResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHITResponsePrivate
+ *
+ * @brief  Private implementation for CreateHITResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHITResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateHITResponse instance.
+ */
+CreateHITResponsePrivate::CreateHITResponsePrivate(
+    CreateHITQueueResponse * const q) : CreateHITPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk CreateHITResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateHITResponsePrivate::CreateHITResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateHITResponse"));
+    /// @todo
+}

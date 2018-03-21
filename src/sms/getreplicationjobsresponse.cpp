@@ -19,3 +19,85 @@
 
 #include "getreplicationjobsresponse.h"
 #include "getreplicationjobsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  GetReplicationJobsResponse
+ *
+ * @brief  Handles SMS GetReplicationJobs responses.
+ *
+ * @see    SMSClient::getReplicationJobs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetReplicationJobsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SMSResponse(new GetReplicationJobsResponsePrivate(this), parent)
+{
+    setRequest(new GetReplicationJobsRequest(request));
+    setReply(reply);
+}
+
+const GetReplicationJobsRequest * GetReplicationJobsResponse::request() const
+{
+    Q_D(const GetReplicationJobsResponse);
+    return static_cast<const GetReplicationJobsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SMS GetReplicationJobs response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetReplicationJobsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetReplicationJobsResponsePrivate
+ *
+ * @brief  Private implementation for GetReplicationJobsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetReplicationJobsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetReplicationJobsResponse instance.
+ */
+GetReplicationJobsResponsePrivate::GetReplicationJobsResponsePrivate(
+    GetReplicationJobsQueueResponse * const q) : GetReplicationJobsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SMS GetReplicationJobsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetReplicationJobsResponsePrivate::GetReplicationJobsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetReplicationJobsResponse"));
+    /// @todo
+}

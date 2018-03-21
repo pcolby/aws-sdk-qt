@@ -19,3 +19,85 @@
 
 #include "createsubscriptionresponse.h"
 #include "createsubscriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  CreateSubscriptionResponse
+ *
+ * @brief  Handles Shield CreateSubscription responses.
+ *
+ * @see    ShieldClient::createSubscription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSubscriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ShieldResponse(new CreateSubscriptionResponsePrivate(this), parent)
+{
+    setRequest(new CreateSubscriptionRequest(request));
+    setReply(reply);
+}
+
+const CreateSubscriptionRequest * CreateSubscriptionResponse::request() const
+{
+    Q_D(const CreateSubscriptionResponse);
+    return static_cast<const CreateSubscriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Shield CreateSubscription response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSubscriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSubscriptionResponsePrivate
+ *
+ * @brief  Private implementation for CreateSubscriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSubscriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSubscriptionResponse instance.
+ */
+CreateSubscriptionResponsePrivate::CreateSubscriptionResponsePrivate(
+    CreateSubscriptionQueueResponse * const q) : CreateSubscriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Shield CreateSubscriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSubscriptionResponsePrivate::CreateSubscriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSubscriptionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createstreamresponse.h"
 #include "createstreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateStreamResponse
+ *
+ * @brief  Handles IoT CreateStream responses.
+ *
+ * @see    IoTClient::createStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreateStreamResponsePrivate(this), parent)
+{
+    setRequest(new CreateStreamRequest(request));
+    setReply(reply);
+}
+
+const CreateStreamRequest * CreateStreamResponse::request() const
+{
+    Q_D(const CreateStreamResponse);
+    return static_cast<const CreateStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreateStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStreamResponsePrivate
+ *
+ * @brief  Private implementation for CreateStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStreamResponse instance.
+ */
+CreateStreamResponsePrivate::CreateStreamResponsePrivate(
+    CreateStreamQueueResponse * const q) : CreateStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreateStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStreamResponsePrivate::CreateStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStreamResponse"));
+    /// @todo
+}

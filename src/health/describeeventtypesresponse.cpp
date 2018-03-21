@@ -19,3 +19,85 @@
 
 #include "describeeventtypesresponse.h"
 #include "describeeventtypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Health {
+
+/**
+ * @class  DescribeEventTypesResponse
+ *
+ * @brief  Handles Health DescribeEventTypes responses.
+ *
+ * @see    HealthClient::describeEventTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : HealthResponse(new DescribeEventTypesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEventTypesRequest(request));
+    setReply(reply);
+}
+
+const DescribeEventTypesRequest * DescribeEventTypesResponse::request() const
+{
+    Q_D(const DescribeEventTypesResponse);
+    return static_cast<const DescribeEventTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Health DescribeEventTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEventTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventTypesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEventTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEventTypesResponse instance.
+ */
+DescribeEventTypesResponsePrivate::DescribeEventTypesResponsePrivate(
+    DescribeEventTypesQueueResponse * const q) : DescribeEventTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Health DescribeEventTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEventTypesResponsePrivate::DescribeEventTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEventTypesResponse"));
+    /// @todo
+}

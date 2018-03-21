@@ -19,3 +19,85 @@
 
 #include "purchasereservedcachenodesofferingresponse.h"
 #include "purchasereservedcachenodesofferingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  PurchaseReservedCacheNodesOfferingResponse
+ *
+ * @brief  Handles ElastiCache PurchaseReservedCacheNodesOffering responses.
+ *
+ * @see    ElastiCacheClient::purchaseReservedCacheNodesOffering
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseReservedCacheNodesOfferingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new PurchaseReservedCacheNodesOfferingResponsePrivate(this), parent)
+{
+    setRequest(new PurchaseReservedCacheNodesOfferingRequest(request));
+    setReply(reply);
+}
+
+const PurchaseReservedCacheNodesOfferingRequest * PurchaseReservedCacheNodesOfferingResponse::request() const
+{
+    Q_D(const PurchaseReservedCacheNodesOfferingResponse);
+    return static_cast<const PurchaseReservedCacheNodesOfferingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache PurchaseReservedCacheNodesOffering response.
+ *
+ * @param  response  Response to parse.
+ */
+void PurchaseReservedCacheNodesOfferingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseReservedCacheNodesOfferingResponsePrivate
+ *
+ * @brief  Private implementation for PurchaseReservedCacheNodesOfferingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseReservedCacheNodesOfferingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PurchaseReservedCacheNodesOfferingResponse instance.
+ */
+PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOfferingResponsePrivate(
+    PurchaseReservedCacheNodesOfferingQueueResponse * const q) : PurchaseReservedCacheNodesOfferingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache PurchaseReservedCacheNodesOfferingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOfferingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedCacheNodesOfferingResponse"));
+    /// @todo
+}

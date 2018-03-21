@@ -19,3 +19,85 @@
 
 #include "putitemresponse.h"
 #include "putitemresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  PutItemResponse
+ *
+ * @brief  Handles DynamoDB PutItem responses.
+ *
+ * @see    DynamoDBClient::putItem
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutItemResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new PutItemResponsePrivate(this), parent)
+{
+    setRequest(new PutItemRequest(request));
+    setReply(reply);
+}
+
+const PutItemRequest * PutItemResponse::request() const
+{
+    Q_D(const PutItemResponse);
+    return static_cast<const PutItemRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB PutItem response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutItemResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutItemResponsePrivate
+ *
+ * @brief  Private implementation for PutItemResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutItemResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutItemResponse instance.
+ */
+PutItemResponsePrivate::PutItemResponsePrivate(
+    PutItemQueueResponse * const q) : PutItemPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB PutItemResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutItemResponsePrivate::PutItemResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutItemResponse"));
+    /// @todo
+}

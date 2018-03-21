@@ -19,3 +19,85 @@
 
 #include "deletesshpublickeyresponse.h"
 #include "deletesshpublickeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteSSHPublicKeyResponse
+ *
+ * @brief  Handles IAM DeleteSSHPublicKey responses.
+ *
+ * @see    IAMClient::deleteSSHPublicKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSSHPublicKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteSSHPublicKeyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSSHPublicKeyRequest(request));
+    setReply(reply);
+}
+
+const DeleteSSHPublicKeyRequest * DeleteSSHPublicKeyResponse::request() const
+{
+    Q_D(const DeleteSSHPublicKeyResponse);
+    return static_cast<const DeleteSSHPublicKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteSSHPublicKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSSHPublicKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSSHPublicKeyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSSHPublicKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSSHPublicKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSSHPublicKeyResponse instance.
+ */
+DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponsePrivate(
+    DeleteSSHPublicKeyQueueResponse * const q) : DeleteSSHPublicKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteSSHPublicKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSSHPublicKeyResponse"));
+    /// @todo
+}

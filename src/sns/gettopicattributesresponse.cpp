@@ -19,3 +19,85 @@
 
 #include "gettopicattributesresponse.h"
 #include "gettopicattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  GetTopicAttributesResponse
+ *
+ * @brief  Handles SNS GetTopicAttributes responses.
+ *
+ * @see    SNSClient::getTopicAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTopicAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new GetTopicAttributesResponsePrivate(this), parent)
+{
+    setRequest(new GetTopicAttributesRequest(request));
+    setReply(reply);
+}
+
+const GetTopicAttributesRequest * GetTopicAttributesResponse::request() const
+{
+    Q_D(const GetTopicAttributesResponse);
+    return static_cast<const GetTopicAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS GetTopicAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTopicAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTopicAttributesResponsePrivate
+ *
+ * @brief  Private implementation for GetTopicAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTopicAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTopicAttributesResponse instance.
+ */
+GetTopicAttributesResponsePrivate::GetTopicAttributesResponsePrivate(
+    GetTopicAttributesQueueResponse * const q) : GetTopicAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS GetTopicAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTopicAttributesResponsePrivate::GetTopicAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTopicAttributesResponse"));
+    /// @todo
+}

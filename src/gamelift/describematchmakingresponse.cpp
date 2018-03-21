@@ -19,3 +19,85 @@
 
 #include "describematchmakingresponse.h"
 #include "describematchmakingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeMatchmakingResponse
+ *
+ * @brief  Handles GameLift DescribeMatchmaking responses.
+ *
+ * @see    GameLiftClient::describeMatchmaking
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMatchmakingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeMatchmakingResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMatchmakingRequest(request));
+    setReply(reply);
+}
+
+const DescribeMatchmakingRequest * DescribeMatchmakingResponse::request() const
+{
+    Q_D(const DescribeMatchmakingResponse);
+    return static_cast<const DescribeMatchmakingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeMatchmaking response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMatchmakingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMatchmakingResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMatchmakingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMatchmakingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMatchmakingResponse instance.
+ */
+DescribeMatchmakingResponsePrivate::DescribeMatchmakingResponsePrivate(
+    DescribeMatchmakingQueueResponse * const q) : DescribeMatchmakingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeMatchmakingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMatchmakingResponsePrivate::DescribeMatchmakingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMatchmakingResponse"));
+    /// @todo
+}

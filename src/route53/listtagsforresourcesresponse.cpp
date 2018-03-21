@@ -19,3 +19,85 @@
 
 #include "listtagsforresourcesresponse.h"
 #include "listtagsforresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListTagsForResourcesResponse
+ *
+ * @brief  Handles Route53 ListTagsForResources responses.
+ *
+ * @see    Route53Client::listTagsForResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new ListTagsForResourcesResponsePrivate(this), parent)
+{
+    setRequest(new ListTagsForResourcesRequest(request));
+    setReply(reply);
+}
+
+const ListTagsForResourcesRequest * ListTagsForResourcesResponse::request() const
+{
+    Q_D(const ListTagsForResourcesResponse);
+    return static_cast<const ListTagsForResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 ListTagsForResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTagsForResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForResourcesResponsePrivate
+ *
+ * @brief  Private implementation for ListTagsForResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTagsForResourcesResponse instance.
+ */
+ListTagsForResourcesResponsePrivate::ListTagsForResourcesResponsePrivate(
+    ListTagsForResourcesQueueResponse * const q) : ListTagsForResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 ListTagsForResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTagsForResourcesResponsePrivate::ListTagsForResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTagsForResourcesResponse"));
+    /// @todo
+}

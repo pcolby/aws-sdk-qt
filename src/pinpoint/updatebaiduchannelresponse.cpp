@@ -19,3 +19,85 @@
 
 #include "updatebaiduchannelresponse.h"
 #include "updatebaiduchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateBaiduChannelResponse
+ *
+ * @brief  Handles Pinpoint UpdateBaiduChannel responses.
+ *
+ * @see    PinpointClient::updateBaiduChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBaiduChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateBaiduChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateBaiduChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateBaiduChannelRequest * UpdateBaiduChannelResponse::request() const
+{
+    Q_D(const UpdateBaiduChannelResponse);
+    return static_cast<const UpdateBaiduChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateBaiduChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateBaiduChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBaiduChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateBaiduChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBaiduChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateBaiduChannelResponse instance.
+ */
+UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponsePrivate(
+    UpdateBaiduChannelQueueResponse * const q) : UpdateBaiduChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateBaiduChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateBaiduChannelResponse"));
+    /// @todo
+}

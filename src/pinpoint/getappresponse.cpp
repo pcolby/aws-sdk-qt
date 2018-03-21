@@ -19,3 +19,85 @@
 
 #include "getappresponse.h"
 #include "getappresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetAppResponse
+ *
+ * @brief  Handles Pinpoint GetApp responses.
+ *
+ * @see    PinpointClient::getApp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAppResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetAppResponsePrivate(this), parent)
+{
+    setRequest(new GetAppRequest(request));
+    setReply(reply);
+}
+
+const GetAppRequest * GetAppResponse::request() const
+{
+    Q_D(const GetAppResponse);
+    return static_cast<const GetAppRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetApp response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAppResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAppResponsePrivate
+ *
+ * @brief  Private implementation for GetAppResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAppResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAppResponse instance.
+ */
+GetAppResponsePrivate::GetAppResponsePrivate(
+    GetAppQueueResponse * const q) : GetAppPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetAppResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAppResponsePrivate::GetAppResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAppResponse"));
+    /// @todo
+}

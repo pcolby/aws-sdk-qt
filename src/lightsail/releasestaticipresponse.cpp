@@ -19,3 +19,85 @@
 
 #include "releasestaticipresponse.h"
 #include "releasestaticipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  ReleaseStaticIpResponse
+ *
+ * @brief  Handles Lightsail ReleaseStaticIp responses.
+ *
+ * @see    LightsailClient::releaseStaticIp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReleaseStaticIpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new ReleaseStaticIpResponsePrivate(this), parent)
+{
+    setRequest(new ReleaseStaticIpRequest(request));
+    setReply(reply);
+}
+
+const ReleaseStaticIpRequest * ReleaseStaticIpResponse::request() const
+{
+    Q_D(const ReleaseStaticIpResponse);
+    return static_cast<const ReleaseStaticIpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail ReleaseStaticIp response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReleaseStaticIpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReleaseStaticIpResponsePrivate
+ *
+ * @brief  Private implementation for ReleaseStaticIpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReleaseStaticIpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReleaseStaticIpResponse instance.
+ */
+ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponsePrivate(
+    ReleaseStaticIpQueueResponse * const q) : ReleaseStaticIpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail ReleaseStaticIpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReleaseStaticIpResponse"));
+    /// @todo
+}

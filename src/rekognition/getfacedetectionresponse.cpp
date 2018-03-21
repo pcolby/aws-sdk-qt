@@ -19,3 +19,85 @@
 
 #include "getfacedetectionresponse.h"
 #include "getfacedetectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  GetFaceDetectionResponse
+ *
+ * @brief  Handles Rekognition GetFaceDetection responses.
+ *
+ * @see    RekognitionClient::getFaceDetection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFaceDetectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new GetFaceDetectionResponsePrivate(this), parent)
+{
+    setRequest(new GetFaceDetectionRequest(request));
+    setReply(reply);
+}
+
+const GetFaceDetectionRequest * GetFaceDetectionResponse::request() const
+{
+    Q_D(const GetFaceDetectionResponse);
+    return static_cast<const GetFaceDetectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition GetFaceDetection response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFaceDetectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFaceDetectionResponsePrivate
+ *
+ * @brief  Private implementation for GetFaceDetectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFaceDetectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFaceDetectionResponse instance.
+ */
+GetFaceDetectionResponsePrivate::GetFaceDetectionResponsePrivate(
+    GetFaceDetectionQueueResponse * const q) : GetFaceDetectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition GetFaceDetectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFaceDetectionResponsePrivate::GetFaceDetectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFaceDetectionResponse"));
+    /// @todo
+}

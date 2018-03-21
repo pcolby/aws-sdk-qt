@@ -19,3 +19,85 @@
 
 #include "executechangesetresponse.h"
 #include "executechangesetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ExecuteChangeSetResponse
+ *
+ * @brief  Handles CloudFormation ExecuteChangeSet responses.
+ *
+ * @see    CloudFormationClient::executeChangeSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExecuteChangeSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ExecuteChangeSetResponsePrivate(this), parent)
+{
+    setRequest(new ExecuteChangeSetRequest(request));
+    setReply(reply);
+}
+
+const ExecuteChangeSetRequest * ExecuteChangeSetResponse::request() const
+{
+    Q_D(const ExecuteChangeSetResponse);
+    return static_cast<const ExecuteChangeSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ExecuteChangeSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void ExecuteChangeSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ExecuteChangeSetResponsePrivate
+ *
+ * @brief  Private implementation for ExecuteChangeSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecuteChangeSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ExecuteChangeSetResponse instance.
+ */
+ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponsePrivate(
+    ExecuteChangeSetQueueResponse * const q) : ExecuteChangeSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ExecuteChangeSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ExecuteChangeSetResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "authorizesecuritygroupegressresponse.h"
 #include "authorizesecuritygroupegressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AuthorizeSecurityGroupEgressResponse
+ *
+ * @brief  Handles EC2 AuthorizeSecurityGroupEgress responses.
+ *
+ * @see    EC2Client::authorizeSecurityGroupEgress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AuthorizeSecurityGroupEgressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AuthorizeSecurityGroupEgressResponsePrivate(this), parent)
+{
+    setRequest(new AuthorizeSecurityGroupEgressRequest(request));
+    setReply(reply);
+}
+
+const AuthorizeSecurityGroupEgressRequest * AuthorizeSecurityGroupEgressResponse::request() const
+{
+    Q_D(const AuthorizeSecurityGroupEgressResponse);
+    return static_cast<const AuthorizeSecurityGroupEgressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AuthorizeSecurityGroupEgress response.
+ *
+ * @param  response  Response to parse.
+ */
+void AuthorizeSecurityGroupEgressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AuthorizeSecurityGroupEgressResponsePrivate
+ *
+ * @brief  Private implementation for AuthorizeSecurityGroupEgressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeSecurityGroupEgressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AuthorizeSecurityGroupEgressResponse instance.
+ */
+AuthorizeSecurityGroupEgressResponsePrivate::AuthorizeSecurityGroupEgressResponsePrivate(
+    AuthorizeSecurityGroupEgressQueueResponse * const q) : AuthorizeSecurityGroupEgressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AuthorizeSecurityGroupEgressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AuthorizeSecurityGroupEgressResponsePrivate::AuthorizeSecurityGroupEgressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AuthorizeSecurityGroupEgressResponse"));
+    /// @todo
+}

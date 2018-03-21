@@ -19,3 +19,85 @@
 
 #include "describecachesecuritygroupsresponse.h"
 #include "describecachesecuritygroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeCacheSecurityGroupsResponse
+ *
+ * @brief  Handles ElastiCache DescribeCacheSecurityGroups responses.
+ *
+ * @see    ElastiCacheClient::describeCacheSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCacheSecurityGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DescribeCacheSecurityGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCacheSecurityGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeCacheSecurityGroupsRequest * DescribeCacheSecurityGroupsResponse::request() const
+{
+    Q_D(const DescribeCacheSecurityGroupsResponse);
+    return static_cast<const DescribeCacheSecurityGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DescribeCacheSecurityGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCacheSecurityGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCacheSecurityGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCacheSecurityGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCacheSecurityGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCacheSecurityGroupsResponse instance.
+ */
+DescribeCacheSecurityGroupsResponsePrivate::DescribeCacheSecurityGroupsResponsePrivate(
+    DescribeCacheSecurityGroupsQueueResponse * const q) : DescribeCacheSecurityGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DescribeCacheSecurityGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCacheSecurityGroupsResponsePrivate::DescribeCacheSecurityGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCacheSecurityGroupsResponse"));
+    /// @todo
+}

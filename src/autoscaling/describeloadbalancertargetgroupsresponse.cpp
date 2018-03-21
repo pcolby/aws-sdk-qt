@@ -19,3 +19,85 @@
 
 #include "describeloadbalancertargetgroupsresponse.h"
 #include "describeloadbalancertargetgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeLoadBalancerTargetGroupsResponse
+ *
+ * @brief  Handles AutoScaling DescribeLoadBalancerTargetGroups responses.
+ *
+ * @see    AutoScalingClient::describeLoadBalancerTargetGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLoadBalancerTargetGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeLoadBalancerTargetGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLoadBalancerTargetGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeLoadBalancerTargetGroupsRequest * DescribeLoadBalancerTargetGroupsResponse::request() const
+{
+    Q_D(const DescribeLoadBalancerTargetGroupsResponse);
+    return static_cast<const DescribeLoadBalancerTargetGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeLoadBalancerTargetGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLoadBalancerTargetGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLoadBalancerTargetGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoadBalancerTargetGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLoadBalancerTargetGroupsResponse instance.
+ */
+DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroupsResponsePrivate(
+    DescribeLoadBalancerTargetGroupsQueueResponse * const q) : DescribeLoadBalancerTargetGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeLoadBalancerTargetGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBalancerTargetGroupsResponse"));
+    /// @todo
+}

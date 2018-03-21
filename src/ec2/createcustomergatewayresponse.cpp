@@ -19,3 +19,85 @@
 
 #include "createcustomergatewayresponse.h"
 #include "createcustomergatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateCustomerGatewayResponse
+ *
+ * @brief  Handles EC2 CreateCustomerGateway responses.
+ *
+ * @see    EC2Client::createCustomerGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCustomerGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateCustomerGatewayResponsePrivate(this), parent)
+{
+    setRequest(new CreateCustomerGatewayRequest(request));
+    setReply(reply);
+}
+
+const CreateCustomerGatewayRequest * CreateCustomerGatewayResponse::request() const
+{
+    Q_D(const CreateCustomerGatewayResponse);
+    return static_cast<const CreateCustomerGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateCustomerGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCustomerGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCustomerGatewayResponsePrivate
+ *
+ * @brief  Private implementation for CreateCustomerGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomerGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCustomerGatewayResponse instance.
+ */
+CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponsePrivate(
+    CreateCustomerGatewayQueueResponse * const q) : CreateCustomerGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateCustomerGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCustomerGatewayResponse"));
+    /// @todo
+}

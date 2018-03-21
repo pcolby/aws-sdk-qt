@@ -19,3 +19,85 @@
 
 #include "updatethinggroupsforthingresponse.h"
 #include "updatethinggroupsforthingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateThingGroupsForThingResponse
+ *
+ * @brief  Handles IoT UpdateThingGroupsForThing responses.
+ *
+ * @see    IoTClient::updateThingGroupsForThing
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateThingGroupsForThingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new UpdateThingGroupsForThingResponsePrivate(this), parent)
+{
+    setRequest(new UpdateThingGroupsForThingRequest(request));
+    setReply(reply);
+}
+
+const UpdateThingGroupsForThingRequest * UpdateThingGroupsForThingResponse::request() const
+{
+    Q_D(const UpdateThingGroupsForThingResponse);
+    return static_cast<const UpdateThingGroupsForThingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT UpdateThingGroupsForThing response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateThingGroupsForThingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateThingGroupsForThingResponsePrivate
+ *
+ * @brief  Private implementation for UpdateThingGroupsForThingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThingGroupsForThingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateThingGroupsForThingResponse instance.
+ */
+UpdateThingGroupsForThingResponsePrivate::UpdateThingGroupsForThingResponsePrivate(
+    UpdateThingGroupsForThingQueueResponse * const q) : UpdateThingGroupsForThingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT UpdateThingGroupsForThingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateThingGroupsForThingResponsePrivate::UpdateThingGroupsForThingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateThingGroupsForThingResponse"));
+    /// @todo
+}

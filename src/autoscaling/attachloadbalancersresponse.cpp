@@ -19,3 +19,85 @@
 
 #include "attachloadbalancersresponse.h"
 #include "attachloadbalancersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  AttachLoadBalancersResponse
+ *
+ * @brief  Handles AutoScaling AttachLoadBalancers responses.
+ *
+ * @see    AutoScalingClient::attachLoadBalancers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachLoadBalancersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new AttachLoadBalancersResponsePrivate(this), parent)
+{
+    setRequest(new AttachLoadBalancersRequest(request));
+    setReply(reply);
+}
+
+const AttachLoadBalancersRequest * AttachLoadBalancersResponse::request() const
+{
+    Q_D(const AttachLoadBalancersResponse);
+    return static_cast<const AttachLoadBalancersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling AttachLoadBalancers response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachLoadBalancersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachLoadBalancersResponsePrivate
+ *
+ * @brief  Private implementation for AttachLoadBalancersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachLoadBalancersResponse instance.
+ */
+AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponsePrivate(
+    AttachLoadBalancersQueueResponse * const q) : AttachLoadBalancersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling AttachLoadBalancersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancersResponse"));
+    /// @todo
+}

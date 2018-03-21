@@ -19,3 +19,85 @@
 
 #include "describetrustedadvisorchecksummariesresponse.h"
 #include "describetrustedadvisorchecksummariesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  DescribeTrustedAdvisorCheckSummariesResponse
+ *
+ * @brief  Handles Support DescribeTrustedAdvisorCheckSummaries responses.
+ *
+ * @see    SupportClient::describeTrustedAdvisorCheckSummaries
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrustedAdvisorCheckSummariesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new DescribeTrustedAdvisorCheckSummariesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTrustedAdvisorCheckSummariesRequest(request));
+    setReply(reply);
+}
+
+const DescribeTrustedAdvisorCheckSummariesRequest * DescribeTrustedAdvisorCheckSummariesResponse::request() const
+{
+    Q_D(const DescribeTrustedAdvisorCheckSummariesResponse);
+    return static_cast<const DescribeTrustedAdvisorCheckSummariesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support DescribeTrustedAdvisorCheckSummaries response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTrustedAdvisorCheckSummariesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrustedAdvisorCheckSummariesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTrustedAdvisorCheckSummariesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTrustedAdvisorCheckSummariesResponse instance.
+ */
+DescribeTrustedAdvisorCheckSummariesResponsePrivate::DescribeTrustedAdvisorCheckSummariesResponsePrivate(
+    DescribeTrustedAdvisorCheckSummariesQueueResponse * const q) : DescribeTrustedAdvisorCheckSummariesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support DescribeTrustedAdvisorCheckSummariesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTrustedAdvisorCheckSummariesResponsePrivate::DescribeTrustedAdvisorCheckSummariesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTrustedAdvisorCheckSummariesResponse"));
+    /// @todo
+}

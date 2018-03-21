@@ -19,3 +19,85 @@
 
 #include "listbucketanalyticsconfigurationsresponse.h"
 #include "listbucketanalyticsconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  ListBucketAnalyticsConfigurationsResponse
+ *
+ * @brief  Handles S3 ListBucketAnalyticsConfigurations responses.
+ *
+ * @see    S3Client::listBucketAnalyticsConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBucketAnalyticsConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new ListBucketAnalyticsConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new ListBucketAnalyticsConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const ListBucketAnalyticsConfigurationsRequest * ListBucketAnalyticsConfigurationsResponse::request() const
+{
+    Q_D(const ListBucketAnalyticsConfigurationsResponse);
+    return static_cast<const ListBucketAnalyticsConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 ListBucketAnalyticsConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBucketAnalyticsConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBucketAnalyticsConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for ListBucketAnalyticsConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBucketAnalyticsConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBucketAnalyticsConfigurationsResponse instance.
+ */
+ListBucketAnalyticsConfigurationsResponsePrivate::ListBucketAnalyticsConfigurationsResponsePrivate(
+    ListBucketAnalyticsConfigurationsQueueResponse * const q) : ListBucketAnalyticsConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 ListBucketAnalyticsConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBucketAnalyticsConfigurationsResponsePrivate::ListBucketAnalyticsConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBucketAnalyticsConfigurationsResponse"));
+    /// @todo
+}

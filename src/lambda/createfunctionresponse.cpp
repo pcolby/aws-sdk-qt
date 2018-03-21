@@ -19,3 +19,85 @@
 
 #include "createfunctionresponse.h"
 #include "createfunctionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  CreateFunctionResponse
+ *
+ * @brief  Handles Lambda CreateFunction responses.
+ *
+ * @see    LambdaClient::createFunction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFunctionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new CreateFunctionResponsePrivate(this), parent)
+{
+    setRequest(new CreateFunctionRequest(request));
+    setReply(reply);
+}
+
+const CreateFunctionRequest * CreateFunctionResponse::request() const
+{
+    Q_D(const CreateFunctionResponse);
+    return static_cast<const CreateFunctionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda CreateFunction response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateFunctionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFunctionResponsePrivate
+ *
+ * @brief  Private implementation for CreateFunctionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFunctionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateFunctionResponse instance.
+ */
+CreateFunctionResponsePrivate::CreateFunctionResponsePrivate(
+    CreateFunctionQueueResponse * const q) : CreateFunctionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda CreateFunctionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateFunctionResponsePrivate::CreateFunctionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateFunctionResponse"));
+    /// @todo
+}

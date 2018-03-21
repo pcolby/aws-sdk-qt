@@ -19,3 +19,85 @@
 
 #include "copyproductresponse.h"
 #include "copyproductresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  CopyProductResponse
+ *
+ * @brief  Handles ServiceCatalog CopyProduct responses.
+ *
+ * @see    ServiceCatalogClient::copyProduct
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyProductResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new CopyProductResponsePrivate(this), parent)
+{
+    setRequest(new CopyProductRequest(request));
+    setReply(reply);
+}
+
+const CopyProductRequest * CopyProductResponse::request() const
+{
+    Q_D(const CopyProductResponse);
+    return static_cast<const CopyProductRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog CopyProduct response.
+ *
+ * @param  response  Response to parse.
+ */
+void CopyProductResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyProductResponsePrivate
+ *
+ * @brief  Private implementation for CopyProductResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyProductResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CopyProductResponse instance.
+ */
+CopyProductResponsePrivate::CopyProductResponsePrivate(
+    CopyProductQueueResponse * const q) : CopyProductPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog CopyProductResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CopyProductResponsePrivate::CopyProductResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CopyProductResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "stopexecutionresponse.h"
 #include "stopexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  StopExecutionResponse
+ *
+ * @brief  Handles SFN StopExecution responses.
+ *
+ * @see    SFNClient::stopExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new StopExecutionResponsePrivate(this), parent)
+{
+    setRequest(new StopExecutionRequest(request));
+    setReply(reply);
+}
+
+const StopExecutionRequest * StopExecutionResponse::request() const
+{
+    Q_D(const StopExecutionResponse);
+    return static_cast<const StopExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN StopExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopExecutionResponsePrivate
+ *
+ * @brief  Private implementation for StopExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopExecutionResponse instance.
+ */
+StopExecutionResponsePrivate::StopExecutionResponsePrivate(
+    StopExecutionQueueResponse * const q) : StopExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN StopExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopExecutionResponsePrivate::StopExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopExecutionResponse"));
+    /// @todo
+}

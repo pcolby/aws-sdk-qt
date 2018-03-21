@@ -19,3 +19,85 @@
 
 #include "getauthorizersresponse.h"
 #include "getauthorizersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetAuthorizersResponse
+ *
+ * @brief  Handles APIGateway GetAuthorizers responses.
+ *
+ * @see    APIGatewayClient::getAuthorizers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAuthorizersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetAuthorizersResponsePrivate(this), parent)
+{
+    setRequest(new GetAuthorizersRequest(request));
+    setReply(reply);
+}
+
+const GetAuthorizersRequest * GetAuthorizersResponse::request() const
+{
+    Q_D(const GetAuthorizersResponse);
+    return static_cast<const GetAuthorizersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetAuthorizers response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAuthorizersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAuthorizersResponsePrivate
+ *
+ * @brief  Private implementation for GetAuthorizersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAuthorizersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAuthorizersResponse instance.
+ */
+GetAuthorizersResponsePrivate::GetAuthorizersResponsePrivate(
+    GetAuthorizersQueueResponse * const q) : GetAuthorizersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetAuthorizersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAuthorizersResponsePrivate::GetAuthorizersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAuthorizersResponse"));
+    /// @todo
+}

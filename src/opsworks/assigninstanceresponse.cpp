@@ -19,3 +19,85 @@
 
 #include "assigninstanceresponse.h"
 #include "assigninstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  AssignInstanceResponse
+ *
+ * @brief  Handles OpsWorks AssignInstance responses.
+ *
+ * @see    OpsWorksClient::assignInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssignInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new AssignInstanceResponsePrivate(this), parent)
+{
+    setRequest(new AssignInstanceRequest(request));
+    setReply(reply);
+}
+
+const AssignInstanceRequest * AssignInstanceResponse::request() const
+{
+    Q_D(const AssignInstanceResponse);
+    return static_cast<const AssignInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks AssignInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssignInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssignInstanceResponsePrivate
+ *
+ * @brief  Private implementation for AssignInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssignInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssignInstanceResponse instance.
+ */
+AssignInstanceResponsePrivate::AssignInstanceResponsePrivate(
+    AssignInstanceQueueResponse * const q) : AssignInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks AssignInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssignInstanceResponsePrivate::AssignInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssignInstanceResponse"));
+    /// @todo
+}

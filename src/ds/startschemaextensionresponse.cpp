@@ -19,3 +19,85 @@
 
 #include "startschemaextensionresponse.h"
 #include "startschemaextensionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  StartSchemaExtensionResponse
+ *
+ * @brief  Handles DirectoryService StartSchemaExtension responses.
+ *
+ * @see    DirectoryServiceClient::startSchemaExtension
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartSchemaExtensionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new StartSchemaExtensionResponsePrivate(this), parent)
+{
+    setRequest(new StartSchemaExtensionRequest(request));
+    setReply(reply);
+}
+
+const StartSchemaExtensionRequest * StartSchemaExtensionResponse::request() const
+{
+    Q_D(const StartSchemaExtensionResponse);
+    return static_cast<const StartSchemaExtensionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService StartSchemaExtension response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartSchemaExtensionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartSchemaExtensionResponsePrivate
+ *
+ * @brief  Private implementation for StartSchemaExtensionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartSchemaExtensionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartSchemaExtensionResponse instance.
+ */
+StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponsePrivate(
+    StartSchemaExtensionQueueResponse * const q) : StartSchemaExtensionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService StartSchemaExtensionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartSchemaExtensionResponse"));
+    /// @todo
+}

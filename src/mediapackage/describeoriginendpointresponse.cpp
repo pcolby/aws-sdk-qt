@@ -19,3 +19,85 @@
 
 #include "describeoriginendpointresponse.h"
 #include "describeoriginendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  DescribeOriginEndpointResponse
+ *
+ * @brief  Handles MediaPackage DescribeOriginEndpoint responses.
+ *
+ * @see    MediaPackageClient::describeOriginEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOriginEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaPackageResponse(new DescribeOriginEndpointResponsePrivate(this), parent)
+{
+    setRequest(new DescribeOriginEndpointRequest(request));
+    setReply(reply);
+}
+
+const DescribeOriginEndpointRequest * DescribeOriginEndpointResponse::request() const
+{
+    Q_D(const DescribeOriginEndpointResponse);
+    return static_cast<const DescribeOriginEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaPackage DescribeOriginEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeOriginEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOriginEndpointResponsePrivate
+ *
+ * @brief  Private implementation for DescribeOriginEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOriginEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeOriginEndpointResponse instance.
+ */
+DescribeOriginEndpointResponsePrivate::DescribeOriginEndpointResponsePrivate(
+    DescribeOriginEndpointQueueResponse * const q) : DescribeOriginEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaPackage DescribeOriginEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeOriginEndpointResponsePrivate::DescribeOriginEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeOriginEndpointResponse"));
+    /// @todo
+}

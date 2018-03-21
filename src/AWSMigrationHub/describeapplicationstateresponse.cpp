@@ -19,3 +19,85 @@
 
 #include "describeapplicationstateresponse.h"
 #include "describeapplicationstateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DescribeApplicationStateResponse
+ *
+ * @brief  Handles MigrationHub DescribeApplicationState responses.
+ *
+ * @see    MigrationHubClient::describeApplicationState
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeApplicationStateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new DescribeApplicationStateResponsePrivate(this), parent)
+{
+    setRequest(new DescribeApplicationStateRequest(request));
+    setReply(reply);
+}
+
+const DescribeApplicationStateRequest * DescribeApplicationStateResponse::request() const
+{
+    Q_D(const DescribeApplicationStateResponse);
+    return static_cast<const DescribeApplicationStateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub DescribeApplicationState response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeApplicationStateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeApplicationStateResponsePrivate
+ *
+ * @brief  Private implementation for DescribeApplicationStateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationStateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeApplicationStateResponse instance.
+ */
+DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponsePrivate(
+    DescribeApplicationStateQueueResponse * const q) : DescribeApplicationStatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub DescribeApplicationStateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationStateResponse"));
+    /// @todo
+}

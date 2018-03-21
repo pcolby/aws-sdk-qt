@@ -19,3 +19,85 @@
 
 #include "createtrafficpolicyinstanceresponse.h"
 #include "createtrafficpolicyinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  CreateTrafficPolicyInstanceResponse
+ *
+ * @brief  Handles Route53 CreateTrafficPolicyInstance responses.
+ *
+ * @see    Route53Client::createTrafficPolicyInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTrafficPolicyInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new CreateTrafficPolicyInstanceResponsePrivate(this), parent)
+{
+    setRequest(new CreateTrafficPolicyInstanceRequest(request));
+    setReply(reply);
+}
+
+const CreateTrafficPolicyInstanceRequest * CreateTrafficPolicyInstanceResponse::request() const
+{
+    Q_D(const CreateTrafficPolicyInstanceResponse);
+    return static_cast<const CreateTrafficPolicyInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 CreateTrafficPolicyInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateTrafficPolicyInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTrafficPolicyInstanceResponsePrivate
+ *
+ * @brief  Private implementation for CreateTrafficPolicyInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTrafficPolicyInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateTrafficPolicyInstanceResponse instance.
+ */
+CreateTrafficPolicyInstanceResponsePrivate::CreateTrafficPolicyInstanceResponsePrivate(
+    CreateTrafficPolicyInstanceQueueResponse * const q) : CreateTrafficPolicyInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 CreateTrafficPolicyInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateTrafficPolicyInstanceResponsePrivate::CreateTrafficPolicyInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateTrafficPolicyInstanceResponse"));
+    /// @todo
+}

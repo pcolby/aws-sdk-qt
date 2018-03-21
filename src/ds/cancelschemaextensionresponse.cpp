@@ -19,3 +19,85 @@
 
 #include "cancelschemaextensionresponse.h"
 #include "cancelschemaextensionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CancelSchemaExtensionResponse
+ *
+ * @brief  Handles DirectoryService CancelSchemaExtension responses.
+ *
+ * @see    DirectoryServiceClient::cancelSchemaExtension
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelSchemaExtensionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new CancelSchemaExtensionResponsePrivate(this), parent)
+{
+    setRequest(new CancelSchemaExtensionRequest(request));
+    setReply(reply);
+}
+
+const CancelSchemaExtensionRequest * CancelSchemaExtensionResponse::request() const
+{
+    Q_D(const CancelSchemaExtensionResponse);
+    return static_cast<const CancelSchemaExtensionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService CancelSchemaExtension response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelSchemaExtensionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelSchemaExtensionResponsePrivate
+ *
+ * @brief  Private implementation for CancelSchemaExtensionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelSchemaExtensionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelSchemaExtensionResponse instance.
+ */
+CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponsePrivate(
+    CancelSchemaExtensionQueueResponse * const q) : CancelSchemaExtensionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService CancelSchemaExtensionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelSchemaExtensionResponse"));
+    /// @todo
+}

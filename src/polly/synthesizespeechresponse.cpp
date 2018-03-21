@@ -19,3 +19,85 @@
 
 #include "synthesizespeechresponse.h"
 #include "synthesizespeechresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Polly {
+
+/**
+ * @class  SynthesizeSpeechResponse
+ *
+ * @brief  Handles Polly SynthesizeSpeech responses.
+ *
+ * @see    PollyClient::synthesizeSpeech
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SynthesizeSpeechResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PollyResponse(new SynthesizeSpeechResponsePrivate(this), parent)
+{
+    setRequest(new SynthesizeSpeechRequest(request));
+    setReply(reply);
+}
+
+const SynthesizeSpeechRequest * SynthesizeSpeechResponse::request() const
+{
+    Q_D(const SynthesizeSpeechResponse);
+    return static_cast<const SynthesizeSpeechRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Polly SynthesizeSpeech response.
+ *
+ * @param  response  Response to parse.
+ */
+void SynthesizeSpeechResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SynthesizeSpeechResponsePrivate
+ *
+ * @brief  Private implementation for SynthesizeSpeechResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SynthesizeSpeechResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SynthesizeSpeechResponse instance.
+ */
+SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponsePrivate(
+    SynthesizeSpeechQueueResponse * const q) : SynthesizeSpeechPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Polly SynthesizeSpeechResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SynthesizeSpeechResponse"));
+    /// @todo
+}

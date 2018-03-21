@@ -19,3 +19,85 @@
 
 #include "createcustomverificationemailtemplateresponse.h"
 #include "createcustomverificationemailtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  CreateCustomVerificationEmailTemplateResponse
+ *
+ * @brief  Handles SES CreateCustomVerificationEmailTemplate responses.
+ *
+ * @see    SESClient::createCustomVerificationEmailTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCustomVerificationEmailTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new CreateCustomVerificationEmailTemplateResponsePrivate(this), parent)
+{
+    setRequest(new CreateCustomVerificationEmailTemplateRequest(request));
+    setReply(reply);
+}
+
+const CreateCustomVerificationEmailTemplateRequest * CreateCustomVerificationEmailTemplateResponse::request() const
+{
+    Q_D(const CreateCustomVerificationEmailTemplateResponse);
+    return static_cast<const CreateCustomVerificationEmailTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES CreateCustomVerificationEmailTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCustomVerificationEmailTemplateResponsePrivate
+ *
+ * @brief  Private implementation for CreateCustomVerificationEmailTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomVerificationEmailTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCustomVerificationEmailTemplateResponse instance.
+ */
+CreateCustomVerificationEmailTemplateResponsePrivate::CreateCustomVerificationEmailTemplateResponsePrivate(
+    CreateCustomVerificationEmailTemplateQueueResponse * const q) : CreateCustomVerificationEmailTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES CreateCustomVerificationEmailTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCustomVerificationEmailTemplateResponsePrivate::CreateCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCustomVerificationEmailTemplateResponse"));
+    /// @todo
+}

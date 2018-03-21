@@ -19,3 +19,85 @@
 
 #include "deletestreamresponse.h"
 #include "deletestreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteStreamResponse
+ *
+ * @brief  Handles IoT DeleteStream responses.
+ *
+ * @see    IoTClient::deleteStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeleteStreamResponsePrivate(this), parent)
+{
+    setRequest(new DeleteStreamRequest(request));
+    setReply(reply);
+}
+
+const DeleteStreamRequest * DeleteStreamResponse::request() const
+{
+    Q_D(const DeleteStreamResponse);
+    return static_cast<const DeleteStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeleteStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStreamResponsePrivate
+ *
+ * @brief  Private implementation for DeleteStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteStreamResponse instance.
+ */
+DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
+    DeleteStreamQueueResponse * const q) : DeleteStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeleteStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteStreamResponsePrivate::DeleteStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteStreamResponse"));
+    /// @todo
+}

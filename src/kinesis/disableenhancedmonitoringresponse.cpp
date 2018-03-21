@@ -19,3 +19,85 @@
 
 #include "disableenhancedmonitoringresponse.h"
 #include "disableenhancedmonitoringresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  DisableEnhancedMonitoringResponse
+ *
+ * @brief  Handles Kinesis DisableEnhancedMonitoring responses.
+ *
+ * @see    KinesisClient::disableEnhancedMonitoring
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableEnhancedMonitoringResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new DisableEnhancedMonitoringResponsePrivate(this), parent)
+{
+    setRequest(new DisableEnhancedMonitoringRequest(request));
+    setReply(reply);
+}
+
+const DisableEnhancedMonitoringRequest * DisableEnhancedMonitoringResponse::request() const
+{
+    Q_D(const DisableEnhancedMonitoringResponse);
+    return static_cast<const DisableEnhancedMonitoringRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis DisableEnhancedMonitoring response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableEnhancedMonitoringResponsePrivate
+ *
+ * @brief  Private implementation for DisableEnhancedMonitoringResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableEnhancedMonitoringResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableEnhancedMonitoringResponse instance.
+ */
+DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponsePrivate(
+    DisableEnhancedMonitoringQueueResponse * const q) : DisableEnhancedMonitoringPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis DisableEnhancedMonitoringResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableEnhancedMonitoringResponse"));
+    /// @todo
+}

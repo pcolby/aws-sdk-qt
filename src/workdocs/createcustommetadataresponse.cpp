@@ -19,3 +19,85 @@
 
 #include "createcustommetadataresponse.h"
 #include "createcustommetadataresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  CreateCustomMetadataResponse
+ *
+ * @brief  Handles WorkDocs CreateCustomMetadata responses.
+ *
+ * @see    WorkDocsClient::createCustomMetadata
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCustomMetadataResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new CreateCustomMetadataResponsePrivate(this), parent)
+{
+    setRequest(new CreateCustomMetadataRequest(request));
+    setReply(reply);
+}
+
+const CreateCustomMetadataRequest * CreateCustomMetadataResponse::request() const
+{
+    Q_D(const CreateCustomMetadataResponse);
+    return static_cast<const CreateCustomMetadataRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs CreateCustomMetadata response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCustomMetadataResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCustomMetadataResponsePrivate
+ *
+ * @brief  Private implementation for CreateCustomMetadataResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomMetadataResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCustomMetadataResponse instance.
+ */
+CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponsePrivate(
+    CreateCustomMetadataQueueResponse * const q) : CreateCustomMetadataPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs CreateCustomMetadataResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCustomMetadataResponse"));
+    /// @todo
+}

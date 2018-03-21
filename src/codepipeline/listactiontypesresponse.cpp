@@ -19,3 +19,85 @@
 
 #include "listactiontypesresponse.h"
 #include "listactiontypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  ListActionTypesResponse
+ *
+ * @brief  Handles CodePipeline ListActionTypes responses.
+ *
+ * @see    CodePipelineClient::listActionTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListActionTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new ListActionTypesResponsePrivate(this), parent)
+{
+    setRequest(new ListActionTypesRequest(request));
+    setReply(reply);
+}
+
+const ListActionTypesRequest * ListActionTypesResponse::request() const
+{
+    Q_D(const ListActionTypesResponse);
+    return static_cast<const ListActionTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline ListActionTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListActionTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListActionTypesResponsePrivate
+ *
+ * @brief  Private implementation for ListActionTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListActionTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListActionTypesResponse instance.
+ */
+ListActionTypesResponsePrivate::ListActionTypesResponsePrivate(
+    ListActionTypesQueueResponse * const q) : ListActionTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline ListActionTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListActionTypesResponsePrivate::ListActionTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListActionTypesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletebucketinventoryconfigurationresponse.h"
 #include "deletebucketinventoryconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteBucketInventoryConfigurationResponse
+ *
+ * @brief  Handles S3 DeleteBucketInventoryConfiguration responses.
+ *
+ * @see    S3Client::deleteBucketInventoryConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBucketInventoryConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new DeleteBucketInventoryConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBucketInventoryConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DeleteBucketInventoryConfigurationRequest * DeleteBucketInventoryConfigurationResponse::request() const
+{
+    Q_D(const DeleteBucketInventoryConfigurationResponse);
+    return static_cast<const DeleteBucketInventoryConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 DeleteBucketInventoryConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBucketInventoryConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBucketInventoryConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketInventoryConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBucketInventoryConfigurationResponse instance.
+ */
+DeleteBucketInventoryConfigurationResponsePrivate::DeleteBucketInventoryConfigurationResponsePrivate(
+    DeleteBucketInventoryConfigurationQueueResponse * const q) : DeleteBucketInventoryConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 DeleteBucketInventoryConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBucketInventoryConfigurationResponsePrivate::DeleteBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBucketInventoryConfigurationResponse"));
+    /// @todo
+}

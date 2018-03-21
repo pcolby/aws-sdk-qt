@@ -19,3 +19,85 @@
 
 #include "deleteuserpoolclientresponse.h"
 #include "deleteuserpoolclientresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DeleteUserPoolClientResponse
+ *
+ * @brief  Handles CognitoIdentityProvider DeleteUserPoolClient responses.
+ *
+ * @see    CognitoIdentityProviderClient::deleteUserPoolClient
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserPoolClientResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new DeleteUserPoolClientResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUserPoolClientRequest(request));
+    setReply(reply);
+}
+
+const DeleteUserPoolClientRequest * DeleteUserPoolClientResponse::request() const
+{
+    Q_D(const DeleteUserPoolClientResponse);
+    return static_cast<const DeleteUserPoolClientRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider DeleteUserPoolClient response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUserPoolClientResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserPoolClientResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUserPoolClientResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserPoolClientResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUserPoolClientResponse instance.
+ */
+DeleteUserPoolClientResponsePrivate::DeleteUserPoolClientResponsePrivate(
+    DeleteUserPoolClientQueueResponse * const q) : DeleteUserPoolClientPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider DeleteUserPoolClientResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUserPoolClientResponsePrivate::DeleteUserPoolClientResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUserPoolClientResponse"));
+    /// @todo
+}

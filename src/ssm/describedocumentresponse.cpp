@@ -19,3 +19,85 @@
 
 #include "describedocumentresponse.h"
 #include "describedocumentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeDocumentResponse
+ *
+ * @brief  Handles SSM DescribeDocument responses.
+ *
+ * @see    SSMClient::describeDocument
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDocumentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeDocumentResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDocumentRequest(request));
+    setReply(reply);
+}
+
+const DescribeDocumentRequest * DescribeDocumentResponse::request() const
+{
+    Q_D(const DescribeDocumentResponse);
+    return static_cast<const DescribeDocumentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeDocument response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDocumentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDocumentResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDocumentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDocumentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDocumentResponse instance.
+ */
+DescribeDocumentResponsePrivate::DescribeDocumentResponsePrivate(
+    DescribeDocumentQueueResponse * const q) : DescribeDocumentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeDocumentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDocumentResponsePrivate::DescribeDocumentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentResponse"));
+    /// @todo
+}

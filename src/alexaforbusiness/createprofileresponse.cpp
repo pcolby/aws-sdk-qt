@@ -19,3 +19,85 @@
 
 #include "createprofileresponse.h"
 #include "createprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  CreateProfileResponse
+ *
+ * @brief  Handles AlexaForBusiness CreateProfile responses.
+ *
+ * @see    AlexaForBusinessClient::createProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new CreateProfileResponsePrivate(this), parent)
+{
+    setRequest(new CreateProfileRequest(request));
+    setReply(reply);
+}
+
+const CreateProfileRequest * CreateProfileResponse::request() const
+{
+    Q_D(const CreateProfileResponse);
+    return static_cast<const CreateProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness CreateProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateProfileResponsePrivate
+ *
+ * @brief  Private implementation for CreateProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateProfileResponse instance.
+ */
+CreateProfileResponsePrivate::CreateProfileResponsePrivate(
+    CreateProfileQueueResponse * const q) : CreateProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness CreateProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateProfileResponsePrivate::CreateProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateProfileResponse"));
+    /// @todo
+}

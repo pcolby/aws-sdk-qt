@@ -19,3 +19,85 @@
 
 #include "updatedeviceresponse.h"
 #include "updatedeviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UpdateDeviceResponse
+ *
+ * @brief  Handles AlexaForBusiness UpdateDevice responses.
+ *
+ * @see    AlexaForBusinessClient::updateDevice
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDeviceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new UpdateDeviceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDeviceRequest(request));
+    setReply(reply);
+}
+
+const UpdateDeviceRequest * UpdateDeviceResponse::request() const
+{
+    Q_D(const UpdateDeviceResponse);
+    return static_cast<const UpdateDeviceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness UpdateDevice response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDeviceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDeviceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDeviceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeviceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDeviceResponse instance.
+ */
+UpdateDeviceResponsePrivate::UpdateDeviceResponsePrivate(
+    UpdateDeviceQueueResponse * const q) : UpdateDevicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness UpdateDeviceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDeviceResponsePrivate::UpdateDeviceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDeviceResponse"));
+    /// @todo
+}

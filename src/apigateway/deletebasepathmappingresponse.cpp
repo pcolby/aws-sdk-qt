@@ -19,3 +19,85 @@
 
 #include "deletebasepathmappingresponse.h"
 #include "deletebasepathmappingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteBasePathMappingResponse
+ *
+ * @brief  Handles APIGateway DeleteBasePathMapping responses.
+ *
+ * @see    APIGatewayClient::deleteBasePathMapping
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBasePathMappingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteBasePathMappingResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBasePathMappingRequest(request));
+    setReply(reply);
+}
+
+const DeleteBasePathMappingRequest * DeleteBasePathMappingResponse::request() const
+{
+    Q_D(const DeleteBasePathMappingResponse);
+    return static_cast<const DeleteBasePathMappingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteBasePathMapping response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBasePathMappingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBasePathMappingResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBasePathMappingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBasePathMappingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBasePathMappingResponse instance.
+ */
+DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponsePrivate(
+    DeleteBasePathMappingQueueResponse * const q) : DeleteBasePathMappingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteBasePathMappingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBasePathMappingResponse"));
+    /// @todo
+}

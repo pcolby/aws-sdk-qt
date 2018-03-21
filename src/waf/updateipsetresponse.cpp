@@ -19,3 +19,85 @@
 
 #include "updateipsetresponse.h"
 #include "updateipsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  UpdateIPSetResponse
+ *
+ * @brief  Handles WAF UpdateIPSet responses.
+ *
+ * @see    WAFClient::updateIPSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateIPSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new UpdateIPSetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateIPSetRequest(request));
+    setReply(reply);
+}
+
+const UpdateIPSetRequest * UpdateIPSetResponse::request() const
+{
+    Q_D(const UpdateIPSetResponse);
+    return static_cast<const UpdateIPSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF UpdateIPSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateIPSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateIPSetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateIPSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIPSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateIPSetResponse instance.
+ */
+UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
+    UpdateIPSetQueueResponse * const q) : UpdateIPSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF UpdateIPSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateIPSetResponsePrivate::UpdateIPSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateIPSetResponse"));
+    /// @todo
+}

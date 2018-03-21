@@ -19,3 +19,85 @@
 
 #include "updatepatchbaselineresponse.h"
 #include "updatepatchbaselineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  UpdatePatchBaselineResponse
+ *
+ * @brief  Handles SSM UpdatePatchBaseline responses.
+ *
+ * @see    SSMClient::updatePatchBaseline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdatePatchBaselineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new UpdatePatchBaselineResponsePrivate(this), parent)
+{
+    setRequest(new UpdatePatchBaselineRequest(request));
+    setReply(reply);
+}
+
+const UpdatePatchBaselineRequest * UpdatePatchBaselineResponse::request() const
+{
+    Q_D(const UpdatePatchBaselineResponse);
+    return static_cast<const UpdatePatchBaselineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM UpdatePatchBaseline response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdatePatchBaselineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdatePatchBaselineResponsePrivate
+ *
+ * @brief  Private implementation for UpdatePatchBaselineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePatchBaselineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdatePatchBaselineResponse instance.
+ */
+UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponsePrivate(
+    UpdatePatchBaselineQueueResponse * const q) : UpdatePatchBaselinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM UpdatePatchBaselineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdatePatchBaselineResponse"));
+    /// @todo
+}

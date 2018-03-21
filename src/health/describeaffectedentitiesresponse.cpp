@@ -19,3 +19,85 @@
 
 #include "describeaffectedentitiesresponse.h"
 #include "describeaffectedentitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Health {
+
+/**
+ * @class  DescribeAffectedEntitiesResponse
+ *
+ * @brief  Handles Health DescribeAffectedEntities responses.
+ *
+ * @see    HealthClient::describeAffectedEntities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAffectedEntitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : HealthResponse(new DescribeAffectedEntitiesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAffectedEntitiesRequest(request));
+    setReply(reply);
+}
+
+const DescribeAffectedEntitiesRequest * DescribeAffectedEntitiesResponse::request() const
+{
+    Q_D(const DescribeAffectedEntitiesResponse);
+    return static_cast<const DescribeAffectedEntitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Health DescribeAffectedEntities response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAffectedEntitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAffectedEntitiesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAffectedEntitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAffectedEntitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAffectedEntitiesResponse instance.
+ */
+DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponsePrivate(
+    DescribeAffectedEntitiesQueueResponse * const q) : DescribeAffectedEntitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Health DescribeAffectedEntitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAffectedEntitiesResponse"));
+    /// @todo
+}

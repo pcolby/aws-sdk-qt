@@ -19,3 +19,85 @@
 
 #include "describeuploadbufferresponse.h"
 #include "describeuploadbufferresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeUploadBufferResponse
+ *
+ * @brief  Handles StorageGateway DescribeUploadBuffer responses.
+ *
+ * @see    StorageGatewayClient::describeUploadBuffer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUploadBufferResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeUploadBufferResponsePrivate(this), parent)
+{
+    setRequest(new DescribeUploadBufferRequest(request));
+    setReply(reply);
+}
+
+const DescribeUploadBufferRequest * DescribeUploadBufferResponse::request() const
+{
+    Q_D(const DescribeUploadBufferResponse);
+    return static_cast<const DescribeUploadBufferRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeUploadBuffer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeUploadBufferResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUploadBufferResponsePrivate
+ *
+ * @brief  Private implementation for DescribeUploadBufferResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUploadBufferResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeUploadBufferResponse instance.
+ */
+DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponsePrivate(
+    DescribeUploadBufferQueueResponse * const q) : DescribeUploadBufferPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeUploadBufferResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeUploadBufferResponse"));
+    /// @todo
+}

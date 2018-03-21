@@ -19,3 +19,85 @@
 
 #include "attachloadbalancertosubnetsresponse.h"
 #include "attachloadbalancertosubnetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  AttachLoadBalancerToSubnetsResponse
+ *
+ * @brief  Handles ElasticLoadBalancing AttachLoadBalancerToSubnets responses.
+ *
+ * @see    ElasticLoadBalancingClient::attachLoadBalancerToSubnets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachLoadBalancerToSubnetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new AttachLoadBalancerToSubnetsResponsePrivate(this), parent)
+{
+    setRequest(new AttachLoadBalancerToSubnetsRequest(request));
+    setReply(reply);
+}
+
+const AttachLoadBalancerToSubnetsRequest * AttachLoadBalancerToSubnetsResponse::request() const
+{
+    Q_D(const AttachLoadBalancerToSubnetsResponse);
+    return static_cast<const AttachLoadBalancerToSubnetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing AttachLoadBalancerToSubnets response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachLoadBalancerToSubnetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachLoadBalancerToSubnetsResponsePrivate
+ *
+ * @brief  Private implementation for AttachLoadBalancerToSubnetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancerToSubnetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachLoadBalancerToSubnetsResponse instance.
+ */
+AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponsePrivate(
+    AttachLoadBalancerToSubnetsQueueResponse * const q) : AttachLoadBalancerToSubnetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing AttachLoadBalancerToSubnetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancerToSubnetsResponse"));
+    /// @todo
+}

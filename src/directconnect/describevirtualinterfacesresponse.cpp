@@ -19,3 +19,85 @@
 
 #include "describevirtualinterfacesresponse.h"
 #include "describevirtualinterfacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeVirtualInterfacesResponse
+ *
+ * @brief  Handles DirectConnect DescribeVirtualInterfaces responses.
+ *
+ * @see    DirectConnectClient::describeVirtualInterfaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVirtualInterfacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeVirtualInterfacesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVirtualInterfacesRequest(request));
+    setReply(reply);
+}
+
+const DescribeVirtualInterfacesRequest * DescribeVirtualInterfacesResponse::request() const
+{
+    Q_D(const DescribeVirtualInterfacesResponse);
+    return static_cast<const DescribeVirtualInterfacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeVirtualInterfaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVirtualInterfacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVirtualInterfacesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVirtualInterfacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVirtualInterfacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVirtualInterfacesResponse instance.
+ */
+DescribeVirtualInterfacesResponsePrivate::DescribeVirtualInterfacesResponsePrivate(
+    DescribeVirtualInterfacesQueueResponse * const q) : DescribeVirtualInterfacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeVirtualInterfacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVirtualInterfacesResponsePrivate::DescribeVirtualInterfacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVirtualInterfacesResponse"));
+    /// @todo
+}

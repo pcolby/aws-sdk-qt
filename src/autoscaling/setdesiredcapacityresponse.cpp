@@ -19,3 +19,85 @@
 
 #include "setdesiredcapacityresponse.h"
 #include "setdesiredcapacityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  SetDesiredCapacityResponse
+ *
+ * @brief  Handles AutoScaling SetDesiredCapacity responses.
+ *
+ * @see    AutoScalingClient::setDesiredCapacity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetDesiredCapacityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new SetDesiredCapacityResponsePrivate(this), parent)
+{
+    setRequest(new SetDesiredCapacityRequest(request));
+    setReply(reply);
+}
+
+const SetDesiredCapacityRequest * SetDesiredCapacityResponse::request() const
+{
+    Q_D(const SetDesiredCapacityResponse);
+    return static_cast<const SetDesiredCapacityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling SetDesiredCapacity response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetDesiredCapacityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetDesiredCapacityResponsePrivate
+ *
+ * @brief  Private implementation for SetDesiredCapacityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDesiredCapacityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetDesiredCapacityResponse instance.
+ */
+SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponsePrivate(
+    SetDesiredCapacityQueueResponse * const q) : SetDesiredCapacityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling SetDesiredCapacityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetDesiredCapacityResponse"));
+    /// @todo
+}

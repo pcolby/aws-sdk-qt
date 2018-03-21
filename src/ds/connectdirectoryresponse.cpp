@@ -19,3 +19,85 @@
 
 #include "connectdirectoryresponse.h"
 #include "connectdirectoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  ConnectDirectoryResponse
+ *
+ * @brief  Handles DirectoryService ConnectDirectory responses.
+ *
+ * @see    DirectoryServiceClient::connectDirectory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConnectDirectoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new ConnectDirectoryResponsePrivate(this), parent)
+{
+    setRequest(new ConnectDirectoryRequest(request));
+    setReply(reply);
+}
+
+const ConnectDirectoryRequest * ConnectDirectoryResponse::request() const
+{
+    Q_D(const ConnectDirectoryResponse);
+    return static_cast<const ConnectDirectoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService ConnectDirectory response.
+ *
+ * @param  response  Response to parse.
+ */
+void ConnectDirectoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ConnectDirectoryResponsePrivate
+ *
+ * @brief  Private implementation for ConnectDirectoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConnectDirectoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ConnectDirectoryResponse instance.
+ */
+ConnectDirectoryResponsePrivate::ConnectDirectoryResponsePrivate(
+    ConnectDirectoryQueueResponse * const q) : ConnectDirectoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService ConnectDirectoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ConnectDirectoryResponsePrivate::ConnectDirectoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ConnectDirectoryResponse"));
+    /// @todo
+}

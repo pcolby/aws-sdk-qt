@@ -19,3 +19,85 @@
 
 #include "detectlabelsresponse.h"
 #include "detectlabelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DetectLabelsResponse
+ *
+ * @brief  Handles Rekognition DetectLabels responses.
+ *
+ * @see    RekognitionClient::detectLabels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectLabelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new DetectLabelsResponsePrivate(this), parent)
+{
+    setRequest(new DetectLabelsRequest(request));
+    setReply(reply);
+}
+
+const DetectLabelsRequest * DetectLabelsResponse::request() const
+{
+    Q_D(const DetectLabelsResponse);
+    return static_cast<const DetectLabelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition DetectLabels response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetectLabelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectLabelsResponsePrivate
+ *
+ * @brief  Private implementation for DetectLabelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectLabelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetectLabelsResponse instance.
+ */
+DetectLabelsResponsePrivate::DetectLabelsResponsePrivate(
+    DetectLabelsQueueResponse * const q) : DetectLabelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition DetectLabelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetectLabelsResponsePrivate::DetectLabelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetectLabelsResponse"));
+    /// @todo
+}

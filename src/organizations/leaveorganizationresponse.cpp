@@ -19,3 +19,85 @@
 
 #include "leaveorganizationresponse.h"
 #include "leaveorganizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  LeaveOrganizationResponse
+ *
+ * @brief  Handles Organizations LeaveOrganization responses.
+ *
+ * @see    OrganizationsClient::leaveOrganization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+LeaveOrganizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new LeaveOrganizationResponsePrivate(this), parent)
+{
+    setRequest(new LeaveOrganizationRequest(request));
+    setReply(reply);
+}
+
+const LeaveOrganizationRequest * LeaveOrganizationResponse::request() const
+{
+    Q_D(const LeaveOrganizationResponse);
+    return static_cast<const LeaveOrganizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations LeaveOrganization response.
+ *
+ * @param  response  Response to parse.
+ */
+void LeaveOrganizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  LeaveOrganizationResponsePrivate
+ *
+ * @brief  Private implementation for LeaveOrganizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new LeaveOrganizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public LeaveOrganizationResponse instance.
+ */
+LeaveOrganizationResponsePrivate::LeaveOrganizationResponsePrivate(
+    LeaveOrganizationQueueResponse * const q) : LeaveOrganizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations LeaveOrganizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void LeaveOrganizationResponsePrivate::LeaveOrganizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("LeaveOrganizationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listsshpublickeysresponse.h"
 #include "listsshpublickeysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListSSHPublicKeysResponse
+ *
+ * @brief  Handles IAM ListSSHPublicKeys responses.
+ *
+ * @see    IAMClient::listSSHPublicKeys
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSSHPublicKeysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListSSHPublicKeysResponsePrivate(this), parent)
+{
+    setRequest(new ListSSHPublicKeysRequest(request));
+    setReply(reply);
+}
+
+const ListSSHPublicKeysRequest * ListSSHPublicKeysResponse::request() const
+{
+    Q_D(const ListSSHPublicKeysResponse);
+    return static_cast<const ListSSHPublicKeysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListSSHPublicKeys response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSSHPublicKeysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSSHPublicKeysResponsePrivate
+ *
+ * @brief  Private implementation for ListSSHPublicKeysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSSHPublicKeysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSSHPublicKeysResponse instance.
+ */
+ListSSHPublicKeysResponsePrivate::ListSSHPublicKeysResponsePrivate(
+    ListSSHPublicKeysQueueResponse * const q) : ListSSHPublicKeysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListSSHPublicKeysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSSHPublicKeysResponsePrivate::ListSSHPublicKeysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSSHPublicKeysResponse"));
+    /// @todo
+}

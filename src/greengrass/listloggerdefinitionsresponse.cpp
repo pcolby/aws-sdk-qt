@@ -19,3 +19,85 @@
 
 #include "listloggerdefinitionsresponse.h"
 #include "listloggerdefinitionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListLoggerDefinitionsResponse
+ *
+ * @brief  Handles Greengrass ListLoggerDefinitions responses.
+ *
+ * @see    GreengrassClient::listLoggerDefinitions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListLoggerDefinitionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListLoggerDefinitionsResponsePrivate(this), parent)
+{
+    setRequest(new ListLoggerDefinitionsRequest(request));
+    setReply(reply);
+}
+
+const ListLoggerDefinitionsRequest * ListLoggerDefinitionsResponse::request() const
+{
+    Q_D(const ListLoggerDefinitionsResponse);
+    return static_cast<const ListLoggerDefinitionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListLoggerDefinitions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListLoggerDefinitionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListLoggerDefinitionsResponsePrivate
+ *
+ * @brief  Private implementation for ListLoggerDefinitionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLoggerDefinitionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListLoggerDefinitionsResponse instance.
+ */
+ListLoggerDefinitionsResponsePrivate::ListLoggerDefinitionsResponsePrivate(
+    ListLoggerDefinitionsQueueResponse * const q) : ListLoggerDefinitionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListLoggerDefinitionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListLoggerDefinitionsResponsePrivate::ListLoggerDefinitionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListLoggerDefinitionsResponse"));
+    /// @todo
+}

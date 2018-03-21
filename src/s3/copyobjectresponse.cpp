@@ -19,3 +19,85 @@
 
 #include "copyobjectresponse.h"
 #include "copyobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  CopyObjectResponse
+ *
+ * @brief  Handles S3 CopyObject responses.
+ *
+ * @see    S3Client::copyObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new CopyObjectResponsePrivate(this), parent)
+{
+    setRequest(new CopyObjectRequest(request));
+    setReply(reply);
+}
+
+const CopyObjectRequest * CopyObjectResponse::request() const
+{
+    Q_D(const CopyObjectResponse);
+    return static_cast<const CopyObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 CopyObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void CopyObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyObjectResponsePrivate
+ *
+ * @brief  Private implementation for CopyObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CopyObjectResponse instance.
+ */
+CopyObjectResponsePrivate::CopyObjectResponsePrivate(
+    CopyObjectQueueResponse * const q) : CopyObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 CopyObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CopyObjectResponsePrivate::CopyObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CopyObjectResponse"));
+    /// @todo
+}

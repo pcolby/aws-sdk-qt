@@ -19,3 +19,85 @@
 
 #include "updateeventsourcemappingresponse.h"
 #include "updateeventsourcemappingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  UpdateEventSourceMappingResponse
+ *
+ * @brief  Handles Lambda UpdateEventSourceMapping responses.
+ *
+ * @see    LambdaClient::updateEventSourceMapping
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEventSourceMappingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new UpdateEventSourceMappingResponsePrivate(this), parent)
+{
+    setRequest(new UpdateEventSourceMappingRequest(request));
+    setReply(reply);
+}
+
+const UpdateEventSourceMappingRequest * UpdateEventSourceMappingResponse::request() const
+{
+    Q_D(const UpdateEventSourceMappingResponse);
+    return static_cast<const UpdateEventSourceMappingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda UpdateEventSourceMapping response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateEventSourceMappingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEventSourceMappingResponsePrivate
+ *
+ * @brief  Private implementation for UpdateEventSourceMappingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEventSourceMappingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateEventSourceMappingResponse instance.
+ */
+UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponsePrivate(
+    UpdateEventSourceMappingQueueResponse * const q) : UpdateEventSourceMappingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda UpdateEventSourceMappingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateEventSourceMappingResponse"));
+    /// @todo
+}

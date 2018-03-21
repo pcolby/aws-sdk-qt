@@ -19,3 +19,85 @@
 
 #include "describereportdefinitionsresponse.h"
 #include "describereportdefinitionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CostandUsageReportService {
+
+/**
+ * @class  DescribeReportDefinitionsResponse
+ *
+ * @brief  Handles CostandUsageReportService DescribeReportDefinitions responses.
+ *
+ * @see    CostandUsageReportServiceClient::describeReportDefinitions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReportDefinitionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CostandUsageReportServiceResponse(new DescribeReportDefinitionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReportDefinitionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReportDefinitionsRequest * DescribeReportDefinitionsResponse::request() const
+{
+    Q_D(const DescribeReportDefinitionsResponse);
+    return static_cast<const DescribeReportDefinitionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CostandUsageReportService DescribeReportDefinitions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReportDefinitionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReportDefinitionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReportDefinitionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReportDefinitionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReportDefinitionsResponse instance.
+ */
+DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponsePrivate(
+    DescribeReportDefinitionsQueueResponse * const q) : DescribeReportDefinitionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CostandUsageReportService DescribeReportDefinitionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReportDefinitionsResponse"));
+    /// @todo
+}

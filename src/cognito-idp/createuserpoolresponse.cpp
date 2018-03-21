@@ -19,3 +19,85 @@
 
 #include "createuserpoolresponse.h"
 #include "createuserpoolresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  CreateUserPoolResponse
+ *
+ * @brief  Handles CognitoIdentityProvider CreateUserPool responses.
+ *
+ * @see    CognitoIdentityProviderClient::createUserPool
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUserPoolResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new CreateUserPoolResponsePrivate(this), parent)
+{
+    setRequest(new CreateUserPoolRequest(request));
+    setReply(reply);
+}
+
+const CreateUserPoolRequest * CreateUserPoolResponse::request() const
+{
+    Q_D(const CreateUserPoolResponse);
+    return static_cast<const CreateUserPoolRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider CreateUserPool response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateUserPoolResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUserPoolResponsePrivate
+ *
+ * @brief  Private implementation for CreateUserPoolResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserPoolResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateUserPoolResponse instance.
+ */
+CreateUserPoolResponsePrivate::CreateUserPoolResponsePrivate(
+    CreateUserPoolQueueResponse * const q) : CreateUserPoolPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider CreateUserPoolResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateUserPoolResponsePrivate::CreateUserPoolResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateUserPoolResponse"));
+    /// @todo
+}

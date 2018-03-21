@@ -19,3 +19,85 @@
 
 #include "updatedomaincontactprivacyresponse.h"
 #include "updatedomaincontactprivacyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  UpdateDomainContactPrivacyResponse
+ *
+ * @brief  Handles Route53Domains UpdateDomainContactPrivacy responses.
+ *
+ * @see    Route53DomainsClient::updateDomainContactPrivacy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDomainContactPrivacyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new UpdateDomainContactPrivacyResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDomainContactPrivacyRequest(request));
+    setReply(reply);
+}
+
+const UpdateDomainContactPrivacyRequest * UpdateDomainContactPrivacyResponse::request() const
+{
+    Q_D(const UpdateDomainContactPrivacyResponse);
+    return static_cast<const UpdateDomainContactPrivacyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains UpdateDomainContactPrivacy response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDomainContactPrivacyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDomainContactPrivacyResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDomainContactPrivacyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDomainContactPrivacyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDomainContactPrivacyResponse instance.
+ */
+UpdateDomainContactPrivacyResponsePrivate::UpdateDomainContactPrivacyResponsePrivate(
+    UpdateDomainContactPrivacyQueueResponse * const q) : UpdateDomainContactPrivacyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains UpdateDomainContactPrivacyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDomainContactPrivacyResponsePrivate::UpdateDomainContactPrivacyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDomainContactPrivacyResponse"));
+    /// @todo
+}

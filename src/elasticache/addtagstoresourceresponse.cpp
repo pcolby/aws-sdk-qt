@@ -19,3 +19,85 @@
 
 #include "addtagstoresourceresponse.h"
 #include "addtagstoresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  AddTagsToResourceResponse
+ *
+ * @brief  Handles ElastiCache AddTagsToResource responses.
+ *
+ * @see    ElastiCacheClient::addTagsToResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsToResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new AddTagsToResourceResponsePrivate(this), parent)
+{
+    setRequest(new AddTagsToResourceRequest(request));
+    setReply(reply);
+}
+
+const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
+{
+    Q_D(const AddTagsToResourceResponse);
+    return static_cast<const AddTagsToResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache AddTagsToResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsToResourceResponsePrivate
+ *
+ * @brief  Private implementation for AddTagsToResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddTagsToResourceResponse instance.
+ */
+AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
+    AddTagsToResourceQueueResponse * const q) : AddTagsToResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache AddTagsToResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddTagsToResourceResponsePrivate::AddTagsToResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddTagsToResourceResponse"));
+    /// @todo
+}

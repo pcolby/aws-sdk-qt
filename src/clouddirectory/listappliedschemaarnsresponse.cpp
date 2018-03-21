@@ -19,3 +19,85 @@
 
 #include "listappliedschemaarnsresponse.h"
 #include "listappliedschemaarnsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListAppliedSchemaArnsResponse
+ *
+ * @brief  Handles CloudDirectory ListAppliedSchemaArns responses.
+ *
+ * @see    CloudDirectoryClient::listAppliedSchemaArns
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAppliedSchemaArnsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListAppliedSchemaArnsResponsePrivate(this), parent)
+{
+    setRequest(new ListAppliedSchemaArnsRequest(request));
+    setReply(reply);
+}
+
+const ListAppliedSchemaArnsRequest * ListAppliedSchemaArnsResponse::request() const
+{
+    Q_D(const ListAppliedSchemaArnsResponse);
+    return static_cast<const ListAppliedSchemaArnsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListAppliedSchemaArns response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAppliedSchemaArnsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAppliedSchemaArnsResponsePrivate
+ *
+ * @brief  Private implementation for ListAppliedSchemaArnsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAppliedSchemaArnsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAppliedSchemaArnsResponse instance.
+ */
+ListAppliedSchemaArnsResponsePrivate::ListAppliedSchemaArnsResponsePrivate(
+    ListAppliedSchemaArnsQueueResponse * const q) : ListAppliedSchemaArnsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListAppliedSchemaArnsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAppliedSchemaArnsResponsePrivate::ListAppliedSchemaArnsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAppliedSchemaArnsResponse"));
+    /// @todo
+}

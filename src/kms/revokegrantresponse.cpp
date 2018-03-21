@@ -19,3 +19,85 @@
 
 #include "revokegrantresponse.h"
 #include "revokegrantresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  RevokeGrantResponse
+ *
+ * @brief  Handles KMS RevokeGrant responses.
+ *
+ * @see    KMSClient::revokeGrant
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeGrantResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new RevokeGrantResponsePrivate(this), parent)
+{
+    setRequest(new RevokeGrantRequest(request));
+    setReply(reply);
+}
+
+const RevokeGrantRequest * RevokeGrantResponse::request() const
+{
+    Q_D(const RevokeGrantResponse);
+    return static_cast<const RevokeGrantRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS RevokeGrant response.
+ *
+ * @param  response  Response to parse.
+ */
+void RevokeGrantResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeGrantResponsePrivate
+ *
+ * @brief  Private implementation for RevokeGrantResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeGrantResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RevokeGrantResponse instance.
+ */
+RevokeGrantResponsePrivate::RevokeGrantResponsePrivate(
+    RevokeGrantQueueResponse * const q) : RevokeGrantPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS RevokeGrantResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RevokeGrantResponsePrivate::RevokeGrantResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RevokeGrantResponse"));
+    /// @todo
+}

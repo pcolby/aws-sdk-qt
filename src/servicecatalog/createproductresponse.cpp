@@ -19,3 +19,85 @@
 
 #include "createproductresponse.h"
 #include "createproductresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  CreateProductResponse
+ *
+ * @brief  Handles ServiceCatalog CreateProduct responses.
+ *
+ * @see    ServiceCatalogClient::createProduct
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateProductResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new CreateProductResponsePrivate(this), parent)
+{
+    setRequest(new CreateProductRequest(request));
+    setReply(reply);
+}
+
+const CreateProductRequest * CreateProductResponse::request() const
+{
+    Q_D(const CreateProductResponse);
+    return static_cast<const CreateProductRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog CreateProduct response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateProductResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateProductResponsePrivate
+ *
+ * @brief  Private implementation for CreateProductResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProductResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateProductResponse instance.
+ */
+CreateProductResponsePrivate::CreateProductResponsePrivate(
+    CreateProductQueueResponse * const q) : CreateProductPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog CreateProductResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateProductResponsePrivate::CreateProductResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateProductResponse"));
+    /// @todo
+}

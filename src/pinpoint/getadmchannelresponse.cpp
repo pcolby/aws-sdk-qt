@@ -19,3 +19,85 @@
 
 #include "getadmchannelresponse.h"
 #include "getadmchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetAdmChannelResponse
+ *
+ * @brief  Handles Pinpoint GetAdmChannel responses.
+ *
+ * @see    PinpointClient::getAdmChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAdmChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetAdmChannelResponsePrivate(this), parent)
+{
+    setRequest(new GetAdmChannelRequest(request));
+    setReply(reply);
+}
+
+const GetAdmChannelRequest * GetAdmChannelResponse::request() const
+{
+    Q_D(const GetAdmChannelResponse);
+    return static_cast<const GetAdmChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetAdmChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAdmChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAdmChannelResponsePrivate
+ *
+ * @brief  Private implementation for GetAdmChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAdmChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAdmChannelResponse instance.
+ */
+GetAdmChannelResponsePrivate::GetAdmChannelResponsePrivate(
+    GetAdmChannelQueueResponse * const q) : GetAdmChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetAdmChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAdmChannelResponsePrivate::GetAdmChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAdmChannelResponse"));
+    /// @todo
+}

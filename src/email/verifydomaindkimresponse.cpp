@@ -19,3 +19,85 @@
 
 #include "verifydomaindkimresponse.h"
 #include "verifydomaindkimresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  VerifyDomainDkimResponse
+ *
+ * @brief  Handles SES VerifyDomainDkim responses.
+ *
+ * @see    SESClient::verifyDomainDkim
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyDomainDkimResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new VerifyDomainDkimResponsePrivate(this), parent)
+{
+    setRequest(new VerifyDomainDkimRequest(request));
+    setReply(reply);
+}
+
+const VerifyDomainDkimRequest * VerifyDomainDkimResponse::request() const
+{
+    Q_D(const VerifyDomainDkimResponse);
+    return static_cast<const VerifyDomainDkimRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES VerifyDomainDkim response.
+ *
+ * @param  response  Response to parse.
+ */
+void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyDomainDkimResponsePrivate
+ *
+ * @brief  Private implementation for VerifyDomainDkimResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyDomainDkimResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public VerifyDomainDkimResponse instance.
+ */
+VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
+    VerifyDomainDkimQueueResponse * const q) : VerifyDomainDkimPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES VerifyDomainDkimResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("VerifyDomainDkimResponse"));
+    /// @todo
+}

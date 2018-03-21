@@ -19,3 +19,85 @@
 
 #include "describelayersresponse.h"
 #include "describelayersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeLayersResponse
+ *
+ * @brief  Handles OpsWorks DescribeLayers responses.
+ *
+ * @see    OpsWorksClient::describeLayers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLayersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeLayersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLayersRequest(request));
+    setReply(reply);
+}
+
+const DescribeLayersRequest * DescribeLayersResponse::request() const
+{
+    Q_D(const DescribeLayersResponse);
+    return static_cast<const DescribeLayersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeLayers response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLayersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLayersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLayersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLayersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLayersResponse instance.
+ */
+DescribeLayersResponsePrivate::DescribeLayersResponsePrivate(
+    DescribeLayersQueueResponse * const q) : DescribeLayersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeLayersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLayersResponsePrivate::DescribeLayersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLayersResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "adminaddusertogroupresponse.h"
 #include "adminaddusertogroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminAddUserToGroupResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminAddUserToGroup responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminAddUserToGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminAddUserToGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminAddUserToGroupResponsePrivate(this), parent)
+{
+    setRequest(new AdminAddUserToGroupRequest(request));
+    setReply(reply);
+}
+
+const AdminAddUserToGroupRequest * AdminAddUserToGroupResponse::request() const
+{
+    Q_D(const AdminAddUserToGroupResponse);
+    return static_cast<const AdminAddUserToGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminAddUserToGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminAddUserToGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminAddUserToGroupResponsePrivate
+ *
+ * @brief  Private implementation for AdminAddUserToGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminAddUserToGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminAddUserToGroupResponse instance.
+ */
+AdminAddUserToGroupResponsePrivate::AdminAddUserToGroupResponsePrivate(
+    AdminAddUserToGroupQueueResponse * const q) : AdminAddUserToGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminAddUserToGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminAddUserToGroupResponsePrivate::AdminAddUserToGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminAddUserToGroupResponse"));
+    /// @todo
+}

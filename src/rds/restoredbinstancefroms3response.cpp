@@ -19,3 +19,85 @@
 
 #include "restoredbinstancefroms3response.h"
 #include "restoredbinstancefroms3response_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  RestoreDBInstanceFromS3Response
+ *
+ * @brief  Handles RDS RestoreDBInstanceFromS3 responses.
+ *
+ * @see    RDSClient::restoreDBInstanceFromS3
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreDBInstanceFromS3Response::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new RestoreDBInstanceFromS3ResponsePrivate(this), parent)
+{
+    setRequest(new RestoreDBInstanceFromS3Request(request));
+    setReply(reply);
+}
+
+const RestoreDBInstanceFromS3Request * RestoreDBInstanceFromS3Response::request() const
+{
+    Q_D(const RestoreDBInstanceFromS3Response);
+    return static_cast<const RestoreDBInstanceFromS3Request *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS RestoreDBInstanceFromS3 response.
+ *
+ * @param  response  Response to parse.
+ */
+void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreDBInstanceFromS3ResponsePrivate
+ *
+ * @brief  Private implementation for RestoreDBInstanceFromS3Response.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreDBInstanceFromS3ResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RestoreDBInstanceFromS3Response instance.
+ */
+RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
+    RestoreDBInstanceFromS3QueueResponse * const q) : RestoreDBInstanceFromS3Private(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS RestoreDBInstanceFromS3Response element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3Response(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceFromS3Response"));
+    /// @todo
+}

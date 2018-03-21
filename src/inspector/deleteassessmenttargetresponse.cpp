@@ -19,3 +19,85 @@
 
 #include "deleteassessmenttargetresponse.h"
 #include "deleteassessmenttargetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  DeleteAssessmentTargetResponse
+ *
+ * @brief  Handles Inspector DeleteAssessmentTarget responses.
+ *
+ * @see    InspectorClient::deleteAssessmentTarget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAssessmentTargetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new DeleteAssessmentTargetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAssessmentTargetRequest(request));
+    setReply(reply);
+}
+
+const DeleteAssessmentTargetRequest * DeleteAssessmentTargetResponse::request() const
+{
+    Q_D(const DeleteAssessmentTargetResponse);
+    return static_cast<const DeleteAssessmentTargetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector DeleteAssessmentTarget response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAssessmentTargetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAssessmentTargetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAssessmentTargetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAssessmentTargetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAssessmentTargetResponse instance.
+ */
+DeleteAssessmentTargetResponsePrivate::DeleteAssessmentTargetResponsePrivate(
+    DeleteAssessmentTargetQueueResponse * const q) : DeleteAssessmentTargetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector DeleteAssessmentTargetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAssessmentTargetResponsePrivate::DeleteAssessmentTargetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAssessmentTargetResponse"));
+    /// @todo
+}

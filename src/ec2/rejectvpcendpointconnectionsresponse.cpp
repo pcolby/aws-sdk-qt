@@ -19,3 +19,85 @@
 
 #include "rejectvpcendpointconnectionsresponse.h"
 #include "rejectvpcendpointconnectionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  RejectVpcEndpointConnectionsResponse
+ *
+ * @brief  Handles EC2 RejectVpcEndpointConnections responses.
+ *
+ * @see    EC2Client::rejectVpcEndpointConnections
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RejectVpcEndpointConnectionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new RejectVpcEndpointConnectionsResponsePrivate(this), parent)
+{
+    setRequest(new RejectVpcEndpointConnectionsRequest(request));
+    setReply(reply);
+}
+
+const RejectVpcEndpointConnectionsRequest * RejectVpcEndpointConnectionsResponse::request() const
+{
+    Q_D(const RejectVpcEndpointConnectionsResponse);
+    return static_cast<const RejectVpcEndpointConnectionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 RejectVpcEndpointConnections response.
+ *
+ * @param  response  Response to parse.
+ */
+void RejectVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RejectVpcEndpointConnectionsResponsePrivate
+ *
+ * @brief  Private implementation for RejectVpcEndpointConnectionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RejectVpcEndpointConnectionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RejectVpcEndpointConnectionsResponse instance.
+ */
+RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsResponsePrivate(
+    RejectVpcEndpointConnectionsQueueResponse * const q) : RejectVpcEndpointConnectionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 RejectVpcEndpointConnectionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RejectVpcEndpointConnectionsResponse"));
+    /// @todo
+}

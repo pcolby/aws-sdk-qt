@@ -19,3 +19,85 @@
 
 #include "getinvalidationresponse.h"
 #include "getinvalidationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetInvalidationResponse
+ *
+ * @brief  Handles CloudFront GetInvalidation responses.
+ *
+ * @see    CloudFrontClient::getInvalidation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInvalidationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new GetInvalidationResponsePrivate(this), parent)
+{
+    setRequest(new GetInvalidationRequest(request));
+    setReply(reply);
+}
+
+const GetInvalidationRequest * GetInvalidationResponse::request() const
+{
+    Q_D(const GetInvalidationResponse);
+    return static_cast<const GetInvalidationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront GetInvalidation response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInvalidationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInvalidationResponsePrivate
+ *
+ * @brief  Private implementation for GetInvalidationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInvalidationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInvalidationResponse instance.
+ */
+GetInvalidationResponsePrivate::GetInvalidationResponsePrivate(
+    GetInvalidationQueueResponse * const q) : GetInvalidationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront GetInvalidationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInvalidationResponsePrivate::GetInvalidationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInvalidationResponse"));
+    /// @todo
+}

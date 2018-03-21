@@ -19,3 +19,85 @@
 
 #include "batchdeletepartitionresponse.h"
 #include "batchdeletepartitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchDeletePartitionResponse
+ *
+ * @brief  Handles Glue BatchDeletePartition responses.
+ *
+ * @see    GlueClient::batchDeletePartition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDeletePartitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new BatchDeletePartitionResponsePrivate(this), parent)
+{
+    setRequest(new BatchDeletePartitionRequest(request));
+    setReply(reply);
+}
+
+const BatchDeletePartitionRequest * BatchDeletePartitionResponse::request() const
+{
+    Q_D(const BatchDeletePartitionResponse);
+    return static_cast<const BatchDeletePartitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue BatchDeletePartition response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDeletePartitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDeletePartitionResponsePrivate
+ *
+ * @brief  Private implementation for BatchDeletePartitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeletePartitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDeletePartitionResponse instance.
+ */
+BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponsePrivate(
+    BatchDeletePartitionQueueResponse * const q) : BatchDeletePartitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue BatchDeletePartitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDeletePartitionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeconfigrulesresponse.h"
 #include "describeconfigrulesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DescribeConfigRulesResponse
+ *
+ * @brief  Handles ConfigService DescribeConfigRules responses.
+ *
+ * @see    ConfigServiceClient::describeConfigRules
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigRulesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DescribeConfigRulesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConfigRulesRequest(request));
+    setReply(reply);
+}
+
+const DescribeConfigRulesRequest * DescribeConfigRulesResponse::request() const
+{
+    Q_D(const DescribeConfigRulesResponse);
+    return static_cast<const DescribeConfigRulesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DescribeConfigRules response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConfigRulesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigRulesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConfigRulesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigRulesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConfigRulesResponse instance.
+ */
+DescribeConfigRulesResponsePrivate::DescribeConfigRulesResponsePrivate(
+    DescribeConfigRulesQueueResponse * const q) : DescribeConfigRulesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DescribeConfigRulesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConfigRulesResponsePrivate::DescribeConfigRulesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConfigRulesResponse"));
+    /// @todo
+}

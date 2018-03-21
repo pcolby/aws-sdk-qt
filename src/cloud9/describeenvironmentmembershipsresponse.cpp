@@ -19,3 +19,85 @@
 
 #include "describeenvironmentmembershipsresponse.h"
 #include "describeenvironmentmembershipsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  DescribeEnvironmentMembershipsResponse
+ *
+ * @brief  Handles Cloud9 DescribeEnvironmentMemberships responses.
+ *
+ * @see    Cloud9Client::describeEnvironmentMemberships
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentMembershipsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Cloud9Response(new DescribeEnvironmentMembershipsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEnvironmentMembershipsRequest(request));
+    setReply(reply);
+}
+
+const DescribeEnvironmentMembershipsRequest * DescribeEnvironmentMembershipsResponse::request() const
+{
+    Q_D(const DescribeEnvironmentMembershipsResponse);
+    return static_cast<const DescribeEnvironmentMembershipsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Cloud9 DescribeEnvironmentMemberships response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEnvironmentMembershipsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentMembershipsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentMembershipsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentMembershipsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEnvironmentMembershipsResponse instance.
+ */
+DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershipsResponsePrivate(
+    DescribeEnvironmentMembershipsQueueResponse * const q) : DescribeEnvironmentMembershipsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Cloud9 DescribeEnvironmentMembershipsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershipsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentMembershipsResponse"));
+    /// @todo
+}

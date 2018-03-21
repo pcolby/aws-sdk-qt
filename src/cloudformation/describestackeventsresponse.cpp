@@ -19,3 +19,85 @@
 
 #include "describestackeventsresponse.h"
 #include "describestackeventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DescribeStackEventsResponse
+ *
+ * @brief  Handles CloudFormation DescribeStackEvents responses.
+ *
+ * @see    CloudFormationClient::describeStackEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new DescribeStackEventsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStackEventsRequest(request));
+    setReply(reply);
+}
+
+const DescribeStackEventsRequest * DescribeStackEventsResponse::request() const
+{
+    Q_D(const DescribeStackEventsResponse);
+    return static_cast<const DescribeStackEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation DescribeStackEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStackEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackEventsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStackEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStackEventsResponse instance.
+ */
+DescribeStackEventsResponsePrivate::DescribeStackEventsResponsePrivate(
+    DescribeStackEventsQueueResponse * const q) : DescribeStackEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation DescribeStackEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStackEventsResponsePrivate::DescribeStackEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStackEventsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletevolumeresponse.h"
 #include "deletevolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVolumeResponse
+ *
+ * @brief  Handles EC2 DeleteVolume responses.
+ *
+ * @see    EC2Client::deleteVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteVolumeResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVolumeRequest(request));
+    setReply(reply);
+}
+
+const DeleteVolumeRequest * DeleteVolumeResponse::request() const
+{
+    Q_D(const DeleteVolumeResponse);
+    return static_cast<const DeleteVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVolumeResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVolumeResponse instance.
+ */
+DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
+    DeleteVolumeQueueResponse * const q) : DeleteVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVolumeResponsePrivate::DeleteVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVolumeResponse"));
+    /// @todo
+}

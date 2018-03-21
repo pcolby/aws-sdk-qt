@@ -19,3 +19,85 @@
 
 #include "listportfoliosresponse.h"
 #include "listportfoliosresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListPortfoliosResponse
+ *
+ * @brief  Handles ServiceCatalog ListPortfolios responses.
+ *
+ * @see    ServiceCatalogClient::listPortfolios
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPortfoliosResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListPortfoliosResponsePrivate(this), parent)
+{
+    setRequest(new ListPortfoliosRequest(request));
+    setReply(reply);
+}
+
+const ListPortfoliosRequest * ListPortfoliosResponse::request() const
+{
+    Q_D(const ListPortfoliosResponse);
+    return static_cast<const ListPortfoliosRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListPortfolios response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPortfoliosResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPortfoliosResponsePrivate
+ *
+ * @brief  Private implementation for ListPortfoliosResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPortfoliosResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPortfoliosResponse instance.
+ */
+ListPortfoliosResponsePrivate::ListPortfoliosResponsePrivate(
+    ListPortfoliosQueueResponse * const q) : ListPortfoliosPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListPortfoliosResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPortfoliosResponsePrivate::ListPortfoliosResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPortfoliosResponse"));
+    /// @todo
+}

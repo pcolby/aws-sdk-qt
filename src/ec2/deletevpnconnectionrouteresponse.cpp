@@ -19,3 +19,85 @@
 
 #include "deletevpnconnectionrouteresponse.h"
 #include "deletevpnconnectionrouteresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpnConnectionRouteResponse
+ *
+ * @brief  Handles EC2 DeleteVpnConnectionRoute responses.
+ *
+ * @see    EC2Client::deleteVpnConnectionRoute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpnConnectionRouteResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteVpnConnectionRouteResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVpnConnectionRouteRequest(request));
+    setReply(reply);
+}
+
+const DeleteVpnConnectionRouteRequest * DeleteVpnConnectionRouteResponse::request() const
+{
+    Q_D(const DeleteVpnConnectionRouteResponse);
+    return static_cast<const DeleteVpnConnectionRouteRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteVpnConnectionRoute response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVpnConnectionRouteResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpnConnectionRouteResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVpnConnectionRouteResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpnConnectionRouteResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVpnConnectionRouteResponse instance.
+ */
+DeleteVpnConnectionRouteResponsePrivate::DeleteVpnConnectionRouteResponsePrivate(
+    DeleteVpnConnectionRouteQueueResponse * const q) : DeleteVpnConnectionRoutePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteVpnConnectionRouteResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVpnConnectionRouteResponsePrivate::DeleteVpnConnectionRouteResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVpnConnectionRouteResponse"));
+    /// @todo
+}

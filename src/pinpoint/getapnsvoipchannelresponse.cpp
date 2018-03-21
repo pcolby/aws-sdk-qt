@@ -19,3 +19,85 @@
 
 #include "getapnsvoipchannelresponse.h"
 #include "getapnsvoipchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetApnsVoipChannelResponse
+ *
+ * @brief  Handles Pinpoint GetApnsVoipChannel responses.
+ *
+ * @see    PinpointClient::getApnsVoipChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApnsVoipChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetApnsVoipChannelResponsePrivate(this), parent)
+{
+    setRequest(new GetApnsVoipChannelRequest(request));
+    setReply(reply);
+}
+
+const GetApnsVoipChannelRequest * GetApnsVoipChannelResponse::request() const
+{
+    Q_D(const GetApnsVoipChannelResponse);
+    return static_cast<const GetApnsVoipChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetApnsVoipChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetApnsVoipChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApnsVoipChannelResponsePrivate
+ *
+ * @brief  Private implementation for GetApnsVoipChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApnsVoipChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetApnsVoipChannelResponse instance.
+ */
+GetApnsVoipChannelResponsePrivate::GetApnsVoipChannelResponsePrivate(
+    GetApnsVoipChannelQueueResponse * const q) : GetApnsVoipChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetApnsVoipChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetApnsVoipChannelResponsePrivate::GetApnsVoipChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetApnsVoipChannelResponse"));
+    /// @todo
+}

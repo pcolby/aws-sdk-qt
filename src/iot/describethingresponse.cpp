@@ -19,3 +19,85 @@
 
 #include "describethingresponse.h"
 #include "describethingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeThingResponse
+ *
+ * @brief  Handles IoT DescribeThing responses.
+ *
+ * @see    IoTClient::describeThing
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeThingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DescribeThingResponsePrivate(this), parent)
+{
+    setRequest(new DescribeThingRequest(request));
+    setReply(reply);
+}
+
+const DescribeThingRequest * DescribeThingResponse::request() const
+{
+    Q_D(const DescribeThingResponse);
+    return static_cast<const DescribeThingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DescribeThing response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeThingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeThingResponsePrivate
+ *
+ * @brief  Private implementation for DescribeThingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeThingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeThingResponse instance.
+ */
+DescribeThingResponsePrivate::DescribeThingResponsePrivate(
+    DescribeThingQueueResponse * const q) : DescribeThingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DescribeThingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeThingResponsePrivate::DescribeThingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeThingResponse"));
+    /// @todo
+}

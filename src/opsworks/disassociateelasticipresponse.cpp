@@ -19,3 +19,85 @@
 
 #include "disassociateelasticipresponse.h"
 #include "disassociateelasticipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DisassociateElasticIpResponse
+ *
+ * @brief  Handles OpsWorks DisassociateElasticIp responses.
+ *
+ * @see    OpsWorksClient::disassociateElasticIp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateElasticIpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DisassociateElasticIpResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateElasticIpRequest(request));
+    setReply(reply);
+}
+
+const DisassociateElasticIpRequest * DisassociateElasticIpResponse::request() const
+{
+    Q_D(const DisassociateElasticIpResponse);
+    return static_cast<const DisassociateElasticIpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DisassociateElasticIp response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateElasticIpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateElasticIpResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateElasticIpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateElasticIpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateElasticIpResponse instance.
+ */
+DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponsePrivate(
+    DisassociateElasticIpQueueResponse * const q) : DisassociateElasticIpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DisassociateElasticIpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateElasticIpResponse"));
+    /// @todo
+}

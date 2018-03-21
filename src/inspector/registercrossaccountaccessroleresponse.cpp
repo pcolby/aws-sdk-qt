@@ -19,3 +19,85 @@
 
 #include "registercrossaccountaccessroleresponse.h"
 #include "registercrossaccountaccessroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  RegisterCrossAccountAccessRoleResponse
+ *
+ * @brief  Handles Inspector RegisterCrossAccountAccessRole responses.
+ *
+ * @see    InspectorClient::registerCrossAccountAccessRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterCrossAccountAccessRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new RegisterCrossAccountAccessRoleResponsePrivate(this), parent)
+{
+    setRequest(new RegisterCrossAccountAccessRoleRequest(request));
+    setReply(reply);
+}
+
+const RegisterCrossAccountAccessRoleRequest * RegisterCrossAccountAccessRoleResponse::request() const
+{
+    Q_D(const RegisterCrossAccountAccessRoleResponse);
+    return static_cast<const RegisterCrossAccountAccessRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector RegisterCrossAccountAccessRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterCrossAccountAccessRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterCrossAccountAccessRoleResponsePrivate
+ *
+ * @brief  Private implementation for RegisterCrossAccountAccessRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterCrossAccountAccessRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterCrossAccountAccessRoleResponse instance.
+ */
+RegisterCrossAccountAccessRoleResponsePrivate::RegisterCrossAccountAccessRoleResponsePrivate(
+    RegisterCrossAccountAccessRoleQueueResponse * const q) : RegisterCrossAccountAccessRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector RegisterCrossAccountAccessRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterCrossAccountAccessRoleResponsePrivate::RegisterCrossAccountAccessRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterCrossAccountAccessRoleResponse"));
+    /// @todo
+}

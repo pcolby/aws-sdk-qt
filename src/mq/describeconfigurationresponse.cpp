@@ -19,3 +19,85 @@
 
 #include "describeconfigurationresponse.h"
 #include "describeconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DescribeConfigurationResponse
+ *
+ * @brief  Handles MQ DescribeConfiguration responses.
+ *
+ * @see    MQClient::describeConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new DescribeConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DescribeConfigurationRequest * DescribeConfigurationResponse::request() const
+{
+    Q_D(const DescribeConfigurationResponse);
+    return static_cast<const DescribeConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ DescribeConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConfigurationResponse instance.
+ */
+DescribeConfigurationResponsePrivate::DescribeConfigurationResponsePrivate(
+    DescribeConfigurationQueueResponse * const q) : DescribeConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ DescribeConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConfigurationResponsePrivate::DescribeConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationResponse"));
+    /// @todo
+}

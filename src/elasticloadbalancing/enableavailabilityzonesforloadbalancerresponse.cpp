@@ -19,3 +19,85 @@
 
 #include "enableavailabilityzonesforloadbalancerresponse.h"
 #include "enableavailabilityzonesforloadbalancerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  EnableAvailabilityZonesForLoadBalancerResponse
+ *
+ * @brief  Handles ElasticLoadBalancing EnableAvailabilityZonesForLoadBalancer responses.
+ *
+ * @see    ElasticLoadBalancingClient::enableAvailabilityZonesForLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableAvailabilityZonesForLoadBalancerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new EnableAvailabilityZonesForLoadBalancerResponsePrivate(this), parent)
+{
+    setRequest(new EnableAvailabilityZonesForLoadBalancerRequest(request));
+    setReply(reply);
+}
+
+const EnableAvailabilityZonesForLoadBalancerRequest * EnableAvailabilityZonesForLoadBalancerResponse::request() const
+{
+    Q_D(const EnableAvailabilityZonesForLoadBalancerResponse);
+    return static_cast<const EnableAvailabilityZonesForLoadBalancerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing EnableAvailabilityZonesForLoadBalancer response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableAvailabilityZonesForLoadBalancerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableAvailabilityZonesForLoadBalancerResponsePrivate
+ *
+ * @brief  Private implementation for EnableAvailabilityZonesForLoadBalancerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableAvailabilityZonesForLoadBalancerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableAvailabilityZonesForLoadBalancerResponse instance.
+ */
+EnableAvailabilityZonesForLoadBalancerResponsePrivate::EnableAvailabilityZonesForLoadBalancerResponsePrivate(
+    EnableAvailabilityZonesForLoadBalancerQueueResponse * const q) : EnableAvailabilityZonesForLoadBalancerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing EnableAvailabilityZonesForLoadBalancerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableAvailabilityZonesForLoadBalancerResponsePrivate::EnableAvailabilityZonesForLoadBalancerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableAvailabilityZonesForLoadBalancerResponse"));
+    /// @todo
+}

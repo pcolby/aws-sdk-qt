@@ -19,3 +19,85 @@
 
 #include "describeeventsresponse.h"
 #include "describeeventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeEventsResponse
+ *
+ * @brief  Handles Redshift DescribeEvents responses.
+ *
+ * @see    RedshiftClient::describeEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeEventsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEventsRequest(request));
+    setReply(reply);
+}
+
+const DescribeEventsRequest * DescribeEventsResponse::request() const
+{
+    Q_D(const DescribeEventsResponse);
+    return static_cast<const DescribeEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEventsResponse instance.
+ */
+DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
+    DescribeEventsQueueResponse * const q) : DescribeEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEventsResponsePrivate::DescribeEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEventsResponse"));
+    /// @todo
+}

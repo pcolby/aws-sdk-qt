@@ -19,3 +19,85 @@
 
 #include "listthinggroupsresponse.h"
 #include "listthinggroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListThingGroupsResponse
+ *
+ * @brief  Handles IoT ListThingGroups responses.
+ *
+ * @see    IoTClient::listThingGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThingGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListThingGroupsResponsePrivate(this), parent)
+{
+    setRequest(new ListThingGroupsRequest(request));
+    setReply(reply);
+}
+
+const ListThingGroupsRequest * ListThingGroupsResponse::request() const
+{
+    Q_D(const ListThingGroupsResponse);
+    return static_cast<const ListThingGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListThingGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListThingGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThingGroupsResponsePrivate
+ *
+ * @brief  Private implementation for ListThingGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListThingGroupsResponse instance.
+ */
+ListThingGroupsResponsePrivate::ListThingGroupsResponsePrivate(
+    ListThingGroupsQueueResponse * const q) : ListThingGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListThingGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListThingGroupsResponsePrivate::ListThingGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListThingGroupsResponse"));
+    /// @todo
+}

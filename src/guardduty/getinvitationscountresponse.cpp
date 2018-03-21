@@ -19,3 +19,85 @@
 
 #include "getinvitationscountresponse.h"
 #include "getinvitationscountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetInvitationsCountResponse
+ *
+ * @brief  Handles GuardDuty GetInvitationsCount responses.
+ *
+ * @see    GuardDutyClient::getInvitationsCount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInvitationsCountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new GetInvitationsCountResponsePrivate(this), parent)
+{
+    setRequest(new GetInvitationsCountRequest(request));
+    setReply(reply);
+}
+
+const GetInvitationsCountRequest * GetInvitationsCountResponse::request() const
+{
+    Q_D(const GetInvitationsCountResponse);
+    return static_cast<const GetInvitationsCountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty GetInvitationsCount response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInvitationsCountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInvitationsCountResponsePrivate
+ *
+ * @brief  Private implementation for GetInvitationsCountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInvitationsCountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInvitationsCountResponse instance.
+ */
+GetInvitationsCountResponsePrivate::GetInvitationsCountResponsePrivate(
+    GetInvitationsCountQueueResponse * const q) : GetInvitationsCountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty GetInvitationsCountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInvitationsCountResponsePrivate::GetInvitationsCountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInvitationsCountResponse"));
+    /// @todo
+}

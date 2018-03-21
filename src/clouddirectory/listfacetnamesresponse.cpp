@@ -19,3 +19,85 @@
 
 #include "listfacetnamesresponse.h"
 #include "listfacetnamesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListFacetNamesResponse
+ *
+ * @brief  Handles CloudDirectory ListFacetNames responses.
+ *
+ * @see    CloudDirectoryClient::listFacetNames
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFacetNamesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListFacetNamesResponsePrivate(this), parent)
+{
+    setRequest(new ListFacetNamesRequest(request));
+    setReply(reply);
+}
+
+const ListFacetNamesRequest * ListFacetNamesResponse::request() const
+{
+    Q_D(const ListFacetNamesResponse);
+    return static_cast<const ListFacetNamesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListFacetNames response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListFacetNamesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFacetNamesResponsePrivate
+ *
+ * @brief  Private implementation for ListFacetNamesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFacetNamesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListFacetNamesResponse instance.
+ */
+ListFacetNamesResponsePrivate::ListFacetNamesResponsePrivate(
+    ListFacetNamesQueueResponse * const q) : ListFacetNamesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListFacetNamesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListFacetNamesResponsePrivate::ListFacetNamesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListFacetNamesResponse"));
+    /// @todo
+}

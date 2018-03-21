@@ -19,3 +19,85 @@
 
 #include "getblueprintsresponse.h"
 #include "getblueprintsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetBlueprintsResponse
+ *
+ * @brief  Handles Lightsail GetBlueprints responses.
+ *
+ * @see    LightsailClient::getBlueprints
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBlueprintsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetBlueprintsResponsePrivate(this), parent)
+{
+    setRequest(new GetBlueprintsRequest(request));
+    setReply(reply);
+}
+
+const GetBlueprintsRequest * GetBlueprintsResponse::request() const
+{
+    Q_D(const GetBlueprintsResponse);
+    return static_cast<const GetBlueprintsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetBlueprints response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBlueprintsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBlueprintsResponsePrivate
+ *
+ * @brief  Private implementation for GetBlueprintsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBlueprintsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBlueprintsResponse instance.
+ */
+GetBlueprintsResponsePrivate::GetBlueprintsResponsePrivate(
+    GetBlueprintsQueueResponse * const q) : GetBlueprintsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetBlueprintsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBlueprintsResponsePrivate::GetBlueprintsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBlueprintsResponse"));
+    /// @todo
+}

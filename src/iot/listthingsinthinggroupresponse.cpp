@@ -19,3 +19,85 @@
 
 #include "listthingsinthinggroupresponse.h"
 #include "listthingsinthinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListThingsInThingGroupResponse
+ *
+ * @brief  Handles IoT ListThingsInThingGroup responses.
+ *
+ * @see    IoTClient::listThingsInThingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThingsInThingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListThingsInThingGroupResponsePrivate(this), parent)
+{
+    setRequest(new ListThingsInThingGroupRequest(request));
+    setReply(reply);
+}
+
+const ListThingsInThingGroupRequest * ListThingsInThingGroupResponse::request() const
+{
+    Q_D(const ListThingsInThingGroupResponse);
+    return static_cast<const ListThingsInThingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListThingsInThingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListThingsInThingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThingsInThingGroupResponsePrivate
+ *
+ * @brief  Private implementation for ListThingsInThingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingsInThingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListThingsInThingGroupResponse instance.
+ */
+ListThingsInThingGroupResponsePrivate::ListThingsInThingGroupResponsePrivate(
+    ListThingsInThingGroupQueueResponse * const q) : ListThingsInThingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListThingsInThingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListThingsInThingGroupResponsePrivate::ListThingsInThingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListThingsInThingGroupResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createdbsnapshotresponse.h"
 #include "createdbsnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBSnapshotResponse
+ *
+ * @brief  Handles RDS CreateDBSnapshot responses.
+ *
+ * @see    RDSClient::createDBSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CreateDBSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new CreateDBSnapshotRequest(request));
+    setReply(reply);
+}
+
+const CreateDBSnapshotRequest * CreateDBSnapshotResponse::request() const
+{
+    Q_D(const CreateDBSnapshotResponse);
+    return static_cast<const CreateDBSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CreateDBSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDBSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for CreateDBSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDBSnapshotResponse instance.
+ */
+CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponsePrivate(
+    CreateDBSnapshotQueueResponse * const q) : CreateDBSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CreateDBSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDBSnapshotResponse"));
+    /// @todo
+}

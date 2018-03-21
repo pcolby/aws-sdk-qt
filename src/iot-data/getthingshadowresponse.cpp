@@ -19,3 +19,85 @@
 
 #include "getthingshadowresponse.h"
 #include "getthingshadowresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoTDataPlane {
+
+/**
+ * @class  GetThingShadowResponse
+ *
+ * @brief  Handles IoTDataPlane GetThingShadow responses.
+ *
+ * @see    IoTDataPlaneClient::getThingShadow
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetThingShadowResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTDataPlaneResponse(new GetThingShadowResponsePrivate(this), parent)
+{
+    setRequest(new GetThingShadowRequest(request));
+    setReply(reply);
+}
+
+const GetThingShadowRequest * GetThingShadowResponse::request() const
+{
+    Q_D(const GetThingShadowResponse);
+    return static_cast<const GetThingShadowRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoTDataPlane GetThingShadow response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetThingShadowResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetThingShadowResponsePrivate
+ *
+ * @brief  Private implementation for GetThingShadowResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetThingShadowResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetThingShadowResponse instance.
+ */
+GetThingShadowResponsePrivate::GetThingShadowResponsePrivate(
+    GetThingShadowQueueResponse * const q) : GetThingShadowPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoTDataPlane GetThingShadowResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetThingShadowResponsePrivate::GetThingShadowResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetThingShadowResponse"));
+    /// @todo
+}

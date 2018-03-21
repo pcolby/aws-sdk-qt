@@ -19,3 +19,85 @@
 
 #include "describedomainresponse.h"
 #include "describedomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DescribeDomainResponse
+ *
+ * @brief  Handles SWF DescribeDomain responses.
+ *
+ * @see    SWFClient::describeDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new DescribeDomainResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDomainRequest(request));
+    setReply(reply);
+}
+
+const DescribeDomainRequest * DescribeDomainResponse::request() const
+{
+    Q_D(const DescribeDomainResponse);
+    return static_cast<const DescribeDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF DescribeDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDomainResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDomainResponse instance.
+ */
+DescribeDomainResponsePrivate::DescribeDomainResponsePrivate(
+    DescribeDomainQueueResponse * const q) : DescribeDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF DescribeDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDomainResponsePrivate::DescribeDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDomainResponse"));
+    /// @todo
+}

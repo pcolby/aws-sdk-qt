@@ -19,3 +19,85 @@
 
 #include "updateapnssandboxchannelresponse.h"
 #include "updateapnssandboxchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateApnsSandboxChannelResponse
+ *
+ * @brief  Handles Pinpoint UpdateApnsSandboxChannel responses.
+ *
+ * @see    PinpointClient::updateApnsSandboxChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApnsSandboxChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateApnsSandboxChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateApnsSandboxChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateApnsSandboxChannelRequest * UpdateApnsSandboxChannelResponse::request() const
+{
+    Q_D(const UpdateApnsSandboxChannelResponse);
+    return static_cast<const UpdateApnsSandboxChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateApnsSandboxChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateApnsSandboxChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApnsSandboxChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateApnsSandboxChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApnsSandboxChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateApnsSandboxChannelResponse instance.
+ */
+UpdateApnsSandboxChannelResponsePrivate::UpdateApnsSandboxChannelResponsePrivate(
+    UpdateApnsSandboxChannelQueueResponse * const q) : UpdateApnsSandboxChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateApnsSandboxChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateApnsSandboxChannelResponsePrivate::UpdateApnsSandboxChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateApnsSandboxChannelResponse"));
+    /// @todo
+}

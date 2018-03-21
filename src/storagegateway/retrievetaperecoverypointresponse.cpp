@@ -19,3 +19,85 @@
 
 #include "retrievetaperecoverypointresponse.h"
 #include "retrievetaperecoverypointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  RetrieveTapeRecoveryPointResponse
+ *
+ * @brief  Handles StorageGateway RetrieveTapeRecoveryPoint responses.
+ *
+ * @see    StorageGatewayClient::retrieveTapeRecoveryPoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RetrieveTapeRecoveryPointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new RetrieveTapeRecoveryPointResponsePrivate(this), parent)
+{
+    setRequest(new RetrieveTapeRecoveryPointRequest(request));
+    setReply(reply);
+}
+
+const RetrieveTapeRecoveryPointRequest * RetrieveTapeRecoveryPointResponse::request() const
+{
+    Q_D(const RetrieveTapeRecoveryPointResponse);
+    return static_cast<const RetrieveTapeRecoveryPointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway RetrieveTapeRecoveryPoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void RetrieveTapeRecoveryPointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RetrieveTapeRecoveryPointResponsePrivate
+ *
+ * @brief  Private implementation for RetrieveTapeRecoveryPointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveTapeRecoveryPointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RetrieveTapeRecoveryPointResponse instance.
+ */
+RetrieveTapeRecoveryPointResponsePrivate::RetrieveTapeRecoveryPointResponsePrivate(
+    RetrieveTapeRecoveryPointQueueResponse * const q) : RetrieveTapeRecoveryPointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway RetrieveTapeRecoveryPointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RetrieveTapeRecoveryPointResponsePrivate::RetrieveTapeRecoveryPointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RetrieveTapeRecoveryPointResponse"));
+    /// @todo
+}

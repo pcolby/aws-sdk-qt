@@ -19,3 +19,85 @@
 
 #include "createregexpatternsetresponse.h"
 #include "createregexpatternsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  CreateRegexPatternSetResponse
+ *
+ * @brief  Handles WAFRegional CreateRegexPatternSet responses.
+ *
+ * @see    WAFRegionalClient::createRegexPatternSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRegexPatternSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new CreateRegexPatternSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateRegexPatternSetRequest(request));
+    setReply(reply);
+}
+
+const CreateRegexPatternSetRequest * CreateRegexPatternSetResponse::request() const
+{
+    Q_D(const CreateRegexPatternSetResponse);
+    return static_cast<const CreateRegexPatternSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional CreateRegexPatternSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateRegexPatternSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRegexPatternSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateRegexPatternSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRegexPatternSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateRegexPatternSetResponse instance.
+ */
+CreateRegexPatternSetResponsePrivate::CreateRegexPatternSetResponsePrivate(
+    CreateRegexPatternSetQueueResponse * const q) : CreateRegexPatternSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional CreateRegexPatternSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateRegexPatternSetResponsePrivate::CreateRegexPatternSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateRegexPatternSetResponse"));
+    /// @todo
+}

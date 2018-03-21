@@ -19,3 +19,85 @@
 
 #include "untagresponse.h"
 #include "untagresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroups {
+
+/**
+ * @class  UntagResponse
+ *
+ * @brief  Handles ResourceGroups Untag responses.
+ *
+ * @see    ResourceGroupsClient::untag
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsResponse(new UntagResponsePrivate(this), parent)
+{
+    setRequest(new UntagRequest(request));
+    setReply(reply);
+}
+
+const UntagRequest * UntagResponse::request() const
+{
+    Q_D(const UntagResponse);
+    return static_cast<const UntagRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroups Untag response.
+ *
+ * @param  response  Response to parse.
+ */
+void UntagResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagResponsePrivate
+ *
+ * @brief  Private implementation for UntagResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UntagResponse instance.
+ */
+UntagResponsePrivate::UntagResponsePrivate(
+    UntagQueueResponse * const q) : UntagPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroups UntagResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UntagResponsePrivate::UntagResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UntagResponse"));
+    /// @todo
+}

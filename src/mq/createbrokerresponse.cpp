@@ -19,3 +19,85 @@
 
 #include "createbrokerresponse.h"
 #include "createbrokerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  CreateBrokerResponse
+ *
+ * @brief  Handles MQ CreateBroker responses.
+ *
+ * @see    MQClient::createBroker
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBrokerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new CreateBrokerResponsePrivate(this), parent)
+{
+    setRequest(new CreateBrokerRequest(request));
+    setReply(reply);
+}
+
+const CreateBrokerRequest * CreateBrokerResponse::request() const
+{
+    Q_D(const CreateBrokerResponse);
+    return static_cast<const CreateBrokerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ CreateBroker response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateBrokerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBrokerResponsePrivate
+ *
+ * @brief  Private implementation for CreateBrokerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBrokerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateBrokerResponse instance.
+ */
+CreateBrokerResponsePrivate::CreateBrokerResponsePrivate(
+    CreateBrokerQueueResponse * const q) : CreateBrokerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ CreateBrokerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateBrokerResponsePrivate::CreateBrokerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateBrokerResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "generatedatasetresponse.h"
 #include "generatedatasetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MarketplaceCommerceAnalytics {
+
+/**
+ * @class  GenerateDataSetResponse
+ *
+ * @brief  Handles MarketplaceCommerceAnalytics GenerateDataSet responses.
+ *
+ * @see    MarketplaceCommerceAnalyticsClient::generateDataSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GenerateDataSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MarketplaceCommerceAnalyticsResponse(new GenerateDataSetResponsePrivate(this), parent)
+{
+    setRequest(new GenerateDataSetRequest(request));
+    setReply(reply);
+}
+
+const GenerateDataSetRequest * GenerateDataSetResponse::request() const
+{
+    Q_D(const GenerateDataSetResponse);
+    return static_cast<const GenerateDataSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MarketplaceCommerceAnalytics GenerateDataSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GenerateDataSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GenerateDataSetResponsePrivate
+ *
+ * @brief  Private implementation for GenerateDataSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GenerateDataSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GenerateDataSetResponse instance.
+ */
+GenerateDataSetResponsePrivate::GenerateDataSetResponsePrivate(
+    GenerateDataSetQueueResponse * const q) : GenerateDataSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MarketplaceCommerceAnalytics GenerateDataSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GenerateDataSetResponsePrivate::GenerateDataSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GenerateDataSetResponse"));
+    /// @todo
+}

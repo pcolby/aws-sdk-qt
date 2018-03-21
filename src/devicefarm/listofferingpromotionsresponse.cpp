@@ -19,3 +19,85 @@
 
 #include "listofferingpromotionsresponse.h"
 #include "listofferingpromotionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListOfferingPromotionsResponse
+ *
+ * @brief  Handles DeviceFarm ListOfferingPromotions responses.
+ *
+ * @see    DeviceFarmClient::listOfferingPromotions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOfferingPromotionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new ListOfferingPromotionsResponsePrivate(this), parent)
+{
+    setRequest(new ListOfferingPromotionsRequest(request));
+    setReply(reply);
+}
+
+const ListOfferingPromotionsRequest * ListOfferingPromotionsResponse::request() const
+{
+    Q_D(const ListOfferingPromotionsResponse);
+    return static_cast<const ListOfferingPromotionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm ListOfferingPromotions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOfferingPromotionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOfferingPromotionsResponsePrivate
+ *
+ * @brief  Private implementation for ListOfferingPromotionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOfferingPromotionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOfferingPromotionsResponse instance.
+ */
+ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponsePrivate(
+    ListOfferingPromotionsQueueResponse * const q) : ListOfferingPromotionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm ListOfferingPromotionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOfferingPromotionsResponse"));
+    /// @todo
+}

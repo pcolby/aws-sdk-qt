@@ -19,3 +19,85 @@
 
 #include "sendbonusresponse.h"
 #include "sendbonusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  SendBonusResponse
+ *
+ * @brief  Handles MTurk SendBonus responses.
+ *
+ * @see    MTurkClient::sendBonus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendBonusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new SendBonusResponsePrivate(this), parent)
+{
+    setRequest(new SendBonusRequest(request));
+    setReply(reply);
+}
+
+const SendBonusRequest * SendBonusResponse::request() const
+{
+    Q_D(const SendBonusResponse);
+    return static_cast<const SendBonusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk SendBonus response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendBonusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendBonusResponsePrivate
+ *
+ * @brief  Private implementation for SendBonusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendBonusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendBonusResponse instance.
+ */
+SendBonusResponsePrivate::SendBonusResponsePrivate(
+    SendBonusQueueResponse * const q) : SendBonusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk SendBonusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendBonusResponsePrivate::SendBonusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendBonusResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletedirectconnectgatewayresponse.h"
 #include "deletedirectconnectgatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DeleteDirectConnectGatewayResponse
+ *
+ * @brief  Handles DirectConnect DeleteDirectConnectGateway responses.
+ *
+ * @see    DirectConnectClient::deleteDirectConnectGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDirectConnectGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DeleteDirectConnectGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDirectConnectGatewayRequest(request));
+    setReply(reply);
+}
+
+const DeleteDirectConnectGatewayRequest * DeleteDirectConnectGatewayResponse::request() const
+{
+    Q_D(const DeleteDirectConnectGatewayResponse);
+    return static_cast<const DeleteDirectConnectGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DeleteDirectConnectGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDirectConnectGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDirectConnectGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDirectConnectGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectConnectGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDirectConnectGatewayResponse instance.
+ */
+DeleteDirectConnectGatewayResponsePrivate::DeleteDirectConnectGatewayResponsePrivate(
+    DeleteDirectConnectGatewayQueueResponse * const q) : DeleteDirectConnectGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DeleteDirectConnectGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDirectConnectGatewayResponsePrivate::DeleteDirectConnectGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDirectConnectGatewayResponse"));
+    /// @todo
+}

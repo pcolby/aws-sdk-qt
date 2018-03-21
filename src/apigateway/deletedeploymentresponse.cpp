@@ -19,3 +19,85 @@
 
 #include "deletedeploymentresponse.h"
 #include "deletedeploymentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteDeploymentResponse
+ *
+ * @brief  Handles APIGateway DeleteDeployment responses.
+ *
+ * @see    APIGatewayClient::deleteDeployment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDeploymentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteDeploymentResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDeploymentRequest(request));
+    setReply(reply);
+}
+
+const DeleteDeploymentRequest * DeleteDeploymentResponse::request() const
+{
+    Q_D(const DeleteDeploymentResponse);
+    return static_cast<const DeleteDeploymentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteDeployment response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDeploymentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDeploymentResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDeploymentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDeploymentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDeploymentResponse instance.
+ */
+DeleteDeploymentResponsePrivate::DeleteDeploymentResponsePrivate(
+    DeleteDeploymentQueueResponse * const q) : DeleteDeploymentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteDeploymentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDeploymentResponsePrivate::DeleteDeploymentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentResponse"));
+    /// @todo
+}

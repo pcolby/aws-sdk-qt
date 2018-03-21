@@ -19,3 +19,85 @@
 
 #include "respondactivitytaskfailedresponse.h"
 #include "respondactivitytaskfailedresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RespondActivityTaskFailedResponse
+ *
+ * @brief  Handles SWF RespondActivityTaskFailed responses.
+ *
+ * @see    SWFClient::respondActivityTaskFailed
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RespondActivityTaskFailedResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new RespondActivityTaskFailedResponsePrivate(this), parent)
+{
+    setRequest(new RespondActivityTaskFailedRequest(request));
+    setReply(reply);
+}
+
+const RespondActivityTaskFailedRequest * RespondActivityTaskFailedResponse::request() const
+{
+    Q_D(const RespondActivityTaskFailedResponse);
+    return static_cast<const RespondActivityTaskFailedRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF RespondActivityTaskFailed response.
+ *
+ * @param  response  Response to parse.
+ */
+void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RespondActivityTaskFailedResponsePrivate
+ *
+ * @brief  Private implementation for RespondActivityTaskFailedResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskFailedResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RespondActivityTaskFailedResponse instance.
+ */
+RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePrivate(
+    RespondActivityTaskFailedQueueResponse * const q) : RespondActivityTaskFailedPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF RespondActivityTaskFailedResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskFailedResponse"));
+    /// @todo
+}

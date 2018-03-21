@@ -19,3 +19,85 @@
 
 #include "describeaccountattributesresponse.h"
 #include "describeaccountattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeAccountAttributesResponse
+ *
+ * @brief  Handles EC2 DescribeAccountAttributes responses.
+ *
+ * @see    EC2Client::describeAccountAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAccountAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeAccountAttributesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAccountAttributesRequest(request));
+    setReply(reply);
+}
+
+const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::request() const
+{
+    Q_D(const DescribeAccountAttributesResponse);
+    return static_cast<const DescribeAccountAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeAccountAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAccountAttributesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAccountAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAccountAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAccountAttributesResponse instance.
+ */
+DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
+    DescribeAccountAttributesQueueResponse * const q) : DescribeAccountAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeAccountAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAccountAttributesResponse"));
+    /// @todo
+}

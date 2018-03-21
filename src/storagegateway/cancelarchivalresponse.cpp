@@ -19,3 +19,85 @@
 
 #include "cancelarchivalresponse.h"
 #include "cancelarchivalresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CancelArchivalResponse
+ *
+ * @brief  Handles StorageGateway CancelArchival responses.
+ *
+ * @see    StorageGatewayClient::cancelArchival
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelArchivalResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new CancelArchivalResponsePrivate(this), parent)
+{
+    setRequest(new CancelArchivalRequest(request));
+    setReply(reply);
+}
+
+const CancelArchivalRequest * CancelArchivalResponse::request() const
+{
+    Q_D(const CancelArchivalResponse);
+    return static_cast<const CancelArchivalRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway CancelArchival response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelArchivalResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelArchivalResponsePrivate
+ *
+ * @brief  Private implementation for CancelArchivalResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelArchivalResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelArchivalResponse instance.
+ */
+CancelArchivalResponsePrivate::CancelArchivalResponsePrivate(
+    CancelArchivalQueueResponse * const q) : CancelArchivalPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway CancelArchivalResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelArchivalResponsePrivate::CancelArchivalResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelArchivalResponse"));
+    /// @todo
+}

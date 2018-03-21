@@ -19,3 +19,85 @@
 
 #include "createipsetresponse.h"
 #include "createipsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  CreateIPSetResponse
+ *
+ * @brief  Handles WAF CreateIPSet responses.
+ *
+ * @see    WAFClient::createIPSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateIPSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new CreateIPSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateIPSetRequest(request));
+    setReply(reply);
+}
+
+const CreateIPSetRequest * CreateIPSetResponse::request() const
+{
+    Q_D(const CreateIPSetResponse);
+    return static_cast<const CreateIPSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF CreateIPSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateIPSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateIPSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateIPSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateIPSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateIPSetResponse instance.
+ */
+CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
+    CreateIPSetQueueResponse * const q) : CreateIPSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF CreateIPSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateIPSetResponsePrivate::CreateIPSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateIPSetResponse"));
+    /// @todo
+}

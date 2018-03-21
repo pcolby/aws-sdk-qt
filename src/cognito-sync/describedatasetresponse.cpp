@@ -19,3 +19,85 @@
 
 #include "describedatasetresponse.h"
 #include "describedatasetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  DescribeDatasetResponse
+ *
+ * @brief  Handles CognitoSync DescribeDataset responses.
+ *
+ * @see    CognitoSyncClient::describeDataset
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDatasetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new DescribeDatasetResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDatasetRequest(request));
+    setReply(reply);
+}
+
+const DescribeDatasetRequest * DescribeDatasetResponse::request() const
+{
+    Q_D(const DescribeDatasetResponse);
+    return static_cast<const DescribeDatasetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync DescribeDataset response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDatasetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDatasetResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDatasetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDatasetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDatasetResponse instance.
+ */
+DescribeDatasetResponsePrivate::DescribeDatasetResponsePrivate(
+    DescribeDatasetQueueResponse * const q) : DescribeDatasetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync DescribeDatasetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDatasetResponsePrivate::DescribeDatasetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDatasetResponse"));
+    /// @todo
+}

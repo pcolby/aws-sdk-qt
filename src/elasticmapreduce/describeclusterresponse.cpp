@@ -19,3 +19,85 @@
 
 #include "describeclusterresponse.h"
 #include "describeclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  DescribeClusterResponse
+ *
+ * @brief  Handles EMR DescribeCluster responses.
+ *
+ * @see    EMRClient::describeCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new DescribeClusterResponsePrivate(this), parent)
+{
+    setRequest(new DescribeClusterRequest(request));
+    setReply(reply);
+}
+
+const DescribeClusterRequest * DescribeClusterResponse::request() const
+{
+    Q_D(const DescribeClusterResponse);
+    return static_cast<const DescribeClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR DescribeCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClusterResponsePrivate
+ *
+ * @brief  Private implementation for DescribeClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeClusterResponse instance.
+ */
+DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
+    DescribeClusterQueueResponse * const q) : DescribeClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR DescribeClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeClusterResponsePrivate::DescribeClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeClusterResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletethingtyperesponse.h"
 #include "deletethingtyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteThingTypeResponse
+ *
+ * @brief  Handles IoT DeleteThingType responses.
+ *
+ * @see    IoTClient::deleteThingType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteThingTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeleteThingTypeResponsePrivate(this), parent)
+{
+    setRequest(new DeleteThingTypeRequest(request));
+    setReply(reply);
+}
+
+const DeleteThingTypeRequest * DeleteThingTypeResponse::request() const
+{
+    Q_D(const DeleteThingTypeResponse);
+    return static_cast<const DeleteThingTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeleteThingType response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteThingTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteThingTypeResponsePrivate
+ *
+ * @brief  Private implementation for DeleteThingTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteThingTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteThingTypeResponse instance.
+ */
+DeleteThingTypeResponsePrivate::DeleteThingTypeResponsePrivate(
+    DeleteThingTypeQueueResponse * const q) : DeleteThingTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeleteThingTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteThingTypeResponsePrivate::DeleteThingTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteThingTypeResponse"));
+    /// @todo
+}

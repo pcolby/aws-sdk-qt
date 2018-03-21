@@ -19,3 +19,85 @@
 
 #include "getloadbalancermetricdataresponse.h"
 #include "getloadbalancermetricdataresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetLoadBalancerMetricDataResponse
+ *
+ * @brief  Handles Lightsail GetLoadBalancerMetricData responses.
+ *
+ * @see    LightsailClient::getLoadBalancerMetricData
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoadBalancerMetricDataResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetLoadBalancerMetricDataResponsePrivate(this), parent)
+{
+    setRequest(new GetLoadBalancerMetricDataRequest(request));
+    setReply(reply);
+}
+
+const GetLoadBalancerMetricDataRequest * GetLoadBalancerMetricDataResponse::request() const
+{
+    Q_D(const GetLoadBalancerMetricDataResponse);
+    return static_cast<const GetLoadBalancerMetricDataRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetLoadBalancerMetricData response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLoadBalancerMetricDataResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoadBalancerMetricDataResponsePrivate
+ *
+ * @brief  Private implementation for GetLoadBalancerMetricDataResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoadBalancerMetricDataResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLoadBalancerMetricDataResponse instance.
+ */
+GetLoadBalancerMetricDataResponsePrivate::GetLoadBalancerMetricDataResponsePrivate(
+    GetLoadBalancerMetricDataQueueResponse * const q) : GetLoadBalancerMetricDataPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetLoadBalancerMetricDataResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLoadBalancerMetricDataResponsePrivate::GetLoadBalancerMetricDataResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLoadBalancerMetricDataResponse"));
+    /// @todo
+}

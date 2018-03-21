@@ -19,3 +19,85 @@
 
 #include "describeauthorizerresponse.h"
 #include "describeauthorizerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeAuthorizerResponse
+ *
+ * @brief  Handles IoT DescribeAuthorizer responses.
+ *
+ * @see    IoTClient::describeAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAuthorizerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DescribeAuthorizerResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAuthorizerRequest(request));
+    setReply(reply);
+}
+
+const DescribeAuthorizerRequest * DescribeAuthorizerResponse::request() const
+{
+    Q_D(const DescribeAuthorizerResponse);
+    return static_cast<const DescribeAuthorizerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DescribeAuthorizer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAuthorizerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAuthorizerResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAuthorizerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAuthorizerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAuthorizerResponse instance.
+ */
+DescribeAuthorizerResponsePrivate::DescribeAuthorizerResponsePrivate(
+    DescribeAuthorizerQueueResponse * const q) : DescribeAuthorizerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DescribeAuthorizerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAuthorizerResponsePrivate::DescribeAuthorizerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAuthorizerResponse"));
+    /// @todo
+}

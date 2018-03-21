@@ -19,3 +19,85 @@
 
 #include "deleteconfigruleresponse.h"
 #include "deleteconfigruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DeleteConfigRuleResponse
+ *
+ * @brief  Handles ConfigService DeleteConfigRule responses.
+ *
+ * @see    ConfigServiceClient::deleteConfigRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DeleteConfigRuleResponsePrivate(this), parent)
+{
+    setRequest(new DeleteConfigRuleRequest(request));
+    setReply(reply);
+}
+
+const DeleteConfigRuleRequest * DeleteConfigRuleResponse::request() const
+{
+    Q_D(const DeleteConfigRuleResponse);
+    return static_cast<const DeleteConfigRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DeleteConfigRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteConfigRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigRuleResponsePrivate
+ *
+ * @brief  Private implementation for DeleteConfigRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteConfigRuleResponse instance.
+ */
+DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponsePrivate(
+    DeleteConfigRuleQueueResponse * const q) : DeleteConfigRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DeleteConfigRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteConfigRuleResponse"));
+    /// @todo
+}

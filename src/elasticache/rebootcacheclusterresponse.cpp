@@ -19,3 +19,85 @@
 
 #include "rebootcacheclusterresponse.h"
 #include "rebootcacheclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  RebootCacheClusterResponse
+ *
+ * @brief  Handles ElastiCache RebootCacheCluster responses.
+ *
+ * @see    ElastiCacheClient::rebootCacheCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebootCacheClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new RebootCacheClusterResponsePrivate(this), parent)
+{
+    setRequest(new RebootCacheClusterRequest(request));
+    setReply(reply);
+}
+
+const RebootCacheClusterRequest * RebootCacheClusterResponse::request() const
+{
+    Q_D(const RebootCacheClusterResponse);
+    return static_cast<const RebootCacheClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache RebootCacheCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void RebootCacheClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RebootCacheClusterResponsePrivate
+ *
+ * @brief  Private implementation for RebootCacheClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootCacheClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RebootCacheClusterResponse instance.
+ */
+RebootCacheClusterResponsePrivate::RebootCacheClusterResponsePrivate(
+    RebootCacheClusterQueueResponse * const q) : RebootCacheClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache RebootCacheClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RebootCacheClusterResponsePrivate::RebootCacheClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RebootCacheClusterResponse"));
+    /// @todo
+}

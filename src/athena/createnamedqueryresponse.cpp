@@ -19,3 +19,85 @@
 
 #include "createnamedqueryresponse.h"
 #include "createnamedqueryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  CreateNamedQueryResponse
+ *
+ * @brief  Handles Athena CreateNamedQuery responses.
+ *
+ * @see    AthenaClient::createNamedQuery
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNamedQueryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new CreateNamedQueryResponsePrivate(this), parent)
+{
+    setRequest(new CreateNamedQueryRequest(request));
+    setReply(reply);
+}
+
+const CreateNamedQueryRequest * CreateNamedQueryResponse::request() const
+{
+    Q_D(const CreateNamedQueryResponse);
+    return static_cast<const CreateNamedQueryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena CreateNamedQuery response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateNamedQueryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNamedQueryResponsePrivate
+ *
+ * @brief  Private implementation for CreateNamedQueryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNamedQueryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateNamedQueryResponse instance.
+ */
+CreateNamedQueryResponsePrivate::CreateNamedQueryResponsePrivate(
+    CreateNamedQueryQueueResponse * const q) : CreateNamedQueryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena CreateNamedQueryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateNamedQueryResponsePrivate::CreateNamedQueryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateNamedQueryResponse"));
+    /// @todo
+}

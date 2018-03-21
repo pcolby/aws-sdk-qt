@@ -19,3 +19,85 @@
 
 #include "describeloadbalancerattributesresponse.h"
 #include "describeloadbalancerattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  DescribeLoadBalancerAttributesResponse
+ *
+ * @brief  Handles ElasticLoadBalancing DescribeLoadBalancerAttributes responses.
+ *
+ * @see    ElasticLoadBalancingClient::describeLoadBalancerAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLoadBalancerAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new DescribeLoadBalancerAttributesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLoadBalancerAttributesRequest(request));
+    setReply(reply);
+}
+
+const DescribeLoadBalancerAttributesRequest * DescribeLoadBalancerAttributesResponse::request() const
+{
+    Q_D(const DescribeLoadBalancerAttributesResponse);
+    return static_cast<const DescribeLoadBalancerAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing DescribeLoadBalancerAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLoadBalancerAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLoadBalancerAttributesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLoadBalancerAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoadBalancerAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLoadBalancerAttributesResponse instance.
+ */
+DescribeLoadBalancerAttributesResponsePrivate::DescribeLoadBalancerAttributesResponsePrivate(
+    DescribeLoadBalancerAttributesQueueResponse * const q) : DescribeLoadBalancerAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing DescribeLoadBalancerAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLoadBalancerAttributesResponsePrivate::DescribeLoadBalancerAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBalancerAttributesResponse"));
+    /// @todo
+}

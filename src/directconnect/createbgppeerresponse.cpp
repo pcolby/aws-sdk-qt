@@ -19,3 +19,85 @@
 
 #include "createbgppeerresponse.h"
 #include "createbgppeerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateBGPPeerResponse
+ *
+ * @brief  Handles DirectConnect CreateBGPPeer responses.
+ *
+ * @see    DirectConnectClient::createBGPPeer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBGPPeerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new CreateBGPPeerResponsePrivate(this), parent)
+{
+    setRequest(new CreateBGPPeerRequest(request));
+    setReply(reply);
+}
+
+const CreateBGPPeerRequest * CreateBGPPeerResponse::request() const
+{
+    Q_D(const CreateBGPPeerResponse);
+    return static_cast<const CreateBGPPeerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect CreateBGPPeer response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateBGPPeerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBGPPeerResponsePrivate
+ *
+ * @brief  Private implementation for CreateBGPPeerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBGPPeerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateBGPPeerResponse instance.
+ */
+CreateBGPPeerResponsePrivate::CreateBGPPeerResponsePrivate(
+    CreateBGPPeerQueueResponse * const q) : CreateBGPPeerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect CreateBGPPeerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateBGPPeerResponsePrivate::CreateBGPPeerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateBGPPeerResponse"));
+    /// @todo
+}

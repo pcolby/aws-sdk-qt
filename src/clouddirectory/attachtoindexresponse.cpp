@@ -19,3 +19,85 @@
 
 #include "attachtoindexresponse.h"
 #include "attachtoindexresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AttachToIndexResponse
+ *
+ * @brief  Handles CloudDirectory AttachToIndex responses.
+ *
+ * @see    CloudDirectoryClient::attachToIndex
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachToIndexResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new AttachToIndexResponsePrivate(this), parent)
+{
+    setRequest(new AttachToIndexRequest(request));
+    setReply(reply);
+}
+
+const AttachToIndexRequest * AttachToIndexResponse::request() const
+{
+    Q_D(const AttachToIndexResponse);
+    return static_cast<const AttachToIndexRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory AttachToIndex response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachToIndexResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachToIndexResponsePrivate
+ *
+ * @brief  Private implementation for AttachToIndexResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachToIndexResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachToIndexResponse instance.
+ */
+AttachToIndexResponsePrivate::AttachToIndexResponsePrivate(
+    AttachToIndexQueueResponse * const q) : AttachToIndexPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory AttachToIndexResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachToIndexResponsePrivate::AttachToIndexResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachToIndexResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describereplicationinstancesresponse.h"
 #include "describereplicationinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeReplicationInstancesResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeReplicationInstances responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeReplicationInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReplicationInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeReplicationInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReplicationInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeReplicationInstancesRequest * DescribeReplicationInstancesResponse::request() const
+{
+    Q_D(const DescribeReplicationInstancesResponse);
+    return static_cast<const DescribeReplicationInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeReplicationInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReplicationInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReplicationInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReplicationInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReplicationInstancesResponse instance.
+ */
+DescribeReplicationInstancesResponsePrivate::DescribeReplicationInstancesResponsePrivate(
+    DescribeReplicationInstancesQueueResponse * const q) : DescribeReplicationInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeReplicationInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReplicationInstancesResponsePrivate::DescribeReplicationInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationInstancesResponse"));
+    /// @todo
+}

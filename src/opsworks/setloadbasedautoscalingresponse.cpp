@@ -19,3 +19,85 @@
 
 #include "setloadbasedautoscalingresponse.h"
 #include "setloadbasedautoscalingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  SetLoadBasedAutoScalingResponse
+ *
+ * @brief  Handles OpsWorks SetLoadBasedAutoScaling responses.
+ *
+ * @see    OpsWorksClient::setLoadBasedAutoScaling
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoadBasedAutoScalingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new SetLoadBasedAutoScalingResponsePrivate(this), parent)
+{
+    setRequest(new SetLoadBasedAutoScalingRequest(request));
+    setReply(reply);
+}
+
+const SetLoadBasedAutoScalingRequest * SetLoadBasedAutoScalingResponse::request() const
+{
+    Q_D(const SetLoadBasedAutoScalingResponse);
+    return static_cast<const SetLoadBasedAutoScalingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks SetLoadBasedAutoScaling response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetLoadBasedAutoScalingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoadBasedAutoScalingResponsePrivate
+ *
+ * @brief  Private implementation for SetLoadBasedAutoScalingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBasedAutoScalingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetLoadBasedAutoScalingResponse instance.
+ */
+SetLoadBasedAutoScalingResponsePrivate::SetLoadBasedAutoScalingResponsePrivate(
+    SetLoadBasedAutoScalingQueueResponse * const q) : SetLoadBasedAutoScalingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks SetLoadBasedAutoScalingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetLoadBasedAutoScalingResponsePrivate::SetLoadBasedAutoScalingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetLoadBasedAutoScalingResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createdomainnameresponse.h"
 #include "createdomainnameresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateDomainNameResponse
+ *
+ * @brief  Handles APIGateway CreateDomainName responses.
+ *
+ * @see    APIGatewayClient::createDomainName
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDomainNameResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateDomainNameResponsePrivate(this), parent)
+{
+    setRequest(new CreateDomainNameRequest(request));
+    setReply(reply);
+}
+
+const CreateDomainNameRequest * CreateDomainNameResponse::request() const
+{
+    Q_D(const CreateDomainNameResponse);
+    return static_cast<const CreateDomainNameRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateDomainName response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDomainNameResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDomainNameResponsePrivate
+ *
+ * @brief  Private implementation for CreateDomainNameResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDomainNameResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDomainNameResponse instance.
+ */
+CreateDomainNameResponsePrivate::CreateDomainNameResponsePrivate(
+    CreateDomainNameQueueResponse * const q) : CreateDomainNamePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateDomainNameResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDomainNameResponsePrivate::CreateDomainNameResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDomainNameResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeapplicationversionsresponse.h"
 #include "describeapplicationversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeApplicationVersionsResponse
+ *
+ * @brief  Handles ElasticBeanstalk DescribeApplicationVersions responses.
+ *
+ * @see    ElasticBeanstalkClient::describeApplicationVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeApplicationVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DescribeApplicationVersionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeApplicationVersionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeApplicationVersionsRequest * DescribeApplicationVersionsResponse::request() const
+{
+    Q_D(const DescribeApplicationVersionsResponse);
+    return static_cast<const DescribeApplicationVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DescribeApplicationVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeApplicationVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeApplicationVersionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeApplicationVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeApplicationVersionsResponse instance.
+ */
+DescribeApplicationVersionsResponsePrivate::DescribeApplicationVersionsResponsePrivate(
+    DescribeApplicationVersionsQueueResponse * const q) : DescribeApplicationVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DescribeApplicationVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeApplicationVersionsResponsePrivate::DescribeApplicationVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationVersionsResponse"));
+    /// @todo
+}

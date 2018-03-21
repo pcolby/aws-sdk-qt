@@ -19,3 +19,85 @@
 
 #include "pollforactivitytaskresponse.h"
 #include "pollforactivitytaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  PollForActivityTaskResponse
+ *
+ * @brief  Handles SWF PollForActivityTask responses.
+ *
+ * @see    SWFClient::pollForActivityTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PollForActivityTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new PollForActivityTaskResponsePrivate(this), parent)
+{
+    setRequest(new PollForActivityTaskRequest(request));
+    setReply(reply);
+}
+
+const PollForActivityTaskRequest * PollForActivityTaskResponse::request() const
+{
+    Q_D(const PollForActivityTaskResponse);
+    return static_cast<const PollForActivityTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF PollForActivityTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void PollForActivityTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PollForActivityTaskResponsePrivate
+ *
+ * @brief  Private implementation for PollForActivityTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForActivityTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PollForActivityTaskResponse instance.
+ */
+PollForActivityTaskResponsePrivate::PollForActivityTaskResponsePrivate(
+    PollForActivityTaskQueueResponse * const q) : PollForActivityTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF PollForActivityTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PollForActivityTaskResponsePrivate::PollForActivityTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PollForActivityTaskResponse"));
+    /// @todo
+}

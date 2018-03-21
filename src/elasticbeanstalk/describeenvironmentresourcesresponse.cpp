@@ -19,3 +19,85 @@
 
 #include "describeenvironmentresourcesresponse.h"
 #include "describeenvironmentresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeEnvironmentResourcesResponse
+ *
+ * @brief  Handles ElasticBeanstalk DescribeEnvironmentResources responses.
+ *
+ * @see    ElasticBeanstalkClient::describeEnvironmentResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DescribeEnvironmentResourcesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEnvironmentResourcesRequest(request));
+    setReply(reply);
+}
+
+const DescribeEnvironmentResourcesRequest * DescribeEnvironmentResourcesResponse::request() const
+{
+    Q_D(const DescribeEnvironmentResourcesResponse);
+    return static_cast<const DescribeEnvironmentResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DescribeEnvironmentResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEnvironmentResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentResourcesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEnvironmentResourcesResponse instance.
+ */
+DescribeEnvironmentResourcesResponsePrivate::DescribeEnvironmentResourcesResponsePrivate(
+    DescribeEnvironmentResourcesQueueResponse * const q) : DescribeEnvironmentResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DescribeEnvironmentResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEnvironmentResourcesResponsePrivate::DescribeEnvironmentResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentResourcesResponse"));
+    /// @todo
+}

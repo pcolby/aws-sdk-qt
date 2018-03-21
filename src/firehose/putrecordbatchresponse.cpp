@@ -19,3 +19,85 @@
 
 #include "putrecordbatchresponse.h"
 #include "putrecordbatchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  PutRecordBatchResponse
+ *
+ * @brief  Handles Firehose PutRecordBatch responses.
+ *
+ * @see    FirehoseClient::putRecordBatch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutRecordBatchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : FirehoseResponse(new PutRecordBatchResponsePrivate(this), parent)
+{
+    setRequest(new PutRecordBatchRequest(request));
+    setReply(reply);
+}
+
+const PutRecordBatchRequest * PutRecordBatchResponse::request() const
+{
+    Q_D(const PutRecordBatchResponse);
+    return static_cast<const PutRecordBatchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Firehose PutRecordBatch response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutRecordBatchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutRecordBatchResponsePrivate
+ *
+ * @brief  Private implementation for PutRecordBatchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRecordBatchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutRecordBatchResponse instance.
+ */
+PutRecordBatchResponsePrivate::PutRecordBatchResponsePrivate(
+    PutRecordBatchQueueResponse * const q) : PutRecordBatchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Firehose PutRecordBatchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutRecordBatchResponsePrivate::PutRecordBatchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutRecordBatchResponse"));
+    /// @todo
+}

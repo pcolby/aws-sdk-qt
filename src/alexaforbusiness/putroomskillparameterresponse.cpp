@@ -19,3 +19,85 @@
 
 #include "putroomskillparameterresponse.h"
 #include "putroomskillparameterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  PutRoomSkillParameterResponse
+ *
+ * @brief  Handles AlexaForBusiness PutRoomSkillParameter responses.
+ *
+ * @see    AlexaForBusinessClient::putRoomSkillParameter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutRoomSkillParameterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new PutRoomSkillParameterResponsePrivate(this), parent)
+{
+    setRequest(new PutRoomSkillParameterRequest(request));
+    setReply(reply);
+}
+
+const PutRoomSkillParameterRequest * PutRoomSkillParameterResponse::request() const
+{
+    Q_D(const PutRoomSkillParameterResponse);
+    return static_cast<const PutRoomSkillParameterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness PutRoomSkillParameter response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutRoomSkillParameterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutRoomSkillParameterResponsePrivate
+ *
+ * @brief  Private implementation for PutRoomSkillParameterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRoomSkillParameterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutRoomSkillParameterResponse instance.
+ */
+PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponsePrivate(
+    PutRoomSkillParameterQueueResponse * const q) : PutRoomSkillParameterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness PutRoomSkillParameterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutRoomSkillParameterResponse"));
+    /// @todo
+}

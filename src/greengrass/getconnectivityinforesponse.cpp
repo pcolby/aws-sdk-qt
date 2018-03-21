@@ -19,3 +19,85 @@
 
 #include "getconnectivityinforesponse.h"
 #include "getconnectivityinforesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetConnectivityInfoResponse
+ *
+ * @brief  Handles Greengrass GetConnectivityInfo responses.
+ *
+ * @see    GreengrassClient::getConnectivityInfo
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConnectivityInfoResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetConnectivityInfoResponsePrivate(this), parent)
+{
+    setRequest(new GetConnectivityInfoRequest(request));
+    setReply(reply);
+}
+
+const GetConnectivityInfoRequest * GetConnectivityInfoResponse::request() const
+{
+    Q_D(const GetConnectivityInfoResponse);
+    return static_cast<const GetConnectivityInfoRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetConnectivityInfo response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetConnectivityInfoResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConnectivityInfoResponsePrivate
+ *
+ * @brief  Private implementation for GetConnectivityInfoResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectivityInfoResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetConnectivityInfoResponse instance.
+ */
+GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponsePrivate(
+    GetConnectivityInfoQueueResponse * const q) : GetConnectivityInfoPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetConnectivityInfoResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetConnectivityInfoResponse"));
+    /// @todo
+}

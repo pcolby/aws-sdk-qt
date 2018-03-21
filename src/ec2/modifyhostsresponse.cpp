@@ -19,3 +19,85 @@
 
 #include "modifyhostsresponse.h"
 #include "modifyhostsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyHostsResponse
+ *
+ * @brief  Handles EC2 ModifyHosts responses.
+ *
+ * @see    EC2Client::modifyHosts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyHostsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyHostsResponsePrivate(this), parent)
+{
+    setRequest(new ModifyHostsRequest(request));
+    setReply(reply);
+}
+
+const ModifyHostsRequest * ModifyHostsResponse::request() const
+{
+    Q_D(const ModifyHostsResponse);
+    return static_cast<const ModifyHostsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyHosts response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyHostsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyHostsResponsePrivate
+ *
+ * @brief  Private implementation for ModifyHostsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyHostsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyHostsResponse instance.
+ */
+ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
+    ModifyHostsQueueResponse * const q) : ModifyHostsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyHostsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyHostsResponsePrivate::ModifyHostsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyHostsResponse"));
+    /// @todo
+}

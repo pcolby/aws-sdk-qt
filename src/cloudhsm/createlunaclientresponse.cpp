@@ -19,3 +19,85 @@
 
 #include "createlunaclientresponse.h"
 #include "createlunaclientresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  CreateLunaClientResponse
+ *
+ * @brief  Handles CloudHSM CreateLunaClient responses.
+ *
+ * @see    CloudHSMClient::createLunaClient
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLunaClientResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new CreateLunaClientResponsePrivate(this), parent)
+{
+    setRequest(new CreateLunaClientRequest(request));
+    setReply(reply);
+}
+
+const CreateLunaClientRequest * CreateLunaClientResponse::request() const
+{
+    Q_D(const CreateLunaClientResponse);
+    return static_cast<const CreateLunaClientRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM CreateLunaClient response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLunaClientResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLunaClientResponsePrivate
+ *
+ * @brief  Private implementation for CreateLunaClientResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLunaClientResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLunaClientResponse instance.
+ */
+CreateLunaClientResponsePrivate::CreateLunaClientResponsePrivate(
+    CreateLunaClientQueueResponse * const q) : CreateLunaClientPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM CreateLunaClientResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLunaClientResponsePrivate::CreateLunaClientResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLunaClientResponse"));
+    /// @todo
+}

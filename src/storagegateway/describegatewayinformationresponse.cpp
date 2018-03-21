@@ -19,3 +19,85 @@
 
 #include "describegatewayinformationresponse.h"
 #include "describegatewayinformationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeGatewayInformationResponse
+ *
+ * @brief  Handles StorageGateway DescribeGatewayInformation responses.
+ *
+ * @see    StorageGatewayClient::describeGatewayInformation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeGatewayInformationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeGatewayInformationResponsePrivate(this), parent)
+{
+    setRequest(new DescribeGatewayInformationRequest(request));
+    setReply(reply);
+}
+
+const DescribeGatewayInformationRequest * DescribeGatewayInformationResponse::request() const
+{
+    Q_D(const DescribeGatewayInformationResponse);
+    return static_cast<const DescribeGatewayInformationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeGatewayInformation response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeGatewayInformationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeGatewayInformationResponsePrivate
+ *
+ * @brief  Private implementation for DescribeGatewayInformationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeGatewayInformationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeGatewayInformationResponse instance.
+ */
+DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponsePrivate(
+    DescribeGatewayInformationQueueResponse * const q) : DescribeGatewayInformationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeGatewayInformationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeGatewayInformationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeconfigurationoptionsresponse.h"
 #include "describeconfigurationoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeConfigurationOptionsResponse
+ *
+ * @brief  Handles ElasticBeanstalk DescribeConfigurationOptions responses.
+ *
+ * @see    ElasticBeanstalkClient::describeConfigurationOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigurationOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DescribeConfigurationOptionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConfigurationOptionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeConfigurationOptionsRequest * DescribeConfigurationOptionsResponse::request() const
+{
+    Q_D(const DescribeConfigurationOptionsResponse);
+    return static_cast<const DescribeConfigurationOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DescribeConfigurationOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConfigurationOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigurationOptionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConfigurationOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConfigurationOptionsResponse instance.
+ */
+DescribeConfigurationOptionsResponsePrivate::DescribeConfigurationOptionsResponsePrivate(
+    DescribeConfigurationOptionsQueueResponse * const q) : DescribeConfigurationOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DescribeConfigurationOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConfigurationOptionsResponsePrivate::DescribeConfigurationOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationOptionsResponse"));
+    /// @todo
+}

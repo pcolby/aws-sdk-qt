@@ -19,3 +19,85 @@
 
 #include "gettagvaluesresponse.h"
 #include "gettagvaluesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroupsTaggingAPI {
+
+/**
+ * @class  GetTagValuesResponse
+ *
+ * @brief  Handles ResourceGroupsTaggingAPI GetTagValues responses.
+ *
+ * @see    ResourceGroupsTaggingAPIClient::getTagValues
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTagValuesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsTaggingAPIResponse(new GetTagValuesResponsePrivate(this), parent)
+{
+    setRequest(new GetTagValuesRequest(request));
+    setReply(reply);
+}
+
+const GetTagValuesRequest * GetTagValuesResponse::request() const
+{
+    Q_D(const GetTagValuesResponse);
+    return static_cast<const GetTagValuesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroupsTaggingAPI GetTagValues response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTagValuesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTagValuesResponsePrivate
+ *
+ * @brief  Private implementation for GetTagValuesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTagValuesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTagValuesResponse instance.
+ */
+GetTagValuesResponsePrivate::GetTagValuesResponsePrivate(
+    GetTagValuesQueueResponse * const q) : GetTagValuesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroupsTaggingAPI GetTagValuesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTagValuesResponsePrivate::GetTagValuesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTagValuesResponse"));
+    /// @todo
+}

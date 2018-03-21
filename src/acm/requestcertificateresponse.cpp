@@ -19,3 +19,85 @@
 
 #include "requestcertificateresponse.h"
 #include "requestcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  RequestCertificateResponse
+ *
+ * @brief  Handles ACM RequestCertificate responses.
+ *
+ * @see    ACMClient::requestCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RequestCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ACMResponse(new RequestCertificateResponsePrivate(this), parent)
+{
+    setRequest(new RequestCertificateRequest(request));
+    setReply(reply);
+}
+
+const RequestCertificateRequest * RequestCertificateResponse::request() const
+{
+    Q_D(const RequestCertificateResponse);
+    return static_cast<const RequestCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ACM RequestCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void RequestCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RequestCertificateResponsePrivate
+ *
+ * @brief  Private implementation for RequestCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RequestCertificateResponse instance.
+ */
+RequestCertificateResponsePrivate::RequestCertificateResponsePrivate(
+    RequestCertificateQueueResponse * const q) : RequestCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ACM RequestCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RequestCertificateResponsePrivate::RequestCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RequestCertificateResponse"));
+    /// @todo
+}

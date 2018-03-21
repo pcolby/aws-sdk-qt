@@ -19,3 +19,85 @@
 
 #include "describefpgaimagesresponse.h"
 #include "describefpgaimagesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeFpgaImagesResponse
+ *
+ * @brief  Handles EC2 DescribeFpgaImages responses.
+ *
+ * @see    EC2Client::describeFpgaImages
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFpgaImagesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeFpgaImagesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeFpgaImagesRequest(request));
+    setReply(reply);
+}
+
+const DescribeFpgaImagesRequest * DescribeFpgaImagesResponse::request() const
+{
+    Q_D(const DescribeFpgaImagesResponse);
+    return static_cast<const DescribeFpgaImagesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeFpgaImages response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeFpgaImagesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFpgaImagesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeFpgaImagesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFpgaImagesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeFpgaImagesResponse instance.
+ */
+DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponsePrivate(
+    DescribeFpgaImagesQueueResponse * const q) : DescribeFpgaImagesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeFpgaImagesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeFpgaImagesResponse"));
+    /// @todo
+}

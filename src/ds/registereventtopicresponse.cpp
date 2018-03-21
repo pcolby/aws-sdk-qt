@@ -19,3 +19,85 @@
 
 #include "registereventtopicresponse.h"
 #include "registereventtopicresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  RegisterEventTopicResponse
+ *
+ * @brief  Handles DirectoryService RegisterEventTopic responses.
+ *
+ * @see    DirectoryServiceClient::registerEventTopic
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterEventTopicResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new RegisterEventTopicResponsePrivate(this), parent)
+{
+    setRequest(new RegisterEventTopicRequest(request));
+    setReply(reply);
+}
+
+const RegisterEventTopicRequest * RegisterEventTopicResponse::request() const
+{
+    Q_D(const RegisterEventTopicResponse);
+    return static_cast<const RegisterEventTopicRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService RegisterEventTopic response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterEventTopicResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterEventTopicResponsePrivate
+ *
+ * @brief  Private implementation for RegisterEventTopicResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterEventTopicResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterEventTopicResponse instance.
+ */
+RegisterEventTopicResponsePrivate::RegisterEventTopicResponsePrivate(
+    RegisterEventTopicQueueResponse * const q) : RegisterEventTopicPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService RegisterEventTopicResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterEventTopicResponsePrivate::RegisterEventTopicResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterEventTopicResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describedbclustersnapshotsresponse.h"
 #include "describedbclustersnapshotsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBClusterSnapshotsResponse
+ *
+ * @brief  Handles RDS DescribeDBClusterSnapshots responses.
+ *
+ * @see    RDSClient::describeDBClusterSnapshots
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBClusterSnapshotsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeDBClusterSnapshotsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDBClusterSnapshotsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDBClusterSnapshotsRequest * DescribeDBClusterSnapshotsResponse::request() const
+{
+    Q_D(const DescribeDBClusterSnapshotsResponse);
+    return static_cast<const DescribeDBClusterSnapshotsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeDBClusterSnapshots response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDBClusterSnapshotsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBClusterSnapshotsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDBClusterSnapshotsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBClusterSnapshotsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDBClusterSnapshotsResponse instance.
+ */
+DescribeDBClusterSnapshotsResponsePrivate::DescribeDBClusterSnapshotsResponsePrivate(
+    DescribeDBClusterSnapshotsQueueResponse * const q) : DescribeDBClusterSnapshotsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeDBClusterSnapshotsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDBClusterSnapshotsResponsePrivate::DescribeDBClusterSnapshotsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDBClusterSnapshotsResponse"));
+    /// @todo
+}

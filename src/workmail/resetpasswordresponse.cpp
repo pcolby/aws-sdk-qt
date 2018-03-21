@@ -19,3 +19,85 @@
 
 #include "resetpasswordresponse.h"
 #include "resetpasswordresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  ResetPasswordResponse
+ *
+ * @brief  Handles WorkMail ResetPassword responses.
+ *
+ * @see    WorkMailClient::resetPassword
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetPasswordResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new ResetPasswordResponsePrivate(this), parent)
+{
+    setRequest(new ResetPasswordRequest(request));
+    setReply(reply);
+}
+
+const ResetPasswordRequest * ResetPasswordResponse::request() const
+{
+    Q_D(const ResetPasswordResponse);
+    return static_cast<const ResetPasswordRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail ResetPassword response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetPasswordResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetPasswordResponsePrivate
+ *
+ * @brief  Private implementation for ResetPasswordResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetPasswordResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetPasswordResponse instance.
+ */
+ResetPasswordResponsePrivate::ResetPasswordResponsePrivate(
+    ResetPasswordQueueResponse * const q) : ResetPasswordPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail ResetPasswordResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetPasswordResponsePrivate::ResetPasswordResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetPasswordResponse"));
+    /// @todo
+}

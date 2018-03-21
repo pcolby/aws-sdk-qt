@@ -19,3 +19,85 @@
 
 #include "lookupdeveloperidentityresponse.h"
 #include "lookupdeveloperidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  LookupDeveloperIdentityResponse
+ *
+ * @brief  Handles CognitoIdentity LookupDeveloperIdentity responses.
+ *
+ * @see    CognitoIdentityClient::lookupDeveloperIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+LookupDeveloperIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new LookupDeveloperIdentityResponsePrivate(this), parent)
+{
+    setRequest(new LookupDeveloperIdentityRequest(request));
+    setReply(reply);
+}
+
+const LookupDeveloperIdentityRequest * LookupDeveloperIdentityResponse::request() const
+{
+    Q_D(const LookupDeveloperIdentityResponse);
+    return static_cast<const LookupDeveloperIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity LookupDeveloperIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void LookupDeveloperIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  LookupDeveloperIdentityResponsePrivate
+ *
+ * @brief  Private implementation for LookupDeveloperIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new LookupDeveloperIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public LookupDeveloperIdentityResponse instance.
+ */
+LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponsePrivate(
+    LookupDeveloperIdentityQueueResponse * const q) : LookupDeveloperIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity LookupDeveloperIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("LookupDeveloperIdentityResponse"));
+    /// @todo
+}

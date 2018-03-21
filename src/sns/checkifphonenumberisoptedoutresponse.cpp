@@ -19,3 +19,85 @@
 
 #include "checkifphonenumberisoptedoutresponse.h"
 #include "checkifphonenumberisoptedoutresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  CheckIfPhoneNumberIsOptedOutResponse
+ *
+ * @brief  Handles SNS CheckIfPhoneNumberIsOptedOut responses.
+ *
+ * @see    SNSClient::checkIfPhoneNumberIsOptedOut
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CheckIfPhoneNumberIsOptedOutResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new CheckIfPhoneNumberIsOptedOutResponsePrivate(this), parent)
+{
+    setRequest(new CheckIfPhoneNumberIsOptedOutRequest(request));
+    setReply(reply);
+}
+
+const CheckIfPhoneNumberIsOptedOutRequest * CheckIfPhoneNumberIsOptedOutResponse::request() const
+{
+    Q_D(const CheckIfPhoneNumberIsOptedOutResponse);
+    return static_cast<const CheckIfPhoneNumberIsOptedOutRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS CheckIfPhoneNumberIsOptedOut response.
+ *
+ * @param  response  Response to parse.
+ */
+void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CheckIfPhoneNumberIsOptedOutResponsePrivate
+ *
+ * @brief  Private implementation for CheckIfPhoneNumberIsOptedOutResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CheckIfPhoneNumberIsOptedOutResponse instance.
+ */
+CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutResponsePrivate(
+    CheckIfPhoneNumberIsOptedOutQueueResponse * const q) : CheckIfPhoneNumberIsOptedOutPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS CheckIfPhoneNumberIsOptedOutResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CheckIfPhoneNumberIsOptedOutResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeparametergroupsresponse.h"
 #include "describeparametergroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DescribeParameterGroupsResponse
+ *
+ * @brief  Handles DAX DescribeParameterGroups responses.
+ *
+ * @see    DAXClient::describeParameterGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeParameterGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new DescribeParameterGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeParameterGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeParameterGroupsRequest * DescribeParameterGroupsResponse::request() const
+{
+    Q_D(const DescribeParameterGroupsResponse);
+    return static_cast<const DescribeParameterGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX DescribeParameterGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeParameterGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeParameterGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeParameterGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeParameterGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeParameterGroupsResponse instance.
+ */
+DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponsePrivate(
+    DescribeParameterGroupsQueueResponse * const q) : DescribeParameterGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX DescribeParameterGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeParameterGroupsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "sendcustomverificationemailresponse.h"
 #include "sendcustomverificationemailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SendCustomVerificationEmailResponse
+ *
+ * @brief  Handles SES SendCustomVerificationEmail responses.
+ *
+ * @see    SESClient::sendCustomVerificationEmail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendCustomVerificationEmailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new SendCustomVerificationEmailResponsePrivate(this), parent)
+{
+    setRequest(new SendCustomVerificationEmailRequest(request));
+    setReply(reply);
+}
+
+const SendCustomVerificationEmailRequest * SendCustomVerificationEmailResponse::request() const
+{
+    Q_D(const SendCustomVerificationEmailResponse);
+    return static_cast<const SendCustomVerificationEmailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES SendCustomVerificationEmail response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendCustomVerificationEmailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendCustomVerificationEmailResponsePrivate
+ *
+ * @brief  Private implementation for SendCustomVerificationEmailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendCustomVerificationEmailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendCustomVerificationEmailResponse instance.
+ */
+SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponsePrivate(
+    SendCustomVerificationEmailQueueResponse * const q) : SendCustomVerificationEmailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES SendCustomVerificationEmailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendCustomVerificationEmailResponse"));
+    /// @todo
+}

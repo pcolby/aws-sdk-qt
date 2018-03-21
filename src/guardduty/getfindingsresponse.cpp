@@ -19,3 +19,85 @@
 
 #include "getfindingsresponse.h"
 #include "getfindingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetFindingsResponse
+ *
+ * @brief  Handles GuardDuty GetFindings responses.
+ *
+ * @see    GuardDutyClient::getFindings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFindingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new GetFindingsResponsePrivate(this), parent)
+{
+    setRequest(new GetFindingsRequest(request));
+    setReply(reply);
+}
+
+const GetFindingsRequest * GetFindingsResponse::request() const
+{
+    Q_D(const GetFindingsResponse);
+    return static_cast<const GetFindingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty GetFindings response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFindingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFindingsResponsePrivate
+ *
+ * @brief  Private implementation for GetFindingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFindingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFindingsResponse instance.
+ */
+GetFindingsResponsePrivate::GetFindingsResponsePrivate(
+    GetFindingsQueueResponse * const q) : GetFindingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty GetFindingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFindingsResponsePrivate::GetFindingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFindingsResponse"));
+    /// @todo
+}

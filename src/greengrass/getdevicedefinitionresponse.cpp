@@ -19,3 +19,85 @@
 
 #include "getdevicedefinitionresponse.h"
 #include "getdevicedefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetDeviceDefinitionResponse
+ *
+ * @brief  Handles Greengrass GetDeviceDefinition responses.
+ *
+ * @see    GreengrassClient::getDeviceDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeviceDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetDeviceDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new GetDeviceDefinitionRequest(request));
+    setReply(reply);
+}
+
+const GetDeviceDefinitionRequest * GetDeviceDefinitionResponse::request() const
+{
+    Q_D(const GetDeviceDefinitionResponse);
+    return static_cast<const GetDeviceDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetDeviceDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDeviceDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeviceDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for GetDeviceDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeviceDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDeviceDefinitionResponse instance.
+ */
+GetDeviceDefinitionResponsePrivate::GetDeviceDefinitionResponsePrivate(
+    GetDeviceDefinitionQueueResponse * const q) : GetDeviceDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetDeviceDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDeviceDefinitionResponsePrivate::GetDeviceDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDeviceDefinitionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listawsserviceaccessfororganizationresponse.h"
 #include "listawsserviceaccessfororganizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListAWSServiceAccessForOrganizationResponse
+ *
+ * @brief  Handles Organizations ListAWSServiceAccessForOrganization responses.
+ *
+ * @see    OrganizationsClient::listAWSServiceAccessForOrganization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAWSServiceAccessForOrganizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new ListAWSServiceAccessForOrganizationResponsePrivate(this), parent)
+{
+    setRequest(new ListAWSServiceAccessForOrganizationRequest(request));
+    setReply(reply);
+}
+
+const ListAWSServiceAccessForOrganizationRequest * ListAWSServiceAccessForOrganizationResponse::request() const
+{
+    Q_D(const ListAWSServiceAccessForOrganizationResponse);
+    return static_cast<const ListAWSServiceAccessForOrganizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations ListAWSServiceAccessForOrganization response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAWSServiceAccessForOrganizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAWSServiceAccessForOrganizationResponsePrivate
+ *
+ * @brief  Private implementation for ListAWSServiceAccessForOrganizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAWSServiceAccessForOrganizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAWSServiceAccessForOrganizationResponse instance.
+ */
+ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrganizationResponsePrivate(
+    ListAWSServiceAccessForOrganizationQueueResponse * const q) : ListAWSServiceAccessForOrganizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations ListAWSServiceAccessForOrganizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrganizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAWSServiceAccessForOrganizationResponse"));
+    /// @todo
+}

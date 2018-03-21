@@ -19,3 +19,85 @@
 
 #include "batchgetimageresponse.h"
 #include "batchgetimageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  BatchGetImageResponse
+ *
+ * @brief  Handles ECR BatchGetImage responses.
+ *
+ * @see    ECRClient::batchGetImage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetImageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new BatchGetImageResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetImageRequest(request));
+    setReply(reply);
+}
+
+const BatchGetImageRequest * BatchGetImageResponse::request() const
+{
+    Q_D(const BatchGetImageResponse);
+    return static_cast<const BatchGetImageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR BatchGetImage response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetImageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetImageResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetImageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetImageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetImageResponse instance.
+ */
+BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
+    BatchGetImageQueueResponse * const q) : BatchGetImagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR BatchGetImageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetImageResponsePrivate::BatchGetImageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetImageResponse"));
+    /// @todo
+}

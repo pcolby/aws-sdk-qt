@@ -19,3 +19,85 @@
 
 #include "describetablestatisticsresponse.h"
 #include "describetablestatisticsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeTableStatisticsResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeTableStatistics responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeTableStatistics
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTableStatisticsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeTableStatisticsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTableStatisticsRequest(request));
+    setReply(reply);
+}
+
+const DescribeTableStatisticsRequest * DescribeTableStatisticsResponse::request() const
+{
+    Q_D(const DescribeTableStatisticsResponse);
+    return static_cast<const DescribeTableStatisticsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeTableStatistics response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTableStatisticsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTableStatisticsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTableStatisticsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableStatisticsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTableStatisticsResponse instance.
+ */
+DescribeTableStatisticsResponsePrivate::DescribeTableStatisticsResponsePrivate(
+    DescribeTableStatisticsQueueResponse * const q) : DescribeTableStatisticsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeTableStatisticsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTableStatisticsResponsePrivate::DescribeTableStatisticsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTableStatisticsResponse"));
+    /// @todo
+}

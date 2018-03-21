@@ -19,3 +19,85 @@
 
 #include "describelaunchtemplatesresponse.h"
 #include "describelaunchtemplatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeLaunchTemplatesResponse
+ *
+ * @brief  Handles EC2 DescribeLaunchTemplates responses.
+ *
+ * @see    EC2Client::describeLaunchTemplates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLaunchTemplatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeLaunchTemplatesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLaunchTemplatesRequest(request));
+    setReply(reply);
+}
+
+const DescribeLaunchTemplatesRequest * DescribeLaunchTemplatesResponse::request() const
+{
+    Q_D(const DescribeLaunchTemplatesResponse);
+    return static_cast<const DescribeLaunchTemplatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeLaunchTemplates response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLaunchTemplatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLaunchTemplatesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLaunchTemplatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLaunchTemplatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLaunchTemplatesResponse instance.
+ */
+DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponsePrivate(
+    DescribeLaunchTemplatesQueueResponse * const q) : DescribeLaunchTemplatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeLaunchTemplatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLaunchTemplatesResponse"));
+    /// @todo
+}

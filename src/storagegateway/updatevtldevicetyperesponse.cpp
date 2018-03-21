@@ -19,3 +19,85 @@
 
 #include "updatevtldevicetyperesponse.h"
 #include "updatevtldevicetyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  UpdateVTLDeviceTypeResponse
+ *
+ * @brief  Handles StorageGateway UpdateVTLDeviceType responses.
+ *
+ * @see    StorageGatewayClient::updateVTLDeviceType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateVTLDeviceTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new UpdateVTLDeviceTypeResponsePrivate(this), parent)
+{
+    setRequest(new UpdateVTLDeviceTypeRequest(request));
+    setReply(reply);
+}
+
+const UpdateVTLDeviceTypeRequest * UpdateVTLDeviceTypeResponse::request() const
+{
+    Q_D(const UpdateVTLDeviceTypeResponse);
+    return static_cast<const UpdateVTLDeviceTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway UpdateVTLDeviceType response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateVTLDeviceTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateVTLDeviceTypeResponsePrivate
+ *
+ * @brief  Private implementation for UpdateVTLDeviceTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateVTLDeviceTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateVTLDeviceTypeResponse instance.
+ */
+UpdateVTLDeviceTypeResponsePrivate::UpdateVTLDeviceTypeResponsePrivate(
+    UpdateVTLDeviceTypeQueueResponse * const q) : UpdateVTLDeviceTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway UpdateVTLDeviceTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateVTLDeviceTypeResponsePrivate::UpdateVTLDeviceTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateVTLDeviceTypeResponse"));
+    /// @todo
+}

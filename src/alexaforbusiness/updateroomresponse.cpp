@@ -19,3 +19,85 @@
 
 #include "updateroomresponse.h"
 #include "updateroomresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UpdateRoomResponse
+ *
+ * @brief  Handles AlexaForBusiness UpdateRoom responses.
+ *
+ * @see    AlexaForBusinessClient::updateRoom
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRoomResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new UpdateRoomResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRoomRequest(request));
+    setReply(reply);
+}
+
+const UpdateRoomRequest * UpdateRoomResponse::request() const
+{
+    Q_D(const UpdateRoomResponse);
+    return static_cast<const UpdateRoomRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness UpdateRoom response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRoomResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRoomResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRoomResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRoomResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRoomResponse instance.
+ */
+UpdateRoomResponsePrivate::UpdateRoomResponsePrivate(
+    UpdateRoomQueueResponse * const q) : UpdateRoomPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness UpdateRoomResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRoomResponsePrivate::UpdateRoomResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRoomResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updateportfolioresponse.h"
 #include "updateportfolioresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  UpdatePortfolioResponse
+ *
+ * @brief  Handles ServiceCatalog UpdatePortfolio responses.
+ *
+ * @see    ServiceCatalogClient::updatePortfolio
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdatePortfolioResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new UpdatePortfolioResponsePrivate(this), parent)
+{
+    setRequest(new UpdatePortfolioRequest(request));
+    setReply(reply);
+}
+
+const UpdatePortfolioRequest * UpdatePortfolioResponse::request() const
+{
+    Q_D(const UpdatePortfolioResponse);
+    return static_cast<const UpdatePortfolioRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog UpdatePortfolio response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdatePortfolioResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdatePortfolioResponsePrivate
+ *
+ * @brief  Private implementation for UpdatePortfolioResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePortfolioResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdatePortfolioResponse instance.
+ */
+UpdatePortfolioResponsePrivate::UpdatePortfolioResponsePrivate(
+    UpdatePortfolioQueueResponse * const q) : UpdatePortfolioPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog UpdatePortfolioResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdatePortfolioResponsePrivate::UpdatePortfolioResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdatePortfolioResponse"));
+    /// @todo
+}

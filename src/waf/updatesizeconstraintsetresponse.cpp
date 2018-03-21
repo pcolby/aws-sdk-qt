@@ -19,3 +19,85 @@
 
 #include "updatesizeconstraintsetresponse.h"
 #include "updatesizeconstraintsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  UpdateSizeConstraintSetResponse
+ *
+ * @brief  Handles WAF UpdateSizeConstraintSet responses.
+ *
+ * @see    WAFClient::updateSizeConstraintSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSizeConstraintSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new UpdateSizeConstraintSetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSizeConstraintSetRequest(request));
+    setReply(reply);
+}
+
+const UpdateSizeConstraintSetRequest * UpdateSizeConstraintSetResponse::request() const
+{
+    Q_D(const UpdateSizeConstraintSetResponse);
+    return static_cast<const UpdateSizeConstraintSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF UpdateSizeConstraintSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSizeConstraintSetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSizeConstraintSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSizeConstraintSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSizeConstraintSetResponse instance.
+ */
+UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
+    UpdateSizeConstraintSetQueueResponse * const q) : UpdateSizeConstraintSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF UpdateSizeConstraintSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSizeConstraintSetResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getitemresponse.h"
 #include "getitemresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  GetItemResponse
+ *
+ * @brief  Handles DynamoDB GetItem responses.
+ *
+ * @see    DynamoDBClient::getItem
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetItemResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new GetItemResponsePrivate(this), parent)
+{
+    setRequest(new GetItemRequest(request));
+    setReply(reply);
+}
+
+const GetItemRequest * GetItemResponse::request() const
+{
+    Q_D(const GetItemResponse);
+    return static_cast<const GetItemRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB GetItem response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetItemResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetItemResponsePrivate
+ *
+ * @brief  Private implementation for GetItemResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetItemResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetItemResponse instance.
+ */
+GetItemResponsePrivate::GetItemResponsePrivate(
+    GetItemQueueResponse * const q) : GetItemPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB GetItemResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetItemResponsePrivate::GetItemResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetItemResponse"));
+    /// @todo
+}

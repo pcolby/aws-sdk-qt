@@ -19,3 +19,85 @@
 
 #include "deletetaperesponse.h"
 #include "deletetaperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteTapeResponse
+ *
+ * @brief  Handles StorageGateway DeleteTape responses.
+ *
+ * @see    StorageGatewayClient::deleteTape
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTapeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DeleteTapeResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTapeRequest(request));
+    setReply(reply);
+}
+
+const DeleteTapeRequest * DeleteTapeResponse::request() const
+{
+    Q_D(const DeleteTapeResponse);
+    return static_cast<const DeleteTapeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DeleteTape response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTapeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTapeResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTapeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTapeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTapeResponse instance.
+ */
+DeleteTapeResponsePrivate::DeleteTapeResponsePrivate(
+    DeleteTapeQueueResponse * const q) : DeleteTapePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DeleteTapeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTapeResponsePrivate::DeleteTapeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTapeResponse"));
+    /// @todo
+}

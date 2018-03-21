@@ -19,3 +19,85 @@
 
 #include "getdeploymentsresponse.h"
 #include "getdeploymentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetDeploymentsResponse
+ *
+ * @brief  Handles APIGateway GetDeployments responses.
+ *
+ * @see    APIGatewayClient::getDeployments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeploymentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetDeploymentsResponsePrivate(this), parent)
+{
+    setRequest(new GetDeploymentsRequest(request));
+    setReply(reply);
+}
+
+const GetDeploymentsRequest * GetDeploymentsResponse::request() const
+{
+    Q_D(const GetDeploymentsResponse);
+    return static_cast<const GetDeploymentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetDeployments response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDeploymentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeploymentsResponsePrivate
+ *
+ * @brief  Private implementation for GetDeploymentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDeploymentsResponse instance.
+ */
+GetDeploymentsResponsePrivate::GetDeploymentsResponsePrivate(
+    GetDeploymentsQueueResponse * const q) : GetDeploymentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetDeploymentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDeploymentsResponsePrivate::GetDeploymentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDeploymentsResponse"));
+    /// @todo
+}

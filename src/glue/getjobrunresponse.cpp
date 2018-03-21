@@ -19,3 +19,85 @@
 
 #include "getjobrunresponse.h"
 #include "getjobrunresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetJobRunResponse
+ *
+ * @brief  Handles Glue GetJobRun responses.
+ *
+ * @see    GlueClient::getJobRun
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetJobRunResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetJobRunResponsePrivate(this), parent)
+{
+    setRequest(new GetJobRunRequest(request));
+    setReply(reply);
+}
+
+const GetJobRunRequest * GetJobRunResponse::request() const
+{
+    Q_D(const GetJobRunResponse);
+    return static_cast<const GetJobRunRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetJobRun response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetJobRunResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetJobRunResponsePrivate
+ *
+ * @brief  Private implementation for GetJobRunResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobRunResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetJobRunResponse instance.
+ */
+GetJobRunResponsePrivate::GetJobRunResponsePrivate(
+    GetJobRunQueueResponse * const q) : GetJobRunPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetJobRunResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetJobRunResponsePrivate::GetJobRunResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetJobRunResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteapplicationresponse.h"
 #include "deleteapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DeleteApplicationResponse
+ *
+ * @brief  Handles KinesisAnalytics DeleteApplication responses.
+ *
+ * @see    KinesisAnalyticsClient::deleteApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new DeleteApplicationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApplicationRequest(request));
+    setReply(reply);
+}
+
+const DeleteApplicationRequest * DeleteApplicationResponse::request() const
+{
+    Q_D(const DeleteApplicationResponse);
+    return static_cast<const DeleteApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics DeleteApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApplicationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApplicationResponse instance.
+ */
+DeleteApplicationResponsePrivate::DeleteApplicationResponsePrivate(
+    DeleteApplicationQueueResponse * const q) : DeleteApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics DeleteApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApplicationResponsePrivate::DeleteApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listopenworkflowexecutionsresponse.h"
 #include "listopenworkflowexecutionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  ListOpenWorkflowExecutionsResponse
+ *
+ * @brief  Handles SWF ListOpenWorkflowExecutions responses.
+ *
+ * @see    SWFClient::listOpenWorkflowExecutions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOpenWorkflowExecutionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new ListOpenWorkflowExecutionsResponsePrivate(this), parent)
+{
+    setRequest(new ListOpenWorkflowExecutionsRequest(request));
+    setReply(reply);
+}
+
+const ListOpenWorkflowExecutionsRequest * ListOpenWorkflowExecutionsResponse::request() const
+{
+    Q_D(const ListOpenWorkflowExecutionsResponse);
+    return static_cast<const ListOpenWorkflowExecutionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF ListOpenWorkflowExecutions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOpenWorkflowExecutionsResponsePrivate
+ *
+ * @brief  Private implementation for ListOpenWorkflowExecutionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOpenWorkflowExecutionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOpenWorkflowExecutionsResponse instance.
+ */
+ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponsePrivate(
+    ListOpenWorkflowExecutionsQueueResponse * const q) : ListOpenWorkflowExecutionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF ListOpenWorkflowExecutionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOpenWorkflowExecutionsResponse"));
+    /// @todo
+}

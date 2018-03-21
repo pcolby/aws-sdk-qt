@@ -19,3 +19,85 @@
 
 #include "creatediskfromsnapshotresponse.h"
 #include "creatediskfromsnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateDiskFromSnapshotResponse
+ *
+ * @brief  Handles Lightsail CreateDiskFromSnapshot responses.
+ *
+ * @see    LightsailClient::createDiskFromSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDiskFromSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new CreateDiskFromSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new CreateDiskFromSnapshotRequest(request));
+    setReply(reply);
+}
+
+const CreateDiskFromSnapshotRequest * CreateDiskFromSnapshotResponse::request() const
+{
+    Q_D(const CreateDiskFromSnapshotResponse);
+    return static_cast<const CreateDiskFromSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail CreateDiskFromSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDiskFromSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDiskFromSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for CreateDiskFromSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDiskFromSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDiskFromSnapshotResponse instance.
+ */
+CreateDiskFromSnapshotResponsePrivate::CreateDiskFromSnapshotResponsePrivate(
+    CreateDiskFromSnapshotQueueResponse * const q) : CreateDiskFromSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail CreateDiskFromSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDiskFromSnapshotResponsePrivate::CreateDiskFromSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDiskFromSnapshotResponse"));
+    /// @todo
+}

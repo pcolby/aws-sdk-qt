@@ -19,3 +19,85 @@
 
 #include "archivefindingsresponse.h"
 #include "archivefindingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  ArchiveFindingsResponse
+ *
+ * @brief  Handles GuardDuty ArchiveFindings responses.
+ *
+ * @see    GuardDutyClient::archiveFindings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ArchiveFindingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new ArchiveFindingsResponsePrivate(this), parent)
+{
+    setRequest(new ArchiveFindingsRequest(request));
+    setReply(reply);
+}
+
+const ArchiveFindingsRequest * ArchiveFindingsResponse::request() const
+{
+    Q_D(const ArchiveFindingsResponse);
+    return static_cast<const ArchiveFindingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty ArchiveFindings response.
+ *
+ * @param  response  Response to parse.
+ */
+void ArchiveFindingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ArchiveFindingsResponsePrivate
+ *
+ * @brief  Private implementation for ArchiveFindingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ArchiveFindingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ArchiveFindingsResponse instance.
+ */
+ArchiveFindingsResponsePrivate::ArchiveFindingsResponsePrivate(
+    ArchiveFindingsQueueResponse * const q) : ArchiveFindingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty ArchiveFindingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ArchiveFindingsResponsePrivate::ArchiveFindingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ArchiveFindingsResponse"));
+    /// @todo
+}

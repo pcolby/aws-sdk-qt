@@ -19,3 +19,85 @@
 
 #include "createoptiongroupresponse.h"
 #include "createoptiongroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateOptionGroupResponse
+ *
+ * @brief  Handles RDS CreateOptionGroup responses.
+ *
+ * @see    RDSClient::createOptionGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateOptionGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CreateOptionGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateOptionGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateOptionGroupRequest * CreateOptionGroupResponse::request() const
+{
+    Q_D(const CreateOptionGroupResponse);
+    return static_cast<const CreateOptionGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CreateOptionGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateOptionGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateOptionGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateOptionGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOptionGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateOptionGroupResponse instance.
+ */
+CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
+    CreateOptionGroupQueueResponse * const q) : CreateOptionGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CreateOptionGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateOptionGroupResponsePrivate::CreateOptionGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateOptionGroupResponse"));
+    /// @todo
+}

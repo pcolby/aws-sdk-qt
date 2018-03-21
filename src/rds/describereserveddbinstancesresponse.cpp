@@ -19,3 +19,85 @@
 
 #include "describereserveddbinstancesresponse.h"
 #include "describereserveddbinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeReservedDBInstancesResponse
+ *
+ * @brief  Handles RDS DescribeReservedDBInstances responses.
+ *
+ * @see    RDSClient::describeReservedDBInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedDBInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeReservedDBInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReservedDBInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeReservedDBInstancesRequest * DescribeReservedDBInstancesResponse::request() const
+{
+    Q_D(const DescribeReservedDBInstancesResponse);
+    return static_cast<const DescribeReservedDBInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeReservedDBInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReservedDBInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedDBInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReservedDBInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedDBInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReservedDBInstancesResponse instance.
+ */
+DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResponsePrivate(
+    DescribeReservedDBInstancesQueueResponse * const q) : DescribeReservedDBInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeReservedDBInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReservedDBInstancesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "postcommentforpullrequestresponse.h"
 #include "postcommentforpullrequestresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PostCommentForPullRequestResponse
+ *
+ * @brief  Handles CodeCommit PostCommentForPullRequest responses.
+ *
+ * @see    CodeCommitClient::postCommentForPullRequest
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostCommentForPullRequestResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new PostCommentForPullRequestResponsePrivate(this), parent)
+{
+    setRequest(new PostCommentForPullRequestRequest(request));
+    setReply(reply);
+}
+
+const PostCommentForPullRequestRequest * PostCommentForPullRequestResponse::request() const
+{
+    Q_D(const PostCommentForPullRequestResponse);
+    return static_cast<const PostCommentForPullRequestRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit PostCommentForPullRequest response.
+ *
+ * @param  response  Response to parse.
+ */
+void PostCommentForPullRequestResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PostCommentForPullRequestResponsePrivate
+ *
+ * @brief  Private implementation for PostCommentForPullRequestResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentForPullRequestResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PostCommentForPullRequestResponse instance.
+ */
+PostCommentForPullRequestResponsePrivate::PostCommentForPullRequestResponsePrivate(
+    PostCommentForPullRequestQueueResponse * const q) : PostCommentForPullRequestPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit PostCommentForPullRequestResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PostCommentForPullRequestResponsePrivate::PostCommentForPullRequestResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PostCommentForPullRequestResponse"));
+    /// @todo
+}

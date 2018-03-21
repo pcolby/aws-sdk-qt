@@ -19,3 +19,85 @@
 
 #include "clonereceiptrulesetresponse.h"
 #include "clonereceiptrulesetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  CloneReceiptRuleSetResponse
+ *
+ * @brief  Handles SES CloneReceiptRuleSet responses.
+ *
+ * @see    SESClient::cloneReceiptRuleSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CloneReceiptRuleSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new CloneReceiptRuleSetResponsePrivate(this), parent)
+{
+    setRequest(new CloneReceiptRuleSetRequest(request));
+    setReply(reply);
+}
+
+const CloneReceiptRuleSetRequest * CloneReceiptRuleSetResponse::request() const
+{
+    Q_D(const CloneReceiptRuleSetResponse);
+    return static_cast<const CloneReceiptRuleSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES CloneReceiptRuleSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CloneReceiptRuleSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CloneReceiptRuleSetResponsePrivate
+ *
+ * @brief  Private implementation for CloneReceiptRuleSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CloneReceiptRuleSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CloneReceiptRuleSetResponse instance.
+ */
+CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponsePrivate(
+    CloneReceiptRuleSetQueueResponse * const q) : CloneReceiptRuleSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES CloneReceiptRuleSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CloneReceiptRuleSetResponse"));
+    /// @todo
+}

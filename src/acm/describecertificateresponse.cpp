@@ -19,3 +19,85 @@
 
 #include "describecertificateresponse.h"
 #include "describecertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  DescribeCertificateResponse
+ *
+ * @brief  Handles ACM DescribeCertificate responses.
+ *
+ * @see    ACMClient::describeCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ACMResponse(new DescribeCertificateResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCertificateRequest(request));
+    setReply(reply);
+}
+
+const DescribeCertificateRequest * DescribeCertificateResponse::request() const
+{
+    Q_D(const DescribeCertificateResponse);
+    return static_cast<const DescribeCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ACM DescribeCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCertificateResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCertificateResponse instance.
+ */
+DescribeCertificateResponsePrivate::DescribeCertificateResponsePrivate(
+    DescribeCertificateQueueResponse * const q) : DescribeCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ACM DescribeCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCertificateResponsePrivate::DescribeCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCertificateResponse"));
+    /// @todo
+}

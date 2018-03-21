@@ -19,3 +19,85 @@
 
 #include "getsdktyperesponse.h"
 #include "getsdktyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetSdkTypeResponse
+ *
+ * @brief  Handles APIGateway GetSdkType responses.
+ *
+ * @see    APIGatewayClient::getSdkType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSdkTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetSdkTypeResponsePrivate(this), parent)
+{
+    setRequest(new GetSdkTypeRequest(request));
+    setReply(reply);
+}
+
+const GetSdkTypeRequest * GetSdkTypeResponse::request() const
+{
+    Q_D(const GetSdkTypeResponse);
+    return static_cast<const GetSdkTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetSdkType response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSdkTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSdkTypeResponsePrivate
+ *
+ * @brief  Private implementation for GetSdkTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSdkTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSdkTypeResponse instance.
+ */
+GetSdkTypeResponsePrivate::GetSdkTypeResponsePrivate(
+    GetSdkTypeQueueResponse * const q) : GetSdkTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetSdkTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSdkTypeResponsePrivate::GetSdkTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSdkTypeResponse"));
+    /// @todo
+}

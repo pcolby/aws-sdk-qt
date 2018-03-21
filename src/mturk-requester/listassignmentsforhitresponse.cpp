@@ -19,3 +19,85 @@
 
 #include "listassignmentsforhitresponse.h"
 #include "listassignmentsforhitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListAssignmentsForHITResponse
+ *
+ * @brief  Handles MTurk ListAssignmentsForHIT responses.
+ *
+ * @see    MTurkClient::listAssignmentsForHIT
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssignmentsForHITResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListAssignmentsForHITResponsePrivate(this), parent)
+{
+    setRequest(new ListAssignmentsForHITRequest(request));
+    setReply(reply);
+}
+
+const ListAssignmentsForHITRequest * ListAssignmentsForHITResponse::request() const
+{
+    Q_D(const ListAssignmentsForHITResponse);
+    return static_cast<const ListAssignmentsForHITRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListAssignmentsForHIT response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAssignmentsForHITResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssignmentsForHITResponsePrivate
+ *
+ * @brief  Private implementation for ListAssignmentsForHITResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssignmentsForHITResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAssignmentsForHITResponse instance.
+ */
+ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponsePrivate(
+    ListAssignmentsForHITQueueResponse * const q) : ListAssignmentsForHITPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListAssignmentsForHITResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAssignmentsForHITResponse"));
+    /// @todo
+}

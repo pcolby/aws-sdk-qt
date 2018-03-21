@@ -19,3 +19,85 @@
 
 #include "putpermissionpolicyresponse.h"
 #include "putpermissionpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  PutPermissionPolicyResponse
+ *
+ * @brief  Handles WAF PutPermissionPolicy responses.
+ *
+ * @see    WAFClient::putPermissionPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutPermissionPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new PutPermissionPolicyResponsePrivate(this), parent)
+{
+    setRequest(new PutPermissionPolicyRequest(request));
+    setReply(reply);
+}
+
+const PutPermissionPolicyRequest * PutPermissionPolicyResponse::request() const
+{
+    Q_D(const PutPermissionPolicyResponse);
+    return static_cast<const PutPermissionPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF PutPermissionPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutPermissionPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutPermissionPolicyResponsePrivate
+ *
+ * @brief  Private implementation for PutPermissionPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutPermissionPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutPermissionPolicyResponse instance.
+ */
+PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponsePrivate(
+    PutPermissionPolicyQueueResponse * const q) : PutPermissionPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF PutPermissionPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutPermissionPolicyResponse"));
+    /// @todo
+}

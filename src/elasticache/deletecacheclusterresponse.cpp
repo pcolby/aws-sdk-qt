@@ -19,3 +19,85 @@
 
 #include "deletecacheclusterresponse.h"
 #include "deletecacheclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DeleteCacheClusterResponse
+ *
+ * @brief  Handles ElastiCache DeleteCacheCluster responses.
+ *
+ * @see    ElastiCacheClient::deleteCacheCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCacheClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DeleteCacheClusterResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCacheClusterRequest(request));
+    setReply(reply);
+}
+
+const DeleteCacheClusterRequest * DeleteCacheClusterResponse::request() const
+{
+    Q_D(const DeleteCacheClusterResponse);
+    return static_cast<const DeleteCacheClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DeleteCacheCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCacheClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCacheClusterResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCacheClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCacheClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCacheClusterResponse instance.
+ */
+DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponsePrivate(
+    DeleteCacheClusterQueueResponse * const q) : DeleteCacheClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DeleteCacheClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCacheClusterResponse"));
+    /// @todo
+}

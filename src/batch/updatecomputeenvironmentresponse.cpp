@@ -19,3 +19,85 @@
 
 #include "updatecomputeenvironmentresponse.h"
 #include "updatecomputeenvironmentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  UpdateComputeEnvironmentResponse
+ *
+ * @brief  Handles Batch UpdateComputeEnvironment responses.
+ *
+ * @see    BatchClient::updateComputeEnvironment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateComputeEnvironmentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new UpdateComputeEnvironmentResponsePrivate(this), parent)
+{
+    setRequest(new UpdateComputeEnvironmentRequest(request));
+    setReply(reply);
+}
+
+const UpdateComputeEnvironmentRequest * UpdateComputeEnvironmentResponse::request() const
+{
+    Q_D(const UpdateComputeEnvironmentResponse);
+    return static_cast<const UpdateComputeEnvironmentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch UpdateComputeEnvironment response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateComputeEnvironmentResponsePrivate
+ *
+ * @brief  Private implementation for UpdateComputeEnvironmentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateComputeEnvironmentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateComputeEnvironmentResponse instance.
+ */
+UpdateComputeEnvironmentResponsePrivate::UpdateComputeEnvironmentResponsePrivate(
+    UpdateComputeEnvironmentQueueResponse * const q) : UpdateComputeEnvironmentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch UpdateComputeEnvironmentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateComputeEnvironmentResponsePrivate::UpdateComputeEnvironmentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateComputeEnvironmentResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describebandwidthratelimitresponse.h"
 #include "describebandwidthratelimitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeBandwidthRateLimitResponse
+ *
+ * @brief  Handles StorageGateway DescribeBandwidthRateLimit responses.
+ *
+ * @see    StorageGatewayClient::describeBandwidthRateLimit
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBandwidthRateLimitResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeBandwidthRateLimitResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBandwidthRateLimitRequest(request));
+    setReply(reply);
+}
+
+const DescribeBandwidthRateLimitRequest * DescribeBandwidthRateLimitResponse::request() const
+{
+    Q_D(const DescribeBandwidthRateLimitResponse);
+    return static_cast<const DescribeBandwidthRateLimitRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeBandwidthRateLimit response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBandwidthRateLimitResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBandwidthRateLimitResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBandwidthRateLimitResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBandwidthRateLimitResponse instance.
+ */
+DescribeBandwidthRateLimitResponsePrivate::DescribeBandwidthRateLimitResponsePrivate(
+    DescribeBandwidthRateLimitQueueResponse * const q) : DescribeBandwidthRateLimitPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeBandwidthRateLimitResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBandwidthRateLimitResponsePrivate::DescribeBandwidthRateLimitResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBandwidthRateLimitResponse"));
+    /// @todo
+}

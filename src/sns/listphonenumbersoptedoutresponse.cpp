@@ -19,3 +19,85 @@
 
 #include "listphonenumbersoptedoutresponse.h"
 #include "listphonenumbersoptedoutresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  ListPhoneNumbersOptedOutResponse
+ *
+ * @brief  Handles SNS ListPhoneNumbersOptedOut responses.
+ *
+ * @see    SNSClient::listPhoneNumbersOptedOut
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPhoneNumbersOptedOutResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new ListPhoneNumbersOptedOutResponsePrivate(this), parent)
+{
+    setRequest(new ListPhoneNumbersOptedOutRequest(request));
+    setReply(reply);
+}
+
+const ListPhoneNumbersOptedOutRequest * ListPhoneNumbersOptedOutResponse::request() const
+{
+    Q_D(const ListPhoneNumbersOptedOutResponse);
+    return static_cast<const ListPhoneNumbersOptedOutRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS ListPhoneNumbersOptedOut response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPhoneNumbersOptedOutResponsePrivate
+ *
+ * @brief  Private implementation for ListPhoneNumbersOptedOutResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPhoneNumbersOptedOutResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPhoneNumbersOptedOutResponse instance.
+ */
+ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponsePrivate(
+    ListPhoneNumbersOptedOutQueueResponse * const q) : ListPhoneNumbersOptedOutPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS ListPhoneNumbersOptedOutResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPhoneNumbersOptedOutResponse"));
+    /// @todo
+}

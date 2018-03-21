@@ -19,3 +19,85 @@
 
 #include "getqueryresultsresponse.h"
 #include "getqueryresultsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  GetQueryResultsResponse
+ *
+ * @brief  Handles Athena GetQueryResults responses.
+ *
+ * @see    AthenaClient::getQueryResults
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQueryResultsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new GetQueryResultsResponsePrivate(this), parent)
+{
+    setRequest(new GetQueryResultsRequest(request));
+    setReply(reply);
+}
+
+const GetQueryResultsRequest * GetQueryResultsResponse::request() const
+{
+    Q_D(const GetQueryResultsResponse);
+    return static_cast<const GetQueryResultsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena GetQueryResults response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetQueryResultsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQueryResultsResponsePrivate
+ *
+ * @brief  Private implementation for GetQueryResultsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueryResultsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetQueryResultsResponse instance.
+ */
+GetQueryResultsResponsePrivate::GetQueryResultsResponsePrivate(
+    GetQueryResultsQueueResponse * const q) : GetQueryResultsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena GetQueryResultsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetQueryResultsResponsePrivate::GetQueryResultsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetQueryResultsResponse"));
+    /// @todo
+}

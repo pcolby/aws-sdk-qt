@@ -19,3 +19,85 @@
 
 #include "disassociateiaminstanceprofileresponse.h"
 #include "disassociateiaminstanceprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisassociateIamInstanceProfileResponse
+ *
+ * @brief  Handles EC2 DisassociateIamInstanceProfile responses.
+ *
+ * @see    EC2Client::disassociateIamInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateIamInstanceProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DisassociateIamInstanceProfileResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateIamInstanceProfileRequest(request));
+    setReply(reply);
+}
+
+const DisassociateIamInstanceProfileRequest * DisassociateIamInstanceProfileResponse::request() const
+{
+    Q_D(const DisassociateIamInstanceProfileResponse);
+    return static_cast<const DisassociateIamInstanceProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DisassociateIamInstanceProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateIamInstanceProfileResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateIamInstanceProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateIamInstanceProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateIamInstanceProfileResponse instance.
+ */
+DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileResponsePrivate(
+    DisassociateIamInstanceProfileQueueResponse * const q) : DisassociateIamInstanceProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DisassociateIamInstanceProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateIamInstanceProfileResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putbucketlifecycleconfigurationresponse.h"
 #include "putbucketlifecycleconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketLifecycleConfigurationResponse
+ *
+ * @brief  Handles S3 PutBucketLifecycleConfiguration responses.
+ *
+ * @see    S3Client::putBucketLifecycleConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketLifecycleConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketLifecycleConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketLifecycleConfigurationRequest(request));
+    setReply(reply);
+}
+
+const PutBucketLifecycleConfigurationRequest * PutBucketLifecycleConfigurationResponse::request() const
+{
+    Q_D(const PutBucketLifecycleConfigurationResponse);
+    return static_cast<const PutBucketLifecycleConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketLifecycleConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketLifecycleConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketLifecycleConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketLifecycleConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketLifecycleConfigurationResponse instance.
+ */
+PutBucketLifecycleConfigurationResponsePrivate::PutBucketLifecycleConfigurationResponsePrivate(
+    PutBucketLifecycleConfigurationQueueResponse * const q) : PutBucketLifecycleConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketLifecycleConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketLifecycleConfigurationResponsePrivate::PutBucketLifecycleConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketLifecycleConfigurationResponse"));
+    /// @todo
+}

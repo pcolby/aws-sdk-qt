@@ -19,3 +19,85 @@
 
 #include "deletegatewayresponse.h"
 #include "deletegatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteGatewayResponse
+ *
+ * @brief  Handles StorageGateway DeleteGateway responses.
+ *
+ * @see    StorageGatewayClient::deleteGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DeleteGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DeleteGatewayRequest(request));
+    setReply(reply);
+}
+
+const DeleteGatewayRequest * DeleteGatewayResponse::request() const
+{
+    Q_D(const DeleteGatewayResponse);
+    return static_cast<const DeleteGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DeleteGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DeleteGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteGatewayResponse instance.
+ */
+DeleteGatewayResponsePrivate::DeleteGatewayResponsePrivate(
+    DeleteGatewayQueueResponse * const q) : DeleteGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DeleteGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteGatewayResponsePrivate::DeleteGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteGatewayResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listtargetsbyruleresponse.h"
 #include "listtargetsbyruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  ListTargetsByRuleResponse
+ *
+ * @brief  Handles CloudWatchEvents ListTargetsByRule responses.
+ *
+ * @see    CloudWatchEventsClient::listTargetsByRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTargetsByRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new ListTargetsByRuleResponsePrivate(this), parent)
+{
+    setRequest(new ListTargetsByRuleRequest(request));
+    setReply(reply);
+}
+
+const ListTargetsByRuleRequest * ListTargetsByRuleResponse::request() const
+{
+    Q_D(const ListTargetsByRuleResponse);
+    return static_cast<const ListTargetsByRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents ListTargetsByRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTargetsByRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTargetsByRuleResponsePrivate
+ *
+ * @brief  Private implementation for ListTargetsByRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTargetsByRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTargetsByRuleResponse instance.
+ */
+ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponsePrivate(
+    ListTargetsByRuleQueueResponse * const q) : ListTargetsByRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents ListTargetsByRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTargetsByRuleResponse"));
+    /// @todo
+}

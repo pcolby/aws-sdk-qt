@@ -19,3 +19,85 @@
 
 #include "creatematchmakingconfigurationresponse.h"
 #include "creatematchmakingconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateMatchmakingConfigurationResponse
+ *
+ * @brief  Handles GameLift CreateMatchmakingConfiguration responses.
+ *
+ * @see    GameLiftClient::createMatchmakingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMatchmakingConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new CreateMatchmakingConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new CreateMatchmakingConfigurationRequest(request));
+    setReply(reply);
+}
+
+const CreateMatchmakingConfigurationRequest * CreateMatchmakingConfigurationResponse::request() const
+{
+    Q_D(const CreateMatchmakingConfigurationResponse);
+    return static_cast<const CreateMatchmakingConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift CreateMatchmakingConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMatchmakingConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for CreateMatchmakingConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMatchmakingConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateMatchmakingConfigurationResponse instance.
+ */
+CreateMatchmakingConfigurationResponsePrivate::CreateMatchmakingConfigurationResponsePrivate(
+    CreateMatchmakingConfigurationQueueResponse * const q) : CreateMatchmakingConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift CreateMatchmakingConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateMatchmakingConfigurationResponsePrivate::CreateMatchmakingConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateMatchmakingConfigurationResponse"));
+    /// @todo
+}

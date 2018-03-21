@@ -19,3 +19,85 @@
 
 #include "addapplicationinputprocessingconfigurationresponse.h"
 #include "addapplicationinputprocessingconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  AddApplicationInputProcessingConfigurationResponse
+ *
+ * @brief  Handles KinesisAnalytics AddApplicationInputProcessingConfiguration responses.
+ *
+ * @see    KinesisAnalyticsClient::addApplicationInputProcessingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddApplicationInputProcessingConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new AddApplicationInputProcessingConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new AddApplicationInputProcessingConfigurationRequest(request));
+    setReply(reply);
+}
+
+const AddApplicationInputProcessingConfigurationRequest * AddApplicationInputProcessingConfigurationResponse::request() const
+{
+    Q_D(const AddApplicationInputProcessingConfigurationResponse);
+    return static_cast<const AddApplicationInputProcessingConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics AddApplicationInputProcessingConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddApplicationInputProcessingConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for AddApplicationInputProcessingConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddApplicationInputProcessingConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddApplicationInputProcessingConfigurationResponse instance.
+ */
+AddApplicationInputProcessingConfigurationResponsePrivate::AddApplicationInputProcessingConfigurationResponsePrivate(
+    AddApplicationInputProcessingConfigurationQueueResponse * const q) : AddApplicationInputProcessingConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics AddApplicationInputProcessingConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddApplicationInputProcessingConfigurationResponsePrivate::AddApplicationInputProcessingConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddApplicationInputProcessingConfigurationResponse"));
+    /// @todo
+}

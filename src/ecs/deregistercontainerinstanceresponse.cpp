@@ -19,3 +19,85 @@
 
 #include "deregistercontainerinstanceresponse.h"
 #include "deregistercontainerinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DeregisterContainerInstanceResponse
+ *
+ * @brief  Handles ECS DeregisterContainerInstance responses.
+ *
+ * @see    ECSClient::deregisterContainerInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterContainerInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new DeregisterContainerInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterContainerInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeregisterContainerInstanceRequest * DeregisterContainerInstanceResponse::request() const
+{
+    Q_D(const DeregisterContainerInstanceResponse);
+    return static_cast<const DeregisterContainerInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS DeregisterContainerInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterContainerInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterContainerInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterContainerInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterContainerInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterContainerInstanceResponse instance.
+ */
+DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponsePrivate(
+    DeregisterContainerInstanceQueueResponse * const q) : DeregisterContainerInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS DeregisterContainerInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterContainerInstanceResponse"));
+    /// @todo
+}

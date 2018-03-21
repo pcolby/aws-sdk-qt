@@ -19,3 +19,85 @@
 
 #include "getroleresponse.h"
 #include "getroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetRoleResponse
+ *
+ * @brief  Handles IAM GetRole responses.
+ *
+ * @see    IAMClient::getRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetRoleResponsePrivate(this), parent)
+{
+    setRequest(new GetRoleRequest(request));
+    setReply(reply);
+}
+
+const GetRoleRequest * GetRoleResponse::request() const
+{
+    Q_D(const GetRoleResponse);
+    return static_cast<const GetRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRoleResponsePrivate
+ *
+ * @brief  Private implementation for GetRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRoleResponse instance.
+ */
+GetRoleResponsePrivate::GetRoleResponsePrivate(
+    GetRoleQueueResponse * const q) : GetRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRoleResponsePrivate::GetRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRoleResponse"));
+    /// @todo
+}

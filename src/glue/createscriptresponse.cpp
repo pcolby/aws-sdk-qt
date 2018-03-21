@@ -19,3 +19,85 @@
 
 #include "createscriptresponse.h"
 #include "createscriptresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateScriptResponse
+ *
+ * @brief  Handles Glue CreateScript responses.
+ *
+ * @see    GlueClient::createScript
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateScriptResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new CreateScriptResponsePrivate(this), parent)
+{
+    setRequest(new CreateScriptRequest(request));
+    setReply(reply);
+}
+
+const CreateScriptRequest * CreateScriptResponse::request() const
+{
+    Q_D(const CreateScriptResponse);
+    return static_cast<const CreateScriptRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue CreateScript response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateScriptResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateScriptResponsePrivate
+ *
+ * @brief  Private implementation for CreateScriptResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateScriptResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateScriptResponse instance.
+ */
+CreateScriptResponsePrivate::CreateScriptResponsePrivate(
+    CreateScriptQueueResponse * const q) : CreateScriptPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue CreateScriptResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateScriptResponsePrivate::CreateScriptResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateScriptResponse"));
+    /// @todo
+}

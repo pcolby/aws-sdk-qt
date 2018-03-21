@@ -19,3 +19,85 @@
 
 #include "updateservercertificateresponse.h"
 #include "updateservercertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateServerCertificateResponse
+ *
+ * @brief  Handles IAM UpdateServerCertificate responses.
+ *
+ * @see    IAMClient::updateServerCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServerCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateServerCertificateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateServerCertificateRequest(request));
+    setReply(reply);
+}
+
+const UpdateServerCertificateRequest * UpdateServerCertificateResponse::request() const
+{
+    Q_D(const UpdateServerCertificateResponse);
+    return static_cast<const UpdateServerCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateServerCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateServerCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServerCertificateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateServerCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServerCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateServerCertificateResponse instance.
+ */
+UpdateServerCertificateResponsePrivate::UpdateServerCertificateResponsePrivate(
+    UpdateServerCertificateQueueResponse * const q) : UpdateServerCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateServerCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateServerCertificateResponsePrivate::UpdateServerCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateServerCertificateResponse"));
+    /// @todo
+}

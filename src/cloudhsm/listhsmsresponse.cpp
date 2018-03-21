@@ -19,3 +19,85 @@
 
 #include "listhsmsresponse.h"
 #include "listhsmsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  ListHsmsResponse
+ *
+ * @brief  Handles CloudHSM ListHsms responses.
+ *
+ * @see    CloudHSMClient::listHsms
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListHsmsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new ListHsmsResponsePrivate(this), parent)
+{
+    setRequest(new ListHsmsRequest(request));
+    setReply(reply);
+}
+
+const ListHsmsRequest * ListHsmsResponse::request() const
+{
+    Q_D(const ListHsmsResponse);
+    return static_cast<const ListHsmsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM ListHsms response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListHsmsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListHsmsResponsePrivate
+ *
+ * @brief  Private implementation for ListHsmsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHsmsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListHsmsResponse instance.
+ */
+ListHsmsResponsePrivate::ListHsmsResponsePrivate(
+    ListHsmsQueueResponse * const q) : ListHsmsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM ListHsmsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListHsmsResponsePrivate::ListHsmsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListHsmsResponse"));
+    /// @todo
+}

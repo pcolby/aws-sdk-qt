@@ -19,3 +19,85 @@
 
 #include "getnamespaceresponse.h"
 #include "getnamespaceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  GetNamespaceResponse
+ *
+ * @brief  Handles ServiceDiscovery GetNamespace responses.
+ *
+ * @see    ServiceDiscoveryClient::getNamespace
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetNamespaceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceDiscoveryResponse(new GetNamespaceResponsePrivate(this), parent)
+{
+    setRequest(new GetNamespaceRequest(request));
+    setReply(reply);
+}
+
+const GetNamespaceRequest * GetNamespaceResponse::request() const
+{
+    Q_D(const GetNamespaceResponse);
+    return static_cast<const GetNamespaceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceDiscovery GetNamespace response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetNamespaceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetNamespaceResponsePrivate
+ *
+ * @brief  Private implementation for GetNamespaceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetNamespaceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetNamespaceResponse instance.
+ */
+GetNamespaceResponsePrivate::GetNamespaceResponsePrivate(
+    GetNamespaceQueueResponse * const q) : GetNamespacePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceDiscovery GetNamespaceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetNamespaceResponsePrivate::GetNamespaceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetNamespaceResponse"));
+    /// @todo
+}

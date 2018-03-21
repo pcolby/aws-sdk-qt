@@ -19,3 +19,85 @@
 
 #include "listfunctiondefinitionversionsresponse.h"
 #include "listfunctiondefinitionversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListFunctionDefinitionVersionsResponse
+ *
+ * @brief  Handles Greengrass ListFunctionDefinitionVersions responses.
+ *
+ * @see    GreengrassClient::listFunctionDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFunctionDefinitionVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListFunctionDefinitionVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListFunctionDefinitionVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListFunctionDefinitionVersionsRequest * ListFunctionDefinitionVersionsResponse::request() const
+{
+    Q_D(const ListFunctionDefinitionVersionsResponse);
+    return static_cast<const ListFunctionDefinitionVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListFunctionDefinitionVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListFunctionDefinitionVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFunctionDefinitionVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListFunctionDefinitionVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFunctionDefinitionVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListFunctionDefinitionVersionsResponse instance.
+ */
+ListFunctionDefinitionVersionsResponsePrivate::ListFunctionDefinitionVersionsResponsePrivate(
+    ListFunctionDefinitionVersionsQueueResponse * const q) : ListFunctionDefinitionVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListFunctionDefinitionVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListFunctionDefinitionVersionsResponsePrivate::ListFunctionDefinitionVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListFunctionDefinitionVersionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "attachstaticipresponse.h"
 #include "attachstaticipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  AttachStaticIpResponse
+ *
+ * @brief  Handles Lightsail AttachStaticIp responses.
+ *
+ * @see    LightsailClient::attachStaticIp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachStaticIpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new AttachStaticIpResponsePrivate(this), parent)
+{
+    setRequest(new AttachStaticIpRequest(request));
+    setReply(reply);
+}
+
+const AttachStaticIpRequest * AttachStaticIpResponse::request() const
+{
+    Q_D(const AttachStaticIpResponse);
+    return static_cast<const AttachStaticIpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail AttachStaticIp response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachStaticIpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachStaticIpResponsePrivate
+ *
+ * @brief  Private implementation for AttachStaticIpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachStaticIpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachStaticIpResponse instance.
+ */
+AttachStaticIpResponsePrivate::AttachStaticIpResponsePrivate(
+    AttachStaticIpQueueResponse * const q) : AttachStaticIpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail AttachStaticIpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachStaticIpResponsePrivate::AttachStaticIpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachStaticIpResponse"));
+    /// @todo
+}

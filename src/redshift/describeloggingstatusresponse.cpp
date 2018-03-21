@@ -19,3 +19,85 @@
 
 #include "describeloggingstatusresponse.h"
 #include "describeloggingstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeLoggingStatusResponse
+ *
+ * @brief  Handles Redshift DescribeLoggingStatus responses.
+ *
+ * @see    RedshiftClient::describeLoggingStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLoggingStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeLoggingStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLoggingStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeLoggingStatusRequest * DescribeLoggingStatusResponse::request() const
+{
+    Q_D(const DescribeLoggingStatusResponse);
+    return static_cast<const DescribeLoggingStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeLoggingStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLoggingStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLoggingStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLoggingStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoggingStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLoggingStatusResponse instance.
+ */
+DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponsePrivate(
+    DescribeLoggingStatusQueueResponse * const q) : DescribeLoggingStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeLoggingStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLoggingStatusResponse"));
+    /// @todo
+}

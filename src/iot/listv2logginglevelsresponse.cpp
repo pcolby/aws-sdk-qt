@@ -19,3 +19,85 @@
 
 #include "listv2logginglevelsresponse.h"
 #include "listv2logginglevelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListV2LoggingLevelsResponse
+ *
+ * @brief  Handles IoT ListV2LoggingLevels responses.
+ *
+ * @see    IoTClient::listV2LoggingLevels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListV2LoggingLevelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListV2LoggingLevelsResponsePrivate(this), parent)
+{
+    setRequest(new ListV2LoggingLevelsRequest(request));
+    setReply(reply);
+}
+
+const ListV2LoggingLevelsRequest * ListV2LoggingLevelsResponse::request() const
+{
+    Q_D(const ListV2LoggingLevelsResponse);
+    return static_cast<const ListV2LoggingLevelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListV2LoggingLevels response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListV2LoggingLevelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListV2LoggingLevelsResponsePrivate
+ *
+ * @brief  Private implementation for ListV2LoggingLevelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListV2LoggingLevelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListV2LoggingLevelsResponse instance.
+ */
+ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponsePrivate(
+    ListV2LoggingLevelsQueueResponse * const q) : ListV2LoggingLevelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListV2LoggingLevelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListV2LoggingLevelsResponse"));
+    /// @todo
+}

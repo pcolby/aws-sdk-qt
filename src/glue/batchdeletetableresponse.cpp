@@ -19,3 +19,85 @@
 
 #include "batchdeletetableresponse.h"
 #include "batchdeletetableresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchDeleteTableResponse
+ *
+ * @brief  Handles Glue BatchDeleteTable responses.
+ *
+ * @see    GlueClient::batchDeleteTable
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDeleteTableResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new BatchDeleteTableResponsePrivate(this), parent)
+{
+    setRequest(new BatchDeleteTableRequest(request));
+    setReply(reply);
+}
+
+const BatchDeleteTableRequest * BatchDeleteTableResponse::request() const
+{
+    Q_D(const BatchDeleteTableResponse);
+    return static_cast<const BatchDeleteTableRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue BatchDeleteTable response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDeleteTableResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDeleteTableResponsePrivate
+ *
+ * @brief  Private implementation for BatchDeleteTableResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeleteTableResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDeleteTableResponse instance.
+ */
+BatchDeleteTableResponsePrivate::BatchDeleteTableResponsePrivate(
+    BatchDeleteTableQueueResponse * const q) : BatchDeleteTablePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue BatchDeleteTableResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDeleteTableResponsePrivate::BatchDeleteTableResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDeleteTableResponse"));
+    /// @todo
+}

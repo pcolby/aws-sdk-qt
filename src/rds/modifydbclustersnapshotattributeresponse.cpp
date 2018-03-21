@@ -19,3 +19,85 @@
 
 #include "modifydbclustersnapshotattributeresponse.h"
 #include "modifydbclustersnapshotattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBClusterSnapshotAttributeResponse
+ *
+ * @brief  Handles RDS ModifyDBClusterSnapshotAttribute responses.
+ *
+ * @see    RDSClient::modifyDBClusterSnapshotAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBClusterSnapshotAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ModifyDBClusterSnapshotAttributeResponsePrivate(this), parent)
+{
+    setRequest(new ModifyDBClusterSnapshotAttributeRequest(request));
+    setReply(reply);
+}
+
+const ModifyDBClusterSnapshotAttributeRequest * ModifyDBClusterSnapshotAttributeResponse::request() const
+{
+    Q_D(const ModifyDBClusterSnapshotAttributeResponse);
+    return static_cast<const ModifyDBClusterSnapshotAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ModifyDBClusterSnapshotAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBClusterSnapshotAttributeResponsePrivate
+ *
+ * @brief  Private implementation for ModifyDBClusterSnapshotAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBClusterSnapshotAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyDBClusterSnapshotAttributeResponse instance.
+ */
+ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttributeResponsePrivate(
+    ModifyDBClusterSnapshotAttributeQueueResponse * const q) : ModifyDBClusterSnapshotAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ModifyDBClusterSnapshotAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterSnapshotAttributeResponse"));
+    /// @todo
+}

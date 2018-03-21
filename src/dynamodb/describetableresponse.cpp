@@ -19,3 +19,85 @@
 
 #include "describetableresponse.h"
 #include "describetableresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DescribeTableResponse
+ *
+ * @brief  Handles DynamoDB DescribeTable responses.
+ *
+ * @see    DynamoDBClient::describeTable
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTableResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new DescribeTableResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTableRequest(request));
+    setReply(reply);
+}
+
+const DescribeTableRequest * DescribeTableResponse::request() const
+{
+    Q_D(const DescribeTableResponse);
+    return static_cast<const DescribeTableRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB DescribeTable response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTableResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTableResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTableResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTableResponse instance.
+ */
+DescribeTableResponsePrivate::DescribeTableResponsePrivate(
+    DescribeTableQueueResponse * const q) : DescribeTablePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB DescribeTableResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTableResponsePrivate::DescribeTableResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTableResponse"));
+    /// @todo
+}

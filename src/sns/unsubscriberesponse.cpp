@@ -19,3 +19,85 @@
 
 #include "unsubscriberesponse.h"
 #include "unsubscriberesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  UnsubscribeResponse
+ *
+ * @brief  Handles SNS Unsubscribe responses.
+ *
+ * @see    SNSClient::unsubscribe
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnsubscribeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new UnsubscribeResponsePrivate(this), parent)
+{
+    setRequest(new UnsubscribeRequest(request));
+    setReply(reply);
+}
+
+const UnsubscribeRequest * UnsubscribeResponse::request() const
+{
+    Q_D(const UnsubscribeResponse);
+    return static_cast<const UnsubscribeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS Unsubscribe response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnsubscribeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnsubscribeResponsePrivate
+ *
+ * @brief  Private implementation for UnsubscribeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnsubscribeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnsubscribeResponse instance.
+ */
+UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
+    UnsubscribeQueueResponse * const q) : UnsubscribePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS UnsubscribeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnsubscribeResponsePrivate::UnsubscribeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnsubscribeResponse"));
+    /// @todo
+}

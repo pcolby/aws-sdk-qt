@@ -19,3 +19,85 @@
 
 #include "disablevpcclassiclinkresponse.h"
 #include "disablevpcclassiclinkresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisableVpcClassicLinkResponse
+ *
+ * @brief  Handles EC2 DisableVpcClassicLink responses.
+ *
+ * @see    EC2Client::disableVpcClassicLink
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableVpcClassicLinkResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DisableVpcClassicLinkResponsePrivate(this), parent)
+{
+    setRequest(new DisableVpcClassicLinkRequest(request));
+    setReply(reply);
+}
+
+const DisableVpcClassicLinkRequest * DisableVpcClassicLinkResponse::request() const
+{
+    Q_D(const DisableVpcClassicLinkResponse);
+    return static_cast<const DisableVpcClassicLinkRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DisableVpcClassicLink response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableVpcClassicLinkResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableVpcClassicLinkResponsePrivate
+ *
+ * @brief  Private implementation for DisableVpcClassicLinkResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableVpcClassicLinkResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableVpcClassicLinkResponse instance.
+ */
+DisableVpcClassicLinkResponsePrivate::DisableVpcClassicLinkResponsePrivate(
+    DisableVpcClassicLinkQueueResponse * const q) : DisableVpcClassicLinkPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DisableVpcClassicLinkResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableVpcClassicLinkResponsePrivate::DisableVpcClassicLinkResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableVpcClassicLinkResponse"));
+    /// @todo
+}

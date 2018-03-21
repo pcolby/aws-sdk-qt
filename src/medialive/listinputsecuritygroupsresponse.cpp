@@ -19,3 +19,85 @@
 
 #include "listinputsecuritygroupsresponse.h"
 #include "listinputsecuritygroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  ListInputSecurityGroupsResponse
+ *
+ * @brief  Handles MediaLive ListInputSecurityGroups responses.
+ *
+ * @see    MediaLiveClient::listInputSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInputSecurityGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaLiveResponse(new ListInputSecurityGroupsResponsePrivate(this), parent)
+{
+    setRequest(new ListInputSecurityGroupsRequest(request));
+    setReply(reply);
+}
+
+const ListInputSecurityGroupsRequest * ListInputSecurityGroupsResponse::request() const
+{
+    Q_D(const ListInputSecurityGroupsResponse);
+    return static_cast<const ListInputSecurityGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaLive ListInputSecurityGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListInputSecurityGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInputSecurityGroupsResponsePrivate
+ *
+ * @brief  Private implementation for ListInputSecurityGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInputSecurityGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListInputSecurityGroupsResponse instance.
+ */
+ListInputSecurityGroupsResponsePrivate::ListInputSecurityGroupsResponsePrivate(
+    ListInputSecurityGroupsQueueResponse * const q) : ListInputSecurityGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaLive ListInputSecurityGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListInputSecurityGroupsResponsePrivate::ListInputSecurityGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListInputSecurityGroupsResponse"));
+    /// @todo
+}

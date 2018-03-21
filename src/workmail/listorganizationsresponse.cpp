@@ -19,3 +19,85 @@
 
 #include "listorganizationsresponse.h"
 #include "listorganizationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  ListOrganizationsResponse
+ *
+ * @brief  Handles WorkMail ListOrganizations responses.
+ *
+ * @see    WorkMailClient::listOrganizations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOrganizationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new ListOrganizationsResponsePrivate(this), parent)
+{
+    setRequest(new ListOrganizationsRequest(request));
+    setReply(reply);
+}
+
+const ListOrganizationsRequest * ListOrganizationsResponse::request() const
+{
+    Q_D(const ListOrganizationsResponse);
+    return static_cast<const ListOrganizationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail ListOrganizations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOrganizationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOrganizationsResponsePrivate
+ *
+ * @brief  Private implementation for ListOrganizationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOrganizationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOrganizationsResponse instance.
+ */
+ListOrganizationsResponsePrivate::ListOrganizationsResponsePrivate(
+    ListOrganizationsQueueResponse * const q) : ListOrganizationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail ListOrganizationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOrganizationsResponsePrivate::ListOrganizationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOrganizationsResponse"));
+    /// @todo
+}

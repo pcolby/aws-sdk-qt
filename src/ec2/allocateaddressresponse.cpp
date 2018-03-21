@@ -19,3 +19,85 @@
 
 #include "allocateaddressresponse.h"
 #include "allocateaddressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AllocateAddressResponse
+ *
+ * @brief  Handles EC2 AllocateAddress responses.
+ *
+ * @see    EC2Client::allocateAddress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AllocateAddressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AllocateAddressResponsePrivate(this), parent)
+{
+    setRequest(new AllocateAddressRequest(request));
+    setReply(reply);
+}
+
+const AllocateAddressRequest * AllocateAddressResponse::request() const
+{
+    Q_D(const AllocateAddressResponse);
+    return static_cast<const AllocateAddressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AllocateAddress response.
+ *
+ * @param  response  Response to parse.
+ */
+void AllocateAddressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AllocateAddressResponsePrivate
+ *
+ * @brief  Private implementation for AllocateAddressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocateAddressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AllocateAddressResponse instance.
+ */
+AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
+    AllocateAddressQueueResponse * const q) : AllocateAddressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AllocateAddressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AllocateAddressResponsePrivate::AllocateAddressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AllocateAddressResponse"));
+    /// @todo
+}

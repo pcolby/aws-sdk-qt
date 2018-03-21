@@ -19,3 +19,85 @@
 
 #include "describemodelresponse.h"
 #include "describemodelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeModelResponse
+ *
+ * @brief  Handles SageMaker DescribeModel responses.
+ *
+ * @see    SageMakerClient::describeModel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeModelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new DescribeModelResponsePrivate(this), parent)
+{
+    setRequest(new DescribeModelRequest(request));
+    setReply(reply);
+}
+
+const DescribeModelRequest * DescribeModelResponse::request() const
+{
+    Q_D(const DescribeModelResponse);
+    return static_cast<const DescribeModelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker DescribeModel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeModelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeModelResponsePrivate
+ *
+ * @brief  Private implementation for DescribeModelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeModelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeModelResponse instance.
+ */
+DescribeModelResponsePrivate::DescribeModelResponsePrivate(
+    DescribeModelQueueResponse * const q) : DescribeModelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker DescribeModelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeModelResponsePrivate::DescribeModelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeModelResponse"));
+    /// @todo
+}

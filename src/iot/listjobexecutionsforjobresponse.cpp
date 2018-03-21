@@ -19,3 +19,85 @@
 
 #include "listjobexecutionsforjobresponse.h"
 #include "listjobexecutionsforjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListJobExecutionsForJobResponse
+ *
+ * @brief  Handles IoT ListJobExecutionsForJob responses.
+ *
+ * @see    IoTClient::listJobExecutionsForJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobExecutionsForJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListJobExecutionsForJobResponsePrivate(this), parent)
+{
+    setRequest(new ListJobExecutionsForJobRequest(request));
+    setReply(reply);
+}
+
+const ListJobExecutionsForJobRequest * ListJobExecutionsForJobResponse::request() const
+{
+    Q_D(const ListJobExecutionsForJobResponse);
+    return static_cast<const ListJobExecutionsForJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListJobExecutionsForJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListJobExecutionsForJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobExecutionsForJobResponsePrivate
+ *
+ * @brief  Private implementation for ListJobExecutionsForJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobExecutionsForJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListJobExecutionsForJobResponse instance.
+ */
+ListJobExecutionsForJobResponsePrivate::ListJobExecutionsForJobResponsePrivate(
+    ListJobExecutionsForJobQueueResponse * const q) : ListJobExecutionsForJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListJobExecutionsForJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListJobExecutionsForJobResponsePrivate::ListJobExecutionsForJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListJobExecutionsForJobResponse"));
+    /// @todo
+}

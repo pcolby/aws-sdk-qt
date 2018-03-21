@@ -19,3 +19,85 @@
 
 #include "deleteaccesskeyresponse.h"
 #include "deleteaccesskeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteAccessKeyResponse
+ *
+ * @brief  Handles IAM DeleteAccessKey responses.
+ *
+ * @see    IAMClient::deleteAccessKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAccessKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteAccessKeyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAccessKeyRequest(request));
+    setReply(reply);
+}
+
+const DeleteAccessKeyRequest * DeleteAccessKeyResponse::request() const
+{
+    Q_D(const DeleteAccessKeyResponse);
+    return static_cast<const DeleteAccessKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteAccessKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAccessKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAccessKeyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAccessKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAccessKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAccessKeyResponse instance.
+ */
+DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponsePrivate(
+    DeleteAccessKeyQueueResponse * const q) : DeleteAccessKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteAccessKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAccessKeyResponse"));
+    /// @todo
+}

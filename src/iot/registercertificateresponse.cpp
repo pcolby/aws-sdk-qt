@@ -19,3 +19,85 @@
 
 #include "registercertificateresponse.h"
 #include "registercertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  RegisterCertificateResponse
+ *
+ * @brief  Handles IoT RegisterCertificate responses.
+ *
+ * @see    IoTClient::registerCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new RegisterCertificateResponsePrivate(this), parent)
+{
+    setRequest(new RegisterCertificateRequest(request));
+    setReply(reply);
+}
+
+const RegisterCertificateRequest * RegisterCertificateResponse::request() const
+{
+    Q_D(const RegisterCertificateResponse);
+    return static_cast<const RegisterCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT RegisterCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterCertificateResponsePrivate
+ *
+ * @brief  Private implementation for RegisterCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterCertificateResponse instance.
+ */
+RegisterCertificateResponsePrivate::RegisterCertificateResponsePrivate(
+    RegisterCertificateQueueResponse * const q) : RegisterCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT RegisterCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterCertificateResponsePrivate::RegisterCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterCertificateResponse"));
+    /// @todo
+}

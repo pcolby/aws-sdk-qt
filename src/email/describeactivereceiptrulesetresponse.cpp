@@ -19,3 +19,85 @@
 
 #include "describeactivereceiptrulesetresponse.h"
 #include "describeactivereceiptrulesetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DescribeActiveReceiptRuleSetResponse
+ *
+ * @brief  Handles SES DescribeActiveReceiptRuleSet responses.
+ *
+ * @see    SESClient::describeActiveReceiptRuleSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeActiveReceiptRuleSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DescribeActiveReceiptRuleSetResponsePrivate(this), parent)
+{
+    setRequest(new DescribeActiveReceiptRuleSetRequest(request));
+    setReply(reply);
+}
+
+const DescribeActiveReceiptRuleSetRequest * DescribeActiveReceiptRuleSetResponse::request() const
+{
+    Q_D(const DescribeActiveReceiptRuleSetResponse);
+    return static_cast<const DescribeActiveReceiptRuleSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DescribeActiveReceiptRuleSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeActiveReceiptRuleSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeActiveReceiptRuleSetResponsePrivate
+ *
+ * @brief  Private implementation for DescribeActiveReceiptRuleSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActiveReceiptRuleSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeActiveReceiptRuleSetResponse instance.
+ */
+DescribeActiveReceiptRuleSetResponsePrivate::DescribeActiveReceiptRuleSetResponsePrivate(
+    DescribeActiveReceiptRuleSetQueueResponse * const q) : DescribeActiveReceiptRuleSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DescribeActiveReceiptRuleSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeActiveReceiptRuleSetResponsePrivate::DescribeActiveReceiptRuleSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeActiveReceiptRuleSetResponse"));
+    /// @todo
+}

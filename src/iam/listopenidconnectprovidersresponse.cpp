@@ -19,3 +19,85 @@
 
 #include "listopenidconnectprovidersresponse.h"
 #include "listopenidconnectprovidersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListOpenIDConnectProvidersResponse
+ *
+ * @brief  Handles IAM ListOpenIDConnectProviders responses.
+ *
+ * @see    IAMClient::listOpenIDConnectProviders
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOpenIDConnectProvidersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListOpenIDConnectProvidersResponsePrivate(this), parent)
+{
+    setRequest(new ListOpenIDConnectProvidersRequest(request));
+    setReply(reply);
+}
+
+const ListOpenIDConnectProvidersRequest * ListOpenIDConnectProvidersResponse::request() const
+{
+    Q_D(const ListOpenIDConnectProvidersResponse);
+    return static_cast<const ListOpenIDConnectProvidersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListOpenIDConnectProviders response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOpenIDConnectProvidersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOpenIDConnectProvidersResponsePrivate
+ *
+ * @brief  Private implementation for ListOpenIDConnectProvidersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOpenIDConnectProvidersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOpenIDConnectProvidersResponse instance.
+ */
+ListOpenIDConnectProvidersResponsePrivate::ListOpenIDConnectProvidersResponsePrivate(
+    ListOpenIDConnectProvidersQueueResponse * const q) : ListOpenIDConnectProvidersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListOpenIDConnectProvidersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOpenIDConnectProvidersResponsePrivate::ListOpenIDConnectProvidersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOpenIDConnectProvidersResponse"));
+    /// @todo
+}

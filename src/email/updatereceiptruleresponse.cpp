@@ -19,3 +19,85 @@
 
 #include "updatereceiptruleresponse.h"
 #include "updatereceiptruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateReceiptRuleResponse
+ *
+ * @brief  Handles SES UpdateReceiptRule responses.
+ *
+ * @see    SESClient::updateReceiptRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateReceiptRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new UpdateReceiptRuleResponsePrivate(this), parent)
+{
+    setRequest(new UpdateReceiptRuleRequest(request));
+    setReply(reply);
+}
+
+const UpdateReceiptRuleRequest * UpdateReceiptRuleResponse::request() const
+{
+    Q_D(const UpdateReceiptRuleResponse);
+    return static_cast<const UpdateReceiptRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES UpdateReceiptRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateReceiptRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateReceiptRuleResponsePrivate
+ *
+ * @brief  Private implementation for UpdateReceiptRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateReceiptRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateReceiptRuleResponse instance.
+ */
+UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponsePrivate(
+    UpdateReceiptRuleQueueResponse * const q) : UpdateReceiptRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES UpdateReceiptRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateReceiptRuleResponse"));
+    /// @todo
+}

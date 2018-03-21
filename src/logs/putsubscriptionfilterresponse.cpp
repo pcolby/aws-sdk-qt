@@ -19,3 +19,85 @@
 
 #include "putsubscriptionfilterresponse.h"
 #include "putsubscriptionfilterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  PutSubscriptionFilterResponse
+ *
+ * @brief  Handles CloudWatchLogs PutSubscriptionFilter responses.
+ *
+ * @see    CloudWatchLogsClient::putSubscriptionFilter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutSubscriptionFilterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new PutSubscriptionFilterResponsePrivate(this), parent)
+{
+    setRequest(new PutSubscriptionFilterRequest(request));
+    setReply(reply);
+}
+
+const PutSubscriptionFilterRequest * PutSubscriptionFilterResponse::request() const
+{
+    Q_D(const PutSubscriptionFilterResponse);
+    return static_cast<const PutSubscriptionFilterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs PutSubscriptionFilter response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutSubscriptionFilterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutSubscriptionFilterResponsePrivate
+ *
+ * @brief  Private implementation for PutSubscriptionFilterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutSubscriptionFilterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutSubscriptionFilterResponse instance.
+ */
+PutSubscriptionFilterResponsePrivate::PutSubscriptionFilterResponsePrivate(
+    PutSubscriptionFilterQueueResponse * const q) : PutSubscriptionFilterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs PutSubscriptionFilterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutSubscriptionFilterResponsePrivate::PutSubscriptionFilterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutSubscriptionFilterResponse"));
+    /// @todo
+}

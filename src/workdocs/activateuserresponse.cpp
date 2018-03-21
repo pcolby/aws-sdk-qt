@@ -19,3 +19,85 @@
 
 #include "activateuserresponse.h"
 #include "activateuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  ActivateUserResponse
+ *
+ * @brief  Handles WorkDocs ActivateUser responses.
+ *
+ * @see    WorkDocsClient::activateUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ActivateUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new ActivateUserResponsePrivate(this), parent)
+{
+    setRequest(new ActivateUserRequest(request));
+    setReply(reply);
+}
+
+const ActivateUserRequest * ActivateUserResponse::request() const
+{
+    Q_D(const ActivateUserResponse);
+    return static_cast<const ActivateUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs ActivateUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void ActivateUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ActivateUserResponsePrivate
+ *
+ * @brief  Private implementation for ActivateUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ActivateUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ActivateUserResponse instance.
+ */
+ActivateUserResponsePrivate::ActivateUserResponsePrivate(
+    ActivateUserQueueResponse * const q) : ActivateUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs ActivateUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ActivateUserResponsePrivate::ActivateUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ActivateUserResponse"));
+    /// @todo
+}

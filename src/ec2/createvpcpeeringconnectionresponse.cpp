@@ -19,3 +19,85 @@
 
 #include "createvpcpeeringconnectionresponse.h"
 #include "createvpcpeeringconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpcPeeringConnectionResponse
+ *
+ * @brief  Handles EC2 CreateVpcPeeringConnection responses.
+ *
+ * @see    EC2Client::createVpcPeeringConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpcPeeringConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateVpcPeeringConnectionResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpcPeeringConnectionRequest(request));
+    setReply(reply);
+}
+
+const CreateVpcPeeringConnectionRequest * CreateVpcPeeringConnectionResponse::request() const
+{
+    Q_D(const CreateVpcPeeringConnectionResponse);
+    return static_cast<const CreateVpcPeeringConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateVpcPeeringConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpcPeeringConnectionResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpcPeeringConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpcPeeringConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpcPeeringConnectionResponse instance.
+ */
+CreateVpcPeeringConnectionResponsePrivate::CreateVpcPeeringConnectionResponsePrivate(
+    CreateVpcPeeringConnectionQueueResponse * const q) : CreateVpcPeeringConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateVpcPeeringConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpcPeeringConnectionResponsePrivate::CreateVpcPeeringConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpcPeeringConnectionResponse"));
+    /// @todo
+}

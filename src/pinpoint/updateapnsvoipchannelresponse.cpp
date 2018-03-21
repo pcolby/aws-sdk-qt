@@ -19,3 +19,85 @@
 
 #include "updateapnsvoipchannelresponse.h"
 #include "updateapnsvoipchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateApnsVoipChannelResponse
+ *
+ * @brief  Handles Pinpoint UpdateApnsVoipChannel responses.
+ *
+ * @see    PinpointClient::updateApnsVoipChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApnsVoipChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateApnsVoipChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateApnsVoipChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateApnsVoipChannelRequest * UpdateApnsVoipChannelResponse::request() const
+{
+    Q_D(const UpdateApnsVoipChannelResponse);
+    return static_cast<const UpdateApnsVoipChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateApnsVoipChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateApnsVoipChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApnsVoipChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateApnsVoipChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApnsVoipChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateApnsVoipChannelResponse instance.
+ */
+UpdateApnsVoipChannelResponsePrivate::UpdateApnsVoipChannelResponsePrivate(
+    UpdateApnsVoipChannelQueueResponse * const q) : UpdateApnsVoipChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateApnsVoipChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateApnsVoipChannelResponsePrivate::UpdateApnsVoipChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateApnsVoipChannelResponse"));
+    /// @todo
+}

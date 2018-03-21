@@ -19,3 +19,85 @@
 
 #include "listobjectparentpathsresponse.h"
 #include "listobjectparentpathsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListObjectParentPathsResponse
+ *
+ * @brief  Handles CloudDirectory ListObjectParentPaths responses.
+ *
+ * @see    CloudDirectoryClient::listObjectParentPaths
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectParentPathsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListObjectParentPathsResponsePrivate(this), parent)
+{
+    setRequest(new ListObjectParentPathsRequest(request));
+    setReply(reply);
+}
+
+const ListObjectParentPathsRequest * ListObjectParentPathsResponse::request() const
+{
+    Q_D(const ListObjectParentPathsResponse);
+    return static_cast<const ListObjectParentPathsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListObjectParentPaths response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListObjectParentPathsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectParentPathsResponsePrivate
+ *
+ * @brief  Private implementation for ListObjectParentPathsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectParentPathsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListObjectParentPathsResponse instance.
+ */
+ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponsePrivate(
+    ListObjectParentPathsQueueResponse * const q) : ListObjectParentPathsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListObjectParentPathsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListObjectParentPathsResponse"));
+    /// @todo
+}

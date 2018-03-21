@@ -19,3 +19,85 @@
 
 #include "createdatabaseresponse.h"
 #include "createdatabaseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateDatabaseResponse
+ *
+ * @brief  Handles Glue CreateDatabase responses.
+ *
+ * @see    GlueClient::createDatabase
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDatabaseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new CreateDatabaseResponsePrivate(this), parent)
+{
+    setRequest(new CreateDatabaseRequest(request));
+    setReply(reply);
+}
+
+const CreateDatabaseRequest * CreateDatabaseResponse::request() const
+{
+    Q_D(const CreateDatabaseResponse);
+    return static_cast<const CreateDatabaseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue CreateDatabase response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDatabaseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDatabaseResponsePrivate
+ *
+ * @brief  Private implementation for CreateDatabaseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDatabaseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDatabaseResponse instance.
+ */
+CreateDatabaseResponsePrivate::CreateDatabaseResponsePrivate(
+    CreateDatabaseQueueResponse * const q) : CreateDatabasePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue CreateDatabaseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDatabaseResponsePrivate::CreateDatabaseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDatabaseResponse"));
+    /// @todo
+}

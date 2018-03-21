@@ -19,3 +19,85 @@
 
 #include "getdimensionvaluesresponse.h"
 #include "getdimensionvaluesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CostExplorer {
+
+/**
+ * @class  GetDimensionValuesResponse
+ *
+ * @brief  Handles CostExplorer GetDimensionValues responses.
+ *
+ * @see    CostExplorerClient::getDimensionValues
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDimensionValuesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CostExplorerResponse(new GetDimensionValuesResponsePrivate(this), parent)
+{
+    setRequest(new GetDimensionValuesRequest(request));
+    setReply(reply);
+}
+
+const GetDimensionValuesRequest * GetDimensionValuesResponse::request() const
+{
+    Q_D(const GetDimensionValuesResponse);
+    return static_cast<const GetDimensionValuesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CostExplorer GetDimensionValues response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDimensionValuesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDimensionValuesResponsePrivate
+ *
+ * @brief  Private implementation for GetDimensionValuesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDimensionValuesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDimensionValuesResponse instance.
+ */
+GetDimensionValuesResponsePrivate::GetDimensionValuesResponsePrivate(
+    GetDimensionValuesQueueResponse * const q) : GetDimensionValuesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CostExplorer GetDimensionValuesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDimensionValuesResponsePrivate::GetDimensionValuesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDimensionValuesResponse"));
+    /// @todo
+}

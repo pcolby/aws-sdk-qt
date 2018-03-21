@@ -19,3 +19,85 @@
 
 #include "puttargetsresponse.h"
 #include "puttargetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  PutTargetsResponse
+ *
+ * @brief  Handles CloudWatchEvents PutTargets responses.
+ *
+ * @see    CloudWatchEventsClient::putTargets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutTargetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new PutTargetsResponsePrivate(this), parent)
+{
+    setRequest(new PutTargetsRequest(request));
+    setReply(reply);
+}
+
+const PutTargetsRequest * PutTargetsResponse::request() const
+{
+    Q_D(const PutTargetsResponse);
+    return static_cast<const PutTargetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents PutTargets response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutTargetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutTargetsResponsePrivate
+ *
+ * @brief  Private implementation for PutTargetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutTargetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutTargetsResponse instance.
+ */
+PutTargetsResponsePrivate::PutTargetsResponsePrivate(
+    PutTargetsQueueResponse * const q) : PutTargetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents PutTargetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutTargetsResponsePrivate::PutTargetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutTargetsResponse"));
+    /// @todo
+}

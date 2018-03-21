@@ -19,3 +19,85 @@
 
 #include "deletereusabledelegationsetresponse.h"
 #include "deletereusabledelegationsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  DeleteReusableDelegationSetResponse
+ *
+ * @brief  Handles Route53 DeleteReusableDelegationSet responses.
+ *
+ * @see    Route53Client::deleteReusableDelegationSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReusableDelegationSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new DeleteReusableDelegationSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteReusableDelegationSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteReusableDelegationSetRequest * DeleteReusableDelegationSetResponse::request() const
+{
+    Q_D(const DeleteReusableDelegationSetResponse);
+    return static_cast<const DeleteReusableDelegationSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 DeleteReusableDelegationSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteReusableDelegationSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReusableDelegationSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteReusableDelegationSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReusableDelegationSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteReusableDelegationSetResponse instance.
+ */
+DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponsePrivate(
+    DeleteReusableDelegationSetQueueResponse * const q) : DeleteReusableDelegationSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 DeleteReusableDelegationSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteReusableDelegationSetResponse"));
+    /// @todo
+}

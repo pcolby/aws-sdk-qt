@@ -19,3 +19,85 @@
 
 #include "createmicrosoftadresponse.h"
 #include "createmicrosoftadresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateMicrosoftADResponse
+ *
+ * @brief  Handles DirectoryService CreateMicrosoftAD responses.
+ *
+ * @see    DirectoryServiceClient::createMicrosoftAD
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMicrosoftADResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new CreateMicrosoftADResponsePrivate(this), parent)
+{
+    setRequest(new CreateMicrosoftADRequest(request));
+    setReply(reply);
+}
+
+const CreateMicrosoftADRequest * CreateMicrosoftADResponse::request() const
+{
+    Q_D(const CreateMicrosoftADResponse);
+    return static_cast<const CreateMicrosoftADRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService CreateMicrosoftAD response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateMicrosoftADResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMicrosoftADResponsePrivate
+ *
+ * @brief  Private implementation for CreateMicrosoftADResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMicrosoftADResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateMicrosoftADResponse instance.
+ */
+CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponsePrivate(
+    CreateMicrosoftADQueueResponse * const q) : CreateMicrosoftADPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService CreateMicrosoftADResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateMicrosoftADResponse"));
+    /// @todo
+}

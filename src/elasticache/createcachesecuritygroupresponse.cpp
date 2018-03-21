@@ -19,3 +19,85 @@
 
 #include "createcachesecuritygroupresponse.h"
 #include "createcachesecuritygroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  CreateCacheSecurityGroupResponse
+ *
+ * @brief  Handles ElastiCache CreateCacheSecurityGroup responses.
+ *
+ * @see    ElastiCacheClient::createCacheSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCacheSecurityGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new CreateCacheSecurityGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateCacheSecurityGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateCacheSecurityGroupRequest * CreateCacheSecurityGroupResponse::request() const
+{
+    Q_D(const CreateCacheSecurityGroupResponse);
+    return static_cast<const CreateCacheSecurityGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache CreateCacheSecurityGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCacheSecurityGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateCacheSecurityGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCacheSecurityGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCacheSecurityGroupResponse instance.
+ */
+CreateCacheSecurityGroupResponsePrivate::CreateCacheSecurityGroupResponsePrivate(
+    CreateCacheSecurityGroupQueueResponse * const q) : CreateCacheSecurityGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache CreateCacheSecurityGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCacheSecurityGroupResponsePrivate::CreateCacheSecurityGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCacheSecurityGroupResponse"));
+    /// @todo
+}

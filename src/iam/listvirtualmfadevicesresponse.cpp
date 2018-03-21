@@ -19,3 +19,85 @@
 
 #include "listvirtualmfadevicesresponse.h"
 #include "listvirtualmfadevicesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListVirtualMFADevicesResponse
+ *
+ * @brief  Handles IAM ListVirtualMFADevices responses.
+ *
+ * @see    IAMClient::listVirtualMFADevices
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListVirtualMFADevicesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListVirtualMFADevicesResponsePrivate(this), parent)
+{
+    setRequest(new ListVirtualMFADevicesRequest(request));
+    setReply(reply);
+}
+
+const ListVirtualMFADevicesRequest * ListVirtualMFADevicesResponse::request() const
+{
+    Q_D(const ListVirtualMFADevicesResponse);
+    return static_cast<const ListVirtualMFADevicesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListVirtualMFADevices response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListVirtualMFADevicesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListVirtualMFADevicesResponsePrivate
+ *
+ * @brief  Private implementation for ListVirtualMFADevicesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVirtualMFADevicesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListVirtualMFADevicesResponse instance.
+ */
+ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponsePrivate(
+    ListVirtualMFADevicesQueueResponse * const q) : ListVirtualMFADevicesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListVirtualMFADevicesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListVirtualMFADevicesResponse"));
+    /// @todo
+}

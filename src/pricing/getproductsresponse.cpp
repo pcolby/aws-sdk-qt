@@ -19,3 +19,85 @@
 
 #include "getproductsresponse.h"
 #include "getproductsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pricing {
+
+/**
+ * @class  GetProductsResponse
+ *
+ * @brief  Handles Pricing GetProducts responses.
+ *
+ * @see    PricingClient::getProducts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetProductsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PricingResponse(new GetProductsResponsePrivate(this), parent)
+{
+    setRequest(new GetProductsRequest(request));
+    setReply(reply);
+}
+
+const GetProductsRequest * GetProductsResponse::request() const
+{
+    Q_D(const GetProductsResponse);
+    return static_cast<const GetProductsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pricing GetProducts response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetProductsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetProductsResponsePrivate
+ *
+ * @brief  Private implementation for GetProductsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetProductsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetProductsResponse instance.
+ */
+GetProductsResponsePrivate::GetProductsResponsePrivate(
+    GetProductsQueueResponse * const q) : GetProductsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pricing GetProductsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetProductsResponsePrivate::GetProductsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetProductsResponse"));
+    /// @todo
+}

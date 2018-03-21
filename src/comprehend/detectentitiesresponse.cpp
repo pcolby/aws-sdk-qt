@@ -19,3 +19,85 @@
 
 #include "detectentitiesresponse.h"
 #include "detectentitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  DetectEntitiesResponse
+ *
+ * @brief  Handles Comprehend DetectEntities responses.
+ *
+ * @see    ComprehendClient::detectEntities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectEntitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ComprehendResponse(new DetectEntitiesResponsePrivate(this), parent)
+{
+    setRequest(new DetectEntitiesRequest(request));
+    setReply(reply);
+}
+
+const DetectEntitiesRequest * DetectEntitiesResponse::request() const
+{
+    Q_D(const DetectEntitiesResponse);
+    return static_cast<const DetectEntitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Comprehend DetectEntities response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetectEntitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectEntitiesResponsePrivate
+ *
+ * @brief  Private implementation for DetectEntitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectEntitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetectEntitiesResponse instance.
+ */
+DetectEntitiesResponsePrivate::DetectEntitiesResponsePrivate(
+    DetectEntitiesQueueResponse * const q) : DetectEntitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Comprehend DetectEntitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetectEntitiesResponsePrivate::DetectEntitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetectEntitiesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describebundletasksresponse.h"
 #include "describebundletasksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeBundleTasksResponse
+ *
+ * @brief  Handles EC2 DescribeBundleTasks responses.
+ *
+ * @see    EC2Client::describeBundleTasks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBundleTasksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeBundleTasksResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBundleTasksRequest(request));
+    setReply(reply);
+}
+
+const DescribeBundleTasksRequest * DescribeBundleTasksResponse::request() const
+{
+    Q_D(const DescribeBundleTasksResponse);
+    return static_cast<const DescribeBundleTasksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeBundleTasks response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBundleTasksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBundleTasksResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBundleTasksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBundleTasksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBundleTasksResponse instance.
+ */
+DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponsePrivate(
+    DescribeBundleTasksQueueResponse * const q) : DescribeBundleTasksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeBundleTasksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBundleTasksResponse"));
+    /// @todo
+}

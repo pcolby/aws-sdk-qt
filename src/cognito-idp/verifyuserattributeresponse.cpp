@@ -19,3 +19,85 @@
 
 #include "verifyuserattributeresponse.h"
 #include "verifyuserattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  VerifyUserAttributeResponse
+ *
+ * @brief  Handles CognitoIdentityProvider VerifyUserAttribute responses.
+ *
+ * @see    CognitoIdentityProviderClient::verifyUserAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyUserAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new VerifyUserAttributeResponsePrivate(this), parent)
+{
+    setRequest(new VerifyUserAttributeRequest(request));
+    setReply(reply);
+}
+
+const VerifyUserAttributeRequest * VerifyUserAttributeResponse::request() const
+{
+    Q_D(const VerifyUserAttributeResponse);
+    return static_cast<const VerifyUserAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider VerifyUserAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void VerifyUserAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyUserAttributeResponsePrivate
+ *
+ * @brief  Private implementation for VerifyUserAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyUserAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public VerifyUserAttributeResponse instance.
+ */
+VerifyUserAttributeResponsePrivate::VerifyUserAttributeResponsePrivate(
+    VerifyUserAttributeQueueResponse * const q) : VerifyUserAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider VerifyUserAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void VerifyUserAttributeResponsePrivate::VerifyUserAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("VerifyUserAttributeResponse"));
+    /// @todo
+}

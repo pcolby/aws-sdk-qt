@@ -19,3 +19,85 @@
 
 #include "listbucketmetricsconfigurationsresponse.h"
 #include "listbucketmetricsconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  ListBucketMetricsConfigurationsResponse
+ *
+ * @brief  Handles S3 ListBucketMetricsConfigurations responses.
+ *
+ * @see    S3Client::listBucketMetricsConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBucketMetricsConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new ListBucketMetricsConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new ListBucketMetricsConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const ListBucketMetricsConfigurationsRequest * ListBucketMetricsConfigurationsResponse::request() const
+{
+    Q_D(const ListBucketMetricsConfigurationsResponse);
+    return static_cast<const ListBucketMetricsConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 ListBucketMetricsConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBucketMetricsConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBucketMetricsConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for ListBucketMetricsConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBucketMetricsConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBucketMetricsConfigurationsResponse instance.
+ */
+ListBucketMetricsConfigurationsResponsePrivate::ListBucketMetricsConfigurationsResponsePrivate(
+    ListBucketMetricsConfigurationsQueueResponse * const q) : ListBucketMetricsConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 ListBucketMetricsConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBucketMetricsConfigurationsResponsePrivate::ListBucketMetricsConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBucketMetricsConfigurationsResponse"));
+    /// @todo
+}

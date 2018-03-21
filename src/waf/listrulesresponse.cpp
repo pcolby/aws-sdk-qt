@@ -19,3 +19,85 @@
 
 #include "listrulesresponse.h"
 #include "listrulesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListRulesResponse
+ *
+ * @brief  Handles WAF ListRules responses.
+ *
+ * @see    WAFClient::listRules
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRulesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new ListRulesResponsePrivate(this), parent)
+{
+    setRequest(new ListRulesRequest(request));
+    setReply(reply);
+}
+
+const ListRulesRequest * ListRulesResponse::request() const
+{
+    Q_D(const ListRulesResponse);
+    return static_cast<const ListRulesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF ListRules response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRulesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRulesResponsePrivate
+ *
+ * @brief  Private implementation for ListRulesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRulesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRulesResponse instance.
+ */
+ListRulesResponsePrivate::ListRulesResponsePrivate(
+    ListRulesQueueResponse * const q) : ListRulesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF ListRulesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRulesResponsePrivate::ListRulesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRulesResponse"));
+    /// @todo
+}

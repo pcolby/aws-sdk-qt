@@ -19,3 +19,85 @@
 
 #include "listdevicedefinitionversionsresponse.h"
 #include "listdevicedefinitionversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListDeviceDefinitionVersionsResponse
+ *
+ * @brief  Handles Greengrass ListDeviceDefinitionVersions responses.
+ *
+ * @see    GreengrassClient::listDeviceDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeviceDefinitionVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListDeviceDefinitionVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListDeviceDefinitionVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListDeviceDefinitionVersionsRequest * ListDeviceDefinitionVersionsResponse::request() const
+{
+    Q_D(const ListDeviceDefinitionVersionsResponse);
+    return static_cast<const ListDeviceDefinitionVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListDeviceDefinitionVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDeviceDefinitionVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeviceDefinitionVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListDeviceDefinitionVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeviceDefinitionVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDeviceDefinitionVersionsResponse instance.
+ */
+ListDeviceDefinitionVersionsResponsePrivate::ListDeviceDefinitionVersionsResponsePrivate(
+    ListDeviceDefinitionVersionsQueueResponse * const q) : ListDeviceDefinitionVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListDeviceDefinitionVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDeviceDefinitionVersionsResponsePrivate::ListDeviceDefinitionVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDeviceDefinitionVersionsResponse"));
+    /// @todo
+}

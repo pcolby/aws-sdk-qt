@@ -19,3 +19,85 @@
 
 #include "describerolealiasresponse.h"
 #include "describerolealiasresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeRoleAliasResponse
+ *
+ * @brief  Handles IoT DescribeRoleAlias responses.
+ *
+ * @see    IoTClient::describeRoleAlias
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRoleAliasResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DescribeRoleAliasResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRoleAliasRequest(request));
+    setReply(reply);
+}
+
+const DescribeRoleAliasRequest * DescribeRoleAliasResponse::request() const
+{
+    Q_D(const DescribeRoleAliasResponse);
+    return static_cast<const DescribeRoleAliasRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DescribeRoleAlias response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRoleAliasResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRoleAliasResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRoleAliasResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRoleAliasResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRoleAliasResponse instance.
+ */
+DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponsePrivate(
+    DescribeRoleAliasQueueResponse * const q) : DescribeRoleAliasPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DescribeRoleAliasResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRoleAliasResponse"));
+    /// @todo
+}

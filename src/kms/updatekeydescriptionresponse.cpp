@@ -19,3 +19,85 @@
 
 #include "updatekeydescriptionresponse.h"
 #include "updatekeydescriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  UpdateKeyDescriptionResponse
+ *
+ * @brief  Handles KMS UpdateKeyDescription responses.
+ *
+ * @see    KMSClient::updateKeyDescription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateKeyDescriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new UpdateKeyDescriptionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateKeyDescriptionRequest(request));
+    setReply(reply);
+}
+
+const UpdateKeyDescriptionRequest * UpdateKeyDescriptionResponse::request() const
+{
+    Q_D(const UpdateKeyDescriptionResponse);
+    return static_cast<const UpdateKeyDescriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS UpdateKeyDescription response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateKeyDescriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateKeyDescriptionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateKeyDescriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateKeyDescriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateKeyDescriptionResponse instance.
+ */
+UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponsePrivate(
+    UpdateKeyDescriptionQueueResponse * const q) : UpdateKeyDescriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS UpdateKeyDescriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateKeyDescriptionResponse"));
+    /// @todo
+}

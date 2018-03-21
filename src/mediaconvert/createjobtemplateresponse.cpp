@@ -19,3 +19,85 @@
 
 #include "createjobtemplateresponse.h"
 #include "createjobtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  CreateJobTemplateResponse
+ *
+ * @brief  Handles MediaConvert CreateJobTemplate responses.
+ *
+ * @see    MediaConvertClient::createJobTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateJobTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new CreateJobTemplateResponsePrivate(this), parent)
+{
+    setRequest(new CreateJobTemplateRequest(request));
+    setReply(reply);
+}
+
+const CreateJobTemplateRequest * CreateJobTemplateResponse::request() const
+{
+    Q_D(const CreateJobTemplateResponse);
+    return static_cast<const CreateJobTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert CreateJobTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateJobTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateJobTemplateResponsePrivate
+ *
+ * @brief  Private implementation for CreateJobTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateJobTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateJobTemplateResponse instance.
+ */
+CreateJobTemplateResponsePrivate::CreateJobTemplateResponsePrivate(
+    CreateJobTemplateQueueResponse * const q) : CreateJobTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert CreateJobTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateJobTemplateResponsePrivate::CreateJobTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateJobTemplateResponse"));
+    /// @todo
+}

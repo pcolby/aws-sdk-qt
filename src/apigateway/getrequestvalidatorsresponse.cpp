@@ -19,3 +19,85 @@
 
 #include "getrequestvalidatorsresponse.h"
 #include "getrequestvalidatorsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetRequestValidatorsResponse
+ *
+ * @brief  Handles APIGateway GetRequestValidators responses.
+ *
+ * @see    APIGatewayClient::getRequestValidators
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRequestValidatorsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetRequestValidatorsResponsePrivate(this), parent)
+{
+    setRequest(new GetRequestValidatorsRequest(request));
+    setReply(reply);
+}
+
+const GetRequestValidatorsRequest * GetRequestValidatorsResponse::request() const
+{
+    Q_D(const GetRequestValidatorsResponse);
+    return static_cast<const GetRequestValidatorsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetRequestValidators response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRequestValidatorsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRequestValidatorsResponsePrivate
+ *
+ * @brief  Private implementation for GetRequestValidatorsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRequestValidatorsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRequestValidatorsResponse instance.
+ */
+GetRequestValidatorsResponsePrivate::GetRequestValidatorsResponsePrivate(
+    GetRequestValidatorsQueueResponse * const q) : GetRequestValidatorsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetRequestValidatorsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRequestValidatorsResponsePrivate::GetRequestValidatorsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRequestValidatorsResponse"));
+    /// @todo
+}

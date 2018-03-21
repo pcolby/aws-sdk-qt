@@ -19,3 +19,85 @@
 
 #include "authorizecachesecuritygroupingressresponse.h"
 #include "authorizecachesecuritygroupingressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  AuthorizeCacheSecurityGroupIngressResponse
+ *
+ * @brief  Handles ElastiCache AuthorizeCacheSecurityGroupIngress responses.
+ *
+ * @see    ElastiCacheClient::authorizeCacheSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AuthorizeCacheSecurityGroupIngressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new AuthorizeCacheSecurityGroupIngressResponsePrivate(this), parent)
+{
+    setRequest(new AuthorizeCacheSecurityGroupIngressRequest(request));
+    setReply(reply);
+}
+
+const AuthorizeCacheSecurityGroupIngressRequest * AuthorizeCacheSecurityGroupIngressResponse::request() const
+{
+    Q_D(const AuthorizeCacheSecurityGroupIngressResponse);
+    return static_cast<const AuthorizeCacheSecurityGroupIngressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache AuthorizeCacheSecurityGroupIngress response.
+ *
+ * @param  response  Response to parse.
+ */
+void AuthorizeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AuthorizeCacheSecurityGroupIngressResponsePrivate
+ *
+ * @brief  Private implementation for AuthorizeCacheSecurityGroupIngressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AuthorizeCacheSecurityGroupIngressResponse instance.
+ */
+AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGroupIngressResponsePrivate(
+    AuthorizeCacheSecurityGroupIngressQueueResponse * const q) : AuthorizeCacheSecurityGroupIngressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache AuthorizeCacheSecurityGroupIngressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AuthorizeCacheSecurityGroupIngressResponse"));
+    /// @todo
+}

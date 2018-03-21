@@ -19,3 +19,85 @@
 
 #include "deleteratebasedruleresponse.h"
 #include "deleteratebasedruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  DeleteRateBasedRuleResponse
+ *
+ * @brief  Handles WAF DeleteRateBasedRule responses.
+ *
+ * @see    WAFClient::deleteRateBasedRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRateBasedRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new DeleteRateBasedRuleResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRateBasedRuleRequest(request));
+    setReply(reply);
+}
+
+const DeleteRateBasedRuleRequest * DeleteRateBasedRuleResponse::request() const
+{
+    Q_D(const DeleteRateBasedRuleResponse);
+    return static_cast<const DeleteRateBasedRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF DeleteRateBasedRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRateBasedRuleResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRateBasedRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRateBasedRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRateBasedRuleResponse instance.
+ */
+DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
+    DeleteRateBasedRuleQueueResponse * const q) : DeleteRateBasedRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF DeleteRateBasedRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRateBasedRuleResponse"));
+    /// @todo
+}

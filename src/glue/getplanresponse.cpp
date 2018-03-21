@@ -19,3 +19,85 @@
 
 #include "getplanresponse.h"
 #include "getplanresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetPlanResponse
+ *
+ * @brief  Handles Glue GetPlan responses.
+ *
+ * @see    GlueClient::getPlan
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPlanResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetPlanResponsePrivate(this), parent)
+{
+    setRequest(new GetPlanRequest(request));
+    setReply(reply);
+}
+
+const GetPlanRequest * GetPlanResponse::request() const
+{
+    Q_D(const GetPlanResponse);
+    return static_cast<const GetPlanRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetPlan response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetPlanResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPlanResponsePrivate
+ *
+ * @brief  Private implementation for GetPlanResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPlanResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetPlanResponse instance.
+ */
+GetPlanResponsePrivate::GetPlanResponsePrivate(
+    GetPlanQueueResponse * const q) : GetPlanPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetPlanResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetPlanResponsePrivate::GetPlanResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetPlanResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "resolvecaseresponse.h"
 #include "resolvecaseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  ResolveCaseResponse
+ *
+ * @brief  Handles Support ResolveCase responses.
+ *
+ * @see    SupportClient::resolveCase
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResolveCaseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new ResolveCaseResponsePrivate(this), parent)
+{
+    setRequest(new ResolveCaseRequest(request));
+    setReply(reply);
+}
+
+const ResolveCaseRequest * ResolveCaseResponse::request() const
+{
+    Q_D(const ResolveCaseResponse);
+    return static_cast<const ResolveCaseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support ResolveCase response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResolveCaseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResolveCaseResponsePrivate
+ *
+ * @brief  Private implementation for ResolveCaseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResolveCaseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResolveCaseResponse instance.
+ */
+ResolveCaseResponsePrivate::ResolveCaseResponsePrivate(
+    ResolveCaseQueueResponse * const q) : ResolveCasePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support ResolveCaseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResolveCaseResponsePrivate::ResolveCaseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResolveCaseResponse"));
+    /// @todo
+}

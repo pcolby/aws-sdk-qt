@@ -19,3 +19,85 @@
 
 #include "setriskconfigurationresponse.h"
 #include "setriskconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  SetRiskConfigurationResponse
+ *
+ * @brief  Handles CognitoIdentityProvider SetRiskConfiguration responses.
+ *
+ * @see    CognitoIdentityProviderClient::setRiskConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetRiskConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new SetRiskConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new SetRiskConfigurationRequest(request));
+    setReply(reply);
+}
+
+const SetRiskConfigurationRequest * SetRiskConfigurationResponse::request() const
+{
+    Q_D(const SetRiskConfigurationResponse);
+    return static_cast<const SetRiskConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider SetRiskConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetRiskConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetRiskConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for SetRiskConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetRiskConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetRiskConfigurationResponse instance.
+ */
+SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponsePrivate(
+    SetRiskConfigurationQueueResponse * const q) : SetRiskConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider SetRiskConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetRiskConfigurationResponse"));
+    /// @todo
+}

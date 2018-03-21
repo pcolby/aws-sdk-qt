@@ -19,3 +19,85 @@
 
 #include "testrendertemplateresponse.h"
 #include "testrendertemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  TestRenderTemplateResponse
+ *
+ * @brief  Handles SES TestRenderTemplate responses.
+ *
+ * @see    SESClient::testRenderTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestRenderTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new TestRenderTemplateResponsePrivate(this), parent)
+{
+    setRequest(new TestRenderTemplateRequest(request));
+    setReply(reply);
+}
+
+const TestRenderTemplateRequest * TestRenderTemplateResponse::request() const
+{
+    Q_D(const TestRenderTemplateResponse);
+    return static_cast<const TestRenderTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES TestRenderTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestRenderTemplateResponsePrivate
+ *
+ * @brief  Private implementation for TestRenderTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestRenderTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestRenderTemplateResponse instance.
+ */
+TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
+    TestRenderTemplateQueueResponse * const q) : TestRenderTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES TestRenderTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestRenderTemplateResponsePrivate::TestRenderTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestRenderTemplateResponse"));
+    /// @todo
+}

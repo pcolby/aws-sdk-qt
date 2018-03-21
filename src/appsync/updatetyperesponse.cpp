@@ -19,3 +19,85 @@
 
 #include "updatetyperesponse.h"
 #include "updatetyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  UpdateTypeResponse
+ *
+ * @brief  Handles AppSync UpdateType responses.
+ *
+ * @see    AppSyncClient::updateType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new UpdateTypeResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTypeRequest(request));
+    setReply(reply);
+}
+
+const UpdateTypeRequest * UpdateTypeResponse::request() const
+{
+    Q_D(const UpdateTypeResponse);
+    return static_cast<const UpdateTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync UpdateType response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTypeResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTypeResponse instance.
+ */
+UpdateTypeResponsePrivate::UpdateTypeResponsePrivate(
+    UpdateTypeQueueResponse * const q) : UpdateTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync UpdateTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTypeResponsePrivate::UpdateTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTypeResponse"));
+    /// @todo
+}

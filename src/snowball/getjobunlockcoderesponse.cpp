@@ -19,3 +19,85 @@
 
 #include "getjobunlockcoderesponse.h"
 #include "getjobunlockcoderesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  GetJobUnlockCodeResponse
+ *
+ * @brief  Handles Snowball GetJobUnlockCode responses.
+ *
+ * @see    SnowballClient::getJobUnlockCode
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetJobUnlockCodeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SnowballResponse(new GetJobUnlockCodeResponsePrivate(this), parent)
+{
+    setRequest(new GetJobUnlockCodeRequest(request));
+    setReply(reply);
+}
+
+const GetJobUnlockCodeRequest * GetJobUnlockCodeResponse::request() const
+{
+    Q_D(const GetJobUnlockCodeResponse);
+    return static_cast<const GetJobUnlockCodeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Snowball GetJobUnlockCode response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetJobUnlockCodeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetJobUnlockCodeResponsePrivate
+ *
+ * @brief  Private implementation for GetJobUnlockCodeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobUnlockCodeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetJobUnlockCodeResponse instance.
+ */
+GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponsePrivate(
+    GetJobUnlockCodeQueueResponse * const q) : GetJobUnlockCodePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Snowball GetJobUnlockCodeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetJobUnlockCodeResponse"));
+    /// @todo
+}

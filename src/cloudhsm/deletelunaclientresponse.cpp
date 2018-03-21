@@ -19,3 +19,85 @@
 
 #include "deletelunaclientresponse.h"
 #include "deletelunaclientresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DeleteLunaClientResponse
+ *
+ * @brief  Handles CloudHSM DeleteLunaClient responses.
+ *
+ * @see    CloudHSMClient::deleteLunaClient
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLunaClientResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new DeleteLunaClientResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLunaClientRequest(request));
+    setReply(reply);
+}
+
+const DeleteLunaClientRequest * DeleteLunaClientResponse::request() const
+{
+    Q_D(const DeleteLunaClientResponse);
+    return static_cast<const DeleteLunaClientRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM DeleteLunaClient response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLunaClientResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLunaClientResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLunaClientResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLunaClientResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLunaClientResponse instance.
+ */
+DeleteLunaClientResponsePrivate::DeleteLunaClientResponsePrivate(
+    DeleteLunaClientQueueResponse * const q) : DeleteLunaClientPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM DeleteLunaClientResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLunaClientResponsePrivate::DeleteLunaClientResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLunaClientResponse"));
+    /// @todo
+}

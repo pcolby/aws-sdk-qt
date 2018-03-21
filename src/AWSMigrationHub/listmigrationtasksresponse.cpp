@@ -19,3 +19,85 @@
 
 #include "listmigrationtasksresponse.h"
 #include "listmigrationtasksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  ListMigrationTasksResponse
+ *
+ * @brief  Handles MigrationHub ListMigrationTasks responses.
+ *
+ * @see    MigrationHubClient::listMigrationTasks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListMigrationTasksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new ListMigrationTasksResponsePrivate(this), parent)
+{
+    setRequest(new ListMigrationTasksRequest(request));
+    setReply(reply);
+}
+
+const ListMigrationTasksRequest * ListMigrationTasksResponse::request() const
+{
+    Q_D(const ListMigrationTasksResponse);
+    return static_cast<const ListMigrationTasksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub ListMigrationTasks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListMigrationTasksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListMigrationTasksResponsePrivate
+ *
+ * @brief  Private implementation for ListMigrationTasksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMigrationTasksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListMigrationTasksResponse instance.
+ */
+ListMigrationTasksResponsePrivate::ListMigrationTasksResponsePrivate(
+    ListMigrationTasksQueueResponse * const q) : ListMigrationTasksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub ListMigrationTasksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListMigrationTasksResponsePrivate::ListMigrationTasksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListMigrationTasksResponse"));
+    /// @todo
+}

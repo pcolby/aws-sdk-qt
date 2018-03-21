@@ -19,3 +19,85 @@
 
 #include "deleteappresponse.h"
 #include "deleteappresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeleteAppResponse
+ *
+ * @brief  Handles OpsWorks DeleteApp responses.
+ *
+ * @see    OpsWorksClient::deleteApp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAppResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DeleteAppResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAppRequest(request));
+    setReply(reply);
+}
+
+const DeleteAppRequest * DeleteAppResponse::request() const
+{
+    Q_D(const DeleteAppResponse);
+    return static_cast<const DeleteAppRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DeleteApp response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAppResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAppResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAppResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAppResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAppResponse instance.
+ */
+DeleteAppResponsePrivate::DeleteAppResponsePrivate(
+    DeleteAppQueueResponse * const q) : DeleteAppPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DeleteAppResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAppResponsePrivate::DeleteAppResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAppResponse"));
+    /// @todo
+}

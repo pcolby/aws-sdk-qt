@@ -19,3 +19,85 @@
 
 #include "getidentitymailfromdomainattributesresponse.h"
 #include "getidentitymailfromdomainattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetIdentityMailFromDomainAttributesResponse
+ *
+ * @brief  Handles SES GetIdentityMailFromDomainAttributes responses.
+ *
+ * @see    SESClient::getIdentityMailFromDomainAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityMailFromDomainAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new GetIdentityMailFromDomainAttributesResponsePrivate(this), parent)
+{
+    setRequest(new GetIdentityMailFromDomainAttributesRequest(request));
+    setReply(reply);
+}
+
+const GetIdentityMailFromDomainAttributesRequest * GetIdentityMailFromDomainAttributesResponse::request() const
+{
+    Q_D(const GetIdentityMailFromDomainAttributesResponse);
+    return static_cast<const GetIdentityMailFromDomainAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES GetIdentityMailFromDomainAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityMailFromDomainAttributesResponsePrivate
+ *
+ * @brief  Private implementation for GetIdentityMailFromDomainAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityMailFromDomainAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIdentityMailFromDomainAttributesResponse instance.
+ */
+GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAttributesResponsePrivate(
+    GetIdentityMailFromDomainAttributesQueueResponse * const q) : GetIdentityMailFromDomainAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES GetIdentityMailFromDomainAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIdentityMailFromDomainAttributesResponse"));
+    /// @todo
+}

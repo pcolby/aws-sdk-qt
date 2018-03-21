@@ -19,3 +19,85 @@
 
 #include "updatedestinationresponse.h"
 #include "updatedestinationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  UpdateDestinationResponse
+ *
+ * @brief  Handles Firehose UpdateDestination responses.
+ *
+ * @see    FirehoseClient::updateDestination
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDestinationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : FirehoseResponse(new UpdateDestinationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDestinationRequest(request));
+    setReply(reply);
+}
+
+const UpdateDestinationRequest * UpdateDestinationResponse::request() const
+{
+    Q_D(const UpdateDestinationResponse);
+    return static_cast<const UpdateDestinationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Firehose UpdateDestination response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDestinationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDestinationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDestinationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDestinationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDestinationResponse instance.
+ */
+UpdateDestinationResponsePrivate::UpdateDestinationResponsePrivate(
+    UpdateDestinationQueueResponse * const q) : UpdateDestinationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Firehose UpdateDestinationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDestinationResponsePrivate::UpdateDestinationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDestinationResponse"));
+    /// @todo
+}

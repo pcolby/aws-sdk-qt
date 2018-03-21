@@ -19,3 +19,85 @@
 
 #include "describemaintenancewindowexecutiontaskinvocationsresponse.h"
 #include "describemaintenancewindowexecutiontaskinvocationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeMaintenanceWindowExecutionTaskInvocationsResponse
+ *
+ * @brief  Handles SSM DescribeMaintenanceWindowExecutionTaskInvocations responses.
+ *
+ * @see    SSMClient::describeMaintenanceWindowExecutionTaskInvocations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMaintenanceWindowExecutionTaskInvocationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeMaintenanceWindowExecutionTaskInvocationsRequest * DescribeMaintenanceWindowExecutionTaskInvocationsResponse::request() const
+{
+    Q_D(const DescribeMaintenanceWindowExecutionTaskInvocationsResponse);
+    return static_cast<const DescribeMaintenanceWindowExecutionTaskInvocationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeMaintenanceWindowExecutionTaskInvocations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMaintenanceWindowExecutionTaskInvocationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMaintenanceWindowExecutionTaskInvocationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMaintenanceWindowExecutionTaskInvocationsResponse instance.
+ */
+DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate::DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate(
+    DescribeMaintenanceWindowExecutionTaskInvocationsQueueResponse * const q) : DescribeMaintenanceWindowExecutionTaskInvocationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeMaintenanceWindowExecutionTaskInvocationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMaintenanceWindowExecutionTaskInvocationsResponsePrivate::DescribeMaintenanceWindowExecutionTaskInvocationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceWindowExecutionTaskInvocationsResponse"));
+    /// @todo
+}

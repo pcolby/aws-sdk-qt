@@ -19,3 +19,85 @@
 
 #include "searchfacesbyimageresponse.h"
 #include "searchfacesbyimageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  SearchFacesByImageResponse
+ *
+ * @brief  Handles Rekognition SearchFacesByImage responses.
+ *
+ * @see    RekognitionClient::searchFacesByImage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchFacesByImageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new SearchFacesByImageResponsePrivate(this), parent)
+{
+    setRequest(new SearchFacesByImageRequest(request));
+    setReply(reply);
+}
+
+const SearchFacesByImageRequest * SearchFacesByImageResponse::request() const
+{
+    Q_D(const SearchFacesByImageResponse);
+    return static_cast<const SearchFacesByImageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition SearchFacesByImage response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchFacesByImageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchFacesByImageResponsePrivate
+ *
+ * @brief  Private implementation for SearchFacesByImageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchFacesByImageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchFacesByImageResponse instance.
+ */
+SearchFacesByImageResponsePrivate::SearchFacesByImageResponsePrivate(
+    SearchFacesByImageQueueResponse * const q) : SearchFacesByImagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition SearchFacesByImageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchFacesByImageResponsePrivate::SearchFacesByImageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchFacesByImageResponse"));
+    /// @todo
+}

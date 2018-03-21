@@ -19,3 +19,85 @@
 
 #include "updategatewayinformationresponse.h"
 #include "updategatewayinformationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  UpdateGatewayInformationResponse
+ *
+ * @brief  Handles StorageGateway UpdateGatewayInformation responses.
+ *
+ * @see    StorageGatewayClient::updateGatewayInformation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateGatewayInformationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new UpdateGatewayInformationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateGatewayInformationRequest(request));
+    setReply(reply);
+}
+
+const UpdateGatewayInformationRequest * UpdateGatewayInformationResponse::request() const
+{
+    Q_D(const UpdateGatewayInformationResponse);
+    return static_cast<const UpdateGatewayInformationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway UpdateGatewayInformation response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateGatewayInformationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateGatewayInformationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateGatewayInformationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateGatewayInformationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateGatewayInformationResponse instance.
+ */
+UpdateGatewayInformationResponsePrivate::UpdateGatewayInformationResponsePrivate(
+    UpdateGatewayInformationQueueResponse * const q) : UpdateGatewayInformationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway UpdateGatewayInformationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateGatewayInformationResponsePrivate::UpdateGatewayInformationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateGatewayInformationResponse"));
+    /// @todo
+}

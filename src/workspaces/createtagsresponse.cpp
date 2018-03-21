@@ -19,3 +19,85 @@
 
 #include "createtagsresponse.h"
 #include "createtagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  CreateTagsResponse
+ *
+ * @brief  Handles WorkSpaces CreateTags responses.
+ *
+ * @see    WorkSpacesClient::createTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new CreateTagsResponsePrivate(this), parent)
+{
+    setRequest(new CreateTagsRequest(request));
+    setReply(reply);
+}
+
+const CreateTagsRequest * CreateTagsResponse::request() const
+{
+    Q_D(const CreateTagsResponse);
+    return static_cast<const CreateTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces CreateTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTagsResponsePrivate
+ *
+ * @brief  Private implementation for CreateTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateTagsResponse instance.
+ */
+CreateTagsResponsePrivate::CreateTagsResponsePrivate(
+    CreateTagsQueueResponse * const q) : CreateTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces CreateTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateTagsResponsePrivate::CreateTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateTagsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describestalesecuritygroupsresponse.h"
 #include "describestalesecuritygroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeStaleSecurityGroupsResponse
+ *
+ * @brief  Handles EC2 DescribeStaleSecurityGroups responses.
+ *
+ * @see    EC2Client::describeStaleSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStaleSecurityGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeStaleSecurityGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStaleSecurityGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeStaleSecurityGroupsRequest * DescribeStaleSecurityGroupsResponse::request() const
+{
+    Q_D(const DescribeStaleSecurityGroupsResponse);
+    return static_cast<const DescribeStaleSecurityGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeStaleSecurityGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStaleSecurityGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStaleSecurityGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStaleSecurityGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStaleSecurityGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStaleSecurityGroupsResponse instance.
+ */
+DescribeStaleSecurityGroupsResponsePrivate::DescribeStaleSecurityGroupsResponsePrivate(
+    DescribeStaleSecurityGroupsQueueResponse * const q) : DescribeStaleSecurityGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeStaleSecurityGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStaleSecurityGroupsResponsePrivate::DescribeStaleSecurityGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStaleSecurityGroupsResponse"));
+    /// @todo
+}

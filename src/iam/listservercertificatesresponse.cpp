@@ -19,3 +19,85 @@
 
 #include "listservercertificatesresponse.h"
 #include "listservercertificatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListServerCertificatesResponse
+ *
+ * @brief  Handles IAM ListServerCertificates responses.
+ *
+ * @see    IAMClient::listServerCertificates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListServerCertificatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListServerCertificatesResponsePrivate(this), parent)
+{
+    setRequest(new ListServerCertificatesRequest(request));
+    setReply(reply);
+}
+
+const ListServerCertificatesRequest * ListServerCertificatesResponse::request() const
+{
+    Q_D(const ListServerCertificatesResponse);
+    return static_cast<const ListServerCertificatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListServerCertificates response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListServerCertificatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListServerCertificatesResponsePrivate
+ *
+ * @brief  Private implementation for ListServerCertificatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServerCertificatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListServerCertificatesResponse instance.
+ */
+ListServerCertificatesResponsePrivate::ListServerCertificatesResponsePrivate(
+    ListServerCertificatesQueueResponse * const q) : ListServerCertificatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListServerCertificatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListServerCertificatesResponsePrivate::ListServerCertificatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListServerCertificatesResponse"));
+    /// @todo
+}

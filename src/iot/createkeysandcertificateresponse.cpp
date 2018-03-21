@@ -19,3 +19,85 @@
 
 #include "createkeysandcertificateresponse.h"
 #include "createkeysandcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateKeysAndCertificateResponse
+ *
+ * @brief  Handles IoT CreateKeysAndCertificate responses.
+ *
+ * @see    IoTClient::createKeysAndCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateKeysAndCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreateKeysAndCertificateResponsePrivate(this), parent)
+{
+    setRequest(new CreateKeysAndCertificateRequest(request));
+    setReply(reply);
+}
+
+const CreateKeysAndCertificateRequest * CreateKeysAndCertificateResponse::request() const
+{
+    Q_D(const CreateKeysAndCertificateResponse);
+    return static_cast<const CreateKeysAndCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreateKeysAndCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateKeysAndCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateKeysAndCertificateResponsePrivate
+ *
+ * @brief  Private implementation for CreateKeysAndCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateKeysAndCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateKeysAndCertificateResponse instance.
+ */
+CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponsePrivate(
+    CreateKeysAndCertificateQueueResponse * const q) : CreateKeysAndCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreateKeysAndCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateKeysAndCertificateResponse"));
+    /// @todo
+}

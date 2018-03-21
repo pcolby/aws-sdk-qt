@@ -19,3 +19,85 @@
 
 #include "listaliasesresponse.h"
 #include "listaliasesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  ListAliasesResponse
+ *
+ * @brief  Handles WorkMail ListAliases responses.
+ *
+ * @see    WorkMailClient::listAliases
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAliasesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new ListAliasesResponsePrivate(this), parent)
+{
+    setRequest(new ListAliasesRequest(request));
+    setReply(reply);
+}
+
+const ListAliasesRequest * ListAliasesResponse::request() const
+{
+    Q_D(const ListAliasesResponse);
+    return static_cast<const ListAliasesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail ListAliases response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAliasesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAliasesResponsePrivate
+ *
+ * @brief  Private implementation for ListAliasesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAliasesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAliasesResponse instance.
+ */
+ListAliasesResponsePrivate::ListAliasesResponsePrivate(
+    ListAliasesQueueResponse * const q) : ListAliasesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail ListAliasesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAliasesResponsePrivate::ListAliasesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAliasesResponse"));
+    /// @todo
+}

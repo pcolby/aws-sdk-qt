@@ -19,3 +19,85 @@
 
 #include "listtemplatesresponse.h"
 #include "listtemplatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ListTemplatesResponse
+ *
+ * @brief  Handles SES ListTemplates responses.
+ *
+ * @see    SESClient::listTemplates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTemplatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new ListTemplatesResponsePrivate(this), parent)
+{
+    setRequest(new ListTemplatesRequest(request));
+    setReply(reply);
+}
+
+const ListTemplatesRequest * ListTemplatesResponse::request() const
+{
+    Q_D(const ListTemplatesResponse);
+    return static_cast<const ListTemplatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES ListTemplates response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTemplatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTemplatesResponsePrivate
+ *
+ * @brief  Private implementation for ListTemplatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTemplatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTemplatesResponse instance.
+ */
+ListTemplatesResponsePrivate::ListTemplatesResponsePrivate(
+    ListTemplatesQueueResponse * const q) : ListTemplatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES ListTemplatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTemplatesResponsePrivate::ListTemplatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTemplatesResponse"));
+    /// @todo
+}

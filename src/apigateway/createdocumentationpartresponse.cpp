@@ -19,3 +19,85 @@
 
 #include "createdocumentationpartresponse.h"
 #include "createdocumentationpartresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateDocumentationPartResponse
+ *
+ * @brief  Handles APIGateway CreateDocumentationPart responses.
+ *
+ * @see    APIGatewayClient::createDocumentationPart
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDocumentationPartResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateDocumentationPartResponsePrivate(this), parent)
+{
+    setRequest(new CreateDocumentationPartRequest(request));
+    setReply(reply);
+}
+
+const CreateDocumentationPartRequest * CreateDocumentationPartResponse::request() const
+{
+    Q_D(const CreateDocumentationPartResponse);
+    return static_cast<const CreateDocumentationPartRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateDocumentationPart response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDocumentationPartResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDocumentationPartResponsePrivate
+ *
+ * @brief  Private implementation for CreateDocumentationPartResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDocumentationPartResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDocumentationPartResponse instance.
+ */
+CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponsePrivate(
+    CreateDocumentationPartQueueResponse * const q) : CreateDocumentationPartPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateDocumentationPartResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDocumentationPartResponse"));
+    /// @todo
+}

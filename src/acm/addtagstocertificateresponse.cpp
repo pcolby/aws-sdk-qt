@@ -19,3 +19,85 @@
 
 #include "addtagstocertificateresponse.h"
 #include "addtagstocertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  AddTagsToCertificateResponse
+ *
+ * @brief  Handles ACM AddTagsToCertificate responses.
+ *
+ * @see    ACMClient::addTagsToCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsToCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ACMResponse(new AddTagsToCertificateResponsePrivate(this), parent)
+{
+    setRequest(new AddTagsToCertificateRequest(request));
+    setReply(reply);
+}
+
+const AddTagsToCertificateRequest * AddTagsToCertificateResponse::request() const
+{
+    Q_D(const AddTagsToCertificateResponse);
+    return static_cast<const AddTagsToCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ACM AddTagsToCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsToCertificateResponsePrivate
+ *
+ * @brief  Private implementation for AddTagsToCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddTagsToCertificateResponse instance.
+ */
+AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
+    AddTagsToCertificateQueueResponse * const q) : AddTagsToCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ACM AddTagsToCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddTagsToCertificateResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getcredentialreportresponse.h"
 #include "getcredentialreportresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetCredentialReportResponse
+ *
+ * @brief  Handles IAM GetCredentialReport responses.
+ *
+ * @see    IAMClient::getCredentialReport
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCredentialReportResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetCredentialReportResponsePrivate(this), parent)
+{
+    setRequest(new GetCredentialReportRequest(request));
+    setReply(reply);
+}
+
+const GetCredentialReportRequest * GetCredentialReportResponse::request() const
+{
+    Q_D(const GetCredentialReportResponse);
+    return static_cast<const GetCredentialReportRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetCredentialReport response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCredentialReportResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCredentialReportResponsePrivate
+ *
+ * @brief  Private implementation for GetCredentialReportResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCredentialReportResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCredentialReportResponse instance.
+ */
+GetCredentialReportResponsePrivate::GetCredentialReportResponsePrivate(
+    GetCredentialReportQueueResponse * const q) : GetCredentialReportPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetCredentialReportResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCredentialReportResponsePrivate::GetCredentialReportResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCredentialReportResponse"));
+    /// @todo
+}

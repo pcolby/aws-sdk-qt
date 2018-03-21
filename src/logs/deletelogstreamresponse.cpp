@@ -19,3 +19,85 @@
 
 #include "deletelogstreamresponse.h"
 #include "deletelogstreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteLogStreamResponse
+ *
+ * @brief  Handles CloudWatchLogs DeleteLogStream responses.
+ *
+ * @see    CloudWatchLogsClient::deleteLogStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLogStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DeleteLogStreamResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLogStreamRequest(request));
+    setReply(reply);
+}
+
+const DeleteLogStreamRequest * DeleteLogStreamResponse::request() const
+{
+    Q_D(const DeleteLogStreamResponse);
+    return static_cast<const DeleteLogStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DeleteLogStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLogStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLogStreamResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLogStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLogStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLogStreamResponse instance.
+ */
+DeleteLogStreamResponsePrivate::DeleteLogStreamResponsePrivate(
+    DeleteLogStreamQueueResponse * const q) : DeleteLogStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DeleteLogStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLogStreamResponsePrivate::DeleteLogStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLogStreamResponse"));
+    /// @todo
+}

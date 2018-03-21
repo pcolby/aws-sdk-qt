@@ -19,3 +19,85 @@
 
 #include "invokeendpointresponse.h"
 #include "invokeendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMakerRuntime {
+
+/**
+ * @class  InvokeEndpointResponse
+ *
+ * @brief  Handles SageMakerRuntime InvokeEndpoint responses.
+ *
+ * @see    SageMakerRuntimeClient::invokeEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InvokeEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerRuntimeResponse(new InvokeEndpointResponsePrivate(this), parent)
+{
+    setRequest(new InvokeEndpointRequest(request));
+    setReply(reply);
+}
+
+const InvokeEndpointRequest * InvokeEndpointResponse::request() const
+{
+    Q_D(const InvokeEndpointResponse);
+    return static_cast<const InvokeEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMakerRuntime InvokeEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void InvokeEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InvokeEndpointResponsePrivate
+ *
+ * @brief  Private implementation for InvokeEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InvokeEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InvokeEndpointResponse instance.
+ */
+InvokeEndpointResponsePrivate::InvokeEndpointResponsePrivate(
+    InvokeEndpointQueueResponse * const q) : InvokeEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMakerRuntime InvokeEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InvokeEndpointResponsePrivate::InvokeEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InvokeEndpointResponse"));
+    /// @todo
+}

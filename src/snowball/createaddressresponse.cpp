@@ -19,3 +19,85 @@
 
 #include "createaddressresponse.h"
 #include "createaddressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  CreateAddressResponse
+ *
+ * @brief  Handles Snowball CreateAddress responses.
+ *
+ * @see    SnowballClient::createAddress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAddressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SnowballResponse(new CreateAddressResponsePrivate(this), parent)
+{
+    setRequest(new CreateAddressRequest(request));
+    setReply(reply);
+}
+
+const CreateAddressRequest * CreateAddressResponse::request() const
+{
+    Q_D(const CreateAddressResponse);
+    return static_cast<const CreateAddressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Snowball CreateAddress response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAddressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAddressResponsePrivate
+ *
+ * @brief  Private implementation for CreateAddressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAddressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAddressResponse instance.
+ */
+CreateAddressResponsePrivate::CreateAddressResponsePrivate(
+    CreateAddressQueueResponse * const q) : CreateAddressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Snowball CreateAddressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAddressResponsePrivate::CreateAddressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAddressResponse"));
+    /// @todo
+}

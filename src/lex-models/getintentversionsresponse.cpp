@@ -19,3 +19,85 @@
 
 #include "getintentversionsresponse.h"
 #include "getintentversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetIntentVersionsResponse
+ *
+ * @brief  Handles LexModelBuildingService GetIntentVersions responses.
+ *
+ * @see    LexModelBuildingServiceClient::getIntentVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntentVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetIntentVersionsResponsePrivate(this), parent)
+{
+    setRequest(new GetIntentVersionsRequest(request));
+    setReply(reply);
+}
+
+const GetIntentVersionsRequest * GetIntentVersionsResponse::request() const
+{
+    Q_D(const GetIntentVersionsResponse);
+    return static_cast<const GetIntentVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetIntentVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIntentVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntentVersionsResponsePrivate
+ *
+ * @brief  Private implementation for GetIntentVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntentVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIntentVersionsResponse instance.
+ */
+GetIntentVersionsResponsePrivate::GetIntentVersionsResponsePrivate(
+    GetIntentVersionsQueueResponse * const q) : GetIntentVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetIntentVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIntentVersionsResponsePrivate::GetIntentVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIntentVersionsResponse"));
+    /// @todo
+}

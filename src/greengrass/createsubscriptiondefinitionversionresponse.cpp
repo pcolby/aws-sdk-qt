@@ -19,3 +19,85 @@
 
 #include "createsubscriptiondefinitionversionresponse.h"
 #include "createsubscriptiondefinitionversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateSubscriptionDefinitionVersionResponse
+ *
+ * @brief  Handles Greengrass CreateSubscriptionDefinitionVersion responses.
+ *
+ * @see    GreengrassClient::createSubscriptionDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSubscriptionDefinitionVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new CreateSubscriptionDefinitionVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreateSubscriptionDefinitionVersionRequest(request));
+    setReply(reply);
+}
+
+const CreateSubscriptionDefinitionVersionRequest * CreateSubscriptionDefinitionVersionResponse::request() const
+{
+    Q_D(const CreateSubscriptionDefinitionVersionResponse);
+    return static_cast<const CreateSubscriptionDefinitionVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass CreateSubscriptionDefinitionVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSubscriptionDefinitionVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSubscriptionDefinitionVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreateSubscriptionDefinitionVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSubscriptionDefinitionVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSubscriptionDefinitionVersionResponse instance.
+ */
+CreateSubscriptionDefinitionVersionResponsePrivate::CreateSubscriptionDefinitionVersionResponsePrivate(
+    CreateSubscriptionDefinitionVersionQueueResponse * const q) : CreateSubscriptionDefinitionVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass CreateSubscriptionDefinitionVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSubscriptionDefinitionVersionResponsePrivate::CreateSubscriptionDefinitionVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSubscriptionDefinitionVersionResponse"));
+    /// @todo
+}

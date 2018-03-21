@@ -19,3 +19,85 @@
 
 #include "deletegroupresponse.h"
 #include "deletegroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteGroupResponse
+ *
+ * @brief  Handles Greengrass DeleteGroup responses.
+ *
+ * @see    GreengrassClient::deleteGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DeleteGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteGroupRequest * DeleteGroupResponse::request() const
+{
+    Q_D(const DeleteGroupResponse);
+    return static_cast<const DeleteGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DeleteGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteGroupResponse instance.
+ */
+DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
+    DeleteGroupQueueResponse * const q) : DeleteGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DeleteGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteGroupResponsePrivate::DeleteGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteGroupResponse"));
+    /// @todo
+}

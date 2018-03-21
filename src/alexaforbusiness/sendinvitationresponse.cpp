@@ -19,3 +19,85 @@
 
 #include "sendinvitationresponse.h"
 #include "sendinvitationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  SendInvitationResponse
+ *
+ * @brief  Handles AlexaForBusiness SendInvitation responses.
+ *
+ * @see    AlexaForBusinessClient::sendInvitation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendInvitationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new SendInvitationResponsePrivate(this), parent)
+{
+    setRequest(new SendInvitationRequest(request));
+    setReply(reply);
+}
+
+const SendInvitationRequest * SendInvitationResponse::request() const
+{
+    Q_D(const SendInvitationResponse);
+    return static_cast<const SendInvitationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness SendInvitation response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendInvitationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendInvitationResponsePrivate
+ *
+ * @brief  Private implementation for SendInvitationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendInvitationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendInvitationResponse instance.
+ */
+SendInvitationResponsePrivate::SendInvitationResponsePrivate(
+    SendInvitationQueueResponse * const q) : SendInvitationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness SendInvitationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendInvitationResponsePrivate::SendInvitationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendInvitationResponse"));
+    /// @todo
+}

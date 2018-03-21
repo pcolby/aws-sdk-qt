@@ -19,3 +19,85 @@
 
 #include "deleteinternetgatewayresponse.h"
 #include "deleteinternetgatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteInternetGatewayResponse
+ *
+ * @brief  Handles EC2 DeleteInternetGateway responses.
+ *
+ * @see    EC2Client::deleteInternetGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInternetGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteInternetGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DeleteInternetGatewayRequest(request));
+    setReply(reply);
+}
+
+const DeleteInternetGatewayRequest * DeleteInternetGatewayResponse::request() const
+{
+    Q_D(const DeleteInternetGatewayResponse);
+    return static_cast<const DeleteInternetGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteInternetGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteInternetGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInternetGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DeleteInternetGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInternetGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteInternetGatewayResponse instance.
+ */
+DeleteInternetGatewayResponsePrivate::DeleteInternetGatewayResponsePrivate(
+    DeleteInternetGatewayQueueResponse * const q) : DeleteInternetGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteInternetGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteInternetGatewayResponsePrivate::DeleteInternetGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteInternetGatewayResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "associateteammemberresponse.h"
 #include "associateteammemberresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  AssociateTeamMemberResponse
+ *
+ * @brief  Handles CodeStar AssociateTeamMember responses.
+ *
+ * @see    CodeStarClient::associateTeamMember
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateTeamMemberResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new AssociateTeamMemberResponsePrivate(this), parent)
+{
+    setRequest(new AssociateTeamMemberRequest(request));
+    setReply(reply);
+}
+
+const AssociateTeamMemberRequest * AssociateTeamMemberResponse::request() const
+{
+    Q_D(const AssociateTeamMemberResponse);
+    return static_cast<const AssociateTeamMemberRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar AssociateTeamMember response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateTeamMemberResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateTeamMemberResponsePrivate
+ *
+ * @brief  Private implementation for AssociateTeamMemberResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTeamMemberResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateTeamMemberResponse instance.
+ */
+AssociateTeamMemberResponsePrivate::AssociateTeamMemberResponsePrivate(
+    AssociateTeamMemberQueueResponse * const q) : AssociateTeamMemberPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar AssociateTeamMemberResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateTeamMemberResponsePrivate::AssociateTeamMemberResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateTeamMemberResponse"));
+    /// @todo
+}

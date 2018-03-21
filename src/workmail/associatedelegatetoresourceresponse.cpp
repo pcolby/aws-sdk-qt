@@ -19,3 +19,85 @@
 
 #include "associatedelegatetoresourceresponse.h"
 #include "associatedelegatetoresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  AssociateDelegateToResourceResponse
+ *
+ * @brief  Handles WorkMail AssociateDelegateToResource responses.
+ *
+ * @see    WorkMailClient::associateDelegateToResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateDelegateToResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new AssociateDelegateToResourceResponsePrivate(this), parent)
+{
+    setRequest(new AssociateDelegateToResourceRequest(request));
+    setReply(reply);
+}
+
+const AssociateDelegateToResourceRequest * AssociateDelegateToResourceResponse::request() const
+{
+    Q_D(const AssociateDelegateToResourceResponse);
+    return static_cast<const AssociateDelegateToResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail AssociateDelegateToResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateDelegateToResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateDelegateToResourceResponsePrivate
+ *
+ * @brief  Private implementation for AssociateDelegateToResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateDelegateToResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateDelegateToResourceResponse instance.
+ */
+AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResponsePrivate(
+    AssociateDelegateToResourceQueueResponse * const q) : AssociateDelegateToResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail AssociateDelegateToResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateDelegateToResourceResponse"));
+    /// @todo
+}

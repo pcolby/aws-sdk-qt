@@ -19,3 +19,85 @@
 
 #include "addattachmentstosetresponse.h"
 #include "addattachmentstosetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  AddAttachmentsToSetResponse
+ *
+ * @brief  Handles Support AddAttachmentsToSet responses.
+ *
+ * @see    SupportClient::addAttachmentsToSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddAttachmentsToSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new AddAttachmentsToSetResponsePrivate(this), parent)
+{
+    setRequest(new AddAttachmentsToSetRequest(request));
+    setReply(reply);
+}
+
+const AddAttachmentsToSetRequest * AddAttachmentsToSetResponse::request() const
+{
+    Q_D(const AddAttachmentsToSetResponse);
+    return static_cast<const AddAttachmentsToSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support AddAttachmentsToSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddAttachmentsToSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddAttachmentsToSetResponsePrivate
+ *
+ * @brief  Private implementation for AddAttachmentsToSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddAttachmentsToSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddAttachmentsToSetResponse instance.
+ */
+AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponsePrivate(
+    AddAttachmentsToSetQueueResponse * const q) : AddAttachmentsToSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support AddAttachmentsToSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddAttachmentsToSetResponse"));
+    /// @todo
+}

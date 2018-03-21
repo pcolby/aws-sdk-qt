@@ -19,3 +19,85 @@
 
 #include "createtopicresponse.h"
 #include "createtopicresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  CreateTopicResponse
+ *
+ * @brief  Handles SNS CreateTopic responses.
+ *
+ * @see    SNSClient::createTopic
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTopicResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new CreateTopicResponsePrivate(this), parent)
+{
+    setRequest(new CreateTopicRequest(request));
+    setReply(reply);
+}
+
+const CreateTopicRequest * CreateTopicResponse::request() const
+{
+    Q_D(const CreateTopicResponse);
+    return static_cast<const CreateTopicRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS CreateTopic response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateTopicResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTopicResponsePrivate
+ *
+ * @brief  Private implementation for CreateTopicResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTopicResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateTopicResponse instance.
+ */
+CreateTopicResponsePrivate::CreateTopicResponsePrivate(
+    CreateTopicQueueResponse * const q) : CreateTopicPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS CreateTopicResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateTopicResponsePrivate::CreateTopicResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateTopicResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "untagresourcesresponse.h"
 #include "untagresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroupsTaggingAPI {
+
+/**
+ * @class  UntagResourcesResponse
+ *
+ * @brief  Handles ResourceGroupsTaggingAPI UntagResources responses.
+ *
+ * @see    ResourceGroupsTaggingAPIClient::untagResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsTaggingAPIResponse(new UntagResourcesResponsePrivate(this), parent)
+{
+    setRequest(new UntagResourcesRequest(request));
+    setReply(reply);
+}
+
+const UntagResourcesRequest * UntagResourcesResponse::request() const
+{
+    Q_D(const UntagResourcesResponse);
+    return static_cast<const UntagResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroupsTaggingAPI UntagResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void UntagResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagResourcesResponsePrivate
+ *
+ * @brief  Private implementation for UntagResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UntagResourcesResponse instance.
+ */
+UntagResourcesResponsePrivate::UntagResourcesResponsePrivate(
+    UntagResourcesQueueResponse * const q) : UntagResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroupsTaggingAPI UntagResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UntagResourcesResponsePrivate::UntagResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UntagResourcesResponse"));
+    /// @todo
+}

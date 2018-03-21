@@ -19,3 +19,85 @@
 
 #include "getfolderpathresponse.h"
 #include "getfolderpathresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  GetFolderPathResponse
+ *
+ * @brief  Handles WorkDocs GetFolderPath responses.
+ *
+ * @see    WorkDocsClient::getFolderPath
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFolderPathResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new GetFolderPathResponsePrivate(this), parent)
+{
+    setRequest(new GetFolderPathRequest(request));
+    setReply(reply);
+}
+
+const GetFolderPathRequest * GetFolderPathResponse::request() const
+{
+    Q_D(const GetFolderPathResponse);
+    return static_cast<const GetFolderPathRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs GetFolderPath response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFolderPathResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFolderPathResponsePrivate
+ *
+ * @brief  Private implementation for GetFolderPathResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFolderPathResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFolderPathResponse instance.
+ */
+GetFolderPathResponsePrivate::GetFolderPathResponsePrivate(
+    GetFolderPathQueueResponse * const q) : GetFolderPathPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs GetFolderPathResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFolderPathResponsePrivate::GetFolderPathResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFolderPathResponse"));
+    /// @todo
+}

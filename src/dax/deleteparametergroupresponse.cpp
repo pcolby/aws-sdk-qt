@@ -19,3 +19,85 @@
 
 #include "deleteparametergroupresponse.h"
 #include "deleteparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DeleteParameterGroupResponse
+ *
+ * @brief  Handles DAX DeleteParameterGroup responses.
+ *
+ * @see    DAXClient::deleteParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new DeleteParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteParameterGroupRequest * DeleteParameterGroupResponse::request() const
+{
+    Q_D(const DeleteParameterGroupResponse);
+    return static_cast<const DeleteParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX DeleteParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteParameterGroupResponse instance.
+ */
+DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponsePrivate(
+    DeleteParameterGroupQueueResponse * const q) : DeleteParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX DeleteParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteParameterGroupResponse"));
+    /// @todo
+}

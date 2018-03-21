@@ -19,3 +19,85 @@
 
 #include "setdefaultpolicyversionresponse.h"
 #include "setdefaultpolicyversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  SetDefaultPolicyVersionResponse
+ *
+ * @brief  Handles IAM SetDefaultPolicyVersion responses.
+ *
+ * @see    IAMClient::setDefaultPolicyVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetDefaultPolicyVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new SetDefaultPolicyVersionResponsePrivate(this), parent)
+{
+    setRequest(new SetDefaultPolicyVersionRequest(request));
+    setReply(reply);
+}
+
+const SetDefaultPolicyVersionRequest * SetDefaultPolicyVersionResponse::request() const
+{
+    Q_D(const SetDefaultPolicyVersionResponse);
+    return static_cast<const SetDefaultPolicyVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM SetDefaultPolicyVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetDefaultPolicyVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetDefaultPolicyVersionResponsePrivate
+ *
+ * @brief  Private implementation for SetDefaultPolicyVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDefaultPolicyVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetDefaultPolicyVersionResponse instance.
+ */
+SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponsePrivate(
+    SetDefaultPolicyVersionQueueResponse * const q) : SetDefaultPolicyVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM SetDefaultPolicyVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetDefaultPolicyVersionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "restoredbclustertopointintimeresponse.h"
 #include "restoredbclustertopointintimeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  RestoreDBClusterToPointInTimeResponse
+ *
+ * @brief  Handles RDS RestoreDBClusterToPointInTime responses.
+ *
+ * @see    RDSClient::restoreDBClusterToPointInTime
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreDBClusterToPointInTimeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new RestoreDBClusterToPointInTimeResponsePrivate(this), parent)
+{
+    setRequest(new RestoreDBClusterToPointInTimeRequest(request));
+    setReply(reply);
+}
+
+const RestoreDBClusterToPointInTimeRequest * RestoreDBClusterToPointInTimeResponse::request() const
+{
+    Q_D(const RestoreDBClusterToPointInTimeResponse);
+    return static_cast<const RestoreDBClusterToPointInTimeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS RestoreDBClusterToPointInTime response.
+ *
+ * @param  response  Response to parse.
+ */
+void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreDBClusterToPointInTimeResponsePrivate
+ *
+ * @brief  Private implementation for RestoreDBClusterToPointInTimeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreDBClusterToPointInTimeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RestoreDBClusterToPointInTimeResponse instance.
+ */
+RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeResponsePrivate(
+    RestoreDBClusterToPointInTimeQueueResponse * const q) : RestoreDBClusterToPointInTimePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS RestoreDBClusterToPointInTimeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterToPointInTimeResponse"));
+    /// @todo
+}

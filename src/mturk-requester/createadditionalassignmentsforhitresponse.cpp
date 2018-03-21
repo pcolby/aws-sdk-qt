@@ -19,3 +19,85 @@
 
 #include "createadditionalassignmentsforhitresponse.h"
 #include "createadditionalassignmentsforhitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  CreateAdditionalAssignmentsForHITResponse
+ *
+ * @brief  Handles MTurk CreateAdditionalAssignmentsForHIT responses.
+ *
+ * @see    MTurkClient::createAdditionalAssignmentsForHIT
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAdditionalAssignmentsForHITResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new CreateAdditionalAssignmentsForHITResponsePrivate(this), parent)
+{
+    setRequest(new CreateAdditionalAssignmentsForHITRequest(request));
+    setReply(reply);
+}
+
+const CreateAdditionalAssignmentsForHITRequest * CreateAdditionalAssignmentsForHITResponse::request() const
+{
+    Q_D(const CreateAdditionalAssignmentsForHITResponse);
+    return static_cast<const CreateAdditionalAssignmentsForHITRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk CreateAdditionalAssignmentsForHIT response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAdditionalAssignmentsForHITResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAdditionalAssignmentsForHITResponsePrivate
+ *
+ * @brief  Private implementation for CreateAdditionalAssignmentsForHITResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAdditionalAssignmentsForHITResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAdditionalAssignmentsForHITResponse instance.
+ */
+CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsForHITResponsePrivate(
+    CreateAdditionalAssignmentsForHITQueueResponse * const q) : CreateAdditionalAssignmentsForHITPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk CreateAdditionalAssignmentsForHITResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsForHITResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAdditionalAssignmentsForHITResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletevpcendpointsresponse.h"
 #include "deletevpcendpointsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpcEndpointsResponse
+ *
+ * @brief  Handles EC2 DeleteVpcEndpoints responses.
+ *
+ * @see    EC2Client::deleteVpcEndpoints
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpcEndpointsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteVpcEndpointsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVpcEndpointsRequest(request));
+    setReply(reply);
+}
+
+const DeleteVpcEndpointsRequest * DeleteVpcEndpointsResponse::request() const
+{
+    Q_D(const DeleteVpcEndpointsResponse);
+    return static_cast<const DeleteVpcEndpointsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteVpcEndpoints response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVpcEndpointsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpcEndpointsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVpcEndpointsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcEndpointsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVpcEndpointsResponse instance.
+ */
+DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponsePrivate(
+    DeleteVpcEndpointsQueueResponse * const q) : DeleteVpcEndpointsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteVpcEndpointsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointsResponse"));
+    /// @todo
+}

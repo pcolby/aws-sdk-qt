@@ -19,3 +19,85 @@
 
 #include "createassociationbatchresponse.h"
 #include "createassociationbatchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  CreateAssociationBatchResponse
+ *
+ * @brief  Handles SSM CreateAssociationBatch responses.
+ *
+ * @see    SSMClient::createAssociationBatch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAssociationBatchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new CreateAssociationBatchResponsePrivate(this), parent)
+{
+    setRequest(new CreateAssociationBatchRequest(request));
+    setReply(reply);
+}
+
+const CreateAssociationBatchRequest * CreateAssociationBatchResponse::request() const
+{
+    Q_D(const CreateAssociationBatchResponse);
+    return static_cast<const CreateAssociationBatchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM CreateAssociationBatch response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAssociationBatchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAssociationBatchResponsePrivate
+ *
+ * @brief  Private implementation for CreateAssociationBatchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAssociationBatchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAssociationBatchResponse instance.
+ */
+CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponsePrivate(
+    CreateAssociationBatchQueueResponse * const q) : CreateAssociationBatchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM CreateAssociationBatchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAssociationBatchResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteuserprofileresponse.h"
 #include "deleteuserprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  DeleteUserProfileResponse
+ *
+ * @brief  Handles CodeStar DeleteUserProfile responses.
+ *
+ * @see    CodeStarClient::deleteUserProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new DeleteUserProfileResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUserProfileRequest(request));
+    setReply(reply);
+}
+
+const DeleteUserProfileRequest * DeleteUserProfileResponse::request() const
+{
+    Q_D(const DeleteUserProfileResponse);
+    return static_cast<const DeleteUserProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar DeleteUserProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUserProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserProfileResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUserProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUserProfileResponse instance.
+ */
+DeleteUserProfileResponsePrivate::DeleteUserProfileResponsePrivate(
+    DeleteUserProfileQueueResponse * const q) : DeleteUserProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar DeleteUserProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUserProfileResponsePrivate::DeleteUserProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUserProfileResponse"));
+    /// @todo
+}

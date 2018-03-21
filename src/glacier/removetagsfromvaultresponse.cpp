@@ -19,3 +19,85 @@
 
 #include "removetagsfromvaultresponse.h"
 #include "removetagsfromvaultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  RemoveTagsFromVaultResponse
+ *
+ * @brief  Handles Glacier RemoveTagsFromVault responses.
+ *
+ * @see    GlacierClient::removeTagsFromVault
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsFromVaultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new RemoveTagsFromVaultResponsePrivate(this), parent)
+{
+    setRequest(new RemoveTagsFromVaultRequest(request));
+    setReply(reply);
+}
+
+const RemoveTagsFromVaultRequest * RemoveTagsFromVaultResponse::request() const
+{
+    Q_D(const RemoveTagsFromVaultResponse);
+    return static_cast<const RemoveTagsFromVaultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier RemoveTagsFromVault response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveTagsFromVaultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsFromVaultResponsePrivate
+ *
+ * @brief  Private implementation for RemoveTagsFromVaultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromVaultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveTagsFromVaultResponse instance.
+ */
+RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponsePrivate(
+    RemoveTagsFromVaultQueueResponse * const q) : RemoveTagsFromVaultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier RemoveTagsFromVaultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromVaultResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteportfolioshareresponse.h"
 #include "deleteportfolioshareresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DeletePortfolioShareResponse
+ *
+ * @brief  Handles ServiceCatalog DeletePortfolioShare responses.
+ *
+ * @see    ServiceCatalogClient::deletePortfolioShare
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePortfolioShareResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DeletePortfolioShareResponsePrivate(this), parent)
+{
+    setRequest(new DeletePortfolioShareRequest(request));
+    setReply(reply);
+}
+
+const DeletePortfolioShareRequest * DeletePortfolioShareResponse::request() const
+{
+    Q_D(const DeletePortfolioShareResponse);
+    return static_cast<const DeletePortfolioShareRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DeletePortfolioShare response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePortfolioShareResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePortfolioShareResponsePrivate
+ *
+ * @brief  Private implementation for DeletePortfolioShareResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePortfolioShareResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePortfolioShareResponse instance.
+ */
+DeletePortfolioShareResponsePrivate::DeletePortfolioShareResponsePrivate(
+    DeletePortfolioShareQueueResponse * const q) : DeletePortfolioSharePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DeletePortfolioShareResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePortfolioShareResponsePrivate::DeletePortfolioShareResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePortfolioShareResponse"));
+    /// @todo
+}

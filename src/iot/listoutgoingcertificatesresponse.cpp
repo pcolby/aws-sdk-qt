@@ -19,3 +19,85 @@
 
 #include "listoutgoingcertificatesresponse.h"
 #include "listoutgoingcertificatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListOutgoingCertificatesResponse
+ *
+ * @brief  Handles IoT ListOutgoingCertificates responses.
+ *
+ * @see    IoTClient::listOutgoingCertificates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOutgoingCertificatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListOutgoingCertificatesResponsePrivate(this), parent)
+{
+    setRequest(new ListOutgoingCertificatesRequest(request));
+    setReply(reply);
+}
+
+const ListOutgoingCertificatesRequest * ListOutgoingCertificatesResponse::request() const
+{
+    Q_D(const ListOutgoingCertificatesResponse);
+    return static_cast<const ListOutgoingCertificatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListOutgoingCertificates response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOutgoingCertificatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOutgoingCertificatesResponsePrivate
+ *
+ * @brief  Private implementation for ListOutgoingCertificatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOutgoingCertificatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOutgoingCertificatesResponse instance.
+ */
+ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponsePrivate(
+    ListOutgoingCertificatesQueueResponse * const q) : ListOutgoingCertificatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListOutgoingCertificatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOutgoingCertificatesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteautoscalinggroupresponse.h"
 #include "deleteautoscalinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DeleteAutoScalingGroupResponse
+ *
+ * @brief  Handles AutoScaling DeleteAutoScalingGroup responses.
+ *
+ * @see    AutoScalingClient::deleteAutoScalingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAutoScalingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DeleteAutoScalingGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAutoScalingGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteAutoScalingGroupRequest * DeleteAutoScalingGroupResponse::request() const
+{
+    Q_D(const DeleteAutoScalingGroupResponse);
+    return static_cast<const DeleteAutoScalingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DeleteAutoScalingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAutoScalingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAutoScalingGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAutoScalingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAutoScalingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAutoScalingGroupResponse instance.
+ */
+DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponsePrivate(
+    DeleteAutoScalingGroupQueueResponse * const q) : DeleteAutoScalingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DeleteAutoScalingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAutoScalingGroupResponse"));
+    /// @todo
+}

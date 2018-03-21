@@ -19,3 +19,85 @@
 
 #include "deletemaintenancewindowresponse.h"
 #include "deletemaintenancewindowresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeleteMaintenanceWindowResponse
+ *
+ * @brief  Handles SSM DeleteMaintenanceWindow responses.
+ *
+ * @see    SSMClient::deleteMaintenanceWindow
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteMaintenanceWindowResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DeleteMaintenanceWindowResponsePrivate(this), parent)
+{
+    setRequest(new DeleteMaintenanceWindowRequest(request));
+    setReply(reply);
+}
+
+const DeleteMaintenanceWindowRequest * DeleteMaintenanceWindowResponse::request() const
+{
+    Q_D(const DeleteMaintenanceWindowResponse);
+    return static_cast<const DeleteMaintenanceWindowRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DeleteMaintenanceWindow response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteMaintenanceWindowResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteMaintenanceWindowResponsePrivate
+ *
+ * @brief  Private implementation for DeleteMaintenanceWindowResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMaintenanceWindowResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteMaintenanceWindowResponse instance.
+ */
+DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponsePrivate(
+    DeleteMaintenanceWindowQueueResponse * const q) : DeleteMaintenanceWindowPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DeleteMaintenanceWindowResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteMaintenanceWindowResponse"));
+    /// @todo
+}

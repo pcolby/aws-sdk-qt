@@ -19,3 +19,85 @@
 
 #include "createvpcendpointresponse.h"
 #include "createvpcendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpcEndpointResponse
+ *
+ * @brief  Handles EC2 CreateVpcEndpoint responses.
+ *
+ * @see    EC2Client::createVpcEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpcEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateVpcEndpointResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpcEndpointRequest(request));
+    setReply(reply);
+}
+
+const CreateVpcEndpointRequest * CreateVpcEndpointResponse::request() const
+{
+    Q_D(const CreateVpcEndpointResponse);
+    return static_cast<const CreateVpcEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateVpcEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpcEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpcEndpointResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpcEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpcEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpcEndpointResponse instance.
+ */
+CreateVpcEndpointResponsePrivate::CreateVpcEndpointResponsePrivate(
+    CreateVpcEndpointQueueResponse * const q) : CreateVpcEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateVpcEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpcEndpointResponsePrivate::CreateVpcEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpcEndpointResponse"));
+    /// @todo
+}

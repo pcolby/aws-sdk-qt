@@ -19,3 +19,85 @@
 
 #include "putbucketloggingresponse.h"
 #include "putbucketloggingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketLoggingResponse
+ *
+ * @brief  Handles S3 PutBucketLogging responses.
+ *
+ * @see    S3Client::putBucketLogging
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketLoggingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketLoggingResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketLoggingRequest(request));
+    setReply(reply);
+}
+
+const PutBucketLoggingRequest * PutBucketLoggingResponse::request() const
+{
+    Q_D(const PutBucketLoggingResponse);
+    return static_cast<const PutBucketLoggingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketLogging response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketLoggingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketLoggingResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketLoggingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketLoggingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketLoggingResponse instance.
+ */
+PutBucketLoggingResponsePrivate::PutBucketLoggingResponsePrivate(
+    PutBucketLoggingQueueResponse * const q) : PutBucketLoggingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketLoggingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketLoggingResponsePrivate::PutBucketLoggingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketLoggingResponse"));
+    /// @todo
+}

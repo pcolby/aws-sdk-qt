@@ -19,3 +19,85 @@
 
 #include "requestenvironmentinforesponse.h"
 #include "requestenvironmentinforesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  RequestEnvironmentInfoResponse
+ *
+ * @brief  Handles ElasticBeanstalk RequestEnvironmentInfo responses.
+ *
+ * @see    ElasticBeanstalkClient::requestEnvironmentInfo
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RequestEnvironmentInfoResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new RequestEnvironmentInfoResponsePrivate(this), parent)
+{
+    setRequest(new RequestEnvironmentInfoRequest(request));
+    setReply(reply);
+}
+
+const RequestEnvironmentInfoRequest * RequestEnvironmentInfoResponse::request() const
+{
+    Q_D(const RequestEnvironmentInfoResponse);
+    return static_cast<const RequestEnvironmentInfoRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk RequestEnvironmentInfo response.
+ *
+ * @param  response  Response to parse.
+ */
+void RequestEnvironmentInfoResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RequestEnvironmentInfoResponsePrivate
+ *
+ * @brief  Private implementation for RequestEnvironmentInfoResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestEnvironmentInfoResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RequestEnvironmentInfoResponse instance.
+ */
+RequestEnvironmentInfoResponsePrivate::RequestEnvironmentInfoResponsePrivate(
+    RequestEnvironmentInfoQueueResponse * const q) : RequestEnvironmentInfoPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk RequestEnvironmentInfoResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RequestEnvironmentInfoResponsePrivate::RequestEnvironmentInfoResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RequestEnvironmentInfoResponse"));
+    /// @todo
+}

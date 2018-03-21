@@ -19,3 +19,85 @@
 
 #include "listbucketsresponse.h"
 #include "listbucketsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  ListBucketsResponse
+ *
+ * @brief  Handles S3 ListBuckets responses.
+ *
+ * @see    S3Client::listBuckets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBucketsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new ListBucketsResponsePrivate(this), parent)
+{
+    setRequest(new ListBucketsRequest(request));
+    setReply(reply);
+}
+
+const ListBucketsRequest * ListBucketsResponse::request() const
+{
+    Q_D(const ListBucketsResponse);
+    return static_cast<const ListBucketsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 ListBuckets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBucketsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBucketsResponsePrivate
+ *
+ * @brief  Private implementation for ListBucketsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBucketsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBucketsResponse instance.
+ */
+ListBucketsResponsePrivate::ListBucketsResponsePrivate(
+    ListBucketsQueueResponse * const q) : ListBucketsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 ListBucketsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBucketsResponsePrivate::ListBucketsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBucketsResponse"));
+    /// @todo
+}

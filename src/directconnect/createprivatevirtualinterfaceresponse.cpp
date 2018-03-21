@@ -19,3 +19,85 @@
 
 #include "createprivatevirtualinterfaceresponse.h"
 #include "createprivatevirtualinterfaceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreatePrivateVirtualInterfaceResponse
+ *
+ * @brief  Handles DirectConnect CreatePrivateVirtualInterface responses.
+ *
+ * @see    DirectConnectClient::createPrivateVirtualInterface
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePrivateVirtualInterfaceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new CreatePrivateVirtualInterfaceResponsePrivate(this), parent)
+{
+    setRequest(new CreatePrivateVirtualInterfaceRequest(request));
+    setReply(reply);
+}
+
+const CreatePrivateVirtualInterfaceRequest * CreatePrivateVirtualInterfaceResponse::request() const
+{
+    Q_D(const CreatePrivateVirtualInterfaceResponse);
+    return static_cast<const CreatePrivateVirtualInterfaceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect CreatePrivateVirtualInterface response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePrivateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePrivateVirtualInterfaceResponsePrivate
+ *
+ * @brief  Private implementation for CreatePrivateVirtualInterfaceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePrivateVirtualInterfaceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePrivateVirtualInterfaceResponse instance.
+ */
+CreatePrivateVirtualInterfaceResponsePrivate::CreatePrivateVirtualInterfaceResponsePrivate(
+    CreatePrivateVirtualInterfaceQueueResponse * const q) : CreatePrivateVirtualInterfacePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect CreatePrivateVirtualInterfaceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePrivateVirtualInterfaceResponsePrivate::CreatePrivateVirtualInterfaceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePrivateVirtualInterfaceResponse"));
+    /// @todo
+}

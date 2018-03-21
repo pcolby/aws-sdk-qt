@@ -19,3 +19,85 @@
 
 #include "createchannelresponse.h"
 #include "createchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  CreateChannelResponse
+ *
+ * @brief  Handles MediaPackage CreateChannel responses.
+ *
+ * @see    MediaPackageClient::createChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaPackageResponse(new CreateChannelResponsePrivate(this), parent)
+{
+    setRequest(new CreateChannelRequest(request));
+    setReply(reply);
+}
+
+const CreateChannelRequest * CreateChannelResponse::request() const
+{
+    Q_D(const CreateChannelResponse);
+    return static_cast<const CreateChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaPackage CreateChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateChannelResponsePrivate
+ *
+ * @brief  Private implementation for CreateChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateChannelResponse instance.
+ */
+CreateChannelResponsePrivate::CreateChannelResponsePrivate(
+    CreateChannelQueueResponse * const q) : CreateChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaPackage CreateChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateChannelResponsePrivate::CreateChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateChannelResponse"));
+    /// @todo
+}

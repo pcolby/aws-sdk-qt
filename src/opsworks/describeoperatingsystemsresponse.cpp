@@ -19,3 +19,85 @@
 
 #include "describeoperatingsystemsresponse.h"
 #include "describeoperatingsystemsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeOperatingSystemsResponse
+ *
+ * @brief  Handles OpsWorks DescribeOperatingSystems responses.
+ *
+ * @see    OpsWorksClient::describeOperatingSystems
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOperatingSystemsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeOperatingSystemsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeOperatingSystemsRequest(request));
+    setReply(reply);
+}
+
+const DescribeOperatingSystemsRequest * DescribeOperatingSystemsResponse::request() const
+{
+    Q_D(const DescribeOperatingSystemsResponse);
+    return static_cast<const DescribeOperatingSystemsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeOperatingSystems response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeOperatingSystemsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOperatingSystemsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeOperatingSystemsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOperatingSystemsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeOperatingSystemsResponse instance.
+ */
+DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponsePrivate(
+    DescribeOperatingSystemsQueueResponse * const q) : DescribeOperatingSystemsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeOperatingSystemsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeOperatingSystemsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getdatabasesresponse.h"
 #include "getdatabasesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetDatabasesResponse
+ *
+ * @brief  Handles Glue GetDatabases responses.
+ *
+ * @see    GlueClient::getDatabases
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDatabasesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetDatabasesResponsePrivate(this), parent)
+{
+    setRequest(new GetDatabasesRequest(request));
+    setReply(reply);
+}
+
+const GetDatabasesRequest * GetDatabasesResponse::request() const
+{
+    Q_D(const GetDatabasesResponse);
+    return static_cast<const GetDatabasesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetDatabases response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDatabasesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDatabasesResponsePrivate
+ *
+ * @brief  Private implementation for GetDatabasesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDatabasesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDatabasesResponse instance.
+ */
+GetDatabasesResponsePrivate::GetDatabasesResponsePrivate(
+    GetDatabasesQueueResponse * const q) : GetDatabasesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetDatabasesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDatabasesResponsePrivate::GetDatabasesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDatabasesResponse"));
+    /// @todo
+}

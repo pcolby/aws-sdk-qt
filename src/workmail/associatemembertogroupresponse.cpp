@@ -19,3 +19,85 @@
 
 #include "associatemembertogroupresponse.h"
 #include "associatemembertogroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  AssociateMemberToGroupResponse
+ *
+ * @brief  Handles WorkMail AssociateMemberToGroup responses.
+ *
+ * @see    WorkMailClient::associateMemberToGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateMemberToGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new AssociateMemberToGroupResponsePrivate(this), parent)
+{
+    setRequest(new AssociateMemberToGroupRequest(request));
+    setReply(reply);
+}
+
+const AssociateMemberToGroupRequest * AssociateMemberToGroupResponse::request() const
+{
+    Q_D(const AssociateMemberToGroupResponse);
+    return static_cast<const AssociateMemberToGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail AssociateMemberToGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateMemberToGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateMemberToGroupResponsePrivate
+ *
+ * @brief  Private implementation for AssociateMemberToGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateMemberToGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateMemberToGroupResponse instance.
+ */
+AssociateMemberToGroupResponsePrivate::AssociateMemberToGroupResponsePrivate(
+    AssociateMemberToGroupQueueResponse * const q) : AssociateMemberToGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail AssociateMemberToGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateMemberToGroupResponsePrivate::AssociateMemberToGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateMemberToGroupResponse"));
+    /// @todo
+}

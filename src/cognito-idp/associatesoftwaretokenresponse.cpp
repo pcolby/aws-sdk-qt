@@ -19,3 +19,85 @@
 
 #include "associatesoftwaretokenresponse.h"
 #include "associatesoftwaretokenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AssociateSoftwareTokenResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AssociateSoftwareToken responses.
+ *
+ * @see    CognitoIdentityProviderClient::associateSoftwareToken
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateSoftwareTokenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AssociateSoftwareTokenResponsePrivate(this), parent)
+{
+    setRequest(new AssociateSoftwareTokenRequest(request));
+    setReply(reply);
+}
+
+const AssociateSoftwareTokenRequest * AssociateSoftwareTokenResponse::request() const
+{
+    Q_D(const AssociateSoftwareTokenResponse);
+    return static_cast<const AssociateSoftwareTokenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AssociateSoftwareToken response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateSoftwareTokenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateSoftwareTokenResponsePrivate
+ *
+ * @brief  Private implementation for AssociateSoftwareTokenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateSoftwareTokenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateSoftwareTokenResponse instance.
+ */
+AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponsePrivate(
+    AssociateSoftwareTokenQueueResponse * const q) : AssociateSoftwareTokenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AssociateSoftwareTokenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateSoftwareTokenResponse"));
+    /// @todo
+}

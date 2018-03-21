@@ -19,3 +19,85 @@
 
 #include "getinstanceresponse.h"
 #include "getinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceResponse
+ *
+ * @brief  Handles Lightsail GetInstance responses.
+ *
+ * @see    LightsailClient::getInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetInstanceResponsePrivate(this), parent)
+{
+    setRequest(new GetInstanceRequest(request));
+    setReply(reply);
+}
+
+const GetInstanceRequest * GetInstanceResponse::request() const
+{
+    Q_D(const GetInstanceResponse);
+    return static_cast<const GetInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceResponsePrivate
+ *
+ * @brief  Private implementation for GetInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInstanceResponse instance.
+ */
+GetInstanceResponsePrivate::GetInstanceResponsePrivate(
+    GetInstanceQueueResponse * const q) : GetInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInstanceResponsePrivate::GetInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInstanceResponse"));
+    /// @todo
+}

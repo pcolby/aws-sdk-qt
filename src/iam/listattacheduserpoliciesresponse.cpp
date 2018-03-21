@@ -19,3 +19,85 @@
 
 #include "listattacheduserpoliciesresponse.h"
 #include "listattacheduserpoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListAttachedUserPoliciesResponse
+ *
+ * @brief  Handles IAM ListAttachedUserPolicies responses.
+ *
+ * @see    IAMClient::listAttachedUserPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAttachedUserPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListAttachedUserPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListAttachedUserPoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListAttachedUserPoliciesRequest * ListAttachedUserPoliciesResponse::request() const
+{
+    Q_D(const ListAttachedUserPoliciesResponse);
+    return static_cast<const ListAttachedUserPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListAttachedUserPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAttachedUserPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAttachedUserPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListAttachedUserPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAttachedUserPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAttachedUserPoliciesResponse instance.
+ */
+ListAttachedUserPoliciesResponsePrivate::ListAttachedUserPoliciesResponsePrivate(
+    ListAttachedUserPoliciesQueueResponse * const q) : ListAttachedUserPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListAttachedUserPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAttachedUserPoliciesResponsePrivate::ListAttachedUserPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAttachedUserPoliciesResponse"));
+    /// @todo
+}

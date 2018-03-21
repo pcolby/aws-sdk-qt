@@ -19,3 +19,85 @@
 
 #include "deleteapnsvoipchannelresponse.h"
 #include "deleteapnsvoipchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteApnsVoipChannelResponse
+ *
+ * @brief  Handles Pinpoint DeleteApnsVoipChannel responses.
+ *
+ * @see    PinpointClient::deleteApnsVoipChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApnsVoipChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteApnsVoipChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApnsVoipChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteApnsVoipChannelRequest * DeleteApnsVoipChannelResponse::request() const
+{
+    Q_D(const DeleteApnsVoipChannelResponse);
+    return static_cast<const DeleteApnsVoipChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteApnsVoipChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApnsVoipChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApnsVoipChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApnsVoipChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApnsVoipChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApnsVoipChannelResponse instance.
+ */
+DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponsePrivate(
+    DeleteApnsVoipChannelQueueResponse * const q) : DeleteApnsVoipChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteApnsVoipChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApnsVoipChannelResponse"));
+    /// @todo
+}

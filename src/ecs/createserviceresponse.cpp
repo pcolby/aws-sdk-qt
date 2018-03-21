@@ -19,3 +19,85 @@
 
 #include "createserviceresponse.h"
 #include "createserviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  CreateServiceResponse
+ *
+ * @brief  Handles ECS CreateService responses.
+ *
+ * @see    ECSClient::createService
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateServiceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new CreateServiceResponsePrivate(this), parent)
+{
+    setRequest(new CreateServiceRequest(request));
+    setReply(reply);
+}
+
+const CreateServiceRequest * CreateServiceResponse::request() const
+{
+    Q_D(const CreateServiceResponse);
+    return static_cast<const CreateServiceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS CreateService response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateServiceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateServiceResponsePrivate
+ *
+ * @brief  Private implementation for CreateServiceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateServiceResponse instance.
+ */
+CreateServiceResponsePrivate::CreateServiceResponsePrivate(
+    CreateServiceQueueResponse * const q) : CreateServicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS CreateServiceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateServiceResponsePrivate::CreateServiceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateServiceResponse"));
+    /// @todo
+}

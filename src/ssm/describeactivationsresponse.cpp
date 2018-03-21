@@ -19,3 +19,85 @@
 
 #include "describeactivationsresponse.h"
 #include "describeactivationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeActivationsResponse
+ *
+ * @brief  Handles SSM DescribeActivations responses.
+ *
+ * @see    SSMClient::describeActivations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeActivationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeActivationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeActivationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeActivationsRequest * DescribeActivationsResponse::request() const
+{
+    Q_D(const DescribeActivationsResponse);
+    return static_cast<const DescribeActivationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeActivations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeActivationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeActivationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeActivationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActivationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeActivationsResponse instance.
+ */
+DescribeActivationsResponsePrivate::DescribeActivationsResponsePrivate(
+    DescribeActivationsQueueResponse * const q) : DescribeActivationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeActivationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeActivationsResponsePrivate::DescribeActivationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeActivationsResponse"));
+    /// @todo
+}

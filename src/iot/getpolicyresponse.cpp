@@ -19,3 +19,85 @@
 
 #include "getpolicyresponse.h"
 #include "getpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetPolicyResponse
+ *
+ * @brief  Handles IoT GetPolicy responses.
+ *
+ * @see    IoTClient::getPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new GetPolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetPolicyRequest(request));
+    setReply(reply);
+}
+
+const GetPolicyRequest * GetPolicyResponse::request() const
+{
+    Q_D(const GetPolicyResponse);
+    return static_cast<const GetPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT GetPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetPolicyResponse instance.
+ */
+GetPolicyResponsePrivate::GetPolicyResponsePrivate(
+    GetPolicyQueueResponse * const q) : GetPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT GetPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetPolicyResponsePrivate::GetPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetPolicyResponse"));
+    /// @todo
+}

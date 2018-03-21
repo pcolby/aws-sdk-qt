@@ -19,3 +19,85 @@
 
 #include "searchusersresponse.h"
 #include "searchusersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  SearchUsersResponse
+ *
+ * @brief  Handles AlexaForBusiness SearchUsers responses.
+ *
+ * @see    AlexaForBusinessClient::searchUsers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchUsersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new SearchUsersResponsePrivate(this), parent)
+{
+    setRequest(new SearchUsersRequest(request));
+    setReply(reply);
+}
+
+const SearchUsersRequest * SearchUsersResponse::request() const
+{
+    Q_D(const SearchUsersResponse);
+    return static_cast<const SearchUsersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness SearchUsers response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchUsersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchUsersResponsePrivate
+ *
+ * @brief  Private implementation for SearchUsersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchUsersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchUsersResponse instance.
+ */
+SearchUsersResponsePrivate::SearchUsersResponsePrivate(
+    SearchUsersQueueResponse * const q) : SearchUsersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness SearchUsersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchUsersResponsePrivate::SearchUsersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchUsersResponse"));
+    /// @todo
+}

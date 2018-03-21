@@ -19,3 +19,85 @@
 
 #include "deletejobtemplateresponse.h"
 #include "deletejobtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  DeleteJobTemplateResponse
+ *
+ * @brief  Handles MediaConvert DeleteJobTemplate responses.
+ *
+ * @see    MediaConvertClient::deleteJobTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteJobTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new DeleteJobTemplateResponsePrivate(this), parent)
+{
+    setRequest(new DeleteJobTemplateRequest(request));
+    setReply(reply);
+}
+
+const DeleteJobTemplateRequest * DeleteJobTemplateResponse::request() const
+{
+    Q_D(const DeleteJobTemplateResponse);
+    return static_cast<const DeleteJobTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert DeleteJobTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteJobTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteJobTemplateResponsePrivate
+ *
+ * @brief  Private implementation for DeleteJobTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteJobTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteJobTemplateResponse instance.
+ */
+DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponsePrivate(
+    DeleteJobTemplateQueueResponse * const q) : DeleteJobTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert DeleteJobTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteJobTemplateResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listuploadsresponse.h"
 #include "listuploadsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListUploadsResponse
+ *
+ * @brief  Handles DeviceFarm ListUploads responses.
+ *
+ * @see    DeviceFarmClient::listUploads
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListUploadsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new ListUploadsResponsePrivate(this), parent)
+{
+    setRequest(new ListUploadsRequest(request));
+    setReply(reply);
+}
+
+const ListUploadsRequest * ListUploadsResponse::request() const
+{
+    Q_D(const ListUploadsResponse);
+    return static_cast<const ListUploadsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm ListUploads response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListUploadsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListUploadsResponsePrivate
+ *
+ * @brief  Private implementation for ListUploadsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUploadsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListUploadsResponse instance.
+ */
+ListUploadsResponsePrivate::ListUploadsResponsePrivate(
+    ListUploadsQueueResponse * const q) : ListUploadsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm ListUploadsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListUploadsResponsePrivate::ListUploadsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListUploadsResponse"));
+    /// @todo
+}

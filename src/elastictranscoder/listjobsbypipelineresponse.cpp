@@ -19,3 +19,85 @@
 
 #include "listjobsbypipelineresponse.h"
 #include "listjobsbypipelineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  ListJobsByPipelineResponse
+ *
+ * @brief  Handles ElasticTranscoder ListJobsByPipeline responses.
+ *
+ * @see    ElasticTranscoderClient::listJobsByPipeline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobsByPipelineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticTranscoderResponse(new ListJobsByPipelineResponsePrivate(this), parent)
+{
+    setRequest(new ListJobsByPipelineRequest(request));
+    setReply(reply);
+}
+
+const ListJobsByPipelineRequest * ListJobsByPipelineResponse::request() const
+{
+    Q_D(const ListJobsByPipelineResponse);
+    return static_cast<const ListJobsByPipelineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticTranscoder ListJobsByPipeline response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListJobsByPipelineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobsByPipelineResponsePrivate
+ *
+ * @brief  Private implementation for ListJobsByPipelineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobsByPipelineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListJobsByPipelineResponse instance.
+ */
+ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponsePrivate(
+    ListJobsByPipelineQueueResponse * const q) : ListJobsByPipelinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticTranscoder ListJobsByPipelineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListJobsByPipelineResponse"));
+    /// @todo
+}

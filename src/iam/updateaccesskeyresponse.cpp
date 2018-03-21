@@ -19,3 +19,85 @@
 
 #include "updateaccesskeyresponse.h"
 #include "updateaccesskeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateAccessKeyResponse
+ *
+ * @brief  Handles IAM UpdateAccessKey responses.
+ *
+ * @see    IAMClient::updateAccessKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAccessKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateAccessKeyResponsePrivate(this), parent)
+{
+    setRequest(new UpdateAccessKeyRequest(request));
+    setReply(reply);
+}
+
+const UpdateAccessKeyRequest * UpdateAccessKeyResponse::request() const
+{
+    Q_D(const UpdateAccessKeyResponse);
+    return static_cast<const UpdateAccessKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateAccessKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateAccessKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAccessKeyResponsePrivate
+ *
+ * @brief  Private implementation for UpdateAccessKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAccessKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateAccessKeyResponse instance.
+ */
+UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponsePrivate(
+    UpdateAccessKeyQueueResponse * const q) : UpdateAccessKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateAccessKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateAccessKeyResponse"));
+    /// @todo
+}

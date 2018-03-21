@@ -19,3 +19,85 @@
 
 #include "updatedeploymentgroupresponse.h"
 #include "updatedeploymentgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  UpdateDeploymentGroupResponse
+ *
+ * @brief  Handles CodeDeploy UpdateDeploymentGroup responses.
+ *
+ * @see    CodeDeployClient::updateDeploymentGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDeploymentGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new UpdateDeploymentGroupResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDeploymentGroupRequest(request));
+    setReply(reply);
+}
+
+const UpdateDeploymentGroupRequest * UpdateDeploymentGroupResponse::request() const
+{
+    Q_D(const UpdateDeploymentGroupResponse);
+    return static_cast<const UpdateDeploymentGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy UpdateDeploymentGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDeploymentGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDeploymentGroupResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDeploymentGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeploymentGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDeploymentGroupResponse instance.
+ */
+UpdateDeploymentGroupResponsePrivate::UpdateDeploymentGroupResponsePrivate(
+    UpdateDeploymentGroupQueueResponse * const q) : UpdateDeploymentGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy UpdateDeploymentGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDeploymentGroupResponsePrivate::UpdateDeploymentGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDeploymentGroupResponse"));
+    /// @todo
+}

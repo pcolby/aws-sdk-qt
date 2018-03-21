@@ -19,3 +19,85 @@
 
 #include "deletesubscriptiondefinitionresponse.h"
 #include "deletesubscriptiondefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteSubscriptionDefinitionResponse
+ *
+ * @brief  Handles Greengrass DeleteSubscriptionDefinition responses.
+ *
+ * @see    GreengrassClient::deleteSubscriptionDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSubscriptionDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DeleteSubscriptionDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSubscriptionDefinitionRequest(request));
+    setReply(reply);
+}
+
+const DeleteSubscriptionDefinitionRequest * DeleteSubscriptionDefinitionResponse::request() const
+{
+    Q_D(const DeleteSubscriptionDefinitionResponse);
+    return static_cast<const DeleteSubscriptionDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DeleteSubscriptionDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSubscriptionDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSubscriptionDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSubscriptionDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSubscriptionDefinitionResponse instance.
+ */
+DeleteSubscriptionDefinitionResponsePrivate::DeleteSubscriptionDefinitionResponsePrivate(
+    DeleteSubscriptionDefinitionQueueResponse * const q) : DeleteSubscriptionDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DeleteSubscriptionDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSubscriptionDefinitionResponsePrivate::DeleteSubscriptionDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriptionDefinitionResponse"));
+    /// @todo
+}

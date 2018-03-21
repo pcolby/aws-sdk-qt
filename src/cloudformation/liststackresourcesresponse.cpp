@@ -19,3 +19,85 @@
 
 #include "liststackresourcesresponse.h"
 #include "liststackresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListStackResourcesResponse
+ *
+ * @brief  Handles CloudFormation ListStackResources responses.
+ *
+ * @see    CloudFormationClient::listStackResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStackResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ListStackResourcesResponsePrivate(this), parent)
+{
+    setRequest(new ListStackResourcesRequest(request));
+    setReply(reply);
+}
+
+const ListStackResourcesRequest * ListStackResourcesResponse::request() const
+{
+    Q_D(const ListStackResourcesResponse);
+    return static_cast<const ListStackResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ListStackResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListStackResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStackResourcesResponsePrivate
+ *
+ * @brief  Private implementation for ListStackResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStackResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListStackResourcesResponse instance.
+ */
+ListStackResourcesResponsePrivate::ListStackResourcesResponsePrivate(
+    ListStackResourcesQueueResponse * const q) : ListStackResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ListStackResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListStackResourcesResponsePrivate::ListStackResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListStackResourcesResponse"));
+    /// @todo
+}

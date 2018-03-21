@@ -19,3 +19,85 @@
 
 #include "sendusersmessagesresponse.h"
 #include "sendusersmessagesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  SendUsersMessagesResponse
+ *
+ * @brief  Handles Pinpoint SendUsersMessages responses.
+ *
+ * @see    PinpointClient::sendUsersMessages
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendUsersMessagesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new SendUsersMessagesResponsePrivate(this), parent)
+{
+    setRequest(new SendUsersMessagesRequest(request));
+    setReply(reply);
+}
+
+const SendUsersMessagesRequest * SendUsersMessagesResponse::request() const
+{
+    Q_D(const SendUsersMessagesResponse);
+    return static_cast<const SendUsersMessagesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint SendUsersMessages response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendUsersMessagesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendUsersMessagesResponsePrivate
+ *
+ * @brief  Private implementation for SendUsersMessagesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendUsersMessagesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendUsersMessagesResponse instance.
+ */
+SendUsersMessagesResponsePrivate::SendUsersMessagesResponsePrivate(
+    SendUsersMessagesQueueResponse * const q) : SendUsersMessagesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint SendUsersMessagesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendUsersMessagesResponsePrivate::SendUsersMessagesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendUsersMessagesResponse"));
+    /// @todo
+}

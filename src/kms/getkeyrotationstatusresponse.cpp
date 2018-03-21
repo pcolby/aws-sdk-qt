@@ -19,3 +19,85 @@
 
 #include "getkeyrotationstatusresponse.h"
 #include "getkeyrotationstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  GetKeyRotationStatusResponse
+ *
+ * @brief  Handles KMS GetKeyRotationStatus responses.
+ *
+ * @see    KMSClient::getKeyRotationStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetKeyRotationStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new GetKeyRotationStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetKeyRotationStatusRequest(request));
+    setReply(reply);
+}
+
+const GetKeyRotationStatusRequest * GetKeyRotationStatusResponse::request() const
+{
+    Q_D(const GetKeyRotationStatusResponse);
+    return static_cast<const GetKeyRotationStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS GetKeyRotationStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetKeyRotationStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetKeyRotationStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetKeyRotationStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetKeyRotationStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetKeyRotationStatusResponse instance.
+ */
+GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponsePrivate(
+    GetKeyRotationStatusQueueResponse * const q) : GetKeyRotationStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS GetKeyRotationStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetKeyRotationStatusResponse"));
+    /// @todo
+}

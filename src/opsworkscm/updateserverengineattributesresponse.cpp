@@ -19,3 +19,85 @@
 
 #include "updateserverengineattributesresponse.h"
 #include "updateserverengineattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  UpdateServerEngineAttributesResponse
+ *
+ * @brief  Handles OpsWorksCM UpdateServerEngineAttributes responses.
+ *
+ * @see    OpsWorksCMClient::updateServerEngineAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServerEngineAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksCMResponse(new UpdateServerEngineAttributesResponsePrivate(this), parent)
+{
+    setRequest(new UpdateServerEngineAttributesRequest(request));
+    setReply(reply);
+}
+
+const UpdateServerEngineAttributesRequest * UpdateServerEngineAttributesResponse::request() const
+{
+    Q_D(const UpdateServerEngineAttributesResponse);
+    return static_cast<const UpdateServerEngineAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorksCM UpdateServerEngineAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateServerEngineAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServerEngineAttributesResponsePrivate
+ *
+ * @brief  Private implementation for UpdateServerEngineAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServerEngineAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateServerEngineAttributesResponse instance.
+ */
+UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesResponsePrivate(
+    UpdateServerEngineAttributesQueueResponse * const q) : UpdateServerEngineAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorksCM UpdateServerEngineAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateServerEngineAttributesResponse"));
+    /// @todo
+}

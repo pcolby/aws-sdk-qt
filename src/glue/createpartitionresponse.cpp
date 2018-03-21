@@ -19,3 +19,85 @@
 
 #include "createpartitionresponse.h"
 #include "createpartitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreatePartitionResponse
+ *
+ * @brief  Handles Glue CreatePartition responses.
+ *
+ * @see    GlueClient::createPartition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePartitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new CreatePartitionResponsePrivate(this), parent)
+{
+    setRequest(new CreatePartitionRequest(request));
+    setReply(reply);
+}
+
+const CreatePartitionRequest * CreatePartitionResponse::request() const
+{
+    Q_D(const CreatePartitionResponse);
+    return static_cast<const CreatePartitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue CreatePartition response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePartitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePartitionResponsePrivate
+ *
+ * @brief  Private implementation for CreatePartitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePartitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePartitionResponse instance.
+ */
+CreatePartitionResponsePrivate::CreatePartitionResponsePrivate(
+    CreatePartitionQueueResponse * const q) : CreatePartitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue CreatePartitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePartitionResponsePrivate::CreatePartitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePartitionResponse"));
+    /// @todo
+}

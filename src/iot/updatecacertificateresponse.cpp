@@ -19,3 +19,85 @@
 
 #include "updatecacertificateresponse.h"
 #include "updatecacertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateCACertificateResponse
+ *
+ * @brief  Handles IoT UpdateCACertificate responses.
+ *
+ * @see    IoTClient::updateCACertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCACertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new UpdateCACertificateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateCACertificateRequest(request));
+    setReply(reply);
+}
+
+const UpdateCACertificateRequest * UpdateCACertificateResponse::request() const
+{
+    Q_D(const UpdateCACertificateResponse);
+    return static_cast<const UpdateCACertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT UpdateCACertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateCACertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCACertificateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateCACertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCACertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateCACertificateResponse instance.
+ */
+UpdateCACertificateResponsePrivate::UpdateCACertificateResponsePrivate(
+    UpdateCACertificateQueueResponse * const q) : UpdateCACertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT UpdateCACertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateCACertificateResponsePrivate::UpdateCACertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateCACertificateResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "testrepositorytriggersresponse.h"
 #include "testrepositorytriggersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  TestRepositoryTriggersResponse
+ *
+ * @brief  Handles CodeCommit TestRepositoryTriggers responses.
+ *
+ * @see    CodeCommitClient::testRepositoryTriggers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestRepositoryTriggersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new TestRepositoryTriggersResponsePrivate(this), parent)
+{
+    setRequest(new TestRepositoryTriggersRequest(request));
+    setReply(reply);
+}
+
+const TestRepositoryTriggersRequest * TestRepositoryTriggersResponse::request() const
+{
+    Q_D(const TestRepositoryTriggersResponse);
+    return static_cast<const TestRepositoryTriggersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit TestRepositoryTriggers response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestRepositoryTriggersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestRepositoryTriggersResponsePrivate
+ *
+ * @brief  Private implementation for TestRepositoryTriggersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestRepositoryTriggersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestRepositoryTriggersResponse instance.
+ */
+TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponsePrivate(
+    TestRepositoryTriggersQueueResponse * const q) : TestRepositoryTriggersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit TestRepositoryTriggersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestRepositoryTriggersResponse"));
+    /// @todo
+}

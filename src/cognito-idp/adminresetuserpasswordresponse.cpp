@@ -19,3 +19,85 @@
 
 #include "adminresetuserpasswordresponse.h"
 #include "adminresetuserpasswordresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminResetUserPasswordResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminResetUserPassword responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminResetUserPassword
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminResetUserPasswordResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminResetUserPasswordResponsePrivate(this), parent)
+{
+    setRequest(new AdminResetUserPasswordRequest(request));
+    setReply(reply);
+}
+
+const AdminResetUserPasswordRequest * AdminResetUserPasswordResponse::request() const
+{
+    Q_D(const AdminResetUserPasswordResponse);
+    return static_cast<const AdminResetUserPasswordRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminResetUserPassword response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminResetUserPasswordResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminResetUserPasswordResponsePrivate
+ *
+ * @brief  Private implementation for AdminResetUserPasswordResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminResetUserPasswordResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminResetUserPasswordResponse instance.
+ */
+AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponsePrivate(
+    AdminResetUserPasswordQueueResponse * const q) : AdminResetUserPasswordPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminResetUserPasswordResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminResetUserPasswordResponse"));
+    /// @todo
+}

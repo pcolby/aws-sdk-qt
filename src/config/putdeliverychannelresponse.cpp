@@ -19,3 +19,85 @@
 
 #include "putdeliverychannelresponse.h"
 #include "putdeliverychannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  PutDeliveryChannelResponse
+ *
+ * @brief  Handles ConfigService PutDeliveryChannel responses.
+ *
+ * @see    ConfigServiceClient::putDeliveryChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutDeliveryChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new PutDeliveryChannelResponsePrivate(this), parent)
+{
+    setRequest(new PutDeliveryChannelRequest(request));
+    setReply(reply);
+}
+
+const PutDeliveryChannelRequest * PutDeliveryChannelResponse::request() const
+{
+    Q_D(const PutDeliveryChannelResponse);
+    return static_cast<const PutDeliveryChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService PutDeliveryChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutDeliveryChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutDeliveryChannelResponsePrivate
+ *
+ * @brief  Private implementation for PutDeliveryChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutDeliveryChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutDeliveryChannelResponse instance.
+ */
+PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponsePrivate(
+    PutDeliveryChannelQueueResponse * const q) : PutDeliveryChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService PutDeliveryChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutDeliveryChannelResponse"));
+    /// @todo
+}

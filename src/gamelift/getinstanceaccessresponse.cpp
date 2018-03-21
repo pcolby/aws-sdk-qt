@@ -19,3 +19,85 @@
 
 #include "getinstanceaccessresponse.h"
 #include "getinstanceaccessresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  GetInstanceAccessResponse
+ *
+ * @brief  Handles GameLift GetInstanceAccess responses.
+ *
+ * @see    GameLiftClient::getInstanceAccess
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceAccessResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new GetInstanceAccessResponsePrivate(this), parent)
+{
+    setRequest(new GetInstanceAccessRequest(request));
+    setReply(reply);
+}
+
+const GetInstanceAccessRequest * GetInstanceAccessResponse::request() const
+{
+    Q_D(const GetInstanceAccessResponse);
+    return static_cast<const GetInstanceAccessRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift GetInstanceAccess response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInstanceAccessResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceAccessResponsePrivate
+ *
+ * @brief  Private implementation for GetInstanceAccessResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceAccessResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInstanceAccessResponse instance.
+ */
+GetInstanceAccessResponsePrivate::GetInstanceAccessResponsePrivate(
+    GetInstanceAccessQueueResponse * const q) : GetInstanceAccessPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift GetInstanceAccessResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInstanceAccessResponsePrivate::GetInstanceAccessResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInstanceAccessResponse"));
+    /// @todo
+}

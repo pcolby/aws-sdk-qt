@@ -19,3 +19,85 @@
 
 #include "listendpointsresponse.h"
 #include "listendpointsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListEndpointsResponse
+ *
+ * @brief  Handles SageMaker ListEndpoints responses.
+ *
+ * @see    SageMakerClient::listEndpoints
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEndpointsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new ListEndpointsResponsePrivate(this), parent)
+{
+    setRequest(new ListEndpointsRequest(request));
+    setReply(reply);
+}
+
+const ListEndpointsRequest * ListEndpointsResponse::request() const
+{
+    Q_D(const ListEndpointsResponse);
+    return static_cast<const ListEndpointsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker ListEndpoints response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListEndpointsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEndpointsResponsePrivate
+ *
+ * @brief  Private implementation for ListEndpointsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEndpointsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListEndpointsResponse instance.
+ */
+ListEndpointsResponsePrivate::ListEndpointsResponsePrivate(
+    ListEndpointsQueueResponse * const q) : ListEndpointsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker ListEndpointsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListEndpointsResponsePrivate::ListEndpointsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListEndpointsResponse"));
+    /// @todo
+}

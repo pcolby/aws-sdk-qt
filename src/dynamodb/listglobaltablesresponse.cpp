@@ -19,3 +19,85 @@
 
 #include "listglobaltablesresponse.h"
 #include "listglobaltablesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  ListGlobalTablesResponse
+ *
+ * @brief  Handles DynamoDB ListGlobalTables responses.
+ *
+ * @see    DynamoDBClient::listGlobalTables
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGlobalTablesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new ListGlobalTablesResponsePrivate(this), parent)
+{
+    setRequest(new ListGlobalTablesRequest(request));
+    setReply(reply);
+}
+
+const ListGlobalTablesRequest * ListGlobalTablesResponse::request() const
+{
+    Q_D(const ListGlobalTablesResponse);
+    return static_cast<const ListGlobalTablesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB ListGlobalTables response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGlobalTablesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGlobalTablesResponsePrivate
+ *
+ * @brief  Private implementation for ListGlobalTablesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGlobalTablesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGlobalTablesResponse instance.
+ */
+ListGlobalTablesResponsePrivate::ListGlobalTablesResponsePrivate(
+    ListGlobalTablesQueueResponse * const q) : ListGlobalTablesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB ListGlobalTablesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGlobalTablesResponsePrivate::ListGlobalTablesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGlobalTablesResponse"));
+    /// @todo
+}

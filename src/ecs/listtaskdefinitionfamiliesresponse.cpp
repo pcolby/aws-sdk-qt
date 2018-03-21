@@ -19,3 +19,85 @@
 
 #include "listtaskdefinitionfamiliesresponse.h"
 #include "listtaskdefinitionfamiliesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  ListTaskDefinitionFamiliesResponse
+ *
+ * @brief  Handles ECS ListTaskDefinitionFamilies responses.
+ *
+ * @see    ECSClient::listTaskDefinitionFamilies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTaskDefinitionFamiliesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new ListTaskDefinitionFamiliesResponsePrivate(this), parent)
+{
+    setRequest(new ListTaskDefinitionFamiliesRequest(request));
+    setReply(reply);
+}
+
+const ListTaskDefinitionFamiliesRequest * ListTaskDefinitionFamiliesResponse::request() const
+{
+    Q_D(const ListTaskDefinitionFamiliesResponse);
+    return static_cast<const ListTaskDefinitionFamiliesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS ListTaskDefinitionFamilies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTaskDefinitionFamiliesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTaskDefinitionFamiliesResponsePrivate
+ *
+ * @brief  Private implementation for ListTaskDefinitionFamiliesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTaskDefinitionFamiliesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTaskDefinitionFamiliesResponse instance.
+ */
+ListTaskDefinitionFamiliesResponsePrivate::ListTaskDefinitionFamiliesResponsePrivate(
+    ListTaskDefinitionFamiliesQueueResponse * const q) : ListTaskDefinitionFamiliesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS ListTaskDefinitionFamiliesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTaskDefinitionFamiliesResponsePrivate::ListTaskDefinitionFamiliesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTaskDefinitionFamiliesResponse"));
+    /// @todo
+}

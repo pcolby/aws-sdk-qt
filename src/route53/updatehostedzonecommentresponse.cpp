@@ -19,3 +19,85 @@
 
 #include "updatehostedzonecommentresponse.h"
 #include "updatehostedzonecommentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  UpdateHostedZoneCommentResponse
+ *
+ * @brief  Handles Route53 UpdateHostedZoneComment responses.
+ *
+ * @see    Route53Client::updateHostedZoneComment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateHostedZoneCommentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new UpdateHostedZoneCommentResponsePrivate(this), parent)
+{
+    setRequest(new UpdateHostedZoneCommentRequest(request));
+    setReply(reply);
+}
+
+const UpdateHostedZoneCommentRequest * UpdateHostedZoneCommentResponse::request() const
+{
+    Q_D(const UpdateHostedZoneCommentResponse);
+    return static_cast<const UpdateHostedZoneCommentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 UpdateHostedZoneComment response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateHostedZoneCommentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateHostedZoneCommentResponsePrivate
+ *
+ * @brief  Private implementation for UpdateHostedZoneCommentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateHostedZoneCommentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateHostedZoneCommentResponse instance.
+ */
+UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponsePrivate(
+    UpdateHostedZoneCommentQueueResponse * const q) : UpdateHostedZoneCommentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 UpdateHostedZoneCommentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateHostedZoneCommentResponse"));
+    /// @todo
+}

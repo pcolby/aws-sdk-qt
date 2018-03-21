@@ -19,3 +19,85 @@
 
 #include "createbytematchsetresponse.h"
 #include "createbytematchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  CreateByteMatchSetResponse
+ *
+ * @brief  Handles WAFRegional CreateByteMatchSet responses.
+ *
+ * @see    WAFRegionalClient::createByteMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateByteMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new CreateByteMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateByteMatchSetRequest(request));
+    setReply(reply);
+}
+
+const CreateByteMatchSetRequest * CreateByteMatchSetResponse::request() const
+{
+    Q_D(const CreateByteMatchSetResponse);
+    return static_cast<const CreateByteMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional CreateByteMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateByteMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateByteMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateByteMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateByteMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateByteMatchSetResponse instance.
+ */
+CreateByteMatchSetResponsePrivate::CreateByteMatchSetResponsePrivate(
+    CreateByteMatchSetQueueResponse * const q) : CreateByteMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional CreateByteMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateByteMatchSetResponsePrivate::CreateByteMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateByteMatchSetResponse"));
+    /// @todo
+}

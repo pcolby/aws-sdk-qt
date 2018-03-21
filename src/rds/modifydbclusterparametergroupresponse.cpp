@@ -19,3 +19,85 @@
 
 #include "modifydbclusterparametergroupresponse.h"
 #include "modifydbclusterparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBClusterParameterGroupResponse
+ *
+ * @brief  Handles RDS ModifyDBClusterParameterGroup responses.
+ *
+ * @see    RDSClient::modifyDBClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBClusterParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ModifyDBClusterParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new ModifyDBClusterParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const ModifyDBClusterParameterGroupRequest * ModifyDBClusterParameterGroupResponse::request() const
+{
+    Q_D(const ModifyDBClusterParameterGroupResponse);
+    return static_cast<const ModifyDBClusterParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ModifyDBClusterParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBClusterParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for ModifyDBClusterParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBClusterParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyDBClusterParameterGroupResponse instance.
+ */
+ModifyDBClusterParameterGroupResponsePrivate::ModifyDBClusterParameterGroupResponsePrivate(
+    ModifyDBClusterParameterGroupQueueResponse * const q) : ModifyDBClusterParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ModifyDBClusterParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyDBClusterParameterGroupResponsePrivate::ModifyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterParameterGroupResponse"));
+    /// @todo
+}

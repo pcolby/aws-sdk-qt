@@ -19,3 +19,85 @@
 
 #include "getrulegroupresponse.h"
 #include "getrulegroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetRuleGroupResponse
+ *
+ * @brief  Handles WAF GetRuleGroup responses.
+ *
+ * @see    WAFClient::getRuleGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRuleGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new GetRuleGroupResponsePrivate(this), parent)
+{
+    setRequest(new GetRuleGroupRequest(request));
+    setReply(reply);
+}
+
+const GetRuleGroupRequest * GetRuleGroupResponse::request() const
+{
+    Q_D(const GetRuleGroupResponse);
+    return static_cast<const GetRuleGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF GetRuleGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRuleGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRuleGroupResponsePrivate
+ *
+ * @brief  Private implementation for GetRuleGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRuleGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRuleGroupResponse instance.
+ */
+GetRuleGroupResponsePrivate::GetRuleGroupResponsePrivate(
+    GetRuleGroupQueueResponse * const q) : GetRuleGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF GetRuleGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRuleGroupResponsePrivate::GetRuleGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRuleGroupResponse"));
+    /// @todo
+}

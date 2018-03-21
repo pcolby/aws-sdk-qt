@@ -19,3 +19,85 @@
 
 #include "describevpcclassiclinkresponse.h"
 #include "describevpcclassiclinkresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcClassicLinkResponse
+ *
+ * @brief  Handles EC2 DescribeVpcClassicLink responses.
+ *
+ * @see    EC2Client::describeVpcClassicLink
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcClassicLinkResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeVpcClassicLinkResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVpcClassicLinkRequest(request));
+    setReply(reply);
+}
+
+const DescribeVpcClassicLinkRequest * DescribeVpcClassicLinkResponse::request() const
+{
+    Q_D(const DescribeVpcClassicLinkResponse);
+    return static_cast<const DescribeVpcClassicLinkRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeVpcClassicLink response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVpcClassicLinkResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcClassicLinkResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVpcClassicLinkResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcClassicLinkResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVpcClassicLinkResponse instance.
+ */
+DescribeVpcClassicLinkResponsePrivate::DescribeVpcClassicLinkResponsePrivate(
+    DescribeVpcClassicLinkQueueResponse * const q) : DescribeVpcClassicLinkPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeVpcClassicLinkResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVpcClassicLinkResponsePrivate::DescribeVpcClassicLinkResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVpcClassicLinkResponse"));
+    /// @todo
+}

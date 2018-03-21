@@ -19,3 +19,85 @@
 
 #include "describecompliancebyconfigruleresponse.h"
 #include "describecompliancebyconfigruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DescribeComplianceByConfigRuleResponse
+ *
+ * @brief  Handles ConfigService DescribeComplianceByConfigRule responses.
+ *
+ * @see    ConfigServiceClient::describeComplianceByConfigRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeComplianceByConfigRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DescribeComplianceByConfigRuleResponsePrivate(this), parent)
+{
+    setRequest(new DescribeComplianceByConfigRuleRequest(request));
+    setReply(reply);
+}
+
+const DescribeComplianceByConfigRuleRequest * DescribeComplianceByConfigRuleResponse::request() const
+{
+    Q_D(const DescribeComplianceByConfigRuleResponse);
+    return static_cast<const DescribeComplianceByConfigRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DescribeComplianceByConfigRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeComplianceByConfigRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeComplianceByConfigRuleResponsePrivate
+ *
+ * @brief  Private implementation for DescribeComplianceByConfigRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeComplianceByConfigRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeComplianceByConfigRuleResponse instance.
+ */
+DescribeComplianceByConfigRuleResponsePrivate::DescribeComplianceByConfigRuleResponsePrivate(
+    DescribeComplianceByConfigRuleQueueResponse * const q) : DescribeComplianceByConfigRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DescribeComplianceByConfigRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeComplianceByConfigRuleResponsePrivate::DescribeComplianceByConfigRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeComplianceByConfigRuleResponse"));
+    /// @todo
+}

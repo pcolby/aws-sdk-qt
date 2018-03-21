@@ -19,3 +19,85 @@
 
 #include "updatethinggroupresponse.h"
 #include "updatethinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateThingGroupResponse
+ *
+ * @brief  Handles IoT UpdateThingGroup responses.
+ *
+ * @see    IoTClient::updateThingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateThingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new UpdateThingGroupResponsePrivate(this), parent)
+{
+    setRequest(new UpdateThingGroupRequest(request));
+    setReply(reply);
+}
+
+const UpdateThingGroupRequest * UpdateThingGroupResponse::request() const
+{
+    Q_D(const UpdateThingGroupResponse);
+    return static_cast<const UpdateThingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT UpdateThingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateThingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateThingGroupResponsePrivate
+ *
+ * @brief  Private implementation for UpdateThingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateThingGroupResponse instance.
+ */
+UpdateThingGroupResponsePrivate::UpdateThingGroupResponsePrivate(
+    UpdateThingGroupQueueResponse * const q) : UpdateThingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT UpdateThingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateThingGroupResponsePrivate::UpdateThingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateThingGroupResponse"));
+    /// @todo
+}

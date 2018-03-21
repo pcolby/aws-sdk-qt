@@ -19,3 +19,85 @@
 
 #include "describebackupresponse.h"
 #include "describebackupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DescribeBackupResponse
+ *
+ * @brief  Handles DynamoDB DescribeBackup responses.
+ *
+ * @see    DynamoDBClient::describeBackup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBackupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new DescribeBackupResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBackupRequest(request));
+    setReply(reply);
+}
+
+const DescribeBackupRequest * DescribeBackupResponse::request() const
+{
+    Q_D(const DescribeBackupResponse);
+    return static_cast<const DescribeBackupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB DescribeBackup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBackupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBackupResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBackupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBackupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBackupResponse instance.
+ */
+DescribeBackupResponsePrivate::DescribeBackupResponsePrivate(
+    DescribeBackupQueueResponse * const q) : DescribeBackupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB DescribeBackupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBackupResponsePrivate::DescribeBackupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBackupResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getbucketnotificationresponse.h"
 #include "getbucketnotificationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketNotificationResponse
+ *
+ * @brief  Handles S3 GetBucketNotification responses.
+ *
+ * @see    S3Client::getBucketNotification
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketNotificationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketNotificationResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketNotificationRequest(request));
+    setReply(reply);
+}
+
+const GetBucketNotificationRequest * GetBucketNotificationResponse::request() const
+{
+    Q_D(const GetBucketNotificationResponse);
+    return static_cast<const GetBucketNotificationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketNotification response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketNotificationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketNotificationResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketNotificationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketNotificationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketNotificationResponse instance.
+ */
+GetBucketNotificationResponsePrivate::GetBucketNotificationResponsePrivate(
+    GetBucketNotificationQueueResponse * const q) : GetBucketNotificationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketNotificationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketNotificationResponsePrivate::GetBucketNotificationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketNotificationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "modifyvolumeresponse.h"
 #include "modifyvolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVolumeResponse
+ *
+ * @brief  Handles EC2 ModifyVolume responses.
+ *
+ * @see    EC2Client::modifyVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyVolumeResponsePrivate(this), parent)
+{
+    setRequest(new ModifyVolumeRequest(request));
+    setReply(reply);
+}
+
+const ModifyVolumeRequest * ModifyVolumeResponse::request() const
+{
+    Q_D(const ModifyVolumeResponse);
+    return static_cast<const ModifyVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVolumeResponsePrivate
+ *
+ * @brief  Private implementation for ModifyVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyVolumeResponse instance.
+ */
+ModifyVolumeResponsePrivate::ModifyVolumeResponsePrivate(
+    ModifyVolumeQueueResponse * const q) : ModifyVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyVolumeResponsePrivate::ModifyVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyVolumeResponse"));
+    /// @todo
+}

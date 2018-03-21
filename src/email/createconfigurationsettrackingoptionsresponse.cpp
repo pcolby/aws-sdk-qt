@@ -19,3 +19,85 @@
 
 #include "createconfigurationsettrackingoptionsresponse.h"
 #include "createconfigurationsettrackingoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  CreateConfigurationSetTrackingOptionsResponse
+ *
+ * @brief  Handles SES CreateConfigurationSetTrackingOptions responses.
+ *
+ * @see    SESClient::createConfigurationSetTrackingOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateConfigurationSetTrackingOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new CreateConfigurationSetTrackingOptionsResponsePrivate(this), parent)
+{
+    setRequest(new CreateConfigurationSetTrackingOptionsRequest(request));
+    setReply(reply);
+}
+
+const CreateConfigurationSetTrackingOptionsRequest * CreateConfigurationSetTrackingOptionsResponse::request() const
+{
+    Q_D(const CreateConfigurationSetTrackingOptionsResponse);
+    return static_cast<const CreateConfigurationSetTrackingOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES CreateConfigurationSetTrackingOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateConfigurationSetTrackingOptionsResponsePrivate
+ *
+ * @brief  Private implementation for CreateConfigurationSetTrackingOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConfigurationSetTrackingOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateConfigurationSetTrackingOptionsResponse instance.
+ */
+CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSetTrackingOptionsResponsePrivate(
+    CreateConfigurationSetTrackingOptionsQueueResponse * const q) : CreateConfigurationSetTrackingOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES CreateConfigurationSetTrackingOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationSetTrackingOptionsResponse"));
+    /// @todo
+}

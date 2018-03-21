@@ -19,3 +19,85 @@
 
 #include "deleteserviceresponse.h"
 #include "deleteserviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DeleteServiceResponse
+ *
+ * @brief  Handles ECS DeleteService responses.
+ *
+ * @see    ECSClient::deleteService
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteServiceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new DeleteServiceResponsePrivate(this), parent)
+{
+    setRequest(new DeleteServiceRequest(request));
+    setReply(reply);
+}
+
+const DeleteServiceRequest * DeleteServiceResponse::request() const
+{
+    Q_D(const DeleteServiceResponse);
+    return static_cast<const DeleteServiceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS DeleteService response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteServiceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteServiceResponsePrivate
+ *
+ * @brief  Private implementation for DeleteServiceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServiceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteServiceResponse instance.
+ */
+DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
+    DeleteServiceQueueResponse * const q) : DeleteServicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS DeleteServiceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteServiceResponsePrivate::DeleteServiceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteServiceResponse"));
+    /// @todo
+}

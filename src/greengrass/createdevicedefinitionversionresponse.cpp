@@ -19,3 +19,85 @@
 
 #include "createdevicedefinitionversionresponse.h"
 #include "createdevicedefinitionversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateDeviceDefinitionVersionResponse
+ *
+ * @brief  Handles Greengrass CreateDeviceDefinitionVersion responses.
+ *
+ * @see    GreengrassClient::createDeviceDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDeviceDefinitionVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new CreateDeviceDefinitionVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreateDeviceDefinitionVersionRequest(request));
+    setReply(reply);
+}
+
+const CreateDeviceDefinitionVersionRequest * CreateDeviceDefinitionVersionResponse::request() const
+{
+    Q_D(const CreateDeviceDefinitionVersionResponse);
+    return static_cast<const CreateDeviceDefinitionVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass CreateDeviceDefinitionVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDeviceDefinitionVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDeviceDefinitionVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreateDeviceDefinitionVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeviceDefinitionVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDeviceDefinitionVersionResponse instance.
+ */
+CreateDeviceDefinitionVersionResponsePrivate::CreateDeviceDefinitionVersionResponsePrivate(
+    CreateDeviceDefinitionVersionQueueResponse * const q) : CreateDeviceDefinitionVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass CreateDeviceDefinitionVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDeviceDefinitionVersionResponsePrivate::CreateDeviceDefinitionVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDeviceDefinitionVersionResponse"));
+    /// @todo
+}

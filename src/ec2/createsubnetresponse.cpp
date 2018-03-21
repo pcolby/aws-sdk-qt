@@ -19,3 +19,85 @@
 
 #include "createsubnetresponse.h"
 #include "createsubnetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateSubnetResponse
+ *
+ * @brief  Handles EC2 CreateSubnet responses.
+ *
+ * @see    EC2Client::createSubnet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSubnetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateSubnetResponsePrivate(this), parent)
+{
+    setRequest(new CreateSubnetRequest(request));
+    setReply(reply);
+}
+
+const CreateSubnetRequest * CreateSubnetResponse::request() const
+{
+    Q_D(const CreateSubnetResponse);
+    return static_cast<const CreateSubnetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateSubnet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSubnetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSubnetResponsePrivate
+ *
+ * @brief  Private implementation for CreateSubnetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSubnetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSubnetResponse instance.
+ */
+CreateSubnetResponsePrivate::CreateSubnetResponsePrivate(
+    CreateSubnetQueueResponse * const q) : CreateSubnetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateSubnetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSubnetResponsePrivate::CreateSubnetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSubnetResponse"));
+    /// @todo
+}

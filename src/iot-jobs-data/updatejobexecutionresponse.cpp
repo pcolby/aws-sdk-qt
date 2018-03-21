@@ -19,3 +19,85 @@
 
 #include "updatejobexecutionresponse.h"
 #include "updatejobexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoTJobsDataPlane {
+
+/**
+ * @class  UpdateJobExecutionResponse
+ *
+ * @brief  Handles IoTJobsDataPlane UpdateJobExecution responses.
+ *
+ * @see    IoTJobsDataPlaneClient::updateJobExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateJobExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTJobsDataPlaneResponse(new UpdateJobExecutionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateJobExecutionRequest(request));
+    setReply(reply);
+}
+
+const UpdateJobExecutionRequest * UpdateJobExecutionResponse::request() const
+{
+    Q_D(const UpdateJobExecutionResponse);
+    return static_cast<const UpdateJobExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoTJobsDataPlane UpdateJobExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateJobExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateJobExecutionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateJobExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateJobExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateJobExecutionResponse instance.
+ */
+UpdateJobExecutionResponsePrivate::UpdateJobExecutionResponsePrivate(
+    UpdateJobExecutionQueueResponse * const q) : UpdateJobExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoTJobsDataPlane UpdateJobExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateJobExecutionResponsePrivate::UpdateJobExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateJobExecutionResponse"));
+    /// @todo
+}

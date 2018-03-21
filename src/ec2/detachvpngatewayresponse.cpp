@@ -19,3 +19,85 @@
 
 #include "detachvpngatewayresponse.h"
 #include "detachvpngatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DetachVpnGatewayResponse
+ *
+ * @brief  Handles EC2 DetachVpnGateway responses.
+ *
+ * @see    EC2Client::detachVpnGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachVpnGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DetachVpnGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DetachVpnGatewayRequest(request));
+    setReply(reply);
+}
+
+const DetachVpnGatewayRequest * DetachVpnGatewayResponse::request() const
+{
+    Q_D(const DetachVpnGatewayResponse);
+    return static_cast<const DetachVpnGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DetachVpnGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachVpnGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachVpnGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DetachVpnGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachVpnGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachVpnGatewayResponse instance.
+ */
+DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
+    DetachVpnGatewayQueueResponse * const q) : DetachVpnGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DetachVpnGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachVpnGatewayResponse"));
+    /// @todo
+}

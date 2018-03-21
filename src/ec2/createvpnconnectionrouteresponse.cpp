@@ -19,3 +19,85 @@
 
 #include "createvpnconnectionrouteresponse.h"
 #include "createvpnconnectionrouteresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpnConnectionRouteResponse
+ *
+ * @brief  Handles EC2 CreateVpnConnectionRoute responses.
+ *
+ * @see    EC2Client::createVpnConnectionRoute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpnConnectionRouteResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateVpnConnectionRouteResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpnConnectionRouteRequest(request));
+    setReply(reply);
+}
+
+const CreateVpnConnectionRouteRequest * CreateVpnConnectionRouteResponse::request() const
+{
+    Q_D(const CreateVpnConnectionRouteResponse);
+    return static_cast<const CreateVpnConnectionRouteRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateVpnConnectionRoute response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpnConnectionRouteResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpnConnectionRouteResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpnConnectionRouteResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpnConnectionRouteResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpnConnectionRouteResponse instance.
+ */
+CreateVpnConnectionRouteResponsePrivate::CreateVpnConnectionRouteResponsePrivate(
+    CreateVpnConnectionRouteQueueResponse * const q) : CreateVpnConnectionRoutePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateVpnConnectionRouteResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpnConnectionRouteResponsePrivate::CreateVpnConnectionRouteResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpnConnectionRouteResponse"));
+    /// @todo
+}

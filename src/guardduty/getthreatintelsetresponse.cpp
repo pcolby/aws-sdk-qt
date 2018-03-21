@@ -19,3 +19,85 @@
 
 #include "getthreatintelsetresponse.h"
 #include "getthreatintelsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetThreatIntelSetResponse
+ *
+ * @brief  Handles GuardDuty GetThreatIntelSet responses.
+ *
+ * @see    GuardDutyClient::getThreatIntelSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetThreatIntelSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new GetThreatIntelSetResponsePrivate(this), parent)
+{
+    setRequest(new GetThreatIntelSetRequest(request));
+    setReply(reply);
+}
+
+const GetThreatIntelSetRequest * GetThreatIntelSetResponse::request() const
+{
+    Q_D(const GetThreatIntelSetResponse);
+    return static_cast<const GetThreatIntelSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty GetThreatIntelSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetThreatIntelSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetThreatIntelSetResponsePrivate
+ *
+ * @brief  Private implementation for GetThreatIntelSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetThreatIntelSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetThreatIntelSetResponse instance.
+ */
+GetThreatIntelSetResponsePrivate::GetThreatIntelSetResponsePrivate(
+    GetThreatIntelSetQueueResponse * const q) : GetThreatIntelSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty GetThreatIntelSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetThreatIntelSetResponsePrivate::GetThreatIntelSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetThreatIntelSetResponse"));
+    /// @todo
+}

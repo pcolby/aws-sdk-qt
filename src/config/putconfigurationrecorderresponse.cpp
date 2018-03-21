@@ -19,3 +19,85 @@
 
 #include "putconfigurationrecorderresponse.h"
 #include "putconfigurationrecorderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  PutConfigurationRecorderResponse
+ *
+ * @brief  Handles ConfigService PutConfigurationRecorder responses.
+ *
+ * @see    ConfigServiceClient::putConfigurationRecorder
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutConfigurationRecorderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new PutConfigurationRecorderResponsePrivate(this), parent)
+{
+    setRequest(new PutConfigurationRecorderRequest(request));
+    setReply(reply);
+}
+
+const PutConfigurationRecorderRequest * PutConfigurationRecorderResponse::request() const
+{
+    Q_D(const PutConfigurationRecorderResponse);
+    return static_cast<const PutConfigurationRecorderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService PutConfigurationRecorder response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutConfigurationRecorderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutConfigurationRecorderResponsePrivate
+ *
+ * @brief  Private implementation for PutConfigurationRecorderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutConfigurationRecorderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutConfigurationRecorderResponse instance.
+ */
+PutConfigurationRecorderResponsePrivate::PutConfigurationRecorderResponsePrivate(
+    PutConfigurationRecorderQueueResponse * const q) : PutConfigurationRecorderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService PutConfigurationRecorderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutConfigurationRecorderResponsePrivate::PutConfigurationRecorderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutConfigurationRecorderResponse"));
+    /// @todo
+}

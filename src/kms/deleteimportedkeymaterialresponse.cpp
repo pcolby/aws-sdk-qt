@@ -19,3 +19,85 @@
 
 #include "deleteimportedkeymaterialresponse.h"
 #include "deleteimportedkeymaterialresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DeleteImportedKeyMaterialResponse
+ *
+ * @brief  Handles KMS DeleteImportedKeyMaterial responses.
+ *
+ * @see    KMSClient::deleteImportedKeyMaterial
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteImportedKeyMaterialResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new DeleteImportedKeyMaterialResponsePrivate(this), parent)
+{
+    setRequest(new DeleteImportedKeyMaterialRequest(request));
+    setReply(reply);
+}
+
+const DeleteImportedKeyMaterialRequest * DeleteImportedKeyMaterialResponse::request() const
+{
+    Q_D(const DeleteImportedKeyMaterialResponse);
+    return static_cast<const DeleteImportedKeyMaterialRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS DeleteImportedKeyMaterial response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteImportedKeyMaterialResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteImportedKeyMaterialResponsePrivate
+ *
+ * @brief  Private implementation for DeleteImportedKeyMaterialResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteImportedKeyMaterialResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteImportedKeyMaterialResponse instance.
+ */
+DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponsePrivate(
+    DeleteImportedKeyMaterialQueueResponse * const q) : DeleteImportedKeyMaterialPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS DeleteImportedKeyMaterialResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteImportedKeyMaterialResponse"));
+    /// @todo
+}

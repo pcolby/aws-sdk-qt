@@ -19,3 +19,85 @@
 
 #include "describespotinstancerequestsresponse.h"
 #include "describespotinstancerequestsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSpotInstanceRequestsResponse
+ *
+ * @brief  Handles EC2 DescribeSpotInstanceRequests responses.
+ *
+ * @see    EC2Client::describeSpotInstanceRequests
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSpotInstanceRequestsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeSpotInstanceRequestsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSpotInstanceRequestsRequest(request));
+    setReply(reply);
+}
+
+const DescribeSpotInstanceRequestsRequest * DescribeSpotInstanceRequestsResponse::request() const
+{
+    Q_D(const DescribeSpotInstanceRequestsResponse);
+    return static_cast<const DescribeSpotInstanceRequestsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeSpotInstanceRequests response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSpotInstanceRequestsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSpotInstanceRequestsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSpotInstanceRequestsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotInstanceRequestsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSpotInstanceRequestsResponse instance.
+ */
+DescribeSpotInstanceRequestsResponsePrivate::DescribeSpotInstanceRequestsResponsePrivate(
+    DescribeSpotInstanceRequestsQueueResponse * const q) : DescribeSpotInstanceRequestsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeSpotInstanceRequestsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSpotInstanceRequestsResponsePrivate::DescribeSpotInstanceRequestsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSpotInstanceRequestsResponse"));
+    /// @todo
+}

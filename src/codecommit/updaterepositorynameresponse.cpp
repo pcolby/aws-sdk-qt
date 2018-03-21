@@ -19,3 +19,85 @@
 
 #include "updaterepositorynameresponse.h"
 #include "updaterepositorynameresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdateRepositoryNameResponse
+ *
+ * @brief  Handles CodeCommit UpdateRepositoryName responses.
+ *
+ * @see    CodeCommitClient::updateRepositoryName
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRepositoryNameResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new UpdateRepositoryNameResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRepositoryNameRequest(request));
+    setReply(reply);
+}
+
+const UpdateRepositoryNameRequest * UpdateRepositoryNameResponse::request() const
+{
+    Q_D(const UpdateRepositoryNameResponse);
+    return static_cast<const UpdateRepositoryNameRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit UpdateRepositoryName response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRepositoryNameResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRepositoryNameResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRepositoryNameResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRepositoryNameResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRepositoryNameResponse instance.
+ */
+UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponsePrivate(
+    UpdateRepositoryNameQueueResponse * const q) : UpdateRepositoryNamePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit UpdateRepositoryNameResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRepositoryNameResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "copyfpgaimageresponse.h"
 #include "copyfpgaimageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CopyFpgaImageResponse
+ *
+ * @brief  Handles EC2 CopyFpgaImage responses.
+ *
+ * @see    EC2Client::copyFpgaImage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyFpgaImageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CopyFpgaImageResponsePrivate(this), parent)
+{
+    setRequest(new CopyFpgaImageRequest(request));
+    setReply(reply);
+}
+
+const CopyFpgaImageRequest * CopyFpgaImageResponse::request() const
+{
+    Q_D(const CopyFpgaImageResponse);
+    return static_cast<const CopyFpgaImageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CopyFpgaImage response.
+ *
+ * @param  response  Response to parse.
+ */
+void CopyFpgaImageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyFpgaImageResponsePrivate
+ *
+ * @brief  Private implementation for CopyFpgaImageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyFpgaImageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CopyFpgaImageResponse instance.
+ */
+CopyFpgaImageResponsePrivate::CopyFpgaImageResponsePrivate(
+    CopyFpgaImageQueueResponse * const q) : CopyFpgaImagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CopyFpgaImageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CopyFpgaImageResponsePrivate::CopyFpgaImageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CopyFpgaImageResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listworkflowtypesresponse.h"
 #include "listworkflowtypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  ListWorkflowTypesResponse
+ *
+ * @brief  Handles SWF ListWorkflowTypes responses.
+ *
+ * @see    SWFClient::listWorkflowTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListWorkflowTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new ListWorkflowTypesResponsePrivate(this), parent)
+{
+    setRequest(new ListWorkflowTypesRequest(request));
+    setReply(reply);
+}
+
+const ListWorkflowTypesRequest * ListWorkflowTypesResponse::request() const
+{
+    Q_D(const ListWorkflowTypesResponse);
+    return static_cast<const ListWorkflowTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF ListWorkflowTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListWorkflowTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListWorkflowTypesResponsePrivate
+ *
+ * @brief  Private implementation for ListWorkflowTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListWorkflowTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListWorkflowTypesResponse instance.
+ */
+ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponsePrivate(
+    ListWorkflowTypesQueueResponse * const q) : ListWorkflowTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF ListWorkflowTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListWorkflowTypesResponse"));
+    /// @todo
+}

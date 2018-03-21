@@ -19,3 +19,85 @@
 
 #include "getbucketcorsresponse.h"
 #include "getbucketcorsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketCorsResponse
+ *
+ * @brief  Handles S3 GetBucketCors responses.
+ *
+ * @see    S3Client::getBucketCors
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketCorsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketCorsResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketCorsRequest(request));
+    setReply(reply);
+}
+
+const GetBucketCorsRequest * GetBucketCorsResponse::request() const
+{
+    Q_D(const GetBucketCorsResponse);
+    return static_cast<const GetBucketCorsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketCors response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketCorsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketCorsResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketCorsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketCorsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketCorsResponse instance.
+ */
+GetBucketCorsResponsePrivate::GetBucketCorsResponsePrivate(
+    GetBucketCorsQueueResponse * const q) : GetBucketCorsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketCorsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketCorsResponsePrivate::GetBucketCorsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketCorsResponse"));
+    /// @todo
+}

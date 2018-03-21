@@ -19,3 +19,85 @@
 
 #include "createloadbalancerpolicyresponse.h"
 #include "createloadbalancerpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  CreateLoadBalancerPolicyResponse
+ *
+ * @brief  Handles ElasticLoadBalancing CreateLoadBalancerPolicy responses.
+ *
+ * @see    ElasticLoadBalancingClient::createLoadBalancerPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLoadBalancerPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new CreateLoadBalancerPolicyResponsePrivate(this), parent)
+{
+    setRequest(new CreateLoadBalancerPolicyRequest(request));
+    setReply(reply);
+}
+
+const CreateLoadBalancerPolicyRequest * CreateLoadBalancerPolicyResponse::request() const
+{
+    Q_D(const CreateLoadBalancerPolicyResponse);
+    return static_cast<const CreateLoadBalancerPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing CreateLoadBalancerPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLoadBalancerPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLoadBalancerPolicyResponsePrivate
+ *
+ * @brief  Private implementation for CreateLoadBalancerPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLoadBalancerPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLoadBalancerPolicyResponse instance.
+ */
+CreateLoadBalancerPolicyResponsePrivate::CreateLoadBalancerPolicyResponsePrivate(
+    CreateLoadBalancerPolicyQueueResponse * const q) : CreateLoadBalancerPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing CreateLoadBalancerPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLoadBalancerPolicyResponsePrivate::CreateLoadBalancerPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLoadBalancerPolicyResponse"));
+    /// @todo
+}

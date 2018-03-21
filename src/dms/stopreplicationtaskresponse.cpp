@@ -19,3 +19,85 @@
 
 #include "stopreplicationtaskresponse.h"
 #include "stopreplicationtaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  StopReplicationTaskResponse
+ *
+ * @brief  Handles DatabaseMigrationService StopReplicationTask responses.
+ *
+ * @see    DatabaseMigrationServiceClient::stopReplicationTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopReplicationTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new StopReplicationTaskResponsePrivate(this), parent)
+{
+    setRequest(new StopReplicationTaskRequest(request));
+    setReply(reply);
+}
+
+const StopReplicationTaskRequest * StopReplicationTaskResponse::request() const
+{
+    Q_D(const StopReplicationTaskResponse);
+    return static_cast<const StopReplicationTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService StopReplicationTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopReplicationTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopReplicationTaskResponsePrivate
+ *
+ * @brief  Private implementation for StopReplicationTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopReplicationTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopReplicationTaskResponse instance.
+ */
+StopReplicationTaskResponsePrivate::StopReplicationTaskResponsePrivate(
+    StopReplicationTaskQueueResponse * const q) : StopReplicationTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService StopReplicationTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopReplicationTaskResponsePrivate::StopReplicationTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopReplicationTaskResponse"));
+    /// @todo
+}

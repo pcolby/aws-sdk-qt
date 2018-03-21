@@ -19,3 +19,85 @@
 
 #include "getsqlinjectionmatchsetresponse.h"
 #include "getsqlinjectionmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetSqlInjectionMatchSetResponse
+ *
+ * @brief  Handles WAF GetSqlInjectionMatchSet responses.
+ *
+ * @see    WAFClient::getSqlInjectionMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSqlInjectionMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new GetSqlInjectionMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new GetSqlInjectionMatchSetRequest(request));
+    setReply(reply);
+}
+
+const GetSqlInjectionMatchSetRequest * GetSqlInjectionMatchSetResponse::request() const
+{
+    Q_D(const GetSqlInjectionMatchSetResponse);
+    return static_cast<const GetSqlInjectionMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF GetSqlInjectionMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSqlInjectionMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for GetSqlInjectionMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSqlInjectionMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSqlInjectionMatchSetResponse instance.
+ */
+GetSqlInjectionMatchSetResponsePrivate::GetSqlInjectionMatchSetResponsePrivate(
+    GetSqlInjectionMatchSetQueueResponse * const q) : GetSqlInjectionMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF GetSqlInjectionMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSqlInjectionMatchSetResponsePrivate::GetSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSqlInjectionMatchSetResponse"));
+    /// @todo
+}

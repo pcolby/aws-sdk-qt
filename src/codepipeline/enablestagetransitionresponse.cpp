@@ -19,3 +19,85 @@
 
 #include "enablestagetransitionresponse.h"
 #include "enablestagetransitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  EnableStageTransitionResponse
+ *
+ * @brief  Handles CodePipeline EnableStageTransition responses.
+ *
+ * @see    CodePipelineClient::enableStageTransition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableStageTransitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new EnableStageTransitionResponsePrivate(this), parent)
+{
+    setRequest(new EnableStageTransitionRequest(request));
+    setReply(reply);
+}
+
+const EnableStageTransitionRequest * EnableStageTransitionResponse::request() const
+{
+    Q_D(const EnableStageTransitionResponse);
+    return static_cast<const EnableStageTransitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline EnableStageTransition response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableStageTransitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableStageTransitionResponsePrivate
+ *
+ * @brief  Private implementation for EnableStageTransitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableStageTransitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableStageTransitionResponse instance.
+ */
+EnableStageTransitionResponsePrivate::EnableStageTransitionResponsePrivate(
+    EnableStageTransitionQueueResponse * const q) : EnableStageTransitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline EnableStageTransitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableStageTransitionResponsePrivate::EnableStageTransitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableStageTransitionResponse"));
+    /// @todo
+}

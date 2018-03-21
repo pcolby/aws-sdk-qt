@@ -19,3 +19,85 @@
 
 #include "describedefaultclusterparametersresponse.h"
 #include "describedefaultclusterparametersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeDefaultClusterParametersResponse
+ *
+ * @brief  Handles Redshift DescribeDefaultClusterParameters responses.
+ *
+ * @see    RedshiftClient::describeDefaultClusterParameters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDefaultClusterParametersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeDefaultClusterParametersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDefaultClusterParametersRequest(request));
+    setReply(reply);
+}
+
+const DescribeDefaultClusterParametersRequest * DescribeDefaultClusterParametersResponse::request() const
+{
+    Q_D(const DescribeDefaultClusterParametersResponse);
+    return static_cast<const DescribeDefaultClusterParametersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeDefaultClusterParameters response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDefaultClusterParametersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDefaultClusterParametersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDefaultClusterParametersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultClusterParametersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDefaultClusterParametersResponse instance.
+ */
+DescribeDefaultClusterParametersResponsePrivate::DescribeDefaultClusterParametersResponsePrivate(
+    DescribeDefaultClusterParametersQueueResponse * const q) : DescribeDefaultClusterParametersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeDefaultClusterParametersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDefaultClusterParametersResponsePrivate::DescribeDefaultClusterParametersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDefaultClusterParametersResponse"));
+    /// @todo
+}

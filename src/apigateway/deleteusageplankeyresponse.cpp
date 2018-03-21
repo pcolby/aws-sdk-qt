@@ -19,3 +19,85 @@
 
 #include "deleteusageplankeyresponse.h"
 #include "deleteusageplankeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteUsagePlanKeyResponse
+ *
+ * @brief  Handles APIGateway DeleteUsagePlanKey responses.
+ *
+ * @see    APIGatewayClient::deleteUsagePlanKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUsagePlanKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteUsagePlanKeyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUsagePlanKeyRequest(request));
+    setReply(reply);
+}
+
+const DeleteUsagePlanKeyRequest * DeleteUsagePlanKeyResponse::request() const
+{
+    Q_D(const DeleteUsagePlanKeyResponse);
+    return static_cast<const DeleteUsagePlanKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteUsagePlanKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUsagePlanKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUsagePlanKeyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUsagePlanKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUsagePlanKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUsagePlanKeyResponse instance.
+ */
+DeleteUsagePlanKeyResponsePrivate::DeleteUsagePlanKeyResponsePrivate(
+    DeleteUsagePlanKeyQueueResponse * const q) : DeleteUsagePlanKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteUsagePlanKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUsagePlanKeyResponsePrivate::DeleteUsagePlanKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUsagePlanKeyResponse"));
+    /// @todo
+}

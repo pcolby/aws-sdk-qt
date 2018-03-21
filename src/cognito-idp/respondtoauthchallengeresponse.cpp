@@ -19,3 +19,85 @@
 
 #include "respondtoauthchallengeresponse.h"
 #include "respondtoauthchallengeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  RespondToAuthChallengeResponse
+ *
+ * @brief  Handles CognitoIdentityProvider RespondToAuthChallenge responses.
+ *
+ * @see    CognitoIdentityProviderClient::respondToAuthChallenge
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RespondToAuthChallengeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new RespondToAuthChallengeResponsePrivate(this), parent)
+{
+    setRequest(new RespondToAuthChallengeRequest(request));
+    setReply(reply);
+}
+
+const RespondToAuthChallengeRequest * RespondToAuthChallengeResponse::request() const
+{
+    Q_D(const RespondToAuthChallengeResponse);
+    return static_cast<const RespondToAuthChallengeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider RespondToAuthChallenge response.
+ *
+ * @param  response  Response to parse.
+ */
+void RespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RespondToAuthChallengeResponsePrivate
+ *
+ * @brief  Private implementation for RespondToAuthChallengeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondToAuthChallengeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RespondToAuthChallengeResponse instance.
+ */
+RespondToAuthChallengeResponsePrivate::RespondToAuthChallengeResponsePrivate(
+    RespondToAuthChallengeQueueResponse * const q) : RespondToAuthChallengePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider RespondToAuthChallengeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RespondToAuthChallengeResponsePrivate::RespondToAuthChallengeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RespondToAuthChallengeResponse"));
+    /// @todo
+}

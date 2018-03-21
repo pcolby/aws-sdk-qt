@@ -19,3 +19,85 @@
 
 #include "describeplayersessionsresponse.h"
 #include "describeplayersessionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribePlayerSessionsResponse
+ *
+ * @brief  Handles GameLift DescribePlayerSessions responses.
+ *
+ * @see    GameLiftClient::describePlayerSessions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePlayerSessionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribePlayerSessionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribePlayerSessionsRequest(request));
+    setReply(reply);
+}
+
+const DescribePlayerSessionsRequest * DescribePlayerSessionsResponse::request() const
+{
+    Q_D(const DescribePlayerSessionsResponse);
+    return static_cast<const DescribePlayerSessionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribePlayerSessions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePlayerSessionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePlayerSessionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribePlayerSessionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePlayerSessionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePlayerSessionsResponse instance.
+ */
+DescribePlayerSessionsResponsePrivate::DescribePlayerSessionsResponsePrivate(
+    DescribePlayerSessionsQueueResponse * const q) : DescribePlayerSessionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribePlayerSessionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePlayerSessionsResponsePrivate::DescribePlayerSessionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePlayerSessionsResponse"));
+    /// @todo
+}

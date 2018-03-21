@@ -19,3 +19,85 @@
 
 #include "describereplicationtaskassessmentresultsresponse.h"
 #include "describereplicationtaskassessmentresultsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeReplicationTaskAssessmentResultsResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeReplicationTaskAssessmentResults responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReplicationTaskAssessmentResultsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeReplicationTaskAssessmentResultsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReplicationTaskAssessmentResultsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReplicationTaskAssessmentResultsRequest * DescribeReplicationTaskAssessmentResultsResponse::request() const
+{
+    Q_D(const DescribeReplicationTaskAssessmentResultsResponse);
+    return static_cast<const DescribeReplicationTaskAssessmentResultsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeReplicationTaskAssessmentResults response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReplicationTaskAssessmentResultsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReplicationTaskAssessmentResultsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReplicationTaskAssessmentResultsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReplicationTaskAssessmentResultsResponse instance.
+ */
+DescribeReplicationTaskAssessmentResultsResponsePrivate::DescribeReplicationTaskAssessmentResultsResponsePrivate(
+    DescribeReplicationTaskAssessmentResultsQueueResponse * const q) : DescribeReplicationTaskAssessmentResultsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeReplicationTaskAssessmentResultsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReplicationTaskAssessmentResultsResponsePrivate::DescribeReplicationTaskAssessmentResultsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationTaskAssessmentResultsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "enableawsserviceaccessresponse.h"
 #include "enableawsserviceaccessresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  EnableAWSServiceAccessResponse
+ *
+ * @brief  Handles Organizations EnableAWSServiceAccess responses.
+ *
+ * @see    OrganizationsClient::enableAWSServiceAccess
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableAWSServiceAccessResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new EnableAWSServiceAccessResponsePrivate(this), parent)
+{
+    setRequest(new EnableAWSServiceAccessRequest(request));
+    setReply(reply);
+}
+
+const EnableAWSServiceAccessRequest * EnableAWSServiceAccessResponse::request() const
+{
+    Q_D(const EnableAWSServiceAccessResponse);
+    return static_cast<const EnableAWSServiceAccessRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations EnableAWSServiceAccess response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableAWSServiceAccessResponsePrivate
+ *
+ * @brief  Private implementation for EnableAWSServiceAccessResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableAWSServiceAccessResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableAWSServiceAccessResponse instance.
+ */
+EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponsePrivate(
+    EnableAWSServiceAccessQueueResponse * const q) : EnableAWSServiceAccessPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations EnableAWSServiceAccessResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableAWSServiceAccessResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "gettablesresponse.h"
 #include "gettablesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetTablesResponse
+ *
+ * @brief  Handles Glue GetTables responses.
+ *
+ * @see    GlueClient::getTables
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTablesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetTablesResponsePrivate(this), parent)
+{
+    setRequest(new GetTablesRequest(request));
+    setReply(reply);
+}
+
+const GetTablesRequest * GetTablesResponse::request() const
+{
+    Q_D(const GetTablesResponse);
+    return static_cast<const GetTablesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetTables response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTablesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTablesResponsePrivate
+ *
+ * @brief  Private implementation for GetTablesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTablesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTablesResponse instance.
+ */
+GetTablesResponsePrivate::GetTablesResponsePrivate(
+    GetTablesQueueResponse * const q) : GetTablesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetTablesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTablesResponsePrivate::GetTablesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTablesResponse"));
+    /// @todo
+}

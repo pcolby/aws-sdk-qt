@@ -19,3 +19,85 @@
 
 #include "deregisterfromworkmailresponse.h"
 #include "deregisterfromworkmailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  DeregisterFromWorkMailResponse
+ *
+ * @brief  Handles WorkMail DeregisterFromWorkMail responses.
+ *
+ * @see    WorkMailClient::deregisterFromWorkMail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterFromWorkMailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new DeregisterFromWorkMailResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterFromWorkMailRequest(request));
+    setReply(reply);
+}
+
+const DeregisterFromWorkMailRequest * DeregisterFromWorkMailResponse::request() const
+{
+    Q_D(const DeregisterFromWorkMailResponse);
+    return static_cast<const DeregisterFromWorkMailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail DeregisterFromWorkMail response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterFromWorkMailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterFromWorkMailResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterFromWorkMailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterFromWorkMailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterFromWorkMailResponse instance.
+ */
+DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponsePrivate(
+    DeregisterFromWorkMailQueueResponse * const q) : DeregisterFromWorkMailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail DeregisterFromWorkMailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterFromWorkMailResponse"));
+    /// @todo
+}

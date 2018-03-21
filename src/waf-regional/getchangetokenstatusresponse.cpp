@@ -19,3 +19,85 @@
 
 #include "getchangetokenstatusresponse.h"
 #include "getchangetokenstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetChangeTokenStatusResponse
+ *
+ * @brief  Handles WAFRegional GetChangeTokenStatus responses.
+ *
+ * @see    WAFRegionalClient::getChangeTokenStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetChangeTokenStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new GetChangeTokenStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetChangeTokenStatusRequest(request));
+    setReply(reply);
+}
+
+const GetChangeTokenStatusRequest * GetChangeTokenStatusResponse::request() const
+{
+    Q_D(const GetChangeTokenStatusResponse);
+    return static_cast<const GetChangeTokenStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional GetChangeTokenStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetChangeTokenStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetChangeTokenStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetChangeTokenStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetChangeTokenStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetChangeTokenStatusResponse instance.
+ */
+GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponsePrivate(
+    GetChangeTokenStatusQueueResponse * const q) : GetChangeTokenStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional GetChangeTokenStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetChangeTokenStatusResponse"));
+    /// @todo
+}

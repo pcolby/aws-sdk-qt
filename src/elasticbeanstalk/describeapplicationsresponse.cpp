@@ -19,3 +19,85 @@
 
 #include "describeapplicationsresponse.h"
 #include "describeapplicationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeApplicationsResponse
+ *
+ * @brief  Handles ElasticBeanstalk DescribeApplications responses.
+ *
+ * @see    ElasticBeanstalkClient::describeApplications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeApplicationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DescribeApplicationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeApplicationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeApplicationsRequest * DescribeApplicationsResponse::request() const
+{
+    Q_D(const DescribeApplicationsResponse);
+    return static_cast<const DescribeApplicationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DescribeApplications response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeApplicationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeApplicationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeApplicationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeApplicationsResponse instance.
+ */
+DescribeApplicationsResponsePrivate::DescribeApplicationsResponsePrivate(
+    DescribeApplicationsQueueResponse * const q) : DescribeApplicationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DescribeApplicationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeApplicationsResponsePrivate::DescribeApplicationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationsResponse"));
+    /// @todo
+}

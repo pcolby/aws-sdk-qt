@@ -19,3 +19,85 @@
 
 #include "getloggerdefinitionresponse.h"
 #include "getloggerdefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetLoggerDefinitionResponse
+ *
+ * @brief  Handles Greengrass GetLoggerDefinition responses.
+ *
+ * @see    GreengrassClient::getLoggerDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoggerDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetLoggerDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new GetLoggerDefinitionRequest(request));
+    setReply(reply);
+}
+
+const GetLoggerDefinitionRequest * GetLoggerDefinitionResponse::request() const
+{
+    Q_D(const GetLoggerDefinitionResponse);
+    return static_cast<const GetLoggerDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetLoggerDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLoggerDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoggerDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for GetLoggerDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoggerDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLoggerDefinitionResponse instance.
+ */
+GetLoggerDefinitionResponsePrivate::GetLoggerDefinitionResponsePrivate(
+    GetLoggerDefinitionQueueResponse * const q) : GetLoggerDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetLoggerDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLoggerDefinitionResponsePrivate::GetLoggerDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLoggerDefinitionResponse"));
+    /// @todo
+}

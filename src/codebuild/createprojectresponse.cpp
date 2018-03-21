@@ -19,3 +19,85 @@
 
 #include "createprojectresponse.h"
 #include "createprojectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  CreateProjectResponse
+ *
+ * @brief  Handles CodeBuild CreateProject responses.
+ *
+ * @see    CodeBuildClient::createProject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateProjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new CreateProjectResponsePrivate(this), parent)
+{
+    setRequest(new CreateProjectRequest(request));
+    setReply(reply);
+}
+
+const CreateProjectRequest * CreateProjectResponse::request() const
+{
+    Q_D(const CreateProjectResponse);
+    return static_cast<const CreateProjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild CreateProject response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateProjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateProjectResponsePrivate
+ *
+ * @brief  Private implementation for CreateProjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateProjectResponse instance.
+ */
+CreateProjectResponsePrivate::CreateProjectResponsePrivate(
+    CreateProjectQueueResponse * const q) : CreateProjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild CreateProjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateProjectResponsePrivate::CreateProjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateProjectResponse"));
+    /// @todo
+}

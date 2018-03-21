@@ -19,3 +19,85 @@
 
 #include "deletehsmclientcertificateresponse.h"
 #include "deletehsmclientcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteHsmClientCertificateResponse
+ *
+ * @brief  Handles Redshift DeleteHsmClientCertificate responses.
+ *
+ * @see    RedshiftClient::deleteHsmClientCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHsmClientCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DeleteHsmClientCertificateResponsePrivate(this), parent)
+{
+    setRequest(new DeleteHsmClientCertificateRequest(request));
+    setReply(reply);
+}
+
+const DeleteHsmClientCertificateRequest * DeleteHsmClientCertificateResponse::request() const
+{
+    Q_D(const DeleteHsmClientCertificateResponse);
+    return static_cast<const DeleteHsmClientCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DeleteHsmClientCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteHsmClientCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHsmClientCertificateResponsePrivate
+ *
+ * @brief  Private implementation for DeleteHsmClientCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHsmClientCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteHsmClientCertificateResponse instance.
+ */
+DeleteHsmClientCertificateResponsePrivate::DeleteHsmClientCertificateResponsePrivate(
+    DeleteHsmClientCertificateQueueResponse * const q) : DeleteHsmClientCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DeleteHsmClientCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteHsmClientCertificateResponsePrivate::DeleteHsmClientCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteHsmClientCertificateResponse"));
+    /// @todo
+}

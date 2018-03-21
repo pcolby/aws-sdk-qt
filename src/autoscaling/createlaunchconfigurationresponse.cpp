@@ -19,3 +19,85 @@
 
 #include "createlaunchconfigurationresponse.h"
 #include "createlaunchconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  CreateLaunchConfigurationResponse
+ *
+ * @brief  Handles AutoScaling CreateLaunchConfiguration responses.
+ *
+ * @see    AutoScalingClient::createLaunchConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLaunchConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new CreateLaunchConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new CreateLaunchConfigurationRequest(request));
+    setReply(reply);
+}
+
+const CreateLaunchConfigurationRequest * CreateLaunchConfigurationResponse::request() const
+{
+    Q_D(const CreateLaunchConfigurationResponse);
+    return static_cast<const CreateLaunchConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling CreateLaunchConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLaunchConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLaunchConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for CreateLaunchConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLaunchConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLaunchConfigurationResponse instance.
+ */
+CreateLaunchConfigurationResponsePrivate::CreateLaunchConfigurationResponsePrivate(
+    CreateLaunchConfigurationQueueResponse * const q) : CreateLaunchConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling CreateLaunchConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLaunchConfigurationResponsePrivate::CreateLaunchConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLaunchConfigurationResponse"));
+    /// @todo
+}

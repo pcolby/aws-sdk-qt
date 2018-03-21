@@ -19,3 +19,85 @@
 
 #include "detachrolepolicyresponse.h"
 #include "detachrolepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DetachRolePolicyResponse
+ *
+ * @brief  Handles IAM DetachRolePolicy responses.
+ *
+ * @see    IAMClient::detachRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachRolePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DetachRolePolicyResponsePrivate(this), parent)
+{
+    setRequest(new DetachRolePolicyRequest(request));
+    setReply(reply);
+}
+
+const DetachRolePolicyRequest * DetachRolePolicyResponse::request() const
+{
+    Q_D(const DetachRolePolicyResponse);
+    return static_cast<const DetachRolePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DetachRolePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachRolePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachRolePolicyResponsePrivate
+ *
+ * @brief  Private implementation for DetachRolePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachRolePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachRolePolicyResponse instance.
+ */
+DetachRolePolicyResponsePrivate::DetachRolePolicyResponsePrivate(
+    DetachRolePolicyQueueResponse * const q) : DetachRolePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DetachRolePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachRolePolicyResponsePrivate::DetachRolePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachRolePolicyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getassessmentreportresponse.h"
 #include "getassessmentreportresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  GetAssessmentReportResponse
+ *
+ * @brief  Handles Inspector GetAssessmentReport responses.
+ *
+ * @see    InspectorClient::getAssessmentReport
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAssessmentReportResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new GetAssessmentReportResponsePrivate(this), parent)
+{
+    setRequest(new GetAssessmentReportRequest(request));
+    setReply(reply);
+}
+
+const GetAssessmentReportRequest * GetAssessmentReportResponse::request() const
+{
+    Q_D(const GetAssessmentReportResponse);
+    return static_cast<const GetAssessmentReportRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector GetAssessmentReport response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAssessmentReportResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAssessmentReportResponsePrivate
+ *
+ * @brief  Private implementation for GetAssessmentReportResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAssessmentReportResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAssessmentReportResponse instance.
+ */
+GetAssessmentReportResponsePrivate::GetAssessmentReportResponsePrivate(
+    GetAssessmentReportQueueResponse * const q) : GetAssessmentReportPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector GetAssessmentReportResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAssessmentReportResponsePrivate::GetAssessmentReportResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAssessmentReportResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createcloudformationchangesetresponse.h"
 #include "createcloudformationchangesetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  CreateCloudFormationChangeSetResponse
+ *
+ * @brief  Handles ServerlessApplicationRepository CreateCloudFormationChangeSet responses.
+ *
+ * @see    ServerlessApplicationRepositoryClient::createCloudFormationChangeSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCloudFormationChangeSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServerlessApplicationRepositoryResponse(new CreateCloudFormationChangeSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateCloudFormationChangeSetRequest(request));
+    setReply(reply);
+}
+
+const CreateCloudFormationChangeSetRequest * CreateCloudFormationChangeSetResponse::request() const
+{
+    Q_D(const CreateCloudFormationChangeSetResponse);
+    return static_cast<const CreateCloudFormationChangeSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServerlessApplicationRepository CreateCloudFormationChangeSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCloudFormationChangeSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCloudFormationChangeSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateCloudFormationChangeSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCloudFormationChangeSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCloudFormationChangeSetResponse instance.
+ */
+CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetResponsePrivate(
+    CreateCloudFormationChangeSetQueueResponse * const q) : CreateCloudFormationChangeSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServerlessApplicationRepository CreateCloudFormationChangeSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCloudFormationChangeSetResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listipsetsresponse.h"
 #include "listipsetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListIPSetsResponse
+ *
+ * @brief  Handles WAF ListIPSets responses.
+ *
+ * @see    WAFClient::listIPSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListIPSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new ListIPSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListIPSetsRequest(request));
+    setReply(reply);
+}
+
+const ListIPSetsRequest * ListIPSetsResponse::request() const
+{
+    Q_D(const ListIPSetsResponse);
+    return static_cast<const ListIPSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF ListIPSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListIPSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListIPSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListIPSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListIPSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListIPSetsResponse instance.
+ */
+ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
+    ListIPSetsQueueResponse * const q) : ListIPSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF ListIPSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListIPSetsResponsePrivate::ListIPSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListIPSetsResponse"));
+    /// @todo
+}

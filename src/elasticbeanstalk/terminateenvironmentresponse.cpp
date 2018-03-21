@@ -19,3 +19,85 @@
 
 #include "terminateenvironmentresponse.h"
 #include "terminateenvironmentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  TerminateEnvironmentResponse
+ *
+ * @brief  Handles ElasticBeanstalk TerminateEnvironment responses.
+ *
+ * @see    ElasticBeanstalkClient::terminateEnvironment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateEnvironmentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new TerminateEnvironmentResponsePrivate(this), parent)
+{
+    setRequest(new TerminateEnvironmentRequest(request));
+    setReply(reply);
+}
+
+const TerminateEnvironmentRequest * TerminateEnvironmentResponse::request() const
+{
+    Q_D(const TerminateEnvironmentResponse);
+    return static_cast<const TerminateEnvironmentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk TerminateEnvironment response.
+ *
+ * @param  response  Response to parse.
+ */
+void TerminateEnvironmentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateEnvironmentResponsePrivate
+ *
+ * @brief  Private implementation for TerminateEnvironmentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateEnvironmentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TerminateEnvironmentResponse instance.
+ */
+TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponsePrivate(
+    TerminateEnvironmentQueueResponse * const q) : TerminateEnvironmentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk TerminateEnvironmentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TerminateEnvironmentResponse"));
+    /// @todo
+}

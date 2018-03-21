@@ -19,3 +19,85 @@
 
 #include "getidentityproviderbyidentifierresponse.h"
 #include "getidentityproviderbyidentifierresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GetIdentityProviderByIdentifierResponse
+ *
+ * @brief  Handles CognitoIdentityProvider GetIdentityProviderByIdentifier responses.
+ *
+ * @see    CognitoIdentityProviderClient::getIdentityProviderByIdentifier
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityProviderByIdentifierResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new GetIdentityProviderByIdentifierResponsePrivate(this), parent)
+{
+    setRequest(new GetIdentityProviderByIdentifierRequest(request));
+    setReply(reply);
+}
+
+const GetIdentityProviderByIdentifierRequest * GetIdentityProviderByIdentifierResponse::request() const
+{
+    Q_D(const GetIdentityProviderByIdentifierResponse);
+    return static_cast<const GetIdentityProviderByIdentifierRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider GetIdentityProviderByIdentifier response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIdentityProviderByIdentifierResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityProviderByIdentifierResponsePrivate
+ *
+ * @brief  Private implementation for GetIdentityProviderByIdentifierResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityProviderByIdentifierResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIdentityProviderByIdentifierResponse instance.
+ */
+GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierResponsePrivate(
+    GetIdentityProviderByIdentifierQueueResponse * const q) : GetIdentityProviderByIdentifierPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider GetIdentityProviderByIdentifierResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIdentityProviderByIdentifierResponse"));
+    /// @todo
+}

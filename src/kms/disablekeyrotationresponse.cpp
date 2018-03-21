@@ -19,3 +19,85 @@
 
 #include "disablekeyrotationresponse.h"
 #include "disablekeyrotationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DisableKeyRotationResponse
+ *
+ * @brief  Handles KMS DisableKeyRotation responses.
+ *
+ * @see    KMSClient::disableKeyRotation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableKeyRotationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new DisableKeyRotationResponsePrivate(this), parent)
+{
+    setRequest(new DisableKeyRotationRequest(request));
+    setReply(reply);
+}
+
+const DisableKeyRotationRequest * DisableKeyRotationResponse::request() const
+{
+    Q_D(const DisableKeyRotationResponse);
+    return static_cast<const DisableKeyRotationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS DisableKeyRotation response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableKeyRotationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableKeyRotationResponsePrivate
+ *
+ * @brief  Private implementation for DisableKeyRotationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableKeyRotationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableKeyRotationResponse instance.
+ */
+DisableKeyRotationResponsePrivate::DisableKeyRotationResponsePrivate(
+    DisableKeyRotationQueueResponse * const q) : DisableKeyRotationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS DisableKeyRotationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableKeyRotationResponsePrivate::DisableKeyRotationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableKeyRotationResponse"));
+    /// @todo
+}

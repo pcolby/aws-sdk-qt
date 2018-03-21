@@ -19,3 +19,85 @@
 
 #include "putslottyperesponse.h"
 #include "putslottyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  PutSlotTypeResponse
+ *
+ * @brief  Handles LexModelBuildingService PutSlotType responses.
+ *
+ * @see    LexModelBuildingServiceClient::putSlotType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutSlotTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new PutSlotTypeResponsePrivate(this), parent)
+{
+    setRequest(new PutSlotTypeRequest(request));
+    setReply(reply);
+}
+
+const PutSlotTypeRequest * PutSlotTypeResponse::request() const
+{
+    Q_D(const PutSlotTypeResponse);
+    return static_cast<const PutSlotTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService PutSlotType response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutSlotTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutSlotTypeResponsePrivate
+ *
+ * @brief  Private implementation for PutSlotTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutSlotTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutSlotTypeResponse instance.
+ */
+PutSlotTypeResponsePrivate::PutSlotTypeResponsePrivate(
+    PutSlotTypeQueueResponse * const q) : PutSlotTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService PutSlotTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutSlotTypeResponsePrivate::PutSlotTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutSlotTypeResponse"));
+    /// @todo
+}

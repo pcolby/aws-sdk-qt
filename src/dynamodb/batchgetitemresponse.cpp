@@ -19,3 +19,85 @@
 
 #include "batchgetitemresponse.h"
 #include "batchgetitemresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  BatchGetItemResponse
+ *
+ * @brief  Handles DynamoDB BatchGetItem responses.
+ *
+ * @see    DynamoDBClient::batchGetItem
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetItemResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new BatchGetItemResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetItemRequest(request));
+    setReply(reply);
+}
+
+const BatchGetItemRequest * BatchGetItemResponse::request() const
+{
+    Q_D(const BatchGetItemResponse);
+    return static_cast<const BatchGetItemRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB BatchGetItem response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetItemResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetItemResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetItemResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetItemResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetItemResponse instance.
+ */
+BatchGetItemResponsePrivate::BatchGetItemResponsePrivate(
+    BatchGetItemQueueResponse * const q) : BatchGetItemPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB BatchGetItemResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetItemResponsePrivate::BatchGetItemResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetItemResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "registerinstanceswithloadbalancerresponse.h"
 #include "registerinstanceswithloadbalancerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  RegisterInstancesWithLoadBalancerResponse
+ *
+ * @brief  Handles ElasticLoadBalancing RegisterInstancesWithLoadBalancer responses.
+ *
+ * @see    ElasticLoadBalancingClient::registerInstancesWithLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterInstancesWithLoadBalancerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new RegisterInstancesWithLoadBalancerResponsePrivate(this), parent)
+{
+    setRequest(new RegisterInstancesWithLoadBalancerRequest(request));
+    setReply(reply);
+}
+
+const RegisterInstancesWithLoadBalancerRequest * RegisterInstancesWithLoadBalancerResponse::request() const
+{
+    Q_D(const RegisterInstancesWithLoadBalancerResponse);
+    return static_cast<const RegisterInstancesWithLoadBalancerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing RegisterInstancesWithLoadBalancer response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterInstancesWithLoadBalancerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterInstancesWithLoadBalancerResponsePrivate
+ *
+ * @brief  Private implementation for RegisterInstancesWithLoadBalancerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterInstancesWithLoadBalancerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterInstancesWithLoadBalancerResponse instance.
+ */
+RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalancerResponsePrivate(
+    RegisterInstancesWithLoadBalancerQueueResponse * const q) : RegisterInstancesWithLoadBalancerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing RegisterInstancesWithLoadBalancerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalancerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterInstancesWithLoadBalancerResponse"));
+    /// @todo
+}

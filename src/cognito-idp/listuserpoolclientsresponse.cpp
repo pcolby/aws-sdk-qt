@@ -19,3 +19,85 @@
 
 #include "listuserpoolclientsresponse.h"
 #include "listuserpoolclientsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListUserPoolClientsResponse
+ *
+ * @brief  Handles CognitoIdentityProvider ListUserPoolClients responses.
+ *
+ * @see    CognitoIdentityProviderClient::listUserPoolClients
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListUserPoolClientsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new ListUserPoolClientsResponsePrivate(this), parent)
+{
+    setRequest(new ListUserPoolClientsRequest(request));
+    setReply(reply);
+}
+
+const ListUserPoolClientsRequest * ListUserPoolClientsResponse::request() const
+{
+    Q_D(const ListUserPoolClientsResponse);
+    return static_cast<const ListUserPoolClientsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider ListUserPoolClients response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListUserPoolClientsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListUserPoolClientsResponsePrivate
+ *
+ * @brief  Private implementation for ListUserPoolClientsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUserPoolClientsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListUserPoolClientsResponse instance.
+ */
+ListUserPoolClientsResponsePrivate::ListUserPoolClientsResponsePrivate(
+    ListUserPoolClientsQueueResponse * const q) : ListUserPoolClientsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider ListUserPoolClientsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListUserPoolClientsResponsePrivate::ListUserPoolClientsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListUserPoolClientsResponse"));
+    /// @todo
+}

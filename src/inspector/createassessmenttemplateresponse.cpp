@@ -19,3 +19,85 @@
 
 #include "createassessmenttemplateresponse.h"
 #include "createassessmenttemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  CreateAssessmentTemplateResponse
+ *
+ * @brief  Handles Inspector CreateAssessmentTemplate responses.
+ *
+ * @see    InspectorClient::createAssessmentTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAssessmentTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new CreateAssessmentTemplateResponsePrivate(this), parent)
+{
+    setRequest(new CreateAssessmentTemplateRequest(request));
+    setReply(reply);
+}
+
+const CreateAssessmentTemplateRequest * CreateAssessmentTemplateResponse::request() const
+{
+    Q_D(const CreateAssessmentTemplateResponse);
+    return static_cast<const CreateAssessmentTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector CreateAssessmentTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAssessmentTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAssessmentTemplateResponsePrivate
+ *
+ * @brief  Private implementation for CreateAssessmentTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAssessmentTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAssessmentTemplateResponse instance.
+ */
+CreateAssessmentTemplateResponsePrivate::CreateAssessmentTemplateResponsePrivate(
+    CreateAssessmentTemplateQueueResponse * const q) : CreateAssessmentTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector CreateAssessmentTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAssessmentTemplateResponsePrivate::CreateAssessmentTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAssessmentTemplateResponse"));
+    /// @todo
+}

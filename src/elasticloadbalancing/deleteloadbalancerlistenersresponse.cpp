@@ -19,3 +19,85 @@
 
 #include "deleteloadbalancerlistenersresponse.h"
 #include "deleteloadbalancerlistenersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  DeleteLoadBalancerListenersResponse
+ *
+ * @brief  Handles ElasticLoadBalancing DeleteLoadBalancerListeners responses.
+ *
+ * @see    ElasticLoadBalancingClient::deleteLoadBalancerListeners
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoadBalancerListenersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new DeleteLoadBalancerListenersResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLoadBalancerListenersRequest(request));
+    setReply(reply);
+}
+
+const DeleteLoadBalancerListenersRequest * DeleteLoadBalancerListenersResponse::request() const
+{
+    Q_D(const DeleteLoadBalancerListenersResponse);
+    return static_cast<const DeleteLoadBalancerListenersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing DeleteLoadBalancerListeners response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLoadBalancerListenersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoadBalancerListenersResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLoadBalancerListenersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerListenersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLoadBalancerListenersResponse instance.
+ */
+DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResponsePrivate(
+    DeleteLoadBalancerListenersQueueResponse * const q) : DeleteLoadBalancerListenersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing DeleteLoadBalancerListenersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerListenersResponse"));
+    /// @todo
+}

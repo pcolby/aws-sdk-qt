@@ -19,3 +19,85 @@
 
 #include "getcontentmoderationresponse.h"
 #include "getcontentmoderationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  GetContentModerationResponse
+ *
+ * @brief  Handles Rekognition GetContentModeration responses.
+ *
+ * @see    RekognitionClient::getContentModeration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetContentModerationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new GetContentModerationResponsePrivate(this), parent)
+{
+    setRequest(new GetContentModerationRequest(request));
+    setReply(reply);
+}
+
+const GetContentModerationRequest * GetContentModerationResponse::request() const
+{
+    Q_D(const GetContentModerationResponse);
+    return static_cast<const GetContentModerationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition GetContentModeration response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetContentModerationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetContentModerationResponsePrivate
+ *
+ * @brief  Private implementation for GetContentModerationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContentModerationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetContentModerationResponse instance.
+ */
+GetContentModerationResponsePrivate::GetContentModerationResponsePrivate(
+    GetContentModerationQueueResponse * const q) : GetContentModerationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition GetContentModerationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetContentModerationResponsePrivate::GetContentModerationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetContentModerationResponse"));
+    /// @todo
+}

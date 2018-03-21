@@ -19,3 +19,85 @@
 
 #include "getlabeldetectionresponse.h"
 #include "getlabeldetectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  GetLabelDetectionResponse
+ *
+ * @brief  Handles Rekognition GetLabelDetection responses.
+ *
+ * @see    RekognitionClient::getLabelDetection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLabelDetectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new GetLabelDetectionResponsePrivate(this), parent)
+{
+    setRequest(new GetLabelDetectionRequest(request));
+    setReply(reply);
+}
+
+const GetLabelDetectionRequest * GetLabelDetectionResponse::request() const
+{
+    Q_D(const GetLabelDetectionResponse);
+    return static_cast<const GetLabelDetectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition GetLabelDetection response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLabelDetectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLabelDetectionResponsePrivate
+ *
+ * @brief  Private implementation for GetLabelDetectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLabelDetectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLabelDetectionResponse instance.
+ */
+GetLabelDetectionResponsePrivate::GetLabelDetectionResponsePrivate(
+    GetLabelDetectionQueueResponse * const q) : GetLabelDetectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition GetLabelDetectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLabelDetectionResponsePrivate::GetLabelDetectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLabelDetectionResponse"));
+    /// @todo
+}

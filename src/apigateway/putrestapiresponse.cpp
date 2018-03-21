@@ -19,3 +19,85 @@
 
 #include "putrestapiresponse.h"
 #include "putrestapiresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  PutRestApiResponse
+ *
+ * @brief  Handles APIGateway PutRestApi responses.
+ *
+ * @see    APIGatewayClient::putRestApi
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutRestApiResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new PutRestApiResponsePrivate(this), parent)
+{
+    setRequest(new PutRestApiRequest(request));
+    setReply(reply);
+}
+
+const PutRestApiRequest * PutRestApiResponse::request() const
+{
+    Q_D(const PutRestApiResponse);
+    return static_cast<const PutRestApiRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway PutRestApi response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutRestApiResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutRestApiResponsePrivate
+ *
+ * @brief  Private implementation for PutRestApiResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRestApiResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutRestApiResponse instance.
+ */
+PutRestApiResponsePrivate::PutRestApiResponsePrivate(
+    PutRestApiQueueResponse * const q) : PutRestApiPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway PutRestApiResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutRestApiResponsePrivate::PutRestApiResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutRestApiResponse"));
+    /// @todo
+}

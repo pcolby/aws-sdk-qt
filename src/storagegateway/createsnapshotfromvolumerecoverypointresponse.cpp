@@ -19,3 +19,85 @@
 
 #include "createsnapshotfromvolumerecoverypointresponse.h"
 #include "createsnapshotfromvolumerecoverypointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CreateSnapshotFromVolumeRecoveryPointResponse
+ *
+ * @brief  Handles StorageGateway CreateSnapshotFromVolumeRecoveryPoint responses.
+ *
+ * @see    StorageGatewayClient::createSnapshotFromVolumeRecoveryPoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSnapshotFromVolumeRecoveryPointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new CreateSnapshotFromVolumeRecoveryPointResponsePrivate(this), parent)
+{
+    setRequest(new CreateSnapshotFromVolumeRecoveryPointRequest(request));
+    setReply(reply);
+}
+
+const CreateSnapshotFromVolumeRecoveryPointRequest * CreateSnapshotFromVolumeRecoveryPointResponse::request() const
+{
+    Q_D(const CreateSnapshotFromVolumeRecoveryPointResponse);
+    return static_cast<const CreateSnapshotFromVolumeRecoveryPointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway CreateSnapshotFromVolumeRecoveryPoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSnapshotFromVolumeRecoveryPointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSnapshotFromVolumeRecoveryPointResponsePrivate
+ *
+ * @brief  Private implementation for CreateSnapshotFromVolumeRecoveryPointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSnapshotFromVolumeRecoveryPointResponse instance.
+ */
+CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRecoveryPointResponsePrivate(
+    CreateSnapshotFromVolumeRecoveryPointQueueResponse * const q) : CreateSnapshotFromVolumeRecoveryPointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway CreateSnapshotFromVolumeRecoveryPointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRecoveryPointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotFromVolumeRecoveryPointResponse"));
+    /// @todo
+}

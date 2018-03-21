@@ -19,3 +19,85 @@
 
 #include "startcontentmoderationresponse.h"
 #include "startcontentmoderationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartContentModerationResponse
+ *
+ * @brief  Handles Rekognition StartContentModeration responses.
+ *
+ * @see    RekognitionClient::startContentModeration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartContentModerationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new StartContentModerationResponsePrivate(this), parent)
+{
+    setRequest(new StartContentModerationRequest(request));
+    setReply(reply);
+}
+
+const StartContentModerationRequest * StartContentModerationResponse::request() const
+{
+    Q_D(const StartContentModerationResponse);
+    return static_cast<const StartContentModerationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition StartContentModeration response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartContentModerationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartContentModerationResponsePrivate
+ *
+ * @brief  Private implementation for StartContentModerationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartContentModerationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartContentModerationResponse instance.
+ */
+StartContentModerationResponsePrivate::StartContentModerationResponsePrivate(
+    StartContentModerationQueueResponse * const q) : StartContentModerationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition StartContentModerationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartContentModerationResponsePrivate::StartContentModerationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartContentModerationResponse"));
+    /// @todo
+}

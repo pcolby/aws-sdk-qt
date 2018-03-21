@@ -19,3 +19,85 @@
 
 #include "deleteorganizationresponse.h"
 #include "deleteorganizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DeleteOrganizationResponse
+ *
+ * @brief  Handles Organizations DeleteOrganization responses.
+ *
+ * @see    OrganizationsClient::deleteOrganization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOrganizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new DeleteOrganizationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteOrganizationRequest(request));
+    setReply(reply);
+}
+
+const DeleteOrganizationRequest * DeleteOrganizationResponse::request() const
+{
+    Q_D(const DeleteOrganizationResponse);
+    return static_cast<const DeleteOrganizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations DeleteOrganization response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteOrganizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOrganizationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteOrganizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOrganizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteOrganizationResponse instance.
+ */
+DeleteOrganizationResponsePrivate::DeleteOrganizationResponsePrivate(
+    DeleteOrganizationQueueResponse * const q) : DeleteOrganizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations DeleteOrganizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteOrganizationResponsePrivate::DeleteOrganizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteOrganizationResponse"));
+    /// @todo
+}

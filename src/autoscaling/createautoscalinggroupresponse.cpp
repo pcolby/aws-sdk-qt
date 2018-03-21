@@ -19,3 +19,85 @@
 
 #include "createautoscalinggroupresponse.h"
 #include "createautoscalinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  CreateAutoScalingGroupResponse
+ *
+ * @brief  Handles AutoScaling CreateAutoScalingGroup responses.
+ *
+ * @see    AutoScalingClient::createAutoScalingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAutoScalingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new CreateAutoScalingGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateAutoScalingGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateAutoScalingGroupRequest * CreateAutoScalingGroupResponse::request() const
+{
+    Q_D(const CreateAutoScalingGroupResponse);
+    return static_cast<const CreateAutoScalingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling CreateAutoScalingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAutoScalingGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateAutoScalingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAutoScalingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAutoScalingGroupResponse instance.
+ */
+CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponsePrivate(
+    CreateAutoScalingGroupQueueResponse * const q) : CreateAutoScalingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling CreateAutoScalingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAutoScalingGroupResponse"));
+    /// @todo
+}

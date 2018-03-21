@@ -19,3 +19,85 @@
 
 #include "getapikeysresponse.h"
 #include "getapikeysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetApiKeysResponse
+ *
+ * @brief  Handles APIGateway GetApiKeys responses.
+ *
+ * @see    APIGatewayClient::getApiKeys
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApiKeysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetApiKeysResponsePrivate(this), parent)
+{
+    setRequest(new GetApiKeysRequest(request));
+    setReply(reply);
+}
+
+const GetApiKeysRequest * GetApiKeysResponse::request() const
+{
+    Q_D(const GetApiKeysResponse);
+    return static_cast<const GetApiKeysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetApiKeys response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetApiKeysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApiKeysResponsePrivate
+ *
+ * @brief  Private implementation for GetApiKeysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApiKeysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetApiKeysResponse instance.
+ */
+GetApiKeysResponsePrivate::GetApiKeysResponsePrivate(
+    GetApiKeysQueueResponse * const q) : GetApiKeysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetApiKeysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetApiKeysResponsePrivate::GetApiKeysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetApiKeysResponse"));
+    /// @todo
+}

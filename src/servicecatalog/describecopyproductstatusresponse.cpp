@@ -19,3 +19,85 @@
 
 #include "describecopyproductstatusresponse.h"
 #include "describecopyproductstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeCopyProductStatusResponse
+ *
+ * @brief  Handles ServiceCatalog DescribeCopyProductStatus responses.
+ *
+ * @see    ServiceCatalogClient::describeCopyProductStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCopyProductStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DescribeCopyProductStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCopyProductStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeCopyProductStatusRequest * DescribeCopyProductStatusResponse::request() const
+{
+    Q_D(const DescribeCopyProductStatusResponse);
+    return static_cast<const DescribeCopyProductStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DescribeCopyProductStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCopyProductStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCopyProductStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCopyProductStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCopyProductStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCopyProductStatusResponse instance.
+ */
+DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponsePrivate(
+    DescribeCopyProductStatusQueueResponse * const q) : DescribeCopyProductStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DescribeCopyProductStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCopyProductStatusResponse"));
+    /// @todo
+}

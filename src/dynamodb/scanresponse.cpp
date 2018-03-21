@@ -19,3 +19,85 @@
 
 #include "scanresponse.h"
 #include "scanresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  ScanResponse
+ *
+ * @brief  Handles DynamoDB Scan responses.
+ *
+ * @see    DynamoDBClient::scan
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ScanResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new ScanResponsePrivate(this), parent)
+{
+    setRequest(new ScanRequest(request));
+    setReply(reply);
+}
+
+const ScanRequest * ScanResponse::request() const
+{
+    Q_D(const ScanResponse);
+    return static_cast<const ScanRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB Scan response.
+ *
+ * @param  response  Response to parse.
+ */
+void ScanResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ScanResponsePrivate
+ *
+ * @brief  Private implementation for ScanResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ScanResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ScanResponse instance.
+ */
+ScanResponsePrivate::ScanResponsePrivate(
+    ScanQueueResponse * const q) : ScanPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB ScanResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ScanResponsePrivate::ScanResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ScanResponse"));
+    /// @todo
+}

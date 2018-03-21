@@ -19,3 +19,85 @@
 
 #include "getwebaclresponse.h"
 #include "getwebaclresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetWebACLResponse
+ *
+ * @brief  Handles WAF GetWebACL responses.
+ *
+ * @see    WAFClient::getWebACL
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetWebACLResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new GetWebACLResponsePrivate(this), parent)
+{
+    setRequest(new GetWebACLRequest(request));
+    setReply(reply);
+}
+
+const GetWebACLRequest * GetWebACLResponse::request() const
+{
+    Q_D(const GetWebACLResponse);
+    return static_cast<const GetWebACLRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF GetWebACL response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetWebACLResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetWebACLResponsePrivate
+ *
+ * @brief  Private implementation for GetWebACLResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetWebACLResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetWebACLResponse instance.
+ */
+GetWebACLResponsePrivate::GetWebACLResponsePrivate(
+    GetWebACLQueueResponse * const q) : GetWebACLPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF GetWebACLResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetWebACLResponsePrivate::GetWebACLResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetWebACLResponse"));
+    /// @todo
+}

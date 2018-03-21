@@ -19,3 +19,85 @@
 
 #include "updatefunctionconfigurationresponse.h"
 #include "updatefunctionconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  UpdateFunctionConfigurationResponse
+ *
+ * @brief  Handles Lambda UpdateFunctionConfiguration responses.
+ *
+ * @see    LambdaClient::updateFunctionConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFunctionConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new UpdateFunctionConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateFunctionConfigurationRequest(request));
+    setReply(reply);
+}
+
+const UpdateFunctionConfigurationRequest * UpdateFunctionConfigurationResponse::request() const
+{
+    Q_D(const UpdateFunctionConfigurationResponse);
+    return static_cast<const UpdateFunctionConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda UpdateFunctionConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateFunctionConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFunctionConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateFunctionConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFunctionConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateFunctionConfigurationResponse instance.
+ */
+UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponsePrivate(
+    UpdateFunctionConfigurationQueueResponse * const q) : UpdateFunctionConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda UpdateFunctionConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateFunctionConfigurationResponse"));
+    /// @todo
+}

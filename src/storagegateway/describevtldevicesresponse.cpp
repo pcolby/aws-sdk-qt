@@ -19,3 +19,85 @@
 
 #include "describevtldevicesresponse.h"
 #include "describevtldevicesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeVTLDevicesResponse
+ *
+ * @brief  Handles StorageGateway DescribeVTLDevices responses.
+ *
+ * @see    StorageGatewayClient::describeVTLDevices
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVTLDevicesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeVTLDevicesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVTLDevicesRequest(request));
+    setReply(reply);
+}
+
+const DescribeVTLDevicesRequest * DescribeVTLDevicesResponse::request() const
+{
+    Q_D(const DescribeVTLDevicesResponse);
+    return static_cast<const DescribeVTLDevicesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeVTLDevices response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVTLDevicesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVTLDevicesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVTLDevicesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVTLDevicesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVTLDevicesResponse instance.
+ */
+DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponsePrivate(
+    DescribeVTLDevicesQueueResponse * const q) : DescribeVTLDevicesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeVTLDevicesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVTLDevicesResponse"));
+    /// @todo
+}

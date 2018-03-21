@@ -19,3 +19,85 @@
 
 #include "removeiproutesresponse.h"
 #include "removeiproutesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  RemoveIpRoutesResponse
+ *
+ * @brief  Handles DirectoryService RemoveIpRoutes responses.
+ *
+ * @see    DirectoryServiceClient::removeIpRoutes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveIpRoutesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new RemoveIpRoutesResponsePrivate(this), parent)
+{
+    setRequest(new RemoveIpRoutesRequest(request));
+    setReply(reply);
+}
+
+const RemoveIpRoutesRequest * RemoveIpRoutesResponse::request() const
+{
+    Q_D(const RemoveIpRoutesResponse);
+    return static_cast<const RemoveIpRoutesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService RemoveIpRoutes response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveIpRoutesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveIpRoutesResponsePrivate
+ *
+ * @brief  Private implementation for RemoveIpRoutesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveIpRoutesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveIpRoutesResponse instance.
+ */
+RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponsePrivate(
+    RemoveIpRoutesQueueResponse * const q) : RemoveIpRoutesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService RemoveIpRoutesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveIpRoutesResponse"));
+    /// @todo
+}

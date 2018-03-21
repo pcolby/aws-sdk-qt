@@ -19,3 +19,85 @@
 
 #include "deletevaultresponse.h"
 #include "deletevaultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  DeleteVaultResponse
+ *
+ * @brief  Handles Glacier DeleteVault responses.
+ *
+ * @see    GlacierClient::deleteVault
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVaultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new DeleteVaultResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVaultRequest(request));
+    setReply(reply);
+}
+
+const DeleteVaultRequest * DeleteVaultResponse::request() const
+{
+    Q_D(const DeleteVaultResponse);
+    return static_cast<const DeleteVaultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier DeleteVault response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVaultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVaultResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVaultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVaultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVaultResponse instance.
+ */
+DeleteVaultResponsePrivate::DeleteVaultResponsePrivate(
+    DeleteVaultQueueResponse * const q) : DeleteVaultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier DeleteVaultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVaultResponsePrivate::DeleteVaultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVaultResponse"));
+    /// @todo
+}

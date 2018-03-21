@@ -19,3 +19,85 @@
 
 #include "searchresponse.h"
 #include "searchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearchDomain {
+
+/**
+ * @class  SearchResponse
+ *
+ * @brief  Handles CloudSearchDomain Search responses.
+ *
+ * @see    CloudSearchDomainClient::search
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchDomainResponse(new SearchResponsePrivate(this), parent)
+{
+    setRequest(new SearchRequest(request));
+    setReply(reply);
+}
+
+const SearchRequest * SearchResponse::request() const
+{
+    Q_D(const SearchResponse);
+    return static_cast<const SearchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearchDomain Search response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchResponsePrivate
+ *
+ * @brief  Private implementation for SearchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchResponse instance.
+ */
+SearchResponsePrivate::SearchResponsePrivate(
+    SearchQueueResponse * const q) : SearchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearchDomain SearchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchResponsePrivate::SearchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchResponse"));
+    /// @todo
+}

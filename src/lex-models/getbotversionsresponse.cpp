@@ -19,3 +19,85 @@
 
 #include "getbotversionsresponse.h"
 #include "getbotversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBotVersionsResponse
+ *
+ * @brief  Handles LexModelBuildingService GetBotVersions responses.
+ *
+ * @see    LexModelBuildingServiceClient::getBotVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBotVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetBotVersionsResponsePrivate(this), parent)
+{
+    setRequest(new GetBotVersionsRequest(request));
+    setReply(reply);
+}
+
+const GetBotVersionsRequest * GetBotVersionsResponse::request() const
+{
+    Q_D(const GetBotVersionsResponse);
+    return static_cast<const GetBotVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetBotVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBotVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBotVersionsResponsePrivate
+ *
+ * @brief  Private implementation for GetBotVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBotVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBotVersionsResponse instance.
+ */
+GetBotVersionsResponsePrivate::GetBotVersionsResponsePrivate(
+    GetBotVersionsQueueResponse * const q) : GetBotVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetBotVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBotVersionsResponsePrivate::GetBotVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBotVersionsResponse"));
+    /// @todo
+}

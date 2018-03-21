@@ -19,3 +19,85 @@
 
 #include "describeplatformversionresponse.h"
 #include "describeplatformversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribePlatformVersionResponse
+ *
+ * @brief  Handles ElasticBeanstalk DescribePlatformVersion responses.
+ *
+ * @see    ElasticBeanstalkClient::describePlatformVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePlatformVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DescribePlatformVersionResponsePrivate(this), parent)
+{
+    setRequest(new DescribePlatformVersionRequest(request));
+    setReply(reply);
+}
+
+const DescribePlatformVersionRequest * DescribePlatformVersionResponse::request() const
+{
+    Q_D(const DescribePlatformVersionResponse);
+    return static_cast<const DescribePlatformVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DescribePlatformVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePlatformVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePlatformVersionResponsePrivate
+ *
+ * @brief  Private implementation for DescribePlatformVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePlatformVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePlatformVersionResponse instance.
+ */
+DescribePlatformVersionResponsePrivate::DescribePlatformVersionResponsePrivate(
+    DescribePlatformVersionQueueResponse * const q) : DescribePlatformVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DescribePlatformVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePlatformVersionResponsePrivate::DescribePlatformVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePlatformVersionResponse"));
+    /// @todo
+}

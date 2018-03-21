@@ -19,3 +19,85 @@
 
 #include "updatesamlproviderresponse.h"
 #include "updatesamlproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateSAMLProviderResponse
+ *
+ * @brief  Handles IAM UpdateSAMLProvider responses.
+ *
+ * @see    IAMClient::updateSAMLProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSAMLProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateSAMLProviderResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSAMLProviderRequest(request));
+    setReply(reply);
+}
+
+const UpdateSAMLProviderRequest * UpdateSAMLProviderResponse::request() const
+{
+    Q_D(const UpdateSAMLProviderResponse);
+    return static_cast<const UpdateSAMLProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateSAMLProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSAMLProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSAMLProviderResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSAMLProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSAMLProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSAMLProviderResponse instance.
+ */
+UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponsePrivate(
+    UpdateSAMLProviderQueueResponse * const q) : UpdateSAMLProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateSAMLProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSAMLProviderResponse"));
+    /// @todo
+}

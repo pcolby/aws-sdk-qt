@@ -19,3 +19,85 @@
 
 #include "deleteusageplanresponse.h"
 #include "deleteusageplanresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteUsagePlanResponse
+ *
+ * @brief  Handles APIGateway DeleteUsagePlan responses.
+ *
+ * @see    APIGatewayClient::deleteUsagePlan
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUsagePlanResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteUsagePlanResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUsagePlanRequest(request));
+    setReply(reply);
+}
+
+const DeleteUsagePlanRequest * DeleteUsagePlanResponse::request() const
+{
+    Q_D(const DeleteUsagePlanResponse);
+    return static_cast<const DeleteUsagePlanRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteUsagePlan response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUsagePlanResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUsagePlanResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUsagePlanResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUsagePlanResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUsagePlanResponse instance.
+ */
+DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponsePrivate(
+    DeleteUsagePlanQueueResponse * const q) : DeleteUsagePlanPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteUsagePlanResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUsagePlanResponse"));
+    /// @todo
+}

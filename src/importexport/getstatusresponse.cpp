@@ -19,3 +19,85 @@
 
 #include "getstatusresponse.h"
 #include "getstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ImportExport {
+
+/**
+ * @class  GetStatusResponse
+ *
+ * @brief  Handles ImportExport GetStatus responses.
+ *
+ * @see    ImportExportClient::getStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ImportExportResponse(new GetStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetStatusRequest(request));
+    setReply(reply);
+}
+
+const GetStatusRequest * GetStatusResponse::request() const
+{
+    Q_D(const GetStatusResponse);
+    return static_cast<const GetStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ImportExport GetStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetStatusResponse instance.
+ */
+GetStatusResponsePrivate::GetStatusResponsePrivate(
+    GetStatusQueueResponse * const q) : GetStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ImportExport GetStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetStatusResponsePrivate::GetStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetStatusResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describecontainerresponse.h"
 #include "describecontainerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  DescribeContainerResponse
+ *
+ * @brief  Handles MediaStore DescribeContainer responses.
+ *
+ * @see    MediaStoreClient::describeContainer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeContainerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreResponse(new DescribeContainerResponsePrivate(this), parent)
+{
+    setRequest(new DescribeContainerRequest(request));
+    setReply(reply);
+}
+
+const DescribeContainerRequest * DescribeContainerResponse::request() const
+{
+    Q_D(const DescribeContainerResponse);
+    return static_cast<const DescribeContainerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStore DescribeContainer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeContainerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeContainerResponsePrivate
+ *
+ * @brief  Private implementation for DescribeContainerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeContainerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeContainerResponse instance.
+ */
+DescribeContainerResponsePrivate::DescribeContainerResponsePrivate(
+    DescribeContainerQueueResponse * const q) : DescribeContainerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStore DescribeContainerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeContainerResponsePrivate::DescribeContainerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeContainerResponse"));
+    /// @todo
+}

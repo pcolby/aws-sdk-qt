@@ -19,3 +19,85 @@
 
 #include "deletenamedqueryresponse.h"
 #include "deletenamedqueryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  DeleteNamedQueryResponse
+ *
+ * @brief  Handles Athena DeleteNamedQuery responses.
+ *
+ * @see    AthenaClient::deleteNamedQuery
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNamedQueryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new DeleteNamedQueryResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNamedQueryRequest(request));
+    setReply(reply);
+}
+
+const DeleteNamedQueryRequest * DeleteNamedQueryResponse::request() const
+{
+    Q_D(const DeleteNamedQueryResponse);
+    return static_cast<const DeleteNamedQueryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena DeleteNamedQuery response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNamedQueryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNamedQueryResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNamedQueryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNamedQueryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNamedQueryResponse instance.
+ */
+DeleteNamedQueryResponsePrivate::DeleteNamedQueryResponsePrivate(
+    DeleteNamedQueryQueueResponse * const q) : DeleteNamedQueryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena DeleteNamedQueryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNamedQueryResponsePrivate::DeleteNamedQueryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNamedQueryResponse"));
+    /// @todo
+}

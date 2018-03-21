@@ -19,3 +19,85 @@
 
 #include "getdomainsresponse.h"
 #include "getdomainsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetDomainsResponse
+ *
+ * @brief  Handles Lightsail GetDomains responses.
+ *
+ * @see    LightsailClient::getDomains
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDomainsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetDomainsResponsePrivate(this), parent)
+{
+    setRequest(new GetDomainsRequest(request));
+    setReply(reply);
+}
+
+const GetDomainsRequest * GetDomainsResponse::request() const
+{
+    Q_D(const GetDomainsResponse);
+    return static_cast<const GetDomainsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetDomains response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDomainsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDomainsResponsePrivate
+ *
+ * @brief  Private implementation for GetDomainsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDomainsResponse instance.
+ */
+GetDomainsResponsePrivate::GetDomainsResponsePrivate(
+    GetDomainsQueueResponse * const q) : GetDomainsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetDomainsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDomainsResponsePrivate::GetDomainsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDomainsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "setrepositorypolicyresponse.h"
 #include "setrepositorypolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  SetRepositoryPolicyResponse
+ *
+ * @brief  Handles ECR SetRepositoryPolicy responses.
+ *
+ * @see    ECRClient::setRepositoryPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetRepositoryPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new SetRepositoryPolicyResponsePrivate(this), parent)
+{
+    setRequest(new SetRepositoryPolicyRequest(request));
+    setReply(reply);
+}
+
+const SetRepositoryPolicyRequest * SetRepositoryPolicyResponse::request() const
+{
+    Q_D(const SetRepositoryPolicyResponse);
+    return static_cast<const SetRepositoryPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR SetRepositoryPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetRepositoryPolicyResponsePrivate
+ *
+ * @brief  Private implementation for SetRepositoryPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetRepositoryPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetRepositoryPolicyResponse instance.
+ */
+SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponsePrivate(
+    SetRepositoryPolicyQueueResponse * const q) : SetRepositoryPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR SetRepositoryPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetRepositoryPolicyResponse"));
+    /// @todo
+}

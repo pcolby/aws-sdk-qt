@@ -19,3 +19,85 @@
 
 #include "deregisterecsclusterresponse.h"
 #include "deregisterecsclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeregisterEcsClusterResponse
+ *
+ * @brief  Handles OpsWorks DeregisterEcsCluster responses.
+ *
+ * @see    OpsWorksClient::deregisterEcsCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterEcsClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DeregisterEcsClusterResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterEcsClusterRequest(request));
+    setReply(reply);
+}
+
+const DeregisterEcsClusterRequest * DeregisterEcsClusterResponse::request() const
+{
+    Q_D(const DeregisterEcsClusterResponse);
+    return static_cast<const DeregisterEcsClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DeregisterEcsCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterEcsClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterEcsClusterResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterEcsClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterEcsClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterEcsClusterResponse instance.
+ */
+DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponsePrivate(
+    DeregisterEcsClusterQueueResponse * const q) : DeregisterEcsClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DeregisterEcsClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterEcsClusterResponse"));
+    /// @todo
+}

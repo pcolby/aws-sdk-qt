@@ -19,3 +19,85 @@
 
 #include "updatesshpublickeyresponse.h"
 #include "updatesshpublickeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateSSHPublicKeyResponse
+ *
+ * @brief  Handles IAM UpdateSSHPublicKey responses.
+ *
+ * @see    IAMClient::updateSSHPublicKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSSHPublicKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateSSHPublicKeyResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSSHPublicKeyRequest(request));
+    setReply(reply);
+}
+
+const UpdateSSHPublicKeyRequest * UpdateSSHPublicKeyResponse::request() const
+{
+    Q_D(const UpdateSSHPublicKeyResponse);
+    return static_cast<const UpdateSSHPublicKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateSSHPublicKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSSHPublicKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSSHPublicKeyResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSSHPublicKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSSHPublicKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSSHPublicKeyResponse instance.
+ */
+UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponsePrivate(
+    UpdateSSHPublicKeyQueueResponse * const q) : UpdateSSHPublicKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateSSHPublicKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSSHPublicKeyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "terminateinstanceinautoscalinggroupresponse.h"
 #include "terminateinstanceinautoscalinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  TerminateInstanceInAutoScalingGroupResponse
+ *
+ * @brief  Handles AutoScaling TerminateInstanceInAutoScalingGroup responses.
+ *
+ * @see    AutoScalingClient::terminateInstanceInAutoScalingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateInstanceInAutoScalingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new TerminateInstanceInAutoScalingGroupResponsePrivate(this), parent)
+{
+    setRequest(new TerminateInstanceInAutoScalingGroupRequest(request));
+    setReply(reply);
+}
+
+const TerminateInstanceInAutoScalingGroupRequest * TerminateInstanceInAutoScalingGroupResponse::request() const
+{
+    Q_D(const TerminateInstanceInAutoScalingGroupResponse);
+    return static_cast<const TerminateInstanceInAutoScalingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling TerminateInstanceInAutoScalingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void TerminateInstanceInAutoScalingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateInstanceInAutoScalingGroupResponsePrivate
+ *
+ * @brief  Private implementation for TerminateInstanceInAutoScalingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateInstanceInAutoScalingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TerminateInstanceInAutoScalingGroupResponse instance.
+ */
+TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScalingGroupResponsePrivate(
+    TerminateInstanceInAutoScalingGroupQueueResponse * const q) : TerminateInstanceInAutoScalingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling TerminateInstanceInAutoScalingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScalingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TerminateInstanceInAutoScalingGroupResponse"));
+    /// @todo
+}

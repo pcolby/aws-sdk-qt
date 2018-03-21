@@ -19,3 +19,85 @@
 
 #include "updateapplicationsettingsresponse.h"
 #include "updateapplicationsettingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateApplicationSettingsResponse
+ *
+ * @brief  Handles Pinpoint UpdateApplicationSettings responses.
+ *
+ * @see    PinpointClient::updateApplicationSettings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApplicationSettingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateApplicationSettingsResponsePrivate(this), parent)
+{
+    setRequest(new UpdateApplicationSettingsRequest(request));
+    setReply(reply);
+}
+
+const UpdateApplicationSettingsRequest * UpdateApplicationSettingsResponse::request() const
+{
+    Q_D(const UpdateApplicationSettingsResponse);
+    return static_cast<const UpdateApplicationSettingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateApplicationSettings response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateApplicationSettingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApplicationSettingsResponsePrivate
+ *
+ * @brief  Private implementation for UpdateApplicationSettingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApplicationSettingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateApplicationSettingsResponse instance.
+ */
+UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponsePrivate(
+    UpdateApplicationSettingsQueueResponse * const q) : UpdateApplicationSettingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateApplicationSettingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationSettingsResponse"));
+    /// @todo
+}

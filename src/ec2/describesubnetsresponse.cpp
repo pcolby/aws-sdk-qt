@@ -19,3 +19,85 @@
 
 #include "describesubnetsresponse.h"
 #include "describesubnetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSubnetsResponse
+ *
+ * @brief  Handles EC2 DescribeSubnets responses.
+ *
+ * @see    EC2Client::describeSubnets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSubnetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeSubnetsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSubnetsRequest(request));
+    setReply(reply);
+}
+
+const DescribeSubnetsRequest * DescribeSubnetsResponse::request() const
+{
+    Q_D(const DescribeSubnetsResponse);
+    return static_cast<const DescribeSubnetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeSubnets response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSubnetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSubnetsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSubnetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubnetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSubnetsResponse instance.
+ */
+DescribeSubnetsResponsePrivate::DescribeSubnetsResponsePrivate(
+    DescribeSubnetsQueueResponse * const q) : DescribeSubnetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeSubnetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSubnetsResponsePrivate::DescribeSubnetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSubnetsResponse"));
+    /// @todo
+}

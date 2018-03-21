@@ -19,3 +19,85 @@
 
 #include "deletecustommetadataresponse.h"
 #include "deletecustommetadataresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DeleteCustomMetadataResponse
+ *
+ * @brief  Handles WorkDocs DeleteCustomMetadata responses.
+ *
+ * @see    WorkDocsClient::deleteCustomMetadata
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCustomMetadataResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DeleteCustomMetadataResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCustomMetadataRequest(request));
+    setReply(reply);
+}
+
+const DeleteCustomMetadataRequest * DeleteCustomMetadataResponse::request() const
+{
+    Q_D(const DeleteCustomMetadataResponse);
+    return static_cast<const DeleteCustomMetadataRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DeleteCustomMetadata response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCustomMetadataResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCustomMetadataResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCustomMetadataResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCustomMetadataResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCustomMetadataResponse instance.
+ */
+DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponsePrivate(
+    DeleteCustomMetadataQueueResponse * const q) : DeleteCustomMetadataPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DeleteCustomMetadataResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCustomMetadataResponse"));
+    /// @todo
+}

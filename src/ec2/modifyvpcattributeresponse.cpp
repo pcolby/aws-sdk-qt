@@ -19,3 +19,85 @@
 
 #include "modifyvpcattributeresponse.h"
 #include "modifyvpcattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcAttributeResponse
+ *
+ * @brief  Handles EC2 ModifyVpcAttribute responses.
+ *
+ * @see    EC2Client::modifyVpcAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyVpcAttributeResponsePrivate(this), parent)
+{
+    setRequest(new ModifyVpcAttributeRequest(request));
+    setReply(reply);
+}
+
+const ModifyVpcAttributeRequest * ModifyVpcAttributeResponse::request() const
+{
+    Q_D(const ModifyVpcAttributeResponse);
+    return static_cast<const ModifyVpcAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyVpcAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyVpcAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcAttributeResponsePrivate
+ *
+ * @brief  Private implementation for ModifyVpcAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyVpcAttributeResponse instance.
+ */
+ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponsePrivate(
+    ModifyVpcAttributeQueueResponse * const q) : ModifyVpcAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyVpcAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyVpcAttributeResponse"));
+    /// @todo
+}

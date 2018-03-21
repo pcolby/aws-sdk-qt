@@ -19,3 +19,85 @@
 
 #include "deleteservicespecificcredentialresponse.h"
 #include "deleteservicespecificcredentialresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteServiceSpecificCredentialResponse
+ *
+ * @brief  Handles IAM DeleteServiceSpecificCredential responses.
+ *
+ * @see    IAMClient::deleteServiceSpecificCredential
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteServiceSpecificCredentialResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteServiceSpecificCredentialResponsePrivate(this), parent)
+{
+    setRequest(new DeleteServiceSpecificCredentialRequest(request));
+    setReply(reply);
+}
+
+const DeleteServiceSpecificCredentialRequest * DeleteServiceSpecificCredentialResponse::request() const
+{
+    Q_D(const DeleteServiceSpecificCredentialResponse);
+    return static_cast<const DeleteServiceSpecificCredentialRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteServiceSpecificCredential response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteServiceSpecificCredentialResponsePrivate
+ *
+ * @brief  Private implementation for DeleteServiceSpecificCredentialResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServiceSpecificCredentialResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteServiceSpecificCredentialResponse instance.
+ */
+DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialResponsePrivate(
+    DeleteServiceSpecificCredentialQueueResponse * const q) : DeleteServiceSpecificCredentialPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteServiceSpecificCredentialResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteServiceSpecificCredentialResponse"));
+    /// @todo
+}

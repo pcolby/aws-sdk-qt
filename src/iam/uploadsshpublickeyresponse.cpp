@@ -19,3 +19,85 @@
 
 #include "uploadsshpublickeyresponse.h"
 #include "uploadsshpublickeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UploadSSHPublicKeyResponse
+ *
+ * @brief  Handles IAM UploadSSHPublicKey responses.
+ *
+ * @see    IAMClient::uploadSSHPublicKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UploadSSHPublicKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UploadSSHPublicKeyResponsePrivate(this), parent)
+{
+    setRequest(new UploadSSHPublicKeyRequest(request));
+    setReply(reply);
+}
+
+const UploadSSHPublicKeyRequest * UploadSSHPublicKeyResponse::request() const
+{
+    Q_D(const UploadSSHPublicKeyResponse);
+    return static_cast<const UploadSSHPublicKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UploadSSHPublicKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UploadSSHPublicKeyResponsePrivate
+ *
+ * @brief  Private implementation for UploadSSHPublicKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadSSHPublicKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UploadSSHPublicKeyResponse instance.
+ */
+UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
+    UploadSSHPublicKeyQueueResponse * const q) : UploadSSHPublicKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UploadSSHPublicKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UploadSSHPublicKeyResponse"));
+    /// @todo
+}

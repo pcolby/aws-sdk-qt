@@ -19,3 +19,85 @@
 
 #include "createinstanceexporttaskresponse.h"
 #include "createinstanceexporttaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateInstanceExportTaskResponse
+ *
+ * @brief  Handles EC2 CreateInstanceExportTask responses.
+ *
+ * @see    EC2Client::createInstanceExportTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstanceExportTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateInstanceExportTaskResponsePrivate(this), parent)
+{
+    setRequest(new CreateInstanceExportTaskRequest(request));
+    setReply(reply);
+}
+
+const CreateInstanceExportTaskRequest * CreateInstanceExportTaskResponse::request() const
+{
+    Q_D(const CreateInstanceExportTaskResponse);
+    return static_cast<const CreateInstanceExportTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateInstanceExportTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateInstanceExportTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstanceExportTaskResponsePrivate
+ *
+ * @brief  Private implementation for CreateInstanceExportTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceExportTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateInstanceExportTaskResponse instance.
+ */
+CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate(
+    CreateInstanceExportTaskQueueResponse * const q) : CreateInstanceExportTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateInstanceExportTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateInstanceExportTaskResponse"));
+    /// @todo
+}

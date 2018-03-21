@@ -19,3 +19,85 @@
 
 #include "updateusageresponse.h"
 #include "updateusageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateUsageResponse
+ *
+ * @brief  Handles APIGateway UpdateUsage responses.
+ *
+ * @see    APIGatewayClient::updateUsage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUsageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new UpdateUsageResponsePrivate(this), parent)
+{
+    setRequest(new UpdateUsageRequest(request));
+    setReply(reply);
+}
+
+const UpdateUsageRequest * UpdateUsageResponse::request() const
+{
+    Q_D(const UpdateUsageResponse);
+    return static_cast<const UpdateUsageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway UpdateUsage response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateUsageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUsageResponsePrivate
+ *
+ * @brief  Private implementation for UpdateUsageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUsageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateUsageResponse instance.
+ */
+UpdateUsageResponsePrivate::UpdateUsageResponsePrivate(
+    UpdateUsageQueueResponse * const q) : UpdateUsagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway UpdateUsageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateUsageResponsePrivate::UpdateUsageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateUsageResponse"));
+    /// @todo
+}

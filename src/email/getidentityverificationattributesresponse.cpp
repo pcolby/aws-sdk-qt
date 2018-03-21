@@ -19,3 +19,85 @@
 
 #include "getidentityverificationattributesresponse.h"
 #include "getidentityverificationattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetIdentityVerificationAttributesResponse
+ *
+ * @brief  Handles SES GetIdentityVerificationAttributes responses.
+ *
+ * @see    SESClient::getIdentityVerificationAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityVerificationAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new GetIdentityVerificationAttributesResponsePrivate(this), parent)
+{
+    setRequest(new GetIdentityVerificationAttributesRequest(request));
+    setReply(reply);
+}
+
+const GetIdentityVerificationAttributesRequest * GetIdentityVerificationAttributesResponse::request() const
+{
+    Q_D(const GetIdentityVerificationAttributesResponse);
+    return static_cast<const GetIdentityVerificationAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES GetIdentityVerificationAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityVerificationAttributesResponsePrivate
+ *
+ * @brief  Private implementation for GetIdentityVerificationAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityVerificationAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIdentityVerificationAttributesResponse instance.
+ */
+GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttributesResponsePrivate(
+    GetIdentityVerificationAttributesQueueResponse * const q) : GetIdentityVerificationAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES GetIdentityVerificationAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIdentityVerificationAttributesResponse"));
+    /// @todo
+}

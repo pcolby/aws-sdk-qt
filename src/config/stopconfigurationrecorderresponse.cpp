@@ -19,3 +19,85 @@
 
 #include "stopconfigurationrecorderresponse.h"
 #include "stopconfigurationrecorderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  StopConfigurationRecorderResponse
+ *
+ * @brief  Handles ConfigService StopConfigurationRecorder responses.
+ *
+ * @see    ConfigServiceClient::stopConfigurationRecorder
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopConfigurationRecorderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new StopConfigurationRecorderResponsePrivate(this), parent)
+{
+    setRequest(new StopConfigurationRecorderRequest(request));
+    setReply(reply);
+}
+
+const StopConfigurationRecorderRequest * StopConfigurationRecorderResponse::request() const
+{
+    Q_D(const StopConfigurationRecorderResponse);
+    return static_cast<const StopConfigurationRecorderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService StopConfigurationRecorder response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopConfigurationRecorderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopConfigurationRecorderResponsePrivate
+ *
+ * @brief  Private implementation for StopConfigurationRecorderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopConfigurationRecorderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopConfigurationRecorderResponse instance.
+ */
+StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponsePrivate(
+    StopConfigurationRecorderQueueResponse * const q) : StopConfigurationRecorderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService StopConfigurationRecorderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopConfigurationRecorderResponse"));
+    /// @todo
+}

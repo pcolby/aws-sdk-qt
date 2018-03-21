@@ -19,3 +19,85 @@
 
 #include "adminupdatedevicestatusresponse.h"
 #include "adminupdatedevicestatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminUpdateDeviceStatusResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminUpdateDeviceStatus responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminUpdateDeviceStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminUpdateDeviceStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminUpdateDeviceStatusResponsePrivate(this), parent)
+{
+    setRequest(new AdminUpdateDeviceStatusRequest(request));
+    setReply(reply);
+}
+
+const AdminUpdateDeviceStatusRequest * AdminUpdateDeviceStatusResponse::request() const
+{
+    Q_D(const AdminUpdateDeviceStatusResponse);
+    return static_cast<const AdminUpdateDeviceStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminUpdateDeviceStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminUpdateDeviceStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminUpdateDeviceStatusResponsePrivate
+ *
+ * @brief  Private implementation for AdminUpdateDeviceStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminUpdateDeviceStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminUpdateDeviceStatusResponse instance.
+ */
+AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponsePrivate(
+    AdminUpdateDeviceStatusQueueResponse * const q) : AdminUpdateDeviceStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminUpdateDeviceStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminUpdateDeviceStatusResponse"));
+    /// @todo
+}

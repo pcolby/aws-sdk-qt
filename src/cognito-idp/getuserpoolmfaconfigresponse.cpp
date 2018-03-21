@@ -19,3 +19,85 @@
 
 #include "getuserpoolmfaconfigresponse.h"
 #include "getuserpoolmfaconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GetUserPoolMfaConfigResponse
+ *
+ * @brief  Handles CognitoIdentityProvider GetUserPoolMfaConfig responses.
+ *
+ * @see    CognitoIdentityProviderClient::getUserPoolMfaConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserPoolMfaConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new GetUserPoolMfaConfigResponsePrivate(this), parent)
+{
+    setRequest(new GetUserPoolMfaConfigRequest(request));
+    setReply(reply);
+}
+
+const GetUserPoolMfaConfigRequest * GetUserPoolMfaConfigResponse::request() const
+{
+    Q_D(const GetUserPoolMfaConfigResponse);
+    return static_cast<const GetUserPoolMfaConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider GetUserPoolMfaConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUserPoolMfaConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserPoolMfaConfigResponsePrivate
+ *
+ * @brief  Private implementation for GetUserPoolMfaConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserPoolMfaConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUserPoolMfaConfigResponse instance.
+ */
+GetUserPoolMfaConfigResponsePrivate::GetUserPoolMfaConfigResponsePrivate(
+    GetUserPoolMfaConfigQueueResponse * const q) : GetUserPoolMfaConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider GetUserPoolMfaConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUserPoolMfaConfigResponsePrivate::GetUserPoolMfaConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUserPoolMfaConfigResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "modifyinstancefleetresponse.h"
 #include "modifyinstancefleetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ModifyInstanceFleetResponse
+ *
+ * @brief  Handles EMR ModifyInstanceFleet responses.
+ *
+ * @see    EMRClient::modifyInstanceFleet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyInstanceFleetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new ModifyInstanceFleetResponsePrivate(this), parent)
+{
+    setRequest(new ModifyInstanceFleetRequest(request));
+    setReply(reply);
+}
+
+const ModifyInstanceFleetRequest * ModifyInstanceFleetResponse::request() const
+{
+    Q_D(const ModifyInstanceFleetResponse);
+    return static_cast<const ModifyInstanceFleetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR ModifyInstanceFleet response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyInstanceFleetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyInstanceFleetResponsePrivate
+ *
+ * @brief  Private implementation for ModifyInstanceFleetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyInstanceFleetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyInstanceFleetResponse instance.
+ */
+ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
+    ModifyInstanceFleetQueueResponse * const q) : ModifyInstanceFleetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR ModifyInstanceFleetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceFleetResponse"));
+    /// @todo
+}

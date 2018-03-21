@@ -19,3 +19,85 @@
 
 #include "modifyreservedinstancesresponse.h"
 #include "modifyreservedinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyReservedInstancesResponse
+ *
+ * @brief  Handles EC2 ModifyReservedInstances responses.
+ *
+ * @see    EC2Client::modifyReservedInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyReservedInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyReservedInstancesResponsePrivate(this), parent)
+{
+    setRequest(new ModifyReservedInstancesRequest(request));
+    setReply(reply);
+}
+
+const ModifyReservedInstancesRequest * ModifyReservedInstancesResponse::request() const
+{
+    Q_D(const ModifyReservedInstancesResponse);
+    return static_cast<const ModifyReservedInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyReservedInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyReservedInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyReservedInstancesResponsePrivate
+ *
+ * @brief  Private implementation for ModifyReservedInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReservedInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyReservedInstancesResponse instance.
+ */
+ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponsePrivate(
+    ModifyReservedInstancesQueueResponse * const q) : ModifyReservedInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyReservedInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyReservedInstancesResponse"));
+    /// @todo
+}

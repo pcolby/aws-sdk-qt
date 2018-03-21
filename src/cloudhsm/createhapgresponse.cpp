@@ -19,3 +19,85 @@
 
 #include "createhapgresponse.h"
 #include "createhapgresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  CreateHapgResponse
+ *
+ * @brief  Handles CloudHSM CreateHapg responses.
+ *
+ * @see    CloudHSMClient::createHapg
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHapgResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new CreateHapgResponsePrivate(this), parent)
+{
+    setRequest(new CreateHapgRequest(request));
+    setReply(reply);
+}
+
+const CreateHapgRequest * CreateHapgResponse::request() const
+{
+    Q_D(const CreateHapgResponse);
+    return static_cast<const CreateHapgRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM CreateHapg response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateHapgResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHapgResponsePrivate
+ *
+ * @brief  Private implementation for CreateHapgResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHapgResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateHapgResponse instance.
+ */
+CreateHapgResponsePrivate::CreateHapgResponsePrivate(
+    CreateHapgQueueResponse * const q) : CreateHapgPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM CreateHapgResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateHapgResponsePrivate::CreateHapgResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateHapgResponse"));
+    /// @todo
+}

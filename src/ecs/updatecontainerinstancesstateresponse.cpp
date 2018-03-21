@@ -19,3 +19,85 @@
 
 #include "updatecontainerinstancesstateresponse.h"
 #include "updatecontainerinstancesstateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  UpdateContainerInstancesStateResponse
+ *
+ * @brief  Handles ECS UpdateContainerInstancesState responses.
+ *
+ * @see    ECSClient::updateContainerInstancesState
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateContainerInstancesStateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new UpdateContainerInstancesStateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateContainerInstancesStateRequest(request));
+    setReply(reply);
+}
+
+const UpdateContainerInstancesStateRequest * UpdateContainerInstancesStateResponse::request() const
+{
+    Q_D(const UpdateContainerInstancesStateResponse);
+    return static_cast<const UpdateContainerInstancesStateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS UpdateContainerInstancesState response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateContainerInstancesStateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateContainerInstancesStateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateContainerInstancesStateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateContainerInstancesStateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateContainerInstancesStateResponse instance.
+ */
+UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateResponsePrivate(
+    UpdateContainerInstancesStateQueueResponse * const q) : UpdateContainerInstancesStatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS UpdateContainerInstancesStateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateContainerInstancesStateResponse"));
+    /// @todo
+}

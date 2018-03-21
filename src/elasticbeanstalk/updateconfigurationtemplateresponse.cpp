@@ -19,3 +19,85 @@
 
 #include "updateconfigurationtemplateresponse.h"
 #include "updateconfigurationtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  UpdateConfigurationTemplateResponse
+ *
+ * @brief  Handles ElasticBeanstalk UpdateConfigurationTemplate responses.
+ *
+ * @see    ElasticBeanstalkClient::updateConfigurationTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConfigurationTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new UpdateConfigurationTemplateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateConfigurationTemplateRequest(request));
+    setReply(reply);
+}
+
+const UpdateConfigurationTemplateRequest * UpdateConfigurationTemplateResponse::request() const
+{
+    Q_D(const UpdateConfigurationTemplateResponse);
+    return static_cast<const UpdateConfigurationTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk UpdateConfigurationTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConfigurationTemplateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateConfigurationTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateConfigurationTemplateResponse instance.
+ */
+UpdateConfigurationTemplateResponsePrivate::UpdateConfigurationTemplateResponsePrivate(
+    UpdateConfigurationTemplateQueueResponse * const q) : UpdateConfigurationTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk UpdateConfigurationTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateConfigurationTemplateResponsePrivate::UpdateConfigurationTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationTemplateResponse"));
+    /// @todo
+}

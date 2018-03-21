@@ -19,3 +19,85 @@
 
 #include "deletehsmconfigurationresponse.h"
 #include "deletehsmconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteHsmConfigurationResponse
+ *
+ * @brief  Handles Redshift DeleteHsmConfiguration responses.
+ *
+ * @see    RedshiftClient::deleteHsmConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHsmConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DeleteHsmConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteHsmConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DeleteHsmConfigurationRequest * DeleteHsmConfigurationResponse::request() const
+{
+    Q_D(const DeleteHsmConfigurationResponse);
+    return static_cast<const DeleteHsmConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DeleteHsmConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteHsmConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHsmConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteHsmConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHsmConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteHsmConfigurationResponse instance.
+ */
+DeleteHsmConfigurationResponsePrivate::DeleteHsmConfigurationResponsePrivate(
+    DeleteHsmConfigurationQueueResponse * const q) : DeleteHsmConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DeleteHsmConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteHsmConfigurationResponsePrivate::DeleteHsmConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteHsmConfigurationResponse"));
+    /// @todo
+}

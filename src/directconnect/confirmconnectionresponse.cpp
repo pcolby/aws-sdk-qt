@@ -19,3 +19,85 @@
 
 #include "confirmconnectionresponse.h"
 #include "confirmconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  ConfirmConnectionResponse
+ *
+ * @brief  Handles DirectConnect ConfirmConnection responses.
+ *
+ * @see    DirectConnectClient::confirmConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new ConfirmConnectionResponsePrivate(this), parent)
+{
+    setRequest(new ConfirmConnectionRequest(request));
+    setReply(reply);
+}
+
+const ConfirmConnectionRequest * ConfirmConnectionResponse::request() const
+{
+    Q_D(const ConfirmConnectionResponse);
+    return static_cast<const ConfirmConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect ConfirmConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void ConfirmConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmConnectionResponsePrivate
+ *
+ * @brief  Private implementation for ConfirmConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ConfirmConnectionResponse instance.
+ */
+ConfirmConnectionResponsePrivate::ConfirmConnectionResponsePrivate(
+    ConfirmConnectionQueueResponse * const q) : ConfirmConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect ConfirmConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ConfirmConnectionResponsePrivate::ConfirmConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ConfirmConnectionResponse"));
+    /// @todo
+}

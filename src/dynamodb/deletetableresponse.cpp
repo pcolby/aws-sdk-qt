@@ -19,3 +19,85 @@
 
 #include "deletetableresponse.h"
 #include "deletetableresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DeleteTableResponse
+ *
+ * @brief  Handles DynamoDB DeleteTable responses.
+ *
+ * @see    DynamoDBClient::deleteTable
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTableResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new DeleteTableResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTableRequest(request));
+    setReply(reply);
+}
+
+const DeleteTableRequest * DeleteTableResponse::request() const
+{
+    Q_D(const DeleteTableResponse);
+    return static_cast<const DeleteTableRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB DeleteTable response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTableResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTableResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTableResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTableResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTableResponse instance.
+ */
+DeleteTableResponsePrivate::DeleteTableResponsePrivate(
+    DeleteTableQueueResponse * const q) : DeleteTablePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB DeleteTableResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTableResponsePrivate::DeleteTableResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTableResponse"));
+    /// @todo
+}

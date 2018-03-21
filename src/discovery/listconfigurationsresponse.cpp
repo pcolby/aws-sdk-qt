@@ -19,3 +19,85 @@
 
 #include "listconfigurationsresponse.h"
 #include "listconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  ListConfigurationsResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService ListConfigurations responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::listConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new ListConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new ListConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const ListConfigurationsRequest * ListConfigurationsResponse::request() const
+{
+    Q_D(const ListConfigurationsResponse);
+    return static_cast<const ListConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService ListConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for ListConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListConfigurationsResponse instance.
+ */
+ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
+    ListConfigurationsQueueResponse * const q) : ListConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService ListConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListConfigurationsResponsePrivate::ListConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListConfigurationsResponse"));
+    /// @todo
+}

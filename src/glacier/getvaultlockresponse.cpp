@@ -19,3 +19,85 @@
 
 #include "getvaultlockresponse.h"
 #include "getvaultlockresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  GetVaultLockResponse
+ *
+ * @brief  Handles Glacier GetVaultLock responses.
+ *
+ * @see    GlacierClient::getVaultLock
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetVaultLockResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new GetVaultLockResponsePrivate(this), parent)
+{
+    setRequest(new GetVaultLockRequest(request));
+    setReply(reply);
+}
+
+const GetVaultLockRequest * GetVaultLockResponse::request() const
+{
+    Q_D(const GetVaultLockResponse);
+    return static_cast<const GetVaultLockRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier GetVaultLock response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetVaultLockResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetVaultLockResponsePrivate
+ *
+ * @brief  Private implementation for GetVaultLockResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetVaultLockResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetVaultLockResponse instance.
+ */
+GetVaultLockResponsePrivate::GetVaultLockResponsePrivate(
+    GetVaultLockQueueResponse * const q) : GetVaultLockPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier GetVaultLockResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetVaultLockResponsePrivate::GetVaultLockResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetVaultLockResponse"));
+    /// @todo
+}

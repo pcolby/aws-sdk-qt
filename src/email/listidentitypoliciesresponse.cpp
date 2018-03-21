@@ -19,3 +19,85 @@
 
 #include "listidentitypoliciesresponse.h"
 #include "listidentitypoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ListIdentityPoliciesResponse
+ *
+ * @brief  Handles SES ListIdentityPolicies responses.
+ *
+ * @see    SESClient::listIdentityPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListIdentityPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new ListIdentityPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListIdentityPoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListIdentityPoliciesRequest * ListIdentityPoliciesResponse::request() const
+{
+    Q_D(const ListIdentityPoliciesResponse);
+    return static_cast<const ListIdentityPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES ListIdentityPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListIdentityPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListIdentityPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListIdentityPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListIdentityPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListIdentityPoliciesResponse instance.
+ */
+ListIdentityPoliciesResponsePrivate::ListIdentityPoliciesResponsePrivate(
+    ListIdentityPoliciesQueueResponse * const q) : ListIdentityPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES ListIdentityPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListIdentityPoliciesResponsePrivate::ListIdentityPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListIdentityPoliciesResponse"));
+    /// @todo
+}

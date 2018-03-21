@@ -19,3 +19,85 @@
 
 #include "createnotificationresponse.h"
 #include "createnotificationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  CreateNotificationResponse
+ *
+ * @brief  Handles Budgets CreateNotification responses.
+ *
+ * @see    BudgetsClient::createNotification
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNotificationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new CreateNotificationResponsePrivate(this), parent)
+{
+    setRequest(new CreateNotificationRequest(request));
+    setReply(reply);
+}
+
+const CreateNotificationRequest * CreateNotificationResponse::request() const
+{
+    Q_D(const CreateNotificationResponse);
+    return static_cast<const CreateNotificationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets CreateNotification response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateNotificationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNotificationResponsePrivate
+ *
+ * @brief  Private implementation for CreateNotificationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNotificationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateNotificationResponse instance.
+ */
+CreateNotificationResponsePrivate::CreateNotificationResponsePrivate(
+    CreateNotificationQueueResponse * const q) : CreateNotificationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets CreateNotificationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateNotificationResponsePrivate::CreateNotificationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateNotificationResponse"));
+    /// @todo
+}

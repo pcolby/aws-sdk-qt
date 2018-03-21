@@ -19,3 +19,85 @@
 
 #include "updateserviceresponse.h"
 #include "updateserviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  UpdateServiceResponse
+ *
+ * @brief  Handles ServiceDiscovery UpdateService responses.
+ *
+ * @see    ServiceDiscoveryClient::updateService
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServiceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceDiscoveryResponse(new UpdateServiceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateServiceRequest(request));
+    setReply(reply);
+}
+
+const UpdateServiceRequest * UpdateServiceResponse::request() const
+{
+    Q_D(const UpdateServiceResponse);
+    return static_cast<const UpdateServiceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceDiscovery UpdateService response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateServiceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServiceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateServiceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServiceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateServiceResponse instance.
+ */
+UpdateServiceResponsePrivate::UpdateServiceResponsePrivate(
+    UpdateServiceQueueResponse * const q) : UpdateServicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceDiscovery UpdateServiceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateServiceResponsePrivate::UpdateServiceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateServiceResponse"));
+    /// @todo
+}

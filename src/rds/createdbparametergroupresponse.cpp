@@ -19,3 +19,85 @@
 
 #include "createdbparametergroupresponse.h"
 #include "createdbparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBParameterGroupResponse
+ *
+ * @brief  Handles RDS CreateDBParameterGroup responses.
+ *
+ * @see    RDSClient::createDBParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CreateDBParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateDBParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateDBParameterGroupRequest * CreateDBParameterGroupResponse::request() const
+{
+    Q_D(const CreateDBParameterGroupResponse);
+    return static_cast<const CreateDBParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CreateDBParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateDBParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDBParameterGroupResponse instance.
+ */
+CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponsePrivate(
+    CreateDBParameterGroupQueueResponse * const q) : CreateDBParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CreateDBParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDBParameterGroupResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getparameterhistoryresponse.h"
 #include "getparameterhistoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetParameterHistoryResponse
+ *
+ * @brief  Handles SSM GetParameterHistory responses.
+ *
+ * @see    SSMClient::getParameterHistory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetParameterHistoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetParameterHistoryResponsePrivate(this), parent)
+{
+    setRequest(new GetParameterHistoryRequest(request));
+    setReply(reply);
+}
+
+const GetParameterHistoryRequest * GetParameterHistoryResponse::request() const
+{
+    Q_D(const GetParameterHistoryResponse);
+    return static_cast<const GetParameterHistoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetParameterHistory response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetParameterHistoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetParameterHistoryResponsePrivate
+ *
+ * @brief  Private implementation for GetParameterHistoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetParameterHistoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetParameterHistoryResponse instance.
+ */
+GetParameterHistoryResponsePrivate::GetParameterHistoryResponsePrivate(
+    GetParameterHistoryQueueResponse * const q) : GetParameterHistoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetParameterHistoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetParameterHistoryResponsePrivate::GetParameterHistoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetParameterHistoryResponse"));
+    /// @todo
+}

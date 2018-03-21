@@ -19,3 +19,85 @@
 
 #include "createdatasourceresponse.h"
 #include "createdatasourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  CreateDataSourceResponse
+ *
+ * @brief  Handles AppSync CreateDataSource responses.
+ *
+ * @see    AppSyncClient::createDataSource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDataSourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new CreateDataSourceResponsePrivate(this), parent)
+{
+    setRequest(new CreateDataSourceRequest(request));
+    setReply(reply);
+}
+
+const CreateDataSourceRequest * CreateDataSourceResponse::request() const
+{
+    Q_D(const CreateDataSourceResponse);
+    return static_cast<const CreateDataSourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync CreateDataSource response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDataSourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDataSourceResponsePrivate
+ *
+ * @brief  Private implementation for CreateDataSourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDataSourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDataSourceResponse instance.
+ */
+CreateDataSourceResponsePrivate::CreateDataSourceResponsePrivate(
+    CreateDataSourceQueueResponse * const q) : CreateDataSourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync CreateDataSourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDataSourceResponsePrivate::CreateDataSourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createroleresponse.h"
 #include "createroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateRoleResponse
+ *
+ * @brief  Handles IAM CreateRole responses.
+ *
+ * @see    IAMClient::createRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new CreateRoleResponsePrivate(this), parent)
+{
+    setRequest(new CreateRoleRequest(request));
+    setReply(reply);
+}
+
+const CreateRoleRequest * CreateRoleResponse::request() const
+{
+    Q_D(const CreateRoleResponse);
+    return static_cast<const CreateRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM CreateRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRoleResponsePrivate
+ *
+ * @brief  Private implementation for CreateRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateRoleResponse instance.
+ */
+CreateRoleResponsePrivate::CreateRoleResponsePrivate(
+    CreateRoleQueueResponse * const q) : CreateRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM CreateRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateRoleResponsePrivate::CreateRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateRoleResponse"));
+    /// @todo
+}

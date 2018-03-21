@@ -19,3 +19,85 @@
 
 #include "batchgetpartitionresponse.h"
 #include "batchgetpartitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchGetPartitionResponse
+ *
+ * @brief  Handles Glue BatchGetPartition responses.
+ *
+ * @see    GlueClient::batchGetPartition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetPartitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new BatchGetPartitionResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetPartitionRequest(request));
+    setReply(reply);
+}
+
+const BatchGetPartitionRequest * BatchGetPartitionResponse::request() const
+{
+    Q_D(const BatchGetPartitionResponse);
+    return static_cast<const BatchGetPartitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue BatchGetPartition response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetPartitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetPartitionResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetPartitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetPartitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetPartitionResponse instance.
+ */
+BatchGetPartitionResponsePrivate::BatchGetPartitionResponsePrivate(
+    BatchGetPartitionQueueResponse * const q) : BatchGetPartitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue BatchGetPartitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetPartitionResponsePrivate::BatchGetPartitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetPartitionResponse"));
+    /// @todo
+}

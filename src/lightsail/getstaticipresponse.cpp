@@ -19,3 +19,85 @@
 
 #include "getstaticipresponse.h"
 #include "getstaticipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetStaticIpResponse
+ *
+ * @brief  Handles Lightsail GetStaticIp responses.
+ *
+ * @see    LightsailClient::getStaticIp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStaticIpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetStaticIpResponsePrivate(this), parent)
+{
+    setRequest(new GetStaticIpRequest(request));
+    setReply(reply);
+}
+
+const GetStaticIpRequest * GetStaticIpResponse::request() const
+{
+    Q_D(const GetStaticIpResponse);
+    return static_cast<const GetStaticIpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetStaticIp response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetStaticIpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStaticIpResponsePrivate
+ *
+ * @brief  Private implementation for GetStaticIpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStaticIpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetStaticIpResponse instance.
+ */
+GetStaticIpResponsePrivate::GetStaticIpResponsePrivate(
+    GetStaticIpQueueResponse * const q) : GetStaticIpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetStaticIpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetStaticIpResponsePrivate::GetStaticIpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetStaticIpResponse"));
+    /// @todo
+}

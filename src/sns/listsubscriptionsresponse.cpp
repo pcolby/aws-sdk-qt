@@ -19,3 +19,85 @@
 
 #include "listsubscriptionsresponse.h"
 #include "listsubscriptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  ListSubscriptionsResponse
+ *
+ * @brief  Handles SNS ListSubscriptions responses.
+ *
+ * @see    SNSClient::listSubscriptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSubscriptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new ListSubscriptionsResponsePrivate(this), parent)
+{
+    setRequest(new ListSubscriptionsRequest(request));
+    setReply(reply);
+}
+
+const ListSubscriptionsRequest * ListSubscriptionsResponse::request() const
+{
+    Q_D(const ListSubscriptionsResponse);
+    return static_cast<const ListSubscriptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS ListSubscriptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSubscriptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSubscriptionsResponsePrivate
+ *
+ * @brief  Private implementation for ListSubscriptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSubscriptionsResponse instance.
+ */
+ListSubscriptionsResponsePrivate::ListSubscriptionsResponsePrivate(
+    ListSubscriptionsQueueResponse * const q) : ListSubscriptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS ListSubscriptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSubscriptionsResponsePrivate::ListSubscriptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionsResponse"));
+    /// @todo
+}

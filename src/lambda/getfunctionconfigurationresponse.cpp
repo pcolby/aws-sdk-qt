@@ -19,3 +19,85 @@
 
 #include "getfunctionconfigurationresponse.h"
 #include "getfunctionconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  GetFunctionConfigurationResponse
+ *
+ * @brief  Handles Lambda GetFunctionConfiguration responses.
+ *
+ * @see    LambdaClient::getFunctionConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFunctionConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new GetFunctionConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new GetFunctionConfigurationRequest(request));
+    setReply(reply);
+}
+
+const GetFunctionConfigurationRequest * GetFunctionConfigurationResponse::request() const
+{
+    Q_D(const GetFunctionConfigurationResponse);
+    return static_cast<const GetFunctionConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda GetFunctionConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFunctionConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFunctionConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for GetFunctionConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFunctionConfigurationResponse instance.
+ */
+GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponsePrivate(
+    GetFunctionConfigurationQueueResponse * const q) : GetFunctionConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda GetFunctionConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFunctionConfigurationResponse"));
+    /// @todo
+}

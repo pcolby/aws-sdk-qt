@@ -19,3 +19,85 @@
 
 #include "batchgetonpremisesinstancesresponse.h"
 #include "batchgetonpremisesinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetOnPremisesInstancesResponse
+ *
+ * @brief  Handles CodeDeploy BatchGetOnPremisesInstances responses.
+ *
+ * @see    CodeDeployClient::batchGetOnPremisesInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetOnPremisesInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new BatchGetOnPremisesInstancesResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetOnPremisesInstancesRequest(request));
+    setReply(reply);
+}
+
+const BatchGetOnPremisesInstancesRequest * BatchGetOnPremisesInstancesResponse::request() const
+{
+    Q_D(const BatchGetOnPremisesInstancesResponse);
+    return static_cast<const BatchGetOnPremisesInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy BatchGetOnPremisesInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetOnPremisesInstancesResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetOnPremisesInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetOnPremisesInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetOnPremisesInstancesResponse instance.
+ */
+BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponsePrivate(
+    BatchGetOnPremisesInstancesQueueResponse * const q) : BatchGetOnPremisesInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy BatchGetOnPremisesInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetOnPremisesInstancesResponse"));
+    /// @todo
+}

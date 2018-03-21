@@ -19,3 +19,85 @@
 
 #include "describecontainerinstancesresponse.h"
 #include "describecontainerinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DescribeContainerInstancesResponse
+ *
+ * @brief  Handles ECS DescribeContainerInstances responses.
+ *
+ * @see    ECSClient::describeContainerInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeContainerInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new DescribeContainerInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeContainerInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeContainerInstancesRequest * DescribeContainerInstancesResponse::request() const
+{
+    Q_D(const DescribeContainerInstancesResponse);
+    return static_cast<const DescribeContainerInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS DescribeContainerInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeContainerInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeContainerInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeContainerInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeContainerInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeContainerInstancesResponse instance.
+ */
+DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesResponsePrivate(
+    DescribeContainerInstancesQueueResponse * const q) : DescribeContainerInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS DescribeContainerInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeContainerInstancesResponse"));
+    /// @todo
+}

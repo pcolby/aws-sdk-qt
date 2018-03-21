@@ -19,3 +19,85 @@
 
 #include "gettriggersresponse.h"
 #include "gettriggersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetTriggersResponse
+ *
+ * @brief  Handles Glue GetTriggers responses.
+ *
+ * @see    GlueClient::getTriggers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTriggersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetTriggersResponsePrivate(this), parent)
+{
+    setRequest(new GetTriggersRequest(request));
+    setReply(reply);
+}
+
+const GetTriggersRequest * GetTriggersResponse::request() const
+{
+    Q_D(const GetTriggersResponse);
+    return static_cast<const GetTriggersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetTriggers response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTriggersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTriggersResponsePrivate
+ *
+ * @brief  Private implementation for GetTriggersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTriggersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTriggersResponse instance.
+ */
+GetTriggersResponsePrivate::GetTriggersResponsePrivate(
+    GetTriggersQueueResponse * const q) : GetTriggersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetTriggersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTriggersResponsePrivate::GetTriggersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTriggersResponse"));
+    /// @todo
+}

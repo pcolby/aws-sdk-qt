@@ -19,3 +19,85 @@
 
 #include "addthingtothinggroupresponse.h"
 #include "addthingtothinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  AddThingToThingGroupResponse
+ *
+ * @brief  Handles IoT AddThingToThingGroup responses.
+ *
+ * @see    IoTClient::addThingToThingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddThingToThingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new AddThingToThingGroupResponsePrivate(this), parent)
+{
+    setRequest(new AddThingToThingGroupRequest(request));
+    setReply(reply);
+}
+
+const AddThingToThingGroupRequest * AddThingToThingGroupResponse::request() const
+{
+    Q_D(const AddThingToThingGroupResponse);
+    return static_cast<const AddThingToThingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT AddThingToThingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddThingToThingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddThingToThingGroupResponsePrivate
+ *
+ * @brief  Private implementation for AddThingToThingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddThingToThingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddThingToThingGroupResponse instance.
+ */
+AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponsePrivate(
+    AddThingToThingGroupQueueResponse * const q) : AddThingToThingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT AddThingToThingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddThingToThingGroupResponse"));
+    /// @todo
+}

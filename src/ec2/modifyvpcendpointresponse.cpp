@@ -19,3 +19,85 @@
 
 #include "modifyvpcendpointresponse.h"
 #include "modifyvpcendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcEndpointResponse
+ *
+ * @brief  Handles EC2 ModifyVpcEndpoint responses.
+ *
+ * @see    EC2Client::modifyVpcEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyVpcEndpointResponsePrivate(this), parent)
+{
+    setRequest(new ModifyVpcEndpointRequest(request));
+    setReply(reply);
+}
+
+const ModifyVpcEndpointRequest * ModifyVpcEndpointResponse::request() const
+{
+    Q_D(const ModifyVpcEndpointResponse);
+    return static_cast<const ModifyVpcEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyVpcEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyVpcEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcEndpointResponsePrivate
+ *
+ * @brief  Private implementation for ModifyVpcEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyVpcEndpointResponse instance.
+ */
+ModifyVpcEndpointResponsePrivate::ModifyVpcEndpointResponsePrivate(
+    ModifyVpcEndpointQueueResponse * const q) : ModifyVpcEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyVpcEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyVpcEndpointResponsePrivate::ModifyVpcEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointResponse"));
+    /// @todo
+}

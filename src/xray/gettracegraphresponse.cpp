@@ -19,3 +19,85 @@
 
 #include "gettracegraphresponse.h"
 #include "gettracegraphresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace XRay {
+
+/**
+ * @class  GetTraceGraphResponse
+ *
+ * @brief  Handles XRay GetTraceGraph responses.
+ *
+ * @see    XRayClient::getTraceGraph
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTraceGraphResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : XRayResponse(new GetTraceGraphResponsePrivate(this), parent)
+{
+    setRequest(new GetTraceGraphRequest(request));
+    setReply(reply);
+}
+
+const GetTraceGraphRequest * GetTraceGraphResponse::request() const
+{
+    Q_D(const GetTraceGraphResponse);
+    return static_cast<const GetTraceGraphRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a XRay GetTraceGraph response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTraceGraphResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTraceGraphResponsePrivate
+ *
+ * @brief  Private implementation for GetTraceGraphResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTraceGraphResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTraceGraphResponse instance.
+ */
+GetTraceGraphResponsePrivate::GetTraceGraphResponsePrivate(
+    GetTraceGraphQueueResponse * const q) : GetTraceGraphPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an XRay GetTraceGraphResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTraceGraphResponsePrivate::GetTraceGraphResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTraceGraphResponse"));
+    /// @todo
+}

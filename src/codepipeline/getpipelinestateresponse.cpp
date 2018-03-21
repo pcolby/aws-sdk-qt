@@ -19,3 +19,85 @@
 
 #include "getpipelinestateresponse.h"
 #include "getpipelinestateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  GetPipelineStateResponse
+ *
+ * @brief  Handles CodePipeline GetPipelineState responses.
+ *
+ * @see    CodePipelineClient::getPipelineState
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPipelineStateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new GetPipelineStateResponsePrivate(this), parent)
+{
+    setRequest(new GetPipelineStateRequest(request));
+    setReply(reply);
+}
+
+const GetPipelineStateRequest * GetPipelineStateResponse::request() const
+{
+    Q_D(const GetPipelineStateResponse);
+    return static_cast<const GetPipelineStateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline GetPipelineState response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetPipelineStateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPipelineStateResponsePrivate
+ *
+ * @brief  Private implementation for GetPipelineStateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPipelineStateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetPipelineStateResponse instance.
+ */
+GetPipelineStateResponsePrivate::GetPipelineStateResponsePrivate(
+    GetPipelineStateQueueResponse * const q) : GetPipelineStatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline GetPipelineStateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetPipelineStateResponsePrivate::GetPipelineStateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetPipelineStateResponse"));
+    /// @todo
+}

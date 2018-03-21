@@ -19,3 +19,85 @@
 
 #include "describeraidarraysresponse.h"
 #include "describeraidarraysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeRaidArraysResponse
+ *
+ * @brief  Handles OpsWorks DescribeRaidArrays responses.
+ *
+ * @see    OpsWorksClient::describeRaidArrays
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRaidArraysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeRaidArraysResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRaidArraysRequest(request));
+    setReply(reply);
+}
+
+const DescribeRaidArraysRequest * DescribeRaidArraysResponse::request() const
+{
+    Q_D(const DescribeRaidArraysResponse);
+    return static_cast<const DescribeRaidArraysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeRaidArrays response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRaidArraysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRaidArraysResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRaidArraysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRaidArraysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRaidArraysResponse instance.
+ */
+DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponsePrivate(
+    DescribeRaidArraysQueueResponse * const q) : DescribeRaidArraysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeRaidArraysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRaidArraysResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createfilesystemresponse.h"
 #include "createfilesystemresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  CreateFileSystemResponse
+ *
+ * @brief  Handles EFS CreateFileSystem responses.
+ *
+ * @see    EFSClient::createFileSystem
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFileSystemResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EFSResponse(new CreateFileSystemResponsePrivate(this), parent)
+{
+    setRequest(new CreateFileSystemRequest(request));
+    setReply(reply);
+}
+
+const CreateFileSystemRequest * CreateFileSystemResponse::request() const
+{
+    Q_D(const CreateFileSystemResponse);
+    return static_cast<const CreateFileSystemRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EFS CreateFileSystem response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateFileSystemResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFileSystemResponsePrivate
+ *
+ * @brief  Private implementation for CreateFileSystemResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFileSystemResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateFileSystemResponse instance.
+ */
+CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
+    CreateFileSystemQueueResponse * const q) : CreateFileSystemPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EFS CreateFileSystemResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateFileSystemResponsePrivate::CreateFileSystemResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateFileSystemResponse"));
+    /// @todo
+}

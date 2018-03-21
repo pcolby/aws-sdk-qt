@@ -19,3 +19,85 @@
 
 #include "getdomainsuggestionsresponse.h"
 #include "getdomainsuggestionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  GetDomainSuggestionsResponse
+ *
+ * @brief  Handles Route53Domains GetDomainSuggestions responses.
+ *
+ * @see    Route53DomainsClient::getDomainSuggestions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDomainSuggestionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new GetDomainSuggestionsResponsePrivate(this), parent)
+{
+    setRequest(new GetDomainSuggestionsRequest(request));
+    setReply(reply);
+}
+
+const GetDomainSuggestionsRequest * GetDomainSuggestionsResponse::request() const
+{
+    Q_D(const GetDomainSuggestionsResponse);
+    return static_cast<const GetDomainSuggestionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains GetDomainSuggestions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDomainSuggestionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDomainSuggestionsResponsePrivate
+ *
+ * @brief  Private implementation for GetDomainSuggestionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainSuggestionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDomainSuggestionsResponse instance.
+ */
+GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponsePrivate(
+    GetDomainSuggestionsQueueResponse * const q) : GetDomainSuggestionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains GetDomainSuggestionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDomainSuggestionsResponse"));
+    /// @todo
+}

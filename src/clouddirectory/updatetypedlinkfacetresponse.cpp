@@ -19,3 +19,85 @@
 
 #include "updatetypedlinkfacetresponse.h"
 #include "updatetypedlinkfacetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  UpdateTypedLinkFacetResponse
+ *
+ * @brief  Handles CloudDirectory UpdateTypedLinkFacet responses.
+ *
+ * @see    CloudDirectoryClient::updateTypedLinkFacet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTypedLinkFacetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new UpdateTypedLinkFacetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTypedLinkFacetRequest(request));
+    setReply(reply);
+}
+
+const UpdateTypedLinkFacetRequest * UpdateTypedLinkFacetResponse::request() const
+{
+    Q_D(const UpdateTypedLinkFacetResponse);
+    return static_cast<const UpdateTypedLinkFacetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory UpdateTypedLinkFacet response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTypedLinkFacetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTypedLinkFacetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTypedLinkFacetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTypedLinkFacetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTypedLinkFacetResponse instance.
+ */
+UpdateTypedLinkFacetResponsePrivate::UpdateTypedLinkFacetResponsePrivate(
+    UpdateTypedLinkFacetQueueResponse * const q) : UpdateTypedLinkFacetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory UpdateTypedLinkFacetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTypedLinkFacetResponsePrivate::UpdateTypedLinkFacetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTypedLinkFacetResponse"));
+    /// @todo
+}

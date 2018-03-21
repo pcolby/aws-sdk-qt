@@ -19,3 +19,85 @@
 
 #include "deletedeploymentgroupresponse.h"
 #include "deletedeploymentgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  DeleteDeploymentGroupResponse
+ *
+ * @brief  Handles CodeDeploy DeleteDeploymentGroup responses.
+ *
+ * @see    CodeDeployClient::deleteDeploymentGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDeploymentGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new DeleteDeploymentGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDeploymentGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteDeploymentGroupRequest * DeleteDeploymentGroupResponse::request() const
+{
+    Q_D(const DeleteDeploymentGroupResponse);
+    return static_cast<const DeleteDeploymentGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy DeleteDeploymentGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDeploymentGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDeploymentGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDeploymentGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDeploymentGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDeploymentGroupResponse instance.
+ */
+DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponsePrivate(
+    DeleteDeploymentGroupQueueResponse * const q) : DeleteDeploymentGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy DeleteDeploymentGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentGroupResponse"));
+    /// @todo
+}

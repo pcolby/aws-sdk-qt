@@ -19,3 +19,85 @@
 
 #include "listdomainsresponse.h"
 #include "listdomainsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  ListDomainsResponse
+ *
+ * @brief  Handles SimpleDB ListDomains responses.
+ *
+ * @see    SimpleDBClient::listDomains
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDomainsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SimpleDBResponse(new ListDomainsResponsePrivate(this), parent)
+{
+    setRequest(new ListDomainsRequest(request));
+    setReply(reply);
+}
+
+const ListDomainsRequest * ListDomainsResponse::request() const
+{
+    Q_D(const ListDomainsResponse);
+    return static_cast<const ListDomainsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SimpleDB ListDomains response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDomainsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDomainsResponsePrivate
+ *
+ * @brief  Private implementation for ListDomainsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDomainsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDomainsResponse instance.
+ */
+ListDomainsResponsePrivate::ListDomainsResponsePrivate(
+    ListDomainsQueueResponse * const q) : ListDomainsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SimpleDB ListDomainsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDomainsResponsePrivate::ListDomainsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDomainsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletereplicationgroupresponse.h"
 #include "deletereplicationgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DeleteReplicationGroupResponse
+ *
+ * @brief  Handles ElastiCache DeleteReplicationGroup responses.
+ *
+ * @see    ElastiCacheClient::deleteReplicationGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DeleteReplicationGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteReplicationGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteReplicationGroupRequest * DeleteReplicationGroupResponse::request() const
+{
+    Q_D(const DeleteReplicationGroupResponse);
+    return static_cast<const DeleteReplicationGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DeleteReplicationGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteReplicationGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteReplicationGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteReplicationGroupResponse instance.
+ */
+DeleteReplicationGroupResponsePrivate::DeleteReplicationGroupResponsePrivate(
+    DeleteReplicationGroupQueueResponse * const q) : DeleteReplicationGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DeleteReplicationGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteReplicationGroupResponsePrivate::DeleteReplicationGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationGroupResponse"));
+    /// @todo
+}

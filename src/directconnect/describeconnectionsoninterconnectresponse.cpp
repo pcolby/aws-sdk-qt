@@ -19,3 +19,85 @@
 
 #include "describeconnectionsoninterconnectresponse.h"
 #include "describeconnectionsoninterconnectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeConnectionsOnInterconnectResponse
+ *
+ * @brief  Handles DirectConnect DescribeConnectionsOnInterconnect responses.
+ *
+ * @see    DirectConnectClient::describeConnectionsOnInterconnect
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConnectionsOnInterconnectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeConnectionsOnInterconnectResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConnectionsOnInterconnectRequest(request));
+    setReply(reply);
+}
+
+const DescribeConnectionsOnInterconnectRequest * DescribeConnectionsOnInterconnectResponse::request() const
+{
+    Q_D(const DescribeConnectionsOnInterconnectResponse);
+    return static_cast<const DescribeConnectionsOnInterconnectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeConnectionsOnInterconnect response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConnectionsOnInterconnectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConnectionsOnInterconnectResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConnectionsOnInterconnectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConnectionsOnInterconnectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConnectionsOnInterconnectResponse instance.
+ */
+DescribeConnectionsOnInterconnectResponsePrivate::DescribeConnectionsOnInterconnectResponsePrivate(
+    DescribeConnectionsOnInterconnectQueueResponse * const q) : DescribeConnectionsOnInterconnectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeConnectionsOnInterconnectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConnectionsOnInterconnectResponsePrivate::DescribeConnectionsOnInterconnectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConnectionsOnInterconnectResponse"));
+    /// @todo
+}

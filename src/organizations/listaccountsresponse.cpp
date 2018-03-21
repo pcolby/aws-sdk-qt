@@ -19,3 +19,85 @@
 
 #include "listaccountsresponse.h"
 #include "listaccountsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListAccountsResponse
+ *
+ * @brief  Handles Organizations ListAccounts responses.
+ *
+ * @see    OrganizationsClient::listAccounts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAccountsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new ListAccountsResponsePrivate(this), parent)
+{
+    setRequest(new ListAccountsRequest(request));
+    setReply(reply);
+}
+
+const ListAccountsRequest * ListAccountsResponse::request() const
+{
+    Q_D(const ListAccountsResponse);
+    return static_cast<const ListAccountsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations ListAccounts response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAccountsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAccountsResponsePrivate
+ *
+ * @brief  Private implementation for ListAccountsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAccountsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAccountsResponse instance.
+ */
+ListAccountsResponsePrivate::ListAccountsResponsePrivate(
+    ListAccountsQueueResponse * const q) : ListAccountsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations ListAccountsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAccountsResponsePrivate::ListAccountsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAccountsResponse"));
+    /// @todo
+}

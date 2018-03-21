@@ -19,3 +19,85 @@
 
 #include "listassociationsresponse.h"
 #include "listassociationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListAssociationsResponse
+ *
+ * @brief  Handles SSM ListAssociations responses.
+ *
+ * @see    SSMClient::listAssociations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssociationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListAssociationsResponsePrivate(this), parent)
+{
+    setRequest(new ListAssociationsRequest(request));
+    setReply(reply);
+}
+
+const ListAssociationsRequest * ListAssociationsResponse::request() const
+{
+    Q_D(const ListAssociationsResponse);
+    return static_cast<const ListAssociationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListAssociations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAssociationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssociationsResponsePrivate
+ *
+ * @brief  Private implementation for ListAssociationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssociationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAssociationsResponse instance.
+ */
+ListAssociationsResponsePrivate::ListAssociationsResponsePrivate(
+    ListAssociationsQueueResponse * const q) : ListAssociationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListAssociationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAssociationsResponsePrivate::ListAssociationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAssociationsResponse"));
+    /// @todo
+}

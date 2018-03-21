@@ -19,3 +19,85 @@
 
 #include "deletedeploymentconfigresponse.h"
 #include "deletedeploymentconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  DeleteDeploymentConfigResponse
+ *
+ * @brief  Handles CodeDeploy DeleteDeploymentConfig responses.
+ *
+ * @see    CodeDeployClient::deleteDeploymentConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDeploymentConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new DeleteDeploymentConfigResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDeploymentConfigRequest(request));
+    setReply(reply);
+}
+
+const DeleteDeploymentConfigRequest * DeleteDeploymentConfigResponse::request() const
+{
+    Q_D(const DeleteDeploymentConfigResponse);
+    return static_cast<const DeleteDeploymentConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy DeleteDeploymentConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDeploymentConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDeploymentConfigResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDeploymentConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDeploymentConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDeploymentConfigResponse instance.
+ */
+DeleteDeploymentConfigResponsePrivate::DeleteDeploymentConfigResponsePrivate(
+    DeleteDeploymentConfigQueueResponse * const q) : DeleteDeploymentConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy DeleteDeploymentConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDeploymentConfigResponsePrivate::DeleteDeploymentConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentConfigResponse"));
+    /// @todo
+}

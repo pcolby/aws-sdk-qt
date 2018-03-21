@@ -19,3 +19,85 @@
 
 #include "tagstreamresponse.h"
 #include "tagstreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisVideo {
+
+/**
+ * @class  TagStreamResponse
+ *
+ * @brief  Handles KinesisVideo TagStream responses.
+ *
+ * @see    KinesisVideoClient::tagStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisVideoResponse(new TagStreamResponsePrivate(this), parent)
+{
+    setRequest(new TagStreamRequest(request));
+    setReply(reply);
+}
+
+const TagStreamRequest * TagStreamResponse::request() const
+{
+    Q_D(const TagStreamResponse);
+    return static_cast<const TagStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisVideo TagStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void TagStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TagStreamResponsePrivate
+ *
+ * @brief  Private implementation for TagStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TagStreamResponse instance.
+ */
+TagStreamResponsePrivate::TagStreamResponsePrivate(
+    TagStreamQueueResponse * const q) : TagStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisVideo TagStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TagStreamResponsePrivate::TagStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TagStreamResponse"));
+    /// @todo
+}

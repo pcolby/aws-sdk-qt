@@ -19,3 +19,85 @@
 
 #include "getpipelinedefinitionresponse.h"
 #include "getpipelinedefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  GetPipelineDefinitionResponse
+ *
+ * @brief  Handles DataPipeline GetPipelineDefinition responses.
+ *
+ * @see    DataPipelineClient::getPipelineDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPipelineDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DataPipelineResponse(new GetPipelineDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new GetPipelineDefinitionRequest(request));
+    setReply(reply);
+}
+
+const GetPipelineDefinitionRequest * GetPipelineDefinitionResponse::request() const
+{
+    Q_D(const GetPipelineDefinitionResponse);
+    return static_cast<const GetPipelineDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DataPipeline GetPipelineDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetPipelineDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPipelineDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for GetPipelineDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPipelineDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetPipelineDefinitionResponse instance.
+ */
+GetPipelineDefinitionResponsePrivate::GetPipelineDefinitionResponsePrivate(
+    GetPipelineDefinitionQueueResponse * const q) : GetPipelineDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DataPipeline GetPipelineDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetPipelineDefinitionResponsePrivate::GetPipelineDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetPipelineDefinitionResponse"));
+    /// @todo
+}

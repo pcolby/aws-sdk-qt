@@ -19,3 +19,85 @@
 
 #include "deletedhcpoptionsresponse.h"
 #include "deletedhcpoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteDhcpOptionsResponse
+ *
+ * @brief  Handles EC2 DeleteDhcpOptions responses.
+ *
+ * @see    EC2Client::deleteDhcpOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDhcpOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteDhcpOptionsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDhcpOptionsRequest(request));
+    setReply(reply);
+}
+
+const DeleteDhcpOptionsRequest * DeleteDhcpOptionsResponse::request() const
+{
+    Q_D(const DeleteDhcpOptionsResponse);
+    return static_cast<const DeleteDhcpOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteDhcpOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDhcpOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDhcpOptionsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDhcpOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDhcpOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDhcpOptionsResponse instance.
+ */
+DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
+    DeleteDhcpOptionsQueueResponse * const q) : DeleteDhcpOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteDhcpOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDhcpOptionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getresourceresponse.h"
 #include "getresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetResourceResponse
+ *
+ * @brief  Handles APIGateway GetResource responses.
+ *
+ * @see    APIGatewayClient::getResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetResourceResponsePrivate(this), parent)
+{
+    setRequest(new GetResourceRequest(request));
+    setReply(reply);
+}
+
+const GetResourceRequest * GetResourceResponse::request() const
+{
+    Q_D(const GetResourceResponse);
+    return static_cast<const GetResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetResourceResponsePrivate
+ *
+ * @brief  Private implementation for GetResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetResourceResponse instance.
+ */
+GetResourceResponsePrivate::GetResourceResponsePrivate(
+    GetResourceQueueResponse * const q) : GetResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetResourceResponsePrivate::GetResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetResourceResponse"));
+    /// @todo
+}

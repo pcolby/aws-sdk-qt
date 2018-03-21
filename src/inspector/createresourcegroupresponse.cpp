@@ -19,3 +19,85 @@
 
 #include "createresourcegroupresponse.h"
 #include "createresourcegroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  CreateResourceGroupResponse
+ *
+ * @brief  Handles Inspector CreateResourceGroup responses.
+ *
+ * @see    InspectorClient::createResourceGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateResourceGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new CreateResourceGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateResourceGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateResourceGroupRequest * CreateResourceGroupResponse::request() const
+{
+    Q_D(const CreateResourceGroupResponse);
+    return static_cast<const CreateResourceGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector CreateResourceGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateResourceGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateResourceGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateResourceGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateResourceGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateResourceGroupResponse instance.
+ */
+CreateResourceGroupResponsePrivate::CreateResourceGroupResponsePrivate(
+    CreateResourceGroupQueueResponse * const q) : CreateResourceGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector CreateResourceGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateResourceGroupResponsePrivate::CreateResourceGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateResourceGroupResponse"));
+    /// @todo
+}

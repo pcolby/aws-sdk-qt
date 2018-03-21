@@ -19,3 +19,85 @@
 
 #include "getcrawlermetricsresponse.h"
 #include "getcrawlermetricsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetCrawlerMetricsResponse
+ *
+ * @brief  Handles Glue GetCrawlerMetrics responses.
+ *
+ * @see    GlueClient::getCrawlerMetrics
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCrawlerMetricsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetCrawlerMetricsResponsePrivate(this), parent)
+{
+    setRequest(new GetCrawlerMetricsRequest(request));
+    setReply(reply);
+}
+
+const GetCrawlerMetricsRequest * GetCrawlerMetricsResponse::request() const
+{
+    Q_D(const GetCrawlerMetricsResponse);
+    return static_cast<const GetCrawlerMetricsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetCrawlerMetrics response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCrawlerMetricsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCrawlerMetricsResponsePrivate
+ *
+ * @brief  Private implementation for GetCrawlerMetricsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCrawlerMetricsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCrawlerMetricsResponse instance.
+ */
+GetCrawlerMetricsResponsePrivate::GetCrawlerMetricsResponsePrivate(
+    GetCrawlerMetricsQueueResponse * const q) : GetCrawlerMetricsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetCrawlerMetricsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCrawlerMetricsResponsePrivate::GetCrawlerMetricsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCrawlerMetricsResponse"));
+    /// @todo
+}

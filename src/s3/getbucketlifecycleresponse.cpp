@@ -19,3 +19,85 @@
 
 #include "getbucketlifecycleresponse.h"
 #include "getbucketlifecycleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketLifecycleResponse
+ *
+ * @brief  Handles S3 GetBucketLifecycle responses.
+ *
+ * @see    S3Client::getBucketLifecycle
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketLifecycleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketLifecycleResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketLifecycleRequest(request));
+    setReply(reply);
+}
+
+const GetBucketLifecycleRequest * GetBucketLifecycleResponse::request() const
+{
+    Q_D(const GetBucketLifecycleResponse);
+    return static_cast<const GetBucketLifecycleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketLifecycle response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketLifecycleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketLifecycleResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketLifecycleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketLifecycleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketLifecycleResponse instance.
+ */
+GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponsePrivate(
+    GetBucketLifecycleQueueResponse * const q) : GetBucketLifecyclePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketLifecycleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketLifecycleResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "addtagstoonpremisesinstancesresponse.h"
 #include "addtagstoonpremisesinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  AddTagsToOnPremisesInstancesResponse
+ *
+ * @brief  Handles CodeDeploy AddTagsToOnPremisesInstances responses.
+ *
+ * @see    CodeDeployClient::addTagsToOnPremisesInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsToOnPremisesInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new AddTagsToOnPremisesInstancesResponsePrivate(this), parent)
+{
+    setRequest(new AddTagsToOnPremisesInstancesRequest(request));
+    setReply(reply);
+}
+
+const AddTagsToOnPremisesInstancesRequest * AddTagsToOnPremisesInstancesResponse::request() const
+{
+    Q_D(const AddTagsToOnPremisesInstancesResponse);
+    return static_cast<const AddTagsToOnPremisesInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy AddTagsToOnPremisesInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddTagsToOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsToOnPremisesInstancesResponsePrivate
+ *
+ * @brief  Private implementation for AddTagsToOnPremisesInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToOnPremisesInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddTagsToOnPremisesInstancesResponse instance.
+ */
+AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesResponsePrivate(
+    AddTagsToOnPremisesInstancesQueueResponse * const q) : AddTagsToOnPremisesInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy AddTagsToOnPremisesInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddTagsToOnPremisesInstancesResponse"));
+    /// @todo
+}

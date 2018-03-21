@@ -19,3 +19,85 @@
 
 #include "getdevendpointsresponse.h"
 #include "getdevendpointsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetDevEndpointsResponse
+ *
+ * @brief  Handles Glue GetDevEndpoints responses.
+ *
+ * @see    GlueClient::getDevEndpoints
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDevEndpointsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetDevEndpointsResponsePrivate(this), parent)
+{
+    setRequest(new GetDevEndpointsRequest(request));
+    setReply(reply);
+}
+
+const GetDevEndpointsRequest * GetDevEndpointsResponse::request() const
+{
+    Q_D(const GetDevEndpointsResponse);
+    return static_cast<const GetDevEndpointsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetDevEndpoints response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDevEndpointsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDevEndpointsResponsePrivate
+ *
+ * @brief  Private implementation for GetDevEndpointsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDevEndpointsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDevEndpointsResponse instance.
+ */
+GetDevEndpointsResponsePrivate::GetDevEndpointsResponsePrivate(
+    GetDevEndpointsQueueResponse * const q) : GetDevEndpointsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetDevEndpointsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDevEndpointsResponsePrivate::GetDevEndpointsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDevEndpointsResponse"));
+    /// @todo
+}

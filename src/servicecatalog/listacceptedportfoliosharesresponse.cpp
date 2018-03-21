@@ -19,3 +19,85 @@
 
 #include "listacceptedportfoliosharesresponse.h"
 #include "listacceptedportfoliosharesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListAcceptedPortfolioSharesResponse
+ *
+ * @brief  Handles ServiceCatalog ListAcceptedPortfolioShares responses.
+ *
+ * @see    ServiceCatalogClient::listAcceptedPortfolioShares
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAcceptedPortfolioSharesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListAcceptedPortfolioSharesResponsePrivate(this), parent)
+{
+    setRequest(new ListAcceptedPortfolioSharesRequest(request));
+    setReply(reply);
+}
+
+const ListAcceptedPortfolioSharesRequest * ListAcceptedPortfolioSharesResponse::request() const
+{
+    Q_D(const ListAcceptedPortfolioSharesResponse);
+    return static_cast<const ListAcceptedPortfolioSharesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListAcceptedPortfolioShares response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAcceptedPortfolioSharesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAcceptedPortfolioSharesResponsePrivate
+ *
+ * @brief  Private implementation for ListAcceptedPortfolioSharesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAcceptedPortfolioSharesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAcceptedPortfolioSharesResponse instance.
+ */
+ListAcceptedPortfolioSharesResponsePrivate::ListAcceptedPortfolioSharesResponsePrivate(
+    ListAcceptedPortfolioSharesQueueResponse * const q) : ListAcceptedPortfolioSharesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListAcceptedPortfolioSharesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAcceptedPortfolioSharesResponsePrivate::ListAcceptedPortfolioSharesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAcceptedPortfolioSharesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updatedirectoryconfigresponse.h"
 #include "updatedirectoryconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  UpdateDirectoryConfigResponse
+ *
+ * @brief  Handles AppStream UpdateDirectoryConfig responses.
+ *
+ * @see    AppStreamClient::updateDirectoryConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDirectoryConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new UpdateDirectoryConfigResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDirectoryConfigRequest(request));
+    setReply(reply);
+}
+
+const UpdateDirectoryConfigRequest * UpdateDirectoryConfigResponse::request() const
+{
+    Q_D(const UpdateDirectoryConfigResponse);
+    return static_cast<const UpdateDirectoryConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream UpdateDirectoryConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDirectoryConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDirectoryConfigResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDirectoryConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDirectoryConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDirectoryConfigResponse instance.
+ */
+UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponsePrivate(
+    UpdateDirectoryConfigQueueResponse * const q) : UpdateDirectoryConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream UpdateDirectoryConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDirectoryConfigResponse"));
+    /// @todo
+}

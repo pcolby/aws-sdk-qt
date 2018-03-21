@@ -19,3 +19,85 @@
 
 #include "listgroupsresponse.h"
 #include "listgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListGroupsResponse
+ *
+ * @brief  Handles IAM ListGroups responses.
+ *
+ * @see    IAMClient::listGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListGroupsResponsePrivate(this), parent)
+{
+    setRequest(new ListGroupsRequest(request));
+    setReply(reply);
+}
+
+const ListGroupsRequest * ListGroupsResponse::request() const
+{
+    Q_D(const ListGroupsResponse);
+    return static_cast<const ListGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupsResponsePrivate
+ *
+ * @brief  Private implementation for ListGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGroupsResponse instance.
+ */
+ListGroupsResponsePrivate::ListGroupsResponsePrivate(
+    ListGroupsQueueResponse * const q) : ListGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGroupsResponsePrivate::ListGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGroupsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updatefleetattributesresponse.h"
 #include "updatefleetattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateFleetAttributesResponse
+ *
+ * @brief  Handles GameLift UpdateFleetAttributes responses.
+ *
+ * @see    GameLiftClient::updateFleetAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFleetAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new UpdateFleetAttributesResponsePrivate(this), parent)
+{
+    setRequest(new UpdateFleetAttributesRequest(request));
+    setReply(reply);
+}
+
+const UpdateFleetAttributesRequest * UpdateFleetAttributesResponse::request() const
+{
+    Q_D(const UpdateFleetAttributesResponse);
+    return static_cast<const UpdateFleetAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift UpdateFleetAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateFleetAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFleetAttributesResponsePrivate
+ *
+ * @brief  Private implementation for UpdateFleetAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFleetAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateFleetAttributesResponse instance.
+ */
+UpdateFleetAttributesResponsePrivate::UpdateFleetAttributesResponsePrivate(
+    UpdateFleetAttributesQueueResponse * const q) : UpdateFleetAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift UpdateFleetAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateFleetAttributesResponsePrivate::UpdateFleetAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateFleetAttributesResponse"));
+    /// @todo
+}

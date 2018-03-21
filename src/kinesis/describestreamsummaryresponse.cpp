@@ -19,3 +19,85 @@
 
 #include "describestreamsummaryresponse.h"
 #include "describestreamsummaryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  DescribeStreamSummaryResponse
+ *
+ * @brief  Handles Kinesis DescribeStreamSummary responses.
+ *
+ * @see    KinesisClient::describeStreamSummary
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStreamSummaryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new DescribeStreamSummaryResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStreamSummaryRequest(request));
+    setReply(reply);
+}
+
+const DescribeStreamSummaryRequest * DescribeStreamSummaryResponse::request() const
+{
+    Q_D(const DescribeStreamSummaryResponse);
+    return static_cast<const DescribeStreamSummaryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis DescribeStreamSummary response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStreamSummaryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStreamSummaryResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStreamSummaryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStreamSummaryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStreamSummaryResponse instance.
+ */
+DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponsePrivate(
+    DescribeStreamSummaryQueueResponse * const q) : DescribeStreamSummaryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis DescribeStreamSummaryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStreamSummaryResponse"));
+    /// @todo
+}

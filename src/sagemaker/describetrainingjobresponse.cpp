@@ -19,3 +19,85 @@
 
 #include "describetrainingjobresponse.h"
 #include "describetrainingjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeTrainingJobResponse
+ *
+ * @brief  Handles SageMaker DescribeTrainingJob responses.
+ *
+ * @see    SageMakerClient::describeTrainingJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrainingJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new DescribeTrainingJobResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTrainingJobRequest(request));
+    setReply(reply);
+}
+
+const DescribeTrainingJobRequest * DescribeTrainingJobResponse::request() const
+{
+    Q_D(const DescribeTrainingJobResponse);
+    return static_cast<const DescribeTrainingJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker DescribeTrainingJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTrainingJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrainingJobResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTrainingJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrainingJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTrainingJobResponse instance.
+ */
+DescribeTrainingJobResponsePrivate::DescribeTrainingJobResponsePrivate(
+    DescribeTrainingJobQueueResponse * const q) : DescribeTrainingJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker DescribeTrainingJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTrainingJobResponsePrivate::DescribeTrainingJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTrainingJobResponse"));
+    /// @todo
+}

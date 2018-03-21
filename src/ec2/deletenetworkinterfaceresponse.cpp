@@ -19,3 +19,85 @@
 
 #include "deletenetworkinterfaceresponse.h"
 #include "deletenetworkinterfaceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteNetworkInterfaceResponse
+ *
+ * @brief  Handles EC2 DeleteNetworkInterface responses.
+ *
+ * @see    EC2Client::deleteNetworkInterface
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNetworkInterfaceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteNetworkInterfaceResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNetworkInterfaceRequest(request));
+    setReply(reply);
+}
+
+const DeleteNetworkInterfaceRequest * DeleteNetworkInterfaceResponse::request() const
+{
+    Q_D(const DeleteNetworkInterfaceResponse);
+    return static_cast<const DeleteNetworkInterfaceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteNetworkInterface response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNetworkInterfaceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNetworkInterfaceResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNetworkInterfaceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNetworkInterfaceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNetworkInterfaceResponse instance.
+ */
+DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponsePrivate(
+    DeleteNetworkInterfaceQueueResponse * const q) : DeleteNetworkInterfacePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteNetworkInterfaceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkInterfaceResponse"));
+    /// @todo
+}

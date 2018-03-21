@@ -19,3 +19,85 @@
 
 #include "getreservationutilizationresponse.h"
 #include "getreservationutilizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CostExplorer {
+
+/**
+ * @class  GetReservationUtilizationResponse
+ *
+ * @brief  Handles CostExplorer GetReservationUtilization responses.
+ *
+ * @see    CostExplorerClient::getReservationUtilization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetReservationUtilizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CostExplorerResponse(new GetReservationUtilizationResponsePrivate(this), parent)
+{
+    setRequest(new GetReservationUtilizationRequest(request));
+    setReply(reply);
+}
+
+const GetReservationUtilizationRequest * GetReservationUtilizationResponse::request() const
+{
+    Q_D(const GetReservationUtilizationResponse);
+    return static_cast<const GetReservationUtilizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CostExplorer GetReservationUtilization response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetReservationUtilizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetReservationUtilizationResponsePrivate
+ *
+ * @brief  Private implementation for GetReservationUtilizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetReservationUtilizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetReservationUtilizationResponse instance.
+ */
+GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponsePrivate(
+    GetReservationUtilizationQueueResponse * const q) : GetReservationUtilizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CostExplorer GetReservationUtilizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetReservationUtilizationResponse"));
+    /// @todo
+}

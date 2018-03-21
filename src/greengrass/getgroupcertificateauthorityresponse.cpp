@@ -19,3 +19,85 @@
 
 #include "getgroupcertificateauthorityresponse.h"
 #include "getgroupcertificateauthorityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetGroupCertificateAuthorityResponse
+ *
+ * @brief  Handles Greengrass GetGroupCertificateAuthority responses.
+ *
+ * @see    GreengrassClient::getGroupCertificateAuthority
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGroupCertificateAuthorityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetGroupCertificateAuthorityResponsePrivate(this), parent)
+{
+    setRequest(new GetGroupCertificateAuthorityRequest(request));
+    setReply(reply);
+}
+
+const GetGroupCertificateAuthorityRequest * GetGroupCertificateAuthorityResponse::request() const
+{
+    Q_D(const GetGroupCertificateAuthorityResponse);
+    return static_cast<const GetGroupCertificateAuthorityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetGroupCertificateAuthority response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGroupCertificateAuthorityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGroupCertificateAuthorityResponsePrivate
+ *
+ * @brief  Private implementation for GetGroupCertificateAuthorityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupCertificateAuthorityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGroupCertificateAuthorityResponse instance.
+ */
+GetGroupCertificateAuthorityResponsePrivate::GetGroupCertificateAuthorityResponsePrivate(
+    GetGroupCertificateAuthorityQueueResponse * const q) : GetGroupCertificateAuthorityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetGroupCertificateAuthorityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGroupCertificateAuthorityResponsePrivate::GetGroupCertificateAuthorityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGroupCertificateAuthorityResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "sendmessagebatchresponse.h"
 #include "sendmessagebatchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  SendMessageBatchResponse
+ *
+ * @brief  Handles SQS SendMessageBatch responses.
+ *
+ * @see    SQSClient::sendMessageBatch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendMessageBatchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new SendMessageBatchResponsePrivate(this), parent)
+{
+    setRequest(new SendMessageBatchRequest(request));
+    setReply(reply);
+}
+
+const SendMessageBatchRequest * SendMessageBatchResponse::request() const
+{
+    Q_D(const SendMessageBatchResponse);
+    return static_cast<const SendMessageBatchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS SendMessageBatch response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendMessageBatchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendMessageBatchResponsePrivate
+ *
+ * @brief  Private implementation for SendMessageBatchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendMessageBatchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendMessageBatchResponse instance.
+ */
+SendMessageBatchResponsePrivate::SendMessageBatchResponsePrivate(
+    SendMessageBatchQueueResponse * const q) : SendMessageBatchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS SendMessageBatchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendMessageBatchResponsePrivate::SendMessageBatchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendMessageBatchResponse"));
+    /// @todo
+}

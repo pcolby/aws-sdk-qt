@@ -19,3 +19,85 @@
 
 #include "describeruleresponse.h"
 #include "describeruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  DescribeRuleResponse
+ *
+ * @brief  Handles CloudWatchEvents DescribeRule responses.
+ *
+ * @see    CloudWatchEventsClient::describeRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new DescribeRuleResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRuleRequest(request));
+    setReply(reply);
+}
+
+const DescribeRuleRequest * DescribeRuleResponse::request() const
+{
+    Q_D(const DescribeRuleResponse);
+    return static_cast<const DescribeRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents DescribeRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRuleResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRuleResponse instance.
+ */
+DescribeRuleResponsePrivate::DescribeRuleResponsePrivate(
+    DescribeRuleQueueResponse * const q) : DescribeRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents DescribeRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRuleResponsePrivate::DescribeRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRuleResponse"));
+    /// @todo
+}

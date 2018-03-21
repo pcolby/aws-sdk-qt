@@ -19,3 +19,85 @@
 
 #include "updatebudgetresponse.h"
 #include "updatebudgetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  UpdateBudgetResponse
+ *
+ * @brief  Handles Budgets UpdateBudget responses.
+ *
+ * @see    BudgetsClient::updateBudget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBudgetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new UpdateBudgetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateBudgetRequest(request));
+    setReply(reply);
+}
+
+const UpdateBudgetRequest * UpdateBudgetResponse::request() const
+{
+    Q_D(const UpdateBudgetResponse);
+    return static_cast<const UpdateBudgetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets UpdateBudget response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateBudgetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBudgetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateBudgetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBudgetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateBudgetResponse instance.
+ */
+UpdateBudgetResponsePrivate::UpdateBudgetResponsePrivate(
+    UpdateBudgetQueueResponse * const q) : UpdateBudgetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets UpdateBudgetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateBudgetResponsePrivate::UpdateBudgetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateBudgetResponse"));
+    /// @todo
+}

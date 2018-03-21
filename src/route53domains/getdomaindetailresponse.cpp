@@ -19,3 +19,85 @@
 
 #include "getdomaindetailresponse.h"
 #include "getdomaindetailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  GetDomainDetailResponse
+ *
+ * @brief  Handles Route53Domains GetDomainDetail responses.
+ *
+ * @see    Route53DomainsClient::getDomainDetail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDomainDetailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new GetDomainDetailResponsePrivate(this), parent)
+{
+    setRequest(new GetDomainDetailRequest(request));
+    setReply(reply);
+}
+
+const GetDomainDetailRequest * GetDomainDetailResponse::request() const
+{
+    Q_D(const GetDomainDetailResponse);
+    return static_cast<const GetDomainDetailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains GetDomainDetail response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDomainDetailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDomainDetailResponsePrivate
+ *
+ * @brief  Private implementation for GetDomainDetailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainDetailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDomainDetailResponse instance.
+ */
+GetDomainDetailResponsePrivate::GetDomainDetailResponsePrivate(
+    GetDomainDetailQueueResponse * const q) : GetDomainDetailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains GetDomainDetailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDomainDetailResponsePrivate::GetDomainDetailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDomainDetailResponse"));
+    /// @todo
+}

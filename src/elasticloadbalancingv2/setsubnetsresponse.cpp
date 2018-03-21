@@ -19,3 +19,85 @@
 
 #include "setsubnetsresponse.h"
 #include "setsubnetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  SetSubnetsResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 SetSubnets responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::setSubnets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetSubnetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new SetSubnetsResponsePrivate(this), parent)
+{
+    setRequest(new SetSubnetsRequest(request));
+    setReply(reply);
+}
+
+const SetSubnetsRequest * SetSubnetsResponse::request() const
+{
+    Q_D(const SetSubnetsResponse);
+    return static_cast<const SetSubnetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 SetSubnets response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetSubnetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetSubnetsResponsePrivate
+ *
+ * @brief  Private implementation for SetSubnetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetSubnetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetSubnetsResponse instance.
+ */
+SetSubnetsResponsePrivate::SetSubnetsResponsePrivate(
+    SetSubnetsQueueResponse * const q) : SetSubnetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 SetSubnetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetSubnetsResponsePrivate::SetSubnetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetSubnetsResponse"));
+    /// @todo
+}

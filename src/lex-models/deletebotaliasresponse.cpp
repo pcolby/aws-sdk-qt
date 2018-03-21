@@ -19,3 +19,85 @@
 
 #include "deletebotaliasresponse.h"
 #include "deletebotaliasresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteBotAliasResponse
+ *
+ * @brief  Handles LexModelBuildingService DeleteBotAlias responses.
+ *
+ * @see    LexModelBuildingServiceClient::deleteBotAlias
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBotAliasResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new DeleteBotAliasResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBotAliasRequest(request));
+    setReply(reply);
+}
+
+const DeleteBotAliasRequest * DeleteBotAliasResponse::request() const
+{
+    Q_D(const DeleteBotAliasResponse);
+    return static_cast<const DeleteBotAliasRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService DeleteBotAlias response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBotAliasResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBotAliasResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBotAliasResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBotAliasResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBotAliasResponse instance.
+ */
+DeleteBotAliasResponsePrivate::DeleteBotAliasResponsePrivate(
+    DeleteBotAliasQueueResponse * const q) : DeleteBotAliasPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService DeleteBotAliasResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBotAliasResponsePrivate::DeleteBotAliasResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBotAliasResponse"));
+    /// @todo
+}

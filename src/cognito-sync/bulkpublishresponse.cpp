@@ -19,3 +19,85 @@
 
 #include "bulkpublishresponse.h"
 #include "bulkpublishresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  BulkPublishResponse
+ *
+ * @brief  Handles CognitoSync BulkPublish responses.
+ *
+ * @see    CognitoSyncClient::bulkPublish
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BulkPublishResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new BulkPublishResponsePrivate(this), parent)
+{
+    setRequest(new BulkPublishRequest(request));
+    setReply(reply);
+}
+
+const BulkPublishRequest * BulkPublishResponse::request() const
+{
+    Q_D(const BulkPublishResponse);
+    return static_cast<const BulkPublishRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync BulkPublish response.
+ *
+ * @param  response  Response to parse.
+ */
+void BulkPublishResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BulkPublishResponsePrivate
+ *
+ * @brief  Private implementation for BulkPublishResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BulkPublishResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BulkPublishResponse instance.
+ */
+BulkPublishResponsePrivate::BulkPublishResponsePrivate(
+    BulkPublishQueueResponse * const q) : BulkPublishPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync BulkPublishResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BulkPublishResponsePrivate::BulkPublishResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BulkPublishResponse"));
+    /// @todo
+}

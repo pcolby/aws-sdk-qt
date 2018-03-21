@@ -19,3 +19,85 @@
 
 #include "updaterequestvalidatorresponse.h"
 #include "updaterequestvalidatorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateRequestValidatorResponse
+ *
+ * @brief  Handles APIGateway UpdateRequestValidator responses.
+ *
+ * @see    APIGatewayClient::updateRequestValidator
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRequestValidatorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new UpdateRequestValidatorResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRequestValidatorRequest(request));
+    setReply(reply);
+}
+
+const UpdateRequestValidatorRequest * UpdateRequestValidatorResponse::request() const
+{
+    Q_D(const UpdateRequestValidatorResponse);
+    return static_cast<const UpdateRequestValidatorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway UpdateRequestValidator response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRequestValidatorResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRequestValidatorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRequestValidatorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRequestValidatorResponse instance.
+ */
+UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponsePrivate(
+    UpdateRequestValidatorQueueResponse * const q) : UpdateRequestValidatorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway UpdateRequestValidatorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRequestValidatorResponse"));
+    /// @todo
+}

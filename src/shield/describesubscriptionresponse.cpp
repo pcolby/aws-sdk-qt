@@ -19,3 +19,85 @@
 
 #include "describesubscriptionresponse.h"
 #include "describesubscriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  DescribeSubscriptionResponse
+ *
+ * @brief  Handles Shield DescribeSubscription responses.
+ *
+ * @see    ShieldClient::describeSubscription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSubscriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ShieldResponse(new DescribeSubscriptionResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSubscriptionRequest(request));
+    setReply(reply);
+}
+
+const DescribeSubscriptionRequest * DescribeSubscriptionResponse::request() const
+{
+    Q_D(const DescribeSubscriptionResponse);
+    return static_cast<const DescribeSubscriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Shield DescribeSubscription response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSubscriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSubscriptionResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSubscriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubscriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSubscriptionResponse instance.
+ */
+DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponsePrivate(
+    DescribeSubscriptionQueueResponse * const q) : DescribeSubscriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Shield DescribeSubscriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSubscriptionResponse"));
+    /// @todo
+}

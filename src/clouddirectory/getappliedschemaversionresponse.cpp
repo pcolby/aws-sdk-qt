@@ -19,3 +19,85 @@
 
 #include "getappliedschemaversionresponse.h"
 #include "getappliedschemaversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  GetAppliedSchemaVersionResponse
+ *
+ * @brief  Handles CloudDirectory GetAppliedSchemaVersion responses.
+ *
+ * @see    CloudDirectoryClient::getAppliedSchemaVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAppliedSchemaVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new GetAppliedSchemaVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetAppliedSchemaVersionRequest(request));
+    setReply(reply);
+}
+
+const GetAppliedSchemaVersionRequest * GetAppliedSchemaVersionResponse::request() const
+{
+    Q_D(const GetAppliedSchemaVersionResponse);
+    return static_cast<const GetAppliedSchemaVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory GetAppliedSchemaVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAppliedSchemaVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAppliedSchemaVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetAppliedSchemaVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAppliedSchemaVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAppliedSchemaVersionResponse instance.
+ */
+GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponsePrivate(
+    GetAppliedSchemaVersionQueueResponse * const q) : GetAppliedSchemaVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory GetAppliedSchemaVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAppliedSchemaVersionResponse"));
+    /// @todo
+}

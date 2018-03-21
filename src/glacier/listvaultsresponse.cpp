@@ -19,3 +19,85 @@
 
 #include "listvaultsresponse.h"
 #include "listvaultsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  ListVaultsResponse
+ *
+ * @brief  Handles Glacier ListVaults responses.
+ *
+ * @see    GlacierClient::listVaults
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListVaultsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new ListVaultsResponsePrivate(this), parent)
+{
+    setRequest(new ListVaultsRequest(request));
+    setReply(reply);
+}
+
+const ListVaultsRequest * ListVaultsResponse::request() const
+{
+    Q_D(const ListVaultsResponse);
+    return static_cast<const ListVaultsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier ListVaults response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListVaultsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListVaultsResponsePrivate
+ *
+ * @brief  Private implementation for ListVaultsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVaultsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListVaultsResponse instance.
+ */
+ListVaultsResponsePrivate::ListVaultsResponsePrivate(
+    ListVaultsQueueResponse * const q) : ListVaultsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier ListVaultsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListVaultsResponsePrivate::ListVaultsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListVaultsResponse"));
+    /// @todo
+}

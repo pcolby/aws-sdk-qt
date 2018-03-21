@@ -19,3 +19,85 @@
 
 #include "listcontainerinstancesresponse.h"
 #include "listcontainerinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  ListContainerInstancesResponse
+ *
+ * @brief  Handles ECS ListContainerInstances responses.
+ *
+ * @see    ECSClient::listContainerInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListContainerInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new ListContainerInstancesResponsePrivate(this), parent)
+{
+    setRequest(new ListContainerInstancesRequest(request));
+    setReply(reply);
+}
+
+const ListContainerInstancesRequest * ListContainerInstancesResponse::request() const
+{
+    Q_D(const ListContainerInstancesResponse);
+    return static_cast<const ListContainerInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS ListContainerInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListContainerInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListContainerInstancesResponsePrivate
+ *
+ * @brief  Private implementation for ListContainerInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListContainerInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListContainerInstancesResponse instance.
+ */
+ListContainerInstancesResponsePrivate::ListContainerInstancesResponsePrivate(
+    ListContainerInstancesQueueResponse * const q) : ListContainerInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS ListContainerInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListContainerInstancesResponsePrivate::ListContainerInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListContainerInstancesResponse"));
+    /// @todo
+}

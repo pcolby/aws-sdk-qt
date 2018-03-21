@@ -19,3 +19,85 @@
 
 #include "listhitsresponse.h"
 #include "listhitsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListHITsResponse
+ *
+ * @brief  Handles MTurk ListHITs responses.
+ *
+ * @see    MTurkClient::listHITs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListHITsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListHITsResponsePrivate(this), parent)
+{
+    setRequest(new ListHITsRequest(request));
+    setReply(reply);
+}
+
+const ListHITsRequest * ListHITsResponse::request() const
+{
+    Q_D(const ListHITsResponse);
+    return static_cast<const ListHITsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListHITs response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListHITsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListHITsResponsePrivate
+ *
+ * @brief  Private implementation for ListHITsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHITsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListHITsResponse instance.
+ */
+ListHITsResponsePrivate::ListHITsResponsePrivate(
+    ListHITsQueueResponse * const q) : ListHITsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListHITsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListHITsResponsePrivate::ListHITsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListHITsResponse"));
+    /// @todo
+}

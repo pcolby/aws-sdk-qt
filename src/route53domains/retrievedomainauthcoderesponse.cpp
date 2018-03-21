@@ -19,3 +19,85 @@
 
 #include "retrievedomainauthcoderesponse.h"
 #include "retrievedomainauthcoderesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  RetrieveDomainAuthCodeResponse
+ *
+ * @brief  Handles Route53Domains RetrieveDomainAuthCode responses.
+ *
+ * @see    Route53DomainsClient::retrieveDomainAuthCode
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RetrieveDomainAuthCodeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new RetrieveDomainAuthCodeResponsePrivate(this), parent)
+{
+    setRequest(new RetrieveDomainAuthCodeRequest(request));
+    setReply(reply);
+}
+
+const RetrieveDomainAuthCodeRequest * RetrieveDomainAuthCodeResponse::request() const
+{
+    Q_D(const RetrieveDomainAuthCodeResponse);
+    return static_cast<const RetrieveDomainAuthCodeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains RetrieveDomainAuthCode response.
+ *
+ * @param  response  Response to parse.
+ */
+void RetrieveDomainAuthCodeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RetrieveDomainAuthCodeResponsePrivate
+ *
+ * @brief  Private implementation for RetrieveDomainAuthCodeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveDomainAuthCodeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RetrieveDomainAuthCodeResponse instance.
+ */
+RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponsePrivate(
+    RetrieveDomainAuthCodeQueueResponse * const q) : RetrieveDomainAuthCodePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains RetrieveDomainAuthCodeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RetrieveDomainAuthCodeResponse"));
+    /// @todo
+}

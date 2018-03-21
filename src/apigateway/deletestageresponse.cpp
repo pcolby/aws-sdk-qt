@@ -19,3 +19,85 @@
 
 #include "deletestageresponse.h"
 #include "deletestageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteStageResponse
+ *
+ * @brief  Handles APIGateway DeleteStage responses.
+ *
+ * @see    APIGatewayClient::deleteStage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteStageResponsePrivate(this), parent)
+{
+    setRequest(new DeleteStageRequest(request));
+    setReply(reply);
+}
+
+const DeleteStageRequest * DeleteStageResponse::request() const
+{
+    Q_D(const DeleteStageResponse);
+    return static_cast<const DeleteStageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteStage response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteStageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStageResponsePrivate
+ *
+ * @brief  Private implementation for DeleteStageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteStageResponse instance.
+ */
+DeleteStageResponsePrivate::DeleteStageResponsePrivate(
+    DeleteStageQueueResponse * const q) : DeleteStagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteStageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteStageResponsePrivate::DeleteStageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteStageResponse"));
+    /// @todo
+}

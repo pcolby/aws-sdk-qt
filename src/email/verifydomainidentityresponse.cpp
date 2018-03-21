@@ -19,3 +19,85 @@
 
 #include "verifydomainidentityresponse.h"
 #include "verifydomainidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  VerifyDomainIdentityResponse
+ *
+ * @brief  Handles SES VerifyDomainIdentity responses.
+ *
+ * @see    SESClient::verifyDomainIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyDomainIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new VerifyDomainIdentityResponsePrivate(this), parent)
+{
+    setRequest(new VerifyDomainIdentityRequest(request));
+    setReply(reply);
+}
+
+const VerifyDomainIdentityRequest * VerifyDomainIdentityResponse::request() const
+{
+    Q_D(const VerifyDomainIdentityResponse);
+    return static_cast<const VerifyDomainIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES VerifyDomainIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyDomainIdentityResponsePrivate
+ *
+ * @brief  Private implementation for VerifyDomainIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyDomainIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public VerifyDomainIdentityResponse instance.
+ */
+VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
+    VerifyDomainIdentityQueueResponse * const q) : VerifyDomainIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES VerifyDomainIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("VerifyDomainIdentityResponse"));
+    /// @todo
+}

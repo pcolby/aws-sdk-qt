@@ -19,3 +19,85 @@
 
 #include "terminateworkflowexecutionresponse.h"
 #include "terminateworkflowexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  TerminateWorkflowExecutionResponse
+ *
+ * @brief  Handles SWF TerminateWorkflowExecution responses.
+ *
+ * @see    SWFClient::terminateWorkflowExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateWorkflowExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new TerminateWorkflowExecutionResponsePrivate(this), parent)
+{
+    setRequest(new TerminateWorkflowExecutionRequest(request));
+    setReply(reply);
+}
+
+const TerminateWorkflowExecutionRequest * TerminateWorkflowExecutionResponse::request() const
+{
+    Q_D(const TerminateWorkflowExecutionResponse);
+    return static_cast<const TerminateWorkflowExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF TerminateWorkflowExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateWorkflowExecutionResponsePrivate
+ *
+ * @brief  Private implementation for TerminateWorkflowExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateWorkflowExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TerminateWorkflowExecutionResponse instance.
+ */
+TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePrivate(
+    TerminateWorkflowExecutionQueueResponse * const q) : TerminateWorkflowExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF TerminateWorkflowExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TerminateWorkflowExecutionResponse"));
+    /// @todo
+}

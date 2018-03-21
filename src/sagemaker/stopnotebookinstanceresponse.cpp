@@ -19,3 +19,85 @@
 
 #include "stopnotebookinstanceresponse.h"
 #include "stopnotebookinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  StopNotebookInstanceResponse
+ *
+ * @brief  Handles SageMaker StopNotebookInstance responses.
+ *
+ * @see    SageMakerClient::stopNotebookInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopNotebookInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new StopNotebookInstanceResponsePrivate(this), parent)
+{
+    setRequest(new StopNotebookInstanceRequest(request));
+    setReply(reply);
+}
+
+const StopNotebookInstanceRequest * StopNotebookInstanceResponse::request() const
+{
+    Q_D(const StopNotebookInstanceResponse);
+    return static_cast<const StopNotebookInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker StopNotebookInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopNotebookInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopNotebookInstanceResponsePrivate
+ *
+ * @brief  Private implementation for StopNotebookInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopNotebookInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopNotebookInstanceResponse instance.
+ */
+StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponsePrivate(
+    StopNotebookInstanceQueueResponse * const q) : StopNotebookInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker StopNotebookInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopNotebookInstanceResponse"));
+    /// @todo
+}

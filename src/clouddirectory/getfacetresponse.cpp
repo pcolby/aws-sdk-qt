@@ -19,3 +19,85 @@
 
 #include "getfacetresponse.h"
 #include "getfacetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  GetFacetResponse
+ *
+ * @brief  Handles CloudDirectory GetFacet responses.
+ *
+ * @see    CloudDirectoryClient::getFacet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFacetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new GetFacetResponsePrivate(this), parent)
+{
+    setRequest(new GetFacetRequest(request));
+    setReply(reply);
+}
+
+const GetFacetRequest * GetFacetResponse::request() const
+{
+    Q_D(const GetFacetResponse);
+    return static_cast<const GetFacetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory GetFacet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFacetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFacetResponsePrivate
+ *
+ * @brief  Private implementation for GetFacetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFacetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFacetResponse instance.
+ */
+GetFacetResponsePrivate::GetFacetResponsePrivate(
+    GetFacetQueueResponse * const q) : GetFacetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory GetFacetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFacetResponsePrivate::GetFacetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFacetResponse"));
+    /// @todo
+}

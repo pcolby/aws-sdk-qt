@@ -19,3 +19,85 @@
 
 #include "createplatformendpointresponse.h"
 #include "createplatformendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  CreatePlatformEndpointResponse
+ *
+ * @brief  Handles SNS CreatePlatformEndpoint responses.
+ *
+ * @see    SNSClient::createPlatformEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePlatformEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new CreatePlatformEndpointResponsePrivate(this), parent)
+{
+    setRequest(new CreatePlatformEndpointRequest(request));
+    setReply(reply);
+}
+
+const CreatePlatformEndpointRequest * CreatePlatformEndpointResponse::request() const
+{
+    Q_D(const CreatePlatformEndpointResponse);
+    return static_cast<const CreatePlatformEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS CreatePlatformEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePlatformEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePlatformEndpointResponsePrivate
+ *
+ * @brief  Private implementation for CreatePlatformEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePlatformEndpointResponse instance.
+ */
+CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponsePrivate(
+    CreatePlatformEndpointQueueResponse * const q) : CreatePlatformEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS CreatePlatformEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePlatformEndpointResponse"));
+    /// @todo
+}

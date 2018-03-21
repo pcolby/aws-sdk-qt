@@ -19,3 +19,85 @@
 
 #include "registervolumeresponse.h"
 #include "registervolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  RegisterVolumeResponse
+ *
+ * @brief  Handles OpsWorks RegisterVolume responses.
+ *
+ * @see    OpsWorksClient::registerVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new RegisterVolumeResponsePrivate(this), parent)
+{
+    setRequest(new RegisterVolumeRequest(request));
+    setReply(reply);
+}
+
+const RegisterVolumeRequest * RegisterVolumeResponse::request() const
+{
+    Q_D(const RegisterVolumeResponse);
+    return static_cast<const RegisterVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks RegisterVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterVolumeResponsePrivate
+ *
+ * @brief  Private implementation for RegisterVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterVolumeResponse instance.
+ */
+RegisterVolumeResponsePrivate::RegisterVolumeResponsePrivate(
+    RegisterVolumeQueueResponse * const q) : RegisterVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks RegisterVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterVolumeResponsePrivate::RegisterVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterVolumeResponse"));
+    /// @todo
+}

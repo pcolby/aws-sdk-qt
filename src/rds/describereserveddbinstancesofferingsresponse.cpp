@@ -19,3 +19,85 @@
 
 #include "describereserveddbinstancesofferingsresponse.h"
 #include "describereserveddbinstancesofferingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeReservedDBInstancesOfferingsResponse
+ *
+ * @brief  Handles RDS DescribeReservedDBInstancesOfferings responses.
+ *
+ * @see    RDSClient::describeReservedDBInstancesOfferings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedDBInstancesOfferingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeReservedDBInstancesOfferingsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReservedDBInstancesOfferingsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReservedDBInstancesOfferingsRequest * DescribeReservedDBInstancesOfferingsResponse::request() const
+{
+    Q_D(const DescribeReservedDBInstancesOfferingsResponse);
+    return static_cast<const DescribeReservedDBInstancesOfferingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeReservedDBInstancesOfferings response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReservedDBInstancesOfferingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedDBInstancesOfferingsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReservedDBInstancesOfferingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedDBInstancesOfferingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReservedDBInstancesOfferingsResponse instance.
+ */
+DescribeReservedDBInstancesOfferingsResponsePrivate::DescribeReservedDBInstancesOfferingsResponsePrivate(
+    DescribeReservedDBInstancesOfferingsQueueResponse * const q) : DescribeReservedDBInstancesOfferingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeReservedDBInstancesOfferingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReservedDBInstancesOfferingsResponsePrivate::DescribeReservedDBInstancesOfferingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReservedDBInstancesOfferingsResponse"));
+    /// @todo
+}

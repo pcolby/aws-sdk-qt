@@ -19,3 +19,85 @@
 
 #include "invitemembersresponse.h"
 #include "invitemembersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  InviteMembersResponse
+ *
+ * @brief  Handles GuardDuty InviteMembers responses.
+ *
+ * @see    GuardDutyClient::inviteMembers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InviteMembersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new InviteMembersResponsePrivate(this), parent)
+{
+    setRequest(new InviteMembersRequest(request));
+    setReply(reply);
+}
+
+const InviteMembersRequest * InviteMembersResponse::request() const
+{
+    Q_D(const InviteMembersResponse);
+    return static_cast<const InviteMembersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty InviteMembers response.
+ *
+ * @param  response  Response to parse.
+ */
+void InviteMembersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InviteMembersResponsePrivate
+ *
+ * @brief  Private implementation for InviteMembersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InviteMembersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InviteMembersResponse instance.
+ */
+InviteMembersResponsePrivate::InviteMembersResponsePrivate(
+    InviteMembersQueueResponse * const q) : InviteMembersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty InviteMembersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InviteMembersResponsePrivate::InviteMembersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InviteMembersResponse"));
+    /// @todo
+}

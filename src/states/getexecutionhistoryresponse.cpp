@@ -19,3 +19,85 @@
 
 #include "getexecutionhistoryresponse.h"
 #include "getexecutionhistoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  GetExecutionHistoryResponse
+ *
+ * @brief  Handles SFN GetExecutionHistory responses.
+ *
+ * @see    SFNClient::getExecutionHistory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetExecutionHistoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new GetExecutionHistoryResponsePrivate(this), parent)
+{
+    setRequest(new GetExecutionHistoryRequest(request));
+    setReply(reply);
+}
+
+const GetExecutionHistoryRequest * GetExecutionHistoryResponse::request() const
+{
+    Q_D(const GetExecutionHistoryResponse);
+    return static_cast<const GetExecutionHistoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN GetExecutionHistory response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetExecutionHistoryResponsePrivate
+ *
+ * @brief  Private implementation for GetExecutionHistoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetExecutionHistoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetExecutionHistoryResponse instance.
+ */
+GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
+    GetExecutionHistoryQueueResponse * const q) : GetExecutionHistoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN GetExecutionHistoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetExecutionHistoryResponse"));
+    /// @todo
+}

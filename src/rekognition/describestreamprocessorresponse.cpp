@@ -19,3 +19,85 @@
 
 #include "describestreamprocessorresponse.h"
 #include "describestreamprocessorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DescribeStreamProcessorResponse
+ *
+ * @brief  Handles Rekognition DescribeStreamProcessor responses.
+ *
+ * @see    RekognitionClient::describeStreamProcessor
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStreamProcessorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new DescribeStreamProcessorResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStreamProcessorRequest(request));
+    setReply(reply);
+}
+
+const DescribeStreamProcessorRequest * DescribeStreamProcessorResponse::request() const
+{
+    Q_D(const DescribeStreamProcessorResponse);
+    return static_cast<const DescribeStreamProcessorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition DescribeStreamProcessor response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStreamProcessorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStreamProcessorResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStreamProcessorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStreamProcessorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStreamProcessorResponse instance.
+ */
+DescribeStreamProcessorResponsePrivate::DescribeStreamProcessorResponsePrivate(
+    DescribeStreamProcessorQueueResponse * const q) : DescribeStreamProcessorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition DescribeStreamProcessorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStreamProcessorResponsePrivate::DescribeStreamProcessorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStreamProcessorResponse"));
+    /// @todo
+}

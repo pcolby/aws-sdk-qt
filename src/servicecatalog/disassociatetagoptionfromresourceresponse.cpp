@@ -19,3 +19,85 @@
 
 #include "disassociatetagoptionfromresourceresponse.h"
 #include "disassociatetagoptionfromresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DisassociateTagOptionFromResourceResponse
+ *
+ * @brief  Handles ServiceCatalog DisassociateTagOptionFromResource responses.
+ *
+ * @see    ServiceCatalogClient::disassociateTagOptionFromResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateTagOptionFromResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DisassociateTagOptionFromResourceResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateTagOptionFromResourceRequest(request));
+    setReply(reply);
+}
+
+const DisassociateTagOptionFromResourceRequest * DisassociateTagOptionFromResourceResponse::request() const
+{
+    Q_D(const DisassociateTagOptionFromResourceResponse);
+    return static_cast<const DisassociateTagOptionFromResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DisassociateTagOptionFromResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateTagOptionFromResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateTagOptionFromResourceResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateTagOptionFromResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateTagOptionFromResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateTagOptionFromResourceResponse instance.
+ */
+DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResourceResponsePrivate(
+    DisassociateTagOptionFromResourceQueueResponse * const q) : DisassociateTagOptionFromResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DisassociateTagOptionFromResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateTagOptionFromResourceResponse"));
+    /// @todo
+}

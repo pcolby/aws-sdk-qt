@@ -19,3 +19,85 @@
 
 #include "addroletodbclusterresponse.h"
 #include "addroletodbclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  AddRoleToDBClusterResponse
+ *
+ * @brief  Handles RDS AddRoleToDBCluster responses.
+ *
+ * @see    RDSClient::addRoleToDBCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddRoleToDBClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new AddRoleToDBClusterResponsePrivate(this), parent)
+{
+    setRequest(new AddRoleToDBClusterRequest(request));
+    setReply(reply);
+}
+
+const AddRoleToDBClusterRequest * AddRoleToDBClusterResponse::request() const
+{
+    Q_D(const AddRoleToDBClusterResponse);
+    return static_cast<const AddRoleToDBClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS AddRoleToDBCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddRoleToDBClusterResponsePrivate
+ *
+ * @brief  Private implementation for AddRoleToDBClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddRoleToDBClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddRoleToDBClusterResponse instance.
+ */
+AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
+    AddRoleToDBClusterQueueResponse * const q) : AddRoleToDBClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS AddRoleToDBClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddRoleToDBClusterResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "removeuserfromgroupresponse.h"
 #include "removeuserfromgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  RemoveUserFromGroupResponse
+ *
+ * @brief  Handles IAM RemoveUserFromGroup responses.
+ *
+ * @see    IAMClient::removeUserFromGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveUserFromGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new RemoveUserFromGroupResponsePrivate(this), parent)
+{
+    setRequest(new RemoveUserFromGroupRequest(request));
+    setReply(reply);
+}
+
+const RemoveUserFromGroupRequest * RemoveUserFromGroupResponse::request() const
+{
+    Q_D(const RemoveUserFromGroupResponse);
+    return static_cast<const RemoveUserFromGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM RemoveUserFromGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveUserFromGroupResponsePrivate
+ *
+ * @brief  Private implementation for RemoveUserFromGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveUserFromGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveUserFromGroupResponse instance.
+ */
+RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponsePrivate(
+    RemoveUserFromGroupQueueResponse * const q) : RemoveUserFromGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM RemoveUserFromGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveUserFromGroupResponse"));
+    /// @todo
+}

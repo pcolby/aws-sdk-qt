@@ -19,3 +19,85 @@
 
 #include "describedirectoryconfigsresponse.h"
 #include "describedirectoryconfigsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DescribeDirectoryConfigsResponse
+ *
+ * @brief  Handles AppStream DescribeDirectoryConfigs responses.
+ *
+ * @see    AppStreamClient::describeDirectoryConfigs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDirectoryConfigsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new DescribeDirectoryConfigsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDirectoryConfigsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDirectoryConfigsRequest * DescribeDirectoryConfigsResponse::request() const
+{
+    Q_D(const DescribeDirectoryConfigsResponse);
+    return static_cast<const DescribeDirectoryConfigsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream DescribeDirectoryConfigs response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDirectoryConfigsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDirectoryConfigsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDirectoryConfigsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDirectoryConfigsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDirectoryConfigsResponse instance.
+ */
+DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponsePrivate(
+    DescribeDirectoryConfigsQueueResponse * const q) : DescribeDirectoryConfigsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream DescribeDirectoryConfigsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDirectoryConfigsResponse"));
+    /// @todo
+}

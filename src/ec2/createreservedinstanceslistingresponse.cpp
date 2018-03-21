@@ -19,3 +19,85 @@
 
 #include "createreservedinstanceslistingresponse.h"
 #include "createreservedinstanceslistingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateReservedInstancesListingResponse
+ *
+ * @brief  Handles EC2 CreateReservedInstancesListing responses.
+ *
+ * @see    EC2Client::createReservedInstancesListing
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReservedInstancesListingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateReservedInstancesListingResponsePrivate(this), parent)
+{
+    setRequest(new CreateReservedInstancesListingRequest(request));
+    setReply(reply);
+}
+
+const CreateReservedInstancesListingRequest * CreateReservedInstancesListingResponse::request() const
+{
+    Q_D(const CreateReservedInstancesListingResponse);
+    return static_cast<const CreateReservedInstancesListingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateReservedInstancesListing response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateReservedInstancesListingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReservedInstancesListingResponsePrivate
+ *
+ * @brief  Private implementation for CreateReservedInstancesListingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReservedInstancesListingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateReservedInstancesListingResponse instance.
+ */
+CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingResponsePrivate(
+    CreateReservedInstancesListingQueueResponse * const q) : CreateReservedInstancesListingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateReservedInstancesListingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateReservedInstancesListingResponse"));
+    /// @todo
+}

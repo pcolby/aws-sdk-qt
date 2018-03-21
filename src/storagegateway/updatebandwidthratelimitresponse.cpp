@@ -19,3 +19,85 @@
 
 #include "updatebandwidthratelimitresponse.h"
 #include "updatebandwidthratelimitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  UpdateBandwidthRateLimitResponse
+ *
+ * @brief  Handles StorageGateway UpdateBandwidthRateLimit responses.
+ *
+ * @see    StorageGatewayClient::updateBandwidthRateLimit
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBandwidthRateLimitResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new UpdateBandwidthRateLimitResponsePrivate(this), parent)
+{
+    setRequest(new UpdateBandwidthRateLimitRequest(request));
+    setReply(reply);
+}
+
+const UpdateBandwidthRateLimitRequest * UpdateBandwidthRateLimitResponse::request() const
+{
+    Q_D(const UpdateBandwidthRateLimitResponse);
+    return static_cast<const UpdateBandwidthRateLimitRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway UpdateBandwidthRateLimit response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBandwidthRateLimitResponsePrivate
+ *
+ * @brief  Private implementation for UpdateBandwidthRateLimitResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBandwidthRateLimitResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateBandwidthRateLimitResponse instance.
+ */
+UpdateBandwidthRateLimitResponsePrivate::UpdateBandwidthRateLimitResponsePrivate(
+    UpdateBandwidthRateLimitQueueResponse * const q) : UpdateBandwidthRateLimitPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway UpdateBandwidthRateLimitResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateBandwidthRateLimitResponsePrivate::UpdateBandwidthRateLimitResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateBandwidthRateLimitResponse"));
+    /// @todo
+}

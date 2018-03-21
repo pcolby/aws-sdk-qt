@@ -19,3 +19,85 @@
 
 #include "describetagsresponse.h"
 #include "describetagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  DescribeTagsResponse
+ *
+ * @brief  Handles MachineLearning DescribeTags responses.
+ *
+ * @see    MachineLearningClient::describeTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new DescribeTagsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTagsRequest(request));
+    setReply(reply);
+}
+
+const DescribeTagsRequest * DescribeTagsResponse::request() const
+{
+    Q_D(const DescribeTagsResponse);
+    return static_cast<const DescribeTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning DescribeTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTagsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTagsResponse instance.
+ */
+DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
+    DescribeTagsQueueResponse * const q) : DescribeTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning DescribeTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTagsResponsePrivate::DescribeTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTagsResponse"));
+    /// @todo
+}

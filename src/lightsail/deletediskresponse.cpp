@@ -19,3 +19,85 @@
 
 #include "deletediskresponse.h"
 #include "deletediskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteDiskResponse
+ *
+ * @brief  Handles Lightsail DeleteDisk responses.
+ *
+ * @see    LightsailClient::deleteDisk
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDiskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DeleteDiskResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDiskRequest(request));
+    setReply(reply);
+}
+
+const DeleteDiskRequest * DeleteDiskResponse::request() const
+{
+    Q_D(const DeleteDiskResponse);
+    return static_cast<const DeleteDiskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DeleteDisk response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDiskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDiskResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDiskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDiskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDiskResponse instance.
+ */
+DeleteDiskResponsePrivate::DeleteDiskResponsePrivate(
+    DeleteDiskQueueResponse * const q) : DeleteDiskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DeleteDiskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDiskResponsePrivate::DeleteDiskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDiskResponse"));
+    /// @todo
+}

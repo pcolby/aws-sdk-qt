@@ -19,3 +19,85 @@
 
 #include "deleteopenidconnectproviderresponse.h"
 #include "deleteopenidconnectproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteOpenIDConnectProviderResponse
+ *
+ * @brief  Handles IAM DeleteOpenIDConnectProvider responses.
+ *
+ * @see    IAMClient::deleteOpenIDConnectProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOpenIDConnectProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteOpenIDConnectProviderResponsePrivate(this), parent)
+{
+    setRequest(new DeleteOpenIDConnectProviderRequest(request));
+    setReply(reply);
+}
+
+const DeleteOpenIDConnectProviderRequest * DeleteOpenIDConnectProviderResponse::request() const
+{
+    Q_D(const DeleteOpenIDConnectProviderResponse);
+    return static_cast<const DeleteOpenIDConnectProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteOpenIDConnectProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOpenIDConnectProviderResponsePrivate
+ *
+ * @brief  Private implementation for DeleteOpenIDConnectProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOpenIDConnectProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteOpenIDConnectProviderResponse instance.
+ */
+DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponsePrivate(
+    DeleteOpenIDConnectProviderQueueResponse * const q) : DeleteOpenIDConnectProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteOpenIDConnectProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteOpenIDConnectProviderResponse"));
+    /// @todo
+}

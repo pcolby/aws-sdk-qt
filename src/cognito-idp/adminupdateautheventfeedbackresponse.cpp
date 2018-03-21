@@ -19,3 +19,85 @@
 
 #include "adminupdateautheventfeedbackresponse.h"
 #include "adminupdateautheventfeedbackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminUpdateAuthEventFeedbackResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminUpdateAuthEventFeedback responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminUpdateAuthEventFeedback
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminUpdateAuthEventFeedbackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminUpdateAuthEventFeedbackResponsePrivate(this), parent)
+{
+    setRequest(new AdminUpdateAuthEventFeedbackRequest(request));
+    setReply(reply);
+}
+
+const AdminUpdateAuthEventFeedbackRequest * AdminUpdateAuthEventFeedbackResponse::request() const
+{
+    Q_D(const AdminUpdateAuthEventFeedbackResponse);
+    return static_cast<const AdminUpdateAuthEventFeedbackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminUpdateAuthEventFeedback response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminUpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminUpdateAuthEventFeedbackResponsePrivate
+ *
+ * @brief  Private implementation for AdminUpdateAuthEventFeedbackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminUpdateAuthEventFeedbackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminUpdateAuthEventFeedbackResponse instance.
+ */
+AdminUpdateAuthEventFeedbackResponsePrivate::AdminUpdateAuthEventFeedbackResponsePrivate(
+    AdminUpdateAuthEventFeedbackQueueResponse * const q) : AdminUpdateAuthEventFeedbackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminUpdateAuthEventFeedbackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminUpdateAuthEventFeedbackResponsePrivate::AdminUpdateAuthEventFeedbackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminUpdateAuthEventFeedbackResponse"));
+    /// @todo
+}

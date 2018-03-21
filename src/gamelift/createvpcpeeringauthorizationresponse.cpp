@@ -19,3 +19,85 @@
 
 #include "createvpcpeeringauthorizationresponse.h"
 #include "createvpcpeeringauthorizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateVpcPeeringAuthorizationResponse
+ *
+ * @brief  Handles GameLift CreateVpcPeeringAuthorization responses.
+ *
+ * @see    GameLiftClient::createVpcPeeringAuthorization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpcPeeringAuthorizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new CreateVpcPeeringAuthorizationResponsePrivate(this), parent)
+{
+    setRequest(new CreateVpcPeeringAuthorizationRequest(request));
+    setReply(reply);
+}
+
+const CreateVpcPeeringAuthorizationRequest * CreateVpcPeeringAuthorizationResponse::request() const
+{
+    Q_D(const CreateVpcPeeringAuthorizationResponse);
+    return static_cast<const CreateVpcPeeringAuthorizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift CreateVpcPeeringAuthorization response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpcPeeringAuthorizationResponsePrivate
+ *
+ * @brief  Private implementation for CreateVpcPeeringAuthorizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpcPeeringAuthorizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVpcPeeringAuthorizationResponse instance.
+ */
+CreateVpcPeeringAuthorizationResponsePrivate::CreateVpcPeeringAuthorizationResponsePrivate(
+    CreateVpcPeeringAuthorizationQueueResponse * const q) : CreateVpcPeeringAuthorizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift CreateVpcPeeringAuthorizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVpcPeeringAuthorizationResponsePrivate::CreateVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVpcPeeringAuthorizationResponse"));
+    /// @todo
+}

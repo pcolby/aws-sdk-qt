@@ -19,3 +19,85 @@
 
 #include "deletedirectoryresponse.h"
 #include "deletedirectoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DeleteDirectoryResponse
+ *
+ * @brief  Handles CloudDirectory DeleteDirectory responses.
+ *
+ * @see    CloudDirectoryClient::deleteDirectory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDirectoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new DeleteDirectoryResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDirectoryRequest(request));
+    setReply(reply);
+}
+
+const DeleteDirectoryRequest * DeleteDirectoryResponse::request() const
+{
+    Q_D(const DeleteDirectoryResponse);
+    return static_cast<const DeleteDirectoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory DeleteDirectory response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDirectoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDirectoryResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDirectoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDirectoryResponse instance.
+ */
+DeleteDirectoryResponsePrivate::DeleteDirectoryResponsePrivate(
+    DeleteDirectoryQueueResponse * const q) : DeleteDirectoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory DeleteDirectoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDirectoryResponsePrivate::DeleteDirectoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDirectoryResponse"));
+    /// @todo
+}

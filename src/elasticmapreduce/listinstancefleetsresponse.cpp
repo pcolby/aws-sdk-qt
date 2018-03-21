@@ -19,3 +19,85 @@
 
 #include "listinstancefleetsresponse.h"
 #include "listinstancefleetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ListInstanceFleetsResponse
+ *
+ * @brief  Handles EMR ListInstanceFleets responses.
+ *
+ * @see    EMRClient::listInstanceFleets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInstanceFleetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new ListInstanceFleetsResponsePrivate(this), parent)
+{
+    setRequest(new ListInstanceFleetsRequest(request));
+    setReply(reply);
+}
+
+const ListInstanceFleetsRequest * ListInstanceFleetsResponse::request() const
+{
+    Q_D(const ListInstanceFleetsResponse);
+    return static_cast<const ListInstanceFleetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR ListInstanceFleets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListInstanceFleetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInstanceFleetsResponsePrivate
+ *
+ * @brief  Private implementation for ListInstanceFleetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceFleetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListInstanceFleetsResponse instance.
+ */
+ListInstanceFleetsResponsePrivate::ListInstanceFleetsResponsePrivate(
+    ListInstanceFleetsQueueResponse * const q) : ListInstanceFleetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR ListInstanceFleetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListInstanceFleetsResponsePrivate::ListInstanceFleetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListInstanceFleetsResponse"));
+    /// @todo
+}

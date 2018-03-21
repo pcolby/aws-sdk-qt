@@ -19,3 +19,85 @@
 
 #include "listofferingsresponse.h"
 #include "listofferingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListOfferingsResponse
+ *
+ * @brief  Handles DeviceFarm ListOfferings responses.
+ *
+ * @see    DeviceFarmClient::listOfferings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOfferingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new ListOfferingsResponsePrivate(this), parent)
+{
+    setRequest(new ListOfferingsRequest(request));
+    setReply(reply);
+}
+
+const ListOfferingsRequest * ListOfferingsResponse::request() const
+{
+    Q_D(const ListOfferingsResponse);
+    return static_cast<const ListOfferingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm ListOfferings response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOfferingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOfferingsResponsePrivate
+ *
+ * @brief  Private implementation for ListOfferingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOfferingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOfferingsResponse instance.
+ */
+ListOfferingsResponsePrivate::ListOfferingsResponsePrivate(
+    ListOfferingsQueueResponse * const q) : ListOfferingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm ListOfferingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOfferingsResponsePrivate::ListOfferingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOfferingsResponse"));
+    /// @todo
+}

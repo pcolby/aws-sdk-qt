@@ -19,3 +19,85 @@
 
 #include "getrestapiresponse.h"
 #include "getrestapiresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetRestApiResponse
+ *
+ * @brief  Handles APIGateway GetRestApi responses.
+ *
+ * @see    APIGatewayClient::getRestApi
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRestApiResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetRestApiResponsePrivate(this), parent)
+{
+    setRequest(new GetRestApiRequest(request));
+    setReply(reply);
+}
+
+const GetRestApiRequest * GetRestApiResponse::request() const
+{
+    Q_D(const GetRestApiResponse);
+    return static_cast<const GetRestApiRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetRestApi response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRestApiResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRestApiResponsePrivate
+ *
+ * @brief  Private implementation for GetRestApiResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRestApiResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRestApiResponse instance.
+ */
+GetRestApiResponsePrivate::GetRestApiResponsePrivate(
+    GetRestApiQueueResponse * const q) : GetRestApiPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetRestApiResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRestApiResponsePrivate::GetRestApiResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRestApiResponse"));
+    /// @todo
+}

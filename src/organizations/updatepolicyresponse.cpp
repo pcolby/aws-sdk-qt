@@ -19,3 +19,85 @@
 
 #include "updatepolicyresponse.h"
 #include "updatepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  UpdatePolicyResponse
+ *
+ * @brief  Handles Organizations UpdatePolicy responses.
+ *
+ * @see    OrganizationsClient::updatePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdatePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new UpdatePolicyResponsePrivate(this), parent)
+{
+    setRequest(new UpdatePolicyRequest(request));
+    setReply(reply);
+}
+
+const UpdatePolicyRequest * UpdatePolicyResponse::request() const
+{
+    Q_D(const UpdatePolicyResponse);
+    return static_cast<const UpdatePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations UpdatePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdatePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdatePolicyResponsePrivate
+ *
+ * @brief  Private implementation for UpdatePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdatePolicyResponse instance.
+ */
+UpdatePolicyResponsePrivate::UpdatePolicyResponsePrivate(
+    UpdatePolicyQueueResponse * const q) : UpdatePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations UpdatePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdatePolicyResponsePrivate::UpdatePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdatePolicyResponse"));
+    /// @todo
+}

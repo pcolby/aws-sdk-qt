@@ -19,3 +19,85 @@
 
 #include "deletedeliverystreamresponse.h"
 #include "deletedeliverystreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  DeleteDeliveryStreamResponse
+ *
+ * @brief  Handles Firehose DeleteDeliveryStream responses.
+ *
+ * @see    FirehoseClient::deleteDeliveryStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDeliveryStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : FirehoseResponse(new DeleteDeliveryStreamResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDeliveryStreamRequest(request));
+    setReply(reply);
+}
+
+const DeleteDeliveryStreamRequest * DeleteDeliveryStreamResponse::request() const
+{
+    Q_D(const DeleteDeliveryStreamResponse);
+    return static_cast<const DeleteDeliveryStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Firehose DeleteDeliveryStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDeliveryStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDeliveryStreamResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDeliveryStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDeliveryStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDeliveryStreamResponse instance.
+ */
+DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponsePrivate(
+    DeleteDeliveryStreamQueueResponse * const q) : DeleteDeliveryStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Firehose DeleteDeliveryStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDeliveryStreamResponse"));
+    /// @todo
+}

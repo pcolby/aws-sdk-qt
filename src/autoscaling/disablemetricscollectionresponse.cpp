@@ -19,3 +19,85 @@
 
 #include "disablemetricscollectionresponse.h"
 #include "disablemetricscollectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DisableMetricsCollectionResponse
+ *
+ * @brief  Handles AutoScaling DisableMetricsCollection responses.
+ *
+ * @see    AutoScalingClient::disableMetricsCollection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableMetricsCollectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DisableMetricsCollectionResponsePrivate(this), parent)
+{
+    setRequest(new DisableMetricsCollectionRequest(request));
+    setReply(reply);
+}
+
+const DisableMetricsCollectionRequest * DisableMetricsCollectionResponse::request() const
+{
+    Q_D(const DisableMetricsCollectionResponse);
+    return static_cast<const DisableMetricsCollectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DisableMetricsCollection response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableMetricsCollectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableMetricsCollectionResponsePrivate
+ *
+ * @brief  Private implementation for DisableMetricsCollectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableMetricsCollectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableMetricsCollectionResponse instance.
+ */
+DisableMetricsCollectionResponsePrivate::DisableMetricsCollectionResponsePrivate(
+    DisableMetricsCollectionQueueResponse * const q) : DisableMetricsCollectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DisableMetricsCollectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableMetricsCollectionResponsePrivate::DisableMetricsCollectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableMetricsCollectionResponse"));
+    /// @todo
+}

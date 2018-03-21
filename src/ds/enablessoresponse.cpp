@@ -19,3 +19,85 @@
 
 #include "enablessoresponse.h"
 #include "enablessoresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  EnableSsoResponse
+ *
+ * @brief  Handles DirectoryService EnableSso responses.
+ *
+ * @see    DirectoryServiceClient::enableSso
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableSsoResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new EnableSsoResponsePrivate(this), parent)
+{
+    setRequest(new EnableSsoRequest(request));
+    setReply(reply);
+}
+
+const EnableSsoRequest * EnableSsoResponse::request() const
+{
+    Q_D(const EnableSsoResponse);
+    return static_cast<const EnableSsoRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService EnableSso response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableSsoResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableSsoResponsePrivate
+ *
+ * @brief  Private implementation for EnableSsoResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableSsoResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableSsoResponse instance.
+ */
+EnableSsoResponsePrivate::EnableSsoResponsePrivate(
+    EnableSsoQueueResponse * const q) : EnableSsoPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService EnableSsoResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableSsoResponsePrivate::EnableSsoResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableSsoResponse"));
+    /// @todo
+}

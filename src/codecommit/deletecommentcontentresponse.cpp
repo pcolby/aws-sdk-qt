@@ -19,3 +19,85 @@
 
 #include "deletecommentcontentresponse.h"
 #include "deletecommentcontentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  DeleteCommentContentResponse
+ *
+ * @brief  Handles CodeCommit DeleteCommentContent responses.
+ *
+ * @see    CodeCommitClient::deleteCommentContent
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCommentContentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new DeleteCommentContentResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCommentContentRequest(request));
+    setReply(reply);
+}
+
+const DeleteCommentContentRequest * DeleteCommentContentResponse::request() const
+{
+    Q_D(const DeleteCommentContentResponse);
+    return static_cast<const DeleteCommentContentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit DeleteCommentContent response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCommentContentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCommentContentResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCommentContentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCommentContentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCommentContentResponse instance.
+ */
+DeleteCommentContentResponsePrivate::DeleteCommentContentResponsePrivate(
+    DeleteCommentContentQueueResponse * const q) : DeleteCommentContentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit DeleteCommentContentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCommentContentResponsePrivate::DeleteCommentContentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCommentContentResponse"));
+    /// @todo
+}

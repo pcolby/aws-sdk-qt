@@ -19,3 +19,85 @@
 
 #include "getqualificationscoreresponse.h"
 #include "getqualificationscoreresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  GetQualificationScoreResponse
+ *
+ * @brief  Handles MTurk GetQualificationScore responses.
+ *
+ * @see    MTurkClient::getQualificationScore
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQualificationScoreResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new GetQualificationScoreResponsePrivate(this), parent)
+{
+    setRequest(new GetQualificationScoreRequest(request));
+    setReply(reply);
+}
+
+const GetQualificationScoreRequest * GetQualificationScoreResponse::request() const
+{
+    Q_D(const GetQualificationScoreResponse);
+    return static_cast<const GetQualificationScoreRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk GetQualificationScore response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetQualificationScoreResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQualificationScoreResponsePrivate
+ *
+ * @brief  Private implementation for GetQualificationScoreResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQualificationScoreResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetQualificationScoreResponse instance.
+ */
+GetQualificationScoreResponsePrivate::GetQualificationScoreResponsePrivate(
+    GetQualificationScoreQueueResponse * const q) : GetQualificationScorePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk GetQualificationScoreResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetQualificationScoreResponsePrivate::GetQualificationScoreResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetQualificationScoreResponse"));
+    /// @todo
+}

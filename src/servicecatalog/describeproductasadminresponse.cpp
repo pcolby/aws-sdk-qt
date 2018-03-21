@@ -19,3 +19,85 @@
 
 #include "describeproductasadminresponse.h"
 #include "describeproductasadminresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeProductAsAdminResponse
+ *
+ * @brief  Handles ServiceCatalog DescribeProductAsAdmin responses.
+ *
+ * @see    ServiceCatalogClient::describeProductAsAdmin
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProductAsAdminResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DescribeProductAsAdminResponsePrivate(this), parent)
+{
+    setRequest(new DescribeProductAsAdminRequest(request));
+    setReply(reply);
+}
+
+const DescribeProductAsAdminRequest * DescribeProductAsAdminResponse::request() const
+{
+    Q_D(const DescribeProductAsAdminResponse);
+    return static_cast<const DescribeProductAsAdminRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DescribeProductAsAdmin response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeProductAsAdminResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProductAsAdminResponsePrivate
+ *
+ * @brief  Private implementation for DescribeProductAsAdminResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProductAsAdminResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeProductAsAdminResponse instance.
+ */
+DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponsePrivate(
+    DescribeProductAsAdminQueueResponse * const q) : DescribeProductAsAdminPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DescribeProductAsAdminResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeProductAsAdminResponse"));
+    /// @todo
+}

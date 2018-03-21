@@ -19,3 +19,85 @@
 
 #include "deletelabelsresponse.h"
 #include "deletelabelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DeleteLabelsResponse
+ *
+ * @brief  Handles WorkDocs DeleteLabels responses.
+ *
+ * @see    WorkDocsClient::deleteLabels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLabelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DeleteLabelsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLabelsRequest(request));
+    setReply(reply);
+}
+
+const DeleteLabelsRequest * DeleteLabelsResponse::request() const
+{
+    Q_D(const DeleteLabelsResponse);
+    return static_cast<const DeleteLabelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DeleteLabels response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLabelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLabelsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLabelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLabelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLabelsResponse instance.
+ */
+DeleteLabelsResponsePrivate::DeleteLabelsResponsePrivate(
+    DeleteLabelsQueueResponse * const q) : DeleteLabelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DeleteLabelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLabelsResponsePrivate::DeleteLabelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLabelsResponse"));
+    /// @todo
+}

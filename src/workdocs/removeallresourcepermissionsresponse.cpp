@@ -19,3 +19,85 @@
 
 #include "removeallresourcepermissionsresponse.h"
 #include "removeallresourcepermissionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  RemoveAllResourcePermissionsResponse
+ *
+ * @brief  Handles WorkDocs RemoveAllResourcePermissions responses.
+ *
+ * @see    WorkDocsClient::removeAllResourcePermissions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveAllResourcePermissionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new RemoveAllResourcePermissionsResponsePrivate(this), parent)
+{
+    setRequest(new RemoveAllResourcePermissionsRequest(request));
+    setReply(reply);
+}
+
+const RemoveAllResourcePermissionsRequest * RemoveAllResourcePermissionsResponse::request() const
+{
+    Q_D(const RemoveAllResourcePermissionsResponse);
+    return static_cast<const RemoveAllResourcePermissionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs RemoveAllResourcePermissions response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveAllResourcePermissionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveAllResourcePermissionsResponsePrivate
+ *
+ * @brief  Private implementation for RemoveAllResourcePermissionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAllResourcePermissionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveAllResourcePermissionsResponse instance.
+ */
+RemoveAllResourcePermissionsResponsePrivate::RemoveAllResourcePermissionsResponsePrivate(
+    RemoveAllResourcePermissionsQueueResponse * const q) : RemoveAllResourcePermissionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs RemoveAllResourcePermissionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveAllResourcePermissionsResponsePrivate::RemoveAllResourcePermissionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveAllResourcePermissionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describematchmakingrulesetsresponse.h"
 #include "describematchmakingrulesetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeMatchmakingRuleSetsResponse
+ *
+ * @brief  Handles GameLift DescribeMatchmakingRuleSets responses.
+ *
+ * @see    GameLiftClient::describeMatchmakingRuleSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMatchmakingRuleSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeMatchmakingRuleSetsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMatchmakingRuleSetsRequest(request));
+    setReply(reply);
+}
+
+const DescribeMatchmakingRuleSetsRequest * DescribeMatchmakingRuleSetsResponse::request() const
+{
+    Q_D(const DescribeMatchmakingRuleSetsResponse);
+    return static_cast<const DescribeMatchmakingRuleSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeMatchmakingRuleSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMatchmakingRuleSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMatchmakingRuleSetsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMatchmakingRuleSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMatchmakingRuleSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMatchmakingRuleSetsResponse instance.
+ */
+DescribeMatchmakingRuleSetsResponsePrivate::DescribeMatchmakingRuleSetsResponsePrivate(
+    DescribeMatchmakingRuleSetsQueueResponse * const q) : DescribeMatchmakingRuleSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeMatchmakingRuleSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMatchmakingRuleSetsResponsePrivate::DescribeMatchmakingRuleSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMatchmakingRuleSetsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listbytematchsetsresponse.h"
 #include "listbytematchsetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListByteMatchSetsResponse
+ *
+ * @brief  Handles WAFRegional ListByteMatchSets responses.
+ *
+ * @see    WAFRegionalClient::listByteMatchSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListByteMatchSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new ListByteMatchSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListByteMatchSetsRequest(request));
+    setReply(reply);
+}
+
+const ListByteMatchSetsRequest * ListByteMatchSetsResponse::request() const
+{
+    Q_D(const ListByteMatchSetsResponse);
+    return static_cast<const ListByteMatchSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional ListByteMatchSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListByteMatchSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListByteMatchSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListByteMatchSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListByteMatchSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListByteMatchSetsResponse instance.
+ */
+ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponsePrivate(
+    ListByteMatchSetsQueueResponse * const q) : ListByteMatchSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional ListByteMatchSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListByteMatchSetsResponse"));
+    /// @todo
+}

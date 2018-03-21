@@ -19,3 +19,85 @@
 
 #include "increasereplicationfactorresponse.h"
 #include "increasereplicationfactorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  IncreaseReplicationFactorResponse
+ *
+ * @brief  Handles DAX IncreaseReplicationFactor responses.
+ *
+ * @see    DAXClient::increaseReplicationFactor
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IncreaseReplicationFactorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new IncreaseReplicationFactorResponsePrivate(this), parent)
+{
+    setRequest(new IncreaseReplicationFactorRequest(request));
+    setReply(reply);
+}
+
+const IncreaseReplicationFactorRequest * IncreaseReplicationFactorResponse::request() const
+{
+    Q_D(const IncreaseReplicationFactorResponse);
+    return static_cast<const IncreaseReplicationFactorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX IncreaseReplicationFactor response.
+ *
+ * @param  response  Response to parse.
+ */
+void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  IncreaseReplicationFactorResponsePrivate
+ *
+ * @brief  Private implementation for IncreaseReplicationFactorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IncreaseReplicationFactorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public IncreaseReplicationFactorResponse instance.
+ */
+IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePrivate(
+    IncreaseReplicationFactorQueueResponse * const q) : IncreaseReplicationFactorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX IncreaseReplicationFactorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("IncreaseReplicationFactorResponse"));
+    /// @todo
+}

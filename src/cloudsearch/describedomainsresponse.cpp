@@ -19,3 +19,85 @@
 
 #include "describedomainsresponse.h"
 #include "describedomainsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeDomainsResponse
+ *
+ * @brief  Handles CloudSearch DescribeDomains responses.
+ *
+ * @see    CloudSearchClient::describeDomains
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDomainsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DescribeDomainsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDomainsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDomainsRequest * DescribeDomainsResponse::request() const
+{
+    Q_D(const DescribeDomainsResponse);
+    return static_cast<const DescribeDomainsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DescribeDomains response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDomainsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDomainsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDomainsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDomainsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDomainsResponse instance.
+ */
+DescribeDomainsResponsePrivate::DescribeDomainsResponsePrivate(
+    DescribeDomainsQueueResponse * const q) : DescribeDomainsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DescribeDomainsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDomainsResponsePrivate::DescribeDomainsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDomainsResponse"));
+    /// @todo
+}

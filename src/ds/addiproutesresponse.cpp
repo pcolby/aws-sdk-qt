@@ -19,3 +19,85 @@
 
 #include "addiproutesresponse.h"
 #include "addiproutesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  AddIpRoutesResponse
+ *
+ * @brief  Handles DirectoryService AddIpRoutes responses.
+ *
+ * @see    DirectoryServiceClient::addIpRoutes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddIpRoutesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new AddIpRoutesResponsePrivate(this), parent)
+{
+    setRequest(new AddIpRoutesRequest(request));
+    setReply(reply);
+}
+
+const AddIpRoutesRequest * AddIpRoutesResponse::request() const
+{
+    Q_D(const AddIpRoutesResponse);
+    return static_cast<const AddIpRoutesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService AddIpRoutes response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddIpRoutesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddIpRoutesResponsePrivate
+ *
+ * @brief  Private implementation for AddIpRoutesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddIpRoutesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddIpRoutesResponse instance.
+ */
+AddIpRoutesResponsePrivate::AddIpRoutesResponsePrivate(
+    AddIpRoutesQueueResponse * const q) : AddIpRoutesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService AddIpRoutesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddIpRoutesResponsePrivate::AddIpRoutesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddIpRoutesResponse"));
+    /// @todo
+}

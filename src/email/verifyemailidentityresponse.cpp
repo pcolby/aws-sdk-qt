@@ -19,3 +19,85 @@
 
 #include "verifyemailidentityresponse.h"
 #include "verifyemailidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  VerifyEmailIdentityResponse
+ *
+ * @brief  Handles SES VerifyEmailIdentity responses.
+ *
+ * @see    SESClient::verifyEmailIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyEmailIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new VerifyEmailIdentityResponsePrivate(this), parent)
+{
+    setRequest(new VerifyEmailIdentityRequest(request));
+    setReply(reply);
+}
+
+const VerifyEmailIdentityRequest * VerifyEmailIdentityResponse::request() const
+{
+    Q_D(const VerifyEmailIdentityResponse);
+    return static_cast<const VerifyEmailIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES VerifyEmailIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void VerifyEmailIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyEmailIdentityResponsePrivate
+ *
+ * @brief  Private implementation for VerifyEmailIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyEmailIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public VerifyEmailIdentityResponse instance.
+ */
+VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponsePrivate(
+    VerifyEmailIdentityQueueResponse * const q) : VerifyEmailIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES VerifyEmailIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("VerifyEmailIdentityResponse"));
+    /// @todo
+}

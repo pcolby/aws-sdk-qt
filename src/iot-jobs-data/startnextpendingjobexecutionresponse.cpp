@@ -19,3 +19,85 @@
 
 #include "startnextpendingjobexecutionresponse.h"
 #include "startnextpendingjobexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoTJobsDataPlane {
+
+/**
+ * @class  StartNextPendingJobExecutionResponse
+ *
+ * @brief  Handles IoTJobsDataPlane StartNextPendingJobExecution responses.
+ *
+ * @see    IoTJobsDataPlaneClient::startNextPendingJobExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartNextPendingJobExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTJobsDataPlaneResponse(new StartNextPendingJobExecutionResponsePrivate(this), parent)
+{
+    setRequest(new StartNextPendingJobExecutionRequest(request));
+    setReply(reply);
+}
+
+const StartNextPendingJobExecutionRequest * StartNextPendingJobExecutionResponse::request() const
+{
+    Q_D(const StartNextPendingJobExecutionResponse);
+    return static_cast<const StartNextPendingJobExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoTJobsDataPlane StartNextPendingJobExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartNextPendingJobExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartNextPendingJobExecutionResponsePrivate
+ *
+ * @brief  Private implementation for StartNextPendingJobExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartNextPendingJobExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartNextPendingJobExecutionResponse instance.
+ */
+StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionResponsePrivate(
+    StartNextPendingJobExecutionQueueResponse * const q) : StartNextPendingJobExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoTJobsDataPlane StartNextPendingJobExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartNextPendingJobExecutionResponse"));
+    /// @todo
+}

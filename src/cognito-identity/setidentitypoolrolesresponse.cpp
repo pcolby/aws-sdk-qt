@@ -19,3 +19,85 @@
 
 #include "setidentitypoolrolesresponse.h"
 #include "setidentitypoolrolesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  SetIdentityPoolRolesResponse
+ *
+ * @brief  Handles CognitoIdentity SetIdentityPoolRoles responses.
+ *
+ * @see    CognitoIdentityClient::setIdentityPoolRoles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetIdentityPoolRolesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new SetIdentityPoolRolesResponsePrivate(this), parent)
+{
+    setRequest(new SetIdentityPoolRolesRequest(request));
+    setReply(reply);
+}
+
+const SetIdentityPoolRolesRequest * SetIdentityPoolRolesResponse::request() const
+{
+    Q_D(const SetIdentityPoolRolesResponse);
+    return static_cast<const SetIdentityPoolRolesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity SetIdentityPoolRoles response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetIdentityPoolRolesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetIdentityPoolRolesResponsePrivate
+ *
+ * @brief  Private implementation for SetIdentityPoolRolesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetIdentityPoolRolesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetIdentityPoolRolesResponse instance.
+ */
+SetIdentityPoolRolesResponsePrivate::SetIdentityPoolRolesResponsePrivate(
+    SetIdentityPoolRolesQueueResponse * const q) : SetIdentityPoolRolesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity SetIdentityPoolRolesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetIdentityPoolRolesResponsePrivate::SetIdentityPoolRolesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetIdentityPoolRolesResponse"));
+    /// @todo
+}

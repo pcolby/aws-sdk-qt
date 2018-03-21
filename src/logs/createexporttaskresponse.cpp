@@ -19,3 +19,85 @@
 
 #include "createexporttaskresponse.h"
 #include "createexporttaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  CreateExportTaskResponse
+ *
+ * @brief  Handles CloudWatchLogs CreateExportTask responses.
+ *
+ * @see    CloudWatchLogsClient::createExportTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateExportTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new CreateExportTaskResponsePrivate(this), parent)
+{
+    setRequest(new CreateExportTaskRequest(request));
+    setReply(reply);
+}
+
+const CreateExportTaskRequest * CreateExportTaskResponse::request() const
+{
+    Q_D(const CreateExportTaskResponse);
+    return static_cast<const CreateExportTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs CreateExportTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateExportTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateExportTaskResponsePrivate
+ *
+ * @brief  Private implementation for CreateExportTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateExportTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateExportTaskResponse instance.
+ */
+CreateExportTaskResponsePrivate::CreateExportTaskResponsePrivate(
+    CreateExportTaskQueueResponse * const q) : CreateExportTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs CreateExportTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateExportTaskResponsePrivate::CreateExportTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateExportTaskResponse"));
+    /// @todo
+}

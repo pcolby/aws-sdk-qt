@@ -19,3 +19,85 @@
 
 #include "startsupportdataexportresponse.h"
 #include "startsupportdataexportresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MarketplaceCommerceAnalytics {
+
+/**
+ * @class  StartSupportDataExportResponse
+ *
+ * @brief  Handles MarketplaceCommerceAnalytics StartSupportDataExport responses.
+ *
+ * @see    MarketplaceCommerceAnalyticsClient::startSupportDataExport
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartSupportDataExportResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MarketplaceCommerceAnalyticsResponse(new StartSupportDataExportResponsePrivate(this), parent)
+{
+    setRequest(new StartSupportDataExportRequest(request));
+    setReply(reply);
+}
+
+const StartSupportDataExportRequest * StartSupportDataExportResponse::request() const
+{
+    Q_D(const StartSupportDataExportResponse);
+    return static_cast<const StartSupportDataExportRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MarketplaceCommerceAnalytics StartSupportDataExport response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartSupportDataExportResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartSupportDataExportResponsePrivate
+ *
+ * @brief  Private implementation for StartSupportDataExportResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartSupportDataExportResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartSupportDataExportResponse instance.
+ */
+StartSupportDataExportResponsePrivate::StartSupportDataExportResponsePrivate(
+    StartSupportDataExportQueueResponse * const q) : StartSupportDataExportPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MarketplaceCommerceAnalytics StartSupportDataExportResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartSupportDataExportResponsePrivate::StartSupportDataExportResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartSupportDataExportResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createfunctiondefinitionresponse.h"
 #include "createfunctiondefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateFunctionDefinitionResponse
+ *
+ * @brief  Handles Greengrass CreateFunctionDefinition responses.
+ *
+ * @see    GreengrassClient::createFunctionDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFunctionDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new CreateFunctionDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new CreateFunctionDefinitionRequest(request));
+    setReply(reply);
+}
+
+const CreateFunctionDefinitionRequest * CreateFunctionDefinitionResponse::request() const
+{
+    Q_D(const CreateFunctionDefinitionResponse);
+    return static_cast<const CreateFunctionDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass CreateFunctionDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateFunctionDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFunctionDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for CreateFunctionDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFunctionDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateFunctionDefinitionResponse instance.
+ */
+CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponsePrivate(
+    CreateFunctionDefinitionQueueResponse * const q) : CreateFunctionDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass CreateFunctionDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateFunctionDefinitionResponse"));
+    /// @todo
+}

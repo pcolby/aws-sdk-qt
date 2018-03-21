@@ -19,3 +19,85 @@
 
 #include "createvirtualmfadeviceresponse.h"
 #include "createvirtualmfadeviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateVirtualMFADeviceResponse
+ *
+ * @brief  Handles IAM CreateVirtualMFADevice responses.
+ *
+ * @see    IAMClient::createVirtualMFADevice
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVirtualMFADeviceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new CreateVirtualMFADeviceResponsePrivate(this), parent)
+{
+    setRequest(new CreateVirtualMFADeviceRequest(request));
+    setReply(reply);
+}
+
+const CreateVirtualMFADeviceRequest * CreateVirtualMFADeviceResponse::request() const
+{
+    Q_D(const CreateVirtualMFADeviceResponse);
+    return static_cast<const CreateVirtualMFADeviceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM CreateVirtualMFADevice response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVirtualMFADeviceResponsePrivate
+ *
+ * @brief  Private implementation for CreateVirtualMFADeviceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVirtualMFADeviceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVirtualMFADeviceResponse instance.
+ */
+CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponsePrivate(
+    CreateVirtualMFADeviceQueueResponse * const q) : CreateVirtualMFADevicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM CreateVirtualMFADeviceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVirtualMFADeviceResponse"));
+    /// @todo
+}

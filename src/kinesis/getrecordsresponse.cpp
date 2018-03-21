@@ -19,3 +19,85 @@
 
 #include "getrecordsresponse.h"
 #include "getrecordsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  GetRecordsResponse
+ *
+ * @brief  Handles Kinesis GetRecords responses.
+ *
+ * @see    KinesisClient::getRecords
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRecordsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new GetRecordsResponsePrivate(this), parent)
+{
+    setRequest(new GetRecordsRequest(request));
+    setReply(reply);
+}
+
+const GetRecordsRequest * GetRecordsResponse::request() const
+{
+    Q_D(const GetRecordsResponse);
+    return static_cast<const GetRecordsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis GetRecords response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRecordsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRecordsResponsePrivate
+ *
+ * @brief  Private implementation for GetRecordsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRecordsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRecordsResponse instance.
+ */
+GetRecordsResponsePrivate::GetRecordsResponsePrivate(
+    GetRecordsQueueResponse * const q) : GetRecordsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis GetRecordsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRecordsResponsePrivate::GetRecordsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRecordsResponse"));
+    /// @todo
+}

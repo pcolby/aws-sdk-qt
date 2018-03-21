@@ -19,3 +19,85 @@
 
 #include "disassociateservicerolefromaccountresponse.h"
 #include "disassociateservicerolefromaccountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DisassociateServiceRoleFromAccountResponse
+ *
+ * @brief  Handles Greengrass DisassociateServiceRoleFromAccount responses.
+ *
+ * @see    GreengrassClient::disassociateServiceRoleFromAccount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateServiceRoleFromAccountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DisassociateServiceRoleFromAccountResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateServiceRoleFromAccountRequest(request));
+    setReply(reply);
+}
+
+const DisassociateServiceRoleFromAccountRequest * DisassociateServiceRoleFromAccountResponse::request() const
+{
+    Q_D(const DisassociateServiceRoleFromAccountResponse);
+    return static_cast<const DisassociateServiceRoleFromAccountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DisassociateServiceRoleFromAccount response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateServiceRoleFromAccountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateServiceRoleFromAccountResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateServiceRoleFromAccountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateServiceRoleFromAccountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateServiceRoleFromAccountResponse instance.
+ */
+DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAccountResponsePrivate(
+    DisassociateServiceRoleFromAccountQueueResponse * const q) : DisassociateServiceRoleFromAccountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DisassociateServiceRoleFromAccountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAccountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateServiceRoleFromAccountResponse"));
+    /// @todo
+}

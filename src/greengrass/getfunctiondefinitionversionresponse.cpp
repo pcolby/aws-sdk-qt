@@ -19,3 +19,85 @@
 
 #include "getfunctiondefinitionversionresponse.h"
 #include "getfunctiondefinitionversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetFunctionDefinitionVersionResponse
+ *
+ * @brief  Handles Greengrass GetFunctionDefinitionVersion responses.
+ *
+ * @see    GreengrassClient::getFunctionDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFunctionDefinitionVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetFunctionDefinitionVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetFunctionDefinitionVersionRequest(request));
+    setReply(reply);
+}
+
+const GetFunctionDefinitionVersionRequest * GetFunctionDefinitionVersionResponse::request() const
+{
+    Q_D(const GetFunctionDefinitionVersionResponse);
+    return static_cast<const GetFunctionDefinitionVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetFunctionDefinitionVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetFunctionDefinitionVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFunctionDefinitionVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetFunctionDefinitionVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionDefinitionVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetFunctionDefinitionVersionResponse instance.
+ */
+GetFunctionDefinitionVersionResponsePrivate::GetFunctionDefinitionVersionResponsePrivate(
+    GetFunctionDefinitionVersionQueueResponse * const q) : GetFunctionDefinitionVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetFunctionDefinitionVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetFunctionDefinitionVersionResponsePrivate::GetFunctionDefinitionVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetFunctionDefinitionVersionResponse"));
+    /// @todo
+}

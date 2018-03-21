@@ -19,3 +19,85 @@
 
 #include "getbuiltinslottypesresponse.h"
 #include "getbuiltinslottypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBuiltinSlotTypesResponse
+ *
+ * @brief  Handles LexModelBuildingService GetBuiltinSlotTypes responses.
+ *
+ * @see    LexModelBuildingServiceClient::getBuiltinSlotTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBuiltinSlotTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetBuiltinSlotTypesResponsePrivate(this), parent)
+{
+    setRequest(new GetBuiltinSlotTypesRequest(request));
+    setReply(reply);
+}
+
+const GetBuiltinSlotTypesRequest * GetBuiltinSlotTypesResponse::request() const
+{
+    Q_D(const GetBuiltinSlotTypesResponse);
+    return static_cast<const GetBuiltinSlotTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetBuiltinSlotTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBuiltinSlotTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBuiltinSlotTypesResponsePrivate
+ *
+ * @brief  Private implementation for GetBuiltinSlotTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBuiltinSlotTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBuiltinSlotTypesResponse instance.
+ */
+GetBuiltinSlotTypesResponsePrivate::GetBuiltinSlotTypesResponsePrivate(
+    GetBuiltinSlotTypesQueueResponse * const q) : GetBuiltinSlotTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetBuiltinSlotTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBuiltinSlotTypesResponsePrivate::GetBuiltinSlotTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBuiltinSlotTypesResponse"));
+    /// @todo
+}

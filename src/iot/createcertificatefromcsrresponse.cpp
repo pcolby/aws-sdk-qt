@@ -19,3 +19,85 @@
 
 #include "createcertificatefromcsrresponse.h"
 #include "createcertificatefromcsrresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateCertificateFromCsrResponse
+ *
+ * @brief  Handles IoT CreateCertificateFromCsr responses.
+ *
+ * @see    IoTClient::createCertificateFromCsr
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCertificateFromCsrResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreateCertificateFromCsrResponsePrivate(this), parent)
+{
+    setRequest(new CreateCertificateFromCsrRequest(request));
+    setReply(reply);
+}
+
+const CreateCertificateFromCsrRequest * CreateCertificateFromCsrResponse::request() const
+{
+    Q_D(const CreateCertificateFromCsrResponse);
+    return static_cast<const CreateCertificateFromCsrRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreateCertificateFromCsr response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCertificateFromCsrResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCertificateFromCsrResponsePrivate
+ *
+ * @brief  Private implementation for CreateCertificateFromCsrResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCertificateFromCsrResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCertificateFromCsrResponse instance.
+ */
+CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponsePrivate(
+    CreateCertificateFromCsrQueueResponse * const q) : CreateCertificateFromCsrPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreateCertificateFromCsrResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCertificateFromCsrResponse"));
+    /// @todo
+}

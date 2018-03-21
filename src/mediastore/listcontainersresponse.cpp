@@ -19,3 +19,85 @@
 
 #include "listcontainersresponse.h"
 #include "listcontainersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  ListContainersResponse
+ *
+ * @brief  Handles MediaStore ListContainers responses.
+ *
+ * @see    MediaStoreClient::listContainers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListContainersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreResponse(new ListContainersResponsePrivate(this), parent)
+{
+    setRequest(new ListContainersRequest(request));
+    setReply(reply);
+}
+
+const ListContainersRequest * ListContainersResponse::request() const
+{
+    Q_D(const ListContainersResponse);
+    return static_cast<const ListContainersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStore ListContainers response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListContainersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListContainersResponsePrivate
+ *
+ * @brief  Private implementation for ListContainersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListContainersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListContainersResponse instance.
+ */
+ListContainersResponsePrivate::ListContainersResponsePrivate(
+    ListContainersQueueResponse * const q) : ListContainersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStore ListContainersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListContainersResponsePrivate::ListContainersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListContainersResponse"));
+    /// @todo
+}

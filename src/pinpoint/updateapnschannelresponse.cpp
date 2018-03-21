@@ -19,3 +19,85 @@
 
 #include "updateapnschannelresponse.h"
 #include "updateapnschannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateApnsChannelResponse
+ *
+ * @brief  Handles Pinpoint UpdateApnsChannel responses.
+ *
+ * @see    PinpointClient::updateApnsChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApnsChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateApnsChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateApnsChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateApnsChannelRequest * UpdateApnsChannelResponse::request() const
+{
+    Q_D(const UpdateApnsChannelResponse);
+    return static_cast<const UpdateApnsChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateApnsChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateApnsChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApnsChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateApnsChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApnsChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateApnsChannelResponse instance.
+ */
+UpdateApnsChannelResponsePrivate::UpdateApnsChannelResponsePrivate(
+    UpdateApnsChannelQueueResponse * const q) : UpdateApnsChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateApnsChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateApnsChannelResponsePrivate::UpdateApnsChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateApnsChannelResponse"));
+    /// @todo
+}

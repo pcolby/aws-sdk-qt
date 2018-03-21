@@ -19,3 +19,85 @@
 
 #include "resyncmfadeviceresponse.h"
 #include "resyncmfadeviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ResyncMFADeviceResponse
+ *
+ * @brief  Handles IAM ResyncMFADevice responses.
+ *
+ * @see    IAMClient::resyncMFADevice
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResyncMFADeviceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ResyncMFADeviceResponsePrivate(this), parent)
+{
+    setRequest(new ResyncMFADeviceRequest(request));
+    setReply(reply);
+}
+
+const ResyncMFADeviceRequest * ResyncMFADeviceResponse::request() const
+{
+    Q_D(const ResyncMFADeviceResponse);
+    return static_cast<const ResyncMFADeviceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ResyncMFADevice response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResyncMFADeviceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResyncMFADeviceResponsePrivate
+ *
+ * @brief  Private implementation for ResyncMFADeviceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResyncMFADeviceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResyncMFADeviceResponse instance.
+ */
+ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponsePrivate(
+    ResyncMFADeviceQueueResponse * const q) : ResyncMFADevicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ResyncMFADeviceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResyncMFADeviceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putbucketpolicyresponse.h"
 #include "putbucketpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketPolicyResponse
+ *
+ * @brief  Handles S3 PutBucketPolicy responses.
+ *
+ * @see    S3Client::putBucketPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketPolicyResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketPolicyRequest(request));
+    setReply(reply);
+}
+
+const PutBucketPolicyRequest * PutBucketPolicyResponse::request() const
+{
+    Q_D(const PutBucketPolicyResponse);
+    return static_cast<const PutBucketPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketPolicyResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketPolicyResponse instance.
+ */
+PutBucketPolicyResponsePrivate::PutBucketPolicyResponsePrivate(
+    PutBucketPolicyQueueResponse * const q) : PutBucketPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketPolicyResponsePrivate::PutBucketPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketPolicyResponse"));
+    /// @todo
+}

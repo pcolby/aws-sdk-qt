@@ -19,3 +19,85 @@
 
 #include "setendpointattributesresponse.h"
 #include "setendpointattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  SetEndpointAttributesResponse
+ *
+ * @brief  Handles SNS SetEndpointAttributes responses.
+ *
+ * @see    SNSClient::setEndpointAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetEndpointAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new SetEndpointAttributesResponsePrivate(this), parent)
+{
+    setRequest(new SetEndpointAttributesRequest(request));
+    setReply(reply);
+}
+
+const SetEndpointAttributesRequest * SetEndpointAttributesResponse::request() const
+{
+    Q_D(const SetEndpointAttributesResponse);
+    return static_cast<const SetEndpointAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS SetEndpointAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetEndpointAttributesResponsePrivate
+ *
+ * @brief  Private implementation for SetEndpointAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetEndpointAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetEndpointAttributesResponse instance.
+ */
+SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponsePrivate(
+    SetEndpointAttributesQueueResponse * const q) : SetEndpointAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS SetEndpointAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetEndpointAttributesResponse"));
+    /// @todo
+}

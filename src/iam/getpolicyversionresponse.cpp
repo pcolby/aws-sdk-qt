@@ -19,3 +19,85 @@
 
 #include "getpolicyversionresponse.h"
 #include "getpolicyversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetPolicyVersionResponse
+ *
+ * @brief  Handles IAM GetPolicyVersion responses.
+ *
+ * @see    IAMClient::getPolicyVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPolicyVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetPolicyVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetPolicyVersionRequest(request));
+    setReply(reply);
+}
+
+const GetPolicyVersionRequest * GetPolicyVersionResponse::request() const
+{
+    Q_D(const GetPolicyVersionResponse);
+    return static_cast<const GetPolicyVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetPolicyVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetPolicyVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPolicyVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetPolicyVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPolicyVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetPolicyVersionResponse instance.
+ */
+GetPolicyVersionResponsePrivate::GetPolicyVersionResponsePrivate(
+    GetPolicyVersionQueueResponse * const q) : GetPolicyVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetPolicyVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetPolicyVersionResponsePrivate::GetPolicyVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetPolicyVersionResponse"));
+    /// @todo
+}

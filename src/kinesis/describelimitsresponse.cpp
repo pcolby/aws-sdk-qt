@@ -19,3 +19,85 @@
 
 #include "describelimitsresponse.h"
 #include "describelimitsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  DescribeLimitsResponse
+ *
+ * @brief  Handles Kinesis DescribeLimits responses.
+ *
+ * @see    KinesisClient::describeLimits
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLimitsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new DescribeLimitsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLimitsRequest(request));
+    setReply(reply);
+}
+
+const DescribeLimitsRequest * DescribeLimitsResponse::request() const
+{
+    Q_D(const DescribeLimitsResponse);
+    return static_cast<const DescribeLimitsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis DescribeLimits response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLimitsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLimitsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLimitsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLimitsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLimitsResponse instance.
+ */
+DescribeLimitsResponsePrivate::DescribeLimitsResponsePrivate(
+    DescribeLimitsQueueResponse * const q) : DescribeLimitsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis DescribeLimitsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLimitsResponsePrivate::DescribeLimitsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLimitsResponse"));
+    /// @todo
+}

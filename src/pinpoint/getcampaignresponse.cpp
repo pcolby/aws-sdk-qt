@@ -19,3 +19,85 @@
 
 #include "getcampaignresponse.h"
 #include "getcampaignresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetCampaignResponse
+ *
+ * @brief  Handles Pinpoint GetCampaign responses.
+ *
+ * @see    PinpointClient::getCampaign
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCampaignResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetCampaignResponsePrivate(this), parent)
+{
+    setRequest(new GetCampaignRequest(request));
+    setReply(reply);
+}
+
+const GetCampaignRequest * GetCampaignResponse::request() const
+{
+    Q_D(const GetCampaignResponse);
+    return static_cast<const GetCampaignRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetCampaign response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCampaignResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCampaignResponsePrivate
+ *
+ * @brief  Private implementation for GetCampaignResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCampaignResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCampaignResponse instance.
+ */
+GetCampaignResponsePrivate::GetCampaignResponsePrivate(
+    GetCampaignQueueResponse * const q) : GetCampaignPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetCampaignResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCampaignResponsePrivate::GetCampaignResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCampaignResponse"));
+    /// @todo
+}

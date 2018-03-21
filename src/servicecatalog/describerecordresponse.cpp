@@ -19,3 +19,85 @@
 
 #include "describerecordresponse.h"
 #include "describerecordresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeRecordResponse
+ *
+ * @brief  Handles ServiceCatalog DescribeRecord responses.
+ *
+ * @see    ServiceCatalogClient::describeRecord
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRecordResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DescribeRecordResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRecordRequest(request));
+    setReply(reply);
+}
+
+const DescribeRecordRequest * DescribeRecordResponse::request() const
+{
+    Q_D(const DescribeRecordResponse);
+    return static_cast<const DescribeRecordRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DescribeRecord response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRecordResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRecordResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRecordResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRecordResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRecordResponse instance.
+ */
+DescribeRecordResponsePrivate::DescribeRecordResponsePrivate(
+    DescribeRecordQueueResponse * const q) : DescribeRecordPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DescribeRecordResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRecordResponsePrivate::DescribeRecordResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRecordResponse"));
+    /// @todo
+}

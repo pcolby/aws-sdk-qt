@@ -19,3 +19,85 @@
 
 #include "listcoredefinitionsresponse.h"
 #include "listcoredefinitionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListCoreDefinitionsResponse
+ *
+ * @brief  Handles Greengrass ListCoreDefinitions responses.
+ *
+ * @see    GreengrassClient::listCoreDefinitions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCoreDefinitionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListCoreDefinitionsResponsePrivate(this), parent)
+{
+    setRequest(new ListCoreDefinitionsRequest(request));
+    setReply(reply);
+}
+
+const ListCoreDefinitionsRequest * ListCoreDefinitionsResponse::request() const
+{
+    Q_D(const ListCoreDefinitionsResponse);
+    return static_cast<const ListCoreDefinitionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListCoreDefinitions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListCoreDefinitionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCoreDefinitionsResponsePrivate
+ *
+ * @brief  Private implementation for ListCoreDefinitionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCoreDefinitionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListCoreDefinitionsResponse instance.
+ */
+ListCoreDefinitionsResponsePrivate::ListCoreDefinitionsResponsePrivate(
+    ListCoreDefinitionsQueueResponse * const q) : ListCoreDefinitionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListCoreDefinitionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListCoreDefinitionsResponsePrivate::ListCoreDefinitionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListCoreDefinitionsResponse"));
+    /// @todo
+}

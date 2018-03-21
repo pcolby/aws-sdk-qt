@@ -19,3 +19,85 @@
 
 #include "deletefacesresponse.h"
 #include "deletefacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DeleteFacesResponse
+ *
+ * @brief  Handles Rekognition DeleteFaces responses.
+ *
+ * @see    RekognitionClient::deleteFaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new DeleteFacesResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFacesRequest(request));
+    setReply(reply);
+}
+
+const DeleteFacesRequest * DeleteFacesResponse::request() const
+{
+    Q_D(const DeleteFacesResponse);
+    return static_cast<const DeleteFacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition DeleteFaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFacesResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFacesResponse instance.
+ */
+DeleteFacesResponsePrivate::DeleteFacesResponsePrivate(
+    DeleteFacesQueueResponse * const q) : DeleteFacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition DeleteFacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFacesResponsePrivate::DeleteFacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFacesResponse"));
+    /// @todo
+}

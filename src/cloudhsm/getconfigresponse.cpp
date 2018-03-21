@@ -19,3 +19,85 @@
 
 #include "getconfigresponse.h"
 #include "getconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  GetConfigResponse
+ *
+ * @brief  Handles CloudHSM GetConfig responses.
+ *
+ * @see    CloudHSMClient::getConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new GetConfigResponsePrivate(this), parent)
+{
+    setRequest(new GetConfigRequest(request));
+    setReply(reply);
+}
+
+const GetConfigRequest * GetConfigResponse::request() const
+{
+    Q_D(const GetConfigResponse);
+    return static_cast<const GetConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM GetConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConfigResponsePrivate
+ *
+ * @brief  Private implementation for GetConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetConfigResponse instance.
+ */
+GetConfigResponsePrivate::GetConfigResponsePrivate(
+    GetConfigQueueResponse * const q) : GetConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM GetConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetConfigResponsePrivate::GetConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetConfigResponse"));
+    /// @todo
+}

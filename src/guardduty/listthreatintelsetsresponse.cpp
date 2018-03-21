@@ -19,3 +19,85 @@
 
 #include "listthreatintelsetsresponse.h"
 #include "listthreatintelsetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  ListThreatIntelSetsResponse
+ *
+ * @brief  Handles GuardDuty ListThreatIntelSets responses.
+ *
+ * @see    GuardDutyClient::listThreatIntelSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThreatIntelSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new ListThreatIntelSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListThreatIntelSetsRequest(request));
+    setReply(reply);
+}
+
+const ListThreatIntelSetsRequest * ListThreatIntelSetsResponse::request() const
+{
+    Q_D(const ListThreatIntelSetsResponse);
+    return static_cast<const ListThreatIntelSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty ListThreatIntelSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListThreatIntelSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThreatIntelSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListThreatIntelSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThreatIntelSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListThreatIntelSetsResponse instance.
+ */
+ListThreatIntelSetsResponsePrivate::ListThreatIntelSetsResponsePrivate(
+    ListThreatIntelSetsQueueResponse * const q) : ListThreatIntelSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty ListThreatIntelSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListThreatIntelSetsResponsePrivate::ListThreatIntelSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListThreatIntelSetsResponse"));
+    /// @todo
+}

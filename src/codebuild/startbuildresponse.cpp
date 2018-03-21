@@ -19,3 +19,85 @@
 
 #include "startbuildresponse.h"
 #include "startbuildresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  StartBuildResponse
+ *
+ * @brief  Handles CodeBuild StartBuild responses.
+ *
+ * @see    CodeBuildClient::startBuild
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartBuildResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new StartBuildResponsePrivate(this), parent)
+{
+    setRequest(new StartBuildRequest(request));
+    setReply(reply);
+}
+
+const StartBuildRequest * StartBuildResponse::request() const
+{
+    Q_D(const StartBuildResponse);
+    return static_cast<const StartBuildRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild StartBuild response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartBuildResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartBuildResponsePrivate
+ *
+ * @brief  Private implementation for StartBuildResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartBuildResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartBuildResponse instance.
+ */
+StartBuildResponsePrivate::StartBuildResponsePrivate(
+    StartBuildQueueResponse * const q) : StartBuildPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild StartBuildResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartBuildResponsePrivate::StartBuildResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartBuildResponse"));
+    /// @todo
+}

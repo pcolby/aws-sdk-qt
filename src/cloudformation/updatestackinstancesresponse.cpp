@@ -19,3 +19,85 @@
 
 #include "updatestackinstancesresponse.h"
 #include "updatestackinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  UpdateStackInstancesResponse
+ *
+ * @brief  Handles CloudFormation UpdateStackInstances responses.
+ *
+ * @see    CloudFormationClient::updateStackInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStackInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new UpdateStackInstancesResponsePrivate(this), parent)
+{
+    setRequest(new UpdateStackInstancesRequest(request));
+    setReply(reply);
+}
+
+const UpdateStackInstancesRequest * UpdateStackInstancesResponse::request() const
+{
+    Q_D(const UpdateStackInstancesResponse);
+    return static_cast<const UpdateStackInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation UpdateStackInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateStackInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStackInstancesResponsePrivate
+ *
+ * @brief  Private implementation for UpdateStackInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStackInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateStackInstancesResponse instance.
+ */
+UpdateStackInstancesResponsePrivate::UpdateStackInstancesResponsePrivate(
+    UpdateStackInstancesQueueResponse * const q) : UpdateStackInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation UpdateStackInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateStackInstancesResponsePrivate::UpdateStackInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateStackInstancesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listworkerblocksresponse.h"
 #include "listworkerblocksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListWorkerBlocksResponse
+ *
+ * @brief  Handles MTurk ListWorkerBlocks responses.
+ *
+ * @see    MTurkClient::listWorkerBlocks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListWorkerBlocksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListWorkerBlocksResponsePrivate(this), parent)
+{
+    setRequest(new ListWorkerBlocksRequest(request));
+    setReply(reply);
+}
+
+const ListWorkerBlocksRequest * ListWorkerBlocksResponse::request() const
+{
+    Q_D(const ListWorkerBlocksResponse);
+    return static_cast<const ListWorkerBlocksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListWorkerBlocks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListWorkerBlocksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListWorkerBlocksResponsePrivate
+ *
+ * @brief  Private implementation for ListWorkerBlocksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListWorkerBlocksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListWorkerBlocksResponse instance.
+ */
+ListWorkerBlocksResponsePrivate::ListWorkerBlocksResponsePrivate(
+    ListWorkerBlocksQueueResponse * const q) : ListWorkerBlocksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListWorkerBlocksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListWorkerBlocksResponsePrivate::ListWorkerBlocksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListWorkerBlocksResponse"));
+    /// @todo
+}

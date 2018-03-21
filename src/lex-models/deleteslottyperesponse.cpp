@@ -19,3 +19,85 @@
 
 #include "deleteslottyperesponse.h"
 #include "deleteslottyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteSlotTypeResponse
+ *
+ * @brief  Handles LexModelBuildingService DeleteSlotType responses.
+ *
+ * @see    LexModelBuildingServiceClient::deleteSlotType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSlotTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new DeleteSlotTypeResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSlotTypeRequest(request));
+    setReply(reply);
+}
+
+const DeleteSlotTypeRequest * DeleteSlotTypeResponse::request() const
+{
+    Q_D(const DeleteSlotTypeResponse);
+    return static_cast<const DeleteSlotTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService DeleteSlotType response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSlotTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSlotTypeResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSlotTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSlotTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSlotTypeResponse instance.
+ */
+DeleteSlotTypeResponsePrivate::DeleteSlotTypeResponsePrivate(
+    DeleteSlotTypeQueueResponse * const q) : DeleteSlotTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService DeleteSlotTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSlotTypeResponsePrivate::DeleteSlotTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSlotTypeResponse"));
+    /// @todo
+}

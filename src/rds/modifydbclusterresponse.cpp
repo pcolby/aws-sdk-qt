@@ -19,3 +19,85 @@
 
 #include "modifydbclusterresponse.h"
 #include "modifydbclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBClusterResponse
+ *
+ * @brief  Handles RDS ModifyDBCluster responses.
+ *
+ * @see    RDSClient::modifyDBCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ModifyDBClusterResponsePrivate(this), parent)
+{
+    setRequest(new ModifyDBClusterRequest(request));
+    setReply(reply);
+}
+
+const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
+{
+    Q_D(const ModifyDBClusterResponse);
+    return static_cast<const ModifyDBClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ModifyDBCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBClusterResponsePrivate
+ *
+ * @brief  Private implementation for ModifyDBClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyDBClusterResponse instance.
+ */
+ModifyDBClusterResponsePrivate::ModifyDBClusterResponsePrivate(
+    ModifyDBClusterQueueResponse * const q) : ModifyDBClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ModifyDBClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyDBClusterResponsePrivate::ModifyDBClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "registerthingresponse.h"
 #include "registerthingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  RegisterThingResponse
+ *
+ * @brief  Handles IoT RegisterThing responses.
+ *
+ * @see    IoTClient::registerThing
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterThingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new RegisterThingResponsePrivate(this), parent)
+{
+    setRequest(new RegisterThingRequest(request));
+    setReply(reply);
+}
+
+const RegisterThingRequest * RegisterThingResponse::request() const
+{
+    Q_D(const RegisterThingResponse);
+    return static_cast<const RegisterThingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT RegisterThing response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterThingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterThingResponsePrivate
+ *
+ * @brief  Private implementation for RegisterThingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterThingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterThingResponse instance.
+ */
+RegisterThingResponsePrivate::RegisterThingResponsePrivate(
+    RegisterThingQueueResponse * const q) : RegisterThingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT RegisterThingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterThingResponsePrivate::RegisterThingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterThingResponse"));
+    /// @todo
+}

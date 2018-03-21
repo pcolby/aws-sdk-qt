@@ -19,3 +19,85 @@
 
 #include "updatestreamingdistributionresponse.h"
 #include "updatestreamingdistributionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  UpdateStreamingDistributionResponse
+ *
+ * @brief  Handles CloudFront UpdateStreamingDistribution responses.
+ *
+ * @see    CloudFrontClient::updateStreamingDistribution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStreamingDistributionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new UpdateStreamingDistributionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateStreamingDistributionRequest(request));
+    setReply(reply);
+}
+
+const UpdateStreamingDistributionRequest * UpdateStreamingDistributionResponse::request() const
+{
+    Q_D(const UpdateStreamingDistributionResponse);
+    return static_cast<const UpdateStreamingDistributionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront UpdateStreamingDistribution response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateStreamingDistributionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStreamingDistributionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateStreamingDistributionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStreamingDistributionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateStreamingDistributionResponse instance.
+ */
+UpdateStreamingDistributionResponsePrivate::UpdateStreamingDistributionResponsePrivate(
+    UpdateStreamingDistributionQueueResponse * const q) : UpdateStreamingDistributionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront UpdateStreamingDistributionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateStreamingDistributionResponsePrivate::UpdateStreamingDistributionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateStreamingDistributionResponse"));
+    /// @todo
+}

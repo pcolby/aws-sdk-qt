@@ -19,3 +19,85 @@
 
 #include "deletesnapshotresponse.h"
 #include "deletesnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DeleteSnapshotResponse
+ *
+ * @brief  Handles ElastiCache DeleteSnapshot responses.
+ *
+ * @see    ElastiCacheClient::deleteSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DeleteSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSnapshotRequest(request));
+    setReply(reply);
+}
+
+const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
+{
+    Q_D(const DeleteSnapshotResponse);
+    return static_cast<const DeleteSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DeleteSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSnapshotResponse instance.
+ */
+DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
+    DeleteSnapshotQueueResponse * const q) : DeleteSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DeleteSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSnapshotResponsePrivate::DeleteSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSnapshotResponse"));
+    /// @todo
+}

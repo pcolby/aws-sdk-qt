@@ -19,3 +19,85 @@
 
 #include "refreshtrustedadvisorcheckresponse.h"
 #include "refreshtrustedadvisorcheckresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  RefreshTrustedAdvisorCheckResponse
+ *
+ * @brief  Handles Support RefreshTrustedAdvisorCheck responses.
+ *
+ * @see    SupportClient::refreshTrustedAdvisorCheck
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RefreshTrustedAdvisorCheckResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new RefreshTrustedAdvisorCheckResponsePrivate(this), parent)
+{
+    setRequest(new RefreshTrustedAdvisorCheckRequest(request));
+    setReply(reply);
+}
+
+const RefreshTrustedAdvisorCheckRequest * RefreshTrustedAdvisorCheckResponse::request() const
+{
+    Q_D(const RefreshTrustedAdvisorCheckResponse);
+    return static_cast<const RefreshTrustedAdvisorCheckRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support RefreshTrustedAdvisorCheck response.
+ *
+ * @param  response  Response to parse.
+ */
+void RefreshTrustedAdvisorCheckResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RefreshTrustedAdvisorCheckResponsePrivate
+ *
+ * @brief  Private implementation for RefreshTrustedAdvisorCheckResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RefreshTrustedAdvisorCheckResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RefreshTrustedAdvisorCheckResponse instance.
+ */
+RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponsePrivate(
+    RefreshTrustedAdvisorCheckQueueResponse * const q) : RefreshTrustedAdvisorCheckPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support RefreshTrustedAdvisorCheckResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RefreshTrustedAdvisorCheckResponse"));
+    /// @todo
+}

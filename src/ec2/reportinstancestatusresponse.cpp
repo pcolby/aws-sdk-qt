@@ -19,3 +19,85 @@
 
 #include "reportinstancestatusresponse.h"
 #include "reportinstancestatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ReportInstanceStatusResponse
+ *
+ * @brief  Handles EC2 ReportInstanceStatus responses.
+ *
+ * @see    EC2Client::reportInstanceStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReportInstanceStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ReportInstanceStatusResponsePrivate(this), parent)
+{
+    setRequest(new ReportInstanceStatusRequest(request));
+    setReply(reply);
+}
+
+const ReportInstanceStatusRequest * ReportInstanceStatusResponse::request() const
+{
+    Q_D(const ReportInstanceStatusResponse);
+    return static_cast<const ReportInstanceStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ReportInstanceStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReportInstanceStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReportInstanceStatusResponsePrivate
+ *
+ * @brief  Private implementation for ReportInstanceStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReportInstanceStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReportInstanceStatusResponse instance.
+ */
+ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponsePrivate(
+    ReportInstanceStatusQueueResponse * const q) : ReportInstanceStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ReportInstanceStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReportInstanceStatusResponse"));
+    /// @todo
+}

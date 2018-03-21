@@ -19,3 +19,85 @@
 
 #include "updateadmchannelresponse.h"
 #include "updateadmchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateAdmChannelResponse
+ *
+ * @brief  Handles Pinpoint UpdateAdmChannel responses.
+ *
+ * @see    PinpointClient::updateAdmChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAdmChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateAdmChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateAdmChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateAdmChannelRequest * UpdateAdmChannelResponse::request() const
+{
+    Q_D(const UpdateAdmChannelResponse);
+    return static_cast<const UpdateAdmChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateAdmChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateAdmChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAdmChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateAdmChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAdmChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateAdmChannelResponse instance.
+ */
+UpdateAdmChannelResponsePrivate::UpdateAdmChannelResponsePrivate(
+    UpdateAdmChannelQueueResponse * const q) : UpdateAdmChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateAdmChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateAdmChannelResponsePrivate::UpdateAdmChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateAdmChannelResponse"));
+    /// @todo
+}

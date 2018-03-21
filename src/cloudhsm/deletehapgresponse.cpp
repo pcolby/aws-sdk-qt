@@ -19,3 +19,85 @@
 
 #include "deletehapgresponse.h"
 #include "deletehapgresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DeleteHapgResponse
+ *
+ * @brief  Handles CloudHSM DeleteHapg responses.
+ *
+ * @see    CloudHSMClient::deleteHapg
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHapgResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new DeleteHapgResponsePrivate(this), parent)
+{
+    setRequest(new DeleteHapgRequest(request));
+    setReply(reply);
+}
+
+const DeleteHapgRequest * DeleteHapgResponse::request() const
+{
+    Q_D(const DeleteHapgResponse);
+    return static_cast<const DeleteHapgRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM DeleteHapg response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteHapgResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHapgResponsePrivate
+ *
+ * @brief  Private implementation for DeleteHapgResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHapgResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteHapgResponse instance.
+ */
+DeleteHapgResponsePrivate::DeleteHapgResponsePrivate(
+    DeleteHapgQueueResponse * const q) : DeleteHapgPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM DeleteHapgResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteHapgResponsePrivate::DeleteHapgResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteHapgResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "adminrespondtoauthchallengeresponse.h"
 #include "adminrespondtoauthchallengeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminRespondToAuthChallengeResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminRespondToAuthChallenge responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminRespondToAuthChallenge
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminRespondToAuthChallengeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminRespondToAuthChallengeResponsePrivate(this), parent)
+{
+    setRequest(new AdminRespondToAuthChallengeRequest(request));
+    setReply(reply);
+}
+
+const AdminRespondToAuthChallengeRequest * AdminRespondToAuthChallengeResponse::request() const
+{
+    Q_D(const AdminRespondToAuthChallengeResponse);
+    return static_cast<const AdminRespondToAuthChallengeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminRespondToAuthChallenge response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminRespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminRespondToAuthChallengeResponsePrivate
+ *
+ * @brief  Private implementation for AdminRespondToAuthChallengeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminRespondToAuthChallengeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminRespondToAuthChallengeResponse instance.
+ */
+AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResponsePrivate(
+    AdminRespondToAuthChallengeQueueResponse * const q) : AdminRespondToAuthChallengePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminRespondToAuthChallengeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminRespondToAuthChallengeResponse"));
+    /// @todo
+}

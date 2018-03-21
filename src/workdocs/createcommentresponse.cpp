@@ -19,3 +19,85 @@
 
 #include "createcommentresponse.h"
 #include "createcommentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  CreateCommentResponse
+ *
+ * @brief  Handles WorkDocs CreateComment responses.
+ *
+ * @see    WorkDocsClient::createComment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCommentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new CreateCommentResponsePrivate(this), parent)
+{
+    setRequest(new CreateCommentRequest(request));
+    setReply(reply);
+}
+
+const CreateCommentRequest * CreateCommentResponse::request() const
+{
+    Q_D(const CreateCommentResponse);
+    return static_cast<const CreateCommentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs CreateComment response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCommentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCommentResponsePrivate
+ *
+ * @brief  Private implementation for CreateCommentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCommentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCommentResponse instance.
+ */
+CreateCommentResponsePrivate::CreateCommentResponsePrivate(
+    CreateCommentQueueResponse * const q) : CreateCommentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs CreateCommentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCommentResponsePrivate::CreateCommentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCommentResponse"));
+    /// @todo
+}

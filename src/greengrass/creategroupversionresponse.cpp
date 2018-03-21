@@ -19,3 +19,85 @@
 
 #include "creategroupversionresponse.h"
 #include "creategroupversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateGroupVersionResponse
+ *
+ * @brief  Handles Greengrass CreateGroupVersion responses.
+ *
+ * @see    GreengrassClient::createGroupVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGroupVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new CreateGroupVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreateGroupVersionRequest(request));
+    setReply(reply);
+}
+
+const CreateGroupVersionRequest * CreateGroupVersionResponse::request() const
+{
+    Q_D(const CreateGroupVersionResponse);
+    return static_cast<const CreateGroupVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass CreateGroupVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateGroupVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGroupVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreateGroupVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGroupVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateGroupVersionResponse instance.
+ */
+CreateGroupVersionResponsePrivate::CreateGroupVersionResponsePrivate(
+    CreateGroupVersionQueueResponse * const q) : CreateGroupVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass CreateGroupVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateGroupVersionResponsePrivate::CreateGroupVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateGroupVersionResponse"));
+    /// @todo
+}

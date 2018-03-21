@@ -19,3 +19,85 @@
 
 #include "deleteroomresponse.h"
 #include "deleteroomresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  DeleteRoomResponse
+ *
+ * @brief  Handles AlexaForBusiness DeleteRoom responses.
+ *
+ * @see    AlexaForBusinessClient::deleteRoom
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRoomResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new DeleteRoomResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRoomRequest(request));
+    setReply(reply);
+}
+
+const DeleteRoomRequest * DeleteRoomResponse::request() const
+{
+    Q_D(const DeleteRoomResponse);
+    return static_cast<const DeleteRoomRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness DeleteRoom response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRoomResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRoomResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRoomResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRoomResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRoomResponse instance.
+ */
+DeleteRoomResponsePrivate::DeleteRoomResponsePrivate(
+    DeleteRoomQueueResponse * const q) : DeleteRoomPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness DeleteRoomResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRoomResponsePrivate::DeleteRoomResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRoomResponse"));
+    /// @todo
+}

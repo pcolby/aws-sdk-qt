@@ -19,3 +19,85 @@
 
 #include "createslottypeversionresponse.h"
 #include "createslottypeversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  CreateSlotTypeVersionResponse
+ *
+ * @brief  Handles LexModelBuildingService CreateSlotTypeVersion responses.
+ *
+ * @see    LexModelBuildingServiceClient::createSlotTypeVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSlotTypeVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new CreateSlotTypeVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreateSlotTypeVersionRequest(request));
+    setReply(reply);
+}
+
+const CreateSlotTypeVersionRequest * CreateSlotTypeVersionResponse::request() const
+{
+    Q_D(const CreateSlotTypeVersionResponse);
+    return static_cast<const CreateSlotTypeVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService CreateSlotTypeVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSlotTypeVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSlotTypeVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreateSlotTypeVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSlotTypeVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSlotTypeVersionResponse instance.
+ */
+CreateSlotTypeVersionResponsePrivate::CreateSlotTypeVersionResponsePrivate(
+    CreateSlotTypeVersionQueueResponse * const q) : CreateSlotTypeVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService CreateSlotTypeVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSlotTypeVersionResponsePrivate::CreateSlotTypeVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSlotTypeVersionResponse"));
+    /// @todo
+}

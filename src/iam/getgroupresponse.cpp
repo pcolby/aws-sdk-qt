@@ -19,3 +19,85 @@
 
 #include "getgroupresponse.h"
 #include "getgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetGroupResponse
+ *
+ * @brief  Handles IAM GetGroup responses.
+ *
+ * @see    IAMClient::getGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new GetGroupResponsePrivate(this), parent)
+{
+    setRequest(new GetGroupRequest(request));
+    setReply(reply);
+}
+
+const GetGroupRequest * GetGroupResponse::request() const
+{
+    Q_D(const GetGroupResponse);
+    return static_cast<const GetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM GetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGroupResponsePrivate
+ *
+ * @brief  Private implementation for GetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGroupResponse instance.
+ */
+GetGroupResponsePrivate::GetGroupResponsePrivate(
+    GetGroupQueueResponse * const q) : GetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM GetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGroupResponsePrivate::GetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGroupResponse"));
+    /// @todo
+}

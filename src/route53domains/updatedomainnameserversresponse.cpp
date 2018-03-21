@@ -19,3 +19,85 @@
 
 #include "updatedomainnameserversresponse.h"
 #include "updatedomainnameserversresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  UpdateDomainNameserversResponse
+ *
+ * @brief  Handles Route53Domains UpdateDomainNameservers responses.
+ *
+ * @see    Route53DomainsClient::updateDomainNameservers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDomainNameserversResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new UpdateDomainNameserversResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDomainNameserversRequest(request));
+    setReply(reply);
+}
+
+const UpdateDomainNameserversRequest * UpdateDomainNameserversResponse::request() const
+{
+    Q_D(const UpdateDomainNameserversResponse);
+    return static_cast<const UpdateDomainNameserversRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains UpdateDomainNameservers response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDomainNameserversResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDomainNameserversResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDomainNameserversResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDomainNameserversResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDomainNameserversResponse instance.
+ */
+UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponsePrivate(
+    UpdateDomainNameserversQueueResponse * const q) : UpdateDomainNameserversPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains UpdateDomainNameserversResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDomainNameserversResponse"));
+    /// @todo
+}

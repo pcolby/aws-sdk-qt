@@ -19,3 +19,85 @@
 
 #include "describecachediscsivolumesresponse.h"
 #include "describecachediscsivolumesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeCachediSCSIVolumesResponse
+ *
+ * @brief  Handles StorageGateway DescribeCachediSCSIVolumes responses.
+ *
+ * @see    StorageGatewayClient::describeCachediSCSIVolumes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCachediSCSIVolumesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeCachediSCSIVolumesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCachediSCSIVolumesRequest(request));
+    setReply(reply);
+}
+
+const DescribeCachediSCSIVolumesRequest * DescribeCachediSCSIVolumesResponse::request() const
+{
+    Q_D(const DescribeCachediSCSIVolumesResponse);
+    return static_cast<const DescribeCachediSCSIVolumesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeCachediSCSIVolumes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCachediSCSIVolumesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCachediSCSIVolumesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCachediSCSIVolumesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCachediSCSIVolumesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCachediSCSIVolumesResponse instance.
+ */
+DescribeCachediSCSIVolumesResponsePrivate::DescribeCachediSCSIVolumesResponsePrivate(
+    DescribeCachediSCSIVolumesQueueResponse * const q) : DescribeCachediSCSIVolumesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeCachediSCSIVolumesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCachediSCSIVolumesResponsePrivate::DescribeCachediSCSIVolumesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCachediSCSIVolumesResponse"));
+    /// @todo
+}

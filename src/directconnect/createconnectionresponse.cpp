@@ -19,3 +19,85 @@
 
 #include "createconnectionresponse.h"
 #include "createconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateConnectionResponse
+ *
+ * @brief  Handles DirectConnect CreateConnection responses.
+ *
+ * @see    DirectConnectClient::createConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new CreateConnectionResponsePrivate(this), parent)
+{
+    setRequest(new CreateConnectionRequest(request));
+    setReply(reply);
+}
+
+const CreateConnectionRequest * CreateConnectionResponse::request() const
+{
+    Q_D(const CreateConnectionResponse);
+    return static_cast<const CreateConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect CreateConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateConnectionResponsePrivate
+ *
+ * @brief  Private implementation for CreateConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateConnectionResponse instance.
+ */
+CreateConnectionResponsePrivate::CreateConnectionResponsePrivate(
+    CreateConnectionQueueResponse * const q) : CreateConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect CreateConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateConnectionResponsePrivate::CreateConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateConnectionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletethinggroupresponse.h"
 #include "deletethinggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteThingGroupResponse
+ *
+ * @brief  Handles IoT DeleteThingGroup responses.
+ *
+ * @see    IoTClient::deleteThingGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteThingGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeleteThingGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteThingGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteThingGroupRequest * DeleteThingGroupResponse::request() const
+{
+    Q_D(const DeleteThingGroupResponse);
+    return static_cast<const DeleteThingGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeleteThingGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteThingGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteThingGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteThingGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteThingGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteThingGroupResponse instance.
+ */
+DeleteThingGroupResponsePrivate::DeleteThingGroupResponsePrivate(
+    DeleteThingGroupQueueResponse * const q) : DeleteThingGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeleteThingGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteThingGroupResponsePrivate::DeleteThingGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteThingGroupResponse"));
+    /// @todo
+}

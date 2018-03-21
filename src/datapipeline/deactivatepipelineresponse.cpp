@@ -19,3 +19,85 @@
 
 #include "deactivatepipelineresponse.h"
 #include "deactivatepipelineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  DeactivatePipelineResponse
+ *
+ * @brief  Handles DataPipeline DeactivatePipeline responses.
+ *
+ * @see    DataPipelineClient::deactivatePipeline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeactivatePipelineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DataPipelineResponse(new DeactivatePipelineResponsePrivate(this), parent)
+{
+    setRequest(new DeactivatePipelineRequest(request));
+    setReply(reply);
+}
+
+const DeactivatePipelineRequest * DeactivatePipelineResponse::request() const
+{
+    Q_D(const DeactivatePipelineResponse);
+    return static_cast<const DeactivatePipelineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DataPipeline DeactivatePipeline response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeactivatePipelineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeactivatePipelineResponsePrivate
+ *
+ * @brief  Private implementation for DeactivatePipelineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeactivatePipelineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeactivatePipelineResponse instance.
+ */
+DeactivatePipelineResponsePrivate::DeactivatePipelineResponsePrivate(
+    DeactivatePipelineQueueResponse * const q) : DeactivatePipelinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DataPipeline DeactivatePipelineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeactivatePipelineResponsePrivate::DeactivatePipelineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeactivatePipelineResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getdataflowgraphresponse.h"
 #include "getdataflowgraphresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetDataflowGraphResponse
+ *
+ * @brief  Handles Glue GetDataflowGraph responses.
+ *
+ * @see    GlueClient::getDataflowGraph
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDataflowGraphResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetDataflowGraphResponsePrivate(this), parent)
+{
+    setRequest(new GetDataflowGraphRequest(request));
+    setReply(reply);
+}
+
+const GetDataflowGraphRequest * GetDataflowGraphResponse::request() const
+{
+    Q_D(const GetDataflowGraphResponse);
+    return static_cast<const GetDataflowGraphRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetDataflowGraph response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDataflowGraphResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDataflowGraphResponsePrivate
+ *
+ * @brief  Private implementation for GetDataflowGraphResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDataflowGraphResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDataflowGraphResponse instance.
+ */
+GetDataflowGraphResponsePrivate::GetDataflowGraphResponsePrivate(
+    GetDataflowGraphQueueResponse * const q) : GetDataflowGraphPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetDataflowGraphResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDataflowGraphResponsePrivate::GetDataflowGraphResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDataflowGraphResponse"));
+    /// @todo
+}

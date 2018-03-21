@@ -19,3 +19,85 @@
 
 #include "listdatasourcesresponse.h"
 #include "listdatasourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  ListDataSourcesResponse
+ *
+ * @brief  Handles AppSync ListDataSources responses.
+ *
+ * @see    AppSyncClient::listDataSources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDataSourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new ListDataSourcesResponsePrivate(this), parent)
+{
+    setRequest(new ListDataSourcesRequest(request));
+    setReply(reply);
+}
+
+const ListDataSourcesRequest * ListDataSourcesResponse::request() const
+{
+    Q_D(const ListDataSourcesResponse);
+    return static_cast<const ListDataSourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync ListDataSources response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDataSourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDataSourcesResponsePrivate
+ *
+ * @brief  Private implementation for ListDataSourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDataSourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDataSourcesResponse instance.
+ */
+ListDataSourcesResponsePrivate::ListDataSourcesResponsePrivate(
+    ListDataSourcesQueueResponse * const q) : ListDataSourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync ListDataSourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDataSourcesResponsePrivate::ListDataSourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDataSourcesResponse"));
+    /// @todo
+}

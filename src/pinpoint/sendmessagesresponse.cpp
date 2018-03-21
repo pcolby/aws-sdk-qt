@@ -19,3 +19,85 @@
 
 #include "sendmessagesresponse.h"
 #include "sendmessagesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  SendMessagesResponse
+ *
+ * @brief  Handles Pinpoint SendMessages responses.
+ *
+ * @see    PinpointClient::sendMessages
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendMessagesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new SendMessagesResponsePrivate(this), parent)
+{
+    setRequest(new SendMessagesRequest(request));
+    setReply(reply);
+}
+
+const SendMessagesRequest * SendMessagesResponse::request() const
+{
+    Q_D(const SendMessagesResponse);
+    return static_cast<const SendMessagesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint SendMessages response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendMessagesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendMessagesResponsePrivate
+ *
+ * @brief  Private implementation for SendMessagesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendMessagesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendMessagesResponse instance.
+ */
+SendMessagesResponsePrivate::SendMessagesResponsePrivate(
+    SendMessagesQueueResponse * const q) : SendMessagesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint SendMessagesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendMessagesResponsePrivate::SendMessagesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendMessagesResponse"));
+    /// @todo
+}

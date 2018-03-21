@@ -19,3 +19,85 @@
 
 #include "startmaintenanceresponse.h"
 #include "startmaintenanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  StartMaintenanceResponse
+ *
+ * @brief  Handles OpsWorksCM StartMaintenance responses.
+ *
+ * @see    OpsWorksCMClient::startMaintenance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartMaintenanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksCMResponse(new StartMaintenanceResponsePrivate(this), parent)
+{
+    setRequest(new StartMaintenanceRequest(request));
+    setReply(reply);
+}
+
+const StartMaintenanceRequest * StartMaintenanceResponse::request() const
+{
+    Q_D(const StartMaintenanceResponse);
+    return static_cast<const StartMaintenanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorksCM StartMaintenance response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartMaintenanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartMaintenanceResponsePrivate
+ *
+ * @brief  Private implementation for StartMaintenanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMaintenanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartMaintenanceResponse instance.
+ */
+StartMaintenanceResponsePrivate::StartMaintenanceResponsePrivate(
+    StartMaintenanceQueueResponse * const q) : StartMaintenancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorksCM StartMaintenanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartMaintenanceResponsePrivate::StartMaintenanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartMaintenanceResponse"));
+    /// @todo
+}

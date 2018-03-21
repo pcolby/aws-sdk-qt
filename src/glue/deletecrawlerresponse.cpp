@@ -19,3 +19,85 @@
 
 #include "deletecrawlerresponse.h"
 #include "deletecrawlerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteCrawlerResponse
+ *
+ * @brief  Handles Glue DeleteCrawler responses.
+ *
+ * @see    GlueClient::deleteCrawler
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCrawlerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new DeleteCrawlerResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCrawlerRequest(request));
+    setReply(reply);
+}
+
+const DeleteCrawlerRequest * DeleteCrawlerResponse::request() const
+{
+    Q_D(const DeleteCrawlerResponse);
+    return static_cast<const DeleteCrawlerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue DeleteCrawler response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCrawlerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCrawlerResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCrawlerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCrawlerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCrawlerResponse instance.
+ */
+DeleteCrawlerResponsePrivate::DeleteCrawlerResponsePrivate(
+    DeleteCrawlerQueueResponse * const q) : DeleteCrawlerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue DeleteCrawlerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCrawlerResponsePrivate::DeleteCrawlerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCrawlerResponse"));
+    /// @todo
+}

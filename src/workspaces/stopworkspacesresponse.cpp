@@ -19,3 +19,85 @@
 
 #include "stopworkspacesresponse.h"
 #include "stopworkspacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  StopWorkspacesResponse
+ *
+ * @brief  Handles WorkSpaces StopWorkspaces responses.
+ *
+ * @see    WorkSpacesClient::stopWorkspaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopWorkspacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new StopWorkspacesResponsePrivate(this), parent)
+{
+    setRequest(new StopWorkspacesRequest(request));
+    setReply(reply);
+}
+
+const StopWorkspacesRequest * StopWorkspacesResponse::request() const
+{
+    Q_D(const StopWorkspacesResponse);
+    return static_cast<const StopWorkspacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces StopWorkspaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopWorkspacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopWorkspacesResponsePrivate
+ *
+ * @brief  Private implementation for StopWorkspacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopWorkspacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopWorkspacesResponse instance.
+ */
+StopWorkspacesResponsePrivate::StopWorkspacesResponsePrivate(
+    StopWorkspacesQueueResponse * const q) : StopWorkspacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces StopWorkspacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopWorkspacesResponsePrivate::StopWorkspacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopWorkspacesResponse"));
+    /// @todo
+}

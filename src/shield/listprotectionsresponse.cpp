@@ -19,3 +19,85 @@
 
 #include "listprotectionsresponse.h"
 #include "listprotectionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  ListProtectionsResponse
+ *
+ * @brief  Handles Shield ListProtections responses.
+ *
+ * @see    ShieldClient::listProtections
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListProtectionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ShieldResponse(new ListProtectionsResponsePrivate(this), parent)
+{
+    setRequest(new ListProtectionsRequest(request));
+    setReply(reply);
+}
+
+const ListProtectionsRequest * ListProtectionsResponse::request() const
+{
+    Q_D(const ListProtectionsResponse);
+    return static_cast<const ListProtectionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Shield ListProtections response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListProtectionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListProtectionsResponsePrivate
+ *
+ * @brief  Private implementation for ListProtectionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListProtectionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListProtectionsResponse instance.
+ */
+ListProtectionsResponsePrivate::ListProtectionsResponsePrivate(
+    ListProtectionsQueueResponse * const q) : ListProtectionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Shield ListProtectionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListProtectionsResponsePrivate::ListProtectionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListProtectionsResponse"));
+    /// @todo
+}

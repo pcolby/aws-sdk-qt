@@ -19,3 +19,85 @@
 
 #include "updatestackresponse.h"
 #include "updatestackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateStackResponse
+ *
+ * @brief  Handles OpsWorks UpdateStack responses.
+ *
+ * @see    OpsWorksClient::updateStack
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UpdateStackResponsePrivate(this), parent)
+{
+    setRequest(new UpdateStackRequest(request));
+    setReply(reply);
+}
+
+const UpdateStackRequest * UpdateStackResponse::request() const
+{
+    Q_D(const UpdateStackResponse);
+    return static_cast<const UpdateStackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UpdateStack response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateStackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStackResponsePrivate
+ *
+ * @brief  Private implementation for UpdateStackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateStackResponse instance.
+ */
+UpdateStackResponsePrivate::UpdateStackResponsePrivate(
+    UpdateStackQueueResponse * const q) : UpdateStackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UpdateStackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateStackResponsePrivate::UpdateStackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateStackResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "detachprincipalpolicyresponse.h"
 #include "detachprincipalpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DetachPrincipalPolicyResponse
+ *
+ * @brief  Handles IoT DetachPrincipalPolicy responses.
+ *
+ * @see    IoTClient::detachPrincipalPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachPrincipalPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DetachPrincipalPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DetachPrincipalPolicyRequest(request));
+    setReply(reply);
+}
+
+const DetachPrincipalPolicyRequest * DetachPrincipalPolicyResponse::request() const
+{
+    Q_D(const DetachPrincipalPolicyResponse);
+    return static_cast<const DetachPrincipalPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DetachPrincipalPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachPrincipalPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachPrincipalPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DetachPrincipalPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachPrincipalPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachPrincipalPolicyResponse instance.
+ */
+DetachPrincipalPolicyResponsePrivate::DetachPrincipalPolicyResponsePrivate(
+    DetachPrincipalPolicyQueueResponse * const q) : DetachPrincipalPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DetachPrincipalPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachPrincipalPolicyResponsePrivate::DetachPrincipalPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachPrincipalPolicyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deregisteronpremisesinstanceresponse.h"
 #include "deregisteronpremisesinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  DeregisterOnPremisesInstanceResponse
+ *
+ * @brief  Handles CodeDeploy DeregisterOnPremisesInstance responses.
+ *
+ * @see    CodeDeployClient::deregisterOnPremisesInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterOnPremisesInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new DeregisterOnPremisesInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterOnPremisesInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeregisterOnPremisesInstanceRequest * DeregisterOnPremisesInstanceResponse::request() const
+{
+    Q_D(const DeregisterOnPremisesInstanceResponse);
+    return static_cast<const DeregisterOnPremisesInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy DeregisterOnPremisesInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterOnPremisesInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterOnPremisesInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterOnPremisesInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterOnPremisesInstanceResponse instance.
+ */
+DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceResponsePrivate(
+    DeregisterOnPremisesInstanceQueueResponse * const q) : DeregisterOnPremisesInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy DeregisterOnPremisesInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterOnPremisesInstanceResponse"));
+    /// @todo
+}

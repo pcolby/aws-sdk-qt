@@ -19,3 +19,85 @@
 
 #include "updatedomaincontactresponse.h"
 #include "updatedomaincontactresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  UpdateDomainContactResponse
+ *
+ * @brief  Handles Route53Domains UpdateDomainContact responses.
+ *
+ * @see    Route53DomainsClient::updateDomainContact
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDomainContactResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new UpdateDomainContactResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDomainContactRequest(request));
+    setReply(reply);
+}
+
+const UpdateDomainContactRequest * UpdateDomainContactResponse::request() const
+{
+    Q_D(const UpdateDomainContactResponse);
+    return static_cast<const UpdateDomainContactRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains UpdateDomainContact response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDomainContactResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDomainContactResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDomainContactResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDomainContactResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDomainContactResponse instance.
+ */
+UpdateDomainContactResponsePrivate::UpdateDomainContactResponsePrivate(
+    UpdateDomainContactQueueResponse * const q) : UpdateDomainContactPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains UpdateDomainContactResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDomainContactResponsePrivate::UpdateDomainContactResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDomainContactResponse"));
+    /// @todo
+}

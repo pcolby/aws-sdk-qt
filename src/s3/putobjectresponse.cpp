@@ -19,3 +19,85 @@
 
 #include "putobjectresponse.h"
 #include "putobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutObjectResponse
+ *
+ * @brief  Handles S3 PutObject responses.
+ *
+ * @see    S3Client::putObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutObjectResponsePrivate(this), parent)
+{
+    setRequest(new PutObjectRequest(request));
+    setReply(reply);
+}
+
+const PutObjectRequest * PutObjectResponse::request() const
+{
+    Q_D(const PutObjectResponse);
+    return static_cast<const PutObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutObjectResponsePrivate
+ *
+ * @brief  Private implementation for PutObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutObjectResponse instance.
+ */
+PutObjectResponsePrivate::PutObjectResponsePrivate(
+    PutObjectQueueResponse * const q) : PutObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutObjectResponsePrivate::PutObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutObjectResponse"));
+    /// @todo
+}

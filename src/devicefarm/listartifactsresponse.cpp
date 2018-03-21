@@ -19,3 +19,85 @@
 
 #include "listartifactsresponse.h"
 #include "listartifactsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListArtifactsResponse
+ *
+ * @brief  Handles DeviceFarm ListArtifacts responses.
+ *
+ * @see    DeviceFarmClient::listArtifacts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListArtifactsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new ListArtifactsResponsePrivate(this), parent)
+{
+    setRequest(new ListArtifactsRequest(request));
+    setReply(reply);
+}
+
+const ListArtifactsRequest * ListArtifactsResponse::request() const
+{
+    Q_D(const ListArtifactsResponse);
+    return static_cast<const ListArtifactsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm ListArtifacts response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListArtifactsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListArtifactsResponsePrivate
+ *
+ * @brief  Private implementation for ListArtifactsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListArtifactsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListArtifactsResponse instance.
+ */
+ListArtifactsResponsePrivate::ListArtifactsResponsePrivate(
+    ListArtifactsQueueResponse * const q) : ListArtifactsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm ListArtifactsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListArtifactsResponsePrivate::ListArtifactsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListArtifactsResponse"));
+    /// @todo
+}

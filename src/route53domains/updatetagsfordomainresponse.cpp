@@ -19,3 +19,85 @@
 
 #include "updatetagsfordomainresponse.h"
 #include "updatetagsfordomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  UpdateTagsForDomainResponse
+ *
+ * @brief  Handles Route53Domains UpdateTagsForDomain responses.
+ *
+ * @see    Route53DomainsClient::updateTagsForDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTagsForDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new UpdateTagsForDomainResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTagsForDomainRequest(request));
+    setReply(reply);
+}
+
+const UpdateTagsForDomainRequest * UpdateTagsForDomainResponse::request() const
+{
+    Q_D(const UpdateTagsForDomainResponse);
+    return static_cast<const UpdateTagsForDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains UpdateTagsForDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTagsForDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTagsForDomainResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTagsForDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTagsForDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTagsForDomainResponse instance.
+ */
+UpdateTagsForDomainResponsePrivate::UpdateTagsForDomainResponsePrivate(
+    UpdateTagsForDomainQueueResponse * const q) : UpdateTagsForDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains UpdateTagsForDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTagsForDomainResponsePrivate::UpdateTagsForDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTagsForDomainResponse"));
+    /// @todo
+}

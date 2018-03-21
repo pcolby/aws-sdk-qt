@@ -19,3 +19,85 @@
 
 #include "createdirectconnectgatewayresponse.h"
 #include "createdirectconnectgatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateDirectConnectGatewayResponse
+ *
+ * @brief  Handles DirectConnect CreateDirectConnectGateway responses.
+ *
+ * @see    DirectConnectClient::createDirectConnectGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDirectConnectGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new CreateDirectConnectGatewayResponsePrivate(this), parent)
+{
+    setRequest(new CreateDirectConnectGatewayRequest(request));
+    setReply(reply);
+}
+
+const CreateDirectConnectGatewayRequest * CreateDirectConnectGatewayResponse::request() const
+{
+    Q_D(const CreateDirectConnectGatewayResponse);
+    return static_cast<const CreateDirectConnectGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect CreateDirectConnectGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDirectConnectGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDirectConnectGatewayResponsePrivate
+ *
+ * @brief  Private implementation for CreateDirectConnectGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectConnectGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDirectConnectGatewayResponse instance.
+ */
+CreateDirectConnectGatewayResponsePrivate::CreateDirectConnectGatewayResponsePrivate(
+    CreateDirectConnectGatewayQueueResponse * const q) : CreateDirectConnectGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect CreateDirectConnectGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDirectConnectGatewayResponsePrivate::CreateDirectConnectGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDirectConnectGatewayResponse"));
+    /// @todo
+}

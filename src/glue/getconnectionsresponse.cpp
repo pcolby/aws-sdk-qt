@@ -19,3 +19,85 @@
 
 #include "getconnectionsresponse.h"
 #include "getconnectionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetConnectionsResponse
+ *
+ * @brief  Handles Glue GetConnections responses.
+ *
+ * @see    GlueClient::getConnections
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConnectionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetConnectionsResponsePrivate(this), parent)
+{
+    setRequest(new GetConnectionsRequest(request));
+    setReply(reply);
+}
+
+const GetConnectionsRequest * GetConnectionsResponse::request() const
+{
+    Q_D(const GetConnectionsResponse);
+    return static_cast<const GetConnectionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetConnections response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetConnectionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConnectionsResponsePrivate
+ *
+ * @brief  Private implementation for GetConnectionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetConnectionsResponse instance.
+ */
+GetConnectionsResponsePrivate::GetConnectionsResponsePrivate(
+    GetConnectionsQueueResponse * const q) : GetConnectionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetConnectionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetConnectionsResponsePrivate::GetConnectionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetConnectionsResponse"));
+    /// @todo
+}

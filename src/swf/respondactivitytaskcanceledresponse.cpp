@@ -19,3 +19,85 @@
 
 #include "respondactivitytaskcanceledresponse.h"
 #include "respondactivitytaskcanceledresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RespondActivityTaskCanceledResponse
+ *
+ * @brief  Handles SWF RespondActivityTaskCanceled responses.
+ *
+ * @see    SWFClient::respondActivityTaskCanceled
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RespondActivityTaskCanceledResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new RespondActivityTaskCanceledResponsePrivate(this), parent)
+{
+    setRequest(new RespondActivityTaskCanceledRequest(request));
+    setReply(reply);
+}
+
+const RespondActivityTaskCanceledRequest * RespondActivityTaskCanceledResponse::request() const
+{
+    Q_D(const RespondActivityTaskCanceledResponse);
+    return static_cast<const RespondActivityTaskCanceledRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF RespondActivityTaskCanceled response.
+ *
+ * @param  response  Response to parse.
+ */
+void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RespondActivityTaskCanceledResponsePrivate
+ *
+ * @brief  Private implementation for RespondActivityTaskCanceledResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskCanceledResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RespondActivityTaskCanceledResponse instance.
+ */
+RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponsePrivate(
+    RespondActivityTaskCanceledQueueResponse * const q) : RespondActivityTaskCanceledPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF RespondActivityTaskCanceledResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskCanceledResponse"));
+    /// @todo
+}

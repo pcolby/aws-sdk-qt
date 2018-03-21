@@ -19,3 +19,85 @@
 
 #include "getdocumentversionresponse.h"
 #include "getdocumentversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  GetDocumentVersionResponse
+ *
+ * @brief  Handles WorkDocs GetDocumentVersion responses.
+ *
+ * @see    WorkDocsClient::getDocumentVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDocumentVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new GetDocumentVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetDocumentVersionRequest(request));
+    setReply(reply);
+}
+
+const GetDocumentVersionRequest * GetDocumentVersionResponse::request() const
+{
+    Q_D(const GetDocumentVersionResponse);
+    return static_cast<const GetDocumentVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs GetDocumentVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDocumentVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDocumentVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetDocumentVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDocumentVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDocumentVersionResponse instance.
+ */
+GetDocumentVersionResponsePrivate::GetDocumentVersionResponsePrivate(
+    GetDocumentVersionQueueResponse * const q) : GetDocumentVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs GetDocumentVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDocumentVersionResponsePrivate::GetDocumentVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDocumentVersionResponse"));
+    /// @todo
+}

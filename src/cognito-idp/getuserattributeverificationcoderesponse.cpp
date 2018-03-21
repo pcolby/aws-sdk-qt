@@ -19,3 +19,85 @@
 
 #include "getuserattributeverificationcoderesponse.h"
 #include "getuserattributeverificationcoderesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GetUserAttributeVerificationCodeResponse
+ *
+ * @brief  Handles CognitoIdentityProvider GetUserAttributeVerificationCode responses.
+ *
+ * @see    CognitoIdentityProviderClient::getUserAttributeVerificationCode
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserAttributeVerificationCodeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new GetUserAttributeVerificationCodeResponsePrivate(this), parent)
+{
+    setRequest(new GetUserAttributeVerificationCodeRequest(request));
+    setReply(reply);
+}
+
+const GetUserAttributeVerificationCodeRequest * GetUserAttributeVerificationCodeResponse::request() const
+{
+    Q_D(const GetUserAttributeVerificationCodeResponse);
+    return static_cast<const GetUserAttributeVerificationCodeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider GetUserAttributeVerificationCode response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUserAttributeVerificationCodeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserAttributeVerificationCodeResponsePrivate
+ *
+ * @brief  Private implementation for GetUserAttributeVerificationCodeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserAttributeVerificationCodeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUserAttributeVerificationCodeResponse instance.
+ */
+GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCodeResponsePrivate(
+    GetUserAttributeVerificationCodeQueueResponse * const q) : GetUserAttributeVerificationCodePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider GetUserAttributeVerificationCodeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCodeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUserAttributeVerificationCodeResponse"));
+    /// @todo
+}

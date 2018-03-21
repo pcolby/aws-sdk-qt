@@ -19,3 +19,85 @@
 
 #include "scanprovisionedproductsresponse.h"
 #include "scanprovisionedproductsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ScanProvisionedProductsResponse
+ *
+ * @brief  Handles ServiceCatalog ScanProvisionedProducts responses.
+ *
+ * @see    ServiceCatalogClient::scanProvisionedProducts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ScanProvisionedProductsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ScanProvisionedProductsResponsePrivate(this), parent)
+{
+    setRequest(new ScanProvisionedProductsRequest(request));
+    setReply(reply);
+}
+
+const ScanProvisionedProductsRequest * ScanProvisionedProductsResponse::request() const
+{
+    Q_D(const ScanProvisionedProductsResponse);
+    return static_cast<const ScanProvisionedProductsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ScanProvisionedProducts response.
+ *
+ * @param  response  Response to parse.
+ */
+void ScanProvisionedProductsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ScanProvisionedProductsResponsePrivate
+ *
+ * @brief  Private implementation for ScanProvisionedProductsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ScanProvisionedProductsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ScanProvisionedProductsResponse instance.
+ */
+ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponsePrivate(
+    ScanProvisionedProductsQueueResponse * const q) : ScanProvisionedProductsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ScanProvisionedProductsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ScanProvisionedProductsResponse"));
+    /// @todo
+}

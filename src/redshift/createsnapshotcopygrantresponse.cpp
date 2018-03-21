@@ -19,3 +19,85 @@
 
 #include "createsnapshotcopygrantresponse.h"
 #include "createsnapshotcopygrantresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateSnapshotCopyGrantResponse
+ *
+ * @brief  Handles Redshift CreateSnapshotCopyGrant responses.
+ *
+ * @see    RedshiftClient::createSnapshotCopyGrant
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSnapshotCopyGrantResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new CreateSnapshotCopyGrantResponsePrivate(this), parent)
+{
+    setRequest(new CreateSnapshotCopyGrantRequest(request));
+    setReply(reply);
+}
+
+const CreateSnapshotCopyGrantRequest * CreateSnapshotCopyGrantResponse::request() const
+{
+    Q_D(const CreateSnapshotCopyGrantResponse);
+    return static_cast<const CreateSnapshotCopyGrantRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift CreateSnapshotCopyGrant response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSnapshotCopyGrantResponsePrivate
+ *
+ * @brief  Private implementation for CreateSnapshotCopyGrantResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotCopyGrantResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSnapshotCopyGrantResponse instance.
+ */
+CreateSnapshotCopyGrantResponsePrivate::CreateSnapshotCopyGrantResponsePrivate(
+    CreateSnapshotCopyGrantQueueResponse * const q) : CreateSnapshotCopyGrantPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift CreateSnapshotCopyGrantResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSnapshotCopyGrantResponsePrivate::CreateSnapshotCopyGrantResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotCopyGrantResponse"));
+    /// @todo
+}

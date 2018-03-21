@@ -19,3 +19,85 @@
 
 #include "canceljobresponse.h"
 #include "canceljobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ImportExport {
+
+/**
+ * @class  CancelJobResponse
+ *
+ * @brief  Handles ImportExport CancelJob responses.
+ *
+ * @see    ImportExportClient::cancelJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ImportExportResponse(new CancelJobResponsePrivate(this), parent)
+{
+    setRequest(new CancelJobRequest(request));
+    setReply(reply);
+}
+
+const CancelJobRequest * CancelJobResponse::request() const
+{
+    Q_D(const CancelJobResponse);
+    return static_cast<const CancelJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ImportExport CancelJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelJobResponsePrivate
+ *
+ * @brief  Private implementation for CancelJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelJobResponse instance.
+ */
+CancelJobResponsePrivate::CancelJobResponsePrivate(
+    CancelJobQueueResponse * const q) : CancelJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ImportExport CancelJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelJobResponsePrivate::CancelJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelJobResponse"));
+    /// @todo
+}

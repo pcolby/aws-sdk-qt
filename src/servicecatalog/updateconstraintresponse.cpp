@@ -19,3 +19,85 @@
 
 #include "updateconstraintresponse.h"
 #include "updateconstraintresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  UpdateConstraintResponse
+ *
+ * @brief  Handles ServiceCatalog UpdateConstraint responses.
+ *
+ * @see    ServiceCatalogClient::updateConstraint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConstraintResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new UpdateConstraintResponsePrivate(this), parent)
+{
+    setRequest(new UpdateConstraintRequest(request));
+    setReply(reply);
+}
+
+const UpdateConstraintRequest * UpdateConstraintResponse::request() const
+{
+    Q_D(const UpdateConstraintResponse);
+    return static_cast<const UpdateConstraintRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog UpdateConstraint response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateConstraintResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConstraintResponsePrivate
+ *
+ * @brief  Private implementation for UpdateConstraintResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConstraintResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateConstraintResponse instance.
+ */
+UpdateConstraintResponsePrivate::UpdateConstraintResponsePrivate(
+    UpdateConstraintQueueResponse * const q) : UpdateConstraintPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog UpdateConstraintResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateConstraintResponsePrivate::UpdateConstraintResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateConstraintResponse"));
+    /// @todo
+}

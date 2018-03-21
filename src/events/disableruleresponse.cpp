@@ -19,3 +19,85 @@
 
 #include "disableruleresponse.h"
 #include "disableruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  DisableRuleResponse
+ *
+ * @brief  Handles CloudWatchEvents DisableRule responses.
+ *
+ * @see    CloudWatchEventsClient::disableRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new DisableRuleResponsePrivate(this), parent)
+{
+    setRequest(new DisableRuleRequest(request));
+    setReply(reply);
+}
+
+const DisableRuleRequest * DisableRuleResponse::request() const
+{
+    Q_D(const DisableRuleResponse);
+    return static_cast<const DisableRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents DisableRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableRuleResponsePrivate
+ *
+ * @brief  Private implementation for DisableRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableRuleResponse instance.
+ */
+DisableRuleResponsePrivate::DisableRuleResponsePrivate(
+    DisableRuleQueueResponse * const q) : DisableRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents DisableRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableRuleResponsePrivate::DisableRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableRuleResponse"));
+    /// @todo
+}

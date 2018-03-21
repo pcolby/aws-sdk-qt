@@ -19,3 +19,85 @@
 
 #include "updatequalificationtyperesponse.h"
 #include "updatequalificationtyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  UpdateQualificationTypeResponse
+ *
+ * @brief  Handles MTurk UpdateQualificationType responses.
+ *
+ * @see    MTurkClient::updateQualificationType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateQualificationTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new UpdateQualificationTypeResponsePrivate(this), parent)
+{
+    setRequest(new UpdateQualificationTypeRequest(request));
+    setReply(reply);
+}
+
+const UpdateQualificationTypeRequest * UpdateQualificationTypeResponse::request() const
+{
+    Q_D(const UpdateQualificationTypeResponse);
+    return static_cast<const UpdateQualificationTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk UpdateQualificationType response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateQualificationTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateQualificationTypeResponsePrivate
+ *
+ * @brief  Private implementation for UpdateQualificationTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateQualificationTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateQualificationTypeResponse instance.
+ */
+UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponsePrivate(
+    UpdateQualificationTypeQueueResponse * const q) : UpdateQualificationTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk UpdateQualificationTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateQualificationTypeResponse"));
+    /// @todo
+}

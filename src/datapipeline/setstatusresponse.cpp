@@ -19,3 +19,85 @@
 
 #include "setstatusresponse.h"
 #include "setstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  SetStatusResponse
+ *
+ * @brief  Handles DataPipeline SetStatus responses.
+ *
+ * @see    DataPipelineClient::setStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DataPipelineResponse(new SetStatusResponsePrivate(this), parent)
+{
+    setRequest(new SetStatusRequest(request));
+    setReply(reply);
+}
+
+const SetStatusRequest * SetStatusResponse::request() const
+{
+    Q_D(const SetStatusResponse);
+    return static_cast<const SetStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DataPipeline SetStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetStatusResponsePrivate
+ *
+ * @brief  Private implementation for SetStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetStatusResponse instance.
+ */
+SetStatusResponsePrivate::SetStatusResponsePrivate(
+    SetStatusQueueResponse * const q) : SetStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DataPipeline SetStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetStatusResponsePrivate::SetStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetStatusResponse"));
+    /// @todo
+}

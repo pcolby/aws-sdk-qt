@@ -19,3 +19,85 @@
 
 #include "deleteremoteaccesssessionresponse.h"
 #include "deleteremoteaccesssessionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  DeleteRemoteAccessSessionResponse
+ *
+ * @brief  Handles DeviceFarm DeleteRemoteAccessSession responses.
+ *
+ * @see    DeviceFarmClient::deleteRemoteAccessSession
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRemoteAccessSessionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new DeleteRemoteAccessSessionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRemoteAccessSessionRequest(request));
+    setReply(reply);
+}
+
+const DeleteRemoteAccessSessionRequest * DeleteRemoteAccessSessionResponse::request() const
+{
+    Q_D(const DeleteRemoteAccessSessionResponse);
+    return static_cast<const DeleteRemoteAccessSessionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm DeleteRemoteAccessSession response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRemoteAccessSessionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRemoteAccessSessionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRemoteAccessSessionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRemoteAccessSessionResponse instance.
+ */
+DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponsePrivate(
+    DeleteRemoteAccessSessionQueueResponse * const q) : DeleteRemoteAccessSessionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm DeleteRemoteAccessSessionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRemoteAccessSessionResponse"));
+    /// @todo
+}

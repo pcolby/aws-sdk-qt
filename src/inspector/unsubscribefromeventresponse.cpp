@@ -19,3 +19,85 @@
 
 #include "unsubscribefromeventresponse.h"
 #include "unsubscribefromeventresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  UnsubscribeFromEventResponse
+ *
+ * @brief  Handles Inspector UnsubscribeFromEvent responses.
+ *
+ * @see    InspectorClient::unsubscribeFromEvent
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnsubscribeFromEventResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new UnsubscribeFromEventResponsePrivate(this), parent)
+{
+    setRequest(new UnsubscribeFromEventRequest(request));
+    setReply(reply);
+}
+
+const UnsubscribeFromEventRequest * UnsubscribeFromEventResponse::request() const
+{
+    Q_D(const UnsubscribeFromEventResponse);
+    return static_cast<const UnsubscribeFromEventRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector UnsubscribeFromEvent response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnsubscribeFromEventResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnsubscribeFromEventResponsePrivate
+ *
+ * @brief  Private implementation for UnsubscribeFromEventResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnsubscribeFromEventResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnsubscribeFromEventResponse instance.
+ */
+UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponsePrivate(
+    UnsubscribeFromEventQueueResponse * const q) : UnsubscribeFromEventPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector UnsubscribeFromEventResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromEventResponse"));
+    /// @todo
+}

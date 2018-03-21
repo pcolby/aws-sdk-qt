@@ -19,3 +19,85 @@
 
 #include "publishversionresponse.h"
 #include "publishversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  PublishVersionResponse
+ *
+ * @brief  Handles Lambda PublishVersion responses.
+ *
+ * @see    LambdaClient::publishVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PublishVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new PublishVersionResponsePrivate(this), parent)
+{
+    setRequest(new PublishVersionRequest(request));
+    setReply(reply);
+}
+
+const PublishVersionRequest * PublishVersionResponse::request() const
+{
+    Q_D(const PublishVersionResponse);
+    return static_cast<const PublishVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda PublishVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void PublishVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PublishVersionResponsePrivate
+ *
+ * @brief  Private implementation for PublishVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PublishVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PublishVersionResponse instance.
+ */
+PublishVersionResponsePrivate::PublishVersionResponsePrivate(
+    PublishVersionQueueResponse * const q) : PublishVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda PublishVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PublishVersionResponsePrivate::PublishVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PublishVersionResponse"));
+    /// @todo
+}

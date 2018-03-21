@@ -19,3 +19,85 @@
 
 #include "putlogeventsresponse.h"
 #include "putlogeventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  PutLogEventsResponse
+ *
+ * @brief  Handles CloudWatchLogs PutLogEvents responses.
+ *
+ * @see    CloudWatchLogsClient::putLogEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutLogEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new PutLogEventsResponsePrivate(this), parent)
+{
+    setRequest(new PutLogEventsRequest(request));
+    setReply(reply);
+}
+
+const PutLogEventsRequest * PutLogEventsResponse::request() const
+{
+    Q_D(const PutLogEventsResponse);
+    return static_cast<const PutLogEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs PutLogEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutLogEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutLogEventsResponsePrivate
+ *
+ * @brief  Private implementation for PutLogEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutLogEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutLogEventsResponse instance.
+ */
+PutLogEventsResponsePrivate::PutLogEventsResponsePrivate(
+    PutLogEventsQueueResponse * const q) : PutLogEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs PutLogEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutLogEventsResponsePrivate::PutLogEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutLogEventsResponse"));
+    /// @todo
+}

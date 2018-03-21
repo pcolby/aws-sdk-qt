@@ -19,3 +19,85 @@
 
 #include "getblobresponse.h"
 #include "getblobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetBlobResponse
+ *
+ * @brief  Handles CodeCommit GetBlob responses.
+ *
+ * @see    CodeCommitClient::getBlob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBlobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new GetBlobResponsePrivate(this), parent)
+{
+    setRequest(new GetBlobRequest(request));
+    setReply(reply);
+}
+
+const GetBlobRequest * GetBlobResponse::request() const
+{
+    Q_D(const GetBlobResponse);
+    return static_cast<const GetBlobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit GetBlob response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBlobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBlobResponsePrivate
+ *
+ * @brief  Private implementation for GetBlobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBlobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBlobResponse instance.
+ */
+GetBlobResponsePrivate::GetBlobResponsePrivate(
+    GetBlobQueueResponse * const q) : GetBlobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit GetBlobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBlobResponsePrivate::GetBlobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBlobResponse"));
+    /// @todo
+}

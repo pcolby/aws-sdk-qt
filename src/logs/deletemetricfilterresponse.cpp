@@ -19,3 +19,85 @@
 
 #include "deletemetricfilterresponse.h"
 #include "deletemetricfilterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteMetricFilterResponse
+ *
+ * @brief  Handles CloudWatchLogs DeleteMetricFilter responses.
+ *
+ * @see    CloudWatchLogsClient::deleteMetricFilter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteMetricFilterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DeleteMetricFilterResponsePrivate(this), parent)
+{
+    setRequest(new DeleteMetricFilterRequest(request));
+    setReply(reply);
+}
+
+const DeleteMetricFilterRequest * DeleteMetricFilterResponse::request() const
+{
+    Q_D(const DeleteMetricFilterResponse);
+    return static_cast<const DeleteMetricFilterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DeleteMetricFilter response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteMetricFilterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteMetricFilterResponsePrivate
+ *
+ * @brief  Private implementation for DeleteMetricFilterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMetricFilterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteMetricFilterResponse instance.
+ */
+DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponsePrivate(
+    DeleteMetricFilterQueueResponse * const q) : DeleteMetricFilterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DeleteMetricFilterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteMetricFilterResponse"));
+    /// @todo
+}

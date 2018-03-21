@@ -19,3 +19,85 @@
 
 #include "importcertificateresponse.h"
 #include "importcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  ImportCertificateResponse
+ *
+ * @brief  Handles DatabaseMigrationService ImportCertificate responses.
+ *
+ * @see    DatabaseMigrationServiceClient::importCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new ImportCertificateResponsePrivate(this), parent)
+{
+    setRequest(new ImportCertificateRequest(request));
+    setReply(reply);
+}
+
+const ImportCertificateRequest * ImportCertificateResponse::request() const
+{
+    Q_D(const ImportCertificateResponse);
+    return static_cast<const ImportCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService ImportCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void ImportCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportCertificateResponsePrivate
+ *
+ * @brief  Private implementation for ImportCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ImportCertificateResponse instance.
+ */
+ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
+    ImportCertificateQueueResponse * const q) : ImportCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService ImportCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ImportCertificateResponsePrivate::ImportCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ImportCertificateResponse"));
+    /// @todo
+}

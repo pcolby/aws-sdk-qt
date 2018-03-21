@@ -19,3 +19,85 @@
 
 #include "deleteattributesresponse.h"
 #include "deleteattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DeleteAttributesResponse
+ *
+ * @brief  Handles ECS DeleteAttributes responses.
+ *
+ * @see    ECSClient::deleteAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new DeleteAttributesResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAttributesRequest(request));
+    setReply(reply);
+}
+
+const DeleteAttributesRequest * DeleteAttributesResponse::request() const
+{
+    Q_D(const DeleteAttributesResponse);
+    return static_cast<const DeleteAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS DeleteAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAttributesResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAttributesResponse instance.
+ */
+DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
+    DeleteAttributesQueueResponse * const q) : DeleteAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS DeleteAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAttributesResponsePrivate::DeleteAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAttributesResponse"));
+    /// @todo
+}

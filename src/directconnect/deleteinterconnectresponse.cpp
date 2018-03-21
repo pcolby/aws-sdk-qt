@@ -19,3 +19,85 @@
 
 #include "deleteinterconnectresponse.h"
 #include "deleteinterconnectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DeleteInterconnectResponse
+ *
+ * @brief  Handles DirectConnect DeleteInterconnect responses.
+ *
+ * @see    DirectConnectClient::deleteInterconnect
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInterconnectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DeleteInterconnectResponsePrivate(this), parent)
+{
+    setRequest(new DeleteInterconnectRequest(request));
+    setReply(reply);
+}
+
+const DeleteInterconnectRequest * DeleteInterconnectResponse::request() const
+{
+    Q_D(const DeleteInterconnectResponse);
+    return static_cast<const DeleteInterconnectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DeleteInterconnect response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteInterconnectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInterconnectResponsePrivate
+ *
+ * @brief  Private implementation for DeleteInterconnectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInterconnectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteInterconnectResponse instance.
+ */
+DeleteInterconnectResponsePrivate::DeleteInterconnectResponsePrivate(
+    DeleteInterconnectQueueResponse * const q) : DeleteInterconnectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DeleteInterconnectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteInterconnectResponsePrivate::DeleteInterconnectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteInterconnectResponse"));
+    /// @todo
+}

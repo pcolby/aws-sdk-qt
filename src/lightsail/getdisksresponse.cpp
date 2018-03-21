@@ -19,3 +19,85 @@
 
 #include "getdisksresponse.h"
 #include "getdisksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetDisksResponse
+ *
+ * @brief  Handles Lightsail GetDisks responses.
+ *
+ * @see    LightsailClient::getDisks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDisksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetDisksResponsePrivate(this), parent)
+{
+    setRequest(new GetDisksRequest(request));
+    setReply(reply);
+}
+
+const GetDisksRequest * GetDisksResponse::request() const
+{
+    Q_D(const GetDisksResponse);
+    return static_cast<const GetDisksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetDisks response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDisksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDisksResponsePrivate
+ *
+ * @brief  Private implementation for GetDisksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDisksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDisksResponse instance.
+ */
+GetDisksResponsePrivate::GetDisksResponsePrivate(
+    GetDisksQueueResponse * const q) : GetDisksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetDisksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDisksResponsePrivate::GetDisksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDisksResponse"));
+    /// @todo
+}

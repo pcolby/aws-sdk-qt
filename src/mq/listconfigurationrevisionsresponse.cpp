@@ -19,3 +19,85 @@
 
 #include "listconfigurationrevisionsresponse.h"
 #include "listconfigurationrevisionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  ListConfigurationRevisionsResponse
+ *
+ * @brief  Handles MQ ListConfigurationRevisions responses.
+ *
+ * @see    MQClient::listConfigurationRevisions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListConfigurationRevisionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new ListConfigurationRevisionsResponsePrivate(this), parent)
+{
+    setRequest(new ListConfigurationRevisionsRequest(request));
+    setReply(reply);
+}
+
+const ListConfigurationRevisionsRequest * ListConfigurationRevisionsResponse::request() const
+{
+    Q_D(const ListConfigurationRevisionsResponse);
+    return static_cast<const ListConfigurationRevisionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ ListConfigurationRevisions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListConfigurationRevisionsResponsePrivate
+ *
+ * @brief  Private implementation for ListConfigurationRevisionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConfigurationRevisionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListConfigurationRevisionsResponse instance.
+ */
+ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePrivate(
+    ListConfigurationRevisionsQueueResponse * const q) : ListConfigurationRevisionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ ListConfigurationRevisionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListConfigurationRevisionsResponse"));
+    /// @todo
+}

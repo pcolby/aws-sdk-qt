@@ -19,3 +19,85 @@
 
 #include "startinstanceresponse.h"
 #include "startinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  StartInstanceResponse
+ *
+ * @brief  Handles Lightsail StartInstance responses.
+ *
+ * @see    LightsailClient::startInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new StartInstanceResponsePrivate(this), parent)
+{
+    setRequest(new StartInstanceRequest(request));
+    setReply(reply);
+}
+
+const StartInstanceRequest * StartInstanceResponse::request() const
+{
+    Q_D(const StartInstanceResponse);
+    return static_cast<const StartInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail StartInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartInstanceResponsePrivate
+ *
+ * @brief  Private implementation for StartInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartInstanceResponse instance.
+ */
+StartInstanceResponsePrivate::StartInstanceResponsePrivate(
+    StartInstanceQueueResponse * const q) : StartInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail StartInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartInstanceResponsePrivate::StartInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartInstanceResponse"));
+    /// @todo
+}

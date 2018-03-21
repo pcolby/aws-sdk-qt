@@ -19,3 +19,85 @@
 
 #include "getsegmentsresponse.h"
 #include "getsegmentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetSegmentsResponse
+ *
+ * @brief  Handles Pinpoint GetSegments responses.
+ *
+ * @see    PinpointClient::getSegments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSegmentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetSegmentsResponsePrivate(this), parent)
+{
+    setRequest(new GetSegmentsRequest(request));
+    setReply(reply);
+}
+
+const GetSegmentsRequest * GetSegmentsResponse::request() const
+{
+    Q_D(const GetSegmentsResponse);
+    return static_cast<const GetSegmentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetSegments response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSegmentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSegmentsResponsePrivate
+ *
+ * @brief  Private implementation for GetSegmentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSegmentsResponse instance.
+ */
+GetSegmentsResponsePrivate::GetSegmentsResponsePrivate(
+    GetSegmentsQueueResponse * const q) : GetSegmentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetSegmentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSegmentsResponsePrivate::GetSegmentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSegmentsResponse"));
+    /// @todo
+}

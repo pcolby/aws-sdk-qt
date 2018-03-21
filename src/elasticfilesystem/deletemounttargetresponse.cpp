@@ -19,3 +19,85 @@
 
 #include "deletemounttargetresponse.h"
 #include "deletemounttargetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DeleteMountTargetResponse
+ *
+ * @brief  Handles EFS DeleteMountTarget responses.
+ *
+ * @see    EFSClient::deleteMountTarget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteMountTargetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EFSResponse(new DeleteMountTargetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteMountTargetRequest(request));
+    setReply(reply);
+}
+
+const DeleteMountTargetRequest * DeleteMountTargetResponse::request() const
+{
+    Q_D(const DeleteMountTargetResponse);
+    return static_cast<const DeleteMountTargetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EFS DeleteMountTarget response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteMountTargetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteMountTargetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteMountTargetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMountTargetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteMountTargetResponse instance.
+ */
+DeleteMountTargetResponsePrivate::DeleteMountTargetResponsePrivate(
+    DeleteMountTargetQueueResponse * const q) : DeleteMountTargetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EFS DeleteMountTargetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteMountTargetResponsePrivate::DeleteMountTargetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteMountTargetResponse"));
+    /// @todo
+}

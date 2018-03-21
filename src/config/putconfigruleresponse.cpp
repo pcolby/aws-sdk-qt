@@ -19,3 +19,85 @@
 
 #include "putconfigruleresponse.h"
 #include "putconfigruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  PutConfigRuleResponse
+ *
+ * @brief  Handles ConfigService PutConfigRule responses.
+ *
+ * @see    ConfigServiceClient::putConfigRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutConfigRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new PutConfigRuleResponsePrivate(this), parent)
+{
+    setRequest(new PutConfigRuleRequest(request));
+    setReply(reply);
+}
+
+const PutConfigRuleRequest * PutConfigRuleResponse::request() const
+{
+    Q_D(const PutConfigRuleResponse);
+    return static_cast<const PutConfigRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService PutConfigRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutConfigRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutConfigRuleResponsePrivate
+ *
+ * @brief  Private implementation for PutConfigRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutConfigRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutConfigRuleResponse instance.
+ */
+PutConfigRuleResponsePrivate::PutConfigRuleResponsePrivate(
+    PutConfigRuleQueueResponse * const q) : PutConfigRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService PutConfigRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutConfigRuleResponsePrivate::PutConfigRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutConfigRuleResponse"));
+    /// @todo
+}

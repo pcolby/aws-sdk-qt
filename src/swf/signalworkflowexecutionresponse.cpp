@@ -19,3 +19,85 @@
 
 #include "signalworkflowexecutionresponse.h"
 #include "signalworkflowexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  SignalWorkflowExecutionResponse
+ *
+ * @brief  Handles SWF SignalWorkflowExecution responses.
+ *
+ * @see    SWFClient::signalWorkflowExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SignalWorkflowExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new SignalWorkflowExecutionResponsePrivate(this), parent)
+{
+    setRequest(new SignalWorkflowExecutionRequest(request));
+    setReply(reply);
+}
+
+const SignalWorkflowExecutionRequest * SignalWorkflowExecutionResponse::request() const
+{
+    Q_D(const SignalWorkflowExecutionResponse);
+    return static_cast<const SignalWorkflowExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF SignalWorkflowExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SignalWorkflowExecutionResponsePrivate
+ *
+ * @brief  Private implementation for SignalWorkflowExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SignalWorkflowExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SignalWorkflowExecutionResponse instance.
+ */
+SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
+    SignalWorkflowExecutionQueueResponse * const q) : SignalWorkflowExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF SignalWorkflowExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SignalWorkflowExecutionResponse"));
+    /// @todo
+}

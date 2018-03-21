@@ -19,3 +19,85 @@
 
 #include "getbucketversioningresponse.h"
 #include "getbucketversioningresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketVersioningResponse
+ *
+ * @brief  Handles S3 GetBucketVersioning responses.
+ *
+ * @see    S3Client::getBucketVersioning
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketVersioningResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketVersioningResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketVersioningRequest(request));
+    setReply(reply);
+}
+
+const GetBucketVersioningRequest * GetBucketVersioningResponse::request() const
+{
+    Q_D(const GetBucketVersioningResponse);
+    return static_cast<const GetBucketVersioningRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketVersioning response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketVersioningResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketVersioningResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketVersioningResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketVersioningResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketVersioningResponse instance.
+ */
+GetBucketVersioningResponsePrivate::GetBucketVersioningResponsePrivate(
+    GetBucketVersioningQueueResponse * const q) : GetBucketVersioningPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketVersioningResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketVersioningResponsePrivate::GetBucketVersioningResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketVersioningResponse"));
+    /// @todo
+}

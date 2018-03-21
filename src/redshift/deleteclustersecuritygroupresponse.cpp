@@ -19,3 +19,85 @@
 
 #include "deleteclustersecuritygroupresponse.h"
 #include "deleteclustersecuritygroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteClusterSecurityGroupResponse
+ *
+ * @brief  Handles Redshift DeleteClusterSecurityGroup responses.
+ *
+ * @see    RedshiftClient::deleteClusterSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteClusterSecurityGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DeleteClusterSecurityGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteClusterSecurityGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteClusterSecurityGroupRequest * DeleteClusterSecurityGroupResponse::request() const
+{
+    Q_D(const DeleteClusterSecurityGroupResponse);
+    return static_cast<const DeleteClusterSecurityGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DeleteClusterSecurityGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteClusterSecurityGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteClusterSecurityGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteClusterSecurityGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteClusterSecurityGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteClusterSecurityGroupResponse instance.
+ */
+DeleteClusterSecurityGroupResponsePrivate::DeleteClusterSecurityGroupResponsePrivate(
+    DeleteClusterSecurityGroupQueueResponse * const q) : DeleteClusterSecurityGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DeleteClusterSecurityGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteClusterSecurityGroupResponsePrivate::DeleteClusterSecurityGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteClusterSecurityGroupResponse"));
+    /// @todo
+}

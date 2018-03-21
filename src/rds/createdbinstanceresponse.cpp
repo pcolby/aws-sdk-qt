@@ -19,3 +19,85 @@
 
 #include "createdbinstanceresponse.h"
 #include "createdbinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBInstanceResponse
+ *
+ * @brief  Handles RDS CreateDBInstance responses.
+ *
+ * @see    RDSClient::createDBInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CreateDBInstanceResponsePrivate(this), parent)
+{
+    setRequest(new CreateDBInstanceRequest(request));
+    setReply(reply);
+}
+
+const CreateDBInstanceRequest * CreateDBInstanceResponse::request() const
+{
+    Q_D(const CreateDBInstanceResponse);
+    return static_cast<const CreateDBInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CreateDBInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBInstanceResponsePrivate
+ *
+ * @brief  Private implementation for CreateDBInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDBInstanceResponse instance.
+ */
+CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
+    CreateDBInstanceQueueResponse * const q) : CreateDBInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CreateDBInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDBInstanceResponsePrivate::CreateDBInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDBInstanceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getintrospectionschemaresponse.h"
 #include "getintrospectionschemaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  GetIntrospectionSchemaResponse
+ *
+ * @brief  Handles AppSync GetIntrospectionSchema responses.
+ *
+ * @see    AppSyncClient::getIntrospectionSchema
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntrospectionSchemaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new GetIntrospectionSchemaResponsePrivate(this), parent)
+{
+    setRequest(new GetIntrospectionSchemaRequest(request));
+    setReply(reply);
+}
+
+const GetIntrospectionSchemaRequest * GetIntrospectionSchemaResponse::request() const
+{
+    Q_D(const GetIntrospectionSchemaResponse);
+    return static_cast<const GetIntrospectionSchemaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync GetIntrospectionSchema response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIntrospectionSchemaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntrospectionSchemaResponsePrivate
+ *
+ * @brief  Private implementation for GetIntrospectionSchemaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntrospectionSchemaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIntrospectionSchemaResponse instance.
+ */
+GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponsePrivate(
+    GetIntrospectionSchemaQueueResponse * const q) : GetIntrospectionSchemaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync GetIntrospectionSchemaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIntrospectionSchemaResponse"));
+    /// @todo
+}

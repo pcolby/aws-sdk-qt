@@ -19,3 +19,85 @@
 
 #include "setdefaultauthorizerresponse.h"
 #include "setdefaultauthorizerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  SetDefaultAuthorizerResponse
+ *
+ * @brief  Handles IoT SetDefaultAuthorizer responses.
+ *
+ * @see    IoTClient::setDefaultAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetDefaultAuthorizerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new SetDefaultAuthorizerResponsePrivate(this), parent)
+{
+    setRequest(new SetDefaultAuthorizerRequest(request));
+    setReply(reply);
+}
+
+const SetDefaultAuthorizerRequest * SetDefaultAuthorizerResponse::request() const
+{
+    Q_D(const SetDefaultAuthorizerResponse);
+    return static_cast<const SetDefaultAuthorizerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT SetDefaultAuthorizer response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetDefaultAuthorizerResponsePrivate
+ *
+ * @brief  Private implementation for SetDefaultAuthorizerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDefaultAuthorizerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetDefaultAuthorizerResponse instance.
+ */
+SetDefaultAuthorizerResponsePrivate::SetDefaultAuthorizerResponsePrivate(
+    SetDefaultAuthorizerQueueResponse * const q) : SetDefaultAuthorizerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT SetDefaultAuthorizerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetDefaultAuthorizerResponsePrivate::SetDefaultAuthorizerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetDefaultAuthorizerResponse"));
+    /// @todo
+}

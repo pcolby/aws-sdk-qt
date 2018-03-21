@@ -19,3 +19,85 @@
 
 #include "updatesigningcertificateresponse.h"
 #include "updatesigningcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateSigningCertificateResponse
+ *
+ * @brief  Handles IAM UpdateSigningCertificate responses.
+ *
+ * @see    IAMClient::updateSigningCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSigningCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateSigningCertificateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSigningCertificateRequest(request));
+    setReply(reply);
+}
+
+const UpdateSigningCertificateRequest * UpdateSigningCertificateResponse::request() const
+{
+    Q_D(const UpdateSigningCertificateResponse);
+    return static_cast<const UpdateSigningCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateSigningCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSigningCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSigningCertificateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSigningCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSigningCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSigningCertificateResponse instance.
+ */
+UpdateSigningCertificateResponsePrivate::UpdateSigningCertificateResponsePrivate(
+    UpdateSigningCertificateQueueResponse * const q) : UpdateSigningCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateSigningCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSigningCertificateResponsePrivate::UpdateSigningCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSigningCertificateResponse"));
+    /// @todo
+}

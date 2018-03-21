@@ -19,3 +19,85 @@
 
 #include "getgroupcertificateconfigurationresponse.h"
 #include "getgroupcertificateconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetGroupCertificateConfigurationResponse
+ *
+ * @brief  Handles Greengrass GetGroupCertificateConfiguration responses.
+ *
+ * @see    GreengrassClient::getGroupCertificateConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGroupCertificateConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetGroupCertificateConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new GetGroupCertificateConfigurationRequest(request));
+    setReply(reply);
+}
+
+const GetGroupCertificateConfigurationRequest * GetGroupCertificateConfigurationResponse::request() const
+{
+    Q_D(const GetGroupCertificateConfigurationResponse);
+    return static_cast<const GetGroupCertificateConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetGroupCertificateConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGroupCertificateConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGroupCertificateConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for GetGroupCertificateConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupCertificateConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGroupCertificateConfigurationResponse instance.
+ */
+GetGroupCertificateConfigurationResponsePrivate::GetGroupCertificateConfigurationResponsePrivate(
+    GetGroupCertificateConfigurationQueueResponse * const q) : GetGroupCertificateConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetGroupCertificateConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGroupCertificateConfigurationResponsePrivate::GetGroupCertificateConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGroupCertificateConfigurationResponse"));
+    /// @todo
+}

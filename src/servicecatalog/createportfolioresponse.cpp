@@ -19,3 +19,85 @@
 
 #include "createportfolioresponse.h"
 #include "createportfolioresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  CreatePortfolioResponse
+ *
+ * @brief  Handles ServiceCatalog CreatePortfolio responses.
+ *
+ * @see    ServiceCatalogClient::createPortfolio
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePortfolioResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new CreatePortfolioResponsePrivate(this), parent)
+{
+    setRequest(new CreatePortfolioRequest(request));
+    setReply(reply);
+}
+
+const CreatePortfolioRequest * CreatePortfolioResponse::request() const
+{
+    Q_D(const CreatePortfolioResponse);
+    return static_cast<const CreatePortfolioRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog CreatePortfolio response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePortfolioResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePortfolioResponsePrivate
+ *
+ * @brief  Private implementation for CreatePortfolioResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePortfolioResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePortfolioResponse instance.
+ */
+CreatePortfolioResponsePrivate::CreatePortfolioResponsePrivate(
+    CreatePortfolioQueueResponse * const q) : CreatePortfolioPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog CreatePortfolioResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePortfolioResponsePrivate::CreatePortfolioResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePortfolioResponse"));
+    /// @todo
+}

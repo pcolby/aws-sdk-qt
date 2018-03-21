@@ -19,3 +19,85 @@
 
 #include "describeuserpoolclientresponse.h"
 #include "describeuserpoolclientresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DescribeUserPoolClientResponse
+ *
+ * @brief  Handles CognitoIdentityProvider DescribeUserPoolClient responses.
+ *
+ * @see    CognitoIdentityProviderClient::describeUserPoolClient
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUserPoolClientResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new DescribeUserPoolClientResponsePrivate(this), parent)
+{
+    setRequest(new DescribeUserPoolClientRequest(request));
+    setReply(reply);
+}
+
+const DescribeUserPoolClientRequest * DescribeUserPoolClientResponse::request() const
+{
+    Q_D(const DescribeUserPoolClientResponse);
+    return static_cast<const DescribeUserPoolClientRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider DescribeUserPoolClient response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeUserPoolClientResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUserPoolClientResponsePrivate
+ *
+ * @brief  Private implementation for DescribeUserPoolClientResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserPoolClientResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeUserPoolClientResponse instance.
+ */
+DescribeUserPoolClientResponsePrivate::DescribeUserPoolClientResponsePrivate(
+    DescribeUserPoolClientQueueResponse * const q) : DescribeUserPoolClientPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider DescribeUserPoolClientResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeUserPoolClientResponsePrivate::DescribeUserPoolClientResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeUserPoolClientResponse"));
+    /// @todo
+}

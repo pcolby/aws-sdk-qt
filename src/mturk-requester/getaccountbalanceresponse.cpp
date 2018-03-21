@@ -19,3 +19,85 @@
 
 #include "getaccountbalanceresponse.h"
 #include "getaccountbalanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  GetAccountBalanceResponse
+ *
+ * @brief  Handles MTurk GetAccountBalance responses.
+ *
+ * @see    MTurkClient::getAccountBalance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAccountBalanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new GetAccountBalanceResponsePrivate(this), parent)
+{
+    setRequest(new GetAccountBalanceRequest(request));
+    setReply(reply);
+}
+
+const GetAccountBalanceRequest * GetAccountBalanceResponse::request() const
+{
+    Q_D(const GetAccountBalanceResponse);
+    return static_cast<const GetAccountBalanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk GetAccountBalance response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAccountBalanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAccountBalanceResponsePrivate
+ *
+ * @brief  Private implementation for GetAccountBalanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountBalanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAccountBalanceResponse instance.
+ */
+GetAccountBalanceResponsePrivate::GetAccountBalanceResponsePrivate(
+    GetAccountBalanceQueueResponse * const q) : GetAccountBalancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk GetAccountBalanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAccountBalanceResponsePrivate::GetAccountBalanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAccountBalanceResponse"));
+    /// @todo
+}

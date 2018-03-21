@@ -19,3 +19,85 @@
 
 #include "stoptriggerresponse.h"
 #include "stoptriggerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StopTriggerResponse
+ *
+ * @brief  Handles Glue StopTrigger responses.
+ *
+ * @see    GlueClient::stopTrigger
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopTriggerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new StopTriggerResponsePrivate(this), parent)
+{
+    setRequest(new StopTriggerRequest(request));
+    setReply(reply);
+}
+
+const StopTriggerRequest * StopTriggerResponse::request() const
+{
+    Q_D(const StopTriggerResponse);
+    return static_cast<const StopTriggerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue StopTrigger response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopTriggerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopTriggerResponsePrivate
+ *
+ * @brief  Private implementation for StopTriggerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopTriggerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopTriggerResponse instance.
+ */
+StopTriggerResponsePrivate::StopTriggerResponsePrivate(
+    StopTriggerQueueResponse * const q) : StopTriggerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue StopTriggerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopTriggerResponsePrivate::StopTriggerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopTriggerResponse"));
+    /// @todo
+}

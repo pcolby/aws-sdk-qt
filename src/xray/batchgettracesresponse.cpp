@@ -19,3 +19,85 @@
 
 #include "batchgettracesresponse.h"
 #include "batchgettracesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace XRay {
+
+/**
+ * @class  BatchGetTracesResponse
+ *
+ * @brief  Handles XRay BatchGetTraces responses.
+ *
+ * @see    XRayClient::batchGetTraces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetTracesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : XRayResponse(new BatchGetTracesResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetTracesRequest(request));
+    setReply(reply);
+}
+
+const BatchGetTracesRequest * BatchGetTracesResponse::request() const
+{
+    Q_D(const BatchGetTracesResponse);
+    return static_cast<const BatchGetTracesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a XRay BatchGetTraces response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetTracesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetTracesResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetTracesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetTracesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetTracesResponse instance.
+ */
+BatchGetTracesResponsePrivate::BatchGetTracesResponsePrivate(
+    BatchGetTracesQueueResponse * const q) : BatchGetTracesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an XRay BatchGetTracesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetTracesResponsePrivate::BatchGetTracesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetTracesResponse"));
+    /// @todo
+}

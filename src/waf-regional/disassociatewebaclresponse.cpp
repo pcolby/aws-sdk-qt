@@ -19,3 +19,85 @@
 
 #include "disassociatewebaclresponse.h"
 #include "disassociatewebaclresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  DisassociateWebACLResponse
+ *
+ * @brief  Handles WAFRegional DisassociateWebACL responses.
+ *
+ * @see    WAFRegionalClient::disassociateWebACL
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateWebACLResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new DisassociateWebACLResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateWebACLRequest(request));
+    setReply(reply);
+}
+
+const DisassociateWebACLRequest * DisassociateWebACLResponse::request() const
+{
+    Q_D(const DisassociateWebACLResponse);
+    return static_cast<const DisassociateWebACLRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional DisassociateWebACL response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateWebACLResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateWebACLResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateWebACLResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateWebACLResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateWebACLResponse instance.
+ */
+DisassociateWebACLResponsePrivate::DisassociateWebACLResponsePrivate(
+    DisassociateWebACLQueueResponse * const q) : DisassociateWebACLPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional DisassociateWebACLResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateWebACLResponsePrivate::DisassociateWebACLResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateWebACLResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getconsoleoutputresponse.h"
 #include "getconsoleoutputresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  GetConsoleOutputResponse
+ *
+ * @brief  Handles EC2 GetConsoleOutput responses.
+ *
+ * @see    EC2Client::getConsoleOutput
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConsoleOutputResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new GetConsoleOutputResponsePrivate(this), parent)
+{
+    setRequest(new GetConsoleOutputRequest(request));
+    setReply(reply);
+}
+
+const GetConsoleOutputRequest * GetConsoleOutputResponse::request() const
+{
+    Q_D(const GetConsoleOutputResponse);
+    return static_cast<const GetConsoleOutputRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 GetConsoleOutput response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetConsoleOutputResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConsoleOutputResponsePrivate
+ *
+ * @brief  Private implementation for GetConsoleOutputResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConsoleOutputResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetConsoleOutputResponse instance.
+ */
+GetConsoleOutputResponsePrivate::GetConsoleOutputResponsePrivate(
+    GetConsoleOutputQueueResponse * const q) : GetConsoleOutputPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 GetConsoleOutputResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetConsoleOutputResponsePrivate::GetConsoleOutputResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetConsoleOutputResponse"));
+    /// @todo
+}

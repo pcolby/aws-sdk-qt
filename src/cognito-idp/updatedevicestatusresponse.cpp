@@ -19,3 +19,85 @@
 
 #include "updatedevicestatusresponse.h"
 #include "updatedevicestatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateDeviceStatusResponse
+ *
+ * @brief  Handles CognitoIdentityProvider UpdateDeviceStatus responses.
+ *
+ * @see    CognitoIdentityProviderClient::updateDeviceStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDeviceStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new UpdateDeviceStatusResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDeviceStatusRequest(request));
+    setReply(reply);
+}
+
+const UpdateDeviceStatusRequest * UpdateDeviceStatusResponse::request() const
+{
+    Q_D(const UpdateDeviceStatusResponse);
+    return static_cast<const UpdateDeviceStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider UpdateDeviceStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDeviceStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDeviceStatusResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDeviceStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeviceStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDeviceStatusResponse instance.
+ */
+UpdateDeviceStatusResponsePrivate::UpdateDeviceStatusResponsePrivate(
+    UpdateDeviceStatusQueueResponse * const q) : UpdateDeviceStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider UpdateDeviceStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDeviceStatusResponsePrivate::UpdateDeviceStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDeviceStatusResponse"));
+    /// @todo
+}

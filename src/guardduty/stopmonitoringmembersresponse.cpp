@@ -19,3 +19,85 @@
 
 #include "stopmonitoringmembersresponse.h"
 #include "stopmonitoringmembersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  StopMonitoringMembersResponse
+ *
+ * @brief  Handles GuardDuty StopMonitoringMembers responses.
+ *
+ * @see    GuardDutyClient::stopMonitoringMembers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopMonitoringMembersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new StopMonitoringMembersResponsePrivate(this), parent)
+{
+    setRequest(new StopMonitoringMembersRequest(request));
+    setReply(reply);
+}
+
+const StopMonitoringMembersRequest * StopMonitoringMembersResponse::request() const
+{
+    Q_D(const StopMonitoringMembersResponse);
+    return static_cast<const StopMonitoringMembersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty StopMonitoringMembers response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopMonitoringMembersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopMonitoringMembersResponsePrivate
+ *
+ * @brief  Private implementation for StopMonitoringMembersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopMonitoringMembersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopMonitoringMembersResponse instance.
+ */
+StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponsePrivate(
+    StopMonitoringMembersQueueResponse * const q) : StopMonitoringMembersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty StopMonitoringMembersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopMonitoringMembersResponse"));
+    /// @todo
+}

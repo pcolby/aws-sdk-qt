@@ -19,3 +19,85 @@
 
 #include "deregistertargetfrommaintenancewindowresponse.h"
 #include "deregistertargetfrommaintenancewindowresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeregisterTargetFromMaintenanceWindowResponse
+ *
+ * @brief  Handles SSM DeregisterTargetFromMaintenanceWindow responses.
+ *
+ * @see    SSMClient::deregisterTargetFromMaintenanceWindow
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterTargetFromMaintenanceWindowResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DeregisterTargetFromMaintenanceWindowResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterTargetFromMaintenanceWindowRequest(request));
+    setReply(reply);
+}
+
+const DeregisterTargetFromMaintenanceWindowRequest * DeregisterTargetFromMaintenanceWindowResponse::request() const
+{
+    Q_D(const DeregisterTargetFromMaintenanceWindowResponse);
+    return static_cast<const DeregisterTargetFromMaintenanceWindowRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DeregisterTargetFromMaintenanceWindow response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterTargetFromMaintenanceWindowResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterTargetFromMaintenanceWindowResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterTargetFromMaintenanceWindowResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterTargetFromMaintenanceWindowResponse instance.
+ */
+DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromMaintenanceWindowResponsePrivate(
+    DeregisterTargetFromMaintenanceWindowQueueResponse * const q) : DeregisterTargetFromMaintenanceWindowPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DeregisterTargetFromMaintenanceWindowResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromMaintenanceWindowResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterTargetFromMaintenanceWindowResponse"));
+    /// @todo
+}

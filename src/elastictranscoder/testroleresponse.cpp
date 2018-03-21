@@ -19,3 +19,85 @@
 
 #include "testroleresponse.h"
 #include "testroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  TestRoleResponse
+ *
+ * @brief  Handles ElasticTranscoder TestRole responses.
+ *
+ * @see    ElasticTranscoderClient::testRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticTranscoderResponse(new TestRoleResponsePrivate(this), parent)
+{
+    setRequest(new TestRoleRequest(request));
+    setReply(reply);
+}
+
+const TestRoleRequest * TestRoleResponse::request() const
+{
+    Q_D(const TestRoleResponse);
+    return static_cast<const TestRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticTranscoder TestRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestRoleResponsePrivate
+ *
+ * @brief  Private implementation for TestRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestRoleResponse instance.
+ */
+TestRoleResponsePrivate::TestRoleResponsePrivate(
+    TestRoleQueueResponse * const q) : TestRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticTranscoder TestRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestRoleResponsePrivate::TestRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestRoleResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createuserdefinedfunctionresponse.h"
 #include "createuserdefinedfunctionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateUserDefinedFunctionResponse
+ *
+ * @brief  Handles Glue CreateUserDefinedFunction responses.
+ *
+ * @see    GlueClient::createUserDefinedFunction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUserDefinedFunctionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new CreateUserDefinedFunctionResponsePrivate(this), parent)
+{
+    setRequest(new CreateUserDefinedFunctionRequest(request));
+    setReply(reply);
+}
+
+const CreateUserDefinedFunctionRequest * CreateUserDefinedFunctionResponse::request() const
+{
+    Q_D(const CreateUserDefinedFunctionResponse);
+    return static_cast<const CreateUserDefinedFunctionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue CreateUserDefinedFunction response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUserDefinedFunctionResponsePrivate
+ *
+ * @brief  Private implementation for CreateUserDefinedFunctionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserDefinedFunctionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateUserDefinedFunctionResponse instance.
+ */
+CreateUserDefinedFunctionResponsePrivate::CreateUserDefinedFunctionResponsePrivate(
+    CreateUserDefinedFunctionQueueResponse * const q) : CreateUserDefinedFunctionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue CreateUserDefinedFunctionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateUserDefinedFunctionResponsePrivate::CreateUserDefinedFunctionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateUserDefinedFunctionResponse"));
+    /// @todo
+}

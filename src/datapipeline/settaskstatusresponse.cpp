@@ -19,3 +19,85 @@
 
 #include "settaskstatusresponse.h"
 #include "settaskstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  SetTaskStatusResponse
+ *
+ * @brief  Handles DataPipeline SetTaskStatus responses.
+ *
+ * @see    DataPipelineClient::setTaskStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetTaskStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DataPipelineResponse(new SetTaskStatusResponsePrivate(this), parent)
+{
+    setRequest(new SetTaskStatusRequest(request));
+    setReply(reply);
+}
+
+const SetTaskStatusRequest * SetTaskStatusResponse::request() const
+{
+    Q_D(const SetTaskStatusResponse);
+    return static_cast<const SetTaskStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DataPipeline SetTaskStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetTaskStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetTaskStatusResponsePrivate
+ *
+ * @brief  Private implementation for SetTaskStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTaskStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetTaskStatusResponse instance.
+ */
+SetTaskStatusResponsePrivate::SetTaskStatusResponsePrivate(
+    SetTaskStatusQueueResponse * const q) : SetTaskStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DataPipeline SetTaskStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetTaskStatusResponsePrivate::SetTaskStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetTaskStatusResponse"));
+    /// @todo
+}

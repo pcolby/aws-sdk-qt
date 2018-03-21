@@ -19,3 +19,85 @@
 
 #include "restoreserverresponse.h"
 #include "restoreserverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  RestoreServerResponse
+ *
+ * @brief  Handles OpsWorksCM RestoreServer responses.
+ *
+ * @see    OpsWorksCMClient::restoreServer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreServerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksCMResponse(new RestoreServerResponsePrivate(this), parent)
+{
+    setRequest(new RestoreServerRequest(request));
+    setReply(reply);
+}
+
+const RestoreServerRequest * RestoreServerResponse::request() const
+{
+    Q_D(const RestoreServerResponse);
+    return static_cast<const RestoreServerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorksCM RestoreServer response.
+ *
+ * @param  response  Response to parse.
+ */
+void RestoreServerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreServerResponsePrivate
+ *
+ * @brief  Private implementation for RestoreServerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreServerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RestoreServerResponse instance.
+ */
+RestoreServerResponsePrivate::RestoreServerResponsePrivate(
+    RestoreServerQueueResponse * const q) : RestoreServerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorksCM RestoreServerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RestoreServerResponsePrivate::RestoreServerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RestoreServerResponse"));
+    /// @todo
+}

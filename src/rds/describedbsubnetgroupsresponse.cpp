@@ -19,3 +19,85 @@
 
 #include "describedbsubnetgroupsresponse.h"
 #include "describedbsubnetgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBSubnetGroupsResponse
+ *
+ * @brief  Handles RDS DescribeDBSubnetGroups responses.
+ *
+ * @see    RDSClient::describeDBSubnetGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBSubnetGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeDBSubnetGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDBSubnetGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() const
+{
+    Q_D(const DescribeDBSubnetGroupsResponse);
+    return static_cast<const DescribeDBSubnetGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeDBSubnetGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDBSubnetGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBSubnetGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDBSubnetGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSubnetGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDBSubnetGroupsResponse instance.
+ */
+DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponsePrivate(
+    DescribeDBSubnetGroupsQueueResponse * const q) : DescribeDBSubnetGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeDBSubnetGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDBSubnetGroupsResponse"));
+    /// @todo
+}

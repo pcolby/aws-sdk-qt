@@ -19,3 +19,85 @@
 
 #include "describedestinationsresponse.h"
 #include "describedestinationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DescribeDestinationsResponse
+ *
+ * @brief  Handles CloudWatchLogs DescribeDestinations responses.
+ *
+ * @see    CloudWatchLogsClient::describeDestinations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDestinationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DescribeDestinationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDestinationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeDestinationsRequest * DescribeDestinationsResponse::request() const
+{
+    Q_D(const DescribeDestinationsResponse);
+    return static_cast<const DescribeDestinationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DescribeDestinations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDestinationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDestinationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDestinationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDestinationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDestinationsResponse instance.
+ */
+DescribeDestinationsResponsePrivate::DescribeDestinationsResponsePrivate(
+    DescribeDestinationsQueueResponse * const q) : DescribeDestinationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DescribeDestinationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDestinationsResponsePrivate::DescribeDestinationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDestinationsResponse"));
+    /// @todo
+}

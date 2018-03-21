@@ -19,3 +19,85 @@
 
 #include "listtagsloggroupresponse.h"
 #include "listtagsloggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  ListTagsLogGroupResponse
+ *
+ * @brief  Handles CloudWatchLogs ListTagsLogGroup responses.
+ *
+ * @see    CloudWatchLogsClient::listTagsLogGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsLogGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new ListTagsLogGroupResponsePrivate(this), parent)
+{
+    setRequest(new ListTagsLogGroupRequest(request));
+    setReply(reply);
+}
+
+const ListTagsLogGroupRequest * ListTagsLogGroupResponse::request() const
+{
+    Q_D(const ListTagsLogGroupResponse);
+    return static_cast<const ListTagsLogGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs ListTagsLogGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTagsLogGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsLogGroupResponsePrivate
+ *
+ * @brief  Private implementation for ListTagsLogGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsLogGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTagsLogGroupResponse instance.
+ */
+ListTagsLogGroupResponsePrivate::ListTagsLogGroupResponsePrivate(
+    ListTagsLogGroupQueueResponse * const q) : ListTagsLogGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs ListTagsLogGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTagsLogGroupResponsePrivate::ListTagsLogGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTagsLogGroupResponse"));
+    /// @todo
+}

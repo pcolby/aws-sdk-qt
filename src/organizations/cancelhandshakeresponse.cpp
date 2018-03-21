@@ -19,3 +19,85 @@
 
 #include "cancelhandshakeresponse.h"
 #include "cancelhandshakeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  CancelHandshakeResponse
+ *
+ * @brief  Handles Organizations CancelHandshake responses.
+ *
+ * @see    OrganizationsClient::cancelHandshake
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelHandshakeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new CancelHandshakeResponsePrivate(this), parent)
+{
+    setRequest(new CancelHandshakeRequest(request));
+    setReply(reply);
+}
+
+const CancelHandshakeRequest * CancelHandshakeResponse::request() const
+{
+    Q_D(const CancelHandshakeResponse);
+    return static_cast<const CancelHandshakeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations CancelHandshake response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelHandshakeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelHandshakeResponsePrivate
+ *
+ * @brief  Private implementation for CancelHandshakeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelHandshakeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelHandshakeResponse instance.
+ */
+CancelHandshakeResponsePrivate::CancelHandshakeResponsePrivate(
+    CancelHandshakeQueueResponse * const q) : CancelHandshakePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations CancelHandshakeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelHandshakeResponsePrivate::CancelHandshakeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelHandshakeResponse"));
+    /// @todo
+}

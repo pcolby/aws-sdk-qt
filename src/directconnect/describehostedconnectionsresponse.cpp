@@ -19,3 +19,85 @@
 
 #include "describehostedconnectionsresponse.h"
 #include "describehostedconnectionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeHostedConnectionsResponse
+ *
+ * @brief  Handles DirectConnect DescribeHostedConnections responses.
+ *
+ * @see    DirectConnectClient::describeHostedConnections
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHostedConnectionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeHostedConnectionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeHostedConnectionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeHostedConnectionsRequest * DescribeHostedConnectionsResponse::request() const
+{
+    Q_D(const DescribeHostedConnectionsResponse);
+    return static_cast<const DescribeHostedConnectionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeHostedConnections response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeHostedConnectionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHostedConnectionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeHostedConnectionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHostedConnectionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeHostedConnectionsResponse instance.
+ */
+DescribeHostedConnectionsResponsePrivate::DescribeHostedConnectionsResponsePrivate(
+    DescribeHostedConnectionsQueueResponse * const q) : DescribeHostedConnectionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeHostedConnectionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeHostedConnectionsResponsePrivate::DescribeHostedConnectionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeHostedConnectionsResponse"));
+    /// @todo
+}

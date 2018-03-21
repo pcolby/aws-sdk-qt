@@ -19,3 +19,85 @@
 
 #include "describegamesessionplacementresponse.h"
 #include "describegamesessionplacementresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeGameSessionPlacementResponse
+ *
+ * @brief  Handles GameLift DescribeGameSessionPlacement responses.
+ *
+ * @see    GameLiftClient::describeGameSessionPlacement
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeGameSessionPlacementResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeGameSessionPlacementResponsePrivate(this), parent)
+{
+    setRequest(new DescribeGameSessionPlacementRequest(request));
+    setReply(reply);
+}
+
+const DescribeGameSessionPlacementRequest * DescribeGameSessionPlacementResponse::request() const
+{
+    Q_D(const DescribeGameSessionPlacementResponse);
+    return static_cast<const DescribeGameSessionPlacementRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeGameSessionPlacement response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeGameSessionPlacementResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeGameSessionPlacementResponsePrivate
+ *
+ * @brief  Private implementation for DescribeGameSessionPlacementResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeGameSessionPlacementResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeGameSessionPlacementResponse instance.
+ */
+DescribeGameSessionPlacementResponsePrivate::DescribeGameSessionPlacementResponsePrivate(
+    DescribeGameSessionPlacementQueueResponse * const q) : DescribeGameSessionPlacementPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeGameSessionPlacementResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeGameSessionPlacementResponsePrivate::DescribeGameSessionPlacementResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeGameSessionPlacementResponse"));
+    /// @todo
+}

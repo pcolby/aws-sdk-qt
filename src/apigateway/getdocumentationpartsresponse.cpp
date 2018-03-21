@@ -19,3 +19,85 @@
 
 #include "getdocumentationpartsresponse.h"
 #include "getdocumentationpartsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetDocumentationPartsResponse
+ *
+ * @brief  Handles APIGateway GetDocumentationParts responses.
+ *
+ * @see    APIGatewayClient::getDocumentationParts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDocumentationPartsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetDocumentationPartsResponsePrivate(this), parent)
+{
+    setRequest(new GetDocumentationPartsRequest(request));
+    setReply(reply);
+}
+
+const GetDocumentationPartsRequest * GetDocumentationPartsResponse::request() const
+{
+    Q_D(const GetDocumentationPartsResponse);
+    return static_cast<const GetDocumentationPartsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetDocumentationParts response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDocumentationPartsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDocumentationPartsResponsePrivate
+ *
+ * @brief  Private implementation for GetDocumentationPartsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDocumentationPartsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDocumentationPartsResponse instance.
+ */
+GetDocumentationPartsResponsePrivate::GetDocumentationPartsResponsePrivate(
+    GetDocumentationPartsQueueResponse * const q) : GetDocumentationPartsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetDocumentationPartsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDocumentationPartsResponsePrivate::GetDocumentationPartsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDocumentationPartsResponse"));
+    /// @todo
+}

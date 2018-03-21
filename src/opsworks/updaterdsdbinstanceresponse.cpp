@@ -19,3 +19,85 @@
 
 #include "updaterdsdbinstanceresponse.h"
 #include "updaterdsdbinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateRdsDbInstanceResponse
+ *
+ * @brief  Handles OpsWorks UpdateRdsDbInstance responses.
+ *
+ * @see    OpsWorksClient::updateRdsDbInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRdsDbInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UpdateRdsDbInstanceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRdsDbInstanceRequest(request));
+    setReply(reply);
+}
+
+const UpdateRdsDbInstanceRequest * UpdateRdsDbInstanceResponse::request() const
+{
+    Q_D(const UpdateRdsDbInstanceResponse);
+    return static_cast<const UpdateRdsDbInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UpdateRdsDbInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRdsDbInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRdsDbInstanceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRdsDbInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRdsDbInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRdsDbInstanceResponse instance.
+ */
+UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponsePrivate(
+    UpdateRdsDbInstanceQueueResponse * const q) : UpdateRdsDbInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UpdateRdsDbInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRdsDbInstanceResponse"));
+    /// @todo
+}

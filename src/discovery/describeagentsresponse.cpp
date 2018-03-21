@@ -19,3 +19,85 @@
 
 #include "describeagentsresponse.h"
 #include "describeagentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  DescribeAgentsResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService DescribeAgents responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::describeAgents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAgentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new DescribeAgentsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAgentsRequest(request));
+    setReply(reply);
+}
+
+const DescribeAgentsRequest * DescribeAgentsResponse::request() const
+{
+    Q_D(const DescribeAgentsResponse);
+    return static_cast<const DescribeAgentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService DescribeAgents response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAgentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAgentsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAgentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAgentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAgentsResponse instance.
+ */
+DescribeAgentsResponsePrivate::DescribeAgentsResponsePrivate(
+    DescribeAgentsQueueResponse * const q) : DescribeAgentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService DescribeAgentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAgentsResponsePrivate::DescribeAgentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAgentsResponse"));
+    /// @todo
+}

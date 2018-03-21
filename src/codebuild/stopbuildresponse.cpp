@@ -19,3 +19,85 @@
 
 #include "stopbuildresponse.h"
 #include "stopbuildresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  StopBuildResponse
+ *
+ * @brief  Handles CodeBuild StopBuild responses.
+ *
+ * @see    CodeBuildClient::stopBuild
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopBuildResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new StopBuildResponsePrivate(this), parent)
+{
+    setRequest(new StopBuildRequest(request));
+    setReply(reply);
+}
+
+const StopBuildRequest * StopBuildResponse::request() const
+{
+    Q_D(const StopBuildResponse);
+    return static_cast<const StopBuildRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild StopBuild response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopBuildResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopBuildResponsePrivate
+ *
+ * @brief  Private implementation for StopBuildResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopBuildResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopBuildResponse instance.
+ */
+StopBuildResponsePrivate::StopBuildResponsePrivate(
+    StopBuildQueueResponse * const q) : StopBuildPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild StopBuildResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopBuildResponsePrivate::StopBuildResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopBuildResponse"));
+    /// @todo
+}

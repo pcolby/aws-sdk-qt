@@ -19,3 +19,85 @@
 
 #include "disabletopicruleresponse.h"
 #include "disabletopicruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DisableTopicRuleResponse
+ *
+ * @brief  Handles IoT DisableTopicRule responses.
+ *
+ * @see    IoTClient::disableTopicRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableTopicRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DisableTopicRuleResponsePrivate(this), parent)
+{
+    setRequest(new DisableTopicRuleRequest(request));
+    setReply(reply);
+}
+
+const DisableTopicRuleRequest * DisableTopicRuleResponse::request() const
+{
+    Q_D(const DisableTopicRuleResponse);
+    return static_cast<const DisableTopicRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DisableTopicRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableTopicRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableTopicRuleResponsePrivate
+ *
+ * @brief  Private implementation for DisableTopicRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableTopicRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableTopicRuleResponse instance.
+ */
+DisableTopicRuleResponsePrivate::DisableTopicRuleResponsePrivate(
+    DisableTopicRuleQueueResponse * const q) : DisableTopicRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DisableTopicRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableTopicRuleResponsePrivate::DisableTopicRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableTopicRuleResponse"));
+    /// @todo
+}

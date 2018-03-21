@@ -19,3 +19,85 @@
 
 #include "testfailoverresponse.h"
 #include "testfailoverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  TestFailoverResponse
+ *
+ * @brief  Handles ElastiCache TestFailover responses.
+ *
+ * @see    ElastiCacheClient::testFailover
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestFailoverResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new TestFailoverResponsePrivate(this), parent)
+{
+    setRequest(new TestFailoverRequest(request));
+    setReply(reply);
+}
+
+const TestFailoverRequest * TestFailoverResponse::request() const
+{
+    Q_D(const TestFailoverResponse);
+    return static_cast<const TestFailoverRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache TestFailover response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestFailoverResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestFailoverResponsePrivate
+ *
+ * @brief  Private implementation for TestFailoverResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestFailoverResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestFailoverResponse instance.
+ */
+TestFailoverResponsePrivate::TestFailoverResponsePrivate(
+    TestFailoverQueueResponse * const q) : TestFailoverPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache TestFailoverResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestFailoverResponsePrivate::TestFailoverResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestFailoverResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "generateclientcertificateresponse.h"
 #include "generateclientcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GenerateClientCertificateResponse
+ *
+ * @brief  Handles APIGateway GenerateClientCertificate responses.
+ *
+ * @see    APIGatewayClient::generateClientCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GenerateClientCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GenerateClientCertificateResponsePrivate(this), parent)
+{
+    setRequest(new GenerateClientCertificateRequest(request));
+    setReply(reply);
+}
+
+const GenerateClientCertificateRequest * GenerateClientCertificateResponse::request() const
+{
+    Q_D(const GenerateClientCertificateResponse);
+    return static_cast<const GenerateClientCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GenerateClientCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void GenerateClientCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GenerateClientCertificateResponsePrivate
+ *
+ * @brief  Private implementation for GenerateClientCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GenerateClientCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GenerateClientCertificateResponse instance.
+ */
+GenerateClientCertificateResponsePrivate::GenerateClientCertificateResponsePrivate(
+    GenerateClientCertificateQueueResponse * const q) : GenerateClientCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GenerateClientCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GenerateClientCertificateResponsePrivate::GenerateClientCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GenerateClientCertificateResponse"));
+    /// @todo
+}

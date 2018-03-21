@@ -19,3 +19,85 @@
 
 #include "attachtypedlinkresponse.h"
 #include "attachtypedlinkresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AttachTypedLinkResponse
+ *
+ * @brief  Handles CloudDirectory AttachTypedLink responses.
+ *
+ * @see    CloudDirectoryClient::attachTypedLink
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachTypedLinkResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new AttachTypedLinkResponsePrivate(this), parent)
+{
+    setRequest(new AttachTypedLinkRequest(request));
+    setReply(reply);
+}
+
+const AttachTypedLinkRequest * AttachTypedLinkResponse::request() const
+{
+    Q_D(const AttachTypedLinkResponse);
+    return static_cast<const AttachTypedLinkRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory AttachTypedLink response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachTypedLinkResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachTypedLinkResponsePrivate
+ *
+ * @brief  Private implementation for AttachTypedLinkResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachTypedLinkResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachTypedLinkResponse instance.
+ */
+AttachTypedLinkResponsePrivate::AttachTypedLinkResponsePrivate(
+    AttachTypedLinkQueueResponse * const q) : AttachTypedLinkPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory AttachTypedLinkResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachTypedLinkResponsePrivate::AttachTypedLinkResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachTypedLinkResponse"));
+    /// @todo
+}

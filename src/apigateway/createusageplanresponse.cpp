@@ -19,3 +19,85 @@
 
 #include "createusageplanresponse.h"
 #include "createusageplanresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateUsagePlanResponse
+ *
+ * @brief  Handles APIGateway CreateUsagePlan responses.
+ *
+ * @see    APIGatewayClient::createUsagePlan
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUsagePlanResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateUsagePlanResponsePrivate(this), parent)
+{
+    setRequest(new CreateUsagePlanRequest(request));
+    setReply(reply);
+}
+
+const CreateUsagePlanRequest * CreateUsagePlanResponse::request() const
+{
+    Q_D(const CreateUsagePlanResponse);
+    return static_cast<const CreateUsagePlanRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateUsagePlan response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateUsagePlanResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUsagePlanResponsePrivate
+ *
+ * @brief  Private implementation for CreateUsagePlanResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUsagePlanResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateUsagePlanResponse instance.
+ */
+CreateUsagePlanResponsePrivate::CreateUsagePlanResponsePrivate(
+    CreateUsagePlanQueueResponse * const q) : CreateUsagePlanPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateUsagePlanResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateUsagePlanResponsePrivate::CreateUsagePlanResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateUsagePlanResponse"));
+    /// @todo
+}

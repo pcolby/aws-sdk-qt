@@ -19,3 +19,85 @@
 
 #include "describeterminationpolicytypesresponse.h"
 #include "describeterminationpolicytypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeTerminationPolicyTypesResponse
+ *
+ * @brief  Handles AutoScaling DescribeTerminationPolicyTypes responses.
+ *
+ * @see    AutoScalingClient::describeTerminationPolicyTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTerminationPolicyTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeTerminationPolicyTypesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTerminationPolicyTypesRequest(request));
+    setReply(reply);
+}
+
+const DescribeTerminationPolicyTypesRequest * DescribeTerminationPolicyTypesResponse::request() const
+{
+    Q_D(const DescribeTerminationPolicyTypesResponse);
+    return static_cast<const DescribeTerminationPolicyTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeTerminationPolicyTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTerminationPolicyTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTerminationPolicyTypesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTerminationPolicyTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTerminationPolicyTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTerminationPolicyTypesResponse instance.
+ */
+DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesResponsePrivate(
+    DescribeTerminationPolicyTypesQueueResponse * const q) : DescribeTerminationPolicyTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeTerminationPolicyTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTerminationPolicyTypesResponse"));
+    /// @todo
+}

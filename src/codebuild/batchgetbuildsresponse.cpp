@@ -19,3 +19,85 @@
 
 #include "batchgetbuildsresponse.h"
 #include "batchgetbuildsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  BatchGetBuildsResponse
+ *
+ * @brief  Handles CodeBuild BatchGetBuilds responses.
+ *
+ * @see    CodeBuildClient::batchGetBuilds
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetBuildsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new BatchGetBuildsResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetBuildsRequest(request));
+    setReply(reply);
+}
+
+const BatchGetBuildsRequest * BatchGetBuildsResponse::request() const
+{
+    Q_D(const BatchGetBuildsResponse);
+    return static_cast<const BatchGetBuildsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild BatchGetBuilds response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetBuildsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetBuildsResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetBuildsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetBuildsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetBuildsResponse instance.
+ */
+BatchGetBuildsResponsePrivate::BatchGetBuildsResponsePrivate(
+    BatchGetBuildsQueueResponse * const q) : BatchGetBuildsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild BatchGetBuildsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetBuildsResponsePrivate::BatchGetBuildsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetBuildsResponse"));
+    /// @todo
+}

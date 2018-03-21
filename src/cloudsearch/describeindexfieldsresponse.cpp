@@ -19,3 +19,85 @@
 
 #include "describeindexfieldsresponse.h"
 #include "describeindexfieldsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeIndexFieldsResponse
+ *
+ * @brief  Handles CloudSearch DescribeIndexFields responses.
+ *
+ * @see    CloudSearchClient::describeIndexFields
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIndexFieldsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DescribeIndexFieldsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeIndexFieldsRequest(request));
+    setReply(reply);
+}
+
+const DescribeIndexFieldsRequest * DescribeIndexFieldsResponse::request() const
+{
+    Q_D(const DescribeIndexFieldsResponse);
+    return static_cast<const DescribeIndexFieldsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DescribeIndexFields response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeIndexFieldsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIndexFieldsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeIndexFieldsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIndexFieldsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeIndexFieldsResponse instance.
+ */
+DescribeIndexFieldsResponsePrivate::DescribeIndexFieldsResponsePrivate(
+    DescribeIndexFieldsQueueResponse * const q) : DescribeIndexFieldsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DescribeIndexFieldsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeIndexFieldsResponsePrivate::DescribeIndexFieldsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeIndexFieldsResponse"));
+    /// @todo
+}

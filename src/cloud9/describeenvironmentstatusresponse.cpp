@@ -19,3 +19,85 @@
 
 #include "describeenvironmentstatusresponse.h"
 #include "describeenvironmentstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  DescribeEnvironmentStatusResponse
+ *
+ * @brief  Handles Cloud9 DescribeEnvironmentStatus responses.
+ *
+ * @see    Cloud9Client::describeEnvironmentStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Cloud9Response(new DescribeEnvironmentStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEnvironmentStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeEnvironmentStatusRequest * DescribeEnvironmentStatusResponse::request() const
+{
+    Q_D(const DescribeEnvironmentStatusResponse);
+    return static_cast<const DescribeEnvironmentStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Cloud9 DescribeEnvironmentStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEnvironmentStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEnvironmentStatusResponse instance.
+ */
+DescribeEnvironmentStatusResponsePrivate::DescribeEnvironmentStatusResponsePrivate(
+    DescribeEnvironmentStatusQueueResponse * const q) : DescribeEnvironmentStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Cloud9 DescribeEnvironmentStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEnvironmentStatusResponsePrivate::DescribeEnvironmentStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentStatusResponse"));
+    /// @todo
+}

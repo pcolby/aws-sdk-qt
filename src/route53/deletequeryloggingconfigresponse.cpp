@@ -19,3 +19,85 @@
 
 #include "deletequeryloggingconfigresponse.h"
 #include "deletequeryloggingconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  DeleteQueryLoggingConfigResponse
+ *
+ * @brief  Handles Route53 DeleteQueryLoggingConfig responses.
+ *
+ * @see    Route53Client::deleteQueryLoggingConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteQueryLoggingConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new DeleteQueryLoggingConfigResponsePrivate(this), parent)
+{
+    setRequest(new DeleteQueryLoggingConfigRequest(request));
+    setReply(reply);
+}
+
+const DeleteQueryLoggingConfigRequest * DeleteQueryLoggingConfigResponse::request() const
+{
+    Q_D(const DeleteQueryLoggingConfigResponse);
+    return static_cast<const DeleteQueryLoggingConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 DeleteQueryLoggingConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteQueryLoggingConfigResponsePrivate
+ *
+ * @brief  Private implementation for DeleteQueryLoggingConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteQueryLoggingConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteQueryLoggingConfigResponse instance.
+ */
+DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponsePrivate(
+    DeleteQueryLoggingConfigQueueResponse * const q) : DeleteQueryLoggingConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 DeleteQueryLoggingConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteQueryLoggingConfigResponse"));
+    /// @todo
+}

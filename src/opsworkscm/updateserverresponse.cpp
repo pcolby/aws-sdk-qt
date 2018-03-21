@@ -19,3 +19,85 @@
 
 #include "updateserverresponse.h"
 #include "updateserverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  UpdateServerResponse
+ *
+ * @brief  Handles OpsWorksCM UpdateServer responses.
+ *
+ * @see    OpsWorksCMClient::updateServer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksCMResponse(new UpdateServerResponsePrivate(this), parent)
+{
+    setRequest(new UpdateServerRequest(request));
+    setReply(reply);
+}
+
+const UpdateServerRequest * UpdateServerResponse::request() const
+{
+    Q_D(const UpdateServerResponse);
+    return static_cast<const UpdateServerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorksCM UpdateServer response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateServerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServerResponsePrivate
+ *
+ * @brief  Private implementation for UpdateServerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateServerResponse instance.
+ */
+UpdateServerResponsePrivate::UpdateServerResponsePrivate(
+    UpdateServerQueueResponse * const q) : UpdateServerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorksCM UpdateServerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateServerResponsePrivate::UpdateServerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateServerResponse"));
+    /// @todo
+}

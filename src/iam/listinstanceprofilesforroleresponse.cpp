@@ -19,3 +19,85 @@
 
 #include "listinstanceprofilesforroleresponse.h"
 #include "listinstanceprofilesforroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListInstanceProfilesForRoleResponse
+ *
+ * @brief  Handles IAM ListInstanceProfilesForRole responses.
+ *
+ * @see    IAMClient::listInstanceProfilesForRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInstanceProfilesForRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListInstanceProfilesForRoleResponsePrivate(this), parent)
+{
+    setRequest(new ListInstanceProfilesForRoleRequest(request));
+    setReply(reply);
+}
+
+const ListInstanceProfilesForRoleRequest * ListInstanceProfilesForRoleResponse::request() const
+{
+    Q_D(const ListInstanceProfilesForRoleResponse);
+    return static_cast<const ListInstanceProfilesForRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListInstanceProfilesForRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInstanceProfilesForRoleResponsePrivate
+ *
+ * @brief  Private implementation for ListInstanceProfilesForRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceProfilesForRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListInstanceProfilesForRoleResponse instance.
+ */
+ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponsePrivate(
+    ListInstanceProfilesForRoleQueueResponse * const q) : ListInstanceProfilesForRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListInstanceProfilesForRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListInstanceProfilesForRoleResponse"));
+    /// @todo
+}

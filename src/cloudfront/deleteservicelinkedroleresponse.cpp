@@ -19,3 +19,85 @@
 
 #include "deleteservicelinkedroleresponse.h"
 #include "deleteservicelinkedroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  DeleteServiceLinkedRoleResponse
+ *
+ * @brief  Handles CloudFront DeleteServiceLinkedRole responses.
+ *
+ * @see    CloudFrontClient::deleteServiceLinkedRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteServiceLinkedRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new DeleteServiceLinkedRoleResponsePrivate(this), parent)
+{
+    setRequest(new DeleteServiceLinkedRoleRequest(request));
+    setReply(reply);
+}
+
+const DeleteServiceLinkedRoleRequest * DeleteServiceLinkedRoleResponse::request() const
+{
+    Q_D(const DeleteServiceLinkedRoleResponse);
+    return static_cast<const DeleteServiceLinkedRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront DeleteServiceLinkedRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteServiceLinkedRoleResponsePrivate
+ *
+ * @brief  Private implementation for DeleteServiceLinkedRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServiceLinkedRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteServiceLinkedRoleResponse instance.
+ */
+DeleteServiceLinkedRoleResponsePrivate::DeleteServiceLinkedRoleResponsePrivate(
+    DeleteServiceLinkedRoleQueueResponse * const q) : DeleteServiceLinkedRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront DeleteServiceLinkedRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteServiceLinkedRoleResponsePrivate::DeleteServiceLinkedRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteServiceLinkedRoleResponse"));
+    /// @todo
+}

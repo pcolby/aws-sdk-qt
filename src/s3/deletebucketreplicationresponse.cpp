@@ -19,3 +19,85 @@
 
 #include "deletebucketreplicationresponse.h"
 #include "deletebucketreplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteBucketReplicationResponse
+ *
+ * @brief  Handles S3 DeleteBucketReplication responses.
+ *
+ * @see    S3Client::deleteBucketReplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBucketReplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new DeleteBucketReplicationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBucketReplicationRequest(request));
+    setReply(reply);
+}
+
+const DeleteBucketReplicationRequest * DeleteBucketReplicationResponse::request() const
+{
+    Q_D(const DeleteBucketReplicationResponse);
+    return static_cast<const DeleteBucketReplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 DeleteBucketReplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBucketReplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBucketReplicationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBucketReplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketReplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBucketReplicationResponse instance.
+ */
+DeleteBucketReplicationResponsePrivate::DeleteBucketReplicationResponsePrivate(
+    DeleteBucketReplicationQueueResponse * const q) : DeleteBucketReplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 DeleteBucketReplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBucketReplicationResponsePrivate::DeleteBucketReplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBucketReplicationResponse"));
+    /// @todo
+}

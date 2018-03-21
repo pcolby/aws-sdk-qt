@@ -19,3 +19,85 @@
 
 #include "putrecordresponse.h"
 #include "putrecordresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  PutRecordResponse
+ *
+ * @brief  Handles Kinesis PutRecord responses.
+ *
+ * @see    KinesisClient::putRecord
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutRecordResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new PutRecordResponsePrivate(this), parent)
+{
+    setRequest(new PutRecordRequest(request));
+    setReply(reply);
+}
+
+const PutRecordRequest * PutRecordResponse::request() const
+{
+    Q_D(const PutRecordResponse);
+    return static_cast<const PutRecordRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis PutRecord response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutRecordResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutRecordResponsePrivate
+ *
+ * @brief  Private implementation for PutRecordResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRecordResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutRecordResponse instance.
+ */
+PutRecordResponsePrivate::PutRecordResponsePrivate(
+    PutRecordQueueResponse * const q) : PutRecordPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis PutRecordResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutRecordResponsePrivate::PutRecordResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutRecordResponse"));
+    /// @todo
+}

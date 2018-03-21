@@ -19,3 +19,85 @@
 
 #include "getgroupqueryresponse.h"
 #include "getgroupqueryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroups {
+
+/**
+ * @class  GetGroupQueryResponse
+ *
+ * @brief  Handles ResourceGroups GetGroupQuery responses.
+ *
+ * @see    ResourceGroupsClient::getGroupQuery
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGroupQueryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsResponse(new GetGroupQueryResponsePrivate(this), parent)
+{
+    setRequest(new GetGroupQueryRequest(request));
+    setReply(reply);
+}
+
+const GetGroupQueryRequest * GetGroupQueryResponse::request() const
+{
+    Q_D(const GetGroupQueryResponse);
+    return static_cast<const GetGroupQueryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroups GetGroupQuery response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGroupQueryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGroupQueryResponsePrivate
+ *
+ * @brief  Private implementation for GetGroupQueryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupQueryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGroupQueryResponse instance.
+ */
+GetGroupQueryResponsePrivate::GetGroupQueryResponsePrivate(
+    GetGroupQueryQueueResponse * const q) : GetGroupQueryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroups GetGroupQueryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGroupQueryResponsePrivate::GetGroupQueryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGroupQueryResponse"));
+    /// @todo
+}

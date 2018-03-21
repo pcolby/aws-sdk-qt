@@ -19,3 +19,85 @@
 
 #include "updateruleresponse.h"
 #include "updateruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  UpdateRuleResponse
+ *
+ * @brief  Handles WAFRegional UpdateRule responses.
+ *
+ * @see    WAFRegionalClient::updateRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new UpdateRuleResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRuleRequest(request));
+    setReply(reply);
+}
+
+const UpdateRuleRequest * UpdateRuleResponse::request() const
+{
+    Q_D(const UpdateRuleResponse);
+    return static_cast<const UpdateRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional UpdateRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRuleResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRuleResponse instance.
+ */
+UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
+    UpdateRuleQueueResponse * const q) : UpdateRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional UpdateRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRuleResponsePrivate::UpdateRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRuleResponse"));
+    /// @todo
+}

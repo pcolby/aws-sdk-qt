@@ -19,3 +19,85 @@
 
 #include "describeserversresponse.h"
 #include "describeserversresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  DescribeServersResponse
+ *
+ * @brief  Handles OpsWorksCM DescribeServers responses.
+ *
+ * @see    OpsWorksCMClient::describeServers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeServersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksCMResponse(new DescribeServersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeServersRequest(request));
+    setReply(reply);
+}
+
+const DescribeServersRequest * DescribeServersResponse::request() const
+{
+    Q_D(const DescribeServersResponse);
+    return static_cast<const DescribeServersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorksCM DescribeServers response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeServersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeServersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeServersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeServersResponse instance.
+ */
+DescribeServersResponsePrivate::DescribeServersResponsePrivate(
+    DescribeServersQueueResponse * const q) : DescribeServersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorksCM DescribeServersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeServersResponsePrivate::DescribeServersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeServersResponse"));
+    /// @todo
+}

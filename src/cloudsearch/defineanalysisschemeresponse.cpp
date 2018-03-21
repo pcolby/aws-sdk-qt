@@ -19,3 +19,85 @@
 
 #include "defineanalysisschemeresponse.h"
 #include "defineanalysisschemeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DefineAnalysisSchemeResponse
+ *
+ * @brief  Handles CloudSearch DefineAnalysisScheme responses.
+ *
+ * @see    CloudSearchClient::defineAnalysisScheme
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DefineAnalysisSchemeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DefineAnalysisSchemeResponsePrivate(this), parent)
+{
+    setRequest(new DefineAnalysisSchemeRequest(request));
+    setReply(reply);
+}
+
+const DefineAnalysisSchemeRequest * DefineAnalysisSchemeResponse::request() const
+{
+    Q_D(const DefineAnalysisSchemeResponse);
+    return static_cast<const DefineAnalysisSchemeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DefineAnalysisScheme response.
+ *
+ * @param  response  Response to parse.
+ */
+void DefineAnalysisSchemeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DefineAnalysisSchemeResponsePrivate
+ *
+ * @brief  Private implementation for DefineAnalysisSchemeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineAnalysisSchemeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DefineAnalysisSchemeResponse instance.
+ */
+DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponsePrivate(
+    DefineAnalysisSchemeQueueResponse * const q) : DefineAnalysisSchemePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DefineAnalysisSchemeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DefineAnalysisSchemeResponse"));
+    /// @todo
+}

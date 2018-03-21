@@ -19,3 +19,85 @@
 
 #include "deleteconfigurationsettrackingoptionsresponse.h"
 #include "deleteconfigurationsettrackingoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteConfigurationSetTrackingOptionsResponse
+ *
+ * @brief  Handles SES DeleteConfigurationSetTrackingOptions responses.
+ *
+ * @see    SESClient::deleteConfigurationSetTrackingOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigurationSetTrackingOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DeleteConfigurationSetTrackingOptionsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteConfigurationSetTrackingOptionsRequest(request));
+    setReply(reply);
+}
+
+const DeleteConfigurationSetTrackingOptionsRequest * DeleteConfigurationSetTrackingOptionsResponse::request() const
+{
+    Q_D(const DeleteConfigurationSetTrackingOptionsResponse);
+    return static_cast<const DeleteConfigurationSetTrackingOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DeleteConfigurationSetTrackingOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigurationSetTrackingOptionsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteConfigurationSetTrackingOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteConfigurationSetTrackingOptionsResponse instance.
+ */
+DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrackingOptionsResponsePrivate(
+    DeleteConfigurationSetTrackingOptionsQueueResponse * const q) : DeleteConfigurationSetTrackingOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DeleteConfigurationSetTrackingOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetTrackingOptionsResponse"));
+    /// @todo
+}

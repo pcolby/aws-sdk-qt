@@ -19,3 +19,85 @@
 
 #include "modifyidformatresponse.h"
 #include "modifyidformatresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyIdFormatResponse
+ *
+ * @brief  Handles EC2 ModifyIdFormat responses.
+ *
+ * @see    EC2Client::modifyIdFormat
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyIdFormatResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyIdFormatResponsePrivate(this), parent)
+{
+    setRequest(new ModifyIdFormatRequest(request));
+    setReply(reply);
+}
+
+const ModifyIdFormatRequest * ModifyIdFormatResponse::request() const
+{
+    Q_D(const ModifyIdFormatResponse);
+    return static_cast<const ModifyIdFormatRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyIdFormat response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyIdFormatResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyIdFormatResponsePrivate
+ *
+ * @brief  Private implementation for ModifyIdFormatResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyIdFormatResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyIdFormatResponse instance.
+ */
+ModifyIdFormatResponsePrivate::ModifyIdFormatResponsePrivate(
+    ModifyIdFormatQueueResponse * const q) : ModifyIdFormatPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyIdFormatResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyIdFormatResponsePrivate::ModifyIdFormatResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyIdFormatResponse"));
+    /// @todo
+}

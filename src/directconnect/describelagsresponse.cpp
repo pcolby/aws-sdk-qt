@@ -19,3 +19,85 @@
 
 #include "describelagsresponse.h"
 #include "describelagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeLagsResponse
+ *
+ * @brief  Handles DirectConnect DescribeLags responses.
+ *
+ * @see    DirectConnectClient::describeLags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeLagsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLagsRequest(request));
+    setReply(reply);
+}
+
+const DescribeLagsRequest * DescribeLagsResponse::request() const
+{
+    Q_D(const DescribeLagsResponse);
+    return static_cast<const DescribeLagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeLags response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLagsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLagsResponse instance.
+ */
+DescribeLagsResponsePrivate::DescribeLagsResponsePrivate(
+    DescribeLagsQueueResponse * const q) : DescribeLagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeLagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLagsResponsePrivate::DescribeLagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLagsResponse"));
+    /// @todo
+}

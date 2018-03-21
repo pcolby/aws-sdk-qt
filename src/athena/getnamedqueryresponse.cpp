@@ -19,3 +19,85 @@
 
 #include "getnamedqueryresponse.h"
 #include "getnamedqueryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  GetNamedQueryResponse
+ *
+ * @brief  Handles Athena GetNamedQuery responses.
+ *
+ * @see    AthenaClient::getNamedQuery
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetNamedQueryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new GetNamedQueryResponsePrivate(this), parent)
+{
+    setRequest(new GetNamedQueryRequest(request));
+    setReply(reply);
+}
+
+const GetNamedQueryRequest * GetNamedQueryResponse::request() const
+{
+    Q_D(const GetNamedQueryResponse);
+    return static_cast<const GetNamedQueryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena GetNamedQuery response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetNamedQueryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetNamedQueryResponsePrivate
+ *
+ * @brief  Private implementation for GetNamedQueryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetNamedQueryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetNamedQueryResponse instance.
+ */
+GetNamedQueryResponsePrivate::GetNamedQueryResponsePrivate(
+    GetNamedQueryQueueResponse * const q) : GetNamedQueryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena GetNamedQueryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetNamedQueryResponsePrivate::GetNamedQueryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetNamedQueryResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createxssmatchsetresponse.h"
 #include "createxssmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  CreateXssMatchSetResponse
+ *
+ * @brief  Handles WAFRegional CreateXssMatchSet responses.
+ *
+ * @see    WAFRegionalClient::createXssMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateXssMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new CreateXssMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateXssMatchSetRequest(request));
+    setReply(reply);
+}
+
+const CreateXssMatchSetRequest * CreateXssMatchSetResponse::request() const
+{
+    Q_D(const CreateXssMatchSetResponse);
+    return static_cast<const CreateXssMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional CreateXssMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateXssMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateXssMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateXssMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateXssMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateXssMatchSetResponse instance.
+ */
+CreateXssMatchSetResponsePrivate::CreateXssMatchSetResponsePrivate(
+    CreateXssMatchSetQueueResponse * const q) : CreateXssMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional CreateXssMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateXssMatchSetResponsePrivate::CreateXssMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateXssMatchSetResponse"));
+    /// @todo
+}

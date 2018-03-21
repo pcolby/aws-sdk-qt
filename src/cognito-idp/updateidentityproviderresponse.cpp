@@ -19,3 +19,85 @@
 
 #include "updateidentityproviderresponse.h"
 #include "updateidentityproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateIdentityProviderResponse
+ *
+ * @brief  Handles CognitoIdentityProvider UpdateIdentityProvider responses.
+ *
+ * @see    CognitoIdentityProviderClient::updateIdentityProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateIdentityProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new UpdateIdentityProviderResponsePrivate(this), parent)
+{
+    setRequest(new UpdateIdentityProviderRequest(request));
+    setReply(reply);
+}
+
+const UpdateIdentityProviderRequest * UpdateIdentityProviderResponse::request() const
+{
+    Q_D(const UpdateIdentityProviderResponse);
+    return static_cast<const UpdateIdentityProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider UpdateIdentityProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateIdentityProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateIdentityProviderResponsePrivate
+ *
+ * @brief  Private implementation for UpdateIdentityProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIdentityProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateIdentityProviderResponse instance.
+ */
+UpdateIdentityProviderResponsePrivate::UpdateIdentityProviderResponsePrivate(
+    UpdateIdentityProviderQueueResponse * const q) : UpdateIdentityProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider UpdateIdentityProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateIdentityProviderResponsePrivate::UpdateIdentityProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateIdentityProviderResponse"));
+    /// @todo
+}

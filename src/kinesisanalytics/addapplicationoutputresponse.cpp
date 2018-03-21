@@ -19,3 +19,85 @@
 
 #include "addapplicationoutputresponse.h"
 #include "addapplicationoutputresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  AddApplicationOutputResponse
+ *
+ * @brief  Handles KinesisAnalytics AddApplicationOutput responses.
+ *
+ * @see    KinesisAnalyticsClient::addApplicationOutput
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddApplicationOutputResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new AddApplicationOutputResponsePrivate(this), parent)
+{
+    setRequest(new AddApplicationOutputRequest(request));
+    setReply(reply);
+}
+
+const AddApplicationOutputRequest * AddApplicationOutputResponse::request() const
+{
+    Q_D(const AddApplicationOutputResponse);
+    return static_cast<const AddApplicationOutputRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics AddApplicationOutput response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddApplicationOutputResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddApplicationOutputResponsePrivate
+ *
+ * @brief  Private implementation for AddApplicationOutputResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddApplicationOutputResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddApplicationOutputResponse instance.
+ */
+AddApplicationOutputResponsePrivate::AddApplicationOutputResponsePrivate(
+    AddApplicationOutputQueueResponse * const q) : AddApplicationOutputPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics AddApplicationOutputResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddApplicationOutputResponsePrivate::AddApplicationOutputResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddApplicationOutputResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describereservedinstancesmodificationsresponse.h"
 #include "describereservedinstancesmodificationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeReservedInstancesModificationsResponse
+ *
+ * @brief  Handles EC2 DescribeReservedInstancesModifications responses.
+ *
+ * @see    EC2Client::describeReservedInstancesModifications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedInstancesModificationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeReservedInstancesModificationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReservedInstancesModificationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReservedInstancesModificationsRequest * DescribeReservedInstancesModificationsResponse::request() const
+{
+    Q_D(const DescribeReservedInstancesModificationsResponse);
+    return static_cast<const DescribeReservedInstancesModificationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeReservedInstancesModifications response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReservedInstancesModificationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedInstancesModificationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReservedInstancesModificationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedInstancesModificationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReservedInstancesModificationsResponse instance.
+ */
+DescribeReservedInstancesModificationsResponsePrivate::DescribeReservedInstancesModificationsResponsePrivate(
+    DescribeReservedInstancesModificationsQueueResponse * const q) : DescribeReservedInstancesModificationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeReservedInstancesModificationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReservedInstancesModificationsResponsePrivate::DescribeReservedInstancesModificationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReservedInstancesModificationsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deregisterrdsdbinstanceresponse.h"
 #include "deregisterrdsdbinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeregisterRdsDbInstanceResponse
+ *
+ * @brief  Handles OpsWorks DeregisterRdsDbInstance responses.
+ *
+ * @see    OpsWorksClient::deregisterRdsDbInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterRdsDbInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DeregisterRdsDbInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterRdsDbInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeregisterRdsDbInstanceRequest * DeregisterRdsDbInstanceResponse::request() const
+{
+    Q_D(const DeregisterRdsDbInstanceResponse);
+    return static_cast<const DeregisterRdsDbInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DeregisterRdsDbInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterRdsDbInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterRdsDbInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterRdsDbInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterRdsDbInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterRdsDbInstanceResponse instance.
+ */
+DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponsePrivate(
+    DeregisterRdsDbInstanceQueueResponse * const q) : DeregisterRdsDbInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DeregisterRdsDbInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterRdsDbInstanceResponse"));
+    /// @todo
+}

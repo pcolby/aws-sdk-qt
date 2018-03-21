@@ -19,3 +19,85 @@
 
 #include "deleteregistrationcoderesponse.h"
 #include "deleteregistrationcoderesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteRegistrationCodeResponse
+ *
+ * @brief  Handles IoT DeleteRegistrationCode responses.
+ *
+ * @see    IoTClient::deleteRegistrationCode
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRegistrationCodeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeleteRegistrationCodeResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRegistrationCodeRequest(request));
+    setReply(reply);
+}
+
+const DeleteRegistrationCodeRequest * DeleteRegistrationCodeResponse::request() const
+{
+    Q_D(const DeleteRegistrationCodeResponse);
+    return static_cast<const DeleteRegistrationCodeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeleteRegistrationCode response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRegistrationCodeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRegistrationCodeResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRegistrationCodeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRegistrationCodeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRegistrationCodeResponse instance.
+ */
+DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponsePrivate(
+    DeleteRegistrationCodeQueueResponse * const q) : DeleteRegistrationCodePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeleteRegistrationCodeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRegistrationCodeResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getmetricstatisticsresponse.h"
 #include "getmetricstatisticsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  GetMetricStatisticsResponse
+ *
+ * @brief  Handles CloudWatch GetMetricStatistics responses.
+ *
+ * @see    CloudWatchClient::getMetricStatistics
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMetricStatisticsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new GetMetricStatisticsResponsePrivate(this), parent)
+{
+    setRequest(new GetMetricStatisticsRequest(request));
+    setReply(reply);
+}
+
+const GetMetricStatisticsRequest * GetMetricStatisticsResponse::request() const
+{
+    Q_D(const GetMetricStatisticsResponse);
+    return static_cast<const GetMetricStatisticsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch GetMetricStatistics response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetMetricStatisticsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMetricStatisticsResponsePrivate
+ *
+ * @brief  Private implementation for GetMetricStatisticsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMetricStatisticsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetMetricStatisticsResponse instance.
+ */
+GetMetricStatisticsResponsePrivate::GetMetricStatisticsResponsePrivate(
+    GetMetricStatisticsQueueResponse * const q) : GetMetricStatisticsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch GetMetricStatisticsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetMetricStatisticsResponsePrivate::GetMetricStatisticsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetMetricStatisticsResponse"));
+    /// @todo
+}

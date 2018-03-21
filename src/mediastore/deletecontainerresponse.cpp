@@ -19,3 +19,85 @@
 
 #include "deletecontainerresponse.h"
 #include "deletecontainerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  DeleteContainerResponse
+ *
+ * @brief  Handles MediaStore DeleteContainer responses.
+ *
+ * @see    MediaStoreClient::deleteContainer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteContainerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreResponse(new DeleteContainerResponsePrivate(this), parent)
+{
+    setRequest(new DeleteContainerRequest(request));
+    setReply(reply);
+}
+
+const DeleteContainerRequest * DeleteContainerResponse::request() const
+{
+    Q_D(const DeleteContainerResponse);
+    return static_cast<const DeleteContainerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStore DeleteContainer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteContainerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteContainerResponsePrivate
+ *
+ * @brief  Private implementation for DeleteContainerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteContainerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteContainerResponse instance.
+ */
+DeleteContainerResponsePrivate::DeleteContainerResponsePrivate(
+    DeleteContainerQueueResponse * const q) : DeleteContainerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStore DeleteContainerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteContainerResponsePrivate::DeleteContainerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteContainerResponse"));
+    /// @todo
+}

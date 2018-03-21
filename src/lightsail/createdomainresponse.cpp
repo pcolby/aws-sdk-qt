@@ -19,3 +19,85 @@
 
 #include "createdomainresponse.h"
 #include "createdomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateDomainResponse
+ *
+ * @brief  Handles Lightsail CreateDomain responses.
+ *
+ * @see    LightsailClient::createDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new CreateDomainResponsePrivate(this), parent)
+{
+    setRequest(new CreateDomainRequest(request));
+    setReply(reply);
+}
+
+const CreateDomainRequest * CreateDomainResponse::request() const
+{
+    Q_D(const CreateDomainResponse);
+    return static_cast<const CreateDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail CreateDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDomainResponsePrivate
+ *
+ * @brief  Private implementation for CreateDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDomainResponse instance.
+ */
+CreateDomainResponsePrivate::CreateDomainResponsePrivate(
+    CreateDomainQueueResponse * const q) : CreateDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail CreateDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDomainResponsePrivate::CreateDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDomainResponse"));
+    /// @todo
+}

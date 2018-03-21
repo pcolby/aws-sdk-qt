@@ -19,3 +19,85 @@
 
 #include "listassociatedstacksresponse.h"
 #include "listassociatedstacksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  ListAssociatedStacksResponse
+ *
+ * @brief  Handles AppStream ListAssociatedStacks responses.
+ *
+ * @see    AppStreamClient::listAssociatedStacks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssociatedStacksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new ListAssociatedStacksResponsePrivate(this), parent)
+{
+    setRequest(new ListAssociatedStacksRequest(request));
+    setReply(reply);
+}
+
+const ListAssociatedStacksRequest * ListAssociatedStacksResponse::request() const
+{
+    Q_D(const ListAssociatedStacksResponse);
+    return static_cast<const ListAssociatedStacksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream ListAssociatedStacks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAssociatedStacksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssociatedStacksResponsePrivate
+ *
+ * @brief  Private implementation for ListAssociatedStacksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssociatedStacksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAssociatedStacksResponse instance.
+ */
+ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponsePrivate(
+    ListAssociatedStacksQueueResponse * const q) : ListAssociatedStacksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream ListAssociatedStacksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAssociatedStacksResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updatethreatintelsetresponse.h"
 #include "updatethreatintelsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  UpdateThreatIntelSetResponse
+ *
+ * @brief  Handles GuardDuty UpdateThreatIntelSet responses.
+ *
+ * @see    GuardDutyClient::updateThreatIntelSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateThreatIntelSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new UpdateThreatIntelSetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateThreatIntelSetRequest(request));
+    setReply(reply);
+}
+
+const UpdateThreatIntelSetRequest * UpdateThreatIntelSetResponse::request() const
+{
+    Q_D(const UpdateThreatIntelSetResponse);
+    return static_cast<const UpdateThreatIntelSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty UpdateThreatIntelSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateThreatIntelSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateThreatIntelSetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateThreatIntelSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThreatIntelSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateThreatIntelSetResponse instance.
+ */
+UpdateThreatIntelSetResponsePrivate::UpdateThreatIntelSetResponsePrivate(
+    UpdateThreatIntelSetQueueResponse * const q) : UpdateThreatIntelSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty UpdateThreatIntelSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateThreatIntelSetResponsePrivate::UpdateThreatIntelSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateThreatIntelSetResponse"));
+    /// @todo
+}

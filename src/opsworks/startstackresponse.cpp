@@ -19,3 +19,85 @@
 
 #include "startstackresponse.h"
 #include "startstackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  StartStackResponse
+ *
+ * @brief  Handles OpsWorks StartStack responses.
+ *
+ * @see    OpsWorksClient::startStack
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartStackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new StartStackResponsePrivate(this), parent)
+{
+    setRequest(new StartStackRequest(request));
+    setReply(reply);
+}
+
+const StartStackRequest * StartStackResponse::request() const
+{
+    Q_D(const StartStackResponse);
+    return static_cast<const StartStackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks StartStack response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartStackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartStackResponsePrivate
+ *
+ * @brief  Private implementation for StartStackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartStackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartStackResponse instance.
+ */
+StartStackResponsePrivate::StartStackResponsePrivate(
+    StartStackQueueResponse * const q) : StartStackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks StartStackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartStackResponsePrivate::StartStackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartStackResponse"));
+    /// @todo
+}

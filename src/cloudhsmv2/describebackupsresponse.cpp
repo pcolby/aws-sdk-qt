@@ -19,3 +19,85 @@
 
 #include "describebackupsresponse.h"
 #include "describebackupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSMV2 {
+
+/**
+ * @class  DescribeBackupsResponse
+ *
+ * @brief  Handles CloudHSMV2 DescribeBackups responses.
+ *
+ * @see    CloudHSMV2Client::describeBackups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBackupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMV2Response(new DescribeBackupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBackupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeBackupsRequest * DescribeBackupsResponse::request() const
+{
+    Q_D(const DescribeBackupsResponse);
+    return static_cast<const DescribeBackupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSMV2 DescribeBackups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBackupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBackupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBackupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBackupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBackupsResponse instance.
+ */
+DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
+    DescribeBackupsQueueResponse * const q) : DescribeBackupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSMV2 DescribeBackupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBackupsResponsePrivate::DescribeBackupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBackupsResponse"));
+    /// @todo
+}

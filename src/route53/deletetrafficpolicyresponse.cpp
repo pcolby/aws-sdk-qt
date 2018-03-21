@@ -19,3 +19,85 @@
 
 #include "deletetrafficpolicyresponse.h"
 #include "deletetrafficpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  DeleteTrafficPolicyResponse
+ *
+ * @brief  Handles Route53 DeleteTrafficPolicy responses.
+ *
+ * @see    Route53Client::deleteTrafficPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTrafficPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new DeleteTrafficPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTrafficPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteTrafficPolicyRequest * DeleteTrafficPolicyResponse::request() const
+{
+    Q_D(const DeleteTrafficPolicyResponse);
+    return static_cast<const DeleteTrafficPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 DeleteTrafficPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTrafficPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTrafficPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTrafficPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTrafficPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTrafficPolicyResponse instance.
+ */
+DeleteTrafficPolicyResponsePrivate::DeleteTrafficPolicyResponsePrivate(
+    DeleteTrafficPolicyQueueResponse * const q) : DeleteTrafficPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 DeleteTrafficPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTrafficPolicyResponsePrivate::DeleteTrafficPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTrafficPolicyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describemaintenancewindowtargetsresponse.h"
 #include "describemaintenancewindowtargetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeMaintenanceWindowTargetsResponse
+ *
+ * @brief  Handles SSM DescribeMaintenanceWindowTargets responses.
+ *
+ * @see    SSMClient::describeMaintenanceWindowTargets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMaintenanceWindowTargetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeMaintenanceWindowTargetsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMaintenanceWindowTargetsRequest(request));
+    setReply(reply);
+}
+
+const DescribeMaintenanceWindowTargetsRequest * DescribeMaintenanceWindowTargetsResponse::request() const
+{
+    Q_D(const DescribeMaintenanceWindowTargetsResponse);
+    return static_cast<const DescribeMaintenanceWindowTargetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeMaintenanceWindowTargets response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMaintenanceWindowTargetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMaintenanceWindowTargetsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMaintenanceWindowTargetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceWindowTargetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMaintenanceWindowTargetsResponse instance.
+ */
+DescribeMaintenanceWindowTargetsResponsePrivate::DescribeMaintenanceWindowTargetsResponsePrivate(
+    DescribeMaintenanceWindowTargetsQueueResponse * const q) : DescribeMaintenanceWindowTargetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeMaintenanceWindowTargetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMaintenanceWindowTargetsResponsePrivate::DescribeMaintenanceWindowTargetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceWindowTargetsResponse"));
+    /// @todo
+}

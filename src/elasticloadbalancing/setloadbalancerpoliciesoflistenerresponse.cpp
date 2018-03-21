@@ -19,3 +19,85 @@
 
 #include "setloadbalancerpoliciesoflistenerresponse.h"
 #include "setloadbalancerpoliciesoflistenerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  SetLoadBalancerPoliciesOfListenerResponse
+ *
+ * @brief  Handles ElasticLoadBalancing SetLoadBalancerPoliciesOfListener responses.
+ *
+ * @see    ElasticLoadBalancingClient::setLoadBalancerPoliciesOfListener
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoadBalancerPoliciesOfListenerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new SetLoadBalancerPoliciesOfListenerResponsePrivate(this), parent)
+{
+    setRequest(new SetLoadBalancerPoliciesOfListenerRequest(request));
+    setReply(reply);
+}
+
+const SetLoadBalancerPoliciesOfListenerRequest * SetLoadBalancerPoliciesOfListenerResponse::request() const
+{
+    Q_D(const SetLoadBalancerPoliciesOfListenerResponse);
+    return static_cast<const SetLoadBalancerPoliciesOfListenerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing SetLoadBalancerPoliciesOfListener response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetLoadBalancerPoliciesOfListenerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoadBalancerPoliciesOfListenerResponsePrivate
+ *
+ * @brief  Private implementation for SetLoadBalancerPoliciesOfListenerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetLoadBalancerPoliciesOfListenerResponse instance.
+ */
+SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOfListenerResponsePrivate(
+    SetLoadBalancerPoliciesOfListenerQueueResponse * const q) : SetLoadBalancerPoliciesOfListenerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing SetLoadBalancerPoliciesOfListenerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOfListenerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerPoliciesOfListenerResponse"));
+    /// @todo
+}

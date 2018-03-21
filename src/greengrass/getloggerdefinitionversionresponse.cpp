@@ -19,3 +19,85 @@
 
 #include "getloggerdefinitionversionresponse.h"
 #include "getloggerdefinitionversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetLoggerDefinitionVersionResponse
+ *
+ * @brief  Handles Greengrass GetLoggerDefinitionVersion responses.
+ *
+ * @see    GreengrassClient::getLoggerDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoggerDefinitionVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetLoggerDefinitionVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetLoggerDefinitionVersionRequest(request));
+    setReply(reply);
+}
+
+const GetLoggerDefinitionVersionRequest * GetLoggerDefinitionVersionResponse::request() const
+{
+    Q_D(const GetLoggerDefinitionVersionResponse);
+    return static_cast<const GetLoggerDefinitionVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetLoggerDefinitionVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLoggerDefinitionVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoggerDefinitionVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetLoggerDefinitionVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoggerDefinitionVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLoggerDefinitionVersionResponse instance.
+ */
+GetLoggerDefinitionVersionResponsePrivate::GetLoggerDefinitionVersionResponsePrivate(
+    GetLoggerDefinitionVersionQueueResponse * const q) : GetLoggerDefinitionVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetLoggerDefinitionVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLoggerDefinitionVersionResponsePrivate::GetLoggerDefinitionVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLoggerDefinitionVersionResponse"));
+    /// @todo
+}

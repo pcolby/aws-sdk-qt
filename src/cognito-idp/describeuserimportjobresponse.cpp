@@ -19,3 +19,85 @@
 
 #include "describeuserimportjobresponse.h"
 #include "describeuserimportjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DescribeUserImportJobResponse
+ *
+ * @brief  Handles CognitoIdentityProvider DescribeUserImportJob responses.
+ *
+ * @see    CognitoIdentityProviderClient::describeUserImportJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUserImportJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new DescribeUserImportJobResponsePrivate(this), parent)
+{
+    setRequest(new DescribeUserImportJobRequest(request));
+    setReply(reply);
+}
+
+const DescribeUserImportJobRequest * DescribeUserImportJobResponse::request() const
+{
+    Q_D(const DescribeUserImportJobResponse);
+    return static_cast<const DescribeUserImportJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider DescribeUserImportJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeUserImportJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUserImportJobResponsePrivate
+ *
+ * @brief  Private implementation for DescribeUserImportJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserImportJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeUserImportJobResponse instance.
+ */
+DescribeUserImportJobResponsePrivate::DescribeUserImportJobResponsePrivate(
+    DescribeUserImportJobQueueResponse * const q) : DescribeUserImportJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider DescribeUserImportJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeUserImportJobResponsePrivate::DescribeUserImportJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeUserImportJobResponse"));
+    /// @todo
+}

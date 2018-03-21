@@ -19,3 +19,85 @@
 
 #include "updatesecuritygroupruledescriptionsingressresponse.h"
 #include "updatesecuritygroupruledescriptionsingressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  UpdateSecurityGroupRuleDescriptionsIngressResponse
+ *
+ * @brief  Handles EC2 UpdateSecurityGroupRuleDescriptionsIngress responses.
+ *
+ * @see    EC2Client::updateSecurityGroupRuleDescriptionsIngress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSecurityGroupRuleDescriptionsIngressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSecurityGroupRuleDescriptionsIngressRequest(request));
+    setReply(reply);
+}
+
+const UpdateSecurityGroupRuleDescriptionsIngressRequest * UpdateSecurityGroupRuleDescriptionsIngressResponse::request() const
+{
+    Q_D(const UpdateSecurityGroupRuleDescriptionsIngressResponse);
+    return static_cast<const UpdateSecurityGroupRuleDescriptionsIngressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 UpdateSecurityGroupRuleDescriptionsIngress response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSecurityGroupRuleDescriptionsIngressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSecurityGroupRuleDescriptionsIngressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSecurityGroupRuleDescriptionsIngressResponse instance.
+ */
+UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate::UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(
+    UpdateSecurityGroupRuleDescriptionsIngressQueueResponse * const q) : UpdateSecurityGroupRuleDescriptionsIngressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 UpdateSecurityGroupRuleDescriptionsIngressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate::UpdateSecurityGroupRuleDescriptionsIngressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSecurityGroupRuleDescriptionsIngressResponse"));
+    /// @todo
+}

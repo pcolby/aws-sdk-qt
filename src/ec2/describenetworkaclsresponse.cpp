@@ -19,3 +19,85 @@
 
 #include "describenetworkaclsresponse.h"
 #include "describenetworkaclsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeNetworkAclsResponse
+ *
+ * @brief  Handles EC2 DescribeNetworkAcls responses.
+ *
+ * @see    EC2Client::describeNetworkAcls
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNetworkAclsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeNetworkAclsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeNetworkAclsRequest(request));
+    setReply(reply);
+}
+
+const DescribeNetworkAclsRequest * DescribeNetworkAclsResponse::request() const
+{
+    Q_D(const DescribeNetworkAclsResponse);
+    return static_cast<const DescribeNetworkAclsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeNetworkAcls response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeNetworkAclsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNetworkAclsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeNetworkAclsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNetworkAclsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeNetworkAclsResponse instance.
+ */
+DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponsePrivate(
+    DescribeNetworkAclsQueueResponse * const q) : DescribeNetworkAclsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeNetworkAclsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeNetworkAclsResponse"));
+    /// @todo
+}

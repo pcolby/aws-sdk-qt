@@ -19,3 +19,85 @@
 
 #include "describestacksresponse.h"
 #include "describestacksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeStacksResponse
+ *
+ * @brief  Handles OpsWorks DescribeStacks responses.
+ *
+ * @see    OpsWorksClient::describeStacks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStacksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeStacksResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStacksRequest(request));
+    setReply(reply);
+}
+
+const DescribeStacksRequest * DescribeStacksResponse::request() const
+{
+    Q_D(const DescribeStacksResponse);
+    return static_cast<const DescribeStacksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeStacks response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStacksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStacksResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStacksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStacksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStacksResponse instance.
+ */
+DescribeStacksResponsePrivate::DescribeStacksResponsePrivate(
+    DescribeStacksQueueResponse * const q) : DescribeStacksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeStacksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStacksResponsePrivate::DescribeStacksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStacksResponse"));
+    /// @todo
+}

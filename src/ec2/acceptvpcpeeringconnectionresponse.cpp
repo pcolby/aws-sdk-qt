@@ -19,3 +19,85 @@
 
 #include "acceptvpcpeeringconnectionresponse.h"
 #include "acceptvpcpeeringconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AcceptVpcPeeringConnectionResponse
+ *
+ * @brief  Handles EC2 AcceptVpcPeeringConnection responses.
+ *
+ * @see    EC2Client::acceptVpcPeeringConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcceptVpcPeeringConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AcceptVpcPeeringConnectionResponsePrivate(this), parent)
+{
+    setRequest(new AcceptVpcPeeringConnectionRequest(request));
+    setReply(reply);
+}
+
+const AcceptVpcPeeringConnectionRequest * AcceptVpcPeeringConnectionResponse::request() const
+{
+    Q_D(const AcceptVpcPeeringConnectionResponse);
+    return static_cast<const AcceptVpcPeeringConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AcceptVpcPeeringConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void AcceptVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AcceptVpcPeeringConnectionResponsePrivate
+ *
+ * @brief  Private implementation for AcceptVpcPeeringConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptVpcPeeringConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AcceptVpcPeeringConnectionResponse instance.
+ */
+AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponsePrivate(
+    AcceptVpcPeeringConnectionQueueResponse * const q) : AcceptVpcPeeringConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AcceptVpcPeeringConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AcceptVpcPeeringConnectionResponse"));
+    /// @todo
+}

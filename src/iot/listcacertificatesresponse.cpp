@@ -19,3 +19,85 @@
 
 #include "listcacertificatesresponse.h"
 #include "listcacertificatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListCACertificatesResponse
+ *
+ * @brief  Handles IoT ListCACertificates responses.
+ *
+ * @see    IoTClient::listCACertificates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCACertificatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListCACertificatesResponsePrivate(this), parent)
+{
+    setRequest(new ListCACertificatesRequest(request));
+    setReply(reply);
+}
+
+const ListCACertificatesRequest * ListCACertificatesResponse::request() const
+{
+    Q_D(const ListCACertificatesResponse);
+    return static_cast<const ListCACertificatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListCACertificates response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListCACertificatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCACertificatesResponsePrivate
+ *
+ * @brief  Private implementation for ListCACertificatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCACertificatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListCACertificatesResponse instance.
+ */
+ListCACertificatesResponsePrivate::ListCACertificatesResponsePrivate(
+    ListCACertificatesQueueResponse * const q) : ListCACertificatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListCACertificatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListCACertificatesResponsePrivate::ListCACertificatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListCACertificatesResponse"));
+    /// @todo
+}

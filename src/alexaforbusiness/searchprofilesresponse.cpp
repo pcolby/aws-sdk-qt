@@ -19,3 +19,85 @@
 
 #include "searchprofilesresponse.h"
 #include "searchprofilesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  SearchProfilesResponse
+ *
+ * @brief  Handles AlexaForBusiness SearchProfiles responses.
+ *
+ * @see    AlexaForBusinessClient::searchProfiles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchProfilesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new SearchProfilesResponsePrivate(this), parent)
+{
+    setRequest(new SearchProfilesRequest(request));
+    setReply(reply);
+}
+
+const SearchProfilesRequest * SearchProfilesResponse::request() const
+{
+    Q_D(const SearchProfilesResponse);
+    return static_cast<const SearchProfilesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness SearchProfiles response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchProfilesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchProfilesResponsePrivate
+ *
+ * @brief  Private implementation for SearchProfilesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchProfilesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchProfilesResponse instance.
+ */
+SearchProfilesResponsePrivate::SearchProfilesResponsePrivate(
+    SearchProfilesQueueResponse * const q) : SearchProfilesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness SearchProfilesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchProfilesResponsePrivate::SearchProfilesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchProfilesResponse"));
+    /// @todo
+}

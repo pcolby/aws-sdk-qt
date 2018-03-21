@@ -19,3 +19,85 @@
 
 #include "transferdomainresponse.h"
 #include "transferdomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  TransferDomainResponse
+ *
+ * @brief  Handles Route53Domains TransferDomain responses.
+ *
+ * @see    Route53DomainsClient::transferDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TransferDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new TransferDomainResponsePrivate(this), parent)
+{
+    setRequest(new TransferDomainRequest(request));
+    setReply(reply);
+}
+
+const TransferDomainRequest * TransferDomainResponse::request() const
+{
+    Q_D(const TransferDomainResponse);
+    return static_cast<const TransferDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains TransferDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void TransferDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TransferDomainResponsePrivate
+ *
+ * @brief  Private implementation for TransferDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TransferDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TransferDomainResponse instance.
+ */
+TransferDomainResponsePrivate::TransferDomainResponsePrivate(
+    TransferDomainQueueResponse * const q) : TransferDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains TransferDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TransferDomainResponsePrivate::TransferDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TransferDomainResponse"));
+    /// @todo
+}

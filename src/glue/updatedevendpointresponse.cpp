@@ -19,3 +19,85 @@
 
 #include "updatedevendpointresponse.h"
 #include "updatedevendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateDevEndpointResponse
+ *
+ * @brief  Handles Glue UpdateDevEndpoint responses.
+ *
+ * @see    GlueClient::updateDevEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDevEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new UpdateDevEndpointResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDevEndpointRequest(request));
+    setReply(reply);
+}
+
+const UpdateDevEndpointRequest * UpdateDevEndpointResponse::request() const
+{
+    Q_D(const UpdateDevEndpointResponse);
+    return static_cast<const UpdateDevEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue UpdateDevEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDevEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDevEndpointResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDevEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDevEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDevEndpointResponse instance.
+ */
+UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponsePrivate(
+    UpdateDevEndpointQueueResponse * const q) : UpdateDevEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue UpdateDevEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDevEndpointResponse"));
+    /// @todo
+}

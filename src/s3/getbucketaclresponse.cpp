@@ -19,3 +19,85 @@
 
 #include "getbucketaclresponse.h"
 #include "getbucketaclresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketAclResponse
+ *
+ * @brief  Handles S3 GetBucketAcl responses.
+ *
+ * @see    S3Client::getBucketAcl
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketAclResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketAclResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketAclRequest(request));
+    setReply(reply);
+}
+
+const GetBucketAclRequest * GetBucketAclResponse::request() const
+{
+    Q_D(const GetBucketAclResponse);
+    return static_cast<const GetBucketAclRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketAcl response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketAclResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketAclResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketAclResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketAclResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketAclResponse instance.
+ */
+GetBucketAclResponsePrivate::GetBucketAclResponsePrivate(
+    GetBucketAclQueueResponse * const q) : GetBucketAclPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketAclResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketAclResponsePrivate::GetBucketAclResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketAclResponse"));
+    /// @todo
+}

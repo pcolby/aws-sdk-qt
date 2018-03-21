@@ -19,3 +19,85 @@
 
 #include "validatepipelinedefinitionresponse.h"
 #include "validatepipelinedefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  ValidatePipelineDefinitionResponse
+ *
+ * @brief  Handles DataPipeline ValidatePipelineDefinition responses.
+ *
+ * @see    DataPipelineClient::validatePipelineDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ValidatePipelineDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DataPipelineResponse(new ValidatePipelineDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new ValidatePipelineDefinitionRequest(request));
+    setReply(reply);
+}
+
+const ValidatePipelineDefinitionRequest * ValidatePipelineDefinitionResponse::request() const
+{
+    Q_D(const ValidatePipelineDefinitionResponse);
+    return static_cast<const ValidatePipelineDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DataPipeline ValidatePipelineDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void ValidatePipelineDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ValidatePipelineDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for ValidatePipelineDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidatePipelineDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ValidatePipelineDefinitionResponse instance.
+ */
+ValidatePipelineDefinitionResponsePrivate::ValidatePipelineDefinitionResponsePrivate(
+    ValidatePipelineDefinitionQueueResponse * const q) : ValidatePipelineDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DataPipeline ValidatePipelineDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ValidatePipelineDefinitionResponsePrivate::ValidatePipelineDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ValidatePipelineDefinitionResponse"));
+    /// @todo
+}

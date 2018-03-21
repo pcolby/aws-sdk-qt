@@ -19,3 +19,85 @@
 
 #include "updatetrafficpolicyinstanceresponse.h"
 #include "updatetrafficpolicyinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  UpdateTrafficPolicyInstanceResponse
+ *
+ * @brief  Handles Route53 UpdateTrafficPolicyInstance responses.
+ *
+ * @see    Route53Client::updateTrafficPolicyInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTrafficPolicyInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new UpdateTrafficPolicyInstanceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTrafficPolicyInstanceRequest(request));
+    setReply(reply);
+}
+
+const UpdateTrafficPolicyInstanceRequest * UpdateTrafficPolicyInstanceResponse::request() const
+{
+    Q_D(const UpdateTrafficPolicyInstanceResponse);
+    return static_cast<const UpdateTrafficPolicyInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 UpdateTrafficPolicyInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTrafficPolicyInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTrafficPolicyInstanceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTrafficPolicyInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTrafficPolicyInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTrafficPolicyInstanceResponse instance.
+ */
+UpdateTrafficPolicyInstanceResponsePrivate::UpdateTrafficPolicyInstanceResponsePrivate(
+    UpdateTrafficPolicyInstanceQueueResponse * const q) : UpdateTrafficPolicyInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 UpdateTrafficPolicyInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTrafficPolicyInstanceResponsePrivate::UpdateTrafficPolicyInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTrafficPolicyInstanceResponse"));
+    /// @todo
+}

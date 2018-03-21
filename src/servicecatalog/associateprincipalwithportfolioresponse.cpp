@@ -19,3 +19,85 @@
 
 #include "associateprincipalwithportfolioresponse.h"
 #include "associateprincipalwithportfolioresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  AssociatePrincipalWithPortfolioResponse
+ *
+ * @brief  Handles ServiceCatalog AssociatePrincipalWithPortfolio responses.
+ *
+ * @see    ServiceCatalogClient::associatePrincipalWithPortfolio
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociatePrincipalWithPortfolioResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new AssociatePrincipalWithPortfolioResponsePrivate(this), parent)
+{
+    setRequest(new AssociatePrincipalWithPortfolioRequest(request));
+    setReply(reply);
+}
+
+const AssociatePrincipalWithPortfolioRequest * AssociatePrincipalWithPortfolioResponse::request() const
+{
+    Q_D(const AssociatePrincipalWithPortfolioResponse);
+    return static_cast<const AssociatePrincipalWithPortfolioRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog AssociatePrincipalWithPortfolio response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociatePrincipalWithPortfolioResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociatePrincipalWithPortfolioResponsePrivate
+ *
+ * @brief  Private implementation for AssociatePrincipalWithPortfolioResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociatePrincipalWithPortfolioResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociatePrincipalWithPortfolioResponse instance.
+ */
+AssociatePrincipalWithPortfolioResponsePrivate::AssociatePrincipalWithPortfolioResponsePrivate(
+    AssociatePrincipalWithPortfolioQueueResponse * const q) : AssociatePrincipalWithPortfolioPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog AssociatePrincipalWithPortfolioResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociatePrincipalWithPortfolioResponsePrivate::AssociatePrincipalWithPortfolioResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociatePrincipalWithPortfolioResponse"));
+    /// @todo
+}

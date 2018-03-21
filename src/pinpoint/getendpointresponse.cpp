@@ -19,3 +19,85 @@
 
 #include "getendpointresponse.h"
 #include "getendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetEndpointResponse
+ *
+ * @brief  Handles Pinpoint GetEndpoint responses.
+ *
+ * @see    PinpointClient::getEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetEndpointResponsePrivate(this), parent)
+{
+    setRequest(new GetEndpointRequest(request));
+    setReply(reply);
+}
+
+const GetEndpointRequest * GetEndpointResponse::request() const
+{
+    Q_D(const GetEndpointResponse);
+    return static_cast<const GetEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEndpointResponsePrivate
+ *
+ * @brief  Private implementation for GetEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetEndpointResponse instance.
+ */
+GetEndpointResponsePrivate::GetEndpointResponsePrivate(
+    GetEndpointQueueResponse * const q) : GetEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetEndpointResponsePrivate::GetEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetEndpointResponse"));
+    /// @todo
+}

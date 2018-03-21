@@ -19,3 +19,85 @@
 
 #include "deletefacetresponse.h"
 #include "deletefacetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DeleteFacetResponse
+ *
+ * @brief  Handles CloudDirectory DeleteFacet responses.
+ *
+ * @see    CloudDirectoryClient::deleteFacet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFacetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new DeleteFacetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFacetRequest(request));
+    setReply(reply);
+}
+
+const DeleteFacetRequest * DeleteFacetResponse::request() const
+{
+    Q_D(const DeleteFacetResponse);
+    return static_cast<const DeleteFacetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory DeleteFacet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFacetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFacetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFacetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFacetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFacetResponse instance.
+ */
+DeleteFacetResponsePrivate::DeleteFacetResponsePrivate(
+    DeleteFacetQueueResponse * const q) : DeleteFacetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory DeleteFacetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFacetResponsePrivate::DeleteFacetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFacetResponse"));
+    /// @todo
+}

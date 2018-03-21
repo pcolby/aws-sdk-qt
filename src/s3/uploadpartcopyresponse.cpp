@@ -19,3 +19,85 @@
 
 #include "uploadpartcopyresponse.h"
 #include "uploadpartcopyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  UploadPartCopyResponse
+ *
+ * @brief  Handles S3 UploadPartCopy responses.
+ *
+ * @see    S3Client::uploadPartCopy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UploadPartCopyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new UploadPartCopyResponsePrivate(this), parent)
+{
+    setRequest(new UploadPartCopyRequest(request));
+    setReply(reply);
+}
+
+const UploadPartCopyRequest * UploadPartCopyResponse::request() const
+{
+    Q_D(const UploadPartCopyResponse);
+    return static_cast<const UploadPartCopyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 UploadPartCopy response.
+ *
+ * @param  response  Response to parse.
+ */
+void UploadPartCopyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UploadPartCopyResponsePrivate
+ *
+ * @brief  Private implementation for UploadPartCopyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadPartCopyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UploadPartCopyResponse instance.
+ */
+UploadPartCopyResponsePrivate::UploadPartCopyResponsePrivate(
+    UploadPartCopyQueueResponse * const q) : UploadPartCopyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 UploadPartCopyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UploadPartCopyResponsePrivate::UploadPartCopyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UploadPartCopyResponse"));
+    /// @todo
+}

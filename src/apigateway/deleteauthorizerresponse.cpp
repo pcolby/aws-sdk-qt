@@ -19,3 +19,85 @@
 
 #include "deleteauthorizerresponse.h"
 #include "deleteauthorizerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteAuthorizerResponse
+ *
+ * @brief  Handles APIGateway DeleteAuthorizer responses.
+ *
+ * @see    APIGatewayClient::deleteAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAuthorizerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteAuthorizerResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAuthorizerRequest(request));
+    setReply(reply);
+}
+
+const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
+{
+    Q_D(const DeleteAuthorizerResponse);
+    return static_cast<const DeleteAuthorizerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteAuthorizer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAuthorizerResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAuthorizerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAuthorizerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAuthorizerResponse instance.
+ */
+DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
+    DeleteAuthorizerQueueResponse * const q) : DeleteAuthorizerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteAuthorizerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAuthorizerResponse"));
+    /// @todo
+}

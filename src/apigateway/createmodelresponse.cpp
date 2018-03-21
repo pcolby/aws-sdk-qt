@@ -19,3 +19,85 @@
 
 #include "createmodelresponse.h"
 #include "createmodelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateModelResponse
+ *
+ * @brief  Handles APIGateway CreateModel responses.
+ *
+ * @see    APIGatewayClient::createModel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateModelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateModelResponsePrivate(this), parent)
+{
+    setRequest(new CreateModelRequest(request));
+    setReply(reply);
+}
+
+const CreateModelRequest * CreateModelResponse::request() const
+{
+    Q_D(const CreateModelResponse);
+    return static_cast<const CreateModelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateModel response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateModelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateModelResponsePrivate
+ *
+ * @brief  Private implementation for CreateModelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateModelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateModelResponse instance.
+ */
+CreateModelResponsePrivate::CreateModelResponsePrivate(
+    CreateModelQueueResponse * const q) : CreateModelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateModelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateModelResponsePrivate::CreateModelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateModelResponse"));
+    /// @todo
+}

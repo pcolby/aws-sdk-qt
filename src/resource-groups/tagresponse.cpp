@@ -19,3 +19,85 @@
 
 #include "tagresponse.h"
 #include "tagresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroups {
+
+/**
+ * @class  TagResponse
+ *
+ * @brief  Handles ResourceGroups Tag responses.
+ *
+ * @see    ResourceGroupsClient::tag
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsResponse(new TagResponsePrivate(this), parent)
+{
+    setRequest(new TagRequest(request));
+    setReply(reply);
+}
+
+const TagRequest * TagResponse::request() const
+{
+    Q_D(const TagResponse);
+    return static_cast<const TagRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroups Tag response.
+ *
+ * @param  response  Response to parse.
+ */
+void TagResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TagResponsePrivate
+ *
+ * @brief  Private implementation for TagResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TagResponse instance.
+ */
+TagResponsePrivate::TagResponsePrivate(
+    TagQueueResponse * const q) : TagPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroups TagResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TagResponsePrivate::TagResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TagResponse"));
+    /// @todo
+}

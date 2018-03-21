@@ -19,3 +19,85 @@
 
 #include "getcelebrityinforesponse.h"
 #include "getcelebrityinforesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  GetCelebrityInfoResponse
+ *
+ * @brief  Handles Rekognition GetCelebrityInfo responses.
+ *
+ * @see    RekognitionClient::getCelebrityInfo
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCelebrityInfoResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new GetCelebrityInfoResponsePrivate(this), parent)
+{
+    setRequest(new GetCelebrityInfoRequest(request));
+    setReply(reply);
+}
+
+const GetCelebrityInfoRequest * GetCelebrityInfoResponse::request() const
+{
+    Q_D(const GetCelebrityInfoResponse);
+    return static_cast<const GetCelebrityInfoRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition GetCelebrityInfo response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCelebrityInfoResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCelebrityInfoResponsePrivate
+ *
+ * @brief  Private implementation for GetCelebrityInfoResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCelebrityInfoResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCelebrityInfoResponse instance.
+ */
+GetCelebrityInfoResponsePrivate::GetCelebrityInfoResponsePrivate(
+    GetCelebrityInfoQueueResponse * const q) : GetCelebrityInfoPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition GetCelebrityInfoResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCelebrityInfoResponsePrivate::GetCelebrityInfoResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCelebrityInfoResponse"));
+    /// @todo
+}

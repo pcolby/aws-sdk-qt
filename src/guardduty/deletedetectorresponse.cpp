@@ -19,3 +19,85 @@
 
 #include "deletedetectorresponse.h"
 #include "deletedetectorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DeleteDetectorResponse
+ *
+ * @brief  Handles GuardDuty DeleteDetector responses.
+ *
+ * @see    GuardDutyClient::deleteDetector
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDetectorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new DeleteDetectorResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDetectorRequest(request));
+    setReply(reply);
+}
+
+const DeleteDetectorRequest * DeleteDetectorResponse::request() const
+{
+    Q_D(const DeleteDetectorResponse);
+    return static_cast<const DeleteDetectorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty DeleteDetector response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDetectorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDetectorResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDetectorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDetectorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDetectorResponse instance.
+ */
+DeleteDetectorResponsePrivate::DeleteDetectorResponsePrivate(
+    DeleteDetectorQueueResponse * const q) : DeleteDetectorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty DeleteDetectorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDetectorResponsePrivate::DeleteDetectorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDetectorResponse"));
+    /// @todo
+}

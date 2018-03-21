@@ -19,3 +19,85 @@
 
 #include "modifyoptiongroupresponse.h"
 #include "modifyoptiongroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyOptionGroupResponse
+ *
+ * @brief  Handles RDS ModifyOptionGroup responses.
+ *
+ * @see    RDSClient::modifyOptionGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyOptionGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ModifyOptionGroupResponsePrivate(this), parent)
+{
+    setRequest(new ModifyOptionGroupRequest(request));
+    setReply(reply);
+}
+
+const ModifyOptionGroupRequest * ModifyOptionGroupResponse::request() const
+{
+    Q_D(const ModifyOptionGroupResponse);
+    return static_cast<const ModifyOptionGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ModifyOptionGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyOptionGroupResponsePrivate
+ *
+ * @brief  Private implementation for ModifyOptionGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyOptionGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyOptionGroupResponse instance.
+ */
+ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
+    ModifyOptionGroupQueueResponse * const q) : ModifyOptionGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ModifyOptionGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyOptionGroupResponse"));
+    /// @todo
+}

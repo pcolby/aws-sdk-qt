@@ -19,3 +19,85 @@
 
 #include "deletenotebookinstanceresponse.h"
 #include "deletenotebookinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DeleteNotebookInstanceResponse
+ *
+ * @brief  Handles SageMaker DeleteNotebookInstance responses.
+ *
+ * @see    SageMakerClient::deleteNotebookInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNotebookInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new DeleteNotebookInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNotebookInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeleteNotebookInstanceRequest * DeleteNotebookInstanceResponse::request() const
+{
+    Q_D(const DeleteNotebookInstanceResponse);
+    return static_cast<const DeleteNotebookInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker DeleteNotebookInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNotebookInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNotebookInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNotebookInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotebookInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNotebookInstanceResponse instance.
+ */
+DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponsePrivate(
+    DeleteNotebookInstanceQueueResponse * const q) : DeleteNotebookInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker DeleteNotebookInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNotebookInstanceResponse"));
+    /// @todo
+}

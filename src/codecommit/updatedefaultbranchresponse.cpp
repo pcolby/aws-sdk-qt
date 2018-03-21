@@ -19,3 +19,85 @@
 
 #include "updatedefaultbranchresponse.h"
 #include "updatedefaultbranchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdateDefaultBranchResponse
+ *
+ * @brief  Handles CodeCommit UpdateDefaultBranch responses.
+ *
+ * @see    CodeCommitClient::updateDefaultBranch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDefaultBranchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new UpdateDefaultBranchResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDefaultBranchRequest(request));
+    setReply(reply);
+}
+
+const UpdateDefaultBranchRequest * UpdateDefaultBranchResponse::request() const
+{
+    Q_D(const UpdateDefaultBranchResponse);
+    return static_cast<const UpdateDefaultBranchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit UpdateDefaultBranch response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDefaultBranchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDefaultBranchResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDefaultBranchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDefaultBranchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDefaultBranchResponse instance.
+ */
+UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponsePrivate(
+    UpdateDefaultBranchQueueResponse * const q) : UpdateDefaultBranchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit UpdateDefaultBranchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDefaultBranchResponse"));
+    /// @todo
+}

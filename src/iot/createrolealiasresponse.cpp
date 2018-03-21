@@ -19,3 +19,85 @@
 
 #include "createrolealiasresponse.h"
 #include "createrolealiasresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateRoleAliasResponse
+ *
+ * @brief  Handles IoT CreateRoleAlias responses.
+ *
+ * @see    IoTClient::createRoleAlias
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRoleAliasResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreateRoleAliasResponsePrivate(this), parent)
+{
+    setRequest(new CreateRoleAliasRequest(request));
+    setReply(reply);
+}
+
+const CreateRoleAliasRequest * CreateRoleAliasResponse::request() const
+{
+    Q_D(const CreateRoleAliasResponse);
+    return static_cast<const CreateRoleAliasRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreateRoleAlias response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateRoleAliasResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRoleAliasResponsePrivate
+ *
+ * @brief  Private implementation for CreateRoleAliasResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRoleAliasResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateRoleAliasResponse instance.
+ */
+CreateRoleAliasResponsePrivate::CreateRoleAliasResponsePrivate(
+    CreateRoleAliasQueueResponse * const q) : CreateRoleAliasPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreateRoleAliasResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateRoleAliasResponsePrivate::CreateRoleAliasResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateRoleAliasResponse"));
+    /// @todo
+}

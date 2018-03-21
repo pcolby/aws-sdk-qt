@@ -19,3 +19,85 @@
 
 #include "unlinkdeveloperidentityresponse.h"
 #include "unlinkdeveloperidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  UnlinkDeveloperIdentityResponse
+ *
+ * @brief  Handles CognitoIdentity UnlinkDeveloperIdentity responses.
+ *
+ * @see    CognitoIdentityClient::unlinkDeveloperIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnlinkDeveloperIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new UnlinkDeveloperIdentityResponsePrivate(this), parent)
+{
+    setRequest(new UnlinkDeveloperIdentityRequest(request));
+    setReply(reply);
+}
+
+const UnlinkDeveloperIdentityRequest * UnlinkDeveloperIdentityResponse::request() const
+{
+    Q_D(const UnlinkDeveloperIdentityResponse);
+    return static_cast<const UnlinkDeveloperIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity UnlinkDeveloperIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnlinkDeveloperIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnlinkDeveloperIdentityResponsePrivate
+ *
+ * @brief  Private implementation for UnlinkDeveloperIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnlinkDeveloperIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnlinkDeveloperIdentityResponse instance.
+ */
+UnlinkDeveloperIdentityResponsePrivate::UnlinkDeveloperIdentityResponsePrivate(
+    UnlinkDeveloperIdentityQueueResponse * const q) : UnlinkDeveloperIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity UnlinkDeveloperIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnlinkDeveloperIdentityResponsePrivate::UnlinkDeveloperIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnlinkDeveloperIdentityResponse"));
+    /// @todo
+}

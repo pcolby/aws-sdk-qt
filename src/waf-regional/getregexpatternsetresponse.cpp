@@ -19,3 +19,85 @@
 
 #include "getregexpatternsetresponse.h"
 #include "getregexpatternsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetRegexPatternSetResponse
+ *
+ * @brief  Handles WAFRegional GetRegexPatternSet responses.
+ *
+ * @see    WAFRegionalClient::getRegexPatternSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRegexPatternSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new GetRegexPatternSetResponsePrivate(this), parent)
+{
+    setRequest(new GetRegexPatternSetRequest(request));
+    setReply(reply);
+}
+
+const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
+{
+    Q_D(const GetRegexPatternSetResponse);
+    return static_cast<const GetRegexPatternSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional GetRegexPatternSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRegexPatternSetResponsePrivate
+ *
+ * @brief  Private implementation for GetRegexPatternSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRegexPatternSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRegexPatternSetResponse instance.
+ */
+GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
+    GetRegexPatternSetQueueResponse * const q) : GetRegexPatternSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional GetRegexPatternSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRegexPatternSetResponse"));
+    /// @todo
+}

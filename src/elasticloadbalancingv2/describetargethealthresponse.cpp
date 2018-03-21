@@ -19,3 +19,85 @@
 
 #include "describetargethealthresponse.h"
 #include "describetargethealthresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeTargetHealthResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 DescribeTargetHealth responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeTargetHealth
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTargetHealthResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new DescribeTargetHealthResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTargetHealthRequest(request));
+    setReply(reply);
+}
+
+const DescribeTargetHealthRequest * DescribeTargetHealthResponse::request() const
+{
+    Q_D(const DescribeTargetHealthResponse);
+    return static_cast<const DescribeTargetHealthRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 DescribeTargetHealth response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTargetHealthResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTargetHealthResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTargetHealthResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTargetHealthResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTargetHealthResponse instance.
+ */
+DescribeTargetHealthResponsePrivate::DescribeTargetHealthResponsePrivate(
+    DescribeTargetHealthQueueResponse * const q) : DescribeTargetHealthPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 DescribeTargetHealthResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTargetHealthResponsePrivate::DescribeTargetHealthResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTargetHealthResponse"));
+    /// @todo
+}

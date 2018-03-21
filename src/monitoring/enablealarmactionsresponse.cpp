@@ -19,3 +19,85 @@
 
 #include "enablealarmactionsresponse.h"
 #include "enablealarmactionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  EnableAlarmActionsResponse
+ *
+ * @brief  Handles CloudWatch EnableAlarmActions responses.
+ *
+ * @see    CloudWatchClient::enableAlarmActions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableAlarmActionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new EnableAlarmActionsResponsePrivate(this), parent)
+{
+    setRequest(new EnableAlarmActionsRequest(request));
+    setReply(reply);
+}
+
+const EnableAlarmActionsRequest * EnableAlarmActionsResponse::request() const
+{
+    Q_D(const EnableAlarmActionsResponse);
+    return static_cast<const EnableAlarmActionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch EnableAlarmActions response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableAlarmActionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableAlarmActionsResponsePrivate
+ *
+ * @brief  Private implementation for EnableAlarmActionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableAlarmActionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableAlarmActionsResponse instance.
+ */
+EnableAlarmActionsResponsePrivate::EnableAlarmActionsResponsePrivate(
+    EnableAlarmActionsQueueResponse * const q) : EnableAlarmActionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch EnableAlarmActionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableAlarmActionsResponsePrivate::EnableAlarmActionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableAlarmActionsResponse"));
+    /// @todo
+}

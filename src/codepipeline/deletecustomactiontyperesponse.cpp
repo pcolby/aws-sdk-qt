@@ -19,3 +19,85 @@
 
 #include "deletecustomactiontyperesponse.h"
 #include "deletecustomactiontyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  DeleteCustomActionTypeResponse
+ *
+ * @brief  Handles CodePipeline DeleteCustomActionType responses.
+ *
+ * @see    CodePipelineClient::deleteCustomActionType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCustomActionTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new DeleteCustomActionTypeResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCustomActionTypeRequest(request));
+    setReply(reply);
+}
+
+const DeleteCustomActionTypeRequest * DeleteCustomActionTypeResponse::request() const
+{
+    Q_D(const DeleteCustomActionTypeResponse);
+    return static_cast<const DeleteCustomActionTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline DeleteCustomActionType response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCustomActionTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCustomActionTypeResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCustomActionTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCustomActionTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCustomActionTypeResponse instance.
+ */
+DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponsePrivate(
+    DeleteCustomActionTypeQueueResponse * const q) : DeleteCustomActionTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline DeleteCustomActionTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCustomActionTypeResponse"));
+    /// @todo
+}

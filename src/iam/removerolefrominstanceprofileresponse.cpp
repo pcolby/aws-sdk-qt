@@ -19,3 +19,85 @@
 
 #include "removerolefrominstanceprofileresponse.h"
 #include "removerolefrominstanceprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  RemoveRoleFromInstanceProfileResponse
+ *
+ * @brief  Handles IAM RemoveRoleFromInstanceProfile responses.
+ *
+ * @see    IAMClient::removeRoleFromInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveRoleFromInstanceProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new RemoveRoleFromInstanceProfileResponsePrivate(this), parent)
+{
+    setRequest(new RemoveRoleFromInstanceProfileRequest(request));
+    setReply(reply);
+}
+
+const RemoveRoleFromInstanceProfileRequest * RemoveRoleFromInstanceProfileResponse::request() const
+{
+    Q_D(const RemoveRoleFromInstanceProfileResponse);
+    return static_cast<const RemoveRoleFromInstanceProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM RemoveRoleFromInstanceProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveRoleFromInstanceProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveRoleFromInstanceProfileResponsePrivate
+ *
+ * @brief  Private implementation for RemoveRoleFromInstanceProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveRoleFromInstanceProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveRoleFromInstanceProfileResponse instance.
+ */
+RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileResponsePrivate(
+    RemoveRoleFromInstanceProfileQueueResponse * const q) : RemoveRoleFromInstanceProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM RemoveRoleFromInstanceProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveRoleFromInstanceProfileResponse"));
+    /// @todo
+}

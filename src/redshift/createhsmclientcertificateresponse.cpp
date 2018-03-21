@@ -19,3 +19,85 @@
 
 #include "createhsmclientcertificateresponse.h"
 #include "createhsmclientcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateHsmClientCertificateResponse
+ *
+ * @brief  Handles Redshift CreateHsmClientCertificate responses.
+ *
+ * @see    RedshiftClient::createHsmClientCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHsmClientCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new CreateHsmClientCertificateResponsePrivate(this), parent)
+{
+    setRequest(new CreateHsmClientCertificateRequest(request));
+    setReply(reply);
+}
+
+const CreateHsmClientCertificateRequest * CreateHsmClientCertificateResponse::request() const
+{
+    Q_D(const CreateHsmClientCertificateResponse);
+    return static_cast<const CreateHsmClientCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift CreateHsmClientCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateHsmClientCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHsmClientCertificateResponsePrivate
+ *
+ * @brief  Private implementation for CreateHsmClientCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHsmClientCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateHsmClientCertificateResponse instance.
+ */
+CreateHsmClientCertificateResponsePrivate::CreateHsmClientCertificateResponsePrivate(
+    CreateHsmClientCertificateQueueResponse * const q) : CreateHsmClientCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift CreateHsmClientCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateHsmClientCertificateResponsePrivate::CreateHsmClientCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateHsmClientCertificateResponse"));
+    /// @todo
+}

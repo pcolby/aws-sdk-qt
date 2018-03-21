@@ -19,3 +19,85 @@
 
 #include "acceptportfolioshareresponse.h"
 #include "acceptportfolioshareresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  AcceptPortfolioShareResponse
+ *
+ * @brief  Handles ServiceCatalog AcceptPortfolioShare responses.
+ *
+ * @see    ServiceCatalogClient::acceptPortfolioShare
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcceptPortfolioShareResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new AcceptPortfolioShareResponsePrivate(this), parent)
+{
+    setRequest(new AcceptPortfolioShareRequest(request));
+    setReply(reply);
+}
+
+const AcceptPortfolioShareRequest * AcceptPortfolioShareResponse::request() const
+{
+    Q_D(const AcceptPortfolioShareResponse);
+    return static_cast<const AcceptPortfolioShareRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog AcceptPortfolioShare response.
+ *
+ * @param  response  Response to parse.
+ */
+void AcceptPortfolioShareResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AcceptPortfolioShareResponsePrivate
+ *
+ * @brief  Private implementation for AcceptPortfolioShareResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptPortfolioShareResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AcceptPortfolioShareResponse instance.
+ */
+AcceptPortfolioShareResponsePrivate::AcceptPortfolioShareResponsePrivate(
+    AcceptPortfolioShareQueueResponse * const q) : AcceptPortfolioSharePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog AcceptPortfolioShareResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AcceptPortfolioShareResponsePrivate::AcceptPortfolioShareResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AcceptPortfolioShareResponse"));
+    /// @todo
+}

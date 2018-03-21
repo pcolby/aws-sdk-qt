@@ -19,3 +19,85 @@
 
 #include "describebudgetsresponse.h"
 #include "describebudgetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DescribeBudgetsResponse
+ *
+ * @brief  Handles Budgets DescribeBudgets responses.
+ *
+ * @see    BudgetsClient::describeBudgets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBudgetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new DescribeBudgetsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBudgetsRequest(request));
+    setReply(reply);
+}
+
+const DescribeBudgetsRequest * DescribeBudgetsResponse::request() const
+{
+    Q_D(const DescribeBudgetsResponse);
+    return static_cast<const DescribeBudgetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets DescribeBudgets response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBudgetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBudgetsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBudgetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBudgetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBudgetsResponse instance.
+ */
+DescribeBudgetsResponsePrivate::DescribeBudgetsResponsePrivate(
+    DescribeBudgetsQueueResponse * const q) : DescribeBudgetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets DescribeBudgetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBudgetsResponsePrivate::DescribeBudgetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBudgetsResponse"));
+    /// @todo
+}

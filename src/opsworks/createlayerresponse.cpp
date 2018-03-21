@@ -19,3 +19,85 @@
 
 #include "createlayerresponse.h"
 #include "createlayerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  CreateLayerResponse
+ *
+ * @brief  Handles OpsWorks CreateLayer responses.
+ *
+ * @see    OpsWorksClient::createLayer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLayerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new CreateLayerResponsePrivate(this), parent)
+{
+    setRequest(new CreateLayerRequest(request));
+    setReply(reply);
+}
+
+const CreateLayerRequest * CreateLayerResponse::request() const
+{
+    Q_D(const CreateLayerResponse);
+    return static_cast<const CreateLayerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks CreateLayer response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLayerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLayerResponsePrivate
+ *
+ * @brief  Private implementation for CreateLayerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLayerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLayerResponse instance.
+ */
+CreateLayerResponsePrivate::CreateLayerResponsePrivate(
+    CreateLayerQueueResponse * const q) : CreateLayerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks CreateLayerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLayerResponsePrivate::CreateLayerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLayerResponse"));
+    /// @todo
+}

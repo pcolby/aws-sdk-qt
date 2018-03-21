@@ -19,3 +19,85 @@
 
 #include "getactivitytaskresponse.h"
 #include "getactivitytaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  GetActivityTaskResponse
+ *
+ * @brief  Handles SFN GetActivityTask responses.
+ *
+ * @see    SFNClient::getActivityTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetActivityTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new GetActivityTaskResponsePrivate(this), parent)
+{
+    setRequest(new GetActivityTaskRequest(request));
+    setReply(reply);
+}
+
+const GetActivityTaskRequest * GetActivityTaskResponse::request() const
+{
+    Q_D(const GetActivityTaskResponse);
+    return static_cast<const GetActivityTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN GetActivityTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetActivityTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetActivityTaskResponsePrivate
+ *
+ * @brief  Private implementation for GetActivityTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetActivityTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetActivityTaskResponse instance.
+ */
+GetActivityTaskResponsePrivate::GetActivityTaskResponsePrivate(
+    GetActivityTaskQueueResponse * const q) : GetActivityTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN GetActivityTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetActivityTaskResponsePrivate::GetActivityTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetActivityTaskResponse"));
+    /// @todo
+}

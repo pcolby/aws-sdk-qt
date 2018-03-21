@@ -19,3 +19,85 @@
 
 #include "enablemetricscollectionresponse.h"
 #include "enablemetricscollectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  EnableMetricsCollectionResponse
+ *
+ * @brief  Handles AutoScaling EnableMetricsCollection responses.
+ *
+ * @see    AutoScalingClient::enableMetricsCollection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableMetricsCollectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new EnableMetricsCollectionResponsePrivate(this), parent)
+{
+    setRequest(new EnableMetricsCollectionRequest(request));
+    setReply(reply);
+}
+
+const EnableMetricsCollectionRequest * EnableMetricsCollectionResponse::request() const
+{
+    Q_D(const EnableMetricsCollectionResponse);
+    return static_cast<const EnableMetricsCollectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling EnableMetricsCollection response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableMetricsCollectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableMetricsCollectionResponsePrivate
+ *
+ * @brief  Private implementation for EnableMetricsCollectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableMetricsCollectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableMetricsCollectionResponse instance.
+ */
+EnableMetricsCollectionResponsePrivate::EnableMetricsCollectionResponsePrivate(
+    EnableMetricsCollectionQueueResponse * const q) : EnableMetricsCollectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling EnableMetricsCollectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableMetricsCollectionResponsePrivate::EnableMetricsCollectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableMetricsCollectionResponse"));
+    /// @todo
+}

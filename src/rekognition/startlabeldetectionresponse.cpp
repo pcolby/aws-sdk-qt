@@ -19,3 +19,85 @@
 
 #include "startlabeldetectionresponse.h"
 #include "startlabeldetectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartLabelDetectionResponse
+ *
+ * @brief  Handles Rekognition StartLabelDetection responses.
+ *
+ * @see    RekognitionClient::startLabelDetection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartLabelDetectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new StartLabelDetectionResponsePrivate(this), parent)
+{
+    setRequest(new StartLabelDetectionRequest(request));
+    setReply(reply);
+}
+
+const StartLabelDetectionRequest * StartLabelDetectionResponse::request() const
+{
+    Q_D(const StartLabelDetectionResponse);
+    return static_cast<const StartLabelDetectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition StartLabelDetection response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartLabelDetectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartLabelDetectionResponsePrivate
+ *
+ * @brief  Private implementation for StartLabelDetectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartLabelDetectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartLabelDetectionResponse instance.
+ */
+StartLabelDetectionResponsePrivate::StartLabelDetectionResponsePrivate(
+    StartLabelDetectionQueueResponse * const q) : StartLabelDetectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition StartLabelDetectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartLabelDetectionResponsePrivate::StartLabelDetectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartLabelDetectionResponse"));
+    /// @todo
+}

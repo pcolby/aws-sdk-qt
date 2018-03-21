@@ -19,3 +19,85 @@
 
 #include "attachvolumeresponse.h"
 #include "attachvolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AttachVolumeResponse
+ *
+ * @brief  Handles EC2 AttachVolume responses.
+ *
+ * @see    EC2Client::attachVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AttachVolumeResponsePrivate(this), parent)
+{
+    setRequest(new AttachVolumeRequest(request));
+    setReply(reply);
+}
+
+const AttachVolumeRequest * AttachVolumeResponse::request() const
+{
+    Q_D(const AttachVolumeResponse);
+    return static_cast<const AttachVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AttachVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachVolumeResponsePrivate
+ *
+ * @brief  Private implementation for AttachVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachVolumeResponse instance.
+ */
+AttachVolumeResponsePrivate::AttachVolumeResponsePrivate(
+    AttachVolumeQueueResponse * const q) : AttachVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AttachVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachVolumeResponsePrivate::AttachVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachVolumeResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "stopmatchmakingresponse.h"
 #include "stopmatchmakingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  StopMatchmakingResponse
+ *
+ * @brief  Handles GameLift StopMatchmaking responses.
+ *
+ * @see    GameLiftClient::stopMatchmaking
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopMatchmakingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new StopMatchmakingResponsePrivate(this), parent)
+{
+    setRequest(new StopMatchmakingRequest(request));
+    setReply(reply);
+}
+
+const StopMatchmakingRequest * StopMatchmakingResponse::request() const
+{
+    Q_D(const StopMatchmakingResponse);
+    return static_cast<const StopMatchmakingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift StopMatchmaking response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopMatchmakingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopMatchmakingResponsePrivate
+ *
+ * @brief  Private implementation for StopMatchmakingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopMatchmakingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopMatchmakingResponse instance.
+ */
+StopMatchmakingResponsePrivate::StopMatchmakingResponsePrivate(
+    StopMatchmakingQueueResponse * const q) : StopMatchmakingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift StopMatchmakingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopMatchmakingResponsePrivate::StopMatchmakingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopMatchmakingResponse"));
+    /// @todo
+}

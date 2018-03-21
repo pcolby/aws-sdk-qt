@@ -19,3 +19,85 @@
 
 #include "putinventoryresponse.h"
 #include "putinventoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  PutInventoryResponse
+ *
+ * @brief  Handles SSM PutInventory responses.
+ *
+ * @see    SSMClient::putInventory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutInventoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new PutInventoryResponsePrivate(this), parent)
+{
+    setRequest(new PutInventoryRequest(request));
+    setReply(reply);
+}
+
+const PutInventoryRequest * PutInventoryResponse::request() const
+{
+    Q_D(const PutInventoryResponse);
+    return static_cast<const PutInventoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM PutInventory response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutInventoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutInventoryResponsePrivate
+ *
+ * @brief  Private implementation for PutInventoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutInventoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutInventoryResponse instance.
+ */
+PutInventoryResponsePrivate::PutInventoryResponsePrivate(
+    PutInventoryQueueResponse * const q) : PutInventoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM PutInventoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutInventoryResponsePrivate::PutInventoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutInventoryResponse"));
+    /// @todo
+}

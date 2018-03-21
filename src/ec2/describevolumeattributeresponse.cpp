@@ -19,3 +19,85 @@
 
 #include "describevolumeattributeresponse.h"
 #include "describevolumeattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVolumeAttributeResponse
+ *
+ * @brief  Handles EC2 DescribeVolumeAttribute responses.
+ *
+ * @see    EC2Client::describeVolumeAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVolumeAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeVolumeAttributeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVolumeAttributeRequest(request));
+    setReply(reply);
+}
+
+const DescribeVolumeAttributeRequest * DescribeVolumeAttributeResponse::request() const
+{
+    Q_D(const DescribeVolumeAttributeResponse);
+    return static_cast<const DescribeVolumeAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeVolumeAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVolumeAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVolumeAttributeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVolumeAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVolumeAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVolumeAttributeResponse instance.
+ */
+DescribeVolumeAttributeResponsePrivate::DescribeVolumeAttributeResponsePrivate(
+    DescribeVolumeAttributeQueueResponse * const q) : DescribeVolumeAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeVolumeAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVolumeAttributeResponsePrivate::DescribeVolumeAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVolumeAttributeResponse"));
+    /// @todo
+}

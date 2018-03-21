@@ -19,3 +19,85 @@
 
 #include "updateconditionalforwarderresponse.h"
 #include "updateconditionalforwarderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  UpdateConditionalForwarderResponse
+ *
+ * @brief  Handles DirectoryService UpdateConditionalForwarder responses.
+ *
+ * @see    DirectoryServiceClient::updateConditionalForwarder
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConditionalForwarderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new UpdateConditionalForwarderResponsePrivate(this), parent)
+{
+    setRequest(new UpdateConditionalForwarderRequest(request));
+    setReply(reply);
+}
+
+const UpdateConditionalForwarderRequest * UpdateConditionalForwarderResponse::request() const
+{
+    Q_D(const UpdateConditionalForwarderResponse);
+    return static_cast<const UpdateConditionalForwarderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService UpdateConditionalForwarder response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateConditionalForwarderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConditionalForwarderResponsePrivate
+ *
+ * @brief  Private implementation for UpdateConditionalForwarderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConditionalForwarderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateConditionalForwarderResponse instance.
+ */
+UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponsePrivate(
+    UpdateConditionalForwarderQueueResponse * const q) : UpdateConditionalForwarderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService UpdateConditionalForwarderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateConditionalForwarderResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getratebasedruleresponse.h"
 #include "getratebasedruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetRateBasedRuleResponse
+ *
+ * @brief  Handles WAF GetRateBasedRule responses.
+ *
+ * @see    WAFClient::getRateBasedRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRateBasedRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new GetRateBasedRuleResponsePrivate(this), parent)
+{
+    setRequest(new GetRateBasedRuleRequest(request));
+    setReply(reply);
+}
+
+const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
+{
+    Q_D(const GetRateBasedRuleResponse);
+    return static_cast<const GetRateBasedRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF GetRateBasedRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRateBasedRuleResponsePrivate
+ *
+ * @brief  Private implementation for GetRateBasedRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRateBasedRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRateBasedRuleResponse instance.
+ */
+GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
+    GetRateBasedRuleQueueResponse * const q) : GetRateBasedRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF GetRateBasedRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRateBasedRuleResponse"));
+    /// @todo
+}

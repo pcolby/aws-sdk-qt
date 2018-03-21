@@ -19,3 +19,85 @@
 
 #include "createinstancesresponse.h"
 #include "createinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateInstancesResponse
+ *
+ * @brief  Handles Lightsail CreateInstances responses.
+ *
+ * @see    LightsailClient::createInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new CreateInstancesResponsePrivate(this), parent)
+{
+    setRequest(new CreateInstancesRequest(request));
+    setReply(reply);
+}
+
+const CreateInstancesRequest * CreateInstancesResponse::request() const
+{
+    Q_D(const CreateInstancesResponse);
+    return static_cast<const CreateInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail CreateInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstancesResponsePrivate
+ *
+ * @brief  Private implementation for CreateInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateInstancesResponse instance.
+ */
+CreateInstancesResponsePrivate::CreateInstancesResponsePrivate(
+    CreateInstancesQueueResponse * const q) : CreateInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail CreateInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateInstancesResponsePrivate::CreateInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateInstancesResponse"));
+    /// @todo
+}

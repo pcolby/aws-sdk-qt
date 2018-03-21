@@ -19,3 +19,85 @@
 
 #include "associateaddressresponse.h"
 #include "associateaddressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AssociateAddressResponse
+ *
+ * @brief  Handles EC2 AssociateAddress responses.
+ *
+ * @see    EC2Client::associateAddress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateAddressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new AssociateAddressResponsePrivate(this), parent)
+{
+    setRequest(new AssociateAddressRequest(request));
+    setReply(reply);
+}
+
+const AssociateAddressRequest * AssociateAddressResponse::request() const
+{
+    Q_D(const AssociateAddressResponse);
+    return static_cast<const AssociateAddressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 AssociateAddress response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateAddressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateAddressResponsePrivate
+ *
+ * @brief  Private implementation for AssociateAddressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateAddressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateAddressResponse instance.
+ */
+AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
+    AssociateAddressQueueResponse * const q) : AssociateAddressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 AssociateAddressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateAddressResponsePrivate::AssociateAddressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateAddressResponse"));
+    /// @todo
+}

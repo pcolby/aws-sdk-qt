@@ -19,3 +19,85 @@
 
 #include "sendtasksuccessresponse.h"
 #include "sendtasksuccessresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  SendTaskSuccessResponse
+ *
+ * @brief  Handles SFN SendTaskSuccess responses.
+ *
+ * @see    SFNClient::sendTaskSuccess
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendTaskSuccessResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new SendTaskSuccessResponsePrivate(this), parent)
+{
+    setRequest(new SendTaskSuccessRequest(request));
+    setReply(reply);
+}
+
+const SendTaskSuccessRequest * SendTaskSuccessResponse::request() const
+{
+    Q_D(const SendTaskSuccessResponse);
+    return static_cast<const SendTaskSuccessRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN SendTaskSuccess response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendTaskSuccessResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendTaskSuccessResponsePrivate
+ *
+ * @brief  Private implementation for SendTaskSuccessResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendTaskSuccessResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendTaskSuccessResponse instance.
+ */
+SendTaskSuccessResponsePrivate::SendTaskSuccessResponsePrivate(
+    SendTaskSuccessQueueResponse * const q) : SendTaskSuccessPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN SendTaskSuccessResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendTaskSuccessResponsePrivate::SendTaskSuccessResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendTaskSuccessResponse"));
+    /// @todo
+}

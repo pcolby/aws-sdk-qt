@@ -19,3 +19,85 @@
 
 #include "updateclassifierresponse.h"
 #include "updateclassifierresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateClassifierResponse
+ *
+ * @brief  Handles Glue UpdateClassifier responses.
+ *
+ * @see    GlueClient::updateClassifier
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateClassifierResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new UpdateClassifierResponsePrivate(this), parent)
+{
+    setRequest(new UpdateClassifierRequest(request));
+    setReply(reply);
+}
+
+const UpdateClassifierRequest * UpdateClassifierResponse::request() const
+{
+    Q_D(const UpdateClassifierResponse);
+    return static_cast<const UpdateClassifierRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue UpdateClassifier response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateClassifierResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateClassifierResponsePrivate
+ *
+ * @brief  Private implementation for UpdateClassifierResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateClassifierResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateClassifierResponse instance.
+ */
+UpdateClassifierResponsePrivate::UpdateClassifierResponsePrivate(
+    UpdateClassifierQueueResponse * const q) : UpdateClassifierPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue UpdateClassifierResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateClassifierResponsePrivate::UpdateClassifierResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateClassifierResponse"));
+    /// @todo
+}

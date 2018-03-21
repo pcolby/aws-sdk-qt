@@ -19,3 +19,85 @@
 
 #include "describeidentityproviderresponse.h"
 #include "describeidentityproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DescribeIdentityProviderResponse
+ *
+ * @brief  Handles CognitoIdentityProvider DescribeIdentityProvider responses.
+ *
+ * @see    CognitoIdentityProviderClient::describeIdentityProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIdentityProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new DescribeIdentityProviderResponsePrivate(this), parent)
+{
+    setRequest(new DescribeIdentityProviderRequest(request));
+    setReply(reply);
+}
+
+const DescribeIdentityProviderRequest * DescribeIdentityProviderResponse::request() const
+{
+    Q_D(const DescribeIdentityProviderResponse);
+    return static_cast<const DescribeIdentityProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider DescribeIdentityProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeIdentityProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIdentityProviderResponsePrivate
+ *
+ * @brief  Private implementation for DescribeIdentityProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdentityProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeIdentityProviderResponse instance.
+ */
+DescribeIdentityProviderResponsePrivate::DescribeIdentityProviderResponsePrivate(
+    DescribeIdentityProviderQueueResponse * const q) : DescribeIdentityProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider DescribeIdentityProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeIdentityProviderResponsePrivate::DescribeIdentityProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeIdentityProviderResponse"));
+    /// @todo
+}

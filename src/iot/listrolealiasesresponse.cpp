@@ -19,3 +19,85 @@
 
 #include "listrolealiasesresponse.h"
 #include "listrolealiasesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListRoleAliasesResponse
+ *
+ * @brief  Handles IoT ListRoleAliases responses.
+ *
+ * @see    IoTClient::listRoleAliases
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRoleAliasesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListRoleAliasesResponsePrivate(this), parent)
+{
+    setRequest(new ListRoleAliasesRequest(request));
+    setReply(reply);
+}
+
+const ListRoleAliasesRequest * ListRoleAliasesResponse::request() const
+{
+    Q_D(const ListRoleAliasesResponse);
+    return static_cast<const ListRoleAliasesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListRoleAliases response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRoleAliasesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRoleAliasesResponsePrivate
+ *
+ * @brief  Private implementation for ListRoleAliasesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRoleAliasesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRoleAliasesResponse instance.
+ */
+ListRoleAliasesResponsePrivate::ListRoleAliasesResponsePrivate(
+    ListRoleAliasesQueueResponse * const q) : ListRoleAliasesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListRoleAliasesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRoleAliasesResponsePrivate::ListRoleAliasesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRoleAliasesResponse"));
+    /// @todo
+}

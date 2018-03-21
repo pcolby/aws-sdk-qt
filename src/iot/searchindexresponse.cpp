@@ -19,3 +19,85 @@
 
 #include "searchindexresponse.h"
 #include "searchindexresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  SearchIndexResponse
+ *
+ * @brief  Handles IoT SearchIndex responses.
+ *
+ * @see    IoTClient::searchIndex
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchIndexResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new SearchIndexResponsePrivate(this), parent)
+{
+    setRequest(new SearchIndexRequest(request));
+    setReply(reply);
+}
+
+const SearchIndexRequest * SearchIndexResponse::request() const
+{
+    Q_D(const SearchIndexResponse);
+    return static_cast<const SearchIndexRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT SearchIndex response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchIndexResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchIndexResponsePrivate
+ *
+ * @brief  Private implementation for SearchIndexResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchIndexResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchIndexResponse instance.
+ */
+SearchIndexResponsePrivate::SearchIndexResponsePrivate(
+    SearchIndexQueueResponse * const q) : SearchIndexPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT SearchIndexResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchIndexResponsePrivate::SearchIndexResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchIndexResponse"));
+    /// @todo
+}

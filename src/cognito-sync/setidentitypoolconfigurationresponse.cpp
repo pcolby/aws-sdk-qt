@@ -19,3 +19,85 @@
 
 #include "setidentitypoolconfigurationresponse.h"
 #include "setidentitypoolconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  SetIdentityPoolConfigurationResponse
+ *
+ * @brief  Handles CognitoSync SetIdentityPoolConfiguration responses.
+ *
+ * @see    CognitoSyncClient::setIdentityPoolConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetIdentityPoolConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new SetIdentityPoolConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new SetIdentityPoolConfigurationRequest(request));
+    setReply(reply);
+}
+
+const SetIdentityPoolConfigurationRequest * SetIdentityPoolConfigurationResponse::request() const
+{
+    Q_D(const SetIdentityPoolConfigurationResponse);
+    return static_cast<const SetIdentityPoolConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync SetIdentityPoolConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetIdentityPoolConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetIdentityPoolConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for SetIdentityPoolConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetIdentityPoolConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetIdentityPoolConfigurationResponse instance.
+ */
+SetIdentityPoolConfigurationResponsePrivate::SetIdentityPoolConfigurationResponsePrivate(
+    SetIdentityPoolConfigurationQueueResponse * const q) : SetIdentityPoolConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync SetIdentityPoolConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetIdentityPoolConfigurationResponsePrivate::SetIdentityPoolConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetIdentityPoolConfigurationResponse"));
+    /// @todo
+}

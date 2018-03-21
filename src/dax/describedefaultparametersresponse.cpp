@@ -19,3 +19,85 @@
 
 #include "describedefaultparametersresponse.h"
 #include "describedefaultparametersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DescribeDefaultParametersResponse
+ *
+ * @brief  Handles DAX DescribeDefaultParameters responses.
+ *
+ * @see    DAXClient::describeDefaultParameters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDefaultParametersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new DescribeDefaultParametersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDefaultParametersRequest(request));
+    setReply(reply);
+}
+
+const DescribeDefaultParametersRequest * DescribeDefaultParametersResponse::request() const
+{
+    Q_D(const DescribeDefaultParametersResponse);
+    return static_cast<const DescribeDefaultParametersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX DescribeDefaultParameters response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDefaultParametersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDefaultParametersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDefaultParametersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultParametersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDefaultParametersResponse instance.
+ */
+DescribeDefaultParametersResponsePrivate::DescribeDefaultParametersResponsePrivate(
+    DescribeDefaultParametersQueueResponse * const q) : DescribeDefaultParametersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX DescribeDefaultParametersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDefaultParametersResponsePrivate::DescribeDefaultParametersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDefaultParametersResponse"));
+    /// @todo
+}

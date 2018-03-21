@@ -19,3 +19,85 @@
 
 #include "listchannelsresponse.h"
 #include "listchannelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  ListChannelsResponse
+ *
+ * @brief  Handles MediaLive ListChannels responses.
+ *
+ * @see    MediaLiveClient::listChannels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListChannelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaLiveResponse(new ListChannelsResponsePrivate(this), parent)
+{
+    setRequest(new ListChannelsRequest(request));
+    setReply(reply);
+}
+
+const ListChannelsRequest * ListChannelsResponse::request() const
+{
+    Q_D(const ListChannelsResponse);
+    return static_cast<const ListChannelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaLive ListChannels response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListChannelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListChannelsResponsePrivate
+ *
+ * @brief  Private implementation for ListChannelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListChannelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListChannelsResponse instance.
+ */
+ListChannelsResponsePrivate::ListChannelsResponsePrivate(
+    ListChannelsQueueResponse * const q) : ListChannelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaLive ListChannelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListChannelsResponsePrivate::ListChannelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListChannelsResponse"));
+    /// @todo
+}

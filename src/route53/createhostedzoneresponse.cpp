@@ -19,3 +19,85 @@
 
 #include "createhostedzoneresponse.h"
 #include "createhostedzoneresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  CreateHostedZoneResponse
+ *
+ * @brief  Handles Route53 CreateHostedZone responses.
+ *
+ * @see    Route53Client::createHostedZone
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHostedZoneResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new CreateHostedZoneResponsePrivate(this), parent)
+{
+    setRequest(new CreateHostedZoneRequest(request));
+    setReply(reply);
+}
+
+const CreateHostedZoneRequest * CreateHostedZoneResponse::request() const
+{
+    Q_D(const CreateHostedZoneResponse);
+    return static_cast<const CreateHostedZoneRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 CreateHostedZone response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateHostedZoneResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHostedZoneResponsePrivate
+ *
+ * @brief  Private implementation for CreateHostedZoneResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHostedZoneResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateHostedZoneResponse instance.
+ */
+CreateHostedZoneResponsePrivate::CreateHostedZoneResponsePrivate(
+    CreateHostedZoneQueueResponse * const q) : CreateHostedZonePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 CreateHostedZoneResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateHostedZoneResponsePrivate::CreateHostedZoneResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateHostedZoneResponse"));
+    /// @todo
+}

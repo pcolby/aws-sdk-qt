@@ -19,3 +19,85 @@
 
 #include "describemetricfiltersresponse.h"
 #include "describemetricfiltersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DescribeMetricFiltersResponse
+ *
+ * @brief  Handles CloudWatchLogs DescribeMetricFilters responses.
+ *
+ * @see    CloudWatchLogsClient::describeMetricFilters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMetricFiltersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DescribeMetricFiltersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMetricFiltersRequest(request));
+    setReply(reply);
+}
+
+const DescribeMetricFiltersRequest * DescribeMetricFiltersResponse::request() const
+{
+    Q_D(const DescribeMetricFiltersResponse);
+    return static_cast<const DescribeMetricFiltersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DescribeMetricFilters response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMetricFiltersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMetricFiltersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMetricFiltersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMetricFiltersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMetricFiltersResponse instance.
+ */
+DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponsePrivate(
+    DescribeMetricFiltersQueueResponse * const q) : DescribeMetricFiltersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DescribeMetricFiltersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMetricFiltersResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "confirmprivatevirtualinterfaceresponse.h"
 #include "confirmprivatevirtualinterfaceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  ConfirmPrivateVirtualInterfaceResponse
+ *
+ * @brief  Handles DirectConnect ConfirmPrivateVirtualInterface responses.
+ *
+ * @see    DirectConnectClient::confirmPrivateVirtualInterface
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmPrivateVirtualInterfaceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new ConfirmPrivateVirtualInterfaceResponsePrivate(this), parent)
+{
+    setRequest(new ConfirmPrivateVirtualInterfaceRequest(request));
+    setReply(reply);
+}
+
+const ConfirmPrivateVirtualInterfaceRequest * ConfirmPrivateVirtualInterfaceResponse::request() const
+{
+    Q_D(const ConfirmPrivateVirtualInterfaceResponse);
+    return static_cast<const ConfirmPrivateVirtualInterfaceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect ConfirmPrivateVirtualInterface response.
+ *
+ * @param  response  Response to parse.
+ */
+void ConfirmPrivateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmPrivateVirtualInterfaceResponsePrivate
+ *
+ * @brief  Private implementation for ConfirmPrivateVirtualInterfaceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmPrivateVirtualInterfaceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ConfirmPrivateVirtualInterfaceResponse instance.
+ */
+ConfirmPrivateVirtualInterfaceResponsePrivate::ConfirmPrivateVirtualInterfaceResponsePrivate(
+    ConfirmPrivateVirtualInterfaceQueueResponse * const q) : ConfirmPrivateVirtualInterfacePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect ConfirmPrivateVirtualInterfaceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ConfirmPrivateVirtualInterfaceResponsePrivate::ConfirmPrivateVirtualInterfaceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ConfirmPrivateVirtualInterfaceResponse"));
+    /// @todo
+}

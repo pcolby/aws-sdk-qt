@@ -19,3 +19,85 @@
 
 #include "getdatasourceresponse.h"
 #include "getdatasourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  GetDataSourceResponse
+ *
+ * @brief  Handles MachineLearning GetDataSource responses.
+ *
+ * @see    MachineLearningClient::getDataSource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDataSourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new GetDataSourceResponsePrivate(this), parent)
+{
+    setRequest(new GetDataSourceRequest(request));
+    setReply(reply);
+}
+
+const GetDataSourceRequest * GetDataSourceResponse::request() const
+{
+    Q_D(const GetDataSourceResponse);
+    return static_cast<const GetDataSourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning GetDataSource response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDataSourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDataSourceResponsePrivate
+ *
+ * @brief  Private implementation for GetDataSourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDataSourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDataSourceResponse instance.
+ */
+GetDataSourceResponsePrivate::GetDataSourceResponsePrivate(
+    GetDataSourceQueueResponse * const q) : GetDataSourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning GetDataSourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDataSourceResponsePrivate::GetDataSourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDataSourceResponse"));
+    /// @todo
+}

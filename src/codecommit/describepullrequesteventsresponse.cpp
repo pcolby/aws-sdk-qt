@@ -19,3 +19,85 @@
 
 #include "describepullrequesteventsresponse.h"
 #include "describepullrequesteventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  DescribePullRequestEventsResponse
+ *
+ * @brief  Handles CodeCommit DescribePullRequestEvents responses.
+ *
+ * @see    CodeCommitClient::describePullRequestEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePullRequestEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new DescribePullRequestEventsResponsePrivate(this), parent)
+{
+    setRequest(new DescribePullRequestEventsRequest(request));
+    setReply(reply);
+}
+
+const DescribePullRequestEventsRequest * DescribePullRequestEventsResponse::request() const
+{
+    Q_D(const DescribePullRequestEventsResponse);
+    return static_cast<const DescribePullRequestEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit DescribePullRequestEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePullRequestEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePullRequestEventsResponsePrivate
+ *
+ * @brief  Private implementation for DescribePullRequestEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePullRequestEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePullRequestEventsResponse instance.
+ */
+DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponsePrivate(
+    DescribePullRequestEventsQueueResponse * const q) : DescribePullRequestEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit DescribePullRequestEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePullRequestEventsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "assumerolewithwebidentityresponse.h"
 #include "assumerolewithwebidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  AssumeRoleWithWebIdentityResponse
+ *
+ * @brief  Handles STS AssumeRoleWithWebIdentity responses.
+ *
+ * @see    STSClient::assumeRoleWithWebIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssumeRoleWithWebIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : STSResponse(new AssumeRoleWithWebIdentityResponsePrivate(this), parent)
+{
+    setRequest(new AssumeRoleWithWebIdentityRequest(request));
+    setReply(reply);
+}
+
+const AssumeRoleWithWebIdentityRequest * AssumeRoleWithWebIdentityResponse::request() const
+{
+    Q_D(const AssumeRoleWithWebIdentityResponse);
+    return static_cast<const AssumeRoleWithWebIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a STS AssumeRoleWithWebIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssumeRoleWithWebIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssumeRoleWithWebIdentityResponsePrivate
+ *
+ * @brief  Private implementation for AssumeRoleWithWebIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssumeRoleWithWebIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssumeRoleWithWebIdentityResponse instance.
+ */
+AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePrivate(
+    AssumeRoleWithWebIdentityQueueResponse * const q) : AssumeRoleWithWebIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an STS AssumeRoleWithWebIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssumeRoleWithWebIdentityResponse"));
+    /// @todo
+}

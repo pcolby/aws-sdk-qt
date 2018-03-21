@@ -19,3 +19,85 @@
 
 #include "describerepositoriesresponse.h"
 #include "describerepositoriesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  DescribeRepositoriesResponse
+ *
+ * @brief  Handles ECR DescribeRepositories responses.
+ *
+ * @see    ECRClient::describeRepositories
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRepositoriesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new DescribeRepositoriesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRepositoriesRequest(request));
+    setReply(reply);
+}
+
+const DescribeRepositoriesRequest * DescribeRepositoriesResponse::request() const
+{
+    Q_D(const DescribeRepositoriesResponse);
+    return static_cast<const DescribeRepositoriesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR DescribeRepositories response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRepositoriesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRepositoriesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRepositoriesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRepositoriesResponse instance.
+ */
+DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponsePrivate(
+    DescribeRepositoriesQueueResponse * const q) : DescribeRepositoriesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR DescribeRepositoriesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRepositoriesResponse"));
+    /// @todo
+}

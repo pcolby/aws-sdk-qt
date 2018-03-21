@@ -19,3 +19,85 @@
 
 #include "createlaunchtemplateresponse.h"
 #include "createlaunchtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateLaunchTemplateResponse
+ *
+ * @brief  Handles EC2 CreateLaunchTemplate responses.
+ *
+ * @see    EC2Client::createLaunchTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLaunchTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateLaunchTemplateResponsePrivate(this), parent)
+{
+    setRequest(new CreateLaunchTemplateRequest(request));
+    setReply(reply);
+}
+
+const CreateLaunchTemplateRequest * CreateLaunchTemplateResponse::request() const
+{
+    Q_D(const CreateLaunchTemplateResponse);
+    return static_cast<const CreateLaunchTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateLaunchTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLaunchTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLaunchTemplateResponsePrivate
+ *
+ * @brief  Private implementation for CreateLaunchTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLaunchTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLaunchTemplateResponse instance.
+ */
+CreateLaunchTemplateResponsePrivate::CreateLaunchTemplateResponsePrivate(
+    CreateLaunchTemplateQueueResponse * const q) : CreateLaunchTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateLaunchTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLaunchTemplateResponsePrivate::CreateLaunchTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLaunchTemplateResponse"));
+    /// @todo
+}

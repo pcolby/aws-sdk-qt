@@ -19,3 +19,85 @@
 
 #include "getpendingjobexecutionsresponse.h"
 #include "getpendingjobexecutionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoTJobsDataPlane {
+
+/**
+ * @class  GetPendingJobExecutionsResponse
+ *
+ * @brief  Handles IoTJobsDataPlane GetPendingJobExecutions responses.
+ *
+ * @see    IoTJobsDataPlaneClient::getPendingJobExecutions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPendingJobExecutionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTJobsDataPlaneResponse(new GetPendingJobExecutionsResponsePrivate(this), parent)
+{
+    setRequest(new GetPendingJobExecutionsRequest(request));
+    setReply(reply);
+}
+
+const GetPendingJobExecutionsRequest * GetPendingJobExecutionsResponse::request() const
+{
+    Q_D(const GetPendingJobExecutionsResponse);
+    return static_cast<const GetPendingJobExecutionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoTJobsDataPlane GetPendingJobExecutions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetPendingJobExecutionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPendingJobExecutionsResponsePrivate
+ *
+ * @brief  Private implementation for GetPendingJobExecutionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPendingJobExecutionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetPendingJobExecutionsResponse instance.
+ */
+GetPendingJobExecutionsResponsePrivate::GetPendingJobExecutionsResponsePrivate(
+    GetPendingJobExecutionsQueueResponse * const q) : GetPendingJobExecutionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoTJobsDataPlane GetPendingJobExecutionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetPendingJobExecutionsResponsePrivate::GetPendingJobExecutionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetPendingJobExecutionsResponse"));
+    /// @todo
+}

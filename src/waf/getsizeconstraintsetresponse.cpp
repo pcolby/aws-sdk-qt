@@ -19,3 +19,85 @@
 
 #include "getsizeconstraintsetresponse.h"
 #include "getsizeconstraintsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetSizeConstraintSetResponse
+ *
+ * @brief  Handles WAF GetSizeConstraintSet responses.
+ *
+ * @see    WAFClient::getSizeConstraintSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSizeConstraintSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new GetSizeConstraintSetResponsePrivate(this), parent)
+{
+    setRequest(new GetSizeConstraintSetRequest(request));
+    setReply(reply);
+}
+
+const GetSizeConstraintSetRequest * GetSizeConstraintSetResponse::request() const
+{
+    Q_D(const GetSizeConstraintSetResponse);
+    return static_cast<const GetSizeConstraintSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF GetSizeConstraintSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSizeConstraintSetResponsePrivate
+ *
+ * @brief  Private implementation for GetSizeConstraintSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSizeConstraintSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSizeConstraintSetResponse instance.
+ */
+GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponsePrivate(
+    GetSizeConstraintSetQueueResponse * const q) : GetSizeConstraintSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF GetSizeConstraintSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSizeConstraintSetResponse"));
+    /// @todo
+}

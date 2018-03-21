@@ -19,3 +19,85 @@
 
 #include "updaterecordsresponse.h"
 #include "updaterecordsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  UpdateRecordsResponse
+ *
+ * @brief  Handles CognitoSync UpdateRecords responses.
+ *
+ * @see    CognitoSyncClient::updateRecords
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRecordsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new UpdateRecordsResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRecordsRequest(request));
+    setReply(reply);
+}
+
+const UpdateRecordsRequest * UpdateRecordsResponse::request() const
+{
+    Q_D(const UpdateRecordsResponse);
+    return static_cast<const UpdateRecordsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync UpdateRecords response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRecordsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRecordsResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRecordsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRecordsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRecordsResponse instance.
+ */
+UpdateRecordsResponsePrivate::UpdateRecordsResponsePrivate(
+    UpdateRecordsQueueResponse * const q) : UpdateRecordsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync UpdateRecordsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRecordsResponsePrivate::UpdateRecordsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRecordsResponse"));
+    /// @todo
+}

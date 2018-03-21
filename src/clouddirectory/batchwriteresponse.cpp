@@ -19,3 +19,85 @@
 
 #include "batchwriteresponse.h"
 #include "batchwriteresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  BatchWriteResponse
+ *
+ * @brief  Handles CloudDirectory BatchWrite responses.
+ *
+ * @see    CloudDirectoryClient::batchWrite
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchWriteResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new BatchWriteResponsePrivate(this), parent)
+{
+    setRequest(new BatchWriteRequest(request));
+    setReply(reply);
+}
+
+const BatchWriteRequest * BatchWriteResponse::request() const
+{
+    Q_D(const BatchWriteResponse);
+    return static_cast<const BatchWriteRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory BatchWrite response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchWriteResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchWriteResponsePrivate
+ *
+ * @brief  Private implementation for BatchWriteResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchWriteResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchWriteResponse instance.
+ */
+BatchWriteResponsePrivate::BatchWriteResponsePrivate(
+    BatchWriteQueueResponse * const q) : BatchWritePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory BatchWriteResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchWriteResponsePrivate::BatchWriteResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchWriteResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createbatchpredictionresponse.h"
 #include "createbatchpredictionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateBatchPredictionResponse
+ *
+ * @brief  Handles MachineLearning CreateBatchPrediction responses.
+ *
+ * @see    MachineLearningClient::createBatchPrediction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBatchPredictionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new CreateBatchPredictionResponsePrivate(this), parent)
+{
+    setRequest(new CreateBatchPredictionRequest(request));
+    setReply(reply);
+}
+
+const CreateBatchPredictionRequest * CreateBatchPredictionResponse::request() const
+{
+    Q_D(const CreateBatchPredictionResponse);
+    return static_cast<const CreateBatchPredictionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning CreateBatchPrediction response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateBatchPredictionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBatchPredictionResponsePrivate
+ *
+ * @brief  Private implementation for CreateBatchPredictionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBatchPredictionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateBatchPredictionResponse instance.
+ */
+CreateBatchPredictionResponsePrivate::CreateBatchPredictionResponsePrivate(
+    CreateBatchPredictionQueueResponse * const q) : CreateBatchPredictionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning CreateBatchPredictionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateBatchPredictionResponsePrivate::CreateBatchPredictionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateBatchPredictionResponse"));
+    /// @todo
+}

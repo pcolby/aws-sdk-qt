@@ -19,3 +19,85 @@
 
 #include "sendcommandresponse.h"
 #include "sendcommandresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  SendCommandResponse
+ *
+ * @brief  Handles SSM SendCommand responses.
+ *
+ * @see    SSMClient::sendCommand
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendCommandResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new SendCommandResponsePrivate(this), parent)
+{
+    setRequest(new SendCommandRequest(request));
+    setReply(reply);
+}
+
+const SendCommandRequest * SendCommandResponse::request() const
+{
+    Q_D(const SendCommandResponse);
+    return static_cast<const SendCommandRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM SendCommand response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendCommandResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendCommandResponsePrivate
+ *
+ * @brief  Private implementation for SendCommandResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendCommandResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendCommandResponse instance.
+ */
+SendCommandResponsePrivate::SendCommandResponsePrivate(
+    SendCommandQueueResponse * const q) : SendCommandPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM SendCommandResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendCommandResponsePrivate::SendCommandResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendCommandResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updateruntimeconfigurationresponse.h"
 #include "updateruntimeconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateRuntimeConfigurationResponse
+ *
+ * @brief  Handles GameLift UpdateRuntimeConfiguration responses.
+ *
+ * @see    GameLiftClient::updateRuntimeConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRuntimeConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new UpdateRuntimeConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRuntimeConfigurationRequest(request));
+    setReply(reply);
+}
+
+const UpdateRuntimeConfigurationRequest * UpdateRuntimeConfigurationResponse::request() const
+{
+    Q_D(const UpdateRuntimeConfigurationResponse);
+    return static_cast<const UpdateRuntimeConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift UpdateRuntimeConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRuntimeConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRuntimeConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRuntimeConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRuntimeConfigurationResponse instance.
+ */
+UpdateRuntimeConfigurationResponsePrivate::UpdateRuntimeConfigurationResponsePrivate(
+    UpdateRuntimeConfigurationQueueResponse * const q) : UpdateRuntimeConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift UpdateRuntimeConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRuntimeConfigurationResponsePrivate::UpdateRuntimeConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRuntimeConfigurationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletedashboardsresponse.h"
 #include "deletedashboardsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  DeleteDashboardsResponse
+ *
+ * @brief  Handles CloudWatch DeleteDashboards responses.
+ *
+ * @see    CloudWatchClient::deleteDashboards
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDashboardsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new DeleteDashboardsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDashboardsRequest(request));
+    setReply(reply);
+}
+
+const DeleteDashboardsRequest * DeleteDashboardsResponse::request() const
+{
+    Q_D(const DeleteDashboardsResponse);
+    return static_cast<const DeleteDashboardsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch DeleteDashboards response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDashboardsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDashboardsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDashboardsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDashboardsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDashboardsResponse instance.
+ */
+DeleteDashboardsResponsePrivate::DeleteDashboardsResponsePrivate(
+    DeleteDashboardsQueueResponse * const q) : DeleteDashboardsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch DeleteDashboardsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDashboardsResponsePrivate::DeleteDashboardsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDashboardsResponse"));
+    /// @todo
+}

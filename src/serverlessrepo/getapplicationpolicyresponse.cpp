@@ -19,3 +19,85 @@
 
 #include "getapplicationpolicyresponse.h"
 #include "getapplicationpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  GetApplicationPolicyResponse
+ *
+ * @brief  Handles ServerlessApplicationRepository GetApplicationPolicy responses.
+ *
+ * @see    ServerlessApplicationRepositoryClient::getApplicationPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApplicationPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServerlessApplicationRepositoryResponse(new GetApplicationPolicyResponsePrivate(this), parent)
+{
+    setRequest(new GetApplicationPolicyRequest(request));
+    setReply(reply);
+}
+
+const GetApplicationPolicyRequest * GetApplicationPolicyResponse::request() const
+{
+    Q_D(const GetApplicationPolicyResponse);
+    return static_cast<const GetApplicationPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServerlessApplicationRepository GetApplicationPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetApplicationPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApplicationPolicyResponsePrivate
+ *
+ * @brief  Private implementation for GetApplicationPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetApplicationPolicyResponse instance.
+ */
+GetApplicationPolicyResponsePrivate::GetApplicationPolicyResponsePrivate(
+    GetApplicationPolicyQueueResponse * const q) : GetApplicationPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServerlessApplicationRepository GetApplicationPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetApplicationPolicyResponsePrivate::GetApplicationPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetApplicationPolicyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createuserprofileresponse.h"
 #include "createuserprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  CreateUserProfileResponse
+ *
+ * @brief  Handles CodeStar CreateUserProfile responses.
+ *
+ * @see    CodeStarClient::createUserProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUserProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new CreateUserProfileResponsePrivate(this), parent)
+{
+    setRequest(new CreateUserProfileRequest(request));
+    setReply(reply);
+}
+
+const CreateUserProfileRequest * CreateUserProfileResponse::request() const
+{
+    Q_D(const CreateUserProfileResponse);
+    return static_cast<const CreateUserProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar CreateUserProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateUserProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUserProfileResponsePrivate
+ *
+ * @brief  Private implementation for CreateUserProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateUserProfileResponse instance.
+ */
+CreateUserProfileResponsePrivate::CreateUserProfileResponsePrivate(
+    CreateUserProfileQueueResponse * const q) : CreateUserProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar CreateUserProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateUserProfileResponsePrivate::CreateUserProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateUserProfileResponse"));
+    /// @todo
+}

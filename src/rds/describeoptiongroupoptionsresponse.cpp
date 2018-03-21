@@ -19,3 +19,85 @@
 
 #include "describeoptiongroupoptionsresponse.h"
 #include "describeoptiongroupoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeOptionGroupOptionsResponse
+ *
+ * @brief  Handles RDS DescribeOptionGroupOptions responses.
+ *
+ * @see    RDSClient::describeOptionGroupOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOptionGroupOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeOptionGroupOptionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeOptionGroupOptionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeOptionGroupOptionsRequest * DescribeOptionGroupOptionsResponse::request() const
+{
+    Q_D(const DescribeOptionGroupOptionsResponse);
+    return static_cast<const DescribeOptionGroupOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeOptionGroupOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeOptionGroupOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOptionGroupOptionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeOptionGroupOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOptionGroupOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeOptionGroupOptionsResponse instance.
+ */
+DescribeOptionGroupOptionsResponsePrivate::DescribeOptionGroupOptionsResponsePrivate(
+    DescribeOptionGroupOptionsQueueResponse * const q) : DescribeOptionGroupOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeOptionGroupOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeOptionGroupOptionsResponsePrivate::DescribeOptionGroupOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeOptionGroupOptionsResponse"));
+    /// @todo
+}

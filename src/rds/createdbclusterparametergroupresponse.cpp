@@ -19,3 +19,85 @@
 
 #include "createdbclusterparametergroupresponse.h"
 #include "createdbclusterparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBClusterParameterGroupResponse
+ *
+ * @brief  Handles RDS CreateDBClusterParameterGroup responses.
+ *
+ * @see    RDSClient::createDBClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBClusterParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CreateDBClusterParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateDBClusterParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateDBClusterParameterGroupRequest * CreateDBClusterParameterGroupResponse::request() const
+{
+    Q_D(const CreateDBClusterParameterGroupResponse);
+    return static_cast<const CreateDBClusterParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CreateDBClusterParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBClusterParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateDBClusterParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBClusterParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDBClusterParameterGroupResponse instance.
+ */
+CreateDBClusterParameterGroupResponsePrivate::CreateDBClusterParameterGroupResponsePrivate(
+    CreateDBClusterParameterGroupQueueResponse * const q) : CreateDBClusterParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CreateDBClusterParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDBClusterParameterGroupResponsePrivate::CreateDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDBClusterParameterGroupResponse"));
+    /// @todo
+}

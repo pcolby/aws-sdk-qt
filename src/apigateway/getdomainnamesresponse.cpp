@@ -19,3 +19,85 @@
 
 #include "getdomainnamesresponse.h"
 #include "getdomainnamesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetDomainNamesResponse
+ *
+ * @brief  Handles APIGateway GetDomainNames responses.
+ *
+ * @see    APIGatewayClient::getDomainNames
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDomainNamesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetDomainNamesResponsePrivate(this), parent)
+{
+    setRequest(new GetDomainNamesRequest(request));
+    setReply(reply);
+}
+
+const GetDomainNamesRequest * GetDomainNamesResponse::request() const
+{
+    Q_D(const GetDomainNamesResponse);
+    return static_cast<const GetDomainNamesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetDomainNames response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDomainNamesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDomainNamesResponsePrivate
+ *
+ * @brief  Private implementation for GetDomainNamesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainNamesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDomainNamesResponse instance.
+ */
+GetDomainNamesResponsePrivate::GetDomainNamesResponsePrivate(
+    GetDomainNamesQueueResponse * const q) : GetDomainNamesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetDomainNamesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDomainNamesResponsePrivate::GetDomainNamesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDomainNamesResponse"));
+    /// @todo
+}

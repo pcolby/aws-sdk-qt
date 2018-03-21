@@ -19,3 +19,85 @@
 
 #include "getapnschannelresponse.h"
 #include "getapnschannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetApnsChannelResponse
+ *
+ * @brief  Handles Pinpoint GetApnsChannel responses.
+ *
+ * @see    PinpointClient::getApnsChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApnsChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetApnsChannelResponsePrivate(this), parent)
+{
+    setRequest(new GetApnsChannelRequest(request));
+    setReply(reply);
+}
+
+const GetApnsChannelRequest * GetApnsChannelResponse::request() const
+{
+    Q_D(const GetApnsChannelResponse);
+    return static_cast<const GetApnsChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetApnsChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetApnsChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApnsChannelResponsePrivate
+ *
+ * @brief  Private implementation for GetApnsChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApnsChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetApnsChannelResponse instance.
+ */
+GetApnsChannelResponsePrivate::GetApnsChannelResponsePrivate(
+    GetApnsChannelQueueResponse * const q) : GetApnsChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetApnsChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetApnsChannelResponsePrivate::GetApnsChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetApnsChannelResponse"));
+    /// @todo
+}

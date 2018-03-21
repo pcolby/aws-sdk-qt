@@ -19,3 +19,85 @@
 
 #include "deleteconnectionresponse.h"
 #include "deleteconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DeleteConnectionResponse
+ *
+ * @brief  Handles DirectConnect DeleteConnection responses.
+ *
+ * @see    DirectConnectClient::deleteConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DeleteConnectionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteConnectionRequest(request));
+    setReply(reply);
+}
+
+const DeleteConnectionRequest * DeleteConnectionResponse::request() const
+{
+    Q_D(const DeleteConnectionResponse);
+    return static_cast<const DeleteConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DeleteConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConnectionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteConnectionResponse instance.
+ */
+DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
+    DeleteConnectionQueueResponse * const q) : DeleteConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DeleteConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteConnectionResponsePrivate::DeleteConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteConnectionResponse"));
+    /// @todo
+}

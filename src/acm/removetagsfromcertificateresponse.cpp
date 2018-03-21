@@ -19,3 +19,85 @@
 
 #include "removetagsfromcertificateresponse.h"
 #include "removetagsfromcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  RemoveTagsFromCertificateResponse
+ *
+ * @brief  Handles ACM RemoveTagsFromCertificate responses.
+ *
+ * @see    ACMClient::removeTagsFromCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsFromCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ACMResponse(new RemoveTagsFromCertificateResponsePrivate(this), parent)
+{
+    setRequest(new RemoveTagsFromCertificateRequest(request));
+    setReply(reply);
+}
+
+const RemoveTagsFromCertificateRequest * RemoveTagsFromCertificateResponse::request() const
+{
+    Q_D(const RemoveTagsFromCertificateResponse);
+    return static_cast<const RemoveTagsFromCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ACM RemoveTagsFromCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveTagsFromCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsFromCertificateResponsePrivate
+ *
+ * @brief  Private implementation for RemoveTagsFromCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveTagsFromCertificateResponse instance.
+ */
+RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePrivate(
+    RemoveTagsFromCertificateQueueResponse * const q) : RemoveTagsFromCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ACM RemoveTagsFromCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromCertificateResponse"));
+    /// @todo
+}

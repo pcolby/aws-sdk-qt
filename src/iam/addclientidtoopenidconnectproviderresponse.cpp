@@ -19,3 +19,85 @@
 
 #include "addclientidtoopenidconnectproviderresponse.h"
 #include "addclientidtoopenidconnectproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  AddClientIDToOpenIDConnectProviderResponse
+ *
+ * @brief  Handles IAM AddClientIDToOpenIDConnectProvider responses.
+ *
+ * @see    IAMClient::addClientIDToOpenIDConnectProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddClientIDToOpenIDConnectProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new AddClientIDToOpenIDConnectProviderResponsePrivate(this), parent)
+{
+    setRequest(new AddClientIDToOpenIDConnectProviderRequest(request));
+    setReply(reply);
+}
+
+const AddClientIDToOpenIDConnectProviderRequest * AddClientIDToOpenIDConnectProviderResponse::request() const
+{
+    Q_D(const AddClientIDToOpenIDConnectProviderResponse);
+    return static_cast<const AddClientIDToOpenIDConnectProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM AddClientIDToOpenIDConnectProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddClientIDToOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddClientIDToOpenIDConnectProviderResponsePrivate
+ *
+ * @brief  Private implementation for AddClientIDToOpenIDConnectProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddClientIDToOpenIDConnectProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddClientIDToOpenIDConnectProviderResponse instance.
+ */
+AddClientIDToOpenIDConnectProviderResponsePrivate::AddClientIDToOpenIDConnectProviderResponsePrivate(
+    AddClientIDToOpenIDConnectProviderQueueResponse * const q) : AddClientIDToOpenIDConnectProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM AddClientIDToOpenIDConnectProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddClientIDToOpenIDConnectProviderResponsePrivate::AddClientIDToOpenIDConnectProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddClientIDToOpenIDConnectProviderResponse"));
+    /// @todo
+}

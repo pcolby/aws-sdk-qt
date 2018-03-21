@@ -19,3 +19,85 @@
 
 #include "createstreamprocessorresponse.h"
 #include "createstreamprocessorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  CreateStreamProcessorResponse
+ *
+ * @brief  Handles Rekognition CreateStreamProcessor responses.
+ *
+ * @see    RekognitionClient::createStreamProcessor
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStreamProcessorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new CreateStreamProcessorResponsePrivate(this), parent)
+{
+    setRequest(new CreateStreamProcessorRequest(request));
+    setReply(reply);
+}
+
+const CreateStreamProcessorRequest * CreateStreamProcessorResponse::request() const
+{
+    Q_D(const CreateStreamProcessorResponse);
+    return static_cast<const CreateStreamProcessorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition CreateStreamProcessor response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStreamProcessorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStreamProcessorResponsePrivate
+ *
+ * @brief  Private implementation for CreateStreamProcessorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStreamProcessorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStreamProcessorResponse instance.
+ */
+CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponsePrivate(
+    CreateStreamProcessorQueueResponse * const q) : CreateStreamProcessorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition CreateStreamProcessorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStreamProcessorResponse"));
+    /// @todo
+}

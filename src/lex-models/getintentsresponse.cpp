@@ -19,3 +19,85 @@
 
 #include "getintentsresponse.h"
 #include "getintentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetIntentsResponse
+ *
+ * @brief  Handles LexModelBuildingService GetIntents responses.
+ *
+ * @see    LexModelBuildingServiceClient::getIntents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetIntentsResponsePrivate(this), parent)
+{
+    setRequest(new GetIntentsRequest(request));
+    setReply(reply);
+}
+
+const GetIntentsRequest * GetIntentsResponse::request() const
+{
+    Q_D(const GetIntentsResponse);
+    return static_cast<const GetIntentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetIntents response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIntentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntentsResponsePrivate
+ *
+ * @brief  Private implementation for GetIntentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIntentsResponse instance.
+ */
+GetIntentsResponsePrivate::GetIntentsResponsePrivate(
+    GetIntentsQueueResponse * const q) : GetIntentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetIntentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIntentsResponsePrivate::GetIntentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIntentsResponse"));
+    /// @todo
+}

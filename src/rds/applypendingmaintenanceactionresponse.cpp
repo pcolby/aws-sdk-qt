@@ -19,3 +19,85 @@
 
 #include "applypendingmaintenanceactionresponse.h"
 #include "applypendingmaintenanceactionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ApplyPendingMaintenanceActionResponse
+ *
+ * @brief  Handles RDS ApplyPendingMaintenanceAction responses.
+ *
+ * @see    RDSClient::applyPendingMaintenanceAction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ApplyPendingMaintenanceActionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ApplyPendingMaintenanceActionResponsePrivate(this), parent)
+{
+    setRequest(new ApplyPendingMaintenanceActionRequest(request));
+    setReply(reply);
+}
+
+const ApplyPendingMaintenanceActionRequest * ApplyPendingMaintenanceActionResponse::request() const
+{
+    Q_D(const ApplyPendingMaintenanceActionResponse);
+    return static_cast<const ApplyPendingMaintenanceActionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ApplyPendingMaintenanceAction response.
+ *
+ * @param  response  Response to parse.
+ */
+void ApplyPendingMaintenanceActionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ApplyPendingMaintenanceActionResponsePrivate
+ *
+ * @brief  Private implementation for ApplyPendingMaintenanceActionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApplyPendingMaintenanceActionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ApplyPendingMaintenanceActionResponse instance.
+ */
+ApplyPendingMaintenanceActionResponsePrivate::ApplyPendingMaintenanceActionResponsePrivate(
+    ApplyPendingMaintenanceActionQueueResponse * const q) : ApplyPendingMaintenanceActionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ApplyPendingMaintenanceActionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ApplyPendingMaintenanceActionResponsePrivate::ApplyPendingMaintenanceActionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ApplyPendingMaintenanceActionResponse"));
+    /// @todo
+}

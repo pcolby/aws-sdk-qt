@@ -19,3 +19,85 @@
 
 #include "getregistrationcoderesponse.h"
 #include "getregistrationcoderesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetRegistrationCodeResponse
+ *
+ * @brief  Handles IoT GetRegistrationCode responses.
+ *
+ * @see    IoTClient::getRegistrationCode
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRegistrationCodeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new GetRegistrationCodeResponsePrivate(this), parent)
+{
+    setRequest(new GetRegistrationCodeRequest(request));
+    setReply(reply);
+}
+
+const GetRegistrationCodeRequest * GetRegistrationCodeResponse::request() const
+{
+    Q_D(const GetRegistrationCodeResponse);
+    return static_cast<const GetRegistrationCodeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT GetRegistrationCode response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRegistrationCodeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRegistrationCodeResponsePrivate
+ *
+ * @brief  Private implementation for GetRegistrationCodeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRegistrationCodeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRegistrationCodeResponse instance.
+ */
+GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponsePrivate(
+    GetRegistrationCodeQueueResponse * const q) : GetRegistrationCodePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT GetRegistrationCodeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRegistrationCodeResponse"));
+    /// @todo
+}

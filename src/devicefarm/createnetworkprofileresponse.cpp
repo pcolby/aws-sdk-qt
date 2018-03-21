@@ -19,3 +19,85 @@
 
 #include "createnetworkprofileresponse.h"
 #include "createnetworkprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  CreateNetworkProfileResponse
+ *
+ * @brief  Handles DeviceFarm CreateNetworkProfile responses.
+ *
+ * @see    DeviceFarmClient::createNetworkProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNetworkProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new CreateNetworkProfileResponsePrivate(this), parent)
+{
+    setRequest(new CreateNetworkProfileRequest(request));
+    setReply(reply);
+}
+
+const CreateNetworkProfileRequest * CreateNetworkProfileResponse::request() const
+{
+    Q_D(const CreateNetworkProfileResponse);
+    return static_cast<const CreateNetworkProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm CreateNetworkProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateNetworkProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNetworkProfileResponsePrivate
+ *
+ * @brief  Private implementation for CreateNetworkProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateNetworkProfileResponse instance.
+ */
+CreateNetworkProfileResponsePrivate::CreateNetworkProfileResponsePrivate(
+    CreateNetworkProfileQueueResponse * const q) : CreateNetworkProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm CreateNetworkProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateNetworkProfileResponsePrivate::CreateNetworkProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateNetworkProfileResponse"));
+    /// @todo
+}

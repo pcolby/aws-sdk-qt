@@ -19,3 +19,85 @@
 
 #include "getbucketloggingresponse.h"
 #include "getbucketloggingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketLoggingResponse
+ *
+ * @brief  Handles S3 GetBucketLogging responses.
+ *
+ * @see    S3Client::getBucketLogging
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketLoggingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketLoggingResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketLoggingRequest(request));
+    setReply(reply);
+}
+
+const GetBucketLoggingRequest * GetBucketLoggingResponse::request() const
+{
+    Q_D(const GetBucketLoggingResponse);
+    return static_cast<const GetBucketLoggingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketLogging response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketLoggingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketLoggingResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketLoggingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketLoggingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketLoggingResponse instance.
+ */
+GetBucketLoggingResponsePrivate::GetBucketLoggingResponsePrivate(
+    GetBucketLoggingQueueResponse * const q) : GetBucketLoggingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketLoggingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketLoggingResponsePrivate::GetBucketLoggingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketLoggingResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listhitsforqualificationtyperesponse.h"
 #include "listhitsforqualificationtyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListHITsForQualificationTypeResponse
+ *
+ * @brief  Handles MTurk ListHITsForQualificationType responses.
+ *
+ * @see    MTurkClient::listHITsForQualificationType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListHITsForQualificationTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListHITsForQualificationTypeResponsePrivate(this), parent)
+{
+    setRequest(new ListHITsForQualificationTypeRequest(request));
+    setReply(reply);
+}
+
+const ListHITsForQualificationTypeRequest * ListHITsForQualificationTypeResponse::request() const
+{
+    Q_D(const ListHITsForQualificationTypeResponse);
+    return static_cast<const ListHITsForQualificationTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListHITsForQualificationType response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListHITsForQualificationTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListHITsForQualificationTypeResponsePrivate
+ *
+ * @brief  Private implementation for ListHITsForQualificationTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHITsForQualificationTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListHITsForQualificationTypeResponse instance.
+ */
+ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeResponsePrivate(
+    ListHITsForQualificationTypeQueueResponse * const q) : ListHITsForQualificationTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListHITsForQualificationTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListHITsForQualificationTypeResponse"));
+    /// @todo
+}

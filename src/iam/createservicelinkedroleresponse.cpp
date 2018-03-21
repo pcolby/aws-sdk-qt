@@ -19,3 +19,85 @@
 
 #include "createservicelinkedroleresponse.h"
 #include "createservicelinkedroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateServiceLinkedRoleResponse
+ *
+ * @brief  Handles IAM CreateServiceLinkedRole responses.
+ *
+ * @see    IAMClient::createServiceLinkedRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateServiceLinkedRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new CreateServiceLinkedRoleResponsePrivate(this), parent)
+{
+    setRequest(new CreateServiceLinkedRoleRequest(request));
+    setReply(reply);
+}
+
+const CreateServiceLinkedRoleRequest * CreateServiceLinkedRoleResponse::request() const
+{
+    Q_D(const CreateServiceLinkedRoleResponse);
+    return static_cast<const CreateServiceLinkedRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM CreateServiceLinkedRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateServiceLinkedRoleResponsePrivate
+ *
+ * @brief  Private implementation for CreateServiceLinkedRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceLinkedRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateServiceLinkedRoleResponse instance.
+ */
+CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponsePrivate(
+    CreateServiceLinkedRoleQueueResponse * const q) : CreateServiceLinkedRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM CreateServiceLinkedRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateServiceLinkedRoleResponse"));
+    /// @todo
+}

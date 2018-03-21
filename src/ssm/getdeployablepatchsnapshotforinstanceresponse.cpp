@@ -19,3 +19,85 @@
 
 #include "getdeployablepatchsnapshotforinstanceresponse.h"
 #include "getdeployablepatchsnapshotforinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetDeployablePatchSnapshotForInstanceResponse
+ *
+ * @brief  Handles SSM GetDeployablePatchSnapshotForInstance responses.
+ *
+ * @see    SSMClient::getDeployablePatchSnapshotForInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeployablePatchSnapshotForInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new GetDeployablePatchSnapshotForInstanceResponsePrivate(this), parent)
+{
+    setRequest(new GetDeployablePatchSnapshotForInstanceRequest(request));
+    setReply(reply);
+}
+
+const GetDeployablePatchSnapshotForInstanceRequest * GetDeployablePatchSnapshotForInstanceResponse::request() const
+{
+    Q_D(const GetDeployablePatchSnapshotForInstanceResponse);
+    return static_cast<const GetDeployablePatchSnapshotForInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM GetDeployablePatchSnapshotForInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDeployablePatchSnapshotForInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeployablePatchSnapshotForInstanceResponsePrivate
+ *
+ * @brief  Private implementation for GetDeployablePatchSnapshotForInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDeployablePatchSnapshotForInstanceResponse instance.
+ */
+GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshotForInstanceResponsePrivate(
+    GetDeployablePatchSnapshotForInstanceQueueResponse * const q) : GetDeployablePatchSnapshotForInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM GetDeployablePatchSnapshotForInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshotForInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDeployablePatchSnapshotForInstanceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "stopinstanceresponse.h"
 #include "stopinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  StopInstanceResponse
+ *
+ * @brief  Handles Lightsail StopInstance responses.
+ *
+ * @see    LightsailClient::stopInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new StopInstanceResponsePrivate(this), parent)
+{
+    setRequest(new StopInstanceRequest(request));
+    setReply(reply);
+}
+
+const StopInstanceRequest * StopInstanceResponse::request() const
+{
+    Q_D(const StopInstanceResponse);
+    return static_cast<const StopInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail StopInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopInstanceResponsePrivate
+ *
+ * @brief  Private implementation for StopInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopInstanceResponse instance.
+ */
+StopInstanceResponsePrivate::StopInstanceResponsePrivate(
+    StopInstanceQueueResponse * const q) : StopInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail StopInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopInstanceResponsePrivate::StopInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopInstanceResponse"));
+    /// @todo
+}

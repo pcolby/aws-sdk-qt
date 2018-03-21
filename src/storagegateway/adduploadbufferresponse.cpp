@@ -19,3 +19,85 @@
 
 #include "adduploadbufferresponse.h"
 #include "adduploadbufferresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  AddUploadBufferResponse
+ *
+ * @brief  Handles StorageGateway AddUploadBuffer responses.
+ *
+ * @see    StorageGatewayClient::addUploadBuffer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddUploadBufferResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new AddUploadBufferResponsePrivate(this), parent)
+{
+    setRequest(new AddUploadBufferRequest(request));
+    setReply(reply);
+}
+
+const AddUploadBufferRequest * AddUploadBufferResponse::request() const
+{
+    Q_D(const AddUploadBufferResponse);
+    return static_cast<const AddUploadBufferRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway AddUploadBuffer response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddUploadBufferResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddUploadBufferResponsePrivate
+ *
+ * @brief  Private implementation for AddUploadBufferResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddUploadBufferResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddUploadBufferResponse instance.
+ */
+AddUploadBufferResponsePrivate::AddUploadBufferResponsePrivate(
+    AddUploadBufferQueueResponse * const q) : AddUploadBufferPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway AddUploadBufferResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddUploadBufferResponsePrivate::AddUploadBufferResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddUploadBufferResponse"));
+    /// @todo
+}

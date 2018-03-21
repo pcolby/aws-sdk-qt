@@ -19,3 +19,85 @@
 
 #include "getapnsvoipsandboxchannelresponse.h"
 #include "getapnsvoipsandboxchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetApnsVoipSandboxChannelResponse
+ *
+ * @brief  Handles Pinpoint GetApnsVoipSandboxChannel responses.
+ *
+ * @see    PinpointClient::getApnsVoipSandboxChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApnsVoipSandboxChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetApnsVoipSandboxChannelResponsePrivate(this), parent)
+{
+    setRequest(new GetApnsVoipSandboxChannelRequest(request));
+    setReply(reply);
+}
+
+const GetApnsVoipSandboxChannelRequest * GetApnsVoipSandboxChannelResponse::request() const
+{
+    Q_D(const GetApnsVoipSandboxChannelResponse);
+    return static_cast<const GetApnsVoipSandboxChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetApnsVoipSandboxChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetApnsVoipSandboxChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApnsVoipSandboxChannelResponsePrivate
+ *
+ * @brief  Private implementation for GetApnsVoipSandboxChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApnsVoipSandboxChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetApnsVoipSandboxChannelResponse instance.
+ */
+GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponsePrivate(
+    GetApnsVoipSandboxChannelQueueResponse * const q) : GetApnsVoipSandboxChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetApnsVoipSandboxChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetApnsVoipSandboxChannelResponse"));
+    /// @todo
+}

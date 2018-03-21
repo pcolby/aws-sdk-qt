@@ -19,3 +19,85 @@
 
 #include "putbucketinventoryconfigurationresponse.h"
 #include "putbucketinventoryconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketInventoryConfigurationResponse
+ *
+ * @brief  Handles S3 PutBucketInventoryConfiguration responses.
+ *
+ * @see    S3Client::putBucketInventoryConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketInventoryConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketInventoryConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketInventoryConfigurationRequest(request));
+    setReply(reply);
+}
+
+const PutBucketInventoryConfigurationRequest * PutBucketInventoryConfigurationResponse::request() const
+{
+    Q_D(const PutBucketInventoryConfigurationResponse);
+    return static_cast<const PutBucketInventoryConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketInventoryConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketInventoryConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketInventoryConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketInventoryConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketInventoryConfigurationResponse instance.
+ */
+PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationResponsePrivate(
+    PutBucketInventoryConfigurationQueueResponse * const q) : PutBucketInventoryConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketInventoryConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketInventoryConfigurationResponse"));
+    /// @todo
+}

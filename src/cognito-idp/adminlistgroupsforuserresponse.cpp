@@ -19,3 +19,85 @@
 
 #include "adminlistgroupsforuserresponse.h"
 #include "adminlistgroupsforuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminListGroupsForUserResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminListGroupsForUser responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminListGroupsForUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminListGroupsForUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminListGroupsForUserResponsePrivate(this), parent)
+{
+    setRequest(new AdminListGroupsForUserRequest(request));
+    setReply(reply);
+}
+
+const AdminListGroupsForUserRequest * AdminListGroupsForUserResponse::request() const
+{
+    Q_D(const AdminListGroupsForUserResponse);
+    return static_cast<const AdminListGroupsForUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminListGroupsForUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminListGroupsForUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminListGroupsForUserResponsePrivate
+ *
+ * @brief  Private implementation for AdminListGroupsForUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListGroupsForUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminListGroupsForUserResponse instance.
+ */
+AdminListGroupsForUserResponsePrivate::AdminListGroupsForUserResponsePrivate(
+    AdminListGroupsForUserQueueResponse * const q) : AdminListGroupsForUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminListGroupsForUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminListGroupsForUserResponsePrivate::AdminListGroupsForUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminListGroupsForUserResponse"));
+    /// @todo
+}

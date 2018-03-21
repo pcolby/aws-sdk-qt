@@ -19,3 +19,85 @@
 
 #include "describedocumentpermissionresponse.h"
 #include "describedocumentpermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeDocumentPermissionResponse
+ *
+ * @brief  Handles SSM DescribeDocumentPermission responses.
+ *
+ * @see    SSMClient::describeDocumentPermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDocumentPermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeDocumentPermissionResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDocumentPermissionRequest(request));
+    setReply(reply);
+}
+
+const DescribeDocumentPermissionRequest * DescribeDocumentPermissionResponse::request() const
+{
+    Q_D(const DescribeDocumentPermissionResponse);
+    return static_cast<const DescribeDocumentPermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeDocumentPermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDocumentPermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDocumentPermissionResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDocumentPermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDocumentPermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDocumentPermissionResponse instance.
+ */
+DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionResponsePrivate(
+    DescribeDocumentPermissionQueueResponse * const q) : DescribeDocumentPermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeDocumentPermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentPermissionResponse"));
+    /// @todo
+}

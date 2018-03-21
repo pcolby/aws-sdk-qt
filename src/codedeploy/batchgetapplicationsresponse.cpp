@@ -19,3 +19,85 @@
 
 #include "batchgetapplicationsresponse.h"
 #include "batchgetapplicationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetApplicationsResponse
+ *
+ * @brief  Handles CodeDeploy BatchGetApplications responses.
+ *
+ * @see    CodeDeployClient::batchGetApplications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetApplicationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new BatchGetApplicationsResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetApplicationsRequest(request));
+    setReply(reply);
+}
+
+const BatchGetApplicationsRequest * BatchGetApplicationsResponse::request() const
+{
+    Q_D(const BatchGetApplicationsResponse);
+    return static_cast<const BatchGetApplicationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy BatchGetApplications response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetApplicationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetApplicationsResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetApplicationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetApplicationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetApplicationsResponse instance.
+ */
+BatchGetApplicationsResponsePrivate::BatchGetApplicationsResponsePrivate(
+    BatchGetApplicationsQueueResponse * const q) : BatchGetApplicationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy BatchGetApplicationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetApplicationsResponsePrivate::BatchGetApplicationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetApplicationsResponse"));
+    /// @todo
+}

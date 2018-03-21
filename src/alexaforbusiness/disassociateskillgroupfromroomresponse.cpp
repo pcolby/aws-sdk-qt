@@ -19,3 +19,85 @@
 
 #include "disassociateskillgroupfromroomresponse.h"
 #include "disassociateskillgroupfromroomresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  DisassociateSkillGroupFromRoomResponse
+ *
+ * @brief  Handles AlexaForBusiness DisassociateSkillGroupFromRoom responses.
+ *
+ * @see    AlexaForBusinessClient::disassociateSkillGroupFromRoom
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateSkillGroupFromRoomResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new DisassociateSkillGroupFromRoomResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateSkillGroupFromRoomRequest(request));
+    setReply(reply);
+}
+
+const DisassociateSkillGroupFromRoomRequest * DisassociateSkillGroupFromRoomResponse::request() const
+{
+    Q_D(const DisassociateSkillGroupFromRoomResponse);
+    return static_cast<const DisassociateSkillGroupFromRoomRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness DisassociateSkillGroupFromRoom response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateSkillGroupFromRoomResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateSkillGroupFromRoomResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateSkillGroupFromRoomResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateSkillGroupFromRoomResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateSkillGroupFromRoomResponse instance.
+ */
+DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomResponsePrivate(
+    DisassociateSkillGroupFromRoomQueueResponse * const q) : DisassociateSkillGroupFromRoomPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness DisassociateSkillGroupFromRoomResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateSkillGroupFromRoomResponse"));
+    /// @todo
+}

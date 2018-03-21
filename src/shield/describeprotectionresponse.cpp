@@ -19,3 +19,85 @@
 
 #include "describeprotectionresponse.h"
 #include "describeprotectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  DescribeProtectionResponse
+ *
+ * @brief  Handles Shield DescribeProtection responses.
+ *
+ * @see    ShieldClient::describeProtection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProtectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ShieldResponse(new DescribeProtectionResponsePrivate(this), parent)
+{
+    setRequest(new DescribeProtectionRequest(request));
+    setReply(reply);
+}
+
+const DescribeProtectionRequest * DescribeProtectionResponse::request() const
+{
+    Q_D(const DescribeProtectionResponse);
+    return static_cast<const DescribeProtectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Shield DescribeProtection response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeProtectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProtectionResponsePrivate
+ *
+ * @brief  Private implementation for DescribeProtectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProtectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeProtectionResponse instance.
+ */
+DescribeProtectionResponsePrivate::DescribeProtectionResponsePrivate(
+    DescribeProtectionQueueResponse * const q) : DescribeProtectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Shield DescribeProtectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeProtectionResponsePrivate::DescribeProtectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeProtectionResponse"));
+    /// @todo
+}

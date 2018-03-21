@@ -19,3 +19,85 @@
 
 #include "putevaluationsresponse.h"
 #include "putevaluationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  PutEvaluationsResponse
+ *
+ * @brief  Handles ConfigService PutEvaluations responses.
+ *
+ * @see    ConfigServiceClient::putEvaluations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutEvaluationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new PutEvaluationsResponsePrivate(this), parent)
+{
+    setRequest(new PutEvaluationsRequest(request));
+    setReply(reply);
+}
+
+const PutEvaluationsRequest * PutEvaluationsResponse::request() const
+{
+    Q_D(const PutEvaluationsResponse);
+    return static_cast<const PutEvaluationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService PutEvaluations response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutEvaluationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutEvaluationsResponsePrivate
+ *
+ * @brief  Private implementation for PutEvaluationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutEvaluationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutEvaluationsResponse instance.
+ */
+PutEvaluationsResponsePrivate::PutEvaluationsResponsePrivate(
+    PutEvaluationsQueueResponse * const q) : PutEvaluationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService PutEvaluationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutEvaluationsResponsePrivate::PutEvaluationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutEvaluationsResponse"));
+    /// @todo
+}

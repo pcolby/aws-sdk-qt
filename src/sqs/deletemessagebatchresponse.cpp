@@ -19,3 +19,85 @@
 
 #include "deletemessagebatchresponse.h"
 #include "deletemessagebatchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  DeleteMessageBatchResponse
+ *
+ * @brief  Handles SQS DeleteMessageBatch responses.
+ *
+ * @see    SQSClient::deleteMessageBatch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteMessageBatchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new DeleteMessageBatchResponsePrivate(this), parent)
+{
+    setRequest(new DeleteMessageBatchRequest(request));
+    setReply(reply);
+}
+
+const DeleteMessageBatchRequest * DeleteMessageBatchResponse::request() const
+{
+    Q_D(const DeleteMessageBatchResponse);
+    return static_cast<const DeleteMessageBatchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS DeleteMessageBatch response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteMessageBatchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteMessageBatchResponsePrivate
+ *
+ * @brief  Private implementation for DeleteMessageBatchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMessageBatchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteMessageBatchResponse instance.
+ */
+DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponsePrivate(
+    DeleteMessageBatchQueueResponse * const q) : DeleteMessageBatchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS DeleteMessageBatchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteMessageBatchResponse"));
+    /// @todo
+}

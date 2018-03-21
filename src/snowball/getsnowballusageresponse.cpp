@@ -19,3 +19,85 @@
 
 #include "getsnowballusageresponse.h"
 #include "getsnowballusageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  GetSnowballUsageResponse
+ *
+ * @brief  Handles Snowball GetSnowballUsage responses.
+ *
+ * @see    SnowballClient::getSnowballUsage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSnowballUsageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SnowballResponse(new GetSnowballUsageResponsePrivate(this), parent)
+{
+    setRequest(new GetSnowballUsageRequest(request));
+    setReply(reply);
+}
+
+const GetSnowballUsageRequest * GetSnowballUsageResponse::request() const
+{
+    Q_D(const GetSnowballUsageResponse);
+    return static_cast<const GetSnowballUsageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Snowball GetSnowballUsage response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSnowballUsageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSnowballUsageResponsePrivate
+ *
+ * @brief  Private implementation for GetSnowballUsageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSnowballUsageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSnowballUsageResponse instance.
+ */
+GetSnowballUsageResponsePrivate::GetSnowballUsageResponsePrivate(
+    GetSnowballUsageQueueResponse * const q) : GetSnowballUsagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Snowball GetSnowballUsageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSnowballUsageResponsePrivate::GetSnowballUsageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSnowballUsageResponse"));
+    /// @todo
+}

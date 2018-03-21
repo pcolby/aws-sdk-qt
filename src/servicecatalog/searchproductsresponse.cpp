@@ -19,3 +19,85 @@
 
 #include "searchproductsresponse.h"
 #include "searchproductsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  SearchProductsResponse
+ *
+ * @brief  Handles ServiceCatalog SearchProducts responses.
+ *
+ * @see    ServiceCatalogClient::searchProducts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchProductsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new SearchProductsResponsePrivate(this), parent)
+{
+    setRequest(new SearchProductsRequest(request));
+    setReply(reply);
+}
+
+const SearchProductsRequest * SearchProductsResponse::request() const
+{
+    Q_D(const SearchProductsResponse);
+    return static_cast<const SearchProductsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog SearchProducts response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchProductsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchProductsResponsePrivate
+ *
+ * @brief  Private implementation for SearchProductsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchProductsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchProductsResponse instance.
+ */
+SearchProductsResponsePrivate::SearchProductsResponsePrivate(
+    SearchProductsQueueResponse * const q) : SearchProductsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog SearchProductsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchProductsResponsePrivate::SearchProductsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchProductsResponse"));
+    /// @todo
+}

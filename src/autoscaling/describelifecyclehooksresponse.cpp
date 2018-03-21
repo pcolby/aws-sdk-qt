@@ -19,3 +19,85 @@
 
 #include "describelifecyclehooksresponse.h"
 #include "describelifecyclehooksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeLifecycleHooksResponse
+ *
+ * @brief  Handles AutoScaling DescribeLifecycleHooks responses.
+ *
+ * @see    AutoScalingClient::describeLifecycleHooks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLifecycleHooksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeLifecycleHooksResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLifecycleHooksRequest(request));
+    setReply(reply);
+}
+
+const DescribeLifecycleHooksRequest * DescribeLifecycleHooksResponse::request() const
+{
+    Q_D(const DescribeLifecycleHooksResponse);
+    return static_cast<const DescribeLifecycleHooksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeLifecycleHooks response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLifecycleHooksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLifecycleHooksResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLifecycleHooksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLifecycleHooksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLifecycleHooksResponse instance.
+ */
+DescribeLifecycleHooksResponsePrivate::DescribeLifecycleHooksResponsePrivate(
+    DescribeLifecycleHooksQueueResponse * const q) : DescribeLifecycleHooksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeLifecycleHooksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLifecycleHooksResponsePrivate::DescribeLifecycleHooksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLifecycleHooksResponse"));
+    /// @todo
+}

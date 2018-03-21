@@ -19,3 +19,85 @@
 
 #include "restartappserverresponse.h"
 #include "restartappserverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  RestartAppServerResponse
+ *
+ * @brief  Handles ElasticBeanstalk RestartAppServer responses.
+ *
+ * @see    ElasticBeanstalkClient::restartAppServer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestartAppServerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new RestartAppServerResponsePrivate(this), parent)
+{
+    setRequest(new RestartAppServerRequest(request));
+    setReply(reply);
+}
+
+const RestartAppServerRequest * RestartAppServerResponse::request() const
+{
+    Q_D(const RestartAppServerResponse);
+    return static_cast<const RestartAppServerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk RestartAppServer response.
+ *
+ * @param  response  Response to parse.
+ */
+void RestartAppServerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RestartAppServerResponsePrivate
+ *
+ * @brief  Private implementation for RestartAppServerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestartAppServerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RestartAppServerResponse instance.
+ */
+RestartAppServerResponsePrivate::RestartAppServerResponsePrivate(
+    RestartAppServerQueueResponse * const q) : RestartAppServerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk RestartAppServerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RestartAppServerResponsePrivate::RestartAppServerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RestartAppServerResponse"));
+    /// @todo
+}

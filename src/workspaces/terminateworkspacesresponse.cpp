@@ -19,3 +19,85 @@
 
 #include "terminateworkspacesresponse.h"
 #include "terminateworkspacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  TerminateWorkspacesResponse
+ *
+ * @brief  Handles WorkSpaces TerminateWorkspaces responses.
+ *
+ * @see    WorkSpacesClient::terminateWorkspaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateWorkspacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new TerminateWorkspacesResponsePrivate(this), parent)
+{
+    setRequest(new TerminateWorkspacesRequest(request));
+    setReply(reply);
+}
+
+const TerminateWorkspacesRequest * TerminateWorkspacesResponse::request() const
+{
+    Q_D(const TerminateWorkspacesResponse);
+    return static_cast<const TerminateWorkspacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces TerminateWorkspaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void TerminateWorkspacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateWorkspacesResponsePrivate
+ *
+ * @brief  Private implementation for TerminateWorkspacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateWorkspacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TerminateWorkspacesResponse instance.
+ */
+TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponsePrivate(
+    TerminateWorkspacesQueueResponse * const q) : TerminateWorkspacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces TerminateWorkspacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TerminateWorkspacesResponse"));
+    /// @todo
+}

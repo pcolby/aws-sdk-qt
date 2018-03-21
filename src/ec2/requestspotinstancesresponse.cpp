@@ -19,3 +19,85 @@
 
 #include "requestspotinstancesresponse.h"
 #include "requestspotinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  RequestSpotInstancesResponse
+ *
+ * @brief  Handles EC2 RequestSpotInstances responses.
+ *
+ * @see    EC2Client::requestSpotInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RequestSpotInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new RequestSpotInstancesResponsePrivate(this), parent)
+{
+    setRequest(new RequestSpotInstancesRequest(request));
+    setReply(reply);
+}
+
+const RequestSpotInstancesRequest * RequestSpotInstancesResponse::request() const
+{
+    Q_D(const RequestSpotInstancesResponse);
+    return static_cast<const RequestSpotInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 RequestSpotInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void RequestSpotInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RequestSpotInstancesResponsePrivate
+ *
+ * @brief  Private implementation for RequestSpotInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestSpotInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RequestSpotInstancesResponse instance.
+ */
+RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponsePrivate(
+    RequestSpotInstancesQueueResponse * const q) : RequestSpotInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 RequestSpotInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RequestSpotInstancesResponse"));
+    /// @todo
+}

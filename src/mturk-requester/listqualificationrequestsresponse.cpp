@@ -19,3 +19,85 @@
 
 #include "listqualificationrequestsresponse.h"
 #include "listqualificationrequestsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListQualificationRequestsResponse
+ *
+ * @brief  Handles MTurk ListQualificationRequests responses.
+ *
+ * @see    MTurkClient::listQualificationRequests
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListQualificationRequestsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListQualificationRequestsResponsePrivate(this), parent)
+{
+    setRequest(new ListQualificationRequestsRequest(request));
+    setReply(reply);
+}
+
+const ListQualificationRequestsRequest * ListQualificationRequestsResponse::request() const
+{
+    Q_D(const ListQualificationRequestsResponse);
+    return static_cast<const ListQualificationRequestsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListQualificationRequests response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListQualificationRequestsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListQualificationRequestsResponsePrivate
+ *
+ * @brief  Private implementation for ListQualificationRequestsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListQualificationRequestsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListQualificationRequestsResponse instance.
+ */
+ListQualificationRequestsResponsePrivate::ListQualificationRequestsResponsePrivate(
+    ListQualificationRequestsQueueResponse * const q) : ListQualificationRequestsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListQualificationRequestsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListQualificationRequestsResponsePrivate::ListQualificationRequestsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListQualificationRequestsResponse"));
+    /// @todo
+}

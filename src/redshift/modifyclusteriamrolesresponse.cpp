@@ -19,3 +19,85 @@
 
 #include "modifyclusteriamrolesresponse.h"
 #include "modifyclusteriamrolesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  ModifyClusterIamRolesResponse
+ *
+ * @brief  Handles Redshift ModifyClusterIamRoles responses.
+ *
+ * @see    RedshiftClient::modifyClusterIamRoles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyClusterIamRolesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new ModifyClusterIamRolesResponsePrivate(this), parent)
+{
+    setRequest(new ModifyClusterIamRolesRequest(request));
+    setReply(reply);
+}
+
+const ModifyClusterIamRolesRequest * ModifyClusterIamRolesResponse::request() const
+{
+    Q_D(const ModifyClusterIamRolesResponse);
+    return static_cast<const ModifyClusterIamRolesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift ModifyClusterIamRoles response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyClusterIamRolesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyClusterIamRolesResponsePrivate
+ *
+ * @brief  Private implementation for ModifyClusterIamRolesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyClusterIamRolesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyClusterIamRolesResponse instance.
+ */
+ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponsePrivate(
+    ModifyClusterIamRolesQueueResponse * const q) : ModifyClusterIamRolesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift ModifyClusterIamRolesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyClusterIamRolesResponse"));
+    /// @todo
+}

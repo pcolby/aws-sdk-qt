@@ -19,3 +19,85 @@
 
 #include "deletebgppeerresponse.h"
 #include "deletebgppeerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DeleteBGPPeerResponse
+ *
+ * @brief  Handles DirectConnect DeleteBGPPeer responses.
+ *
+ * @see    DirectConnectClient::deleteBGPPeer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBGPPeerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DeleteBGPPeerResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBGPPeerRequest(request));
+    setReply(reply);
+}
+
+const DeleteBGPPeerRequest * DeleteBGPPeerResponse::request() const
+{
+    Q_D(const DeleteBGPPeerResponse);
+    return static_cast<const DeleteBGPPeerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DeleteBGPPeer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBGPPeerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBGPPeerResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBGPPeerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBGPPeerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBGPPeerResponse instance.
+ */
+DeleteBGPPeerResponsePrivate::DeleteBGPPeerResponsePrivate(
+    DeleteBGPPeerQueueResponse * const q) : DeleteBGPPeerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DeleteBGPPeerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBGPPeerResponsePrivate::DeleteBGPPeerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBGPPeerResponse"));
+    /// @todo
+}

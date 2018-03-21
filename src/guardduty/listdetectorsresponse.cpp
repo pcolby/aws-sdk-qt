@@ -19,3 +19,85 @@
 
 #include "listdetectorsresponse.h"
 #include "listdetectorsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  ListDetectorsResponse
+ *
+ * @brief  Handles GuardDuty ListDetectors responses.
+ *
+ * @see    GuardDutyClient::listDetectors
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDetectorsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new ListDetectorsResponsePrivate(this), parent)
+{
+    setRequest(new ListDetectorsRequest(request));
+    setReply(reply);
+}
+
+const ListDetectorsRequest * ListDetectorsResponse::request() const
+{
+    Q_D(const ListDetectorsResponse);
+    return static_cast<const ListDetectorsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty ListDetectors response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDetectorsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDetectorsResponsePrivate
+ *
+ * @brief  Private implementation for ListDetectorsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDetectorsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDetectorsResponse instance.
+ */
+ListDetectorsResponsePrivate::ListDetectorsResponsePrivate(
+    ListDetectorsQueueResponse * const q) : ListDetectorsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty ListDetectorsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDetectorsResponsePrivate::ListDetectorsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDetectorsResponse"));
+    /// @todo
+}

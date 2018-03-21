@@ -19,3 +19,85 @@
 
 #include "updatedatasourceresponse.h"
 #include "updatedatasourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  UpdateDataSourceResponse
+ *
+ * @brief  Handles AppSync UpdateDataSource responses.
+ *
+ * @see    AppSyncClient::updateDataSource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDataSourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new UpdateDataSourceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDataSourceRequest(request));
+    setReply(reply);
+}
+
+const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
+{
+    Q_D(const UpdateDataSourceResponse);
+    return static_cast<const UpdateDataSourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync UpdateDataSource response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDataSourceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDataSourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDataSourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDataSourceResponse instance.
+ */
+UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
+    UpdateDataSourceQueueResponse * const q) : UpdateDataSourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync UpdateDataSourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDataSourceResponsePrivate::UpdateDataSourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDataSourceResponse"));
+    /// @todo
+}

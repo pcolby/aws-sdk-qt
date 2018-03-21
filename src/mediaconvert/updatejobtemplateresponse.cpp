@@ -19,3 +19,85 @@
 
 #include "updatejobtemplateresponse.h"
 #include "updatejobtemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  UpdateJobTemplateResponse
+ *
+ * @brief  Handles MediaConvert UpdateJobTemplate responses.
+ *
+ * @see    MediaConvertClient::updateJobTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateJobTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new UpdateJobTemplateResponsePrivate(this), parent)
+{
+    setRequest(new UpdateJobTemplateRequest(request));
+    setReply(reply);
+}
+
+const UpdateJobTemplateRequest * UpdateJobTemplateResponse::request() const
+{
+    Q_D(const UpdateJobTemplateResponse);
+    return static_cast<const UpdateJobTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert UpdateJobTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateJobTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateJobTemplateResponsePrivate
+ *
+ * @brief  Private implementation for UpdateJobTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateJobTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateJobTemplateResponse instance.
+ */
+UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponsePrivate(
+    UpdateJobTemplateQueueResponse * const q) : UpdateJobTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert UpdateJobTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateJobTemplateResponse"));
+    /// @todo
+}

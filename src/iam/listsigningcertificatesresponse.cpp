@@ -19,3 +19,85 @@
 
 #include "listsigningcertificatesresponse.h"
 #include "listsigningcertificatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListSigningCertificatesResponse
+ *
+ * @brief  Handles IAM ListSigningCertificates responses.
+ *
+ * @see    IAMClient::listSigningCertificates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSigningCertificatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListSigningCertificatesResponsePrivate(this), parent)
+{
+    setRequest(new ListSigningCertificatesRequest(request));
+    setReply(reply);
+}
+
+const ListSigningCertificatesRequest * ListSigningCertificatesResponse::request() const
+{
+    Q_D(const ListSigningCertificatesResponse);
+    return static_cast<const ListSigningCertificatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListSigningCertificates response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSigningCertificatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSigningCertificatesResponsePrivate
+ *
+ * @brief  Private implementation for ListSigningCertificatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSigningCertificatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSigningCertificatesResponse instance.
+ */
+ListSigningCertificatesResponsePrivate::ListSigningCertificatesResponsePrivate(
+    ListSigningCertificatesQueueResponse * const q) : ListSigningCertificatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListSigningCertificatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSigningCertificatesResponsePrivate::ListSigningCertificatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSigningCertificatesResponse"));
+    /// @todo
+}

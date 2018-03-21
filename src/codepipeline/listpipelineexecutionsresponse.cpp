@@ -19,3 +19,85 @@
 
 #include "listpipelineexecutionsresponse.h"
 #include "listpipelineexecutionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  ListPipelineExecutionsResponse
+ *
+ * @brief  Handles CodePipeline ListPipelineExecutions responses.
+ *
+ * @see    CodePipelineClient::listPipelineExecutions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPipelineExecutionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new ListPipelineExecutionsResponsePrivate(this), parent)
+{
+    setRequest(new ListPipelineExecutionsRequest(request));
+    setReply(reply);
+}
+
+const ListPipelineExecutionsRequest * ListPipelineExecutionsResponse::request() const
+{
+    Q_D(const ListPipelineExecutionsResponse);
+    return static_cast<const ListPipelineExecutionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline ListPipelineExecutions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPipelineExecutionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPipelineExecutionsResponsePrivate
+ *
+ * @brief  Private implementation for ListPipelineExecutionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPipelineExecutionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPipelineExecutionsResponse instance.
+ */
+ListPipelineExecutionsResponsePrivate::ListPipelineExecutionsResponsePrivate(
+    ListPipelineExecutionsQueueResponse * const q) : ListPipelineExecutionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline ListPipelineExecutionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPipelineExecutionsResponsePrivate::ListPipelineExecutionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPipelineExecutionsResponse"));
+    /// @todo
+}

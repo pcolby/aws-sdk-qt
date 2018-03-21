@@ -19,3 +19,85 @@
 
 #include "describeuserresponse.h"
 #include "describeuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DescribeUserResponse
+ *
+ * @brief  Handles MQ DescribeUser responses.
+ *
+ * @see    MQClient::describeUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new DescribeUserResponsePrivate(this), parent)
+{
+    setRequest(new DescribeUserRequest(request));
+    setReply(reply);
+}
+
+const DescribeUserRequest * DescribeUserResponse::request() const
+{
+    Q_D(const DescribeUserResponse);
+    return static_cast<const DescribeUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ DescribeUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUserResponsePrivate
+ *
+ * @brief  Private implementation for DescribeUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeUserResponse instance.
+ */
+DescribeUserResponsePrivate::DescribeUserResponsePrivate(
+    DescribeUserQueueResponse * const q) : DescribeUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ DescribeUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeUserResponsePrivate::DescribeUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeUserResponse"));
+    /// @todo
+}

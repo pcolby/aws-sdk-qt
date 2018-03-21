@@ -19,3 +19,85 @@
 
 #include "describescheduledinstanceavailabilityresponse.h"
 #include "describescheduledinstanceavailabilityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeScheduledInstanceAvailabilityResponse
+ *
+ * @brief  Handles EC2 DescribeScheduledInstanceAvailability responses.
+ *
+ * @see    EC2Client::describeScheduledInstanceAvailability
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScheduledInstanceAvailabilityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeScheduledInstanceAvailabilityResponsePrivate(this), parent)
+{
+    setRequest(new DescribeScheduledInstanceAvailabilityRequest(request));
+    setReply(reply);
+}
+
+const DescribeScheduledInstanceAvailabilityRequest * DescribeScheduledInstanceAvailabilityResponse::request() const
+{
+    Q_D(const DescribeScheduledInstanceAvailabilityResponse);
+    return static_cast<const DescribeScheduledInstanceAvailabilityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeScheduledInstanceAvailability response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeScheduledInstanceAvailabilityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScheduledInstanceAvailabilityResponsePrivate
+ *
+ * @brief  Private implementation for DescribeScheduledInstanceAvailabilityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScheduledInstanceAvailabilityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeScheduledInstanceAvailabilityResponse instance.
+ */
+DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceAvailabilityResponsePrivate(
+    DescribeScheduledInstanceAvailabilityQueueResponse * const q) : DescribeScheduledInstanceAvailabilityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeScheduledInstanceAvailabilityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceAvailabilityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledInstanceAvailabilityResponse"));
+    /// @todo
+}

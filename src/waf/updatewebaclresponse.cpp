@@ -19,3 +19,85 @@
 
 #include "updatewebaclresponse.h"
 #include "updatewebaclresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  UpdateWebACLResponse
+ *
+ * @brief  Handles WAF UpdateWebACL responses.
+ *
+ * @see    WAFClient::updateWebACL
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateWebACLResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new UpdateWebACLResponsePrivate(this), parent)
+{
+    setRequest(new UpdateWebACLRequest(request));
+    setReply(reply);
+}
+
+const UpdateWebACLRequest * UpdateWebACLResponse::request() const
+{
+    Q_D(const UpdateWebACLResponse);
+    return static_cast<const UpdateWebACLRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF UpdateWebACL response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateWebACLResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateWebACLResponsePrivate
+ *
+ * @brief  Private implementation for UpdateWebACLResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateWebACLResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateWebACLResponse instance.
+ */
+UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
+    UpdateWebACLQueueResponse * const q) : UpdateWebACLPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF UpdateWebACLResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateWebACLResponsePrivate::UpdateWebACLResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateWebACLResponse"));
+    /// @todo
+}

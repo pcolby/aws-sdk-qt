@@ -19,3 +19,85 @@
 
 #include "getcertificateresponse.h"
 #include "getcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  GetCertificateResponse
+ *
+ * @brief  Handles ACM GetCertificate responses.
+ *
+ * @see    ACMClient::getCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ACMResponse(new GetCertificateResponsePrivate(this), parent)
+{
+    setRequest(new GetCertificateRequest(request));
+    setReply(reply);
+}
+
+const GetCertificateRequest * GetCertificateResponse::request() const
+{
+    Q_D(const GetCertificateResponse);
+    return static_cast<const GetCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ACM GetCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCertificateResponsePrivate
+ *
+ * @brief  Private implementation for GetCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCertificateResponse instance.
+ */
+GetCertificateResponsePrivate::GetCertificateResponsePrivate(
+    GetCertificateQueueResponse * const q) : GetCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ACM GetCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCertificateResponsePrivate::GetCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCertificateResponse"));
+    /// @todo
+}

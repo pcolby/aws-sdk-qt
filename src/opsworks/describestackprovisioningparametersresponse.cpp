@@ -19,3 +19,85 @@
 
 #include "describestackprovisioningparametersresponse.h"
 #include "describestackprovisioningparametersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeStackProvisioningParametersResponse
+ *
+ * @brief  Handles OpsWorks DescribeStackProvisioningParameters responses.
+ *
+ * @see    OpsWorksClient::describeStackProvisioningParameters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackProvisioningParametersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeStackProvisioningParametersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStackProvisioningParametersRequest(request));
+    setReply(reply);
+}
+
+const DescribeStackProvisioningParametersRequest * DescribeStackProvisioningParametersResponse::request() const
+{
+    Q_D(const DescribeStackProvisioningParametersResponse);
+    return static_cast<const DescribeStackProvisioningParametersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeStackProvisioningParameters response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStackProvisioningParametersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackProvisioningParametersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStackProvisioningParametersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackProvisioningParametersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStackProvisioningParametersResponse instance.
+ */
+DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningParametersResponsePrivate(
+    DescribeStackProvisioningParametersQueueResponse * const q) : DescribeStackProvisioningParametersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeStackProvisioningParametersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningParametersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStackProvisioningParametersResponse"));
+    /// @todo
+}

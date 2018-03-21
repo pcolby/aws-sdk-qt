@@ -19,3 +19,85 @@
 
 #include "restoreobjectresponse.h"
 #include "restoreobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  RestoreObjectResponse
+ *
+ * @brief  Handles S3 RestoreObject responses.
+ *
+ * @see    S3Client::restoreObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new RestoreObjectResponsePrivate(this), parent)
+{
+    setRequest(new RestoreObjectRequest(request));
+    setReply(reply);
+}
+
+const RestoreObjectRequest * RestoreObjectResponse::request() const
+{
+    Q_D(const RestoreObjectResponse);
+    return static_cast<const RestoreObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 RestoreObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void RestoreObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreObjectResponsePrivate
+ *
+ * @brief  Private implementation for RestoreObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RestoreObjectResponse instance.
+ */
+RestoreObjectResponsePrivate::RestoreObjectResponsePrivate(
+    RestoreObjectQueueResponse * const q) : RestoreObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 RestoreObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RestoreObjectResponsePrivate::RestoreObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RestoreObjectResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "detachstaticipresponse.h"
 #include "detachstaticipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DetachStaticIpResponse
+ *
+ * @brief  Handles Lightsail DetachStaticIp responses.
+ *
+ * @see    LightsailClient::detachStaticIp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachStaticIpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DetachStaticIpResponsePrivate(this), parent)
+{
+    setRequest(new DetachStaticIpRequest(request));
+    setReply(reply);
+}
+
+const DetachStaticIpRequest * DetachStaticIpResponse::request() const
+{
+    Q_D(const DetachStaticIpResponse);
+    return static_cast<const DetachStaticIpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DetachStaticIp response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetachStaticIpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachStaticIpResponsePrivate
+ *
+ * @brief  Private implementation for DetachStaticIpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachStaticIpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetachStaticIpResponse instance.
+ */
+DetachStaticIpResponsePrivate::DetachStaticIpResponsePrivate(
+    DetachStaticIpQueueResponse * const q) : DetachStaticIpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DetachStaticIpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetachStaticIpResponsePrivate::DetachStaticIpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetachStaticIpResponse"));
+    /// @todo
+}

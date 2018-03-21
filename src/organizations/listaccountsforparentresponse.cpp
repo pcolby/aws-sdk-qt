@@ -19,3 +19,85 @@
 
 #include "listaccountsforparentresponse.h"
 #include "listaccountsforparentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListAccountsForParentResponse
+ *
+ * @brief  Handles Organizations ListAccountsForParent responses.
+ *
+ * @see    OrganizationsClient::listAccountsForParent
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAccountsForParentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new ListAccountsForParentResponsePrivate(this), parent)
+{
+    setRequest(new ListAccountsForParentRequest(request));
+    setReply(reply);
+}
+
+const ListAccountsForParentRequest * ListAccountsForParentResponse::request() const
+{
+    Q_D(const ListAccountsForParentResponse);
+    return static_cast<const ListAccountsForParentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations ListAccountsForParent response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAccountsForParentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAccountsForParentResponsePrivate
+ *
+ * @brief  Private implementation for ListAccountsForParentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAccountsForParentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAccountsForParentResponse instance.
+ */
+ListAccountsForParentResponsePrivate::ListAccountsForParentResponsePrivate(
+    ListAccountsForParentQueueResponse * const q) : ListAccountsForParentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations ListAccountsForParentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAccountsForParentResponsePrivate::ListAccountsForParentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAccountsForParentResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "liststacksetoperationsresponse.h"
 #include "liststacksetoperationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListStackSetOperationsResponse
+ *
+ * @brief  Handles CloudFormation ListStackSetOperations responses.
+ *
+ * @see    CloudFormationClient::listStackSetOperations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStackSetOperationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ListStackSetOperationsResponsePrivate(this), parent)
+{
+    setRequest(new ListStackSetOperationsRequest(request));
+    setReply(reply);
+}
+
+const ListStackSetOperationsRequest * ListStackSetOperationsResponse::request() const
+{
+    Q_D(const ListStackSetOperationsResponse);
+    return static_cast<const ListStackSetOperationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ListStackSetOperations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListStackSetOperationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStackSetOperationsResponsePrivate
+ *
+ * @brief  Private implementation for ListStackSetOperationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStackSetOperationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListStackSetOperationsResponse instance.
+ */
+ListStackSetOperationsResponsePrivate::ListStackSetOperationsResponsePrivate(
+    ListStackSetOperationsQueueResponse * const q) : ListStackSetOperationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ListStackSetOperationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListStackSetOperationsResponsePrivate::ListStackSetOperationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListStackSetOperationsResponse"));
+    /// @todo
+}

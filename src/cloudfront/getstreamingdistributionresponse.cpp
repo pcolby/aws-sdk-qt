@@ -19,3 +19,85 @@
 
 #include "getstreamingdistributionresponse.h"
 #include "getstreamingdistributionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetStreamingDistributionResponse
+ *
+ * @brief  Handles CloudFront GetStreamingDistribution responses.
+ *
+ * @see    CloudFrontClient::getStreamingDistribution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStreamingDistributionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new GetStreamingDistributionResponsePrivate(this), parent)
+{
+    setRequest(new GetStreamingDistributionRequest(request));
+    setReply(reply);
+}
+
+const GetStreamingDistributionRequest * GetStreamingDistributionResponse::request() const
+{
+    Q_D(const GetStreamingDistributionResponse);
+    return static_cast<const GetStreamingDistributionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront GetStreamingDistribution response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetStreamingDistributionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStreamingDistributionResponsePrivate
+ *
+ * @brief  Private implementation for GetStreamingDistributionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStreamingDistributionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetStreamingDistributionResponse instance.
+ */
+GetStreamingDistributionResponsePrivate::GetStreamingDistributionResponsePrivate(
+    GetStreamingDistributionQueueResponse * const q) : GetStreamingDistributionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront GetStreamingDistributionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetStreamingDistributionResponsePrivate::GetStreamingDistributionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetStreamingDistributionResponse"));
+    /// @todo
+}

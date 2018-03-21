@@ -19,3 +19,85 @@
 
 #include "resendvalidationemailresponse.h"
 #include "resendvalidationemailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  ResendValidationEmailResponse
+ *
+ * @brief  Handles ACM ResendValidationEmail responses.
+ *
+ * @see    ACMClient::resendValidationEmail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResendValidationEmailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ACMResponse(new ResendValidationEmailResponsePrivate(this), parent)
+{
+    setRequest(new ResendValidationEmailRequest(request));
+    setReply(reply);
+}
+
+const ResendValidationEmailRequest * ResendValidationEmailResponse::request() const
+{
+    Q_D(const ResendValidationEmailResponse);
+    return static_cast<const ResendValidationEmailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ACM ResendValidationEmail response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResendValidationEmailResponsePrivate
+ *
+ * @brief  Private implementation for ResendValidationEmailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResendValidationEmailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResendValidationEmailResponse instance.
+ */
+ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
+    ResendValidationEmailQueueResponse * const q) : ResendValidationEmailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ACM ResendValidationEmailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResendValidationEmailResponsePrivate::ResendValidationEmailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResendValidationEmailResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getprofileresponse.h"
 #include "getprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  GetProfileResponse
+ *
+ * @brief  Handles AlexaForBusiness GetProfile responses.
+ *
+ * @see    AlexaForBusinessClient::getProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new GetProfileResponsePrivate(this), parent)
+{
+    setRequest(new GetProfileRequest(request));
+    setReply(reply);
+}
+
+const GetProfileRequest * GetProfileResponse::request() const
+{
+    Q_D(const GetProfileResponse);
+    return static_cast<const GetProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness GetProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetProfileResponsePrivate
+ *
+ * @brief  Private implementation for GetProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetProfileResponse instance.
+ */
+GetProfileResponsePrivate::GetProfileResponsePrivate(
+    GetProfileQueueResponse * const q) : GetProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness GetProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetProfileResponsePrivate::GetProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetProfileResponse"));
+    /// @todo
+}

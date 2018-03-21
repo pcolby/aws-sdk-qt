@@ -19,3 +19,85 @@
 
 #include "associatevirtualinterfaceresponse.h"
 #include "associatevirtualinterfaceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AssociateVirtualInterfaceResponse
+ *
+ * @brief  Handles DirectConnect AssociateVirtualInterface responses.
+ *
+ * @see    DirectConnectClient::associateVirtualInterface
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateVirtualInterfaceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new AssociateVirtualInterfaceResponsePrivate(this), parent)
+{
+    setRequest(new AssociateVirtualInterfaceRequest(request));
+    setReply(reply);
+}
+
+const AssociateVirtualInterfaceRequest * AssociateVirtualInterfaceResponse::request() const
+{
+    Q_D(const AssociateVirtualInterfaceResponse);
+    return static_cast<const AssociateVirtualInterfaceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect AssociateVirtualInterface response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateVirtualInterfaceResponsePrivate
+ *
+ * @brief  Private implementation for AssociateVirtualInterfaceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateVirtualInterfaceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateVirtualInterfaceResponse instance.
+ */
+AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponsePrivate(
+    AssociateVirtualInterfaceQueueResponse * const q) : AssociateVirtualInterfacePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect AssociateVirtualInterfaceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateVirtualInterfaceResponse"));
+    /// @todo
+}

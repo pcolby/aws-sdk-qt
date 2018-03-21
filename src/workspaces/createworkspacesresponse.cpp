@@ -19,3 +19,85 @@
 
 #include "createworkspacesresponse.h"
 #include "createworkspacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  CreateWorkspacesResponse
+ *
+ * @brief  Handles WorkSpaces CreateWorkspaces responses.
+ *
+ * @see    WorkSpacesClient::createWorkspaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateWorkspacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new CreateWorkspacesResponsePrivate(this), parent)
+{
+    setRequest(new CreateWorkspacesRequest(request));
+    setReply(reply);
+}
+
+const CreateWorkspacesRequest * CreateWorkspacesResponse::request() const
+{
+    Q_D(const CreateWorkspacesResponse);
+    return static_cast<const CreateWorkspacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces CreateWorkspaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateWorkspacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateWorkspacesResponsePrivate
+ *
+ * @brief  Private implementation for CreateWorkspacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateWorkspacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateWorkspacesResponse instance.
+ */
+CreateWorkspacesResponsePrivate::CreateWorkspacesResponsePrivate(
+    CreateWorkspacesQueueResponse * const q) : CreateWorkspacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces CreateWorkspacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateWorkspacesResponsePrivate::CreateWorkspacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateWorkspacesResponse"));
+    /// @todo
+}

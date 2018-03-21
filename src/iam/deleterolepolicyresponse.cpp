@@ -19,3 +19,85 @@
 
 #include "deleterolepolicyresponse.h"
 #include "deleterolepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteRolePolicyResponse
+ *
+ * @brief  Handles IAM DeleteRolePolicy responses.
+ *
+ * @see    IAMClient::deleteRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRolePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteRolePolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRolePolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteRolePolicyRequest * DeleteRolePolicyResponse::request() const
+{
+    Q_D(const DeleteRolePolicyResponse);
+    return static_cast<const DeleteRolePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteRolePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRolePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRolePolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRolePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRolePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRolePolicyResponse instance.
+ */
+DeleteRolePolicyResponsePrivate::DeleteRolePolicyResponsePrivate(
+    DeleteRolePolicyQueueResponse * const q) : DeleteRolePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteRolePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRolePolicyResponsePrivate::DeleteRolePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRolePolicyResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "searchdevicesresponse.h"
 #include "searchdevicesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  SearchDevicesResponse
+ *
+ * @brief  Handles AlexaForBusiness SearchDevices responses.
+ *
+ * @see    AlexaForBusinessClient::searchDevices
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchDevicesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new SearchDevicesResponsePrivate(this), parent)
+{
+    setRequest(new SearchDevicesRequest(request));
+    setReply(reply);
+}
+
+const SearchDevicesRequest * SearchDevicesResponse::request() const
+{
+    Q_D(const SearchDevicesResponse);
+    return static_cast<const SearchDevicesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness SearchDevices response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchDevicesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchDevicesResponsePrivate
+ *
+ * @brief  Private implementation for SearchDevicesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchDevicesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchDevicesResponse instance.
+ */
+SearchDevicesResponsePrivate::SearchDevicesResponsePrivate(
+    SearchDevicesQueueResponse * const q) : SearchDevicesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness SearchDevicesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchDevicesResponsePrivate::SearchDevicesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchDevicesResponse"));
+    /// @todo
+}

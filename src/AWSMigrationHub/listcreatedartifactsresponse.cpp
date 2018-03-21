@@ -19,3 +19,85 @@
 
 #include "listcreatedartifactsresponse.h"
 #include "listcreatedartifactsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  ListCreatedArtifactsResponse
+ *
+ * @brief  Handles MigrationHub ListCreatedArtifacts responses.
+ *
+ * @see    MigrationHubClient::listCreatedArtifacts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCreatedArtifactsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new ListCreatedArtifactsResponsePrivate(this), parent)
+{
+    setRequest(new ListCreatedArtifactsRequest(request));
+    setReply(reply);
+}
+
+const ListCreatedArtifactsRequest * ListCreatedArtifactsResponse::request() const
+{
+    Q_D(const ListCreatedArtifactsResponse);
+    return static_cast<const ListCreatedArtifactsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub ListCreatedArtifacts response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListCreatedArtifactsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCreatedArtifactsResponsePrivate
+ *
+ * @brief  Private implementation for ListCreatedArtifactsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCreatedArtifactsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListCreatedArtifactsResponse instance.
+ */
+ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponsePrivate(
+    ListCreatedArtifactsQueueResponse * const q) : ListCreatedArtifactsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub ListCreatedArtifactsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListCreatedArtifactsResponse"));
+    /// @todo
+}

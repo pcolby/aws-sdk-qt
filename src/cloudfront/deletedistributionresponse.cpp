@@ -19,3 +19,85 @@
 
 #include "deletedistributionresponse.h"
 #include "deletedistributionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  DeleteDistributionResponse
+ *
+ * @brief  Handles CloudFront DeleteDistribution responses.
+ *
+ * @see    CloudFrontClient::deleteDistribution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDistributionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new DeleteDistributionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDistributionRequest(request));
+    setReply(reply);
+}
+
+const DeleteDistributionRequest * DeleteDistributionResponse::request() const
+{
+    Q_D(const DeleteDistributionResponse);
+    return static_cast<const DeleteDistributionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront DeleteDistribution response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDistributionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDistributionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDistributionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDistributionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDistributionResponse instance.
+ */
+DeleteDistributionResponsePrivate::DeleteDistributionResponsePrivate(
+    DeleteDistributionQueueResponse * const q) : DeleteDistributionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront DeleteDistributionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDistributionResponsePrivate::DeleteDistributionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDistributionResponse"));
+    /// @todo
+}

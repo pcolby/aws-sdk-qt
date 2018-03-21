@@ -19,3 +19,85 @@
 
 #include "listtypesresponse.h"
 #include "listtypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  ListTypesResponse
+ *
+ * @brief  Handles AppSync ListTypes responses.
+ *
+ * @see    AppSyncClient::listTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new ListTypesResponsePrivate(this), parent)
+{
+    setRequest(new ListTypesRequest(request));
+    setReply(reply);
+}
+
+const ListTypesRequest * ListTypesResponse::request() const
+{
+    Q_D(const ListTypesResponse);
+    return static_cast<const ListTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync ListTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTypesResponsePrivate
+ *
+ * @brief  Private implementation for ListTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTypesResponse instance.
+ */
+ListTypesResponsePrivate::ListTypesResponsePrivate(
+    ListTypesQueueResponse * const q) : ListTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync ListTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTypesResponsePrivate::ListTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTypesResponse"));
+    /// @todo
+}

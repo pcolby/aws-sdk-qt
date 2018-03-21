@@ -19,3 +19,85 @@
 
 #include "getapplicationrevisionresponse.h"
 #include "getapplicationrevisionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  GetApplicationRevisionResponse
+ *
+ * @brief  Handles CodeDeploy GetApplicationRevision responses.
+ *
+ * @see    CodeDeployClient::getApplicationRevision
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApplicationRevisionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new GetApplicationRevisionResponsePrivate(this), parent)
+{
+    setRequest(new GetApplicationRevisionRequest(request));
+    setReply(reply);
+}
+
+const GetApplicationRevisionRequest * GetApplicationRevisionResponse::request() const
+{
+    Q_D(const GetApplicationRevisionResponse);
+    return static_cast<const GetApplicationRevisionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy GetApplicationRevision response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetApplicationRevisionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApplicationRevisionResponsePrivate
+ *
+ * @brief  Private implementation for GetApplicationRevisionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationRevisionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetApplicationRevisionResponse instance.
+ */
+GetApplicationRevisionResponsePrivate::GetApplicationRevisionResponsePrivate(
+    GetApplicationRevisionQueueResponse * const q) : GetApplicationRevisionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy GetApplicationRevisionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetApplicationRevisionResponsePrivate::GetApplicationRevisionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetApplicationRevisionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "buildsuggestersresponse.h"
 #include "buildsuggestersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  BuildSuggestersResponse
+ *
+ * @brief  Handles CloudSearch BuildSuggesters responses.
+ *
+ * @see    CloudSearchClient::buildSuggesters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BuildSuggestersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new BuildSuggestersResponsePrivate(this), parent)
+{
+    setRequest(new BuildSuggestersRequest(request));
+    setReply(reply);
+}
+
+const BuildSuggestersRequest * BuildSuggestersResponse::request() const
+{
+    Q_D(const BuildSuggestersResponse);
+    return static_cast<const BuildSuggestersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch BuildSuggesters response.
+ *
+ * @param  response  Response to parse.
+ */
+void BuildSuggestersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BuildSuggestersResponsePrivate
+ *
+ * @brief  Private implementation for BuildSuggestersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BuildSuggestersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BuildSuggestersResponse instance.
+ */
+BuildSuggestersResponsePrivate::BuildSuggestersResponsePrivate(
+    BuildSuggestersQueueResponse * const q) : BuildSuggestersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch BuildSuggestersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BuildSuggestersResponsePrivate::BuildSuggestersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BuildSuggestersResponse"));
+    /// @todo
+}

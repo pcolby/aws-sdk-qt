@@ -19,3 +19,85 @@
 
 #include "putbucketrequestpaymentresponse.h"
 #include "putbucketrequestpaymentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketRequestPaymentResponse
+ *
+ * @brief  Handles S3 PutBucketRequestPayment responses.
+ *
+ * @see    S3Client::putBucketRequestPayment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketRequestPaymentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketRequestPaymentResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketRequestPaymentRequest(request));
+    setReply(reply);
+}
+
+const PutBucketRequestPaymentRequest * PutBucketRequestPaymentResponse::request() const
+{
+    Q_D(const PutBucketRequestPaymentResponse);
+    return static_cast<const PutBucketRequestPaymentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketRequestPayment response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketRequestPaymentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketRequestPaymentResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketRequestPaymentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketRequestPaymentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketRequestPaymentResponse instance.
+ */
+PutBucketRequestPaymentResponsePrivate::PutBucketRequestPaymentResponsePrivate(
+    PutBucketRequestPaymentQueueResponse * const q) : PutBucketRequestPaymentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketRequestPaymentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketRequestPaymentResponsePrivate::PutBucketRequestPaymentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketRequestPaymentResponse"));
+    /// @todo
+}

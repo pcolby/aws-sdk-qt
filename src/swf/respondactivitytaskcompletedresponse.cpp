@@ -19,3 +19,85 @@
 
 #include "respondactivitytaskcompletedresponse.h"
 #include "respondactivitytaskcompletedresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RespondActivityTaskCompletedResponse
+ *
+ * @brief  Handles SWF RespondActivityTaskCompleted responses.
+ *
+ * @see    SWFClient::respondActivityTaskCompleted
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RespondActivityTaskCompletedResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new RespondActivityTaskCompletedResponsePrivate(this), parent)
+{
+    setRequest(new RespondActivityTaskCompletedRequest(request));
+    setReply(reply);
+}
+
+const RespondActivityTaskCompletedRequest * RespondActivityTaskCompletedResponse::request() const
+{
+    Q_D(const RespondActivityTaskCompletedResponse);
+    return static_cast<const RespondActivityTaskCompletedRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF RespondActivityTaskCompleted response.
+ *
+ * @param  response  Response to parse.
+ */
+void RespondActivityTaskCompletedResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RespondActivityTaskCompletedResponsePrivate
+ *
+ * @brief  Private implementation for RespondActivityTaskCompletedResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskCompletedResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RespondActivityTaskCompletedResponse instance.
+ */
+RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedResponsePrivate(
+    RespondActivityTaskCompletedQueueResponse * const q) : RespondActivityTaskCompletedPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF RespondActivityTaskCompletedResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskCompletedResponse"));
+    /// @todo
+}

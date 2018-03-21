@@ -19,3 +19,85 @@
 
 #include "listregexpatternsetsresponse.h"
 #include "listregexpatternsetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListRegexPatternSetsResponse
+ *
+ * @brief  Handles WAFRegional ListRegexPatternSets responses.
+ *
+ * @see    WAFRegionalClient::listRegexPatternSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRegexPatternSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new ListRegexPatternSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListRegexPatternSetsRequest(request));
+    setReply(reply);
+}
+
+const ListRegexPatternSetsRequest * ListRegexPatternSetsResponse::request() const
+{
+    Q_D(const ListRegexPatternSetsResponse);
+    return static_cast<const ListRegexPatternSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional ListRegexPatternSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRegexPatternSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRegexPatternSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListRegexPatternSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRegexPatternSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRegexPatternSetsResponse instance.
+ */
+ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponsePrivate(
+    ListRegexPatternSetsQueueResponse * const q) : ListRegexPatternSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional ListRegexPatternSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRegexPatternSetsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteprojectresponse.h"
 #include "deleteprojectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  DeleteProjectResponse
+ *
+ * @brief  Handles DeviceFarm DeleteProject responses.
+ *
+ * @see    DeviceFarmClient::deleteProject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteProjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new DeleteProjectResponsePrivate(this), parent)
+{
+    setRequest(new DeleteProjectRequest(request));
+    setReply(reply);
+}
+
+const DeleteProjectRequest * DeleteProjectResponse::request() const
+{
+    Q_D(const DeleteProjectResponse);
+    return static_cast<const DeleteProjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm DeleteProject response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteProjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteProjectResponsePrivate
+ *
+ * @brief  Private implementation for DeleteProjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteProjectResponse instance.
+ */
+DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
+    DeleteProjectQueueResponse * const q) : DeleteProjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm DeleteProjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteProjectResponsePrivate::DeleteProjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteProjectResponse"));
+    /// @todo
+}

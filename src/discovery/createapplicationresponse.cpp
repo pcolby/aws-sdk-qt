@@ -19,3 +19,85 @@
 
 #include "createapplicationresponse.h"
 #include "createapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  CreateApplicationResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService CreateApplication responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::createApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new CreateApplicationResponsePrivate(this), parent)
+{
+    setRequest(new CreateApplicationRequest(request));
+    setReply(reply);
+}
+
+const CreateApplicationRequest * CreateApplicationResponse::request() const
+{
+    Q_D(const CreateApplicationResponse);
+    return static_cast<const CreateApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService CreateApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateApplicationResponsePrivate
+ *
+ * @brief  Private implementation for CreateApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateApplicationResponse instance.
+ */
+CreateApplicationResponsePrivate::CreateApplicationResponsePrivate(
+    CreateApplicationQueueResponse * const q) : CreateApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService CreateApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateApplicationResponsePrivate::CreateApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateApplicationResponse"));
+    /// @todo
+}

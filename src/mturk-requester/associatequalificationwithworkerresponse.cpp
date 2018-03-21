@@ -19,3 +19,85 @@
 
 #include "associatequalificationwithworkerresponse.h"
 #include "associatequalificationwithworkerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  AssociateQualificationWithWorkerResponse
+ *
+ * @brief  Handles MTurk AssociateQualificationWithWorker responses.
+ *
+ * @see    MTurkClient::associateQualificationWithWorker
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateQualificationWithWorkerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new AssociateQualificationWithWorkerResponsePrivate(this), parent)
+{
+    setRequest(new AssociateQualificationWithWorkerRequest(request));
+    setReply(reply);
+}
+
+const AssociateQualificationWithWorkerRequest * AssociateQualificationWithWorkerResponse::request() const
+{
+    Q_D(const AssociateQualificationWithWorkerResponse);
+    return static_cast<const AssociateQualificationWithWorkerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk AssociateQualificationWithWorker response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateQualificationWithWorkerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateQualificationWithWorkerResponsePrivate
+ *
+ * @brief  Private implementation for AssociateQualificationWithWorkerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateQualificationWithWorkerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateQualificationWithWorkerResponse instance.
+ */
+AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorkerResponsePrivate(
+    AssociateQualificationWithWorkerQueueResponse * const q) : AssociateQualificationWithWorkerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk AssociateQualificationWithWorkerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorkerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateQualificationWithWorkerResponse"));
+    /// @todo
+}

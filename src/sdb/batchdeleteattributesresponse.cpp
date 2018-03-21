@@ -19,3 +19,85 @@
 
 #include "batchdeleteattributesresponse.h"
 #include "batchdeleteattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  BatchDeleteAttributesResponse
+ *
+ * @brief  Handles SimpleDB BatchDeleteAttributes responses.
+ *
+ * @see    SimpleDBClient::batchDeleteAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDeleteAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SimpleDBResponse(new BatchDeleteAttributesResponsePrivate(this), parent)
+{
+    setRequest(new BatchDeleteAttributesRequest(request));
+    setReply(reply);
+}
+
+const BatchDeleteAttributesRequest * BatchDeleteAttributesResponse::request() const
+{
+    Q_D(const BatchDeleteAttributesResponse);
+    return static_cast<const BatchDeleteAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SimpleDB BatchDeleteAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDeleteAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDeleteAttributesResponsePrivate
+ *
+ * @brief  Private implementation for BatchDeleteAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeleteAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDeleteAttributesResponse instance.
+ */
+BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponsePrivate(
+    BatchDeleteAttributesQueueResponse * const q) : BatchDeleteAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SimpleDB BatchDeleteAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDeleteAttributesResponse"));
+    /// @todo
+}

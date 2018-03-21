@@ -19,3 +19,85 @@
 
 #include "associateconnectionwithlagresponse.h"
 #include "associateconnectionwithlagresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AssociateConnectionWithLagResponse
+ *
+ * @brief  Handles DirectConnect AssociateConnectionWithLag responses.
+ *
+ * @see    DirectConnectClient::associateConnectionWithLag
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateConnectionWithLagResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new AssociateConnectionWithLagResponsePrivate(this), parent)
+{
+    setRequest(new AssociateConnectionWithLagRequest(request));
+    setReply(reply);
+}
+
+const AssociateConnectionWithLagRequest * AssociateConnectionWithLagResponse::request() const
+{
+    Q_D(const AssociateConnectionWithLagResponse);
+    return static_cast<const AssociateConnectionWithLagRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect AssociateConnectionWithLag response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateConnectionWithLagResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateConnectionWithLagResponsePrivate
+ *
+ * @brief  Private implementation for AssociateConnectionWithLagResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateConnectionWithLagResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateConnectionWithLagResponse instance.
+ */
+AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponsePrivate(
+    AssociateConnectionWithLagQueueResponse * const q) : AssociateConnectionWithLagPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect AssociateConnectionWithLagResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateConnectionWithLagResponse"));
+    /// @todo
+}

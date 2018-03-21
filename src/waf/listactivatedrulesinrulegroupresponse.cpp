@@ -19,3 +19,85 @@
 
 #include "listactivatedrulesinrulegroupresponse.h"
 #include "listactivatedrulesinrulegroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListActivatedRulesInRuleGroupResponse
+ *
+ * @brief  Handles WAF ListActivatedRulesInRuleGroup responses.
+ *
+ * @see    WAFClient::listActivatedRulesInRuleGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListActivatedRulesInRuleGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new ListActivatedRulesInRuleGroupResponsePrivate(this), parent)
+{
+    setRequest(new ListActivatedRulesInRuleGroupRequest(request));
+    setReply(reply);
+}
+
+const ListActivatedRulesInRuleGroupRequest * ListActivatedRulesInRuleGroupResponse::request() const
+{
+    Q_D(const ListActivatedRulesInRuleGroupResponse);
+    return static_cast<const ListActivatedRulesInRuleGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF ListActivatedRulesInRuleGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListActivatedRulesInRuleGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListActivatedRulesInRuleGroupResponsePrivate
+ *
+ * @brief  Private implementation for ListActivatedRulesInRuleGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListActivatedRulesInRuleGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListActivatedRulesInRuleGroupResponse instance.
+ */
+ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupResponsePrivate(
+    ListActivatedRulesInRuleGroupQueueResponse * const q) : ListActivatedRulesInRuleGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF ListActivatedRulesInRuleGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListActivatedRulesInRuleGroupResponse"));
+    /// @todo
+}

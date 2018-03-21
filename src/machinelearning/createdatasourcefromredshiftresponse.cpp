@@ -19,3 +19,85 @@
 
 #include "createdatasourcefromredshiftresponse.h"
 #include "createdatasourcefromredshiftresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateDataSourceFromRedshiftResponse
+ *
+ * @brief  Handles MachineLearning CreateDataSourceFromRedshift responses.
+ *
+ * @see    MachineLearningClient::createDataSourceFromRedshift
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDataSourceFromRedshiftResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new CreateDataSourceFromRedshiftResponsePrivate(this), parent)
+{
+    setRequest(new CreateDataSourceFromRedshiftRequest(request));
+    setReply(reply);
+}
+
+const CreateDataSourceFromRedshiftRequest * CreateDataSourceFromRedshiftResponse::request() const
+{
+    Q_D(const CreateDataSourceFromRedshiftResponse);
+    return static_cast<const CreateDataSourceFromRedshiftRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning CreateDataSourceFromRedshift response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDataSourceFromRedshiftResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDataSourceFromRedshiftResponsePrivate
+ *
+ * @brief  Private implementation for CreateDataSourceFromRedshiftResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDataSourceFromRedshiftResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDataSourceFromRedshiftResponse instance.
+ */
+CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftResponsePrivate(
+    CreateDataSourceFromRedshiftQueueResponse * const q) : CreateDataSourceFromRedshiftPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning CreateDataSourceFromRedshiftResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromRedshiftResponse"));
+    /// @todo
+}

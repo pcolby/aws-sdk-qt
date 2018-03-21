@@ -19,3 +19,85 @@
 
 #include "updatehealthcheckresponse.h"
 #include "updatehealthcheckresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  UpdateHealthCheckResponse
+ *
+ * @brief  Handles Route53 UpdateHealthCheck responses.
+ *
+ * @see    Route53Client::updateHealthCheck
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateHealthCheckResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new UpdateHealthCheckResponsePrivate(this), parent)
+{
+    setRequest(new UpdateHealthCheckRequest(request));
+    setReply(reply);
+}
+
+const UpdateHealthCheckRequest * UpdateHealthCheckResponse::request() const
+{
+    Q_D(const UpdateHealthCheckResponse);
+    return static_cast<const UpdateHealthCheckRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 UpdateHealthCheck response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateHealthCheckResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateHealthCheckResponsePrivate
+ *
+ * @brief  Private implementation for UpdateHealthCheckResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateHealthCheckResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateHealthCheckResponse instance.
+ */
+UpdateHealthCheckResponsePrivate::UpdateHealthCheckResponsePrivate(
+    UpdateHealthCheckQueueResponse * const q) : UpdateHealthCheckPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 UpdateHealthCheckResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateHealthCheckResponsePrivate::UpdateHealthCheckResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateHealthCheckResponse"));
+    /// @todo
+}

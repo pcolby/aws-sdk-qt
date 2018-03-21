@@ -19,3 +19,85 @@
 
 #include "listlocaldisksresponse.h"
 #include "listlocaldisksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ListLocalDisksResponse
+ *
+ * @brief  Handles StorageGateway ListLocalDisks responses.
+ *
+ * @see    StorageGatewayClient::listLocalDisks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListLocalDisksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new ListLocalDisksResponsePrivate(this), parent)
+{
+    setRequest(new ListLocalDisksRequest(request));
+    setReply(reply);
+}
+
+const ListLocalDisksRequest * ListLocalDisksResponse::request() const
+{
+    Q_D(const ListLocalDisksResponse);
+    return static_cast<const ListLocalDisksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway ListLocalDisks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListLocalDisksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListLocalDisksResponsePrivate
+ *
+ * @brief  Private implementation for ListLocalDisksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLocalDisksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListLocalDisksResponse instance.
+ */
+ListLocalDisksResponsePrivate::ListLocalDisksResponsePrivate(
+    ListLocalDisksQueueResponse * const q) : ListLocalDisksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway ListLocalDisksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListLocalDisksResponsePrivate::ListLocalDisksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListLocalDisksResponse"));
+    /// @todo
+}

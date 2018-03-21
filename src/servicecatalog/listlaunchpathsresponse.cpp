@@ -19,3 +19,85 @@
 
 #include "listlaunchpathsresponse.h"
 #include "listlaunchpathsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListLaunchPathsResponse
+ *
+ * @brief  Handles ServiceCatalog ListLaunchPaths responses.
+ *
+ * @see    ServiceCatalogClient::listLaunchPaths
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListLaunchPathsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListLaunchPathsResponsePrivate(this), parent)
+{
+    setRequest(new ListLaunchPathsRequest(request));
+    setReply(reply);
+}
+
+const ListLaunchPathsRequest * ListLaunchPathsResponse::request() const
+{
+    Q_D(const ListLaunchPathsResponse);
+    return static_cast<const ListLaunchPathsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListLaunchPaths response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListLaunchPathsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListLaunchPathsResponsePrivate
+ *
+ * @brief  Private implementation for ListLaunchPathsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLaunchPathsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListLaunchPathsResponse instance.
+ */
+ListLaunchPathsResponsePrivate::ListLaunchPathsResponsePrivate(
+    ListLaunchPathsQueueResponse * const q) : ListLaunchPathsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListLaunchPathsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListLaunchPathsResponsePrivate::ListLaunchPathsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListLaunchPathsResponse"));
+    /// @todo
+}

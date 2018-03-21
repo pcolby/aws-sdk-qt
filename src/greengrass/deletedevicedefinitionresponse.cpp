@@ -19,3 +19,85 @@
 
 #include "deletedevicedefinitionresponse.h"
 #include "deletedevicedefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteDeviceDefinitionResponse
+ *
+ * @brief  Handles Greengrass DeleteDeviceDefinition responses.
+ *
+ * @see    GreengrassClient::deleteDeviceDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDeviceDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DeleteDeviceDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDeviceDefinitionRequest(request));
+    setReply(reply);
+}
+
+const DeleteDeviceDefinitionRequest * DeleteDeviceDefinitionResponse::request() const
+{
+    Q_D(const DeleteDeviceDefinitionResponse);
+    return static_cast<const DeleteDeviceDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DeleteDeviceDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDeviceDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDeviceDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDeviceDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDeviceDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDeviceDefinitionResponse instance.
+ */
+DeleteDeviceDefinitionResponsePrivate::DeleteDeviceDefinitionResponsePrivate(
+    DeleteDeviceDefinitionQueueResponse * const q) : DeleteDeviceDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DeleteDeviceDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDeviceDefinitionResponsePrivate::DeleteDeviceDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDeviceDefinitionResponse"));
+    /// @todo
+}

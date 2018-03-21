@@ -19,3 +19,85 @@
 
 #include "disablegatewayresponse.h"
 #include "disablegatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DisableGatewayResponse
+ *
+ * @brief  Handles StorageGateway DisableGateway responses.
+ *
+ * @see    StorageGatewayClient::disableGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DisableGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DisableGatewayRequest(request));
+    setReply(reply);
+}
+
+const DisableGatewayRequest * DisableGatewayResponse::request() const
+{
+    Q_D(const DisableGatewayResponse);
+    return static_cast<const DisableGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DisableGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DisableGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableGatewayResponse instance.
+ */
+DisableGatewayResponsePrivate::DisableGatewayResponsePrivate(
+    DisableGatewayQueueResponse * const q) : DisableGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DisableGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableGatewayResponsePrivate::DisableGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableGatewayResponse"));
+    /// @todo
+}

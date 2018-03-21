@@ -19,3 +19,85 @@
 
 #include "listfragmentsresponse.h"
 #include "listfragmentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisVideoArchivedMedia {
+
+/**
+ * @class  ListFragmentsResponse
+ *
+ * @brief  Handles KinesisVideoArchivedMedia ListFragments responses.
+ *
+ * @see    KinesisVideoArchivedMediaClient::listFragments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFragmentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisVideoArchivedMediaResponse(new ListFragmentsResponsePrivate(this), parent)
+{
+    setRequest(new ListFragmentsRequest(request));
+    setReply(reply);
+}
+
+const ListFragmentsRequest * ListFragmentsResponse::request() const
+{
+    Q_D(const ListFragmentsResponse);
+    return static_cast<const ListFragmentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisVideoArchivedMedia ListFragments response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListFragmentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFragmentsResponsePrivate
+ *
+ * @brief  Private implementation for ListFragmentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFragmentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListFragmentsResponse instance.
+ */
+ListFragmentsResponsePrivate::ListFragmentsResponsePrivate(
+    ListFragmentsQueueResponse * const q) : ListFragmentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisVideoArchivedMedia ListFragmentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListFragmentsResponsePrivate::ListFragmentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListFragmentsResponse"));
+    /// @todo
+}

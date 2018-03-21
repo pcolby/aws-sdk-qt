@@ -19,3 +19,85 @@
 
 #include "deletegrouppolicyresponse.h"
 #include "deletegrouppolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteGroupPolicyResponse
+ *
+ * @brief  Handles IAM DeleteGroupPolicy responses.
+ *
+ * @see    IAMClient::deleteGroupPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGroupPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeleteGroupPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteGroupPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteGroupPolicyRequest * DeleteGroupPolicyResponse::request() const
+{
+    Q_D(const DeleteGroupPolicyResponse);
+    return static_cast<const DeleteGroupPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeleteGroupPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteGroupPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGroupPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteGroupPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGroupPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteGroupPolicyResponse instance.
+ */
+DeleteGroupPolicyResponsePrivate::DeleteGroupPolicyResponsePrivate(
+    DeleteGroupPolicyQueueResponse * const q) : DeleteGroupPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeleteGroupPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteGroupPolicyResponsePrivate::DeleteGroupPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteGroupPolicyResponse"));
+    /// @todo
+}

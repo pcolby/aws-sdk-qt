@@ -19,3 +19,85 @@
 
 #include "deletenotificationsubscriptionresponse.h"
 #include "deletenotificationsubscriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DeleteNotificationSubscriptionResponse
+ *
+ * @brief  Handles WorkDocs DeleteNotificationSubscription responses.
+ *
+ * @see    WorkDocsClient::deleteNotificationSubscription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNotificationSubscriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DeleteNotificationSubscriptionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNotificationSubscriptionRequest(request));
+    setReply(reply);
+}
+
+const DeleteNotificationSubscriptionRequest * DeleteNotificationSubscriptionResponse::request() const
+{
+    Q_D(const DeleteNotificationSubscriptionResponse);
+    return static_cast<const DeleteNotificationSubscriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DeleteNotificationSubscription response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNotificationSubscriptionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNotificationSubscriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotificationSubscriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNotificationSubscriptionResponse instance.
+ */
+DeleteNotificationSubscriptionResponsePrivate::DeleteNotificationSubscriptionResponsePrivate(
+    DeleteNotificationSubscriptionQueueResponse * const q) : DeleteNotificationSubscriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DeleteNotificationSubscriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNotificationSubscriptionResponsePrivate::DeleteNotificationSubscriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationSubscriptionResponse"));
+    /// @todo
+}

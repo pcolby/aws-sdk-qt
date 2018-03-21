@@ -19,3 +19,85 @@
 
 #include "listteammembersresponse.h"
 #include "listteammembersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  ListTeamMembersResponse
+ *
+ * @brief  Handles CodeStar ListTeamMembers responses.
+ *
+ * @see    CodeStarClient::listTeamMembers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTeamMembersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new ListTeamMembersResponsePrivate(this), parent)
+{
+    setRequest(new ListTeamMembersRequest(request));
+    setReply(reply);
+}
+
+const ListTeamMembersRequest * ListTeamMembersResponse::request() const
+{
+    Q_D(const ListTeamMembersResponse);
+    return static_cast<const ListTeamMembersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar ListTeamMembers response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTeamMembersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTeamMembersResponsePrivate
+ *
+ * @brief  Private implementation for ListTeamMembersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTeamMembersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTeamMembersResponse instance.
+ */
+ListTeamMembersResponsePrivate::ListTeamMembersResponsePrivate(
+    ListTeamMembersQueueResponse * const q) : ListTeamMembersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar ListTeamMembersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTeamMembersResponsePrivate::ListTeamMembersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTeamMembersResponse"));
+    /// @todo
+}

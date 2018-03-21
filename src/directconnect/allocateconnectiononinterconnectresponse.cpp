@@ -19,3 +19,85 @@
 
 #include "allocateconnectiononinterconnectresponse.h"
 #include "allocateconnectiononinterconnectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AllocateConnectionOnInterconnectResponse
+ *
+ * @brief  Handles DirectConnect AllocateConnectionOnInterconnect responses.
+ *
+ * @see    DirectConnectClient::allocateConnectionOnInterconnect
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AllocateConnectionOnInterconnectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new AllocateConnectionOnInterconnectResponsePrivate(this), parent)
+{
+    setRequest(new AllocateConnectionOnInterconnectRequest(request));
+    setReply(reply);
+}
+
+const AllocateConnectionOnInterconnectRequest * AllocateConnectionOnInterconnectResponse::request() const
+{
+    Q_D(const AllocateConnectionOnInterconnectResponse);
+    return static_cast<const AllocateConnectionOnInterconnectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect AllocateConnectionOnInterconnect response.
+ *
+ * @param  response  Response to parse.
+ */
+void AllocateConnectionOnInterconnectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AllocateConnectionOnInterconnectResponsePrivate
+ *
+ * @brief  Private implementation for AllocateConnectionOnInterconnectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocateConnectionOnInterconnectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AllocateConnectionOnInterconnectResponse instance.
+ */
+AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnectResponsePrivate(
+    AllocateConnectionOnInterconnectQueueResponse * const q) : AllocateConnectionOnInterconnectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect AllocateConnectionOnInterconnectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AllocateConnectionOnInterconnectResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "batchdeletetableversionresponse.h"
 #include "batchdeletetableversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchDeleteTableVersionResponse
+ *
+ * @brief  Handles Glue BatchDeleteTableVersion responses.
+ *
+ * @see    GlueClient::batchDeleteTableVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDeleteTableVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new BatchDeleteTableVersionResponsePrivate(this), parent)
+{
+    setRequest(new BatchDeleteTableVersionRequest(request));
+    setReply(reply);
+}
+
+const BatchDeleteTableVersionRequest * BatchDeleteTableVersionResponse::request() const
+{
+    Q_D(const BatchDeleteTableVersionResponse);
+    return static_cast<const BatchDeleteTableVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue BatchDeleteTableVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDeleteTableVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDeleteTableVersionResponsePrivate
+ *
+ * @brief  Private implementation for BatchDeleteTableVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeleteTableVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDeleteTableVersionResponse instance.
+ */
+BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponsePrivate(
+    BatchDeleteTableVersionQueueResponse * const q) : BatchDeleteTableVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue BatchDeleteTableVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDeleteTableVersionResponse"));
+    /// @todo
+}

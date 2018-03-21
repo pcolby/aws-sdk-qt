@@ -19,3 +19,85 @@
 
 #include "deletetypedlinkfacetresponse.h"
 #include "deletetypedlinkfacetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DeleteTypedLinkFacetResponse
+ *
+ * @brief  Handles CloudDirectory DeleteTypedLinkFacet responses.
+ *
+ * @see    CloudDirectoryClient::deleteTypedLinkFacet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTypedLinkFacetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new DeleteTypedLinkFacetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTypedLinkFacetRequest(request));
+    setReply(reply);
+}
+
+const DeleteTypedLinkFacetRequest * DeleteTypedLinkFacetResponse::request() const
+{
+    Q_D(const DeleteTypedLinkFacetResponse);
+    return static_cast<const DeleteTypedLinkFacetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory DeleteTypedLinkFacet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTypedLinkFacetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTypedLinkFacetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTypedLinkFacetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTypedLinkFacetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTypedLinkFacetResponse instance.
+ */
+DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponsePrivate(
+    DeleteTypedLinkFacetQueueResponse * const q) : DeleteTypedLinkFacetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory DeleteTypedLinkFacetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTypedLinkFacetResponse"));
+    /// @todo
+}

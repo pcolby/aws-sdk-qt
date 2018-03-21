@@ -19,3 +19,85 @@
 
 #include "deleterequestvalidatorresponse.h"
 #include "deleterequestvalidatorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteRequestValidatorResponse
+ *
+ * @brief  Handles APIGateway DeleteRequestValidator responses.
+ *
+ * @see    APIGatewayClient::deleteRequestValidator
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRequestValidatorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteRequestValidatorResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRequestValidatorRequest(request));
+    setReply(reply);
+}
+
+const DeleteRequestValidatorRequest * DeleteRequestValidatorResponse::request() const
+{
+    Q_D(const DeleteRequestValidatorResponse);
+    return static_cast<const DeleteRequestValidatorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteRequestValidator response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRequestValidatorResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRequestValidatorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRequestValidatorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRequestValidatorResponse instance.
+ */
+DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
+    DeleteRequestValidatorQueueResponse * const q) : DeleteRequestValidatorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteRequestValidatorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRequestValidatorResponse"));
+    /// @todo
+}

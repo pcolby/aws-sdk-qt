@@ -19,3 +19,85 @@
 
 #include "updatereplicationjobresponse.h"
 #include "updatereplicationjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  UpdateReplicationJobResponse
+ *
+ * @brief  Handles SMS UpdateReplicationJob responses.
+ *
+ * @see    SMSClient::updateReplicationJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateReplicationJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SMSResponse(new UpdateReplicationJobResponsePrivate(this), parent)
+{
+    setRequest(new UpdateReplicationJobRequest(request));
+    setReply(reply);
+}
+
+const UpdateReplicationJobRequest * UpdateReplicationJobResponse::request() const
+{
+    Q_D(const UpdateReplicationJobResponse);
+    return static_cast<const UpdateReplicationJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SMS UpdateReplicationJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateReplicationJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateReplicationJobResponsePrivate
+ *
+ * @brief  Private implementation for UpdateReplicationJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateReplicationJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateReplicationJobResponse instance.
+ */
+UpdateReplicationJobResponsePrivate::UpdateReplicationJobResponsePrivate(
+    UpdateReplicationJobQueueResponse * const q) : UpdateReplicationJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SMS UpdateReplicationJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateReplicationJobResponsePrivate::UpdateReplicationJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateReplicationJobResponse"));
+    /// @todo
+}

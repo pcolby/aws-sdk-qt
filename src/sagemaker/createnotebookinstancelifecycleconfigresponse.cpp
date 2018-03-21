@@ -19,3 +19,85 @@
 
 #include "createnotebookinstancelifecycleconfigresponse.h"
 #include "createnotebookinstancelifecycleconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  CreateNotebookInstanceLifecycleConfigResponse
+ *
+ * @brief  Handles SageMaker CreateNotebookInstanceLifecycleConfig responses.
+ *
+ * @see    SageMakerClient::createNotebookInstanceLifecycleConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNotebookInstanceLifecycleConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new CreateNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
+{
+    setRequest(new CreateNotebookInstanceLifecycleConfigRequest(request));
+    setReply(reply);
+}
+
+const CreateNotebookInstanceLifecycleConfigRequest * CreateNotebookInstanceLifecycleConfigResponse::request() const
+{
+    Q_D(const CreateNotebookInstanceLifecycleConfigResponse);
+    return static_cast<const CreateNotebookInstanceLifecycleConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker CreateNotebookInstanceLifecycleConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateNotebookInstanceLifecycleConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNotebookInstanceLifecycleConfigResponsePrivate
+ *
+ * @brief  Private implementation for CreateNotebookInstanceLifecycleConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNotebookInstanceLifecycleConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateNotebookInstanceLifecycleConfigResponse instance.
+ */
+CreateNotebookInstanceLifecycleConfigResponsePrivate::CreateNotebookInstanceLifecycleConfigResponsePrivate(
+    CreateNotebookInstanceLifecycleConfigQueueResponse * const q) : CreateNotebookInstanceLifecycleConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker CreateNotebookInstanceLifecycleConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateNotebookInstanceLifecycleConfigResponsePrivate::CreateNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateNotebookInstanceLifecycleConfigResponse"));
+    /// @todo
+}

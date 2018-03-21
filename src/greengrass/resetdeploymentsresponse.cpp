@@ -19,3 +19,85 @@
 
 #include "resetdeploymentsresponse.h"
 #include "resetdeploymentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ResetDeploymentsResponse
+ *
+ * @brief  Handles Greengrass ResetDeployments responses.
+ *
+ * @see    GreengrassClient::resetDeployments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetDeploymentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ResetDeploymentsResponsePrivate(this), parent)
+{
+    setRequest(new ResetDeploymentsRequest(request));
+    setReply(reply);
+}
+
+const ResetDeploymentsRequest * ResetDeploymentsResponse::request() const
+{
+    Q_D(const ResetDeploymentsResponse);
+    return static_cast<const ResetDeploymentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ResetDeployments response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetDeploymentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetDeploymentsResponsePrivate
+ *
+ * @brief  Private implementation for ResetDeploymentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetDeploymentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetDeploymentsResponse instance.
+ */
+ResetDeploymentsResponsePrivate::ResetDeploymentsResponsePrivate(
+    ResetDeploymentsQueueResponse * const q) : ResetDeploymentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ResetDeploymentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetDeploymentsResponsePrivate::ResetDeploymentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetDeploymentsResponse"));
+    /// @todo
+}

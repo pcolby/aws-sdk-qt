@@ -19,3 +19,85 @@
 
 #include "deleteinstanceresponse.h"
 #include "deleteinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteInstanceResponse
+ *
+ * @brief  Handles Lightsail DeleteInstance responses.
+ *
+ * @see    LightsailClient::deleteInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DeleteInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeleteInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeleteInstanceRequest * DeleteInstanceResponse::request() const
+{
+    Q_D(const DeleteInstanceResponse);
+    return static_cast<const DeleteInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DeleteInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeleteInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteInstanceResponse instance.
+ */
+DeleteInstanceResponsePrivate::DeleteInstanceResponsePrivate(
+    DeleteInstanceQueueResponse * const q) : DeleteInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DeleteInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteInstanceResponsePrivate::DeleteInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceResponse"));
+    /// @todo
+}

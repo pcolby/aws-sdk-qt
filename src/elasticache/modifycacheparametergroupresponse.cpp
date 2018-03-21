@@ -19,3 +19,85 @@
 
 #include "modifycacheparametergroupresponse.h"
 #include "modifycacheparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ModifyCacheParameterGroupResponse
+ *
+ * @brief  Handles ElastiCache ModifyCacheParameterGroup responses.
+ *
+ * @see    ElastiCacheClient::modifyCacheParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyCacheParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new ModifyCacheParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new ModifyCacheParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const ModifyCacheParameterGroupRequest * ModifyCacheParameterGroupResponse::request() const
+{
+    Q_D(const ModifyCacheParameterGroupResponse);
+    return static_cast<const ModifyCacheParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache ModifyCacheParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyCacheParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyCacheParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for ModifyCacheParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyCacheParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyCacheParameterGroupResponse instance.
+ */
+ModifyCacheParameterGroupResponsePrivate::ModifyCacheParameterGroupResponsePrivate(
+    ModifyCacheParameterGroupQueueResponse * const q) : ModifyCacheParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache ModifyCacheParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyCacheParameterGroupResponsePrivate::ModifyCacheParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyCacheParameterGroupResponse"));
+    /// @todo
+}

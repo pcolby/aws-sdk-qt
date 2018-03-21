@@ -19,3 +19,85 @@
 
 #include "deletefunctiondefinitionresponse.h"
 #include "deletefunctiondefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteFunctionDefinitionResponse
+ *
+ * @brief  Handles Greengrass DeleteFunctionDefinition responses.
+ *
+ * @see    GreengrassClient::deleteFunctionDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFunctionDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DeleteFunctionDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFunctionDefinitionRequest(request));
+    setReply(reply);
+}
+
+const DeleteFunctionDefinitionRequest * DeleteFunctionDefinitionResponse::request() const
+{
+    Q_D(const DeleteFunctionDefinitionResponse);
+    return static_cast<const DeleteFunctionDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DeleteFunctionDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFunctionDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFunctionDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFunctionDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFunctionDefinitionResponse instance.
+ */
+DeleteFunctionDefinitionResponsePrivate::DeleteFunctionDefinitionResponsePrivate(
+    DeleteFunctionDefinitionQueueResponse * const q) : DeleteFunctionDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DeleteFunctionDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFunctionDefinitionResponsePrivate::DeleteFunctionDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionDefinitionResponse"));
+    /// @todo
+}

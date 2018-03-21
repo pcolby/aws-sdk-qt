@@ -19,3 +19,85 @@
 
 #include "deletepolicyversionresponse.h"
 #include "deletepolicyversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeletePolicyVersionResponse
+ *
+ * @brief  Handles IAM DeletePolicyVersion responses.
+ *
+ * @see    IAMClient::deletePolicyVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePolicyVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeletePolicyVersionResponsePrivate(this), parent)
+{
+    setRequest(new DeletePolicyVersionRequest(request));
+    setReply(reply);
+}
+
+const DeletePolicyVersionRequest * DeletePolicyVersionResponse::request() const
+{
+    Q_D(const DeletePolicyVersionResponse);
+    return static_cast<const DeletePolicyVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeletePolicyVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePolicyVersionResponsePrivate
+ *
+ * @brief  Private implementation for DeletePolicyVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePolicyVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePolicyVersionResponse instance.
+ */
+DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
+    DeletePolicyVersionQueueResponse * const q) : DeletePolicyVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeletePolicyVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePolicyVersionResponse"));
+    /// @todo
+}

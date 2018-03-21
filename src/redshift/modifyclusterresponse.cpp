@@ -19,3 +19,85 @@
 
 #include "modifyclusterresponse.h"
 #include "modifyclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  ModifyClusterResponse
+ *
+ * @brief  Handles Redshift ModifyCluster responses.
+ *
+ * @see    RedshiftClient::modifyCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new ModifyClusterResponsePrivate(this), parent)
+{
+    setRequest(new ModifyClusterRequest(request));
+    setReply(reply);
+}
+
+const ModifyClusterRequest * ModifyClusterResponse::request() const
+{
+    Q_D(const ModifyClusterResponse);
+    return static_cast<const ModifyClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift ModifyCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyClusterResponsePrivate
+ *
+ * @brief  Private implementation for ModifyClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyClusterResponse instance.
+ */
+ModifyClusterResponsePrivate::ModifyClusterResponsePrivate(
+    ModifyClusterQueueResponse * const q) : ModifyClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift ModifyClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyClusterResponsePrivate::ModifyClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyClusterResponse"));
+    /// @todo
+}

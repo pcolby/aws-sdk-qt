@@ -19,3 +19,85 @@
 
 #include "getroomresponse.h"
 #include "getroomresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  GetRoomResponse
+ *
+ * @brief  Handles AlexaForBusiness GetRoom responses.
+ *
+ * @see    AlexaForBusinessClient::getRoom
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRoomResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new GetRoomResponsePrivate(this), parent)
+{
+    setRequest(new GetRoomRequest(request));
+    setReply(reply);
+}
+
+const GetRoomRequest * GetRoomResponse::request() const
+{
+    Q_D(const GetRoomResponse);
+    return static_cast<const GetRoomRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness GetRoom response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRoomResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRoomResponsePrivate
+ *
+ * @brief  Private implementation for GetRoomResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoomResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRoomResponse instance.
+ */
+GetRoomResponsePrivate::GetRoomResponsePrivate(
+    GetRoomQueueResponse * const q) : GetRoomPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness GetRoomResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRoomResponsePrivate::GetRoomResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRoomResponse"));
+    /// @todo
+}

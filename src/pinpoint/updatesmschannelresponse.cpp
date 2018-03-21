@@ -19,3 +19,85 @@
 
 #include "updatesmschannelresponse.h"
 #include "updatesmschannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateSmsChannelResponse
+ *
+ * @brief  Handles Pinpoint UpdateSmsChannel responses.
+ *
+ * @see    PinpointClient::updateSmsChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSmsChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateSmsChannelResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSmsChannelRequest(request));
+    setReply(reply);
+}
+
+const UpdateSmsChannelRequest * UpdateSmsChannelResponse::request() const
+{
+    Q_D(const UpdateSmsChannelResponse);
+    return static_cast<const UpdateSmsChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateSmsChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSmsChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSmsChannelResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSmsChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSmsChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSmsChannelResponse instance.
+ */
+UpdateSmsChannelResponsePrivate::UpdateSmsChannelResponsePrivate(
+    UpdateSmsChannelQueueResponse * const q) : UpdateSmsChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateSmsChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSmsChannelResponsePrivate::UpdateSmsChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSmsChannelResponse"));
+    /// @todo
+}

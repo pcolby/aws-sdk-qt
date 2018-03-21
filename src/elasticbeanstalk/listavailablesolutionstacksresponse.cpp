@@ -19,3 +19,85 @@
 
 #include "listavailablesolutionstacksresponse.h"
 #include "listavailablesolutionstacksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  ListAvailableSolutionStacksResponse
+ *
+ * @brief  Handles ElasticBeanstalk ListAvailableSolutionStacks responses.
+ *
+ * @see    ElasticBeanstalkClient::listAvailableSolutionStacks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAvailableSolutionStacksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new ListAvailableSolutionStacksResponsePrivate(this), parent)
+{
+    setRequest(new ListAvailableSolutionStacksRequest(request));
+    setReply(reply);
+}
+
+const ListAvailableSolutionStacksRequest * ListAvailableSolutionStacksResponse::request() const
+{
+    Q_D(const ListAvailableSolutionStacksResponse);
+    return static_cast<const ListAvailableSolutionStacksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk ListAvailableSolutionStacks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAvailableSolutionStacksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAvailableSolutionStacksResponsePrivate
+ *
+ * @brief  Private implementation for ListAvailableSolutionStacksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAvailableSolutionStacksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAvailableSolutionStacksResponse instance.
+ */
+ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponsePrivate(
+    ListAvailableSolutionStacksQueueResponse * const q) : ListAvailableSolutionStacksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk ListAvailableSolutionStacksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAvailableSolutionStacksResponse"));
+    /// @todo
+}

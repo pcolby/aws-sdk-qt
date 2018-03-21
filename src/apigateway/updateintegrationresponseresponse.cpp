@@ -19,3 +19,85 @@
 
 #include "updateintegrationresponseresponse.h"
 #include "updateintegrationresponseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateIntegrationResponseResponse
+ *
+ * @brief  Handles APIGateway UpdateIntegrationResponse responses.
+ *
+ * @see    APIGatewayClient::updateIntegrationResponse
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateIntegrationResponseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new UpdateIntegrationResponseResponsePrivate(this), parent)
+{
+    setRequest(new UpdateIntegrationResponseRequest(request));
+    setReply(reply);
+}
+
+const UpdateIntegrationResponseRequest * UpdateIntegrationResponseResponse::request() const
+{
+    Q_D(const UpdateIntegrationResponseResponse);
+    return static_cast<const UpdateIntegrationResponseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway UpdateIntegrationResponse response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateIntegrationResponseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateIntegrationResponseResponsePrivate
+ *
+ * @brief  Private implementation for UpdateIntegrationResponseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIntegrationResponseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateIntegrationResponseResponse instance.
+ */
+UpdateIntegrationResponseResponsePrivate::UpdateIntegrationResponseResponsePrivate(
+    UpdateIntegrationResponseQueueResponse * const q) : UpdateIntegrationResponsePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway UpdateIntegrationResponseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateIntegrationResponseResponsePrivate::UpdateIntegrationResponseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateIntegrationResponseResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listmultipartuploadsresponse.h"
 #include "listmultipartuploadsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  ListMultipartUploadsResponse
+ *
+ * @brief  Handles Glacier ListMultipartUploads responses.
+ *
+ * @see    GlacierClient::listMultipartUploads
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListMultipartUploadsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new ListMultipartUploadsResponsePrivate(this), parent)
+{
+    setRequest(new ListMultipartUploadsRequest(request));
+    setReply(reply);
+}
+
+const ListMultipartUploadsRequest * ListMultipartUploadsResponse::request() const
+{
+    Q_D(const ListMultipartUploadsResponse);
+    return static_cast<const ListMultipartUploadsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier ListMultipartUploads response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListMultipartUploadsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListMultipartUploadsResponsePrivate
+ *
+ * @brief  Private implementation for ListMultipartUploadsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMultipartUploadsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListMultipartUploadsResponse instance.
+ */
+ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponsePrivate(
+    ListMultipartUploadsQueueResponse * const q) : ListMultipartUploadsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier ListMultipartUploadsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListMultipartUploadsResponse"));
+    /// @todo
+}

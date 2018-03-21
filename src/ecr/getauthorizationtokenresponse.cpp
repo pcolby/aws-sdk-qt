@@ -19,3 +19,85 @@
 
 #include "getauthorizationtokenresponse.h"
 #include "getauthorizationtokenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  GetAuthorizationTokenResponse
+ *
+ * @brief  Handles ECR GetAuthorizationToken responses.
+ *
+ * @see    ECRClient::getAuthorizationToken
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAuthorizationTokenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new GetAuthorizationTokenResponsePrivate(this), parent)
+{
+    setRequest(new GetAuthorizationTokenRequest(request));
+    setReply(reply);
+}
+
+const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() const
+{
+    Q_D(const GetAuthorizationTokenResponse);
+    return static_cast<const GetAuthorizationTokenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR GetAuthorizationToken response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAuthorizationTokenResponsePrivate
+ *
+ * @brief  Private implementation for GetAuthorizationTokenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAuthorizationTokenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAuthorizationTokenResponse instance.
+ */
+GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
+    GetAuthorizationTokenQueueResponse * const q) : GetAuthorizationTokenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR GetAuthorizationTokenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAuthorizationTokenResponse"));
+    /// @todo
+}

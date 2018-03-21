@@ -19,3 +19,85 @@
 
 #include "putimageresponse.h"
 #include "putimageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  PutImageResponse
+ *
+ * @brief  Handles ECR PutImage responses.
+ *
+ * @see    ECRClient::putImage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutImageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new PutImageResponsePrivate(this), parent)
+{
+    setRequest(new PutImageRequest(request));
+    setReply(reply);
+}
+
+const PutImageRequest * PutImageResponse::request() const
+{
+    Q_D(const PutImageResponse);
+    return static_cast<const PutImageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR PutImage response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutImageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutImageResponsePrivate
+ *
+ * @brief  Private implementation for PutImageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutImageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutImageResponse instance.
+ */
+PutImageResponsePrivate::PutImageResponsePrivate(
+    PutImageQueueResponse * const q) : PutImagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR PutImageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutImageResponsePrivate::PutImageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutImageResponse"));
+    /// @todo
+}

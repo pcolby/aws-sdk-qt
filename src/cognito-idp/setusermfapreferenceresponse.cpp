@@ -19,3 +19,85 @@
 
 #include "setusermfapreferenceresponse.h"
 #include "setusermfapreferenceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  SetUserMFAPreferenceResponse
+ *
+ * @brief  Handles CognitoIdentityProvider SetUserMFAPreference responses.
+ *
+ * @see    CognitoIdentityProviderClient::setUserMFAPreference
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetUserMFAPreferenceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new SetUserMFAPreferenceResponsePrivate(this), parent)
+{
+    setRequest(new SetUserMFAPreferenceRequest(request));
+    setReply(reply);
+}
+
+const SetUserMFAPreferenceRequest * SetUserMFAPreferenceResponse::request() const
+{
+    Q_D(const SetUserMFAPreferenceResponse);
+    return static_cast<const SetUserMFAPreferenceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider SetUserMFAPreference response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetUserMFAPreferenceResponsePrivate
+ *
+ * @brief  Private implementation for SetUserMFAPreferenceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetUserMFAPreferenceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetUserMFAPreferenceResponse instance.
+ */
+SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponsePrivate(
+    SetUserMFAPreferenceQueueResponse * const q) : SetUserMFAPreferencePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider SetUserMFAPreferenceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetUserMFAPreferenceResponse"));
+    /// @todo
+}

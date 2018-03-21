@@ -19,3 +19,85 @@
 
 #include "listpoliciesresponse.h"
 #include "listpoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListPoliciesResponse
+ *
+ * @brief  Handles IAM ListPolicies responses.
+ *
+ * @see    IAMClient::listPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListPoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListPoliciesRequest * ListPoliciesResponse::request() const
+{
+    Q_D(const ListPoliciesResponse);
+    return static_cast<const ListPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPoliciesResponse instance.
+ */
+ListPoliciesResponsePrivate::ListPoliciesResponsePrivate(
+    ListPoliciesQueueResponse * const q) : ListPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPoliciesResponsePrivate::ListPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPoliciesResponse"));
+    /// @todo
+}

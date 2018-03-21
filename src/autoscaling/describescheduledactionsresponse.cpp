@@ -19,3 +19,85 @@
 
 #include "describescheduledactionsresponse.h"
 #include "describescheduledactionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeScheduledActionsResponse
+ *
+ * @brief  Handles AutoScaling DescribeScheduledActions responses.
+ *
+ * @see    AutoScalingClient::describeScheduledActions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScheduledActionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeScheduledActionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeScheduledActionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeScheduledActionsRequest * DescribeScheduledActionsResponse::request() const
+{
+    Q_D(const DescribeScheduledActionsResponse);
+    return static_cast<const DescribeScheduledActionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeScheduledActions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeScheduledActionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScheduledActionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeScheduledActionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScheduledActionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeScheduledActionsResponse instance.
+ */
+DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponsePrivate(
+    DescribeScheduledActionsQueueResponse * const q) : DescribeScheduledActionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeScheduledActionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledActionsResponse"));
+    /// @todo
+}

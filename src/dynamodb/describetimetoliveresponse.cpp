@@ -19,3 +19,85 @@
 
 #include "describetimetoliveresponse.h"
 #include "describetimetoliveresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DescribeTimeToLiveResponse
+ *
+ * @brief  Handles DynamoDB DescribeTimeToLive responses.
+ *
+ * @see    DynamoDBClient::describeTimeToLive
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTimeToLiveResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new DescribeTimeToLiveResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTimeToLiveRequest(request));
+    setReply(reply);
+}
+
+const DescribeTimeToLiveRequest * DescribeTimeToLiveResponse::request() const
+{
+    Q_D(const DescribeTimeToLiveResponse);
+    return static_cast<const DescribeTimeToLiveRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB DescribeTimeToLive response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTimeToLiveResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTimeToLiveResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTimeToLiveResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTimeToLiveResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTimeToLiveResponse instance.
+ */
+DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponsePrivate(
+    DescribeTimeToLiveQueueResponse * const q) : DescribeTimeToLivePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB DescribeTimeToLiveResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTimeToLiveResponse"));
+    /// @todo
+}

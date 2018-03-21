@@ -19,3 +19,85 @@
 
 #include "deletenatgatewayresponse.h"
 #include "deletenatgatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteNatGatewayResponse
+ *
+ * @brief  Handles EC2 DeleteNatGateway responses.
+ *
+ * @see    EC2Client::deleteNatGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNatGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteNatGatewayResponsePrivate(this), parent)
+{
+    setRequest(new DeleteNatGatewayRequest(request));
+    setReply(reply);
+}
+
+const DeleteNatGatewayRequest * DeleteNatGatewayResponse::request() const
+{
+    Q_D(const DeleteNatGatewayResponse);
+    return static_cast<const DeleteNatGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteNatGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteNatGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNatGatewayResponsePrivate
+ *
+ * @brief  Private implementation for DeleteNatGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNatGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteNatGatewayResponse instance.
+ */
+DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponsePrivate(
+    DeleteNatGatewayQueueResponse * const q) : DeleteNatGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteNatGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteNatGatewayResponse"));
+    /// @todo
+}

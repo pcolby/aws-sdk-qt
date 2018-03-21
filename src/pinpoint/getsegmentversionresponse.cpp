@@ -19,3 +19,85 @@
 
 #include "getsegmentversionresponse.h"
 #include "getsegmentversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetSegmentVersionResponse
+ *
+ * @brief  Handles Pinpoint GetSegmentVersion responses.
+ *
+ * @see    PinpointClient::getSegmentVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSegmentVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetSegmentVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetSegmentVersionRequest(request));
+    setReply(reply);
+}
+
+const GetSegmentVersionRequest * GetSegmentVersionResponse::request() const
+{
+    Q_D(const GetSegmentVersionResponse);
+    return static_cast<const GetSegmentVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetSegmentVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSegmentVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSegmentVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetSegmentVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSegmentVersionResponse instance.
+ */
+GetSegmentVersionResponsePrivate::GetSegmentVersionResponsePrivate(
+    GetSegmentVersionQueueResponse * const q) : GetSegmentVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetSegmentVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSegmentVersionResponsePrivate::GetSegmentVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSegmentVersionResponse"));
+    /// @todo
+}

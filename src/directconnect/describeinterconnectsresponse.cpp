@@ -19,3 +19,85 @@
 
 #include "describeinterconnectsresponse.h"
 #include "describeinterconnectsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeInterconnectsResponse
+ *
+ * @brief  Handles DirectConnect DescribeInterconnects responses.
+ *
+ * @see    DirectConnectClient::describeInterconnects
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInterconnectsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeInterconnectsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInterconnectsRequest(request));
+    setReply(reply);
+}
+
+const DescribeInterconnectsRequest * DescribeInterconnectsResponse::request() const
+{
+    Q_D(const DescribeInterconnectsResponse);
+    return static_cast<const DescribeInterconnectsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeInterconnects response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInterconnectsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInterconnectsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInterconnectsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInterconnectsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInterconnectsResponse instance.
+ */
+DescribeInterconnectsResponsePrivate::DescribeInterconnectsResponsePrivate(
+    DescribeInterconnectsQueueResponse * const q) : DescribeInterconnectsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeInterconnectsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInterconnectsResponsePrivate::DescribeInterconnectsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInterconnectsResponse"));
+    /// @todo
+}

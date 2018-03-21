@@ -19,3 +19,85 @@
 
 #include "updatenotificationresponse.h"
 #include "updatenotificationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  UpdateNotificationResponse
+ *
+ * @brief  Handles Budgets UpdateNotification responses.
+ *
+ * @see    BudgetsClient::updateNotification
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateNotificationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new UpdateNotificationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateNotificationRequest(request));
+    setReply(reply);
+}
+
+const UpdateNotificationRequest * UpdateNotificationResponse::request() const
+{
+    Q_D(const UpdateNotificationResponse);
+    return static_cast<const UpdateNotificationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets UpdateNotification response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateNotificationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateNotificationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateNotificationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNotificationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateNotificationResponse instance.
+ */
+UpdateNotificationResponsePrivate::UpdateNotificationResponsePrivate(
+    UpdateNotificationQueueResponse * const q) : UpdateNotificationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets UpdateNotificationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateNotificationResponsePrivate::UpdateNotificationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateNotificationResponse"));
+    /// @todo
+}

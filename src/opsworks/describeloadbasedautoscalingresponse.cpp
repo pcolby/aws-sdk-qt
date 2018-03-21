@@ -19,3 +19,85 @@
 
 #include "describeloadbasedautoscalingresponse.h"
 #include "describeloadbasedautoscalingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeLoadBasedAutoScalingResponse
+ *
+ * @brief  Handles OpsWorks DescribeLoadBasedAutoScaling responses.
+ *
+ * @see    OpsWorksClient::describeLoadBasedAutoScaling
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLoadBasedAutoScalingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeLoadBasedAutoScalingResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLoadBasedAutoScalingRequest(request));
+    setReply(reply);
+}
+
+const DescribeLoadBasedAutoScalingRequest * DescribeLoadBasedAutoScalingResponse::request() const
+{
+    Q_D(const DescribeLoadBasedAutoScalingResponse);
+    return static_cast<const DescribeLoadBasedAutoScalingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeLoadBasedAutoScaling response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLoadBasedAutoScalingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLoadBasedAutoScalingResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLoadBasedAutoScalingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoadBasedAutoScalingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLoadBasedAutoScalingResponse instance.
+ */
+DescribeLoadBasedAutoScalingResponsePrivate::DescribeLoadBasedAutoScalingResponsePrivate(
+    DescribeLoadBasedAutoScalingQueueResponse * const q) : DescribeLoadBasedAutoScalingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeLoadBasedAutoScalingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLoadBasedAutoScalingResponsePrivate::DescribeLoadBasedAutoScalingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBasedAutoScalingResponse"));
+    /// @todo
+}

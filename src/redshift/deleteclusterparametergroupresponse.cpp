@@ -19,3 +19,85 @@
 
 #include "deleteclusterparametergroupresponse.h"
 #include "deleteclusterparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteClusterParameterGroupResponse
+ *
+ * @brief  Handles Redshift DeleteClusterParameterGroup responses.
+ *
+ * @see    RedshiftClient::deleteClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteClusterParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DeleteClusterParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteClusterParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteClusterParameterGroupRequest * DeleteClusterParameterGroupResponse::request() const
+{
+    Q_D(const DeleteClusterParameterGroupResponse);
+    return static_cast<const DeleteClusterParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DeleteClusterParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteClusterParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteClusterParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteClusterParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteClusterParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteClusterParameterGroupResponse instance.
+ */
+DeleteClusterParameterGroupResponsePrivate::DeleteClusterParameterGroupResponsePrivate(
+    DeleteClusterParameterGroupQueueResponse * const q) : DeleteClusterParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DeleteClusterParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteClusterParameterGroupResponsePrivate::DeleteClusterParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteClusterParameterGroupResponse"));
+    /// @todo
+}

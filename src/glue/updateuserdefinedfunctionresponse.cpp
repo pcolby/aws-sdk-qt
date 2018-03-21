@@ -19,3 +19,85 @@
 
 #include "updateuserdefinedfunctionresponse.h"
 #include "updateuserdefinedfunctionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateUserDefinedFunctionResponse
+ *
+ * @brief  Handles Glue UpdateUserDefinedFunction responses.
+ *
+ * @see    GlueClient::updateUserDefinedFunction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserDefinedFunctionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new UpdateUserDefinedFunctionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateUserDefinedFunctionRequest(request));
+    setReply(reply);
+}
+
+const UpdateUserDefinedFunctionRequest * UpdateUserDefinedFunctionResponse::request() const
+{
+    Q_D(const UpdateUserDefinedFunctionResponse);
+    return static_cast<const UpdateUserDefinedFunctionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue UpdateUserDefinedFunction response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserDefinedFunctionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateUserDefinedFunctionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserDefinedFunctionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateUserDefinedFunctionResponse instance.
+ */
+UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponsePrivate(
+    UpdateUserDefinedFunctionQueueResponse * const q) : UpdateUserDefinedFunctionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue UpdateUserDefinedFunctionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateUserDefinedFunctionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletebucketwebsiteresponse.h"
 #include "deletebucketwebsiteresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteBucketWebsiteResponse
+ *
+ * @brief  Handles S3 DeleteBucketWebsite responses.
+ *
+ * @see    S3Client::deleteBucketWebsite
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBucketWebsiteResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new DeleteBucketWebsiteResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBucketWebsiteRequest(request));
+    setReply(reply);
+}
+
+const DeleteBucketWebsiteRequest * DeleteBucketWebsiteResponse::request() const
+{
+    Q_D(const DeleteBucketWebsiteResponse);
+    return static_cast<const DeleteBucketWebsiteRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 DeleteBucketWebsite response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBucketWebsiteResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBucketWebsiteResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBucketWebsiteResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketWebsiteResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBucketWebsiteResponse instance.
+ */
+DeleteBucketWebsiteResponsePrivate::DeleteBucketWebsiteResponsePrivate(
+    DeleteBucketWebsiteQueueResponse * const q) : DeleteBucketWebsitePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 DeleteBucketWebsiteResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBucketWebsiteResponsePrivate::DeleteBucketWebsiteResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBucketWebsiteResponse"));
+    /// @todo
+}

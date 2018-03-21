@@ -19,3 +19,85 @@
 
 #include "associatefleetresponse.h"
 #include "associatefleetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  AssociateFleetResponse
+ *
+ * @brief  Handles AppStream AssociateFleet responses.
+ *
+ * @see    AppStreamClient::associateFleet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateFleetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new AssociateFleetResponsePrivate(this), parent)
+{
+    setRequest(new AssociateFleetRequest(request));
+    setReply(reply);
+}
+
+const AssociateFleetRequest * AssociateFleetResponse::request() const
+{
+    Q_D(const AssociateFleetResponse);
+    return static_cast<const AssociateFleetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream AssociateFleet response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateFleetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateFleetResponsePrivate
+ *
+ * @brief  Private implementation for AssociateFleetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateFleetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateFleetResponse instance.
+ */
+AssociateFleetResponsePrivate::AssociateFleetResponsePrivate(
+    AssociateFleetQueueResponse * const q) : AssociateFleetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream AssociateFleetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateFleetResponsePrivate::AssociateFleetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateFleetResponse"));
+    /// @todo
+}

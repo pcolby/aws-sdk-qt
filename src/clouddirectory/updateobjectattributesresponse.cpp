@@ -19,3 +19,85 @@
 
 #include "updateobjectattributesresponse.h"
 #include "updateobjectattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  UpdateObjectAttributesResponse
+ *
+ * @brief  Handles CloudDirectory UpdateObjectAttributes responses.
+ *
+ * @see    CloudDirectoryClient::updateObjectAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateObjectAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new UpdateObjectAttributesResponsePrivate(this), parent)
+{
+    setRequest(new UpdateObjectAttributesRequest(request));
+    setReply(reply);
+}
+
+const UpdateObjectAttributesRequest * UpdateObjectAttributesResponse::request() const
+{
+    Q_D(const UpdateObjectAttributesResponse);
+    return static_cast<const UpdateObjectAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory UpdateObjectAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateObjectAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateObjectAttributesResponsePrivate
+ *
+ * @brief  Private implementation for UpdateObjectAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateObjectAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateObjectAttributesResponse instance.
+ */
+UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponsePrivate(
+    UpdateObjectAttributesQueueResponse * const q) : UpdateObjectAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory UpdateObjectAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateObjectAttributesResponse"));
+    /// @todo
+}

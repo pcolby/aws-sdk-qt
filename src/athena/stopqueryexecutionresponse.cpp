@@ -19,3 +19,85 @@
 
 #include "stopqueryexecutionresponse.h"
 #include "stopqueryexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  StopQueryExecutionResponse
+ *
+ * @brief  Handles Athena StopQueryExecution responses.
+ *
+ * @see    AthenaClient::stopQueryExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopQueryExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new StopQueryExecutionResponsePrivate(this), parent)
+{
+    setRequest(new StopQueryExecutionRequest(request));
+    setReply(reply);
+}
+
+const StopQueryExecutionRequest * StopQueryExecutionResponse::request() const
+{
+    Q_D(const StopQueryExecutionResponse);
+    return static_cast<const StopQueryExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena StopQueryExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopQueryExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopQueryExecutionResponsePrivate
+ *
+ * @brief  Private implementation for StopQueryExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopQueryExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopQueryExecutionResponse instance.
+ */
+StopQueryExecutionResponsePrivate::StopQueryExecutionResponsePrivate(
+    StopQueryExecutionQueueResponse * const q) : StopQueryExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena StopQueryExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopQueryExecutionResponsePrivate::StopQueryExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopQueryExecutionResponse"));
+    /// @todo
+}

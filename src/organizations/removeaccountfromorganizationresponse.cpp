@@ -19,3 +19,85 @@
 
 #include "removeaccountfromorganizationresponse.h"
 #include "removeaccountfromorganizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  RemoveAccountFromOrganizationResponse
+ *
+ * @brief  Handles Organizations RemoveAccountFromOrganization responses.
+ *
+ * @see    OrganizationsClient::removeAccountFromOrganization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveAccountFromOrganizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new RemoveAccountFromOrganizationResponsePrivate(this), parent)
+{
+    setRequest(new RemoveAccountFromOrganizationRequest(request));
+    setReply(reply);
+}
+
+const RemoveAccountFromOrganizationRequest * RemoveAccountFromOrganizationResponse::request() const
+{
+    Q_D(const RemoveAccountFromOrganizationResponse);
+    return static_cast<const RemoveAccountFromOrganizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations RemoveAccountFromOrganization response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveAccountFromOrganizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveAccountFromOrganizationResponsePrivate
+ *
+ * @brief  Private implementation for RemoveAccountFromOrganizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAccountFromOrganizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveAccountFromOrganizationResponse instance.
+ */
+RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationResponsePrivate(
+    RemoveAccountFromOrganizationQueueResponse * const q) : RemoveAccountFromOrganizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations RemoveAccountFromOrganizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveAccountFromOrganizationResponse"));
+    /// @todo
+}

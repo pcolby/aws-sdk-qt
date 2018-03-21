@@ -19,3 +19,85 @@
 
 #include "getcrawlerresponse.h"
 #include "getcrawlerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetCrawlerResponse
+ *
+ * @brief  Handles Glue GetCrawler responses.
+ *
+ * @see    GlueClient::getCrawler
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCrawlerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetCrawlerResponsePrivate(this), parent)
+{
+    setRequest(new GetCrawlerRequest(request));
+    setReply(reply);
+}
+
+const GetCrawlerRequest * GetCrawlerResponse::request() const
+{
+    Q_D(const GetCrawlerResponse);
+    return static_cast<const GetCrawlerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetCrawler response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCrawlerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCrawlerResponsePrivate
+ *
+ * @brief  Private implementation for GetCrawlerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCrawlerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCrawlerResponse instance.
+ */
+GetCrawlerResponsePrivate::GetCrawlerResponsePrivate(
+    GetCrawlerQueueResponse * const q) : GetCrawlerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetCrawlerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCrawlerResponsePrivate::GetCrawlerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCrawlerResponse"));
+    /// @todo
+}

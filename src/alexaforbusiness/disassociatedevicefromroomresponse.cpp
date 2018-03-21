@@ -19,3 +19,85 @@
 
 #include "disassociatedevicefromroomresponse.h"
 #include "disassociatedevicefromroomresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  DisassociateDeviceFromRoomResponse
+ *
+ * @brief  Handles AlexaForBusiness DisassociateDeviceFromRoom responses.
+ *
+ * @see    AlexaForBusinessClient::disassociateDeviceFromRoom
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateDeviceFromRoomResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new DisassociateDeviceFromRoomResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateDeviceFromRoomRequest(request));
+    setReply(reply);
+}
+
+const DisassociateDeviceFromRoomRequest * DisassociateDeviceFromRoomResponse::request() const
+{
+    Q_D(const DisassociateDeviceFromRoomResponse);
+    return static_cast<const DisassociateDeviceFromRoomRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness DisassociateDeviceFromRoom response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateDeviceFromRoomResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateDeviceFromRoomResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateDeviceFromRoomResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateDeviceFromRoomResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateDeviceFromRoomResponse instance.
+ */
+DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponsePrivate(
+    DisassociateDeviceFromRoomQueueResponse * const q) : DisassociateDeviceFromRoomPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness DisassociateDeviceFromRoomResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateDeviceFromRoomResponse"));
+    /// @todo
+}

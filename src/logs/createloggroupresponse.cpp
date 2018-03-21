@@ -19,3 +19,85 @@
 
 #include "createloggroupresponse.h"
 #include "createloggroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  CreateLogGroupResponse
+ *
+ * @brief  Handles CloudWatchLogs CreateLogGroup responses.
+ *
+ * @see    CloudWatchLogsClient::createLogGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLogGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new CreateLogGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateLogGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateLogGroupRequest * CreateLogGroupResponse::request() const
+{
+    Q_D(const CreateLogGroupResponse);
+    return static_cast<const CreateLogGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs CreateLogGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLogGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLogGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateLogGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLogGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLogGroupResponse instance.
+ */
+CreateLogGroupResponsePrivate::CreateLogGroupResponsePrivate(
+    CreateLogGroupQueueResponse * const q) : CreateLogGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs CreateLogGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLogGroupResponsePrivate::CreateLogGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLogGroupResponse"));
+    /// @todo
+}

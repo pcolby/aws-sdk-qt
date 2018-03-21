@@ -19,3 +19,85 @@
 
 #include "executepolicyresponse.h"
 #include "executepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  ExecutePolicyResponse
+ *
+ * @brief  Handles AutoScaling ExecutePolicy responses.
+ *
+ * @see    AutoScalingClient::executePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExecutePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new ExecutePolicyResponsePrivate(this), parent)
+{
+    setRequest(new ExecutePolicyRequest(request));
+    setReply(reply);
+}
+
+const ExecutePolicyRequest * ExecutePolicyResponse::request() const
+{
+    Q_D(const ExecutePolicyResponse);
+    return static_cast<const ExecutePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling ExecutePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void ExecutePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ExecutePolicyResponsePrivate
+ *
+ * @brief  Private implementation for ExecutePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecutePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ExecutePolicyResponse instance.
+ */
+ExecutePolicyResponsePrivate::ExecutePolicyResponsePrivate(
+    ExecutePolicyQueueResponse * const q) : ExecutePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling ExecutePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ExecutePolicyResponsePrivate::ExecutePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ExecutePolicyResponse"));
+    /// @todo
+}

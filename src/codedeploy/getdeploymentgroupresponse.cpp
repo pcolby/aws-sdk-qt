@@ -19,3 +19,85 @@
 
 #include "getdeploymentgroupresponse.h"
 #include "getdeploymentgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  GetDeploymentGroupResponse
+ *
+ * @brief  Handles CodeDeploy GetDeploymentGroup responses.
+ *
+ * @see    CodeDeployClient::getDeploymentGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeploymentGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new GetDeploymentGroupResponsePrivate(this), parent)
+{
+    setRequest(new GetDeploymentGroupRequest(request));
+    setReply(reply);
+}
+
+const GetDeploymentGroupRequest * GetDeploymentGroupResponse::request() const
+{
+    Q_D(const GetDeploymentGroupResponse);
+    return static_cast<const GetDeploymentGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy GetDeploymentGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDeploymentGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeploymentGroupResponsePrivate
+ *
+ * @brief  Private implementation for GetDeploymentGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDeploymentGroupResponse instance.
+ */
+GetDeploymentGroupResponsePrivate::GetDeploymentGroupResponsePrivate(
+    GetDeploymentGroupQueueResponse * const q) : GetDeploymentGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy GetDeploymentGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDeploymentGroupResponsePrivate::GetDeploymentGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDeploymentGroupResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getclientcertificatesresponse.h"
 #include "getclientcertificatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetClientCertificatesResponse
+ *
+ * @brief  Handles APIGateway GetClientCertificates responses.
+ *
+ * @see    APIGatewayClient::getClientCertificates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetClientCertificatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetClientCertificatesResponsePrivate(this), parent)
+{
+    setRequest(new GetClientCertificatesRequest(request));
+    setReply(reply);
+}
+
+const GetClientCertificatesRequest * GetClientCertificatesResponse::request() const
+{
+    Q_D(const GetClientCertificatesResponse);
+    return static_cast<const GetClientCertificatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetClientCertificates response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetClientCertificatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetClientCertificatesResponsePrivate
+ *
+ * @brief  Private implementation for GetClientCertificatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetClientCertificatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetClientCertificatesResponse instance.
+ */
+GetClientCertificatesResponsePrivate::GetClientCertificatesResponsePrivate(
+    GetClientCertificatesQueueResponse * const q) : GetClientCertificatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetClientCertificatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetClientCertificatesResponsePrivate::GetClientCertificatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetClientCertificatesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describescalingpoliciesresponse.h"
 #include "describescalingpoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeScalingPoliciesResponse
+ *
+ * @brief  Handles GameLift DescribeScalingPolicies responses.
+ *
+ * @see    GameLiftClient::describeScalingPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeScalingPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeScalingPoliciesRequest(request));
+    setReply(reply);
+}
+
+const DescribeScalingPoliciesRequest * DescribeScalingPoliciesResponse::request() const
+{
+    Q_D(const DescribeScalingPoliciesResponse);
+    return static_cast<const DescribeScalingPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeScalingPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeScalingPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeScalingPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeScalingPoliciesResponse instance.
+ */
+DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponsePrivate(
+    DescribeScalingPoliciesQueueResponse * const q) : DescribeScalingPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeScalingPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeScalingPoliciesResponse"));
+    /// @todo
+}

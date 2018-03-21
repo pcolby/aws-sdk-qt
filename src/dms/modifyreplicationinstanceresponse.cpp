@@ -19,3 +19,85 @@
 
 #include "modifyreplicationinstanceresponse.h"
 #include "modifyreplicationinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  ModifyReplicationInstanceResponse
+ *
+ * @brief  Handles DatabaseMigrationService ModifyReplicationInstance responses.
+ *
+ * @see    DatabaseMigrationServiceClient::modifyReplicationInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyReplicationInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new ModifyReplicationInstanceResponsePrivate(this), parent)
+{
+    setRequest(new ModifyReplicationInstanceRequest(request));
+    setReply(reply);
+}
+
+const ModifyReplicationInstanceRequest * ModifyReplicationInstanceResponse::request() const
+{
+    Q_D(const ModifyReplicationInstanceResponse);
+    return static_cast<const ModifyReplicationInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService ModifyReplicationInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyReplicationInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyReplicationInstanceResponsePrivate
+ *
+ * @brief  Private implementation for ModifyReplicationInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyReplicationInstanceResponse instance.
+ */
+ModifyReplicationInstanceResponsePrivate::ModifyReplicationInstanceResponsePrivate(
+    ModifyReplicationInstanceQueueResponse * const q) : ModifyReplicationInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService ModifyReplicationInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyReplicationInstanceResponsePrivate::ModifyReplicationInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationInstanceResponse"));
+    /// @todo
+}

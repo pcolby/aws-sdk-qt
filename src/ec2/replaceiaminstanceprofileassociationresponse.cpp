@@ -19,3 +19,85 @@
 
 #include "replaceiaminstanceprofileassociationresponse.h"
 #include "replaceiaminstanceprofileassociationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ReplaceIamInstanceProfileAssociationResponse
+ *
+ * @brief  Handles EC2 ReplaceIamInstanceProfileAssociation responses.
+ *
+ * @see    EC2Client::replaceIamInstanceProfileAssociation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReplaceIamInstanceProfileAssociationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ReplaceIamInstanceProfileAssociationResponsePrivate(this), parent)
+{
+    setRequest(new ReplaceIamInstanceProfileAssociationRequest(request));
+    setReply(reply);
+}
+
+const ReplaceIamInstanceProfileAssociationRequest * ReplaceIamInstanceProfileAssociationResponse::request() const
+{
+    Q_D(const ReplaceIamInstanceProfileAssociationResponse);
+    return static_cast<const ReplaceIamInstanceProfileAssociationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ReplaceIamInstanceProfileAssociation response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReplaceIamInstanceProfileAssociationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReplaceIamInstanceProfileAssociationResponsePrivate
+ *
+ * @brief  Private implementation for ReplaceIamInstanceProfileAssociationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceIamInstanceProfileAssociationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReplaceIamInstanceProfileAssociationResponse instance.
+ */
+ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAssociationResponsePrivate(
+    ReplaceIamInstanceProfileAssociationQueueResponse * const q) : ReplaceIamInstanceProfileAssociationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ReplaceIamInstanceProfileAssociationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAssociationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReplaceIamInstanceProfileAssociationResponse"));
+    /// @todo
+}

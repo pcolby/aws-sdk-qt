@@ -19,3 +19,85 @@
 
 #include "putmethodresponse.h"
 #include "putmethodresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  PutMethodResponse
+ *
+ * @brief  Handles APIGateway PutMethod responses.
+ *
+ * @see    APIGatewayClient::putMethod
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutMethodResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new PutMethodResponsePrivate(this), parent)
+{
+    setRequest(new PutMethodRequest(request));
+    setReply(reply);
+}
+
+const PutMethodRequest * PutMethodResponse::request() const
+{
+    Q_D(const PutMethodResponse);
+    return static_cast<const PutMethodRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway PutMethod response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutMethodResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutMethodResponsePrivate
+ *
+ * @brief  Private implementation for PutMethodResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutMethodResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutMethodResponse instance.
+ */
+PutMethodResponsePrivate::PutMethodResponsePrivate(
+    PutMethodQueueResponse * const q) : PutMethodPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway PutMethodResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutMethodResponsePrivate::PutMethodResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutMethodResponse"));
+    /// @todo
+}

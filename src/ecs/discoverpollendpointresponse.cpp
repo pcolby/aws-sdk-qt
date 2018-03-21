@@ -19,3 +19,85 @@
 
 #include "discoverpollendpointresponse.h"
 #include "discoverpollendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DiscoverPollEndpointResponse
+ *
+ * @brief  Handles ECS DiscoverPollEndpoint responses.
+ *
+ * @see    ECSClient::discoverPollEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DiscoverPollEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new DiscoverPollEndpointResponsePrivate(this), parent)
+{
+    setRequest(new DiscoverPollEndpointRequest(request));
+    setReply(reply);
+}
+
+const DiscoverPollEndpointRequest * DiscoverPollEndpointResponse::request() const
+{
+    Q_D(const DiscoverPollEndpointResponse);
+    return static_cast<const DiscoverPollEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS DiscoverPollEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void DiscoverPollEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DiscoverPollEndpointResponsePrivate
+ *
+ * @brief  Private implementation for DiscoverPollEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DiscoverPollEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DiscoverPollEndpointResponse instance.
+ */
+DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
+    DiscoverPollEndpointQueueResponse * const q) : DiscoverPollEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS DiscoverPollEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DiscoverPollEndpointResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "adminlinkproviderforuserresponse.h"
 #include "adminlinkproviderforuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminLinkProviderForUserResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminLinkProviderForUser responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminLinkProviderForUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminLinkProviderForUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminLinkProviderForUserResponsePrivate(this), parent)
+{
+    setRequest(new AdminLinkProviderForUserRequest(request));
+    setReply(reply);
+}
+
+const AdminLinkProviderForUserRequest * AdminLinkProviderForUserResponse::request() const
+{
+    Q_D(const AdminLinkProviderForUserResponse);
+    return static_cast<const AdminLinkProviderForUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminLinkProviderForUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminLinkProviderForUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminLinkProviderForUserResponsePrivate
+ *
+ * @brief  Private implementation for AdminLinkProviderForUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminLinkProviderForUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminLinkProviderForUserResponse instance.
+ */
+AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponsePrivate(
+    AdminLinkProviderForUserQueueResponse * const q) : AdminLinkProviderForUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminLinkProviderForUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminLinkProviderForUserResponse"));
+    /// @todo
+}

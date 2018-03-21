@@ -19,3 +19,85 @@
 
 #include "disassociatediscoveredresourceresponse.h"
 #include "disassociatediscoveredresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DisassociateDiscoveredResourceResponse
+ *
+ * @brief  Handles MigrationHub DisassociateDiscoveredResource responses.
+ *
+ * @see    MigrationHubClient::disassociateDiscoveredResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateDiscoveredResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new DisassociateDiscoveredResourceResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateDiscoveredResourceRequest(request));
+    setReply(reply);
+}
+
+const DisassociateDiscoveredResourceRequest * DisassociateDiscoveredResourceResponse::request() const
+{
+    Q_D(const DisassociateDiscoveredResourceResponse);
+    return static_cast<const DisassociateDiscoveredResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub DisassociateDiscoveredResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateDiscoveredResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateDiscoveredResourceResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateDiscoveredResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateDiscoveredResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateDiscoveredResourceResponse instance.
+ */
+DisassociateDiscoveredResourceResponsePrivate::DisassociateDiscoveredResourceResponsePrivate(
+    DisassociateDiscoveredResourceQueueResponse * const q) : DisassociateDiscoveredResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub DisassociateDiscoveredResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateDiscoveredResourceResponsePrivate::DisassociateDiscoveredResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateDiscoveredResourceResponse"));
+    /// @todo
+}

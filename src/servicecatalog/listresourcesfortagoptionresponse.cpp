@@ -19,3 +19,85 @@
 
 #include "listresourcesfortagoptionresponse.h"
 #include "listresourcesfortagoptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListResourcesForTagOptionResponse
+ *
+ * @brief  Handles ServiceCatalog ListResourcesForTagOption responses.
+ *
+ * @see    ServiceCatalogClient::listResourcesForTagOption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourcesForTagOptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListResourcesForTagOptionResponsePrivate(this), parent)
+{
+    setRequest(new ListResourcesForTagOptionRequest(request));
+    setReply(reply);
+}
+
+const ListResourcesForTagOptionRequest * ListResourcesForTagOptionResponse::request() const
+{
+    Q_D(const ListResourcesForTagOptionResponse);
+    return static_cast<const ListResourcesForTagOptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListResourcesForTagOption response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListResourcesForTagOptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourcesForTagOptionResponsePrivate
+ *
+ * @brief  Private implementation for ListResourcesForTagOptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourcesForTagOptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListResourcesForTagOptionResponse instance.
+ */
+ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponsePrivate(
+    ListResourcesForTagOptionQueueResponse * const q) : ListResourcesForTagOptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListResourcesForTagOptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListResourcesForTagOptionResponse"));
+    /// @todo
+}

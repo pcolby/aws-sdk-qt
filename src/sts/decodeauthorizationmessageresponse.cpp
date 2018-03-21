@@ -19,3 +19,85 @@
 
 #include "decodeauthorizationmessageresponse.h"
 #include "decodeauthorizationmessageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  DecodeAuthorizationMessageResponse
+ *
+ * @brief  Handles STS DecodeAuthorizationMessage responses.
+ *
+ * @see    STSClient::decodeAuthorizationMessage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DecodeAuthorizationMessageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : STSResponse(new DecodeAuthorizationMessageResponsePrivate(this), parent)
+{
+    setRequest(new DecodeAuthorizationMessageRequest(request));
+    setReply(reply);
+}
+
+const DecodeAuthorizationMessageRequest * DecodeAuthorizationMessageResponse::request() const
+{
+    Q_D(const DecodeAuthorizationMessageResponse);
+    return static_cast<const DecodeAuthorizationMessageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a STS DecodeAuthorizationMessage response.
+ *
+ * @param  response  Response to parse.
+ */
+void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DecodeAuthorizationMessageResponsePrivate
+ *
+ * @brief  Private implementation for DecodeAuthorizationMessageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecodeAuthorizationMessageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DecodeAuthorizationMessageResponse instance.
+ */
+DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePrivate(
+    DecodeAuthorizationMessageQueueResponse * const q) : DecodeAuthorizationMessagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an STS DecodeAuthorizationMessageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DecodeAuthorizationMessageResponse"));
+    /// @todo
+}

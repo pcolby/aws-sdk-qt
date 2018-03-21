@@ -19,3 +19,85 @@
 
 #include "getcredentialsforidentityresponse.h"
 #include "getcredentialsforidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  GetCredentialsForIdentityResponse
+ *
+ * @brief  Handles CognitoIdentity GetCredentialsForIdentity responses.
+ *
+ * @see    CognitoIdentityClient::getCredentialsForIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCredentialsForIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new GetCredentialsForIdentityResponsePrivate(this), parent)
+{
+    setRequest(new GetCredentialsForIdentityRequest(request));
+    setReply(reply);
+}
+
+const GetCredentialsForIdentityRequest * GetCredentialsForIdentityResponse::request() const
+{
+    Q_D(const GetCredentialsForIdentityResponse);
+    return static_cast<const GetCredentialsForIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity GetCredentialsForIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCredentialsForIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCredentialsForIdentityResponsePrivate
+ *
+ * @brief  Private implementation for GetCredentialsForIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCredentialsForIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCredentialsForIdentityResponse instance.
+ */
+GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponsePrivate(
+    GetCredentialsForIdentityQueueResponse * const q) : GetCredentialsForIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity GetCredentialsForIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCredentialsForIdentityResponse"));
+    /// @todo
+}

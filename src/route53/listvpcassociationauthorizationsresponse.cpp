@@ -19,3 +19,85 @@
 
 #include "listvpcassociationauthorizationsresponse.h"
 #include "listvpcassociationauthorizationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListVPCAssociationAuthorizationsResponse
+ *
+ * @brief  Handles Route53 ListVPCAssociationAuthorizations responses.
+ *
+ * @see    Route53Client::listVPCAssociationAuthorizations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListVPCAssociationAuthorizationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new ListVPCAssociationAuthorizationsResponsePrivate(this), parent)
+{
+    setRequest(new ListVPCAssociationAuthorizationsRequest(request));
+    setReply(reply);
+}
+
+const ListVPCAssociationAuthorizationsRequest * ListVPCAssociationAuthorizationsResponse::request() const
+{
+    Q_D(const ListVPCAssociationAuthorizationsResponse);
+    return static_cast<const ListVPCAssociationAuthorizationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 ListVPCAssociationAuthorizations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListVPCAssociationAuthorizationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListVPCAssociationAuthorizationsResponsePrivate
+ *
+ * @brief  Private implementation for ListVPCAssociationAuthorizationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVPCAssociationAuthorizationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListVPCAssociationAuthorizationsResponse instance.
+ */
+ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorizationsResponsePrivate(
+    ListVPCAssociationAuthorizationsQueueResponse * const q) : ListVPCAssociationAuthorizationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 ListVPCAssociationAuthorizationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorizationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListVPCAssociationAuthorizationsResponse"));
+    /// @todo
+}

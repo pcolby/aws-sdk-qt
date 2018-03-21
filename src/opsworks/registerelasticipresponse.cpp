@@ -19,3 +19,85 @@
 
 #include "registerelasticipresponse.h"
 #include "registerelasticipresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  RegisterElasticIpResponse
+ *
+ * @brief  Handles OpsWorks RegisterElasticIp responses.
+ *
+ * @see    OpsWorksClient::registerElasticIp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterElasticIpResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new RegisterElasticIpResponsePrivate(this), parent)
+{
+    setRequest(new RegisterElasticIpRequest(request));
+    setReply(reply);
+}
+
+const RegisterElasticIpRequest * RegisterElasticIpResponse::request() const
+{
+    Q_D(const RegisterElasticIpResponse);
+    return static_cast<const RegisterElasticIpRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks RegisterElasticIp response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterElasticIpResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterElasticIpResponsePrivate
+ *
+ * @brief  Private implementation for RegisterElasticIpResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterElasticIpResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterElasticIpResponse instance.
+ */
+RegisterElasticIpResponsePrivate::RegisterElasticIpResponsePrivate(
+    RegisterElasticIpQueueResponse * const q) : RegisterElasticIpPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks RegisterElasticIpResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterElasticIpResponsePrivate::RegisterElasticIpResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterElasticIpResponse"));
+    /// @todo
+}

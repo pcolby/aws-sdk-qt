@@ -19,3 +19,85 @@
 
 #include "getjobresponse.h"
 #include "getjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  GetJobResponse
+ *
+ * @brief  Handles MediaConvert GetJob responses.
+ *
+ * @see    MediaConvertClient::getJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new GetJobResponsePrivate(this), parent)
+{
+    setRequest(new GetJobRequest(request));
+    setReply(reply);
+}
+
+const GetJobRequest * GetJobResponse::request() const
+{
+    Q_D(const GetJobResponse);
+    return static_cast<const GetJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert GetJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetJobResponsePrivate
+ *
+ * @brief  Private implementation for GetJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetJobResponse instance.
+ */
+GetJobResponsePrivate::GetJobResponsePrivate(
+    GetJobQueueResponse * const q) : GetJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert GetJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetJobResponsePrivate::GetJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetJobResponse"));
+    /// @todo
+}

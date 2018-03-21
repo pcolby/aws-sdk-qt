@@ -19,3 +19,85 @@
 
 #include "describecontinuousbackupsresponse.h"
 #include "describecontinuousbackupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DescribeContinuousBackupsResponse
+ *
+ * @brief  Handles DynamoDB DescribeContinuousBackups responses.
+ *
+ * @see    DynamoDBClient::describeContinuousBackups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeContinuousBackupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new DescribeContinuousBackupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeContinuousBackupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeContinuousBackupsRequest * DescribeContinuousBackupsResponse::request() const
+{
+    Q_D(const DescribeContinuousBackupsResponse);
+    return static_cast<const DescribeContinuousBackupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB DescribeContinuousBackups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeContinuousBackupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeContinuousBackupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeContinuousBackupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeContinuousBackupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeContinuousBackupsResponse instance.
+ */
+DescribeContinuousBackupsResponsePrivate::DescribeContinuousBackupsResponsePrivate(
+    DescribeContinuousBackupsQueueResponse * const q) : DescribeContinuousBackupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB DescribeContinuousBackupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeContinuousBackupsResponsePrivate::DescribeContinuousBackupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeContinuousBackupsResponse"));
+    /// @todo
+}

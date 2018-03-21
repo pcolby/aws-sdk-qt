@@ -19,3 +19,85 @@
 
 #include "describeprovisioningartifactresponse.h"
 #include "describeprovisioningartifactresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeProvisioningArtifactResponse
+ *
+ * @brief  Handles ServiceCatalog DescribeProvisioningArtifact responses.
+ *
+ * @see    ServiceCatalogClient::describeProvisioningArtifact
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProvisioningArtifactResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DescribeProvisioningArtifactResponsePrivate(this), parent)
+{
+    setRequest(new DescribeProvisioningArtifactRequest(request));
+    setReply(reply);
+}
+
+const DescribeProvisioningArtifactRequest * DescribeProvisioningArtifactResponse::request() const
+{
+    Q_D(const DescribeProvisioningArtifactResponse);
+    return static_cast<const DescribeProvisioningArtifactRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DescribeProvisioningArtifact response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeProvisioningArtifactResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProvisioningArtifactResponsePrivate
+ *
+ * @brief  Private implementation for DescribeProvisioningArtifactResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProvisioningArtifactResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeProvisioningArtifactResponse instance.
+ */
+DescribeProvisioningArtifactResponsePrivate::DescribeProvisioningArtifactResponsePrivate(
+    DescribeProvisioningArtifactQueueResponse * const q) : DescribeProvisioningArtifactPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DescribeProvisioningArtifactResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeProvisioningArtifactResponsePrivate::DescribeProvisioningArtifactResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeProvisioningArtifactResponse"));
+    /// @todo
+}

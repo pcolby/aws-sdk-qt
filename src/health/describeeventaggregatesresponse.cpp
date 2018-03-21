@@ -19,3 +19,85 @@
 
 #include "describeeventaggregatesresponse.h"
 #include "describeeventaggregatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Health {
+
+/**
+ * @class  DescribeEventAggregatesResponse
+ *
+ * @brief  Handles Health DescribeEventAggregates responses.
+ *
+ * @see    HealthClient::describeEventAggregates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventAggregatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : HealthResponse(new DescribeEventAggregatesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEventAggregatesRequest(request));
+    setReply(reply);
+}
+
+const DescribeEventAggregatesRequest * DescribeEventAggregatesResponse::request() const
+{
+    Q_D(const DescribeEventAggregatesResponse);
+    return static_cast<const DescribeEventAggregatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Health DescribeEventAggregates response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEventAggregatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventAggregatesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEventAggregatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventAggregatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEventAggregatesResponse instance.
+ */
+DescribeEventAggregatesResponsePrivate::DescribeEventAggregatesResponsePrivate(
+    DescribeEventAggregatesQueueResponse * const q) : DescribeEventAggregatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Health DescribeEventAggregatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEventAggregatesResponsePrivate::DescribeEventAggregatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEventAggregatesResponse"));
+    /// @todo
+}

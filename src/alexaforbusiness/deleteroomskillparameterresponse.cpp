@@ -19,3 +19,85 @@
 
 #include "deleteroomskillparameterresponse.h"
 #include "deleteroomskillparameterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  DeleteRoomSkillParameterResponse
+ *
+ * @brief  Handles AlexaForBusiness DeleteRoomSkillParameter responses.
+ *
+ * @see    AlexaForBusinessClient::deleteRoomSkillParameter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRoomSkillParameterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new DeleteRoomSkillParameterResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRoomSkillParameterRequest(request));
+    setReply(reply);
+}
+
+const DeleteRoomSkillParameterRequest * DeleteRoomSkillParameterResponse::request() const
+{
+    Q_D(const DeleteRoomSkillParameterResponse);
+    return static_cast<const DeleteRoomSkillParameterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness DeleteRoomSkillParameter response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRoomSkillParameterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRoomSkillParameterResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRoomSkillParameterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRoomSkillParameterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRoomSkillParameterResponse instance.
+ */
+DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponsePrivate(
+    DeleteRoomSkillParameterQueueResponse * const q) : DeleteRoomSkillParameterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness DeleteRoomSkillParameterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRoomSkillParameterResponse"));
+    /// @todo
+}

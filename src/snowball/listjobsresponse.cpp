@@ -19,3 +19,85 @@
 
 #include "listjobsresponse.h"
 #include "listjobsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  ListJobsResponse
+ *
+ * @brief  Handles Snowball ListJobs responses.
+ *
+ * @see    SnowballClient::listJobs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SnowballResponse(new ListJobsResponsePrivate(this), parent)
+{
+    setRequest(new ListJobsRequest(request));
+    setReply(reply);
+}
+
+const ListJobsRequest * ListJobsResponse::request() const
+{
+    Q_D(const ListJobsResponse);
+    return static_cast<const ListJobsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Snowball ListJobs response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListJobsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobsResponsePrivate
+ *
+ * @brief  Private implementation for ListJobsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListJobsResponse instance.
+ */
+ListJobsResponsePrivate::ListJobsResponsePrivate(
+    ListJobsQueueResponse * const q) : ListJobsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Snowball ListJobsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListJobsResponsePrivate::ListJobsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListJobsResponse"));
+    /// @todo
+}

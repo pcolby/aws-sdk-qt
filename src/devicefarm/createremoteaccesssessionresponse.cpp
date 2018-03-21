@@ -19,3 +19,85 @@
 
 #include "createremoteaccesssessionresponse.h"
 #include "createremoteaccesssessionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  CreateRemoteAccessSessionResponse
+ *
+ * @brief  Handles DeviceFarm CreateRemoteAccessSession responses.
+ *
+ * @see    DeviceFarmClient::createRemoteAccessSession
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRemoteAccessSessionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new CreateRemoteAccessSessionResponsePrivate(this), parent)
+{
+    setRequest(new CreateRemoteAccessSessionRequest(request));
+    setReply(reply);
+}
+
+const CreateRemoteAccessSessionRequest * CreateRemoteAccessSessionResponse::request() const
+{
+    Q_D(const CreateRemoteAccessSessionResponse);
+    return static_cast<const CreateRemoteAccessSessionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm CreateRemoteAccessSession response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRemoteAccessSessionResponsePrivate
+ *
+ * @brief  Private implementation for CreateRemoteAccessSessionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRemoteAccessSessionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateRemoteAccessSessionResponse instance.
+ */
+CreateRemoteAccessSessionResponsePrivate::CreateRemoteAccessSessionResponsePrivate(
+    CreateRemoteAccessSessionQueueResponse * const q) : CreateRemoteAccessSessionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm CreateRemoteAccessSessionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateRemoteAccessSessionResponsePrivate::CreateRemoteAccessSessionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateRemoteAccessSessionResponse"));
+    /// @todo
+}

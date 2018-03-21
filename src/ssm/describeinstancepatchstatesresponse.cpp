@@ -19,3 +19,85 @@
 
 #include "describeinstancepatchstatesresponse.h"
 #include "describeinstancepatchstatesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeInstancePatchStatesResponse
+ *
+ * @brief  Handles SSM DescribeInstancePatchStates responses.
+ *
+ * @see    SSMClient::describeInstancePatchStates
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstancePatchStatesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeInstancePatchStatesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInstancePatchStatesRequest(request));
+    setReply(reply);
+}
+
+const DescribeInstancePatchStatesRequest * DescribeInstancePatchStatesResponse::request() const
+{
+    Q_D(const DescribeInstancePatchStatesResponse);
+    return static_cast<const DescribeInstancePatchStatesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeInstancePatchStates response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInstancePatchStatesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstancePatchStatesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInstancePatchStatesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancePatchStatesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInstancePatchStatesResponse instance.
+ */
+DescribeInstancePatchStatesResponsePrivate::DescribeInstancePatchStatesResponsePrivate(
+    DescribeInstancePatchStatesQueueResponse * const q) : DescribeInstancePatchStatesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeInstancePatchStatesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInstancePatchStatesResponsePrivate::DescribeInstancePatchStatesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInstancePatchStatesResponse"));
+    /// @todo
+}

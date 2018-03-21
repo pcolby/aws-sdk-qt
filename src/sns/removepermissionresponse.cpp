@@ -19,3 +19,85 @@
 
 #include "removepermissionresponse.h"
 #include "removepermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  RemovePermissionResponse
+ *
+ * @brief  Handles SNS RemovePermission responses.
+ *
+ * @see    SNSClient::removePermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemovePermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new RemovePermissionResponsePrivate(this), parent)
+{
+    setRequest(new RemovePermissionRequest(request));
+    setReply(reply);
+}
+
+const RemovePermissionRequest * RemovePermissionResponse::request() const
+{
+    Q_D(const RemovePermissionResponse);
+    return static_cast<const RemovePermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS RemovePermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemovePermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemovePermissionResponsePrivate
+ *
+ * @brief  Private implementation for RemovePermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemovePermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemovePermissionResponse instance.
+ */
+RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
+    RemovePermissionQueueResponse * const q) : RemovePermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS RemovePermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemovePermissionResponsePrivate::RemovePermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemovePermissionResponse"));
+    /// @todo
+}

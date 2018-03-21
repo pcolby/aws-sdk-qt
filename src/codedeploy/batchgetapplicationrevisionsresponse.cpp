@@ -19,3 +19,85 @@
 
 #include "batchgetapplicationrevisionsresponse.h"
 #include "batchgetapplicationrevisionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetApplicationRevisionsResponse
+ *
+ * @brief  Handles CodeDeploy BatchGetApplicationRevisions responses.
+ *
+ * @see    CodeDeployClient::batchGetApplicationRevisions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetApplicationRevisionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new BatchGetApplicationRevisionsResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetApplicationRevisionsRequest(request));
+    setReply(reply);
+}
+
+const BatchGetApplicationRevisionsRequest * BatchGetApplicationRevisionsResponse::request() const
+{
+    Q_D(const BatchGetApplicationRevisionsResponse);
+    return static_cast<const BatchGetApplicationRevisionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy BatchGetApplicationRevisions response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetApplicationRevisionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetApplicationRevisionsResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetApplicationRevisionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetApplicationRevisionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetApplicationRevisionsResponse instance.
+ */
+BatchGetApplicationRevisionsResponsePrivate::BatchGetApplicationRevisionsResponsePrivate(
+    BatchGetApplicationRevisionsQueueResponse * const q) : BatchGetApplicationRevisionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy BatchGetApplicationRevisionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetApplicationRevisionsResponsePrivate::BatchGetApplicationRevisionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetApplicationRevisionsResponse"));
+    /// @todo
+}

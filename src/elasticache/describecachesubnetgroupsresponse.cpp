@@ -19,3 +19,85 @@
 
 #include "describecachesubnetgroupsresponse.h"
 #include "describecachesubnetgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeCacheSubnetGroupsResponse
+ *
+ * @brief  Handles ElastiCache DescribeCacheSubnetGroups responses.
+ *
+ * @see    ElastiCacheClient::describeCacheSubnetGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCacheSubnetGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DescribeCacheSubnetGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCacheSubnetGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeCacheSubnetGroupsRequest * DescribeCacheSubnetGroupsResponse::request() const
+{
+    Q_D(const DescribeCacheSubnetGroupsResponse);
+    return static_cast<const DescribeCacheSubnetGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DescribeCacheSubnetGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCacheSubnetGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCacheSubnetGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCacheSubnetGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCacheSubnetGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCacheSubnetGroupsResponse instance.
+ */
+DescribeCacheSubnetGroupsResponsePrivate::DescribeCacheSubnetGroupsResponsePrivate(
+    DescribeCacheSubnetGroupsQueueResponse * const q) : DescribeCacheSubnetGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DescribeCacheSubnetGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCacheSubnetGroupsResponsePrivate::DescribeCacheSubnetGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCacheSubnetGroupsResponse"));
+    /// @todo
+}

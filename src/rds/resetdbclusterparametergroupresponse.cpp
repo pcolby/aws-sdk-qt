@@ -19,3 +19,85 @@
 
 #include "resetdbclusterparametergroupresponse.h"
 #include "resetdbclusterparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ResetDBClusterParameterGroupResponse
+ *
+ * @brief  Handles RDS ResetDBClusterParameterGroup responses.
+ *
+ * @see    RDSClient::resetDBClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetDBClusterParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ResetDBClusterParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new ResetDBClusterParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const ResetDBClusterParameterGroupRequest * ResetDBClusterParameterGroupResponse::request() const
+{
+    Q_D(const ResetDBClusterParameterGroupResponse);
+    return static_cast<const ResetDBClusterParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ResetDBClusterParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetDBClusterParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for ResetDBClusterParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetDBClusterParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetDBClusterParameterGroupResponse instance.
+ */
+ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupResponsePrivate(
+    ResetDBClusterParameterGroupQueueResponse * const q) : ResetDBClusterParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ResetDBClusterParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetDBClusterParameterGroupResponse"));
+    /// @todo
+}

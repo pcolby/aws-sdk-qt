@@ -19,3 +19,85 @@
 
 #include "closeinstancepublicportsresponse.h"
 #include "closeinstancepublicportsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CloseInstancePublicPortsResponse
+ *
+ * @brief  Handles Lightsail CloseInstancePublicPorts responses.
+ *
+ * @see    LightsailClient::closeInstancePublicPorts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CloseInstancePublicPortsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new CloseInstancePublicPortsResponsePrivate(this), parent)
+{
+    setRequest(new CloseInstancePublicPortsRequest(request));
+    setReply(reply);
+}
+
+const CloseInstancePublicPortsRequest * CloseInstancePublicPortsResponse::request() const
+{
+    Q_D(const CloseInstancePublicPortsResponse);
+    return static_cast<const CloseInstancePublicPortsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail CloseInstancePublicPorts response.
+ *
+ * @param  response  Response to parse.
+ */
+void CloseInstancePublicPortsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CloseInstancePublicPortsResponsePrivate
+ *
+ * @brief  Private implementation for CloseInstancePublicPortsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CloseInstancePublicPortsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CloseInstancePublicPortsResponse instance.
+ */
+CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponsePrivate(
+    CloseInstancePublicPortsQueueResponse * const q) : CloseInstancePublicPortsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail CloseInstancePublicPortsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CloseInstancePublicPortsResponse"));
+    /// @todo
+}

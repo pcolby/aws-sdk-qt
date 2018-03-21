@@ -19,3 +19,85 @@
 
 #include "disassociaterolefromgroupresponse.h"
 #include "disassociaterolefromgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DisassociateRoleFromGroupResponse
+ *
+ * @brief  Handles Greengrass DisassociateRoleFromGroup responses.
+ *
+ * @see    GreengrassClient::disassociateRoleFromGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateRoleFromGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DisassociateRoleFromGroupResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateRoleFromGroupRequest(request));
+    setReply(reply);
+}
+
+const DisassociateRoleFromGroupRequest * DisassociateRoleFromGroupResponse::request() const
+{
+    Q_D(const DisassociateRoleFromGroupResponse);
+    return static_cast<const DisassociateRoleFromGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DisassociateRoleFromGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateRoleFromGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateRoleFromGroupResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateRoleFromGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateRoleFromGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateRoleFromGroupResponse instance.
+ */
+DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponsePrivate(
+    DisassociateRoleFromGroupQueueResponse * const q) : DisassociateRoleFromGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DisassociateRoleFromGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateRoleFromGroupResponse"));
+    /// @todo
+}

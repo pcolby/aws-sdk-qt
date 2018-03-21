@@ -19,3 +19,85 @@
 
 #include "modifyvpcendpointserviceconfigurationresponse.h"
 #include "modifyvpcendpointserviceconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcEndpointServiceConfigurationResponse
+ *
+ * @brief  Handles EC2 ModifyVpcEndpointServiceConfiguration responses.
+ *
+ * @see    EC2Client::modifyVpcEndpointServiceConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcEndpointServiceConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyVpcEndpointServiceConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new ModifyVpcEndpointServiceConfigurationRequest(request));
+    setReply(reply);
+}
+
+const ModifyVpcEndpointServiceConfigurationRequest * ModifyVpcEndpointServiceConfigurationResponse::request() const
+{
+    Q_D(const ModifyVpcEndpointServiceConfigurationResponse);
+    return static_cast<const ModifyVpcEndpointServiceConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyVpcEndpointServiceConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyVpcEndpointServiceConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcEndpointServiceConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for ModifyVpcEndpointServiceConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyVpcEndpointServiceConfigurationResponse instance.
+ */
+ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServiceConfigurationResponsePrivate(
+    ModifyVpcEndpointServiceConfigurationQueueResponse * const q) : ModifyVpcEndpointServiceConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyVpcEndpointServiceConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServiceConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointServiceConfigurationResponse"));
+    /// @todo
+}

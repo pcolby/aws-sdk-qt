@@ -19,3 +19,85 @@
 
 #include "describerdsdbinstancesresponse.h"
 #include "describerdsdbinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeRdsDbInstancesResponse
+ *
+ * @brief  Handles OpsWorks DescribeRdsDbInstances responses.
+ *
+ * @see    OpsWorksClient::describeRdsDbInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRdsDbInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeRdsDbInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRdsDbInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeRdsDbInstancesRequest * DescribeRdsDbInstancesResponse::request() const
+{
+    Q_D(const DescribeRdsDbInstancesResponse);
+    return static_cast<const DescribeRdsDbInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeRdsDbInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRdsDbInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRdsDbInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRdsDbInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRdsDbInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRdsDbInstancesResponse instance.
+ */
+DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponsePrivate(
+    DescribeRdsDbInstancesQueueResponse * const q) : DescribeRdsDbInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeRdsDbInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRdsDbInstancesResponse"));
+    /// @todo
+}

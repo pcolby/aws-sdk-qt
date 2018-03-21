@@ -19,3 +19,85 @@
 
 #include "deletefunctionresponse.h"
 #include "deletefunctionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  DeleteFunctionResponse
+ *
+ * @brief  Handles Lambda DeleteFunction responses.
+ *
+ * @see    LambdaClient::deleteFunction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFunctionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new DeleteFunctionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFunctionRequest(request));
+    setReply(reply);
+}
+
+const DeleteFunctionRequest * DeleteFunctionResponse::request() const
+{
+    Q_D(const DeleteFunctionResponse);
+    return static_cast<const DeleteFunctionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda DeleteFunction response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFunctionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFunctionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFunctionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFunctionResponse instance.
+ */
+DeleteFunctionResponsePrivate::DeleteFunctionResponsePrivate(
+    DeleteFunctionQueueResponse * const q) : DeleteFunctionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda DeleteFunctionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFunctionResponsePrivate::DeleteFunctionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionResponse"));
+    /// @todo
+}

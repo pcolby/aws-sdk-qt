@@ -19,3 +19,85 @@
 
 #include "getuserdefinedfunctionsresponse.h"
 #include "getuserdefinedfunctionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetUserDefinedFunctionsResponse
+ *
+ * @brief  Handles Glue GetUserDefinedFunctions responses.
+ *
+ * @see    GlueClient::getUserDefinedFunctions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserDefinedFunctionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetUserDefinedFunctionsResponsePrivate(this), parent)
+{
+    setRequest(new GetUserDefinedFunctionsRequest(request));
+    setReply(reply);
+}
+
+const GetUserDefinedFunctionsRequest * GetUserDefinedFunctionsResponse::request() const
+{
+    Q_D(const GetUserDefinedFunctionsResponse);
+    return static_cast<const GetUserDefinedFunctionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetUserDefinedFunctions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUserDefinedFunctionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserDefinedFunctionsResponsePrivate
+ *
+ * @brief  Private implementation for GetUserDefinedFunctionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserDefinedFunctionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUserDefinedFunctionsResponse instance.
+ */
+GetUserDefinedFunctionsResponsePrivate::GetUserDefinedFunctionsResponsePrivate(
+    GetUserDefinedFunctionsQueueResponse * const q) : GetUserDefinedFunctionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetUserDefinedFunctionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUserDefinedFunctionsResponsePrivate::GetUserDefinedFunctionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUserDefinedFunctionsResponse"));
+    /// @todo
+}

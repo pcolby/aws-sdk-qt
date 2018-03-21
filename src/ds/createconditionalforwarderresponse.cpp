@@ -19,3 +19,85 @@
 
 #include "createconditionalforwarderresponse.h"
 #include "createconditionalforwarderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateConditionalForwarderResponse
+ *
+ * @brief  Handles DirectoryService CreateConditionalForwarder responses.
+ *
+ * @see    DirectoryServiceClient::createConditionalForwarder
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateConditionalForwarderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new CreateConditionalForwarderResponsePrivate(this), parent)
+{
+    setRequest(new CreateConditionalForwarderRequest(request));
+    setReply(reply);
+}
+
+const CreateConditionalForwarderRequest * CreateConditionalForwarderResponse::request() const
+{
+    Q_D(const CreateConditionalForwarderResponse);
+    return static_cast<const CreateConditionalForwarderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService CreateConditionalForwarder response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateConditionalForwarderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateConditionalForwarderResponsePrivate
+ *
+ * @brief  Private implementation for CreateConditionalForwarderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConditionalForwarderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateConditionalForwarderResponse instance.
+ */
+CreateConditionalForwarderResponsePrivate::CreateConditionalForwarderResponsePrivate(
+    CreateConditionalForwarderQueueResponse * const q) : CreateConditionalForwarderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService CreateConditionalForwarderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateConditionalForwarderResponsePrivate::CreateConditionalForwarderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateConditionalForwarderResponse"));
+    /// @todo
+}

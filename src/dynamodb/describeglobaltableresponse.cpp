@@ -19,3 +19,85 @@
 
 #include "describeglobaltableresponse.h"
 #include "describeglobaltableresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DescribeGlobalTableResponse
+ *
+ * @brief  Handles DynamoDB DescribeGlobalTable responses.
+ *
+ * @see    DynamoDBClient::describeGlobalTable
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeGlobalTableResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new DescribeGlobalTableResponsePrivate(this), parent)
+{
+    setRequest(new DescribeGlobalTableRequest(request));
+    setReply(reply);
+}
+
+const DescribeGlobalTableRequest * DescribeGlobalTableResponse::request() const
+{
+    Q_D(const DescribeGlobalTableResponse);
+    return static_cast<const DescribeGlobalTableRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB DescribeGlobalTable response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeGlobalTableResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeGlobalTableResponsePrivate
+ *
+ * @brief  Private implementation for DescribeGlobalTableResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeGlobalTableResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeGlobalTableResponse instance.
+ */
+DescribeGlobalTableResponsePrivate::DescribeGlobalTableResponsePrivate(
+    DescribeGlobalTableQueueResponse * const q) : DescribeGlobalTablePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB DescribeGlobalTableResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeGlobalTableResponsePrivate::DescribeGlobalTableResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeGlobalTableResponse"));
+    /// @todo
+}

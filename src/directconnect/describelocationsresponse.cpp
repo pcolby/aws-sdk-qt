@@ -19,3 +19,85 @@
 
 #include "describelocationsresponse.h"
 #include "describelocationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeLocationsResponse
+ *
+ * @brief  Handles DirectConnect DescribeLocations responses.
+ *
+ * @see    DirectConnectClient::describeLocations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLocationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeLocationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeLocationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeLocationsRequest * DescribeLocationsResponse::request() const
+{
+    Q_D(const DescribeLocationsResponse);
+    return static_cast<const DescribeLocationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeLocations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeLocationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLocationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeLocationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLocationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeLocationsResponse instance.
+ */
+DescribeLocationsResponsePrivate::DescribeLocationsResponsePrivate(
+    DescribeLocationsQueueResponse * const q) : DescribeLocationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeLocationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeLocationsResponsePrivate::DescribeLocationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeLocationsResponse"));
+    /// @todo
+}

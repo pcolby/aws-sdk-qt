@@ -19,3 +19,85 @@
 
 #include "purchaseprovisionedcapacityresponse.h"
 #include "purchaseprovisionedcapacityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  PurchaseProvisionedCapacityResponse
+ *
+ * @brief  Handles Glacier PurchaseProvisionedCapacity responses.
+ *
+ * @see    GlacierClient::purchaseProvisionedCapacity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseProvisionedCapacityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new PurchaseProvisionedCapacityResponsePrivate(this), parent)
+{
+    setRequest(new PurchaseProvisionedCapacityRequest(request));
+    setReply(reply);
+}
+
+const PurchaseProvisionedCapacityRequest * PurchaseProvisionedCapacityResponse::request() const
+{
+    Q_D(const PurchaseProvisionedCapacityResponse);
+    return static_cast<const PurchaseProvisionedCapacityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier PurchaseProvisionedCapacity response.
+ *
+ * @param  response  Response to parse.
+ */
+void PurchaseProvisionedCapacityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseProvisionedCapacityResponsePrivate
+ *
+ * @brief  Private implementation for PurchaseProvisionedCapacityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseProvisionedCapacityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PurchaseProvisionedCapacityResponse instance.
+ */
+PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponsePrivate(
+    PurchaseProvisionedCapacityQueueResponse * const q) : PurchaseProvisionedCapacityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier PurchaseProvisionedCapacityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PurchaseProvisionedCapacityResponse"));
+    /// @todo
+}

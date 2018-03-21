@@ -19,3 +19,85 @@
 
 #include "describecacheresponse.h"
 #include "describecacheresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeCacheResponse
+ *
+ * @brief  Handles StorageGateway DescribeCache responses.
+ *
+ * @see    StorageGatewayClient::describeCache
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCacheResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeCacheResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCacheRequest(request));
+    setReply(reply);
+}
+
+const DescribeCacheRequest * DescribeCacheResponse::request() const
+{
+    Q_D(const DescribeCacheResponse);
+    return static_cast<const DescribeCacheRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeCache response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCacheResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCacheResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCacheResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCacheResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCacheResponse instance.
+ */
+DescribeCacheResponsePrivate::DescribeCacheResponsePrivate(
+    DescribeCacheQueueResponse * const q) : DescribeCachePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeCacheResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCacheResponsePrivate::DescribeCacheResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCacheResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteintegrationresponse.h"
 #include "deleteintegrationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteIntegrationResponse
+ *
+ * @brief  Handles APIGateway DeleteIntegration responses.
+ *
+ * @see    APIGatewayClient::deleteIntegration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIntegrationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new DeleteIntegrationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteIntegrationRequest(request));
+    setReply(reply);
+}
+
+const DeleteIntegrationRequest * DeleteIntegrationResponse::request() const
+{
+    Q_D(const DeleteIntegrationResponse);
+    return static_cast<const DeleteIntegrationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway DeleteIntegration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteIntegrationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIntegrationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteIntegrationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntegrationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteIntegrationResponse instance.
+ */
+DeleteIntegrationResponsePrivate::DeleteIntegrationResponsePrivate(
+    DeleteIntegrationQueueResponse * const q) : DeleteIntegrationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway DeleteIntegrationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteIntegrationResponsePrivate::DeleteIntegrationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteIntegrationResponse"));
+    /// @todo
+}

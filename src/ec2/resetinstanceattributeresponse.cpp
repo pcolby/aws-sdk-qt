@@ -19,3 +19,85 @@
 
 #include "resetinstanceattributeresponse.h"
 #include "resetinstanceattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ResetInstanceAttributeResponse
+ *
+ * @brief  Handles EC2 ResetInstanceAttribute responses.
+ *
+ * @see    EC2Client::resetInstanceAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetInstanceAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ResetInstanceAttributeResponsePrivate(this), parent)
+{
+    setRequest(new ResetInstanceAttributeRequest(request));
+    setReply(reply);
+}
+
+const ResetInstanceAttributeRequest * ResetInstanceAttributeResponse::request() const
+{
+    Q_D(const ResetInstanceAttributeResponse);
+    return static_cast<const ResetInstanceAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ResetInstanceAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetInstanceAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetInstanceAttributeResponsePrivate
+ *
+ * @brief  Private implementation for ResetInstanceAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetInstanceAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetInstanceAttributeResponse instance.
+ */
+ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponsePrivate(
+    ResetInstanceAttributeQueueResponse * const q) : ResetInstanceAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ResetInstanceAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetInstanceAttributeResponse"));
+    /// @todo
+}

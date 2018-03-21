@@ -19,3 +19,85 @@
 
 #include "createresourceresponse.h"
 #include "createresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  CreateResourceResponse
+ *
+ * @brief  Handles WorkMail CreateResource responses.
+ *
+ * @see    WorkMailClient::createResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new CreateResourceResponsePrivate(this), parent)
+{
+    setRequest(new CreateResourceRequest(request));
+    setReply(reply);
+}
+
+const CreateResourceRequest * CreateResourceResponse::request() const
+{
+    Q_D(const CreateResourceResponse);
+    return static_cast<const CreateResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail CreateResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateResourceResponsePrivate
+ *
+ * @brief  Private implementation for CreateResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateResourceResponse instance.
+ */
+CreateResourceResponsePrivate::CreateResourceResponsePrivate(
+    CreateResourceQueueResponse * const q) : CreateResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail CreateResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateResourceResponsePrivate::CreateResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateResourceResponse"));
+    /// @todo
+}

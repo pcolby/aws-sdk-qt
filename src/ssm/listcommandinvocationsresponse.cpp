@@ -19,3 +19,85 @@
 
 #include "listcommandinvocationsresponse.h"
 #include "listcommandinvocationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListCommandInvocationsResponse
+ *
+ * @brief  Handles SSM ListCommandInvocations responses.
+ *
+ * @see    SSMClient::listCommandInvocations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCommandInvocationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListCommandInvocationsResponsePrivate(this), parent)
+{
+    setRequest(new ListCommandInvocationsRequest(request));
+    setReply(reply);
+}
+
+const ListCommandInvocationsRequest * ListCommandInvocationsResponse::request() const
+{
+    Q_D(const ListCommandInvocationsResponse);
+    return static_cast<const ListCommandInvocationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListCommandInvocations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListCommandInvocationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCommandInvocationsResponsePrivate
+ *
+ * @brief  Private implementation for ListCommandInvocationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCommandInvocationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListCommandInvocationsResponse instance.
+ */
+ListCommandInvocationsResponsePrivate::ListCommandInvocationsResponsePrivate(
+    ListCommandInvocationsQueueResponse * const q) : ListCommandInvocationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListCommandInvocationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListCommandInvocationsResponsePrivate::ListCommandInvocationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListCommandInvocationsResponse"));
+    /// @todo
+}

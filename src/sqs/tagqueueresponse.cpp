@@ -19,3 +19,85 @@
 
 #include "tagqueueresponse.h"
 #include "tagqueueresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  TagQueueResponse
+ *
+ * @brief  Handles SQS TagQueue responses.
+ *
+ * @see    SQSClient::tagQueue
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagQueueResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new TagQueueResponsePrivate(this), parent)
+{
+    setRequest(new TagQueueRequest(request));
+    setReply(reply);
+}
+
+const TagQueueRequest * TagQueueResponse::request() const
+{
+    Q_D(const TagQueueResponse);
+    return static_cast<const TagQueueRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS TagQueue response.
+ *
+ * @param  response  Response to parse.
+ */
+void TagQueueResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TagQueueResponsePrivate
+ *
+ * @brief  Private implementation for TagQueueResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagQueueResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TagQueueResponse instance.
+ */
+TagQueueResponsePrivate::TagQueueResponsePrivate(
+    TagQueueQueueResponse * const q) : TagQueuePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS TagQueueResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TagQueueResponsePrivate::TagQueueResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TagQueueResponse"));
+    /// @todo
+}

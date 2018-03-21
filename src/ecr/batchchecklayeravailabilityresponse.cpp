@@ -19,3 +19,85 @@
 
 #include "batchchecklayeravailabilityresponse.h"
 #include "batchchecklayeravailabilityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  BatchCheckLayerAvailabilityResponse
+ *
+ * @brief  Handles ECR BatchCheckLayerAvailability responses.
+ *
+ * @see    ECRClient::batchCheckLayerAvailability
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchCheckLayerAvailabilityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECRResponse(new BatchCheckLayerAvailabilityResponsePrivate(this), parent)
+{
+    setRequest(new BatchCheckLayerAvailabilityRequest(request));
+    setReply(reply);
+}
+
+const BatchCheckLayerAvailabilityRequest * BatchCheckLayerAvailabilityResponse::request() const
+{
+    Q_D(const BatchCheckLayerAvailabilityResponse);
+    return static_cast<const BatchCheckLayerAvailabilityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECR BatchCheckLayerAvailability response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchCheckLayerAvailabilityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchCheckLayerAvailabilityResponsePrivate
+ *
+ * @brief  Private implementation for BatchCheckLayerAvailabilityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchCheckLayerAvailabilityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchCheckLayerAvailabilityResponse instance.
+ */
+BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponsePrivate(
+    BatchCheckLayerAvailabilityQueueResponse * const q) : BatchCheckLayerAvailabilityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECR BatchCheckLayerAvailabilityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchCheckLayerAvailabilityResponse"));
+    /// @todo
+}

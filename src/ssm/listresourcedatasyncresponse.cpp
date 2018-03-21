@@ -19,3 +19,85 @@
 
 #include "listresourcedatasyncresponse.h"
 #include "listresourcedatasyncresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListResourceDataSyncResponse
+ *
+ * @brief  Handles SSM ListResourceDataSync responses.
+ *
+ * @see    SSMClient::listResourceDataSync
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourceDataSyncResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListResourceDataSyncResponsePrivate(this), parent)
+{
+    setRequest(new ListResourceDataSyncRequest(request));
+    setReply(reply);
+}
+
+const ListResourceDataSyncRequest * ListResourceDataSyncResponse::request() const
+{
+    Q_D(const ListResourceDataSyncResponse);
+    return static_cast<const ListResourceDataSyncRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListResourceDataSync response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListResourceDataSyncResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourceDataSyncResponsePrivate
+ *
+ * @brief  Private implementation for ListResourceDataSyncResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceDataSyncResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListResourceDataSyncResponse instance.
+ */
+ListResourceDataSyncResponsePrivate::ListResourceDataSyncResponsePrivate(
+    ListResourceDataSyncQueueResponse * const q) : ListResourceDataSyncPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListResourceDataSyncResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListResourceDataSyncResponsePrivate::ListResourceDataSyncResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListResourceDataSyncResponse"));
+    /// @todo
+}

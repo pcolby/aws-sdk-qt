@@ -19,3 +19,85 @@
 
 #include "disassociateproductfromportfolioresponse.h"
 #include "disassociateproductfromportfolioresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DisassociateProductFromPortfolioResponse
+ *
+ * @brief  Handles ServiceCatalog DisassociateProductFromPortfolio responses.
+ *
+ * @see    ServiceCatalogClient::disassociateProductFromPortfolio
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateProductFromPortfolioResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DisassociateProductFromPortfolioResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateProductFromPortfolioRequest(request));
+    setReply(reply);
+}
+
+const DisassociateProductFromPortfolioRequest * DisassociateProductFromPortfolioResponse::request() const
+{
+    Q_D(const DisassociateProductFromPortfolioResponse);
+    return static_cast<const DisassociateProductFromPortfolioRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DisassociateProductFromPortfolio response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateProductFromPortfolioResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateProductFromPortfolioResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateProductFromPortfolioResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateProductFromPortfolioResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateProductFromPortfolioResponse instance.
+ */
+DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfolioResponsePrivate(
+    DisassociateProductFromPortfolioQueueResponse * const q) : DisassociateProductFromPortfolioPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DisassociateProductFromPortfolioResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfolioResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateProductFromPortfolioResponse"));
+    /// @todo
+}

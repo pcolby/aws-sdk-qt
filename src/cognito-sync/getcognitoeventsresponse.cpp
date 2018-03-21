@@ -19,3 +19,85 @@
 
 #include "getcognitoeventsresponse.h"
 #include "getcognitoeventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  GetCognitoEventsResponse
+ *
+ * @brief  Handles CognitoSync GetCognitoEvents responses.
+ *
+ * @see    CognitoSyncClient::getCognitoEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCognitoEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new GetCognitoEventsResponsePrivate(this), parent)
+{
+    setRequest(new GetCognitoEventsRequest(request));
+    setReply(reply);
+}
+
+const GetCognitoEventsRequest * GetCognitoEventsResponse::request() const
+{
+    Q_D(const GetCognitoEventsResponse);
+    return static_cast<const GetCognitoEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync GetCognitoEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCognitoEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCognitoEventsResponsePrivate
+ *
+ * @brief  Private implementation for GetCognitoEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCognitoEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCognitoEventsResponse instance.
+ */
+GetCognitoEventsResponsePrivate::GetCognitoEventsResponsePrivate(
+    GetCognitoEventsQueueResponse * const q) : GetCognitoEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync GetCognitoEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCognitoEventsResponsePrivate::GetCognitoEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCognitoEventsResponse"));
+    /// @todo
+}

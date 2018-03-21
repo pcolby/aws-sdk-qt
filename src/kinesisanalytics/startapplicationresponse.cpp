@@ -19,3 +19,85 @@
 
 #include "startapplicationresponse.h"
 #include "startapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  StartApplicationResponse
+ *
+ * @brief  Handles KinesisAnalytics StartApplication responses.
+ *
+ * @see    KinesisAnalyticsClient::startApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new StartApplicationResponsePrivate(this), parent)
+{
+    setRequest(new StartApplicationRequest(request));
+    setReply(reply);
+}
+
+const StartApplicationRequest * StartApplicationResponse::request() const
+{
+    Q_D(const StartApplicationResponse);
+    return static_cast<const StartApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics StartApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartApplicationResponsePrivate
+ *
+ * @brief  Private implementation for StartApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartApplicationResponse instance.
+ */
+StartApplicationResponsePrivate::StartApplicationResponsePrivate(
+    StartApplicationQueueResponse * const q) : StartApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics StartApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartApplicationResponsePrivate::StartApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartApplicationResponse"));
+    /// @todo
+}

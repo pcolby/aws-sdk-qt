@@ -19,3 +19,85 @@
 
 #include "createclusterresponse.h"
 #include "createclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSMV2 {
+
+/**
+ * @class  CreateClusterResponse
+ *
+ * @brief  Handles CloudHSMV2 CreateCluster responses.
+ *
+ * @see    CloudHSMV2Client::createCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMV2Response(new CreateClusterResponsePrivate(this), parent)
+{
+    setRequest(new CreateClusterRequest(request));
+    setReply(reply);
+}
+
+const CreateClusterRequest * CreateClusterResponse::request() const
+{
+    Q_D(const CreateClusterResponse);
+    return static_cast<const CreateClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSMV2 CreateCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateClusterResponsePrivate
+ *
+ * @brief  Private implementation for CreateClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateClusterResponse instance.
+ */
+CreateClusterResponsePrivate::CreateClusterResponsePrivate(
+    CreateClusterQueueResponse * const q) : CreateClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSMV2 CreateClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateClusterResponsePrivate::CreateClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateClusterResponse"));
+    /// @todo
+}

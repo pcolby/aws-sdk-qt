@@ -19,3 +19,85 @@
 
 #include "activatepipelineresponse.h"
 #include "activatepipelineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  ActivatePipelineResponse
+ *
+ * @brief  Handles DataPipeline ActivatePipeline responses.
+ *
+ * @see    DataPipelineClient::activatePipeline
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ActivatePipelineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DataPipelineResponse(new ActivatePipelineResponsePrivate(this), parent)
+{
+    setRequest(new ActivatePipelineRequest(request));
+    setReply(reply);
+}
+
+const ActivatePipelineRequest * ActivatePipelineResponse::request() const
+{
+    Q_D(const ActivatePipelineResponse);
+    return static_cast<const ActivatePipelineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DataPipeline ActivatePipeline response.
+ *
+ * @param  response  Response to parse.
+ */
+void ActivatePipelineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ActivatePipelineResponsePrivate
+ *
+ * @brief  Private implementation for ActivatePipelineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ActivatePipelineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ActivatePipelineResponse instance.
+ */
+ActivatePipelineResponsePrivate::ActivatePipelineResponsePrivate(
+    ActivatePipelineQueueResponse * const q) : ActivatePipelinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DataPipeline ActivatePipelineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ActivatePipelineResponsePrivate::ActivatePipelineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ActivatePipelineResponse"));
+    /// @todo
+}

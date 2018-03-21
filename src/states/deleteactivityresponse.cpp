@@ -19,3 +19,85 @@
 
 #include "deleteactivityresponse.h"
 #include "deleteactivityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DeleteActivityResponse
+ *
+ * @brief  Handles SFN DeleteActivity responses.
+ *
+ * @see    SFNClient::deleteActivity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteActivityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new DeleteActivityResponsePrivate(this), parent)
+{
+    setRequest(new DeleteActivityRequest(request));
+    setReply(reply);
+}
+
+const DeleteActivityRequest * DeleteActivityResponse::request() const
+{
+    Q_D(const DeleteActivityResponse);
+    return static_cast<const DeleteActivityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN DeleteActivity response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteActivityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteActivityResponsePrivate
+ *
+ * @brief  Private implementation for DeleteActivityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteActivityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteActivityResponse instance.
+ */
+DeleteActivityResponsePrivate::DeleteActivityResponsePrivate(
+    DeleteActivityQueueResponse * const q) : DeleteActivityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN DeleteActivityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteActivityResponsePrivate::DeleteActivityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteActivityResponse"));
+    /// @todo
+}

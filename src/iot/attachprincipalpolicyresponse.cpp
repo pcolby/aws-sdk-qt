@@ -19,3 +19,85 @@
 
 #include "attachprincipalpolicyresponse.h"
 #include "attachprincipalpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  AttachPrincipalPolicyResponse
+ *
+ * @brief  Handles IoT AttachPrincipalPolicy responses.
+ *
+ * @see    IoTClient::attachPrincipalPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachPrincipalPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new AttachPrincipalPolicyResponsePrivate(this), parent)
+{
+    setRequest(new AttachPrincipalPolicyRequest(request));
+    setReply(reply);
+}
+
+const AttachPrincipalPolicyRequest * AttachPrincipalPolicyResponse::request() const
+{
+    Q_D(const AttachPrincipalPolicyResponse);
+    return static_cast<const AttachPrincipalPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT AttachPrincipalPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachPrincipalPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachPrincipalPolicyResponsePrivate
+ *
+ * @brief  Private implementation for AttachPrincipalPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachPrincipalPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachPrincipalPolicyResponse instance.
+ */
+AttachPrincipalPolicyResponsePrivate::AttachPrincipalPolicyResponsePrivate(
+    AttachPrincipalPolicyQueueResponse * const q) : AttachPrincipalPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT AttachPrincipalPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachPrincipalPolicyResponsePrivate::AttachPrincipalPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachPrincipalPolicyResponse"));
+    /// @todo
+}

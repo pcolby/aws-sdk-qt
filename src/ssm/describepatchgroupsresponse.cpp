@@ -19,3 +19,85 @@
 
 #include "describepatchgroupsresponse.h"
 #include "describepatchgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribePatchGroupsResponse
+ *
+ * @brief  Handles SSM DescribePatchGroups responses.
+ *
+ * @see    SSMClient::describePatchGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePatchGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribePatchGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribePatchGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribePatchGroupsRequest * DescribePatchGroupsResponse::request() const
+{
+    Q_D(const DescribePatchGroupsResponse);
+    return static_cast<const DescribePatchGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribePatchGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePatchGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePatchGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribePatchGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePatchGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePatchGroupsResponse instance.
+ */
+DescribePatchGroupsResponsePrivate::DescribePatchGroupsResponsePrivate(
+    DescribePatchGroupsQueueResponse * const q) : DescribePatchGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribePatchGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePatchGroupsResponsePrivate::DescribePatchGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePatchGroupsResponse"));
+    /// @todo
+}

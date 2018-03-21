@@ -19,3 +19,85 @@
 
 #include "updateshardcountresponse.h"
 #include "updateshardcountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  UpdateShardCountResponse
+ *
+ * @brief  Handles Kinesis UpdateShardCount responses.
+ *
+ * @see    KinesisClient::updateShardCount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateShardCountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new UpdateShardCountResponsePrivate(this), parent)
+{
+    setRequest(new UpdateShardCountRequest(request));
+    setReply(reply);
+}
+
+const UpdateShardCountRequest * UpdateShardCountResponse::request() const
+{
+    Q_D(const UpdateShardCountResponse);
+    return static_cast<const UpdateShardCountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis UpdateShardCount response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateShardCountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateShardCountResponsePrivate
+ *
+ * @brief  Private implementation for UpdateShardCountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateShardCountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateShardCountResponse instance.
+ */
+UpdateShardCountResponsePrivate::UpdateShardCountResponsePrivate(
+    UpdateShardCountQueueResponse * const q) : UpdateShardCountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis UpdateShardCountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateShardCountResponsePrivate::UpdateShardCountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateShardCountResponse"));
+    /// @todo
+}

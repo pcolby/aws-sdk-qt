@@ -19,3 +19,85 @@
 
 #include "describebrokerresponse.h"
 #include "describebrokerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DescribeBrokerResponse
+ *
+ * @brief  Handles MQ DescribeBroker responses.
+ *
+ * @see    MQClient::describeBroker
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBrokerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MQResponse(new DescribeBrokerResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBrokerRequest(request));
+    setReply(reply);
+}
+
+const DescribeBrokerRequest * DescribeBrokerResponse::request() const
+{
+    Q_D(const DescribeBrokerResponse);
+    return static_cast<const DescribeBrokerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MQ DescribeBroker response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBrokerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBrokerResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBrokerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBrokerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBrokerResponse instance.
+ */
+DescribeBrokerResponsePrivate::DescribeBrokerResponsePrivate(
+    DescribeBrokerQueueResponse * const q) : DescribeBrokerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MQ DescribeBrokerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBrokerResponsePrivate::DescribeBrokerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBrokerResponse"));
+    /// @todo
+}

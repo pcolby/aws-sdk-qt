@@ -19,3 +19,85 @@
 
 #include "listhandshakesforaccountresponse.h"
 #include "listhandshakesforaccountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListHandshakesForAccountResponse
+ *
+ * @brief  Handles Organizations ListHandshakesForAccount responses.
+ *
+ * @see    OrganizationsClient::listHandshakesForAccount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListHandshakesForAccountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new ListHandshakesForAccountResponsePrivate(this), parent)
+{
+    setRequest(new ListHandshakesForAccountRequest(request));
+    setReply(reply);
+}
+
+const ListHandshakesForAccountRequest * ListHandshakesForAccountResponse::request() const
+{
+    Q_D(const ListHandshakesForAccountResponse);
+    return static_cast<const ListHandshakesForAccountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations ListHandshakesForAccount response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListHandshakesForAccountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListHandshakesForAccountResponsePrivate
+ *
+ * @brief  Private implementation for ListHandshakesForAccountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHandshakesForAccountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListHandshakesForAccountResponse instance.
+ */
+ListHandshakesForAccountResponsePrivate::ListHandshakesForAccountResponsePrivate(
+    ListHandshakesForAccountQueueResponse * const q) : ListHandshakesForAccountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations ListHandshakesForAccountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListHandshakesForAccountResponsePrivate::ListHandshakesForAccountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListHandshakesForAccountResponse"));
+    /// @todo
+}

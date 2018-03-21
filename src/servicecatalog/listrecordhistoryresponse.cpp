@@ -19,3 +19,85 @@
 
 #include "listrecordhistoryresponse.h"
 #include "listrecordhistoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListRecordHistoryResponse
+ *
+ * @brief  Handles ServiceCatalog ListRecordHistory responses.
+ *
+ * @see    ServiceCatalogClient::listRecordHistory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRecordHistoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListRecordHistoryResponsePrivate(this), parent)
+{
+    setRequest(new ListRecordHistoryRequest(request));
+    setReply(reply);
+}
+
+const ListRecordHistoryRequest * ListRecordHistoryResponse::request() const
+{
+    Q_D(const ListRecordHistoryResponse);
+    return static_cast<const ListRecordHistoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListRecordHistory response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRecordHistoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRecordHistoryResponsePrivate
+ *
+ * @brief  Private implementation for ListRecordHistoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRecordHistoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRecordHistoryResponse instance.
+ */
+ListRecordHistoryResponsePrivate::ListRecordHistoryResponsePrivate(
+    ListRecordHistoryQueueResponse * const q) : ListRecordHistoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListRecordHistoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRecordHistoryResponsePrivate::ListRecordHistoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRecordHistoryResponse"));
+    /// @todo
+}

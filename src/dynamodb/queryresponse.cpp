@@ -19,3 +19,85 @@
 
 #include "queryresponse.h"
 #include "queryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  QueryResponse
+ *
+ * @brief  Handles DynamoDB Query responses.
+ *
+ * @see    DynamoDBClient::query
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+QueryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DynamoDBResponse(new QueryResponsePrivate(this), parent)
+{
+    setRequest(new QueryRequest(request));
+    setReply(reply);
+}
+
+const QueryRequest * QueryResponse::request() const
+{
+    Q_D(const QueryResponse);
+    return static_cast<const QueryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DynamoDB Query response.
+ *
+ * @param  response  Response to parse.
+ */
+void QueryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  QueryResponsePrivate
+ *
+ * @brief  Private implementation for QueryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new QueryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public QueryResponse instance.
+ */
+QueryResponsePrivate::QueryResponsePrivate(
+    QueryQueueResponse * const q) : QueryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DynamoDB QueryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void QueryResponsePrivate::QueryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("QueryResponse"));
+    /// @todo
+}

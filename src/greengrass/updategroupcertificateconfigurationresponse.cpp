@@ -19,3 +19,85 @@
 
 #include "updategroupcertificateconfigurationresponse.h"
 #include "updategroupcertificateconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  UpdateGroupCertificateConfigurationResponse
+ *
+ * @brief  Handles Greengrass UpdateGroupCertificateConfiguration responses.
+ *
+ * @see    GreengrassClient::updateGroupCertificateConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateGroupCertificateConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new UpdateGroupCertificateConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateGroupCertificateConfigurationRequest(request));
+    setReply(reply);
+}
+
+const UpdateGroupCertificateConfigurationRequest * UpdateGroupCertificateConfigurationResponse::request() const
+{
+    Q_D(const UpdateGroupCertificateConfigurationResponse);
+    return static_cast<const UpdateGroupCertificateConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass UpdateGroupCertificateConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateGroupCertificateConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateGroupCertificateConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateGroupCertificateConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateGroupCertificateConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateGroupCertificateConfigurationResponse instance.
+ */
+UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateConfigurationResponsePrivate(
+    UpdateGroupCertificateConfigurationQueueResponse * const q) : UpdateGroupCertificateConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass UpdateGroupCertificateConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateGroupCertificateConfigurationResponse"));
+    /// @todo
+}

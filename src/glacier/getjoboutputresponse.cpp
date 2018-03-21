@@ -19,3 +19,85 @@
 
 #include "getjoboutputresponse.h"
 #include "getjoboutputresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  GetJobOutputResponse
+ *
+ * @brief  Handles Glacier GetJobOutput responses.
+ *
+ * @see    GlacierClient::getJobOutput
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetJobOutputResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new GetJobOutputResponsePrivate(this), parent)
+{
+    setRequest(new GetJobOutputRequest(request));
+    setReply(reply);
+}
+
+const GetJobOutputRequest * GetJobOutputResponse::request() const
+{
+    Q_D(const GetJobOutputResponse);
+    return static_cast<const GetJobOutputRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier GetJobOutput response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetJobOutputResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetJobOutputResponsePrivate
+ *
+ * @brief  Private implementation for GetJobOutputResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobOutputResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetJobOutputResponse instance.
+ */
+GetJobOutputResponsePrivate::GetJobOutputResponsePrivate(
+    GetJobOutputQueueResponse * const q) : GetJobOutputPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier GetJobOutputResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetJobOutputResponsePrivate::GetJobOutputResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetJobOutputResponse"));
+    /// @todo
+}

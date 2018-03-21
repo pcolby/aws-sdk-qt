@@ -19,3 +19,85 @@
 
 #include "deleteelasticsearchserviceroleresponse.h"
 #include "deleteelasticsearchserviceroleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  DeleteElasticsearchServiceRoleResponse
+ *
+ * @brief  Handles ElasticsearchService DeleteElasticsearchServiceRole responses.
+ *
+ * @see    ElasticsearchServiceClient::deleteElasticsearchServiceRole
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteElasticsearchServiceRoleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticsearchServiceResponse(new DeleteElasticsearchServiceRoleResponsePrivate(this), parent)
+{
+    setRequest(new DeleteElasticsearchServiceRoleRequest(request));
+    setReply(reply);
+}
+
+const DeleteElasticsearchServiceRoleRequest * DeleteElasticsearchServiceRoleResponse::request() const
+{
+    Q_D(const DeleteElasticsearchServiceRoleResponse);
+    return static_cast<const DeleteElasticsearchServiceRoleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticsearchService DeleteElasticsearchServiceRole response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteElasticsearchServiceRoleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteElasticsearchServiceRoleResponsePrivate
+ *
+ * @brief  Private implementation for DeleteElasticsearchServiceRoleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteElasticsearchServiceRoleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteElasticsearchServiceRoleResponse instance.
+ */
+DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleResponsePrivate(
+    DeleteElasticsearchServiceRoleQueueResponse * const q) : DeleteElasticsearchServiceRolePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticsearchService DeleteElasticsearchServiceRoleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRoleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteElasticsearchServiceRoleResponse"));
+    /// @todo
+}

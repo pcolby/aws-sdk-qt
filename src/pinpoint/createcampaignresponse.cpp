@@ -19,3 +19,85 @@
 
 #include "createcampaignresponse.h"
 #include "createcampaignresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  CreateCampaignResponse
+ *
+ * @brief  Handles Pinpoint CreateCampaign responses.
+ *
+ * @see    PinpointClient::createCampaign
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCampaignResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new CreateCampaignResponsePrivate(this), parent)
+{
+    setRequest(new CreateCampaignRequest(request));
+    setReply(reply);
+}
+
+const CreateCampaignRequest * CreateCampaignResponse::request() const
+{
+    Q_D(const CreateCampaignResponse);
+    return static_cast<const CreateCampaignRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint CreateCampaign response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCampaignResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCampaignResponsePrivate
+ *
+ * @brief  Private implementation for CreateCampaignResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCampaignResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCampaignResponse instance.
+ */
+CreateCampaignResponsePrivate::CreateCampaignResponsePrivate(
+    CreateCampaignQueueResponse * const q) : CreateCampaignPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint CreateCampaignResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCampaignResponsePrivate::CreateCampaignResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCampaignResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putapprovalresultresponse.h"
 #include "putapprovalresultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PutApprovalResultResponse
+ *
+ * @brief  Handles CodePipeline PutApprovalResult responses.
+ *
+ * @see    CodePipelineClient::putApprovalResult
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutApprovalResultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new PutApprovalResultResponsePrivate(this), parent)
+{
+    setRequest(new PutApprovalResultRequest(request));
+    setReply(reply);
+}
+
+const PutApprovalResultRequest * PutApprovalResultResponse::request() const
+{
+    Q_D(const PutApprovalResultResponse);
+    return static_cast<const PutApprovalResultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline PutApprovalResult response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutApprovalResultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutApprovalResultResponsePrivate
+ *
+ * @brief  Private implementation for PutApprovalResultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutApprovalResultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutApprovalResultResponse instance.
+ */
+PutApprovalResultResponsePrivate::PutApprovalResultResponsePrivate(
+    PutApprovalResultQueueResponse * const q) : PutApprovalResultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline PutApprovalResultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutApprovalResultResponsePrivate::PutApprovalResultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutApprovalResultResponse"));
+    /// @todo
+}

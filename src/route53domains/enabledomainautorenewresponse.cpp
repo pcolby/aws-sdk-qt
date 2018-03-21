@@ -19,3 +19,85 @@
 
 #include "enabledomainautorenewresponse.h"
 #include "enabledomainautorenewresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  EnableDomainAutoRenewResponse
+ *
+ * @brief  Handles Route53Domains EnableDomainAutoRenew responses.
+ *
+ * @see    Route53DomainsClient::enableDomainAutoRenew
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableDomainAutoRenewResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new EnableDomainAutoRenewResponsePrivate(this), parent)
+{
+    setRequest(new EnableDomainAutoRenewRequest(request));
+    setReply(reply);
+}
+
+const EnableDomainAutoRenewRequest * EnableDomainAutoRenewResponse::request() const
+{
+    Q_D(const EnableDomainAutoRenewResponse);
+    return static_cast<const EnableDomainAutoRenewRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains EnableDomainAutoRenew response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableDomainAutoRenewResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableDomainAutoRenewResponsePrivate
+ *
+ * @brief  Private implementation for EnableDomainAutoRenewResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableDomainAutoRenewResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableDomainAutoRenewResponse instance.
+ */
+EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponsePrivate(
+    EnableDomainAutoRenewQueueResponse * const q) : EnableDomainAutoRenewPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains EnableDomainAutoRenewResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableDomainAutoRenewResponse"));
+    /// @todo
+}

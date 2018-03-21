@@ -19,3 +19,85 @@
 
 #include "updatedomainnameresponse.h"
 #include "updatedomainnameresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateDomainNameResponse
+ *
+ * @brief  Handles APIGateway UpdateDomainName responses.
+ *
+ * @see    APIGatewayClient::updateDomainName
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDomainNameResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new UpdateDomainNameResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDomainNameRequest(request));
+    setReply(reply);
+}
+
+const UpdateDomainNameRequest * UpdateDomainNameResponse::request() const
+{
+    Q_D(const UpdateDomainNameResponse);
+    return static_cast<const UpdateDomainNameRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway UpdateDomainName response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDomainNameResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDomainNameResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDomainNameResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDomainNameResponse instance.
+ */
+UpdateDomainNameResponsePrivate::UpdateDomainNameResponsePrivate(
+    UpdateDomainNameQueueResponse * const q) : UpdateDomainNamePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway UpdateDomainNameResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDomainNameResponsePrivate::UpdateDomainNameResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDomainNameResponse"));
+    /// @todo
+}

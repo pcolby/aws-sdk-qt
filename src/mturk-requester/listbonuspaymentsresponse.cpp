@@ -19,3 +19,85 @@
 
 #include "listbonuspaymentsresponse.h"
 #include "listbonuspaymentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListBonusPaymentsResponse
+ *
+ * @brief  Handles MTurk ListBonusPayments responses.
+ *
+ * @see    MTurkClient::listBonusPayments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBonusPaymentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new ListBonusPaymentsResponsePrivate(this), parent)
+{
+    setRequest(new ListBonusPaymentsRequest(request));
+    setReply(reply);
+}
+
+const ListBonusPaymentsRequest * ListBonusPaymentsResponse::request() const
+{
+    Q_D(const ListBonusPaymentsResponse);
+    return static_cast<const ListBonusPaymentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk ListBonusPayments response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBonusPaymentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBonusPaymentsResponsePrivate
+ *
+ * @brief  Private implementation for ListBonusPaymentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBonusPaymentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBonusPaymentsResponse instance.
+ */
+ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponsePrivate(
+    ListBonusPaymentsQueueResponse * const q) : ListBonusPaymentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk ListBonusPaymentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBonusPaymentsResponse"));
+    /// @todo
+}

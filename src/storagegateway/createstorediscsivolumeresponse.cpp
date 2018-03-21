@@ -19,3 +19,85 @@
 
 #include "createstorediscsivolumeresponse.h"
 #include "createstorediscsivolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CreateStorediSCSIVolumeResponse
+ *
+ * @brief  Handles StorageGateway CreateStorediSCSIVolume responses.
+ *
+ * @see    StorageGatewayClient::createStorediSCSIVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStorediSCSIVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new CreateStorediSCSIVolumeResponsePrivate(this), parent)
+{
+    setRequest(new CreateStorediSCSIVolumeRequest(request));
+    setReply(reply);
+}
+
+const CreateStorediSCSIVolumeRequest * CreateStorediSCSIVolumeResponse::request() const
+{
+    Q_D(const CreateStorediSCSIVolumeResponse);
+    return static_cast<const CreateStorediSCSIVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway CreateStorediSCSIVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateStorediSCSIVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStorediSCSIVolumeResponsePrivate
+ *
+ * @brief  Private implementation for CreateStorediSCSIVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStorediSCSIVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateStorediSCSIVolumeResponse instance.
+ */
+CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponsePrivate(
+    CreateStorediSCSIVolumeQueueResponse * const q) : CreateStorediSCSIVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway CreateStorediSCSIVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateStorediSCSIVolumeResponse"));
+    /// @todo
+}

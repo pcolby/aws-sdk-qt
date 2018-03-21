@@ -19,3 +19,85 @@
 
 #include "addcommunicationtocaseresponse.h"
 #include "addcommunicationtocaseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  AddCommunicationToCaseResponse
+ *
+ * @brief  Handles Support AddCommunicationToCase responses.
+ *
+ * @see    SupportClient::addCommunicationToCase
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddCommunicationToCaseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new AddCommunicationToCaseResponsePrivate(this), parent)
+{
+    setRequest(new AddCommunicationToCaseRequest(request));
+    setReply(reply);
+}
+
+const AddCommunicationToCaseRequest * AddCommunicationToCaseResponse::request() const
+{
+    Q_D(const AddCommunicationToCaseResponse);
+    return static_cast<const AddCommunicationToCaseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support AddCommunicationToCase response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddCommunicationToCaseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddCommunicationToCaseResponsePrivate
+ *
+ * @brief  Private implementation for AddCommunicationToCaseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddCommunicationToCaseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddCommunicationToCaseResponse instance.
+ */
+AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponsePrivate(
+    AddCommunicationToCaseQueueResponse * const q) : AddCommunicationToCasePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support AddCommunicationToCaseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddCommunicationToCaseResponse"));
+    /// @todo
+}

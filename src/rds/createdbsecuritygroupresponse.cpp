@@ -19,3 +19,85 @@
 
 #include "createdbsecuritygroupresponse.h"
 #include "createdbsecuritygroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBSecurityGroupResponse
+ *
+ * @brief  Handles RDS CreateDBSecurityGroup responses.
+ *
+ * @see    RDSClient::createDBSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBSecurityGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CreateDBSecurityGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateDBSecurityGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateDBSecurityGroupRequest * CreateDBSecurityGroupResponse::request() const
+{
+    Q_D(const CreateDBSecurityGroupResponse);
+    return static_cast<const CreateDBSecurityGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CreateDBSecurityGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBSecurityGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateDBSecurityGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBSecurityGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDBSecurityGroupResponse instance.
+ */
+CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponsePrivate(
+    CreateDBSecurityGroupQueueResponse * const q) : CreateDBSecurityGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CreateDBSecurityGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDBSecurityGroupResponse"));
+    /// @todo
+}

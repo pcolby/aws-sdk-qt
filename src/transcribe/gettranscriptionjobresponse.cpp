@@ -19,3 +19,85 @@
 
 #include "gettranscriptionjobresponse.h"
 #include "gettranscriptionjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace TranscribeService {
+
+/**
+ * @class  GetTranscriptionJobResponse
+ *
+ * @brief  Handles TranscribeService GetTranscriptionJob responses.
+ *
+ * @see    TranscribeServiceClient::getTranscriptionJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTranscriptionJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : TranscribeServiceResponse(new GetTranscriptionJobResponsePrivate(this), parent)
+{
+    setRequest(new GetTranscriptionJobRequest(request));
+    setReply(reply);
+}
+
+const GetTranscriptionJobRequest * GetTranscriptionJobResponse::request() const
+{
+    Q_D(const GetTranscriptionJobResponse);
+    return static_cast<const GetTranscriptionJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a TranscribeService GetTranscriptionJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTranscriptionJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTranscriptionJobResponsePrivate
+ *
+ * @brief  Private implementation for GetTranscriptionJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTranscriptionJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTranscriptionJobResponse instance.
+ */
+GetTranscriptionJobResponsePrivate::GetTranscriptionJobResponsePrivate(
+    GetTranscriptionJobQueueResponse * const q) : GetTranscriptionJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an TranscribeService GetTranscriptionJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTranscriptionJobResponsePrivate::GetTranscriptionJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTranscriptionJobResponse"));
+    /// @todo
+}

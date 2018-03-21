@@ -19,3 +19,85 @@
 
 #include "updateassumerolepolicyresponse.h"
 #include "updateassumerolepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateAssumeRolePolicyResponse
+ *
+ * @brief  Handles IAM UpdateAssumeRolePolicy responses.
+ *
+ * @see    IAMClient::updateAssumeRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAssumeRolePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateAssumeRolePolicyResponsePrivate(this), parent)
+{
+    setRequest(new UpdateAssumeRolePolicyRequest(request));
+    setReply(reply);
+}
+
+const UpdateAssumeRolePolicyRequest * UpdateAssumeRolePolicyResponse::request() const
+{
+    Q_D(const UpdateAssumeRolePolicyResponse);
+    return static_cast<const UpdateAssumeRolePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateAssumeRolePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateAssumeRolePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAssumeRolePolicyResponsePrivate
+ *
+ * @brief  Private implementation for UpdateAssumeRolePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAssumeRolePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateAssumeRolePolicyResponse instance.
+ */
+UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponsePrivate(
+    UpdateAssumeRolePolicyQueueResponse * const q) : UpdateAssumeRolePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateAssumeRolePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateAssumeRolePolicyResponse"));
+    /// @todo
+}

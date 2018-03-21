@@ -19,3 +19,85 @@
 
 #include "getgroupversionresponse.h"
 #include "getgroupversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetGroupVersionResponse
+ *
+ * @brief  Handles Greengrass GetGroupVersion responses.
+ *
+ * @see    GreengrassClient::getGroupVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGroupVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new GetGroupVersionResponsePrivate(this), parent)
+{
+    setRequest(new GetGroupVersionRequest(request));
+    setReply(reply);
+}
+
+const GetGroupVersionRequest * GetGroupVersionResponse::request() const
+{
+    Q_D(const GetGroupVersionResponse);
+    return static_cast<const GetGroupVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass GetGroupVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGroupVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGroupVersionResponsePrivate
+ *
+ * @brief  Private implementation for GetGroupVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGroupVersionResponse instance.
+ */
+GetGroupVersionResponsePrivate::GetGroupVersionResponsePrivate(
+    GetGroupVersionQueueResponse * const q) : GetGroupVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass GetGroupVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGroupVersionResponsePrivate::GetGroupVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGroupVersionResponse"));
+    /// @todo
+}

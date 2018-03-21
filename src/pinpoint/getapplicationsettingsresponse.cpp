@@ -19,3 +19,85 @@
 
 #include "getapplicationsettingsresponse.h"
 #include "getapplicationsettingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetApplicationSettingsResponse
+ *
+ * @brief  Handles Pinpoint GetApplicationSettings responses.
+ *
+ * @see    PinpointClient::getApplicationSettings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApplicationSettingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetApplicationSettingsResponsePrivate(this), parent)
+{
+    setRequest(new GetApplicationSettingsRequest(request));
+    setReply(reply);
+}
+
+const GetApplicationSettingsRequest * GetApplicationSettingsResponse::request() const
+{
+    Q_D(const GetApplicationSettingsResponse);
+    return static_cast<const GetApplicationSettingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetApplicationSettings response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetApplicationSettingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApplicationSettingsResponsePrivate
+ *
+ * @brief  Private implementation for GetApplicationSettingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationSettingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetApplicationSettingsResponse instance.
+ */
+GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponsePrivate(
+    GetApplicationSettingsQueueResponse * const q) : GetApplicationSettingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetApplicationSettingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetApplicationSettingsResponse"));
+    /// @todo
+}

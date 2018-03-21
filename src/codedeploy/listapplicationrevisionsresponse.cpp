@@ -19,3 +19,85 @@
 
 #include "listapplicationrevisionsresponse.h"
 #include "listapplicationrevisionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListApplicationRevisionsResponse
+ *
+ * @brief  Handles CodeDeploy ListApplicationRevisions responses.
+ *
+ * @see    CodeDeployClient::listApplicationRevisions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListApplicationRevisionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new ListApplicationRevisionsResponsePrivate(this), parent)
+{
+    setRequest(new ListApplicationRevisionsRequest(request));
+    setReply(reply);
+}
+
+const ListApplicationRevisionsRequest * ListApplicationRevisionsResponse::request() const
+{
+    Q_D(const ListApplicationRevisionsResponse);
+    return static_cast<const ListApplicationRevisionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy ListApplicationRevisions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListApplicationRevisionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListApplicationRevisionsResponsePrivate
+ *
+ * @brief  Private implementation for ListApplicationRevisionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationRevisionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListApplicationRevisionsResponse instance.
+ */
+ListApplicationRevisionsResponsePrivate::ListApplicationRevisionsResponsePrivate(
+    ListApplicationRevisionsQueueResponse * const q) : ListApplicationRevisionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy ListApplicationRevisionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListApplicationRevisionsResponsePrivate::ListApplicationRevisionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListApplicationRevisionsResponse"));
+    /// @todo
+}

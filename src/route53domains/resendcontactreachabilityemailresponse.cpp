@@ -19,3 +19,85 @@
 
 #include "resendcontactreachabilityemailresponse.h"
 #include "resendcontactreachabilityemailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  ResendContactReachabilityEmailResponse
+ *
+ * @brief  Handles Route53Domains ResendContactReachabilityEmail responses.
+ *
+ * @see    Route53DomainsClient::resendContactReachabilityEmail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResendContactReachabilityEmailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new ResendContactReachabilityEmailResponsePrivate(this), parent)
+{
+    setRequest(new ResendContactReachabilityEmailRequest(request));
+    setReply(reply);
+}
+
+const ResendContactReachabilityEmailRequest * ResendContactReachabilityEmailResponse::request() const
+{
+    Q_D(const ResendContactReachabilityEmailResponse);
+    return static_cast<const ResendContactReachabilityEmailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains ResendContactReachabilityEmail response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResendContactReachabilityEmailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResendContactReachabilityEmailResponsePrivate
+ *
+ * @brief  Private implementation for ResendContactReachabilityEmailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResendContactReachabilityEmailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResendContactReachabilityEmailResponse instance.
+ */
+ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEmailResponsePrivate(
+    ResendContactReachabilityEmailQueueResponse * const q) : ResendContactReachabilityEmailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains ResendContactReachabilityEmailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEmailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResendContactReachabilityEmailResponse"));
+    /// @todo
+}

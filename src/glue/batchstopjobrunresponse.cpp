@@ -19,3 +19,85 @@
 
 #include "batchstopjobrunresponse.h"
 #include "batchstopjobrunresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchStopJobRunResponse
+ *
+ * @brief  Handles Glue BatchStopJobRun responses.
+ *
+ * @see    GlueClient::batchStopJobRun
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchStopJobRunResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new BatchStopJobRunResponsePrivate(this), parent)
+{
+    setRequest(new BatchStopJobRunRequest(request));
+    setReply(reply);
+}
+
+const BatchStopJobRunRequest * BatchStopJobRunResponse::request() const
+{
+    Q_D(const BatchStopJobRunResponse);
+    return static_cast<const BatchStopJobRunRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue BatchStopJobRun response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchStopJobRunResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchStopJobRunResponsePrivate
+ *
+ * @brief  Private implementation for BatchStopJobRunResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchStopJobRunResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchStopJobRunResponse instance.
+ */
+BatchStopJobRunResponsePrivate::BatchStopJobRunResponsePrivate(
+    BatchStopJobRunQueueResponse * const q) : BatchStopJobRunPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue BatchStopJobRunResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchStopJobRunResponsePrivate::BatchStopJobRunResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchStopJobRunResponse"));
+    /// @todo
+}

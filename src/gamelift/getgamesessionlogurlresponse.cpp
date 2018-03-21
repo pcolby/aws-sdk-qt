@@ -19,3 +19,85 @@
 
 #include "getgamesessionlogurlresponse.h"
 #include "getgamesessionlogurlresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  GetGameSessionLogUrlResponse
+ *
+ * @brief  Handles GameLift GetGameSessionLogUrl responses.
+ *
+ * @see    GameLiftClient::getGameSessionLogUrl
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGameSessionLogUrlResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new GetGameSessionLogUrlResponsePrivate(this), parent)
+{
+    setRequest(new GetGameSessionLogUrlRequest(request));
+    setReply(reply);
+}
+
+const GetGameSessionLogUrlRequest * GetGameSessionLogUrlResponse::request() const
+{
+    Q_D(const GetGameSessionLogUrlResponse);
+    return static_cast<const GetGameSessionLogUrlRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift GetGameSessionLogUrl response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGameSessionLogUrlResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGameSessionLogUrlResponsePrivate
+ *
+ * @brief  Private implementation for GetGameSessionLogUrlResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGameSessionLogUrlResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGameSessionLogUrlResponse instance.
+ */
+GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponsePrivate(
+    GetGameSessionLogUrlQueueResponse * const q) : GetGameSessionLogUrlPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift GetGameSessionLogUrlResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGameSessionLogUrlResponse"));
+    /// @todo
+}

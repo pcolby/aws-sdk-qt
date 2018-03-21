@@ -19,3 +19,85 @@
 
 #include "describehapgresponse.h"
 #include "describehapgresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DescribeHapgResponse
+ *
+ * @brief  Handles CloudHSM DescribeHapg responses.
+ *
+ * @see    CloudHSMClient::describeHapg
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHapgResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new DescribeHapgResponsePrivate(this), parent)
+{
+    setRequest(new DescribeHapgRequest(request));
+    setReply(reply);
+}
+
+const DescribeHapgRequest * DescribeHapgResponse::request() const
+{
+    Q_D(const DescribeHapgResponse);
+    return static_cast<const DescribeHapgRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM DescribeHapg response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeHapgResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHapgResponsePrivate
+ *
+ * @brief  Private implementation for DescribeHapgResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHapgResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeHapgResponse instance.
+ */
+DescribeHapgResponsePrivate::DescribeHapgResponsePrivate(
+    DescribeHapgQueueResponse * const q) : DescribeHapgPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM DescribeHapgResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeHapgResponsePrivate::DescribeHapgResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeHapgResponse"));
+    /// @todo
+}

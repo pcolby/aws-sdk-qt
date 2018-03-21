@@ -19,3 +19,85 @@
 
 #include "listdomainnamesresponse.h"
 #include "listdomainnamesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  ListDomainNamesResponse
+ *
+ * @brief  Handles ElasticsearchService ListDomainNames responses.
+ *
+ * @see    ElasticsearchServiceClient::listDomainNames
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDomainNamesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticsearchServiceResponse(new ListDomainNamesResponsePrivate(this), parent)
+{
+    setRequest(new ListDomainNamesRequest(request));
+    setReply(reply);
+}
+
+const ListDomainNamesRequest * ListDomainNamesResponse::request() const
+{
+    Q_D(const ListDomainNamesResponse);
+    return static_cast<const ListDomainNamesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticsearchService ListDomainNames response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListDomainNamesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDomainNamesResponsePrivate
+ *
+ * @brief  Private implementation for ListDomainNamesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDomainNamesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListDomainNamesResponse instance.
+ */
+ListDomainNamesResponsePrivate::ListDomainNamesResponsePrivate(
+    ListDomainNamesQueueResponse * const q) : ListDomainNamesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticsearchService ListDomainNamesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListDomainNamesResponsePrivate::ListDomainNamesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListDomainNamesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putpermissionresponse.h"
 #include "putpermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  PutPermissionResponse
+ *
+ * @brief  Handles CloudWatchEvents PutPermission responses.
+ *
+ * @see    CloudWatchEventsClient::putPermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutPermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new PutPermissionResponsePrivate(this), parent)
+{
+    setRequest(new PutPermissionRequest(request));
+    setReply(reply);
+}
+
+const PutPermissionRequest * PutPermissionResponse::request() const
+{
+    Q_D(const PutPermissionResponse);
+    return static_cast<const PutPermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents PutPermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutPermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutPermissionResponsePrivate
+ *
+ * @brief  Private implementation for PutPermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutPermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutPermissionResponse instance.
+ */
+PutPermissionResponsePrivate::PutPermissionResponsePrivate(
+    PutPermissionQueueResponse * const q) : PutPermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents PutPermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutPermissionResponsePrivate::PutPermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutPermissionResponse"));
+    /// @todo
+}

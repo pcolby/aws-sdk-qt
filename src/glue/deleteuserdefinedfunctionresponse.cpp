@@ -19,3 +19,85 @@
 
 #include "deleteuserdefinedfunctionresponse.h"
 #include "deleteuserdefinedfunctionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteUserDefinedFunctionResponse
+ *
+ * @brief  Handles Glue DeleteUserDefinedFunction responses.
+ *
+ * @see    GlueClient::deleteUserDefinedFunction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserDefinedFunctionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new DeleteUserDefinedFunctionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUserDefinedFunctionRequest(request));
+    setReply(reply);
+}
+
+const DeleteUserDefinedFunctionRequest * DeleteUserDefinedFunctionResponse::request() const
+{
+    Q_D(const DeleteUserDefinedFunctionResponse);
+    return static_cast<const DeleteUserDefinedFunctionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue DeleteUserDefinedFunction response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserDefinedFunctionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUserDefinedFunctionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserDefinedFunctionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUserDefinedFunctionResponse instance.
+ */
+DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponsePrivate(
+    DeleteUserDefinedFunctionQueueResponse * const q) : DeleteUserDefinedFunctionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue DeleteUserDefinedFunctionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUserDefinedFunctionResponse"));
+    /// @todo
+}

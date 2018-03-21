@@ -19,3 +19,85 @@
 
 #include "getratebasedrulemanagedkeysresponse.h"
 #include "getratebasedrulemanagedkeysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetRateBasedRuleManagedKeysResponse
+ *
+ * @brief  Handles WAFRegional GetRateBasedRuleManagedKeys responses.
+ *
+ * @see    WAFRegionalClient::getRateBasedRuleManagedKeys
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRateBasedRuleManagedKeysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new GetRateBasedRuleManagedKeysResponsePrivate(this), parent)
+{
+    setRequest(new GetRateBasedRuleManagedKeysRequest(request));
+    setReply(reply);
+}
+
+const GetRateBasedRuleManagedKeysRequest * GetRateBasedRuleManagedKeysResponse::request() const
+{
+    Q_D(const GetRateBasedRuleManagedKeysResponse);
+    return static_cast<const GetRateBasedRuleManagedKeysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional GetRateBasedRuleManagedKeys response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRateBasedRuleManagedKeysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRateBasedRuleManagedKeysResponsePrivate
+ *
+ * @brief  Private implementation for GetRateBasedRuleManagedKeysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRateBasedRuleManagedKeysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRateBasedRuleManagedKeysResponse instance.
+ */
+GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponsePrivate(
+    GetRateBasedRuleManagedKeysQueueResponse * const q) : GetRateBasedRuleManagedKeysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional GetRateBasedRuleManagedKeysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRateBasedRuleManagedKeysResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "testmetricfilterresponse.h"
 #include "testmetricfilterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  TestMetricFilterResponse
+ *
+ * @brief  Handles CloudWatchLogs TestMetricFilter responses.
+ *
+ * @see    CloudWatchLogsClient::testMetricFilter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestMetricFilterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new TestMetricFilterResponsePrivate(this), parent)
+{
+    setRequest(new TestMetricFilterRequest(request));
+    setReply(reply);
+}
+
+const TestMetricFilterRequest * TestMetricFilterResponse::request() const
+{
+    Q_D(const TestMetricFilterResponse);
+    return static_cast<const TestMetricFilterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs TestMetricFilter response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestMetricFilterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestMetricFilterResponsePrivate
+ *
+ * @brief  Private implementation for TestMetricFilterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestMetricFilterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestMetricFilterResponse instance.
+ */
+TestMetricFilterResponsePrivate::TestMetricFilterResponsePrivate(
+    TestMetricFilterQueueResponse * const q) : TestMetricFilterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs TestMetricFilterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestMetricFilterResponsePrivate::TestMetricFilterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestMetricFilterResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listcuratedenvironmentimagesresponse.h"
 #include "listcuratedenvironmentimagesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  ListCuratedEnvironmentImagesResponse
+ *
+ * @brief  Handles CodeBuild ListCuratedEnvironmentImages responses.
+ *
+ * @see    CodeBuildClient::listCuratedEnvironmentImages
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCuratedEnvironmentImagesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new ListCuratedEnvironmentImagesResponsePrivate(this), parent)
+{
+    setRequest(new ListCuratedEnvironmentImagesRequest(request));
+    setReply(reply);
+}
+
+const ListCuratedEnvironmentImagesRequest * ListCuratedEnvironmentImagesResponse::request() const
+{
+    Q_D(const ListCuratedEnvironmentImagesResponse);
+    return static_cast<const ListCuratedEnvironmentImagesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild ListCuratedEnvironmentImages response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListCuratedEnvironmentImagesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCuratedEnvironmentImagesResponsePrivate
+ *
+ * @brief  Private implementation for ListCuratedEnvironmentImagesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCuratedEnvironmentImagesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListCuratedEnvironmentImagesResponse instance.
+ */
+ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesResponsePrivate(
+    ListCuratedEnvironmentImagesQueueResponse * const q) : ListCuratedEnvironmentImagesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild ListCuratedEnvironmentImagesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListCuratedEnvironmentImagesResponse"));
+    /// @todo
+}

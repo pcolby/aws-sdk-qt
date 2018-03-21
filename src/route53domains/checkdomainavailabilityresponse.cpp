@@ -19,3 +19,85 @@
 
 #include "checkdomainavailabilityresponse.h"
 #include "checkdomainavailabilityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  CheckDomainAvailabilityResponse
+ *
+ * @brief  Handles Route53Domains CheckDomainAvailability responses.
+ *
+ * @see    Route53DomainsClient::checkDomainAvailability
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CheckDomainAvailabilityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new CheckDomainAvailabilityResponsePrivate(this), parent)
+{
+    setRequest(new CheckDomainAvailabilityRequest(request));
+    setReply(reply);
+}
+
+const CheckDomainAvailabilityRequest * CheckDomainAvailabilityResponse::request() const
+{
+    Q_D(const CheckDomainAvailabilityResponse);
+    return static_cast<const CheckDomainAvailabilityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains CheckDomainAvailability response.
+ *
+ * @param  response  Response to parse.
+ */
+void CheckDomainAvailabilityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CheckDomainAvailabilityResponsePrivate
+ *
+ * @brief  Private implementation for CheckDomainAvailabilityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckDomainAvailabilityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CheckDomainAvailabilityResponse instance.
+ */
+CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponsePrivate(
+    CheckDomainAvailabilityQueueResponse * const q) : CheckDomainAvailabilityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains CheckDomainAvailabilityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CheckDomainAvailabilityResponse"));
+    /// @todo
+}

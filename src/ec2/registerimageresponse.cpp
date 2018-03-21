@@ -19,3 +19,85 @@
 
 #include "registerimageresponse.h"
 #include "registerimageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  RegisterImageResponse
+ *
+ * @brief  Handles EC2 RegisterImage responses.
+ *
+ * @see    EC2Client::registerImage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterImageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new RegisterImageResponsePrivate(this), parent)
+{
+    setRequest(new RegisterImageRequest(request));
+    setReply(reply);
+}
+
+const RegisterImageRequest * RegisterImageResponse::request() const
+{
+    Q_D(const RegisterImageResponse);
+    return static_cast<const RegisterImageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 RegisterImage response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterImageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterImageResponsePrivate
+ *
+ * @brief  Private implementation for RegisterImageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterImageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterImageResponse instance.
+ */
+RegisterImageResponsePrivate::RegisterImageResponsePrivate(
+    RegisterImageQueueResponse * const q) : RegisterImagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 RegisterImageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterImageResponsePrivate::RegisterImageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterImageResponse"));
+    /// @todo
+}

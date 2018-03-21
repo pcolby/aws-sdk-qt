@@ -19,3 +19,85 @@
 
 #include "untagprojectresponse.h"
 #include "untagprojectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  UntagProjectResponse
+ *
+ * @brief  Handles CodeStar UntagProject responses.
+ *
+ * @see    CodeStarClient::untagProject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagProjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new UntagProjectResponsePrivate(this), parent)
+{
+    setRequest(new UntagProjectRequest(request));
+    setReply(reply);
+}
+
+const UntagProjectRequest * UntagProjectResponse::request() const
+{
+    Q_D(const UntagProjectResponse);
+    return static_cast<const UntagProjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar UntagProject response.
+ *
+ * @param  response  Response to parse.
+ */
+void UntagProjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagProjectResponsePrivate
+ *
+ * @brief  Private implementation for UntagProjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagProjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UntagProjectResponse instance.
+ */
+UntagProjectResponsePrivate::UntagProjectResponsePrivate(
+    UntagProjectQueueResponse * const q) : UntagProjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar UntagProjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UntagProjectResponsePrivate::UntagProjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UntagProjectResponse"));
+    /// @todo
+}

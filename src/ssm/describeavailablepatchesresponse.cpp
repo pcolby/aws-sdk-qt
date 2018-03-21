@@ -19,3 +19,85 @@
 
 #include "describeavailablepatchesresponse.h"
 #include "describeavailablepatchesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeAvailablePatchesResponse
+ *
+ * @brief  Handles SSM DescribeAvailablePatches responses.
+ *
+ * @see    SSMClient::describeAvailablePatches
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAvailablePatchesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeAvailablePatchesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAvailablePatchesRequest(request));
+    setReply(reply);
+}
+
+const DescribeAvailablePatchesRequest * DescribeAvailablePatchesResponse::request() const
+{
+    Q_D(const DescribeAvailablePatchesResponse);
+    return static_cast<const DescribeAvailablePatchesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeAvailablePatches response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAvailablePatchesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAvailablePatchesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAvailablePatchesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAvailablePatchesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAvailablePatchesResponse instance.
+ */
+DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponsePrivate(
+    DescribeAvailablePatchesQueueResponse * const q) : DescribeAvailablePatchesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeAvailablePatchesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAvailablePatchesResponse"));
+    /// @todo
+}

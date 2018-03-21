@@ -19,3 +19,85 @@
 
 #include "promotereadreplicaresponse.h"
 #include "promotereadreplicaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  PromoteReadReplicaResponse
+ *
+ * @brief  Handles RDS PromoteReadReplica responses.
+ *
+ * @see    RDSClient::promoteReadReplica
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PromoteReadReplicaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new PromoteReadReplicaResponsePrivate(this), parent)
+{
+    setRequest(new PromoteReadReplicaRequest(request));
+    setReply(reply);
+}
+
+const PromoteReadReplicaRequest * PromoteReadReplicaResponse::request() const
+{
+    Q_D(const PromoteReadReplicaResponse);
+    return static_cast<const PromoteReadReplicaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS PromoteReadReplica response.
+ *
+ * @param  response  Response to parse.
+ */
+void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PromoteReadReplicaResponsePrivate
+ *
+ * @brief  Private implementation for PromoteReadReplicaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PromoteReadReplicaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PromoteReadReplicaResponse instance.
+ */
+PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
+    PromoteReadReplicaQueueResponse * const q) : PromoteReadReplicaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS PromoteReadReplicaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PromoteReadReplicaResponse"));
+    /// @todo
+}

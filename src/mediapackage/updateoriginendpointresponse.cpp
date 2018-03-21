@@ -19,3 +19,85 @@
 
 #include "updateoriginendpointresponse.h"
 #include "updateoriginendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  UpdateOriginEndpointResponse
+ *
+ * @brief  Handles MediaPackage UpdateOriginEndpoint responses.
+ *
+ * @see    MediaPackageClient::updateOriginEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateOriginEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaPackageResponse(new UpdateOriginEndpointResponsePrivate(this), parent)
+{
+    setRequest(new UpdateOriginEndpointRequest(request));
+    setReply(reply);
+}
+
+const UpdateOriginEndpointRequest * UpdateOriginEndpointResponse::request() const
+{
+    Q_D(const UpdateOriginEndpointResponse);
+    return static_cast<const UpdateOriginEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaPackage UpdateOriginEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateOriginEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateOriginEndpointResponsePrivate
+ *
+ * @brief  Private implementation for UpdateOriginEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateOriginEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateOriginEndpointResponse instance.
+ */
+UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponsePrivate(
+    UpdateOriginEndpointQueueResponse * const q) : UpdateOriginEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaPackage UpdateOriginEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateOriginEndpointResponse"));
+    /// @todo
+}

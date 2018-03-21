@@ -19,3 +19,85 @@
 
 #include "uploaddocumentsresponse.h"
 #include "uploaddocumentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearchDomain {
+
+/**
+ * @class  UploadDocumentsResponse
+ *
+ * @brief  Handles CloudSearchDomain UploadDocuments responses.
+ *
+ * @see    CloudSearchDomainClient::uploadDocuments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UploadDocumentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchDomainResponse(new UploadDocumentsResponsePrivate(this), parent)
+{
+    setRequest(new UploadDocumentsRequest(request));
+    setReply(reply);
+}
+
+const UploadDocumentsRequest * UploadDocumentsResponse::request() const
+{
+    Q_D(const UploadDocumentsResponse);
+    return static_cast<const UploadDocumentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearchDomain UploadDocuments response.
+ *
+ * @param  response  Response to parse.
+ */
+void UploadDocumentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UploadDocumentsResponsePrivate
+ *
+ * @brief  Private implementation for UploadDocumentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadDocumentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UploadDocumentsResponse instance.
+ */
+UploadDocumentsResponsePrivate::UploadDocumentsResponsePrivate(
+    UploadDocumentsQueueResponse * const q) : UploadDocumentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearchDomain UploadDocumentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UploadDocumentsResponsePrivate::UploadDocumentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UploadDocumentsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletecollectionresponse.h"
 #include "deletecollectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DeleteCollectionResponse
+ *
+ * @brief  Handles Rekognition DeleteCollection responses.
+ *
+ * @see    RekognitionClient::deleteCollection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCollectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new DeleteCollectionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCollectionRequest(request));
+    setReply(reply);
+}
+
+const DeleteCollectionRequest * DeleteCollectionResponse::request() const
+{
+    Q_D(const DeleteCollectionResponse);
+    return static_cast<const DeleteCollectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition DeleteCollection response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCollectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCollectionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCollectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCollectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCollectionResponse instance.
+ */
+DeleteCollectionResponsePrivate::DeleteCollectionResponsePrivate(
+    DeleteCollectionQueueResponse * const q) : DeleteCollectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition DeleteCollectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCollectionResponsePrivate::DeleteCollectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCollectionResponse"));
+    /// @todo
+}

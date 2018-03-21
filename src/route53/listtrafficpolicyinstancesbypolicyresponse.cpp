@@ -19,3 +19,85 @@
 
 #include "listtrafficpolicyinstancesbypolicyresponse.h"
 #include "listtrafficpolicyinstancesbypolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListTrafficPolicyInstancesByPolicyResponse
+ *
+ * @brief  Handles Route53 ListTrafficPolicyInstancesByPolicy responses.
+ *
+ * @see    Route53Client::listTrafficPolicyInstancesByPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTrafficPolicyInstancesByPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new ListTrafficPolicyInstancesByPolicyResponsePrivate(this), parent)
+{
+    setRequest(new ListTrafficPolicyInstancesByPolicyRequest(request));
+    setReply(reply);
+}
+
+const ListTrafficPolicyInstancesByPolicyRequest * ListTrafficPolicyInstancesByPolicyResponse::request() const
+{
+    Q_D(const ListTrafficPolicyInstancesByPolicyResponse);
+    return static_cast<const ListTrafficPolicyInstancesByPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 ListTrafficPolicyInstancesByPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTrafficPolicyInstancesByPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTrafficPolicyInstancesByPolicyResponsePrivate
+ *
+ * @brief  Private implementation for ListTrafficPolicyInstancesByPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTrafficPolicyInstancesByPolicyResponse instance.
+ */
+ListTrafficPolicyInstancesByPolicyResponsePrivate::ListTrafficPolicyInstancesByPolicyResponsePrivate(
+    ListTrafficPolicyInstancesByPolicyQueueResponse * const q) : ListTrafficPolicyInstancesByPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 ListTrafficPolicyInstancesByPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTrafficPolicyInstancesByPolicyResponsePrivate::ListTrafficPolicyInstancesByPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTrafficPolicyInstancesByPolicyResponse"));
+    /// @todo
+}

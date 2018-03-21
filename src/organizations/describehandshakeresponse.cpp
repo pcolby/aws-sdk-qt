@@ -19,3 +19,85 @@
 
 #include "describehandshakeresponse.h"
 #include "describehandshakeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DescribeHandshakeResponse
+ *
+ * @brief  Handles Organizations DescribeHandshake responses.
+ *
+ * @see    OrganizationsClient::describeHandshake
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHandshakeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new DescribeHandshakeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeHandshakeRequest(request));
+    setReply(reply);
+}
+
+const DescribeHandshakeRequest * DescribeHandshakeResponse::request() const
+{
+    Q_D(const DescribeHandshakeResponse);
+    return static_cast<const DescribeHandshakeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations DescribeHandshake response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeHandshakeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHandshakeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeHandshakeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHandshakeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeHandshakeResponse instance.
+ */
+DescribeHandshakeResponsePrivate::DescribeHandshakeResponsePrivate(
+    DescribeHandshakeQueueResponse * const q) : DescribeHandshakePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations DescribeHandshakeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeHandshakeResponsePrivate::DescribeHandshakeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeHandshakeResponse"));
+    /// @todo
+}

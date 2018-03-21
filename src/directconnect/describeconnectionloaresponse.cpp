@@ -19,3 +19,85 @@
 
 #include "describeconnectionloaresponse.h"
 #include "describeconnectionloaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeConnectionLoaResponse
+ *
+ * @brief  Handles DirectConnect DescribeConnectionLoa responses.
+ *
+ * @see    DirectConnectClient::describeConnectionLoa
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConnectionLoaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DescribeConnectionLoaResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConnectionLoaRequest(request));
+    setReply(reply);
+}
+
+const DescribeConnectionLoaRequest * DescribeConnectionLoaResponse::request() const
+{
+    Q_D(const DescribeConnectionLoaResponse);
+    return static_cast<const DescribeConnectionLoaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DescribeConnectionLoa response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConnectionLoaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConnectionLoaResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConnectionLoaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConnectionLoaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConnectionLoaResponse instance.
+ */
+DescribeConnectionLoaResponsePrivate::DescribeConnectionLoaResponsePrivate(
+    DescribeConnectionLoaQueueResponse * const q) : DescribeConnectionLoaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DescribeConnectionLoaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConnectionLoaResponsePrivate::DescribeConnectionLoaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConnectionLoaResponse"));
+    /// @todo
+}

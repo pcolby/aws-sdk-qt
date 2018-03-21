@@ -19,3 +19,85 @@
 
 #include "deletedirectoryconfigresponse.h"
 #include "deletedirectoryconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DeleteDirectoryConfigResponse
+ *
+ * @brief  Handles AppStream DeleteDirectoryConfig responses.
+ *
+ * @see    AppStreamClient::deleteDirectoryConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDirectoryConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new DeleteDirectoryConfigResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDirectoryConfigRequest(request));
+    setReply(reply);
+}
+
+const DeleteDirectoryConfigRequest * DeleteDirectoryConfigResponse::request() const
+{
+    Q_D(const DeleteDirectoryConfigResponse);
+    return static_cast<const DeleteDirectoryConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream DeleteDirectoryConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDirectoryConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDirectoryConfigResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDirectoryConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectoryConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDirectoryConfigResponse instance.
+ */
+DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponsePrivate(
+    DeleteDirectoryConfigQueueResponse * const q) : DeleteDirectoryConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream DeleteDirectoryConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDirectoryConfigResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listfacetattributesresponse.h"
 #include "listfacetattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListFacetAttributesResponse
+ *
+ * @brief  Handles CloudDirectory ListFacetAttributes responses.
+ *
+ * @see    CloudDirectoryClient::listFacetAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFacetAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListFacetAttributesResponsePrivate(this), parent)
+{
+    setRequest(new ListFacetAttributesRequest(request));
+    setReply(reply);
+}
+
+const ListFacetAttributesRequest * ListFacetAttributesResponse::request() const
+{
+    Q_D(const ListFacetAttributesResponse);
+    return static_cast<const ListFacetAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListFacetAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListFacetAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFacetAttributesResponsePrivate
+ *
+ * @brief  Private implementation for ListFacetAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFacetAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListFacetAttributesResponse instance.
+ */
+ListFacetAttributesResponsePrivate::ListFacetAttributesResponsePrivate(
+    ListFacetAttributesQueueResponse * const q) : ListFacetAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListFacetAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListFacetAttributesResponsePrivate::ListFacetAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListFacetAttributesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeendpointsresponse.h"
 #include "describeendpointsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeEndpointsResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeEndpoints responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeEndpoints
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEndpointsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeEndpointsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEndpointsRequest(request));
+    setReply(reply);
+}
+
+const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
+{
+    Q_D(const DescribeEndpointsResponse);
+    return static_cast<const DescribeEndpointsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeEndpoints response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEndpointsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEndpointsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEndpointsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEndpointsResponse instance.
+ */
+DescribeEndpointsResponsePrivate::DescribeEndpointsResponsePrivate(
+    DescribeEndpointsQueueResponse * const q) : DescribeEndpointsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeEndpointsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEndpointsResponsePrivate::DescribeEndpointsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEndpointsResponse"));
+    /// @todo
+}

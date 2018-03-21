@@ -19,3 +19,85 @@
 
 #include "listelasticsearchversionsresponse.h"
 #include "listelasticsearchversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  ListElasticsearchVersionsResponse
+ *
+ * @brief  Handles ElasticsearchService ListElasticsearchVersions responses.
+ *
+ * @see    ElasticsearchServiceClient::listElasticsearchVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListElasticsearchVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticsearchServiceResponse(new ListElasticsearchVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListElasticsearchVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListElasticsearchVersionsRequest * ListElasticsearchVersionsResponse::request() const
+{
+    Q_D(const ListElasticsearchVersionsResponse);
+    return static_cast<const ListElasticsearchVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticsearchService ListElasticsearchVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListElasticsearchVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListElasticsearchVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListElasticsearchVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListElasticsearchVersionsResponse instance.
+ */
+ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePrivate(
+    ListElasticsearchVersionsQueueResponse * const q) : ListElasticsearchVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticsearchService ListElasticsearchVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListElasticsearchVersionsResponse"));
+    /// @todo
+}

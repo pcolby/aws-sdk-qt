@@ -19,3 +19,85 @@
 
 #include "testconnectionresponse.h"
 #include "testconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  TestConnectionResponse
+ *
+ * @brief  Handles DatabaseMigrationService TestConnection responses.
+ *
+ * @see    DatabaseMigrationServiceClient::testConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new TestConnectionResponsePrivate(this), parent)
+{
+    setRequest(new TestConnectionRequest(request));
+    setReply(reply);
+}
+
+const TestConnectionRequest * TestConnectionResponse::request() const
+{
+    Q_D(const TestConnectionResponse);
+    return static_cast<const TestConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService TestConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void TestConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TestConnectionResponsePrivate
+ *
+ * @brief  Private implementation for TestConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TestConnectionResponse instance.
+ */
+TestConnectionResponsePrivate::TestConnectionResponsePrivate(
+    TestConnectionQueueResponse * const q) : TestConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService TestConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TestConnectionResponsePrivate::TestConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TestConnectionResponse"));
+    /// @todo
+}

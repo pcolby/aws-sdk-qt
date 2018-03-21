@@ -19,3 +19,85 @@
 
 #include "createprovisionedproductplanresponse.h"
 #include "createprovisionedproductplanresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  CreateProvisionedProductPlanResponse
+ *
+ * @brief  Handles ServiceCatalog CreateProvisionedProductPlan responses.
+ *
+ * @see    ServiceCatalogClient::createProvisionedProductPlan
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateProvisionedProductPlanResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new CreateProvisionedProductPlanResponsePrivate(this), parent)
+{
+    setRequest(new CreateProvisionedProductPlanRequest(request));
+    setReply(reply);
+}
+
+const CreateProvisionedProductPlanRequest * CreateProvisionedProductPlanResponse::request() const
+{
+    Q_D(const CreateProvisionedProductPlanResponse);
+    return static_cast<const CreateProvisionedProductPlanRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog CreateProvisionedProductPlan response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateProvisionedProductPlanResponsePrivate
+ *
+ * @brief  Private implementation for CreateProvisionedProductPlanResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProvisionedProductPlanResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateProvisionedProductPlanResponse instance.
+ */
+CreateProvisionedProductPlanResponsePrivate::CreateProvisionedProductPlanResponsePrivate(
+    CreateProvisionedProductPlanQueueResponse * const q) : CreateProvisionedProductPlanPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog CreateProvisionedProductPlanResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateProvisionedProductPlanResponsePrivate::CreateProvisionedProductPlanResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateProvisionedProductPlanResponse"));
+    /// @todo
+}

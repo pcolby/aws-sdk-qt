@@ -19,3 +19,85 @@
 
 #include "modifydbinstanceresponse.h"
 #include "modifydbinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBInstanceResponse
+ *
+ * @brief  Handles RDS ModifyDBInstance responses.
+ *
+ * @see    RDSClient::modifyDBInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ModifyDBInstanceResponsePrivate(this), parent)
+{
+    setRequest(new ModifyDBInstanceRequest(request));
+    setReply(reply);
+}
+
+const ModifyDBInstanceRequest * ModifyDBInstanceResponse::request() const
+{
+    Q_D(const ModifyDBInstanceResponse);
+    return static_cast<const ModifyDBInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ModifyDBInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBInstanceResponsePrivate
+ *
+ * @brief  Private implementation for ModifyDBInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyDBInstanceResponse instance.
+ */
+ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponsePrivate(
+    ModifyDBInstanceQueueResponse * const q) : ModifyDBInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ModifyDBInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyDBInstanceResponse"));
+    /// @todo
+}

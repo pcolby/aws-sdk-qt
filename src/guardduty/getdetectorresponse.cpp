@@ -19,3 +19,85 @@
 
 #include "getdetectorresponse.h"
 #include "getdetectorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetDetectorResponse
+ *
+ * @brief  Handles GuardDuty GetDetector responses.
+ *
+ * @see    GuardDutyClient::getDetector
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDetectorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new GetDetectorResponsePrivate(this), parent)
+{
+    setRequest(new GetDetectorRequest(request));
+    setReply(reply);
+}
+
+const GetDetectorRequest * GetDetectorResponse::request() const
+{
+    Q_D(const GetDetectorResponse);
+    return static_cast<const GetDetectorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty GetDetector response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDetectorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDetectorResponsePrivate
+ *
+ * @brief  Private implementation for GetDetectorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDetectorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDetectorResponse instance.
+ */
+GetDetectorResponsePrivate::GetDetectorResponsePrivate(
+    GetDetectorQueueResponse * const q) : GetDetectorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty GetDetectorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDetectorResponsePrivate::GetDetectorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDetectorResponse"));
+    /// @todo
+}

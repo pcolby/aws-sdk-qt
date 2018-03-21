@@ -19,3 +19,85 @@
 
 #include "detectdominantlanguageresponse.h"
 #include "detectdominantlanguageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  DetectDominantLanguageResponse
+ *
+ * @brief  Handles Comprehend DetectDominantLanguage responses.
+ *
+ * @see    ComprehendClient::detectDominantLanguage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectDominantLanguageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ComprehendResponse(new DetectDominantLanguageResponsePrivate(this), parent)
+{
+    setRequest(new DetectDominantLanguageRequest(request));
+    setReply(reply);
+}
+
+const DetectDominantLanguageRequest * DetectDominantLanguageResponse::request() const
+{
+    Q_D(const DetectDominantLanguageResponse);
+    return static_cast<const DetectDominantLanguageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Comprehend DetectDominantLanguage response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetectDominantLanguageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectDominantLanguageResponsePrivate
+ *
+ * @brief  Private implementation for DetectDominantLanguageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectDominantLanguageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetectDominantLanguageResponse instance.
+ */
+DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponsePrivate(
+    DetectDominantLanguageQueueResponse * const q) : DetectDominantLanguagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Comprehend DetectDominantLanguageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetectDominantLanguageResponse"));
+    /// @todo
+}

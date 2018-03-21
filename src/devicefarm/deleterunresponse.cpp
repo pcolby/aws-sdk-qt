@@ -19,3 +19,85 @@
 
 #include "deleterunresponse.h"
 #include "deleterunresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  DeleteRunResponse
+ *
+ * @brief  Handles DeviceFarm DeleteRun responses.
+ *
+ * @see    DeviceFarmClient::deleteRun
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRunResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new DeleteRunResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRunRequest(request));
+    setReply(reply);
+}
+
+const DeleteRunRequest * DeleteRunResponse::request() const
+{
+    Q_D(const DeleteRunResponse);
+    return static_cast<const DeleteRunRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm DeleteRun response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRunResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRunResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRunResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRunResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRunResponse instance.
+ */
+DeleteRunResponsePrivate::DeleteRunResponsePrivate(
+    DeleteRunQueueResponse * const q) : DeleteRunPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm DeleteRunResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRunResponsePrivate::DeleteRunResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRunResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletecacheparametergroupresponse.h"
 #include "deletecacheparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DeleteCacheParameterGroupResponse
+ *
+ * @brief  Handles ElastiCache DeleteCacheParameterGroup responses.
+ *
+ * @see    ElastiCacheClient::deleteCacheParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCacheParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DeleteCacheParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCacheParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteCacheParameterGroupRequest * DeleteCacheParameterGroupResponse::request() const
+{
+    Q_D(const DeleteCacheParameterGroupResponse);
+    return static_cast<const DeleteCacheParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DeleteCacheParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCacheParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCacheParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCacheParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCacheParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCacheParameterGroupResponse instance.
+ */
+DeleteCacheParameterGroupResponsePrivate::DeleteCacheParameterGroupResponsePrivate(
+    DeleteCacheParameterGroupQueueResponse * const q) : DeleteCacheParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DeleteCacheParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCacheParameterGroupResponsePrivate::DeleteCacheParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCacheParameterGroupResponse"));
+    /// @todo
+}

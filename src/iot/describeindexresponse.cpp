@@ -19,3 +19,85 @@
 
 #include "describeindexresponse.h"
 #include "describeindexresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeIndexResponse
+ *
+ * @brief  Handles IoT DescribeIndex responses.
+ *
+ * @see    IoTClient::describeIndex
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIndexResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DescribeIndexResponsePrivate(this), parent)
+{
+    setRequest(new DescribeIndexRequest(request));
+    setReply(reply);
+}
+
+const DescribeIndexRequest * DescribeIndexResponse::request() const
+{
+    Q_D(const DescribeIndexResponse);
+    return static_cast<const DescribeIndexRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DescribeIndex response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeIndexResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIndexResponsePrivate
+ *
+ * @brief  Private implementation for DescribeIndexResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIndexResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeIndexResponse instance.
+ */
+DescribeIndexResponsePrivate::DescribeIndexResponsePrivate(
+    DescribeIndexQueueResponse * const q) : DescribeIndexPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DescribeIndexResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeIndexResponsePrivate::DescribeIndexResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeIndexResponse"));
+    /// @todo
+}

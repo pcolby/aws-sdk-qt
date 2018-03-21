@@ -19,3 +19,85 @@
 
 #include "createworkerblockresponse.h"
 #include "createworkerblockresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  CreateWorkerBlockResponse
+ *
+ * @brief  Handles MTurk CreateWorkerBlock responses.
+ *
+ * @see    MTurkClient::createWorkerBlock
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateWorkerBlockResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new CreateWorkerBlockResponsePrivate(this), parent)
+{
+    setRequest(new CreateWorkerBlockRequest(request));
+    setReply(reply);
+}
+
+const CreateWorkerBlockRequest * CreateWorkerBlockResponse::request() const
+{
+    Q_D(const CreateWorkerBlockResponse);
+    return static_cast<const CreateWorkerBlockRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk CreateWorkerBlock response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateWorkerBlockResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateWorkerBlockResponsePrivate
+ *
+ * @brief  Private implementation for CreateWorkerBlockResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateWorkerBlockResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateWorkerBlockResponse instance.
+ */
+CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponsePrivate(
+    CreateWorkerBlockQueueResponse * const q) : CreateWorkerBlockPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk CreateWorkerBlockResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateWorkerBlockResponse"));
+    /// @todo
+}

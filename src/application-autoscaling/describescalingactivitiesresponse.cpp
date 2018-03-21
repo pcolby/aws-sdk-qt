@@ -19,3 +19,85 @@
 
 #include "describescalingactivitiesresponse.h"
 #include "describescalingactivitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  DescribeScalingActivitiesResponse
+ *
+ * @brief  Handles ApplicationAutoScaling DescribeScalingActivities responses.
+ *
+ * @see    ApplicationAutoScalingClient::describeScalingActivities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingActivitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationAutoScalingResponse(new DescribeScalingActivitiesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeScalingActivitiesRequest(request));
+    setReply(reply);
+}
+
+const DescribeScalingActivitiesRequest * DescribeScalingActivitiesResponse::request() const
+{
+    Q_D(const DescribeScalingActivitiesResponse);
+    return static_cast<const DescribeScalingActivitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationAutoScaling DescribeScalingActivities response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeScalingActivitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingActivitiesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeScalingActivitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingActivitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeScalingActivitiesResponse instance.
+ */
+DescribeScalingActivitiesResponsePrivate::DescribeScalingActivitiesResponsePrivate(
+    DescribeScalingActivitiesQueueResponse * const q) : DescribeScalingActivitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationAutoScaling DescribeScalingActivitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeScalingActivitiesResponsePrivate::DescribeScalingActivitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeScalingActivitiesResponse"));
+    /// @todo
+}

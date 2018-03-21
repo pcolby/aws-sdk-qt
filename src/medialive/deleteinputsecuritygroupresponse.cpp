@@ -19,3 +19,85 @@
 
 #include "deleteinputsecuritygroupresponse.h"
 #include "deleteinputsecuritygroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  DeleteInputSecurityGroupResponse
+ *
+ * @brief  Handles MediaLive DeleteInputSecurityGroup responses.
+ *
+ * @see    MediaLiveClient::deleteInputSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInputSecurityGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaLiveResponse(new DeleteInputSecurityGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteInputSecurityGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteInputSecurityGroupRequest * DeleteInputSecurityGroupResponse::request() const
+{
+    Q_D(const DeleteInputSecurityGroupResponse);
+    return static_cast<const DeleteInputSecurityGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaLive DeleteInputSecurityGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteInputSecurityGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInputSecurityGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteInputSecurityGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInputSecurityGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteInputSecurityGroupResponse instance.
+ */
+DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponsePrivate(
+    DeleteInputSecurityGroupQueueResponse * const q) : DeleteInputSecurityGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaLive DeleteInputSecurityGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteInputSecurityGroupResponse"));
+    /// @todo
+}

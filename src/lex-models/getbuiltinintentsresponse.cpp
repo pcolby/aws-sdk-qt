@@ -19,3 +19,85 @@
 
 #include "getbuiltinintentsresponse.h"
 #include "getbuiltinintentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBuiltinIntentsResponse
+ *
+ * @brief  Handles LexModelBuildingService GetBuiltinIntents responses.
+ *
+ * @see    LexModelBuildingServiceClient::getBuiltinIntents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBuiltinIntentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetBuiltinIntentsResponsePrivate(this), parent)
+{
+    setRequest(new GetBuiltinIntentsRequest(request));
+    setReply(reply);
+}
+
+const GetBuiltinIntentsRequest * GetBuiltinIntentsResponse::request() const
+{
+    Q_D(const GetBuiltinIntentsResponse);
+    return static_cast<const GetBuiltinIntentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetBuiltinIntents response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBuiltinIntentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBuiltinIntentsResponsePrivate
+ *
+ * @brief  Private implementation for GetBuiltinIntentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBuiltinIntentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBuiltinIntentsResponse instance.
+ */
+GetBuiltinIntentsResponsePrivate::GetBuiltinIntentsResponsePrivate(
+    GetBuiltinIntentsQueueResponse * const q) : GetBuiltinIntentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetBuiltinIntentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBuiltinIntentsResponsePrivate::GetBuiltinIntentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBuiltinIntentsResponse"));
+    /// @todo
+}

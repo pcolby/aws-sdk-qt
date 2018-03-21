@@ -19,3 +19,85 @@
 
 #include "describeattackresponse.h"
 #include "describeattackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  DescribeAttackResponse
+ *
+ * @brief  Handles Shield DescribeAttack responses.
+ *
+ * @see    ShieldClient::describeAttack
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAttackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ShieldResponse(new DescribeAttackResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAttackRequest(request));
+    setReply(reply);
+}
+
+const DescribeAttackRequest * DescribeAttackResponse::request() const
+{
+    Q_D(const DescribeAttackResponse);
+    return static_cast<const DescribeAttackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Shield DescribeAttack response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAttackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAttackResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAttackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAttackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAttackResponse instance.
+ */
+DescribeAttackResponsePrivate::DescribeAttackResponsePrivate(
+    DescribeAttackQueueResponse * const q) : DescribeAttackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Shield DescribeAttackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAttackResponsePrivate::DescribeAttackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAttackResponse"));
+    /// @todo
+}

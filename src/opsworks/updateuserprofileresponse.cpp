@@ -19,3 +19,85 @@
 
 #include "updateuserprofileresponse.h"
 #include "updateuserprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateUserProfileResponse
+ *
+ * @brief  Handles OpsWorks UpdateUserProfile responses.
+ *
+ * @see    OpsWorksClient::updateUserProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UpdateUserProfileResponsePrivate(this), parent)
+{
+    setRequest(new UpdateUserProfileRequest(request));
+    setReply(reply);
+}
+
+const UpdateUserProfileRequest * UpdateUserProfileResponse::request() const
+{
+    Q_D(const UpdateUserProfileResponse);
+    return static_cast<const UpdateUserProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UpdateUserProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateUserProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserProfileResponsePrivate
+ *
+ * @brief  Private implementation for UpdateUserProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateUserProfileResponse instance.
+ */
+UpdateUserProfileResponsePrivate::UpdateUserProfileResponsePrivate(
+    UpdateUserProfileQueueResponse * const q) : UpdateUserProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UpdateUserProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateUserProfileResponsePrivate::UpdateUserProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateUserProfileResponse"));
+    /// @todo
+}

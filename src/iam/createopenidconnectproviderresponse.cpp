@@ -19,3 +19,85 @@
 
 #include "createopenidconnectproviderresponse.h"
 #include "createopenidconnectproviderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateOpenIDConnectProviderResponse
+ *
+ * @brief  Handles IAM CreateOpenIDConnectProvider responses.
+ *
+ * @see    IAMClient::createOpenIDConnectProvider
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateOpenIDConnectProviderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new CreateOpenIDConnectProviderResponsePrivate(this), parent)
+{
+    setRequest(new CreateOpenIDConnectProviderRequest(request));
+    setReply(reply);
+}
+
+const CreateOpenIDConnectProviderRequest * CreateOpenIDConnectProviderResponse::request() const
+{
+    Q_D(const CreateOpenIDConnectProviderResponse);
+    return static_cast<const CreateOpenIDConnectProviderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM CreateOpenIDConnectProvider response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateOpenIDConnectProviderResponsePrivate
+ *
+ * @brief  Private implementation for CreateOpenIDConnectProviderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOpenIDConnectProviderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateOpenIDConnectProviderResponse instance.
+ */
+CreateOpenIDConnectProviderResponsePrivate::CreateOpenIDConnectProviderResponsePrivate(
+    CreateOpenIDConnectProviderQueueResponse * const q) : CreateOpenIDConnectProviderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM CreateOpenIDConnectProviderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateOpenIDConnectProviderResponsePrivate::CreateOpenIDConnectProviderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateOpenIDConnectProviderResponse"));
+    /// @todo
+}

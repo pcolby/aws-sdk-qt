@@ -19,3 +19,85 @@
 
 #include "describeworkspacebundlesresponse.h"
 #include "describeworkspacebundlesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  DescribeWorkspaceBundlesResponse
+ *
+ * @brief  Handles WorkSpaces DescribeWorkspaceBundles responses.
+ *
+ * @see    WorkSpacesClient::describeWorkspaceBundles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeWorkspaceBundlesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new DescribeWorkspaceBundlesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeWorkspaceBundlesRequest(request));
+    setReply(reply);
+}
+
+const DescribeWorkspaceBundlesRequest * DescribeWorkspaceBundlesResponse::request() const
+{
+    Q_D(const DescribeWorkspaceBundlesResponse);
+    return static_cast<const DescribeWorkspaceBundlesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces DescribeWorkspaceBundles response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeWorkspaceBundlesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeWorkspaceBundlesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeWorkspaceBundlesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkspaceBundlesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeWorkspaceBundlesResponse instance.
+ */
+DescribeWorkspaceBundlesResponsePrivate::DescribeWorkspaceBundlesResponsePrivate(
+    DescribeWorkspaceBundlesQueueResponse * const q) : DescribeWorkspaceBundlesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces DescribeWorkspaceBundlesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeWorkspaceBundlesResponsePrivate::DescribeWorkspaceBundlesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspaceBundlesResponse"));
+    /// @todo
+}

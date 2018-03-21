@@ -19,3 +19,85 @@
 
 #include "deletevpcendpointserviceconfigurationsresponse.h"
 #include "deletevpcendpointserviceconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpcEndpointServiceConfigurationsResponse
+ *
+ * @brief  Handles EC2 DeleteVpcEndpointServiceConfigurations responses.
+ *
+ * @see    EC2Client::deleteVpcEndpointServiceConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpcEndpointServiceConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteVpcEndpointServiceConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVpcEndpointServiceConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const DeleteVpcEndpointServiceConfigurationsRequest * DeleteVpcEndpointServiceConfigurationsResponse::request() const
+{
+    Q_D(const DeleteVpcEndpointServiceConfigurationsResponse);
+    return static_cast<const DeleteVpcEndpointServiceConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteVpcEndpointServiceConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVpcEndpointServiceConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpcEndpointServiceConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVpcEndpointServiceConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcEndpointServiceConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVpcEndpointServiceConfigurationsResponse instance.
+ */
+DeleteVpcEndpointServiceConfigurationsResponsePrivate::DeleteVpcEndpointServiceConfigurationsResponsePrivate(
+    DeleteVpcEndpointServiceConfigurationsQueueResponse * const q) : DeleteVpcEndpointServiceConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteVpcEndpointServiceConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVpcEndpointServiceConfigurationsResponsePrivate::DeleteVpcEndpointServiceConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointServiceConfigurationsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listinventoryentriesresponse.h"
 #include "listinventoryentriesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListInventoryEntriesResponse
+ *
+ * @brief  Handles SSM ListInventoryEntries responses.
+ *
+ * @see    SSMClient::listInventoryEntries
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInventoryEntriesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListInventoryEntriesResponsePrivate(this), parent)
+{
+    setRequest(new ListInventoryEntriesRequest(request));
+    setReply(reply);
+}
+
+const ListInventoryEntriesRequest * ListInventoryEntriesResponse::request() const
+{
+    Q_D(const ListInventoryEntriesResponse);
+    return static_cast<const ListInventoryEntriesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListInventoryEntries response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListInventoryEntriesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInventoryEntriesResponsePrivate
+ *
+ * @brief  Private implementation for ListInventoryEntriesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInventoryEntriesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListInventoryEntriesResponse instance.
+ */
+ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponsePrivate(
+    ListInventoryEntriesQueueResponse * const q) : ListInventoryEntriesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListInventoryEntriesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListInventoryEntriesResponse"));
+    /// @todo
+}

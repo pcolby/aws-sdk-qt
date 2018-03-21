@@ -19,3 +19,85 @@
 
 #include "stopapplicationresponse.h"
 #include "stopapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  StopApplicationResponse
+ *
+ * @brief  Handles KinesisAnalytics StopApplication responses.
+ *
+ * @see    KinesisAnalyticsClient::stopApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new StopApplicationResponsePrivate(this), parent)
+{
+    setRequest(new StopApplicationRequest(request));
+    setReply(reply);
+}
+
+const StopApplicationRequest * StopApplicationResponse::request() const
+{
+    Q_D(const StopApplicationResponse);
+    return static_cast<const StopApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics StopApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopApplicationResponsePrivate
+ *
+ * @brief  Private implementation for StopApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopApplicationResponse instance.
+ */
+StopApplicationResponsePrivate::StopApplicationResponsePrivate(
+    StopApplicationQueueResponse * const q) : StopApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics StopApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopApplicationResponsePrivate::StopApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopApplicationResponse"));
+    /// @todo
+}

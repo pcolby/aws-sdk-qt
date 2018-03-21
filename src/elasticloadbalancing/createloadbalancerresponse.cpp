@@ -19,3 +19,85 @@
 
 #include "createloadbalancerresponse.h"
 #include "createloadbalancerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  CreateLoadBalancerResponse
+ *
+ * @brief  Handles ElasticLoadBalancing CreateLoadBalancer responses.
+ *
+ * @see    ElasticLoadBalancingClient::createLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLoadBalancerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new CreateLoadBalancerResponsePrivate(this), parent)
+{
+    setRequest(new CreateLoadBalancerRequest(request));
+    setReply(reply);
+}
+
+const CreateLoadBalancerRequest * CreateLoadBalancerResponse::request() const
+{
+    Q_D(const CreateLoadBalancerResponse);
+    return static_cast<const CreateLoadBalancerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing CreateLoadBalancer response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLoadBalancerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLoadBalancerResponsePrivate
+ *
+ * @brief  Private implementation for CreateLoadBalancerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLoadBalancerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLoadBalancerResponse instance.
+ */
+CreateLoadBalancerResponsePrivate::CreateLoadBalancerResponsePrivate(
+    CreateLoadBalancerQueueResponse * const q) : CreateLoadBalancerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing CreateLoadBalancerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLoadBalancerResponsePrivate::CreateLoadBalancerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLoadBalancerResponse"));
+    /// @todo
+}

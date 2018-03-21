@@ -19,3 +19,85 @@
 
 #include "deleteresourcedefinitionresponse.h"
 #include "deleteresourcedefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteResourceDefinitionResponse
+ *
+ * @brief  Handles Greengrass DeleteResourceDefinition responses.
+ *
+ * @see    GreengrassClient::deleteResourceDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteResourceDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new DeleteResourceDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteResourceDefinitionRequest(request));
+    setReply(reply);
+}
+
+const DeleteResourceDefinitionRequest * DeleteResourceDefinitionResponse::request() const
+{
+    Q_D(const DeleteResourceDefinitionResponse);
+    return static_cast<const DeleteResourceDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass DeleteResourceDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteResourceDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteResourceDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteResourceDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourceDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteResourceDefinitionResponse instance.
+ */
+DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponsePrivate(
+    DeleteResourceDefinitionQueueResponse * const q) : DeleteResourceDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass DeleteResourceDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteResourceDefinitionResponse"));
+    /// @todo
+}

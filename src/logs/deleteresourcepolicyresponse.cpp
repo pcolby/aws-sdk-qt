@@ -19,3 +19,85 @@
 
 #include "deleteresourcepolicyresponse.h"
 #include "deleteresourcepolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteResourcePolicyResponse
+ *
+ * @brief  Handles CloudWatchLogs DeleteResourcePolicy responses.
+ *
+ * @see    CloudWatchLogsClient::deleteResourcePolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteResourcePolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new DeleteResourcePolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteResourcePolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteResourcePolicyRequest * DeleteResourcePolicyResponse::request() const
+{
+    Q_D(const DeleteResourcePolicyResponse);
+    return static_cast<const DeleteResourcePolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs DeleteResourcePolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteResourcePolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteResourcePolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteResourcePolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourcePolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteResourcePolicyResponse instance.
+ */
+DeleteResourcePolicyResponsePrivate::DeleteResourcePolicyResponsePrivate(
+    DeleteResourcePolicyQueueResponse * const q) : DeleteResourcePolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs DeleteResourcePolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteResourcePolicyResponsePrivate::DeleteResourcePolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteResourcePolicyResponse"));
+    /// @todo
+}

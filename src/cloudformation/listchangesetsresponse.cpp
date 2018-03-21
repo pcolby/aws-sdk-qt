@@ -19,3 +19,85 @@
 
 #include "listchangesetsresponse.h"
 #include "listchangesetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListChangeSetsResponse
+ *
+ * @brief  Handles CloudFormation ListChangeSets responses.
+ *
+ * @see    CloudFormationClient::listChangeSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListChangeSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ListChangeSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListChangeSetsRequest(request));
+    setReply(reply);
+}
+
+const ListChangeSetsRequest * ListChangeSetsResponse::request() const
+{
+    Q_D(const ListChangeSetsResponse);
+    return static_cast<const ListChangeSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ListChangeSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListChangeSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListChangeSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListChangeSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListChangeSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListChangeSetsResponse instance.
+ */
+ListChangeSetsResponsePrivate::ListChangeSetsResponsePrivate(
+    ListChangeSetsQueueResponse * const q) : ListChangeSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ListChangeSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListChangeSetsResponsePrivate::ListChangeSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListChangeSetsResponse"));
+    /// @todo
+}

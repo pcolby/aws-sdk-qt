@@ -19,3 +19,85 @@
 
 #include "indexfacesresponse.h"
 #include "indexfacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  IndexFacesResponse
+ *
+ * @brief  Handles Rekognition IndexFaces responses.
+ *
+ * @see    RekognitionClient::indexFaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IndexFacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new IndexFacesResponsePrivate(this), parent)
+{
+    setRequest(new IndexFacesRequest(request));
+    setReply(reply);
+}
+
+const IndexFacesRequest * IndexFacesResponse::request() const
+{
+    Q_D(const IndexFacesResponse);
+    return static_cast<const IndexFacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition IndexFaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void IndexFacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  IndexFacesResponsePrivate
+ *
+ * @brief  Private implementation for IndexFacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IndexFacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public IndexFacesResponse instance.
+ */
+IndexFacesResponsePrivate::IndexFacesResponsePrivate(
+    IndexFacesQueueResponse * const q) : IndexFacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition IndexFacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void IndexFacesResponsePrivate::IndexFacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("IndexFacesResponse"));
+    /// @todo
+}

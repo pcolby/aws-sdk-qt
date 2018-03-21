@@ -19,3 +19,85 @@
 
 #include "createenvironmentec2response.h"
 #include "createenvironmentec2response_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  CreateEnvironmentEC2Response
+ *
+ * @brief  Handles Cloud9 CreateEnvironmentEC2 responses.
+ *
+ * @see    Cloud9Client::createEnvironmentEC2
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEnvironmentEC2Response::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Cloud9Response(new CreateEnvironmentEC2ResponsePrivate(this), parent)
+{
+    setRequest(new CreateEnvironmentEC2Request(request));
+    setReply(reply);
+}
+
+const CreateEnvironmentEC2Request * CreateEnvironmentEC2Response::request() const
+{
+    Q_D(const CreateEnvironmentEC2Response);
+    return static_cast<const CreateEnvironmentEC2Request *>(d->request);
+}
+
+/**
+ * @brief  Parse a Cloud9 CreateEnvironmentEC2 response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateEnvironmentEC2Response::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEnvironmentEC2ResponsePrivate
+ *
+ * @brief  Private implementation for CreateEnvironmentEC2Response.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEnvironmentEC2ResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateEnvironmentEC2Response instance.
+ */
+CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2ResponsePrivate(
+    CreateEnvironmentEC2QueueResponse * const q) : CreateEnvironmentEC2Private(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Cloud9 CreateEnvironmentEC2Response element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2Response(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentEC2Response"));
+    /// @todo
+}

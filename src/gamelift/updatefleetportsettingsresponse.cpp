@@ -19,3 +19,85 @@
 
 #include "updatefleetportsettingsresponse.h"
 #include "updatefleetportsettingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateFleetPortSettingsResponse
+ *
+ * @brief  Handles GameLift UpdateFleetPortSettings responses.
+ *
+ * @see    GameLiftClient::updateFleetPortSettings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFleetPortSettingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new UpdateFleetPortSettingsResponsePrivate(this), parent)
+{
+    setRequest(new UpdateFleetPortSettingsRequest(request));
+    setReply(reply);
+}
+
+const UpdateFleetPortSettingsRequest * UpdateFleetPortSettingsResponse::request() const
+{
+    Q_D(const UpdateFleetPortSettingsResponse);
+    return static_cast<const UpdateFleetPortSettingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift UpdateFleetPortSettings response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateFleetPortSettingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFleetPortSettingsResponsePrivate
+ *
+ * @brief  Private implementation for UpdateFleetPortSettingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFleetPortSettingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateFleetPortSettingsResponse instance.
+ */
+UpdateFleetPortSettingsResponsePrivate::UpdateFleetPortSettingsResponsePrivate(
+    UpdateFleetPortSettingsQueueResponse * const q) : UpdateFleetPortSettingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift UpdateFleetPortSettingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateFleetPortSettingsResponsePrivate::UpdateFleetPortSettingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateFleetPortSettingsResponse"));
+    /// @todo
+}

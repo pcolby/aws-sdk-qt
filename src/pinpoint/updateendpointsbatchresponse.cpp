@@ -19,3 +19,85 @@
 
 #include "updateendpointsbatchresponse.h"
 #include "updateendpointsbatchresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateEndpointsBatchResponse
+ *
+ * @brief  Handles Pinpoint UpdateEndpointsBatch responses.
+ *
+ * @see    PinpointClient::updateEndpointsBatch
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEndpointsBatchResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateEndpointsBatchResponsePrivate(this), parent)
+{
+    setRequest(new UpdateEndpointsBatchRequest(request));
+    setReply(reply);
+}
+
+const UpdateEndpointsBatchRequest * UpdateEndpointsBatchResponse::request() const
+{
+    Q_D(const UpdateEndpointsBatchResponse);
+    return static_cast<const UpdateEndpointsBatchRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateEndpointsBatch response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateEndpointsBatchResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEndpointsBatchResponsePrivate
+ *
+ * @brief  Private implementation for UpdateEndpointsBatchResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEndpointsBatchResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateEndpointsBatchResponse instance.
+ */
+UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponsePrivate(
+    UpdateEndpointsBatchQueueResponse * const q) : UpdateEndpointsBatchPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateEndpointsBatchResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointsBatchResponse"));
+    /// @todo
+}

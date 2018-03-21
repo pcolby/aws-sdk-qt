@@ -19,3 +19,85 @@
 
 #include "describenotebookinstanceresponse.h"
 #include "describenotebookinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeNotebookInstanceResponse
+ *
+ * @brief  Handles SageMaker DescribeNotebookInstance responses.
+ *
+ * @see    SageMakerClient::describeNotebookInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNotebookInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new DescribeNotebookInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DescribeNotebookInstanceRequest(request));
+    setReply(reply);
+}
+
+const DescribeNotebookInstanceRequest * DescribeNotebookInstanceResponse::request() const
+{
+    Q_D(const DescribeNotebookInstanceResponse);
+    return static_cast<const DescribeNotebookInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker DescribeNotebookInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeNotebookInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNotebookInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DescribeNotebookInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotebookInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeNotebookInstanceResponse instance.
+ */
+DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponsePrivate(
+    DescribeNotebookInstanceQueueResponse * const q) : DescribeNotebookInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker DescribeNotebookInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeNotebookInstanceResponse"));
+    /// @todo
+}

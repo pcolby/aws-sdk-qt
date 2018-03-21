@@ -19,3 +19,85 @@
 
 #include "describetargetgroupsresponse.h"
 #include "describetargetgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeTargetGroupsResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 DescribeTargetGroups responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeTargetGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTargetGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new DescribeTargetGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeTargetGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeTargetGroupsRequest * DescribeTargetGroupsResponse::request() const
+{
+    Q_D(const DescribeTargetGroupsResponse);
+    return static_cast<const DescribeTargetGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 DescribeTargetGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeTargetGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTargetGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeTargetGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTargetGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeTargetGroupsResponse instance.
+ */
+DescribeTargetGroupsResponsePrivate::DescribeTargetGroupsResponsePrivate(
+    DescribeTargetGroupsQueueResponse * const q) : DescribeTargetGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 DescribeTargetGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeTargetGroupsResponsePrivate::DescribeTargetGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeTargetGroupsResponse"));
+    /// @todo
+}

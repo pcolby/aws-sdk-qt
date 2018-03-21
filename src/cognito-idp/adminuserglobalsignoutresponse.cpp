@@ -19,3 +19,85 @@
 
 #include "adminuserglobalsignoutresponse.h"
 #include "adminuserglobalsignoutresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminUserGlobalSignOutResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminUserGlobalSignOut responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminUserGlobalSignOut
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminUserGlobalSignOutResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminUserGlobalSignOutResponsePrivate(this), parent)
+{
+    setRequest(new AdminUserGlobalSignOutRequest(request));
+    setReply(reply);
+}
+
+const AdminUserGlobalSignOutRequest * AdminUserGlobalSignOutResponse::request() const
+{
+    Q_D(const AdminUserGlobalSignOutResponse);
+    return static_cast<const AdminUserGlobalSignOutRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminUserGlobalSignOut response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminUserGlobalSignOutResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminUserGlobalSignOutResponsePrivate
+ *
+ * @brief  Private implementation for AdminUserGlobalSignOutResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminUserGlobalSignOutResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminUserGlobalSignOutResponse instance.
+ */
+AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponsePrivate(
+    AdminUserGlobalSignOutQueueResponse * const q) : AdminUserGlobalSignOutPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminUserGlobalSignOutResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminUserGlobalSignOutResponse"));
+    /// @todo
+}

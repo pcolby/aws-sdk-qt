@@ -19,3 +19,85 @@
 
 #include "putuserpolicyresponse.h"
 #include "putuserpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  PutUserPolicyResponse
+ *
+ * @brief  Handles IAM PutUserPolicy responses.
+ *
+ * @see    IAMClient::putUserPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutUserPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new PutUserPolicyResponsePrivate(this), parent)
+{
+    setRequest(new PutUserPolicyRequest(request));
+    setReply(reply);
+}
+
+const PutUserPolicyRequest * PutUserPolicyResponse::request() const
+{
+    Q_D(const PutUserPolicyResponse);
+    return static_cast<const PutUserPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM PutUserPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutUserPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutUserPolicyResponsePrivate
+ *
+ * @brief  Private implementation for PutUserPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutUserPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutUserPolicyResponse instance.
+ */
+PutUserPolicyResponsePrivate::PutUserPolicyResponsePrivate(
+    PutUserPolicyQueueResponse * const q) : PutUserPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM PutUserPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutUserPolicyResponsePrivate::PutUserPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutUserPolicyResponse"));
+    /// @todo
+}

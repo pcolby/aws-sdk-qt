@@ -19,3 +19,85 @@
 
 #include "describevpcendpointservicepermissionsresponse.h"
 #include "describevpcendpointservicepermissionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcEndpointServicePermissionsResponse
+ *
+ * @brief  Handles EC2 DescribeVpcEndpointServicePermissions responses.
+ *
+ * @see    EC2Client::describeVpcEndpointServicePermissions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcEndpointServicePermissionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeVpcEndpointServicePermissionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVpcEndpointServicePermissionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeVpcEndpointServicePermissionsRequest * DescribeVpcEndpointServicePermissionsResponse::request() const
+{
+    Q_D(const DescribeVpcEndpointServicePermissionsResponse);
+    return static_cast<const DescribeVpcEndpointServicePermissionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeVpcEndpointServicePermissions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcEndpointServicePermissionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVpcEndpointServicePermissionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcEndpointServicePermissionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVpcEndpointServicePermissionsResponse instance.
+ */
+DescribeVpcEndpointServicePermissionsResponsePrivate::DescribeVpcEndpointServicePermissionsResponsePrivate(
+    DescribeVpcEndpointServicePermissionsQueueResponse * const q) : DescribeVpcEndpointServicePermissionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeVpcEndpointServicePermissionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVpcEndpointServicePermissionsResponsePrivate::DescribeVpcEndpointServicePermissionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVpcEndpointServicePermissionsResponse"));
+    /// @todo
+}

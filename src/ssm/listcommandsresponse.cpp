@@ -19,3 +19,85 @@
 
 #include "listcommandsresponse.h"
 #include "listcommandsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListCommandsResponse
+ *
+ * @brief  Handles SSM ListCommands responses.
+ *
+ * @see    SSMClient::listCommands
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCommandsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListCommandsResponsePrivate(this), parent)
+{
+    setRequest(new ListCommandsRequest(request));
+    setReply(reply);
+}
+
+const ListCommandsRequest * ListCommandsResponse::request() const
+{
+    Q_D(const ListCommandsResponse);
+    return static_cast<const ListCommandsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListCommands response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListCommandsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCommandsResponsePrivate
+ *
+ * @brief  Private implementation for ListCommandsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCommandsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListCommandsResponse instance.
+ */
+ListCommandsResponsePrivate::ListCommandsResponsePrivate(
+    ListCommandsQueueResponse * const q) : ListCommandsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListCommandsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListCommandsResponsePrivate::ListCommandsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListCommandsResponse"));
+    /// @todo
+}

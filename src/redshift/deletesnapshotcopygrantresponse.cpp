@@ -19,3 +19,85 @@
 
 #include "deletesnapshotcopygrantresponse.h"
 #include "deletesnapshotcopygrantresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteSnapshotCopyGrantResponse
+ *
+ * @brief  Handles Redshift DeleteSnapshotCopyGrant responses.
+ *
+ * @see    RedshiftClient::deleteSnapshotCopyGrant
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSnapshotCopyGrantResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DeleteSnapshotCopyGrantResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSnapshotCopyGrantRequest(request));
+    setReply(reply);
+}
+
+const DeleteSnapshotCopyGrantRequest * DeleteSnapshotCopyGrantResponse::request() const
+{
+    Q_D(const DeleteSnapshotCopyGrantResponse);
+    return static_cast<const DeleteSnapshotCopyGrantRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DeleteSnapshotCopyGrant response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSnapshotCopyGrantResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSnapshotCopyGrantResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSnapshotCopyGrantResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSnapshotCopyGrantResponse instance.
+ */
+DeleteSnapshotCopyGrantResponsePrivate::DeleteSnapshotCopyGrantResponsePrivate(
+    DeleteSnapshotCopyGrantQueueResponse * const q) : DeleteSnapshotCopyGrantPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DeleteSnapshotCopyGrantResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSnapshotCopyGrantResponsePrivate::DeleteSnapshotCopyGrantResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSnapshotCopyGrantResponse"));
+    /// @todo
+}

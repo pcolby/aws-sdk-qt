@@ -19,3 +19,85 @@
 
 #include "deleteportfolioresponse.h"
 #include "deleteportfolioresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DeletePortfolioResponse
+ *
+ * @brief  Handles ServiceCatalog DeletePortfolio responses.
+ *
+ * @see    ServiceCatalogClient::deletePortfolio
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePortfolioResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new DeletePortfolioResponsePrivate(this), parent)
+{
+    setRequest(new DeletePortfolioRequest(request));
+    setReply(reply);
+}
+
+const DeletePortfolioRequest * DeletePortfolioResponse::request() const
+{
+    Q_D(const DeletePortfolioResponse);
+    return static_cast<const DeletePortfolioRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog DeletePortfolio response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeletePortfolioResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePortfolioResponsePrivate
+ *
+ * @brief  Private implementation for DeletePortfolioResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePortfolioResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeletePortfolioResponse instance.
+ */
+DeletePortfolioResponsePrivate::DeletePortfolioResponsePrivate(
+    DeletePortfolioQueueResponse * const q) : DeletePortfolioPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog DeletePortfolioResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeletePortfolioResponsePrivate::DeletePortfolioResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeletePortfolioResponse"));
+    /// @todo
+}

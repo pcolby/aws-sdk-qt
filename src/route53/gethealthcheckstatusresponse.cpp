@@ -19,3 +19,85 @@
 
 #include "gethealthcheckstatusresponse.h"
 #include "gethealthcheckstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetHealthCheckStatusResponse
+ *
+ * @brief  Handles Route53 GetHealthCheckStatus responses.
+ *
+ * @see    Route53Client::getHealthCheckStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHealthCheckStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new GetHealthCheckStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetHealthCheckStatusRequest(request));
+    setReply(reply);
+}
+
+const GetHealthCheckStatusRequest * GetHealthCheckStatusResponse::request() const
+{
+    Q_D(const GetHealthCheckStatusResponse);
+    return static_cast<const GetHealthCheckStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 GetHealthCheckStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetHealthCheckStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHealthCheckStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetHealthCheckStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHealthCheckStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetHealthCheckStatusResponse instance.
+ */
+GetHealthCheckStatusResponsePrivate::GetHealthCheckStatusResponsePrivate(
+    GetHealthCheckStatusQueueResponse * const q) : GetHealthCheckStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 GetHealthCheckStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetHealthCheckStatusResponsePrivate::GetHealthCheckStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckStatusResponse"));
+    /// @todo
+}

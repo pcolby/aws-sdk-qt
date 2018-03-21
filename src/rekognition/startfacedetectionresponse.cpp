@@ -19,3 +19,85 @@
 
 #include "startfacedetectionresponse.h"
 #include "startfacedetectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartFaceDetectionResponse
+ *
+ * @brief  Handles Rekognition StartFaceDetection responses.
+ *
+ * @see    RekognitionClient::startFaceDetection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartFaceDetectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new StartFaceDetectionResponsePrivate(this), parent)
+{
+    setRequest(new StartFaceDetectionRequest(request));
+    setReply(reply);
+}
+
+const StartFaceDetectionRequest * StartFaceDetectionResponse::request() const
+{
+    Q_D(const StartFaceDetectionResponse);
+    return static_cast<const StartFaceDetectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition StartFaceDetection response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartFaceDetectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartFaceDetectionResponsePrivate
+ *
+ * @brief  Private implementation for StartFaceDetectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartFaceDetectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartFaceDetectionResponse instance.
+ */
+StartFaceDetectionResponsePrivate::StartFaceDetectionResponsePrivate(
+    StartFaceDetectionQueueResponse * const q) : StartFaceDetectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition StartFaceDetectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartFaceDetectionResponsePrivate::StartFaceDetectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartFaceDetectionResponse"));
+    /// @todo
+}

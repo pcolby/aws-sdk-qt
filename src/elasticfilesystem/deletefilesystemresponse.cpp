@@ -19,3 +19,85 @@
 
 #include "deletefilesystemresponse.h"
 #include "deletefilesystemresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DeleteFileSystemResponse
+ *
+ * @brief  Handles EFS DeleteFileSystem responses.
+ *
+ * @see    EFSClient::deleteFileSystem
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFileSystemResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EFSResponse(new DeleteFileSystemResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFileSystemRequest(request));
+    setReply(reply);
+}
+
+const DeleteFileSystemRequest * DeleteFileSystemResponse::request() const
+{
+    Q_D(const DeleteFileSystemResponse);
+    return static_cast<const DeleteFileSystemRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EFS DeleteFileSystem response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFileSystemResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFileSystemResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFileSystemResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFileSystemResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFileSystemResponse instance.
+ */
+DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
+    DeleteFileSystemQueueResponse * const q) : DeleteFileSystemPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EFS DeleteFileSystemResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFileSystemResponsePrivate::DeleteFileSystemResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFileSystemResponse"));
+    /// @todo
+}

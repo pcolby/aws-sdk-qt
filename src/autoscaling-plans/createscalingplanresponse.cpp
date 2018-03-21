@@ -19,3 +19,85 @@
 
 #include "createscalingplanresponse.h"
 #include "createscalingplanresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScalingPlans {
+
+/**
+ * @class  CreateScalingPlanResponse
+ *
+ * @brief  Handles AutoScalingPlans CreateScalingPlan responses.
+ *
+ * @see    AutoScalingPlansClient::createScalingPlan
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateScalingPlanResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingPlansResponse(new CreateScalingPlanResponsePrivate(this), parent)
+{
+    setRequest(new CreateScalingPlanRequest(request));
+    setReply(reply);
+}
+
+const CreateScalingPlanRequest * CreateScalingPlanResponse::request() const
+{
+    Q_D(const CreateScalingPlanResponse);
+    return static_cast<const CreateScalingPlanRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScalingPlans CreateScalingPlan response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateScalingPlanResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateScalingPlanResponsePrivate
+ *
+ * @brief  Private implementation for CreateScalingPlanResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateScalingPlanResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateScalingPlanResponse instance.
+ */
+CreateScalingPlanResponsePrivate::CreateScalingPlanResponsePrivate(
+    CreateScalingPlanQueueResponse * const q) : CreateScalingPlanPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScalingPlans CreateScalingPlanResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateScalingPlanResponsePrivate::CreateScalingPlanResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateScalingPlanResponse"));
+    /// @todo
+}

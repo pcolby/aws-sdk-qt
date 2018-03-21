@@ -19,3 +19,85 @@
 
 #include "deletematchmakingconfigurationresponse.h"
 #include "deletematchmakingconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DeleteMatchmakingConfigurationResponse
+ *
+ * @brief  Handles GameLift DeleteMatchmakingConfiguration responses.
+ *
+ * @see    GameLiftClient::deleteMatchmakingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteMatchmakingConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DeleteMatchmakingConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteMatchmakingConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DeleteMatchmakingConfigurationRequest * DeleteMatchmakingConfigurationResponse::request() const
+{
+    Q_D(const DeleteMatchmakingConfigurationResponse);
+    return static_cast<const DeleteMatchmakingConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DeleteMatchmakingConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteMatchmakingConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteMatchmakingConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMatchmakingConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteMatchmakingConfigurationResponse instance.
+ */
+DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationResponsePrivate(
+    DeleteMatchmakingConfigurationQueueResponse * const q) : DeleteMatchmakingConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DeleteMatchmakingConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteMatchmakingConfigurationResponse"));
+    /// @todo
+}

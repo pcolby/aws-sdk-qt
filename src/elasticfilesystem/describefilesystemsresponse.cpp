@@ -19,3 +19,85 @@
 
 #include "describefilesystemsresponse.h"
 #include "describefilesystemsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DescribeFileSystemsResponse
+ *
+ * @brief  Handles EFS DescribeFileSystems responses.
+ *
+ * @see    EFSClient::describeFileSystems
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFileSystemsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EFSResponse(new DescribeFileSystemsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeFileSystemsRequest(request));
+    setReply(reply);
+}
+
+const DescribeFileSystemsRequest * DescribeFileSystemsResponse::request() const
+{
+    Q_D(const DescribeFileSystemsResponse);
+    return static_cast<const DescribeFileSystemsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EFS DescribeFileSystems response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeFileSystemsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFileSystemsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeFileSystemsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFileSystemsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeFileSystemsResponse instance.
+ */
+DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
+    DescribeFileSystemsQueueResponse * const q) : DescribeFileSystemsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EFS DescribeFileSystemsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeFileSystemsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listbuildsforprojectresponse.h"
 #include "listbuildsforprojectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  ListBuildsForProjectResponse
+ *
+ * @brief  Handles CodeBuild ListBuildsForProject responses.
+ *
+ * @see    CodeBuildClient::listBuildsForProject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBuildsForProjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeBuildResponse(new ListBuildsForProjectResponsePrivate(this), parent)
+{
+    setRequest(new ListBuildsForProjectRequest(request));
+    setReply(reply);
+}
+
+const ListBuildsForProjectRequest * ListBuildsForProjectResponse::request() const
+{
+    Q_D(const ListBuildsForProjectResponse);
+    return static_cast<const ListBuildsForProjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeBuild ListBuildsForProject response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBuildsForProjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBuildsForProjectResponsePrivate
+ *
+ * @brief  Private implementation for ListBuildsForProjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBuildsForProjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBuildsForProjectResponse instance.
+ */
+ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponsePrivate(
+    ListBuildsForProjectQueueResponse * const q) : ListBuildsForProjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeBuild ListBuildsForProjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBuildsForProjectResponse"));
+    /// @todo
+}

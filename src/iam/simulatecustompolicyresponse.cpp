@@ -19,3 +19,85 @@
 
 #include "simulatecustompolicyresponse.h"
 #include "simulatecustompolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  SimulateCustomPolicyResponse
+ *
+ * @brief  Handles IAM SimulateCustomPolicy responses.
+ *
+ * @see    IAMClient::simulateCustomPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SimulateCustomPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new SimulateCustomPolicyResponsePrivate(this), parent)
+{
+    setRequest(new SimulateCustomPolicyRequest(request));
+    setReply(reply);
+}
+
+const SimulateCustomPolicyRequest * SimulateCustomPolicyResponse::request() const
+{
+    Q_D(const SimulateCustomPolicyResponse);
+    return static_cast<const SimulateCustomPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM SimulateCustomPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void SimulateCustomPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SimulateCustomPolicyResponsePrivate
+ *
+ * @brief  Private implementation for SimulateCustomPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SimulateCustomPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SimulateCustomPolicyResponse instance.
+ */
+SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponsePrivate(
+    SimulateCustomPolicyQueueResponse * const q) : SimulateCustomPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM SimulateCustomPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SimulateCustomPolicyResponse"));
+    /// @todo
+}

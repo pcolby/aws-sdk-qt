@@ -19,3 +19,85 @@
 
 #include "listentitiesforpolicyresponse.h"
 #include "listentitiesforpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListEntitiesForPolicyResponse
+ *
+ * @brief  Handles IAM ListEntitiesForPolicy responses.
+ *
+ * @see    IAMClient::listEntitiesForPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEntitiesForPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListEntitiesForPolicyResponsePrivate(this), parent)
+{
+    setRequest(new ListEntitiesForPolicyRequest(request));
+    setReply(reply);
+}
+
+const ListEntitiesForPolicyRequest * ListEntitiesForPolicyResponse::request() const
+{
+    Q_D(const ListEntitiesForPolicyResponse);
+    return static_cast<const ListEntitiesForPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListEntitiesForPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListEntitiesForPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEntitiesForPolicyResponsePrivate
+ *
+ * @brief  Private implementation for ListEntitiesForPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEntitiesForPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListEntitiesForPolicyResponse instance.
+ */
+ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponsePrivate(
+    ListEntitiesForPolicyQueueResponse * const q) : ListEntitiesForPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListEntitiesForPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListEntitiesForPolicyResponse"));
+    /// @todo
+}

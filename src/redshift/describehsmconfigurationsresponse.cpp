@@ -19,3 +19,85 @@
 
 #include "describehsmconfigurationsresponse.h"
 #include "describehsmconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeHsmConfigurationsResponse
+ *
+ * @brief  Handles Redshift DescribeHsmConfigurations responses.
+ *
+ * @see    RedshiftClient::describeHsmConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHsmConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeHsmConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeHsmConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeHsmConfigurationsRequest * DescribeHsmConfigurationsResponse::request() const
+{
+    Q_D(const DescribeHsmConfigurationsResponse);
+    return static_cast<const DescribeHsmConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeHsmConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeHsmConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHsmConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeHsmConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHsmConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeHsmConfigurationsResponse instance.
+ */
+DescribeHsmConfigurationsResponsePrivate::DescribeHsmConfigurationsResponsePrivate(
+    DescribeHsmConfigurationsQueueResponse * const q) : DescribeHsmConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeHsmConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeHsmConfigurationsResponsePrivate::DescribeHsmConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeHsmConfigurationsResponse"));
+    /// @todo
+}

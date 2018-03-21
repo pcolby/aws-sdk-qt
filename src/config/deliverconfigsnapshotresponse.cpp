@@ -19,3 +19,85 @@
 
 #include "deliverconfigsnapshotresponse.h"
 #include "deliverconfigsnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DeliverConfigSnapshotResponse
+ *
+ * @brief  Handles ConfigService DeliverConfigSnapshot responses.
+ *
+ * @see    ConfigServiceClient::deliverConfigSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeliverConfigSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DeliverConfigSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new DeliverConfigSnapshotRequest(request));
+    setReply(reply);
+}
+
+const DeliverConfigSnapshotRequest * DeliverConfigSnapshotResponse::request() const
+{
+    Q_D(const DeliverConfigSnapshotResponse);
+    return static_cast<const DeliverConfigSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DeliverConfigSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeliverConfigSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeliverConfigSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for DeliverConfigSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeliverConfigSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeliverConfigSnapshotResponse instance.
+ */
+DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponsePrivate(
+    DeliverConfigSnapshotQueueResponse * const q) : DeliverConfigSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DeliverConfigSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeliverConfigSnapshotResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "putfunctionconcurrencyresponse.h"
 #include "putfunctionconcurrencyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  PutFunctionConcurrencyResponse
+ *
+ * @brief  Handles Lambda PutFunctionConcurrency responses.
+ *
+ * @see    LambdaClient::putFunctionConcurrency
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutFunctionConcurrencyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new PutFunctionConcurrencyResponsePrivate(this), parent)
+{
+    setRequest(new PutFunctionConcurrencyRequest(request));
+    setReply(reply);
+}
+
+const PutFunctionConcurrencyRequest * PutFunctionConcurrencyResponse::request() const
+{
+    Q_D(const PutFunctionConcurrencyResponse);
+    return static_cast<const PutFunctionConcurrencyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda PutFunctionConcurrency response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutFunctionConcurrencyResponsePrivate
+ *
+ * @brief  Private implementation for PutFunctionConcurrencyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutFunctionConcurrencyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutFunctionConcurrencyResponse instance.
+ */
+PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponsePrivate(
+    PutFunctionConcurrencyQueueResponse * const q) : PutFunctionConcurrencyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda PutFunctionConcurrencyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutFunctionConcurrencyResponse"));
+    /// @todo
+}

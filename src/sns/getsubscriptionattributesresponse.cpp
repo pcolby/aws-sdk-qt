@@ -19,3 +19,85 @@
 
 #include "getsubscriptionattributesresponse.h"
 #include "getsubscriptionattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  GetSubscriptionAttributesResponse
+ *
+ * @brief  Handles SNS GetSubscriptionAttributes responses.
+ *
+ * @see    SNSClient::getSubscriptionAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSubscriptionAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new GetSubscriptionAttributesResponsePrivate(this), parent)
+{
+    setRequest(new GetSubscriptionAttributesRequest(request));
+    setReply(reply);
+}
+
+const GetSubscriptionAttributesRequest * GetSubscriptionAttributesResponse::request() const
+{
+    Q_D(const GetSubscriptionAttributesResponse);
+    return static_cast<const GetSubscriptionAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS GetSubscriptionAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSubscriptionAttributesResponsePrivate
+ *
+ * @brief  Private implementation for GetSubscriptionAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSubscriptionAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSubscriptionAttributesResponse instance.
+ */
+GetSubscriptionAttributesResponsePrivate::GetSubscriptionAttributesResponsePrivate(
+    GetSubscriptionAttributesQueueResponse * const q) : GetSubscriptionAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS GetSubscriptionAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSubscriptionAttributesResponsePrivate::GetSubscriptionAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSubscriptionAttributesResponse"));
+    /// @todo
+}

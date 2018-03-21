@@ -19,3 +19,85 @@
 
 #include "removetagsfromresourceresponse.h"
 #include "removetagsfromresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  RemoveTagsFromResourceResponse
+ *
+ * @brief  Handles DatabaseMigrationService RemoveTagsFromResource responses.
+ *
+ * @see    DatabaseMigrationServiceClient::removeTagsFromResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsFromResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
+{
+    setRequest(new RemoveTagsFromResourceRequest(request));
+    setReply(reply);
+}
+
+const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() const
+{
+    Q_D(const RemoveTagsFromResourceResponse);
+    return static_cast<const RemoveTagsFromResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService RemoveTagsFromResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsFromResourceResponsePrivate
+ *
+ * @brief  Private implementation for RemoveTagsFromResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveTagsFromResourceResponse instance.
+ */
+RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
+    RemoveTagsFromResourceQueueResponse * const q) : RemoveTagsFromResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService RemoveTagsFromResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromResourceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listattachedrolepoliciesresponse.h"
 #include "listattachedrolepoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListAttachedRolePoliciesResponse
+ *
+ * @brief  Handles IAM ListAttachedRolePolicies responses.
+ *
+ * @see    IAMClient::listAttachedRolePolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAttachedRolePoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListAttachedRolePoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListAttachedRolePoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListAttachedRolePoliciesRequest * ListAttachedRolePoliciesResponse::request() const
+{
+    Q_D(const ListAttachedRolePoliciesResponse);
+    return static_cast<const ListAttachedRolePoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListAttachedRolePolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAttachedRolePoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAttachedRolePoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListAttachedRolePoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAttachedRolePoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAttachedRolePoliciesResponse instance.
+ */
+ListAttachedRolePoliciesResponsePrivate::ListAttachedRolePoliciesResponsePrivate(
+    ListAttachedRolePoliciesQueueResponse * const q) : ListAttachedRolePoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListAttachedRolePoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAttachedRolePoliciesResponsePrivate::ListAttachedRolePoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAttachedRolePoliciesResponse"));
+    /// @todo
+}

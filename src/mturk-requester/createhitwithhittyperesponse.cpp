@@ -19,3 +19,85 @@
 
 #include "createhitwithhittyperesponse.h"
 #include "createhitwithhittyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  CreateHITWithHITTypeResponse
+ *
+ * @brief  Handles MTurk CreateHITWithHITType responses.
+ *
+ * @see    MTurkClient::createHITWithHITType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHITWithHITTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new CreateHITWithHITTypeResponsePrivate(this), parent)
+{
+    setRequest(new CreateHITWithHITTypeRequest(request));
+    setReply(reply);
+}
+
+const CreateHITWithHITTypeRequest * CreateHITWithHITTypeResponse::request() const
+{
+    Q_D(const CreateHITWithHITTypeResponse);
+    return static_cast<const CreateHITWithHITTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk CreateHITWithHITType response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateHITWithHITTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHITWithHITTypeResponsePrivate
+ *
+ * @brief  Private implementation for CreateHITWithHITTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHITWithHITTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateHITWithHITTypeResponse instance.
+ */
+CreateHITWithHITTypeResponsePrivate::CreateHITWithHITTypeResponsePrivate(
+    CreateHITWithHITTypeQueueResponse * const q) : CreateHITWithHITTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk CreateHITWithHITTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateHITWithHITTypeResponsePrivate::CreateHITWithHITTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateHITWithHITTypeResponse"));
+    /// @todo
+}

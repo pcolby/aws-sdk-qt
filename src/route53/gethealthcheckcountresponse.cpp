@@ -19,3 +19,85 @@
 
 #include "gethealthcheckcountresponse.h"
 #include "gethealthcheckcountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetHealthCheckCountResponse
+ *
+ * @brief  Handles Route53 GetHealthCheckCount responses.
+ *
+ * @see    Route53Client::getHealthCheckCount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHealthCheckCountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new GetHealthCheckCountResponsePrivate(this), parent)
+{
+    setRequest(new GetHealthCheckCountRequest(request));
+    setReply(reply);
+}
+
+const GetHealthCheckCountRequest * GetHealthCheckCountResponse::request() const
+{
+    Q_D(const GetHealthCheckCountResponse);
+    return static_cast<const GetHealthCheckCountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 GetHealthCheckCount response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetHealthCheckCountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHealthCheckCountResponsePrivate
+ *
+ * @brief  Private implementation for GetHealthCheckCountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHealthCheckCountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetHealthCheckCountResponse instance.
+ */
+GetHealthCheckCountResponsePrivate::GetHealthCheckCountResponsePrivate(
+    GetHealthCheckCountQueueResponse * const q) : GetHealthCheckCountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 GetHealthCheckCountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetHealthCheckCountResponsePrivate::GetHealthCheckCountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckCountResponse"));
+    /// @todo
+}

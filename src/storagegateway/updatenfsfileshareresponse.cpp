@@ -19,3 +19,85 @@
 
 #include "updatenfsfileshareresponse.h"
 #include "updatenfsfileshareresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  UpdateNFSFileShareResponse
+ *
+ * @brief  Handles StorageGateway UpdateNFSFileShare responses.
+ *
+ * @see    StorageGatewayClient::updateNFSFileShare
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateNFSFileShareResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new UpdateNFSFileShareResponsePrivate(this), parent)
+{
+    setRequest(new UpdateNFSFileShareRequest(request));
+    setReply(reply);
+}
+
+const UpdateNFSFileShareRequest * UpdateNFSFileShareResponse::request() const
+{
+    Q_D(const UpdateNFSFileShareResponse);
+    return static_cast<const UpdateNFSFileShareRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway UpdateNFSFileShare response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateNFSFileShareResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateNFSFileShareResponsePrivate
+ *
+ * @brief  Private implementation for UpdateNFSFileShareResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNFSFileShareResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateNFSFileShareResponse instance.
+ */
+UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponsePrivate(
+    UpdateNFSFileShareQueueResponse * const q) : UpdateNFSFileSharePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway UpdateNFSFileShareResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateNFSFileShareResponse"));
+    /// @todo
+}

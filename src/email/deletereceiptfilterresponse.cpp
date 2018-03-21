@@ -19,3 +19,85 @@
 
 #include "deletereceiptfilterresponse.h"
 #include "deletereceiptfilterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteReceiptFilterResponse
+ *
+ * @brief  Handles SES DeleteReceiptFilter responses.
+ *
+ * @see    SESClient::deleteReceiptFilter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReceiptFilterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DeleteReceiptFilterResponsePrivate(this), parent)
+{
+    setRequest(new DeleteReceiptFilterRequest(request));
+    setReply(reply);
+}
+
+const DeleteReceiptFilterRequest * DeleteReceiptFilterResponse::request() const
+{
+    Q_D(const DeleteReceiptFilterResponse);
+    return static_cast<const DeleteReceiptFilterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DeleteReceiptFilter response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteReceiptFilterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReceiptFilterResponsePrivate
+ *
+ * @brief  Private implementation for DeleteReceiptFilterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReceiptFilterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteReceiptFilterResponse instance.
+ */
+DeleteReceiptFilterResponsePrivate::DeleteReceiptFilterResponsePrivate(
+    DeleteReceiptFilterQueueResponse * const q) : DeleteReceiptFilterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DeleteReceiptFilterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteReceiptFilterResponsePrivate::DeleteReceiptFilterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteReceiptFilterResponse"));
+    /// @todo
+}

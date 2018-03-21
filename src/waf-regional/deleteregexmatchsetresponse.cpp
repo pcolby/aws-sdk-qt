@@ -19,3 +19,85 @@
 
 #include "deleteregexmatchsetresponse.h"
 #include "deleteregexmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  DeleteRegexMatchSetResponse
+ *
+ * @brief  Handles WAFRegional DeleteRegexMatchSet responses.
+ *
+ * @see    WAFRegionalClient::deleteRegexMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRegexMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new DeleteRegexMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRegexMatchSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
+{
+    Q_D(const DeleteRegexMatchSetResponse);
+    return static_cast<const DeleteRegexMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional DeleteRegexMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRegexMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRegexMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRegexMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRegexMatchSetResponse instance.
+ */
+DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
+    DeleteRegexMatchSetQueueResponse * const q) : DeleteRegexMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional DeleteRegexMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRegexMatchSetResponse"));
+    /// @todo
+}

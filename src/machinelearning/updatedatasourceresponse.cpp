@@ -19,3 +19,85 @@
 
 #include "updatedatasourceresponse.h"
 #include "updatedatasourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  UpdateDataSourceResponse
+ *
+ * @brief  Handles MachineLearning UpdateDataSource responses.
+ *
+ * @see    MachineLearningClient::updateDataSource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDataSourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new UpdateDataSourceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDataSourceRequest(request));
+    setReply(reply);
+}
+
+const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
+{
+    Q_D(const UpdateDataSourceResponse);
+    return static_cast<const UpdateDataSourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning UpdateDataSource response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDataSourceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDataSourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDataSourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDataSourceResponse instance.
+ */
+UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
+    UpdateDataSourceQueueResponse * const q) : UpdateDataSourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning UpdateDataSourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDataSourceResponsePrivate::UpdateDataSourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDataSourceResponse"));
+    /// @todo
+}

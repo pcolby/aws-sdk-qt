@@ -19,3 +19,85 @@
 
 #include "readjobresponse.h"
 #include "readjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  ReadJobResponse
+ *
+ * @brief  Handles ElasticTranscoder ReadJob responses.
+ *
+ * @see    ElasticTranscoderClient::readJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReadJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticTranscoderResponse(new ReadJobResponsePrivate(this), parent)
+{
+    setRequest(new ReadJobRequest(request));
+    setReply(reply);
+}
+
+const ReadJobRequest * ReadJobResponse::request() const
+{
+    Q_D(const ReadJobResponse);
+    return static_cast<const ReadJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticTranscoder ReadJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReadJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReadJobResponsePrivate
+ *
+ * @brief  Private implementation for ReadJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReadJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReadJobResponse instance.
+ */
+ReadJobResponsePrivate::ReadJobResponsePrivate(
+    ReadJobQueueResponse * const q) : ReadJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticTranscoder ReadJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReadJobResponsePrivate::ReadJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReadJobResponse"));
+    /// @todo
+}

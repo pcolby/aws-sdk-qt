@@ -19,3 +19,85 @@
 
 #include "describeinputresponse.h"
 #include "describeinputresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  DescribeInputResponse
+ *
+ * @brief  Handles MediaLive DescribeInput responses.
+ *
+ * @see    MediaLiveClient::describeInput
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInputResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaLiveResponse(new DescribeInputResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInputRequest(request));
+    setReply(reply);
+}
+
+const DescribeInputRequest * DescribeInputResponse::request() const
+{
+    Q_D(const DescribeInputResponse);
+    return static_cast<const DescribeInputRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaLive DescribeInput response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInputResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInputResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInputResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInputResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInputResponse instance.
+ */
+DescribeInputResponsePrivate::DescribeInputResponsePrivate(
+    DescribeInputQueueResponse * const q) : DescribeInputPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaLive DescribeInputResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInputResponsePrivate::DescribeInputResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInputResponse"));
+    /// @todo
+}

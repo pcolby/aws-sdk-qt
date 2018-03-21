@@ -19,3 +19,85 @@
 
 #include "modifyinstancecreditspecificationresponse.h"
 #include "modifyinstancecreditspecificationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyInstanceCreditSpecificationResponse
+ *
+ * @brief  Handles EC2 ModifyInstanceCreditSpecification responses.
+ *
+ * @see    EC2Client::modifyInstanceCreditSpecification
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyInstanceCreditSpecificationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyInstanceCreditSpecificationResponsePrivate(this), parent)
+{
+    setRequest(new ModifyInstanceCreditSpecificationRequest(request));
+    setReply(reply);
+}
+
+const ModifyInstanceCreditSpecificationRequest * ModifyInstanceCreditSpecificationResponse::request() const
+{
+    Q_D(const ModifyInstanceCreditSpecificationResponse);
+    return static_cast<const ModifyInstanceCreditSpecificationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyInstanceCreditSpecification response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyInstanceCreditSpecificationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyInstanceCreditSpecificationResponsePrivate
+ *
+ * @brief  Private implementation for ModifyInstanceCreditSpecificationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyInstanceCreditSpecificationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyInstanceCreditSpecificationResponse instance.
+ */
+ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificationResponsePrivate(
+    ModifyInstanceCreditSpecificationQueueResponse * const q) : ModifyInstanceCreditSpecificationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyInstanceCreditSpecificationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceCreditSpecificationResponse"));
+    /// @todo
+}

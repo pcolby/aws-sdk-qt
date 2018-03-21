@@ -19,3 +19,85 @@
 
 #include "renewdomainresponse.h"
 #include "renewdomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  RenewDomainResponse
+ *
+ * @brief  Handles Route53Domains RenewDomain responses.
+ *
+ * @see    Route53DomainsClient::renewDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RenewDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53DomainsResponse(new RenewDomainResponsePrivate(this), parent)
+{
+    setRequest(new RenewDomainRequest(request));
+    setReply(reply);
+}
+
+const RenewDomainRequest * RenewDomainResponse::request() const
+{
+    Q_D(const RenewDomainResponse);
+    return static_cast<const RenewDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53Domains RenewDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void RenewDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RenewDomainResponsePrivate
+ *
+ * @brief  Private implementation for RenewDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RenewDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RenewDomainResponse instance.
+ */
+RenewDomainResponsePrivate::RenewDomainResponsePrivate(
+    RenewDomainQueueResponse * const q) : RenewDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53Domains RenewDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RenewDomainResponsePrivate::RenewDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RenewDomainResponse"));
+    /// @todo
+}

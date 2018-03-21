@@ -19,3 +19,85 @@
 
 #include "createimagebuilderstreamingurlresponse.h"
 #include "createimagebuilderstreamingurlresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  CreateImageBuilderStreamingURLResponse
+ *
+ * @brief  Handles AppStream CreateImageBuilderStreamingURL responses.
+ *
+ * @see    AppStreamClient::createImageBuilderStreamingURL
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateImageBuilderStreamingURLResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new CreateImageBuilderStreamingURLResponsePrivate(this), parent)
+{
+    setRequest(new CreateImageBuilderStreamingURLRequest(request));
+    setReply(reply);
+}
+
+const CreateImageBuilderStreamingURLRequest * CreateImageBuilderStreamingURLResponse::request() const
+{
+    Q_D(const CreateImageBuilderStreamingURLResponse);
+    return static_cast<const CreateImageBuilderStreamingURLRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream CreateImageBuilderStreamingURL response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateImageBuilderStreamingURLResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateImageBuilderStreamingURLResponsePrivate
+ *
+ * @brief  Private implementation for CreateImageBuilderStreamingURLResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateImageBuilderStreamingURLResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateImageBuilderStreamingURLResponse instance.
+ */
+CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingURLResponsePrivate(
+    CreateImageBuilderStreamingURLQueueResponse * const q) : CreateImageBuilderStreamingURLPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream CreateImageBuilderStreamingURLResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingURLResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateImageBuilderStreamingURLResponse"));
+    /// @todo
+}

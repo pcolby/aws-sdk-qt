@@ -19,3 +19,85 @@
 
 #include "updatefunctiondefinitionresponse.h"
 #include "updatefunctiondefinitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  UpdateFunctionDefinitionResponse
+ *
+ * @brief  Handles Greengrass UpdateFunctionDefinition responses.
+ *
+ * @see    GreengrassClient::updateFunctionDefinition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFunctionDefinitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new UpdateFunctionDefinitionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateFunctionDefinitionRequest(request));
+    setReply(reply);
+}
+
+const UpdateFunctionDefinitionRequest * UpdateFunctionDefinitionResponse::request() const
+{
+    Q_D(const UpdateFunctionDefinitionResponse);
+    return static_cast<const UpdateFunctionDefinitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass UpdateFunctionDefinition response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateFunctionDefinitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFunctionDefinitionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateFunctionDefinitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFunctionDefinitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateFunctionDefinitionResponse instance.
+ */
+UpdateFunctionDefinitionResponsePrivate::UpdateFunctionDefinitionResponsePrivate(
+    UpdateFunctionDefinitionQueueResponse * const q) : UpdateFunctionDefinitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass UpdateFunctionDefinitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateFunctionDefinitionResponsePrivate::UpdateFunctionDefinitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateFunctionDefinitionResponse"));
+    /// @todo
+}

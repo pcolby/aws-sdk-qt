@@ -19,3 +19,85 @@
 
 #include "posttextresponse.h"
 #include "posttextresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexRuntimeService {
+
+/**
+ * @class  PostTextResponse
+ *
+ * @brief  Handles LexRuntimeService PostText responses.
+ *
+ * @see    LexRuntimeServiceClient::postText
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostTextResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexRuntimeServiceResponse(new PostTextResponsePrivate(this), parent)
+{
+    setRequest(new PostTextRequest(request));
+    setReply(reply);
+}
+
+const PostTextRequest * PostTextResponse::request() const
+{
+    Q_D(const PostTextResponse);
+    return static_cast<const PostTextRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexRuntimeService PostText response.
+ *
+ * @param  response  Response to parse.
+ */
+void PostTextResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PostTextResponsePrivate
+ *
+ * @brief  Private implementation for PostTextResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostTextResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PostTextResponse instance.
+ */
+PostTextResponsePrivate::PostTextResponsePrivate(
+    PostTextQueueResponse * const q) : PostTextPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexRuntimeService PostTextResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PostTextResponsePrivate::PostTextResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PostTextResponse"));
+    /// @todo
+}

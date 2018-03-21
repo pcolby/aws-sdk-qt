@@ -19,3 +19,85 @@
 
 #include "putbuckettaggingresponse.h"
 #include "putbuckettaggingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketTaggingResponse
+ *
+ * @brief  Handles S3 PutBucketTagging responses.
+ *
+ * @see    S3Client::putBucketTagging
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketTaggingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutBucketTaggingResponsePrivate(this), parent)
+{
+    setRequest(new PutBucketTaggingRequest(request));
+    setReply(reply);
+}
+
+const PutBucketTaggingRequest * PutBucketTaggingResponse::request() const
+{
+    Q_D(const PutBucketTaggingResponse);
+    return static_cast<const PutBucketTaggingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutBucketTagging response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBucketTaggingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketTaggingResponsePrivate
+ *
+ * @brief  Private implementation for PutBucketTaggingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketTaggingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBucketTaggingResponse instance.
+ */
+PutBucketTaggingResponsePrivate::PutBucketTaggingResponsePrivate(
+    PutBucketTaggingQueueResponse * const q) : PutBucketTaggingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutBucketTaggingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBucketTaggingResponsePrivate::PutBucketTaggingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBucketTaggingResponse"));
+    /// @todo
+}

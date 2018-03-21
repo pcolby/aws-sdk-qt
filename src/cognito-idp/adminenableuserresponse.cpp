@@ -19,3 +19,85 @@
 
 #include "adminenableuserresponse.h"
 #include "adminenableuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminEnableUserResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminEnableUser responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminEnableUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminEnableUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminEnableUserResponsePrivate(this), parent)
+{
+    setRequest(new AdminEnableUserRequest(request));
+    setReply(reply);
+}
+
+const AdminEnableUserRequest * AdminEnableUserResponse::request() const
+{
+    Q_D(const AdminEnableUserResponse);
+    return static_cast<const AdminEnableUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminEnableUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminEnableUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminEnableUserResponsePrivate
+ *
+ * @brief  Private implementation for AdminEnableUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminEnableUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminEnableUserResponse instance.
+ */
+AdminEnableUserResponsePrivate::AdminEnableUserResponsePrivate(
+    AdminEnableUserQueueResponse * const q) : AdminEnableUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminEnableUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminEnableUserResponsePrivate::AdminEnableUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminEnableUserResponse"));
+    /// @todo
+}

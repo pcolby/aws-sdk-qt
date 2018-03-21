@@ -19,3 +19,85 @@
 
 #include "updateautheventfeedbackresponse.h"
 #include "updateautheventfeedbackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateAuthEventFeedbackResponse
+ *
+ * @brief  Handles CognitoIdentityProvider UpdateAuthEventFeedback responses.
+ *
+ * @see    CognitoIdentityProviderClient::updateAuthEventFeedback
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAuthEventFeedbackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new UpdateAuthEventFeedbackResponsePrivate(this), parent)
+{
+    setRequest(new UpdateAuthEventFeedbackRequest(request));
+    setReply(reply);
+}
+
+const UpdateAuthEventFeedbackRequest * UpdateAuthEventFeedbackResponse::request() const
+{
+    Q_D(const UpdateAuthEventFeedbackResponse);
+    return static_cast<const UpdateAuthEventFeedbackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider UpdateAuthEventFeedback response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAuthEventFeedbackResponsePrivate
+ *
+ * @brief  Private implementation for UpdateAuthEventFeedbackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAuthEventFeedbackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateAuthEventFeedbackResponse instance.
+ */
+UpdateAuthEventFeedbackResponsePrivate::UpdateAuthEventFeedbackResponsePrivate(
+    UpdateAuthEventFeedbackQueueResponse * const q) : UpdateAuthEventFeedbackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider UpdateAuthEventFeedbackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateAuthEventFeedbackResponsePrivate::UpdateAuthEventFeedbackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateAuthEventFeedbackResponse"));
+    /// @todo
+}

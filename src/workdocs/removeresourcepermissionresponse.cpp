@@ -19,3 +19,85 @@
 
 #include "removeresourcepermissionresponse.h"
 #include "removeresourcepermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  RemoveResourcePermissionResponse
+ *
+ * @brief  Handles WorkDocs RemoveResourcePermission responses.
+ *
+ * @see    WorkDocsClient::removeResourcePermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveResourcePermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new RemoveResourcePermissionResponsePrivate(this), parent)
+{
+    setRequest(new RemoveResourcePermissionRequest(request));
+    setReply(reply);
+}
+
+const RemoveResourcePermissionRequest * RemoveResourcePermissionResponse::request() const
+{
+    Q_D(const RemoveResourcePermissionResponse);
+    return static_cast<const RemoveResourcePermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs RemoveResourcePermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveResourcePermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveResourcePermissionResponsePrivate
+ *
+ * @brief  Private implementation for RemoveResourcePermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveResourcePermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveResourcePermissionResponse instance.
+ */
+RemoveResourcePermissionResponsePrivate::RemoveResourcePermissionResponsePrivate(
+    RemoveResourcePermissionQueueResponse * const q) : RemoveResourcePermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs RemoveResourcePermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveResourcePermissionResponsePrivate::RemoveResourcePermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveResourcePermissionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "admininitiateauthresponse.h"
 #include "admininitiateauthresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminInitiateAuthResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminInitiateAuth responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminInitiateAuth
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminInitiateAuthResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminInitiateAuthResponsePrivate(this), parent)
+{
+    setRequest(new AdminInitiateAuthRequest(request));
+    setReply(reply);
+}
+
+const AdminInitiateAuthRequest * AdminInitiateAuthResponse::request() const
+{
+    Q_D(const AdminInitiateAuthResponse);
+    return static_cast<const AdminInitiateAuthRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminInitiateAuth response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminInitiateAuthResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminInitiateAuthResponsePrivate
+ *
+ * @brief  Private implementation for AdminInitiateAuthResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminInitiateAuthResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminInitiateAuthResponse instance.
+ */
+AdminInitiateAuthResponsePrivate::AdminInitiateAuthResponsePrivate(
+    AdminInitiateAuthQueueResponse * const q) : AdminInitiateAuthPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminInitiateAuthResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminInitiateAuthResponsePrivate::AdminInitiateAuthResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminInitiateAuthResponse"));
+    /// @todo
+}

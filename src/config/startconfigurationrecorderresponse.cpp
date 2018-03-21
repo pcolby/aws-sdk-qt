@@ -19,3 +19,85 @@
 
 #include "startconfigurationrecorderresponse.h"
 #include "startconfigurationrecorderresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  StartConfigurationRecorderResponse
+ *
+ * @brief  Handles ConfigService StartConfigurationRecorder responses.
+ *
+ * @see    ConfigServiceClient::startConfigurationRecorder
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartConfigurationRecorderResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new StartConfigurationRecorderResponsePrivate(this), parent)
+{
+    setRequest(new StartConfigurationRecorderRequest(request));
+    setReply(reply);
+}
+
+const StartConfigurationRecorderRequest * StartConfigurationRecorderResponse::request() const
+{
+    Q_D(const StartConfigurationRecorderResponse);
+    return static_cast<const StartConfigurationRecorderRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService StartConfigurationRecorder response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartConfigurationRecorderResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartConfigurationRecorderResponsePrivate
+ *
+ * @brief  Private implementation for StartConfigurationRecorderResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartConfigurationRecorderResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartConfigurationRecorderResponse instance.
+ */
+StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponsePrivate(
+    StartConfigurationRecorderQueueResponse * const q) : StartConfigurationRecorderPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService StartConfigurationRecorderResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartConfigurationRecorderResponse"));
+    /// @todo
+}

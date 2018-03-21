@@ -19,3 +19,85 @@
 
 #include "addtagstostreamresponse.h"
 #include "addtagstostreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  AddTagsToStreamResponse
+ *
+ * @brief  Handles Kinesis AddTagsToStream responses.
+ *
+ * @see    KinesisClient::addTagsToStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsToStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new AddTagsToStreamResponsePrivate(this), parent)
+{
+    setRequest(new AddTagsToStreamRequest(request));
+    setReply(reply);
+}
+
+const AddTagsToStreamRequest * AddTagsToStreamResponse::request() const
+{
+    Q_D(const AddTagsToStreamResponse);
+    return static_cast<const AddTagsToStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis AddTagsToStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddTagsToStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsToStreamResponsePrivate
+ *
+ * @brief  Private implementation for AddTagsToStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddTagsToStreamResponse instance.
+ */
+AddTagsToStreamResponsePrivate::AddTagsToStreamResponsePrivate(
+    AddTagsToStreamQueueResponse * const q) : AddTagsToStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis AddTagsToStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddTagsToStreamResponsePrivate::AddTagsToStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddTagsToStreamResponse"));
+    /// @todo
+}

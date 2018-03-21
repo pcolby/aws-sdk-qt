@@ -19,3 +19,85 @@
 
 #include "updatedistributionresponse.h"
 #include "updatedistributionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  UpdateDistributionResponse
+ *
+ * @brief  Handles CloudFront UpdateDistribution responses.
+ *
+ * @see    CloudFrontClient::updateDistribution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDistributionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new UpdateDistributionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDistributionRequest(request));
+    setReply(reply);
+}
+
+const UpdateDistributionRequest * UpdateDistributionResponse::request() const
+{
+    Q_D(const UpdateDistributionResponse);
+    return static_cast<const UpdateDistributionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront UpdateDistribution response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDistributionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDistributionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDistributionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDistributionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDistributionResponse instance.
+ */
+UpdateDistributionResponsePrivate::UpdateDistributionResponsePrivate(
+    UpdateDistributionQueueResponse * const q) : UpdateDistributionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront UpdateDistributionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDistributionResponsePrivate::UpdateDistributionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDistributionResponse"));
+    /// @todo
+}

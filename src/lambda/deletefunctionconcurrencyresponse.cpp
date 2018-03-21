@@ -19,3 +19,85 @@
 
 #include "deletefunctionconcurrencyresponse.h"
 #include "deletefunctionconcurrencyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  DeleteFunctionConcurrencyResponse
+ *
+ * @brief  Handles Lambda DeleteFunctionConcurrency responses.
+ *
+ * @see    LambdaClient::deleteFunctionConcurrency
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFunctionConcurrencyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new DeleteFunctionConcurrencyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFunctionConcurrencyRequest(request));
+    setReply(reply);
+}
+
+const DeleteFunctionConcurrencyRequest * DeleteFunctionConcurrencyResponse::request() const
+{
+    Q_D(const DeleteFunctionConcurrencyResponse);
+    return static_cast<const DeleteFunctionConcurrencyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda DeleteFunctionConcurrency response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFunctionConcurrencyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFunctionConcurrencyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionConcurrencyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFunctionConcurrencyResponse instance.
+ */
+DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponsePrivate(
+    DeleteFunctionConcurrencyQueueResponse * const q) : DeleteFunctionConcurrencyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda DeleteFunctionConcurrencyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionConcurrencyResponse"));
+    /// @todo
+}

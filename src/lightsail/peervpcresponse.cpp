@@ -19,3 +19,85 @@
 
 #include "peervpcresponse.h"
 #include "peervpcresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  PeerVpcResponse
+ *
+ * @brief  Handles Lightsail PeerVpc responses.
+ *
+ * @see    LightsailClient::peerVpc
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PeerVpcResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new PeerVpcResponsePrivate(this), parent)
+{
+    setRequest(new PeerVpcRequest(request));
+    setReply(reply);
+}
+
+const PeerVpcRequest * PeerVpcResponse::request() const
+{
+    Q_D(const PeerVpcResponse);
+    return static_cast<const PeerVpcRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail PeerVpc response.
+ *
+ * @param  response  Response to parse.
+ */
+void PeerVpcResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PeerVpcResponsePrivate
+ *
+ * @brief  Private implementation for PeerVpcResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PeerVpcResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PeerVpcResponse instance.
+ */
+PeerVpcResponsePrivate::PeerVpcResponsePrivate(
+    PeerVpcQueueResponse * const q) : PeerVpcPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail PeerVpcResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PeerVpcResponsePrivate::PeerVpcResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PeerVpcResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describevpcendpointconnectionnotificationsresponse.h"
 #include "describevpcendpointconnectionnotificationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcEndpointConnectionNotificationsResponse
+ *
+ * @brief  Handles EC2 DescribeVpcEndpointConnectionNotifications responses.
+ *
+ * @see    EC2Client::describeVpcEndpointConnectionNotifications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcEndpointConnectionNotificationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeVpcEndpointConnectionNotificationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVpcEndpointConnectionNotificationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeVpcEndpointConnectionNotificationsRequest * DescribeVpcEndpointConnectionNotificationsResponse::request() const
+{
+    Q_D(const DescribeVpcEndpointConnectionNotificationsResponse);
+    return static_cast<const DescribeVpcEndpointConnectionNotificationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeVpcEndpointConnectionNotifications response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcEndpointConnectionNotificationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVpcEndpointConnectionNotificationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVpcEndpointConnectionNotificationsResponse instance.
+ */
+DescribeVpcEndpointConnectionNotificationsResponsePrivate::DescribeVpcEndpointConnectionNotificationsResponsePrivate(
+    DescribeVpcEndpointConnectionNotificationsQueueResponse * const q) : DescribeVpcEndpointConnectionNotificationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeVpcEndpointConnectionNotificationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVpcEndpointConnectionNotificationsResponsePrivate::DescribeVpcEndpointConnectionNotificationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVpcEndpointConnectionNotificationsResponse"));
+    /// @todo
+}

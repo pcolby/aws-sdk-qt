@@ -19,3 +19,85 @@
 
 #include "setsecuritygroupsresponse.h"
 #include "setsecuritygroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  SetSecurityGroupsResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 SetSecurityGroups responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::setSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetSecurityGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new SetSecurityGroupsResponsePrivate(this), parent)
+{
+    setRequest(new SetSecurityGroupsRequest(request));
+    setReply(reply);
+}
+
+const SetSecurityGroupsRequest * SetSecurityGroupsResponse::request() const
+{
+    Q_D(const SetSecurityGroupsResponse);
+    return static_cast<const SetSecurityGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 SetSecurityGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetSecurityGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetSecurityGroupsResponsePrivate
+ *
+ * @brief  Private implementation for SetSecurityGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetSecurityGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetSecurityGroupsResponse instance.
+ */
+SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponsePrivate(
+    SetSecurityGroupsQueueResponse * const q) : SetSecurityGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 SetSecurityGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetSecurityGroupsResponse"));
+    /// @todo
+}

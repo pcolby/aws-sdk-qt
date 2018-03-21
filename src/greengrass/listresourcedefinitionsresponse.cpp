@@ -19,3 +19,85 @@
 
 #include "listresourcedefinitionsresponse.h"
 #include "listresourcedefinitionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListResourceDefinitionsResponse
+ *
+ * @brief  Handles Greengrass ListResourceDefinitions responses.
+ *
+ * @see    GreengrassClient::listResourceDefinitions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourceDefinitionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListResourceDefinitionsResponsePrivate(this), parent)
+{
+    setRequest(new ListResourceDefinitionsRequest(request));
+    setReply(reply);
+}
+
+const ListResourceDefinitionsRequest * ListResourceDefinitionsResponse::request() const
+{
+    Q_D(const ListResourceDefinitionsResponse);
+    return static_cast<const ListResourceDefinitionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListResourceDefinitions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListResourceDefinitionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourceDefinitionsResponsePrivate
+ *
+ * @brief  Private implementation for ListResourceDefinitionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceDefinitionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListResourceDefinitionsResponse instance.
+ */
+ListResourceDefinitionsResponsePrivate::ListResourceDefinitionsResponsePrivate(
+    ListResourceDefinitionsQueueResponse * const q) : ListResourceDefinitionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListResourceDefinitionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListResourceDefinitionsResponsePrivate::ListResourceDefinitionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListResourceDefinitionsResponse"));
+    /// @todo
+}

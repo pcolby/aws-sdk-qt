@@ -19,3 +19,85 @@
 
 #include "listapplicationversionsresponse.h"
 #include "listapplicationversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  ListApplicationVersionsResponse
+ *
+ * @brief  Handles ServerlessApplicationRepository ListApplicationVersions responses.
+ *
+ * @see    ServerlessApplicationRepositoryClient::listApplicationVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListApplicationVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServerlessApplicationRepositoryResponse(new ListApplicationVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListApplicationVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListApplicationVersionsRequest * ListApplicationVersionsResponse::request() const
+{
+    Q_D(const ListApplicationVersionsResponse);
+    return static_cast<const ListApplicationVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServerlessApplicationRepository ListApplicationVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListApplicationVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListApplicationVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListApplicationVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListApplicationVersionsResponse instance.
+ */
+ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponsePrivate(
+    ListApplicationVersionsQueueResponse * const q) : ListApplicationVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServerlessApplicationRepository ListApplicationVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListApplicationVersionsResponse"));
+    /// @todo
+}

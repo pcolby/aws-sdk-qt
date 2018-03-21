@@ -19,3 +19,85 @@
 
 #include "createenvironmentresponse.h"
 #include "createenvironmentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  CreateEnvironmentResponse
+ *
+ * @brief  Handles ElasticBeanstalk CreateEnvironment responses.
+ *
+ * @see    ElasticBeanstalkClient::createEnvironment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEnvironmentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new CreateEnvironmentResponsePrivate(this), parent)
+{
+    setRequest(new CreateEnvironmentRequest(request));
+    setReply(reply);
+}
+
+const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
+{
+    Q_D(const CreateEnvironmentResponse);
+    return static_cast<const CreateEnvironmentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk CreateEnvironment response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateEnvironmentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEnvironmentResponsePrivate
+ *
+ * @brief  Private implementation for CreateEnvironmentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEnvironmentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateEnvironmentResponse instance.
+ */
+CreateEnvironmentResponsePrivate::CreateEnvironmentResponsePrivate(
+    CreateEnvironmentQueueResponse * const q) : CreateEnvironmentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk CreateEnvironmentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateEnvironmentResponsePrivate::CreateEnvironmentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentResponse"));
+    /// @todo
+}

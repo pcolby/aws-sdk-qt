@@ -19,3 +19,85 @@
 
 #include "startimportresponse.h"
 #include "startimportresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  StartImportResponse
+ *
+ * @brief  Handles LexModelBuildingService StartImport responses.
+ *
+ * @see    LexModelBuildingServiceClient::startImport
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartImportResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new StartImportResponsePrivate(this), parent)
+{
+    setRequest(new StartImportRequest(request));
+    setReply(reply);
+}
+
+const StartImportRequest * StartImportResponse::request() const
+{
+    Q_D(const StartImportResponse);
+    return static_cast<const StartImportRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService StartImport response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartImportResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartImportResponsePrivate
+ *
+ * @brief  Private implementation for StartImportResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartImportResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartImportResponse instance.
+ */
+StartImportResponsePrivate::StartImportResponsePrivate(
+    StartImportQueueResponse * const q) : StartImportPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService StartImportResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartImportResponsePrivate::StartImportResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartImportResponse"));
+    /// @todo
+}

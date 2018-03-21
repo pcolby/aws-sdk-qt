@@ -19,3 +19,85 @@
 
 #include "listsqlinjectionmatchsetsresponse.h"
 #include "listsqlinjectionmatchsetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListSqlInjectionMatchSetsResponse
+ *
+ * @brief  Handles WAF ListSqlInjectionMatchSets responses.
+ *
+ * @see    WAFClient::listSqlInjectionMatchSets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSqlInjectionMatchSetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new ListSqlInjectionMatchSetsResponsePrivate(this), parent)
+{
+    setRequest(new ListSqlInjectionMatchSetsRequest(request));
+    setReply(reply);
+}
+
+const ListSqlInjectionMatchSetsRequest * ListSqlInjectionMatchSetsResponse::request() const
+{
+    Q_D(const ListSqlInjectionMatchSetsResponse);
+    return static_cast<const ListSqlInjectionMatchSetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF ListSqlInjectionMatchSets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListSqlInjectionMatchSetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSqlInjectionMatchSetsResponsePrivate
+ *
+ * @brief  Private implementation for ListSqlInjectionMatchSetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSqlInjectionMatchSetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListSqlInjectionMatchSetsResponse instance.
+ */
+ListSqlInjectionMatchSetsResponsePrivate::ListSqlInjectionMatchSetsResponsePrivate(
+    ListSqlInjectionMatchSetsQueueResponse * const q) : ListSqlInjectionMatchSetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF ListSqlInjectionMatchSetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListSqlInjectionMatchSetsResponsePrivate::ListSqlInjectionMatchSetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListSqlInjectionMatchSetsResponse"));
+    /// @todo
+}

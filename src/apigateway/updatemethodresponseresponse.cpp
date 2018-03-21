@@ -19,3 +19,85 @@
 
 #include "updatemethodresponseresponse.h"
 #include "updatemethodresponseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateMethodResponseResponse
+ *
+ * @brief  Handles APIGateway UpdateMethodResponse responses.
+ *
+ * @see    APIGatewayClient::updateMethodResponse
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateMethodResponseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new UpdateMethodResponseResponsePrivate(this), parent)
+{
+    setRequest(new UpdateMethodResponseRequest(request));
+    setReply(reply);
+}
+
+const UpdateMethodResponseRequest * UpdateMethodResponseResponse::request() const
+{
+    Q_D(const UpdateMethodResponseResponse);
+    return static_cast<const UpdateMethodResponseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway UpdateMethodResponse response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateMethodResponseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateMethodResponseResponsePrivate
+ *
+ * @brief  Private implementation for UpdateMethodResponseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMethodResponseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateMethodResponseResponse instance.
+ */
+UpdateMethodResponseResponsePrivate::UpdateMethodResponseResponsePrivate(
+    UpdateMethodResponseQueueResponse * const q) : UpdateMethodResponsePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway UpdateMethodResponseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateMethodResponseResponsePrivate::UpdateMethodResponseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateMethodResponseResponse"));
+    /// @todo
+}

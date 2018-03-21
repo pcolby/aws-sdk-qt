@@ -19,3 +19,85 @@
 
 #include "describepoliciesresponse.h"
 #include "describepoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribePoliciesResponse
+ *
+ * @brief  Handles AutoScaling DescribePolicies responses.
+ *
+ * @see    AutoScalingClient::describePolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribePoliciesResponsePrivate(this), parent)
+{
+    setRequest(new DescribePoliciesRequest(request));
+    setReply(reply);
+}
+
+const DescribePoliciesRequest * DescribePoliciesResponse::request() const
+{
+    Q_D(const DescribePoliciesResponse);
+    return static_cast<const DescribePoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribePolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePoliciesResponsePrivate
+ *
+ * @brief  Private implementation for DescribePoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePoliciesResponse instance.
+ */
+DescribePoliciesResponsePrivate::DescribePoliciesResponsePrivate(
+    DescribePoliciesQueueResponse * const q) : DescribePoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribePoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePoliciesResponsePrivate::DescribePoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePoliciesResponse"));
+    /// @todo
+}

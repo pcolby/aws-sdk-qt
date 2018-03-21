@@ -19,3 +19,85 @@
 
 #include "getvpclinksresponse.h"
 #include "getvpclinksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetVpcLinksResponse
+ *
+ * @brief  Handles APIGateway GetVpcLinks responses.
+ *
+ * @see    APIGatewayClient::getVpcLinks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetVpcLinksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetVpcLinksResponsePrivate(this), parent)
+{
+    setRequest(new GetVpcLinksRequest(request));
+    setReply(reply);
+}
+
+const GetVpcLinksRequest * GetVpcLinksResponse::request() const
+{
+    Q_D(const GetVpcLinksResponse);
+    return static_cast<const GetVpcLinksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetVpcLinks response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetVpcLinksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetVpcLinksResponsePrivate
+ *
+ * @brief  Private implementation for GetVpcLinksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetVpcLinksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetVpcLinksResponse instance.
+ */
+GetVpcLinksResponsePrivate::GetVpcLinksResponsePrivate(
+    GetVpcLinksQueueResponse * const q) : GetVpcLinksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetVpcLinksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetVpcLinksResponsePrivate::GetVpcLinksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetVpcLinksResponse"));
+    /// @todo
+}

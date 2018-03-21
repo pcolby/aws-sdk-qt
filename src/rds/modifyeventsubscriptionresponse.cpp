@@ -19,3 +19,85 @@
 
 #include "modifyeventsubscriptionresponse.h"
 #include "modifyeventsubscriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyEventSubscriptionResponse
+ *
+ * @brief  Handles RDS ModifyEventSubscription responses.
+ *
+ * @see    RDSClient::modifyEventSubscription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyEventSubscriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
+{
+    setRequest(new ModifyEventSubscriptionRequest(request));
+    setReply(reply);
+}
+
+const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request() const
+{
+    Q_D(const ModifyEventSubscriptionResponse);
+    return static_cast<const ModifyEventSubscriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS ModifyEventSubscription response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyEventSubscriptionResponsePrivate
+ *
+ * @brief  Private implementation for ModifyEventSubscriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyEventSubscriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyEventSubscriptionResponse instance.
+ */
+ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
+    ModifyEventSubscriptionQueueResponse * const q) : ModifyEventSubscriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS ModifyEventSubscriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyEventSubscriptionResponse"));
+    /// @todo
+}

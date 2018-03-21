@@ -19,3 +19,85 @@
 
 #include "signalresourceresponse.h"
 #include "signalresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  SignalResourceResponse
+ *
+ * @brief  Handles CloudFormation SignalResource responses.
+ *
+ * @see    CloudFormationClient::signalResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SignalResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new SignalResourceResponsePrivate(this), parent)
+{
+    setRequest(new SignalResourceRequest(request));
+    setReply(reply);
+}
+
+const SignalResourceRequest * SignalResourceResponse::request() const
+{
+    Q_D(const SignalResourceResponse);
+    return static_cast<const SignalResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation SignalResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void SignalResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SignalResourceResponsePrivate
+ *
+ * @brief  Private implementation for SignalResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SignalResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SignalResourceResponse instance.
+ */
+SignalResourceResponsePrivate::SignalResourceResponsePrivate(
+    SignalResourceQueueResponse * const q) : SignalResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation SignalResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SignalResourceResponsePrivate::SignalResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SignalResourceResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "registerscalabletargetresponse.h"
 #include "registerscalabletargetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  RegisterScalableTargetResponse
+ *
+ * @brief  Handles ApplicationAutoScaling RegisterScalableTarget responses.
+ *
+ * @see    ApplicationAutoScalingClient::registerScalableTarget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterScalableTargetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationAutoScalingResponse(new RegisterScalableTargetResponsePrivate(this), parent)
+{
+    setRequest(new RegisterScalableTargetRequest(request));
+    setReply(reply);
+}
+
+const RegisterScalableTargetRequest * RegisterScalableTargetResponse::request() const
+{
+    Q_D(const RegisterScalableTargetResponse);
+    return static_cast<const RegisterScalableTargetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationAutoScaling RegisterScalableTarget response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterScalableTargetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterScalableTargetResponsePrivate
+ *
+ * @brief  Private implementation for RegisterScalableTargetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterScalableTargetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterScalableTargetResponse instance.
+ */
+RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponsePrivate(
+    RegisterScalableTargetQueueResponse * const q) : RegisterScalableTargetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationAutoScaling RegisterScalableTargetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterScalableTargetResponse"));
+    /// @todo
+}

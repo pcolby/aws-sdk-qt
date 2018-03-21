@@ -19,3 +19,85 @@
 
 #include "listrolepoliciesresponse.h"
 #include "listrolepoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListRolePoliciesResponse
+ *
+ * @brief  Handles IAM ListRolePolicies responses.
+ *
+ * @see    IAMClient::listRolePolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRolePoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListRolePoliciesResponsePrivate(this), parent)
+{
+    setRequest(new ListRolePoliciesRequest(request));
+    setReply(reply);
+}
+
+const ListRolePoliciesRequest * ListRolePoliciesResponse::request() const
+{
+    Q_D(const ListRolePoliciesResponse);
+    return static_cast<const ListRolePoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListRolePolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListRolePoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRolePoliciesResponsePrivate
+ *
+ * @brief  Private implementation for ListRolePoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRolePoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListRolePoliciesResponse instance.
+ */
+ListRolePoliciesResponsePrivate::ListRolePoliciesResponsePrivate(
+    ListRolePoliciesQueueResponse * const q) : ListRolePoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListRolePoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListRolePoliciesResponsePrivate::ListRolePoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListRolePoliciesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createelasticsearchdomainresponse.h"
 #include "createelasticsearchdomainresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  CreateElasticsearchDomainResponse
+ *
+ * @brief  Handles ElasticsearchService CreateElasticsearchDomain responses.
+ *
+ * @see    ElasticsearchServiceClient::createElasticsearchDomain
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateElasticsearchDomainResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticsearchServiceResponse(new CreateElasticsearchDomainResponsePrivate(this), parent)
+{
+    setRequest(new CreateElasticsearchDomainRequest(request));
+    setReply(reply);
+}
+
+const CreateElasticsearchDomainRequest * CreateElasticsearchDomainResponse::request() const
+{
+    Q_D(const CreateElasticsearchDomainResponse);
+    return static_cast<const CreateElasticsearchDomainRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticsearchService CreateElasticsearchDomain response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateElasticsearchDomainResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateElasticsearchDomainResponsePrivate
+ *
+ * @brief  Private implementation for CreateElasticsearchDomainResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateElasticsearchDomainResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateElasticsearchDomainResponse instance.
+ */
+CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponsePrivate(
+    CreateElasticsearchDomainQueueResponse * const q) : CreateElasticsearchDomainPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticsearchService CreateElasticsearchDomainResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateElasticsearchDomainResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleterealtimeendpointresponse.h"
 #include "deleterealtimeendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  DeleteRealtimeEndpointResponse
+ *
+ * @brief  Handles MachineLearning DeleteRealtimeEndpoint responses.
+ *
+ * @see    MachineLearningClient::deleteRealtimeEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRealtimeEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new DeleteRealtimeEndpointResponsePrivate(this), parent)
+{
+    setRequest(new DeleteRealtimeEndpointRequest(request));
+    setReply(reply);
+}
+
+const DeleteRealtimeEndpointRequest * DeleteRealtimeEndpointResponse::request() const
+{
+    Q_D(const DeleteRealtimeEndpointResponse);
+    return static_cast<const DeleteRealtimeEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning DeleteRealtimeEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteRealtimeEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRealtimeEndpointResponsePrivate
+ *
+ * @brief  Private implementation for DeleteRealtimeEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRealtimeEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteRealtimeEndpointResponse instance.
+ */
+DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponsePrivate(
+    DeleteRealtimeEndpointQueueResponse * const q) : DeleteRealtimeEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning DeleteRealtimeEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteRealtimeEndpointResponse"));
+    /// @todo
+}

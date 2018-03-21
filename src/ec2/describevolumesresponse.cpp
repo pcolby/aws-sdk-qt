@@ -19,3 +19,85 @@
 
 #include "describevolumesresponse.h"
 #include "describevolumesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVolumesResponse
+ *
+ * @brief  Handles EC2 DescribeVolumes responses.
+ *
+ * @see    EC2Client::describeVolumes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVolumesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeVolumesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVolumesRequest(request));
+    setReply(reply);
+}
+
+const DescribeVolumesRequest * DescribeVolumesResponse::request() const
+{
+    Q_D(const DescribeVolumesResponse);
+    return static_cast<const DescribeVolumesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeVolumes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVolumesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVolumesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVolumesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVolumesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVolumesResponse instance.
+ */
+DescribeVolumesResponsePrivate::DescribeVolumesResponsePrivate(
+    DescribeVolumesQueueResponse * const q) : DescribeVolumesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeVolumesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVolumesResponsePrivate::DescribeVolumesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVolumesResponse"));
+    /// @todo
+}

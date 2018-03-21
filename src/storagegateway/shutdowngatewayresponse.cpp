@@ -19,3 +19,85 @@
 
 #include "shutdowngatewayresponse.h"
 #include "shutdowngatewayresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ShutdownGatewayResponse
+ *
+ * @brief  Handles StorageGateway ShutdownGateway responses.
+ *
+ * @see    StorageGatewayClient::shutdownGateway
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ShutdownGatewayResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new ShutdownGatewayResponsePrivate(this), parent)
+{
+    setRequest(new ShutdownGatewayRequest(request));
+    setReply(reply);
+}
+
+const ShutdownGatewayRequest * ShutdownGatewayResponse::request() const
+{
+    Q_D(const ShutdownGatewayResponse);
+    return static_cast<const ShutdownGatewayRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway ShutdownGateway response.
+ *
+ * @param  response  Response to parse.
+ */
+void ShutdownGatewayResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ShutdownGatewayResponsePrivate
+ *
+ * @brief  Private implementation for ShutdownGatewayResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ShutdownGatewayResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ShutdownGatewayResponse instance.
+ */
+ShutdownGatewayResponsePrivate::ShutdownGatewayResponsePrivate(
+    ShutdownGatewayQueueResponse * const q) : ShutdownGatewayPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway ShutdownGatewayResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ShutdownGatewayResponsePrivate::ShutdownGatewayResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ShutdownGatewayResponse"));
+    /// @todo
+}

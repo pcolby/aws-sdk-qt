@@ -19,3 +19,85 @@
 
 #include "getmappingresponse.h"
 #include "getmappingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetMappingResponse
+ *
+ * @brief  Handles Glue GetMapping responses.
+ *
+ * @see    GlueClient::getMapping
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMappingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetMappingResponsePrivate(this), parent)
+{
+    setRequest(new GetMappingRequest(request));
+    setReply(reply);
+}
+
+const GetMappingRequest * GetMappingResponse::request() const
+{
+    Q_D(const GetMappingResponse);
+    return static_cast<const GetMappingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetMapping response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetMappingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMappingResponsePrivate
+ *
+ * @brief  Private implementation for GetMappingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMappingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetMappingResponse instance.
+ */
+GetMappingResponsePrivate::GetMappingResponsePrivate(
+    GetMappingQueueResponse * const q) : GetMappingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetMappingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetMappingResponsePrivate::GetMappingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetMappingResponse"));
+    /// @todo
+}

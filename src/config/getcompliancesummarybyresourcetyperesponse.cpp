@@ -19,3 +19,85 @@
 
 #include "getcompliancesummarybyresourcetyperesponse.h"
 #include "getcompliancesummarybyresourcetyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  GetComplianceSummaryByResourceTypeResponse
+ *
+ * @brief  Handles ConfigService GetComplianceSummaryByResourceType responses.
+ *
+ * @see    ConfigServiceClient::getComplianceSummaryByResourceType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetComplianceSummaryByResourceTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new GetComplianceSummaryByResourceTypeResponsePrivate(this), parent)
+{
+    setRequest(new GetComplianceSummaryByResourceTypeRequest(request));
+    setReply(reply);
+}
+
+const GetComplianceSummaryByResourceTypeRequest * GetComplianceSummaryByResourceTypeResponse::request() const
+{
+    Q_D(const GetComplianceSummaryByResourceTypeResponse);
+    return static_cast<const GetComplianceSummaryByResourceTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService GetComplianceSummaryByResourceType response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetComplianceSummaryByResourceTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetComplianceSummaryByResourceTypeResponsePrivate
+ *
+ * @brief  Private implementation for GetComplianceSummaryByResourceTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetComplianceSummaryByResourceTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetComplianceSummaryByResourceTypeResponse instance.
+ */
+GetComplianceSummaryByResourceTypeResponsePrivate::GetComplianceSummaryByResourceTypeResponsePrivate(
+    GetComplianceSummaryByResourceTypeQueueResponse * const q) : GetComplianceSummaryByResourceTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService GetComplianceSummaryByResourceTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetComplianceSummaryByResourceTypeResponsePrivate::GetComplianceSummaryByResourceTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetComplianceSummaryByResourceTypeResponse"));
+    /// @todo
+}

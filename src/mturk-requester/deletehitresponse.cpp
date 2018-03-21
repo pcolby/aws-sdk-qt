@@ -19,3 +19,85 @@
 
 #include "deletehitresponse.h"
 #include "deletehitresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  DeleteHITResponse
+ *
+ * @brief  Handles MTurk DeleteHIT responses.
+ *
+ * @see    MTurkClient::deleteHIT
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHITResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MTurkResponse(new DeleteHITResponsePrivate(this), parent)
+{
+    setRequest(new DeleteHITRequest(request));
+    setReply(reply);
+}
+
+const DeleteHITRequest * DeleteHITResponse::request() const
+{
+    Q_D(const DeleteHITResponse);
+    return static_cast<const DeleteHITRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MTurk DeleteHIT response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteHITResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHITResponsePrivate
+ *
+ * @brief  Private implementation for DeleteHITResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHITResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteHITResponse instance.
+ */
+DeleteHITResponsePrivate::DeleteHITResponsePrivate(
+    DeleteHITQueueResponse * const q) : DeleteHITPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MTurk DeleteHITResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteHITResponsePrivate::DeleteHITResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteHITResponse"));
+    /// @todo
+}

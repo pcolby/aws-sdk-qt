@@ -19,3 +19,85 @@
 
 #include "putidentitypolicyresponse.h"
 #include "putidentitypolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  PutIdentityPolicyResponse
+ *
+ * @brief  Handles SES PutIdentityPolicy responses.
+ *
+ * @see    SESClient::putIdentityPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutIdentityPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new PutIdentityPolicyResponsePrivate(this), parent)
+{
+    setRequest(new PutIdentityPolicyRequest(request));
+    setReply(reply);
+}
+
+const PutIdentityPolicyRequest * PutIdentityPolicyResponse::request() const
+{
+    Q_D(const PutIdentityPolicyResponse);
+    return static_cast<const PutIdentityPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES PutIdentityPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutIdentityPolicyResponsePrivate
+ *
+ * @brief  Private implementation for PutIdentityPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutIdentityPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutIdentityPolicyResponse instance.
+ */
+PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
+    PutIdentityPolicyQueueResponse * const q) : PutIdentityPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES PutIdentityPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutIdentityPolicyResponse"));
+    /// @todo
+}

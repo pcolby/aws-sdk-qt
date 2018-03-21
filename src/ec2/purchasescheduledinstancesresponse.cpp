@@ -19,3 +19,85 @@
 
 #include "purchasescheduledinstancesresponse.h"
 #include "purchasescheduledinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  PurchaseScheduledInstancesResponse
+ *
+ * @brief  Handles EC2 PurchaseScheduledInstances responses.
+ *
+ * @see    EC2Client::purchaseScheduledInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseScheduledInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new PurchaseScheduledInstancesResponsePrivate(this), parent)
+{
+    setRequest(new PurchaseScheduledInstancesRequest(request));
+    setReply(reply);
+}
+
+const PurchaseScheduledInstancesRequest * PurchaseScheduledInstancesResponse::request() const
+{
+    Q_D(const PurchaseScheduledInstancesResponse);
+    return static_cast<const PurchaseScheduledInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 PurchaseScheduledInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void PurchaseScheduledInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseScheduledInstancesResponsePrivate
+ *
+ * @brief  Private implementation for PurchaseScheduledInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseScheduledInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PurchaseScheduledInstancesResponse instance.
+ */
+PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponsePrivate(
+    PurchaseScheduledInstancesQueueResponse * const q) : PurchaseScheduledInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 PurchaseScheduledInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PurchaseScheduledInstancesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "registerdeviceresponse.h"
 #include "registerdeviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  RegisterDeviceResponse
+ *
+ * @brief  Handles CognitoSync RegisterDevice responses.
+ *
+ * @see    CognitoSyncClient::registerDevice
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterDeviceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new RegisterDeviceResponsePrivate(this), parent)
+{
+    setRequest(new RegisterDeviceRequest(request));
+    setReply(reply);
+}
+
+const RegisterDeviceRequest * RegisterDeviceResponse::request() const
+{
+    Q_D(const RegisterDeviceResponse);
+    return static_cast<const RegisterDeviceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync RegisterDevice response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterDeviceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterDeviceResponsePrivate
+ *
+ * @brief  Private implementation for RegisterDeviceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterDeviceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterDeviceResponse instance.
+ */
+RegisterDeviceResponsePrivate::RegisterDeviceResponsePrivate(
+    RegisterDeviceQueueResponse * const q) : RegisterDevicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync RegisterDeviceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterDeviceResponsePrivate::RegisterDeviceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterDeviceResponse"));
+    /// @todo
+}

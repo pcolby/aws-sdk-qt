@@ -19,3 +19,85 @@
 
 #include "deleteapnsvoipsandboxchannelresponse.h"
 #include "deleteapnsvoipsandboxchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteApnsVoipSandboxChannelResponse
+ *
+ * @brief  Handles Pinpoint DeleteApnsVoipSandboxChannel responses.
+ *
+ * @see    PinpointClient::deleteApnsVoipSandboxChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApnsVoipSandboxChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteApnsVoipSandboxChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApnsVoipSandboxChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteApnsVoipSandboxChannelRequest * DeleteApnsVoipSandboxChannelResponse::request() const
+{
+    Q_D(const DeleteApnsVoipSandboxChannelResponse);
+    return static_cast<const DeleteApnsVoipSandboxChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteApnsVoipSandboxChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApnsVoipSandboxChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApnsVoipSandboxChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApnsVoipSandboxChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApnsVoipSandboxChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApnsVoipSandboxChannelResponse instance.
+ */
+DeleteApnsVoipSandboxChannelResponsePrivate::DeleteApnsVoipSandboxChannelResponsePrivate(
+    DeleteApnsVoipSandboxChannelQueueResponse * const q) : DeleteApnsVoipSandboxChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteApnsVoipSandboxChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApnsVoipSandboxChannelResponsePrivate::DeleteApnsVoipSandboxChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApnsVoipSandboxChannelResponse"));
+    /// @todo
+}

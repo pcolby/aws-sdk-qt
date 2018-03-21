@@ -19,3 +19,85 @@
 
 #include "describeconfigruleevaluationstatusresponse.h"
 #include "describeconfigruleevaluationstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DescribeConfigRuleEvaluationStatusResponse
+ *
+ * @brief  Handles ConfigService DescribeConfigRuleEvaluationStatus responses.
+ *
+ * @see    ConfigServiceClient::describeConfigRuleEvaluationStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigRuleEvaluationStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DescribeConfigRuleEvaluationStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConfigRuleEvaluationStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeConfigRuleEvaluationStatusRequest * DescribeConfigRuleEvaluationStatusResponse::request() const
+{
+    Q_D(const DescribeConfigRuleEvaluationStatusResponse);
+    return static_cast<const DescribeConfigRuleEvaluationStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DescribeConfigRuleEvaluationStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConfigRuleEvaluationStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigRuleEvaluationStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConfigRuleEvaluationStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigRuleEvaluationStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConfigRuleEvaluationStatusResponse instance.
+ */
+DescribeConfigRuleEvaluationStatusResponsePrivate::DescribeConfigRuleEvaluationStatusResponsePrivate(
+    DescribeConfigRuleEvaluationStatusQueueResponse * const q) : DescribeConfigRuleEvaluationStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DescribeConfigRuleEvaluationStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConfigRuleEvaluationStatusResponsePrivate::DescribeConfigRuleEvaluationStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConfigRuleEvaluationStatusResponse"));
+    /// @todo
+}

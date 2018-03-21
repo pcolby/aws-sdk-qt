@@ -19,3 +19,85 @@
 
 #include "updateconnectionresponse.h"
 #include "updateconnectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateConnectionResponse
+ *
+ * @brief  Handles Glue UpdateConnection responses.
+ *
+ * @see    GlueClient::updateConnection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConnectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new UpdateConnectionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateConnectionRequest(request));
+    setReply(reply);
+}
+
+const UpdateConnectionRequest * UpdateConnectionResponse::request() const
+{
+    Q_D(const UpdateConnectionResponse);
+    return static_cast<const UpdateConnectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue UpdateConnection response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateConnectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConnectionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateConnectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConnectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateConnectionResponse instance.
+ */
+UpdateConnectionResponsePrivate::UpdateConnectionResponsePrivate(
+    UpdateConnectionQueueResponse * const q) : UpdateConnectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue UpdateConnectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateConnectionResponsePrivate::UpdateConnectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateConnectionResponse"));
+    /// @todo
+}

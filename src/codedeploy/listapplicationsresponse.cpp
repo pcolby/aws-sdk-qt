@@ -19,3 +19,85 @@
 
 #include "listapplicationsresponse.h"
 #include "listapplicationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListApplicationsResponse
+ *
+ * @brief  Handles CodeDeploy ListApplications responses.
+ *
+ * @see    CodeDeployClient::listApplications
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListApplicationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new ListApplicationsResponsePrivate(this), parent)
+{
+    setRequest(new ListApplicationsRequest(request));
+    setReply(reply);
+}
+
+const ListApplicationsRequest * ListApplicationsResponse::request() const
+{
+    Q_D(const ListApplicationsResponse);
+    return static_cast<const ListApplicationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy ListApplications response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListApplicationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListApplicationsResponsePrivate
+ *
+ * @brief  Private implementation for ListApplicationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListApplicationsResponse instance.
+ */
+ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
+    ListApplicationsQueueResponse * const q) : ListApplicationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy ListApplicationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListApplicationsResponsePrivate::ListApplicationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListApplicationsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getloggingoptionsresponse.h"
 #include "getloggingoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetLoggingOptionsResponse
+ *
+ * @brief  Handles IoT GetLoggingOptions responses.
+ *
+ * @see    IoTClient::getLoggingOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoggingOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new GetLoggingOptionsResponsePrivate(this), parent)
+{
+    setRequest(new GetLoggingOptionsRequest(request));
+    setReply(reply);
+}
+
+const GetLoggingOptionsRequest * GetLoggingOptionsResponse::request() const
+{
+    Q_D(const GetLoggingOptionsResponse);
+    return static_cast<const GetLoggingOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT GetLoggingOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLoggingOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoggingOptionsResponsePrivate
+ *
+ * @brief  Private implementation for GetLoggingOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoggingOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLoggingOptionsResponse instance.
+ */
+GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponsePrivate(
+    GetLoggingOptionsQueueResponse * const q) : GetLoggingOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT GetLoggingOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLoggingOptionsResponse"));
+    /// @todo
+}

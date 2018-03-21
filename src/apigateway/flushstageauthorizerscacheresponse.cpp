@@ -19,3 +19,85 @@
 
 #include "flushstageauthorizerscacheresponse.h"
 #include "flushstageauthorizerscacheresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  FlushStageAuthorizersCacheResponse
+ *
+ * @brief  Handles APIGateway FlushStageAuthorizersCache responses.
+ *
+ * @see    APIGatewayClient::flushStageAuthorizersCache
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+FlushStageAuthorizersCacheResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new FlushStageAuthorizersCacheResponsePrivate(this), parent)
+{
+    setRequest(new FlushStageAuthorizersCacheRequest(request));
+    setReply(reply);
+}
+
+const FlushStageAuthorizersCacheRequest * FlushStageAuthorizersCacheResponse::request() const
+{
+    Q_D(const FlushStageAuthorizersCacheResponse);
+    return static_cast<const FlushStageAuthorizersCacheRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway FlushStageAuthorizersCache response.
+ *
+ * @param  response  Response to parse.
+ */
+void FlushStageAuthorizersCacheResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  FlushStageAuthorizersCacheResponsePrivate
+ *
+ * @brief  Private implementation for FlushStageAuthorizersCacheResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FlushStageAuthorizersCacheResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public FlushStageAuthorizersCacheResponse instance.
+ */
+FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponsePrivate(
+    FlushStageAuthorizersCacheQueueResponse * const q) : FlushStageAuthorizersCachePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway FlushStageAuthorizersCacheResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("FlushStageAuthorizersCacheResponse"));
+    /// @todo
+}

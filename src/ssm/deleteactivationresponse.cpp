@@ -19,3 +19,85 @@
 
 #include "deleteactivationresponse.h"
 #include "deleteactivationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeleteActivationResponse
+ *
+ * @brief  Handles SSM DeleteActivation responses.
+ *
+ * @see    SSMClient::deleteActivation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteActivationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DeleteActivationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteActivationRequest(request));
+    setReply(reply);
+}
+
+const DeleteActivationRequest * DeleteActivationResponse::request() const
+{
+    Q_D(const DeleteActivationResponse);
+    return static_cast<const DeleteActivationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DeleteActivation response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteActivationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteActivationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteActivationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteActivationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteActivationResponse instance.
+ */
+DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
+    DeleteActivationQueueResponse * const q) : DeleteActivationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DeleteActivationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteActivationResponsePrivate::DeleteActivationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteActivationResponse"));
+    /// @todo
+}

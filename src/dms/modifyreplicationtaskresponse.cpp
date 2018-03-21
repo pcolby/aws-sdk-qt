@@ -19,3 +19,85 @@
 
 #include "modifyreplicationtaskresponse.h"
 #include "modifyreplicationtaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  ModifyReplicationTaskResponse
+ *
+ * @brief  Handles DatabaseMigrationService ModifyReplicationTask responses.
+ *
+ * @see    DatabaseMigrationServiceClient::modifyReplicationTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyReplicationTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new ModifyReplicationTaskResponsePrivate(this), parent)
+{
+    setRequest(new ModifyReplicationTaskRequest(request));
+    setReply(reply);
+}
+
+const ModifyReplicationTaskRequest * ModifyReplicationTaskResponse::request() const
+{
+    Q_D(const ModifyReplicationTaskResponse);
+    return static_cast<const ModifyReplicationTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService ModifyReplicationTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyReplicationTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyReplicationTaskResponsePrivate
+ *
+ * @brief  Private implementation for ModifyReplicationTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyReplicationTaskResponse instance.
+ */
+ModifyReplicationTaskResponsePrivate::ModifyReplicationTaskResponsePrivate(
+    ModifyReplicationTaskQueueResponse * const q) : ModifyReplicationTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService ModifyReplicationTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyReplicationTaskResponsePrivate::ModifyReplicationTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationTaskResponse"));
+    /// @todo
+}

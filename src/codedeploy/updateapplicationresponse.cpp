@@ -19,3 +19,85 @@
 
 #include "updateapplicationresponse.h"
 #include "updateapplicationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  UpdateApplicationResponse
+ *
+ * @brief  Handles CodeDeploy UpdateApplication responses.
+ *
+ * @see    CodeDeployClient::updateApplication
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApplicationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new UpdateApplicationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateApplicationRequest(request));
+    setReply(reply);
+}
+
+const UpdateApplicationRequest * UpdateApplicationResponse::request() const
+{
+    Q_D(const UpdateApplicationResponse);
+    return static_cast<const UpdateApplicationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy UpdateApplication response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateApplicationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApplicationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateApplicationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApplicationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateApplicationResponse instance.
+ */
+UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
+    UpdateApplicationQueueResponse * const q) : UpdateApplicationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy UpdateApplicationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateApplicationResponsePrivate::UpdateApplicationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationResponse"));
+    /// @todo
+}

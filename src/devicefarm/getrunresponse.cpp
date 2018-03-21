@@ -19,3 +19,85 @@
 
 #include "getrunresponse.h"
 #include "getrunresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  GetRunResponse
+ *
+ * @brief  Handles DeviceFarm GetRun responses.
+ *
+ * @see    DeviceFarmClient::getRun
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRunResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new GetRunResponsePrivate(this), parent)
+{
+    setRequest(new GetRunRequest(request));
+    setReply(reply);
+}
+
+const GetRunRequest * GetRunResponse::request() const
+{
+    Q_D(const GetRunResponse);
+    return static_cast<const GetRunRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm GetRun response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetRunResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRunResponsePrivate
+ *
+ * @brief  Private implementation for GetRunResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRunResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetRunResponse instance.
+ */
+GetRunResponsePrivate::GetRunResponsePrivate(
+    GetRunQueueResponse * const q) : GetRunPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm GetRunResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetRunResponsePrivate::GetRunResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetRunResponse"));
+    /// @todo
+}

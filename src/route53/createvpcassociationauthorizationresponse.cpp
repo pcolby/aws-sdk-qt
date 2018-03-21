@@ -19,3 +19,85 @@
 
 #include "createvpcassociationauthorizationresponse.h"
 #include "createvpcassociationauthorizationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  CreateVPCAssociationAuthorizationResponse
+ *
+ * @brief  Handles Route53 CreateVPCAssociationAuthorization responses.
+ *
+ * @see    Route53Client::createVPCAssociationAuthorization
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVPCAssociationAuthorizationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new CreateVPCAssociationAuthorizationResponsePrivate(this), parent)
+{
+    setRequest(new CreateVPCAssociationAuthorizationRequest(request));
+    setReply(reply);
+}
+
+const CreateVPCAssociationAuthorizationRequest * CreateVPCAssociationAuthorizationResponse::request() const
+{
+    Q_D(const CreateVPCAssociationAuthorizationResponse);
+    return static_cast<const CreateVPCAssociationAuthorizationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 CreateVPCAssociationAuthorization response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVPCAssociationAuthorizationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVPCAssociationAuthorizationResponsePrivate
+ *
+ * @brief  Private implementation for CreateVPCAssociationAuthorizationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVPCAssociationAuthorizationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVPCAssociationAuthorizationResponse instance.
+ */
+CreateVPCAssociationAuthorizationResponsePrivate::CreateVPCAssociationAuthorizationResponsePrivate(
+    CreateVPCAssociationAuthorizationQueueResponse * const q) : CreateVPCAssociationAuthorizationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 CreateVPCAssociationAuthorizationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVPCAssociationAuthorizationResponsePrivate::CreateVPCAssociationAuthorizationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVPCAssociationAuthorizationResponse"));
+    /// @todo
+}

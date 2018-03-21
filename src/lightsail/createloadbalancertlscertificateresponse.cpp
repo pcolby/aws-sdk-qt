@@ -19,3 +19,85 @@
 
 #include "createloadbalancertlscertificateresponse.h"
 #include "createloadbalancertlscertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateLoadBalancerTlsCertificateResponse
+ *
+ * @brief  Handles Lightsail CreateLoadBalancerTlsCertificate responses.
+ *
+ * @see    LightsailClient::createLoadBalancerTlsCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLoadBalancerTlsCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new CreateLoadBalancerTlsCertificateResponsePrivate(this), parent)
+{
+    setRequest(new CreateLoadBalancerTlsCertificateRequest(request));
+    setReply(reply);
+}
+
+const CreateLoadBalancerTlsCertificateRequest * CreateLoadBalancerTlsCertificateResponse::request() const
+{
+    Q_D(const CreateLoadBalancerTlsCertificateResponse);
+    return static_cast<const CreateLoadBalancerTlsCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail CreateLoadBalancerTlsCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLoadBalancerTlsCertificateResponsePrivate
+ *
+ * @brief  Private implementation for CreateLoadBalancerTlsCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLoadBalancerTlsCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLoadBalancerTlsCertificateResponse instance.
+ */
+CreateLoadBalancerTlsCertificateResponsePrivate::CreateLoadBalancerTlsCertificateResponsePrivate(
+    CreateLoadBalancerTlsCertificateQueueResponse * const q) : CreateLoadBalancerTlsCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail CreateLoadBalancerTlsCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLoadBalancerTlsCertificateResponsePrivate::CreateLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLoadBalancerTlsCertificateResponse"));
+    /// @todo
+}

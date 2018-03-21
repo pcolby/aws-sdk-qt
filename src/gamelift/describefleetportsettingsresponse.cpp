@@ -19,3 +19,85 @@
 
 #include "describefleetportsettingsresponse.h"
 #include "describefleetportsettingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeFleetPortSettingsResponse
+ *
+ * @brief  Handles GameLift DescribeFleetPortSettings responses.
+ *
+ * @see    GameLiftClient::describeFleetPortSettings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetPortSettingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeFleetPortSettingsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeFleetPortSettingsRequest(request));
+    setReply(reply);
+}
+
+const DescribeFleetPortSettingsRequest * DescribeFleetPortSettingsResponse::request() const
+{
+    Q_D(const DescribeFleetPortSettingsResponse);
+    return static_cast<const DescribeFleetPortSettingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeFleetPortSettings response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeFleetPortSettingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetPortSettingsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeFleetPortSettingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetPortSettingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeFleetPortSettingsResponse instance.
+ */
+DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponsePrivate(
+    DescribeFleetPortSettingsQueueResponse * const q) : DescribeFleetPortSettingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeFleetPortSettingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeFleetPortSettingsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "stopdeploymentresponse.h"
 #include "stopdeploymentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  StopDeploymentResponse
+ *
+ * @brief  Handles CodeDeploy StopDeployment responses.
+ *
+ * @see    CodeDeployClient::stopDeployment
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopDeploymentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new StopDeploymentResponsePrivate(this), parent)
+{
+    setRequest(new StopDeploymentRequest(request));
+    setReply(reply);
+}
+
+const StopDeploymentRequest * StopDeploymentResponse::request() const
+{
+    Q_D(const StopDeploymentResponse);
+    return static_cast<const StopDeploymentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy StopDeployment response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopDeploymentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopDeploymentResponsePrivate
+ *
+ * @brief  Private implementation for StopDeploymentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopDeploymentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopDeploymentResponse instance.
+ */
+StopDeploymentResponsePrivate::StopDeploymentResponsePrivate(
+    StopDeploymentQueueResponse * const q) : StopDeploymentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy StopDeploymentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopDeploymentResponsePrivate::StopDeploymentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopDeploymentResponse"));
+    /// @todo
+}

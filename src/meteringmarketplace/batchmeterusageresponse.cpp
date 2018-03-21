@@ -19,3 +19,85 @@
 
 #include "batchmeterusageresponse.h"
 #include "batchmeterusageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MarketplaceMetering {
+
+/**
+ * @class  BatchMeterUsageResponse
+ *
+ * @brief  Handles MarketplaceMetering BatchMeterUsage responses.
+ *
+ * @see    MarketplaceMeteringClient::batchMeterUsage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchMeterUsageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MarketplaceMeteringResponse(new BatchMeterUsageResponsePrivate(this), parent)
+{
+    setRequest(new BatchMeterUsageRequest(request));
+    setReply(reply);
+}
+
+const BatchMeterUsageRequest * BatchMeterUsageResponse::request() const
+{
+    Q_D(const BatchMeterUsageResponse);
+    return static_cast<const BatchMeterUsageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MarketplaceMetering BatchMeterUsage response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchMeterUsageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchMeterUsageResponsePrivate
+ *
+ * @brief  Private implementation for BatchMeterUsageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchMeterUsageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchMeterUsageResponse instance.
+ */
+BatchMeterUsageResponsePrivate::BatchMeterUsageResponsePrivate(
+    BatchMeterUsageQueueResponse * const q) : BatchMeterUsagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MarketplaceMetering BatchMeterUsageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchMeterUsageResponsePrivate::BatchMeterUsageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchMeterUsageResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listoutgoingtypedlinksresponse.h"
 #include "listoutgoingtypedlinksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListOutgoingTypedLinksResponse
+ *
+ * @brief  Handles CloudDirectory ListOutgoingTypedLinks responses.
+ *
+ * @see    CloudDirectoryClient::listOutgoingTypedLinks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOutgoingTypedLinksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListOutgoingTypedLinksResponsePrivate(this), parent)
+{
+    setRequest(new ListOutgoingTypedLinksRequest(request));
+    setReply(reply);
+}
+
+const ListOutgoingTypedLinksRequest * ListOutgoingTypedLinksResponse::request() const
+{
+    Q_D(const ListOutgoingTypedLinksResponse);
+    return static_cast<const ListOutgoingTypedLinksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListOutgoingTypedLinks response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOutgoingTypedLinksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOutgoingTypedLinksResponsePrivate
+ *
+ * @brief  Private implementation for ListOutgoingTypedLinksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOutgoingTypedLinksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOutgoingTypedLinksResponse instance.
+ */
+ListOutgoingTypedLinksResponsePrivate::ListOutgoingTypedLinksResponsePrivate(
+    ListOutgoingTypedLinksQueueResponse * const q) : ListOutgoingTypedLinksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListOutgoingTypedLinksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOutgoingTypedLinksResponsePrivate::ListOutgoingTypedLinksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOutgoingTypedLinksResponse"));
+    /// @todo
+}

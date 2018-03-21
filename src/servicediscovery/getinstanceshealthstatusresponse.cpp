@@ -19,3 +19,85 @@
 
 #include "getinstanceshealthstatusresponse.h"
 #include "getinstanceshealthstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  GetInstancesHealthStatusResponse
+ *
+ * @brief  Handles ServiceDiscovery GetInstancesHealthStatus responses.
+ *
+ * @see    ServiceDiscoveryClient::getInstancesHealthStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstancesHealthStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceDiscoveryResponse(new GetInstancesHealthStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetInstancesHealthStatusRequest(request));
+    setReply(reply);
+}
+
+const GetInstancesHealthStatusRequest * GetInstancesHealthStatusResponse::request() const
+{
+    Q_D(const GetInstancesHealthStatusResponse);
+    return static_cast<const GetInstancesHealthStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceDiscovery GetInstancesHealthStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInstancesHealthStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstancesHealthStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetInstancesHealthStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstancesHealthStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInstancesHealthStatusResponse instance.
+ */
+GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponsePrivate(
+    GetInstancesHealthStatusQueueResponse * const q) : GetInstancesHealthStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceDiscovery GetInstancesHealthStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInstancesHealthStatusResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeinstanceassociationsstatusresponse.h"
 #include "describeinstanceassociationsstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeInstanceAssociationsStatusResponse
+ *
+ * @brief  Handles SSM DescribeInstanceAssociationsStatus responses.
+ *
+ * @see    SSMClient::describeInstanceAssociationsStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstanceAssociationsStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new DescribeInstanceAssociationsStatusResponsePrivate(this), parent)
+{
+    setRequest(new DescribeInstanceAssociationsStatusRequest(request));
+    setReply(reply);
+}
+
+const DescribeInstanceAssociationsStatusRequest * DescribeInstanceAssociationsStatusResponse::request() const
+{
+    Q_D(const DescribeInstanceAssociationsStatusResponse);
+    return static_cast<const DescribeInstanceAssociationsStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM DescribeInstanceAssociationsStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeInstanceAssociationsStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstanceAssociationsStatusResponsePrivate
+ *
+ * @brief  Private implementation for DescribeInstanceAssociationsStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceAssociationsStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeInstanceAssociationsStatusResponse instance.
+ */
+DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociationsStatusResponsePrivate(
+    DescribeInstanceAssociationsStatusQueueResponse * const q) : DescribeInstanceAssociationsStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM DescribeInstanceAssociationsStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociationsStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceAssociationsStatusResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "setdataretrievalpolicyresponse.h"
 #include "setdataretrievalpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  SetDataRetrievalPolicyResponse
+ *
+ * @brief  Handles Glacier SetDataRetrievalPolicy responses.
+ *
+ * @see    GlacierClient::setDataRetrievalPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetDataRetrievalPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new SetDataRetrievalPolicyResponsePrivate(this), parent)
+{
+    setRequest(new SetDataRetrievalPolicyRequest(request));
+    setReply(reply);
+}
+
+const SetDataRetrievalPolicyRequest * SetDataRetrievalPolicyResponse::request() const
+{
+    Q_D(const SetDataRetrievalPolicyResponse);
+    return static_cast<const SetDataRetrievalPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier SetDataRetrievalPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetDataRetrievalPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetDataRetrievalPolicyResponsePrivate
+ *
+ * @brief  Private implementation for SetDataRetrievalPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDataRetrievalPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetDataRetrievalPolicyResponse instance.
+ */
+SetDataRetrievalPolicyResponsePrivate::SetDataRetrievalPolicyResponsePrivate(
+    SetDataRetrievalPolicyQueueResponse * const q) : SetDataRetrievalPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier SetDataRetrievalPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetDataRetrievalPolicyResponsePrivate::SetDataRetrievalPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetDataRetrievalPolicyResponse"));
+    /// @todo
+}

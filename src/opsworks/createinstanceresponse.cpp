@@ -19,3 +19,85 @@
 
 #include "createinstanceresponse.h"
 #include "createinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  CreateInstanceResponse
+ *
+ * @brief  Handles OpsWorks CreateInstance responses.
+ *
+ * @see    OpsWorksClient::createInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new CreateInstanceResponsePrivate(this), parent)
+{
+    setRequest(new CreateInstanceRequest(request));
+    setReply(reply);
+}
+
+const CreateInstanceRequest * CreateInstanceResponse::request() const
+{
+    Q_D(const CreateInstanceResponse);
+    return static_cast<const CreateInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks CreateInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstanceResponsePrivate
+ *
+ * @brief  Private implementation for CreateInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateInstanceResponse instance.
+ */
+CreateInstanceResponsePrivate::CreateInstanceResponsePrivate(
+    CreateInstanceQueueResponse * const q) : CreateInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks CreateInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateInstanceResponsePrivate::CreateInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateInstanceResponse"));
+    /// @todo
+}

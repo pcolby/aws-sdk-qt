@@ -19,3 +19,85 @@
 
 #include "describestepresponse.h"
 #include "describestepresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  DescribeStepResponse
+ *
+ * @brief  Handles EMR DescribeStep responses.
+ *
+ * @see    EMRClient::describeStep
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStepResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new DescribeStepResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStepRequest(request));
+    setReply(reply);
+}
+
+const DescribeStepRequest * DescribeStepResponse::request() const
+{
+    Q_D(const DescribeStepResponse);
+    return static_cast<const DescribeStepRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR DescribeStep response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStepResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStepResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStepResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStepResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStepResponse instance.
+ */
+DescribeStepResponsePrivate::DescribeStepResponsePrivate(
+    DescribeStepQueueResponse * const q) : DescribeStepPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR DescribeStepResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStepResponsePrivate::DescribeStepResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStepResponse"));
+    /// @todo
+}

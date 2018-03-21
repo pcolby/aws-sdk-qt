@@ -19,3 +19,85 @@
 
 #include "deletedbsubnetgroupresponse.h"
 #include "deletedbsubnetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteDBSubnetGroupResponse
+ *
+ * @brief  Handles RDS DeleteDBSubnetGroup responses.
+ *
+ * @see    RDSClient::deleteDBSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDBSubnetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DeleteDBSubnetGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDBSubnetGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteDBSubnetGroupRequest * DeleteDBSubnetGroupResponse::request() const
+{
+    Q_D(const DeleteDBSubnetGroupResponse);
+    return static_cast<const DeleteDBSubnetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DeleteDBSubnetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDBSubnetGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDBSubnetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBSubnetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDBSubnetGroupResponse instance.
+ */
+DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
+    DeleteDBSubnetGroupQueueResponse * const q) : DeleteDBSubnetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DeleteDBSubnetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDBSubnetGroupResponse"));
+    /// @todo
+}

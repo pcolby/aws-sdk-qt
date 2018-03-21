@@ -19,3 +19,85 @@
 
 #include "headbucketresponse.h"
 #include "headbucketresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  HeadBucketResponse
+ *
+ * @brief  Handles S3 HeadBucket responses.
+ *
+ * @see    S3Client::headBucket
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+HeadBucketResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new HeadBucketResponsePrivate(this), parent)
+{
+    setRequest(new HeadBucketRequest(request));
+    setReply(reply);
+}
+
+const HeadBucketRequest * HeadBucketResponse::request() const
+{
+    Q_D(const HeadBucketResponse);
+    return static_cast<const HeadBucketRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 HeadBucket response.
+ *
+ * @param  response  Response to parse.
+ */
+void HeadBucketResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  HeadBucketResponsePrivate
+ *
+ * @brief  Private implementation for HeadBucketResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new HeadBucketResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public HeadBucketResponse instance.
+ */
+HeadBucketResponsePrivate::HeadBucketResponsePrivate(
+    HeadBucketQueueResponse * const q) : HeadBucketPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 HeadBucketResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void HeadBucketResponsePrivate::HeadBucketResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("HeadBucketResponse"));
+    /// @todo
+}

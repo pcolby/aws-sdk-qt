@@ -19,3 +19,85 @@
 
 #include "createfacetresponse.h"
 #include "createfacetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  CreateFacetResponse
+ *
+ * @brief  Handles CloudDirectory CreateFacet responses.
+ *
+ * @see    CloudDirectoryClient::createFacet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFacetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new CreateFacetResponsePrivate(this), parent)
+{
+    setRequest(new CreateFacetRequest(request));
+    setReply(reply);
+}
+
+const CreateFacetRequest * CreateFacetResponse::request() const
+{
+    Q_D(const CreateFacetResponse);
+    return static_cast<const CreateFacetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory CreateFacet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateFacetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFacetResponsePrivate
+ *
+ * @brief  Private implementation for CreateFacetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFacetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateFacetResponse instance.
+ */
+CreateFacetResponsePrivate::CreateFacetResponsePrivate(
+    CreateFacetQueueResponse * const q) : CreateFacetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory CreateFacetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateFacetResponsePrivate::CreateFacetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateFacetResponse"));
+    /// @todo
+}

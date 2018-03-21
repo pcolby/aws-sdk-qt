@@ -19,3 +19,85 @@
 
 #include "detectmoderationlabelsresponse.h"
 #include "detectmoderationlabelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DetectModerationLabelsResponse
+ *
+ * @brief  Handles Rekognition DetectModerationLabels responses.
+ *
+ * @see    RekognitionClient::detectModerationLabels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectModerationLabelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new DetectModerationLabelsResponsePrivate(this), parent)
+{
+    setRequest(new DetectModerationLabelsRequest(request));
+    setReply(reply);
+}
+
+const DetectModerationLabelsRequest * DetectModerationLabelsResponse::request() const
+{
+    Q_D(const DetectModerationLabelsResponse);
+    return static_cast<const DetectModerationLabelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition DetectModerationLabels response.
+ *
+ * @param  response  Response to parse.
+ */
+void DetectModerationLabelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectModerationLabelsResponsePrivate
+ *
+ * @brief  Private implementation for DetectModerationLabelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectModerationLabelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DetectModerationLabelsResponse instance.
+ */
+DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponsePrivate(
+    DetectModerationLabelsQueueResponse * const q) : DetectModerationLabelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition DetectModerationLabelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DetectModerationLabelsResponse"));
+    /// @todo
+}

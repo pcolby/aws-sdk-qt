@@ -19,3 +19,85 @@
 
 #include "describedblogfilesresponse.h"
 #include "describedblogfilesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBLogFilesResponse
+ *
+ * @brief  Handles RDS DescribeDBLogFiles responses.
+ *
+ * @see    RDSClient::describeDBLogFiles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBLogFilesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DescribeDBLogFilesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeDBLogFilesRequest(request));
+    setReply(reply);
+}
+
+const DescribeDBLogFilesRequest * DescribeDBLogFilesResponse::request() const
+{
+    Q_D(const DescribeDBLogFilesResponse);
+    return static_cast<const DescribeDBLogFilesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DescribeDBLogFiles response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBLogFilesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeDBLogFilesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBLogFilesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeDBLogFilesResponse instance.
+ */
+DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
+    DescribeDBLogFilesQueueResponse * const q) : DescribeDBLogFilesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DescribeDBLogFilesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeDBLogFilesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createlogstreamresponse.h"
 #include "createlogstreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  CreateLogStreamResponse
+ *
+ * @brief  Handles CloudWatchLogs CreateLogStream responses.
+ *
+ * @see    CloudWatchLogsClient::createLogStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLogStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchLogsResponse(new CreateLogStreamResponsePrivate(this), parent)
+{
+    setRequest(new CreateLogStreamRequest(request));
+    setReply(reply);
+}
+
+const CreateLogStreamRequest * CreateLogStreamResponse::request() const
+{
+    Q_D(const CreateLogStreamResponse);
+    return static_cast<const CreateLogStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchLogs CreateLogStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLogStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLogStreamResponsePrivate
+ *
+ * @brief  Private implementation for CreateLogStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLogStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLogStreamResponse instance.
+ */
+CreateLogStreamResponsePrivate::CreateLogStreamResponsePrivate(
+    CreateLogStreamQueueResponse * const q) : CreateLogStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchLogs CreateLogStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLogStreamResponsePrivate::CreateLogStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLogStreamResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listcompliancesummariesresponse.h"
 #include "listcompliancesummariesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListComplianceSummariesResponse
+ *
+ * @brief  Handles SSM ListComplianceSummaries responses.
+ *
+ * @see    SSMClient::listComplianceSummaries
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListComplianceSummariesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new ListComplianceSummariesResponsePrivate(this), parent)
+{
+    setRequest(new ListComplianceSummariesRequest(request));
+    setReply(reply);
+}
+
+const ListComplianceSummariesRequest * ListComplianceSummariesResponse::request() const
+{
+    Q_D(const ListComplianceSummariesResponse);
+    return static_cast<const ListComplianceSummariesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM ListComplianceSummaries response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListComplianceSummariesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListComplianceSummariesResponsePrivate
+ *
+ * @brief  Private implementation for ListComplianceSummariesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListComplianceSummariesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListComplianceSummariesResponse instance.
+ */
+ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponsePrivate(
+    ListComplianceSummariesQueueResponse * const q) : ListComplianceSummariesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM ListComplianceSummariesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListComplianceSummariesResponse"));
+    /// @todo
+}

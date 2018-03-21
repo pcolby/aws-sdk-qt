@@ -19,3 +19,85 @@
 
 #include "createprotectionresponse.h"
 #include "createprotectionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  CreateProtectionResponse
+ *
+ * @brief  Handles Shield CreateProtection responses.
+ *
+ * @see    ShieldClient::createProtection
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateProtectionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ShieldResponse(new CreateProtectionResponsePrivate(this), parent)
+{
+    setRequest(new CreateProtectionRequest(request));
+    setReply(reply);
+}
+
+const CreateProtectionRequest * CreateProtectionResponse::request() const
+{
+    Q_D(const CreateProtectionResponse);
+    return static_cast<const CreateProtectionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Shield CreateProtection response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateProtectionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateProtectionResponsePrivate
+ *
+ * @brief  Private implementation for CreateProtectionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProtectionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateProtectionResponse instance.
+ */
+CreateProtectionResponsePrivate::CreateProtectionResponsePrivate(
+    CreateProtectionQueueResponse * const q) : CreateProtectionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Shield CreateProtectionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateProtectionResponsePrivate::CreateProtectionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateProtectionResponse"));
+    /// @todo
+}

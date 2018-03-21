@@ -19,3 +19,85 @@
 
 #include "createreceiptfilterresponse.h"
 #include "createreceiptfilterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  CreateReceiptFilterResponse
+ *
+ * @brief  Handles SES CreateReceiptFilter responses.
+ *
+ * @see    SESClient::createReceiptFilter
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReceiptFilterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new CreateReceiptFilterResponsePrivate(this), parent)
+{
+    setRequest(new CreateReceiptFilterRequest(request));
+    setReply(reply);
+}
+
+const CreateReceiptFilterRequest * CreateReceiptFilterResponse::request() const
+{
+    Q_D(const CreateReceiptFilterResponse);
+    return static_cast<const CreateReceiptFilterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES CreateReceiptFilter response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateReceiptFilterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReceiptFilterResponsePrivate
+ *
+ * @brief  Private implementation for CreateReceiptFilterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReceiptFilterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateReceiptFilterResponse instance.
+ */
+CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponsePrivate(
+    CreateReceiptFilterQueueResponse * const q) : CreateReceiptFilterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES CreateReceiptFilterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateReceiptFilterResponse"));
+    /// @todo
+}

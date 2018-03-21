@@ -19,3 +19,85 @@
 
 #include "describenotificationconfigurationsresponse.h"
 #include "describenotificationconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeNotificationConfigurationsResponse
+ *
+ * @brief  Handles AutoScaling DescribeNotificationConfigurations responses.
+ *
+ * @see    AutoScalingClient::describeNotificationConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNotificationConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeNotificationConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeNotificationConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeNotificationConfigurationsRequest * DescribeNotificationConfigurationsResponse::request() const
+{
+    Q_D(const DescribeNotificationConfigurationsResponse);
+    return static_cast<const DescribeNotificationConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeNotificationConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeNotificationConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNotificationConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeNotificationConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotificationConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeNotificationConfigurationsResponse instance.
+ */
+DescribeNotificationConfigurationsResponsePrivate::DescribeNotificationConfigurationsResponsePrivate(
+    DescribeNotificationConfigurationsQueueResponse * const q) : DescribeNotificationConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeNotificationConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeNotificationConfigurationsResponsePrivate::DescribeNotificationConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeNotificationConfigurationsResponse"));
+    /// @todo
+}

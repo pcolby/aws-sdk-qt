@@ -19,3 +19,85 @@
 
 #include "resolvealiasresponse.h"
 #include "resolvealiasresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  ResolveAliasResponse
+ *
+ * @brief  Handles GameLift ResolveAlias responses.
+ *
+ * @see    GameLiftClient::resolveAlias
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResolveAliasResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new ResolveAliasResponsePrivate(this), parent)
+{
+    setRequest(new ResolveAliasRequest(request));
+    setReply(reply);
+}
+
+const ResolveAliasRequest * ResolveAliasResponse::request() const
+{
+    Q_D(const ResolveAliasResponse);
+    return static_cast<const ResolveAliasRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift ResolveAlias response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResolveAliasResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResolveAliasResponsePrivate
+ *
+ * @brief  Private implementation for ResolveAliasResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResolveAliasResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResolveAliasResponse instance.
+ */
+ResolveAliasResponsePrivate::ResolveAliasResponsePrivate(
+    ResolveAliasQueueResponse * const q) : ResolveAliasPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift ResolveAliasResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResolveAliasResponsePrivate::ResolveAliasResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResolveAliasResponse"));
+    /// @todo
+}

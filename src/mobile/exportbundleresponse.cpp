@@ -19,3 +19,85 @@
 
 #include "exportbundleresponse.h"
 #include "exportbundleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Mobile {
+
+/**
+ * @class  ExportBundleResponse
+ *
+ * @brief  Handles Mobile ExportBundle responses.
+ *
+ * @see    MobileClient::exportBundle
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExportBundleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MobileResponse(new ExportBundleResponsePrivate(this), parent)
+{
+    setRequest(new ExportBundleRequest(request));
+    setReply(reply);
+}
+
+const ExportBundleRequest * ExportBundleResponse::request() const
+{
+    Q_D(const ExportBundleResponse);
+    return static_cast<const ExportBundleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Mobile ExportBundle response.
+ *
+ * @param  response  Response to parse.
+ */
+void ExportBundleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ExportBundleResponsePrivate
+ *
+ * @brief  Private implementation for ExportBundleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExportBundleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ExportBundleResponse instance.
+ */
+ExportBundleResponsePrivate::ExportBundleResponsePrivate(
+    ExportBundleQueueResponse * const q) : ExportBundlePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Mobile ExportBundleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ExportBundleResponsePrivate::ExportBundleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ExportBundleResponse"));
+    /// @todo
+}

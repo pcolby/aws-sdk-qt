@@ -19,3 +19,85 @@
 
 #include "importkeypairresponse.h"
 #include "importkeypairresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  ImportKeyPairResponse
+ *
+ * @brief  Handles Lightsail ImportKeyPair responses.
+ *
+ * @see    LightsailClient::importKeyPair
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportKeyPairResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new ImportKeyPairResponsePrivate(this), parent)
+{
+    setRequest(new ImportKeyPairRequest(request));
+    setReply(reply);
+}
+
+const ImportKeyPairRequest * ImportKeyPairResponse::request() const
+{
+    Q_D(const ImportKeyPairResponse);
+    return static_cast<const ImportKeyPairRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail ImportKeyPair response.
+ *
+ * @param  response  Response to parse.
+ */
+void ImportKeyPairResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportKeyPairResponsePrivate
+ *
+ * @brief  Private implementation for ImportKeyPairResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportKeyPairResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ImportKeyPairResponse instance.
+ */
+ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
+    ImportKeyPairQueueResponse * const q) : ImportKeyPairPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail ImportKeyPairResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ImportKeyPairResponsePrivate::ImportKeyPairResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ImportKeyPairResponse"));
+    /// @todo
+}

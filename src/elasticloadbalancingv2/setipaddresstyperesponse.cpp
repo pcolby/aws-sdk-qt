@@ -19,3 +19,85 @@
 
 #include "setipaddresstyperesponse.h"
 #include "setipaddresstyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  SetIpAddressTypeResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 SetIpAddressType responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::setIpAddressType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetIpAddressTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new SetIpAddressTypeResponsePrivate(this), parent)
+{
+    setRequest(new SetIpAddressTypeRequest(request));
+    setReply(reply);
+}
+
+const SetIpAddressTypeRequest * SetIpAddressTypeResponse::request() const
+{
+    Q_D(const SetIpAddressTypeResponse);
+    return static_cast<const SetIpAddressTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 SetIpAddressType response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetIpAddressTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetIpAddressTypeResponsePrivate
+ *
+ * @brief  Private implementation for SetIpAddressTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetIpAddressTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetIpAddressTypeResponse instance.
+ */
+SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponsePrivate(
+    SetIpAddressTypeQueueResponse * const q) : SetIpAddressTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 SetIpAddressTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetIpAddressTypeResponse"));
+    /// @todo
+}

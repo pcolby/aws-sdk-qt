@@ -19,3 +19,85 @@
 
 #include "createtrustresponse.h"
 #include "createtrustresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateTrustResponse
+ *
+ * @brief  Handles DirectoryService CreateTrust responses.
+ *
+ * @see    DirectoryServiceClient::createTrust
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTrustResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new CreateTrustResponsePrivate(this), parent)
+{
+    setRequest(new CreateTrustRequest(request));
+    setReply(reply);
+}
+
+const CreateTrustRequest * CreateTrustResponse::request() const
+{
+    Q_D(const CreateTrustResponse);
+    return static_cast<const CreateTrustRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService CreateTrust response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateTrustResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTrustResponsePrivate
+ *
+ * @brief  Private implementation for CreateTrustResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTrustResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateTrustResponse instance.
+ */
+CreateTrustResponsePrivate::CreateTrustResponsePrivate(
+    CreateTrustQueueResponse * const q) : CreateTrustPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService CreateTrustResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateTrustResponsePrivate::CreateTrustResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateTrustResponse"));
+    /// @todo
+}

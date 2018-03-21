@@ -19,3 +19,85 @@
 
 #include "describeconditionalforwardersresponse.h"
 #include "describeconditionalforwardersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeConditionalForwardersResponse
+ *
+ * @brief  Handles DirectoryService DescribeConditionalForwarders responses.
+ *
+ * @see    DirectoryServiceClient::describeConditionalForwarders
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConditionalForwardersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new DescribeConditionalForwardersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConditionalForwardersRequest(request));
+    setReply(reply);
+}
+
+const DescribeConditionalForwardersRequest * DescribeConditionalForwardersResponse::request() const
+{
+    Q_D(const DescribeConditionalForwardersResponse);
+    return static_cast<const DescribeConditionalForwardersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService DescribeConditionalForwarders response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConditionalForwardersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConditionalForwardersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConditionalForwardersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConditionalForwardersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConditionalForwardersResponse instance.
+ */
+DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwardersResponsePrivate(
+    DescribeConditionalForwardersQueueResponse * const q) : DescribeConditionalForwardersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService DescribeConditionalForwardersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwardersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConditionalForwardersResponse"));
+    /// @todo
+}

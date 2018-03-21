@@ -19,3 +19,85 @@
 
 #include "describevoicesresponse.h"
 #include "describevoicesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Polly {
+
+/**
+ * @class  DescribeVoicesResponse
+ *
+ * @brief  Handles Polly DescribeVoices responses.
+ *
+ * @see    PollyClient::describeVoices
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVoicesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PollyResponse(new DescribeVoicesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeVoicesRequest(request));
+    setReply(reply);
+}
+
+const DescribeVoicesRequest * DescribeVoicesResponse::request() const
+{
+    Q_D(const DescribeVoicesResponse);
+    return static_cast<const DescribeVoicesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Polly DescribeVoices response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeVoicesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVoicesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeVoicesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVoicesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeVoicesResponse instance.
+ */
+DescribeVoicesResponsePrivate::DescribeVoicesResponsePrivate(
+    DescribeVoicesQueueResponse * const q) : DescribeVoicesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Polly DescribeVoicesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeVoicesResponsePrivate::DescribeVoicesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeVoicesResponse"));
+    /// @todo
+}

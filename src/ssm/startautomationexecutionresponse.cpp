@@ -19,3 +19,85 @@
 
 #include "startautomationexecutionresponse.h"
 #include "startautomationexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  StartAutomationExecutionResponse
+ *
+ * @brief  Handles SSM StartAutomationExecution responses.
+ *
+ * @see    SSMClient::startAutomationExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartAutomationExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new StartAutomationExecutionResponsePrivate(this), parent)
+{
+    setRequest(new StartAutomationExecutionRequest(request));
+    setReply(reply);
+}
+
+const StartAutomationExecutionRequest * StartAutomationExecutionResponse::request() const
+{
+    Q_D(const StartAutomationExecutionResponse);
+    return static_cast<const StartAutomationExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM StartAutomationExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartAutomationExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartAutomationExecutionResponsePrivate
+ *
+ * @brief  Private implementation for StartAutomationExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartAutomationExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartAutomationExecutionResponse instance.
+ */
+StartAutomationExecutionResponsePrivate::StartAutomationExecutionResponsePrivate(
+    StartAutomationExecutionQueueResponse * const q) : StartAutomationExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM StartAutomationExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartAutomationExecutionResponsePrivate::StartAutomationExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartAutomationExecutionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteemailchannelresponse.h"
 #include "deleteemailchannelresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteEmailChannelResponse
+ *
+ * @brief  Handles Pinpoint DeleteEmailChannel responses.
+ *
+ * @see    PinpointClient::deleteEmailChannel
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEmailChannelResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new DeleteEmailChannelResponsePrivate(this), parent)
+{
+    setRequest(new DeleteEmailChannelRequest(request));
+    setReply(reply);
+}
+
+const DeleteEmailChannelRequest * DeleteEmailChannelResponse::request() const
+{
+    Q_D(const DeleteEmailChannelResponse);
+    return static_cast<const DeleteEmailChannelRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint DeleteEmailChannel response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteEmailChannelResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEmailChannelResponsePrivate
+ *
+ * @brief  Private implementation for DeleteEmailChannelResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEmailChannelResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteEmailChannelResponse instance.
+ */
+DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponsePrivate(
+    DeleteEmailChannelQueueResponse * const q) : DeleteEmailChannelPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint DeleteEmailChannelResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteEmailChannelResponse"));
+    /// @todo
+}

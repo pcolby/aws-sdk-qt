@@ -19,3 +19,85 @@
 
 #include "getbotsresponse.h"
 #include "getbotsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBotsResponse
+ *
+ * @brief  Handles LexModelBuildingService GetBots responses.
+ *
+ * @see    LexModelBuildingServiceClient::getBots
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBotsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new GetBotsResponsePrivate(this), parent)
+{
+    setRequest(new GetBotsRequest(request));
+    setReply(reply);
+}
+
+const GetBotsRequest * GetBotsResponse::request() const
+{
+    Q_D(const GetBotsResponse);
+    return static_cast<const GetBotsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService GetBots response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBotsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBotsResponsePrivate
+ *
+ * @brief  Private implementation for GetBotsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBotsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBotsResponse instance.
+ */
+GetBotsResponsePrivate::GetBotsResponsePrivate(
+    GetBotsQueueResponse * const q) : GetBotsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService GetBotsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBotsResponsePrivate::GetBotsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBotsResponse"));
+    /// @todo
+}

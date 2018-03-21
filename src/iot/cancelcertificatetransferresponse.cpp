@@ -19,3 +19,85 @@
 
 #include "cancelcertificatetransferresponse.h"
 #include "cancelcertificatetransferresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CancelCertificateTransferResponse
+ *
+ * @brief  Handles IoT CancelCertificateTransfer responses.
+ *
+ * @see    IoTClient::cancelCertificateTransfer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelCertificateTransferResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CancelCertificateTransferResponsePrivate(this), parent)
+{
+    setRequest(new CancelCertificateTransferRequest(request));
+    setReply(reply);
+}
+
+const CancelCertificateTransferRequest * CancelCertificateTransferResponse::request() const
+{
+    Q_D(const CancelCertificateTransferResponse);
+    return static_cast<const CancelCertificateTransferRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CancelCertificateTransfer response.
+ *
+ * @param  response  Response to parse.
+ */
+void CancelCertificateTransferResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelCertificateTransferResponsePrivate
+ *
+ * @brief  Private implementation for CancelCertificateTransferResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelCertificateTransferResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CancelCertificateTransferResponse instance.
+ */
+CancelCertificateTransferResponsePrivate::CancelCertificateTransferResponsePrivate(
+    CancelCertificateTransferQueueResponse * const q) : CancelCertificateTransferPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CancelCertificateTransferResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CancelCertificateTransferResponsePrivate::CancelCertificateTransferResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CancelCertificateTransferResponse"));
+    /// @todo
+}

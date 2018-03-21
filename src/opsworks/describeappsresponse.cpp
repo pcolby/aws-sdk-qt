@@ -19,3 +19,85 @@
 
 #include "describeappsresponse.h"
 #include "describeappsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeAppsResponse
+ *
+ * @brief  Handles OpsWorks DescribeApps responses.
+ *
+ * @see    OpsWorksClient::describeApps
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAppsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribeAppsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAppsRequest(request));
+    setReply(reply);
+}
+
+const DescribeAppsRequest * DescribeAppsResponse::request() const
+{
+    Q_D(const DescribeAppsResponse);
+    return static_cast<const DescribeAppsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribeApps response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAppsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAppsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAppsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAppsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAppsResponse instance.
+ */
+DescribeAppsResponsePrivate::DescribeAppsResponsePrivate(
+    DescribeAppsQueueResponse * const q) : DescribeAppsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribeAppsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAppsResponsePrivate::DescribeAppsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAppsResponse"));
+    /// @todo
+}

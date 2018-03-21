@@ -19,3 +19,85 @@
 
 #include "describerootfoldersresponse.h"
 #include "describerootfoldersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeRootFoldersResponse
+ *
+ * @brief  Handles WorkDocs DescribeRootFolders responses.
+ *
+ * @see    WorkDocsClient::describeRootFolders
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRootFoldersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new DescribeRootFoldersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRootFoldersRequest(request));
+    setReply(reply);
+}
+
+const DescribeRootFoldersRequest * DescribeRootFoldersResponse::request() const
+{
+    Q_D(const DescribeRootFoldersResponse);
+    return static_cast<const DescribeRootFoldersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs DescribeRootFolders response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRootFoldersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRootFoldersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRootFoldersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRootFoldersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRootFoldersResponse instance.
+ */
+DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponsePrivate(
+    DescribeRootFoldersQueueResponse * const q) : DescribeRootFoldersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs DescribeRootFoldersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRootFoldersResponse"));
+    /// @todo
+}

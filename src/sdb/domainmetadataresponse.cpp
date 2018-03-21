@@ -19,3 +19,85 @@
 
 #include "domainmetadataresponse.h"
 #include "domainmetadataresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  DomainMetadataResponse
+ *
+ * @brief  Handles SimpleDB DomainMetadata responses.
+ *
+ * @see    SimpleDBClient::domainMetadata
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DomainMetadataResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SimpleDBResponse(new DomainMetadataResponsePrivate(this), parent)
+{
+    setRequest(new DomainMetadataRequest(request));
+    setReply(reply);
+}
+
+const DomainMetadataRequest * DomainMetadataResponse::request() const
+{
+    Q_D(const DomainMetadataResponse);
+    return static_cast<const DomainMetadataRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SimpleDB DomainMetadata response.
+ *
+ * @param  response  Response to parse.
+ */
+void DomainMetadataResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DomainMetadataResponsePrivate
+ *
+ * @brief  Private implementation for DomainMetadataResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DomainMetadataResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DomainMetadataResponse instance.
+ */
+DomainMetadataResponsePrivate::DomainMetadataResponsePrivate(
+    DomainMetadataQueueResponse * const q) : DomainMetadataPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SimpleDB DomainMetadataResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DomainMetadataResponsePrivate::DomainMetadataResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DomainMetadataResponse"));
+    /// @todo
+}

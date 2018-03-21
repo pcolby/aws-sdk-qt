@@ -19,3 +19,85 @@
 
 #include "updatesqlinjectionmatchsetresponse.h"
 #include "updatesqlinjectionmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  UpdateSqlInjectionMatchSetResponse
+ *
+ * @brief  Handles WAFRegional UpdateSqlInjectionMatchSet responses.
+ *
+ * @see    WAFRegionalClient::updateSqlInjectionMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSqlInjectionMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new UpdateSqlInjectionMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSqlInjectionMatchSetRequest(request));
+    setReply(reply);
+}
+
+const UpdateSqlInjectionMatchSetRequest * UpdateSqlInjectionMatchSetResponse::request() const
+{
+    Q_D(const UpdateSqlInjectionMatchSetResponse);
+    return static_cast<const UpdateSqlInjectionMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional UpdateSqlInjectionMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSqlInjectionMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSqlInjectionMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSqlInjectionMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSqlInjectionMatchSetResponse instance.
+ */
+UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePrivate(
+    UpdateSqlInjectionMatchSetQueueResponse * const q) : UpdateSqlInjectionMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional UpdateSqlInjectionMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSqlInjectionMatchSetResponse"));
+    /// @todo
+}

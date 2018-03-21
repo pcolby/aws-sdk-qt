@@ -19,3 +19,85 @@
 
 #include "getinstancesnapshotresponse.h"
 #include "getinstancesnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceSnapshotResponse
+ *
+ * @brief  Handles Lightsail GetInstanceSnapshot responses.
+ *
+ * @see    LightsailClient::getInstanceSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetInstanceSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new GetInstanceSnapshotRequest(request));
+    setReply(reply);
+}
+
+const GetInstanceSnapshotRequest * GetInstanceSnapshotResponse::request() const
+{
+    Q_D(const GetInstanceSnapshotResponse);
+    return static_cast<const GetInstanceSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetInstanceSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInstanceSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for GetInstanceSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInstanceSnapshotResponse instance.
+ */
+GetInstanceSnapshotResponsePrivate::GetInstanceSnapshotResponsePrivate(
+    GetInstanceSnapshotQueueResponse * const q) : GetInstanceSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetInstanceSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInstanceSnapshotResponsePrivate::GetInstanceSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInstanceSnapshotResponse"));
+    /// @todo
+}

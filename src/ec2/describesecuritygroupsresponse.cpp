@@ -19,3 +19,85 @@
 
 #include "describesecuritygroupsresponse.h"
 #include "describesecuritygroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSecurityGroupsResponse
+ *
+ * @brief  Handles EC2 DescribeSecurityGroups responses.
+ *
+ * @see    EC2Client::describeSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSecurityGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeSecurityGroupsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSecurityGroupsRequest(request));
+    setReply(reply);
+}
+
+const DescribeSecurityGroupsRequest * DescribeSecurityGroupsResponse::request() const
+{
+    Q_D(const DescribeSecurityGroupsResponse);
+    return static_cast<const DescribeSecurityGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeSecurityGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSecurityGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSecurityGroupsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSecurityGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSecurityGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSecurityGroupsResponse instance.
+ */
+DescribeSecurityGroupsResponsePrivate::DescribeSecurityGroupsResponsePrivate(
+    DescribeSecurityGroupsQueueResponse * const q) : DescribeSecurityGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeSecurityGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSecurityGroupsResponsePrivate::DescribeSecurityGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSecurityGroupsResponse"));
+    /// @todo
+}

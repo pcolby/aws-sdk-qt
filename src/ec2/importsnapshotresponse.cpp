@@ -19,3 +19,85 @@
 
 #include "importsnapshotresponse.h"
 #include "importsnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ImportSnapshotResponse
+ *
+ * @brief  Handles EC2 ImportSnapshot responses.
+ *
+ * @see    EC2Client::importSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ImportSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new ImportSnapshotRequest(request));
+    setReply(reply);
+}
+
+const ImportSnapshotRequest * ImportSnapshotResponse::request() const
+{
+    Q_D(const ImportSnapshotResponse);
+    return static_cast<const ImportSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ImportSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void ImportSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for ImportSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ImportSnapshotResponse instance.
+ */
+ImportSnapshotResponsePrivate::ImportSnapshotResponsePrivate(
+    ImportSnapshotQueueResponse * const q) : ImportSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ImportSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ImportSnapshotResponsePrivate::ImportSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ImportSnapshotResponse"));
+    /// @todo
+}

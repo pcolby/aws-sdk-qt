@@ -19,3 +19,85 @@
 
 #include "putbotaliasresponse.h"
 #include "putbotaliasresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  PutBotAliasResponse
+ *
+ * @brief  Handles LexModelBuildingService PutBotAlias responses.
+ *
+ * @see    LexModelBuildingServiceClient::putBotAlias
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBotAliasResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new PutBotAliasResponsePrivate(this), parent)
+{
+    setRequest(new PutBotAliasRequest(request));
+    setReply(reply);
+}
+
+const PutBotAliasRequest * PutBotAliasResponse::request() const
+{
+    Q_D(const PutBotAliasResponse);
+    return static_cast<const PutBotAliasRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService PutBotAlias response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutBotAliasResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBotAliasResponsePrivate
+ *
+ * @brief  Private implementation for PutBotAliasResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBotAliasResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutBotAliasResponse instance.
+ */
+PutBotAliasResponsePrivate::PutBotAliasResponsePrivate(
+    PutBotAliasQueueResponse * const q) : PutBotAliasPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService PutBotAliasResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutBotAliasResponsePrivate::PutBotAliasResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutBotAliasResponse"));
+    /// @todo
+}

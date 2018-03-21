@@ -19,3 +19,85 @@
 
 #include "deleteindexfieldresponse.h"
 #include "deleteindexfieldresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DeleteIndexFieldResponse
+ *
+ * @brief  Handles CloudSearch DeleteIndexField responses.
+ *
+ * @see    CloudSearchClient::deleteIndexField
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIndexFieldResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DeleteIndexFieldResponsePrivate(this), parent)
+{
+    setRequest(new DeleteIndexFieldRequest(request));
+    setReply(reply);
+}
+
+const DeleteIndexFieldRequest * DeleteIndexFieldResponse::request() const
+{
+    Q_D(const DeleteIndexFieldResponse);
+    return static_cast<const DeleteIndexFieldRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DeleteIndexField response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteIndexFieldResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIndexFieldResponsePrivate
+ *
+ * @brief  Private implementation for DeleteIndexFieldResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIndexFieldResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteIndexFieldResponse instance.
+ */
+DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponsePrivate(
+    DeleteIndexFieldQueueResponse * const q) : DeleteIndexFieldPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DeleteIndexFieldResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteIndexFieldResponse"));
+    /// @todo
+}

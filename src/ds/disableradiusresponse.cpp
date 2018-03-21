@@ -19,3 +19,85 @@
 
 #include "disableradiusresponse.h"
 #include "disableradiusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DisableRadiusResponse
+ *
+ * @brief  Handles DirectoryService DisableRadius responses.
+ *
+ * @see    DirectoryServiceClient::disableRadius
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableRadiusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new DisableRadiusResponsePrivate(this), parent)
+{
+    setRequest(new DisableRadiusRequest(request));
+    setReply(reply);
+}
+
+const DisableRadiusRequest * DisableRadiusResponse::request() const
+{
+    Q_D(const DisableRadiusResponse);
+    return static_cast<const DisableRadiusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService DisableRadius response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableRadiusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableRadiusResponsePrivate
+ *
+ * @brief  Private implementation for DisableRadiusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableRadiusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableRadiusResponse instance.
+ */
+DisableRadiusResponsePrivate::DisableRadiusResponsePrivate(
+    DisableRadiusQueueResponse * const q) : DisableRadiusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService DisableRadiusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableRadiusResponsePrivate::DisableRadiusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableRadiusResponse"));
+    /// @todo
+}

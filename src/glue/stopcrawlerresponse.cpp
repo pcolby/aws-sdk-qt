@@ -19,3 +19,85 @@
 
 #include "stopcrawlerresponse.h"
 #include "stopcrawlerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StopCrawlerResponse
+ *
+ * @brief  Handles Glue StopCrawler responses.
+ *
+ * @see    GlueClient::stopCrawler
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopCrawlerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new StopCrawlerResponsePrivate(this), parent)
+{
+    setRequest(new StopCrawlerRequest(request));
+    setReply(reply);
+}
+
+const StopCrawlerRequest * StopCrawlerResponse::request() const
+{
+    Q_D(const StopCrawlerResponse);
+    return static_cast<const StopCrawlerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue StopCrawler response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopCrawlerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopCrawlerResponsePrivate
+ *
+ * @brief  Private implementation for StopCrawlerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopCrawlerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopCrawlerResponse instance.
+ */
+StopCrawlerResponsePrivate::StopCrawlerResponsePrivate(
+    StopCrawlerQueueResponse * const q) : StopCrawlerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue StopCrawlerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopCrawlerResponsePrivate::StopCrawlerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopCrawlerResponse"));
+    /// @todo
+}

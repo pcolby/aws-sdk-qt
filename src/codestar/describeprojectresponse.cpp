@@ -19,3 +19,85 @@
 
 #include "describeprojectresponse.h"
 #include "describeprojectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  DescribeProjectResponse
+ *
+ * @brief  Handles CodeStar DescribeProject responses.
+ *
+ * @see    CodeStarClient::describeProject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new DescribeProjectResponsePrivate(this), parent)
+{
+    setRequest(new DescribeProjectRequest(request));
+    setReply(reply);
+}
+
+const DescribeProjectRequest * DescribeProjectResponse::request() const
+{
+    Q_D(const DescribeProjectResponse);
+    return static_cast<const DescribeProjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar DescribeProject response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeProjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProjectResponsePrivate
+ *
+ * @brief  Private implementation for DescribeProjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeProjectResponse instance.
+ */
+DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
+    DescribeProjectQueueResponse * const q) : DescribeProjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar DescribeProjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeProjectResponsePrivate::DescribeProjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeProjectResponse"));
+    /// @todo
+}

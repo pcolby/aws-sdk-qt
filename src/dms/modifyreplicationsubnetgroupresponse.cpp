@@ -19,3 +19,85 @@
 
 #include "modifyreplicationsubnetgroupresponse.h"
 #include "modifyreplicationsubnetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  ModifyReplicationSubnetGroupResponse
+ *
+ * @brief  Handles DatabaseMigrationService ModifyReplicationSubnetGroup responses.
+ *
+ * @see    DatabaseMigrationServiceClient::modifyReplicationSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyReplicationSubnetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new ModifyReplicationSubnetGroupResponsePrivate(this), parent)
+{
+    setRequest(new ModifyReplicationSubnetGroupRequest(request));
+    setReply(reply);
+}
+
+const ModifyReplicationSubnetGroupRequest * ModifyReplicationSubnetGroupResponse::request() const
+{
+    Q_D(const ModifyReplicationSubnetGroupResponse);
+    return static_cast<const ModifyReplicationSubnetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService ModifyReplicationSubnetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyReplicationSubnetGroupResponsePrivate
+ *
+ * @brief  Private implementation for ModifyReplicationSubnetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationSubnetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyReplicationSubnetGroupResponse instance.
+ */
+ModifyReplicationSubnetGroupResponsePrivate::ModifyReplicationSubnetGroupResponsePrivate(
+    ModifyReplicationSubnetGroupQueueResponse * const q) : ModifyReplicationSubnetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService ModifyReplicationSubnetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyReplicationSubnetGroupResponsePrivate::ModifyReplicationSubnetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationSubnetGroupResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listexecutionsresponse.h"
 #include "listexecutionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  ListExecutionsResponse
+ *
+ * @brief  Handles SFN ListExecutions responses.
+ *
+ * @see    SFNClient::listExecutions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListExecutionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new ListExecutionsResponsePrivate(this), parent)
+{
+    setRequest(new ListExecutionsRequest(request));
+    setReply(reply);
+}
+
+const ListExecutionsRequest * ListExecutionsResponse::request() const
+{
+    Q_D(const ListExecutionsResponse);
+    return static_cast<const ListExecutionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN ListExecutions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListExecutionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListExecutionsResponsePrivate
+ *
+ * @brief  Private implementation for ListExecutionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListExecutionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListExecutionsResponse instance.
+ */
+ListExecutionsResponsePrivate::ListExecutionsResponsePrivate(
+    ListExecutionsQueueResponse * const q) : ListExecutionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN ListExecutionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListExecutionsResponsePrivate::ListExecutionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListExecutionsResponse"));
+    /// @todo
+}

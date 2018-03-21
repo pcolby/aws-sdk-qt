@@ -19,3 +19,85 @@
 
 #include "stopstreamprocessorresponse.h"
 #include "stopstreamprocessorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StopStreamProcessorResponse
+ *
+ * @brief  Handles Rekognition StopStreamProcessor responses.
+ *
+ * @see    RekognitionClient::stopStreamProcessor
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStreamProcessorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new StopStreamProcessorResponsePrivate(this), parent)
+{
+    setRequest(new StopStreamProcessorRequest(request));
+    setReply(reply);
+}
+
+const StopStreamProcessorRequest * StopStreamProcessorResponse::request() const
+{
+    Q_D(const StopStreamProcessorResponse);
+    return static_cast<const StopStreamProcessorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition StopStreamProcessor response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopStreamProcessorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStreamProcessorResponsePrivate
+ *
+ * @brief  Private implementation for StopStreamProcessorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStreamProcessorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopStreamProcessorResponse instance.
+ */
+StopStreamProcessorResponsePrivate::StopStreamProcessorResponsePrivate(
+    StopStreamProcessorQueueResponse * const q) : StopStreamProcessorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition StopStreamProcessorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopStreamProcessorResponsePrivate::StopStreamProcessorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopStreamProcessorResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "attachthingprincipalresponse.h"
 #include "attachthingprincipalresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  AttachThingPrincipalResponse
+ *
+ * @brief  Handles IoT AttachThingPrincipal responses.
+ *
+ * @see    IoTClient::attachThingPrincipal
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachThingPrincipalResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new AttachThingPrincipalResponsePrivate(this), parent)
+{
+    setRequest(new AttachThingPrincipalRequest(request));
+    setReply(reply);
+}
+
+const AttachThingPrincipalRequest * AttachThingPrincipalResponse::request() const
+{
+    Q_D(const AttachThingPrincipalResponse);
+    return static_cast<const AttachThingPrincipalRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT AttachThingPrincipal response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachThingPrincipalResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachThingPrincipalResponsePrivate
+ *
+ * @brief  Private implementation for AttachThingPrincipalResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachThingPrincipalResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachThingPrincipalResponse instance.
+ */
+AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponsePrivate(
+    AttachThingPrincipalQueueResponse * const q) : AttachThingPrincipalPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT AttachThingPrincipalResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachThingPrincipalResponse"));
+    /// @todo
+}

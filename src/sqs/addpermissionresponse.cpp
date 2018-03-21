@@ -19,3 +19,85 @@
 
 #include "addpermissionresponse.h"
 #include "addpermissionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  AddPermissionResponse
+ *
+ * @brief  Handles SQS AddPermission responses.
+ *
+ * @see    SQSClient::addPermission
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddPermissionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SQSResponse(new AddPermissionResponsePrivate(this), parent)
+{
+    setRequest(new AddPermissionRequest(request));
+    setReply(reply);
+}
+
+const AddPermissionRequest * AddPermissionResponse::request() const
+{
+    Q_D(const AddPermissionResponse);
+    return static_cast<const AddPermissionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SQS AddPermission response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddPermissionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddPermissionResponsePrivate
+ *
+ * @brief  Private implementation for AddPermissionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddPermissionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddPermissionResponse instance.
+ */
+AddPermissionResponsePrivate::AddPermissionResponsePrivate(
+    AddPermissionQueueResponse * const q) : AddPermissionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SQS AddPermissionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddPermissionResponsePrivate::AddPermissionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddPermissionResponse"));
+    /// @todo
+}

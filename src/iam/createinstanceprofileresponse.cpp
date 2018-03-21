@@ -19,3 +19,85 @@
 
 #include "createinstanceprofileresponse.h"
 #include "createinstanceprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateInstanceProfileResponse
+ *
+ * @brief  Handles IAM CreateInstanceProfile responses.
+ *
+ * @see    IAMClient::createInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstanceProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new CreateInstanceProfileResponsePrivate(this), parent)
+{
+    setRequest(new CreateInstanceProfileRequest(request));
+    setReply(reply);
+}
+
+const CreateInstanceProfileRequest * CreateInstanceProfileResponse::request() const
+{
+    Q_D(const CreateInstanceProfileResponse);
+    return static_cast<const CreateInstanceProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM CreateInstanceProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateInstanceProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstanceProfileResponsePrivate
+ *
+ * @brief  Private implementation for CreateInstanceProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateInstanceProfileResponse instance.
+ */
+CreateInstanceProfileResponsePrivate::CreateInstanceProfileResponsePrivate(
+    CreateInstanceProfileQueueResponse * const q) : CreateInstanceProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM CreateInstanceProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateInstanceProfileResponsePrivate::CreateInstanceProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateInstanceProfileResponse"));
+    /// @todo
+}

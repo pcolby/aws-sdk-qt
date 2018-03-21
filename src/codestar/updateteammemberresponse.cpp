@@ -19,3 +19,85 @@
 
 #include "updateteammemberresponse.h"
 #include "updateteammemberresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  UpdateTeamMemberResponse
+ *
+ * @brief  Handles CodeStar UpdateTeamMember responses.
+ *
+ * @see    CodeStarClient::updateTeamMember
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTeamMemberResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new UpdateTeamMemberResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTeamMemberRequest(request));
+    setReply(reply);
+}
+
+const UpdateTeamMemberRequest * UpdateTeamMemberResponse::request() const
+{
+    Q_D(const UpdateTeamMemberResponse);
+    return static_cast<const UpdateTeamMemberRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar UpdateTeamMember response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTeamMemberResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTeamMemberResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTeamMemberResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTeamMemberResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTeamMemberResponse instance.
+ */
+UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponsePrivate(
+    UpdateTeamMemberQueueResponse * const q) : UpdateTeamMemberPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar UpdateTeamMemberResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTeamMemberResponse"));
+    /// @todo
+}

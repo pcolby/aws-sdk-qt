@@ -19,3 +19,85 @@
 
 #include "createcoredefinitionversionresponse.h"
 #include "createcoredefinitionversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateCoreDefinitionVersionResponse
+ *
+ * @brief  Handles Greengrass CreateCoreDefinitionVersion responses.
+ *
+ * @see    GreengrassClient::createCoreDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCoreDefinitionVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new CreateCoreDefinitionVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreateCoreDefinitionVersionRequest(request));
+    setReply(reply);
+}
+
+const CreateCoreDefinitionVersionRequest * CreateCoreDefinitionVersionResponse::request() const
+{
+    Q_D(const CreateCoreDefinitionVersionResponse);
+    return static_cast<const CreateCoreDefinitionVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass CreateCoreDefinitionVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCoreDefinitionVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCoreDefinitionVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreateCoreDefinitionVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCoreDefinitionVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCoreDefinitionVersionResponse instance.
+ */
+CreateCoreDefinitionVersionResponsePrivate::CreateCoreDefinitionVersionResponsePrivate(
+    CreateCoreDefinitionVersionQueueResponse * const q) : CreateCoreDefinitionVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass CreateCoreDefinitionVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCoreDefinitionVersionResponsePrivate::CreateCoreDefinitionVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCoreDefinitionVersionResponse"));
+    /// @todo
+}

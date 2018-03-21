@@ -19,3 +19,85 @@
 
 #include "getconnectorsresponse.h"
 #include "getconnectorsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  GetConnectorsResponse
+ *
+ * @brief  Handles SMS GetConnectors responses.
+ *
+ * @see    SMSClient::getConnectors
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConnectorsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SMSResponse(new GetConnectorsResponsePrivate(this), parent)
+{
+    setRequest(new GetConnectorsRequest(request));
+    setReply(reply);
+}
+
+const GetConnectorsRequest * GetConnectorsResponse::request() const
+{
+    Q_D(const GetConnectorsResponse);
+    return static_cast<const GetConnectorsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SMS GetConnectors response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetConnectorsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConnectorsResponsePrivate
+ *
+ * @brief  Private implementation for GetConnectorsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectorsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetConnectorsResponse instance.
+ */
+GetConnectorsResponsePrivate::GetConnectorsResponsePrivate(
+    GetConnectorsQueueResponse * const q) : GetConnectorsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SMS GetConnectorsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetConnectorsResponsePrivate::GetConnectorsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetConnectorsResponse"));
+    /// @todo
+}

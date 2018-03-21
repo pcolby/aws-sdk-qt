@@ -19,3 +19,85 @@
 
 #include "createconfigurationsetresponse.h"
 #include "createconfigurationsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  CreateConfigurationSetResponse
+ *
+ * @brief  Handles SES CreateConfigurationSet responses.
+ *
+ * @see    SESClient::createConfigurationSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateConfigurationSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new CreateConfigurationSetResponsePrivate(this), parent)
+{
+    setRequest(new CreateConfigurationSetRequest(request));
+    setReply(reply);
+}
+
+const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() const
+{
+    Q_D(const CreateConfigurationSetResponse);
+    return static_cast<const CreateConfigurationSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES CreateConfigurationSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateConfigurationSetResponsePrivate
+ *
+ * @brief  Private implementation for CreateConfigurationSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConfigurationSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateConfigurationSetResponse instance.
+ */
+CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
+    CreateConfigurationSetQueueResponse * const q) : CreateConfigurationSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES CreateConfigurationSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationSetResponse"));
+    /// @todo
+}

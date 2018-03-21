@@ -19,3 +19,85 @@
 
 #include "geteventstreamresponse.h"
 #include "geteventstreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetEventStreamResponse
+ *
+ * @brief  Handles Pinpoint GetEventStream responses.
+ *
+ * @see    PinpointClient::getEventStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEventStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetEventStreamResponsePrivate(this), parent)
+{
+    setRequest(new GetEventStreamRequest(request));
+    setReply(reply);
+}
+
+const GetEventStreamRequest * GetEventStreamResponse::request() const
+{
+    Q_D(const GetEventStreamResponse);
+    return static_cast<const GetEventStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetEventStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetEventStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEventStreamResponsePrivate
+ *
+ * @brief  Private implementation for GetEventStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEventStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetEventStreamResponse instance.
+ */
+GetEventStreamResponsePrivate::GetEventStreamResponsePrivate(
+    GetEventStreamQueueResponse * const q) : GetEventStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetEventStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetEventStreamResponsePrivate::GetEventStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetEventStreamResponse"));
+    /// @todo
+}

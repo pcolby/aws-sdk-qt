@@ -19,3 +19,85 @@
 
 #include "listinstanceprofilesresponse.h"
 #include "listinstanceprofilesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListInstanceProfilesResponse
+ *
+ * @brief  Handles IAM ListInstanceProfiles responses.
+ *
+ * @see    IAMClient::listInstanceProfiles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInstanceProfilesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ListInstanceProfilesResponsePrivate(this), parent)
+{
+    setRequest(new ListInstanceProfilesRequest(request));
+    setReply(reply);
+}
+
+const ListInstanceProfilesRequest * ListInstanceProfilesResponse::request() const
+{
+    Q_D(const ListInstanceProfilesResponse);
+    return static_cast<const ListInstanceProfilesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ListInstanceProfiles response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListInstanceProfilesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInstanceProfilesResponsePrivate
+ *
+ * @brief  Private implementation for ListInstanceProfilesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceProfilesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListInstanceProfilesResponse instance.
+ */
+ListInstanceProfilesResponsePrivate::ListInstanceProfilesResponsePrivate(
+    ListInstanceProfilesQueueResponse * const q) : ListInstanceProfilesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ListInstanceProfilesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListInstanceProfilesResponsePrivate::ListInstanceProfilesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListInstanceProfilesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeeventconfigurationsresponse.h"
 #include "describeeventconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeEventConfigurationsResponse
+ *
+ * @brief  Handles IoT DescribeEventConfigurations responses.
+ *
+ * @see    IoTClient::describeEventConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DescribeEventConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEventConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeEventConfigurationsRequest * DescribeEventConfigurationsResponse::request() const
+{
+    Q_D(const DescribeEventConfigurationsResponse);
+    return static_cast<const DescribeEventConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DescribeEventConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEventConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEventConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEventConfigurationsResponse instance.
+ */
+DescribeEventConfigurationsResponsePrivate::DescribeEventConfigurationsResponsePrivate(
+    DescribeEventConfigurationsQueueResponse * const q) : DescribeEventConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DescribeEventConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEventConfigurationsResponsePrivate::DescribeEventConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEventConfigurationsResponse"));
+    /// @todo
+}

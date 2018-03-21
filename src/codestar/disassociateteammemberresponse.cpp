@@ -19,3 +19,85 @@
 
 #include "disassociateteammemberresponse.h"
 #include "disassociateteammemberresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  DisassociateTeamMemberResponse
+ *
+ * @brief  Handles CodeStar DisassociateTeamMember responses.
+ *
+ * @see    CodeStarClient::disassociateTeamMember
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateTeamMemberResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new DisassociateTeamMemberResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateTeamMemberRequest(request));
+    setReply(reply);
+}
+
+const DisassociateTeamMemberRequest * DisassociateTeamMemberResponse::request() const
+{
+    Q_D(const DisassociateTeamMemberResponse);
+    return static_cast<const DisassociateTeamMemberRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar DisassociateTeamMember response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateTeamMemberResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateTeamMemberResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateTeamMemberResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateTeamMemberResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateTeamMemberResponse instance.
+ */
+DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponsePrivate(
+    DisassociateTeamMemberQueueResponse * const q) : DisassociateTeamMemberPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar DisassociateTeamMemberResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateTeamMemberResponse"));
+    /// @todo
+}

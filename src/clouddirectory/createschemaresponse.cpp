@@ -19,3 +19,85 @@
 
 #include "createschemaresponse.h"
 #include "createschemaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  CreateSchemaResponse
+ *
+ * @brief  Handles CloudDirectory CreateSchema responses.
+ *
+ * @see    CloudDirectoryClient::createSchema
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSchemaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new CreateSchemaResponsePrivate(this), parent)
+{
+    setRequest(new CreateSchemaRequest(request));
+    setReply(reply);
+}
+
+const CreateSchemaRequest * CreateSchemaResponse::request() const
+{
+    Q_D(const CreateSchemaResponse);
+    return static_cast<const CreateSchemaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory CreateSchema response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSchemaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSchemaResponsePrivate
+ *
+ * @brief  Private implementation for CreateSchemaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSchemaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSchemaResponse instance.
+ */
+CreateSchemaResponsePrivate::CreateSchemaResponsePrivate(
+    CreateSchemaQueueResponse * const q) : CreateSchemaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory CreateSchemaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSchemaResponsePrivate::CreateSchemaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSchemaResponse"));
+    /// @todo
+}

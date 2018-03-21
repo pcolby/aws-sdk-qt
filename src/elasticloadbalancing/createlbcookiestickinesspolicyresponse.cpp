@@ -19,3 +19,85 @@
 
 #include "createlbcookiestickinesspolicyresponse.h"
 #include "createlbcookiestickinesspolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  CreateLBCookieStickinessPolicyResponse
+ *
+ * @brief  Handles ElasticLoadBalancing CreateLBCookieStickinessPolicy responses.
+ *
+ * @see    ElasticLoadBalancingClient::createLBCookieStickinessPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLBCookieStickinessPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new CreateLBCookieStickinessPolicyResponsePrivate(this), parent)
+{
+    setRequest(new CreateLBCookieStickinessPolicyRequest(request));
+    setReply(reply);
+}
+
+const CreateLBCookieStickinessPolicyRequest * CreateLBCookieStickinessPolicyResponse::request() const
+{
+    Q_D(const CreateLBCookieStickinessPolicyResponse);
+    return static_cast<const CreateLBCookieStickinessPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing CreateLBCookieStickinessPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLBCookieStickinessPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLBCookieStickinessPolicyResponsePrivate
+ *
+ * @brief  Private implementation for CreateLBCookieStickinessPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLBCookieStickinessPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLBCookieStickinessPolicyResponse instance.
+ */
+CreateLBCookieStickinessPolicyResponsePrivate::CreateLBCookieStickinessPolicyResponsePrivate(
+    CreateLBCookieStickinessPolicyQueueResponse * const q) : CreateLBCookieStickinessPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing CreateLBCookieStickinessPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLBCookieStickinessPolicyResponsePrivate::CreateLBCookieStickinessPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLBCookieStickinessPolicyResponse"));
+    /// @todo
+}

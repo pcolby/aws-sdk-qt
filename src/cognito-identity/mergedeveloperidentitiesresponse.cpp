@@ -19,3 +19,85 @@
 
 #include "mergedeveloperidentitiesresponse.h"
 #include "mergedeveloperidentitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  MergeDeveloperIdentitiesResponse
+ *
+ * @brief  Handles CognitoIdentity MergeDeveloperIdentities responses.
+ *
+ * @see    CognitoIdentityClient::mergeDeveloperIdentities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+MergeDeveloperIdentitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new MergeDeveloperIdentitiesResponsePrivate(this), parent)
+{
+    setRequest(new MergeDeveloperIdentitiesRequest(request));
+    setReply(reply);
+}
+
+const MergeDeveloperIdentitiesRequest * MergeDeveloperIdentitiesResponse::request() const
+{
+    Q_D(const MergeDeveloperIdentitiesResponse);
+    return static_cast<const MergeDeveloperIdentitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity MergeDeveloperIdentities response.
+ *
+ * @param  response  Response to parse.
+ */
+void MergeDeveloperIdentitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  MergeDeveloperIdentitiesResponsePrivate
+ *
+ * @brief  Private implementation for MergeDeveloperIdentitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MergeDeveloperIdentitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public MergeDeveloperIdentitiesResponse instance.
+ */
+MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponsePrivate(
+    MergeDeveloperIdentitiesQueueResponse * const q) : MergeDeveloperIdentitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity MergeDeveloperIdentitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("MergeDeveloperIdentitiesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "getpresetresponse.h"
 #include "getpresetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  GetPresetResponse
+ *
+ * @brief  Handles MediaConvert GetPreset responses.
+ *
+ * @see    MediaConvertClient::getPreset
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPresetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new GetPresetResponsePrivate(this), parent)
+{
+    setRequest(new GetPresetRequest(request));
+    setReply(reply);
+}
+
+const GetPresetRequest * GetPresetResponse::request() const
+{
+    Q_D(const GetPresetResponse);
+    return static_cast<const GetPresetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert GetPreset response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetPresetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPresetResponsePrivate
+ *
+ * @brief  Private implementation for GetPresetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPresetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetPresetResponse instance.
+ */
+GetPresetResponsePrivate::GetPresetResponsePrivate(
+    GetPresetQueueResponse * const q) : GetPresetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert GetPresetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetPresetResponsePrivate::GetPresetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetPresetResponse"));
+    /// @todo
+}

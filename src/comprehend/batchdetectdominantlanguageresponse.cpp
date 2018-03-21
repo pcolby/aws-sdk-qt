@@ -19,3 +19,85 @@
 
 #include "batchdetectdominantlanguageresponse.h"
 #include "batchdetectdominantlanguageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  BatchDetectDominantLanguageResponse
+ *
+ * @brief  Handles Comprehend BatchDetectDominantLanguage responses.
+ *
+ * @see    ComprehendClient::batchDetectDominantLanguage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDetectDominantLanguageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ComprehendResponse(new BatchDetectDominantLanguageResponsePrivate(this), parent)
+{
+    setRequest(new BatchDetectDominantLanguageRequest(request));
+    setReply(reply);
+}
+
+const BatchDetectDominantLanguageRequest * BatchDetectDominantLanguageResponse::request() const
+{
+    Q_D(const BatchDetectDominantLanguageResponse);
+    return static_cast<const BatchDetectDominantLanguageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Comprehend BatchDetectDominantLanguage response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchDetectDominantLanguageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDetectDominantLanguageResponsePrivate
+ *
+ * @brief  Private implementation for BatchDetectDominantLanguageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDetectDominantLanguageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchDetectDominantLanguageResponse instance.
+ */
+BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponsePrivate(
+    BatchDetectDominantLanguageQueueResponse * const q) : BatchDetectDominantLanguagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Comprehend BatchDetectDominantLanguageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchDetectDominantLanguageResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updatefleetcapacityresponse.h"
 #include "updatefleetcapacityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateFleetCapacityResponse
+ *
+ * @brief  Handles GameLift UpdateFleetCapacity responses.
+ *
+ * @see    GameLiftClient::updateFleetCapacity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFleetCapacityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new UpdateFleetCapacityResponsePrivate(this), parent)
+{
+    setRequest(new UpdateFleetCapacityRequest(request));
+    setReply(reply);
+}
+
+const UpdateFleetCapacityRequest * UpdateFleetCapacityResponse::request() const
+{
+    Q_D(const UpdateFleetCapacityResponse);
+    return static_cast<const UpdateFleetCapacityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift UpdateFleetCapacity response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateFleetCapacityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFleetCapacityResponsePrivate
+ *
+ * @brief  Private implementation for UpdateFleetCapacityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFleetCapacityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateFleetCapacityResponse instance.
+ */
+UpdateFleetCapacityResponsePrivate::UpdateFleetCapacityResponsePrivate(
+    UpdateFleetCapacityQueueResponse * const q) : UpdateFleetCapacityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift UpdateFleetCapacityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateFleetCapacityResponsePrivate::UpdateFleetCapacityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateFleetCapacityResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describepermissionsresponse.h"
 #include "describepermissionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribePermissionsResponse
+ *
+ * @brief  Handles OpsWorks DescribePermissions responses.
+ *
+ * @see    OpsWorksClient::describePermissions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePermissionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new DescribePermissionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribePermissionsRequest(request));
+    setReply(reply);
+}
+
+const DescribePermissionsRequest * DescribePermissionsResponse::request() const
+{
+    Q_D(const DescribePermissionsResponse);
+    return static_cast<const DescribePermissionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks DescribePermissions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribePermissionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePermissionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribePermissionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePermissionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribePermissionsResponse instance.
+ */
+DescribePermissionsResponsePrivate::DescribePermissionsResponsePrivate(
+    DescribePermissionsQueueResponse * const q) : DescribePermissionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks DescribePermissionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribePermissionsResponsePrivate::DescribePermissionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribePermissionsResponse"));
+    /// @todo
+}

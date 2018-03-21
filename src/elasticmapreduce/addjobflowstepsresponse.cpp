@@ -19,3 +19,85 @@
 
 #include "addjobflowstepsresponse.h"
 #include "addjobflowstepsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  AddJobFlowStepsResponse
+ *
+ * @brief  Handles EMR AddJobFlowSteps responses.
+ *
+ * @see    EMRClient::addJobFlowSteps
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddJobFlowStepsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EMRResponse(new AddJobFlowStepsResponsePrivate(this), parent)
+{
+    setRequest(new AddJobFlowStepsRequest(request));
+    setReply(reply);
+}
+
+const AddJobFlowStepsRequest * AddJobFlowStepsResponse::request() const
+{
+    Q_D(const AddJobFlowStepsResponse);
+    return static_cast<const AddJobFlowStepsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EMR AddJobFlowSteps response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddJobFlowStepsResponsePrivate
+ *
+ * @brief  Private implementation for AddJobFlowStepsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddJobFlowStepsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddJobFlowStepsResponse instance.
+ */
+AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
+    AddJobFlowStepsQueueResponse * const q) : AddJobFlowStepsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EMR AddJobFlowStepsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddJobFlowStepsResponse"));
+    /// @todo
+}

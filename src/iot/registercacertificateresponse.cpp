@@ -19,3 +19,85 @@
 
 #include "registercacertificateresponse.h"
 #include "registercacertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  RegisterCACertificateResponse
+ *
+ * @brief  Handles IoT RegisterCACertificate responses.
+ *
+ * @see    IoTClient::registerCACertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterCACertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new RegisterCACertificateResponsePrivate(this), parent)
+{
+    setRequest(new RegisterCACertificateRequest(request));
+    setReply(reply);
+}
+
+const RegisterCACertificateRequest * RegisterCACertificateResponse::request() const
+{
+    Q_D(const RegisterCACertificateResponse);
+    return static_cast<const RegisterCACertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT RegisterCACertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterCACertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterCACertificateResponsePrivate
+ *
+ * @brief  Private implementation for RegisterCACertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterCACertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterCACertificateResponse instance.
+ */
+RegisterCACertificateResponsePrivate::RegisterCACertificateResponsePrivate(
+    RegisterCACertificateQueueResponse * const q) : RegisterCACertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT RegisterCACertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterCACertificateResponsePrivate::RegisterCACertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterCACertificateResponse"));
+    /// @todo
+}

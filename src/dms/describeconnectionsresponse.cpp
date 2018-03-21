@@ -19,3 +19,85 @@
 
 #include "describeconnectionsresponse.h"
 #include "describeconnectionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeConnectionsResponse
+ *
+ * @brief  Handles DatabaseMigrationService DescribeConnections responses.
+ *
+ * @see    DatabaseMigrationServiceClient::describeConnections
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConnectionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DescribeConnectionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeConnectionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeConnectionsRequest * DescribeConnectionsResponse::request() const
+{
+    Q_D(const DescribeConnectionsResponse);
+    return static_cast<const DescribeConnectionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DescribeConnections response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeConnectionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConnectionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeConnectionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConnectionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeConnectionsResponse instance.
+ */
+DescribeConnectionsResponsePrivate::DescribeConnectionsResponsePrivate(
+    DescribeConnectionsQueueResponse * const q) : DescribeConnectionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DescribeConnectionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeConnectionsResponsePrivate::DescribeConnectionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeConnectionsResponse"));
+    /// @todo
+}

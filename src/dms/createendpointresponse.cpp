@@ -19,3 +19,85 @@
 
 #include "createendpointresponse.h"
 #include "createendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  CreateEndpointResponse
+ *
+ * @brief  Handles DatabaseMigrationService CreateEndpoint responses.
+ *
+ * @see    DatabaseMigrationServiceClient::createEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new CreateEndpointResponsePrivate(this), parent)
+{
+    setRequest(new CreateEndpointRequest(request));
+    setReply(reply);
+}
+
+const CreateEndpointRequest * CreateEndpointResponse::request() const
+{
+    Q_D(const CreateEndpointResponse);
+    return static_cast<const CreateEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService CreateEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEndpointResponsePrivate
+ *
+ * @brief  Private implementation for CreateEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateEndpointResponse instance.
+ */
+CreateEndpointResponsePrivate::CreateEndpointResponsePrivate(
+    CreateEndpointQueueResponse * const q) : CreateEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService CreateEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateEndpointResponsePrivate::CreateEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateEndpointResponse"));
+    /// @todo
+}

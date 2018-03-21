@@ -19,3 +19,85 @@
 
 #include "describeruntimeconfigurationresponse.h"
 #include "describeruntimeconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeRuntimeConfigurationResponse
+ *
+ * @brief  Handles GameLift DescribeRuntimeConfiguration responses.
+ *
+ * @see    GameLiftClient::describeRuntimeConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRuntimeConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DescribeRuntimeConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRuntimeConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DescribeRuntimeConfigurationRequest * DescribeRuntimeConfigurationResponse::request() const
+{
+    Q_D(const DescribeRuntimeConfigurationResponse);
+    return static_cast<const DescribeRuntimeConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DescribeRuntimeConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRuntimeConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRuntimeConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRuntimeConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRuntimeConfigurationResponse instance.
+ */
+DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationResponsePrivate(
+    DescribeRuntimeConfigurationQueueResponse * const q) : DescribeRuntimeConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DescribeRuntimeConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRuntimeConfigurationResponse"));
+    /// @todo
+}

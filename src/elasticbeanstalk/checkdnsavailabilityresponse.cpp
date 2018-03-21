@@ -19,3 +19,85 @@
 
 #include "checkdnsavailabilityresponse.h"
 #include "checkdnsavailabilityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  CheckDNSAvailabilityResponse
+ *
+ * @brief  Handles ElasticBeanstalk CheckDNSAvailability responses.
+ *
+ * @see    ElasticBeanstalkClient::checkDNSAvailability
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CheckDNSAvailabilityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new CheckDNSAvailabilityResponsePrivate(this), parent)
+{
+    setRequest(new CheckDNSAvailabilityRequest(request));
+    setReply(reply);
+}
+
+const CheckDNSAvailabilityRequest * CheckDNSAvailabilityResponse::request() const
+{
+    Q_D(const CheckDNSAvailabilityResponse);
+    return static_cast<const CheckDNSAvailabilityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk CheckDNSAvailability response.
+ *
+ * @param  response  Response to parse.
+ */
+void CheckDNSAvailabilityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CheckDNSAvailabilityResponsePrivate
+ *
+ * @brief  Private implementation for CheckDNSAvailabilityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckDNSAvailabilityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CheckDNSAvailabilityResponse instance.
+ */
+CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponsePrivate(
+    CheckDNSAvailabilityQueueResponse * const q) : CheckDNSAvailabilityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk CheckDNSAvailabilityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CheckDNSAvailabilityResponse"));
+    /// @todo
+}

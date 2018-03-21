@@ -19,3 +19,85 @@
 
 #include "deactivatemfadeviceresponse.h"
 #include "deactivatemfadeviceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeactivateMFADeviceResponse
+ *
+ * @brief  Handles IAM DeactivateMFADevice responses.
+ *
+ * @see    IAMClient::deactivateMFADevice
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeactivateMFADeviceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new DeactivateMFADeviceResponsePrivate(this), parent)
+{
+    setRequest(new DeactivateMFADeviceRequest(request));
+    setReply(reply);
+}
+
+const DeactivateMFADeviceRequest * DeactivateMFADeviceResponse::request() const
+{
+    Q_D(const DeactivateMFADeviceResponse);
+    return static_cast<const DeactivateMFADeviceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM DeactivateMFADevice response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeactivateMFADeviceResponsePrivate
+ *
+ * @brief  Private implementation for DeactivateMFADeviceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeactivateMFADeviceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeactivateMFADeviceResponse instance.
+ */
+DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
+    DeactivateMFADeviceQueueResponse * const q) : DeactivateMFADevicePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM DeactivateMFADeviceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeactivateMFADeviceResponse"));
+    /// @todo
+}

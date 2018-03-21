@@ -19,3 +19,85 @@
 
 #include "createcaseresponse.h"
 #include "createcaseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  CreateCaseResponse
+ *
+ * @brief  Handles Support CreateCase responses.
+ *
+ * @see    SupportClient::createCase
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCaseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SupportResponse(new CreateCaseResponsePrivate(this), parent)
+{
+    setRequest(new CreateCaseRequest(request));
+    setReply(reply);
+}
+
+const CreateCaseRequest * CreateCaseResponse::request() const
+{
+    Q_D(const CreateCaseResponse);
+    return static_cast<const CreateCaseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Support CreateCase response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCaseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCaseResponsePrivate
+ *
+ * @brief  Private implementation for CreateCaseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCaseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCaseResponse instance.
+ */
+CreateCaseResponsePrivate::CreateCaseResponsePrivate(
+    CreateCaseQueueResponse * const q) : CreateCasePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Support CreateCaseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCaseResponsePrivate::CreateCaseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCaseResponse"));
+    /// @todo
+}

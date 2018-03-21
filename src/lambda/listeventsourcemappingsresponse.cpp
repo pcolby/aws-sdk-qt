@@ -19,3 +19,85 @@
 
 #include "listeventsourcemappingsresponse.h"
 #include "listeventsourcemappingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  ListEventSourceMappingsResponse
+ *
+ * @brief  Handles Lambda ListEventSourceMappings responses.
+ *
+ * @see    LambdaClient::listEventSourceMappings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEventSourceMappingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LambdaResponse(new ListEventSourceMappingsResponsePrivate(this), parent)
+{
+    setRequest(new ListEventSourceMappingsRequest(request));
+    setReply(reply);
+}
+
+const ListEventSourceMappingsRequest * ListEventSourceMappingsResponse::request() const
+{
+    Q_D(const ListEventSourceMappingsResponse);
+    return static_cast<const ListEventSourceMappingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lambda ListEventSourceMappings response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListEventSourceMappingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEventSourceMappingsResponsePrivate
+ *
+ * @brief  Private implementation for ListEventSourceMappingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEventSourceMappingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListEventSourceMappingsResponse instance.
+ */
+ListEventSourceMappingsResponsePrivate::ListEventSourceMappingsResponsePrivate(
+    ListEventSourceMappingsQueueResponse * const q) : ListEventSourceMappingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lambda ListEventSourceMappingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListEventSourceMappingsResponsePrivate::ListEventSourceMappingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListEventSourceMappingsResponse"));
+    /// @todo
+}

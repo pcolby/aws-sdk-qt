@@ -19,3 +19,85 @@
 
 #include "describereservednodeofferingsresponse.h"
 #include "describereservednodeofferingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeReservedNodeOfferingsResponse
+ *
+ * @brief  Handles Redshift DescribeReservedNodeOfferings responses.
+ *
+ * @see    RedshiftClient::describeReservedNodeOfferings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedNodeOfferingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new DescribeReservedNodeOfferingsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReservedNodeOfferingsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReservedNodeOfferingsRequest * DescribeReservedNodeOfferingsResponse::request() const
+{
+    Q_D(const DescribeReservedNodeOfferingsResponse);
+    return static_cast<const DescribeReservedNodeOfferingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift DescribeReservedNodeOfferings response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReservedNodeOfferingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedNodeOfferingsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReservedNodeOfferingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedNodeOfferingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReservedNodeOfferingsResponse instance.
+ */
+DescribeReservedNodeOfferingsResponsePrivate::DescribeReservedNodeOfferingsResponsePrivate(
+    DescribeReservedNodeOfferingsQueueResponse * const q) : DescribeReservedNodeOfferingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift DescribeReservedNodeOfferingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReservedNodeOfferingsResponsePrivate::DescribeReservedNodeOfferingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReservedNodeOfferingsResponse"));
+    /// @todo
+}

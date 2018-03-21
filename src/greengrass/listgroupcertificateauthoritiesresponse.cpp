@@ -19,3 +19,85 @@
 
 #include "listgroupcertificateauthoritiesresponse.h"
 #include "listgroupcertificateauthoritiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListGroupCertificateAuthoritiesResponse
+ *
+ * @brief  Handles Greengrass ListGroupCertificateAuthorities responses.
+ *
+ * @see    GreengrassClient::listGroupCertificateAuthorities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupCertificateAuthoritiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListGroupCertificateAuthoritiesResponsePrivate(this), parent)
+{
+    setRequest(new ListGroupCertificateAuthoritiesRequest(request));
+    setReply(reply);
+}
+
+const ListGroupCertificateAuthoritiesRequest * ListGroupCertificateAuthoritiesResponse::request() const
+{
+    Q_D(const ListGroupCertificateAuthoritiesResponse);
+    return static_cast<const ListGroupCertificateAuthoritiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListGroupCertificateAuthorities response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGroupCertificateAuthoritiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupCertificateAuthoritiesResponsePrivate
+ *
+ * @brief  Private implementation for ListGroupCertificateAuthoritiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupCertificateAuthoritiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGroupCertificateAuthoritiesResponse instance.
+ */
+ListGroupCertificateAuthoritiesResponsePrivate::ListGroupCertificateAuthoritiesResponsePrivate(
+    ListGroupCertificateAuthoritiesQueueResponse * const q) : ListGroupCertificateAuthoritiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListGroupCertificateAuthoritiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGroupCertificateAuthoritiesResponsePrivate::ListGroupCertificateAuthoritiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGroupCertificateAuthoritiesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updateconfigurationsetreputationmetricsenabledresponse.h"
 #include "updateconfigurationsetreputationmetricsenabledresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateConfigurationSetReputationMetricsEnabledResponse
+ *
+ * @brief  Handles SES UpdateConfigurationSetReputationMetricsEnabled responses.
+ *
+ * @see    SESClient::updateConfigurationSetReputationMetricsEnabled
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConfigurationSetReputationMetricsEnabledResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(this), parent)
+{
+    setRequest(new UpdateConfigurationSetReputationMetricsEnabledRequest(request));
+    setReply(reply);
+}
+
+const UpdateConfigurationSetReputationMetricsEnabledRequest * UpdateConfigurationSetReputationMetricsEnabledResponse::request() const
+{
+    Q_D(const UpdateConfigurationSetReputationMetricsEnabledResponse);
+    return static_cast<const UpdateConfigurationSetReputationMetricsEnabledRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES UpdateConfigurationSetReputationMetricsEnabled response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConfigurationSetReputationMetricsEnabledResponsePrivate
+ *
+ * @brief  Private implementation for UpdateConfigurationSetReputationMetricsEnabledResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateConfigurationSetReputationMetricsEnabledResponse instance.
+ */
+UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(
+    UpdateConfigurationSetReputationMetricsEnabledQueueResponse * const q) : UpdateConfigurationSetReputationMetricsEnabledPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES UpdateConfigurationSetReputationMetricsEnabledResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurationSetReputationMetricsEnabledResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetReputationMetricsEnabledResponse"));
+    /// @todo
+}

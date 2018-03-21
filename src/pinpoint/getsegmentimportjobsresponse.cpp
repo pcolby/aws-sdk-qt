@@ -19,3 +19,85 @@
 
 #include "getsegmentimportjobsresponse.h"
 #include "getsegmentimportjobsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetSegmentImportJobsResponse
+ *
+ * @brief  Handles Pinpoint GetSegmentImportJobs responses.
+ *
+ * @see    PinpointClient::getSegmentImportJobs
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSegmentImportJobsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetSegmentImportJobsResponsePrivate(this), parent)
+{
+    setRequest(new GetSegmentImportJobsRequest(request));
+    setReply(reply);
+}
+
+const GetSegmentImportJobsRequest * GetSegmentImportJobsResponse::request() const
+{
+    Q_D(const GetSegmentImportJobsResponse);
+    return static_cast<const GetSegmentImportJobsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetSegmentImportJobs response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSegmentImportJobsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSegmentImportJobsResponsePrivate
+ *
+ * @brief  Private implementation for GetSegmentImportJobsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentImportJobsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSegmentImportJobsResponse instance.
+ */
+GetSegmentImportJobsResponsePrivate::GetSegmentImportJobsResponsePrivate(
+    GetSegmentImportJobsQueueResponse * const q) : GetSegmentImportJobsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetSegmentImportJobsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSegmentImportJobsResponsePrivate::GetSegmentImportJobsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSegmentImportJobsResponse"));
+    /// @todo
+}

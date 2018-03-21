@@ -19,3 +19,85 @@
 
 #include "associatetargetswithjobresponse.h"
 #include "associatetargetswithjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  AssociateTargetsWithJobResponse
+ *
+ * @brief  Handles IoT AssociateTargetsWithJob responses.
+ *
+ * @see    IoTClient::associateTargetsWithJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateTargetsWithJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new AssociateTargetsWithJobResponsePrivate(this), parent)
+{
+    setRequest(new AssociateTargetsWithJobRequest(request));
+    setReply(reply);
+}
+
+const AssociateTargetsWithJobRequest * AssociateTargetsWithJobResponse::request() const
+{
+    Q_D(const AssociateTargetsWithJobResponse);
+    return static_cast<const AssociateTargetsWithJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT AssociateTargetsWithJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateTargetsWithJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateTargetsWithJobResponsePrivate
+ *
+ * @brief  Private implementation for AssociateTargetsWithJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTargetsWithJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateTargetsWithJobResponse instance.
+ */
+AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponsePrivate(
+    AssociateTargetsWithJobQueueResponse * const q) : AssociateTargetsWithJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT AssociateTargetsWithJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateTargetsWithJobResponse"));
+    /// @todo
+}

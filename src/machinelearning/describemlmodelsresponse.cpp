@@ -19,3 +19,85 @@
 
 #include "describemlmodelsresponse.h"
 #include "describemlmodelsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  DescribeMLModelsResponse
+ *
+ * @brief  Handles MachineLearning DescribeMLModels responses.
+ *
+ * @see    MachineLearningClient::describeMLModels
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMLModelsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new DescribeMLModelsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeMLModelsRequest(request));
+    setReply(reply);
+}
+
+const DescribeMLModelsRequest * DescribeMLModelsResponse::request() const
+{
+    Q_D(const DescribeMLModelsResponse);
+    return static_cast<const DescribeMLModelsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning DescribeMLModels response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeMLModelsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMLModelsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeMLModelsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMLModelsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeMLModelsResponse instance.
+ */
+DescribeMLModelsResponsePrivate::DescribeMLModelsResponsePrivate(
+    DescribeMLModelsQueueResponse * const q) : DescribeMLModelsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning DescribeMLModelsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeMLModelsResponsePrivate::DescribeMLModelsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeMLModelsResponse"));
+    /// @todo
+}

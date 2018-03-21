@@ -19,3 +19,85 @@
 
 #include "listbundlesresponse.h"
 #include "listbundlesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Mobile {
+
+/**
+ * @class  ListBundlesResponse
+ *
+ * @brief  Handles Mobile ListBundles responses.
+ *
+ * @see    MobileClient::listBundles
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBundlesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MobileResponse(new ListBundlesResponsePrivate(this), parent)
+{
+    setRequest(new ListBundlesRequest(request));
+    setReply(reply);
+}
+
+const ListBundlesRequest * ListBundlesResponse::request() const
+{
+    Q_D(const ListBundlesResponse);
+    return static_cast<const ListBundlesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Mobile ListBundles response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListBundlesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBundlesResponsePrivate
+ *
+ * @brief  Private implementation for ListBundlesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBundlesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListBundlesResponse instance.
+ */
+ListBundlesResponsePrivate::ListBundlesResponsePrivate(
+    ListBundlesQueueResponse * const q) : ListBundlesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Mobile ListBundlesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListBundlesResponsePrivate::ListBundlesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListBundlesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updatedomainentryresponse.h"
 #include "updatedomainentryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  UpdateDomainEntryResponse
+ *
+ * @brief  Handles Lightsail UpdateDomainEntry responses.
+ *
+ * @see    LightsailClient::updateDomainEntry
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDomainEntryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new UpdateDomainEntryResponsePrivate(this), parent)
+{
+    setRequest(new UpdateDomainEntryRequest(request));
+    setReply(reply);
+}
+
+const UpdateDomainEntryRequest * UpdateDomainEntryResponse::request() const
+{
+    Q_D(const UpdateDomainEntryResponse);
+    return static_cast<const UpdateDomainEntryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail UpdateDomainEntry response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateDomainEntryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDomainEntryResponsePrivate
+ *
+ * @brief  Private implementation for UpdateDomainEntryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDomainEntryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateDomainEntryResponse instance.
+ */
+UpdateDomainEntryResponsePrivate::UpdateDomainEntryResponsePrivate(
+    UpdateDomainEntryQueueResponse * const q) : UpdateDomainEntryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail UpdateDomainEntryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateDomainEntryResponsePrivate::UpdateDomainEntryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateDomainEntryResponse"));
+    /// @todo
+}

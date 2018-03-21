@@ -19,3 +19,85 @@
 
 #include "createdetectorresponse.h"
 #include "createdetectorresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  CreateDetectorResponse
+ *
+ * @brief  Handles GuardDuty CreateDetector responses.
+ *
+ * @see    GuardDutyClient::createDetector
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDetectorResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new CreateDetectorResponsePrivate(this), parent)
+{
+    setRequest(new CreateDetectorRequest(request));
+    setReply(reply);
+}
+
+const CreateDetectorRequest * CreateDetectorResponse::request() const
+{
+    Q_D(const CreateDetectorResponse);
+    return static_cast<const CreateDetectorRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty CreateDetector response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDetectorResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDetectorResponsePrivate
+ *
+ * @brief  Private implementation for CreateDetectorResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDetectorResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDetectorResponse instance.
+ */
+CreateDetectorResponsePrivate::CreateDetectorResponsePrivate(
+    CreateDetectorQueueResponse * const q) : CreateDetectorPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty CreateDetectorResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDetectorResponsePrivate::CreateDetectorResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDetectorResponse"));
+    /// @todo
+}

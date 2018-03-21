@@ -19,3 +19,85 @@
 
 #include "deprecateworkflowtyperesponse.h"
 #include "deprecateworkflowtyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DeprecateWorkflowTypeResponse
+ *
+ * @brief  Handles SWF DeprecateWorkflowType responses.
+ *
+ * @see    SWFClient::deprecateWorkflowType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeprecateWorkflowTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new DeprecateWorkflowTypeResponsePrivate(this), parent)
+{
+    setRequest(new DeprecateWorkflowTypeRequest(request));
+    setReply(reply);
+}
+
+const DeprecateWorkflowTypeRequest * DeprecateWorkflowTypeResponse::request() const
+{
+    Q_D(const DeprecateWorkflowTypeResponse);
+    return static_cast<const DeprecateWorkflowTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF DeprecateWorkflowType response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeprecateWorkflowTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeprecateWorkflowTypeResponsePrivate
+ *
+ * @brief  Private implementation for DeprecateWorkflowTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateWorkflowTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeprecateWorkflowTypeResponse instance.
+ */
+DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponsePrivate(
+    DeprecateWorkflowTypeQueueResponse * const q) : DeprecateWorkflowTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF DeprecateWorkflowTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeprecateWorkflowTypeResponse"));
+    /// @todo
+}

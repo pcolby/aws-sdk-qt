@@ -19,3 +19,85 @@
 
 #include "createlagresponse.h"
 #include "createlagresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateLagResponse
+ *
+ * @brief  Handles DirectConnect CreateLag responses.
+ *
+ * @see    DirectConnectClient::createLag
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLagResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new CreateLagResponsePrivate(this), parent)
+{
+    setRequest(new CreateLagRequest(request));
+    setReply(reply);
+}
+
+const CreateLagRequest * CreateLagResponse::request() const
+{
+    Q_D(const CreateLagResponse);
+    return static_cast<const CreateLagRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect CreateLag response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLagResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLagResponsePrivate
+ *
+ * @brief  Private implementation for CreateLagResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLagResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLagResponse instance.
+ */
+CreateLagResponsePrivate::CreateLagResponsePrivate(
+    CreateLagQueueResponse * const q) : CreateLagPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect CreateLagResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLagResponsePrivate::CreateLagResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLagResponse"));
+    /// @todo
+}

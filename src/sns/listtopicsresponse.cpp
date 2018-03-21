@@ -19,3 +19,85 @@
 
 #include "listtopicsresponse.h"
 #include "listtopicsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  ListTopicsResponse
+ *
+ * @brief  Handles SNS ListTopics responses.
+ *
+ * @see    SNSClient::listTopics
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTopicsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new ListTopicsResponsePrivate(this), parent)
+{
+    setRequest(new ListTopicsRequest(request));
+    setReply(reply);
+}
+
+const ListTopicsRequest * ListTopicsResponse::request() const
+{
+    Q_D(const ListTopicsResponse);
+    return static_cast<const ListTopicsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS ListTopics response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTopicsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTopicsResponsePrivate
+ *
+ * @brief  Private implementation for ListTopicsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTopicsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTopicsResponse instance.
+ */
+ListTopicsResponsePrivate::ListTopicsResponsePrivate(
+    ListTopicsQueueResponse * const q) : ListTopicsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS ListTopicsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTopicsResponsePrivate::ListTopicsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTopicsResponse"));
+    /// @todo
+}

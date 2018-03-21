@@ -19,3 +19,85 @@
 
 #include "getxssmatchsetresponse.h"
 #include "getxssmatchsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetXssMatchSetResponse
+ *
+ * @brief  Handles WAFRegional GetXssMatchSet responses.
+ *
+ * @see    WAFRegionalClient::getXssMatchSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetXssMatchSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFRegionalResponse(new GetXssMatchSetResponsePrivate(this), parent)
+{
+    setRequest(new GetXssMatchSetRequest(request));
+    setReply(reply);
+}
+
+const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
+{
+    Q_D(const GetXssMatchSetResponse);
+    return static_cast<const GetXssMatchSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAFRegional GetXssMatchSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetXssMatchSetResponsePrivate
+ *
+ * @brief  Private implementation for GetXssMatchSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetXssMatchSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetXssMatchSetResponse instance.
+ */
+GetXssMatchSetResponsePrivate::GetXssMatchSetResponsePrivate(
+    GetXssMatchSetQueueResponse * const q) : GetXssMatchSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAFRegional GetXssMatchSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetXssMatchSetResponsePrivate::GetXssMatchSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetXssMatchSetResponse"));
+    /// @todo
+}

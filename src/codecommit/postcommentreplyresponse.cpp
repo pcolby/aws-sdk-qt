@@ -19,3 +19,85 @@
 
 #include "postcommentreplyresponse.h"
 #include "postcommentreplyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PostCommentReplyResponse
+ *
+ * @brief  Handles CodeCommit PostCommentReply responses.
+ *
+ * @see    CodeCommitClient::postCommentReply
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostCommentReplyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new PostCommentReplyResponsePrivate(this), parent)
+{
+    setRequest(new PostCommentReplyRequest(request));
+    setReply(reply);
+}
+
+const PostCommentReplyRequest * PostCommentReplyResponse::request() const
+{
+    Q_D(const PostCommentReplyResponse);
+    return static_cast<const PostCommentReplyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit PostCommentReply response.
+ *
+ * @param  response  Response to parse.
+ */
+void PostCommentReplyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PostCommentReplyResponsePrivate
+ *
+ * @brief  Private implementation for PostCommentReplyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentReplyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PostCommentReplyResponse instance.
+ */
+PostCommentReplyResponsePrivate::PostCommentReplyResponsePrivate(
+    PostCommentReplyQueueResponse * const q) : PostCommentReplyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit PostCommentReplyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PostCommentReplyResponsePrivate::PostCommentReplyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PostCommentReplyResponse"));
+    /// @todo
+}

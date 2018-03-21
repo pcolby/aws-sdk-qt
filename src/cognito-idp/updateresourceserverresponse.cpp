@@ -19,3 +19,85 @@
 
 #include "updateresourceserverresponse.h"
 #include "updateresourceserverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateResourceServerResponse
+ *
+ * @brief  Handles CognitoIdentityProvider UpdateResourceServer responses.
+ *
+ * @see    CognitoIdentityProviderClient::updateResourceServer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateResourceServerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new UpdateResourceServerResponsePrivate(this), parent)
+{
+    setRequest(new UpdateResourceServerRequest(request));
+    setReply(reply);
+}
+
+const UpdateResourceServerRequest * UpdateResourceServerResponse::request() const
+{
+    Q_D(const UpdateResourceServerResponse);
+    return static_cast<const UpdateResourceServerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider UpdateResourceServer response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateResourceServerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateResourceServerResponsePrivate
+ *
+ * @brief  Private implementation for UpdateResourceServerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateResourceServerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateResourceServerResponse instance.
+ */
+UpdateResourceServerResponsePrivate::UpdateResourceServerResponsePrivate(
+    UpdateResourceServerQueueResponse * const q) : UpdateResourceServerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider UpdateResourceServerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateResourceServerResponsePrivate::UpdateResourceServerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateResourceServerResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listqueuesresponse.h"
 #include "listqueuesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  ListQueuesResponse
+ *
+ * @brief  Handles MediaConvert ListQueues responses.
+ *
+ * @see    MediaConvertClient::listQueues
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListQueuesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new ListQueuesResponsePrivate(this), parent)
+{
+    setRequest(new ListQueuesRequest(request));
+    setReply(reply);
+}
+
+const ListQueuesRequest * ListQueuesResponse::request() const
+{
+    Q_D(const ListQueuesResponse);
+    return static_cast<const ListQueuesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert ListQueues response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListQueuesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListQueuesResponsePrivate
+ *
+ * @brief  Private implementation for ListQueuesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListQueuesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListQueuesResponse instance.
+ */
+ListQueuesResponsePrivate::ListQueuesResponsePrivate(
+    ListQueuesQueueResponse * const q) : ListQueuesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert ListQueuesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListQueuesResponsePrivate::ListQueuesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListQueuesResponse"));
+    /// @todo
+}

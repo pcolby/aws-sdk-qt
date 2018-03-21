@@ -19,3 +19,85 @@
 
 #include "describealarmsformetricresponse.h"
 #include "describealarmsformetricresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  DescribeAlarmsForMetricResponse
+ *
+ * @brief  Handles CloudWatch DescribeAlarmsForMetric responses.
+ *
+ * @see    CloudWatchClient::describeAlarmsForMetric
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAlarmsForMetricResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchResponse(new DescribeAlarmsForMetricResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAlarmsForMetricRequest(request));
+    setReply(reply);
+}
+
+const DescribeAlarmsForMetricRequest * DescribeAlarmsForMetricResponse::request() const
+{
+    Q_D(const DescribeAlarmsForMetricResponse);
+    return static_cast<const DescribeAlarmsForMetricRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatch DescribeAlarmsForMetric response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAlarmsForMetricResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAlarmsForMetricResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAlarmsForMetricResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAlarmsForMetricResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAlarmsForMetricResponse instance.
+ */
+DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponsePrivate(
+    DescribeAlarmsForMetricQueueResponse * const q) : DescribeAlarmsForMetricPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatch DescribeAlarmsForMetricResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmsForMetricResponse"));
+    /// @todo
+}

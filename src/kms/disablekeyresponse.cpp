@@ -19,3 +19,85 @@
 
 #include "disablekeyresponse.h"
 #include "disablekeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DisableKeyResponse
+ *
+ * @brief  Handles KMS DisableKey responses.
+ *
+ * @see    KMSClient::disableKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new DisableKeyResponsePrivate(this), parent)
+{
+    setRequest(new DisableKeyRequest(request));
+    setReply(reply);
+}
+
+const DisableKeyRequest * DisableKeyResponse::request() const
+{
+    Q_D(const DisableKeyResponse);
+    return static_cast<const DisableKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS DisableKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisableKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableKeyResponsePrivate
+ *
+ * @brief  Private implementation for DisableKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisableKeyResponse instance.
+ */
+DisableKeyResponsePrivate::DisableKeyResponsePrivate(
+    DisableKeyQueueResponse * const q) : DisableKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS DisableKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisableKeyResponsePrivate::DisableKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisableKeyResponse"));
+    /// @todo
+}

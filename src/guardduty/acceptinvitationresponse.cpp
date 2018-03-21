@@ -19,3 +19,85 @@
 
 #include "acceptinvitationresponse.h"
 #include "acceptinvitationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  AcceptInvitationResponse
+ *
+ * @brief  Handles GuardDuty AcceptInvitation responses.
+ *
+ * @see    GuardDutyClient::acceptInvitation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcceptInvitationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new AcceptInvitationResponsePrivate(this), parent)
+{
+    setRequest(new AcceptInvitationRequest(request));
+    setReply(reply);
+}
+
+const AcceptInvitationRequest * AcceptInvitationResponse::request() const
+{
+    Q_D(const AcceptInvitationResponse);
+    return static_cast<const AcceptInvitationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty AcceptInvitation response.
+ *
+ * @param  response  Response to parse.
+ */
+void AcceptInvitationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AcceptInvitationResponsePrivate
+ *
+ * @brief  Private implementation for AcceptInvitationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptInvitationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AcceptInvitationResponse instance.
+ */
+AcceptInvitationResponsePrivate::AcceptInvitationResponsePrivate(
+    AcceptInvitationQueueResponse * const q) : AcceptInvitationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty AcceptInvitationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AcceptInvitationResponsePrivate::AcceptInvitationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AcceptInvitationResponse"));
+    /// @todo
+}

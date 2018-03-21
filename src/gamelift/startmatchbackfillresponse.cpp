@@ -19,3 +19,85 @@
 
 #include "startmatchbackfillresponse.h"
 #include "startmatchbackfillresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  StartMatchBackfillResponse
+ *
+ * @brief  Handles GameLift StartMatchBackfill responses.
+ *
+ * @see    GameLiftClient::startMatchBackfill
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartMatchBackfillResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new StartMatchBackfillResponsePrivate(this), parent)
+{
+    setRequest(new StartMatchBackfillRequest(request));
+    setReply(reply);
+}
+
+const StartMatchBackfillRequest * StartMatchBackfillResponse::request() const
+{
+    Q_D(const StartMatchBackfillResponse);
+    return static_cast<const StartMatchBackfillRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift StartMatchBackfill response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartMatchBackfillResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartMatchBackfillResponsePrivate
+ *
+ * @brief  Private implementation for StartMatchBackfillResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMatchBackfillResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartMatchBackfillResponse instance.
+ */
+StartMatchBackfillResponsePrivate::StartMatchBackfillResponsePrivate(
+    StartMatchBackfillQueueResponse * const q) : StartMatchBackfillPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift StartMatchBackfillResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartMatchBackfillResponsePrivate::StartMatchBackfillResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartMatchBackfillResponse"));
+    /// @todo
+}

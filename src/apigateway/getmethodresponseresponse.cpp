@@ -19,3 +19,85 @@
 
 #include "getmethodresponseresponse.h"
 #include "getmethodresponseresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetMethodResponseResponse
+ *
+ * @brief  Handles APIGateway GetMethodResponse responses.
+ *
+ * @see    APIGatewayClient::getMethodResponse
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMethodResponseResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetMethodResponseResponsePrivate(this), parent)
+{
+    setRequest(new GetMethodResponseRequest(request));
+    setReply(reply);
+}
+
+const GetMethodResponseRequest * GetMethodResponseResponse::request() const
+{
+    Q_D(const GetMethodResponseResponse);
+    return static_cast<const GetMethodResponseRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetMethodResponse response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetMethodResponseResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMethodResponseResponsePrivate
+ *
+ * @brief  Private implementation for GetMethodResponseResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMethodResponseResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetMethodResponseResponse instance.
+ */
+GetMethodResponseResponsePrivate::GetMethodResponseResponsePrivate(
+    GetMethodResponseQueueResponse * const q) : GetMethodResponsePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetMethodResponseResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetMethodResponseResponsePrivate::GetMethodResponseResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetMethodResponseResponse"));
+    /// @todo
+}

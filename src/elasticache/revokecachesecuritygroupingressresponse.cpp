@@ -19,3 +19,85 @@
 
 #include "revokecachesecuritygroupingressresponse.h"
 #include "revokecachesecuritygroupingressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  RevokeCacheSecurityGroupIngressResponse
+ *
+ * @brief  Handles ElastiCache RevokeCacheSecurityGroupIngress responses.
+ *
+ * @see    ElastiCacheClient::revokeCacheSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeCacheSecurityGroupIngressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new RevokeCacheSecurityGroupIngressResponsePrivate(this), parent)
+{
+    setRequest(new RevokeCacheSecurityGroupIngressRequest(request));
+    setReply(reply);
+}
+
+const RevokeCacheSecurityGroupIngressRequest * RevokeCacheSecurityGroupIngressResponse::request() const
+{
+    Q_D(const RevokeCacheSecurityGroupIngressResponse);
+    return static_cast<const RevokeCacheSecurityGroupIngressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache RevokeCacheSecurityGroupIngress response.
+ *
+ * @param  response  Response to parse.
+ */
+void RevokeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeCacheSecurityGroupIngressResponsePrivate
+ *
+ * @brief  Private implementation for RevokeCacheSecurityGroupIngressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeCacheSecurityGroupIngressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RevokeCacheSecurityGroupIngressResponse instance.
+ */
+RevokeCacheSecurityGroupIngressResponsePrivate::RevokeCacheSecurityGroupIngressResponsePrivate(
+    RevokeCacheSecurityGroupIngressQueueResponse * const q) : RevokeCacheSecurityGroupIngressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache RevokeCacheSecurityGroupIngressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RevokeCacheSecurityGroupIngressResponsePrivate::RevokeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RevokeCacheSecurityGroupIngressResponse"));
+    /// @todo
+}

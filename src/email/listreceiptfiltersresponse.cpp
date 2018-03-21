@@ -19,3 +19,85 @@
 
 #include "listreceiptfiltersresponse.h"
 #include "listreceiptfiltersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ListReceiptFiltersResponse
+ *
+ * @brief  Handles SES ListReceiptFilters responses.
+ *
+ * @see    SESClient::listReceiptFilters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListReceiptFiltersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new ListReceiptFiltersResponsePrivate(this), parent)
+{
+    setRequest(new ListReceiptFiltersRequest(request));
+    setReply(reply);
+}
+
+const ListReceiptFiltersRequest * ListReceiptFiltersResponse::request() const
+{
+    Q_D(const ListReceiptFiltersResponse);
+    return static_cast<const ListReceiptFiltersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES ListReceiptFilters response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListReceiptFiltersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListReceiptFiltersResponsePrivate
+ *
+ * @brief  Private implementation for ListReceiptFiltersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReceiptFiltersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListReceiptFiltersResponse instance.
+ */
+ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponsePrivate(
+    ListReceiptFiltersQueueResponse * const q) : ListReceiptFiltersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES ListReceiptFiltersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListReceiptFiltersResponse"));
+    /// @todo
+}

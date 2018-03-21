@@ -19,3 +19,85 @@
 
 #include "getcompliancedetailsbyconfigruleresponse.h"
 #include "getcompliancedetailsbyconfigruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  GetComplianceDetailsByConfigRuleResponse
+ *
+ * @brief  Handles ConfigService GetComplianceDetailsByConfigRule responses.
+ *
+ * @see    ConfigServiceClient::getComplianceDetailsByConfigRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetComplianceDetailsByConfigRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new GetComplianceDetailsByConfigRuleResponsePrivate(this), parent)
+{
+    setRequest(new GetComplianceDetailsByConfigRuleRequest(request));
+    setReply(reply);
+}
+
+const GetComplianceDetailsByConfigRuleRequest * GetComplianceDetailsByConfigRuleResponse::request() const
+{
+    Q_D(const GetComplianceDetailsByConfigRuleResponse);
+    return static_cast<const GetComplianceDetailsByConfigRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService GetComplianceDetailsByConfigRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetComplianceDetailsByConfigRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetComplianceDetailsByConfigRuleResponsePrivate
+ *
+ * @brief  Private implementation for GetComplianceDetailsByConfigRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetComplianceDetailsByConfigRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetComplianceDetailsByConfigRuleResponse instance.
+ */
+GetComplianceDetailsByConfigRuleResponsePrivate::GetComplianceDetailsByConfigRuleResponsePrivate(
+    GetComplianceDetailsByConfigRuleQueueResponse * const q) : GetComplianceDetailsByConfigRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService GetComplianceDetailsByConfigRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetComplianceDetailsByConfigRuleResponsePrivate::GetComplianceDetailsByConfigRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetComplianceDetailsByConfigRuleResponse"));
+    /// @todo
+}

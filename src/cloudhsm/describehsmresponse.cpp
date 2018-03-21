@@ -19,3 +19,85 @@
 
 #include "describehsmresponse.h"
 #include "describehsmresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DescribeHsmResponse
+ *
+ * @brief  Handles CloudHSM DescribeHsm responses.
+ *
+ * @see    CloudHSMClient::describeHsm
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHsmResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudHSMResponse(new DescribeHsmResponsePrivate(this), parent)
+{
+    setRequest(new DescribeHsmRequest(request));
+    setReply(reply);
+}
+
+const DescribeHsmRequest * DescribeHsmResponse::request() const
+{
+    Q_D(const DescribeHsmResponse);
+    return static_cast<const DescribeHsmRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudHSM DescribeHsm response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeHsmResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHsmResponsePrivate
+ *
+ * @brief  Private implementation for DescribeHsmResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHsmResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeHsmResponse instance.
+ */
+DescribeHsmResponsePrivate::DescribeHsmResponsePrivate(
+    DescribeHsmQueueResponse * const q) : DescribeHsmPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudHSM DescribeHsmResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeHsmResponsePrivate::DescribeHsmResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeHsmResponse"));
+    /// @todo
+}

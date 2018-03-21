@@ -19,3 +19,85 @@
 
 #include "listgroupresourcesresponse.h"
 #include "listgroupresourcesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroups {
+
+/**
+ * @class  ListGroupResourcesResponse
+ *
+ * @brief  Handles ResourceGroups ListGroupResources responses.
+ *
+ * @see    ResourceGroupsClient::listGroupResources
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupResourcesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsResponse(new ListGroupResourcesResponsePrivate(this), parent)
+{
+    setRequest(new ListGroupResourcesRequest(request));
+    setReply(reply);
+}
+
+const ListGroupResourcesRequest * ListGroupResourcesResponse::request() const
+{
+    Q_D(const ListGroupResourcesResponse);
+    return static_cast<const ListGroupResourcesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroups ListGroupResources response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListGroupResourcesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupResourcesResponsePrivate
+ *
+ * @brief  Private implementation for ListGroupResourcesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupResourcesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListGroupResourcesResponse instance.
+ */
+ListGroupResourcesResponsePrivate::ListGroupResourcesResponsePrivate(
+    ListGroupResourcesQueueResponse * const q) : ListGroupResourcesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroups ListGroupResourcesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListGroupResourcesResponsePrivate::ListGroupResourcesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListGroupResourcesResponse"));
+    /// @todo
+}

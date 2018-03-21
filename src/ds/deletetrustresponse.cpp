@@ -19,3 +19,85 @@
 
 #include "deletetrustresponse.h"
 #include "deletetrustresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DeleteTrustResponse
+ *
+ * @brief  Handles DirectoryService DeleteTrust responses.
+ *
+ * @see    DirectoryServiceClient::deleteTrust
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTrustResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new DeleteTrustResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTrustRequest(request));
+    setReply(reply);
+}
+
+const DeleteTrustRequest * DeleteTrustResponse::request() const
+{
+    Q_D(const DeleteTrustResponse);
+    return static_cast<const DeleteTrustRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService DeleteTrust response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTrustResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTrustResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTrustResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTrustResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTrustResponse instance.
+ */
+DeleteTrustResponsePrivate::DeleteTrustResponsePrivate(
+    DeleteTrustQueueResponse * const q) : DeleteTrustPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService DeleteTrustResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTrustResponsePrivate::DeleteTrustResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTrustResponse"));
+    /// @todo
+}

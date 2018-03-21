@@ -19,3 +19,85 @@
 
 #include "deletethreatintelsetresponse.h"
 #include "deletethreatintelsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DeleteThreatIntelSetResponse
+ *
+ * @brief  Handles GuardDuty DeleteThreatIntelSet responses.
+ *
+ * @see    GuardDutyClient::deleteThreatIntelSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteThreatIntelSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new DeleteThreatIntelSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteThreatIntelSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteThreatIntelSetRequest * DeleteThreatIntelSetResponse::request() const
+{
+    Q_D(const DeleteThreatIntelSetResponse);
+    return static_cast<const DeleteThreatIntelSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty DeleteThreatIntelSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteThreatIntelSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteThreatIntelSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteThreatIntelSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteThreatIntelSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteThreatIntelSetResponse instance.
+ */
+DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponsePrivate(
+    DeleteThreatIntelSetQueueResponse * const q) : DeleteThreatIntelSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty DeleteThreatIntelSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteThreatIntelSetResponse"));
+    /// @todo
+}

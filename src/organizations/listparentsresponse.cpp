@@ -19,3 +19,85 @@
 
 #include "listparentsresponse.h"
 #include "listparentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListParentsResponse
+ *
+ * @brief  Handles Organizations ListParents responses.
+ *
+ * @see    OrganizationsClient::listParents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListParentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new ListParentsResponsePrivate(this), parent)
+{
+    setRequest(new ListParentsRequest(request));
+    setReply(reply);
+}
+
+const ListParentsRequest * ListParentsResponse::request() const
+{
+    Q_D(const ListParentsResponse);
+    return static_cast<const ListParentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations ListParents response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListParentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListParentsResponsePrivate
+ *
+ * @brief  Private implementation for ListParentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListParentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListParentsResponse instance.
+ */
+ListParentsResponsePrivate::ListParentsResponsePrivate(
+    ListParentsQueueResponse * const q) : ListParentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations ListParentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListParentsResponsePrivate::ListParentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListParentsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createkeypairresponse.h"
 #include "createkeypairresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateKeyPairResponse
+ *
+ * @brief  Handles EC2 CreateKeyPair responses.
+ *
+ * @see    EC2Client::createKeyPair
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateKeyPairResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateKeyPairResponsePrivate(this), parent)
+{
+    setRequest(new CreateKeyPairRequest(request));
+    setReply(reply);
+}
+
+const CreateKeyPairRequest * CreateKeyPairResponse::request() const
+{
+    Q_D(const CreateKeyPairResponse);
+    return static_cast<const CreateKeyPairRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateKeyPair response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateKeyPairResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateKeyPairResponsePrivate
+ *
+ * @brief  Private implementation for CreateKeyPairResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateKeyPairResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateKeyPairResponse instance.
+ */
+CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
+    CreateKeyPairQueueResponse * const q) : CreateKeyPairPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateKeyPairResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateKeyPairResponsePrivate::CreateKeyPairResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateKeyPairResponse"));
+    /// @todo
+}

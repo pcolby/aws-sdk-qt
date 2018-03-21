@@ -19,3 +19,85 @@
 
 #include "createdatasourcefromrdsresponse.h"
 #include "createdatasourcefromrdsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateDataSourceFromRDSResponse
+ *
+ * @brief  Handles MachineLearning CreateDataSourceFromRDS responses.
+ *
+ * @see    MachineLearningClient::createDataSourceFromRDS
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDataSourceFromRDSResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MachineLearningResponse(new CreateDataSourceFromRDSResponsePrivate(this), parent)
+{
+    setRequest(new CreateDataSourceFromRDSRequest(request));
+    setReply(reply);
+}
+
+const CreateDataSourceFromRDSRequest * CreateDataSourceFromRDSResponse::request() const
+{
+    Q_D(const CreateDataSourceFromRDSResponse);
+    return static_cast<const CreateDataSourceFromRDSRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MachineLearning CreateDataSourceFromRDS response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDataSourceFromRDSResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDataSourceFromRDSResponsePrivate
+ *
+ * @brief  Private implementation for CreateDataSourceFromRDSResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDataSourceFromRDSResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDataSourceFromRDSResponse instance.
+ */
+CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponsePrivate(
+    CreateDataSourceFromRDSQueueResponse * const q) : CreateDataSourceFromRDSPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MachineLearning CreateDataSourceFromRDSResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromRDSResponse"));
+    /// @todo
+}

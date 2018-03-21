@@ -19,3 +19,85 @@
 
 #include "describeimagesresponse.h"
 #include "describeimagesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeImagesResponse
+ *
+ * @brief  Handles EC2 DescribeImages responses.
+ *
+ * @see    EC2Client::describeImages
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeImagesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeImagesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeImagesRequest(request));
+    setReply(reply);
+}
+
+const DescribeImagesRequest * DescribeImagesResponse::request() const
+{
+    Q_D(const DescribeImagesResponse);
+    return static_cast<const DescribeImagesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeImages response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeImagesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeImagesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeImagesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeImagesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeImagesResponse instance.
+ */
+DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
+    DescribeImagesQueueResponse * const q) : DescribeImagesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeImagesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeImagesResponsePrivate::DescribeImagesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeImagesResponse"));
+    /// @todo
+}

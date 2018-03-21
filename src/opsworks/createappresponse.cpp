@@ -19,3 +19,85 @@
 
 #include "createappresponse.h"
 #include "createappresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  CreateAppResponse
+ *
+ * @brief  Handles OpsWorks CreateApp responses.
+ *
+ * @see    OpsWorksClient::createApp
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAppResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new CreateAppResponsePrivate(this), parent)
+{
+    setRequest(new CreateAppRequest(request));
+    setReply(reply);
+}
+
+const CreateAppRequest * CreateAppResponse::request() const
+{
+    Q_D(const CreateAppResponse);
+    return static_cast<const CreateAppRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks CreateApp response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateAppResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAppResponsePrivate
+ *
+ * @brief  Private implementation for CreateAppResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAppResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateAppResponse instance.
+ */
+CreateAppResponsePrivate::CreateAppResponsePrivate(
+    CreateAppQueueResponse * const q) : CreateAppPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks CreateAppResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateAppResponsePrivate::CreateAppResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateAppResponse"));
+    /// @todo
+}

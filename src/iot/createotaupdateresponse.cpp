@@ -19,3 +19,85 @@
 
 #include "createotaupdateresponse.h"
 #include "createotaupdateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateOTAUpdateResponse
+ *
+ * @brief  Handles IoT CreateOTAUpdate responses.
+ *
+ * @see    IoTClient::createOTAUpdate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateOTAUpdateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new CreateOTAUpdateResponsePrivate(this), parent)
+{
+    setRequest(new CreateOTAUpdateRequest(request));
+    setReply(reply);
+}
+
+const CreateOTAUpdateRequest * CreateOTAUpdateResponse::request() const
+{
+    Q_D(const CreateOTAUpdateResponse);
+    return static_cast<const CreateOTAUpdateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT CreateOTAUpdate response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateOTAUpdateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateOTAUpdateResponsePrivate
+ *
+ * @brief  Private implementation for CreateOTAUpdateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOTAUpdateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateOTAUpdateResponse instance.
+ */
+CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponsePrivate(
+    CreateOTAUpdateQueueResponse * const q) : CreateOTAUpdatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT CreateOTAUpdateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateOTAUpdateResponse"));
+    /// @todo
+}

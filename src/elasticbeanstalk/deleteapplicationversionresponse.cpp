@@ -19,3 +19,85 @@
 
 #include "deleteapplicationversionresponse.h"
 #include "deleteapplicationversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DeleteApplicationVersionResponse
+ *
+ * @brief  Handles ElasticBeanstalk DeleteApplicationVersion responses.
+ *
+ * @see    ElasticBeanstalkClient::deleteApplicationVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApplicationVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DeleteApplicationVersionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApplicationVersionRequest(request));
+    setReply(reply);
+}
+
+const DeleteApplicationVersionRequest * DeleteApplicationVersionResponse::request() const
+{
+    Q_D(const DeleteApplicationVersionResponse);
+    return static_cast<const DeleteApplicationVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DeleteApplicationVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApplicationVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApplicationVersionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApplicationVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApplicationVersionResponse instance.
+ */
+DeleteApplicationVersionResponsePrivate::DeleteApplicationVersionResponsePrivate(
+    DeleteApplicationVersionQueueResponse * const q) : DeleteApplicationVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DeleteApplicationVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApplicationVersionResponsePrivate::DeleteApplicationVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationVersionResponse"));
+    /// @todo
+}

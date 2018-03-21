@@ -19,3 +19,85 @@
 
 #include "describeenvironmentmanagedactionhistoryresponse.h"
 #include "describeenvironmentmanagedactionhistoryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeEnvironmentManagedActionHistoryResponse
+ *
+ * @brief  Handles ElasticBeanstalk DescribeEnvironmentManagedActionHistory responses.
+ *
+ * @see    ElasticBeanstalkClient::describeEnvironmentManagedActionHistory
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentManagedActionHistoryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DescribeEnvironmentManagedActionHistoryResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEnvironmentManagedActionHistoryRequest(request));
+    setReply(reply);
+}
+
+const DescribeEnvironmentManagedActionHistoryRequest * DescribeEnvironmentManagedActionHistoryResponse::request() const
+{
+    Q_D(const DescribeEnvironmentManagedActionHistoryResponse);
+    return static_cast<const DescribeEnvironmentManagedActionHistoryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DescribeEnvironmentManagedActionHistory response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEnvironmentManagedActionHistoryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentManagedActionHistoryResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentManagedActionHistoryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEnvironmentManagedActionHistoryResponse instance.
+ */
+DescribeEnvironmentManagedActionHistoryResponsePrivate::DescribeEnvironmentManagedActionHistoryResponsePrivate(
+    DescribeEnvironmentManagedActionHistoryQueueResponse * const q) : DescribeEnvironmentManagedActionHistoryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DescribeEnvironmentManagedActionHistoryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEnvironmentManagedActionHistoryResponsePrivate::DescribeEnvironmentManagedActionHistoryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentManagedActionHistoryResponse"));
+    /// @todo
+}

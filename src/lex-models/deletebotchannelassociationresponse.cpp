@@ -19,3 +19,85 @@
 
 #include "deletebotchannelassociationresponse.h"
 #include "deletebotchannelassociationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteBotChannelAssociationResponse
+ *
+ * @brief  Handles LexModelBuildingService DeleteBotChannelAssociation responses.
+ *
+ * @see    LexModelBuildingServiceClient::deleteBotChannelAssociation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBotChannelAssociationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new DeleteBotChannelAssociationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBotChannelAssociationRequest(request));
+    setReply(reply);
+}
+
+const DeleteBotChannelAssociationRequest * DeleteBotChannelAssociationResponse::request() const
+{
+    Q_D(const DeleteBotChannelAssociationResponse);
+    return static_cast<const DeleteBotChannelAssociationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService DeleteBotChannelAssociation response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBotChannelAssociationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBotChannelAssociationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBotChannelAssociationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBotChannelAssociationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBotChannelAssociationResponse instance.
+ */
+DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponsePrivate(
+    DeleteBotChannelAssociationQueueResponse * const q) : DeleteBotChannelAssociationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService DeleteBotChannelAssociationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBotChannelAssociationResponse"));
+    /// @todo
+}

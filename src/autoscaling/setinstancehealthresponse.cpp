@@ -19,3 +19,85 @@
 
 #include "setinstancehealthresponse.h"
 #include "setinstancehealthresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  SetInstanceHealthResponse
+ *
+ * @brief  Handles AutoScaling SetInstanceHealth responses.
+ *
+ * @see    AutoScalingClient::setInstanceHealth
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetInstanceHealthResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new SetInstanceHealthResponsePrivate(this), parent)
+{
+    setRequest(new SetInstanceHealthRequest(request));
+    setReply(reply);
+}
+
+const SetInstanceHealthRequest * SetInstanceHealthResponse::request() const
+{
+    Q_D(const SetInstanceHealthResponse);
+    return static_cast<const SetInstanceHealthRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling SetInstanceHealth response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetInstanceHealthResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetInstanceHealthResponsePrivate
+ *
+ * @brief  Private implementation for SetInstanceHealthResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetInstanceHealthResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetInstanceHealthResponse instance.
+ */
+SetInstanceHealthResponsePrivate::SetInstanceHealthResponsePrivate(
+    SetInstanceHealthQueueResponse * const q) : SetInstanceHealthPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling SetInstanceHealthResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetInstanceHealthResponsePrivate::SetInstanceHealthResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetInstanceHealthResponse"));
+    /// @todo
+}

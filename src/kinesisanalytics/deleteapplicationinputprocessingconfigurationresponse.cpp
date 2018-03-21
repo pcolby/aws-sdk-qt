@@ -19,3 +19,85 @@
 
 #include "deleteapplicationinputprocessingconfigurationresponse.h"
 #include "deleteapplicationinputprocessingconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DeleteApplicationInputProcessingConfigurationResponse
+ *
+ * @brief  Handles KinesisAnalytics DeleteApplicationInputProcessingConfiguration responses.
+ *
+ * @see    KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApplicationInputProcessingConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new DeleteApplicationInputProcessingConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApplicationInputProcessingConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DeleteApplicationInputProcessingConfigurationRequest * DeleteApplicationInputProcessingConfigurationResponse::request() const
+{
+    Q_D(const DeleteApplicationInputProcessingConfigurationResponse);
+    return static_cast<const DeleteApplicationInputProcessingConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics DeleteApplicationInputProcessingConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApplicationInputProcessingConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApplicationInputProcessingConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApplicationInputProcessingConfigurationResponse instance.
+ */
+DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationInputProcessingConfigurationResponsePrivate(
+    DeleteApplicationInputProcessingConfigurationQueueResponse * const q) : DeleteApplicationInputProcessingConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics DeleteApplicationInputProcessingConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationInputProcessingConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationInputProcessingConfigurationResponse"));
+    /// @todo
+}

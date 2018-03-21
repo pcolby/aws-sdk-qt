@@ -19,3 +19,85 @@
 
 #include "authorizeclustersecuritygroupingressresponse.h"
 #include "authorizeclustersecuritygroupingressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  AuthorizeClusterSecurityGroupIngressResponse
+ *
+ * @brief  Handles Redshift AuthorizeClusterSecurityGroupIngress responses.
+ *
+ * @see    RedshiftClient::authorizeClusterSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AuthorizeClusterSecurityGroupIngressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new AuthorizeClusterSecurityGroupIngressResponsePrivate(this), parent)
+{
+    setRequest(new AuthorizeClusterSecurityGroupIngressRequest(request));
+    setReply(reply);
+}
+
+const AuthorizeClusterSecurityGroupIngressRequest * AuthorizeClusterSecurityGroupIngressResponse::request() const
+{
+    Q_D(const AuthorizeClusterSecurityGroupIngressResponse);
+    return static_cast<const AuthorizeClusterSecurityGroupIngressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift AuthorizeClusterSecurityGroupIngress response.
+ *
+ * @param  response  Response to parse.
+ */
+void AuthorizeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AuthorizeClusterSecurityGroupIngressResponsePrivate
+ *
+ * @brief  Private implementation for AuthorizeClusterSecurityGroupIngressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AuthorizeClusterSecurityGroupIngressResponse instance.
+ */
+AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecurityGroupIngressResponsePrivate(
+    AuthorizeClusterSecurityGroupIngressQueueResponse * const q) : AuthorizeClusterSecurityGroupIngressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift AuthorizeClusterSecurityGroupIngressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AuthorizeClusterSecurityGroupIngressResponse"));
+    /// @todo
+}

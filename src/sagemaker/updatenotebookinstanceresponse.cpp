@@ -19,3 +19,85 @@
 
 #include "updatenotebookinstanceresponse.h"
 #include "updatenotebookinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  UpdateNotebookInstanceResponse
+ *
+ * @brief  Handles SageMaker UpdateNotebookInstance responses.
+ *
+ * @see    SageMakerClient::updateNotebookInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateNotebookInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new UpdateNotebookInstanceResponsePrivate(this), parent)
+{
+    setRequest(new UpdateNotebookInstanceRequest(request));
+    setReply(reply);
+}
+
+const UpdateNotebookInstanceRequest * UpdateNotebookInstanceResponse::request() const
+{
+    Q_D(const UpdateNotebookInstanceResponse);
+    return static_cast<const UpdateNotebookInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker UpdateNotebookInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateNotebookInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateNotebookInstanceResponsePrivate
+ *
+ * @brief  Private implementation for UpdateNotebookInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNotebookInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateNotebookInstanceResponse instance.
+ */
+UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponsePrivate(
+    UpdateNotebookInstanceQueueResponse * const q) : UpdateNotebookInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker UpdateNotebookInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateNotebookInstanceResponse"));
+    /// @todo
+}

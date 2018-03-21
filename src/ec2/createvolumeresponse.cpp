@@ -19,3 +19,85 @@
 
 #include "createvolumeresponse.h"
 #include "createvolumeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVolumeResponse
+ *
+ * @brief  Handles EC2 CreateVolume responses.
+ *
+ * @see    EC2Client::createVolume
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVolumeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateVolumeResponsePrivate(this), parent)
+{
+    setRequest(new CreateVolumeRequest(request));
+    setReply(reply);
+}
+
+const CreateVolumeRequest * CreateVolumeResponse::request() const
+{
+    Q_D(const CreateVolumeResponse);
+    return static_cast<const CreateVolumeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateVolume response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateVolumeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVolumeResponsePrivate
+ *
+ * @brief  Private implementation for CreateVolumeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVolumeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateVolumeResponse instance.
+ */
+CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
+    CreateVolumeQueueResponse * const q) : CreateVolumePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateVolumeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateVolumeResponsePrivate::CreateVolumeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateVolumeResponse"));
+    /// @todo
+}

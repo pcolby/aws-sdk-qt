@@ -19,3 +19,85 @@
 
 #include "describeendpointconfigresponse.h"
 #include "describeendpointconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeEndpointConfigResponse
+ *
+ * @brief  Handles SageMaker DescribeEndpointConfig responses.
+ *
+ * @see    SageMakerClient::describeEndpointConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEndpointConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new DescribeEndpointConfigResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEndpointConfigRequest(request));
+    setReply(reply);
+}
+
+const DescribeEndpointConfigRequest * DescribeEndpointConfigResponse::request() const
+{
+    Q_D(const DescribeEndpointConfigResponse);
+    return static_cast<const DescribeEndpointConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker DescribeEndpointConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEndpointConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEndpointConfigResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEndpointConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEndpointConfigResponse instance.
+ */
+DescribeEndpointConfigResponsePrivate::DescribeEndpointConfigResponsePrivate(
+    DescribeEndpointConfigQueueResponse * const q) : DescribeEndpointConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker DescribeEndpointConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEndpointConfigResponsePrivate::DescribeEndpointConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEndpointConfigResponse"));
+    /// @todo
+}

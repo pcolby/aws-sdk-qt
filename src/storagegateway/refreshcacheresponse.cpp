@@ -19,3 +19,85 @@
 
 #include "refreshcacheresponse.h"
 #include "refreshcacheresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  RefreshCacheResponse
+ *
+ * @brief  Handles StorageGateway RefreshCache responses.
+ *
+ * @see    StorageGatewayClient::refreshCache
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RefreshCacheResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new RefreshCacheResponsePrivate(this), parent)
+{
+    setRequest(new RefreshCacheRequest(request));
+    setReply(reply);
+}
+
+const RefreshCacheRequest * RefreshCacheResponse::request() const
+{
+    Q_D(const RefreshCacheResponse);
+    return static_cast<const RefreshCacheRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway RefreshCache response.
+ *
+ * @param  response  Response to parse.
+ */
+void RefreshCacheResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RefreshCacheResponsePrivate
+ *
+ * @brief  Private implementation for RefreshCacheResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RefreshCacheResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RefreshCacheResponse instance.
+ */
+RefreshCacheResponsePrivate::RefreshCacheResponsePrivate(
+    RefreshCacheQueueResponse * const q) : RefreshCachePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway RefreshCacheResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RefreshCacheResponsePrivate::RefreshCacheResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RefreshCacheResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletetopicresponse.h"
 #include "deletetopicresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  DeleteTopicResponse
+ *
+ * @brief  Handles SNS DeleteTopic responses.
+ *
+ * @see    SNSClient::deleteTopic
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTopicResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new DeleteTopicResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTopicRequest(request));
+    setReply(reply);
+}
+
+const DeleteTopicRequest * DeleteTopicResponse::request() const
+{
+    Q_D(const DeleteTopicResponse);
+    return static_cast<const DeleteTopicRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS DeleteTopic response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTopicResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTopicResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTopicResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTopicResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTopicResponse instance.
+ */
+DeleteTopicResponsePrivate::DeleteTopicResponsePrivate(
+    DeleteTopicQueueResponse * const q) : DeleteTopicPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS DeleteTopicResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTopicResponsePrivate::DeleteTopicResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTopicResponse"));
+    /// @todo
+}

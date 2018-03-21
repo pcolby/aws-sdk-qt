@@ -19,3 +19,85 @@
 
 #include "updateprovisionedproductresponse.h"
 #include "updateprovisionedproductresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  UpdateProvisionedProductResponse
+ *
+ * @brief  Handles ServiceCatalog UpdateProvisionedProduct responses.
+ *
+ * @see    ServiceCatalogClient::updateProvisionedProduct
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateProvisionedProductResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new UpdateProvisionedProductResponsePrivate(this), parent)
+{
+    setRequest(new UpdateProvisionedProductRequest(request));
+    setReply(reply);
+}
+
+const UpdateProvisionedProductRequest * UpdateProvisionedProductResponse::request() const
+{
+    Q_D(const UpdateProvisionedProductResponse);
+    return static_cast<const UpdateProvisionedProductRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog UpdateProvisionedProduct response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateProvisionedProductResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateProvisionedProductResponsePrivate
+ *
+ * @brief  Private implementation for UpdateProvisionedProductResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateProvisionedProductResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateProvisionedProductResponse instance.
+ */
+UpdateProvisionedProductResponsePrivate::UpdateProvisionedProductResponsePrivate(
+    UpdateProvisionedProductQueueResponse * const q) : UpdateProvisionedProductPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog UpdateProvisionedProductResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateProvisionedProductResponsePrivate::UpdateProvisionedProductResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateProvisionedProductResponse"));
+    /// @todo
+}

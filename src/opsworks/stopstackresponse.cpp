@@ -19,3 +19,85 @@
 
 #include "stopstackresponse.h"
 #include "stopstackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  StopStackResponse
+ *
+ * @brief  Handles OpsWorks StopStack responses.
+ *
+ * @see    OpsWorksClient::stopStack
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new StopStackResponsePrivate(this), parent)
+{
+    setRequest(new StopStackRequest(request));
+    setReply(reply);
+}
+
+const StopStackRequest * StopStackResponse::request() const
+{
+    Q_D(const StopStackResponse);
+    return static_cast<const StopStackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks StopStack response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopStackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStackResponsePrivate
+ *
+ * @brief  Private implementation for StopStackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopStackResponse instance.
+ */
+StopStackResponsePrivate::StopStackResponsePrivate(
+    StopStackQueueResponse * const q) : StopStackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks StopStackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopStackResponsePrivate::StopStackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopStackResponse"));
+    /// @todo
+}

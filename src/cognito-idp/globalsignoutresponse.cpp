@@ -19,3 +19,85 @@
 
 #include "globalsignoutresponse.h"
 #include "globalsignoutresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GlobalSignOutResponse
+ *
+ * @brief  Handles CognitoIdentityProvider GlobalSignOut responses.
+ *
+ * @see    CognitoIdentityProviderClient::globalSignOut
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GlobalSignOutResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new GlobalSignOutResponsePrivate(this), parent)
+{
+    setRequest(new GlobalSignOutRequest(request));
+    setReply(reply);
+}
+
+const GlobalSignOutRequest * GlobalSignOutResponse::request() const
+{
+    Q_D(const GlobalSignOutResponse);
+    return static_cast<const GlobalSignOutRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider GlobalSignOut response.
+ *
+ * @param  response  Response to parse.
+ */
+void GlobalSignOutResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GlobalSignOutResponsePrivate
+ *
+ * @brief  Private implementation for GlobalSignOutResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GlobalSignOutResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GlobalSignOutResponse instance.
+ */
+GlobalSignOutResponsePrivate::GlobalSignOutResponsePrivate(
+    GlobalSignOutQueueResponse * const q) : GlobalSignOutPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider GlobalSignOutResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GlobalSignOutResponsePrivate::GlobalSignOutResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GlobalSignOutResponse"));
+    /// @todo
+}

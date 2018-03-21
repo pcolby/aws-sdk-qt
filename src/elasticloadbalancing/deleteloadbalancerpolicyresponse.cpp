@@ -19,3 +19,85 @@
 
 #include "deleteloadbalancerpolicyresponse.h"
 #include "deleteloadbalancerpolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  DeleteLoadBalancerPolicyResponse
+ *
+ * @brief  Handles ElasticLoadBalancing DeleteLoadBalancerPolicy responses.
+ *
+ * @see    ElasticLoadBalancingClient::deleteLoadBalancerPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoadBalancerPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new DeleteLoadBalancerPolicyResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLoadBalancerPolicyRequest(request));
+    setReply(reply);
+}
+
+const DeleteLoadBalancerPolicyRequest * DeleteLoadBalancerPolicyResponse::request() const
+{
+    Q_D(const DeleteLoadBalancerPolicyResponse);
+    return static_cast<const DeleteLoadBalancerPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing DeleteLoadBalancerPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLoadBalancerPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoadBalancerPolicyResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLoadBalancerPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLoadBalancerPolicyResponse instance.
+ */
+DeleteLoadBalancerPolicyResponsePrivate::DeleteLoadBalancerPolicyResponsePrivate(
+    DeleteLoadBalancerPolicyQueueResponse * const q) : DeleteLoadBalancerPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing DeleteLoadBalancerPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLoadBalancerPolicyResponsePrivate::DeleteLoadBalancerPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerPolicyResponse"));
+    /// @todo
+}

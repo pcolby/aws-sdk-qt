@@ -19,3 +19,85 @@
 
 #include "getdistributionresponse.h"
 #include "getdistributionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetDistributionResponse
+ *
+ * @brief  Handles CloudFront GetDistribution responses.
+ *
+ * @see    CloudFrontClient::getDistribution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDistributionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new GetDistributionResponsePrivate(this), parent)
+{
+    setRequest(new GetDistributionRequest(request));
+    setReply(reply);
+}
+
+const GetDistributionRequest * GetDistributionResponse::request() const
+{
+    Q_D(const GetDistributionResponse);
+    return static_cast<const GetDistributionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront GetDistribution response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDistributionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDistributionResponsePrivate
+ *
+ * @brief  Private implementation for GetDistributionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDistributionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDistributionResponse instance.
+ */
+GetDistributionResponsePrivate::GetDistributionResponsePrivate(
+    GetDistributionQueueResponse * const q) : GetDistributionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront GetDistributionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDistributionResponsePrivate::GetDistributionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDistributionResponse"));
+    /// @todo
+}

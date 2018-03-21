@@ -19,3 +19,85 @@
 
 #include "deregisterscalabletargetresponse.h"
 #include "deregisterscalabletargetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  DeregisterScalableTargetResponse
+ *
+ * @brief  Handles ApplicationAutoScaling DeregisterScalableTarget responses.
+ *
+ * @see    ApplicationAutoScalingClient::deregisterScalableTarget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterScalableTargetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationAutoScalingResponse(new DeregisterScalableTargetResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterScalableTargetRequest(request));
+    setReply(reply);
+}
+
+const DeregisterScalableTargetRequest * DeregisterScalableTargetResponse::request() const
+{
+    Q_D(const DeregisterScalableTargetResponse);
+    return static_cast<const DeregisterScalableTargetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationAutoScaling DeregisterScalableTarget response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterScalableTargetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterScalableTargetResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterScalableTargetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterScalableTargetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterScalableTargetResponse instance.
+ */
+DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponsePrivate(
+    DeregisterScalableTargetQueueResponse * const q) : DeregisterScalableTargetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationAutoScaling DeregisterScalableTargetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterScalableTargetResponse"));
+    /// @todo
+}

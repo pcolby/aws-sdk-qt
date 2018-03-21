@@ -19,3 +19,85 @@
 
 #include "batchputattributesresponse.h"
 #include "batchputattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  BatchPutAttributesResponse
+ *
+ * @brief  Handles SimpleDB BatchPutAttributes responses.
+ *
+ * @see    SimpleDBClient::batchPutAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchPutAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SimpleDBResponse(new BatchPutAttributesResponsePrivate(this), parent)
+{
+    setRequest(new BatchPutAttributesRequest(request));
+    setReply(reply);
+}
+
+const BatchPutAttributesRequest * BatchPutAttributesResponse::request() const
+{
+    Q_D(const BatchPutAttributesResponse);
+    return static_cast<const BatchPutAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SimpleDB BatchPutAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchPutAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchPutAttributesResponsePrivate
+ *
+ * @brief  Private implementation for BatchPutAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchPutAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchPutAttributesResponse instance.
+ */
+BatchPutAttributesResponsePrivate::BatchPutAttributesResponsePrivate(
+    BatchPutAttributesQueueResponse * const q) : BatchPutAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SimpleDB BatchPutAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchPutAttributesResponsePrivate::BatchPutAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchPutAttributesResponse"));
+    /// @todo
+}

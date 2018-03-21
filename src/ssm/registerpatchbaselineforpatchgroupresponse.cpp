@@ -19,3 +19,85 @@
 
 #include "registerpatchbaselineforpatchgroupresponse.h"
 #include "registerpatchbaselineforpatchgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  RegisterPatchBaselineForPatchGroupResponse
+ *
+ * @brief  Handles SSM RegisterPatchBaselineForPatchGroup responses.
+ *
+ * @see    SSMClient::registerPatchBaselineForPatchGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterPatchBaselineForPatchGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SSMResponse(new RegisterPatchBaselineForPatchGroupResponsePrivate(this), parent)
+{
+    setRequest(new RegisterPatchBaselineForPatchGroupRequest(request));
+    setReply(reply);
+}
+
+const RegisterPatchBaselineForPatchGroupRequest * RegisterPatchBaselineForPatchGroupResponse::request() const
+{
+    Q_D(const RegisterPatchBaselineForPatchGroupResponse);
+    return static_cast<const RegisterPatchBaselineForPatchGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SSM RegisterPatchBaselineForPatchGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterPatchBaselineForPatchGroupResponsePrivate
+ *
+ * @brief  Private implementation for RegisterPatchBaselineForPatchGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterPatchBaselineForPatchGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterPatchBaselineForPatchGroupResponse instance.
+ */
+RegisterPatchBaselineForPatchGroupResponsePrivate::RegisterPatchBaselineForPatchGroupResponsePrivate(
+    RegisterPatchBaselineForPatchGroupQueueResponse * const q) : RegisterPatchBaselineForPatchGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SSM RegisterPatchBaselineForPatchGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterPatchBaselineForPatchGroupResponsePrivate::RegisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterPatchBaselineForPatchGroupResponse"));
+    /// @todo
+}

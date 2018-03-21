@@ -19,3 +19,85 @@
 
 #include "createidentitypoolresponse.h"
 #include "createidentitypoolresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  CreateIdentityPoolResponse
+ *
+ * @brief  Handles CognitoIdentity CreateIdentityPool responses.
+ *
+ * @see    CognitoIdentityClient::createIdentityPool
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateIdentityPoolResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new CreateIdentityPoolResponsePrivate(this), parent)
+{
+    setRequest(new CreateIdentityPoolRequest(request));
+    setReply(reply);
+}
+
+const CreateIdentityPoolRequest * CreateIdentityPoolResponse::request() const
+{
+    Q_D(const CreateIdentityPoolResponse);
+    return static_cast<const CreateIdentityPoolRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity CreateIdentityPool response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateIdentityPoolResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateIdentityPoolResponsePrivate
+ *
+ * @brief  Private implementation for CreateIdentityPoolResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateIdentityPoolResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateIdentityPoolResponse instance.
+ */
+CreateIdentityPoolResponsePrivate::CreateIdentityPoolResponsePrivate(
+    CreateIdentityPoolQueueResponse * const q) : CreateIdentityPoolPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity CreateIdentityPoolResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateIdentityPoolResponsePrivate::CreateIdentityPoolResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateIdentityPoolResponse"));
+    /// @todo
+}

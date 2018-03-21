@@ -19,3 +19,85 @@
 
 #include "describeidentityresponse.h"
 #include "describeidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  DescribeIdentityResponse
+ *
+ * @brief  Handles CognitoIdentity DescribeIdentity responses.
+ *
+ * @see    CognitoIdentityClient::describeIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityResponse(new DescribeIdentityResponsePrivate(this), parent)
+{
+    setRequest(new DescribeIdentityRequest(request));
+    setReply(reply);
+}
+
+const DescribeIdentityRequest * DescribeIdentityResponse::request() const
+{
+    Q_D(const DescribeIdentityResponse);
+    return static_cast<const DescribeIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentity DescribeIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIdentityResponsePrivate
+ *
+ * @brief  Private implementation for DescribeIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeIdentityResponse instance.
+ */
+DescribeIdentityResponsePrivate::DescribeIdentityResponsePrivate(
+    DescribeIdentityQueueResponse * const q) : DescribeIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentity DescribeIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeIdentityResponsePrivate::DescribeIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeIdentityResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteconfigurationseteventdestinationresponse.h"
 #include "deleteconfigurationseteventdestinationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteConfigurationSetEventDestinationResponse
+ *
+ * @brief  Handles SES DeleteConfigurationSetEventDestination responses.
+ *
+ * @see    SESClient::deleteConfigurationSetEventDestination
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigurationSetEventDestinationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DeleteConfigurationSetEventDestinationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteConfigurationSetEventDestinationRequest(request));
+    setReply(reply);
+}
+
+const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEventDestinationResponse::request() const
+{
+    Q_D(const DeleteConfigurationSetEventDestinationResponse);
+    return static_cast<const DeleteConfigurationSetEventDestinationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DeleteConfigurationSetEventDestination response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigurationSetEventDestinationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteConfigurationSetEventDestinationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationSetEventDestinationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteConfigurationSetEventDestinationResponse instance.
+ */
+DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEventDestinationResponsePrivate(
+    DeleteConfigurationSetEventDestinationQueueResponse * const q) : DeleteConfigurationSetEventDestinationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DeleteConfigurationSetEventDestinationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetEventDestinationResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "replacetopicruleresponse.h"
 #include "replacetopicruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ReplaceTopicRuleResponse
+ *
+ * @brief  Handles IoT ReplaceTopicRule responses.
+ *
+ * @see    IoTClient::replaceTopicRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReplaceTopicRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ReplaceTopicRuleResponsePrivate(this), parent)
+{
+    setRequest(new ReplaceTopicRuleRequest(request));
+    setReply(reply);
+}
+
+const ReplaceTopicRuleRequest * ReplaceTopicRuleResponse::request() const
+{
+    Q_D(const ReplaceTopicRuleResponse);
+    return static_cast<const ReplaceTopicRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ReplaceTopicRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void ReplaceTopicRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ReplaceTopicRuleResponsePrivate
+ *
+ * @brief  Private implementation for ReplaceTopicRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceTopicRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ReplaceTopicRuleResponse instance.
+ */
+ReplaceTopicRuleResponsePrivate::ReplaceTopicRuleResponsePrivate(
+    ReplaceTopicRuleQueueResponse * const q) : ReplaceTopicRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ReplaceTopicRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ReplaceTopicRuleResponsePrivate::ReplaceTopicRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ReplaceTopicRuleResponse"));
+    /// @todo
+}

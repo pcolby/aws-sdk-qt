@@ -19,3 +19,85 @@
 
 #include "deletedomainentryresponse.h"
 #include "deletedomainentryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteDomainEntryResponse
+ *
+ * @brief  Handles Lightsail DeleteDomainEntry responses.
+ *
+ * @see    LightsailClient::deleteDomainEntry
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDomainEntryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new DeleteDomainEntryResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDomainEntryRequest(request));
+    setReply(reply);
+}
+
+const DeleteDomainEntryRequest * DeleteDomainEntryResponse::request() const
+{
+    Q_D(const DeleteDomainEntryResponse);
+    return static_cast<const DeleteDomainEntryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail DeleteDomainEntry response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDomainEntryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDomainEntryResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDomainEntryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDomainEntryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDomainEntryResponse instance.
+ */
+DeleteDomainEntryResponsePrivate::DeleteDomainEntryResponsePrivate(
+    DeleteDomainEntryQueueResponse * const q) : DeleteDomainEntryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail DeleteDomainEntryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDomainEntryResponsePrivate::DeleteDomainEntryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDomainEntryResponse"));
+    /// @todo
+}

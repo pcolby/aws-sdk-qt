@@ -19,3 +19,85 @@
 
 #include "listassessmenttargetsresponse.h"
 #include "listassessmenttargetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  ListAssessmentTargetsResponse
+ *
+ * @brief  Handles Inspector ListAssessmentTargets responses.
+ *
+ * @see    InspectorClient::listAssessmentTargets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssessmentTargetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new ListAssessmentTargetsResponsePrivate(this), parent)
+{
+    setRequest(new ListAssessmentTargetsRequest(request));
+    setReply(reply);
+}
+
+const ListAssessmentTargetsRequest * ListAssessmentTargetsResponse::request() const
+{
+    Q_D(const ListAssessmentTargetsResponse);
+    return static_cast<const ListAssessmentTargetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector ListAssessmentTargets response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListAssessmentTargetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssessmentTargetsResponsePrivate
+ *
+ * @brief  Private implementation for ListAssessmentTargetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssessmentTargetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListAssessmentTargetsResponse instance.
+ */
+ListAssessmentTargetsResponsePrivate::ListAssessmentTargetsResponsePrivate(
+    ListAssessmentTargetsQueueResponse * const q) : ListAssessmentTargetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector ListAssessmentTargetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListAssessmentTargetsResponsePrivate::ListAssessmentTargetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListAssessmentTargetsResponse"));
+    /// @todo
+}

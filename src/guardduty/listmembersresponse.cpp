@@ -19,3 +19,85 @@
 
 #include "listmembersresponse.h"
 #include "listmembersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  ListMembersResponse
+ *
+ * @brief  Handles GuardDuty ListMembers responses.
+ *
+ * @see    GuardDutyClient::listMembers
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListMembersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new ListMembersResponsePrivate(this), parent)
+{
+    setRequest(new ListMembersRequest(request));
+    setReply(reply);
+}
+
+const ListMembersRequest * ListMembersResponse::request() const
+{
+    Q_D(const ListMembersResponse);
+    return static_cast<const ListMembersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty ListMembers response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListMembersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListMembersResponsePrivate
+ *
+ * @brief  Private implementation for ListMembersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMembersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListMembersResponse instance.
+ */
+ListMembersResponsePrivate::ListMembersResponsePrivate(
+    ListMembersQueueResponse * const q) : ListMembersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty ListMembersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListMembersResponsePrivate::ListMembersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListMembersResponse"));
+    /// @todo
+}

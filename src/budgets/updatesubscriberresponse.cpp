@@ -19,3 +19,85 @@
 
 #include "updatesubscriberresponse.h"
 #include "updatesubscriberresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  UpdateSubscriberResponse
+ *
+ * @brief  Handles Budgets UpdateSubscriber responses.
+ *
+ * @see    BudgetsClient::updateSubscriber
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSubscriberResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new UpdateSubscriberResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSubscriberRequest(request));
+    setReply(reply);
+}
+
+const UpdateSubscriberRequest * UpdateSubscriberResponse::request() const
+{
+    Q_D(const UpdateSubscriberResponse);
+    return static_cast<const UpdateSubscriberRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets UpdateSubscriber response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSubscriberResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSubscriberResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSubscriberResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSubscriberResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSubscriberResponse instance.
+ */
+UpdateSubscriberResponsePrivate::UpdateSubscriberResponsePrivate(
+    UpdateSubscriberQueueResponse * const q) : UpdateSubscriberPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets UpdateSubscriberResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSubscriberResponsePrivate::UpdateSubscriberResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSubscriberResponse"));
+    /// @todo
+}

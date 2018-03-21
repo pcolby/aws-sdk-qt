@@ -19,3 +19,85 @@
 
 #include "deleteinvitationsresponse.h"
 #include "deleteinvitationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DeleteInvitationsResponse
+ *
+ * @brief  Handles GuardDuty DeleteInvitations responses.
+ *
+ * @see    GuardDutyClient::deleteInvitations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInvitationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new DeleteInvitationsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteInvitationsRequest(request));
+    setReply(reply);
+}
+
+const DeleteInvitationsRequest * DeleteInvitationsResponse::request() const
+{
+    Q_D(const DeleteInvitationsResponse);
+    return static_cast<const DeleteInvitationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty DeleteInvitations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteInvitationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInvitationsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteInvitationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInvitationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteInvitationsResponse instance.
+ */
+DeleteInvitationsResponsePrivate::DeleteInvitationsResponsePrivate(
+    DeleteInvitationsQueueResponse * const q) : DeleteInvitationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty DeleteInvitationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteInvitationsResponsePrivate::DeleteInvitationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteInvitationsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "definesuggesterresponse.h"
 #include "definesuggesterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DefineSuggesterResponse
+ *
+ * @brief  Handles CloudSearch DefineSuggester responses.
+ *
+ * @see    CloudSearchClient::defineSuggester
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DefineSuggesterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DefineSuggesterResponsePrivate(this), parent)
+{
+    setRequest(new DefineSuggesterRequest(request));
+    setReply(reply);
+}
+
+const DefineSuggesterRequest * DefineSuggesterResponse::request() const
+{
+    Q_D(const DefineSuggesterResponse);
+    return static_cast<const DefineSuggesterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DefineSuggester response.
+ *
+ * @param  response  Response to parse.
+ */
+void DefineSuggesterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DefineSuggesterResponsePrivate
+ *
+ * @brief  Private implementation for DefineSuggesterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineSuggesterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DefineSuggesterResponse instance.
+ */
+DefineSuggesterResponsePrivate::DefineSuggesterResponsePrivate(
+    DefineSuggesterQueueResponse * const q) : DefineSuggesterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DefineSuggesterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DefineSuggesterResponsePrivate::DefineSuggesterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DefineSuggesterResponse"));
+    /// @todo
+}

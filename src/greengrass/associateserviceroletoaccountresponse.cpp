@@ -19,3 +19,85 @@
 
 #include "associateserviceroletoaccountresponse.h"
 #include "associateserviceroletoaccountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  AssociateServiceRoleToAccountResponse
+ *
+ * @brief  Handles Greengrass AssociateServiceRoleToAccount responses.
+ *
+ * @see    GreengrassClient::associateServiceRoleToAccount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateServiceRoleToAccountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new AssociateServiceRoleToAccountResponsePrivate(this), parent)
+{
+    setRequest(new AssociateServiceRoleToAccountRequest(request));
+    setReply(reply);
+}
+
+const AssociateServiceRoleToAccountRequest * AssociateServiceRoleToAccountResponse::request() const
+{
+    Q_D(const AssociateServiceRoleToAccountResponse);
+    return static_cast<const AssociateServiceRoleToAccountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass AssociateServiceRoleToAccount response.
+ *
+ * @param  response  Response to parse.
+ */
+void AssociateServiceRoleToAccountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateServiceRoleToAccountResponsePrivate
+ *
+ * @brief  Private implementation for AssociateServiceRoleToAccountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateServiceRoleToAccountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AssociateServiceRoleToAccountResponse instance.
+ */
+AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountResponsePrivate(
+    AssociateServiceRoleToAccountQueueResponse * const q) : AssociateServiceRoleToAccountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass AssociateServiceRoleToAccountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AssociateServiceRoleToAccountResponse"));
+    /// @todo
+}

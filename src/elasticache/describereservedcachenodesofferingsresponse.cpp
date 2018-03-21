@@ -19,3 +19,85 @@
 
 #include "describereservedcachenodesofferingsresponse.h"
 #include "describereservedcachenodesofferingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeReservedCacheNodesOfferingsResponse
+ *
+ * @brief  Handles ElastiCache DescribeReservedCacheNodesOfferings responses.
+ *
+ * @see    ElastiCacheClient::describeReservedCacheNodesOfferings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedCacheNodesOfferingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DescribeReservedCacheNodesOfferingsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReservedCacheNodesOfferingsRequest(request));
+    setReply(reply);
+}
+
+const DescribeReservedCacheNodesOfferingsRequest * DescribeReservedCacheNodesOfferingsResponse::request() const
+{
+    Q_D(const DescribeReservedCacheNodesOfferingsResponse);
+    return static_cast<const DescribeReservedCacheNodesOfferingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DescribeReservedCacheNodesOfferings response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReservedCacheNodesOfferingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedCacheNodesOfferingsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReservedCacheNodesOfferingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedCacheNodesOfferingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReservedCacheNodesOfferingsResponse instance.
+ */
+DescribeReservedCacheNodesOfferingsResponsePrivate::DescribeReservedCacheNodesOfferingsResponsePrivate(
+    DescribeReservedCacheNodesOfferingsQueueResponse * const q) : DescribeReservedCacheNodesOfferingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DescribeReservedCacheNodesOfferingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReservedCacheNodesOfferingsResponsePrivate::DescribeReservedCacheNodesOfferingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReservedCacheNodesOfferingsResponse"));
+    /// @todo
+}

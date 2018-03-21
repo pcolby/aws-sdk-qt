@@ -19,3 +19,85 @@
 
 #include "deletefleetresponse.h"
 #include "deletefleetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DeleteFleetResponse
+ *
+ * @brief  Handles GameLift DeleteFleet responses.
+ *
+ * @see    GameLiftClient::deleteFleet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFleetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new DeleteFleetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteFleetRequest(request));
+    setReply(reply);
+}
+
+const DeleteFleetRequest * DeleteFleetResponse::request() const
+{
+    Q_D(const DeleteFleetResponse);
+    return static_cast<const DeleteFleetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift DeleteFleet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteFleetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFleetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteFleetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFleetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteFleetResponse instance.
+ */
+DeleteFleetResponsePrivate::DeleteFleetResponsePrivate(
+    DeleteFleetQueueResponse * const q) : DeleteFleetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift DeleteFleetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteFleetResponsePrivate::DeleteFleetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteFleetResponse"));
+    /// @todo
+}

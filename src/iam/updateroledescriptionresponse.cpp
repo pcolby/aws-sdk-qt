@@ -19,3 +19,85 @@
 
 #include "updateroledescriptionresponse.h"
 #include "updateroledescriptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateRoleDescriptionResponse
+ *
+ * @brief  Handles IAM UpdateRoleDescription responses.
+ *
+ * @see    IAMClient::updateRoleDescription
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRoleDescriptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new UpdateRoleDescriptionResponsePrivate(this), parent)
+{
+    setRequest(new UpdateRoleDescriptionRequest(request));
+    setReply(reply);
+}
+
+const UpdateRoleDescriptionRequest * UpdateRoleDescriptionResponse::request() const
+{
+    Q_D(const UpdateRoleDescriptionResponse);
+    return static_cast<const UpdateRoleDescriptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM UpdateRoleDescription response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateRoleDescriptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRoleDescriptionResponsePrivate
+ *
+ * @brief  Private implementation for UpdateRoleDescriptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRoleDescriptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateRoleDescriptionResponse instance.
+ */
+UpdateRoleDescriptionResponsePrivate::UpdateRoleDescriptionResponsePrivate(
+    UpdateRoleDescriptionQueueResponse * const q) : UpdateRoleDescriptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM UpdateRoleDescriptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateRoleDescriptionResponsePrivate::UpdateRoleDescriptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateRoleDescriptionResponse"));
+    /// @todo
+}

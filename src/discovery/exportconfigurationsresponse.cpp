@@ -19,3 +19,85 @@
 
 #include "exportconfigurationsresponse.h"
 #include "exportconfigurationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  ExportConfigurationsResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService ExportConfigurations responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::exportConfigurations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExportConfigurationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new ExportConfigurationsResponsePrivate(this), parent)
+{
+    setRequest(new ExportConfigurationsRequest(request));
+    setReply(reply);
+}
+
+const ExportConfigurationsRequest * ExportConfigurationsResponse::request() const
+{
+    Q_D(const ExportConfigurationsResponse);
+    return static_cast<const ExportConfigurationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService ExportConfigurations response.
+ *
+ * @param  response  Response to parse.
+ */
+void ExportConfigurationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ExportConfigurationsResponsePrivate
+ *
+ * @brief  Private implementation for ExportConfigurationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExportConfigurationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ExportConfigurationsResponse instance.
+ */
+ExportConfigurationsResponsePrivate::ExportConfigurationsResponsePrivate(
+    ExportConfigurationsQueueResponse * const q) : ExportConfigurationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService ExportConfigurationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ExportConfigurationsResponsePrivate::ExportConfigurationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ExportConfigurationsResponse"));
+    /// @todo
+}

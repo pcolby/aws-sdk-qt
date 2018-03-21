@@ -19,3 +19,85 @@
 
 #include "deletebucketmetricsconfigurationresponse.h"
 #include "deletebucketmetricsconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteBucketMetricsConfigurationResponse
+ *
+ * @brief  Handles S3 DeleteBucketMetricsConfiguration responses.
+ *
+ * @see    S3Client::deleteBucketMetricsConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBucketMetricsConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new DeleteBucketMetricsConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteBucketMetricsConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DeleteBucketMetricsConfigurationRequest * DeleteBucketMetricsConfigurationResponse::request() const
+{
+    Q_D(const DeleteBucketMetricsConfigurationResponse);
+    return static_cast<const DeleteBucketMetricsConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 DeleteBucketMetricsConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBucketMetricsConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteBucketMetricsConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketMetricsConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteBucketMetricsConfigurationResponse instance.
+ */
+DeleteBucketMetricsConfigurationResponsePrivate::DeleteBucketMetricsConfigurationResponsePrivate(
+    DeleteBucketMetricsConfigurationQueueResponse * const q) : DeleteBucketMetricsConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 DeleteBucketMetricsConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteBucketMetricsConfigurationResponsePrivate::DeleteBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteBucketMetricsConfigurationResponse"));
+    /// @todo
+}

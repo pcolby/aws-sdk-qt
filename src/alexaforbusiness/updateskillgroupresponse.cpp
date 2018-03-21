@@ -19,3 +19,85 @@
 
 #include "updateskillgroupresponse.h"
 #include "updateskillgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UpdateSkillGroupResponse
+ *
+ * @brief  Handles AlexaForBusiness UpdateSkillGroup responses.
+ *
+ * @see    AlexaForBusinessClient::updateSkillGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSkillGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new UpdateSkillGroupResponsePrivate(this), parent)
+{
+    setRequest(new UpdateSkillGroupRequest(request));
+    setReply(reply);
+}
+
+const UpdateSkillGroupRequest * UpdateSkillGroupResponse::request() const
+{
+    Q_D(const UpdateSkillGroupResponse);
+    return static_cast<const UpdateSkillGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness UpdateSkillGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateSkillGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSkillGroupResponsePrivate
+ *
+ * @brief  Private implementation for UpdateSkillGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSkillGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateSkillGroupResponse instance.
+ */
+UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponsePrivate(
+    UpdateSkillGroupQueueResponse * const q) : UpdateSkillGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness UpdateSkillGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateSkillGroupResponse"));
+    /// @todo
+}

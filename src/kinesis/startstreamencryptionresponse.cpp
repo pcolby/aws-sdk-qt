@@ -19,3 +19,85 @@
 
 #include "startstreamencryptionresponse.h"
 #include "startstreamencryptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  StartStreamEncryptionResponse
+ *
+ * @brief  Handles Kinesis StartStreamEncryption responses.
+ *
+ * @see    KinesisClient::startStreamEncryption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartStreamEncryptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new StartStreamEncryptionResponsePrivate(this), parent)
+{
+    setRequest(new StartStreamEncryptionRequest(request));
+    setReply(reply);
+}
+
+const StartStreamEncryptionRequest * StartStreamEncryptionResponse::request() const
+{
+    Q_D(const StartStreamEncryptionResponse);
+    return static_cast<const StartStreamEncryptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis StartStreamEncryption response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartStreamEncryptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartStreamEncryptionResponsePrivate
+ *
+ * @brief  Private implementation for StartStreamEncryptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartStreamEncryptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartStreamEncryptionResponse instance.
+ */
+StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponsePrivate(
+    StartStreamEncryptionQueueResponse * const q) : StartStreamEncryptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis StartStreamEncryptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartStreamEncryptionResponse"));
+    /// @todo
+}

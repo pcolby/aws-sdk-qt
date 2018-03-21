@@ -19,3 +19,85 @@
 
 #include "disassociateconnectionfromlagresponse.h"
 #include "disassociateconnectionfromlagresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DisassociateConnectionFromLagResponse
+ *
+ * @brief  Handles DirectConnect DisassociateConnectionFromLag responses.
+ *
+ * @see    DirectConnectClient::disassociateConnectionFromLag
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateConnectionFromLagResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new DisassociateConnectionFromLagResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateConnectionFromLagRequest(request));
+    setReply(reply);
+}
+
+const DisassociateConnectionFromLagRequest * DisassociateConnectionFromLagResponse::request() const
+{
+    Q_D(const DisassociateConnectionFromLagResponse);
+    return static_cast<const DisassociateConnectionFromLagRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect DisassociateConnectionFromLag response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateConnectionFromLagResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateConnectionFromLagResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateConnectionFromLagResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateConnectionFromLagResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateConnectionFromLagResponse instance.
+ */
+DisassociateConnectionFromLagResponsePrivate::DisassociateConnectionFromLagResponsePrivate(
+    DisassociateConnectionFromLagQueueResponse * const q) : DisassociateConnectionFromLagPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect DisassociateConnectionFromLagResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateConnectionFromLagResponsePrivate::DisassociateConnectionFromLagResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateConnectionFromLagResponse"));
+    /// @todo
+}

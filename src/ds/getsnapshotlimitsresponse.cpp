@@ -19,3 +19,85 @@
 
 #include "getsnapshotlimitsresponse.h"
 #include "getsnapshotlimitsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  GetSnapshotLimitsResponse
+ *
+ * @brief  Handles DirectoryService GetSnapshotLimits responses.
+ *
+ * @see    DirectoryServiceClient::getSnapshotLimits
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSnapshotLimitsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new GetSnapshotLimitsResponsePrivate(this), parent)
+{
+    setRequest(new GetSnapshotLimitsRequest(request));
+    setReply(reply);
+}
+
+const GetSnapshotLimitsRequest * GetSnapshotLimitsResponse::request() const
+{
+    Q_D(const GetSnapshotLimitsResponse);
+    return static_cast<const GetSnapshotLimitsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService GetSnapshotLimits response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSnapshotLimitsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSnapshotLimitsResponsePrivate
+ *
+ * @brief  Private implementation for GetSnapshotLimitsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSnapshotLimitsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSnapshotLimitsResponse instance.
+ */
+GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponsePrivate(
+    GetSnapshotLimitsQueueResponse * const q) : GetSnapshotLimitsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService GetSnapshotLimitsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSnapshotLimitsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "revokeclustersecuritygroupingressresponse.h"
 #include "revokeclustersecuritygroupingressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  RevokeClusterSecurityGroupIngressResponse
+ *
+ * @brief  Handles Redshift RevokeClusterSecurityGroupIngress responses.
+ *
+ * @see    RedshiftClient::revokeClusterSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeClusterSecurityGroupIngressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RedshiftResponse(new RevokeClusterSecurityGroupIngressResponsePrivate(this), parent)
+{
+    setRequest(new RevokeClusterSecurityGroupIngressRequest(request));
+    setReply(reply);
+}
+
+const RevokeClusterSecurityGroupIngressRequest * RevokeClusterSecurityGroupIngressResponse::request() const
+{
+    Q_D(const RevokeClusterSecurityGroupIngressResponse);
+    return static_cast<const RevokeClusterSecurityGroupIngressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Redshift RevokeClusterSecurityGroupIngress response.
+ *
+ * @param  response  Response to parse.
+ */
+void RevokeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeClusterSecurityGroupIngressResponsePrivate
+ *
+ * @brief  Private implementation for RevokeClusterSecurityGroupIngressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeClusterSecurityGroupIngressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RevokeClusterSecurityGroupIngressResponse instance.
+ */
+RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngressResponsePrivate(
+    RevokeClusterSecurityGroupIngressQueueResponse * const q) : RevokeClusterSecurityGroupIngressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Redshift RevokeClusterSecurityGroupIngressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RevokeClusterSecurityGroupIngressResponse"));
+    /// @todo
+}

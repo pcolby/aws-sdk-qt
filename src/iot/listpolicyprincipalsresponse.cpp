@@ -19,3 +19,85 @@
 
 #include "listpolicyprincipalsresponse.h"
 #include "listpolicyprincipalsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListPolicyPrincipalsResponse
+ *
+ * @brief  Handles IoT ListPolicyPrincipals responses.
+ *
+ * @see    IoTClient::listPolicyPrincipals
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPolicyPrincipalsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ListPolicyPrincipalsResponsePrivate(this), parent)
+{
+    setRequest(new ListPolicyPrincipalsRequest(request));
+    setReply(reply);
+}
+
+const ListPolicyPrincipalsRequest * ListPolicyPrincipalsResponse::request() const
+{
+    Q_D(const ListPolicyPrincipalsResponse);
+    return static_cast<const ListPolicyPrincipalsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ListPolicyPrincipals response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListPolicyPrincipalsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPolicyPrincipalsResponsePrivate
+ *
+ * @brief  Private implementation for ListPolicyPrincipalsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPolicyPrincipalsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListPolicyPrincipalsResponse instance.
+ */
+ListPolicyPrincipalsResponsePrivate::ListPolicyPrincipalsResponsePrivate(
+    ListPolicyPrincipalsQueueResponse * const q) : ListPolicyPrincipalsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ListPolicyPrincipalsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListPolicyPrincipalsResponsePrivate::ListPolicyPrincipalsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListPolicyPrincipalsResponse"));
+    /// @todo
+}

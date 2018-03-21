@@ -19,3 +19,85 @@
 
 #include "listfacesresponse.h"
 #include "listfacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  ListFacesResponse
+ *
+ * @brief  Handles Rekognition ListFaces responses.
+ *
+ * @see    RekognitionClient::listFaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RekognitionResponse(new ListFacesResponsePrivate(this), parent)
+{
+    setRequest(new ListFacesRequest(request));
+    setReply(reply);
+}
+
+const ListFacesRequest * ListFacesResponse::request() const
+{
+    Q_D(const ListFacesResponse);
+    return static_cast<const ListFacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Rekognition ListFaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListFacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFacesResponsePrivate
+ *
+ * @brief  Private implementation for ListFacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListFacesResponse instance.
+ */
+ListFacesResponsePrivate::ListFacesResponsePrivate(
+    ListFacesQueueResponse * const q) : ListFacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Rekognition ListFacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListFacesResponsePrivate::ListFacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListFacesResponse"));
+    /// @todo
+}

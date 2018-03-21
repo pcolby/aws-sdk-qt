@@ -19,3 +19,85 @@
 
 #include "describestatemachineforexecutionresponse.h"
 #include "describestatemachineforexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DescribeStateMachineForExecutionResponse
+ *
+ * @brief  Handles SFN DescribeStateMachineForExecution responses.
+ *
+ * @see    SFNClient::describeStateMachineForExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStateMachineForExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new DescribeStateMachineForExecutionResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStateMachineForExecutionRequest(request));
+    setReply(reply);
+}
+
+const DescribeStateMachineForExecutionRequest * DescribeStateMachineForExecutionResponse::request() const
+{
+    Q_D(const DescribeStateMachineForExecutionResponse);
+    return static_cast<const DescribeStateMachineForExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN DescribeStateMachineForExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStateMachineForExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStateMachineForExecutionResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStateMachineForExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStateMachineForExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStateMachineForExecutionResponse instance.
+ */
+DescribeStateMachineForExecutionResponsePrivate::DescribeStateMachineForExecutionResponsePrivate(
+    DescribeStateMachineForExecutionQueueResponse * const q) : DescribeStateMachineForExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN DescribeStateMachineForExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStateMachineForExecutionResponsePrivate::DescribeStateMachineForExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStateMachineForExecutionResponse"));
+    /// @todo
+}

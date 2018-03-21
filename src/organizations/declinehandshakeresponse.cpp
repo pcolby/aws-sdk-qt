@@ -19,3 +19,85 @@
 
 #include "declinehandshakeresponse.h"
 #include "declinehandshakeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DeclineHandshakeResponse
+ *
+ * @brief  Handles Organizations DeclineHandshake responses.
+ *
+ * @see    OrganizationsClient::declineHandshake
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeclineHandshakeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new DeclineHandshakeResponsePrivate(this), parent)
+{
+    setRequest(new DeclineHandshakeRequest(request));
+    setReply(reply);
+}
+
+const DeclineHandshakeRequest * DeclineHandshakeResponse::request() const
+{
+    Q_D(const DeclineHandshakeResponse);
+    return static_cast<const DeclineHandshakeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations DeclineHandshake response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeclineHandshakeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeclineHandshakeResponsePrivate
+ *
+ * @brief  Private implementation for DeclineHandshakeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeclineHandshakeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeclineHandshakeResponse instance.
+ */
+DeclineHandshakeResponsePrivate::DeclineHandshakeResponsePrivate(
+    DeclineHandshakeQueueResponse * const q) : DeclineHandshakePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations DeclineHandshakeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeclineHandshakeResponsePrivate::DeclineHandshakeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeclineHandshakeResponse"));
+    /// @todo
+}

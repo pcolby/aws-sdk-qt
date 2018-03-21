@@ -19,3 +19,85 @@
 
 #include "composeenvironmentsresponse.h"
 #include "composeenvironmentsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  ComposeEnvironmentsResponse
+ *
+ * @brief  Handles ElasticBeanstalk ComposeEnvironments responses.
+ *
+ * @see    ElasticBeanstalkClient::composeEnvironments
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ComposeEnvironmentsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new ComposeEnvironmentsResponsePrivate(this), parent)
+{
+    setRequest(new ComposeEnvironmentsRequest(request));
+    setReply(reply);
+}
+
+const ComposeEnvironmentsRequest * ComposeEnvironmentsResponse::request() const
+{
+    Q_D(const ComposeEnvironmentsResponse);
+    return static_cast<const ComposeEnvironmentsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk ComposeEnvironments response.
+ *
+ * @param  response  Response to parse.
+ */
+void ComposeEnvironmentsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ComposeEnvironmentsResponsePrivate
+ *
+ * @brief  Private implementation for ComposeEnvironmentsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ComposeEnvironmentsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ComposeEnvironmentsResponse instance.
+ */
+ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponsePrivate(
+    ComposeEnvironmentsQueueResponse * const q) : ComposeEnvironmentsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk ComposeEnvironmentsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ComposeEnvironmentsResponse"));
+    /// @todo
+}

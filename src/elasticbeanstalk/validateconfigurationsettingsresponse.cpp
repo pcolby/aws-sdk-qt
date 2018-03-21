@@ -19,3 +19,85 @@
 
 #include "validateconfigurationsettingsresponse.h"
 #include "validateconfigurationsettingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  ValidateConfigurationSettingsResponse
+ *
+ * @brief  Handles ElasticBeanstalk ValidateConfigurationSettings responses.
+ *
+ * @see    ElasticBeanstalkClient::validateConfigurationSettings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ValidateConfigurationSettingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new ValidateConfigurationSettingsResponsePrivate(this), parent)
+{
+    setRequest(new ValidateConfigurationSettingsRequest(request));
+    setReply(reply);
+}
+
+const ValidateConfigurationSettingsRequest * ValidateConfigurationSettingsResponse::request() const
+{
+    Q_D(const ValidateConfigurationSettingsResponse);
+    return static_cast<const ValidateConfigurationSettingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk ValidateConfigurationSettings response.
+ *
+ * @param  response  Response to parse.
+ */
+void ValidateConfigurationSettingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ValidateConfigurationSettingsResponsePrivate
+ *
+ * @brief  Private implementation for ValidateConfigurationSettingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidateConfigurationSettingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ValidateConfigurationSettingsResponse instance.
+ */
+ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsResponsePrivate(
+    ValidateConfigurationSettingsQueueResponse * const q) : ValidateConfigurationSettingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk ValidateConfigurationSettingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ValidateConfigurationSettingsResponse"));
+    /// @todo
+}

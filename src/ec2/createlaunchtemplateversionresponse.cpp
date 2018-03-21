@@ -19,3 +19,85 @@
 
 #include "createlaunchtemplateversionresponse.h"
 #include "createlaunchtemplateversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateLaunchTemplateVersionResponse
+ *
+ * @brief  Handles EC2 CreateLaunchTemplateVersion responses.
+ *
+ * @see    EC2Client::createLaunchTemplateVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLaunchTemplateVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateLaunchTemplateVersionResponsePrivate(this), parent)
+{
+    setRequest(new CreateLaunchTemplateVersionRequest(request));
+    setReply(reply);
+}
+
+const CreateLaunchTemplateVersionRequest * CreateLaunchTemplateVersionResponse::request() const
+{
+    Q_D(const CreateLaunchTemplateVersionResponse);
+    return static_cast<const CreateLaunchTemplateVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateLaunchTemplateVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateLaunchTemplateVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLaunchTemplateVersionResponsePrivate
+ *
+ * @brief  Private implementation for CreateLaunchTemplateVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLaunchTemplateVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateLaunchTemplateVersionResponse instance.
+ */
+CreateLaunchTemplateVersionResponsePrivate::CreateLaunchTemplateVersionResponsePrivate(
+    CreateLaunchTemplateVersionQueueResponse * const q) : CreateLaunchTemplateVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateLaunchTemplateVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateLaunchTemplateVersionResponsePrivate::CreateLaunchTemplateVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateLaunchTemplateVersionResponse"));
+    /// @todo
+}

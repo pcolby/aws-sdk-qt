@@ -19,3 +19,85 @@
 
 #include "listorganizationalunitsforparentresponse.h"
 #include "listorganizationalunitsforparentresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListOrganizationalUnitsForParentResponse
+ *
+ * @brief  Handles Organizations ListOrganizationalUnitsForParent responses.
+ *
+ * @see    OrganizationsClient::listOrganizationalUnitsForParent
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOrganizationalUnitsForParentResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OrganizationsResponse(new ListOrganizationalUnitsForParentResponsePrivate(this), parent)
+{
+    setRequest(new ListOrganizationalUnitsForParentRequest(request));
+    setReply(reply);
+}
+
+const ListOrganizationalUnitsForParentRequest * ListOrganizationalUnitsForParentResponse::request() const
+{
+    Q_D(const ListOrganizationalUnitsForParentResponse);
+    return static_cast<const ListOrganizationalUnitsForParentRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Organizations ListOrganizationalUnitsForParent response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListOrganizationalUnitsForParentResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOrganizationalUnitsForParentResponsePrivate
+ *
+ * @brief  Private implementation for ListOrganizationalUnitsForParentResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOrganizationalUnitsForParentResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListOrganizationalUnitsForParentResponse instance.
+ */
+ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParentResponsePrivate(
+    ListOrganizationalUnitsForParentQueueResponse * const q) : ListOrganizationalUnitsForParentPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Organizations ListOrganizationalUnitsForParentResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParentResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListOrganizationalUnitsForParentResponse"));
+    /// @todo
+}

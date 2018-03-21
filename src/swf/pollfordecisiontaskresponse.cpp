@@ -19,3 +19,85 @@
 
 #include "pollfordecisiontaskresponse.h"
 #include "pollfordecisiontaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  PollForDecisionTaskResponse
+ *
+ * @brief  Handles SWF PollForDecisionTask responses.
+ *
+ * @see    SWFClient::pollForDecisionTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PollForDecisionTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new PollForDecisionTaskResponsePrivate(this), parent)
+{
+    setRequest(new PollForDecisionTaskRequest(request));
+    setReply(reply);
+}
+
+const PollForDecisionTaskRequest * PollForDecisionTaskResponse::request() const
+{
+    Q_D(const PollForDecisionTaskResponse);
+    return static_cast<const PollForDecisionTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF PollForDecisionTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void PollForDecisionTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PollForDecisionTaskResponsePrivate
+ *
+ * @brief  Private implementation for PollForDecisionTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForDecisionTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PollForDecisionTaskResponse instance.
+ */
+PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponsePrivate(
+    PollForDecisionTaskQueueResponse * const q) : PollForDecisionTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF PollForDecisionTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PollForDecisionTaskResponse"));
+    /// @todo
+}

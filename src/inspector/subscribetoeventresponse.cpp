@@ -19,3 +19,85 @@
 
 #include "subscribetoeventresponse.h"
 #include "subscribetoeventresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  SubscribeToEventResponse
+ *
+ * @brief  Handles Inspector SubscribeToEvent responses.
+ *
+ * @see    InspectorClient::subscribeToEvent
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubscribeToEventResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new SubscribeToEventResponsePrivate(this), parent)
+{
+    setRequest(new SubscribeToEventRequest(request));
+    setReply(reply);
+}
+
+const SubscribeToEventRequest * SubscribeToEventResponse::request() const
+{
+    Q_D(const SubscribeToEventResponse);
+    return static_cast<const SubscribeToEventRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector SubscribeToEvent response.
+ *
+ * @param  response  Response to parse.
+ */
+void SubscribeToEventResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SubscribeToEventResponsePrivate
+ *
+ * @brief  Private implementation for SubscribeToEventResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubscribeToEventResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SubscribeToEventResponse instance.
+ */
+SubscribeToEventResponsePrivate::SubscribeToEventResponsePrivate(
+    SubscribeToEventQueueResponse * const q) : SubscribeToEventPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector SubscribeToEventResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SubscribeToEventResponsePrivate::SubscribeToEventResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SubscribeToEventResponse"));
+    /// @todo
+}

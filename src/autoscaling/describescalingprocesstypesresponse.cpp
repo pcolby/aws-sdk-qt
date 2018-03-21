@@ -19,3 +19,85 @@
 
 #include "describescalingprocesstypesresponse.h"
 #include "describescalingprocesstypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeScalingProcessTypesResponse
+ *
+ * @brief  Handles AutoScaling DescribeScalingProcessTypes responses.
+ *
+ * @see    AutoScalingClient::describeScalingProcessTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingProcessTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeScalingProcessTypesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeScalingProcessTypesRequest(request));
+    setReply(reply);
+}
+
+const DescribeScalingProcessTypesRequest * DescribeScalingProcessTypesResponse::request() const
+{
+    Q_D(const DescribeScalingProcessTypesResponse);
+    return static_cast<const DescribeScalingProcessTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeScalingProcessTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeScalingProcessTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingProcessTypesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeScalingProcessTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingProcessTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeScalingProcessTypesResponse instance.
+ */
+DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponsePrivate(
+    DescribeScalingProcessTypesQueueResponse * const q) : DescribeScalingProcessTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeScalingProcessTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeScalingProcessTypesResponse"));
+    /// @todo
+}

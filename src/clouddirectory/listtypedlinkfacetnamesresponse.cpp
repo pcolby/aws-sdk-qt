@@ -19,3 +19,85 @@
 
 #include "listtypedlinkfacetnamesresponse.h"
 #include "listtypedlinkfacetnamesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListTypedLinkFacetNamesResponse
+ *
+ * @brief  Handles CloudDirectory ListTypedLinkFacetNames responses.
+ *
+ * @see    CloudDirectoryClient::listTypedLinkFacetNames
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTypedLinkFacetNamesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListTypedLinkFacetNamesResponsePrivate(this), parent)
+{
+    setRequest(new ListTypedLinkFacetNamesRequest(request));
+    setReply(reply);
+}
+
+const ListTypedLinkFacetNamesRequest * ListTypedLinkFacetNamesResponse::request() const
+{
+    Q_D(const ListTypedLinkFacetNamesResponse);
+    return static_cast<const ListTypedLinkFacetNamesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListTypedLinkFacetNames response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTypedLinkFacetNamesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTypedLinkFacetNamesResponsePrivate
+ *
+ * @brief  Private implementation for ListTypedLinkFacetNamesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTypedLinkFacetNamesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTypedLinkFacetNamesResponse instance.
+ */
+ListTypedLinkFacetNamesResponsePrivate::ListTypedLinkFacetNamesResponsePrivate(
+    ListTypedLinkFacetNamesQueueResponse * const q) : ListTypedLinkFacetNamesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListTypedLinkFacetNamesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTypedLinkFacetNamesResponsePrivate::ListTypedLinkFacetNamesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTypedLinkFacetNamesResponse"));
+    /// @todo
+}

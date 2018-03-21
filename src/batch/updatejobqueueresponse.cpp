@@ -19,3 +19,85 @@
 
 #include "updatejobqueueresponse.h"
 #include "updatejobqueueresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  UpdateJobQueueResponse
+ *
+ * @brief  Handles Batch UpdateJobQueue responses.
+ *
+ * @see    BatchClient::updateJobQueue
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateJobQueueResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BatchResponse(new UpdateJobQueueResponsePrivate(this), parent)
+{
+    setRequest(new UpdateJobQueueRequest(request));
+    setReply(reply);
+}
+
+const UpdateJobQueueRequest * UpdateJobQueueResponse::request() const
+{
+    Q_D(const UpdateJobQueueResponse);
+    return static_cast<const UpdateJobQueueRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Batch UpdateJobQueue response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateJobQueueResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateJobQueueResponsePrivate
+ *
+ * @brief  Private implementation for UpdateJobQueueResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateJobQueueResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateJobQueueResponse instance.
+ */
+UpdateJobQueueResponsePrivate::UpdateJobQueueResponsePrivate(
+    UpdateJobQueueQueueResponse * const q) : UpdateJobQueuePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Batch UpdateJobQueueResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateJobQueueResponsePrivate::UpdateJobQueueResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateJobQueueResponse"));
+    /// @todo
+}

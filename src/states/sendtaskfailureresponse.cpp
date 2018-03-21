@@ -19,3 +19,85 @@
 
 #include "sendtaskfailureresponse.h"
 #include "sendtaskfailureresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  SendTaskFailureResponse
+ *
+ * @brief  Handles SFN SendTaskFailure responses.
+ *
+ * @see    SFNClient::sendTaskFailure
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendTaskFailureResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new SendTaskFailureResponsePrivate(this), parent)
+{
+    setRequest(new SendTaskFailureRequest(request));
+    setReply(reply);
+}
+
+const SendTaskFailureRequest * SendTaskFailureResponse::request() const
+{
+    Q_D(const SendTaskFailureResponse);
+    return static_cast<const SendTaskFailureRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN SendTaskFailure response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendTaskFailureResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendTaskFailureResponsePrivate
+ *
+ * @brief  Private implementation for SendTaskFailureResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendTaskFailureResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendTaskFailureResponse instance.
+ */
+SendTaskFailureResponsePrivate::SendTaskFailureResponsePrivate(
+    SendTaskFailureQueueResponse * const q) : SendTaskFailurePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN SendTaskFailureResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendTaskFailureResponsePrivate::SendTaskFailureResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendTaskFailureResponse"));
+    /// @todo
+}

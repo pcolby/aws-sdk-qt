@@ -19,3 +19,85 @@
 
 #include "gethealthchecklastfailurereasonresponse.h"
 #include "gethealthchecklastfailurereasonresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetHealthCheckLastFailureReasonResponse
+ *
+ * @brief  Handles Route53 GetHealthCheckLastFailureReason responses.
+ *
+ * @see    Route53Client::getHealthCheckLastFailureReason
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHealthCheckLastFailureReasonResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : Route53Response(new GetHealthCheckLastFailureReasonResponsePrivate(this), parent)
+{
+    setRequest(new GetHealthCheckLastFailureReasonRequest(request));
+    setReply(reply);
+}
+
+const GetHealthCheckLastFailureReasonRequest * GetHealthCheckLastFailureReasonResponse::request() const
+{
+    Q_D(const GetHealthCheckLastFailureReasonResponse);
+    return static_cast<const GetHealthCheckLastFailureReasonRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Route53 GetHealthCheckLastFailureReason response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetHealthCheckLastFailureReasonResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHealthCheckLastFailureReasonResponsePrivate
+ *
+ * @brief  Private implementation for GetHealthCheckLastFailureReasonResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHealthCheckLastFailureReasonResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetHealthCheckLastFailureReasonResponse instance.
+ */
+GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonResponsePrivate(
+    GetHealthCheckLastFailureReasonQueueResponse * const q) : GetHealthCheckLastFailureReasonPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Route53 GetHealthCheckLastFailureReasonResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckLastFailureReasonResponse"));
+    /// @todo
+}

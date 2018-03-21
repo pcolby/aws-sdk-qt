@@ -19,3 +19,85 @@
 
 #include "deletedbclustersnapshotresponse.h"
 #include "deletedbclustersnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteDBClusterSnapshotResponse
+ *
+ * @brief  Handles RDS DeleteDBClusterSnapshot responses.
+ *
+ * @see    RDSClient::deleteDBClusterSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDBClusterSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DeleteDBClusterSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDBClusterSnapshotRequest(request));
+    setReply(reply);
+}
+
+const DeleteDBClusterSnapshotRequest * DeleteDBClusterSnapshotResponse::request() const
+{
+    Q_D(const DeleteDBClusterSnapshotResponse);
+    return static_cast<const DeleteDBClusterSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DeleteDBClusterSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDBClusterSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDBClusterSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBClusterSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDBClusterSnapshotResponse instance.
+ */
+DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponsePrivate(
+    DeleteDBClusterSnapshotQueueResponse * const q) : DeleteDBClusterSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DeleteDBClusterSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDBClusterSnapshotResponse"));
+    /// @todo
+}

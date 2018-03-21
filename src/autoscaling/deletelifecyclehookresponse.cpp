@@ -19,3 +19,85 @@
 
 #include "deletelifecyclehookresponse.h"
 #include "deletelifecyclehookresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DeleteLifecycleHookResponse
+ *
+ * @brief  Handles AutoScaling DeleteLifecycleHook responses.
+ *
+ * @see    AutoScalingClient::deleteLifecycleHook
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLifecycleHookResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DeleteLifecycleHookResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLifecycleHookRequest(request));
+    setReply(reply);
+}
+
+const DeleteLifecycleHookRequest * DeleteLifecycleHookResponse::request() const
+{
+    Q_D(const DeleteLifecycleHookResponse);
+    return static_cast<const DeleteLifecycleHookRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DeleteLifecycleHook response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLifecycleHookResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLifecycleHookResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLifecycleHookResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLifecycleHookResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLifecycleHookResponse instance.
+ */
+DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponsePrivate(
+    DeleteLifecycleHookQueueResponse * const q) : DeleteLifecycleHookPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DeleteLifecycleHookResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLifecycleHookResponse"));
+    /// @todo
+}

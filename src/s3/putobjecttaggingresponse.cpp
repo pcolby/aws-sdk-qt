@@ -19,3 +19,85 @@
 
 #include "putobjecttaggingresponse.h"
 #include "putobjecttaggingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutObjectTaggingResponse
+ *
+ * @brief  Handles S3 PutObjectTagging responses.
+ *
+ * @see    S3Client::putObjectTagging
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutObjectTaggingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new PutObjectTaggingResponsePrivate(this), parent)
+{
+    setRequest(new PutObjectTaggingRequest(request));
+    setReply(reply);
+}
+
+const PutObjectTaggingRequest * PutObjectTaggingResponse::request() const
+{
+    Q_D(const PutObjectTaggingResponse);
+    return static_cast<const PutObjectTaggingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 PutObjectTagging response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutObjectTaggingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutObjectTaggingResponsePrivate
+ *
+ * @brief  Private implementation for PutObjectTaggingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutObjectTaggingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutObjectTaggingResponse instance.
+ */
+PutObjectTaggingResponsePrivate::PutObjectTaggingResponsePrivate(
+    PutObjectTaggingQueueResponse * const q) : PutObjectTaggingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 PutObjectTaggingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutObjectTaggingResponsePrivate::PutObjectTaggingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutObjectTaggingResponse"));
+    /// @todo
+}

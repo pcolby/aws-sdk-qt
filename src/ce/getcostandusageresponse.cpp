@@ -19,3 +19,85 @@
 
 #include "getcostandusageresponse.h"
 #include "getcostandusageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CostExplorer {
+
+/**
+ * @class  GetCostAndUsageResponse
+ *
+ * @brief  Handles CostExplorer GetCostAndUsage responses.
+ *
+ * @see    CostExplorerClient::getCostAndUsage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCostAndUsageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CostExplorerResponse(new GetCostAndUsageResponsePrivate(this), parent)
+{
+    setRequest(new GetCostAndUsageRequest(request));
+    setReply(reply);
+}
+
+const GetCostAndUsageRequest * GetCostAndUsageResponse::request() const
+{
+    Q_D(const GetCostAndUsageResponse);
+    return static_cast<const GetCostAndUsageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CostExplorer GetCostAndUsage response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCostAndUsageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCostAndUsageResponsePrivate
+ *
+ * @brief  Private implementation for GetCostAndUsageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCostAndUsageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCostAndUsageResponse instance.
+ */
+GetCostAndUsageResponsePrivate::GetCostAndUsageResponsePrivate(
+    GetCostAndUsageQueueResponse * const q) : GetCostAndUsagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CostExplorer GetCostAndUsageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCostAndUsageResponsePrivate::GetCostAndUsageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCostAndUsageResponse"));
+    /// @todo
+}

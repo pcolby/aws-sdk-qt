@@ -19,3 +19,85 @@
 
 #include "describeobjectresponse.h"
 #include "describeobjectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaStoreData {
+
+/**
+ * @class  DescribeObjectResponse
+ *
+ * @brief  Handles MediaStoreData DescribeObject responses.
+ *
+ * @see    MediaStoreDataClient::describeObject
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeObjectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaStoreDataResponse(new DescribeObjectResponsePrivate(this), parent)
+{
+    setRequest(new DescribeObjectRequest(request));
+    setReply(reply);
+}
+
+const DescribeObjectRequest * DescribeObjectResponse::request() const
+{
+    Q_D(const DescribeObjectResponse);
+    return static_cast<const DescribeObjectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaStoreData DescribeObject response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeObjectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeObjectResponsePrivate
+ *
+ * @brief  Private implementation for DescribeObjectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeObjectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeObjectResponse instance.
+ */
+DescribeObjectResponsePrivate::DescribeObjectResponsePrivate(
+    DescribeObjectQueueResponse * const q) : DescribeObjectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaStoreData DescribeObjectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeObjectResponsePrivate::DescribeObjectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeObjectResponse"));
+    /// @todo
+}

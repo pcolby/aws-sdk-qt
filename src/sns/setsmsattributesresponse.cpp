@@ -19,3 +19,85 @@
 
 #include "setsmsattributesresponse.h"
 #include "setsmsattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  SetSMSAttributesResponse
+ *
+ * @brief  Handles SNS SetSMSAttributes responses.
+ *
+ * @see    SNSClient::setSMSAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetSMSAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SNSResponse(new SetSMSAttributesResponsePrivate(this), parent)
+{
+    setRequest(new SetSMSAttributesRequest(request));
+    setReply(reply);
+}
+
+const SetSMSAttributesRequest * SetSMSAttributesResponse::request() const
+{
+    Q_D(const SetSMSAttributesResponse);
+    return static_cast<const SetSMSAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SNS SetSMSAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetSMSAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetSMSAttributesResponsePrivate
+ *
+ * @brief  Private implementation for SetSMSAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetSMSAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetSMSAttributesResponse instance.
+ */
+SetSMSAttributesResponsePrivate::SetSMSAttributesResponsePrivate(
+    SetSMSAttributesQueueResponse * const q) : SetSMSAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SNS SetSMSAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetSMSAttributesResponsePrivate::SetSMSAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetSMSAttributesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createbudgetresponse.h"
 #include "createbudgetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  CreateBudgetResponse
+ *
+ * @brief  Handles Budgets CreateBudget responses.
+ *
+ * @see    BudgetsClient::createBudget
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBudgetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new CreateBudgetResponsePrivate(this), parent)
+{
+    setRequest(new CreateBudgetRequest(request));
+    setReply(reply);
+}
+
+const CreateBudgetRequest * CreateBudgetResponse::request() const
+{
+    Q_D(const CreateBudgetResponse);
+    return static_cast<const CreateBudgetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets CreateBudget response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateBudgetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBudgetResponsePrivate
+ *
+ * @brief  Private implementation for CreateBudgetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBudgetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateBudgetResponse instance.
+ */
+CreateBudgetResponsePrivate::CreateBudgetResponsePrivate(
+    CreateBudgetQueueResponse * const q) : CreateBudgetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets CreateBudgetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateBudgetResponsePrivate::CreateBudgetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateBudgetResponse"));
+    /// @todo
+}

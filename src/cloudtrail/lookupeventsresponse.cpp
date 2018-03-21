@@ -19,3 +19,85 @@
 
 #include "lookupeventsresponse.h"
 #include "lookupeventsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  LookupEventsResponse
+ *
+ * @brief  Handles CloudTrail LookupEvents responses.
+ *
+ * @see    CloudTrailClient::lookupEvents
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+LookupEventsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudTrailResponse(new LookupEventsResponsePrivate(this), parent)
+{
+    setRequest(new LookupEventsRequest(request));
+    setReply(reply);
+}
+
+const LookupEventsRequest * LookupEventsResponse::request() const
+{
+    Q_D(const LookupEventsResponse);
+    return static_cast<const LookupEventsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudTrail LookupEvents response.
+ *
+ * @param  response  Response to parse.
+ */
+void LookupEventsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  LookupEventsResponsePrivate
+ *
+ * @brief  Private implementation for LookupEventsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new LookupEventsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public LookupEventsResponse instance.
+ */
+LookupEventsResponsePrivate::LookupEventsResponsePrivate(
+    LookupEventsQueueResponse * const q) : LookupEventsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudTrail LookupEventsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void LookupEventsResponsePrivate::LookupEventsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("LookupEventsResponse"));
+    /// @todo
+}

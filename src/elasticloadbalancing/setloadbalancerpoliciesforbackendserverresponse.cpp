@@ -19,3 +19,85 @@
 
 #include "setloadbalancerpoliciesforbackendserverresponse.h"
 #include "setloadbalancerpoliciesforbackendserverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  SetLoadBalancerPoliciesForBackendServerResponse
+ *
+ * @brief  Handles ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer responses.
+ *
+ * @see    ElasticLoadBalancingClient::setLoadBalancerPoliciesForBackendServer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoadBalancerPoliciesForBackendServerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new SetLoadBalancerPoliciesForBackendServerResponsePrivate(this), parent)
+{
+    setRequest(new SetLoadBalancerPoliciesForBackendServerRequest(request));
+    setReply(reply);
+}
+
+const SetLoadBalancerPoliciesForBackendServerRequest * SetLoadBalancerPoliciesForBackendServerResponse::request() const
+{
+    Q_D(const SetLoadBalancerPoliciesForBackendServerResponse);
+    return static_cast<const SetLoadBalancerPoliciesForBackendServerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetLoadBalancerPoliciesForBackendServerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoadBalancerPoliciesForBackendServerResponsePrivate
+ *
+ * @brief  Private implementation for SetLoadBalancerPoliciesForBackendServerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetLoadBalancerPoliciesForBackendServerResponse instance.
+ */
+SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesForBackendServerResponsePrivate(
+    SetLoadBalancerPoliciesForBackendServerQueueResponse * const q) : SetLoadBalancerPoliciesForBackendServerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesForBackendServerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerPoliciesForBackendServerResponse"));
+    /// @todo
+}

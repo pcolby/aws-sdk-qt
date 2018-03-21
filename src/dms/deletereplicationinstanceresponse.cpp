@@ -19,3 +19,85 @@
 
 #include "deletereplicationinstanceresponse.h"
 #include "deletereplicationinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DeleteReplicationInstanceResponse
+ *
+ * @brief  Handles DatabaseMigrationService DeleteReplicationInstance responses.
+ *
+ * @see    DatabaseMigrationServiceClient::deleteReplicationInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DatabaseMigrationServiceResponse(new DeleteReplicationInstanceResponsePrivate(this), parent)
+{
+    setRequest(new DeleteReplicationInstanceRequest(request));
+    setReply(reply);
+}
+
+const DeleteReplicationInstanceRequest * DeleteReplicationInstanceResponse::request() const
+{
+    Q_D(const DeleteReplicationInstanceResponse);
+    return static_cast<const DeleteReplicationInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DatabaseMigrationService DeleteReplicationInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationInstanceResponsePrivate
+ *
+ * @brief  Private implementation for DeleteReplicationInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteReplicationInstanceResponse instance.
+ */
+DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponsePrivate(
+    DeleteReplicationInstanceQueueResponse * const q) : DeleteReplicationInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DatabaseMigrationService DeleteReplicationInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationInstanceResponse"));
+    /// @todo
+}

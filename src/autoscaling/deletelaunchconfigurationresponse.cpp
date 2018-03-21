@@ -19,3 +19,85 @@
 
 #include "deletelaunchconfigurationresponse.h"
 #include "deletelaunchconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DeleteLaunchConfigurationResponse
+ *
+ * @brief  Handles AutoScaling DeleteLaunchConfiguration responses.
+ *
+ * @see    AutoScalingClient::deleteLaunchConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLaunchConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DeleteLaunchConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteLaunchConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DeleteLaunchConfigurationRequest * DeleteLaunchConfigurationResponse::request() const
+{
+    Q_D(const DeleteLaunchConfigurationResponse);
+    return static_cast<const DeleteLaunchConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DeleteLaunchConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteLaunchConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLaunchConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteLaunchConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLaunchConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteLaunchConfigurationResponse instance.
+ */
+DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponsePrivate(
+    DeleteLaunchConfigurationQueueResponse * const q) : DeleteLaunchConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DeleteLaunchConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteLaunchConfigurationResponse"));
+    /// @todo
+}

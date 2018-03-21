@@ -19,3 +19,85 @@
 
 #include "removetargetsresponse.h"
 #include "removetargetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  RemoveTargetsResponse
+ *
+ * @brief  Handles CloudWatchEvents RemoveTargets responses.
+ *
+ * @see    CloudWatchEventsClient::removeTargets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTargetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudWatchEventsResponse(new RemoveTargetsResponsePrivate(this), parent)
+{
+    setRequest(new RemoveTargetsRequest(request));
+    setReply(reply);
+}
+
+const RemoveTargetsRequest * RemoveTargetsResponse::request() const
+{
+    Q_D(const RemoveTargetsResponse);
+    return static_cast<const RemoveTargetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudWatchEvents RemoveTargets response.
+ *
+ * @param  response  Response to parse.
+ */
+void RemoveTargetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTargetsResponsePrivate
+ *
+ * @brief  Private implementation for RemoveTargetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTargetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RemoveTargetsResponse instance.
+ */
+RemoveTargetsResponsePrivate::RemoveTargetsResponsePrivate(
+    RemoveTargetsQueueResponse * const q) : RemoveTargetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudWatchEvents RemoveTargetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RemoveTargetsResponsePrivate::RemoveTargetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RemoveTargetsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "registertargetsresponse.h"
 #include "registertargetsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  RegisterTargetsResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 RegisterTargets responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::registerTargets
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterTargetsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new RegisterTargetsResponsePrivate(this), parent)
+{
+    setRequest(new RegisterTargetsRequest(request));
+    setReply(reply);
+}
+
+const RegisterTargetsRequest * RegisterTargetsResponse::request() const
+{
+    Q_D(const RegisterTargetsResponse);
+    return static_cast<const RegisterTargetsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 RegisterTargets response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterTargetsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterTargetsResponsePrivate
+ *
+ * @brief  Private implementation for RegisterTargetsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterTargetsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterTargetsResponse instance.
+ */
+RegisterTargetsResponsePrivate::RegisterTargetsResponsePrivate(
+    RegisterTargetsQueueResponse * const q) : RegisterTargetsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 RegisterTargetsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterTargetsResponsePrivate::RegisterTargetsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterTargetsResponse"));
+    /// @todo
+}

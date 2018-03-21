@@ -19,3 +19,85 @@
 
 #include "updatetrailresponse.h"
 #include "updatetrailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  UpdateTrailResponse
+ *
+ * @brief  Handles CloudTrail UpdateTrail responses.
+ *
+ * @see    CloudTrailClient::updateTrail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTrailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudTrailResponse(new UpdateTrailResponsePrivate(this), parent)
+{
+    setRequest(new UpdateTrailRequest(request));
+    setReply(reply);
+}
+
+const UpdateTrailRequest * UpdateTrailResponse::request() const
+{
+    Q_D(const UpdateTrailResponse);
+    return static_cast<const UpdateTrailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudTrail UpdateTrail response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateTrailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTrailResponsePrivate
+ *
+ * @brief  Private implementation for UpdateTrailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTrailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateTrailResponse instance.
+ */
+UpdateTrailResponsePrivate::UpdateTrailResponsePrivate(
+    UpdateTrailQueueResponse * const q) : UpdateTrailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudTrail UpdateTrailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateTrailResponsePrivate::UpdateTrailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateTrailResponse"));
+    /// @todo
+}

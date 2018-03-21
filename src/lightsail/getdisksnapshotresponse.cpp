@@ -19,3 +19,85 @@
 
 #include "getdisksnapshotresponse.h"
 #include "getdisksnapshotresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetDiskSnapshotResponse
+ *
+ * @brief  Handles Lightsail GetDiskSnapshot responses.
+ *
+ * @see    LightsailClient::getDiskSnapshot
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDiskSnapshotResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetDiskSnapshotResponsePrivate(this), parent)
+{
+    setRequest(new GetDiskSnapshotRequest(request));
+    setReply(reply);
+}
+
+const GetDiskSnapshotRequest * GetDiskSnapshotResponse::request() const
+{
+    Q_D(const GetDiskSnapshotResponse);
+    return static_cast<const GetDiskSnapshotRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetDiskSnapshot response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetDiskSnapshotResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDiskSnapshotResponsePrivate
+ *
+ * @brief  Private implementation for GetDiskSnapshotResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDiskSnapshotResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetDiskSnapshotResponse instance.
+ */
+GetDiskSnapshotResponsePrivate::GetDiskSnapshotResponsePrivate(
+    GetDiskSnapshotQueueResponse * const q) : GetDiskSnapshotPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetDiskSnapshotResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetDiskSnapshotResponsePrivate::GetDiskSnapshotResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetDiskSnapshotResponse"));
+    /// @todo
+}

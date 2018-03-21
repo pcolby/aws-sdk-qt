@@ -19,3 +19,85 @@
 
 #include "creategroupresponse.h"
 #include "creategroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  CreateGroupResponse
+ *
+ * @brief  Handles CognitoIdentityProvider CreateGroup responses.
+ *
+ * @see    CognitoIdentityProviderClient::createGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new CreateGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateGroupRequest * CreateGroupResponse::request() const
+{
+    Q_D(const CreateGroupResponse);
+    return static_cast<const CreateGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider CreateGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateGroupResponse instance.
+ */
+CreateGroupResponsePrivate::CreateGroupResponsePrivate(
+    CreateGroupQueueResponse * const q) : CreateGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider CreateGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateGroupResponsePrivate::CreateGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateGroupResponse"));
+    /// @todo
+}

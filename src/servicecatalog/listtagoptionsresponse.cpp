@@ -19,3 +19,85 @@
 
 #include "listtagoptionsresponse.h"
 #include "listtagoptionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListTagOptionsResponse
+ *
+ * @brief  Handles ServiceCatalog ListTagOptions responses.
+ *
+ * @see    ServiceCatalogClient::listTagOptions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagOptionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new ListTagOptionsResponsePrivate(this), parent)
+{
+    setRequest(new ListTagOptionsRequest(request));
+    setReply(reply);
+}
+
+const ListTagOptionsRequest * ListTagOptionsResponse::request() const
+{
+    Q_D(const ListTagOptionsResponse);
+    return static_cast<const ListTagOptionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog ListTagOptions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListTagOptionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagOptionsResponsePrivate
+ *
+ * @brief  Private implementation for ListTagOptionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagOptionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListTagOptionsResponse instance.
+ */
+ListTagOptionsResponsePrivate::ListTagOptionsResponsePrivate(
+    ListTagOptionsQueueResponse * const q) : ListTagOptionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog ListTagOptionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListTagOptionsResponsePrivate::ListTagOptionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListTagOptionsResponse"));
+    /// @todo
+}

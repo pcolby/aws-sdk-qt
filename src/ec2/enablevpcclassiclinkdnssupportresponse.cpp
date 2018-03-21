@@ -19,3 +19,85 @@
 
 #include "enablevpcclassiclinkdnssupportresponse.h"
 #include "enablevpcclassiclinkdnssupportresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  EnableVpcClassicLinkDnsSupportResponse
+ *
+ * @brief  Handles EC2 EnableVpcClassicLinkDnsSupport responses.
+ *
+ * @see    EC2Client::enableVpcClassicLinkDnsSupport
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableVpcClassicLinkDnsSupportResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new EnableVpcClassicLinkDnsSupportResponsePrivate(this), parent)
+{
+    setRequest(new EnableVpcClassicLinkDnsSupportRequest(request));
+    setReply(reply);
+}
+
+const EnableVpcClassicLinkDnsSupportRequest * EnableVpcClassicLinkDnsSupportResponse::request() const
+{
+    Q_D(const EnableVpcClassicLinkDnsSupportResponse);
+    return static_cast<const EnableVpcClassicLinkDnsSupportRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 EnableVpcClassicLinkDnsSupport response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableVpcClassicLinkDnsSupportResponsePrivate
+ *
+ * @brief  Private implementation for EnableVpcClassicLinkDnsSupportResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVpcClassicLinkDnsSupportResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableVpcClassicLinkDnsSupportResponse instance.
+ */
+EnableVpcClassicLinkDnsSupportResponsePrivate::EnableVpcClassicLinkDnsSupportResponsePrivate(
+    EnableVpcClassicLinkDnsSupportQueueResponse * const q) : EnableVpcClassicLinkDnsSupportPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 EnableVpcClassicLinkDnsSupportResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableVpcClassicLinkDnsSupportResponsePrivate::EnableVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableVpcClassicLinkDnsSupportResponse"));
+    /// @todo
+}

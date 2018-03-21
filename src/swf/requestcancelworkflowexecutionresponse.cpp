@@ -19,3 +19,85 @@
 
 #include "requestcancelworkflowexecutionresponse.h"
 #include "requestcancelworkflowexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RequestCancelWorkflowExecutionResponse
+ *
+ * @brief  Handles SWF RequestCancelWorkflowExecution responses.
+ *
+ * @see    SWFClient::requestCancelWorkflowExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RequestCancelWorkflowExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new RequestCancelWorkflowExecutionResponsePrivate(this), parent)
+{
+    setRequest(new RequestCancelWorkflowExecutionRequest(request));
+    setReply(reply);
+}
+
+const RequestCancelWorkflowExecutionRequest * RequestCancelWorkflowExecutionResponse::request() const
+{
+    Q_D(const RequestCancelWorkflowExecutionResponse);
+    return static_cast<const RequestCancelWorkflowExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF RequestCancelWorkflowExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RequestCancelWorkflowExecutionResponsePrivate
+ *
+ * @brief  Private implementation for RequestCancelWorkflowExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestCancelWorkflowExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RequestCancelWorkflowExecutionResponse instance.
+ */
+RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionResponsePrivate(
+    RequestCancelWorkflowExecutionQueueResponse * const q) : RequestCancelWorkflowExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF RequestCancelWorkflowExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RequestCancelWorkflowExecutionResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteprogressupdatestreamresponse.h"
 #include "deleteprogressupdatestreamresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DeleteProgressUpdateStreamResponse
+ *
+ * @brief  Handles MigrationHub DeleteProgressUpdateStream responses.
+ *
+ * @see    MigrationHubClient::deleteProgressUpdateStream
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteProgressUpdateStreamResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new DeleteProgressUpdateStreamResponsePrivate(this), parent)
+{
+    setRequest(new DeleteProgressUpdateStreamRequest(request));
+    setReply(reply);
+}
+
+const DeleteProgressUpdateStreamRequest * DeleteProgressUpdateStreamResponse::request() const
+{
+    Q_D(const DeleteProgressUpdateStreamResponse);
+    return static_cast<const DeleteProgressUpdateStreamRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub DeleteProgressUpdateStream response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteProgressUpdateStreamResponsePrivate
+ *
+ * @brief  Private implementation for DeleteProgressUpdateStreamResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProgressUpdateStreamResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteProgressUpdateStreamResponse instance.
+ */
+DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamResponsePrivate(
+    DeleteProgressUpdateStreamQueueResponse * const q) : DeleteProgressUpdateStreamPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub DeleteProgressUpdateStreamResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteProgressUpdateStreamResponse"));
+    /// @todo
+}

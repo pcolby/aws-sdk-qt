@@ -19,3 +19,85 @@
 
 #include "rebootinstanceresponse.h"
 #include "rebootinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  RebootInstanceResponse
+ *
+ * @brief  Handles OpsWorks RebootInstance responses.
+ *
+ * @see    OpsWorksClient::rebootInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebootInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new RebootInstanceResponsePrivate(this), parent)
+{
+    setRequest(new RebootInstanceRequest(request));
+    setReply(reply);
+}
+
+const RebootInstanceRequest * RebootInstanceResponse::request() const
+{
+    Q_D(const RebootInstanceResponse);
+    return static_cast<const RebootInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks RebootInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void RebootInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RebootInstanceResponsePrivate
+ *
+ * @brief  Private implementation for RebootInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RebootInstanceResponse instance.
+ */
+RebootInstanceResponsePrivate::RebootInstanceResponsePrivate(
+    RebootInstanceQueueResponse * const q) : RebootInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks RebootInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RebootInstanceResponsePrivate::RebootInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RebootInstanceResponse"));
+    /// @todo
+}

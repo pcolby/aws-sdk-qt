@@ -19,3 +19,85 @@
 
 #include "listidentityprovidersresponse.h"
 #include "listidentityprovidersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListIdentityProvidersResponse
+ *
+ * @brief  Handles CognitoIdentityProvider ListIdentityProviders responses.
+ *
+ * @see    CognitoIdentityProviderClient::listIdentityProviders
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListIdentityProvidersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new ListIdentityProvidersResponsePrivate(this), parent)
+{
+    setRequest(new ListIdentityProvidersRequest(request));
+    setReply(reply);
+}
+
+const ListIdentityProvidersRequest * ListIdentityProvidersResponse::request() const
+{
+    Q_D(const ListIdentityProvidersResponse);
+    return static_cast<const ListIdentityProvidersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider ListIdentityProviders response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListIdentityProvidersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListIdentityProvidersResponsePrivate
+ *
+ * @brief  Private implementation for ListIdentityProvidersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListIdentityProvidersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListIdentityProvidersResponse instance.
+ */
+ListIdentityProvidersResponsePrivate::ListIdentityProvidersResponsePrivate(
+    ListIdentityProvidersQueueResponse * const q) : ListIdentityProvidersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider ListIdentityProvidersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListIdentityProvidersResponsePrivate::ListIdentityProvidersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListIdentityProvidersResponse"));
+    /// @todo
+}

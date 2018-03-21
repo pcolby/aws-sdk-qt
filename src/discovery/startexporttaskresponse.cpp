@@ -19,3 +19,85 @@
 
 #include "startexporttaskresponse.h"
 #include "startexporttaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  StartExportTaskResponse
+ *
+ * @brief  Handles ApplicationDiscoveryService StartExportTask responses.
+ *
+ * @see    ApplicationDiscoveryServiceClient::startExportTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartExportTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ApplicationDiscoveryServiceResponse(new StartExportTaskResponsePrivate(this), parent)
+{
+    setRequest(new StartExportTaskRequest(request));
+    setReply(reply);
+}
+
+const StartExportTaskRequest * StartExportTaskResponse::request() const
+{
+    Q_D(const StartExportTaskResponse);
+    return static_cast<const StartExportTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ApplicationDiscoveryService StartExportTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartExportTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartExportTaskResponsePrivate
+ *
+ * @brief  Private implementation for StartExportTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartExportTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartExportTaskResponse instance.
+ */
+StartExportTaskResponsePrivate::StartExportTaskResponsePrivate(
+    StartExportTaskQueueResponse * const q) : StartExportTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ApplicationDiscoveryService StartExportTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartExportTaskResponsePrivate::StartExportTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartExportTaskResponse"));
+    /// @todo
+}

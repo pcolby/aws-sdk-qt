@@ -19,3 +19,85 @@
 
 #include "describeimportsnapshottasksresponse.h"
 #include "describeimportsnapshottasksresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeImportSnapshotTasksResponse
+ *
+ * @brief  Handles EC2 DescribeImportSnapshotTasks responses.
+ *
+ * @see    EC2Client::describeImportSnapshotTasks
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeImportSnapshotTasksResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeImportSnapshotTasksResponsePrivate(this), parent)
+{
+    setRequest(new DescribeImportSnapshotTasksRequest(request));
+    setReply(reply);
+}
+
+const DescribeImportSnapshotTasksRequest * DescribeImportSnapshotTasksResponse::request() const
+{
+    Q_D(const DescribeImportSnapshotTasksResponse);
+    return static_cast<const DescribeImportSnapshotTasksRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeImportSnapshotTasks response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeImportSnapshotTasksResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeImportSnapshotTasksResponsePrivate
+ *
+ * @brief  Private implementation for DescribeImportSnapshotTasksResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeImportSnapshotTasksResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeImportSnapshotTasksResponse instance.
+ */
+DescribeImportSnapshotTasksResponsePrivate::DescribeImportSnapshotTasksResponsePrivate(
+    DescribeImportSnapshotTasksQueueResponse * const q) : DescribeImportSnapshotTasksPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeImportSnapshotTasksResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeImportSnapshotTasksResponsePrivate::DescribeImportSnapshotTasksResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeImportSnapshotTasksResponse"));
+    /// @todo
+}

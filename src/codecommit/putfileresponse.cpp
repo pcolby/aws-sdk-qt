@@ -19,3 +19,85 @@
 
 #include "putfileresponse.h"
 #include "putfileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PutFileResponse
+ *
+ * @brief  Handles CodeCommit PutFile responses.
+ *
+ * @see    CodeCommitClient::putFile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutFileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new PutFileResponsePrivate(this), parent)
+{
+    setRequest(new PutFileRequest(request));
+    setReply(reply);
+}
+
+const PutFileRequest * PutFileResponse::request() const
+{
+    Q_D(const PutFileResponse);
+    return static_cast<const PutFileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit PutFile response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutFileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutFileResponsePrivate
+ *
+ * @brief  Private implementation for PutFileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutFileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutFileResponse instance.
+ */
+PutFileResponsePrivate::PutFileResponsePrivate(
+    PutFileQueueResponse * const q) : PutFilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit PutFileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutFileResponsePrivate::PutFileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutFileResponse"));
+    /// @todo
+}

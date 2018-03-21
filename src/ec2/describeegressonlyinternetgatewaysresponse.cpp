@@ -19,3 +19,85 @@
 
 #include "describeegressonlyinternetgatewaysresponse.h"
 #include "describeegressonlyinternetgatewaysresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeEgressOnlyInternetGatewaysResponse
+ *
+ * @brief  Handles EC2 DescribeEgressOnlyInternetGateways responses.
+ *
+ * @see    EC2Client::describeEgressOnlyInternetGateways
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEgressOnlyInternetGatewaysResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeEgressOnlyInternetGatewaysResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEgressOnlyInternetGatewaysRequest(request));
+    setReply(reply);
+}
+
+const DescribeEgressOnlyInternetGatewaysRequest * DescribeEgressOnlyInternetGatewaysResponse::request() const
+{
+    Q_D(const DescribeEgressOnlyInternetGatewaysResponse);
+    return static_cast<const DescribeEgressOnlyInternetGatewaysRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeEgressOnlyInternetGateways response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEgressOnlyInternetGatewaysResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEgressOnlyInternetGatewaysResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEgressOnlyInternetGatewaysResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEgressOnlyInternetGatewaysResponse instance.
+ */
+DescribeEgressOnlyInternetGatewaysResponsePrivate::DescribeEgressOnlyInternetGatewaysResponsePrivate(
+    DescribeEgressOnlyInternetGatewaysQueueResponse * const q) : DescribeEgressOnlyInternetGatewaysPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeEgressOnlyInternetGatewaysResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEgressOnlyInternetGatewaysResponsePrivate::DescribeEgressOnlyInternetGatewaysResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEgressOnlyInternetGatewaysResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "initiatejobresponse.h"
 #include "initiatejobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  InitiateJobResponse
+ *
+ * @brief  Handles Glacier InitiateJob responses.
+ *
+ * @see    GlacierClient::initiateJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new InitiateJobResponsePrivate(this), parent)
+{
+    setRequest(new InitiateJobRequest(request));
+    setReply(reply);
+}
+
+const InitiateJobRequest * InitiateJobResponse::request() const
+{
+    Q_D(const InitiateJobResponse);
+    return static_cast<const InitiateJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier InitiateJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void InitiateJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateJobResponsePrivate
+ *
+ * @brief  Private implementation for InitiateJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public InitiateJobResponse instance.
+ */
+InitiateJobResponsePrivate::InitiateJobResponsePrivate(
+    InitiateJobQueueResponse * const q) : InitiateJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier InitiateJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void InitiateJobResponsePrivate::InitiateJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("InitiateJobResponse"));
+    /// @todo
+}

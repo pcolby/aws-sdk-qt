@@ -19,3 +19,85 @@
 
 #include "getintegrationresponse.h"
 #include "getintegrationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetIntegrationResponse
+ *
+ * @brief  Handles APIGateway GetIntegration responses.
+ *
+ * @see    APIGatewayClient::getIntegration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntegrationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetIntegrationResponsePrivate(this), parent)
+{
+    setRequest(new GetIntegrationRequest(request));
+    setReply(reply);
+}
+
+const GetIntegrationRequest * GetIntegrationResponse::request() const
+{
+    Q_D(const GetIntegrationResponse);
+    return static_cast<const GetIntegrationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetIntegration response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetIntegrationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntegrationResponsePrivate
+ *
+ * @brief  Private implementation for GetIntegrationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntegrationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetIntegrationResponse instance.
+ */
+GetIntegrationResponsePrivate::GetIntegrationResponsePrivate(
+    GetIntegrationQueueResponse * const q) : GetIntegrationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetIntegrationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetIntegrationResponsePrivate::GetIntegrationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetIntegrationResponse"));
+    /// @todo
+}

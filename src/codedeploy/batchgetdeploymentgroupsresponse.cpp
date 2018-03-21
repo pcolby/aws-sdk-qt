@@ -19,3 +19,85 @@
 
 #include "batchgetdeploymentgroupsresponse.h"
 #include "batchgetdeploymentgroupsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetDeploymentGroupsResponse
+ *
+ * @brief  Handles CodeDeploy BatchGetDeploymentGroups responses.
+ *
+ * @see    CodeDeployClient::batchGetDeploymentGroups
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetDeploymentGroupsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new BatchGetDeploymentGroupsResponsePrivate(this), parent)
+{
+    setRequest(new BatchGetDeploymentGroupsRequest(request));
+    setReply(reply);
+}
+
+const BatchGetDeploymentGroupsRequest * BatchGetDeploymentGroupsResponse::request() const
+{
+    Q_D(const BatchGetDeploymentGroupsResponse);
+    return static_cast<const BatchGetDeploymentGroupsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy BatchGetDeploymentGroups response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchGetDeploymentGroupsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetDeploymentGroupsResponsePrivate
+ *
+ * @brief  Private implementation for BatchGetDeploymentGroupsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetDeploymentGroupsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchGetDeploymentGroupsResponse instance.
+ */
+BatchGetDeploymentGroupsResponsePrivate::BatchGetDeploymentGroupsResponsePrivate(
+    BatchGetDeploymentGroupsQueueResponse * const q) : BatchGetDeploymentGroupsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy BatchGetDeploymentGroupsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchGetDeploymentGroupsResponsePrivate::BatchGetDeploymentGroupsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchGetDeploymentGroupsResponse"));
+    /// @todo
+}

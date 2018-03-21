@@ -19,3 +19,85 @@
 
 #include "confirmproductinstanceresponse.h"
 #include "confirmproductinstanceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ConfirmProductInstanceResponse
+ *
+ * @brief  Handles EC2 ConfirmProductInstance responses.
+ *
+ * @see    EC2Client::confirmProductInstance
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmProductInstanceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ConfirmProductInstanceResponsePrivate(this), parent)
+{
+    setRequest(new ConfirmProductInstanceRequest(request));
+    setReply(reply);
+}
+
+const ConfirmProductInstanceRequest * ConfirmProductInstanceResponse::request() const
+{
+    Q_D(const ConfirmProductInstanceResponse);
+    return static_cast<const ConfirmProductInstanceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ConfirmProductInstance response.
+ *
+ * @param  response  Response to parse.
+ */
+void ConfirmProductInstanceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmProductInstanceResponsePrivate
+ *
+ * @brief  Private implementation for ConfirmProductInstanceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmProductInstanceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ConfirmProductInstanceResponse instance.
+ */
+ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponsePrivate(
+    ConfirmProductInstanceQueueResponse * const q) : ConfirmProductInstancePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ConfirmProductInstanceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ConfirmProductInstanceResponse"));
+    /// @todo
+}

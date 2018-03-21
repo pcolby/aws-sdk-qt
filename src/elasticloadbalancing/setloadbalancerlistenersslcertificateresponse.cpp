@@ -19,3 +19,85 @@
 
 #include "setloadbalancerlistenersslcertificateresponse.h"
 #include "setloadbalancerlistenersslcertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  SetLoadBalancerListenerSSLCertificateResponse
+ *
+ * @brief  Handles ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate responses.
+ *
+ * @see    ElasticLoadBalancingClient::setLoadBalancerListenerSSLCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoadBalancerListenerSSLCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingResponse(new SetLoadBalancerListenerSSLCertificateResponsePrivate(this), parent)
+{
+    setRequest(new SetLoadBalancerListenerSSLCertificateRequest(request));
+    setReply(reply);
+}
+
+const SetLoadBalancerListenerSSLCertificateRequest * SetLoadBalancerListenerSSLCertificateResponse::request() const
+{
+    Q_D(const SetLoadBalancerListenerSSLCertificateResponse);
+    return static_cast<const SetLoadBalancerListenerSSLCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetLoadBalancerListenerSSLCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoadBalancerListenerSSLCertificateResponsePrivate
+ *
+ * @brief  Private implementation for SetLoadBalancerListenerSSLCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBalancerListenerSSLCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetLoadBalancerListenerSSLCertificateResponse instance.
+ */
+SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListenerSSLCertificateResponsePrivate(
+    SetLoadBalancerListenerSSLCertificateQueueResponse * const q) : SetLoadBalancerListenerSSLCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancing SetLoadBalancerListenerSSLCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListenerSSLCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerListenerSSLCertificateResponse"));
+    /// @todo
+}

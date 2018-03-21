@@ -19,3 +19,85 @@
 
 #include "createimportjobresponse.h"
 #include "createimportjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  CreateImportJobResponse
+ *
+ * @brief  Handles Pinpoint CreateImportJob responses.
+ *
+ * @see    PinpointClient::createImportJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateImportJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new CreateImportJobResponsePrivate(this), parent)
+{
+    setRequest(new CreateImportJobRequest(request));
+    setReply(reply);
+}
+
+const CreateImportJobRequest * CreateImportJobResponse::request() const
+{
+    Q_D(const CreateImportJobResponse);
+    return static_cast<const CreateImportJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint CreateImportJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateImportJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateImportJobResponsePrivate
+ *
+ * @brief  Private implementation for CreateImportJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateImportJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateImportJobResponse instance.
+ */
+CreateImportJobResponsePrivate::CreateImportJobResponsePrivate(
+    CreateImportJobQueueResponse * const q) : CreateImportJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint CreateImportJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateImportJobResponsePrivate::CreateImportJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateImportJobResponse"));
+    /// @todo
+}

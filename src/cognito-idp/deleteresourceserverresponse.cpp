@@ -19,3 +19,85 @@
 
 #include "deleteresourceserverresponse.h"
 #include "deleteresourceserverresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DeleteResourceServerResponse
+ *
+ * @brief  Handles CognitoIdentityProvider DeleteResourceServer responses.
+ *
+ * @see    CognitoIdentityProviderClient::deleteResourceServer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteResourceServerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new DeleteResourceServerResponsePrivate(this), parent)
+{
+    setRequest(new DeleteResourceServerRequest(request));
+    setReply(reply);
+}
+
+const DeleteResourceServerRequest * DeleteResourceServerResponse::request() const
+{
+    Q_D(const DeleteResourceServerResponse);
+    return static_cast<const DeleteResourceServerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider DeleteResourceServer response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteResourceServerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteResourceServerResponsePrivate
+ *
+ * @brief  Private implementation for DeleteResourceServerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourceServerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteResourceServerResponse instance.
+ */
+DeleteResourceServerResponsePrivate::DeleteResourceServerResponsePrivate(
+    DeleteResourceServerQueueResponse * const q) : DeleteResourceServerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider DeleteResourceServerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteResourceServerResponsePrivate::DeleteResourceServerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteResourceServerResponse"));
+    /// @todo
+}

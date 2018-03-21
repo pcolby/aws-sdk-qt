@@ -19,3 +19,85 @@
 
 #include "deletecertificateresponse.h"
 #include "deletecertificateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteCertificateResponse
+ *
+ * @brief  Handles IoT DeleteCertificate responses.
+ *
+ * @see    IoTClient::deleteCertificate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCertificateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeleteCertificateResponsePrivate(this), parent)
+{
+    setRequest(new DeleteCertificateRequest(request));
+    setReply(reply);
+}
+
+const DeleteCertificateRequest * DeleteCertificateResponse::request() const
+{
+    Q_D(const DeleteCertificateResponse);
+    return static_cast<const DeleteCertificateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeleteCertificate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteCertificateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCertificateResponsePrivate
+ *
+ * @brief  Private implementation for DeleteCertificateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCertificateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteCertificateResponse instance.
+ */
+DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
+    DeleteCertificateQueueResponse * const q) : DeleteCertificatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeleteCertificateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteCertificateResponsePrivate::DeleteCertificateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteCertificateResponse"));
+    /// @todo
+}

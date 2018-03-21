@@ -19,3 +19,85 @@
 
 #include "rebuildworkspacesresponse.h"
 #include "rebuildworkspacesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  RebuildWorkspacesResponse
+ *
+ * @brief  Handles WorkSpaces RebuildWorkspaces responses.
+ *
+ * @see    WorkSpacesClient::rebuildWorkspaces
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebuildWorkspacesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkSpacesResponse(new RebuildWorkspacesResponsePrivate(this), parent)
+{
+    setRequest(new RebuildWorkspacesRequest(request));
+    setReply(reply);
+}
+
+const RebuildWorkspacesRequest * RebuildWorkspacesResponse::request() const
+{
+    Q_D(const RebuildWorkspacesResponse);
+    return static_cast<const RebuildWorkspacesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkSpaces RebuildWorkspaces response.
+ *
+ * @param  response  Response to parse.
+ */
+void RebuildWorkspacesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RebuildWorkspacesResponsePrivate
+ *
+ * @brief  Private implementation for RebuildWorkspacesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebuildWorkspacesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RebuildWorkspacesResponse instance.
+ */
+RebuildWorkspacesResponsePrivate::RebuildWorkspacesResponsePrivate(
+    RebuildWorkspacesQueueResponse * const q) : RebuildWorkspacesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkSpaces RebuildWorkspacesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RebuildWorkspacesResponsePrivate::RebuildWorkspacesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RebuildWorkspacesResponse"));
+    /// @todo
+}

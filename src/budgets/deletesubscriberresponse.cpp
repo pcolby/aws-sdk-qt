@@ -19,3 +19,85 @@
 
 #include "deletesubscriberresponse.h"
 #include "deletesubscriberresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DeleteSubscriberResponse
+ *
+ * @brief  Handles Budgets DeleteSubscriber responses.
+ *
+ * @see    BudgetsClient::deleteSubscriber
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSubscriberResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : BudgetsResponse(new DeleteSubscriberResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSubscriberRequest(request));
+    setReply(reply);
+}
+
+const DeleteSubscriberRequest * DeleteSubscriberResponse::request() const
+{
+    Q_D(const DeleteSubscriberResponse);
+    return static_cast<const DeleteSubscriberRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Budgets DeleteSubscriber response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSubscriberResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSubscriberResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSubscriberResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSubscriberResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSubscriberResponse instance.
+ */
+DeleteSubscriberResponsePrivate::DeleteSubscriberResponsePrivate(
+    DeleteSubscriberQueueResponse * const q) : DeleteSubscriberPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Budgets DeleteSubscriberResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSubscriberResponsePrivate::DeleteSubscriberResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriberResponse"));
+    /// @todo
+}

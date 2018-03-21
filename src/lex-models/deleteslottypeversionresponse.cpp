@@ -19,3 +19,85 @@
 
 #include "deleteslottypeversionresponse.h"
 #include "deleteslottypeversionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteSlotTypeVersionResponse
+ *
+ * @brief  Handles LexModelBuildingService DeleteSlotTypeVersion responses.
+ *
+ * @see    LexModelBuildingServiceClient::deleteSlotTypeVersion
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSlotTypeVersionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new DeleteSlotTypeVersionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteSlotTypeVersionRequest(request));
+    setReply(reply);
+}
+
+const DeleteSlotTypeVersionRequest * DeleteSlotTypeVersionResponse::request() const
+{
+    Q_D(const DeleteSlotTypeVersionResponse);
+    return static_cast<const DeleteSlotTypeVersionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService DeleteSlotTypeVersion response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteSlotTypeVersionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSlotTypeVersionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteSlotTypeVersionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSlotTypeVersionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteSlotTypeVersionResponse instance.
+ */
+DeleteSlotTypeVersionResponsePrivate::DeleteSlotTypeVersionResponsePrivate(
+    DeleteSlotTypeVersionQueueResponse * const q) : DeleteSlotTypeVersionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService DeleteSlotTypeVersionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteSlotTypeVersionResponsePrivate::DeleteSlotTypeVersionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteSlotTypeVersionResponse"));
+    /// @todo
+}

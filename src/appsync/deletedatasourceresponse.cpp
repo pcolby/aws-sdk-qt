@@ -19,3 +19,85 @@
 
 #include "deletedatasourceresponse.h"
 #include "deletedatasourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  DeleteDataSourceResponse
+ *
+ * @brief  Handles AppSync DeleteDataSource responses.
+ *
+ * @see    AppSyncClient::deleteDataSource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDataSourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new DeleteDataSourceResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDataSourceRequest(request));
+    setReply(reply);
+}
+
+const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
+{
+    Q_D(const DeleteDataSourceResponse);
+    return static_cast<const DeleteDataSourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync DeleteDataSource response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDataSourceResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDataSourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDataSourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDataSourceResponse instance.
+ */
+DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
+    DeleteDataSourceQueueResponse * const q) : DeleteDataSourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync DeleteDataSourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDataSourceResponsePrivate::DeleteDataSourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDataSourceResponse"));
+    /// @todo
+}

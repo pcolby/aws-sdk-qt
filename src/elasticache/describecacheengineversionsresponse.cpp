@@ -19,3 +19,85 @@
 
 #include "describecacheengineversionsresponse.h"
 #include "describecacheengineversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeCacheEngineVersionsResponse
+ *
+ * @brief  Handles ElastiCache DescribeCacheEngineVersions responses.
+ *
+ * @see    ElastiCacheClient::describeCacheEngineVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCacheEngineVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new DescribeCacheEngineVersionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeCacheEngineVersionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeCacheEngineVersionsRequest * DescribeCacheEngineVersionsResponse::request() const
+{
+    Q_D(const DescribeCacheEngineVersionsResponse);
+    return static_cast<const DescribeCacheEngineVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache DescribeCacheEngineVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeCacheEngineVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCacheEngineVersionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeCacheEngineVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCacheEngineVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeCacheEngineVersionsResponse instance.
+ */
+DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponsePrivate(
+    DescribeCacheEngineVersionsQueueResponse * const q) : DescribeCacheEngineVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache DescribeCacheEngineVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeCacheEngineVersionsResponse"));
+    /// @todo
+}

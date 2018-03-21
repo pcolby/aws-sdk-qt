@@ -19,3 +19,85 @@
 
 #include "updatealiasresponse.h"
 #include "updatealiasresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  UpdateAliasResponse
+ *
+ * @brief  Handles KMS UpdateAlias responses.
+ *
+ * @see    KMSClient::updateAlias
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAliasResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KMSResponse(new UpdateAliasResponsePrivate(this), parent)
+{
+    setRequest(new UpdateAliasRequest(request));
+    setReply(reply);
+}
+
+const UpdateAliasRequest * UpdateAliasResponse::request() const
+{
+    Q_D(const UpdateAliasResponse);
+    return static_cast<const UpdateAliasRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KMS UpdateAlias response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateAliasResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAliasResponsePrivate
+ *
+ * @brief  Private implementation for UpdateAliasResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAliasResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateAliasResponse instance.
+ */
+UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
+    UpdateAliasQueueResponse * const q) : UpdateAliasPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KMS UpdateAliasResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateAliasResponsePrivate::UpdateAliasResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateAliasResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "completelifecycleactionresponse.h"
 #include "completelifecycleactionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  CompleteLifecycleActionResponse
+ *
+ * @brief  Handles AutoScaling CompleteLifecycleAction responses.
+ *
+ * @see    AutoScalingClient::completeLifecycleAction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CompleteLifecycleActionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new CompleteLifecycleActionResponsePrivate(this), parent)
+{
+    setRequest(new CompleteLifecycleActionRequest(request));
+    setReply(reply);
+}
+
+const CompleteLifecycleActionRequest * CompleteLifecycleActionResponse::request() const
+{
+    Q_D(const CompleteLifecycleActionResponse);
+    return static_cast<const CompleteLifecycleActionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling CompleteLifecycleAction response.
+ *
+ * @param  response  Response to parse.
+ */
+void CompleteLifecycleActionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CompleteLifecycleActionResponsePrivate
+ *
+ * @brief  Private implementation for CompleteLifecycleActionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CompleteLifecycleActionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CompleteLifecycleActionResponse instance.
+ */
+CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponsePrivate(
+    CompleteLifecycleActionQueueResponse * const q) : CompleteLifecycleActionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling CompleteLifecycleActionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CompleteLifecycleActionResponse"));
+    /// @todo
+}

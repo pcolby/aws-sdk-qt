@@ -19,3 +19,85 @@
 
 #include "describehostreservationsresponse.h"
 #include "describehostreservationsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeHostReservationsResponse
+ *
+ * @brief  Handles EC2 DescribeHostReservations responses.
+ *
+ * @see    EC2Client::describeHostReservations
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHostReservationsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeHostReservationsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeHostReservationsRequest(request));
+    setReply(reply);
+}
+
+const DescribeHostReservationsRequest * DescribeHostReservationsResponse::request() const
+{
+    Q_D(const DescribeHostReservationsResponse);
+    return static_cast<const DescribeHostReservationsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeHostReservations response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeHostReservationsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHostReservationsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeHostReservationsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHostReservationsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeHostReservationsResponse instance.
+ */
+DescribeHostReservationsResponsePrivate::DescribeHostReservationsResponsePrivate(
+    DescribeHostReservationsQueueResponse * const q) : DescribeHostReservationsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeHostReservationsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeHostReservationsResponsePrivate::DescribeHostReservationsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeHostReservationsResponse"));
+    /// @todo
+}

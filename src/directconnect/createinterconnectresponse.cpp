@@ -19,3 +19,85 @@
 
 #include "createinterconnectresponse.h"
 #include "createinterconnectresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateInterconnectResponse
+ *
+ * @brief  Handles DirectConnect CreateInterconnect responses.
+ *
+ * @see    DirectConnectClient::createInterconnect
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInterconnectResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectConnectResponse(new CreateInterconnectResponsePrivate(this), parent)
+{
+    setRequest(new CreateInterconnectRequest(request));
+    setReply(reply);
+}
+
+const CreateInterconnectRequest * CreateInterconnectResponse::request() const
+{
+    Q_D(const CreateInterconnectResponse);
+    return static_cast<const CreateInterconnectRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectConnect CreateInterconnect response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateInterconnectResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInterconnectResponsePrivate
+ *
+ * @brief  Private implementation for CreateInterconnectResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInterconnectResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateInterconnectResponse instance.
+ */
+CreateInterconnectResponsePrivate::CreateInterconnectResponsePrivate(
+    CreateInterconnectQueueResponse * const q) : CreateInterconnectPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectConnect CreateInterconnectResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateInterconnectResponsePrivate::CreateInterconnectResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateInterconnectResponse"));
+    /// @todo
+}

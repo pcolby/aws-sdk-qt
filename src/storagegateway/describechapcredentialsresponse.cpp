@@ -19,3 +19,85 @@
 
 #include "describechapcredentialsresponse.h"
 #include "describechapcredentialsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeChapCredentialsResponse
+ *
+ * @brief  Handles StorageGateway DescribeChapCredentials responses.
+ *
+ * @see    StorageGatewayClient::describeChapCredentials
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeChapCredentialsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeChapCredentialsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeChapCredentialsRequest(request));
+    setReply(reply);
+}
+
+const DescribeChapCredentialsRequest * DescribeChapCredentialsResponse::request() const
+{
+    Q_D(const DescribeChapCredentialsResponse);
+    return static_cast<const DescribeChapCredentialsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeChapCredentials response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeChapCredentialsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeChapCredentialsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeChapCredentialsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeChapCredentialsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeChapCredentialsResponse instance.
+ */
+DescribeChapCredentialsResponsePrivate::DescribeChapCredentialsResponsePrivate(
+    DescribeChapCredentialsQueueResponse * const q) : DescribeChapCredentialsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeChapCredentialsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeChapCredentialsResponsePrivate::DescribeChapCredentialsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeChapCredentialsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "sendbounceresponse.h"
 #include "sendbounceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SendBounceResponse
+ *
+ * @brief  Handles SES SendBounce responses.
+ *
+ * @see    SESClient::sendBounce
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendBounceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new SendBounceResponsePrivate(this), parent)
+{
+    setRequest(new SendBounceRequest(request));
+    setReply(reply);
+}
+
+const SendBounceRequest * SendBounceResponse::request() const
+{
+    Q_D(const SendBounceResponse);
+    return static_cast<const SendBounceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES SendBounce response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendBounceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendBounceResponsePrivate
+ *
+ * @brief  Private implementation for SendBounceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendBounceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendBounceResponse instance.
+ */
+SendBounceResponsePrivate::SendBounceResponsePrivate(
+    SendBounceQueueResponse * const q) : SendBouncePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES SendBounceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendBounceResponsePrivate::SendBounceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendBounceResponse"));
+    /// @todo
+}

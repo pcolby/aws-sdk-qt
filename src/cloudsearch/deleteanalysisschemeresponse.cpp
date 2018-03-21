@@ -19,3 +19,85 @@
 
 #include "deleteanalysisschemeresponse.h"
 #include "deleteanalysisschemeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DeleteAnalysisSchemeResponse
+ *
+ * @brief  Handles CloudSearch DeleteAnalysisScheme responses.
+ *
+ * @see    CloudSearchClient::deleteAnalysisScheme
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAnalysisSchemeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DeleteAnalysisSchemeResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAnalysisSchemeRequest(request));
+    setReply(reply);
+}
+
+const DeleteAnalysisSchemeRequest * DeleteAnalysisSchemeResponse::request() const
+{
+    Q_D(const DeleteAnalysisSchemeResponse);
+    return static_cast<const DeleteAnalysisSchemeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DeleteAnalysisScheme response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAnalysisSchemeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAnalysisSchemeResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAnalysisSchemeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAnalysisSchemeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAnalysisSchemeResponse instance.
+ */
+DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponsePrivate(
+    DeleteAnalysisSchemeQueueResponse * const q) : DeleteAnalysisSchemePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DeleteAnalysisSchemeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAnalysisSchemeResponse"));
+    /// @todo
+}

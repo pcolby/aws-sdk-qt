@@ -19,3 +19,85 @@
 
 #include "updategroupqueryresponse.h"
 #include "updategroupqueryresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ResourceGroups {
+
+/**
+ * @class  UpdateGroupQueryResponse
+ *
+ * @brief  Handles ResourceGroups UpdateGroupQuery responses.
+ *
+ * @see    ResourceGroupsClient::updateGroupQuery
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateGroupQueryResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ResourceGroupsResponse(new UpdateGroupQueryResponsePrivate(this), parent)
+{
+    setRequest(new UpdateGroupQueryRequest(request));
+    setReply(reply);
+}
+
+const UpdateGroupQueryRequest * UpdateGroupQueryResponse::request() const
+{
+    Q_D(const UpdateGroupQueryResponse);
+    return static_cast<const UpdateGroupQueryRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ResourceGroups UpdateGroupQuery response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateGroupQueryResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateGroupQueryResponsePrivate
+ *
+ * @brief  Private implementation for UpdateGroupQueryResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateGroupQueryResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateGroupQueryResponse instance.
+ */
+UpdateGroupQueryResponsePrivate::UpdateGroupQueryResponsePrivate(
+    UpdateGroupQueryQueueResponse * const q) : UpdateGroupQueryPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ResourceGroups UpdateGroupQueryResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateGroupQueryResponsePrivate::UpdateGroupQueryResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateGroupQueryResponse"));
+    /// @todo
+}

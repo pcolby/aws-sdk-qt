@@ -19,3 +19,85 @@
 
 #include "upgradepublishedschemaresponse.h"
 #include "upgradepublishedschemaresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  UpgradePublishedSchemaResponse
+ *
+ * @brief  Handles CloudDirectory UpgradePublishedSchema responses.
+ *
+ * @see    CloudDirectoryClient::upgradePublishedSchema
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpgradePublishedSchemaResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new UpgradePublishedSchemaResponsePrivate(this), parent)
+{
+    setRequest(new UpgradePublishedSchemaRequest(request));
+    setReply(reply);
+}
+
+const UpgradePublishedSchemaRequest * UpgradePublishedSchemaResponse::request() const
+{
+    Q_D(const UpgradePublishedSchemaResponse);
+    return static_cast<const UpgradePublishedSchemaRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory UpgradePublishedSchema response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpgradePublishedSchemaResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpgradePublishedSchemaResponsePrivate
+ *
+ * @brief  Private implementation for UpgradePublishedSchemaResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpgradePublishedSchemaResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpgradePublishedSchemaResponse instance.
+ */
+UpgradePublishedSchemaResponsePrivate::UpgradePublishedSchemaResponsePrivate(
+    UpgradePublishedSchemaQueueResponse * const q) : UpgradePublishedSchemaPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory UpgradePublishedSchemaResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpgradePublishedSchemaResponsePrivate::UpgradePublishedSchemaResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpgradePublishedSchemaResponse"));
+    /// @todo
+}

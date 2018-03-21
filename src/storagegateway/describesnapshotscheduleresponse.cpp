@@ -19,3 +19,85 @@
 
 #include "describesnapshotscheduleresponse.h"
 #include "describesnapshotscheduleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeSnapshotScheduleResponse
+ *
+ * @brief  Handles StorageGateway DescribeSnapshotSchedule responses.
+ *
+ * @see    StorageGatewayClient::describeSnapshotSchedule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSnapshotScheduleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DescribeSnapshotScheduleResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSnapshotScheduleRequest(request));
+    setReply(reply);
+}
+
+const DescribeSnapshotScheduleRequest * DescribeSnapshotScheduleResponse::request() const
+{
+    Q_D(const DescribeSnapshotScheduleResponse);
+    return static_cast<const DescribeSnapshotScheduleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DescribeSnapshotSchedule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSnapshotScheduleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSnapshotScheduleResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSnapshotScheduleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSnapshotScheduleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSnapshotScheduleResponse instance.
+ */
+DescribeSnapshotScheduleResponsePrivate::DescribeSnapshotScheduleResponsePrivate(
+    DescribeSnapshotScheduleQueueResponse * const q) : DescribeSnapshotSchedulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DescribeSnapshotScheduleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSnapshotScheduleResponsePrivate::DescribeSnapshotScheduleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotScheduleResponse"));
+    /// @todo
+}

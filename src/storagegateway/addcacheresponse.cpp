@@ -19,3 +19,85 @@
 
 #include "addcacheresponse.h"
 #include "addcacheresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  AddCacheResponse
+ *
+ * @brief  Handles StorageGateway AddCache responses.
+ *
+ * @see    StorageGatewayClient::addCache
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddCacheResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new AddCacheResponsePrivate(this), parent)
+{
+    setRequest(new AddCacheRequest(request));
+    setReply(reply);
+}
+
+const AddCacheRequest * AddCacheResponse::request() const
+{
+    Q_D(const AddCacheResponse);
+    return static_cast<const AddCacheRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway AddCache response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddCacheResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddCacheResponsePrivate
+ *
+ * @brief  Private implementation for AddCacheResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddCacheResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddCacheResponse instance.
+ */
+AddCacheResponsePrivate::AddCacheResponsePrivate(
+    AddCacheQueueResponse * const q) : AddCachePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway AddCacheResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddCacheResponsePrivate::AddCacheResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddCacheResponse"));
+    /// @todo
+}

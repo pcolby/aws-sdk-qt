@@ -19,3 +19,85 @@
 
 #include "updateconfigurationseteventdestinationresponse.h"
 #include "updateconfigurationseteventdestinationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateConfigurationSetEventDestinationResponse
+ *
+ * @brief  Handles SES UpdateConfigurationSetEventDestination responses.
+ *
+ * @see    SESClient::updateConfigurationSetEventDestination
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConfigurationSetEventDestinationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new UpdateConfigurationSetEventDestinationResponsePrivate(this), parent)
+{
+    setRequest(new UpdateConfigurationSetEventDestinationRequest(request));
+    setReply(reply);
+}
+
+const UpdateConfigurationSetEventDestinationRequest * UpdateConfigurationSetEventDestinationResponse::request() const
+{
+    Q_D(const UpdateConfigurationSetEventDestinationResponse);
+    return static_cast<const UpdateConfigurationSetEventDestinationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES UpdateConfigurationSetEventDestination response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConfigurationSetEventDestinationResponsePrivate
+ *
+ * @brief  Private implementation for UpdateConfigurationSetEventDestinationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationSetEventDestinationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateConfigurationSetEventDestinationResponse instance.
+ */
+UpdateConfigurationSetEventDestinationResponsePrivate::UpdateConfigurationSetEventDestinationResponsePrivate(
+    UpdateConfigurationSetEventDestinationQueueResponse * const q) : UpdateConfigurationSetEventDestinationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES UpdateConfigurationSetEventDestinationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateConfigurationSetEventDestinationResponsePrivate::UpdateConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetEventDestinationResponse"));
+    /// @todo
+}

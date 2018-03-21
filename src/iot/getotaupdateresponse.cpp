@@ -19,3 +19,85 @@
 
 #include "getotaupdateresponse.h"
 #include "getotaupdateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetOTAUpdateResponse
+ *
+ * @brief  Handles IoT GetOTAUpdate responses.
+ *
+ * @see    IoTClient::getOTAUpdate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOTAUpdateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new GetOTAUpdateResponsePrivate(this), parent)
+{
+    setRequest(new GetOTAUpdateRequest(request));
+    setReply(reply);
+}
+
+const GetOTAUpdateRequest * GetOTAUpdateResponse::request() const
+{
+    Q_D(const GetOTAUpdateResponse);
+    return static_cast<const GetOTAUpdateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT GetOTAUpdate response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetOTAUpdateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOTAUpdateResponsePrivate
+ *
+ * @brief  Private implementation for GetOTAUpdateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOTAUpdateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetOTAUpdateResponse instance.
+ */
+GetOTAUpdateResponsePrivate::GetOTAUpdateResponsePrivate(
+    GetOTAUpdateQueueResponse * const q) : GetOTAUpdatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT GetOTAUpdateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetOTAUpdateResponsePrivate::GetOTAUpdateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetOTAUpdateResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "gettagsresponse.h"
 #include "gettagsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetTagsResponse
+ *
+ * @brief  Handles APIGateway GetTags responses.
+ *
+ * @see    APIGatewayClient::getTags
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTagsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetTagsResponsePrivate(this), parent)
+{
+    setRequest(new GetTagsRequest(request));
+    setReply(reply);
+}
+
+const GetTagsRequest * GetTagsResponse::request() const
+{
+    Q_D(const GetTagsResponse);
+    return static_cast<const GetTagsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetTags response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetTagsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTagsResponsePrivate
+ *
+ * @brief  Private implementation for GetTagsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTagsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetTagsResponse instance.
+ */
+GetTagsResponsePrivate::GetTagsResponsePrivate(
+    GetTagsQueueResponse * const q) : GetTagsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetTagsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetTagsResponsePrivate::GetTagsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetTagsResponse"));
+    /// @todo
+}

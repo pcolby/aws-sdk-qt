@@ -19,3 +19,85 @@
 
 #include "recordlifecycleactionheartbeatresponse.h"
 #include "recordlifecycleactionheartbeatresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  RecordLifecycleActionHeartbeatResponse
+ *
+ * @brief  Handles AutoScaling RecordLifecycleActionHeartbeat responses.
+ *
+ * @see    AutoScalingClient::recordLifecycleActionHeartbeat
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RecordLifecycleActionHeartbeatResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new RecordLifecycleActionHeartbeatResponsePrivate(this), parent)
+{
+    setRequest(new RecordLifecycleActionHeartbeatRequest(request));
+    setReply(reply);
+}
+
+const RecordLifecycleActionHeartbeatRequest * RecordLifecycleActionHeartbeatResponse::request() const
+{
+    Q_D(const RecordLifecycleActionHeartbeatResponse);
+    return static_cast<const RecordLifecycleActionHeartbeatRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling RecordLifecycleActionHeartbeat response.
+ *
+ * @param  response  Response to parse.
+ */
+void RecordLifecycleActionHeartbeatResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RecordLifecycleActionHeartbeatResponsePrivate
+ *
+ * @brief  Private implementation for RecordLifecycleActionHeartbeatResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RecordLifecycleActionHeartbeatResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RecordLifecycleActionHeartbeatResponse instance.
+ */
+RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatResponsePrivate(
+    RecordLifecycleActionHeartbeatQueueResponse * const q) : RecordLifecycleActionHeartbeatPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling RecordLifecycleActionHeartbeatResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RecordLifecycleActionHeartbeatResponse"));
+    /// @todo
+}

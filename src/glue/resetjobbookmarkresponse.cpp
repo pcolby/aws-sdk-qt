@@ -19,3 +19,85 @@
 
 #include "resetjobbookmarkresponse.h"
 #include "resetjobbookmarkresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  ResetJobBookmarkResponse
+ *
+ * @brief  Handles Glue ResetJobBookmark responses.
+ *
+ * @see    GlueClient::resetJobBookmark
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetJobBookmarkResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new ResetJobBookmarkResponsePrivate(this), parent)
+{
+    setRequest(new ResetJobBookmarkRequest(request));
+    setReply(reply);
+}
+
+const ResetJobBookmarkRequest * ResetJobBookmarkResponse::request() const
+{
+    Q_D(const ResetJobBookmarkResponse);
+    return static_cast<const ResetJobBookmarkRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue ResetJobBookmark response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetJobBookmarkResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetJobBookmarkResponsePrivate
+ *
+ * @brief  Private implementation for ResetJobBookmarkResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetJobBookmarkResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetJobBookmarkResponse instance.
+ */
+ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponsePrivate(
+    ResetJobBookmarkQueueResponse * const q) : ResetJobBookmarkPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue ResetJobBookmarkResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetJobBookmarkResponse"));
+    /// @todo
+}

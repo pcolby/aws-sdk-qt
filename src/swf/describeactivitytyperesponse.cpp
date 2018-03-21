@@ -19,3 +19,85 @@
 
 #include "describeactivitytyperesponse.h"
 #include "describeactivitytyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DescribeActivityTypeResponse
+ *
+ * @brief  Handles SWF DescribeActivityType responses.
+ *
+ * @see    SWFClient::describeActivityType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeActivityTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new DescribeActivityTypeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeActivityTypeRequest(request));
+    setReply(reply);
+}
+
+const DescribeActivityTypeRequest * DescribeActivityTypeResponse::request() const
+{
+    Q_D(const DescribeActivityTypeResponse);
+    return static_cast<const DescribeActivityTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF DescribeActivityType response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeActivityTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeActivityTypeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeActivityTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActivityTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeActivityTypeResponse instance.
+ */
+DescribeActivityTypeResponsePrivate::DescribeActivityTypeResponsePrivate(
+    DescribeActivityTypeQueueResponse * const q) : DescribeActivityTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF DescribeActivityTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeActivityTypeResponsePrivate::DescribeActivityTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeActivityTypeResponse"));
+    /// @todo
+}

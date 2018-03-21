@@ -19,3 +19,85 @@
 
 #include "disassociatesubnetcidrblockresponse.h"
 #include "disassociatesubnetcidrblockresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisassociateSubnetCidrBlockResponse
+ *
+ * @brief  Handles EC2 DisassociateSubnetCidrBlock responses.
+ *
+ * @see    EC2Client::disassociateSubnetCidrBlock
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateSubnetCidrBlockResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DisassociateSubnetCidrBlockResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateSubnetCidrBlockRequest(request));
+    setReply(reply);
+}
+
+const DisassociateSubnetCidrBlockRequest * DisassociateSubnetCidrBlockResponse::request() const
+{
+    Q_D(const DisassociateSubnetCidrBlockResponse);
+    return static_cast<const DisassociateSubnetCidrBlockRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DisassociateSubnetCidrBlock response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateSubnetCidrBlockResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateSubnetCidrBlockResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateSubnetCidrBlockResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateSubnetCidrBlockResponse instance.
+ */
+DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponsePrivate(
+    DisassociateSubnetCidrBlockQueueResponse * const q) : DisassociateSubnetCidrBlockPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DisassociateSubnetCidrBlockResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateSubnetCidrBlockResponse"));
+    /// @todo
+}

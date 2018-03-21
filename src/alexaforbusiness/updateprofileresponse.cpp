@@ -19,3 +19,85 @@
 
 #include "updateprofileresponse.h"
 #include "updateprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UpdateProfileResponse
+ *
+ * @brief  Handles AlexaForBusiness UpdateProfile responses.
+ *
+ * @see    AlexaForBusinessClient::updateProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new UpdateProfileResponsePrivate(this), parent)
+{
+    setRequest(new UpdateProfileRequest(request));
+    setReply(reply);
+}
+
+const UpdateProfileRequest * UpdateProfileResponse::request() const
+{
+    Q_D(const UpdateProfileResponse);
+    return static_cast<const UpdateProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness UpdateProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateProfileResponsePrivate
+ *
+ * @brief  Private implementation for UpdateProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateProfileResponse instance.
+ */
+UpdateProfileResponsePrivate::UpdateProfileResponsePrivate(
+    UpdateProfileQueueResponse * const q) : UpdateProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness UpdateProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateProfileResponsePrivate::UpdateProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateProfileResponse"));
+    /// @todo
+}

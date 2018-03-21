@@ -19,3 +19,85 @@
 
 #include "deleteevaluationresultsresponse.h"
 #include "deleteevaluationresultsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DeleteEvaluationResultsResponse
+ *
+ * @brief  Handles ConfigService DeleteEvaluationResults responses.
+ *
+ * @see    ConfigServiceClient::deleteEvaluationResults
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEvaluationResultsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ConfigServiceResponse(new DeleteEvaluationResultsResponsePrivate(this), parent)
+{
+    setRequest(new DeleteEvaluationResultsRequest(request));
+    setReply(reply);
+}
+
+const DeleteEvaluationResultsRequest * DeleteEvaluationResultsResponse::request() const
+{
+    Q_D(const DeleteEvaluationResultsResponse);
+    return static_cast<const DeleteEvaluationResultsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ConfigService DeleteEvaluationResults response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteEvaluationResultsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEvaluationResultsResponsePrivate
+ *
+ * @brief  Private implementation for DeleteEvaluationResultsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEvaluationResultsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteEvaluationResultsResponse instance.
+ */
+DeleteEvaluationResultsResponsePrivate::DeleteEvaluationResultsResponsePrivate(
+    DeleteEvaluationResultsQueueResponse * const q) : DeleteEvaluationResultsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ConfigService DeleteEvaluationResultsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteEvaluationResultsResponsePrivate::DeleteEvaluationResultsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteEvaluationResultsResponse"));
+    /// @todo
+}

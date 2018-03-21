@@ -19,3 +19,85 @@
 
 #include "deleteconfigurationsetresponse.h"
 #include "deleteconfigurationsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteConfigurationSetResponse
+ *
+ * @brief  Handles SES DeleteConfigurationSet responses.
+ *
+ * @see    SESClient::deleteConfigurationSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigurationSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DeleteConfigurationSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteConfigurationSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() const
+{
+    Q_D(const DeleteConfigurationSetResponse);
+    return static_cast<const DeleteConfigurationSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DeleteConfigurationSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigurationSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteConfigurationSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteConfigurationSetResponse instance.
+ */
+DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
+    DeleteConfigurationSetQueueResponse * const q) : DeleteConfigurationSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DeleteConfigurationSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetResponse"));
+    /// @todo
+}

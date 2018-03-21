@@ -19,3 +19,85 @@
 
 #include "describeuserprofileresponse.h"
 #include "describeuserprofileresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  DescribeUserProfileResponse
+ *
+ * @brief  Handles CodeStar DescribeUserProfile responses.
+ *
+ * @see    CodeStarClient::describeUserProfile
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUserProfileResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeStarResponse(new DescribeUserProfileResponsePrivate(this), parent)
+{
+    setRequest(new DescribeUserProfileRequest(request));
+    setReply(reply);
+}
+
+const DescribeUserProfileRequest * DescribeUserProfileResponse::request() const
+{
+    Q_D(const DescribeUserProfileResponse);
+    return static_cast<const DescribeUserProfileRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeStar DescribeUserProfile response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeUserProfileResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUserProfileResponsePrivate
+ *
+ * @brief  Private implementation for DescribeUserProfileResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserProfileResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeUserProfileResponse instance.
+ */
+DescribeUserProfileResponsePrivate::DescribeUserProfileResponsePrivate(
+    DescribeUserProfileQueueResponse * const q) : DescribeUserProfilePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeStar DescribeUserProfileResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeUserProfileResponsePrivate::DescribeUserProfileResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeUserProfileResponse"));
+    /// @todo
+}

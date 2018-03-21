@@ -19,3 +19,85 @@
 
 #include "addresourcepermissionsresponse.h"
 #include "addresourcepermissionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  AddResourcePermissionsResponse
+ *
+ * @brief  Handles WorkDocs AddResourcePermissions responses.
+ *
+ * @see    WorkDocsClient::addResourcePermissions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddResourcePermissionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new AddResourcePermissionsResponsePrivate(this), parent)
+{
+    setRequest(new AddResourcePermissionsRequest(request));
+    setReply(reply);
+}
+
+const AddResourcePermissionsRequest * AddResourcePermissionsResponse::request() const
+{
+    Q_D(const AddResourcePermissionsResponse);
+    return static_cast<const AddResourcePermissionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs AddResourcePermissions response.
+ *
+ * @param  response  Response to parse.
+ */
+void AddResourcePermissionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AddResourcePermissionsResponsePrivate
+ *
+ * @brief  Private implementation for AddResourcePermissionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddResourcePermissionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AddResourcePermissionsResponse instance.
+ */
+AddResourcePermissionsResponsePrivate::AddResourcePermissionsResponsePrivate(
+    AddResourcePermissionsQueueResponse * const q) : AddResourcePermissionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs AddResourcePermissionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AddResourcePermissionsResponsePrivate::AddResourcePermissionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AddResourcePermissionsResponse"));
+    /// @todo
+}

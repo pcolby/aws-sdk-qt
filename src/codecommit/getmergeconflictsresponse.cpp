@@ -19,3 +19,85 @@
 
 #include "getmergeconflictsresponse.h"
 #include "getmergeconflictsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetMergeConflictsResponse
+ *
+ * @brief  Handles CodeCommit GetMergeConflicts responses.
+ *
+ * @see    CodeCommitClient::getMergeConflicts
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMergeConflictsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeCommitResponse(new GetMergeConflictsResponsePrivate(this), parent)
+{
+    setRequest(new GetMergeConflictsRequest(request));
+    setReply(reply);
+}
+
+const GetMergeConflictsRequest * GetMergeConflictsResponse::request() const
+{
+    Q_D(const GetMergeConflictsResponse);
+    return static_cast<const GetMergeConflictsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeCommit GetMergeConflicts response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetMergeConflictsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMergeConflictsResponsePrivate
+ *
+ * @brief  Private implementation for GetMergeConflictsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMergeConflictsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetMergeConflictsResponse instance.
+ */
+GetMergeConflictsResponsePrivate::GetMergeConflictsResponsePrivate(
+    GetMergeConflictsQueueResponse * const q) : GetMergeConflictsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeCommit GetMergeConflictsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetMergeConflictsResponsePrivate::GetMergeConflictsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetMergeConflictsResponse"));
+    /// @todo
+}

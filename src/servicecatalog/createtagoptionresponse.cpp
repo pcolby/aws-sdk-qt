@@ -19,3 +19,85 @@
 
 #include "createtagoptionresponse.h"
 #include "createtagoptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  CreateTagOptionResponse
+ *
+ * @brief  Handles ServiceCatalog CreateTagOption responses.
+ *
+ * @see    ServiceCatalogClient::createTagOption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTagOptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ServiceCatalogResponse(new CreateTagOptionResponsePrivate(this), parent)
+{
+    setRequest(new CreateTagOptionRequest(request));
+    setReply(reply);
+}
+
+const CreateTagOptionRequest * CreateTagOptionResponse::request() const
+{
+    Q_D(const CreateTagOptionResponse);
+    return static_cast<const CreateTagOptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ServiceCatalog CreateTagOption response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateTagOptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTagOptionResponsePrivate
+ *
+ * @brief  Private implementation for CreateTagOptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTagOptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateTagOptionResponse instance.
+ */
+CreateTagOptionResponsePrivate::CreateTagOptionResponsePrivate(
+    CreateTagOptionQueueResponse * const q) : CreateTagOptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ServiceCatalog CreateTagOptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateTagOptionResponsePrivate::CreateTagOptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateTagOptionResponse"));
+    /// @todo
+}

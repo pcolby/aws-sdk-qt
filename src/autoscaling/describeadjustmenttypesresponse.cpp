@@ -19,3 +19,85 @@
 
 #include "describeadjustmenttypesresponse.h"
 #include "describeadjustmenttypesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeAdjustmentTypesResponse
+ *
+ * @brief  Handles AutoScaling DescribeAdjustmentTypes responses.
+ *
+ * @see    AutoScalingClient::describeAdjustmentTypes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAdjustmentTypesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DescribeAdjustmentTypesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeAdjustmentTypesRequest(request));
+    setReply(reply);
+}
+
+const DescribeAdjustmentTypesRequest * DescribeAdjustmentTypesResponse::request() const
+{
+    Q_D(const DescribeAdjustmentTypesResponse);
+    return static_cast<const DescribeAdjustmentTypesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DescribeAdjustmentTypes response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeAdjustmentTypesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAdjustmentTypesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeAdjustmentTypesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAdjustmentTypesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeAdjustmentTypesResponse instance.
+ */
+DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponsePrivate(
+    DescribeAdjustmentTypesQueueResponse * const q) : DescribeAdjustmentTypesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DescribeAdjustmentTypesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeAdjustmentTypesResponse"));
+    /// @todo
+}

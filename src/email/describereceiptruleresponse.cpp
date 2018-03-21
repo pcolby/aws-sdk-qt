@@ -19,3 +19,85 @@
 
 #include "describereceiptruleresponse.h"
 #include "describereceiptruleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DescribeReceiptRuleResponse
+ *
+ * @brief  Handles SES DescribeReceiptRule responses.
+ *
+ * @see    SESClient::describeReceiptRule
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReceiptRuleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new DescribeReceiptRuleResponsePrivate(this), parent)
+{
+    setRequest(new DescribeReceiptRuleRequest(request));
+    setReply(reply);
+}
+
+const DescribeReceiptRuleRequest * DescribeReceiptRuleResponse::request() const
+{
+    Q_D(const DescribeReceiptRuleResponse);
+    return static_cast<const DescribeReceiptRuleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES DescribeReceiptRule response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeReceiptRuleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReceiptRuleResponsePrivate
+ *
+ * @brief  Private implementation for DescribeReceiptRuleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReceiptRuleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeReceiptRuleResponse instance.
+ */
+DescribeReceiptRuleResponsePrivate::DescribeReceiptRuleResponsePrivate(
+    DescribeReceiptRuleQueueResponse * const q) : DescribeReceiptRulePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES DescribeReceiptRuleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeReceiptRuleResponsePrivate::DescribeReceiptRuleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeReceiptRuleResponse"));
+    /// @todo
+}

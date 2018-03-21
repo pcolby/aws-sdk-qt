@@ -19,3 +19,85 @@
 
 #include "setvaultaccesspolicyresponse.h"
 #include "setvaultaccesspolicyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  SetVaultAccessPolicyResponse
+ *
+ * @brief  Handles Glacier SetVaultAccessPolicy responses.
+ *
+ * @see    GlacierClient::setVaultAccessPolicy
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetVaultAccessPolicyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlacierResponse(new SetVaultAccessPolicyResponsePrivate(this), parent)
+{
+    setRequest(new SetVaultAccessPolicyRequest(request));
+    setReply(reply);
+}
+
+const SetVaultAccessPolicyRequest * SetVaultAccessPolicyResponse::request() const
+{
+    Q_D(const SetVaultAccessPolicyResponse);
+    return static_cast<const SetVaultAccessPolicyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glacier SetVaultAccessPolicy response.
+ *
+ * @param  response  Response to parse.
+ */
+void SetVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SetVaultAccessPolicyResponsePrivate
+ *
+ * @brief  Private implementation for SetVaultAccessPolicyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetVaultAccessPolicyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SetVaultAccessPolicyResponse instance.
+ */
+SetVaultAccessPolicyResponsePrivate::SetVaultAccessPolicyResponsePrivate(
+    SetVaultAccessPolicyQueueResponse * const q) : SetVaultAccessPolicyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glacier SetVaultAccessPolicyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SetVaultAccessPolicyResponsePrivate::SetVaultAccessPolicyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SetVaultAccessPolicyResponse"));
+    /// @todo
+}

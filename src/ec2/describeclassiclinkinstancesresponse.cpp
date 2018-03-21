@@ -19,3 +19,85 @@
 
 #include "describeclassiclinkinstancesresponse.h"
 #include "describeclassiclinkinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeClassicLinkInstancesResponse
+ *
+ * @brief  Handles EC2 DescribeClassicLinkInstances responses.
+ *
+ * @see    EC2Client::describeClassicLinkInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClassicLinkInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DescribeClassicLinkInstancesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeClassicLinkInstancesRequest(request));
+    setReply(reply);
+}
+
+const DescribeClassicLinkInstancesRequest * DescribeClassicLinkInstancesResponse::request() const
+{
+    Q_D(const DescribeClassicLinkInstancesResponse);
+    return static_cast<const DescribeClassicLinkInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DescribeClassicLinkInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeClassicLinkInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClassicLinkInstancesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeClassicLinkInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClassicLinkInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeClassicLinkInstancesResponse instance.
+ */
+DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesResponsePrivate(
+    DescribeClassicLinkInstancesQueueResponse * const q) : DescribeClassicLinkInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DescribeClassicLinkInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeClassicLinkInstancesResponse"));
+    /// @todo
+}

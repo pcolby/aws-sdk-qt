@@ -19,3 +19,85 @@
 
 #include "createpresetresponse.h"
 #include "createpresetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  CreatePresetResponse
+ *
+ * @brief  Handles MediaConvert CreatePreset responses.
+ *
+ * @see    MediaConvertClient::createPreset
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePresetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaConvertResponse(new CreatePresetResponsePrivate(this), parent)
+{
+    setRequest(new CreatePresetRequest(request));
+    setReply(reply);
+}
+
+const CreatePresetRequest * CreatePresetResponse::request() const
+{
+    Q_D(const CreatePresetResponse);
+    return static_cast<const CreatePresetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaConvert CreatePreset response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreatePresetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePresetResponsePrivate
+ *
+ * @brief  Private implementation for CreatePresetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePresetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreatePresetResponse instance.
+ */
+CreatePresetResponsePrivate::CreatePresetResponsePrivate(
+    CreatePresetQueueResponse * const q) : CreatePresetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaConvert CreatePresetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreatePresetResponsePrivate::CreatePresetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreatePresetResponse"));
+    /// @todo
+}

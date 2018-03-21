@@ -19,3 +19,85 @@
 
 #include "modifytargetgroupresponse.h"
 #include "modifytargetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  ModifyTargetGroupResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 ModifyTargetGroup responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::modifyTargetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyTargetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new ModifyTargetGroupResponsePrivate(this), parent)
+{
+    setRequest(new ModifyTargetGroupRequest(request));
+    setReply(reply);
+}
+
+const ModifyTargetGroupRequest * ModifyTargetGroupResponse::request() const
+{
+    Q_D(const ModifyTargetGroupResponse);
+    return static_cast<const ModifyTargetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 ModifyTargetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyTargetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyTargetGroupResponsePrivate
+ *
+ * @brief  Private implementation for ModifyTargetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyTargetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyTargetGroupResponse instance.
+ */
+ModifyTargetGroupResponsePrivate::ModifyTargetGroupResponsePrivate(
+    ModifyTargetGroupQueueResponse * const q) : ModifyTargetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 ModifyTargetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyTargetGroupResponsePrivate::ModifyTargetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyTargetGroupResponse"));
+    /// @todo
+}

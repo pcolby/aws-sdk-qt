@@ -19,3 +19,85 @@
 
 #include "updatecloudfrontoriginaccessidentityresponse.h"
 #include "updatecloudfrontoriginaccessidentityresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  UpdateCloudFrontOriginAccessIdentityResponse
+ *
+ * @brief  Handles CloudFront UpdateCloudFrontOriginAccessIdentity responses.
+ *
+ * @see    CloudFrontClient::updateCloudFrontOriginAccessIdentity
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCloudFrontOriginAccessIdentityResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new UpdateCloudFrontOriginAccessIdentityResponsePrivate(this), parent)
+{
+    setRequest(new UpdateCloudFrontOriginAccessIdentityRequest(request));
+    setReply(reply);
+}
+
+const UpdateCloudFrontOriginAccessIdentityRequest * UpdateCloudFrontOriginAccessIdentityResponse::request() const
+{
+    Q_D(const UpdateCloudFrontOriginAccessIdentityResponse);
+    return static_cast<const UpdateCloudFrontOriginAccessIdentityRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront UpdateCloudFrontOriginAccessIdentity response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCloudFrontOriginAccessIdentityResponsePrivate
+ *
+ * @brief  Private implementation for UpdateCloudFrontOriginAccessIdentityResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateCloudFrontOriginAccessIdentityResponse instance.
+ */
+UpdateCloudFrontOriginAccessIdentityResponsePrivate::UpdateCloudFrontOriginAccessIdentityResponsePrivate(
+    UpdateCloudFrontOriginAccessIdentityQueueResponse * const q) : UpdateCloudFrontOriginAccessIdentityPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront UpdateCloudFrontOriginAccessIdentityResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateCloudFrontOriginAccessIdentityResponsePrivate::UpdateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateCloudFrontOriginAccessIdentityResponse"));
+    /// @todo
+}

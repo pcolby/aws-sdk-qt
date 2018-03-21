@@ -19,3 +19,85 @@
 
 #include "describebundleresponse.h"
 #include "describebundleresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Mobile {
+
+/**
+ * @class  DescribeBundleResponse
+ *
+ * @brief  Handles Mobile DescribeBundle responses.
+ *
+ * @see    MobileClient::describeBundle
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBundleResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MobileResponse(new DescribeBundleResponsePrivate(this), parent)
+{
+    setRequest(new DescribeBundleRequest(request));
+    setReply(reply);
+}
+
+const DescribeBundleRequest * DescribeBundleResponse::request() const
+{
+    Q_D(const DescribeBundleResponse);
+    return static_cast<const DescribeBundleRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Mobile DescribeBundle response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeBundleResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBundleResponsePrivate
+ *
+ * @brief  Private implementation for DescribeBundleResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBundleResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeBundleResponse instance.
+ */
+DescribeBundleResponsePrivate::DescribeBundleResponsePrivate(
+    DescribeBundleQueueResponse * const q) : DescribeBundlePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Mobile DescribeBundleResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeBundleResponsePrivate::DescribeBundleResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeBundleResponse"));
+    /// @todo
+}

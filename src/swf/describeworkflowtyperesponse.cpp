@@ -19,3 +19,85 @@
 
 #include "describeworkflowtyperesponse.h"
 #include "describeworkflowtyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DescribeWorkflowTypeResponse
+ *
+ * @brief  Handles SWF DescribeWorkflowType responses.
+ *
+ * @see    SWFClient::describeWorkflowType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeWorkflowTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new DescribeWorkflowTypeResponsePrivate(this), parent)
+{
+    setRequest(new DescribeWorkflowTypeRequest(request));
+    setReply(reply);
+}
+
+const DescribeWorkflowTypeRequest * DescribeWorkflowTypeResponse::request() const
+{
+    Q_D(const DescribeWorkflowTypeResponse);
+    return static_cast<const DescribeWorkflowTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF DescribeWorkflowType response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeWorkflowTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeWorkflowTypeResponsePrivate
+ *
+ * @brief  Private implementation for DescribeWorkflowTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkflowTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeWorkflowTypeResponse instance.
+ */
+DescribeWorkflowTypeResponsePrivate::DescribeWorkflowTypeResponsePrivate(
+    DescribeWorkflowTypeQueueResponse * const q) : DescribeWorkflowTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF DescribeWorkflowTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeWorkflowTypeResponsePrivate::DescribeWorkflowTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeWorkflowTypeResponse"));
+    /// @todo
+}

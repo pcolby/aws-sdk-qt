@@ -19,3 +19,85 @@
 
 #include "cleardefaultauthorizerresponse.h"
 #include "cleardefaultauthorizerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ClearDefaultAuthorizerResponse
+ *
+ * @brief  Handles IoT ClearDefaultAuthorizer responses.
+ *
+ * @see    IoTClient::clearDefaultAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ClearDefaultAuthorizerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new ClearDefaultAuthorizerResponsePrivate(this), parent)
+{
+    setRequest(new ClearDefaultAuthorizerRequest(request));
+    setReply(reply);
+}
+
+const ClearDefaultAuthorizerRequest * ClearDefaultAuthorizerResponse::request() const
+{
+    Q_D(const ClearDefaultAuthorizerResponse);
+    return static_cast<const ClearDefaultAuthorizerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT ClearDefaultAuthorizer response.
+ *
+ * @param  response  Response to parse.
+ */
+void ClearDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ClearDefaultAuthorizerResponsePrivate
+ *
+ * @brief  Private implementation for ClearDefaultAuthorizerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ClearDefaultAuthorizerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ClearDefaultAuthorizerResponse instance.
+ */
+ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponsePrivate(
+    ClearDefaultAuthorizerQueueResponse * const q) : ClearDefaultAuthorizerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT ClearDefaultAuthorizerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ClearDefaultAuthorizerResponse"));
+    /// @todo
+}

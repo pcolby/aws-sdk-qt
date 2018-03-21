@@ -19,3 +19,85 @@
 
 #include "describeelasticsearchinstancetypelimitsresponse.h"
 #include "describeelasticsearchinstancetypelimitsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  DescribeElasticsearchInstanceTypeLimitsResponse
+ *
+ * @brief  Handles ElasticsearchService DescribeElasticsearchInstanceTypeLimits responses.
+ *
+ * @see    ElasticsearchServiceClient::describeElasticsearchInstanceTypeLimits
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeElasticsearchInstanceTypeLimitsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticsearchServiceResponse(new DescribeElasticsearchInstanceTypeLimitsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeElasticsearchInstanceTypeLimitsRequest(request));
+    setReply(reply);
+}
+
+const DescribeElasticsearchInstanceTypeLimitsRequest * DescribeElasticsearchInstanceTypeLimitsResponse::request() const
+{
+    Q_D(const DescribeElasticsearchInstanceTypeLimitsResponse);
+    return static_cast<const DescribeElasticsearchInstanceTypeLimitsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticsearchService DescribeElasticsearchInstanceTypeLimits response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeElasticsearchInstanceTypeLimitsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeElasticsearchInstanceTypeLimitsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeElasticsearchInstanceTypeLimitsResponse instance.
+ */
+DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchInstanceTypeLimitsResponsePrivate(
+    DescribeElasticsearchInstanceTypeLimitsQueueResponse * const q) : DescribeElasticsearchInstanceTypeLimitsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticsearchService DescribeElasticsearchInstanceTypeLimitsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchInstanceTypeLimitsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeElasticsearchInstanceTypeLimitsResponse"));
+    /// @todo
+}

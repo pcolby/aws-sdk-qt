@@ -19,3 +19,85 @@
 
 #include "getcurrentuserresponse.h"
 #include "getcurrentuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  GetCurrentUserResponse
+ *
+ * @brief  Handles WorkDocs GetCurrentUser responses.
+ *
+ * @see    WorkDocsClient::getCurrentUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCurrentUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkDocsResponse(new GetCurrentUserResponsePrivate(this), parent)
+{
+    setRequest(new GetCurrentUserRequest(request));
+    setReply(reply);
+}
+
+const GetCurrentUserRequest * GetCurrentUserResponse::request() const
+{
+    Q_D(const GetCurrentUserResponse);
+    return static_cast<const GetCurrentUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkDocs GetCurrentUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCurrentUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCurrentUserResponsePrivate
+ *
+ * @brief  Private implementation for GetCurrentUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCurrentUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCurrentUserResponse instance.
+ */
+GetCurrentUserResponsePrivate::GetCurrentUserResponsePrivate(
+    GetCurrentUserQueueResponse * const q) : GetCurrentUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkDocs GetCurrentUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCurrentUserResponsePrivate::GetCurrentUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCurrentUserResponse"));
+    /// @todo
+}

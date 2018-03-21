@@ -19,3 +19,85 @@
 
 #include "getcatalogimportstatusresponse.h"
 #include "getcatalogimportstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetCatalogImportStatusResponse
+ *
+ * @brief  Handles Glue GetCatalogImportStatus responses.
+ *
+ * @see    GlueClient::getCatalogImportStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCatalogImportStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new GetCatalogImportStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetCatalogImportStatusRequest(request));
+    setReply(reply);
+}
+
+const GetCatalogImportStatusRequest * GetCatalogImportStatusResponse::request() const
+{
+    Q_D(const GetCatalogImportStatusResponse);
+    return static_cast<const GetCatalogImportStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue GetCatalogImportStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetCatalogImportStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCatalogImportStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetCatalogImportStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCatalogImportStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetCatalogImportStatusResponse instance.
+ */
+GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponsePrivate(
+    GetCatalogImportStatusQueueResponse * const q) : GetCatalogImportStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue GetCatalogImportStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetCatalogImportStatusResponse"));
+    /// @todo
+}

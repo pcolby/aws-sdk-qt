@@ -19,3 +19,85 @@
 
 #include "describesessionsresponse.h"
 #include "describesessionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DescribeSessionsResponse
+ *
+ * @brief  Handles AppStream DescribeSessions responses.
+ *
+ * @see    AppStreamClient::describeSessions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSessionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new DescribeSessionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSessionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeSessionsRequest * DescribeSessionsResponse::request() const
+{
+    Q_D(const DescribeSessionsResponse);
+    return static_cast<const DescribeSessionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream DescribeSessions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSessionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSessionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSessionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSessionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSessionsResponse instance.
+ */
+DescribeSessionsResponsePrivate::DescribeSessionsResponsePrivate(
+    DescribeSessionsQueueResponse * const q) : DescribeSessionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream DescribeSessionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSessionsResponsePrivate::DescribeSessionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSessionsResponse"));
+    /// @todo
+}

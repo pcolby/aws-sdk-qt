@@ -19,3 +19,85 @@
 
 #include "createdbclusterresponse.h"
 #include "createdbclusterresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBClusterResponse
+ *
+ * @brief  Handles RDS CreateDBCluster responses.
+ *
+ * @see    RDSClient::createDBCluster
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBClusterResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new CreateDBClusterResponsePrivate(this), parent)
+{
+    setRequest(new CreateDBClusterRequest(request));
+    setReply(reply);
+}
+
+const CreateDBClusterRequest * CreateDBClusterResponse::request() const
+{
+    Q_D(const CreateDBClusterResponse);
+    return static_cast<const CreateDBClusterRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS CreateDBCluster response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDBClusterResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBClusterResponsePrivate
+ *
+ * @brief  Private implementation for CreateDBClusterResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBClusterResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDBClusterResponse instance.
+ */
+CreateDBClusterResponsePrivate::CreateDBClusterResponsePrivate(
+    CreateDBClusterQueueResponse * const q) : CreateDBClusterPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS CreateDBClusterResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDBClusterResponsePrivate::CreateDBClusterResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDBClusterResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "batchcreatepartitionresponse.h"
 #include "batchcreatepartitionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchCreatePartitionResponse
+ *
+ * @brief  Handles Glue BatchCreatePartition responses.
+ *
+ * @see    GlueClient::batchCreatePartition
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchCreatePartitionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new BatchCreatePartitionResponsePrivate(this), parent)
+{
+    setRequest(new BatchCreatePartitionRequest(request));
+    setReply(reply);
+}
+
+const BatchCreatePartitionRequest * BatchCreatePartitionResponse::request() const
+{
+    Q_D(const BatchCreatePartitionResponse);
+    return static_cast<const BatchCreatePartitionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue BatchCreatePartition response.
+ *
+ * @param  response  Response to parse.
+ */
+void BatchCreatePartitionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchCreatePartitionResponsePrivate
+ *
+ * @brief  Private implementation for BatchCreatePartitionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchCreatePartitionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public BatchCreatePartitionResponse instance.
+ */
+BatchCreatePartitionResponsePrivate::BatchCreatePartitionResponsePrivate(
+    BatchCreatePartitionQueueResponse * const q) : BatchCreatePartitionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue BatchCreatePartitionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void BatchCreatePartitionResponsePrivate::BatchCreatePartitionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("BatchCreatePartitionResponse"));
+    /// @todo
+}

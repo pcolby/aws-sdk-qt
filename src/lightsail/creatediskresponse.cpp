@@ -19,3 +19,85 @@
 
 #include "creatediskresponse.h"
 #include "creatediskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateDiskResponse
+ *
+ * @brief  Handles Lightsail CreateDisk responses.
+ *
+ * @see    LightsailClient::createDisk
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDiskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new CreateDiskResponsePrivate(this), parent)
+{
+    setRequest(new CreateDiskRequest(request));
+    setReply(reply);
+}
+
+const CreateDiskRequest * CreateDiskResponse::request() const
+{
+    Q_D(const CreateDiskResponse);
+    return static_cast<const CreateDiskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail CreateDisk response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDiskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDiskResponsePrivate
+ *
+ * @brief  Private implementation for CreateDiskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDiskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDiskResponse instance.
+ */
+CreateDiskResponsePrivate::CreateDiskResponsePrivate(
+    CreateDiskQueueResponse * const q) : CreateDiskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail CreateDiskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDiskResponsePrivate::CreateDiskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDiskResponse"));
+    /// @todo
+}

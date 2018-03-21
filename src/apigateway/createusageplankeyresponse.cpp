@@ -19,3 +19,85 @@
 
 #include "createusageplankeyresponse.h"
 #include "createusageplankeyresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateUsagePlanKeyResponse
+ *
+ * @brief  Handles APIGateway CreateUsagePlanKey responses.
+ *
+ * @see    APIGatewayClient::createUsagePlanKey
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUsagePlanKeyResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new CreateUsagePlanKeyResponsePrivate(this), parent)
+{
+    setRequest(new CreateUsagePlanKeyRequest(request));
+    setReply(reply);
+}
+
+const CreateUsagePlanKeyRequest * CreateUsagePlanKeyResponse::request() const
+{
+    Q_D(const CreateUsagePlanKeyResponse);
+    return static_cast<const CreateUsagePlanKeyRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway CreateUsagePlanKey response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateUsagePlanKeyResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUsagePlanKeyResponsePrivate
+ *
+ * @brief  Private implementation for CreateUsagePlanKeyResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUsagePlanKeyResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateUsagePlanKeyResponse instance.
+ */
+CreateUsagePlanKeyResponsePrivate::CreateUsagePlanKeyResponsePrivate(
+    CreateUsagePlanKeyQueueResponse * const q) : CreateUsagePlanKeyPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway CreateUsagePlanKeyResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateUsagePlanKeyResponsePrivate::CreateUsagePlanKeyResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateUsagePlanKeyResponse"));
+    /// @todo
+}

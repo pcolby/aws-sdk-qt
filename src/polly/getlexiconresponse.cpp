@@ -19,3 +19,85 @@
 
 #include "getlexiconresponse.h"
 #include "getlexiconresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Polly {
+
+/**
+ * @class  GetLexiconResponse
+ *
+ * @brief  Handles Polly GetLexicon responses.
+ *
+ * @see    PollyClient::getLexicon
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLexiconResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PollyResponse(new GetLexiconResponsePrivate(this), parent)
+{
+    setRequest(new GetLexiconRequest(request));
+    setReply(reply);
+}
+
+const GetLexiconRequest * GetLexiconResponse::request() const
+{
+    Q_D(const GetLexiconResponse);
+    return static_cast<const GetLexiconRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Polly GetLexicon response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetLexiconResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLexiconResponsePrivate
+ *
+ * @brief  Private implementation for GetLexiconResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLexiconResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetLexiconResponse instance.
+ */
+GetLexiconResponsePrivate::GetLexiconResponsePrivate(
+    GetLexiconQueueResponse * const q) : GetLexiconPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Polly GetLexiconResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetLexiconResponsePrivate::GetLexiconResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetLexiconResponse"));
+    /// @todo
+}

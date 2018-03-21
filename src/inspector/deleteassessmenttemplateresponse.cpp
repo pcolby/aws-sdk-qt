@@ -19,3 +19,85 @@
 
 #include "deleteassessmenttemplateresponse.h"
 #include "deleteassessmenttemplateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  DeleteAssessmentTemplateResponse
+ *
+ * @brief  Handles Inspector DeleteAssessmentTemplate responses.
+ *
+ * @see    InspectorClient::deleteAssessmentTemplate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAssessmentTemplateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : InspectorResponse(new DeleteAssessmentTemplateResponsePrivate(this), parent)
+{
+    setRequest(new DeleteAssessmentTemplateRequest(request));
+    setReply(reply);
+}
+
+const DeleteAssessmentTemplateRequest * DeleteAssessmentTemplateResponse::request() const
+{
+    Q_D(const DeleteAssessmentTemplateResponse);
+    return static_cast<const DeleteAssessmentTemplateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Inspector DeleteAssessmentTemplate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteAssessmentTemplateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAssessmentTemplateResponsePrivate
+ *
+ * @brief  Private implementation for DeleteAssessmentTemplateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAssessmentTemplateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteAssessmentTemplateResponse instance.
+ */
+DeleteAssessmentTemplateResponsePrivate::DeleteAssessmentTemplateResponsePrivate(
+    DeleteAssessmentTemplateQueueResponse * const q) : DeleteAssessmentTemplatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Inspector DeleteAssessmentTemplateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteAssessmentTemplateResponsePrivate::DeleteAssessmentTemplateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteAssessmentTemplateResponse"));
+    /// @todo
+}

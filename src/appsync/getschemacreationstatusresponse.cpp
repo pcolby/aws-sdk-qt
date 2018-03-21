@@ -19,3 +19,85 @@
 
 #include "getschemacreationstatusresponse.h"
 #include "getschemacreationstatusresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  GetSchemaCreationStatusResponse
+ *
+ * @brief  Handles AppSync GetSchemaCreationStatus responses.
+ *
+ * @see    AppSyncClient::getSchemaCreationStatus
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSchemaCreationStatusResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppSyncResponse(new GetSchemaCreationStatusResponsePrivate(this), parent)
+{
+    setRequest(new GetSchemaCreationStatusRequest(request));
+    setReply(reply);
+}
+
+const GetSchemaCreationStatusRequest * GetSchemaCreationStatusResponse::request() const
+{
+    Q_D(const GetSchemaCreationStatusResponse);
+    return static_cast<const GetSchemaCreationStatusRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppSync GetSchemaCreationStatus response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetSchemaCreationStatusResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSchemaCreationStatusResponsePrivate
+ *
+ * @brief  Private implementation for GetSchemaCreationStatusResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSchemaCreationStatusResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetSchemaCreationStatusResponse instance.
+ */
+GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponsePrivate(
+    GetSchemaCreationStatusQueueResponse * const q) : GetSchemaCreationStatusPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppSync GetSchemaCreationStatusResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetSchemaCreationStatusResponse"));
+    /// @todo
+}

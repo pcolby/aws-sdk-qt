@@ -19,3 +19,85 @@
 
 #include "putthirdpartyjobsuccessresultresponse.h"
 #include "putthirdpartyjobsuccessresultresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PutThirdPartyJobSuccessResultResponse
+ *
+ * @brief  Handles CodePipeline PutThirdPartyJobSuccessResult responses.
+ *
+ * @see    CodePipelineClient::putThirdPartyJobSuccessResult
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutThirdPartyJobSuccessResultResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new PutThirdPartyJobSuccessResultResponsePrivate(this), parent)
+{
+    setRequest(new PutThirdPartyJobSuccessResultRequest(request));
+    setReply(reply);
+}
+
+const PutThirdPartyJobSuccessResultRequest * PutThirdPartyJobSuccessResultResponse::request() const
+{
+    Q_D(const PutThirdPartyJobSuccessResultResponse);
+    return static_cast<const PutThirdPartyJobSuccessResultRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline PutThirdPartyJobSuccessResult response.
+ *
+ * @param  response  Response to parse.
+ */
+void PutThirdPartyJobSuccessResultResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PutThirdPartyJobSuccessResultResponsePrivate
+ *
+ * @brief  Private implementation for PutThirdPartyJobSuccessResultResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutThirdPartyJobSuccessResultResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PutThirdPartyJobSuccessResultResponse instance.
+ */
+PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultResponsePrivate(
+    PutThirdPartyJobSuccessResultQueueResponse * const q) : PutThirdPartyJobSuccessResultPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline PutThirdPartyJobSuccessResultResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PutThirdPartyJobSuccessResultResponse"));
+    /// @todo
+}

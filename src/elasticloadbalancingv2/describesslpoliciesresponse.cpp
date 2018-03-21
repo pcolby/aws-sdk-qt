@@ -19,3 +19,85 @@
 
 #include "describesslpoliciesresponse.h"
 #include "describesslpoliciesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeSSLPoliciesResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 DescribeSSLPolicies responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeSSLPolicies
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSSLPoliciesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new DescribeSSLPoliciesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeSSLPoliciesRequest(request));
+    setReply(reply);
+}
+
+const DescribeSSLPoliciesRequest * DescribeSSLPoliciesResponse::request() const
+{
+    Q_D(const DescribeSSLPoliciesResponse);
+    return static_cast<const DescribeSSLPoliciesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 DescribeSSLPolicies response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeSSLPoliciesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSSLPoliciesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeSSLPoliciesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSSLPoliciesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeSSLPoliciesResponse instance.
+ */
+DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponsePrivate(
+    DescribeSSLPoliciesQueueResponse * const q) : DescribeSSLPoliciesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 DescribeSSLPoliciesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeSSLPoliciesResponse"));
+    /// @todo
+}

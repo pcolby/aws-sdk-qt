@@ -19,3 +19,85 @@
 
 #include "getinstancesnapshotsresponse.h"
 #include "getinstancesnapshotsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceSnapshotsResponse
+ *
+ * @brief  Handles Lightsail GetInstanceSnapshots responses.
+ *
+ * @see    LightsailClient::getInstanceSnapshots
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceSnapshotsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LightsailResponse(new GetInstanceSnapshotsResponsePrivate(this), parent)
+{
+    setRequest(new GetInstanceSnapshotsRequest(request));
+    setReply(reply);
+}
+
+const GetInstanceSnapshotsRequest * GetInstanceSnapshotsResponse::request() const
+{
+    Q_D(const GetInstanceSnapshotsResponse);
+    return static_cast<const GetInstanceSnapshotsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Lightsail GetInstanceSnapshots response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetInstanceSnapshotsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceSnapshotsResponsePrivate
+ *
+ * @brief  Private implementation for GetInstanceSnapshotsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceSnapshotsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetInstanceSnapshotsResponse instance.
+ */
+GetInstanceSnapshotsResponsePrivate::GetInstanceSnapshotsResponsePrivate(
+    GetInstanceSnapshotsQueueResponse * const q) : GetInstanceSnapshotsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Lightsail GetInstanceSnapshotsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetInstanceSnapshotsResponsePrivate::GetInstanceSnapshotsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetInstanceSnapshotsResponse"));
+    /// @todo
+}

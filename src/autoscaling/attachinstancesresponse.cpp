@@ -19,3 +19,85 @@
 
 #include "attachinstancesresponse.h"
 #include "attachinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  AttachInstancesResponse
+ *
+ * @brief  Handles AutoScaling AttachInstances responses.
+ *
+ * @see    AutoScalingClient::attachInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new AttachInstancesResponsePrivate(this), parent)
+{
+    setRequest(new AttachInstancesRequest(request));
+    setReply(reply);
+}
+
+const AttachInstancesRequest * AttachInstancesResponse::request() const
+{
+    Q_D(const AttachInstancesResponse);
+    return static_cast<const AttachInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling AttachInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void AttachInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachInstancesResponsePrivate
+ *
+ * @brief  Private implementation for AttachInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AttachInstancesResponse instance.
+ */
+AttachInstancesResponsePrivate::AttachInstancesResponsePrivate(
+    AttachInstancesQueueResponse * const q) : AttachInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling AttachInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AttachInstancesResponsePrivate::AttachInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AttachInstancesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "tagresourceresponse.h"
 #include "tagresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  TagResourceResponse
+ *
+ * @brief  Handles DAX TagResource responses.
+ *
+ * @see    DAXClient::tagResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new TagResourceResponsePrivate(this), parent)
+{
+    setRequest(new TagResourceRequest(request));
+    setReply(reply);
+}
+
+const TagResourceRequest * TagResourceResponse::request() const
+{
+    Q_D(const TagResourceResponse);
+    return static_cast<const TagResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX TagResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void TagResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  TagResourceResponsePrivate
+ *
+ * @brief  Private implementation for TagResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public TagResourceResponse instance.
+ */
+TagResourceResponsePrivate::TagResourceResponsePrivate(
+    TagResourceQueueResponse * const q) : TagResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX TagResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void TagResourceResponsePrivate::TagResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("TagResourceResponse"));
+    /// @todo
+}

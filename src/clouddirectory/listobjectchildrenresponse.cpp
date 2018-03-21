@@ -19,3 +19,85 @@
 
 #include "listobjectchildrenresponse.h"
 #include "listobjectchildrenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListObjectChildrenResponse
+ *
+ * @brief  Handles CloudDirectory ListObjectChildren responses.
+ *
+ * @see    CloudDirectoryClient::listObjectChildren
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectChildrenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudDirectoryResponse(new ListObjectChildrenResponsePrivate(this), parent)
+{
+    setRequest(new ListObjectChildrenRequest(request));
+    setReply(reply);
+}
+
+const ListObjectChildrenRequest * ListObjectChildrenResponse::request() const
+{
+    Q_D(const ListObjectChildrenResponse);
+    return static_cast<const ListObjectChildrenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudDirectory ListObjectChildren response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListObjectChildrenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectChildrenResponsePrivate
+ *
+ * @brief  Private implementation for ListObjectChildrenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectChildrenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListObjectChildrenResponse instance.
+ */
+ListObjectChildrenResponsePrivate::ListObjectChildrenResponsePrivate(
+    ListObjectChildrenQueueResponse * const q) : ListObjectChildrenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudDirectory ListObjectChildrenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListObjectChildrenResponsePrivate::ListObjectChildrenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListObjectChildrenResponse"));
+    /// @todo
+}

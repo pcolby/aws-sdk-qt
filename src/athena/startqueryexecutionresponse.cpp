@@ -19,3 +19,85 @@
 
 #include "startqueryexecutionresponse.h"
 #include "startqueryexecutionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  StartQueryExecutionResponse
+ *
+ * @brief  Handles Athena StartQueryExecution responses.
+ *
+ * @see    AthenaClient::startQueryExecution
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartQueryExecutionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AthenaResponse(new StartQueryExecutionResponsePrivate(this), parent)
+{
+    setRequest(new StartQueryExecutionRequest(request));
+    setReply(reply);
+}
+
+const StartQueryExecutionRequest * StartQueryExecutionResponse::request() const
+{
+    Q_D(const StartQueryExecutionResponse);
+    return static_cast<const StartQueryExecutionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Athena StartQueryExecution response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartQueryExecutionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartQueryExecutionResponsePrivate
+ *
+ * @brief  Private implementation for StartQueryExecutionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartQueryExecutionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartQueryExecutionResponse instance.
+ */
+StartQueryExecutionResponsePrivate::StartQueryExecutionResponsePrivate(
+    StartQueryExecutionQueueResponse * const q) : StartQueryExecutionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Athena StartQueryExecutionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartQueryExecutionResponsePrivate::StartQueryExecutionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartQueryExecutionResponse"));
+    /// @todo
+}

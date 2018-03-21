@@ -19,3 +19,85 @@
 
 #include "starttriggerresponse.h"
 #include "starttriggerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StartTriggerResponse
+ *
+ * @brief  Handles Glue StartTrigger responses.
+ *
+ * @see    GlueClient::startTrigger
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartTriggerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GlueResponse(new StartTriggerResponsePrivate(this), parent)
+{
+    setRequest(new StartTriggerRequest(request));
+    setReply(reply);
+}
+
+const StartTriggerRequest * StartTriggerResponse::request() const
+{
+    Q_D(const StartTriggerResponse);
+    return static_cast<const StartTriggerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Glue StartTrigger response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartTriggerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartTriggerResponsePrivate
+ *
+ * @brief  Private implementation for StartTriggerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartTriggerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartTriggerResponse instance.
+ */
+StartTriggerResponsePrivate::StartTriggerResponsePrivate(
+    StartTriggerQueueResponse * const q) : StartTriggerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Glue StartTriggerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartTriggerResponsePrivate::StartTriggerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartTriggerResponse"));
+    /// @todo
+}

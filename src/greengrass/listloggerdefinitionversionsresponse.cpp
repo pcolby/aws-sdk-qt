@@ -19,3 +19,85 @@
 
 #include "listloggerdefinitionversionsresponse.h"
 #include "listloggerdefinitionversionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListLoggerDefinitionVersionsResponse
+ *
+ * @brief  Handles Greengrass ListLoggerDefinitionVersions responses.
+ *
+ * @see    GreengrassClient::listLoggerDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListLoggerDefinitionVersionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GreengrassResponse(new ListLoggerDefinitionVersionsResponsePrivate(this), parent)
+{
+    setRequest(new ListLoggerDefinitionVersionsRequest(request));
+    setReply(reply);
+}
+
+const ListLoggerDefinitionVersionsRequest * ListLoggerDefinitionVersionsResponse::request() const
+{
+    Q_D(const ListLoggerDefinitionVersionsResponse);
+    return static_cast<const ListLoggerDefinitionVersionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Greengrass ListLoggerDefinitionVersions response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListLoggerDefinitionVersionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListLoggerDefinitionVersionsResponsePrivate
+ *
+ * @brief  Private implementation for ListLoggerDefinitionVersionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLoggerDefinitionVersionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListLoggerDefinitionVersionsResponse instance.
+ */
+ListLoggerDefinitionVersionsResponsePrivate::ListLoggerDefinitionVersionsResponsePrivate(
+    ListLoggerDefinitionVersionsQueueResponse * const q) : ListLoggerDefinitionVersionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Greengrass ListLoggerDefinitionVersionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListLoggerDefinitionVersionsResponsePrivate::ListLoggerDefinitionVersionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListLoggerDefinitionVersionsResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deleteoriginendpointresponse.h"
 #include "deleteoriginendpointresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  DeleteOriginEndpointResponse
+ *
+ * @brief  Handles MediaPackage DeleteOriginEndpoint responses.
+ *
+ * @see    MediaPackageClient::deleteOriginEndpoint
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOriginEndpointResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaPackageResponse(new DeleteOriginEndpointResponsePrivate(this), parent)
+{
+    setRequest(new DeleteOriginEndpointRequest(request));
+    setReply(reply);
+}
+
+const DeleteOriginEndpointRequest * DeleteOriginEndpointResponse::request() const
+{
+    Q_D(const DeleteOriginEndpointResponse);
+    return static_cast<const DeleteOriginEndpointRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaPackage DeleteOriginEndpoint response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteOriginEndpointResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOriginEndpointResponsePrivate
+ *
+ * @brief  Private implementation for DeleteOriginEndpointResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOriginEndpointResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteOriginEndpointResponse instance.
+ */
+DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponsePrivate(
+    DeleteOriginEndpointQueueResponse * const q) : DeleteOriginEndpointPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaPackage DeleteOriginEndpointResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteOriginEndpointResponse"));
+    /// @todo
+}

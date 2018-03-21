@@ -19,3 +19,85 @@
 
 #include "listnotebookinstancesresponse.h"
 #include "listnotebookinstancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListNotebookInstancesResponse
+ *
+ * @brief  Handles SageMaker ListNotebookInstances responses.
+ *
+ * @see    SageMakerClient::listNotebookInstances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListNotebookInstancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SageMakerResponse(new ListNotebookInstancesResponsePrivate(this), parent)
+{
+    setRequest(new ListNotebookInstancesRequest(request));
+    setReply(reply);
+}
+
+const ListNotebookInstancesRequest * ListNotebookInstancesResponse::request() const
+{
+    Q_D(const ListNotebookInstancesResponse);
+    return static_cast<const ListNotebookInstancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SageMaker ListNotebookInstances response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListNotebookInstancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListNotebookInstancesResponsePrivate
+ *
+ * @brief  Private implementation for ListNotebookInstancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListNotebookInstancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListNotebookInstancesResponse instance.
+ */
+ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponsePrivate(
+    ListNotebookInstancesQueueResponse * const q) : ListNotebookInstancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SageMaker ListNotebookInstancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListNotebookInstancesResponse"));
+    /// @todo
+}

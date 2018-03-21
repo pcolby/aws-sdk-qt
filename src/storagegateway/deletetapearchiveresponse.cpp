@@ -19,3 +19,85 @@
 
 #include "deletetapearchiveresponse.h"
 #include "deletetapearchiveresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteTapeArchiveResponse
+ *
+ * @brief  Handles StorageGateway DeleteTapeArchive responses.
+ *
+ * @see    StorageGatewayClient::deleteTapeArchive
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTapeArchiveResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new DeleteTapeArchiveResponsePrivate(this), parent)
+{
+    setRequest(new DeleteTapeArchiveRequest(request));
+    setReply(reply);
+}
+
+const DeleteTapeArchiveRequest * DeleteTapeArchiveResponse::request() const
+{
+    Q_D(const DeleteTapeArchiveResponse);
+    return static_cast<const DeleteTapeArchiveRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway DeleteTapeArchive response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteTapeArchiveResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTapeArchiveResponsePrivate
+ *
+ * @brief  Private implementation for DeleteTapeArchiveResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTapeArchiveResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteTapeArchiveResponse instance.
+ */
+DeleteTapeArchiveResponsePrivate::DeleteTapeArchiveResponsePrivate(
+    DeleteTapeArchiveQueueResponse * const q) : DeleteTapeArchivePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway DeleteTapeArchiveResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteTapeArchiveResponsePrivate::DeleteTapeArchiveResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteTapeArchiveResponse"));
+    /// @todo
+}

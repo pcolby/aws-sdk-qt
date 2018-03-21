@@ -19,3 +19,85 @@
 
 #include "createdirectoryconfigresponse.h"
 #include "createdirectoryconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  CreateDirectoryConfigResponse
+ *
+ * @brief  Handles AppStream CreateDirectoryConfig responses.
+ *
+ * @see    AppStreamClient::createDirectoryConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDirectoryConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new CreateDirectoryConfigResponsePrivate(this), parent)
+{
+    setRequest(new CreateDirectoryConfigRequest(request));
+    setReply(reply);
+}
+
+const CreateDirectoryConfigRequest * CreateDirectoryConfigResponse::request() const
+{
+    Q_D(const CreateDirectoryConfigResponse);
+    return static_cast<const CreateDirectoryConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream CreateDirectoryConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDirectoryConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDirectoryConfigResponsePrivate
+ *
+ * @brief  Private implementation for CreateDirectoryConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectoryConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDirectoryConfigResponse instance.
+ */
+CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponsePrivate(
+    CreateDirectoryConfigQueueResponse * const q) : CreateDirectoryConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream CreateDirectoryConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDirectoryConfigResponse"));
+    /// @todo
+}

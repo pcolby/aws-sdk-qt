@@ -19,3 +19,85 @@
 
 #include "modifycachesubnetgroupresponse.h"
 #include "modifycachesubnetgroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ModifyCacheSubnetGroupResponse
+ *
+ * @brief  Handles ElastiCache ModifyCacheSubnetGroup responses.
+ *
+ * @see    ElastiCacheClient::modifyCacheSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyCacheSubnetGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElastiCacheResponse(new ModifyCacheSubnetGroupResponsePrivate(this), parent)
+{
+    setRequest(new ModifyCacheSubnetGroupRequest(request));
+    setReply(reply);
+}
+
+const ModifyCacheSubnetGroupRequest * ModifyCacheSubnetGroupResponse::request() const
+{
+    Q_D(const ModifyCacheSubnetGroupResponse);
+    return static_cast<const ModifyCacheSubnetGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElastiCache ModifyCacheSubnetGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyCacheSubnetGroupResponsePrivate
+ *
+ * @brief  Private implementation for ModifyCacheSubnetGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyCacheSubnetGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyCacheSubnetGroupResponse instance.
+ */
+ModifyCacheSubnetGroupResponsePrivate::ModifyCacheSubnetGroupResponsePrivate(
+    ModifyCacheSubnetGroupQueueResponse * const q) : ModifyCacheSubnetGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElastiCache ModifyCacheSubnetGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyCacheSubnetGroupResponsePrivate::ModifyCacheSubnetGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyCacheSubnetGroupResponse"));
+    /// @todo
+}

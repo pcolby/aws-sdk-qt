@@ -19,3 +19,85 @@
 
 #include "registeractivitytyperesponse.h"
 #include "registeractivitytyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RegisterActivityTypeResponse
+ *
+ * @brief  Handles SWF RegisterActivityType responses.
+ *
+ * @see    SWFClient::registerActivityType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterActivityTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SWFResponse(new RegisterActivityTypeResponsePrivate(this), parent)
+{
+    setRequest(new RegisterActivityTypeRequest(request));
+    setReply(reply);
+}
+
+const RegisterActivityTypeRequest * RegisterActivityTypeResponse::request() const
+{
+    Q_D(const RegisterActivityTypeResponse);
+    return static_cast<const RegisterActivityTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SWF RegisterActivityType response.
+ *
+ * @param  response  Response to parse.
+ */
+void RegisterActivityTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterActivityTypeResponsePrivate
+ *
+ * @brief  Private implementation for RegisterActivityTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterActivityTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RegisterActivityTypeResponse instance.
+ */
+RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
+    RegisterActivityTypeQueueResponse * const q) : RegisterActivityTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SWF RegisterActivityTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RegisterActivityTypeResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createsecuritygroupresponse.h"
 #include "createsecuritygroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateSecurityGroupResponse
+ *
+ * @brief  Handles EC2 CreateSecurityGroup responses.
+ *
+ * @see    EC2Client::createSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSecurityGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new CreateSecurityGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateSecurityGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateSecurityGroupRequest * CreateSecurityGroupResponse::request() const
+{
+    Q_D(const CreateSecurityGroupResponse);
+    return static_cast<const CreateSecurityGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 CreateSecurityGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateSecurityGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSecurityGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateSecurityGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSecurityGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateSecurityGroupResponse instance.
+ */
+CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponsePrivate(
+    CreateSecurityGroupQueueResponse * const q) : CreateSecurityGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 CreateSecurityGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateSecurityGroupResponse"));
+    /// @todo
+}

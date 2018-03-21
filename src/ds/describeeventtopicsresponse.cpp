@@ -19,3 +19,85 @@
 
 #include "describeeventtopicsresponse.h"
 #include "describeeventtopicsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeEventTopicsResponse
+ *
+ * @brief  Handles DirectoryService DescribeEventTopics responses.
+ *
+ * @see    DirectoryServiceClient::describeEventTopics
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventTopicsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new DescribeEventTopicsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeEventTopicsRequest(request));
+    setReply(reply);
+}
+
+const DescribeEventTopicsRequest * DescribeEventTopicsResponse::request() const
+{
+    Q_D(const DescribeEventTopicsResponse);
+    return static_cast<const DescribeEventTopicsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService DescribeEventTopics response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeEventTopicsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventTopicsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeEventTopicsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventTopicsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeEventTopicsResponse instance.
+ */
+DescribeEventTopicsResponsePrivate::DescribeEventTopicsResponsePrivate(
+    DescribeEventTopicsQueueResponse * const q) : DescribeEventTopicsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService DescribeEventTopicsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeEventTopicsResponsePrivate::DescribeEventTopicsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeEventTopicsResponse"));
+    /// @todo
+}

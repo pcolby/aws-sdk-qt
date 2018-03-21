@@ -19,3 +19,85 @@
 
 #include "subscribetodatasetresponse.h"
 #include "subscribetodatasetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  SubscribeToDatasetResponse
+ *
+ * @brief  Handles CognitoSync SubscribeToDataset responses.
+ *
+ * @see    CognitoSyncClient::subscribeToDataset
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubscribeToDatasetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoSyncResponse(new SubscribeToDatasetResponsePrivate(this), parent)
+{
+    setRequest(new SubscribeToDatasetRequest(request));
+    setReply(reply);
+}
+
+const SubscribeToDatasetRequest * SubscribeToDatasetResponse::request() const
+{
+    Q_D(const SubscribeToDatasetResponse);
+    return static_cast<const SubscribeToDatasetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoSync SubscribeToDataset response.
+ *
+ * @param  response  Response to parse.
+ */
+void SubscribeToDatasetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SubscribeToDatasetResponsePrivate
+ *
+ * @brief  Private implementation for SubscribeToDatasetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubscribeToDatasetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SubscribeToDatasetResponse instance.
+ */
+SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponsePrivate(
+    SubscribeToDatasetQueueResponse * const q) : SubscribeToDatasetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoSync SubscribeToDatasetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SubscribeToDatasetResponse"));
+    /// @todo
+}

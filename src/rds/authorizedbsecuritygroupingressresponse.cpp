@@ -19,3 +19,85 @@
 
 #include "authorizedbsecuritygroupingressresponse.h"
 #include "authorizedbsecuritygroupingressresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  AuthorizeDBSecurityGroupIngressResponse
+ *
+ * @brief  Handles RDS AuthorizeDBSecurityGroupIngress responses.
+ *
+ * @see    RDSClient::authorizeDBSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AuthorizeDBSecurityGroupIngressResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new AuthorizeDBSecurityGroupIngressResponsePrivate(this), parent)
+{
+    setRequest(new AuthorizeDBSecurityGroupIngressRequest(request));
+    setReply(reply);
+}
+
+const AuthorizeDBSecurityGroupIngressRequest * AuthorizeDBSecurityGroupIngressResponse::request() const
+{
+    Q_D(const AuthorizeDBSecurityGroupIngressResponse);
+    return static_cast<const AuthorizeDBSecurityGroupIngressRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS AuthorizeDBSecurityGroupIngress response.
+ *
+ * @param  response  Response to parse.
+ */
+void AuthorizeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AuthorizeDBSecurityGroupIngressResponsePrivate
+ *
+ * @brief  Private implementation for AuthorizeDBSecurityGroupIngressResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeDBSecurityGroupIngressResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AuthorizeDBSecurityGroupIngressResponse instance.
+ */
+AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressResponsePrivate(
+    AuthorizeDBSecurityGroupIngressQueueResponse * const q) : AuthorizeDBSecurityGroupIngressPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS AuthorizeDBSecurityGroupIngressResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AuthorizeDBSecurityGroupIngressResponse"));
+    /// @todo
+}

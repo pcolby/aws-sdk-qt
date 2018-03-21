@@ -19,3 +19,85 @@
 
 #include "describestatemachineresponse.h"
 #include "describestatemachineresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DescribeStateMachineResponse
+ *
+ * @brief  Handles SFN DescribeStateMachine responses.
+ *
+ * @see    SFNClient::describeStateMachine
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStateMachineResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SFNResponse(new DescribeStateMachineResponsePrivate(this), parent)
+{
+    setRequest(new DescribeStateMachineRequest(request));
+    setReply(reply);
+}
+
+const DescribeStateMachineRequest * DescribeStateMachineResponse::request() const
+{
+    Q_D(const DescribeStateMachineResponse);
+    return static_cast<const DescribeStateMachineRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SFN DescribeStateMachine response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeStateMachineResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStateMachineResponsePrivate
+ *
+ * @brief  Private implementation for DescribeStateMachineResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStateMachineResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeStateMachineResponse instance.
+ */
+DescribeStateMachineResponsePrivate::DescribeStateMachineResponsePrivate(
+    DescribeStateMachineQueueResponse * const q) : DescribeStateMachinePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SFN DescribeStateMachineResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeStateMachineResponsePrivate::DescribeStateMachineResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeStateMachineResponse"));
+    /// @todo
+}

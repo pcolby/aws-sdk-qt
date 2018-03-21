@@ -19,3 +19,85 @@
 
 #include "createbuildresponse.h"
 #include "createbuildresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateBuildResponse
+ *
+ * @brief  Handles GameLift CreateBuild responses.
+ *
+ * @see    GameLiftClient::createBuild
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBuildResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new CreateBuildResponsePrivate(this), parent)
+{
+    setRequest(new CreateBuildRequest(request));
+    setReply(reply);
+}
+
+const CreateBuildRequest * CreateBuildResponse::request() const
+{
+    Q_D(const CreateBuildResponse);
+    return static_cast<const CreateBuildRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift CreateBuild response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateBuildResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBuildResponsePrivate
+ *
+ * @brief  Private implementation for CreateBuildResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBuildResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateBuildResponse instance.
+ */
+CreateBuildResponsePrivate::CreateBuildResponsePrivate(
+    CreateBuildQueueResponse * const q) : CreateBuildPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift CreateBuildResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateBuildResponsePrivate::CreateBuildResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateBuildResponse"));
+    /// @todo
+}

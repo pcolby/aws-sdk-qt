@@ -19,3 +19,85 @@
 
 #include "createinputresponse.h"
 #include "createinputresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  CreateInputResponse
+ *
+ * @brief  Handles MediaLive CreateInput responses.
+ *
+ * @see    MediaLiveClient::createInput
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInputResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MediaLiveResponse(new CreateInputResponsePrivate(this), parent)
+{
+    setRequest(new CreateInputRequest(request));
+    setReply(reply);
+}
+
+const CreateInputRequest * CreateInputResponse::request() const
+{
+    Q_D(const CreateInputResponse);
+    return static_cast<const CreateInputRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MediaLive CreateInput response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateInputResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInputResponsePrivate
+ *
+ * @brief  Private implementation for CreateInputResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInputResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateInputResponse instance.
+ */
+CreateInputResponsePrivate::CreateInputResponsePrivate(
+    CreateInputQueueResponse * const q) : CreateInputPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MediaLive CreateInputResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateInputResponsePrivate::CreateInputResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateInputResponse"));
+    /// @todo
+}

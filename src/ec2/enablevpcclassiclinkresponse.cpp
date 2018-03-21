@@ -19,3 +19,85 @@
 
 #include "enablevpcclassiclinkresponse.h"
 #include "enablevpcclassiclinkresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  EnableVpcClassicLinkResponse
+ *
+ * @brief  Handles EC2 EnableVpcClassicLink responses.
+ *
+ * @see    EC2Client::enableVpcClassicLink
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableVpcClassicLinkResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new EnableVpcClassicLinkResponsePrivate(this), parent)
+{
+    setRequest(new EnableVpcClassicLinkRequest(request));
+    setReply(reply);
+}
+
+const EnableVpcClassicLinkRequest * EnableVpcClassicLinkResponse::request() const
+{
+    Q_D(const EnableVpcClassicLinkResponse);
+    return static_cast<const EnableVpcClassicLinkRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 EnableVpcClassicLink response.
+ *
+ * @param  response  Response to parse.
+ */
+void EnableVpcClassicLinkResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableVpcClassicLinkResponsePrivate
+ *
+ * @brief  Private implementation for EnableVpcClassicLinkResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVpcClassicLinkResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public EnableVpcClassicLinkResponse instance.
+ */
+EnableVpcClassicLinkResponsePrivate::EnableVpcClassicLinkResponsePrivate(
+    EnableVpcClassicLinkQueueResponse * const q) : EnableVpcClassicLinkPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 EnableVpcClassicLinkResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void EnableVpcClassicLinkResponsePrivate::EnableVpcClassicLinkResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("EnableVpcClassicLinkResponse"));
+    /// @todo
+}

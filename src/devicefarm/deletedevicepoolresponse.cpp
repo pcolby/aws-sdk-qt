@@ -19,3 +19,85 @@
 
 #include "deletedevicepoolresponse.h"
 #include "deletedevicepoolresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  DeleteDevicePoolResponse
+ *
+ * @brief  Handles DeviceFarm DeleteDevicePool responses.
+ *
+ * @see    DeviceFarmClient::deleteDevicePool
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDevicePoolResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new DeleteDevicePoolResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDevicePoolRequest(request));
+    setReply(reply);
+}
+
+const DeleteDevicePoolRequest * DeleteDevicePoolResponse::request() const
+{
+    Q_D(const DeleteDevicePoolResponse);
+    return static_cast<const DeleteDevicePoolRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm DeleteDevicePool response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDevicePoolResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDevicePoolResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDevicePoolResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDevicePoolResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDevicePoolResponse instance.
+ */
+DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponsePrivate(
+    DeleteDevicePoolQueueResponse * const q) : DeleteDevicePoolPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm DeleteDevicePoolResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDevicePoolResponse"));
+    /// @todo
+}

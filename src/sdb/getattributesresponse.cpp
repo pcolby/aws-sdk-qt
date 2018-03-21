@@ -19,3 +19,85 @@
 
 #include "getattributesresponse.h"
 #include "getattributesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  GetAttributesResponse
+ *
+ * @brief  Handles SimpleDB GetAttributes responses.
+ *
+ * @see    SimpleDBClient::getAttributes
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAttributesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SimpleDBResponse(new GetAttributesResponsePrivate(this), parent)
+{
+    setRequest(new GetAttributesRequest(request));
+    setReply(reply);
+}
+
+const GetAttributesRequest * GetAttributesResponse::request() const
+{
+    Q_D(const GetAttributesResponse);
+    return static_cast<const GetAttributesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SimpleDB GetAttributes response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetAttributesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAttributesResponsePrivate
+ *
+ * @brief  Private implementation for GetAttributesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAttributesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetAttributesResponse instance.
+ */
+GetAttributesResponsePrivate::GetAttributesResponsePrivate(
+    GetAttributesQueueResponse * const q) : GetAttributesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SimpleDB GetAttributesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetAttributesResponsePrivate::GetAttributesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetAttributesResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createtapewithbarcoderesponse.h"
 #include "createtapewithbarcoderesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CreateTapeWithBarcodeResponse
+ *
+ * @brief  Handles StorageGateway CreateTapeWithBarcode responses.
+ *
+ * @see    StorageGatewayClient::createTapeWithBarcode
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTapeWithBarcodeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : StorageGatewayResponse(new CreateTapeWithBarcodeResponsePrivate(this), parent)
+{
+    setRequest(new CreateTapeWithBarcodeRequest(request));
+    setReply(reply);
+}
+
+const CreateTapeWithBarcodeRequest * CreateTapeWithBarcodeResponse::request() const
+{
+    Q_D(const CreateTapeWithBarcodeResponse);
+    return static_cast<const CreateTapeWithBarcodeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a StorageGateway CreateTapeWithBarcode response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateTapeWithBarcodeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTapeWithBarcodeResponsePrivate
+ *
+ * @brief  Private implementation for CreateTapeWithBarcodeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTapeWithBarcodeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateTapeWithBarcodeResponse instance.
+ */
+CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponsePrivate(
+    CreateTapeWithBarcodeQueueResponse * const q) : CreateTapeWithBarcodePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an StorageGateway CreateTapeWithBarcodeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateTapeWithBarcodeResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "describeexpressionsresponse.h"
 #include "describeexpressionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeExpressionsResponse
+ *
+ * @brief  Handles CloudSearch DescribeExpressions responses.
+ *
+ * @see    CloudSearchClient::describeExpressions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeExpressionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DescribeExpressionsResponsePrivate(this), parent)
+{
+    setRequest(new DescribeExpressionsRequest(request));
+    setReply(reply);
+}
+
+const DescribeExpressionsRequest * DescribeExpressionsResponse::request() const
+{
+    Q_D(const DescribeExpressionsResponse);
+    return static_cast<const DescribeExpressionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DescribeExpressions response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeExpressionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeExpressionsResponsePrivate
+ *
+ * @brief  Private implementation for DescribeExpressionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExpressionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeExpressionsResponse instance.
+ */
+DescribeExpressionsResponsePrivate::DescribeExpressionsResponsePrivate(
+    DescribeExpressionsQueueResponse * const q) : DescribeExpressionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DescribeExpressionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeExpressionsResponsePrivate::DescribeExpressionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeExpressionsResponse"));
+    /// @todo
+}

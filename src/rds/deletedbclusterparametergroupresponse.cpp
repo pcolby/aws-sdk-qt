@@ -19,3 +19,85 @@
 
 #include "deletedbclusterparametergroupresponse.h"
 #include "deletedbclusterparametergroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteDBClusterParameterGroupResponse
+ *
+ * @brief  Handles RDS DeleteDBClusterParameterGroup responses.
+ *
+ * @see    RDSClient::deleteDBClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDBClusterParameterGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : RDSResponse(new DeleteDBClusterParameterGroupResponsePrivate(this), parent)
+{
+    setRequest(new DeleteDBClusterParameterGroupRequest(request));
+    setReply(reply);
+}
+
+const DeleteDBClusterParameterGroupRequest * DeleteDBClusterParameterGroupResponse::request() const
+{
+    Q_D(const DeleteDBClusterParameterGroupResponse);
+    return static_cast<const DeleteDBClusterParameterGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a RDS DeleteDBClusterParameterGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDBClusterParameterGroupResponsePrivate
+ *
+ * @brief  Private implementation for DeleteDBClusterParameterGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBClusterParameterGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteDBClusterParameterGroupResponse instance.
+ */
+DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupResponsePrivate(
+    DeleteDBClusterParameterGroupQueueResponse * const q) : DeleteDBClusterParameterGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an RDS DeleteDBClusterParameterGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteDBClusterParameterGroupResponse"));
+    /// @todo
+}

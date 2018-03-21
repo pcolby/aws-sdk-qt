@@ -19,3 +19,85 @@
 
 #include "getbucketaccelerateconfigurationresponse.h"
 #include "getbucketaccelerateconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketAccelerateConfigurationResponse
+ *
+ * @brief  Handles S3 GetBucketAccelerateConfiguration responses.
+ *
+ * @see    S3Client::getBucketAccelerateConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketAccelerateConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : S3Response(new GetBucketAccelerateConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new GetBucketAccelerateConfigurationRequest(request));
+    setReply(reply);
+}
+
+const GetBucketAccelerateConfigurationRequest * GetBucketAccelerateConfigurationResponse::request() const
+{
+    Q_D(const GetBucketAccelerateConfigurationResponse);
+    return static_cast<const GetBucketAccelerateConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a S3 GetBucketAccelerateConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetBucketAccelerateConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketAccelerateConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for GetBucketAccelerateConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketAccelerateConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetBucketAccelerateConfigurationResponse instance.
+ */
+GetBucketAccelerateConfigurationResponsePrivate::GetBucketAccelerateConfigurationResponsePrivate(
+    GetBucketAccelerateConfigurationQueueResponse * const q) : GetBucketAccelerateConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an S3 GetBucketAccelerateConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetBucketAccelerateConfigurationResponsePrivate::GetBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetBucketAccelerateConfigurationResponse"));
+    /// @todo
+}

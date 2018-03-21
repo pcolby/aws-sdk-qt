@@ -19,3 +19,85 @@
 
 #include "deleteipsetresponse.h"
 #include "deleteipsetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DeleteIPSetResponse
+ *
+ * @brief  Handles GuardDuty DeleteIPSet responses.
+ *
+ * @see    GuardDutyClient::deleteIPSet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIPSetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new DeleteIPSetResponsePrivate(this), parent)
+{
+    setRequest(new DeleteIPSetRequest(request));
+    setReply(reply);
+}
+
+const DeleteIPSetRequest * DeleteIPSetResponse::request() const
+{
+    Q_D(const DeleteIPSetResponse);
+    return static_cast<const DeleteIPSetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty DeleteIPSet response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteIPSetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIPSetResponsePrivate
+ *
+ * @brief  Private implementation for DeleteIPSetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIPSetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteIPSetResponse instance.
+ */
+DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
+    DeleteIPSetQueueResponse * const q) : DeleteIPSetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty DeleteIPSetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteIPSetResponsePrivate::DeleteIPSetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteIPSetResponse"));
+    /// @todo
+}

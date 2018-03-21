@@ -19,3 +19,85 @@
 
 #include "createdeploymentconfigresponse.h"
 #include "createdeploymentconfigresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  CreateDeploymentConfigResponse
+ *
+ * @brief  Handles CodeDeploy CreateDeploymentConfig responses.
+ *
+ * @see    CodeDeployClient::createDeploymentConfig
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDeploymentConfigResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new CreateDeploymentConfigResponsePrivate(this), parent)
+{
+    setRequest(new CreateDeploymentConfigRequest(request));
+    setReply(reply);
+}
+
+const CreateDeploymentConfigRequest * CreateDeploymentConfigResponse::request() const
+{
+    Q_D(const CreateDeploymentConfigResponse);
+    return static_cast<const CreateDeploymentConfigRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy CreateDeploymentConfig response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateDeploymentConfigResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDeploymentConfigResponsePrivate
+ *
+ * @brief  Private implementation for CreateDeploymentConfigResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeploymentConfigResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateDeploymentConfigResponse instance.
+ */
+CreateDeploymentConfigResponsePrivate::CreateDeploymentConfigResponsePrivate(
+    CreateDeploymentConfigQueueResponse * const q) : CreateDeploymentConfigPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy CreateDeploymentConfigResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateDeploymentConfigResponsePrivate::CreateDeploymentConfigResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentConfigResponse"));
+    /// @todo
+}

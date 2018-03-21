@@ -19,3 +19,85 @@
 
 #include "purchaseofferingresponse.h"
 #include "purchaseofferingresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  PurchaseOfferingResponse
+ *
+ * @brief  Handles DeviceFarm PurchaseOffering responses.
+ *
+ * @see    DeviceFarmClient::purchaseOffering
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseOfferingResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DeviceFarmResponse(new PurchaseOfferingResponsePrivate(this), parent)
+{
+    setRequest(new PurchaseOfferingRequest(request));
+    setReply(reply);
+}
+
+const PurchaseOfferingRequest * PurchaseOfferingResponse::request() const
+{
+    Q_D(const PurchaseOfferingResponse);
+    return static_cast<const PurchaseOfferingRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DeviceFarm PurchaseOffering response.
+ *
+ * @param  response  Response to parse.
+ */
+void PurchaseOfferingResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseOfferingResponsePrivate
+ *
+ * @brief  Private implementation for PurchaseOfferingResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseOfferingResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public PurchaseOfferingResponse instance.
+ */
+PurchaseOfferingResponsePrivate::PurchaseOfferingResponsePrivate(
+    PurchaseOfferingQueueResponse * const q) : PurchaseOfferingPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DeviceFarm PurchaseOfferingResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void PurchaseOfferingResponsePrivate::PurchaseOfferingResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("PurchaseOfferingResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "deletescheduledactionresponse.h"
 #include "deletescheduledactionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DeleteScheduledActionResponse
+ *
+ * @brief  Handles AutoScaling DeleteScheduledAction responses.
+ *
+ * @see    AutoScalingClient::deleteScheduledAction
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteScheduledActionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AutoScalingResponse(new DeleteScheduledActionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteScheduledActionRequest(request));
+    setReply(reply);
+}
+
+const DeleteScheduledActionRequest * DeleteScheduledActionResponse::request() const
+{
+    Q_D(const DeleteScheduledActionResponse);
+    return static_cast<const DeleteScheduledActionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AutoScaling DeleteScheduledAction response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteScheduledActionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteScheduledActionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteScheduledActionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteScheduledActionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteScheduledActionResponse instance.
+ */
+DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponsePrivate(
+    DeleteScheduledActionQueueResponse * const q) : DeleteScheduledActionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AutoScaling DeleteScheduledActionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteScheduledActionResponse"));
+    /// @todo
+}

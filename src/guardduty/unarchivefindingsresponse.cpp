@@ -19,3 +19,85 @@
 
 #include "unarchivefindingsresponse.h"
 #include "unarchivefindingsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  UnarchiveFindingsResponse
+ *
+ * @brief  Handles GuardDuty UnarchiveFindings responses.
+ *
+ * @see    GuardDutyClient::unarchiveFindings
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnarchiveFindingsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new UnarchiveFindingsResponsePrivate(this), parent)
+{
+    setRequest(new UnarchiveFindingsRequest(request));
+    setReply(reply);
+}
+
+const UnarchiveFindingsRequest * UnarchiveFindingsResponse::request() const
+{
+    Q_D(const UnarchiveFindingsResponse);
+    return static_cast<const UnarchiveFindingsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty UnarchiveFindings response.
+ *
+ * @param  response  Response to parse.
+ */
+void UnarchiveFindingsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UnarchiveFindingsResponsePrivate
+ *
+ * @brief  Private implementation for UnarchiveFindingsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnarchiveFindingsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UnarchiveFindingsResponse instance.
+ */
+UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponsePrivate(
+    UnarchiveFindingsQueueResponse * const q) : UnarchiveFindingsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty UnarchiveFindingsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UnarchiveFindingsResponse"));
+    /// @todo
+}

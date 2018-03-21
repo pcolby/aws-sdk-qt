@@ -19,3 +19,85 @@
 
 #include "deregistereventtopicresponse.h"
 #include "deregistereventtopicresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DeregisterEventTopicResponse
+ *
+ * @brief  Handles DirectoryService DeregisterEventTopic responses.
+ *
+ * @see    DirectoryServiceClient::deregisterEventTopic
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterEventTopicResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DirectoryServiceResponse(new DeregisterEventTopicResponsePrivate(this), parent)
+{
+    setRequest(new DeregisterEventTopicRequest(request));
+    setReply(reply);
+}
+
+const DeregisterEventTopicRequest * DeregisterEventTopicResponse::request() const
+{
+    Q_D(const DeregisterEventTopicResponse);
+    return static_cast<const DeregisterEventTopicRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DirectoryService DeregisterEventTopic response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeregisterEventTopicResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterEventTopicResponsePrivate
+ *
+ * @brief  Private implementation for DeregisterEventTopicResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterEventTopicResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeregisterEventTopicResponse instance.
+ */
+DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponsePrivate(
+    DeregisterEventTopicQueueResponse * const q) : DeregisterEventTopicPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DirectoryService DeregisterEventTopicResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeregisterEventTopicResponse"));
+    /// @todo
+}

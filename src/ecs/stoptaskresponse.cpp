@@ -19,3 +19,85 @@
 
 #include "stoptaskresponse.h"
 #include "stoptaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  StopTaskResponse
+ *
+ * @brief  Handles ECS StopTask responses.
+ *
+ * @see    ECSClient::stopTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ECSResponse(new StopTaskResponsePrivate(this), parent)
+{
+    setRequest(new StopTaskRequest(request));
+    setReply(reply);
+}
+
+const StopTaskRequest * StopTaskResponse::request() const
+{
+    Q_D(const StopTaskResponse);
+    return static_cast<const StopTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ECS StopTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void StopTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StopTaskResponsePrivate
+ *
+ * @brief  Private implementation for StopTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StopTaskResponse instance.
+ */
+StopTaskResponsePrivate::StopTaskResponsePrivate(
+    StopTaskQueueResponse * const q) : StopTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ECS StopTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StopTaskResponsePrivate::StopTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StopTaskResponse"));
+    /// @todo
+}

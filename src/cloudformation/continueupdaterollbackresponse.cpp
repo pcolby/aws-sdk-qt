@@ -19,3 +19,85 @@
 
 #include "continueupdaterollbackresponse.h"
 #include "continueupdaterollbackresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ContinueUpdateRollbackResponse
+ *
+ * @brief  Handles CloudFormation ContinueUpdateRollback responses.
+ *
+ * @see    CloudFormationClient::continueUpdateRollback
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ContinueUpdateRollbackResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFormationResponse(new ContinueUpdateRollbackResponsePrivate(this), parent)
+{
+    setRequest(new ContinueUpdateRollbackRequest(request));
+    setReply(reply);
+}
+
+const ContinueUpdateRollbackRequest * ContinueUpdateRollbackResponse::request() const
+{
+    Q_D(const ContinueUpdateRollbackResponse);
+    return static_cast<const ContinueUpdateRollbackRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFormation ContinueUpdateRollback response.
+ *
+ * @param  response  Response to parse.
+ */
+void ContinueUpdateRollbackResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ContinueUpdateRollbackResponsePrivate
+ *
+ * @brief  Private implementation for ContinueUpdateRollbackResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ContinueUpdateRollbackResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ContinueUpdateRollbackResponse instance.
+ */
+ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponsePrivate(
+    ContinueUpdateRollbackQueueResponse * const q) : ContinueUpdateRollbackPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFormation ContinueUpdateRollbackResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ContinueUpdateRollbackResponse"));
+    /// @todo
+}

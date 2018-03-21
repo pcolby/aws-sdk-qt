@@ -19,3 +19,85 @@
 
 #include "importmigrationtaskresponse.h"
 #include "importmigrationtaskresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  ImportMigrationTaskResponse
+ *
+ * @brief  Handles MigrationHub ImportMigrationTask responses.
+ *
+ * @see    MigrationHubClient::importMigrationTask
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportMigrationTaskResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : MigrationHubResponse(new ImportMigrationTaskResponsePrivate(this), parent)
+{
+    setRequest(new ImportMigrationTaskRequest(request));
+    setReply(reply);
+}
+
+const ImportMigrationTaskRequest * ImportMigrationTaskResponse::request() const
+{
+    Q_D(const ImportMigrationTaskResponse);
+    return static_cast<const ImportMigrationTaskRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a MigrationHub ImportMigrationTask response.
+ *
+ * @param  response  Response to parse.
+ */
+void ImportMigrationTaskResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportMigrationTaskResponsePrivate
+ *
+ * @brief  Private implementation for ImportMigrationTaskResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportMigrationTaskResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ImportMigrationTaskResponse instance.
+ */
+ImportMigrationTaskResponsePrivate::ImportMigrationTaskResponsePrivate(
+    ImportMigrationTaskQueueResponse * const q) : ImportMigrationTaskPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an MigrationHub ImportMigrationTaskResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ImportMigrationTaskResponsePrivate::ImportMigrationTaskResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ImportMigrationTaskResponse"));
+    /// @todo
+}

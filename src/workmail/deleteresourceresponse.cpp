@@ -19,3 +19,85 @@
 
 #include "deleteresourceresponse.h"
 #include "deleteresourceresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  DeleteResourceResponse
+ *
+ * @brief  Handles WorkMail DeleteResource responses.
+ *
+ * @see    WorkMailClient::deleteResource
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteResourceResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WorkMailResponse(new DeleteResourceResponsePrivate(this), parent)
+{
+    setRequest(new DeleteResourceRequest(request));
+    setReply(reply);
+}
+
+const DeleteResourceRequest * DeleteResourceResponse::request() const
+{
+    Q_D(const DeleteResourceResponse);
+    return static_cast<const DeleteResourceRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WorkMail DeleteResource response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteResourceResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteResourceResponsePrivate
+ *
+ * @brief  Private implementation for DeleteResourceResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourceResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteResourceResponse instance.
+ */
+DeleteResourceResponsePrivate::DeleteResourceResponsePrivate(
+    DeleteResourceQueueResponse * const q) : DeleteResourcePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WorkMail DeleteResourceResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteResourceResponsePrivate::DeleteResourceResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteResourceResponse"));
+    /// @todo
+}

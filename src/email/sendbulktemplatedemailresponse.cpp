@@ -19,3 +19,85 @@
 
 #include "sendbulktemplatedemailresponse.h"
 #include "sendbulktemplatedemailresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SendBulkTemplatedEmailResponse
+ *
+ * @brief  Handles SES SendBulkTemplatedEmail responses.
+ *
+ * @see    SESClient::sendBulkTemplatedEmail
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendBulkTemplatedEmailResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : SESResponse(new SendBulkTemplatedEmailResponsePrivate(this), parent)
+{
+    setRequest(new SendBulkTemplatedEmailRequest(request));
+    setReply(reply);
+}
+
+const SendBulkTemplatedEmailRequest * SendBulkTemplatedEmailResponse::request() const
+{
+    Q_D(const SendBulkTemplatedEmailResponse);
+    return static_cast<const SendBulkTemplatedEmailRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a SES SendBulkTemplatedEmail response.
+ *
+ * @param  response  Response to parse.
+ */
+void SendBulkTemplatedEmailResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SendBulkTemplatedEmailResponsePrivate
+ *
+ * @brief  Private implementation for SendBulkTemplatedEmailResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendBulkTemplatedEmailResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SendBulkTemplatedEmailResponse instance.
+ */
+SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponsePrivate(
+    SendBulkTemplatedEmailQueueResponse * const q) : SendBulkTemplatedEmailPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an SES SendBulkTemplatedEmailResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SendBulkTemplatedEmailResponse"));
+    /// @todo
+}

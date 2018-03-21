@@ -19,3 +19,85 @@
 
 #include "getexportjobresponse.h"
 #include "getexportjobresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetExportJobResponse
+ *
+ * @brief  Handles Pinpoint GetExportJob responses.
+ *
+ * @see    PinpointClient::getExportJob
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetExportJobResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new GetExportJobResponsePrivate(this), parent)
+{
+    setRequest(new GetExportJobRequest(request));
+    setReply(reply);
+}
+
+const GetExportJobRequest * GetExportJobResponse::request() const
+{
+    Q_D(const GetExportJobResponse);
+    return static_cast<const GetExportJobRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint GetExportJob response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetExportJobResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetExportJobResponsePrivate
+ *
+ * @brief  Private implementation for GetExportJobResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetExportJobResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetExportJobResponse instance.
+ */
+GetExportJobResponsePrivate::GetExportJobResponsePrivate(
+    GetExportJobQueueResponse * const q) : GetExportJobPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint GetExportJobResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetExportJobResponsePrivate::GetExportJobResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetExportJobResponse"));
+    /// @todo
+}

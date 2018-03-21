@@ -19,3 +19,85 @@
 
 #include "modifyinstanceattributeresponse.h"
 #include "modifyinstanceattributeresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyInstanceAttributeResponse
+ *
+ * @brief  Handles EC2 ModifyInstanceAttribute responses.
+ *
+ * @see    EC2Client::modifyInstanceAttribute
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyInstanceAttributeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new ModifyInstanceAttributeResponsePrivate(this), parent)
+{
+    setRequest(new ModifyInstanceAttributeRequest(request));
+    setReply(reply);
+}
+
+const ModifyInstanceAttributeRequest * ModifyInstanceAttributeResponse::request() const
+{
+    Q_D(const ModifyInstanceAttributeResponse);
+    return static_cast<const ModifyInstanceAttributeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 ModifyInstanceAttribute response.
+ *
+ * @param  response  Response to parse.
+ */
+void ModifyInstanceAttributeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyInstanceAttributeResponsePrivate
+ *
+ * @brief  Private implementation for ModifyInstanceAttributeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyInstanceAttributeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ModifyInstanceAttributeResponse instance.
+ */
+ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponsePrivate(
+    ModifyInstanceAttributeQueueResponse * const q) : ModifyInstanceAttributePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 ModifyInstanceAttributeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceAttributeResponse"));
+    /// @todo
+}

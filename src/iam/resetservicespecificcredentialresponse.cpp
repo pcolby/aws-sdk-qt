@@ -19,3 +19,85 @@
 
 #include "resetservicespecificcredentialresponse.h"
 #include "resetservicespecificcredentialresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ResetServiceSpecificCredentialResponse
+ *
+ * @brief  Handles IAM ResetServiceSpecificCredential responses.
+ *
+ * @see    IAMClient::resetServiceSpecificCredential
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetServiceSpecificCredentialResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IAMResponse(new ResetServiceSpecificCredentialResponsePrivate(this), parent)
+{
+    setRequest(new ResetServiceSpecificCredentialRequest(request));
+    setReply(reply);
+}
+
+const ResetServiceSpecificCredentialRequest * ResetServiceSpecificCredentialResponse::request() const
+{
+    Q_D(const ResetServiceSpecificCredentialResponse);
+    return static_cast<const ResetServiceSpecificCredentialRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IAM ResetServiceSpecificCredential response.
+ *
+ * @param  response  Response to parse.
+ */
+void ResetServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetServiceSpecificCredentialResponsePrivate
+ *
+ * @brief  Private implementation for ResetServiceSpecificCredentialResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetServiceSpecificCredentialResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ResetServiceSpecificCredentialResponse instance.
+ */
+ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialResponsePrivate(
+    ResetServiceSpecificCredentialQueueResponse * const q) : ResetServiceSpecificCredentialPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IAM ResetServiceSpecificCredentialResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ResetServiceSpecificCredentialResponse"));
+    /// @todo
+}

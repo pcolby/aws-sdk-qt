@@ -19,3 +19,85 @@
 
 #include "defineindexfieldresponse.h"
 #include "defineindexfieldresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DefineIndexFieldResponse
+ *
+ * @brief  Handles CloudSearch DefineIndexField responses.
+ *
+ * @see    CloudSearchClient::defineIndexField
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DefineIndexFieldResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudSearchResponse(new DefineIndexFieldResponsePrivate(this), parent)
+{
+    setRequest(new DefineIndexFieldRequest(request));
+    setReply(reply);
+}
+
+const DefineIndexFieldRequest * DefineIndexFieldResponse::request() const
+{
+    Q_D(const DefineIndexFieldResponse);
+    return static_cast<const DefineIndexFieldRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudSearch DefineIndexField response.
+ *
+ * @param  response  Response to parse.
+ */
+void DefineIndexFieldResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DefineIndexFieldResponsePrivate
+ *
+ * @brief  Private implementation for DefineIndexFieldResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineIndexFieldResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DefineIndexFieldResponse instance.
+ */
+DefineIndexFieldResponsePrivate::DefineIndexFieldResponsePrivate(
+    DefineIndexFieldQueueResponse * const q) : DefineIndexFieldPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudSearch DefineIndexFieldResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DefineIndexFieldResponsePrivate::DefineIndexFieldResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DefineIndexFieldResponse"));
+    /// @todo
+}

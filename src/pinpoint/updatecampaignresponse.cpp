@@ -19,3 +19,85 @@
 
 #include "updatecampaignresponse.h"
 #include "updatecampaignresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateCampaignResponse
+ *
+ * @brief  Handles Pinpoint UpdateCampaign responses.
+ *
+ * @see    PinpointClient::updateCampaign
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCampaignResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : PinpointResponse(new UpdateCampaignResponsePrivate(this), parent)
+{
+    setRequest(new UpdateCampaignRequest(request));
+    setReply(reply);
+}
+
+const UpdateCampaignRequest * UpdateCampaignResponse::request() const
+{
+    Q_D(const UpdateCampaignResponse);
+    return static_cast<const UpdateCampaignRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Pinpoint UpdateCampaign response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateCampaignResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCampaignResponsePrivate
+ *
+ * @brief  Private implementation for UpdateCampaignResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCampaignResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateCampaignResponse instance.
+ */
+UpdateCampaignResponsePrivate::UpdateCampaignResponsePrivate(
+    UpdateCampaignQueueResponse * const q) : UpdateCampaignPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Pinpoint UpdateCampaignResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateCampaignResponsePrivate::UpdateCampaignResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateCampaignResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "createrulegroupresponse.h"
 #include "createrulegroupresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  CreateRuleGroupResponse
+ *
+ * @brief  Handles WAF CreateRuleGroup responses.
+ *
+ * @see    WAFClient::createRuleGroup
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRuleGroupResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : WAFResponse(new CreateRuleGroupResponsePrivate(this), parent)
+{
+    setRequest(new CreateRuleGroupRequest(request));
+    setReply(reply);
+}
+
+const CreateRuleGroupRequest * CreateRuleGroupResponse::request() const
+{
+    Q_D(const CreateRuleGroupResponse);
+    return static_cast<const CreateRuleGroupRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a WAF CreateRuleGroup response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateRuleGroupResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRuleGroupResponsePrivate
+ *
+ * @brief  Private implementation for CreateRuleGroupResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRuleGroupResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateRuleGroupResponse instance.
+ */
+CreateRuleGroupResponsePrivate::CreateRuleGroupResponsePrivate(
+    CreateRuleGroupQueueResponse * const q) : CreateRuleGroupPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an WAF CreateRuleGroupResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateRuleGroupResponsePrivate::CreateRuleGroupResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateRuleGroupResponse"));
+    /// @todo
+}

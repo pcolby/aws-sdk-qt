@@ -19,3 +19,85 @@
 
 #include "deletevpcresponse.h"
 #include "deletevpcresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpcResponse
+ *
+ * @brief  Handles EC2 DeleteVpc responses.
+ *
+ * @see    EC2Client::deleteVpc
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpcResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : EC2Response(new DeleteVpcResponsePrivate(this), parent)
+{
+    setRequest(new DeleteVpcRequest(request));
+    setReply(reply);
+}
+
+const DeleteVpcRequest * DeleteVpcResponse::request() const
+{
+    Q_D(const DeleteVpcResponse);
+    return static_cast<const DeleteVpcRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a EC2 DeleteVpc response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteVpcResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpcResponsePrivate
+ *
+ * @brief  Private implementation for DeleteVpcResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteVpcResponse instance.
+ */
+DeleteVpcResponsePrivate::DeleteVpcResponsePrivate(
+    DeleteVpcQueueResponse * const q) : DeleteVpcPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an EC2 DeleteVpcResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteVpcResponsePrivate::DeleteVpcResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteVpcResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "updatelayerresponse.h"
 #include "updatelayerresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateLayerResponse
+ *
+ * @brief  Handles OpsWorks UpdateLayer responses.
+ *
+ * @see    OpsWorksClient::updateLayer
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateLayerResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : OpsWorksResponse(new UpdateLayerResponsePrivate(this), parent)
+{
+    setRequest(new UpdateLayerRequest(request));
+    setReply(reply);
+}
+
+const UpdateLayerRequest * UpdateLayerResponse::request() const
+{
+    Q_D(const UpdateLayerResponse);
+    return static_cast<const UpdateLayerRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a OpsWorks UpdateLayer response.
+ *
+ * @param  response  Response to parse.
+ */
+void UpdateLayerResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateLayerResponsePrivate
+ *
+ * @brief  Private implementation for UpdateLayerResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLayerResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public UpdateLayerResponse instance.
+ */
+UpdateLayerResponsePrivate::UpdateLayerResponsePrivate(
+    UpdateLayerQueueResponse * const q) : UpdateLayerPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an OpsWorks UpdateLayerResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void UpdateLayerResponsePrivate::UpdateLayerResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("UpdateLayerResponse"));
+    /// @todo
+}

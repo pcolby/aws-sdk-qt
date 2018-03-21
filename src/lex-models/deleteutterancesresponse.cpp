@@ -19,3 +19,85 @@
 
 #include "deleteutterancesresponse.h"
 #include "deleteutterancesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteUtterancesResponse
+ *
+ * @brief  Handles LexModelBuildingService DeleteUtterances responses.
+ *
+ * @see    LexModelBuildingServiceClient::deleteUtterances
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUtterancesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : LexModelBuildingServiceResponse(new DeleteUtterancesResponsePrivate(this), parent)
+{
+    setRequest(new DeleteUtterancesRequest(request));
+    setReply(reply);
+}
+
+const DeleteUtterancesRequest * DeleteUtterancesResponse::request() const
+{
+    Q_D(const DeleteUtterancesResponse);
+    return static_cast<const DeleteUtterancesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a LexModelBuildingService DeleteUtterances response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteUtterancesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUtterancesResponsePrivate
+ *
+ * @brief  Private implementation for DeleteUtterancesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUtterancesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteUtterancesResponse instance.
+ */
+DeleteUtterancesResponsePrivate::DeleteUtterancesResponsePrivate(
+    DeleteUtterancesQueueResponse * const q) : DeleteUtterancesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an LexModelBuildingService DeleteUtterancesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteUtterancesResponsePrivate::DeleteUtterancesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteUtterancesResponse"));
+    /// @todo
+}

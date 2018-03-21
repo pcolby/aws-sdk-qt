@@ -19,3 +19,85 @@
 
 #include "describeclustersresponse.h"
 #include "describeclustersresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DescribeClustersResponse
+ *
+ * @brief  Handles DAX DescribeClusters responses.
+ *
+ * @see    DAXClient::describeClusters
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClustersResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : DAXResponse(new DescribeClustersResponsePrivate(this), parent)
+{
+    setRequest(new DescribeClustersRequest(request));
+    setReply(reply);
+}
+
+const DescribeClustersRequest * DescribeClustersResponse::request() const
+{
+    Q_D(const DescribeClustersResponse);
+    return static_cast<const DescribeClustersRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a DAX DescribeClusters response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeClustersResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClustersResponsePrivate
+ *
+ * @brief  Private implementation for DescribeClustersResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClustersResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeClustersResponse instance.
+ */
+DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
+    DescribeClustersQueueResponse * const q) : DescribeClustersPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an DAX DescribeClustersResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeClustersResponsePrivate::DescribeClustersResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeClustersResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "disassociatefrommasteraccountresponse.h"
 #include "disassociatefrommasteraccountresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DisassociateFromMasterAccountResponse
+ *
+ * @brief  Handles GuardDuty DisassociateFromMasterAccount responses.
+ *
+ * @see    GuardDutyClient::disassociateFromMasterAccount
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateFromMasterAccountResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GuardDutyResponse(new DisassociateFromMasterAccountResponsePrivate(this), parent)
+{
+    setRequest(new DisassociateFromMasterAccountRequest(request));
+    setReply(reply);
+}
+
+const DisassociateFromMasterAccountRequest * DisassociateFromMasterAccountResponse::request() const
+{
+    Q_D(const DisassociateFromMasterAccountResponse);
+    return static_cast<const DisassociateFromMasterAccountRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GuardDuty DisassociateFromMasterAccount response.
+ *
+ * @param  response  Response to parse.
+ */
+void DisassociateFromMasterAccountResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateFromMasterAccountResponsePrivate
+ *
+ * @brief  Private implementation for DisassociateFromMasterAccountResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateFromMasterAccountResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DisassociateFromMasterAccountResponse instance.
+ */
+DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccountResponsePrivate(
+    DisassociateFromMasterAccountQueueResponse * const q) : DisassociateFromMasterAccountPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GuardDuty DisassociateFromMasterAccountResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccountResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DisassociateFromMasterAccountResponse"));
+    /// @todo
+}

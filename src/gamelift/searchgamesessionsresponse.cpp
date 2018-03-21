@@ -19,3 +19,85 @@
 
 #include "searchgamesessionsresponse.h"
 #include "searchgamesessionsresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  SearchGameSessionsResponse
+ *
+ * @brief  Handles GameLift SearchGameSessions responses.
+ *
+ * @see    GameLiftClient::searchGameSessions
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchGameSessionsResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : GameLiftResponse(new SearchGameSessionsResponsePrivate(this), parent)
+{
+    setRequest(new SearchGameSessionsRequest(request));
+    setReply(reply);
+}
+
+const SearchGameSessionsRequest * SearchGameSessionsResponse::request() const
+{
+    Q_D(const SearchGameSessionsResponse);
+    return static_cast<const SearchGameSessionsRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a GameLift SearchGameSessions response.
+ *
+ * @param  response  Response to parse.
+ */
+void SearchGameSessionsResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchGameSessionsResponsePrivate
+ *
+ * @brief  Private implementation for SearchGameSessionsResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchGameSessionsResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public SearchGameSessionsResponse instance.
+ */
+SearchGameSessionsResponsePrivate::SearchGameSessionsResponsePrivate(
+    SearchGameSessionsQueueResponse * const q) : SearchGameSessionsPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an GameLift SearchGameSessionsResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void SearchGameSessionsResponsePrivate::SearchGameSessionsResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("SearchGameSessionsResponse"));
+    /// @todo
+}

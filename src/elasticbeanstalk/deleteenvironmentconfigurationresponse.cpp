@@ -19,3 +19,85 @@
 
 #include "deleteenvironmentconfigurationresponse.h"
 #include "deleteenvironmentconfigurationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DeleteEnvironmentConfigurationResponse
+ *
+ * @brief  Handles ElasticBeanstalk DeleteEnvironmentConfiguration responses.
+ *
+ * @see    ElasticBeanstalkClient::deleteEnvironmentConfiguration
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEnvironmentConfigurationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticBeanstalkResponse(new DeleteEnvironmentConfigurationResponsePrivate(this), parent)
+{
+    setRequest(new DeleteEnvironmentConfigurationRequest(request));
+    setReply(reply);
+}
+
+const DeleteEnvironmentConfigurationRequest * DeleteEnvironmentConfigurationResponse::request() const
+{
+    Q_D(const DeleteEnvironmentConfigurationResponse);
+    return static_cast<const DeleteEnvironmentConfigurationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticBeanstalk DeleteEnvironmentConfiguration response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteEnvironmentConfigurationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEnvironmentConfigurationResponsePrivate
+ *
+ * @brief  Private implementation for DeleteEnvironmentConfigurationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEnvironmentConfigurationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteEnvironmentConfigurationResponse instance.
+ */
+DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationResponsePrivate(
+    DeleteEnvironmentConfigurationQueueResponse * const q) : DeleteEnvironmentConfigurationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticBeanstalk DeleteEnvironmentConfigurationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentConfigurationResponse"));
+    /// @todo
+}

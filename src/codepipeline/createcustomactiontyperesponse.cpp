@@ -19,3 +19,85 @@
 
 #include "createcustomactiontyperesponse.h"
 #include "createcustomactiontyperesponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  CreateCustomActionTypeResponse
+ *
+ * @brief  Handles CodePipeline CreateCustomActionType responses.
+ *
+ * @see    CodePipelineClient::createCustomActionType
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCustomActionTypeResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodePipelineResponse(new CreateCustomActionTypeResponsePrivate(this), parent)
+{
+    setRequest(new CreateCustomActionTypeRequest(request));
+    setReply(reply);
+}
+
+const CreateCustomActionTypeRequest * CreateCustomActionTypeResponse::request() const
+{
+    Q_D(const CreateCustomActionTypeResponse);
+    return static_cast<const CreateCustomActionTypeRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodePipeline CreateCustomActionType response.
+ *
+ * @param  response  Response to parse.
+ */
+void CreateCustomActionTypeResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCustomActionTypeResponsePrivate
+ *
+ * @brief  Private implementation for CreateCustomActionTypeResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomActionTypeResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public CreateCustomActionTypeResponse instance.
+ */
+CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponsePrivate(
+    CreateCustomActionTypeQueueResponse * const q) : CreateCustomActionTypePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodePipeline CreateCustomActionTypeResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("CreateCustomActionTypeResponse"));
+    /// @todo
+}

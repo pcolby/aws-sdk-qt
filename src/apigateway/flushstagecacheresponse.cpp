@@ -19,3 +19,85 @@
 
 #include "flushstagecacheresponse.h"
 #include "flushstagecacheresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  FlushStageCacheResponse
+ *
+ * @brief  Handles APIGateway FlushStageCache responses.
+ *
+ * @see    APIGatewayClient::flushStageCache
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+FlushStageCacheResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new FlushStageCacheResponsePrivate(this), parent)
+{
+    setRequest(new FlushStageCacheRequest(request));
+    setReply(reply);
+}
+
+const FlushStageCacheRequest * FlushStageCacheResponse::request() const
+{
+    Q_D(const FlushStageCacheResponse);
+    return static_cast<const FlushStageCacheRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway FlushStageCache response.
+ *
+ * @param  response  Response to parse.
+ */
+void FlushStageCacheResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  FlushStageCacheResponsePrivate
+ *
+ * @brief  Private implementation for FlushStageCacheResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FlushStageCacheResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public FlushStageCacheResponse instance.
+ */
+FlushStageCacheResponsePrivate::FlushStageCacheResponsePrivate(
+    FlushStageCacheQueueResponse * const q) : FlushStageCachePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway FlushStageCacheResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void FlushStageCacheResponsePrivate::FlushStageCacheResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("FlushStageCacheResponse"));
+    /// @todo
+}

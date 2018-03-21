@@ -19,3 +19,85 @@
 
 #include "getgatewayresponsesresponse.h"
 #include "getgatewayresponsesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetGatewayResponsesResponse
+ *
+ * @brief  Handles APIGateway GetGatewayResponses responses.
+ *
+ * @see    APIGatewayClient::getGatewayResponses
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGatewayResponsesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetGatewayResponsesResponsePrivate(this), parent)
+{
+    setRequest(new GetGatewayResponsesRequest(request));
+    setReply(reply);
+}
+
+const GetGatewayResponsesRequest * GetGatewayResponsesResponse::request() const
+{
+    Q_D(const GetGatewayResponsesResponse);
+    return static_cast<const GetGatewayResponsesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetGatewayResponses response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetGatewayResponsesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGatewayResponsesResponsePrivate
+ *
+ * @brief  Private implementation for GetGatewayResponsesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGatewayResponsesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetGatewayResponsesResponse instance.
+ */
+GetGatewayResponsesResponsePrivate::GetGatewayResponsesResponsePrivate(
+    GetGatewayResponsesQueueResponse * const q) : GetGatewayResponsesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetGatewayResponsesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetGatewayResponsesResponsePrivate::GetGatewayResponsesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetGatewayResponsesResponse"));
+    /// @todo
+}

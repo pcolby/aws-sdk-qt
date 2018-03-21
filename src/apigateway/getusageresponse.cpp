@@ -19,3 +19,85 @@
 
 #include "getusageresponse.h"
 #include "getusageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetUsageResponse
+ *
+ * @brief  Handles APIGateway GetUsage responses.
+ *
+ * @see    APIGatewayClient::getUsage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUsageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : APIGatewayResponse(new GetUsageResponsePrivate(this), parent)
+{
+    setRequest(new GetUsageRequest(request));
+    setReply(reply);
+}
+
+const GetUsageRequest * GetUsageResponse::request() const
+{
+    Q_D(const GetUsageResponse);
+    return static_cast<const GetUsageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a APIGateway GetUsage response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetUsageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUsageResponsePrivate
+ *
+ * @brief  Private implementation for GetUsageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUsageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetUsageResponse instance.
+ */
+GetUsageResponsePrivate::GetUsageResponsePrivate(
+    GetUsageQueueResponse * const q) : GetUsagePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an APIGateway GetUsageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetUsageResponsePrivate::GetUsageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetUsageResponse"));
+    /// @todo
+}

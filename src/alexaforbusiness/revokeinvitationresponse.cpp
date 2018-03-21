@@ -19,3 +19,85 @@
 
 #include "revokeinvitationresponse.h"
 #include "revokeinvitationresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  RevokeInvitationResponse
+ *
+ * @brief  Handles AlexaForBusiness RevokeInvitation responses.
+ *
+ * @see    AlexaForBusinessClient::revokeInvitation
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeInvitationResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AlexaForBusinessResponse(new RevokeInvitationResponsePrivate(this), parent)
+{
+    setRequest(new RevokeInvitationRequest(request));
+    setReply(reply);
+}
+
+const RevokeInvitationRequest * RevokeInvitationResponse::request() const
+{
+    Q_D(const RevokeInvitationResponse);
+    return static_cast<const RevokeInvitationRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AlexaForBusiness RevokeInvitation response.
+ *
+ * @param  response  Response to parse.
+ */
+void RevokeInvitationResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeInvitationResponsePrivate
+ *
+ * @brief  Private implementation for RevokeInvitationResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeInvitationResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public RevokeInvitationResponse instance.
+ */
+RevokeInvitationResponsePrivate::RevokeInvitationResponsePrivate(
+    RevokeInvitationQueueResponse * const q) : RevokeInvitationPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AlexaForBusiness RevokeInvitationResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void RevokeInvitationResponsePrivate::RevokeInvitationResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("RevokeInvitationResponse"));
+    /// @todo
+}

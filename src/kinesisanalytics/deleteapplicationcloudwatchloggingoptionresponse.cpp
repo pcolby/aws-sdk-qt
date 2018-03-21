@@ -19,3 +19,85 @@
 
 #include "deleteapplicationcloudwatchloggingoptionresponse.h"
 #include "deleteapplicationcloudwatchloggingoptionresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DeleteApplicationCloudWatchLoggingOptionResponse
+ *
+ * @brief  Handles KinesisAnalytics DeleteApplicationCloudWatchLoggingOption responses.
+ *
+ * @see    KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApplicationCloudWatchLoggingOptionResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisAnalyticsResponse(new DeleteApplicationCloudWatchLoggingOptionResponsePrivate(this), parent)
+{
+    setRequest(new DeleteApplicationCloudWatchLoggingOptionRequest(request));
+    setReply(reply);
+}
+
+const DeleteApplicationCloudWatchLoggingOptionRequest * DeleteApplicationCloudWatchLoggingOptionResponse::request() const
+{
+    Q_D(const DeleteApplicationCloudWatchLoggingOptionResponse);
+    return static_cast<const DeleteApplicationCloudWatchLoggingOptionRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a KinesisAnalytics DeleteApplicationCloudWatchLoggingOption response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApplicationCloudWatchLoggingOptionResponsePrivate
+ *
+ * @brief  Private implementation for DeleteApplicationCloudWatchLoggingOptionResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteApplicationCloudWatchLoggingOptionResponse instance.
+ */
+DeleteApplicationCloudWatchLoggingOptionResponsePrivate::DeleteApplicationCloudWatchLoggingOptionResponsePrivate(
+    DeleteApplicationCloudWatchLoggingOptionQueueResponse * const q) : DeleteApplicationCloudWatchLoggingOptionPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an KinesisAnalytics DeleteApplicationCloudWatchLoggingOptionResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteApplicationCloudWatchLoggingOptionResponsePrivate::DeleteApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationCloudWatchLoggingOptionResponse"));
+    /// @todo
+}

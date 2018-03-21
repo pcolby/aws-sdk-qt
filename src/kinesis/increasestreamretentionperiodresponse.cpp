@@ -19,3 +19,85 @@
 
 #include "increasestreamretentionperiodresponse.h"
 #include "increasestreamretentionperiodresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  IncreaseStreamRetentionPeriodResponse
+ *
+ * @brief  Handles Kinesis IncreaseStreamRetentionPeriod responses.
+ *
+ * @see    KinesisClient::increaseStreamRetentionPeriod
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IncreaseStreamRetentionPeriodResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : KinesisResponse(new IncreaseStreamRetentionPeriodResponsePrivate(this), parent)
+{
+    setRequest(new IncreaseStreamRetentionPeriodRequest(request));
+    setReply(reply);
+}
+
+const IncreaseStreamRetentionPeriodRequest * IncreaseStreamRetentionPeriodResponse::request() const
+{
+    Q_D(const IncreaseStreamRetentionPeriodResponse);
+    return static_cast<const IncreaseStreamRetentionPeriodRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a Kinesis IncreaseStreamRetentionPeriod response.
+ *
+ * @param  response  Response to parse.
+ */
+void IncreaseStreamRetentionPeriodResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  IncreaseStreamRetentionPeriodResponsePrivate
+ *
+ * @brief  Private implementation for IncreaseStreamRetentionPeriodResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IncreaseStreamRetentionPeriodResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public IncreaseStreamRetentionPeriodResponse instance.
+ */
+IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodResponsePrivate(
+    IncreaseStreamRetentionPeriodQueueResponse * const q) : IncreaseStreamRetentionPeriodPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an Kinesis IncreaseStreamRetentionPeriodResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("IncreaseStreamRetentionPeriodResponse"));
+    /// @todo
+}

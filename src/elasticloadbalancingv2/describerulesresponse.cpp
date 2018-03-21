@@ -19,3 +19,85 @@
 
 #include "describerulesresponse.h"
 #include "describerulesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeRulesResponse
+ *
+ * @brief  Handles ElasticLoadBalancingv2 DescribeRules responses.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeRules
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRulesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : ElasticLoadBalancingv2Response(new DescribeRulesResponsePrivate(this), parent)
+{
+    setRequest(new DescribeRulesRequest(request));
+    setReply(reply);
+}
+
+const DescribeRulesRequest * DescribeRulesResponse::request() const
+{
+    Q_D(const DescribeRulesResponse);
+    return static_cast<const DescribeRulesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a ElasticLoadBalancingv2 DescribeRules response.
+ *
+ * @param  response  Response to parse.
+ */
+void DescribeRulesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRulesResponsePrivate
+ *
+ * @brief  Private implementation for DescribeRulesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRulesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DescribeRulesResponse instance.
+ */
+DescribeRulesResponsePrivate::DescribeRulesResponsePrivate(
+    DescribeRulesQueueResponse * const q) : DescribeRulesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an ElasticLoadBalancingv2 DescribeRulesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DescribeRulesResponsePrivate::DescribeRulesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DescribeRulesResponse"));
+    /// @todo
+}

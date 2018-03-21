@@ -19,3 +19,85 @@
 
 #include "startfleetresponse.h"
 #include "startfleetresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  StartFleetResponse
+ *
+ * @brief  Handles AppStream StartFleet responses.
+ *
+ * @see    AppStreamClient::startFleet
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartFleetResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : AppStreamResponse(new StartFleetResponsePrivate(this), parent)
+{
+    setRequest(new StartFleetRequest(request));
+    setReply(reply);
+}
+
+const StartFleetRequest * StartFleetResponse::request() const
+{
+    Q_D(const StartFleetResponse);
+    return static_cast<const StartFleetRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a AppStream StartFleet response.
+ *
+ * @param  response  Response to parse.
+ */
+void StartFleetResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  StartFleetResponsePrivate
+ *
+ * @brief  Private implementation for StartFleetResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartFleetResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public StartFleetResponse instance.
+ */
+StartFleetResponsePrivate::StartFleetResponsePrivate(
+    StartFleetQueueResponse * const q) : StartFleetPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an AppStream StartFleetResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void StartFleetResponsePrivate::StartFleetResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("StartFleetResponse"));
+    /// @todo
+}

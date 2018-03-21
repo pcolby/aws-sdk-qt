@@ -19,3 +19,85 @@
 
 #include "deletegithubaccounttokenresponse.h"
 #include "deletegithubaccounttokenresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  DeleteGitHubAccountTokenResponse
+ *
+ * @brief  Handles CodeDeploy DeleteGitHubAccountToken responses.
+ *
+ * @see    CodeDeployClient::deleteGitHubAccountToken
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGitHubAccountTokenResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CodeDeployResponse(new DeleteGitHubAccountTokenResponsePrivate(this), parent)
+{
+    setRequest(new DeleteGitHubAccountTokenRequest(request));
+    setReply(reply);
+}
+
+const DeleteGitHubAccountTokenRequest * DeleteGitHubAccountTokenResponse::request() const
+{
+    Q_D(const DeleteGitHubAccountTokenResponse);
+    return static_cast<const DeleteGitHubAccountTokenRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CodeDeploy DeleteGitHubAccountToken response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteGitHubAccountTokenResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGitHubAccountTokenResponsePrivate
+ *
+ * @brief  Private implementation for DeleteGitHubAccountTokenResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGitHubAccountTokenResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteGitHubAccountTokenResponse instance.
+ */
+DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponsePrivate(
+    DeleteGitHubAccountTokenQueueResponse * const q) : DeleteGitHubAccountTokenPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CodeDeploy DeleteGitHubAccountTokenResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteGitHubAccountTokenResponse"));
+    /// @todo
+}

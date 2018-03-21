@@ -19,3 +19,85 @@
 
 #include "getreservationcoverageresponse.h"
 #include "getreservationcoverageresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CostExplorer {
+
+/**
+ * @class  GetReservationCoverageResponse
+ *
+ * @brief  Handles CostExplorer GetReservationCoverage responses.
+ *
+ * @see    CostExplorerClient::getReservationCoverage
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetReservationCoverageResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CostExplorerResponse(new GetReservationCoverageResponsePrivate(this), parent)
+{
+    setRequest(new GetReservationCoverageRequest(request));
+    setReply(reply);
+}
+
+const GetReservationCoverageRequest * GetReservationCoverageResponse::request() const
+{
+    Q_D(const GetReservationCoverageResponse);
+    return static_cast<const GetReservationCoverageRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CostExplorer GetReservationCoverage response.
+ *
+ * @param  response  Response to parse.
+ */
+void GetReservationCoverageResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  GetReservationCoverageResponsePrivate
+ *
+ * @brief  Private implementation for GetReservationCoverageResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetReservationCoverageResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public GetReservationCoverageResponse instance.
+ */
+GetReservationCoverageResponsePrivate::GetReservationCoverageResponsePrivate(
+    GetReservationCoverageQueueResponse * const q) : GetReservationCoveragePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CostExplorer GetReservationCoverageResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void GetReservationCoverageResponsePrivate::GetReservationCoverageResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("GetReservationCoverageResponse"));
+    /// @todo
+}

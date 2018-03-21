@@ -19,3 +19,85 @@
 
 #include "admindeleteuserresponse.h"
 #include "admindeleteuserresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminDeleteUserResponse
+ *
+ * @brief  Handles CognitoIdentityProvider AdminDeleteUser responses.
+ *
+ * @see    CognitoIdentityProviderClient::adminDeleteUser
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminDeleteUserResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CognitoIdentityProviderResponse(new AdminDeleteUserResponsePrivate(this), parent)
+{
+    setRequest(new AdminDeleteUserRequest(request));
+    setReply(reply);
+}
+
+const AdminDeleteUserRequest * AdminDeleteUserResponse::request() const
+{
+    Q_D(const AdminDeleteUserResponse);
+    return static_cast<const AdminDeleteUserRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CognitoIdentityProvider AdminDeleteUser response.
+ *
+ * @param  response  Response to parse.
+ */
+void AdminDeleteUserResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminDeleteUserResponsePrivate
+ *
+ * @brief  Private implementation for AdminDeleteUserResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminDeleteUserResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public AdminDeleteUserResponse instance.
+ */
+AdminDeleteUserResponsePrivate::AdminDeleteUserResponsePrivate(
+    AdminDeleteUserQueueResponse * const q) : AdminDeleteUserPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CognitoIdentityProvider AdminDeleteUserResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void AdminDeleteUserResponsePrivate::AdminDeleteUserResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("AdminDeleteUserResponse"));
+    /// @todo
+}

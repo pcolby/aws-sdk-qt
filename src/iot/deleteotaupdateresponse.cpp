@@ -19,3 +19,85 @@
 
 #include "deleteotaupdateresponse.h"
 #include "deleteotaupdateresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteOTAUpdateResponse
+ *
+ * @brief  Handles IoT DeleteOTAUpdate responses.
+ *
+ * @see    IoTClient::deleteOTAUpdate
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOTAUpdateResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : IoTResponse(new DeleteOTAUpdateResponsePrivate(this), parent)
+{
+    setRequest(new DeleteOTAUpdateRequest(request));
+    setReply(reply);
+}
+
+const DeleteOTAUpdateRequest * DeleteOTAUpdateResponse::request() const
+{
+    Q_D(const DeleteOTAUpdateResponse);
+    return static_cast<const DeleteOTAUpdateRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a IoT DeleteOTAUpdate response.
+ *
+ * @param  response  Response to parse.
+ */
+void DeleteOTAUpdateResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOTAUpdateResponsePrivate
+ *
+ * @brief  Private implementation for DeleteOTAUpdateResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOTAUpdateResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public DeleteOTAUpdateResponse instance.
+ */
+DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponsePrivate(
+    DeleteOTAUpdateQueueResponse * const q) : DeleteOTAUpdatePrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an IoT DeleteOTAUpdateResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("DeleteOTAUpdateResponse"));
+    /// @todo
+}

@@ -19,3 +19,85 @@
 
 #include "listcloudfrontoriginaccessidentitiesresponse.h"
 #include "listcloudfrontoriginaccessidentitiesresponse_p.h"
+
+#include <QDebug>
+#include <QNetworkReply>
+#include <QXmlStreamReader>
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  ListCloudFrontOriginAccessIdentitiesResponse
+ *
+ * @brief  Handles CloudFront ListCloudFrontOriginAccessIdentities responses.
+ *
+ * @see    CloudFrontClient::listCloudFrontOriginAccessIdentities
+ */
+
+/**
+ * @brief  Constructs a new {OperationName}}Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCloudFrontOriginAccessIdentitiesResponse::{OperationName}}Response(
+        const {OperationName}}Request &request,
+        QNetworkReply * const reply,
+        QObject * const parent)
+    : CloudFrontResponse(new ListCloudFrontOriginAccessIdentitiesResponsePrivate(this), parent)
+{
+    setRequest(new ListCloudFrontOriginAccessIdentitiesRequest(request));
+    setReply(reply);
+}
+
+const ListCloudFrontOriginAccessIdentitiesRequest * ListCloudFrontOriginAccessIdentitiesResponse::request() const
+{
+    Q_D(const ListCloudFrontOriginAccessIdentitiesResponse);
+    return static_cast<const ListCloudFrontOriginAccessIdentitiesRequest *>(d->request);
+}
+
+/**
+ * @brief  Parse a CloudFront ListCloudFrontOriginAccessIdentities response.
+ *
+ * @param  response  Response to parse.
+ */
+void ListCloudFrontOriginAccessIdentitiesResponse::parseSuccess(QIODevice &response)
+{
+    Q_D(Response);
+    QXmlStreamReader xml(&response);
+    /// @todo
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCloudFrontOriginAccessIdentitiesResponsePrivate
+ *
+ * @brief  Private implementation for ListCloudFrontOriginAccessIdentitiesResponse.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesResponsePrivate object.
+ *
+ * @param  q  Pointer to this object's public ListCloudFrontOriginAccessIdentitiesResponse instance.
+ */
+ListCloudFrontOriginAccessIdentitiesResponsePrivate::ListCloudFrontOriginAccessIdentitiesResponsePrivate(
+    ListCloudFrontOriginAccessIdentitiesQueueResponse * const q) : ListCloudFrontOriginAccessIdentitiesPrivate(q)
+{
+
+}
+
+/**
+ * @brief  Parse an CloudFront ListCloudFrontOriginAccessIdentitiesResponse element.
+ *
+ * @param  xml  XML stream to parse.
+ */
+void ListCloudFrontOriginAccessIdentitiesResponsePrivate::ListCloudFrontOriginAccessIdentitiesResponse(QXmlStreamReader &xml)
+{
+    Q_ASSERT(xml.name() == QLatin1String("ListCloudFrontOriginAccessIdentitiesResponse"));
+    /// @todo
+}
