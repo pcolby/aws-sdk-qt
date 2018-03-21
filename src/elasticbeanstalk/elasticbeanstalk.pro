@@ -120,6 +120,10 @@ HEADERS += \
     describeplatformversionresponse_p.h \
     elasticbeanstalkclient.h \
     elasticbeanstalkclient_p.h \
+    elasticbeanstalkclientrequest.h \
+    elasticbeanstalkclientrequest_p.h \
+    elasticbeanstalkclientresponse.h \
+    elasticbeanstalkclientresponse_p.h \
     listavailablesolutionstacksresponse.h \
     listavailablesolutionstacksresponse_p.h \
     listplatformversionsrequest.h \
@@ -239,6 +243,8 @@ SOURCES += \
     describeplatformversionrequest.cpp \
     describeplatformversionresponse.cpp \
     elasticbeanstalkclient.cpp \
+    elasticbeanstalkclientrequest.cpp \
+    elasticbeanstalkclientresponse.cpp \
     listavailablesolutionstacksresponse.cpp \
     listplatformversionsrequest.cpp \
     listplatformversionsresponse.cpp \

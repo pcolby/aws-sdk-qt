@@ -68,6 +68,10 @@ HEADERS += \
     terminateworkspacesresponse_p.h \
     workspacesclient.h \
     workspacesclient_p.h \
+    workspacesclientrequest.h \
+    workspacesclientrequest_p.h \
+    workspacesclientresponse.h \
+    workspacesclientresponse_p.h \
 
 SOURCES += \
     createtagsrequest.cpp \
@@ -99,5 +103,7 @@ SOURCES += \
     terminateworkspacesrequest.cpp \
     terminateworkspacesresponse.cpp \
     workspacesclient.cpp \
+    workspacesclientrequest.cpp \
+    workspacesclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -120,6 +120,10 @@ HEADERS += \
     listtrainingjobsresponse_p.h \
     sagemakerclient.h \
     sagemakerclient_p.h \
+    sagemakerclientrequest.h \
+    sagemakerclientrequest_p.h \
+    sagemakerclientresponse.h \
+    sagemakerclientresponse_p.h \
     startnotebookinstancerequest.h \
     startnotebookinstancerequest_p.h \
     startnotebookinstanceresponse.h \
@@ -205,6 +209,8 @@ SOURCES += \
     listtrainingjobsrequest.cpp \
     listtrainingjobsresponse.cpp \
     sagemakerclient.cpp \
+    sagemakerclientrequest.cpp \
+    sagemakerclientresponse.cpp \
     startnotebookinstancerequest.cpp \
     startnotebookinstanceresponse.cpp \
     stopnotebookinstancerequest.cpp \

@@ -52,6 +52,10 @@ HEADERS += \
     selectresponse_p.h \
     simpledbclient.h \
     simpledbclient_p.h \
+    simpledbclientrequest.h \
+    simpledbclientrequest_p.h \
+    simpledbclientresponse.h \
+    simpledbclientresponse_p.h \
 
 SOURCES += \
     batchdeleteattributesrequest.cpp \
@@ -75,5 +79,7 @@ SOURCES += \
     selectrequest.cpp \
     selectresponse.cpp \
     simpledbclient.cpp \
+    simpledbclientrequest.cpp \
+    simpledbclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -72,6 +72,10 @@ HEADERS += \
     listjobsresponse_p.h \
     snowballclient.h \
     snowballclient_p.h \
+    snowballclientrequest.h \
+    snowballclientrequest_p.h \
+    snowballclientresponse.h \
+    snowballclientresponse_p.h \
     updateclusterrequest.h \
     updateclusterrequest_p.h \
     updateclusterresponse.h \
@@ -113,6 +117,8 @@ SOURCES += \
     listjobsrequest.cpp \
     listjobsresponse.cpp \
     snowballclient.cpp \
+    snowballclientrequest.cpp \
+    snowballclientresponse.cpp \
     updateclusterrequest.cpp \
     updateclusterresponse.cpp \
     updatejobrequest.cpp \

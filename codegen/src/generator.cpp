@@ -93,9 +93,13 @@ bool Generator::generate(const QString &serviceFileName,
         formatHtmlDocumentation(description.value(QLatin1String("documentation")).toString()));
 
     /// @todo Generate model classes.
+    context.push();
+    renderClassFiles(QSL("requestbase"),  context, projectDir, className + QSL("Request"));
+    renderClassFiles(QSL("responsebase"), context, projectDir, className + QSL("Response"));
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
         generateModelClasses(projectDir, classNamePrefix, operationName, description);
     }
+    context.pop();
 
     /// @todo Generate service client.
     context.push();

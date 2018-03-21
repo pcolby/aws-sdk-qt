@@ -16,10 +16,16 @@ HEADERS += \
     getentitlementsresponse_p.h \
     marketplaceentitlementserviceclient.h \
     marketplaceentitlementserviceclient_p.h \
+    marketplaceentitlementserviceclientrequest.h \
+    marketplaceentitlementserviceclientrequest_p.h \
+    marketplaceentitlementserviceclientresponse.h \
+    marketplaceentitlementserviceclientresponse_p.h \
 
 SOURCES += \
     getentitlementsrequest.cpp \
     getentitlementsresponse.cpp \
     marketplaceentitlementserviceclient.cpp \
+    marketplaceentitlementserviceclientrequest.cpp \
+    marketplaceentitlementserviceclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

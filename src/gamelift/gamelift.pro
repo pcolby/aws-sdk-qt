@@ -176,6 +176,10 @@ HEADERS += \
     describevpcpeeringconnectionsresponse_p.h \
     gameliftclient.h \
     gameliftclient_p.h \
+    gameliftclientrequest.h \
+    gameliftclientrequest_p.h \
+    gameliftclientresponse.h \
+    gameliftclientresponse_p.h \
     getgamesessionlogurlrequest.h \
     getgamesessionlogurlrequest_p.h \
     getgamesessionlogurlresponse.h \
@@ -357,6 +361,8 @@ SOURCES += \
     describevpcpeeringconnectionsrequest.cpp \
     describevpcpeeringconnectionsresponse.cpp \
     gameliftclient.cpp \
+    gameliftclientrequest.cpp \
+    gameliftclientresponse.cpp \
     getgamesessionlogurlrequest.cpp \
     getgamesessionlogurlresponse.cpp \
     getinstanceaccessrequest.cpp \

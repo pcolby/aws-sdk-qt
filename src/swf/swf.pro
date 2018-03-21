@@ -132,6 +132,10 @@ HEADERS += \
     startworkflowexecutionresponse_p.h \
     swfclient.h \
     swfclient_p.h \
+    swfclientrequest.h \
+    swfclientrequest_p.h \
+    swfclientresponse.h \
+    swfclientresponse_p.h \
     terminateworkflowexecutionrequest.h \
     terminateworkflowexecutionrequest_p.h \
     terminateworkflowexecutionresponse.h \
@@ -199,6 +203,8 @@ SOURCES += \
     startworkflowexecutionrequest.cpp \
     startworkflowexecutionresponse.cpp \
     swfclient.cpp \
+    swfclientrequest.cpp \
+    swfclientresponse.cpp \
     terminateworkflowexecutionrequest.cpp \
     terminateworkflowexecutionresponse.cpp \
 

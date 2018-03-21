@@ -304,6 +304,10 @@ HEADERS += \
     updatexssmatchsetresponse_p.h \
     wafregionalclient.h \
     wafregionalclient_p.h \
+    wafregionalclientrequest.h \
+    wafregionalclientrequest_p.h \
+    wafregionalclientresponse.h \
+    wafregionalclientresponse_p.h \
 
 SOURCES += \
     associatewebaclrequest.cpp \
@@ -453,5 +457,7 @@ SOURCES += \
     updatexssmatchsetrequest.cpp \
     updatexssmatchsetresponse.cpp \
     wafregionalclient.cpp \
+    wafregionalclientrequest.cpp \
+    wafregionalclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

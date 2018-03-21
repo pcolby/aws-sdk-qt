@@ -60,6 +60,10 @@ HEADERS += \
     listinputsresponse_p.h \
     medialiveclient.h \
     medialiveclient_p.h \
+    medialiveclientrequest.h \
+    medialiveclientrequest_p.h \
+    medialiveclientresponse.h \
+    medialiveclientresponse_p.h \
     startchannelrequest.h \
     startchannelrequest_p.h \
     startchannelresponse.h \
@@ -99,6 +103,8 @@ SOURCES += \
     listinputsrequest.cpp \
     listinputsresponse.cpp \
     medialiveclient.cpp \
+    medialiveclientrequest.cpp \
+    medialiveclientresponse.cpp \
     startchannelrequest.cpp \
     startchannelresponse.cpp \
     stopchannelrequest.cpp \

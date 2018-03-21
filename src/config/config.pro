@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     configserviceclient.h \
     configserviceclient_p.h \
+    configserviceclientrequest.h \
+    configserviceclientrequest_p.h \
+    configserviceclientresponse.h \
+    configserviceclientresponse_p.h \
     deleteconfigrulerequest.h \
     deleteconfigrulerequest_p.h \
     deleteconfigruleresponse.h \
@@ -121,6 +125,8 @@ HEADERS += \
 
 SOURCES += \
     configserviceclient.cpp \
+    configserviceclientrequest.cpp \
+    configserviceclientresponse.cpp \
     deleteconfigrulerequest.cpp \
     deleteconfigruleresponse.cpp \
     deleteconfigurationrecorderrequest.cpp \

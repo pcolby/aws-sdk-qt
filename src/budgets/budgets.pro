@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     budgetsclient.h \
     budgetsclient_p.h \
+    budgetsclientrequest.h \
+    budgetsclientrequest_p.h \
+    budgetsclientresponse.h \
+    budgetsclientresponse_p.h \
     createbudgetrequest.h \
     createbudgetrequest_p.h \
     createbudgetresponse.h \
@@ -67,6 +71,8 @@ HEADERS += \
 
 SOURCES += \
     budgetsclient.cpp \
+    budgetsclientrequest.cpp \
+    budgetsclientresponse.cpp \
     createbudgetrequest.cpp \
     createbudgetresponse.cpp \
     createnotificationrequest.cpp \

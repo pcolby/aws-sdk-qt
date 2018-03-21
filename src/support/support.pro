@@ -68,6 +68,10 @@ HEADERS += \
     resolvecaseresponse_p.h \
     supportclient.h \
     supportclient_p.h \
+    supportclientrequest.h \
+    supportclientrequest_p.h \
+    supportclientresponse.h \
+    supportclientresponse_p.h \
 
 SOURCES += \
     addattachmentstosetrequest.cpp \
@@ -99,5 +103,7 @@ SOURCES += \
     resolvecaserequest.cpp \
     resolvecaseresponse.cpp \
     supportclient.cpp \
+    supportclientrequest.cpp \
+    supportclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -784,6 +784,10 @@ HEADERS += \
     disassociatevpccidrblockresponse_p.h \
     ec2client.h \
     ec2client_p.h \
+    ec2clientrequest.h \
+    ec2clientrequest_p.h \
+    ec2clientresponse.h \
+    ec2clientresponse_p.h \
     enablevgwroutepropagationrequest.h \
     enablevgwroutepropagationrequest_p.h \
     enablevgwroutepropagationresponse.h \
@@ -1473,6 +1477,8 @@ SOURCES += \
     disassociatevpccidrblockrequest.cpp \
     disassociatevpccidrblockresponse.cpp \
     ec2client.cpp \
+    ec2clientrequest.cpp \
+    ec2clientresponse.cpp \
     enablevgwroutepropagationrequest.cpp \
     enablevgwroutepropagationresponse.cpp \
     enablevolumeiorequest.cpp \

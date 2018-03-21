@@ -216,6 +216,10 @@ HEADERS += \
     listvpcassociationauthorizationsresponse_p.h \
     route53client.h \
     route53client_p.h \
+    route53clientrequest.h \
+    route53clientrequest_p.h \
+    route53clientresponse.h \
+    route53clientresponse_p.h \
     testdnsanswerrequest.h \
     testdnsanswerrequest_p.h \
     testdnsanswerresponse.h \
@@ -341,6 +345,8 @@ SOURCES += \
     listvpcassociationauthorizationsrequest.cpp \
     listvpcassociationauthorizationsresponse.cpp \
     route53client.cpp \
+    route53clientrequest.cpp \
+    route53clientresponse.cpp \
     testdnsanswerrequest.cpp \
     testdnsanswerresponse.cpp \
     updatehealthcheckrequest.cpp \

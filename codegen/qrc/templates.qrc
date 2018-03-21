@@ -8,9 +8,15 @@
     <file>templates/request.cpp</file>
     <file>templates/request.h</file>
     <file>templates/request_p.h</file>
+    <file>templates/requestbase.cpp</file>
+    <file>templates/requestbase.h</file>
+    <file>templates/requestbase_p.h</file>
     <file>templates/response.cpp</file>
     <file>templates/response.h</file>
     <file>templates/response_p.h</file>
+    <file>templates/responsebase.cpp</file>
+    <file>templates/responsebase.h</file>
+    <file>templates/responsebase_p.h</file>
     <file>templates/service.pro</file>
     <file>templates/src.pro</file>
   </qresource>

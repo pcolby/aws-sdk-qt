@@ -76,6 +76,10 @@ HEADERS += \
     invokeresponse_p.h \
     lambdaclient.h \
     lambdaclient_p.h \
+    lambdaclientrequest.h \
+    lambdaclientrequest_p.h \
+    lambdaclientresponse.h \
+    lambdaclientresponse_p.h \
     listaliasesrequest.h \
     listaliasesrequest_p.h \
     listaliasesresponse.h \
@@ -167,6 +171,8 @@ SOURCES += \
     invokerequest.cpp \
     invokeresponse.cpp \
     lambdaclient.cpp \
+    lambdaclientrequest.cpp \
+    lambdaclientresponse.cpp \
     listaliasesrequest.cpp \
     listaliasesresponse.cpp \
     listeventsourcemappingsrequest.cpp \

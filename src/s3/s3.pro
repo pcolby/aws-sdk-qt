@@ -310,6 +310,10 @@ HEADERS += \
     restoreobjectresponse_p.h \
     s3client.h \
     s3client_p.h \
+    s3clientrequest.h \
+    s3clientrequest_p.h \
+    s3clientresponse.h \
+    s3clientresponse_p.h \
     uploadpartcopyrequest.h \
     uploadpartcopyrequest_p.h \
     uploadpartcopyresponse.h \
@@ -470,6 +474,8 @@ SOURCES += \
     restoreobjectrequest.cpp \
     restoreobjectresponse.cpp \
     s3client.cpp \
+    s3clientrequest.cpp \
+    s3clientresponse.cpp \
     uploadpartcopyrequest.cpp \
     uploadpartcopyresponse.cpp \
     uploadpartrequest.cpp \

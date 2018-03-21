@@ -24,6 +24,10 @@ HEADERS += \
     batchgetprojectsresponse_p.h \
     codebuildclient.h \
     codebuildclient_p.h \
+    codebuildclientrequest.h \
+    codebuildclientrequest_p.h \
+    codebuildclientresponse.h \
+    codebuildclientresponse_p.h \
     createprojectrequest.h \
     createprojectrequest_p.h \
     createprojectresponse.h \
@@ -81,6 +85,8 @@ SOURCES += \
     batchgetprojectsrequest.cpp \
     batchgetprojectsresponse.cpp \
     codebuildclient.cpp \
+    codebuildclientrequest.cpp \
+    codebuildclientresponse.cpp \
     createprojectrequest.cpp \
     createprojectresponse.cpp \
     createwebhookrequest.cpp \

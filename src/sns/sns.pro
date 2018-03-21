@@ -124,6 +124,10 @@ HEADERS += \
     settopicattributesresponse_p.h \
     snsclient.h \
     snsclient_p.h \
+    snsclientrequest.h \
+    snsclientrequest_p.h \
+    snsclientresponse.h \
+    snsclientresponse_p.h \
     subscriberequest.h \
     subscriberequest_p.h \
     subscriberesponse.h \
@@ -191,6 +195,8 @@ SOURCES += \
     settopicattributesrequest.cpp \
     settopicattributesresponse.cpp \
     snsclient.cpp \
+    snsclientrequest.cpp \
+    snsclientresponse.cpp \
     subscriberequest.cpp \
     subscriberesponse.cpp \
     unsubscriberequest.cpp \

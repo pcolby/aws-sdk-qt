@@ -204,6 +204,10 @@ HEADERS += \
     sendtemplatedemailresponse_p.h \
     sesclient.h \
     sesclient_p.h \
+    sesclientrequest.h \
+    sesclientrequest_p.h \
+    sesclientresponse.h \
+    sesclientresponse_p.h \
     setactivereceiptrulesetrequest.h \
     setactivereceiptrulesetrequest_p.h \
     setactivereceiptrulesetresponse.h \
@@ -383,6 +387,8 @@ SOURCES += \
     sendtemplatedemailrequest.cpp \
     sendtemplatedemailresponse.cpp \
     sesclient.cpp \
+    sesclientrequest.cpp \
+    sesclientresponse.cpp \
     setactivereceiptrulesetrequest.cpp \
     setactivereceiptrulesetresponse.cpp \
     setidentitydkimenabledrequest.cpp \

@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     cloud9client.h \
     cloud9client_p.h \
+    cloud9clientrequest.h \
+    cloud9clientrequest_p.h \
+    cloud9clientresponse.h \
+    cloud9clientresponse_p.h \
     createenvironmentec2request.h \
     createenvironmentec2request_p.h \
     createenvironmentec2response.h \
@@ -55,6 +59,8 @@ HEADERS += \
 
 SOURCES += \
     cloud9client.cpp \
+    cloud9clientrequest.cpp \
+    cloud9clientresponse.cpp \
     createenvironmentec2request.cpp \
     createenvironmentec2response.cpp \
     createenvironmentmembershiprequest.cpp \

@@ -44,6 +44,10 @@ HEADERS += \
     listprojectsresponse_p.h \
     mobileclient.h \
     mobileclient_p.h \
+    mobileclientrequest.h \
+    mobileclientrequest_p.h \
+    mobileclientresponse.h \
+    mobileclientresponse_p.h \
     updateprojectrequest.h \
     updateprojectrequest_p.h \
     updateprojectresponse.h \
@@ -67,6 +71,8 @@ SOURCES += \
     listprojectsrequest.cpp \
     listprojectsresponse.cpp \
     mobileclient.cpp \
+    mobileclientrequest.cpp \
+    mobileclientresponse.cpp \
     updateprojectrequest.cpp \
     updateprojectresponse.cpp \
 

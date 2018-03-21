@@ -28,6 +28,10 @@ HEADERS += \
     listlexiconsresponse_p.h \
     pollyclient.h \
     pollyclient_p.h \
+    pollyclientrequest.h \
+    pollyclientrequest_p.h \
+    pollyclientresponse.h \
+    pollyclientresponse_p.h \
     putlexiconrequest.h \
     putlexiconrequest_p.h \
     putlexiconresponse.h \
@@ -47,6 +51,8 @@ SOURCES += \
     listlexiconsrequest.cpp \
     listlexiconsresponse.cpp \
     pollyclient.cpp \
+    pollyclientrequest.cpp \
+    pollyclientresponse.cpp \
     putlexiconrequest.cpp \
     putlexiconresponse.cpp \
     synthesizespeechrequest.cpp \

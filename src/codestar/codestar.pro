@@ -16,6 +16,10 @@ HEADERS += \
     associateteammemberresponse_p.h \
     codestarclient.h \
     codestarclient_p.h \
+    codestarclientrequest.h \
+    codestarclientrequest_p.h \
+    codestarclientresponse.h \
+    codestarclientresponse_p.h \
     createprojectrequest.h \
     createprojectrequest_p.h \
     createprojectresponse.h \
@@ -89,6 +93,8 @@ SOURCES += \
     associateteammemberrequest.cpp \
     associateteammemberresponse.cpp \
     codestarclient.cpp \
+    codestarclientrequest.cpp \
+    codestarclientresponse.cpp \
     createprojectrequest.cpp \
     createprojectresponse.cpp \
     createuserprofilerequest.cpp \

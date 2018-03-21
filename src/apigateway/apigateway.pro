@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     apigatewayclient.h \
     apigatewayclient_p.h \
+    apigatewayclientrequest.h \
+    apigatewayclientrequest_p.h \
+    apigatewayclientresponse.h \
+    apigatewayclientresponse_p.h \
     createapikeyrequest.h \
     createapikeyrequest_p.h \
     createapikeyresponse.h \
@@ -495,6 +499,8 @@ HEADERS += \
 
 SOURCES += \
     apigatewayclient.cpp \
+    apigatewayclientrequest.cpp \
+    apigatewayclientresponse.cpp \
     createapikeyrequest.cpp \
     createapikeyresponse.cpp \
     createauthorizerrequest.cpp \

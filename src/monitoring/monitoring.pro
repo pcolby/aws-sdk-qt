@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     cloudwatchclient.h \
     cloudwatchclient_p.h \
+    cloudwatchclientrequest.h \
+    cloudwatchclientrequest_p.h \
+    cloudwatchclientresponse.h \
+    cloudwatchclientresponse_p.h \
     deletealarmsrequest.h \
     deletealarmsrequest_p.h \
     deletealarmsresponse.h \
@@ -75,6 +79,8 @@ HEADERS += \
 
 SOURCES += \
     cloudwatchclient.cpp \
+    cloudwatchclientrequest.cpp \
+    cloudwatchclientresponse.cpp \
     deletealarmsrequest.cpp \
     deletealarmsresponse.cpp \
     deletedashboardsrequest.cpp \

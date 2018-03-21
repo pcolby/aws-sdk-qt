@@ -204,6 +204,10 @@ HEADERS += \
     getsubscriptiondefinitionversionresponse_p.h \
     greengrassclient.h \
     greengrassclient_p.h \
+    greengrassclientrequest.h \
+    greengrassclientrequest_p.h \
+    greengrassclientresponse.h \
+    greengrassclientresponse_p.h \
     listcoredefinitionsrequest.h \
     listcoredefinitionsrequest_p.h \
     listcoredefinitionsresponse.h \
@@ -407,6 +411,8 @@ SOURCES += \
     getsubscriptiondefinitionversionrequest.cpp \
     getsubscriptiondefinitionversionresponse.cpp \
     greengrassclient.cpp \
+    greengrassclientrequest.cpp \
+    greengrassclientresponse.cpp \
     listcoredefinitionsrequest.cpp \
     listcoredefinitionsresponse.cpp \
     listcoredefinitionversionsrequest.cpp \

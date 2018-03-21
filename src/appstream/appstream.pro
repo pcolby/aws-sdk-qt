@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     appstreamclient.h \
     appstreamclient_p.h \
+    appstreamclientrequest.h \
+    appstreamclientrequest_p.h \
+    appstreamclientresponse.h \
+    appstreamclientresponse_p.h \
     associatefleetrequest.h \
     associatefleetrequest_p.h \
     associatefleetresponse.h \
@@ -147,6 +151,8 @@ HEADERS += \
 
 SOURCES += \
     appstreamclient.cpp \
+    appstreamclientrequest.cpp \
+    appstreamclientresponse.cpp \
     associatefleetrequest.cpp \
     associatefleetresponse.cpp \
     copyimagerequest.cpp \

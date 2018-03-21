@@ -24,6 +24,10 @@ HEADERS += \
     starttranscriptionjobresponse_p.h \
     transcribeserviceclient.h \
     transcribeserviceclient_p.h \
+    transcribeserviceclientrequest.h \
+    transcribeserviceclientrequest_p.h \
+    transcribeserviceclientresponse.h \
+    transcribeserviceclientresponse_p.h \
 
 SOURCES += \
     gettranscriptionjobrequest.cpp \
@@ -33,5 +37,7 @@ SOURCES += \
     starttranscriptionjobrequest.cpp \
     starttranscriptionjobresponse.cpp \
     transcribeserviceclient.cpp \
+    transcribeserviceclientrequest.cpp \
+    transcribeserviceclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

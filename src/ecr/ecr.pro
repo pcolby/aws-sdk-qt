@@ -52,6 +52,10 @@ HEADERS += \
     describerepositoriesresponse_p.h \
     ecrclient.h \
     ecrclient_p.h \
+    ecrclientrequest.h \
+    ecrclientrequest_p.h \
+    ecrclientresponse.h \
+    ecrclientresponse_p.h \
     getauthorizationtokenrequest.h \
     getauthorizationtokenrequest_p.h \
     getauthorizationtokenresponse.h \
@@ -123,6 +127,8 @@ SOURCES += \
     describerepositoriesrequest.cpp \
     describerepositoriesresponse.cpp \
     ecrclient.cpp \
+    ecrclientrequest.cpp \
+    ecrclientresponse.cpp \
     getauthorizationtokenrequest.cpp \
     getauthorizationtokenresponse.cpp \
     getdownloadurlforlayerrequest.cpp \

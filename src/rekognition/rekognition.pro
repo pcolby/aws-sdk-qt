@@ -104,6 +104,10 @@ HEADERS += \
     recognizecelebritiesresponse_p.h \
     rekognitionclient.h \
     rekognitionclient_p.h \
+    rekognitionclientrequest.h \
+    rekognitionclientrequest_p.h \
+    rekognitionclientresponse.h \
+    rekognitionclientresponse_p.h \
     searchfacesbyimagerequest.h \
     searchfacesbyimagerequest_p.h \
     searchfacesbyimageresponse.h \
@@ -193,6 +197,8 @@ SOURCES += \
     recognizecelebritiesrequest.cpp \
     recognizecelebritiesresponse.cpp \
     rekognitionclient.cpp \
+    rekognitionclientrequest.cpp \
+    rekognitionclientresponse.cpp \
     searchfacesbyimagerequest.cpp \
     searchfacesbyimageresponse.cpp \
     searchfacesrequest.cpp \

@@ -44,6 +44,10 @@ HEADERS += \
     listoriginendpointsresponse_p.h \
     mediapackageclient.h \
     mediapackageclient_p.h \
+    mediapackageclientrequest.h \
+    mediapackageclientrequest_p.h \
+    mediapackageclientresponse.h \
+    mediapackageclientresponse_p.h \
     rotatechannelcredentialsrequest.h \
     rotatechannelcredentialsrequest_p.h \
     rotatechannelcredentialsresponse.h \
@@ -75,6 +79,8 @@ SOURCES += \
     listoriginendpointsrequest.cpp \
     listoriginendpointsresponse.cpp \
     mediapackageclient.cpp \
+    mediapackageclientrequest.cpp \
+    mediapackageclientresponse.cpp \
     rotatechannelcredentialsrequest.cpp \
     rotatechannelcredentialsresponse.cpp \
     updatechannelrequest.cpp \

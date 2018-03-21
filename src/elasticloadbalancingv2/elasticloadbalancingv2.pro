@@ -100,6 +100,10 @@ HEADERS += \
     describetargethealthresponse_p.h \
     elasticloadbalancingv2client.h \
     elasticloadbalancingv2client_p.h \
+    elasticloadbalancingv2clientrequest.h \
+    elasticloadbalancingv2clientrequest_p.h \
+    elasticloadbalancingv2clientresponse.h \
+    elasticloadbalancingv2clientresponse_p.h \
     modifylistenerrequest.h \
     modifylistenerrequest_p.h \
     modifylistenerresponse.h \
@@ -195,6 +199,8 @@ SOURCES += \
     describetargethealthrequest.cpp \
     describetargethealthresponse.cpp \
     elasticloadbalancingv2client.cpp \
+    elasticloadbalancingv2clientrequest.cpp \
+    elasticloadbalancingv2clientresponse.cpp \
     modifylistenerrequest.cpp \
     modifylistenerresponse.cpp \
     modifyloadbalancerattributesrequest.cpp \

@@ -84,6 +84,10 @@ HEADERS += \
     setqueueattributesresponse_p.h \
     sqsclient.h \
     sqsclient_p.h \
+    sqsclientrequest.h \
+    sqsclientrequest_p.h \
+    sqsclientresponse.h \
+    sqsclientresponse_p.h \
     tagqueuerequest.h \
     tagqueuerequest_p.h \
     tagqueueresponse.h \
@@ -131,6 +135,8 @@ SOURCES += \
     setqueueattributesrequest.cpp \
     setqueueattributesresponse.cpp \
     sqsclient.cpp \
+    sqsclientrequest.cpp \
+    sqsclientresponse.cpp \
     tagqueuerequest.cpp \
     tagqueueresponse.cpp \
     untagqueuerequest.cpp \

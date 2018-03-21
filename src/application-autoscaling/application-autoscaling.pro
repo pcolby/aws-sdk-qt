@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     applicationautoscalingclient.h \
     applicationautoscalingclient_p.h \
+    applicationautoscalingclientrequest.h \
+    applicationautoscalingclientrequest_p.h \
+    applicationautoscalingclientresponse.h \
+    applicationautoscalingclientresponse_p.h \
     deletescalingpolicyrequest.h \
     deletescalingpolicyrequest_p.h \
     deletescalingpolicyresponse.h \
@@ -55,6 +59,8 @@ HEADERS += \
 
 SOURCES += \
     applicationautoscalingclient.cpp \
+    applicationautoscalingclientrequest.cpp \
+    applicationautoscalingclientresponse.cpp \
     deletescalingpolicyrequest.cpp \
     deletescalingpolicyresponse.cpp \
     deletescheduledactionrequest.cpp \

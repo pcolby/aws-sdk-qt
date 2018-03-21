@@ -204,6 +204,10 @@ HEADERS += \
     getsmschannelresponse_p.h \
     pinpointclient.h \
     pinpointclient_p.h \
+    pinpointclientrequest.h \
+    pinpointclientrequest_p.h \
+    pinpointclientresponse.h \
+    pinpointclientresponse_p.h \
     puteventstreamrequest.h \
     puteventstreamrequest_p.h \
     puteventstreamresponse.h \
@@ -371,6 +375,8 @@ SOURCES += \
     getsmschannelrequest.cpp \
     getsmschannelresponse.cpp \
     pinpointclient.cpp \
+    pinpointclientrequest.cpp \
+    pinpointclientresponse.cpp \
     puteventstreamrequest.cpp \
     puteventstreamresponse.cpp \
     sendmessagesrequest.cpp \

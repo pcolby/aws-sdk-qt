@@ -20,6 +20,10 @@ HEADERS += \
     cancelexporttaskresponse_p.h \
     cloudwatchlogsclient.h \
     cloudwatchlogsclient_p.h \
+    cloudwatchlogsclientrequest.h \
+    cloudwatchlogsclientrequest_p.h \
+    cloudwatchlogsclientresponse.h \
+    cloudwatchlogsclientresponse_p.h \
     createexporttaskrequest.h \
     createexporttaskrequest_p.h \
     createexporttaskresponse.h \
@@ -151,6 +155,8 @@ SOURCES += \
     cancelexporttaskrequest.cpp \
     cancelexporttaskresponse.cpp \
     cloudwatchlogsclient.cpp \
+    cloudwatchlogsclientrequest.cpp \
+    cloudwatchlogsclientresponse.cpp \
     createexporttaskrequest.cpp \
     createexporttaskresponse.cpp \
     createloggrouprequest.cpp \

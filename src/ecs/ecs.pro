@@ -64,6 +64,10 @@ HEADERS += \
     discoverpollendpointresponse_p.h \
     ecsclient.h \
     ecsclient_p.h \
+    ecsclientrequest.h \
+    ecsclientrequest_p.h \
+    ecsclientresponse.h \
+    ecsclientresponse_p.h \
     listattributesrequest.h \
     listattributesrequest_p.h \
     listattributesresponse.h \
@@ -165,6 +169,8 @@ SOURCES += \
     discoverpollendpointrequest.cpp \
     discoverpollendpointresponse.cpp \
     ecsclient.cpp \
+    ecsclientrequest.cpp \
+    ecsclientresponse.cpp \
     listattributesrequest.cpp \
     listattributesresponse.cpp \
     listclustersrequest.cpp \

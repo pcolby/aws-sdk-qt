@@ -20,6 +20,10 @@ HEADERS += \
     getpendingjobexecutionsresponse_p.h \
     iotjobsdataplaneclient.h \
     iotjobsdataplaneclient_p.h \
+    iotjobsdataplaneclientrequest.h \
+    iotjobsdataplaneclientrequest_p.h \
+    iotjobsdataplaneclientresponse.h \
+    iotjobsdataplaneclientresponse_p.h \
     startnextpendingjobexecutionrequest.h \
     startnextpendingjobexecutionrequest_p.h \
     startnextpendingjobexecutionresponse.h \
@@ -35,6 +39,8 @@ SOURCES += \
     getpendingjobexecutionsrequest.cpp \
     getpendingjobexecutionsresponse.cpp \
     iotjobsdataplaneclient.cpp \
+    iotjobsdataplaneclientrequest.cpp \
+    iotjobsdataplaneclientresponse.cpp \
     startnextpendingjobexecutionrequest.cpp \
     startnextpendingjobexecutionresponse.cpp \
     updatejobexecutionrequest.cpp \

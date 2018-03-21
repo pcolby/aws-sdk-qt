@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     alexaforbusinessclient.h \
     alexaforbusinessclient_p.h \
+    alexaforbusinessclientrequest.h \
+    alexaforbusinessclientrequest_p.h \
+    alexaforbusinessclientresponse.h \
+    alexaforbusinessclientresponse_p.h \
     associatedevicewithroomrequest.h \
     associatedevicewithroomrequest_p.h \
     associatedevicewithroomresponse.h \
@@ -159,6 +163,8 @@ HEADERS += \
 
 SOURCES += \
     alexaforbusinessclient.cpp \
+    alexaforbusinessclientrequest.cpp \
+    alexaforbusinessclientresponse.cpp \
     associatedevicewithroomrequest.cpp \
     associatedevicewithroomresponse.cpp \
     associateskillgroupwithroomrequest.cpp \

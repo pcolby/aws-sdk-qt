@@ -24,6 +24,10 @@ HEADERS += \
     createpipelineresponse_p.h \
     datapipelineclient.h \
     datapipelineclient_p.h \
+    datapipelineclientrequest.h \
+    datapipelineclientrequest_p.h \
+    datapipelineclientresponse.h \
+    datapipelineclientresponse_p.h \
     deactivatepipelinerequest.h \
     deactivatepipelinerequest_p.h \
     deactivatepipelineresponse.h \
@@ -97,6 +101,8 @@ SOURCES += \
     createpipelinerequest.cpp \
     createpipelineresponse.cpp \
     datapipelineclient.cpp \
+    datapipelineclientrequest.cpp \
+    datapipelineclientresponse.cpp \
     deactivatepipelinerequest.cpp \
     deactivatepipelineresponse.cpp \
     deletepipelinerequest.cpp \

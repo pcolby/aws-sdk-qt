@@ -76,6 +76,10 @@ HEADERS += \
     registerinstanceresponse_p.h \
     servicediscoveryclient.h \
     servicediscoveryclient_p.h \
+    servicediscoveryclientrequest.h \
+    servicediscoveryclientrequest_p.h \
+    servicediscoveryclientresponse.h \
+    servicediscoveryclientresponse_p.h \
     updateinstancecustomhealthstatusrequest.h \
     updateinstancecustomhealthstatusrequest_p.h \
     updateinstancecustomhealthstatusresponse.h \
@@ -119,6 +123,8 @@ SOURCES += \
     registerinstancerequest.cpp \
     registerinstanceresponse.cpp \
     servicediscoveryclient.cpp \
+    servicediscoveryclientrequest.cpp \
+    servicediscoveryclientresponse.cpp \
     updateinstancecustomhealthstatusrequest.cpp \
     updateinstancecustomhealthstatusresponse.cpp \
     updateservicerequest.cpp \

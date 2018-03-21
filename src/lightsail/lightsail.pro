@@ -256,6 +256,10 @@ HEADERS += \
     isvpcpeeredresponse_p.h \
     lightsailclient.h \
     lightsailclient_p.h \
+    lightsailclientrequest.h \
+    lightsailclientrequest_p.h \
+    lightsailclientresponse.h \
+    lightsailclientresponse_p.h \
     openinstancepublicportsrequest.h \
     openinstancepublicportsrequest_p.h \
     openinstancepublicportsresponse.h \
@@ -421,6 +425,8 @@ SOURCES += \
     isvpcpeeredrequest.cpp \
     isvpcpeeredresponse.cpp \
     lightsailclient.cpp \
+    lightsailclientrequest.cpp \
+    lightsailclientresponse.cpp \
     openinstancepublicportsrequest.cpp \
     openinstancepublicportsresponse.cpp \
     peervpcrequest.cpp \

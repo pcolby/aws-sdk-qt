@@ -16,6 +16,10 @@ HEADERS += \
     addtagsresponse_p.h \
     cloudtrailclient.h \
     cloudtrailclient_p.h \
+    cloudtrailclientrequest.h \
+    cloudtrailclientrequest_p.h \
+    cloudtrailclientresponse.h \
+    cloudtrailclientresponse_p.h \
     createtrailrequest.h \
     createtrailrequest_p.h \
     createtrailresponse.h \
@@ -73,6 +77,8 @@ SOURCES += \
     addtagsrequest.cpp \
     addtagsresponse.cpp \
     cloudtrailclient.cpp \
+    cloudtrailclientrequest.cpp \
+    cloudtrailclientresponse.cpp \
     createtrailrequest.cpp \
     createtrailresponse.cpp \
     deletetrailrequest.cpp \

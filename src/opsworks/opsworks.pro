@@ -200,6 +200,10 @@ HEADERS += \
     listtagsresponse_p.h \
     opsworksclient.h \
     opsworksclient_p.h \
+    opsworksclientrequest.h \
+    opsworksclientrequest_p.h \
+    opsworksclientresponse.h \
+    opsworksclientresponse_p.h \
     rebootinstancerequest.h \
     rebootinstancerequest_p.h \
     rebootinstanceresponse.h \
@@ -401,6 +405,8 @@ SOURCES += \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
     opsworksclient.cpp \
+    opsworksclientrequest.cpp \
+    opsworksclientresponse.cpp \
     rebootinstancerequest.cpp \
     rebootinstanceresponse.cpp \
     registerecsclusterrequest.cpp \

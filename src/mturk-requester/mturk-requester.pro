@@ -128,6 +128,10 @@ HEADERS += \
     listworkerswithqualificationtyperesponse_p.h \
     mturkclient.h \
     mturkclient_p.h \
+    mturkclientrequest.h \
+    mturkclientrequest_p.h \
+    mturkclientresponse.h \
+    mturkclientresponse_p.h \
     notifyworkersrequest.h \
     notifyworkersrequest_p.h \
     notifyworkersresponse.h \
@@ -229,6 +233,8 @@ SOURCES += \
     listworkerswithqualificationtyperequest.cpp \
     listworkerswithqualificationtyperesponse.cpp \
     mturkclient.cpp \
+    mturkclientrequest.cpp \
+    mturkclientresponse.cpp \
     notifyworkersrequest.cpp \
     notifyworkersresponse.cpp \
     rejectassignmentrequest.cpp \

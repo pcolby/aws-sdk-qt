@@ -28,6 +28,10 @@ HEADERS += \
     getdataendpointresponse_p.h \
     kinesisvideoclient.h \
     kinesisvideoclient_p.h \
+    kinesisvideoclientrequest.h \
+    kinesisvideoclientrequest_p.h \
+    kinesisvideoclientresponse.h \
+    kinesisvideoclientresponse_p.h \
     liststreamsrequest.h \
     liststreamsrequest_p.h \
     liststreamsresponse.h \
@@ -63,6 +67,8 @@ SOURCES += \
     getdataendpointrequest.cpp \
     getdataendpointresponse.cpp \
     kinesisvideoclient.cpp \
+    kinesisvideoclientrequest.cpp \
+    kinesisvideoclientresponse.cpp \
     liststreamsrequest.cpp \
     liststreamsresponse.cpp \
     listtagsforstreamrequest.cpp \

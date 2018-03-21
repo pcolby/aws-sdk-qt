@@ -60,6 +60,10 @@ HEADERS += \
     increasestreamretentionperiodresponse_p.h \
     kinesisclient.h \
     kinesisclient_p.h \
+    kinesisclientrequest.h \
+    kinesisclientrequest_p.h \
+    kinesisclientresponse.h \
+    kinesisclientresponse_p.h \
     listshardsrequest.h \
     listshardsrequest_p.h \
     listshardsresponse.h \
@@ -131,6 +135,8 @@ SOURCES += \
     increasestreamretentionperiodrequest.cpp \
     increasestreamretentionperiodresponse.cpp \
     kinesisclient.cpp \
+    kinesisclientrequest.cpp \
+    kinesisclientresponse.cpp \
     listshardsrequest.cpp \
     listshardsresponse.cpp \
     liststreamsrequest.cpp \

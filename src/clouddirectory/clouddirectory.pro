@@ -44,6 +44,10 @@ HEADERS += \
     batchwriteresponse_p.h \
     clouddirectoryclient.h \
     clouddirectoryclient_p.h \
+    clouddirectoryclientrequest.h \
+    clouddirectoryclientrequest_p.h \
+    clouddirectoryclientresponse.h \
+    clouddirectoryclientresponse_p.h \
     createdirectoryrequest.h \
     createdirectoryrequest_p.h \
     createdirectoryresponse.h \
@@ -279,6 +283,8 @@ SOURCES += \
     batchwriterequest.cpp \
     batchwriteresponse.cpp \
     clouddirectoryclient.cpp \
+    clouddirectoryclientrequest.cpp \
+    clouddirectoryclientresponse.cpp \
     createdirectoryrequest.cpp \
     createdirectoryresponse.cpp \
     createfacetrequest.cpp \

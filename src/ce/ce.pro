@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     costexplorerclient.h \
     costexplorerclient_p.h \
+    costexplorerclientrequest.h \
+    costexplorerclientrequest_p.h \
+    costexplorerclientresponse.h \
+    costexplorerclientresponse_p.h \
     getcostandusagerequest.h \
     getcostandusagerequest_p.h \
     getcostandusageresponse.h \
@@ -35,6 +39,8 @@ HEADERS += \
 
 SOURCES += \
     costexplorerclient.cpp \
+    costexplorerclientrequest.cpp \
+    costexplorerclientresponse.cpp \
     getcostandusagerequest.cpp \
     getcostandusageresponse.cpp \
     getdimensionvaluesrequest.cpp \

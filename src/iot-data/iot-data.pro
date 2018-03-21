@@ -20,6 +20,10 @@ HEADERS += \
     getthingshadowresponse_p.h \
     iotdataplaneclient.h \
     iotdataplaneclient_p.h \
+    iotdataplaneclientrequest.h \
+    iotdataplaneclientrequest_p.h \
+    iotdataplaneclientresponse.h \
+    iotdataplaneclientresponse_p.h \
     publishrequest.h \
     publishrequest_p.h \
     publishresponse.h \
@@ -35,6 +39,8 @@ SOURCES += \
     getthingshadowrequest.cpp \
     getthingshadowresponse.cpp \
     iotdataplaneclient.cpp \
+    iotdataplaneclientrequest.cpp \
+    iotdataplaneclientresponse.cpp \
     publishrequest.cpp \
     publishresponse.cpp \
     updatethingshadowrequest.cpp \

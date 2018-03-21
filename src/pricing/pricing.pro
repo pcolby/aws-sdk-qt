@@ -24,6 +24,10 @@ HEADERS += \
     getproductsresponse_p.h \
     pricingclient.h \
     pricingclient_p.h \
+    pricingclientrequest.h \
+    pricingclientrequest_p.h \
+    pricingclientresponse.h \
+    pricingclientresponse_p.h \
 
 SOURCES += \
     describeservicesrequest.cpp \
@@ -33,5 +37,7 @@ SOURCES += \
     getproductsrequest.cpp \
     getproductsresponse.cpp \
     pricingclient.cpp \
+    pricingclientrequest.cpp \
+    pricingclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -56,6 +56,10 @@ HEADERS += \
     deleteuploadresponse_p.h \
     devicefarmclient.h \
     devicefarmclient_p.h \
+    devicefarmclientrequest.h \
+    devicefarmclientrequest_p.h \
+    devicefarmclientresponse.h \
+    devicefarmclientresponse_p.h \
     getaccountsettingsrequest.h \
     getaccountsettingsrequest_p.h \
     getaccountsettingsresponse.h \
@@ -233,6 +237,8 @@ SOURCES += \
     deleteuploadrequest.cpp \
     deleteuploadresponse.cpp \
     devicefarmclient.cpp \
+    devicefarmclientrequest.cpp \
+    devicefarmclientresponse.cpp \
     getaccountsettingsrequest.cpp \
     getaccountsettingsresponse.cpp \
     getdevicepoolcompatibilityrequest.cpp \

@@ -84,6 +84,10 @@ HEADERS += \
     retrievedomainauthcoderesponse_p.h \
     route53domainsclient.h \
     route53domainsclient_p.h \
+    route53domainsclientrequest.h \
+    route53domainsclientrequest_p.h \
+    route53domainsclientresponse.h \
+    route53domainsclientresponse_p.h \
     transferdomainrequest.h \
     transferdomainrequest_p.h \
     transferdomainresponse.h \
@@ -147,6 +151,8 @@ SOURCES += \
     retrievedomainauthcoderequest.cpp \
     retrievedomainauthcoderesponse.cpp \
     route53domainsclient.cpp \
+    route53domainsclientrequest.cpp \
+    route53domainsclientresponse.cpp \
     transferdomainrequest.cpp \
     transferdomainresponse.cpp \
     updatedomaincontactprivacyrequest.cpp \

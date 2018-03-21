@@ -36,6 +36,10 @@ HEADERS += \
     createreplicationtaskresponse_p.h \
     databasemigrationserviceclient.h \
     databasemigrationserviceclient_p.h \
+    databasemigrationserviceclientrequest.h \
+    databasemigrationserviceclientrequest_p.h \
+    databasemigrationserviceclientresponse.h \
+    databasemigrationserviceclientresponse_p.h \
     deletecertificaterequest.h \
     deletecertificaterequest_p.h \
     deletecertificateresponse.h \
@@ -203,6 +207,8 @@ SOURCES += \
     createreplicationtaskrequest.cpp \
     createreplicationtaskresponse.cpp \
     databasemigrationserviceclient.cpp \
+    databasemigrationserviceclientrequest.cpp \
+    databasemigrationserviceclientresponse.cpp \
     deletecertificaterequest.cpp \
     deletecertificateresponse.cpp \
     deleteendpointrequest.cpp \

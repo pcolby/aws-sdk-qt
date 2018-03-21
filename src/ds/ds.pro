@@ -100,6 +100,10 @@ HEADERS += \
     describetrustsresponse_p.h \
     directoryserviceclient.h \
     directoryserviceclient_p.h \
+    directoryserviceclientrequest.h \
+    directoryserviceclientrequest_p.h \
+    directoryserviceclientresponse.h \
+    directoryserviceclientresponse_p.h \
     disableradiusrequest.h \
     disableradiusrequest_p.h \
     disableradiusresponse.h \
@@ -219,6 +223,8 @@ SOURCES += \
     describetrustsrequest.cpp \
     describetrustsresponse.cpp \
     directoryserviceclient.cpp \
+    directoryserviceclientrequest.cpp \
+    directoryserviceclientresponse.cpp \
     disableradiusrequest.cpp \
     disableradiusresponse.cpp \
     disablessorequest.cpp \

@@ -16,6 +16,10 @@ HEADERS += \
     cancelupdatestackresponse_p.h \
     cloudformationclient.h \
     cloudformationclient_p.h \
+    cloudformationclientrequest.h \
+    cloudformationclientrequest_p.h \
+    cloudformationclientresponse.h \
+    cloudformationclientresponse_p.h \
     continueupdaterollbackrequest.h \
     continueupdaterollbackrequest_p.h \
     continueupdaterollbackresponse.h \
@@ -181,6 +185,8 @@ SOURCES += \
     cancelupdatestackrequest.cpp \
     cancelupdatestackresponse.cpp \
     cloudformationclient.cpp \
+    cloudformationclientrequest.cpp \
+    cloudformationclientresponse.cpp \
     continueupdaterollbackrequest.cpp \
     continueupdaterollbackresponse.cpp \
     createchangesetrequest.cpp \

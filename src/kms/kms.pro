@@ -92,6 +92,10 @@ HEADERS += \
     importkeymaterialresponse_p.h \
     kmsclient.h \
     kmsclient_p.h \
+    kmsclientrequest.h \
+    kmsclientrequest_p.h \
+    kmsclientresponse.h \
+    kmsclientresponse_p.h \
     listaliasesrequest.h \
     listaliasesrequest_p.h \
     listaliasesresponse.h \
@@ -195,6 +199,8 @@ SOURCES += \
     importkeymaterialrequest.cpp \
     importkeymaterialresponse.cpp \
     kmsclient.cpp \
+    kmsclientrequest.cpp \
+    kmsclientresponse.cpp \
     listaliasesrequest.cpp \
     listaliasesresponse.cpp \
     listgrantsrequest.cpp \

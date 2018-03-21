@@ -240,6 +240,10 @@ HEADERS += \
     rebootclusterresponse_p.h \
     redshiftclient.h \
     redshiftclient_p.h \
+    redshiftclientrequest.h \
+    redshiftclientrequest_p.h \
+    redshiftclientresponse.h \
+    redshiftclientresponse_p.h \
     resetclusterparametergrouprequest.h \
     resetclusterparametergrouprequest_p.h \
     resetclusterparametergroupresponse.h \
@@ -381,6 +385,8 @@ SOURCES += \
     rebootclusterrequest.cpp \
     rebootclusterresponse.cpp \
     redshiftclient.cpp \
+    redshiftclientrequest.cpp \
+    redshiftclientresponse.cpp \
     resetclusterparametergrouprequest.cpp \
     resetclusterparametergroupresponse.cpp \
     restorefromclustersnapshotrequest.cpp \

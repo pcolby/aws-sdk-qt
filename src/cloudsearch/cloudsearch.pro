@@ -16,6 +16,10 @@ HEADERS += \
     buildsuggestersresponse_p.h \
     cloudsearchclient.h \
     cloudsearchclient_p.h \
+    cloudsearchclientrequest.h \
+    cloudsearchclientrequest_p.h \
+    cloudsearchclientresponse.h \
+    cloudsearchclientresponse_p.h \
     createdomainrequest.h \
     createdomainrequest_p.h \
     createdomainresponse.h \
@@ -111,6 +115,8 @@ SOURCES += \
     buildsuggestersrequest.cpp \
     buildsuggestersresponse.cpp \
     cloudsearchclient.cpp \
+    cloudsearchclientrequest.cpp \
+    cloudsearchclientresponse.cpp \
     createdomainrequest.cpp \
     createdomainresponse.cpp \
     defineanalysisschemerequest.cpp \

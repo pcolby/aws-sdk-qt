@@ -36,6 +36,10 @@ HEADERS += \
     puttracesegmentsresponse_p.h \
     xrayclient.h \
     xrayclient_p.h \
+    xrayclientrequest.h \
+    xrayclientrequest_p.h \
+    xrayclientresponse.h \
+    xrayclientresponse_p.h \
 
 SOURCES += \
     batchgettracesrequest.cpp \
@@ -51,5 +55,7 @@ SOURCES += \
     puttracesegmentsrequest.cpp \
     puttracesegmentsresponse.cpp \
     xrayclient.cpp \
+    xrayclientrequest.cpp \
+    xrayclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

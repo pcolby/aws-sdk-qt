@@ -40,6 +40,10 @@ HEADERS += \
     getsessiontokenresponse_p.h \
     stsclient.h \
     stsclient_p.h \
+    stsclientrequest.h \
+    stsclientrequest_p.h \
+    stsclientresponse.h \
+    stsclientresponse_p.h \
 
 SOURCES += \
     assumerolerequest.cpp \
@@ -57,5 +61,7 @@ SOURCES += \
     getsessiontokenrequest.cpp \
     getsessiontokenresponse.cpp \
     stsclient.cpp \
+    stsclientrequest.cpp \
+    stsclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

@@ -56,6 +56,10 @@ HEADERS += \
     disassociatenoderesponse_p.h \
     opsworkscmclient.h \
     opsworkscmclient_p.h \
+    opsworkscmclientrequest.h \
+    opsworkscmclientrequest_p.h \
+    opsworkscmclientresponse.h \
+    opsworkscmclientresponse_p.h \
     restoreserverrequest.h \
     restoreserverrequest_p.h \
     restoreserverresponse.h \
@@ -97,6 +101,8 @@ SOURCES += \
     disassociatenoderequest.cpp \
     disassociatenoderesponse.cpp \
     opsworkscmclient.cpp \
+    opsworkscmclientrequest.cpp \
+    opsworkscmclientresponse.cpp \
     restoreserverrequest.cpp \
     restoreserverresponse.cpp \
     startmaintenancerequest.cpp \

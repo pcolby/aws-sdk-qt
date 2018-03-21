@@ -104,6 +104,10 @@ HEADERS += \
     getmlmodelresponse_p.h \
     machinelearningclient.h \
     machinelearningclient_p.h \
+    machinelearningclientrequest.h \
+    machinelearningclientrequest_p.h \
+    machinelearningclientresponse.h \
+    machinelearningclientresponse_p.h \
     predictrequest.h \
     predictrequest_p.h \
     predictresponse.h \
@@ -173,6 +177,8 @@ SOURCES += \
     getmlmodelrequest.cpp \
     getmlmodelresponse.cpp \
     machinelearningclient.cpp \
+    machinelearningclientrequest.cpp \
+    machinelearningclientresponse.cpp \
     predictrequest.cpp \
     predictresponse.cpp \
     updatebatchpredictionrequest.cpp \

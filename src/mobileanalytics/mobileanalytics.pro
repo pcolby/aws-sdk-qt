@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     mobileanalyticsclient.h \
     mobileanalyticsclient_p.h \
+    mobileanalyticsclientrequest.h \
+    mobileanalyticsclientrequest_p.h \
+    mobileanalyticsclientresponse.h \
+    mobileanalyticsclientresponse_p.h \
     puteventsrequest.h \
     puteventsrequest_p.h \
     puteventsresponse.h \
@@ -19,6 +23,8 @@ HEADERS += \
 
 SOURCES += \
     mobileanalyticsclient.cpp \
+    mobileanalyticsclientrequest.cpp \
+    mobileanalyticsclientresponse.cpp \
     puteventsrequest.cpp \
     puteventsresponse.cpp \
 

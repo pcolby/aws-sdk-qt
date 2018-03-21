@@ -36,6 +36,10 @@ HEADERS += \
     describeeventtypesresponse_p.h \
     healthclient.h \
     healthclient_p.h \
+    healthclientrequest.h \
+    healthclientrequest_p.h \
+    healthclientresponse.h \
+    healthclientresponse_p.h \
 
 SOURCES += \
     describeaffectedentitiesrequest.cpp \
@@ -51,5 +55,7 @@ SOURCES += \
     describeeventtypesrequest.cpp \
     describeeventtypesresponse.cpp \
     healthclient.cpp \
+    healthclientrequest.cpp \
+    healthclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

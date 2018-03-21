@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     applicationdiscoveryserviceclient.h \
     applicationdiscoveryserviceclient_p.h \
+    applicationdiscoveryserviceclientrequest.h \
+    applicationdiscoveryserviceclientrequest_p.h \
+    applicationdiscoveryserviceclientresponse.h \
+    applicationdiscoveryserviceclientresponse_p.h \
     associateconfigurationitemstoapplicationrequest.h \
     associateconfigurationitemstoapplicationrequest_p.h \
     associateconfigurationitemstoapplicationresponse.h \
@@ -89,6 +93,8 @@ HEADERS += \
 
 SOURCES += \
     applicationdiscoveryserviceclient.cpp \
+    applicationdiscoveryserviceclientrequest.cpp \
+    applicationdiscoveryserviceclientresponse.cpp \
     associateconfigurationitemstoapplicationrequest.cpp \
     associateconfigurationitemstoapplicationresponse.cpp \
     createapplicationrequest.cpp \

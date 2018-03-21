@@ -162,6 +162,10 @@ HEADERS += \
     moveaccountresponse_p.h \
     organizationsclient.h \
     organizationsclient_p.h \
+    organizationsclientrequest.h \
+    organizationsclientrequest_p.h \
+    organizationsclientresponse.h \
+    organizationsclientresponse_p.h \
     removeaccountfromorganizationrequest.h \
     removeaccountfromorganizationrequest_p.h \
     removeaccountfromorganizationresponse.h \
@@ -252,6 +256,8 @@ SOURCES += \
     moveaccountrequest.cpp \
     moveaccountresponse.cpp \
     organizationsclient.cpp \
+    organizationsclientrequest.cpp \
+    organizationsclientresponse.cpp \
     removeaccountfromorganizationrequest.cpp \
     removeaccountfromorganizationresponse.cpp \
     updateorganizationalunitrequest.cpp \

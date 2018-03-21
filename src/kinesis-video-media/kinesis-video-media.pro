@@ -16,10 +16,16 @@ HEADERS += \
     getmediaresponse_p.h \
     kinesisvideomediaclient.h \
     kinesisvideomediaclient_p.h \
+    kinesisvideomediaclientrequest.h \
+    kinesisvideomediaclientrequest_p.h \
+    kinesisvideomediaclientresponse.h \
+    kinesisvideomediaclientresponse_p.h \
 
 SOURCES += \
     getmediarequest.cpp \
     getmediaresponse.cpp \
     kinesisvideomediaclient.cpp \
+    kinesisvideomediaclientrequest.cpp \
+    kinesisvideomediaclientresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

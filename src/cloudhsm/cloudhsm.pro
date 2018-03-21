@@ -16,6 +16,10 @@ HEADERS += \
     addtagstoresourceresponse_p.h \
     cloudhsmclient.h \
     cloudhsmclient_p.h \
+    cloudhsmclientrequest.h \
+    cloudhsmclientrequest_p.h \
+    cloudhsmclientresponse.h \
+    cloudhsmclientresponse_p.h \
     createhapgrequest.h \
     createhapgrequest_p.h \
     createhapgresponse.h \
@@ -97,6 +101,8 @@ SOURCES += \
     addtagstoresourcerequest.cpp \
     addtagstoresourceresponse.cpp \
     cloudhsmclient.cpp \
+    cloudhsmclientrequest.cpp \
+    cloudhsmclientresponse.cpp \
     createhapgrequest.cpp \
     createhapgresponse.cpp \
     createhsmrequest.cpp \

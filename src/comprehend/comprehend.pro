@@ -28,6 +28,10 @@ HEADERS += \
     batchdetectsentimentresponse_p.h \
     comprehendclient.h \
     comprehendclient_p.h \
+    comprehendclientrequest.h \
+    comprehendclientrequest_p.h \
+    comprehendclientresponse.h \
+    comprehendclientresponse_p.h \
     describetopicsdetectionjobrequest.h \
     describetopicsdetectionjobrequest_p.h \
     describetopicsdetectionjobresponse.h \
@@ -67,6 +71,8 @@ SOURCES += \
     batchdetectsentimentrequest.cpp \
     batchdetectsentimentresponse.cpp \
     comprehendclient.cpp \
+    comprehendclientrequest.cpp \
+    comprehendclientresponse.cpp \
     describetopicsdetectionjobrequest.cpp \
     describetopicsdetectionjobresponse.cpp \
     detectdominantlanguagerequest.cpp \

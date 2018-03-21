@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     costandusagereportserviceclient.h \
     costandusagereportserviceclient_p.h \
+    costandusagereportserviceclientrequest.h \
+    costandusagereportserviceclientrequest_p.h \
+    costandusagereportserviceclientresponse.h \
+    costandusagereportserviceclientresponse_p.h \
     deletereportdefinitionrequest.h \
     deletereportdefinitionrequest_p.h \
     deletereportdefinitionresponse.h \
@@ -27,6 +31,8 @@ HEADERS += \
 
 SOURCES += \
     costandusagereportserviceclient.cpp \
+    costandusagereportserviceclientrequest.cpp \
+    costandusagereportserviceclientresponse.cpp \
     deletereportdefinitionrequest.cpp \
     deletereportdefinitionresponse.cpp \
     describereportdefinitionsrequest.cpp \

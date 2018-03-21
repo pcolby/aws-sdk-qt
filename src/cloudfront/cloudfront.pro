@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     cloudfrontclient.h \
     cloudfrontclient_p.h \
+    cloudfrontclientrequest.h \
+    cloudfrontclientrequest_p.h \
+    cloudfrontclientresponse.h \
+    cloudfrontclientresponse_p.h \
     createcloudfrontoriginaccessidentityrequest.h \
     createcloudfrontoriginaccessidentityrequest_p.h \
     createcloudfrontoriginaccessidentityresponse.h \
@@ -127,6 +131,8 @@ HEADERS += \
 
 SOURCES += \
     cloudfrontclient.cpp \
+    cloudfrontclientrequest.cpp \
+    cloudfrontclientresponse.cpp \
     createcloudfrontoriginaccessidentityrequest.cpp \
     createcloudfrontoriginaccessidentityresponse.cpp \
     createdistributionrequest.cpp \

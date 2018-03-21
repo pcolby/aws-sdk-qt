@@ -16,6 +16,10 @@ HEADERS += \
     describestreamresponse_p.h \
     dynamodbstreamsclient.h \
     dynamodbstreamsclient_p.h \
+    dynamodbstreamsclientrequest.h \
+    dynamodbstreamsclientrequest_p.h \
+    dynamodbstreamsclientresponse.h \
+    dynamodbstreamsclientresponse_p.h \
     getrecordsrequest.h \
     getrecordsrequest_p.h \
     getrecordsresponse.h \
@@ -33,6 +37,8 @@ SOURCES += \
     describestreamrequest.cpp \
     describestreamresponse.cpp \
     dynamodbstreamsclient.cpp \
+    dynamodbstreamsclientrequest.cpp \
+    dynamodbstreamsclientresponse.cpp \
     getrecordsrequest.cpp \
     getrecordsresponse.cpp \
     getsharditeratorrequest.cpp \

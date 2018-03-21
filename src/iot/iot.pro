@@ -280,6 +280,10 @@ HEADERS += \
     getv2loggingoptionsresponse_p.h \
     iotclient.h \
     iotclient_p.h \
+    iotclientrequest.h \
+    iotclientrequest_p.h \
+    iotclientresponse.h \
+    iotclientresponse_p.h \
     listattachedpoliciesrequest.h \
     listattachedpoliciesrequest_p.h \
     listattachedpoliciesresponse.h \
@@ -641,6 +645,8 @@ SOURCES += \
     getv2loggingoptionsrequest.cpp \
     getv2loggingoptionsresponse.cpp \
     iotclient.cpp \
+    iotclientrequest.cpp \
+    iotclientresponse.cpp \
     listattachedpoliciesrequest.cpp \
     listattachedpoliciesresponse.cpp \
     listauthorizersrequest.cpp \

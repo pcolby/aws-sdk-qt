@@ -12,6 +12,10 @@ INCLUDEPATH = $$TOPDIR/src
 HEADERS += \
     appsyncclient.h \
     appsyncclient_p.h \
+    appsyncclientrequest.h \
+    appsyncclientrequest_p.h \
+    appsyncclientresponse.h \
+    appsyncclientresponse_p.h \
     createapikeyrequest.h \
     createapikeyrequest_p.h \
     createapikeyresponse.h \
@@ -123,6 +127,8 @@ HEADERS += \
 
 SOURCES += \
     appsyncclient.cpp \
+    appsyncclientrequest.cpp \
+    appsyncclientresponse.cpp \
     createapikeyrequest.cpp \
     createapikeyresponse.cpp \
     createdatasourcerequest.cpp \

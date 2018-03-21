@@ -76,6 +76,10 @@ HEADERS += \
     sendtasksuccessresponse_p.h \
     sfnclient.h \
     sfnclient_p.h \
+    sfnclientrequest.h \
+    sfnclientrequest_p.h \
+    sfnclientresponse.h \
+    sfnclientresponse_p.h \
     startexecutionrequest.h \
     startexecutionrequest_p.h \
     startexecutionresponse.h \
@@ -123,6 +127,8 @@ SOURCES += \
     sendtasksuccessrequest.cpp \
     sendtasksuccessresponse.cpp \
     sfnclient.cpp \
+    sfnclientrequest.cpp \
+    sfnclientresponse.cpp \
     startexecutionrequest.cpp \
     startexecutionresponse.cpp \
     stopexecutionrequest.cpp \
