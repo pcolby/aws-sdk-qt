@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchStopJobRunResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchStopJobRunResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchStopJobRunResponse::BatchStopJobRunResponse(
+        const BatchStopJobRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new BatchStopJobRunResponsePrivate(this), parent)

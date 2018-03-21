@@ -36,14 +36,14 @@ namespace ResourceGroups {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UntagResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UntagResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UntagResponse::UntagResponse(
+        const UntagRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ResourceGroupsResponse(new UntagResponsePrivate(this), parent)

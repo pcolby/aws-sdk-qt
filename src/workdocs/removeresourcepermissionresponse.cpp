@@ -36,14 +36,14 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveResourcePermissionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveResourcePermissionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveResourcePermissionResponse::RemoveResourcePermissionResponse(
+        const RemoveResourcePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkDocsResponse(new RemoveResourcePermissionResponsePrivate(this), parent)

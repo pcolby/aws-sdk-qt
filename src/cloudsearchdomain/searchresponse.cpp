@@ -36,14 +36,14 @@ namespace CloudSearchDomain {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SearchResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SearchResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SearchResponse::SearchResponse(
+        const SearchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudSearchDomainResponse(new SearchResponsePrivate(this), parent)

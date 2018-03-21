@@ -36,14 +36,14 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteApplicationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteApplicationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteApplicationResponse::DeleteApplicationResponse(
+        const DeleteApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticBeanstalkResponse(new DeleteApplicationResponsePrivate(this), parent)

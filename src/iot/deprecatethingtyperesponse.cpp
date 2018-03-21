@@ -36,14 +36,14 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeprecateThingTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeprecateThingTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeprecateThingTypeResponse::DeprecateThingTypeResponse(
+        const DeprecateThingTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTResponse(new DeprecateThingTypeResponsePrivate(this), parent)

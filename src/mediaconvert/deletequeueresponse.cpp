@@ -36,14 +36,14 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteQueueResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteQueueResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteQueueResponse::DeleteQueueResponse(
+        const DeleteQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaConvertResponse(new DeleteQueueResponsePrivate(this), parent)

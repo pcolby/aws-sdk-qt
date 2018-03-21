@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetParameterHistoryResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetParameterHistoryResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetParameterHistoryResponse::GetParameterHistoryResponse(
+        const GetParameterHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new GetParameterHistoryResponsePrivate(this), parent)

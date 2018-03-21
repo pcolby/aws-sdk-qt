@@ -36,14 +36,14 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteCommentResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteCommentResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteCommentResponse::DeleteCommentResponse(
+        const DeleteCommentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkDocsResponse(new DeleteCommentResponsePrivate(this), parent)

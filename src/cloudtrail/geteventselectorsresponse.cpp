@@ -36,14 +36,14 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetEventSelectorsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetEventSelectorsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetEventSelectorsResponse::GetEventSelectorsResponse(
+        const GetEventSelectorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudTrailResponse(new GetEventSelectorsResponsePrivate(this), parent)

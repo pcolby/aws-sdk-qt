@@ -36,14 +36,14 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisableAvailabilityZonesForLoadBalancerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisableAvailabilityZonesForLoadBalancerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisableAvailabilityZonesForLoadBalancerResponse::DisableAvailabilityZonesForLoadBalancerResponse(
+        const DisableAvailabilityZonesForLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticLoadBalancingResponse(new DisableAvailabilityZonesForLoadBalancerResponsePrivate(this), parent)

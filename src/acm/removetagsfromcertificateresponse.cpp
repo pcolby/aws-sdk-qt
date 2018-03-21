@@ -36,14 +36,14 @@ namespace ACM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveTagsFromCertificateResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveTagsFromCertificateResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveTagsFromCertificateResponse::RemoveTagsFromCertificateResponse(
+        const RemoveTagsFromCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ACMResponse(new RemoveTagsFromCertificateResponsePrivate(this), parent)

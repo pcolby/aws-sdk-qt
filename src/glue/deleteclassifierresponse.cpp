@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteClassifierResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteClassifierResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteClassifierResponse::DeleteClassifierResponse(
+        const DeleteClassifierRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new DeleteClassifierResponsePrivate(this), parent)

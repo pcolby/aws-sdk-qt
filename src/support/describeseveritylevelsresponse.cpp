@@ -36,14 +36,14 @@ namespace Support {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeSeverityLevelsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeSeverityLevelsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeSeverityLevelsResponse::DescribeSeverityLevelsResponse(
+        const DescribeSeverityLevelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SupportResponse(new DescribeSeverityLevelsResponsePrivate(this), parent)

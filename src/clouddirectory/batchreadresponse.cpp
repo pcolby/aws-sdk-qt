@@ -36,14 +36,14 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchReadResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchReadResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchReadResponse::BatchReadResponse(
+        const BatchReadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudDirectoryResponse(new BatchReadResponsePrivate(this), parent)

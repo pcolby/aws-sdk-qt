@@ -36,14 +36,14 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeregisterEcsClusterResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeregisterEcsClusterResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeregisterEcsClusterResponse::DeregisterEcsClusterResponse(
+        const DeregisterEcsClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DeregisterEcsClusterResponsePrivate(this), parent)

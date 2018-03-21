@@ -36,14 +36,14 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListLaunchPathsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListLaunchPathsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListLaunchPathsResponse::ListLaunchPathsResponse(
+        const ListLaunchPathsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceCatalogResponse(new ListLaunchPathsResponsePrivate(this), parent)

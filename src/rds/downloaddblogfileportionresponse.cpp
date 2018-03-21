@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DownloadDBLogFilePortionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DownloadDBLogFilePortionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
+        const DownloadDBLogFilePortionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new DownloadDBLogFilePortionResponsePrivate(this), parent)

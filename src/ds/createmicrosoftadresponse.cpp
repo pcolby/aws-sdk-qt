@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateMicrosoftADResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateMicrosoftADResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateMicrosoftADResponse::CreateMicrosoftADResponse(
+        const CreateMicrosoftADRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new CreateMicrosoftADResponsePrivate(this), parent)

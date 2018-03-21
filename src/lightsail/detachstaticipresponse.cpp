@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DetachStaticIpResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DetachStaticIpResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DetachStaticIpResponse::DetachStaticIpResponse(
+        const DetachStaticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new DetachStaticIpResponsePrivate(this), parent)

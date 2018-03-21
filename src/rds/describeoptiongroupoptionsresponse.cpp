@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeOptionGroupOptionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeOptionGroupOptionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeOptionGroupOptionsResponse::DescribeOptionGroupOptionsResponse(
+        const DescribeOptionGroupOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new DescribeOptionGroupOptionsResponsePrivate(this), parent)

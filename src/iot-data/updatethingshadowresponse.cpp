@@ -36,14 +36,14 @@ namespace IoTDataPlane {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateThingShadowResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateThingShadowResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateThingShadowResponse::UpdateThingShadowResponse(
+        const UpdateThingShadowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTDataPlaneResponse(new UpdateThingShadowResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreatePlatformEndpointResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreatePlatformEndpointResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
+        const CreatePlatformEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SNSResponse(new CreatePlatformEndpointResponsePrivate(this), parent)

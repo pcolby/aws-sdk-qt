@@ -36,14 +36,14 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetReusableDelegationSetLimitResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetReusableDelegationSetLimitResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetReusableDelegationSetLimitResponse::GetReusableDelegationSetLimitResponse(
+        const GetReusableDelegationSetLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53Response(new GetReusableDelegationSetLimitResponsePrivate(this), parent)

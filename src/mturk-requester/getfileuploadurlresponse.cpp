@@ -36,14 +36,14 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetFileUploadURLResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetFileUploadURLResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetFileUploadURLResponse::GetFileUploadURLResponse(
+        const GetFileUploadURLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MTurkResponse(new GetFileUploadURLResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeSpotInstanceRequestsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeSpotInstanceRequestsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeSpotInstanceRequestsResponse::DescribeSpotInstanceRequestsResponse(
+        const DescribeSpotInstanceRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new DescribeSpotInstanceRequestsResponsePrivate(this), parent)

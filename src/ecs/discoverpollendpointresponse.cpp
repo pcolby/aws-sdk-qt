@@ -36,14 +36,14 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DiscoverPollEndpointResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DiscoverPollEndpointResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DiscoverPollEndpointResponse::DiscoverPollEndpointResponse(
+        const DiscoverPollEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECSResponse(new DiscoverPollEndpointResponsePrivate(this), parent)

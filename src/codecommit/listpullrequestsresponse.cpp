@@ -36,14 +36,14 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListPullRequestsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListPullRequestsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListPullRequestsResponse::ListPullRequestsResponse(
+        const ListPullRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeCommitResponse(new ListPullRequestsResponsePrivate(this), parent)

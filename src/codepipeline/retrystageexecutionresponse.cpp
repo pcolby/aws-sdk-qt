@@ -36,14 +36,14 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RetryStageExecutionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RetryStageExecutionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RetryStageExecutionResponse::RetryStageExecutionResponse(
+        const RetryStageExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodePipelineResponse(new RetryStageExecutionResponsePrivate(this), parent)

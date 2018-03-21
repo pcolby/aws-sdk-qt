@@ -36,14 +36,14 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListActivitiesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListActivitiesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListActivitiesResponse::ListActivitiesResponse(
+        const ListActivitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SFNResponse(new ListActivitiesResponsePrivate(this), parent)

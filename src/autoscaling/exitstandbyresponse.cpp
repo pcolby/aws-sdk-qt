@@ -36,14 +36,14 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ExitStandbyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ExitStandbyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ExitStandbyResponse::ExitStandbyResponse(
+        const ExitStandbyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new ExitStandbyResponsePrivate(this), parent)

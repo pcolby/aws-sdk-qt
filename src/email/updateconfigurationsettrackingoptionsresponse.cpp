@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateConfigurationSetTrackingOptionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateConfigurationSetTrackingOptionsResponse::UpdateConfigurationSetTrackingOptionsResponse(
+        const UpdateConfigurationSetTrackingOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new UpdateConfigurationSetTrackingOptionsResponsePrivate(this), parent)

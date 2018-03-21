@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetTableVersionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetTableVersionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetTableVersionResponse::GetTableVersionResponse(
+        const GetTableVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new GetTableVersionResponsePrivate(this), parent)

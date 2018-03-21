@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveRoleFromDBClusterResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveRoleFromDBClusterResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveRoleFromDBClusterResponse::RemoveRoleFromDBClusterResponse(
+        const RemoveRoleFromDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new RemoveRoleFromDBClusterResponsePrivate(this), parent)

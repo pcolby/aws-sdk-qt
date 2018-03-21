@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchDeletePartitionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchDeletePartitionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchDeletePartitionResponse::BatchDeletePartitionResponse(
+        const BatchDeletePartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new BatchDeletePartitionResponsePrivate(this), parent)

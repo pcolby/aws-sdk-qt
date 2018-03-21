@@ -36,14 +36,14 @@ namespace CostExplorer {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetDimensionValuesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetDimensionValuesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetDimensionValuesResponse::GetDimensionValuesResponse(
+        const GetDimensionValuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CostExplorerResponse(new GetDimensionValuesResponsePrivate(this), parent)

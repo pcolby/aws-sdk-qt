@@ -36,14 +36,14 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchGetDeploymentsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchGetDeploymentsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchGetDeploymentsResponse::BatchGetDeploymentsResponse(
+        const BatchGetDeploymentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeDeployResponse(new BatchGetDeploymentsResponsePrivate(this), parent)

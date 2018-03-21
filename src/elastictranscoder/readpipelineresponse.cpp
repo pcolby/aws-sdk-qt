@@ -36,14 +36,14 @@ namespace ElasticTranscoder {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ReadPipelineResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ReadPipelineResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ReadPipelineResponse::ReadPipelineResponse(
+        const ReadPipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticTranscoderResponse(new ReadPipelineResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAssociatedFleetsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAssociatedFleetsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAssociatedFleetsResponse::ListAssociatedFleetsResponse(
+        const ListAssociatedFleetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppStreamResponse(new ListAssociatedFleetsResponsePrivate(this), parent)

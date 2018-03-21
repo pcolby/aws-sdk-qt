@@ -36,14 +36,14 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SubmitContainerStateChangeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SubmitContainerStateChangeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SubmitContainerStateChangeResponse::SubmitContainerStateChangeResponse(
+        const SubmitContainerStateChangeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECSResponse(new SubmitContainerStateChangeResponsePrivate(this), parent)

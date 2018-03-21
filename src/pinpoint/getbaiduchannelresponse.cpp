@@ -36,14 +36,14 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetBaiduChannelResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetBaiduChannelResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetBaiduChannelResponse::GetBaiduChannelResponse(
+        const GetBaiduChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PinpointResponse(new GetBaiduChannelResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteBucketInventoryConfigurationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteBucketInventoryConfigurationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteBucketInventoryConfigurationResponse::DeleteBucketInventoryConfigurationResponse(
+        const DeleteBucketInventoryConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : S3Response(new DeleteBucketInventoryConfigurationResponsePrivate(this), parent)

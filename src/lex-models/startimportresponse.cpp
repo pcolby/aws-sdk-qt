@@ -36,14 +36,14 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartImportResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartImportResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartImportResponse::StartImportResponse(
+        const StartImportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LexModelBuildingServiceResponse(new StartImportResponsePrivate(this), parent)

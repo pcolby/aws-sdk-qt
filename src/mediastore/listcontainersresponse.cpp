@@ -36,14 +36,14 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListContainersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListContainersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListContainersResponse::ListContainersResponse(
+        const ListContainersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaStoreResponse(new ListContainersResponsePrivate(this), parent)

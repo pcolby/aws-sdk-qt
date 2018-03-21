@@ -36,14 +36,14 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetAuthorizersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetAuthorizersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetAuthorizersResponse::GetAuthorizersResponse(
+        const GetAuthorizersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : APIGatewayResponse(new GetAuthorizersResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CompleteLifecycleActionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CompleteLifecycleActionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CompleteLifecycleActionResponse::CompleteLifecycleActionResponse(
+        const CompleteLifecycleActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new CompleteLifecycleActionResponsePrivate(this), parent)

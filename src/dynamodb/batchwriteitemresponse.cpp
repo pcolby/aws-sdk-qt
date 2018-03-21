@@ -36,14 +36,14 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchWriteItemResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchWriteItemResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchWriteItemResponse::BatchWriteItemResponse(
+        const BatchWriteItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DynamoDBResponse(new BatchWriteItemResponsePrivate(this), parent)

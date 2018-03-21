@@ -36,14 +36,14 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateDocumentationPartResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateDocumentationPartResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateDocumentationPartResponse::CreateDocumentationPartResponse(
+        const CreateDocumentationPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : APIGatewayResponse(new CreateDocumentationPartResponsePrivate(this), parent)

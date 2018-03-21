@@ -36,14 +36,14 @@ namespace XRay {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchGetTracesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchGetTracesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchGetTracesResponse::BatchGetTracesResponse(
+        const BatchGetTracesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : XRayResponse(new BatchGetTracesResponsePrivate(this), parent)

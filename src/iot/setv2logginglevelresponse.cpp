@@ -36,14 +36,14 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetV2LoggingLevelResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetV2LoggingLevelResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetV2LoggingLevelResponse::SetV2LoggingLevelResponse(
+        const SetV2LoggingLevelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTResponse(new SetV2LoggingLevelResponsePrivate(this), parent)

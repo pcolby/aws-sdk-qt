@@ -36,14 +36,14 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeScalingParametersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeScalingParametersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeScalingParametersResponse::DescribeScalingParametersResponse(
+        const DescribeScalingParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudSearchResponse(new DescribeScalingParametersResponsePrivate(this), parent)

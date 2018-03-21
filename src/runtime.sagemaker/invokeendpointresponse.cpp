@@ -36,14 +36,14 @@ namespace SageMakerRuntime {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new InvokeEndpointResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-InvokeEndpointResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+InvokeEndpointResponse::InvokeEndpointResponse(
+        const InvokeEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SageMakerRuntimeResponse(new InvokeEndpointResponsePrivate(this), parent)

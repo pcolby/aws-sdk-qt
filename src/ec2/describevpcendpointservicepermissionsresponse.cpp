@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeVpcEndpointServicePermissionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeVpcEndpointServicePermissionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeVpcEndpointServicePermissionsResponse::DescribeVpcEndpointServicePermissionsResponse(
+        const DescribeVpcEndpointServicePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new DescribeVpcEndpointServicePermissionsResponsePrivate(this), parent)

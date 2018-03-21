@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RestoreDBClusterFromS3Response object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RestoreDBClusterFromS3Response::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RestoreDBClusterFromS3Response::RestoreDBClusterFromS3Response(
+        const RestoreDBClusterFromS3Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new RestoreDBClusterFromS3ResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateUploadResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateUploadResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateUploadResponse::CreateUploadResponse(
+        const CreateUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DeviceFarmResponse(new CreateUploadResponsePrivate(this), parent)

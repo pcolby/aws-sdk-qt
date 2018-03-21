@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListSizeConstraintSetsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListSizeConstraintSetsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
+        const ListSizeConstraintSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new ListSizeConstraintSetsResponsePrivate(this), parent)

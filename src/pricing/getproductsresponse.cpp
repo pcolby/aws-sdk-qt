@@ -36,14 +36,14 @@ namespace Pricing {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetProductsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetProductsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetProductsResponse::GetProductsResponse(
+        const GetProductsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PricingResponse(new GetProductsResponsePrivate(this), parent)

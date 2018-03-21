@@ -36,14 +36,14 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListTopicsDetectionJobsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListTopicsDetectionJobsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListTopicsDetectionJobsResponse::ListTopicsDetectionJobsResponse(
+        const ListTopicsDetectionJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ComprehendResponse(new ListTopicsDetectionJobsResponsePrivate(this), parent)

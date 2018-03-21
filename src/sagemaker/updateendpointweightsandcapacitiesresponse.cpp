@@ -36,14 +36,14 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateEndpointWeightsAndCapacitiesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateEndpointWeightsAndCapacitiesResponse::UpdateEndpointWeightsAndCapacitiesResponse(
+        const UpdateEndpointWeightsAndCapacitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SageMakerResponse(new UpdateEndpointWeightsAndCapacitiesResponsePrivate(this), parent)

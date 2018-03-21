@@ -36,14 +36,14 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AssociateTagOptionWithResourceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AssociateTagOptionWithResourceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AssociateTagOptionWithResourceResponse::AssociateTagOptionWithResourceResponse(
+        const AssociateTagOptionWithResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceCatalogResponse(new AssociateTagOptionWithResourceResponsePrivate(this), parent)

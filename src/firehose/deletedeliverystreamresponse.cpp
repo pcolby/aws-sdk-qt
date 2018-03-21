@@ -36,14 +36,14 @@ namespace Firehose {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteDeliveryStreamResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteDeliveryStreamResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteDeliveryStreamResponse::DeleteDeliveryStreamResponse(
+        const DeleteDeliveryStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : FirehoseResponse(new DeleteDeliveryStreamResponsePrivate(this), parent)

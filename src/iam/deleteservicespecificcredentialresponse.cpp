@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteServiceSpecificCredentialResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteServiceSpecificCredentialResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteServiceSpecificCredentialResponse::DeleteServiceSpecificCredentialResponse(
+        const DeleteServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new DeleteServiceSpecificCredentialResponsePrivate(this), parent)

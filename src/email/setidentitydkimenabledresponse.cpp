@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetIdentityDkimEnabledResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetIdentityDkimEnabledResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetIdentityDkimEnabledResponse::SetIdentityDkimEnabledResponse(
+        const SetIdentityDkimEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new SetIdentityDkimEnabledResponsePrivate(this), parent)

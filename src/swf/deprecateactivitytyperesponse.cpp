@@ -36,14 +36,14 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeprecateActivityTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeprecateActivityTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeprecateActivityTypeResponse::DeprecateActivityTypeResponse(
+        const DeprecateActivityTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SWFResponse(new DeprecateActivityTypeResponsePrivate(this), parent)

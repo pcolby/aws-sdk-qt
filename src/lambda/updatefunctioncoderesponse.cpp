@@ -36,14 +36,14 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateFunctionCodeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateFunctionCodeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateFunctionCodeResponse::UpdateFunctionCodeResponse(
+        const UpdateFunctionCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LambdaResponse(new UpdateFunctionCodeResponsePrivate(this), parent)

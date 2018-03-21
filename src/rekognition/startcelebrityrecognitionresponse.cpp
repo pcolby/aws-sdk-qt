@@ -36,14 +36,14 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartCelebrityRecognitionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartCelebrityRecognitionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartCelebrityRecognitionResponse::StartCelebrityRecognitionResponse(
+        const StartCelebrityRecognitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RekognitionResponse(new StartCelebrityRecognitionResponsePrivate(this), parent)

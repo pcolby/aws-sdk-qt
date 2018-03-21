@@ -36,14 +36,14 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteLoadBalancerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteLoadBalancerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
+        const DeleteLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticLoadBalancingv2Response(new DeleteLoadBalancerResponsePrivate(this), parent)

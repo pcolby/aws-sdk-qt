@@ -36,14 +36,14 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetBotAliasResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetBotAliasResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetBotAliasResponse::GetBotAliasResponse(
+        const GetBotAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LexModelBuildingServiceResponse(new GetBotAliasResponsePrivate(this), parent)

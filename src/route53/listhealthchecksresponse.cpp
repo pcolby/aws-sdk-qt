@@ -36,14 +36,14 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListHealthChecksResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListHealthChecksResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListHealthChecksResponse::ListHealthChecksResponse(
+        const ListHealthChecksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53Response(new ListHealthChecksResponsePrivate(this), parent)

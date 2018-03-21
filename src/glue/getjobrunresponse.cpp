@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetJobRunResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetJobRunResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetJobRunResponse::GetJobRunResponse(
+        const GetJobRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new GetJobRunResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace MarketplaceEntitlementService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetEntitlementsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetEntitlementsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetEntitlementsResponse::GetEntitlementsResponse(
+        const GetEntitlementsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MarketplaceEntitlementServiceResponse(new GetEntitlementsResponsePrivate(this), parent)

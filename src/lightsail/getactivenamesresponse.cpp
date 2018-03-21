@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetActiveNamesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetActiveNamesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetActiveNamesResponse::GetActiveNamesResponse(
+        const GetActiveNamesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new GetActiveNamesResponsePrivate(this), parent)

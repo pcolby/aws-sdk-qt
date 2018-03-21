@@ -36,14 +36,14 @@ namespace ServerlessApplicationRepository {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateCloudFormationChangeSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateCloudFormationChangeSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateCloudFormationChangeSetResponse::CreateCloudFormationChangeSetResponse(
+        const CreateCloudFormationChangeSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServerlessApplicationRepositoryResponse(new CreateCloudFormationChangeSetResponsePrivate(this), parent)

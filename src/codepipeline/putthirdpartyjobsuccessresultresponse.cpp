@@ -36,14 +36,14 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutThirdPartyJobSuccessResultResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutThirdPartyJobSuccessResultResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutThirdPartyJobSuccessResultResponse::PutThirdPartyJobSuccessResultResponse(
+        const PutThirdPartyJobSuccessResultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodePipelineResponse(new PutThirdPartyJobSuccessResultResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteStreamResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteStreamResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteStreamResponse::DeleteStreamResponse(
+        const DeleteStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisResponse(new DeleteStreamResponsePrivate(this), parent)

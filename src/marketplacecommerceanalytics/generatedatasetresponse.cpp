@@ -36,14 +36,14 @@ namespace MarketplaceCommerceAnalytics {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GenerateDataSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GenerateDataSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GenerateDataSetResponse::GenerateDataSetResponse(
+        const GenerateDataSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MarketplaceCommerceAnalyticsResponse(new GenerateDataSetResponsePrivate(this), parent)

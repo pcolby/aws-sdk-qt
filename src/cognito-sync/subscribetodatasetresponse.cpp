@@ -36,14 +36,14 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SubscribeToDatasetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SubscribeToDatasetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SubscribeToDatasetResponse::SubscribeToDatasetResponse(
+        const SubscribeToDatasetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoSyncResponse(new SubscribeToDatasetResponsePrivate(this), parent)

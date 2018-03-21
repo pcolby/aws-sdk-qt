@@ -36,14 +36,14 @@ namespace Athena {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListNamedQueriesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListNamedQueriesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListNamedQueriesResponse::ListNamedQueriesResponse(
+        const ListNamedQueriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AthenaResponse(new ListNamedQueriesResponsePrivate(this), parent)

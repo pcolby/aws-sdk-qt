@@ -36,14 +36,14 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteLayerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteLayerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteLayerResponse::DeleteLayerResponse(
+        const DeleteLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DeleteLayerResponsePrivate(this), parent)

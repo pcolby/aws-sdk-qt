@@ -36,14 +36,14 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CheckDomainTransferabilityResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CheckDomainTransferabilityResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CheckDomainTransferabilityResponse::CheckDomainTransferabilityResponse(
+        const CheckDomainTransferabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53DomainsResponse(new CheckDomainTransferabilityResponsePrivate(this), parent)

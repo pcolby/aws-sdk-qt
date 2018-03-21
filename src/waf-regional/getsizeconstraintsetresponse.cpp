@@ -36,14 +36,14 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetSizeConstraintSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetSizeConstraintSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
+        const GetSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFRegionalResponse(new GetSizeConstraintSetResponsePrivate(this), parent)

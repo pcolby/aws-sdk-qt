@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetIdentityHeadersInNotificationsEnabledResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetIdentityHeadersInNotificationsEnabledResponse::SetIdentityHeadersInNotificationsEnabledResponse(
+        const SetIdentityHeadersInNotificationsEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new SetIdentityHeadersInNotificationsEnabledResponsePrivate(this), parent)

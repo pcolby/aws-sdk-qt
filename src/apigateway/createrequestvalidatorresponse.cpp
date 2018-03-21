@@ -36,14 +36,14 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateRequestValidatorResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateRequestValidatorResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateRequestValidatorResponse::CreateRequestValidatorResponse(
+        const CreateRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : APIGatewayResponse(new CreateRequestValidatorResponsePrivate(this), parent)

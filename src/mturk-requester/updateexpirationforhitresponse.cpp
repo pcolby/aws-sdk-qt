@@ -36,14 +36,14 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateExpirationForHITResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateExpirationForHITResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateExpirationForHITResponse::UpdateExpirationForHITResponse(
+        const UpdateExpirationForHITRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MTurkResponse(new UpdateExpirationForHITResponsePrivate(this), parent)

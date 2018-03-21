@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetIdentityMailFromDomainAttributesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetIdentityMailFromDomainAttributesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetIdentityMailFromDomainAttributesResponse::GetIdentityMailFromDomainAttributesResponse(
+        const GetIdentityMailFromDomainAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new GetIdentityMailFromDomainAttributesResponsePrivate(this), parent)

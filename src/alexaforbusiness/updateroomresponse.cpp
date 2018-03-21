@@ -36,14 +36,14 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateRoomResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateRoomResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateRoomResponse::UpdateRoomResponse(
+        const UpdateRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AlexaForBusinessResponse(new UpdateRoomResponsePrivate(this), parent)

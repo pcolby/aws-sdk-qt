@@ -36,14 +36,14 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteVirtualInterfaceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteVirtualInterfaceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteVirtualInterfaceResponse::DeleteVirtualInterfaceResponse(
+        const DeleteVirtualInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectConnectResponse(new DeleteVirtualInterfaceResponsePrivate(this), parent)

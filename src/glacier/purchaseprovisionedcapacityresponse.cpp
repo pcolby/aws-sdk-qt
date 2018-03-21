@@ -36,14 +36,14 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PurchaseProvisionedCapacityResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PurchaseProvisionedCapacityResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PurchaseProvisionedCapacityResponse::PurchaseProvisionedCapacityResponse(
+        const PurchaseProvisionedCapacityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlacierResponse(new PurchaseProvisionedCapacityResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteFunctionDefinitionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteFunctionDefinitionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteFunctionDefinitionResponse::DeleteFunctionDefinitionResponse(
+        const DeleteFunctionDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GreengrassResponse(new DeleteFunctionDefinitionResponsePrivate(this), parent)

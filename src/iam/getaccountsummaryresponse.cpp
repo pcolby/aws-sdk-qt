@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetAccountSummaryResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetAccountSummaryResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetAccountSummaryResponse::GetAccountSummaryResponse(
+        const GetAccountSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new GetAccountSummaryResponsePrivate(this), parent)

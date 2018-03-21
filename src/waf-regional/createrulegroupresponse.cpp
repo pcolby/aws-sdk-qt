@@ -36,14 +36,14 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateRuleGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateRuleGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateRuleGroupResponse::CreateRuleGroupResponse(
+        const CreateRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFRegionalResponse(new CreateRuleGroupResponsePrivate(this), parent)

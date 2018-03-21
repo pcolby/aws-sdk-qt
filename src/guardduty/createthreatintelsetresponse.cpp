@@ -36,14 +36,14 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateThreatIntelSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateThreatIntelSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateThreatIntelSetResponse::CreateThreatIntelSetResponse(
+        const CreateThreatIntelSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GuardDutyResponse(new CreateThreatIntelSetResponsePrivate(this), parent)

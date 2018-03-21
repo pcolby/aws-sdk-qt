@@ -36,14 +36,14 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DetectLabelsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DetectLabelsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DetectLabelsResponse::DetectLabelsResponse(
+        const DetectLabelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RekognitionResponse(new DetectLabelsResponsePrivate(this), parent)

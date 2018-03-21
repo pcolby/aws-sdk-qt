@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AddUserToGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AddUserToGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AddUserToGroupResponse::AddUserToGroupResponse(
+        const AddUserToGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new AddUserToGroupResponsePrivate(this), parent)

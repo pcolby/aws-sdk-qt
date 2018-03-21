@@ -36,14 +36,14 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateLoadBalancerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateLoadBalancerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateLoadBalancerResponse::CreateLoadBalancerResponse(
+        const CreateLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticLoadBalancingResponse(new CreateLoadBalancerResponsePrivate(this), parent)

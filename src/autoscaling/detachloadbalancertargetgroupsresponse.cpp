@@ -36,14 +36,14 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DetachLoadBalancerTargetGroupsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DetachLoadBalancerTargetGroupsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DetachLoadBalancerTargetGroupsResponse::DetachLoadBalancerTargetGroupsResponse(
+        const DetachLoadBalancerTargetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DetachLoadBalancerTargetGroupsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateStackSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateStackSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateStackSetResponse::UpdateStackSetResponse(
+        const UpdateStackSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudFormationResponse(new UpdateStackSetResponsePrivate(this), parent)

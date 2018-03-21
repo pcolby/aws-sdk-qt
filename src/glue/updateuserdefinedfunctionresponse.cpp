@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateUserDefinedFunctionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateUserDefinedFunctionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateUserDefinedFunctionResponse::UpdateUserDefinedFunctionResponse(
+        const UpdateUserDefinedFunctionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new UpdateUserDefinedFunctionResponsePrivate(this), parent)

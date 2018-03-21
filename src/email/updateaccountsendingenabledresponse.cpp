@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateAccountSendingEnabledResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateAccountSendingEnabledResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateAccountSendingEnabledResponse::UpdateAccountSendingEnabledResponse(
+        const UpdateAccountSendingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new UpdateAccountSendingEnabledResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutRepositoryTriggersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutRepositoryTriggersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutRepositoryTriggersResponse::PutRepositoryTriggersResponse(
+        const PutRepositoryTriggersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeCommitResponse(new PutRepositoryTriggersResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StopMatchmakingResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StopMatchmakingResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StopMatchmakingResponse::StopMatchmakingResponse(
+        const StopMatchmakingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new StopMatchmakingResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetDiscoverySummaryResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetDiscoverySummaryResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
+        const GetDiscoverySummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ApplicationDiscoveryServiceResponse(new GetDiscoverySummaryResponsePrivate(this), parent)

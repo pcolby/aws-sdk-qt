@@ -36,14 +36,14 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteRuleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteRuleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteRuleResponse::DeleteRuleResponse(
+        const DeleteRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFRegionalResponse(new DeleteRuleResponsePrivate(this), parent)

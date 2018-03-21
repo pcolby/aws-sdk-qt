@@ -36,14 +36,14 @@ namespace MediaLive {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListInputSecurityGroupsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListInputSecurityGroupsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListInputSecurityGroupsResponse::ListInputSecurityGroupsResponse(
+        const ListInputSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaLiveResponse(new ListInputSecurityGroupsResponsePrivate(this), parent)

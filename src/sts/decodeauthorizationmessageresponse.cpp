@@ -36,14 +36,14 @@ namespace STS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DecodeAuthorizationMessageResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DecodeAuthorizationMessageResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DecodeAuthorizationMessageResponse::DecodeAuthorizationMessageResponse(
+        const DecodeAuthorizationMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : STSResponse(new DecodeAuthorizationMessageResponsePrivate(this), parent)

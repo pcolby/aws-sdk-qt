@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeAvailabilityZonesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeAvailabilityZonesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeAvailabilityZonesResponse::DescribeAvailabilityZonesResponse(
+        const DescribeAvailabilityZonesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new DescribeAvailabilityZonesResponsePrivate(this), parent)

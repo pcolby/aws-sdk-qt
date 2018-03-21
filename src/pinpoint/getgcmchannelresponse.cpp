@@ -36,14 +36,14 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetGcmChannelResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetGcmChannelResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetGcmChannelResponse::GetGcmChannelResponse(
+        const GetGcmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PinpointResponse(new GetGcmChannelResponsePrivate(this), parent)

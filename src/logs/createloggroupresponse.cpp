@@ -36,14 +36,14 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateLogGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateLogGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateLogGroupResponse::CreateLogGroupResponse(
+        const CreateLogGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchLogsResponse(new CreateLogGroupResponsePrivate(this), parent)

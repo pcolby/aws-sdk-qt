@@ -36,14 +36,14 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartFaceDetectionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartFaceDetectionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartFaceDetectionResponse::StartFaceDetectionResponse(
+        const StartFaceDetectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RekognitionResponse(new StartFaceDetectionResponsePrivate(this), parent)

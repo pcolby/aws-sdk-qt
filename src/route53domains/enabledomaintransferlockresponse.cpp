@@ -36,14 +36,14 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new EnableDomainTransferLockResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-EnableDomainTransferLockResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+EnableDomainTransferLockResponse::EnableDomainTransferLockResponse(
+        const EnableDomainTransferLockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53DomainsResponse(new EnableDomainTransferLockResponsePrivate(this), parent)

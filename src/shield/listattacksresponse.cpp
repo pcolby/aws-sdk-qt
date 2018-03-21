@@ -36,14 +36,14 @@ namespace Shield {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAttacksResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAttacksResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAttacksResponse::ListAttacksResponse(
+        const ListAttacksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ShieldResponse(new ListAttacksResponsePrivate(this), parent)

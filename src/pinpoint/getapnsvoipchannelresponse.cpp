@@ -36,14 +36,14 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetApnsVoipChannelResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetApnsVoipChannelResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetApnsVoipChannelResponse::GetApnsVoipChannelResponse(
+        const GetApnsVoipChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PinpointResponse(new GetApnsVoipChannelResponsePrivate(this), parent)

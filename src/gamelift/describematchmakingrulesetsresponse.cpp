@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeMatchmakingRuleSetsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeMatchmakingRuleSetsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeMatchmakingRuleSetsResponse::DescribeMatchmakingRuleSetsResponse(
+        const DescribeMatchmakingRuleSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new DescribeMatchmakingRuleSetsResponsePrivate(this), parent)

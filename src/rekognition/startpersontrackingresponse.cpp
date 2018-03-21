@@ -36,14 +36,14 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartPersonTrackingResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartPersonTrackingResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartPersonTrackingResponse::StartPersonTrackingResponse(
+        const StartPersonTrackingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RekognitionResponse(new StartPersonTrackingResponsePrivate(this), parent)

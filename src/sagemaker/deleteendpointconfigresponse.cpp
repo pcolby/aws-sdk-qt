@@ -36,14 +36,14 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteEndpointConfigResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteEndpointConfigResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteEndpointConfigResponse::DeleteEndpointConfigResponse(
+        const DeleteEndpointConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SageMakerResponse(new DeleteEndpointConfigResponsePrivate(this), parent)

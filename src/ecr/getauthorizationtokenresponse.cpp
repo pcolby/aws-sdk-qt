@@ -36,14 +36,14 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetAuthorizationTokenResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetAuthorizationTokenResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
+        const GetAuthorizationTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECRResponse(new GetAuthorizationTokenResponsePrivate(this), parent)

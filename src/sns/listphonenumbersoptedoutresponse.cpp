@@ -36,14 +36,14 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListPhoneNumbersOptedOutResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListPhoneNumbersOptedOutResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListPhoneNumbersOptedOutResponse::ListPhoneNumbersOptedOutResponse(
+        const ListPhoneNumbersOptedOutRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SNSResponse(new ListPhoneNumbersOptedOutResponsePrivate(this), parent)

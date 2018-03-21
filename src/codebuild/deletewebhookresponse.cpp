@@ -36,14 +36,14 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteWebhookResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteWebhookResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteWebhookResponse::DeleteWebhookResponse(
+        const DeleteWebhookRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeBuildResponse(new DeleteWebhookResponsePrivate(this), parent)

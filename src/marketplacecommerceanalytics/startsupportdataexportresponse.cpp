@@ -36,14 +36,14 @@ namespace MarketplaceCommerceAnalytics {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartSupportDataExportResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartSupportDataExportResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartSupportDataExportResponse::StartSupportDataExportResponse(
+        const StartSupportDataExportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MarketplaceCommerceAnalyticsResponse(new StartSupportDataExportResponsePrivate(this), parent)

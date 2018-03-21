@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListVirtualMFADevicesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListVirtualMFADevicesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListVirtualMFADevicesResponse::ListVirtualMFADevicesResponse(
+        const ListVirtualMFADevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new ListVirtualMFADevicesResponsePrivate(this), parent)

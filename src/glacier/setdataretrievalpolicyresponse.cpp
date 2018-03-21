@@ -36,14 +36,14 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetDataRetrievalPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetDataRetrievalPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetDataRetrievalPolicyResponse::SetDataRetrievalPolicyResponse(
+        const SetDataRetrievalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlacierResponse(new SetDataRetrievalPolicyResponsePrivate(this), parent)

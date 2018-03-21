@@ -36,14 +36,14 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateCustomMetadataResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateCustomMetadataResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateCustomMetadataResponse::CreateCustomMetadataResponse(
+        const CreateCustomMetadataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkDocsResponse(new CreateCustomMetadataResponsePrivate(this), parent)

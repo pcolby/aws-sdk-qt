@@ -36,14 +36,14 @@ namespace STS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetFederationTokenResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetFederationTokenResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetFederationTokenResponse::GetFederationTokenResponse(
+        const GetFederationTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : STSResponse(new GetFederationTokenResponsePrivate(this), parent)

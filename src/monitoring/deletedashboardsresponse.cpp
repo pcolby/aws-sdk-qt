@@ -36,14 +36,14 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteDashboardsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteDashboardsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteDashboardsResponse::DeleteDashboardsResponse(
+        const DeleteDashboardsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchResponse(new DeleteDashboardsResponsePrivate(this), parent)

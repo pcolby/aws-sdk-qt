@@ -36,14 +36,14 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateGrantResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateGrantResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateGrantResponse::CreateGrantResponse(
+        const CreateGrantRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KMSResponse(new CreateGrantResponsePrivate(this), parent)

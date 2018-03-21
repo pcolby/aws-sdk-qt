@@ -36,14 +36,14 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListRecordHistoryResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListRecordHistoryResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListRecordHistoryResponse::ListRecordHistoryResponse(
+        const ListRecordHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceCatalogResponse(new ListRecordHistoryResponsePrivate(this), parent)

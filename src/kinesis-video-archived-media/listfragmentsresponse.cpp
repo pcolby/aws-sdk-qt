@@ -36,14 +36,14 @@ namespace KinesisVideoArchivedMedia {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListFragmentsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListFragmentsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListFragmentsResponse::ListFragmentsResponse(
+        const ListFragmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisVideoArchivedMediaResponse(new ListFragmentsResponsePrivate(this), parent)

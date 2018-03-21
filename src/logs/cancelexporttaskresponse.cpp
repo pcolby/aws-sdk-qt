@@ -36,14 +36,14 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CancelExportTaskResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CancelExportTaskResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CancelExportTaskResponse::CancelExportTaskResponse(
+        const CancelExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchLogsResponse(new CancelExportTaskResponsePrivate(this), parent)

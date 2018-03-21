@@ -36,14 +36,14 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetTerminationProtectionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetTerminationProtectionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetTerminationProtectionResponse::SetTerminationProtectionResponse(
+        const SetTerminationProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EMRResponse(new SetTerminationProtectionResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AuthorizeSecurityGroupEgressResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AuthorizeSecurityGroupEgressResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AuthorizeSecurityGroupEgressResponse::AuthorizeSecurityGroupEgressResponse(
+        const AuthorizeSecurityGroupEgressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new AuthorizeSecurityGroupEgressResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteCorsPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteCorsPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteCorsPolicyResponse::DeleteCorsPolicyResponse(
+        const DeleteCorsPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaStoreResponse(new DeleteCorsPolicyResponsePrivate(this), parent)

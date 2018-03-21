@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeDBClusterParametersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeDBClusterParametersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeDBClusterParametersResponse::DescribeDBClusterParametersResponse(
+        const DescribeDBClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new DescribeDBClusterParametersResponsePrivate(this), parent)

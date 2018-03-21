@@ -36,14 +36,14 @@ namespace ElasticsearchService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListElasticsearchVersionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListElasticsearchVersionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListElasticsearchVersionsResponse::ListElasticsearchVersionsResponse(
+        const ListElasticsearchVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticsearchServiceResponse(new ListElasticsearchVersionsResponsePrivate(this), parent)

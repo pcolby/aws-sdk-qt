@@ -36,14 +36,14 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateDetectorResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateDetectorResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateDetectorResponse::CreateDetectorResponse(
+        const CreateDetectorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GuardDutyResponse(new CreateDetectorResponsePrivate(this), parent)

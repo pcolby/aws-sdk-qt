@@ -36,14 +36,14 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UploadArchiveResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UploadArchiveResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UploadArchiveResponse::UploadArchiveResponse(
+        const UploadArchiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlacierResponse(new UploadArchiveResponsePrivate(this), parent)

@@ -18,14 +18,14 @@ namespace {{ServiceName}} {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new {{OperationName}}Response object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-{{OperationName}}Response::{OperationName}}Response(
-        const {OperationName}}Request &request,
+{{OperationName}}Response::{{OperationName}}Response(
+        const {{OperationName}}Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : {{ServiceName}}Response(new {{OperationName}}ResponsePrivate(this), parent)

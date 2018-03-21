@@ -36,14 +36,14 @@ namespace Polly {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutLexiconResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutLexiconResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutLexiconResponse::PutLexiconResponse(
+        const PutLexiconRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PollyResponse(new PutLexiconResponsePrivate(this), parent)

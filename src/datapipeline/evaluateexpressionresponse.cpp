@@ -36,14 +36,14 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new EvaluateExpressionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-EvaluateExpressionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+EvaluateExpressionResponse::EvaluateExpressionResponse(
+        const EvaluateExpressionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DataPipelineResponse(new EvaluateExpressionResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListGlobalTablesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListGlobalTablesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListGlobalTablesResponse::ListGlobalTablesResponse(
+        const ListGlobalTablesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DynamoDBResponse(new ListGlobalTablesResponsePrivate(this), parent)

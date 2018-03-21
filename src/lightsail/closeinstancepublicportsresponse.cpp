@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CloseInstancePublicPortsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CloseInstancePublicPortsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CloseInstancePublicPortsResponse::CloseInstancePublicPortsResponse(
+        const CloseInstancePublicPortsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new CloseInstancePublicPortsResponsePrivate(this), parent)

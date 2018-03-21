@@ -36,14 +36,14 @@ namespace SMS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateReplicationJobResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateReplicationJobResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateReplicationJobResponse::UpdateReplicationJobResponse(
+        const UpdateReplicationJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SMSResponse(new UpdateReplicationJobResponsePrivate(this), parent)

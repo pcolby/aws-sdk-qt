@@ -36,14 +36,14 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListCuratedEnvironmentImagesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListCuratedEnvironmentImagesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListCuratedEnvironmentImagesResponse::ListCuratedEnvironmentImagesResponse(
+        const ListCuratedEnvironmentImagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeBuildResponse(new ListCuratedEnvironmentImagesResponsePrivate(this), parent)

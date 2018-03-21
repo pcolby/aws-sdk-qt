@@ -36,14 +36,14 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAWSServiceAccessForOrganizationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAWSServiceAccessForOrganizationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAWSServiceAccessForOrganizationResponse::ListAWSServiceAccessForOrganizationResponse(
+        const ListAWSServiceAccessForOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OrganizationsResponse(new ListAWSServiceAccessForOrganizationResponsePrivate(this), parent)

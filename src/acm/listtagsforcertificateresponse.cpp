@@ -36,14 +36,14 @@ namespace ACM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListTagsForCertificateResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListTagsForCertificateResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListTagsForCertificateResponse::ListTagsForCertificateResponse(
+        const ListTagsForCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ACMResponse(new ListTagsForCertificateResponsePrivate(this), parent)

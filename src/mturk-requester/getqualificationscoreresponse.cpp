@@ -36,14 +36,14 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetQualificationScoreResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetQualificationScoreResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetQualificationScoreResponse::GetQualificationScoreResponse(
+        const GetQualificationScoreRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MTurkResponse(new GetQualificationScoreResponsePrivate(this), parent)

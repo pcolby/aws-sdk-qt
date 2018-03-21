@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateVpnConnectionRouteResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateVpnConnectionRouteResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateVpnConnectionRouteResponse::CreateVpnConnectionRouteResponse(
+        const CreateVpnConnectionRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new CreateVpnConnectionRouteResponsePrivate(this), parent)

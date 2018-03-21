@@ -36,14 +36,14 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisassociateElasticIpResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisassociateElasticIpResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisassociateElasticIpResponse::DisassociateElasticIpResponse(
+        const DisassociateElasticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DisassociateElasticIpResponsePrivate(this), parent)

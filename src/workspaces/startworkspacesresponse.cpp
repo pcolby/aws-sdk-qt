@@ -36,14 +36,14 @@ namespace WorkSpaces {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartWorkspacesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartWorkspacesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartWorkspacesResponse::StartWorkspacesResponse(
+        const StartWorkspacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkSpacesResponse(new StartWorkspacesResponsePrivate(this), parent)

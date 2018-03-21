@@ -36,14 +36,14 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutDashboardResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutDashboardResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutDashboardResponse::PutDashboardResponse(
+        const PutDashboardRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchResponse(new PutDashboardResponsePrivate(this), parent)

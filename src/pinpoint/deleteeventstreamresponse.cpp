@@ -36,14 +36,14 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteEventStreamResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteEventStreamResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteEventStreamResponse::DeleteEventStreamResponse(
+        const DeleteEventStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PinpointResponse(new DeleteEventStreamResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ApplyPendingMaintenanceActionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ApplyPendingMaintenanceActionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ApplyPendingMaintenanceActionResponse::ApplyPendingMaintenanceActionResponse(
+        const ApplyPendingMaintenanceActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new ApplyPendingMaintenanceActionResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetActiveReceiptRuleSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetActiveReceiptRuleSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetActiveReceiptRuleSetResponse::SetActiveReceiptRuleSetResponse(
+        const SetActiveReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new SetActiveReceiptRuleSetResponsePrivate(this), parent)

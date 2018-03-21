@@ -36,14 +36,14 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RotateEncryptionKeyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RotateEncryptionKeyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RotateEncryptionKeyResponse::RotateEncryptionKeyResponse(
+        const RotateEncryptionKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RedshiftResponse(new RotateEncryptionKeyResponsePrivate(this), parent)

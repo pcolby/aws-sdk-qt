@@ -36,14 +36,14 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListInvalidationsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListInvalidationsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListInvalidationsResponse::ListInvalidationsResponse(
+        const ListInvalidationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudFrontResponse(new ListInvalidationsResponsePrivate(this), parent)

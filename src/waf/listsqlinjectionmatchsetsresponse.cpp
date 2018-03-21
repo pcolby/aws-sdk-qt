@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListSqlInjectionMatchSetsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListSqlInjectionMatchSetsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
+        const ListSqlInjectionMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new ListSqlInjectionMatchSetsResponsePrivate(this), parent)

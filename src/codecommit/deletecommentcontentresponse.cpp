@@ -36,14 +36,14 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteCommentContentResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteCommentContentResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteCommentContentResponse::DeleteCommentContentResponse(
+        const DeleteCommentContentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeCommitResponse(new DeleteCommentContentResponsePrivate(this), parent)

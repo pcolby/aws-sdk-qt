@@ -36,14 +36,14 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetBasePathMappingsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetBasePathMappingsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetBasePathMappingsResponse::GetBasePathMappingsResponse(
+        const GetBasePathMappingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : APIGatewayResponse(new GetBasePathMappingsResponsePrivate(this), parent)

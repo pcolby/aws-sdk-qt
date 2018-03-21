@@ -36,14 +36,14 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteApplicationReferenceDataSourceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteApplicationReferenceDataSourceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteApplicationReferenceDataSourceResponse::DeleteApplicationReferenceDataSourceResponse(
+        const DeleteApplicationReferenceDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisAnalyticsResponse(new DeleteApplicationReferenceDataSourceResponsePrivate(this), parent)

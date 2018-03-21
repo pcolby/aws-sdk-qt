@@ -36,14 +36,14 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListReusableDelegationSetsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListReusableDelegationSetsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListReusableDelegationSetsResponse::ListReusableDelegationSetsResponse(
+        const ListReusableDelegationSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53Response(new ListReusableDelegationSetsResponsePrivate(this), parent)

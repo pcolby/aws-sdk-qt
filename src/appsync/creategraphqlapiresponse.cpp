@@ -36,14 +36,14 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateGraphqlApiResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateGraphqlApiResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateGraphqlApiResponse::CreateGraphqlApiResponse(
+        const CreateGraphqlApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppSyncResponse(new CreateGraphqlApiResponsePrivate(this), parent)

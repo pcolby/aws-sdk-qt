@@ -36,14 +36,14 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateThingGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateThingGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateThingGroupResponse::CreateThingGroupResponse(
+        const CreateThingGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTResponse(new CreateThingGroupResponsePrivate(this), parent)

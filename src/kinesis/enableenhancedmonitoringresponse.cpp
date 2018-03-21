@@ -36,14 +36,14 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new EnableEnhancedMonitoringResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-EnableEnhancedMonitoringResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+EnableEnhancedMonitoringResponse::EnableEnhancedMonitoringResponse(
+        const EnableEnhancedMonitoringRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisResponse(new EnableEnhancedMonitoringResponsePrivate(this), parent)

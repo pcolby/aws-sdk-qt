@@ -36,14 +36,14 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeOrderableClusterOptionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeOrderableClusterOptionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeOrderableClusterOptionsResponse::DescribeOrderableClusterOptionsResponse(
+        const DescribeOrderableClusterOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RedshiftResponse(new DescribeOrderableClusterOptionsResponsePrivate(this), parent)

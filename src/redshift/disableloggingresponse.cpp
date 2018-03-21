@@ -36,14 +36,14 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisableLoggingResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisableLoggingResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisableLoggingResponse::DisableLoggingResponse(
+        const DisableLoggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RedshiftResponse(new DisableLoggingResponsePrivate(this), parent)

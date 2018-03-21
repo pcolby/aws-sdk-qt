@@ -36,14 +36,14 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetInstanceProtectionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetInstanceProtectionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetInstanceProtectionResponse::SetInstanceProtectionResponse(
+        const SetInstanceProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new SetInstanceProtectionResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace Budgets {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteBudgetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteBudgetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteBudgetResponse::DeleteBudgetResponse(
+        const DeleteBudgetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : BudgetsResponse(new DeleteBudgetResponsePrivate(this), parent)

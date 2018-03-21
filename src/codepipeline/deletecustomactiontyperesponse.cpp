@@ -36,14 +36,14 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteCustomActionTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteCustomActionTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteCustomActionTypeResponse::DeleteCustomActionTypeResponse(
+        const DeleteCustomActionTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodePipelineResponse(new DeleteCustomActionTypeResponsePrivate(this), parent)

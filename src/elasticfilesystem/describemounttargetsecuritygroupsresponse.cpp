@@ -36,14 +36,14 @@ namespace EFS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeMountTargetSecurityGroupsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeMountTargetSecurityGroupsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeMountTargetSecurityGroupsResponse::DescribeMountTargetSecurityGroupsResponse(
+        const DescribeMountTargetSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EFSResponse(new DescribeMountTargetSecurityGroupsResponsePrivate(this), parent)

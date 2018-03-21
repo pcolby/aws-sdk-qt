@@ -36,14 +36,14 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ModifySnapshotCopyRetentionPeriodResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ModifySnapshotCopyRetentionPeriodResponse::ModifySnapshotCopyRetentionPeriodResponse(
+        const ModifySnapshotCopyRetentionPeriodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RedshiftResponse(new ModifySnapshotCopyRetentionPeriodResponsePrivate(this), parent)

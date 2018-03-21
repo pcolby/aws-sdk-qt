@@ -36,14 +36,14 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteEnvironmentResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteEnvironmentResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteEnvironmentResponse::DeleteEnvironmentResponse(
+        const DeleteEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Cloud9Response(new DeleteEnvironmentResponsePrivate(this), parent)

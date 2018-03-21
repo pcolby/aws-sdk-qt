@@ -36,14 +36,14 @@ namespace Mobile {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListBundlesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListBundlesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListBundlesResponse::ListBundlesResponse(
+        const ListBundlesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MobileResponse(new ListBundlesResponsePrivate(this), parent)

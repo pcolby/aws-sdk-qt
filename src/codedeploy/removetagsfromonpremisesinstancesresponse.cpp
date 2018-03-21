@@ -36,14 +36,14 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveTagsFromOnPremisesInstancesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveTagsFromOnPremisesInstancesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveTagsFromOnPremisesInstancesResponse::RemoveTagsFromOnPremisesInstancesResponse(
+        const RemoveTagsFromOnPremisesInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeDeployResponse(new RemoveTagsFromOnPremisesInstancesResponsePrivate(this), parent)

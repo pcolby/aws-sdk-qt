@@ -36,14 +36,14 @@ namespace ImportExport {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetStatusResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetStatusResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetStatusResponse::GetStatusResponse(
+        const GetStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ImportExportResponse(new GetStatusResponsePrivate(this), parent)

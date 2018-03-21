@@ -36,14 +36,14 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AuthorizeSnapshotAccessResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AuthorizeSnapshotAccessResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AuthorizeSnapshotAccessResponse::AuthorizeSnapshotAccessResponse(
+        const AuthorizeSnapshotAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RedshiftResponse(new AuthorizeSnapshotAccessResponsePrivate(this), parent)

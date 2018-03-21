@@ -36,14 +36,14 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteRemoteAccessSessionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteRemoteAccessSessionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteRemoteAccessSessionResponse::DeleteRemoteAccessSessionResponse(
+        const DeleteRemoteAccessSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DeviceFarmResponse(new DeleteRemoteAccessSessionResponsePrivate(this), parent)

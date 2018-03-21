@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdatePartitionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdatePartitionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdatePartitionResponse::UpdatePartitionResponse(
+        const UpdatePartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new UpdatePartitionResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeEgressOnlyInternetGatewaysResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeEgressOnlyInternetGatewaysResponse::DescribeEgressOnlyInternetGatewaysResponse(
+        const DescribeEgressOnlyInternetGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new DescribeEgressOnlyInternetGatewaysResponsePrivate(this), parent)

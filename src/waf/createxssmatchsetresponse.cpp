@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateXssMatchSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateXssMatchSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateXssMatchSetResponse::CreateXssMatchSetResponse(
+        const CreateXssMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new CreateXssMatchSetResponsePrivate(this), parent)

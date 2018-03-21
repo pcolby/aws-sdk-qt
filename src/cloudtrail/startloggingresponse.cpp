@@ -36,14 +36,14 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartLoggingResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartLoggingResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartLoggingResponse::StartLoggingResponse(
+        const StartLoggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudTrailResponse(new StartLoggingResponsePrivate(this), parent)

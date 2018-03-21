@@ -36,14 +36,14 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetBuiltinIntentsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetBuiltinIntentsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetBuiltinIntentsResponse::GetBuiltinIntentsResponse(
+        const GetBuiltinIntentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LexModelBuildingServiceResponse(new GetBuiltinIntentsResponsePrivate(this), parent)

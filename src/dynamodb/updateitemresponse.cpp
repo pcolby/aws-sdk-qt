@@ -36,14 +36,14 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateItemResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateItemResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateItemResponse::UpdateItemResponse(
+        const UpdateItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DynamoDBResponse(new UpdateItemResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteRequestValidatorResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteRequestValidatorResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
+        const DeleteRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : APIGatewayResponse(new DeleteRequestValidatorResponsePrivate(this), parent)

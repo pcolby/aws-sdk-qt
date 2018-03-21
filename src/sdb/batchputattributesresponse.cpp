@@ -36,14 +36,14 @@ namespace SimpleDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchPutAttributesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchPutAttributesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchPutAttributesResponse::BatchPutAttributesResponse(
+        const BatchPutAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SimpleDBResponse(new BatchPutAttributesResponsePrivate(this), parent)

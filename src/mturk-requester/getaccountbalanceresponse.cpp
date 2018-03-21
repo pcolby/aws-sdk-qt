@@ -36,14 +36,14 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetAccountBalanceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetAccountBalanceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetAccountBalanceResponse::GetAccountBalanceResponse(
+        const GetAccountBalanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MTurkResponse(new GetAccountBalanceResponsePrivate(this), parent)

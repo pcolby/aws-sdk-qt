@@ -36,14 +36,14 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new MergePullRequestByFastForwardResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-MergePullRequestByFastForwardResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+MergePullRequestByFastForwardResponse::MergePullRequestByFastForwardResponse(
+        const MergePullRequestByFastForwardRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeCommitResponse(new MergePullRequestByFastForwardResponsePrivate(this), parent)

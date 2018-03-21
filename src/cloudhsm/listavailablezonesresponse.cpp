@@ -36,14 +36,14 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAvailableZonesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAvailableZonesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAvailableZonesResponse::ListAvailableZonesResponse(
+        const ListAvailableZonesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudHSMResponse(new ListAvailableZonesResponsePrivate(this), parent)

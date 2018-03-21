@@ -36,14 +36,14 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeregisterJobDefinitionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeregisterJobDefinitionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeregisterJobDefinitionResponse::DeregisterJobDefinitionResponse(
+        const DeregisterJobDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : BatchResponse(new DeregisterJobDefinitionResponsePrivate(this), parent)

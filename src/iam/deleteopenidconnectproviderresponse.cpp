@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteOpenIDConnectProviderResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteOpenIDConnectProviderResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
+        const DeleteOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new DeleteOpenIDConnectProviderResponsePrivate(this), parent)

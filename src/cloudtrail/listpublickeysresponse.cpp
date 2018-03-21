@@ -36,14 +36,14 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListPublicKeysResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListPublicKeysResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListPublicKeysResponse::ListPublicKeysResponse(
+        const ListPublicKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudTrailResponse(new ListPublicKeysResponsePrivate(this), parent)

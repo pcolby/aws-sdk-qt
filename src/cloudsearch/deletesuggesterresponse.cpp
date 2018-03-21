@@ -36,14 +36,14 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteSuggesterResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteSuggesterResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteSuggesterResponse::DeleteSuggesterResponse(
+        const DeleteSuggesterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudSearchResponse(new DeleteSuggesterResponsePrivate(this), parent)

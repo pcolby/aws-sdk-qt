@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveTagsFromResourceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveTagsFromResourceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
+        const RemoveTagsFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)

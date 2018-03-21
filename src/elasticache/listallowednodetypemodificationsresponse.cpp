@@ -36,14 +36,14 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAllowedNodeTypeModificationsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAllowedNodeTypeModificationsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAllowedNodeTypeModificationsResponse::ListAllowedNodeTypeModificationsResponse(
+        const ListAllowedNodeTypeModificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElastiCacheResponse(new ListAllowedNodeTypeModificationsResponsePrivate(this), parent)

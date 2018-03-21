@@ -36,14 +36,14 @@ namespace Health {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeEventAggregatesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeEventAggregatesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeEventAggregatesResponse::DescribeEventAggregatesResponse(
+        const DescribeEventAggregatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : HealthResponse(new DescribeEventAggregatesResponsePrivate(this), parent)

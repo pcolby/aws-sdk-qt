@@ -36,14 +36,14 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeHsmConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeHsmConfigurationsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeHsmConfigurationsResponse::DescribeHsmConfigurationsResponse(
+        const DescribeHsmConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RedshiftResponse(new DescribeHsmConfigurationsResponsePrivate(this), parent)

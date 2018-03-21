@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListSubscribedRuleGroupsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListSubscribedRuleGroupsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListSubscribedRuleGroupsResponse::ListSubscribedRuleGroupsResponse(
+        const ListSubscribedRuleGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)

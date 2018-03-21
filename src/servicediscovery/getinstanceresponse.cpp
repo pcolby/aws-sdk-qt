@@ -36,14 +36,14 @@ namespace ServiceDiscovery {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetInstanceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetInstanceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetInstanceResponse::GetInstanceResponse(
+        const GetInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceDiscoveryResponse(new GetInstanceResponsePrivate(this), parent)

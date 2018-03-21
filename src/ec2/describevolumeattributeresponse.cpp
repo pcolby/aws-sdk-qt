@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeVolumeAttributeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeVolumeAttributeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeVolumeAttributeResponse::DescribeVolumeAttributeResponse(
+        const DescribeVolumeAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new DescribeVolumeAttributeResponsePrivate(this), parent)

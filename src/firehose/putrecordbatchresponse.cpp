@@ -36,14 +36,14 @@ namespace Firehose {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutRecordBatchResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutRecordBatchResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutRecordBatchResponse::PutRecordBatchResponse(
+        const PutRecordBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : FirehoseResponse(new PutRecordBatchResponsePrivate(this), parent)

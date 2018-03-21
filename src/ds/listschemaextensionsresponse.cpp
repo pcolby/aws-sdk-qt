@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListSchemaExtensionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListSchemaExtensionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListSchemaExtensionsResponse::ListSchemaExtensionsResponse(
+        const ListSchemaExtensionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new ListSchemaExtensionsResponsePrivate(this), parent)

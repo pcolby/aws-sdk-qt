@@ -36,14 +36,14 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListPipelinesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListPipelinesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListPipelinesResponse::ListPipelinesResponse(
+        const ListPipelinesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DataPipelineResponse(new ListPipelinesResponsePrivate(this), parent)

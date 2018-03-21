@@ -36,14 +36,14 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RecordActivityTaskHeartbeatResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RecordActivityTaskHeartbeatResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RecordActivityTaskHeartbeatResponse::RecordActivityTaskHeartbeatResponse(
+        const RecordActivityTaskHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SWFResponse(new RecordActivityTaskHeartbeatResponsePrivate(this), parent)

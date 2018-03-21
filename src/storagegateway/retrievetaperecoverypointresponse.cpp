@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RetrieveTapeRecoveryPointResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RetrieveTapeRecoveryPointResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RetrieveTapeRecoveryPointResponse::RetrieveTapeRecoveryPointResponse(
+        const RetrieveTapeRecoveryPointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new RetrieveTapeRecoveryPointResponsePrivate(this), parent)

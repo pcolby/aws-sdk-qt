@@ -36,14 +36,14 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ApplyEnvironmentManagedActionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ApplyEnvironmentManagedActionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ApplyEnvironmentManagedActionResponse::ApplyEnvironmentManagedActionResponse(
+        const ApplyEnvironmentManagedActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticBeanstalkResponse(new ApplyEnvironmentManagedActionResponsePrivate(this), parent)

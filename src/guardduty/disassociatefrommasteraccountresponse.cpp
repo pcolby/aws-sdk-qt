@@ -36,14 +36,14 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisassociateFromMasterAccountResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisassociateFromMasterAccountResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisassociateFromMasterAccountResponse::DisassociateFromMasterAccountResponse(
+        const DisassociateFromMasterAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GuardDutyResponse(new DisassociateFromMasterAccountResponsePrivate(this), parent)

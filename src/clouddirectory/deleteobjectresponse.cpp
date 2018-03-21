@@ -36,14 +36,14 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteObjectResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteObjectResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteObjectResponse::DeleteObjectResponse(
+        const DeleteObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudDirectoryResponse(new DeleteObjectResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RestoreTableFromBackupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RestoreTableFromBackupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
+        const RestoreTableFromBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DynamoDBResponse(new RestoreTableFromBackupResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace Polly {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SynthesizeSpeechResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SynthesizeSpeechResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SynthesizeSpeechResponse::SynthesizeSpeechResponse(
+        const SynthesizeSpeechRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PollyResponse(new SynthesizeSpeechResponsePrivate(this), parent)

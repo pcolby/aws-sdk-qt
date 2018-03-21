@@ -36,14 +36,14 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetCloudFrontOriginAccessIdentityResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetCloudFrontOriginAccessIdentityResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetCloudFrontOriginAccessIdentityResponse::GetCloudFrontOriginAccessIdentityResponse(
+        const GetCloudFrontOriginAccessIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudFrontResponse(new GetCloudFrontOriginAccessIdentityResponsePrivate(this), parent)

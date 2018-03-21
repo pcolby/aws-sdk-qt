@@ -36,14 +36,14 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutLifecycleHookResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutLifecycleHookResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutLifecycleHookResponse::PutLifecycleHookResponse(
+        const PutLifecycleHookRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new PutLifecycleHookResponsePrivate(this), parent)

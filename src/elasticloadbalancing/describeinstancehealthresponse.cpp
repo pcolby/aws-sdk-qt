@@ -36,14 +36,14 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeInstanceHealthResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeInstanceHealthResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeInstanceHealthResponse::DescribeInstanceHealthResponse(
+        const DescribeInstanceHealthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticLoadBalancingResponse(new DescribeInstanceHealthResponsePrivate(this), parent)

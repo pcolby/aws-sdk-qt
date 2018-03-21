@@ -36,14 +36,14 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateSkillGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateSkillGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateSkillGroupResponse::CreateSkillGroupResponse(
+        const CreateSkillGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AlexaForBusinessResponse(new CreateSkillGroupResponsePrivate(this), parent)

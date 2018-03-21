@@ -36,14 +36,14 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeSubnetGroupsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeSubnetGroupsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeSubnetGroupsResponse::DescribeSubnetGroupsResponse(
+        const DescribeSubnetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DAXResponse(new DescribeSubnetGroupsResponsePrivate(this), parent)

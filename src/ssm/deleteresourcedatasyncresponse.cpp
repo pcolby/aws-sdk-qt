@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteResourceDataSyncResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteResourceDataSyncResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteResourceDataSyncResponse::DeleteResourceDataSyncResponse(
+        const DeleteResourceDataSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new DeleteResourceDataSyncResponsePrivate(this), parent)

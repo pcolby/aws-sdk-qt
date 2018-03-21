@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteAccountPasswordPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteAccountPasswordPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteAccountPasswordPolicyResponse::DeleteAccountPasswordPolicyResponse(
+        const DeleteAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new DeleteAccountPasswordPolicyResponsePrivate(this), parent)

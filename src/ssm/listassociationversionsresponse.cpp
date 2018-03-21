@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAssociationVersionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAssociationVersionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAssociationVersionsResponse::ListAssociationVersionsResponse(
+        const ListAssociationVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new ListAssociationVersionsResponsePrivate(this), parent)

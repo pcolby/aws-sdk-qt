@@ -36,14 +36,14 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetPresetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetPresetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetPresetResponse::GetPresetResponse(
+        const GetPresetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaConvertResponse(new GetPresetResponsePrivate(this), parent)

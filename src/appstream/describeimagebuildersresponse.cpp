@@ -36,14 +36,14 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeImageBuildersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeImageBuildersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeImageBuildersResponse::DescribeImageBuildersResponse(
+        const DescribeImageBuildersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppStreamResponse(new DescribeImageBuildersResponsePrivate(this), parent)

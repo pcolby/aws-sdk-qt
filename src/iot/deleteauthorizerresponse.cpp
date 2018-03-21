@@ -36,14 +36,14 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteAuthorizerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteAuthorizerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteAuthorizerResponse::DeleteAuthorizerResponse(
+        const DeleteAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTResponse(new DeleteAuthorizerResponsePrivate(this), parent)

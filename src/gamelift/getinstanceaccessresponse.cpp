@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetInstanceAccessResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetInstanceAccessResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetInstanceAccessResponse::GetInstanceAccessResponse(
+        const GetInstanceAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new GetInstanceAccessResponsePrivate(this), parent)

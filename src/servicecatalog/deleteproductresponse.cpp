@@ -36,14 +36,14 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteProductResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteProductResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteProductResponse::DeleteProductResponse(
+        const DeleteProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceCatalogResponse(new DeleteProductResponsePrivate(this), parent)

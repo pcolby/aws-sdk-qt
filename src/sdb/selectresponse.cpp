@@ -36,14 +36,14 @@ namespace SimpleDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SelectResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SelectResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SelectResponse::SelectResponse(
+        const SelectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SimpleDBResponse(new SelectResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace MediaLive {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteChannelResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteChannelResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteChannelResponse::DeleteChannelResponse(
+        const DeleteChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaLiveResponse(new DeleteChannelResponsePrivate(this), parent)

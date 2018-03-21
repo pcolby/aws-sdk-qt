@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateAssociationBatchResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateAssociationBatchResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateAssociationBatchResponse::CreateAssociationBatchResponse(
+        const CreateAssociationBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new CreateAssociationBatchResponsePrivate(this), parent)

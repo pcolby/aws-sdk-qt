@@ -36,14 +36,14 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetKeyRotationStatusResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetKeyRotationStatusResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetKeyRotationStatusResponse::GetKeyRotationStatusResponse(
+        const GetKeyRotationStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KMSResponse(new GetKeyRotationStatusResponsePrivate(this), parent)

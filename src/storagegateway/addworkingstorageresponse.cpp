@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AddWorkingStorageResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AddWorkingStorageResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AddWorkingStorageResponse::AddWorkingStorageResponse(
+        const AddWorkingStorageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new AddWorkingStorageResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new TestEventPatternResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-TestEventPatternResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+TestEventPatternResponse::TestEventPatternResponse(
+        const TestEventPatternRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchEventsResponse(new TestEventPatternResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateTagsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateTagsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateTagsResponse::CreateTagsResponse(
+        const CreateTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ApplicationDiscoveryServiceResponse(new CreateTagsResponsePrivate(this), parent)

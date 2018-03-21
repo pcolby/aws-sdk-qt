@@ -36,14 +36,14 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeregisterRdsDbInstanceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeregisterRdsDbInstanceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeregisterRdsDbInstanceResponse::DeregisterRdsDbInstanceResponse(
+        const DeregisterRdsDbInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DeregisterRdsDbInstanceResponsePrivate(this), parent)

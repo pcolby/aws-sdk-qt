@@ -36,14 +36,14 @@ namespace MarketplaceMetering {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new MeterUsageResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-MeterUsageResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+MeterUsageResponse::MeterUsageResponse(
+        const MeterUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MarketplaceMeteringResponse(new MeterUsageResponsePrivate(this), parent)

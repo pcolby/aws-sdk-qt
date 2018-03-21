@@ -36,14 +36,14 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetRepositoryPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetRepositoryPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetRepositoryPolicyResponse::GetRepositoryPolicyResponse(
+        const GetRepositoryPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECRResponse(new GetRepositoryPolicyResponsePrivate(this), parent)

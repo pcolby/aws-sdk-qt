@@ -36,14 +36,14 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteMessageBatchResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteMessageBatchResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteMessageBatchResponse::DeleteMessageBatchResponse(
+        const DeleteMessageBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SQSResponse(new DeleteMessageBatchResponsePrivate(this), parent)

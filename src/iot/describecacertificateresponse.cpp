@@ -36,14 +36,14 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeCACertificateResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeCACertificateResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeCACertificateResponse::DescribeCACertificateResponse(
+        const DescribeCACertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTResponse(new DescribeCACertificateResponsePrivate(this), parent)

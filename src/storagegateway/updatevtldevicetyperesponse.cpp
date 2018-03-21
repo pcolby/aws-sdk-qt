@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateVTLDeviceTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateVTLDeviceTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateVTLDeviceTypeResponse::UpdateVTLDeviceTypeResponse(
+        const UpdateVTLDeviceTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new UpdateVTLDeviceTypeResponsePrivate(this), parent)

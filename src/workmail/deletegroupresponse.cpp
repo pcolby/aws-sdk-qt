@@ -36,14 +36,14 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteGroupResponse::DeleteGroupResponse(
+        const DeleteGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkMailResponse(new DeleteGroupResponsePrivate(this), parent)

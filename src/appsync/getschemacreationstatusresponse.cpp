@@ -36,14 +36,14 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetSchemaCreationStatusResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetSchemaCreationStatusResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetSchemaCreationStatusResponse::GetSchemaCreationStatusResponse(
+        const GetSchemaCreationStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppSyncResponse(new GetSchemaCreationStatusResponsePrivate(this), parent)

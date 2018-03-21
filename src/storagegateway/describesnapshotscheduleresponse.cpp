@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeSnapshotScheduleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeSnapshotScheduleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeSnapshotScheduleResponse::DescribeSnapshotScheduleResponse(
+        const DescribeSnapshotScheduleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new DescribeSnapshotScheduleResponsePrivate(this), parent)

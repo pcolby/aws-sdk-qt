@@ -36,14 +36,14 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetDownloadUrlForLayerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetDownloadUrlForLayerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetDownloadUrlForLayerResponse::GetDownloadUrlForLayerResponse(
+        const GetDownloadUrlForLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECRResponse(new GetDownloadUrlForLayerResponsePrivate(this), parent)

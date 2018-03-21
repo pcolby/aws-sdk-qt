@@ -36,14 +36,14 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutRecordsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutRecordsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutRecordsResponse::PutRecordsResponse(
+        const PutRecordsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisResponse(new PutRecordsResponsePrivate(this), parent)

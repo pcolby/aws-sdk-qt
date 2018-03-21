@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteDomainResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteDomainResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteDomainResponse::DeleteDomainResponse(
+        const DeleteDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new DeleteDomainResponsePrivate(this), parent)

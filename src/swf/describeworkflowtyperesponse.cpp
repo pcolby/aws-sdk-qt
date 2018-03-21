@@ -36,14 +36,14 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeWorkflowTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeWorkflowTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeWorkflowTypeResponse::DescribeWorkflowTypeResponse(
+        const DescribeWorkflowTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SWFResponse(new DescribeWorkflowTypeResponsePrivate(this), parent)

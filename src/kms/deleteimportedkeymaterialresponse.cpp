@@ -36,14 +36,14 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteImportedKeyMaterialResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteImportedKeyMaterialResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteImportedKeyMaterialResponse::DeleteImportedKeyMaterialResponse(
+        const DeleteImportedKeyMaterialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KMSResponse(new DeleteImportedKeyMaterialResponsePrivate(this), parent)

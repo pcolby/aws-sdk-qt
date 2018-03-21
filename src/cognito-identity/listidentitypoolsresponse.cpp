@@ -36,14 +36,14 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListIdentityPoolsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListIdentityPoolsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListIdentityPoolsResponse::ListIdentityPoolsResponse(
+        const ListIdentityPoolsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoIdentityResponse(new ListIdentityPoolsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateDistributionWithTagsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateDistributionWithTagsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateDistributionWithTagsResponse::CreateDistributionWithTagsResponse(
+        const CreateDistributionWithTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudFrontResponse(new CreateDistributionWithTagsResponsePrivate(this), parent)

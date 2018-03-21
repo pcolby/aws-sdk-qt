@@ -36,14 +36,14 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeConfigurationSettingsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeConfigurationSettingsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeConfigurationSettingsResponse::DescribeConfigurationSettingsResponse(
+        const DescribeConfigurationSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticBeanstalkResponse(new DescribeConfigurationSettingsResponsePrivate(this), parent)

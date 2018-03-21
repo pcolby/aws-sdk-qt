@@ -36,14 +36,14 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeComputeEnvironmentsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeComputeEnvironmentsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeComputeEnvironmentsResponse::DescribeComputeEnvironmentsResponse(
+        const DescribeComputeEnvironmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : BatchResponse(new DescribeComputeEnvironmentsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateDataSourceFromRedshiftResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateDataSourceFromRedshiftResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateDataSourceFromRedshiftResponse::CreateDataSourceFromRedshiftResponse(
+        const CreateDataSourceFromRedshiftRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MachineLearningResponse(new CreateDataSourceFromRedshiftResponsePrivate(this), parent)

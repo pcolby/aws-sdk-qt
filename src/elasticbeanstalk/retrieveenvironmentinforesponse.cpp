@@ -36,14 +36,14 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RetrieveEnvironmentInfoResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RetrieveEnvironmentInfoResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RetrieveEnvironmentInfoResponse::RetrieveEnvironmentInfoResponse(
+        const RetrieveEnvironmentInfoRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticBeanstalkResponse(new RetrieveEnvironmentInfoResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetInstanceMetricDataResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetInstanceMetricDataResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetInstanceMetricDataResponse::GetInstanceMetricDataResponse(
+        const GetInstanceMetricDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new GetInstanceMetricDataResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ImportCatalogToGlueResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ImportCatalogToGlueResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ImportCatalogToGlueResponse::ImportCatalogToGlueResponse(
+        const ImportCatalogToGlueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new ImportCatalogToGlueResponsePrivate(this), parent)

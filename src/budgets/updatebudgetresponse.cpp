@@ -36,14 +36,14 @@ namespace Budgets {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateBudgetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateBudgetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateBudgetResponse::UpdateBudgetResponse(
+        const UpdateBudgetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : BudgetsResponse(new UpdateBudgetResponsePrivate(this), parent)

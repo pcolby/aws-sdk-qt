@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetLoadBalancerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetLoadBalancerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetLoadBalancerResponse::GetLoadBalancerResponse(
+        const GetLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new GetLoadBalancerResponsePrivate(this), parent)

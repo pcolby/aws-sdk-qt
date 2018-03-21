@@ -36,14 +36,14 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartConfigurationRecorderResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartConfigurationRecorderResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartConfigurationRecorderResponse::StartConfigurationRecorderResponse(
+        const StartConfigurationRecorderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ConfigServiceResponse(new StartConfigurationRecorderResponsePrivate(this), parent)

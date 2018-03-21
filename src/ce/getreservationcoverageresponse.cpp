@@ -36,14 +36,14 @@ namespace CostExplorer {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetReservationCoverageResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetReservationCoverageResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetReservationCoverageResponse::GetReservationCoverageResponse(
+        const GetReservationCoverageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CostExplorerResponse(new GetReservationCoverageResponsePrivate(this), parent)

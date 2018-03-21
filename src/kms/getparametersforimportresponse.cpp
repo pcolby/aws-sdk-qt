@@ -36,14 +36,14 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetParametersForImportResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetParametersForImportResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetParametersForImportResponse::GetParametersForImportResponse(
+        const GetParametersForImportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KMSResponse(new GetParametersForImportResponsePrivate(this), parent)

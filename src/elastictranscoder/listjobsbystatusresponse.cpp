@@ -36,14 +36,14 @@ namespace ElasticTranscoder {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListJobsByStatusResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListJobsByStatusResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListJobsByStatusResponse::ListJobsByStatusResponse(
+        const ListJobsByStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticTranscoderResponse(new ListJobsByStatusResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListBucketInventoryConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListBucketInventoryConfigurationsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListBucketInventoryConfigurationsResponse::ListBucketInventoryConfigurationsResponse(
+        const ListBucketInventoryConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : S3Response(new ListBucketInventoryConfigurationsResponsePrivate(this), parent)

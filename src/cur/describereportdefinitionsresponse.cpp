@@ -36,14 +36,14 @@ namespace CostandUsageReportService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeReportDefinitionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeReportDefinitionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeReportDefinitionsResponse::DescribeReportDefinitionsResponse(
+        const DescribeReportDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CostandUsageReportServiceResponse(new DescribeReportDefinitionsResponsePrivate(this), parent)

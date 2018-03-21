@@ -36,14 +36,14 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetContactReachabilityStatusResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetContactReachabilityStatusResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetContactReachabilityStatusResponse::GetContactReachabilityStatusResponse(
+        const GetContactReachabilityStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53DomainsResponse(new GetContactReachabilityStatusResponsePrivate(this), parent)

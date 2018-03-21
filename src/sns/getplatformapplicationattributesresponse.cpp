@@ -36,14 +36,14 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetPlatformApplicationAttributesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetPlatformApplicationAttributesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetPlatformApplicationAttributesResponse::GetPlatformApplicationAttributesResponse(
+        const GetPlatformApplicationAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SNSResponse(new GetPlatformApplicationAttributesResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchDeleteBuildsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchDeleteBuildsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchDeleteBuildsResponse::BatchDeleteBuildsResponse(
+        const BatchDeleteBuildsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeBuildResponse(new BatchDeleteBuildsResponsePrivate(this), parent)

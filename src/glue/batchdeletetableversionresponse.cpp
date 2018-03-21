@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchDeleteTableVersionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchDeleteTableVersionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchDeleteTableVersionResponse::BatchDeleteTableVersionResponse(
+        const BatchDeleteTableVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new BatchDeleteTableVersionResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeAlarmHistoryResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeAlarmHistoryResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeAlarmHistoryResponse::DescribeAlarmHistoryResponse(
+        const DescribeAlarmHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchResponse(new DescribeAlarmHistoryResponsePrivate(this), parent)

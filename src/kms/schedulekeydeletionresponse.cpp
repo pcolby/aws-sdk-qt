@@ -36,14 +36,14 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ScheduleKeyDeletionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ScheduleKeyDeletionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ScheduleKeyDeletionResponse::ScheduleKeyDeletionResponse(
+        const ScheduleKeyDeletionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KMSResponse(new ScheduleKeyDeletionResponsePrivate(this), parent)

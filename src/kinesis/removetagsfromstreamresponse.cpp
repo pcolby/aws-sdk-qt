@@ -36,14 +36,14 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveTagsFromStreamResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveTagsFromStreamResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveTagsFromStreamResponse::RemoveTagsFromStreamResponse(
+        const RemoveTagsFromStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisResponse(new RemoveTagsFromStreamResponsePrivate(this), parent)

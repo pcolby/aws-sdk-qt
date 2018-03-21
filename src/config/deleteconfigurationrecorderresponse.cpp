@@ -36,14 +36,14 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteConfigurationRecorderResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteConfigurationRecorderResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteConfigurationRecorderResponse::DeleteConfigurationRecorderResponse(
+        const DeleteConfigurationRecorderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ConfigServiceResponse(new DeleteConfigurationRecorderResponsePrivate(this), parent)

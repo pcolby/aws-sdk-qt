@@ -36,14 +36,14 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchGetImageResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchGetImageResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchGetImageResponse::BatchGetImageResponse(
+        const BatchGetImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECRResponse(new BatchGetImageResponsePrivate(this), parent)

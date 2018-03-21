@@ -36,14 +36,14 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListDistributionsByWebACLIdResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListDistributionsByWebACLIdResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListDistributionsByWebACLIdResponse::ListDistributionsByWebACLIdResponse(
+        const ListDistributionsByWebACLIdRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudFrontResponse(new ListDistributionsByWebACLIdResponsePrivate(this), parent)

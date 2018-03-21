@@ -36,14 +36,14 @@ namespace CodeStar {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateProjectResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateProjectResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateProjectResponse::CreateProjectResponse(
+        const CreateProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeStarResponse(new CreateProjectResponsePrivate(this), parent)

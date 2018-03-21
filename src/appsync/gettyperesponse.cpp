@@ -36,14 +36,14 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetTypeResponse::GetTypeResponse(
+        const GetTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppSyncResponse(new GetTypeResponsePrivate(this), parent)

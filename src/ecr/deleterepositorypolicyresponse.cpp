@@ -36,14 +36,14 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteRepositoryPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteRepositoryPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteRepositoryPolicyResponse::DeleteRepositoryPolicyResponse(
+        const DeleteRepositoryPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECRResponse(new DeleteRepositoryPolicyResponsePrivate(this), parent)

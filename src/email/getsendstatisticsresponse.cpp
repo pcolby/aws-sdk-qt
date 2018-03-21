@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetSendStatisticsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetSendStatisticsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetSendStatisticsResponse::GetSendStatisticsResponse(
+        const GetSendStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new GetSendStatisticsResponsePrivate(this), parent)

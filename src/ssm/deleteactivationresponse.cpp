@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteActivationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteActivationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteActivationResponse::DeleteActivationResponse(
+        const DeleteActivationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new DeleteActivationResponsePrivate(this), parent)

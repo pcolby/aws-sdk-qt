@@ -36,14 +36,14 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListQueueTagsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListQueueTagsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListQueueTagsResponse::ListQueueTagsResponse(
+        const ListQueueTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SQSResponse(new ListQueueTagsResponsePrivate(this), parent)

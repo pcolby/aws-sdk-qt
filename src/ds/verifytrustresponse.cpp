@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new VerifyTrustResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-VerifyTrustResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+VerifyTrustResponse::VerifyTrustResponse(
+        const VerifyTrustRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new VerifyTrustResponsePrivate(this), parent)

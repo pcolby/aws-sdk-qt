@@ -36,14 +36,14 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteHapgResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteHapgResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteHapgResponse::DeleteHapgResponse(
+        const DeleteHapgRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudHSMResponse(new DeleteHapgResponsePrivate(this), parent)

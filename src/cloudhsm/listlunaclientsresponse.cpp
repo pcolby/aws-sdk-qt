@@ -36,14 +36,14 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListLunaClientsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListLunaClientsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListLunaClientsResponse::ListLunaClientsResponse(
+        const ListLunaClientsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudHSMResponse(new ListLunaClientsResponsePrivate(this), parent)

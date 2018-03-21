@@ -36,14 +36,14 @@ namespace Translate {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new TranslateTextResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-TranslateTextResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+TranslateTextResponse::TranslateTextResponse(
+        const TranslateTextRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : TranslateResponse(new TranslateTextResponsePrivate(this), parent)

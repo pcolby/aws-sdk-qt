@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutParameterResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutParameterResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutParameterResponse::PutParameterResponse(
+        const PutParameterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new PutParameterResponsePrivate(this), parent)

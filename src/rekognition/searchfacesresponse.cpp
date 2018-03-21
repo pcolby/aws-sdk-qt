@@ -36,14 +36,14 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SearchFacesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SearchFacesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SearchFacesResponse::SearchFacesResponse(
+        const SearchFacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RekognitionResponse(new SearchFacesResponsePrivate(this), parent)

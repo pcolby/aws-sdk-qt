@@ -36,14 +36,14 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListBuildsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListBuildsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListBuildsResponse::ListBuildsResponse(
+        const ListBuildsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeBuildResponse(new ListBuildsResponsePrivate(this), parent)

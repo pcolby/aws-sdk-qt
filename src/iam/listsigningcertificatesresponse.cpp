@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListSigningCertificatesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListSigningCertificatesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListSigningCertificatesResponse::ListSigningCertificatesResponse(
+        const ListSigningCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new ListSigningCertificatesResponsePrivate(this), parent)

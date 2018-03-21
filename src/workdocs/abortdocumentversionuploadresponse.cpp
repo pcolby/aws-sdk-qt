@@ -36,14 +36,14 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AbortDocumentVersionUploadResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AbortDocumentVersionUploadResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AbortDocumentVersionUploadResponse::AbortDocumentVersionUploadResponse(
+        const AbortDocumentVersionUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkDocsResponse(new AbortDocumentVersionUploadResponsePrivate(this), parent)

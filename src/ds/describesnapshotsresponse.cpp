@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeSnapshotsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeSnapshotsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeSnapshotsResponse::DescribeSnapshotsResponse(
+        const DescribeSnapshotsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new DescribeSnapshotsResponsePrivate(this), parent)

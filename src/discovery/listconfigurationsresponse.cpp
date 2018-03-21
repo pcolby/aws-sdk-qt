@@ -36,14 +36,14 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListConfigurationsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListConfigurationsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListConfigurationsResponse::ListConfigurationsResponse(
+        const ListConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ApplicationDiscoveryServiceResponse(new ListConfigurationsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveTagsFromVaultResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveTagsFromVaultResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveTagsFromVaultResponse::RemoveTagsFromVaultResponse(
+        const RemoveTagsFromVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlacierResponse(new RemoveTagsFromVaultResponsePrivate(this), parent)

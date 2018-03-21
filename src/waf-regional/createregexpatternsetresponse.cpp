@@ -36,14 +36,14 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateRegexPatternSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateRegexPatternSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateRegexPatternSetResponse::CreateRegexPatternSetResponse(
+        const CreateRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFRegionalResponse(new CreateRegexPatternSetResponsePrivate(this), parent)

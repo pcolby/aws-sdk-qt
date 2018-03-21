@@ -36,14 +36,14 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteDataSourceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteDataSourceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteDataSourceResponse::DeleteDataSourceResponse(
+        const DeleteDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppSyncResponse(new DeleteDataSourceResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteTapeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteTapeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteTapeResponse::DeleteTapeResponse(
+        const DeleteTapeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new DeleteTapeResponsePrivate(this), parent)

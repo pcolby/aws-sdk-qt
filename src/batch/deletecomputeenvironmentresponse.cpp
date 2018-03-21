@@ -36,14 +36,14 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteComputeEnvironmentResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteComputeEnvironmentResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteComputeEnvironmentResponse::DeleteComputeEnvironmentResponse(
+        const DeleteComputeEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : BatchResponse(new DeleteComputeEnvironmentResponsePrivate(this), parent)

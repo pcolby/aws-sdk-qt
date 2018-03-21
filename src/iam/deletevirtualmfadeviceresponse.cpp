@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteVirtualMFADeviceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteVirtualMFADeviceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
+        const DeleteVirtualMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new DeleteVirtualMFADeviceResponsePrivate(this), parent)

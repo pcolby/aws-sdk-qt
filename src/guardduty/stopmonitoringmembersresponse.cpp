@@ -36,14 +36,14 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StopMonitoringMembersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StopMonitoringMembersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StopMonitoringMembersResponse::StopMonitoringMembersResponse(
+        const StopMonitoringMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GuardDutyResponse(new StopMonitoringMembersResponsePrivate(this), parent)

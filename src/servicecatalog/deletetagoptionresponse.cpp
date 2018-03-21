@@ -36,14 +36,14 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteTagOptionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteTagOptionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteTagOptionResponse::DeleteTagOptionResponse(
+        const DeleteTagOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceCatalogResponse(new DeleteTagOptionResponsePrivate(this), parent)

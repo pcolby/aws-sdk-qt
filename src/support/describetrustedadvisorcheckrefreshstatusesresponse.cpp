@@ -36,14 +36,14 @@ namespace Support {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeTrustedAdvisorCheckRefreshStatusesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeTrustedAdvisorCheckRefreshStatusesResponse::DescribeTrustedAdvisorCheckRefreshStatusesResponse(
+        const DescribeTrustedAdvisorCheckRefreshStatusesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SupportResponse(new DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate(this), parent)

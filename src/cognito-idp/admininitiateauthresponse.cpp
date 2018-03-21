@@ -36,14 +36,14 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AdminInitiateAuthResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AdminInitiateAuthResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AdminInitiateAuthResponse::AdminInitiateAuthResponse(
+        const AdminInitiateAuthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoIdentityProviderResponse(new AdminInitiateAuthResponsePrivate(this), parent)

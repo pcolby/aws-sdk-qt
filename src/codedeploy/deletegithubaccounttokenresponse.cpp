@@ -36,14 +36,14 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteGitHubAccountTokenResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteGitHubAccountTokenResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteGitHubAccountTokenResponse::DeleteGitHubAccountTokenResponse(
+        const DeleteGitHubAccountTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeDeployResponse(new DeleteGitHubAccountTokenResponsePrivate(this), parent)

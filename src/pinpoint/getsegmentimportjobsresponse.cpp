@@ -36,14 +36,14 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetSegmentImportJobsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetSegmentImportJobsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetSegmentImportJobsResponse::GetSegmentImportJobsResponse(
+        const GetSegmentImportJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PinpointResponse(new GetSegmentImportJobsResponsePrivate(this), parent)

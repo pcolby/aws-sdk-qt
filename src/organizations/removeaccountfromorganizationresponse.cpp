@@ -36,14 +36,14 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveAccountFromOrganizationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveAccountFromOrganizationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveAccountFromOrganizationResponse::RemoveAccountFromOrganizationResponse(
+        const RemoveAccountFromOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OrganizationsResponse(new RemoveAccountFromOrganizationResponsePrivate(this), parent)

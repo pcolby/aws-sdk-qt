@@ -36,14 +36,14 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new TestDNSAnswerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-TestDNSAnswerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+TestDNSAnswerResponse::TestDNSAnswerResponse(
+        const TestDNSAnswerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53Response(new TestDNSAnswerResponsePrivate(this), parent)

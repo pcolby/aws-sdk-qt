@@ -36,14 +36,14 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DiscoverInputSchemaResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DiscoverInputSchemaResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DiscoverInputSchemaResponse::DiscoverInputSchemaResponse(
+        const DiscoverInputSchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisAnalyticsResponse(new DiscoverInputSchemaResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteApplicationsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteApplicationsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteApplicationsResponse::DeleteApplicationsResponse(
+        const DeleteApplicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ApplicationDiscoveryServiceResponse(new DeleteApplicationsResponsePrivate(this), parent)

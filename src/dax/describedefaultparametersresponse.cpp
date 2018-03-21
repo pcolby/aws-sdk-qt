@@ -36,14 +36,14 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeDefaultParametersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeDefaultParametersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeDefaultParametersResponse::DescribeDefaultParametersResponse(
+        const DescribeDefaultParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DAXResponse(new DescribeDefaultParametersResponsePrivate(this), parent)

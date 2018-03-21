@@ -36,14 +36,14 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartDeviceSyncResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartDeviceSyncResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartDeviceSyncResponse::StartDeviceSyncResponse(
+        const StartDeviceSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AlexaForBusinessResponse(new StartDeviceSyncResponsePrivate(this), parent)

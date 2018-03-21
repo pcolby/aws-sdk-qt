@@ -36,14 +36,14 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetServiceRoleForAccountResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetServiceRoleForAccountResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetServiceRoleForAccountResponse::GetServiceRoleForAccountResponse(
+        const GetServiceRoleForAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GreengrassResponse(new GetServiceRoleForAccountResponsePrivate(this), parent)

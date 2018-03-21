@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteFileShareResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteFileShareResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteFileShareResponse::DeleteFileShareResponse(
+        const DeleteFileShareRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new DeleteFileShareResponsePrivate(this), parent)

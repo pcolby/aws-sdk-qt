@@ -36,14 +36,14 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateAdmChannelResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateAdmChannelResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateAdmChannelResponse::UpdateAdmChannelResponse(
+        const UpdateAdmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PinpointResponse(new UpdateAdmChannelResponsePrivate(this), parent)

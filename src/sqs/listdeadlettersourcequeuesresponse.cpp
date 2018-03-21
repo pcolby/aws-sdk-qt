@@ -36,14 +36,14 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListDeadLetterSourceQueuesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListDeadLetterSourceQueuesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListDeadLetterSourceQueuesResponse::ListDeadLetterSourceQueuesResponse(
+        const ListDeadLetterSourceQueuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SQSResponse(new ListDeadLetterSourceQueuesResponsePrivate(this), parent)

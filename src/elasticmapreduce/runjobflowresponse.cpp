@@ -36,14 +36,14 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RunJobFlowResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RunJobFlowResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RunJobFlowResponse::RunJobFlowResponse(
+        const RunJobFlowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EMRResponse(new RunJobFlowResponsePrivate(this), parent)

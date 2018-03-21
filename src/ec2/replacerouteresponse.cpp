@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ReplaceRouteResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ReplaceRouteResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ReplaceRouteResponse::ReplaceRouteResponse(
+        const ReplaceRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new ReplaceRouteResponsePrivate(this), parent)

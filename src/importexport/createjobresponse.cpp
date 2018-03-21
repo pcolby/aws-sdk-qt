@@ -36,14 +36,14 @@ namespace ImportExport {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateJobResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateJobResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateJobResponse::CreateJobResponse(
+        const CreateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ImportExportResponse(new CreateJobResponsePrivate(this), parent)

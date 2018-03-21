@@ -36,14 +36,14 @@ namespace MQ {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeBrokerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeBrokerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeBrokerResponse::DescribeBrokerResponse(
+        const DescribeBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MQResponse(new DescribeBrokerResponsePrivate(this), parent)

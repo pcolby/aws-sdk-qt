@@ -36,14 +36,14 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListNotebookInstancesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListNotebookInstancesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListNotebookInstancesResponse::ListNotebookInstancesResponse(
+        const ListNotebookInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SageMakerResponse(new ListNotebookInstancesResponsePrivate(this), parent)

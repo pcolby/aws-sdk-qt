@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PromoteReadReplicaResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PromoteReadReplicaResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PromoteReadReplicaResponse::PromoteReadReplicaResponse(
+        const PromoteReadReplicaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new PromoteReadReplicaResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetDefaultPolicyVersionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetDefaultPolicyVersionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
+        const SetDefaultPolicyVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new SetDefaultPolicyVersionResponsePrivate(this), parent)

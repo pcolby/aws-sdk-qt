@@ -36,14 +36,14 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteResourcePolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteResourcePolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
+        const DeleteResourcePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchLogsResponse(new DeleteResourcePolicyResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateDeploymentGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateDeploymentGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateDeploymentGroupResponse::CreateDeploymentGroupResponse(
+        const CreateDeploymentGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeDeployResponse(new CreateDeploymentGroupResponsePrivate(this), parent)

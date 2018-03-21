@@ -36,14 +36,14 @@ namespace ServiceDiscovery {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreatePrivateDnsNamespaceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreatePrivateDnsNamespaceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreatePrivateDnsNamespaceResponse::CreatePrivateDnsNamespaceResponse(
+        const CreatePrivateDnsNamespaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceDiscoveryResponse(new CreatePrivateDnsNamespaceResponsePrivate(this), parent)

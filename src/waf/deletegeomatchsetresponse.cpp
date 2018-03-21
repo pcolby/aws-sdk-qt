@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteGeoMatchSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteGeoMatchSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
+        const DeleteGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)

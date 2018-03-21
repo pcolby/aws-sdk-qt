@@ -36,14 +36,14 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ModifyCacheParameterGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ModifyCacheParameterGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ModifyCacheParameterGroupResponse::ModifyCacheParameterGroupResponse(
+        const ModifyCacheParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElastiCacheResponse(new ModifyCacheParameterGroupResponsePrivate(this), parent)

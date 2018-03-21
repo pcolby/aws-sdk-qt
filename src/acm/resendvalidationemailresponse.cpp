@@ -36,14 +36,14 @@ namespace ACM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ResendValidationEmailResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ResendValidationEmailResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ResendValidationEmailResponse::ResendValidationEmailResponse(
+        const ResendValidationEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ACMResponse(new ResendValidationEmailResponsePrivate(this), parent)

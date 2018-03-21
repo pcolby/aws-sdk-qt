@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StopGameSessionPlacementResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StopGameSessionPlacementResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StopGameSessionPlacementResponse::StopGameSessionPlacementResponse(
+        const StopGameSessionPlacementRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new StopGameSessionPlacementResponsePrivate(this), parent)

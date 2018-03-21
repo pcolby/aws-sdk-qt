@@ -36,14 +36,14 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ChangeMessageVisibilityResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ChangeMessageVisibilityResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ChangeMessageVisibilityResponse::ChangeMessageVisibilityResponse(
+        const ChangeMessageVisibilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SQSResponse(new ChangeMessageVisibilityResponsePrivate(this), parent)

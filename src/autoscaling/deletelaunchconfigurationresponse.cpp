@@ -36,14 +36,14 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteLaunchConfigurationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteLaunchConfigurationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteLaunchConfigurationResponse::DeleteLaunchConfigurationResponse(
+        const DeleteLaunchConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingResponse(new DeleteLaunchConfigurationResponsePrivate(this), parent)

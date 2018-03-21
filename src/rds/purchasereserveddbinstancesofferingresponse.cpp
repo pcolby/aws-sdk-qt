@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PurchaseReservedDBInstancesOfferingResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PurchaseReservedDBInstancesOfferingResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PurchaseReservedDBInstancesOfferingResponse::PurchaseReservedDBInstancesOfferingResponse(
+        const PurchaseReservedDBInstancesOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new PurchaseReservedDBInstancesOfferingResponsePrivate(this), parent)

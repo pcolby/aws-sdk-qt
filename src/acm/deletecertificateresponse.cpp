@@ -36,14 +36,14 @@ namespace ACM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteCertificateResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteCertificateResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteCertificateResponse::DeleteCertificateResponse(
+        const DeleteCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ACMResponse(new DeleteCertificateResponsePrivate(this), parent)

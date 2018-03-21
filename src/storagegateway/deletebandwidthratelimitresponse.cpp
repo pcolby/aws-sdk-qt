@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteBandwidthRateLimitResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteBandwidthRateLimitResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteBandwidthRateLimitResponse::DeleteBandwidthRateLimitResponse(
+        const DeleteBandwidthRateLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new DeleteBandwidthRateLimitResponsePrivate(this), parent)

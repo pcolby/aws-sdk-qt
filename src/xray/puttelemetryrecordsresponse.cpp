@@ -36,14 +36,14 @@ namespace XRay {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutTelemetryRecordsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutTelemetryRecordsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutTelemetryRecordsResponse::PutTelemetryRecordsResponse(
+        const PutTelemetryRecordsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : XRayResponse(new PutTelemetryRecordsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RegisterTargetWithMaintenanceWindowResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RegisterTargetWithMaintenanceWindowResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RegisterTargetWithMaintenanceWindowResponse::RegisterTargetWithMaintenanceWindowResponse(
+        const RegisterTargetWithMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new RegisterTargetWithMaintenanceWindowResponsePrivate(this), parent)

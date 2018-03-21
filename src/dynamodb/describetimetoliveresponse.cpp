@@ -36,14 +36,14 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeTimeToLiveResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeTimeToLiveResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeTimeToLiveResponse::DescribeTimeToLiveResponse(
+        const DescribeTimeToLiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DynamoDBResponse(new DescribeTimeToLiveResponsePrivate(this), parent)

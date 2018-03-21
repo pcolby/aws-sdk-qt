@@ -36,14 +36,14 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetIpAddressTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetIpAddressTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetIpAddressTypeResponse::SetIpAddressTypeResponse(
+        const SetIpAddressTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticLoadBalancingv2Response(new SetIpAddressTypeResponsePrivate(this), parent)

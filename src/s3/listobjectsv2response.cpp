@@ -36,14 +36,14 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListObjectsV2Response object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListObjectsV2Response::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListObjectsV2Response::ListObjectsV2Response(
+        const ListObjectsV2Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : S3Response(new ListObjectsV2ResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace AutoScalingPlans {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeScalingPlanResourcesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeScalingPlanResourcesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeScalingPlanResourcesResponse::DescribeScalingPlanResourcesResponse(
+        const DescribeScalingPlanResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AutoScalingPlansResponse(new DescribeScalingPlanResourcesResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace ResourceGroups {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListGroupResourcesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListGroupResourcesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListGroupResourcesResponse::ListGroupResourcesResponse(
+        const ListGroupResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ResourceGroupsResponse(new ListGroupResourcesResponsePrivate(this), parent)

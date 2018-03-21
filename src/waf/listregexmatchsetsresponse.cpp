@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListRegexMatchSetsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListRegexMatchSetsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListRegexMatchSetsResponse::ListRegexMatchSetsResponse(
+        const ListRegexMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new ListRegexMatchSetsResponsePrivate(this), parent)

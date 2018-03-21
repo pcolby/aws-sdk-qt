@@ -36,14 +36,14 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutCorsPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutCorsPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutCorsPolicyResponse::PutCorsPolicyResponse(
+        const PutCorsPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaStoreResponse(new PutCorsPolicyResponsePrivate(this), parent)

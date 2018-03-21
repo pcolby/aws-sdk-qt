@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeEC2InstanceLimitsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeEC2InstanceLimitsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeEC2InstanceLimitsResponse::DescribeEC2InstanceLimitsResponse(
+        const DescribeEC2InstanceLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new DescribeEC2InstanceLimitsResponsePrivate(this), parent)

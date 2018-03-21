@@ -36,14 +36,14 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AssociateVPCWithHostedZoneResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AssociateVPCWithHostedZoneResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AssociateVPCWithHostedZoneResponse::AssociateVPCWithHostedZoneResponse(
+        const AssociateVPCWithHostedZoneRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53Response(new AssociateVPCWithHostedZoneResponsePrivate(this), parent)

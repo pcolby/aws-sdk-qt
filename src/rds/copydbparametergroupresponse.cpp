@@ -36,14 +36,14 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CopyDBParameterGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CopyDBParameterGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
+        const CopyDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RDSResponse(new CopyDBParameterGroupResponsePrivate(this), parent)

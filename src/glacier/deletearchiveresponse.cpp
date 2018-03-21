@@ -36,14 +36,14 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteArchiveResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteArchiveResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteArchiveResponse::DeleteArchiveResponse(
+        const DeleteArchiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlacierResponse(new DeleteArchiveResponsePrivate(this), parent)

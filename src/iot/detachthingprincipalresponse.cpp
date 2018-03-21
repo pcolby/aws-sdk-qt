@@ -36,14 +36,14 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DetachThingPrincipalResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DetachThingPrincipalResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DetachThingPrincipalResponse::DetachThingPrincipalResponse(
+        const DetachThingPrincipalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTResponse(new DetachThingPrincipalResponsePrivate(this), parent)

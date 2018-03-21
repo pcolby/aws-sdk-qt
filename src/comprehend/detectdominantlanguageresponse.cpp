@@ -36,14 +36,14 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DetectDominantLanguageResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DetectDominantLanguageResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DetectDominantLanguageResponse::DetectDominantLanguageResponse(
+        const DetectDominantLanguageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ComprehendResponse(new DetectDominantLanguageResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PollForJobsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PollForJobsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PollForJobsResponse::PollForJobsResponse(
+        const PollForJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodePipelineResponse(new PollForJobsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace KinesisVideo {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateStreamResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateStreamResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateStreamResponse::CreateStreamResponse(
+        const CreateStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisVideoResponse(new CreateStreamResponsePrivate(this), parent)

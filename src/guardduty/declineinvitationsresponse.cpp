@@ -36,14 +36,14 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeclineInvitationsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeclineInvitationsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeclineInvitationsResponse::DeclineInvitationsResponse(
+        const DeclineInvitationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GuardDutyResponse(new DeclineInvitationsResponsePrivate(this), parent)

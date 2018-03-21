@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new EnableVpcClassicLinkResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-EnableVpcClassicLinkResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+EnableVpcClassicLinkResponse::EnableVpcClassicLinkResponse(
+        const EnableVpcClassicLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new EnableVpcClassicLinkResponsePrivate(this), parent)

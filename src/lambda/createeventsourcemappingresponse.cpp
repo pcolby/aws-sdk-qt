@@ -36,14 +36,14 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateEventSourceMappingResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateEventSourceMappingResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateEventSourceMappingResponse::CreateEventSourceMappingResponse(
+        const CreateEventSourceMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LambdaResponse(new CreateEventSourceMappingResponsePrivate(this), parent)

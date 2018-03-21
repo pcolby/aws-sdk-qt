@@ -36,14 +36,14 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListMetricsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListMetricsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListMetricsResponse::ListMetricsResponse(
+        const ListMetricsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudWatchResponse(new ListMetricsResponsePrivate(this), parent)

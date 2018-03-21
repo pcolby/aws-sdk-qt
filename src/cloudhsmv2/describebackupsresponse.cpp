@@ -36,14 +36,14 @@ namespace CloudHSMV2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeBackupsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeBackupsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeBackupsResponse::DescribeBackupsResponse(
+        const DescribeBackupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudHSMV2Response(new DescribeBackupsResponsePrivate(this), parent)

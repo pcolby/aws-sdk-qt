@@ -36,14 +36,14 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DetachElasticLoadBalancerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DetachElasticLoadBalancerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DetachElasticLoadBalancerResponse::DetachElasticLoadBalancerResponse(
+        const DetachElasticLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DetachElasticLoadBalancerResponsePrivate(this), parent)

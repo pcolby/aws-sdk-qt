@@ -36,14 +36,14 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteStreamProcessorResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteStreamProcessorResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteStreamProcessorResponse::DeleteStreamProcessorResponse(
+        const DeleteStreamProcessorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RekognitionResponse(new DeleteStreamProcessorResponsePrivate(this), parent)

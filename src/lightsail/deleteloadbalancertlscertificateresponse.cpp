@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteLoadBalancerTlsCertificateResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteLoadBalancerTlsCertificateResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteLoadBalancerTlsCertificateResponse::DeleteLoadBalancerTlsCertificateResponse(
+        const DeleteLoadBalancerTlsCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new DeleteLoadBalancerTlsCertificateResponsePrivate(this), parent)

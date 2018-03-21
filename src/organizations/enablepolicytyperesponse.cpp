@@ -36,14 +36,14 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new EnablePolicyTypeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-EnablePolicyTypeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+EnablePolicyTypeResponse::EnablePolicyTypeResponse(
+        const EnablePolicyTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OrganizationsResponse(new EnablePolicyTypeResponsePrivate(this), parent)

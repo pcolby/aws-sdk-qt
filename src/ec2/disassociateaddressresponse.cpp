@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisassociateAddressResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisassociateAddressResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisassociateAddressResponse::DisassociateAddressResponse(
+        const DisassociateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new DisassociateAddressResponsePrivate(this), parent)

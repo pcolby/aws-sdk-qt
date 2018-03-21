@@ -36,14 +36,14 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AdminUserGlobalSignOutResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AdminUserGlobalSignOutResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AdminUserGlobalSignOutResponse::AdminUserGlobalSignOutResponse(
+        const AdminUserGlobalSignOutRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoIdentityProviderResponse(new AdminUserGlobalSignOutResponsePrivate(this), parent)

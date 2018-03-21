@@ -36,14 +36,14 @@ namespace IoTJobsDataPlane {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateJobExecutionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateJobExecutionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateJobExecutionResponse::UpdateJobExecutionResponse(
+        const UpdateJobExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTJobsDataPlaneResponse(new UpdateJobExecutionResponsePrivate(this), parent)

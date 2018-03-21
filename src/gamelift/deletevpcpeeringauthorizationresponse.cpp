@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteVpcPeeringAuthorizationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteVpcPeeringAuthorizationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteVpcPeeringAuthorizationResponse::DeleteVpcPeeringAuthorizationResponse(
+        const DeleteVpcPeeringAuthorizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new DeleteVpcPeeringAuthorizationResponsePrivate(this), parent)

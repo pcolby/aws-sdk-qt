@@ -36,14 +36,14 @@ namespace OpsWorksCM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeServersResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeServersResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeServersResponse::DescribeServersResponse(
+        const DescribeServersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksCMResponse(new DescribeServersResponsePrivate(this), parent)

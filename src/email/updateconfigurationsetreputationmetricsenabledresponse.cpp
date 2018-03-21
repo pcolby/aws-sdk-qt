@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateConfigurationSetReputationMetricsEnabledResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetReputationMetricsEnabledResponse(
+        const UpdateConfigurationSetReputationMetricsEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(this), parent)

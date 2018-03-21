@@ -36,14 +36,14 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetBucketReplicationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetBucketReplicationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetBucketReplicationResponse::GetBucketReplicationResponse(
+        const GetBucketReplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : S3Response(new GetBucketReplicationResponsePrivate(this), parent)

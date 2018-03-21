@@ -36,14 +36,14 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisassociateQualificationFromWorkerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisassociateQualificationFromWorkerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisassociateQualificationFromWorkerResponse::DisassociateQualificationFromWorkerResponse(
+        const DisassociateQualificationFromWorkerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MTurkResponse(new DisassociateQualificationFromWorkerResponsePrivate(this), parent)

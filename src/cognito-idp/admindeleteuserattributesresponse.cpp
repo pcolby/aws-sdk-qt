@@ -36,14 +36,14 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AdminDeleteUserAttributesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AdminDeleteUserAttributesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AdminDeleteUserAttributesResponse::AdminDeleteUserAttributesResponse(
+        const AdminDeleteUserAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoIdentityProviderResponse(new AdminDeleteUserAttributesResponsePrivate(this), parent)

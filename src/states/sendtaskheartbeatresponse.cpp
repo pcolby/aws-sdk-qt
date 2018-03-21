@@ -36,14 +36,14 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SendTaskHeartbeatResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SendTaskHeartbeatResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SendTaskHeartbeatResponse::SendTaskHeartbeatResponse(
+        const SendTaskHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SFNResponse(new SendTaskHeartbeatResponsePrivate(this), parent)

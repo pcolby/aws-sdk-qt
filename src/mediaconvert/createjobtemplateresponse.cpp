@@ -36,14 +36,14 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateJobTemplateResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateJobTemplateResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateJobTemplateResponse::CreateJobTemplateResponse(
+        const CreateJobTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaConvertResponse(new CreateJobTemplateResponsePrivate(this), parent)

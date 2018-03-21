@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateRoleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateRoleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateRoleResponse::CreateRoleResponse(
+        const CreateRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new CreateRoleResponsePrivate(this), parent)

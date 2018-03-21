@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RegisterPatchBaselineForPatchGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RegisterPatchBaselineForPatchGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RegisterPatchBaselineForPatchGroupResponse::RegisterPatchBaselineForPatchGroupResponse(
+        const RegisterPatchBaselineForPatchGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new RegisterPatchBaselineForPatchGroupResponsePrivate(this), parent)

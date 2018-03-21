@@ -36,14 +36,14 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateHsmResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateHsmResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateHsmResponse::CreateHsmResponse(
+        const CreateHsmRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudHSMResponse(new CreateHsmResponsePrivate(this), parent)

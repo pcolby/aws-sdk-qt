@@ -36,14 +36,14 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetObjectInformationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetObjectInformationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetObjectInformationResponse::GetObjectInformationResponse(
+        const GetObjectInformationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudDirectoryResponse(new GetObjectInformationResponsePrivate(this), parent)

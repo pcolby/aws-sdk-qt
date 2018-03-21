@@ -36,14 +36,14 @@ namespace KinesisVideo {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new TagStreamResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-TagStreamResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+TagStreamResponse::TagStreamResponse(
+        const TagStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisVideoResponse(new TagStreamResponsePrivate(this), parent)

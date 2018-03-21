@@ -36,14 +36,14 @@ namespace DynamoDBStreams {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetShardIteratorResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetShardIteratorResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetShardIteratorResponse::GetShardIteratorResponse(
+        const GetShardIteratorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DynamoDBStreamsResponse(new GetShardIteratorResponsePrivate(this), parent)

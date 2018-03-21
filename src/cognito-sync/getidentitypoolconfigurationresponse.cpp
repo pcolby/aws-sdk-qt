@@ -36,14 +36,14 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetIdentityPoolConfigurationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetIdentityPoolConfigurationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetIdentityPoolConfigurationResponse::GetIdentityPoolConfigurationResponse(
+        const GetIdentityPoolConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoSyncResponse(new GetIdentityPoolConfigurationResponsePrivate(this), parent)

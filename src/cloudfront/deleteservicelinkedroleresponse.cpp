@@ -36,14 +36,14 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteServiceLinkedRoleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteServiceLinkedRoleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteServiceLinkedRoleResponse::DeleteServiceLinkedRoleResponse(
+        const DeleteServiceLinkedRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudFrontResponse(new DeleteServiceLinkedRoleResponsePrivate(this), parent)

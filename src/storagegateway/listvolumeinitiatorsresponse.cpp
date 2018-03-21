@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListVolumeInitiatorsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListVolumeInitiatorsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListVolumeInitiatorsResponse::ListVolumeInitiatorsResponse(
+        const ListVolumeInitiatorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new ListVolumeInitiatorsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace EFS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateFileSystemResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateFileSystemResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateFileSystemResponse::CreateFileSystemResponse(
+        const CreateFileSystemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EFSResponse(new CreateFileSystemResponsePrivate(this), parent)

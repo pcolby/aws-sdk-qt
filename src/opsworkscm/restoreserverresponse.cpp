@@ -36,14 +36,14 @@ namespace OpsWorksCM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RestoreServerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RestoreServerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RestoreServerResponse::RestoreServerResponse(
+        const RestoreServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksCMResponse(new RestoreServerResponsePrivate(this), parent)

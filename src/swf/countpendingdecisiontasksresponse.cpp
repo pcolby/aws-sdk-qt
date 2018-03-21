@@ -36,14 +36,14 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CountPendingDecisionTasksResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CountPendingDecisionTasksResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CountPendingDecisionTasksResponse::CountPendingDecisionTasksResponse(
+        const CountPendingDecisionTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SWFResponse(new CountPendingDecisionTasksResponsePrivate(this), parent)

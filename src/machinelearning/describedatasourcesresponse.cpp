@@ -36,14 +36,14 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeDataSourcesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeDataSourcesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeDataSourcesResponse::DescribeDataSourcesResponse(
+        const DescribeDataSourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MachineLearningResponse(new DescribeDataSourcesResponsePrivate(this), parent)

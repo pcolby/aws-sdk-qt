@@ -36,14 +36,14 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeUserResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeUserResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeUserResponse::DescribeUserResponse(
+        const DescribeUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkMailResponse(new DescribeUserResponsePrivate(this), parent)

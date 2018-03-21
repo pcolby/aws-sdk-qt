@@ -36,14 +36,14 @@ namespace CloudSearchDomain {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UploadDocumentsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UploadDocumentsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UploadDocumentsResponse::UploadDocumentsResponse(
+        const UploadDocumentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudSearchDomainResponse(new UploadDocumentsResponsePrivate(this), parent)

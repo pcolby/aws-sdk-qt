@@ -36,14 +36,14 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ScanResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ScanResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ScanResponse::ScanResponse(
+        const ScanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DynamoDBResponse(new ScanResponsePrivate(this), parent)

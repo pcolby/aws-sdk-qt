@@ -36,14 +36,14 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetAppResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetAppResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetAppResponse::GetAppResponse(
+        const GetAppRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : PinpointResponse(new GetAppResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ModifyEndpointResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ModifyEndpointResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ModifyEndpointResponse::ModifyEndpointResponse(
+        const ModifyEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DatabaseMigrationServiceResponse(new ModifyEndpointResponsePrivate(this), parent)

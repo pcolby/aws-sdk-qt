@@ -36,14 +36,14 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListReviewableHITsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListReviewableHITsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListReviewableHITsResponse::ListReviewableHITsResponse(
+        const ListReviewableHITsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MTurkResponse(new ListReviewableHITsResponsePrivate(this), parent)

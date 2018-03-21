@@ -36,14 +36,14 @@ namespace SMS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteServerCatalogResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteServerCatalogResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteServerCatalogResponse::DeleteServerCatalogResponse(
+        const DeleteServerCatalogRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SMSResponse(new DeleteServerCatalogResponsePrivate(this), parent)

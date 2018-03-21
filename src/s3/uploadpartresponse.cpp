@@ -36,14 +36,14 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UploadPartResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UploadPartResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UploadPartResponse::UploadPartResponse(
+        const UploadPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : S3Response(new UploadPartResponsePrivate(this), parent)

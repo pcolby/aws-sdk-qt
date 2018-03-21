@@ -36,14 +36,14 @@ namespace Snowball {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeAddressResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeAddressResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeAddressResponse::DescribeAddressResponse(
+        const DescribeAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SnowballResponse(new DescribeAddressResponsePrivate(this), parent)

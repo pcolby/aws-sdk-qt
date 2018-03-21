@@ -36,14 +36,14 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateLayerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateLayerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateLayerResponse::CreateLayerResponse(
+        const CreateLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new CreateLayerResponsePrivate(this), parent)

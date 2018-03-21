@@ -36,14 +36,14 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AcceptHandshakeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AcceptHandshakeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AcceptHandshakeResponse::AcceptHandshakeResponse(
+        const AcceptHandshakeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OrganizationsResponse(new AcceptHandshakeResponsePrivate(this), parent)

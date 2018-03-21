@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RemoveIpRoutesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RemoveIpRoutesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RemoveIpRoutesResponse::RemoveIpRoutesResponse(
+        const RemoveIpRoutesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new RemoveIpRoutesResponsePrivate(this), parent)

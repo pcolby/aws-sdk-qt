@@ -36,14 +36,14 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisableTopicRuleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisableTopicRuleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisableTopicRuleResponse::DisableTopicRuleResponse(
+        const DisableTopicRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IoTResponse(new DisableTopicRuleResponsePrivate(this), parent)

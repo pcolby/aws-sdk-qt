@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ModifyHostsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ModifyHostsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ModifyHostsResponse::ModifyHostsResponse(
+        const ModifyHostsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new ModifyHostsResponsePrivate(this), parent)

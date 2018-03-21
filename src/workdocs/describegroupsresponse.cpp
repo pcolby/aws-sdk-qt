@@ -36,14 +36,14 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeGroupsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeGroupsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeGroupsResponse::DescribeGroupsResponse(
+        const DescribeGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkDocsResponse(new DescribeGroupsResponsePrivate(this), parent)

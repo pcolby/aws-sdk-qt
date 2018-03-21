@@ -36,14 +36,14 @@ namespace SimpleDB {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteAttributesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteAttributesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteAttributesResponse::DeleteAttributesResponse(
+        const DeleteAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SimpleDBResponse(new DeleteAttributesResponsePrivate(this), parent)

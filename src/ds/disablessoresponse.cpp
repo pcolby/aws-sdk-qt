@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DisableSsoResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DisableSsoResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DisableSsoResponse::DisableSsoResponse(
+        const DisableSsoRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new DisableSsoResponsePrivate(this), parent)

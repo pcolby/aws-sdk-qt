@@ -36,14 +36,14 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AssociateWebACLResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AssociateWebACLResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AssociateWebACLResponse::AssociateWebACLResponse(
+        const AssociateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFRegionalResponse(new AssociateWebACLResponsePrivate(this), parent)

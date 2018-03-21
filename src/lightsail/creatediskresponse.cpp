@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateDiskResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateDiskResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateDiskResponse::CreateDiskResponse(
+        const CreateDiskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new CreateDiskResponsePrivate(this), parent)

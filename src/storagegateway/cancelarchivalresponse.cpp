@@ -36,14 +36,14 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CancelArchivalResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CancelArchivalResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CancelArchivalResponse::CancelArchivalResponse(
+        const CancelArchivalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : StorageGatewayResponse(new CancelArchivalResponsePrivate(this), parent)

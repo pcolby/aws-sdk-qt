@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BatchDeleteConnectionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BatchDeleteConnectionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BatchDeleteConnectionResponse::BatchDeleteConnectionResponse(
+        const BatchDeleteConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new BatchDeleteConnectionResponsePrivate(this), parent)

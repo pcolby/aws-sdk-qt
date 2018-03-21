@@ -36,14 +36,14 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ExpireSessionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ExpireSessionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ExpireSessionResponse::ExpireSessionResponse(
+        const ExpireSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppStreamResponse(new ExpireSessionResponsePrivate(this), parent)

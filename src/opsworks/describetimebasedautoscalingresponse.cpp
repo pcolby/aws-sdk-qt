@@ -36,14 +36,14 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeTimeBasedAutoScalingResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeTimeBasedAutoScalingResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeTimeBasedAutoScalingResponse::DescribeTimeBasedAutoScalingResponse(
+        const DescribeTimeBasedAutoScalingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : OpsWorksResponse(new DescribeTimeBasedAutoScalingResponsePrivate(this), parent)

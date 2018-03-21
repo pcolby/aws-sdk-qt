@@ -36,14 +36,14 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeregisterContainerInstanceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeregisterContainerInstanceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
+        const DeregisterContainerInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECSResponse(new DeregisterContainerInstanceResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UnarchiveFindingsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UnarchiveFindingsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UnarchiveFindingsResponse::UnarchiveFindingsResponse(
+        const UnarchiveFindingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GuardDutyResponse(new UnarchiveFindingsResponsePrivate(this), parent)

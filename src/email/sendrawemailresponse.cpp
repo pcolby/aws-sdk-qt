@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SendRawEmailResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SendRawEmailResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SendRawEmailResponse::SendRawEmailResponse(
+        const SendRawEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new SendRawEmailResponsePrivate(this), parent)

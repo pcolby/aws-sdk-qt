@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateConditionalForwarderResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateConditionalForwarderResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateConditionalForwarderResponse::UpdateConditionalForwarderResponse(
+        const UpdateConditionalForwarderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new UpdateConditionalForwarderResponsePrivate(this), parent)

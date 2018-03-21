@@ -36,14 +36,14 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UnpeerVpcResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UnpeerVpcResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UnpeerVpcResponse::UnpeerVpcResponse(
+        const UnpeerVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : LightsailResponse(new UnpeerVpcResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutBucketNotificationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutBucketNotificationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutBucketNotificationResponse::PutBucketNotificationResponse(
+        const PutBucketNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : S3Response(new PutBucketNotificationResponsePrivate(this), parent)

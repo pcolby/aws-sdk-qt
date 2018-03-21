@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetContextKeysForPrincipalPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetContextKeysForPrincipalPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetContextKeysForPrincipalPolicyResponse::GetContextKeysForPrincipalPolicyResponse(
+        const GetContextKeysForPrincipalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new GetContextKeysForPrincipalPolicyResponsePrivate(this), parent)

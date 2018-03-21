@@ -36,14 +36,14 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteCacheSubnetGroupResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteCacheSubnetGroupResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteCacheSubnetGroupResponse::DeleteCacheSubnetGroupResponse(
+        const DeleteCacheSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElastiCacheResponse(new DeleteCacheSubnetGroupResponsePrivate(this), parent)

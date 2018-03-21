@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteBuildResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteBuildResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteBuildResponse::DeleteBuildResponse(
+        const DeleteBuildRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new DeleteBuildResponsePrivate(this), parent)

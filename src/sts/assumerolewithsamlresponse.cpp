@@ -36,14 +36,14 @@ namespace STS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AssumeRoleWithSAMLResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AssumeRoleWithSAMLResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
+        const AssumeRoleWithSAMLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : STSResponse(new AssumeRoleWithSAMLResponsePrivate(this), parent)

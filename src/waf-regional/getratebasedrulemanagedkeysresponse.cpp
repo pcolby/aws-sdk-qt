@@ -36,14 +36,14 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetRateBasedRuleManagedKeysResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetRateBasedRuleManagedKeysResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetRateBasedRuleManagedKeysResponse::GetRateBasedRuleManagedKeysResponse(
+        const GetRateBasedRuleManagedKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFRegionalResponse(new GetRateBasedRuleManagedKeysResponsePrivate(this), parent)

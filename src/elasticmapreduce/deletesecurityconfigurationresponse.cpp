@@ -36,14 +36,14 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteSecurityConfigurationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteSecurityConfigurationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
+        const DeleteSecurityConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EMRResponse(new DeleteSecurityConfigurationResponsePrivate(this), parent)

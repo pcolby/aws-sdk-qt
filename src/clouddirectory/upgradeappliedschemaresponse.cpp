@@ -36,14 +36,14 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpgradeAppliedSchemaResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpgradeAppliedSchemaResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpgradeAppliedSchemaResponse::UpgradeAppliedSchemaResponse(
+        const UpgradeAppliedSchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudDirectoryResponse(new UpgradeAppliedSchemaResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeregisterManagedInstanceResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeregisterManagedInstanceResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
+        const DeregisterManagedInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new DeregisterManagedInstanceResponsePrivate(this), parent)

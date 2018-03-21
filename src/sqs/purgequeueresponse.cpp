@@ -36,14 +36,14 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PurgeQueueResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PurgeQueueResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PurgeQueueResponse::PurgeQueueResponse(
+        const PurgeQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SQSResponse(new PurgeQueueResponsePrivate(this), parent)

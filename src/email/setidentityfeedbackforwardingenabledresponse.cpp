@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetIdentityFeedbackForwardingEnabledResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabledResponse(
+        const SetIdentityFeedbackForwardingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new SetIdentityFeedbackForwardingEnabledResponsePrivate(this), parent)

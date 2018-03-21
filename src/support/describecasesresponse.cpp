@@ -36,14 +36,14 @@ namespace Support {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeCasesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeCasesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeCasesResponse::DescribeCasesResponse(
+        const DescribeCasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SupportResponse(new DescribeCasesResponsePrivate(this), parent)

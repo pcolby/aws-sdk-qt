@@ -36,14 +36,14 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new EnableRadiusResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-EnableRadiusResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+EnableRadiusResponse::EnableRadiusResponse(
+        const EnableRadiusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectoryServiceResponse(new EnableRadiusResponsePrivate(this), parent)

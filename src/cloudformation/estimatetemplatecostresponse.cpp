@@ -36,14 +36,14 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new EstimateTemplateCostResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-EstimateTemplateCostResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+EstimateTemplateCostResponse::EstimateTemplateCostResponse(
+        const EstimateTemplateCostRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudFormationResponse(new EstimateTemplateCostResponsePrivate(this), parent)

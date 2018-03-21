@@ -36,14 +36,14 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListVerifiedEmailAddressesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListVerifiedEmailAddressesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListVerifiedEmailAddressesResponse::ListVerifiedEmailAddressesResponse(
+        const ListVerifiedEmailAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SESResponse(new ListVerifiedEmailAddressesResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace ServerlessApplicationRepository {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListApplicationVersionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListApplicationVersionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListApplicationVersionsResponse::ListApplicationVersionsResponse(
+        const ListApplicationVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServerlessApplicationRepositoryResponse(new ListApplicationVersionsResponsePrivate(this), parent)

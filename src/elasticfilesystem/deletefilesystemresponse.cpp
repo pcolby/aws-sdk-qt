@@ -36,14 +36,14 @@ namespace EFS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteFileSystemResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteFileSystemResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteFileSystemResponse::DeleteFileSystemResponse(
+        const DeleteFileSystemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EFSResponse(new DeleteFileSystemResponsePrivate(this), parent)

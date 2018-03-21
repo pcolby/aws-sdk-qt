@@ -36,14 +36,14 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAssessmentTemplatesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAssessmentTemplatesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAssessmentTemplatesResponse::ListAssessmentTemplatesResponse(
+        const ListAssessmentTemplatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : InspectorResponse(new ListAssessmentTemplatesResponsePrivate(this), parent)

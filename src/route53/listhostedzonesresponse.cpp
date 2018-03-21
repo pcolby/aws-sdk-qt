@@ -36,14 +36,14 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListHostedZonesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListHostedZonesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListHostedZonesResponse::ListHostedZonesResponse(
+        const ListHostedZonesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53Response(new ListHostedZonesResponsePrivate(this), parent)

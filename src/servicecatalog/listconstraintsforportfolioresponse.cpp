@@ -36,14 +36,14 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListConstraintsForPortfolioResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListConstraintsForPortfolioResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListConstraintsForPortfolioResponse::ListConstraintsForPortfolioResponse(
+        const ListConstraintsForPortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ServiceCatalogResponse(new ListConstraintsForPortfolioResponsePrivate(this), parent)

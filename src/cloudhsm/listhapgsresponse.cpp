@@ -36,14 +36,14 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListHapgsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListHapgsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListHapgsResponse::ListHapgsResponse(
+        const ListHapgsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudHSMResponse(new ListHapgsResponsePrivate(this), parent)

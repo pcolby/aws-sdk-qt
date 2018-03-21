@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateManagedInstanceRoleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateManagedInstanceRoleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateManagedInstanceRoleResponse::UpdateManagedInstanceRoleResponse(
+        const UpdateManagedInstanceRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new UpdateManagedInstanceRoleResponsePrivate(this), parent)

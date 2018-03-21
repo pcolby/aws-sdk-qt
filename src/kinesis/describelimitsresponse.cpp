@@ -36,14 +36,14 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeLimitsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeLimitsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeLimitsResponse::DescribeLimitsResponse(
+        const DescribeLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisResponse(new DescribeLimitsResponsePrivate(this), parent)

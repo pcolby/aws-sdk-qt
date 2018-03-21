@@ -36,14 +36,14 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateVpcLinkResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateVpcLinkResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateVpcLinkResponse::CreateVpcLinkResponse(
+        const CreateVpcLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : APIGatewayResponse(new CreateVpcLinkResponsePrivate(this), parent)

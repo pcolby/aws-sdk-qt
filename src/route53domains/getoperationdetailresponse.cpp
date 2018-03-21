@@ -36,14 +36,14 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetOperationDetailResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetOperationDetailResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetOperationDetailResponse::GetOperationDetailResponse(
+        const GetOperationDetailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Route53DomainsResponse(new GetOperationDetailResponsePrivate(this), parent)

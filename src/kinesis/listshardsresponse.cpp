@@ -36,14 +36,14 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListShardsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListShardsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListShardsResponse::ListShardsResponse(
+        const ListShardsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisResponse(new ListShardsResponsePrivate(this), parent)

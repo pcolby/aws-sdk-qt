@@ -36,14 +36,14 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AdminResetUserPasswordResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AdminResetUserPasswordResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AdminResetUserPasswordResponse::AdminResetUserPasswordResponse(
+        const AdminResetUserPasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoIdentityProviderResponse(new AdminResetUserPasswordResponsePrivate(this), parent)

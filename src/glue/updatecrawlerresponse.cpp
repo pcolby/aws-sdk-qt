@@ -36,14 +36,14 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateCrawlerResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateCrawlerResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateCrawlerResponse::UpdateCrawlerResponse(
+        const UpdateCrawlerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlueResponse(new UpdateCrawlerResponsePrivate(this), parent)

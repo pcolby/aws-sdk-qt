@@ -36,14 +36,14 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DeleteDirectoryConfigResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DeleteDirectoryConfigResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DeleteDirectoryConfigResponse::DeleteDirectoryConfigResponse(
+        const DeleteDirectoryConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppStreamResponse(new DeleteDirectoryConfigResponsePrivate(this), parent)

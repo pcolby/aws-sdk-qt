@@ -36,14 +36,14 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetStatusResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetStatusResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetStatusResponse::SetStatusResponse(
+        const SetStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DataPipelineResponse(new SetStatusResponsePrivate(this), parent)

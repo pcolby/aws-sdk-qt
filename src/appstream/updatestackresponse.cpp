@@ -36,14 +36,14 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateStackResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateStackResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateStackResponse::UpdateStackResponse(
+        const UpdateStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppStreamResponse(new UpdateStackResponsePrivate(this), parent)

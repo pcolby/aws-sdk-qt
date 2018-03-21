@@ -36,14 +36,14 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeVaultResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeVaultResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeVaultResponse::DescribeVaultResponse(
+        const DescribeVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlacierResponse(new DescribeVaultResponsePrivate(this), parent)

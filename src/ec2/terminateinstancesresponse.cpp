@@ -36,14 +36,14 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new TerminateInstancesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-TerminateInstancesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+TerminateInstancesResponse::TerminateInstancesResponse(
+        const TerminateInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EC2Response(new TerminateInstancesResponsePrivate(this), parent)

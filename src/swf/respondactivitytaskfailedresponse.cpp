@@ -36,14 +36,14 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RespondActivityTaskFailedResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RespondActivityTaskFailedResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
+        const RespondActivityTaskFailedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SWFResponse(new RespondActivityTaskFailedResponsePrivate(this), parent)

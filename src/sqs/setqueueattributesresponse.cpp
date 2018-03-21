@@ -36,14 +36,14 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new SetQueueAttributesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-SetQueueAttributesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+SetQueueAttributesResponse::SetQueueAttributesResponse(
+        const SetQueueAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SQSResponse(new SetQueueAttributesResponsePrivate(this), parent)

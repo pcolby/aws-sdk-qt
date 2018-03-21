@@ -36,14 +36,14 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CompleteLayerUploadResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CompleteLayerUploadResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CompleteLayerUploadResponse::CompleteLayerUploadResponse(
+        const CompleteLayerUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECRResponse(new CompleteLayerUploadResponsePrivate(this), parent)

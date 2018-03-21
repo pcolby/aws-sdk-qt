@@ -36,14 +36,14 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetDocumentPathResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetDocumentPathResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetDocumentPathResponse::GetDocumentPathResponse(
+        const GetDocumentPathRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WorkDocsResponse(new GetDocumentPathResponsePrivate(this), parent)

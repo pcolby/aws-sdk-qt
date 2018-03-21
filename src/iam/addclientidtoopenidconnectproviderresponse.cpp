@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new AddClientIDToOpenIDConnectProviderResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-AddClientIDToOpenIDConnectProviderResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+AddClientIDToOpenIDConnectProviderResponse::AddClientIDToOpenIDConnectProviderResponse(
+        const AddClientIDToOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new AddClientIDToOpenIDConnectProviderResponsePrivate(this), parent)

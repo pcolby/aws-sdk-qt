@@ -36,14 +36,14 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeFleetCapacityResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeFleetCapacityResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeFleetCapacityResponse::DescribeFleetCapacityResponse(
+        const DescribeFleetCapacityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GameLiftResponse(new DescribeFleetCapacityResponsePrivate(this), parent)

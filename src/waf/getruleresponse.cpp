@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetRuleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetRuleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetRuleResponse::GetRuleResponse(
+        const GetRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new GetRuleResponsePrivate(this), parent)

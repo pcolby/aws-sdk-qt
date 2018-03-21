@@ -36,14 +36,14 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetCredentialReportResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetCredentialReportResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetCredentialReportResponse::GetCredentialReportResponse(
+        const GetCredentialReportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : IAMResponse(new GetCredentialReportResponsePrivate(this), parent)

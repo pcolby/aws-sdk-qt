@@ -36,14 +36,14 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new RegisterTargetsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-RegisterTargetsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+RegisterTargetsResponse::RegisterTargetsResponse(
+        const RegisterTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ElasticLoadBalancingv2Response(new RegisterTargetsResponsePrivate(this), parent)

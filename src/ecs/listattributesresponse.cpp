@@ -36,14 +36,14 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListAttributesResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListAttributesResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListAttributesResponse::ListAttributesResponse(
+        const ListAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ECSResponse(new ListAttributesResponsePrivate(this), parent)

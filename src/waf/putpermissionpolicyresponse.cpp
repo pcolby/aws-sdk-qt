@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new PutPermissionPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-PutPermissionPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+PutPermissionPolicyResponse::PutPermissionPolicyResponse(
+        const PutPermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new PutPermissionPolicyResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListBootstrapActionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListBootstrapActionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListBootstrapActionsResponse::ListBootstrapActionsResponse(
+        const ListBootstrapActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : EMRResponse(new ListBootstrapActionsResponsePrivate(this), parent)

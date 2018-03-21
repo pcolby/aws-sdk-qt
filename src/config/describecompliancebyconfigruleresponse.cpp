@@ -36,14 +36,14 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeComplianceByConfigRuleResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeComplianceByConfigRuleResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeComplianceByConfigRuleResponse::DescribeComplianceByConfigRuleResponse(
+        const DescribeComplianceByConfigRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ConfigServiceResponse(new DescribeComplianceByConfigRuleResponsePrivate(this), parent)

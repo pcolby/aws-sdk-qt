@@ -36,14 +36,14 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeEnvironmentMembershipsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeEnvironmentMembershipsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeEnvironmentMembershipsResponse::DescribeEnvironmentMembershipsResponse(
+        const DescribeEnvironmentMembershipsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : Cloud9Response(new DescribeEnvironmentMembershipsResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateEvaluationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateEvaluationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateEvaluationResponse::CreateEvaluationResponse(
+        const CreateEvaluationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MachineLearningResponse(new CreateEvaluationResponsePrivate(this), parent)

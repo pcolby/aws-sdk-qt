@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListWebACLsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListWebACLsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListWebACLsResponse::ListWebACLsResponse(
+        const ListWebACLsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new ListWebACLsResponsePrivate(this), parent)

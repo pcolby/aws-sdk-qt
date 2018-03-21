@@ -36,14 +36,14 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListOfferingTransactionsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListOfferingTransactionsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListOfferingTransactionsResponse::ListOfferingTransactionsResponse(
+        const ListOfferingTransactionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DeviceFarmResponse(new ListOfferingTransactionsResponsePrivate(this), parent)

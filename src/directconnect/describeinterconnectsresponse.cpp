@@ -36,14 +36,14 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeInterconnectsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeInterconnectsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeInterconnectsResponse::DescribeInterconnectsResponse(
+        const DescribeInterconnectsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : DirectConnectResponse(new DescribeInterconnectsResponsePrivate(this), parent)

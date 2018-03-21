@@ -36,14 +36,14 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new BulkPublishResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-BulkPublishResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+BulkPublishResponse::BulkPublishResponse(
+        const BulkPublishRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CognitoSyncResponse(new BulkPublishResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateGeoMatchSetResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateGeoMatchSetResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateGeoMatchSetResponse::CreateGeoMatchSetResponse(
+        const CreateGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : WAFResponse(new CreateGeoMatchSetResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace MediaPackage {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeOriginEndpointResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeOriginEndpointResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeOriginEndpointResponse::DescribeOriginEndpointResponse(
+        const DescribeOriginEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaPackageResponse(new DescribeOriginEndpointResponsePrivate(this), parent)

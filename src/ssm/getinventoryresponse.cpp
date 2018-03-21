@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetInventoryResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetInventoryResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetInventoryResponse::GetInventoryResponse(
+        const GetInventoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new GetInventoryResponsePrivate(this), parent)

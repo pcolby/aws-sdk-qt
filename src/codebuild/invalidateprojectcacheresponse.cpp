@@ -36,14 +36,14 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new InvalidateProjectCacheResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-InvalidateProjectCacheResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+InvalidateProjectCacheResponse::InvalidateProjectCacheResponse(
+        const InvalidateProjectCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CodeBuildResponse(new InvalidateProjectCacheResponsePrivate(this), parent)

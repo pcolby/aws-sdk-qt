@@ -36,14 +36,14 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartAutomationExecutionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartAutomationExecutionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartAutomationExecutionResponse::StartAutomationExecutionResponse(
+        const StartAutomationExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SSMResponse(new StartAutomationExecutionResponsePrivate(this), parent)

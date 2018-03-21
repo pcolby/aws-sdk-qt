@@ -36,14 +36,14 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DefineSuggesterResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DefineSuggesterResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DefineSuggesterResponse::DefineSuggesterResponse(
+        const DefineSuggesterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudSearchResponse(new DefineSuggesterResponsePrivate(this), parent)

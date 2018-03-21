@@ -36,14 +36,14 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetContentModerationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetContentModerationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetContentModerationResponse::GetContentModerationResponse(
+        const GetContentModerationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : RekognitionResponse(new GetContentModerationResponsePrivate(this), parent)

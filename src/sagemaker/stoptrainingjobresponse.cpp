@@ -36,14 +36,14 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StopTrainingJobResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StopTrainingJobResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StopTrainingJobResponse::StopTrainingJobResponse(
+        const StopTrainingJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SageMakerResponse(new StopTrainingJobResponsePrivate(this), parent)

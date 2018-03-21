@@ -36,14 +36,14 @@ namespace MQ {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new UpdateConfigurationResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-UpdateConfigurationResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+UpdateConfigurationResponse::UpdateConfigurationResponse(
+        const UpdateConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MQResponse(new UpdateConfigurationResponsePrivate(this), parent)

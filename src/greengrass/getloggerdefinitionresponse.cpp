@@ -36,14 +36,14 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetLoggerDefinitionResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetLoggerDefinitionResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetLoggerDefinitionResponse::GetLoggerDefinitionResponse(
+        const GetLoggerDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GreengrassResponse(new GetLoggerDefinitionResponsePrivate(this), parent)

@@ -36,14 +36,14 @@ namespace KinesisVideo {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetDataEndpointResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetDataEndpointResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetDataEndpointResponse::GetDataEndpointResponse(
+        const GetDataEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : KinesisVideoResponse(new GetDataEndpointResponsePrivate(this), parent)

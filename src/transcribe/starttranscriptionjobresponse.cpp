@@ -36,14 +36,14 @@ namespace TranscribeService {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new StartTranscriptionJobResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-StartTranscriptionJobResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+StartTranscriptionJobResponse::StartTranscriptionJobResponse(
+        const StartTranscriptionJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : TranscribeServiceResponse(new StartTranscriptionJobResponsePrivate(this), parent)

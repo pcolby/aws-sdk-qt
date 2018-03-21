@@ -36,14 +36,14 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new LookupPolicyResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-LookupPolicyResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+LookupPolicyResponse::LookupPolicyResponse(
+        const LookupPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : CloudDirectoryResponse(new LookupPolicyResponsePrivate(this), parent)

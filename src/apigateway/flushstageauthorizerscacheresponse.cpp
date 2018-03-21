@@ -36,14 +36,14 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new FlushStageAuthorizersCacheResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-FlushStageAuthorizersCacheResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+FlushStageAuthorizersCacheResponse::FlushStageAuthorizersCacheResponse(
+        const FlushStageAuthorizersCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : APIGatewayResponse(new FlushStageAuthorizersCacheResponsePrivate(this), parent)

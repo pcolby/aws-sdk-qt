@@ -36,14 +36,14 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new CreateDirectoryConfigResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-CreateDirectoryConfigResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+CreateDirectoryConfigResponse::CreateDirectoryConfigResponse(
+        const CreateDirectoryConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : AppStreamResponse(new CreateDirectoryConfigResponsePrivate(this), parent)

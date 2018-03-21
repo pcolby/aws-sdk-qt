@@ -36,14 +36,14 @@ namespace ImportExport {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetShippingLabelResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetShippingLabelResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetShippingLabelResponse::GetShippingLabelResponse(
+        const GetShippingLabelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : ImportExportResponse(new GetShippingLabelResponsePrivate(this), parent)

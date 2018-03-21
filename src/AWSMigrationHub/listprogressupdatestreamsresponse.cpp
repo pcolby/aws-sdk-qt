@@ -36,14 +36,14 @@ namespace MigrationHub {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new ListProgressUpdateStreamsResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-ListProgressUpdateStreamsResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+ListProgressUpdateStreamsResponse::ListProgressUpdateStreamsResponse(
+        const ListProgressUpdateStreamsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MigrationHubResponse(new ListProgressUpdateStreamsResponsePrivate(this), parent)

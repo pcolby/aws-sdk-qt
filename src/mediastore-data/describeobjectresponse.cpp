@@ -36,14 +36,14 @@ namespace MediaStoreData {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new DescribeObjectResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-DescribeObjectResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+DescribeObjectResponse::DescribeObjectResponse(
+        const DescribeObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : MediaStoreDataResponse(new DescribeObjectResponsePrivate(this), parent)

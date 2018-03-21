@@ -36,14 +36,14 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new InitiateJobResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-InitiateJobResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+InitiateJobResponse::InitiateJobResponse(
+        const InitiateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : GlacierResponse(new InitiateJobResponsePrivate(this), parent)

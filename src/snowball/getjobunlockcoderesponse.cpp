@@ -36,14 +36,14 @@ namespace Snowball {
  */
 
 /**
- * @brief  Constructs a new {OperationName}}Response object.
+ * @brief  Constructs a new GetJobUnlockCodeResponse object.
  *
  * @param  request  Original AWS request.
  * @param  reply    AWS network response to observe.
  * @param  parent   This object's parent.
  */
-GetJobUnlockCodeResponse::{OperationName}}Response(
-        const {OperationName}}Request &request,
+GetJobUnlockCodeResponse::GetJobUnlockCodeResponse(
+        const GetJobUnlockCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
     : SnowballResponse(new GetJobUnlockCodeResponsePrivate(this), parent)
