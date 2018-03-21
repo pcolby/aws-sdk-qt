@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEMETRICFILTERRESPONSE_H
 #define QTAWS_DELETEMETRICFILTERRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "deletemetricfilterrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DeleteMetricFilterResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEEVALUATIONRESULTSRESPONSE_H
 #define QTAWS_DELETEEVALUATIONRESULTSRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "deleteevaluationresultsrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DeleteEvaluationResultsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

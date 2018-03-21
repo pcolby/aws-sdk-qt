@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTBONUSPAYMENTSRESPONSE_H
 #define QTAWS_LISTBONUSPAYMENTSRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "listbonuspaymentsrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class ListBonusPaymentsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

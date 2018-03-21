@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace workdocs {
+namespace WorkDocs {
 
 class CreateFolderResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace workdocs
+} // namespace WorkDocs
 } // namespace AWS
 
 #endif

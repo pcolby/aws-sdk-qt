@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTIDENTITIESRESPONSE_H
 #define QTAWS_LISTIDENTITIESRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "listidentitiesrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class ListIdentitiesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

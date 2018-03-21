@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloudtrail {
+namespace CloudTrail {
 
 class StopLoggingResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloudtrail
+} // namespace CloudTrail
 } // namespace AWS
 
 #endif

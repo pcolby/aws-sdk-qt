@@ -20,12 +20,12 @@
 #ifndef QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_H
 #define QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "disassociatequalificationfromworkerrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class DisassociateQualificationFromWorkerResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

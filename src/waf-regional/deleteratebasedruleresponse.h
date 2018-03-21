@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETERATEBASEDRULERESPONSE_H
 #define QTAWS_DELETERATEBASEDRULERESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "deleteratebasedrulerequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class DeleteRateBasedRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

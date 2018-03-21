@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloudhsmv2 {
+namespace CloudHSMV2 {
 
 class DeleteHsmResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloudhsmv2
+} // namespace CloudHSMV2
 } // namespace AWS
 
 #endif

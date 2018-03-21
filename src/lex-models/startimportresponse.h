@@ -20,12 +20,12 @@
 #ifndef QTAWS_STARTIMPORTRESPONSE_H
 #define QTAWS_STARTIMPORTRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "startimportrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class StartImportResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

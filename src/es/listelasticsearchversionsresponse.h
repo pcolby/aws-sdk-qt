@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_H
 #define QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_H
 
-#include "esresponse.h"
+#include "elasticsearchserviceresponse.h"
 #include "listelasticsearchversionsrequest.h"
 
 namespace AWS {
 
-namespace es {
+namespace ElasticsearchService {
 
 class ListElasticsearchVersionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace es
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

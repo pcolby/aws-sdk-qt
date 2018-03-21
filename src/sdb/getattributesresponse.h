@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETATTRIBUTESRESPONSE_H
 #define QTAWS_GETATTRIBUTESRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "getattributesrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class GetAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

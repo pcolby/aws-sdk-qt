@@ -20,12 +20,12 @@
 #ifndef QTAWS_SENDRAWEMAILRESPONSE_H
 #define QTAWS_SENDRAWEMAILRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "sendrawemailrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class SendRawEmailResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

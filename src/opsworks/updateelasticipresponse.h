@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace opsworks {
+namespace OpsWorks {
 
 class UpdateElasticIpResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace opsworks
+} // namespace OpsWorks
 } // namespace AWS
 
 #endif

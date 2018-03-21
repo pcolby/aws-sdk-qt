@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETERULERESPONSE_H
 #define QTAWS_DELETERULERESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "deleterulerequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class DeleteRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

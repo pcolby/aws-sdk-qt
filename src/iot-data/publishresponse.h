@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUBLISHRESPONSE_H
 #define QTAWS_PUBLISHRESPONSE_H
 
-#include "iot-dataresponse.h"
+#include "iotdataplaneresponse.h"
 #include "publishrequest.h"
 
 namespace AWS {
 
-namespace iot-data {
+namespace IoTDataPlane {
 
 class PublishResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iot-data
+} // namespace IoTDataPlane
 } // namespace AWS
 
 #endif

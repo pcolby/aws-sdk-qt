@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace mediaconvert {
+namespace MediaConvert {
 
 class GetJobTemplateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediaconvert
+} // namespace MediaConvert
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBETABLESTATISTICSRESPONSE_H
 #define QTAWS_DESCRIBETABLESTATISTICSRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "describetablestatisticsrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DescribeTableStatisticsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEEVENTTOPICSRESPONSE_H
 #define QTAWS_DESCRIBEEVENTTOPICSRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "describeeventtopicsrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DescribeEventTopicsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

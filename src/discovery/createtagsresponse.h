@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_H
 #define QTAWS_CREATETAGSRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "createtagsrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class CreateTagsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

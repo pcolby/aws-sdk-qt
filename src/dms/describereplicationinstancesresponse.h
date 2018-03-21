@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONINSTANCESRESPONSE_H
 #define QTAWS_DESCRIBEREPLICATIONINSTANCESRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "describereplicationinstancesrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DescribeReplicationInstancesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

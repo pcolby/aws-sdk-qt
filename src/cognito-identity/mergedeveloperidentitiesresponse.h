@@ -20,12 +20,12 @@
 #ifndef QTAWS_MERGEDEVELOPERIDENTITIESRESPONSE_H
 #define QTAWS_MERGEDEVELOPERIDENTITIESRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "mergedeveloperidentitiesrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class MergeDeveloperIdentitiesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

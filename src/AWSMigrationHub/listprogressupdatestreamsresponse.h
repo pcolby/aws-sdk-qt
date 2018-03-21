@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTPROGRESSUPDATESTREAMSRESPONSE_H
 #define QTAWS_LISTPROGRESSUPDATESTREAMSRESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "listprogressupdatestreamsrequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class ListProgressUpdateStreamsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

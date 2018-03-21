@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace servicecatalog {
+namespace ServiceCatalog {
 
 class CreateProvisioningArtifactResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace servicecatalog
+} // namespace ServiceCatalog
 } // namespace AWS
 
 #endif

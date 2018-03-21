@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace codebuild {
+namespace CodeBuild {
 
 class DeleteWebhookResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace codebuild
+} // namespace CodeBuild
 } // namespace AWS
 
 #endif

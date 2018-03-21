@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTMETRICSRESPONSE_H
 #define QTAWS_LISTMETRICSRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "listmetricsrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class ListMetricsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

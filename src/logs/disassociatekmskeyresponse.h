@@ -20,12 +20,12 @@
 #ifndef QTAWS_DISASSOCIATEKMSKEYRESPONSE_H
 #define QTAWS_DISASSOCIATEKMSKEYRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "disassociatekmskeyrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DisassociateKmsKeyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace codecommit {
+namespace CodeCommit {
 
 class DeleteCommentContentResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace codecommit
+} // namespace CodeCommit
 } // namespace AWS
 
 #endif

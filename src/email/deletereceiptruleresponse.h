@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETERECEIPTRULERESPONSE_H
 #define QTAWS_DELETERECEIPTRULERESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "deletereceiptrulerequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class DeleteReceiptRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

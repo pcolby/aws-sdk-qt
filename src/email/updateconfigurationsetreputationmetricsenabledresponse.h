@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_H
 #define QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "updateconfigurationsetreputationmetricsenabledrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class UpdateConfigurationSetReputationMetricsEnabledResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

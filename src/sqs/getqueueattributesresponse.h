@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace sqs {
+namespace SQS {
 
 class GetQueueAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sqs
+} // namespace SQS
 } // namespace AWS
 
 #endif

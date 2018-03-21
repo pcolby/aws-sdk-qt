@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTCONFIGRULERESPONSE_H
 #define QTAWS_PUTCONFIGRULERESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "putconfigrulerequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class PutConfigRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

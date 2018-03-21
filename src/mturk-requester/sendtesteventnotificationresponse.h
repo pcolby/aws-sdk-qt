@@ -20,12 +20,12 @@
 #ifndef QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_H
 #define QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "sendtesteventnotificationrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class SendTestEventNotificationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

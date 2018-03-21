@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEMETRICFILTERSRESPONSE_H
 #define QTAWS_DESCRIBEMETRICFILTERSRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "describemetricfiltersrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DescribeMetricFiltersResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

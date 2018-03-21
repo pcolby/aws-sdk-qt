@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTGROUPRESOURCESRESPONSE_H
 #define QTAWS_LISTGROUPRESOURCESRESPONSE_H
 
-#include "resource-groupsresponse.h"
+#include "resourcegroupsresponse.h"
 #include "listgroupresourcesrequest.h"
 
 namespace AWS {
 
-namespace resource-groups {
+namespace ResourceGroups {
 
 class ListGroupResourcesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace resource-groups
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

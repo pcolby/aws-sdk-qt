@@ -20,12 +20,12 @@
 #ifndef QTAWS_REMOVETAGSRESPONSE_H
 #define QTAWS_REMOVETAGSRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "removetagsrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class RemoveTagsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

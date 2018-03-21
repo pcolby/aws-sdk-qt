@@ -20,12 +20,12 @@
 #ifndef QTAWS_BATCHPUTATTRIBUTESRESPONSE_H
 #define QTAWS_BATCHPUTATTRIBUTESRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "batchputattributesrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class BatchPutAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

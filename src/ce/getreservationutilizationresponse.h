@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_H
 #define QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_H
 
-#include "ceresponse.h"
+#include "costexplorerresponse.h"
 #include "getreservationutilizationrequest.h"
 
 namespace AWS {
 
-namespace ce {
+namespace CostExplorer {
 
 class GetReservationUtilizationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ce
+} // namespace CostExplorer
 } // namespace AWS
 
 #endif

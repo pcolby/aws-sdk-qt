@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEBYTEMATCHSETRESPONSE_H
 #define QTAWS_CREATEBYTEMATCHSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "createbytematchsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class CreateByteMatchSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETIDENTITYDKIMATTRIBUTESRESPONSE_H
 #define QTAWS_GETIDENTITYDKIMATTRIBUTESRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "getidentitydkimattributesrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class GetIdentityDkimAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

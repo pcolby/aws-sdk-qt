@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATESIZECONSTRAINTSETRESPONSE_H
 #define QTAWS_CREATESIZECONSTRAINTSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "createsizeconstraintsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class CreateSizeConstraintSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

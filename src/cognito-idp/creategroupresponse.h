@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEGROUPRESPONSE_H
 #define QTAWS_CREATEGROUPRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "creategrouprequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class CreateGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

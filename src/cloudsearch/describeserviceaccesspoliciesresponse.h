@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloudsearch {
+namespace CloudSearch {
 
 class DescribeServiceAccessPoliciesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloudsearch
+} // namespace CloudSearch
 } // namespace AWS
 
 #endif

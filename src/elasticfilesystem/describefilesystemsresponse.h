@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEFILESYSTEMSRESPONSE_H
 #define QTAWS_DESCRIBEFILESYSTEMSRESPONSE_H
 
-#include "elasticfilesystemresponse.h"
+#include "efsresponse.h"
 #include "describefilesystemsrequest.h"
 
 namespace AWS {
 
-namespace elasticfilesystem {
+namespace EFS {
 
 class DescribeFileSystemsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticfilesystem
+} // namespace EFS
 } // namespace AWS
 
 #endif

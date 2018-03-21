@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEIPSETRESPONSE_H
 #define QTAWS_DELETEIPSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "deleteipsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class DeleteIPSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTXSSMATCHSETSRESPONSE_H
 #define QTAWS_LISTXSSMATCHSETSRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "listxssmatchsetsrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class ListXssMatchSetsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

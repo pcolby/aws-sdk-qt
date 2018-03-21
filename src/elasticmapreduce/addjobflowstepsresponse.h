@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADDJOBFLOWSTEPSRESPONSE_H
 #define QTAWS_ADDJOBFLOWSTEPSRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "addjobflowstepsrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class AddJobFlowStepsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

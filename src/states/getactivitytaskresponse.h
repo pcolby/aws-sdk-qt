@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETACTIVITYTASKRESPONSE_H
 #define QTAWS_GETACTIVITYTASKRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "getactivitytaskrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class GetActivityTaskResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

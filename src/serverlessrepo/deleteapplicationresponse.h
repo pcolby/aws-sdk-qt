@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEAPPLICATIONRESPONSE_H
 #define QTAWS_DELETEAPPLICATIONRESPONSE_H
 
-#include "serverlessreporesponse.h"
+#include "serverlessapplicationrepositoryresponse.h"
 #include "deleteapplicationrequest.h"
 
 namespace AWS {
 
-namespace serverlessrepo {
+namespace ServerlessApplicationRepository {
 
 class DeleteApplicationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace serverlessrepo
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

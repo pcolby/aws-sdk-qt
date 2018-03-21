@@ -20,12 +20,12 @@
 #ifndef QTAWS_NOTIFYWORKERSRESPONSE_H
 #define QTAWS_NOTIFYWORKERSRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "notifyworkersrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class NotifyWorkersResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

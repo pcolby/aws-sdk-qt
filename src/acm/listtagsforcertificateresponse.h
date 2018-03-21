@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace acm {
+namespace ACM {
 
 class ListTagsForCertificateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace acm
+} // namespace ACM
 } // namespace AWS
 
 #endif

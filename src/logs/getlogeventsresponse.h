@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETLOGEVENTSRESPONSE_H
 #define QTAWS_GETLOGEVENTSRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "getlogeventsrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class GetLogEventsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

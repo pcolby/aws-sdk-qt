@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace health {
+namespace Health {
 
 class DescribeAffectedEntitiesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace health
+} // namespace Health
 } // namespace AWS
 
 #endif

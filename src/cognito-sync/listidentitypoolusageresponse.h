@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTIDENTITYPOOLUSAGERESPONSE_H
 #define QTAWS_LISTIDENTITYPOOLUSAGERESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "listidentitypoolusagerequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class ListIdentityPoolUsageResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

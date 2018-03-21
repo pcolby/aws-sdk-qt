@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEUSERPOOLDOMAINRESPONSE_H
 #define QTAWS_DELETEUSERPOOLDOMAINRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "deleteuserpooldomainrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class DeleteUserPoolDomainResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

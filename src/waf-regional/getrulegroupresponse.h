@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETRULEGROUPRESPONSE_H
 #define QTAWS_GETRULEGROUPRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getrulegrouprequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetRuleGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

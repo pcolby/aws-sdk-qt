@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace workspaces {
+namespace WorkSpaces {
 
 class DescribeWorkspacesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace workspaces
+} // namespace WorkSpaces
 } // namespace AWS
 
 #endif

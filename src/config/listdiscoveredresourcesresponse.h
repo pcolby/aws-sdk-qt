@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTDISCOVEREDRESOURCESRESPONSE_H
 #define QTAWS_LISTDISCOVEREDRESOURCESRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "listdiscoveredresourcesrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class ListDiscoveredResourcesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

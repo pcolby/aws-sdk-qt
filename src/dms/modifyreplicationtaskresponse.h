@@ -20,12 +20,12 @@
 #ifndef QTAWS_MODIFYREPLICATIONTASKRESPONSE_H
 #define QTAWS_MODIFYREPLICATIONTASKRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "modifyreplicationtaskrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class ModifyReplicationTaskResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

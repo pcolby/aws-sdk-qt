@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEREPORTDEFINITIONSRESPONSE_H
 #define QTAWS_DESCRIBEREPORTDEFINITIONSRESPONSE_H
 
-#include "curresponse.h"
+#include "costandusagereportserviceresponse.h"
 #include "describereportdefinitionsrequest.h"
 
 namespace AWS {
 
-namespace cur {
+namespace CostandUsageReportService {
 
 class DescribeReportDefinitionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cur
+} // namespace CostandUsageReportService
 } // namespace AWS
 
 #endif

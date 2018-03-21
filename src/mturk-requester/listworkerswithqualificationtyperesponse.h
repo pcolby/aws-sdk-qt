@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTWORKERSWITHQUALIFICATIONTYPERESPONSE_H
 #define QTAWS_LISTWORKERSWITHQUALIFICATIONTYPERESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "listworkerswithqualificationtyperequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class ListWorkersWithQualificationTypeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

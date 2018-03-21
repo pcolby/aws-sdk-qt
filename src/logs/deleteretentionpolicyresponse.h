@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETERETENTIONPOLICYRESPONSE_H
 #define QTAWS_DELETERETENTIONPOLICYRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "deleteretentionpolicyrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DeleteRetentionPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

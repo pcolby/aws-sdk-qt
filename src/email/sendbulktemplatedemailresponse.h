@@ -20,12 +20,12 @@
 #ifndef QTAWS_SENDBULKTEMPLATEDEMAILRESPONSE_H
 #define QTAWS_SENDBULKTEMPLATEDEMAILRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "sendbulktemplatedemailrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class SendBulkTemplatedEmailResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETERESOURCEPOLICYRESPONSE_H
 #define QTAWS_DELETERESOURCEPOLICYRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "deleteresourcepolicyrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DeleteResourcePolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

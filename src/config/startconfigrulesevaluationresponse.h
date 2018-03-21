@@ -20,12 +20,12 @@
 #ifndef QTAWS_STARTCONFIGRULESEVALUATIONRESPONSE_H
 #define QTAWS_STARTCONFIGRULESEVALUATIONRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "startconfigrulesevaluationrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class StartConfigRulesEvaluationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

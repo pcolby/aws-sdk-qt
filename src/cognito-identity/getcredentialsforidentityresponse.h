@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETCREDENTIALSFORIDENTITYRESPONSE_H
 #define QTAWS_GETCREDENTIALSFORIDENTITYRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "getcredentialsforidentityrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class GetCredentialsForIdentityResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

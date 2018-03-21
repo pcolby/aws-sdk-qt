@@ -20,12 +20,12 @@
 #ifndef QTAWS_CONFIRMFORGOTPASSWORDRESPONSE_H
 #define QTAWS_CONFIRMFORGOTPASSWORDRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "confirmforgotpasswordrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class ConfirmForgotPasswordResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_H
 #define QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "cancelschemaextensionrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class CancelSchemaExtensionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

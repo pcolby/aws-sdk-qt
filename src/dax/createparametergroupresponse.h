@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace dax {
+namespace DAX {
 
 class CreateParameterGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dax
+} // namespace DAX
 } // namespace AWS
 
 #endif

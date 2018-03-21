@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDACTIONSRESPONSE_H
 #define QTAWS_DESCRIBESCHEDULEDACTIONSRESPONSE_H
 
-#include "application-autoscalingresponse.h"
+#include "applicationautoscalingresponse.h"
 #include "describescheduledactionsrequest.h"
 
 namespace AWS {
 
-namespace application-autoscaling {
+namespace ApplicationAutoScaling {
 
 class DescribeScheduledActionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace application-autoscaling
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

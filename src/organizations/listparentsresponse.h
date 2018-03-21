@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace organizations {
+namespace Organizations {
 
 class ListParentsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace organizations
+} // namespace Organizations
 } // namespace AWS
 
 #endif

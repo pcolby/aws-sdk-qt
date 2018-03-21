@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETIMPORTRESPONSE_H
 #define QTAWS_GETIMPORTRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "getimportrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class GetImportResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace elasticloadbalancing {
+namespace ElasticLoadBalancing {
 
 class CreateAppCookieStickinessPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticloadbalancing
+} // namespace ElasticLoadBalancing
 } // namespace AWS
 
 #endif

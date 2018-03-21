@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTCONFIGURATIONSRESPONSE_H
 #define QTAWS_LISTCONFIGURATIONSRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "listconfigurationsrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class ListConfigurationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

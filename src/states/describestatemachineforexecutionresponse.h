@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONRESPONSE_H
 #define QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "describestatemachineforexecutionrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class DescribeStateMachineForExecutionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

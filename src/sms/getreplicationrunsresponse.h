@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace sms {
+namespace SMS {
 
 class GetReplicationRunsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sms
+} // namespace SMS
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 #define QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "deleteconfigurationsettrackingoptionsrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class DeleteConfigurationSetTrackingOptionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

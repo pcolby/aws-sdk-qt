@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace elastictranscoder {
+namespace ElasticTranscoder {
 
 class ListPipelinesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elastictranscoder
+} // namespace ElasticTranscoder
 } // namespace AWS
 
 #endif

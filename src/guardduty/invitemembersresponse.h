@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace guardduty {
+namespace GuardDuty {
 
 class InviteMembersResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace guardduty
+} // namespace GuardDuty
 } // namespace AWS
 
 #endif

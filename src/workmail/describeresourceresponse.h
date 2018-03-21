@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace workmail {
+namespace WorkMail {
 
 class DescribeResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace workmail
+} // namespace WorkMail
 } // namespace AWS
 
 #endif

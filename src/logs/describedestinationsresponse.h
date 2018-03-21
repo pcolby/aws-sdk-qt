@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEDESTINATIONSRESPONSE_H
 #define QTAWS_DESCRIBEDESTINATIONSRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "describedestinationsrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DescribeDestinationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTTARGETSRESPONSE_H
 #define QTAWS_PUTTARGETSRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "puttargetsrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class PutTargetsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

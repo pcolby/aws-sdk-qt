@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEGROUPRESPONSE_H
 #define QTAWS_CREATEGROUPRESPONSE_H
 
-#include "resource-groupsresponse.h"
+#include "resourcegroupsresponse.h"
 #include "creategrouprequest.h"
 
 namespace AWS {
 
-namespace resource-groups {
+namespace ResourceGroups {
 
 class CreateGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace resource-groups
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

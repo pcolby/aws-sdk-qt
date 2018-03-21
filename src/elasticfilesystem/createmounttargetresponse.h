@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEMOUNTTARGETRESPONSE_H
 #define QTAWS_CREATEMOUNTTARGETRESPONSE_H
 
-#include "elasticfilesystemresponse.h"
+#include "efsresponse.h"
 #include "createmounttargetrequest.h"
 
 namespace AWS {
 
-namespace elasticfilesystem {
+namespace EFS {
 
 class CreateMountTargetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticfilesystem
+} // namespace EFS
 } // namespace AWS
 
 #endif

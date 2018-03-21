@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONFILTERRESPONSE_H
 #define QTAWS_DELETESUBSCRIPTIONFILTERRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "deletesubscriptionfilterrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DeleteSubscriptionFilterResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

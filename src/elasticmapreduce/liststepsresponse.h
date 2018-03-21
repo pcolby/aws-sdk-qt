@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTSTEPSRESPONSE_H
 #define QTAWS_LISTSTEPSRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "liststepsrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class ListStepsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONRESPONSE_H
 #define QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "disassociateconfigurationitemsfromapplicationrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class DisassociateConfigurationItemsFromApplicationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

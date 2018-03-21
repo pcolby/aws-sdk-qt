@@ -20,12 +20,12 @@
 #ifndef QTAWS_STARTNEXTPENDINGJOBEXECUTIONRESPONSE_H
 #define QTAWS_STARTNEXTPENDINGJOBEXECUTIONRESPONSE_H
 
-#include "iot-jobs-dataresponse.h"
+#include "iotjobsdataplaneresponse.h"
 #include "startnextpendingjobexecutionrequest.h"
 
 namespace AWS {
 
-namespace iot-jobs-data {
+namespace IoTJobsDataPlane {
 
 class StartNextPendingJobExecutionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iot-jobs-data
+} // namespace IoTJobsDataPlane
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBELOGGROUPSRESPONSE_H
 #define QTAWS_DESCRIBELOGGROUPSRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "describeloggroupsrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DescribeLogGroupsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

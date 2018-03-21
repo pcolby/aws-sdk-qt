@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEIDENTITYUSAGERESPONSE_H
 #define QTAWS_DESCRIBEIDENTITYUSAGERESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "describeidentityusagerequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class DescribeIdentityUsageResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

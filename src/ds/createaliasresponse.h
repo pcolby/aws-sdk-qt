@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEALIASRESPONSE_H
 #define QTAWS_CREATEALIASRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "createaliasrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class CreateAliasResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

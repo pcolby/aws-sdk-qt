@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELIVERCONFIGSNAPSHOTRESPONSE_H
 #define QTAWS_DELIVERCONFIGSNAPSHOTRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "deliverconfigsnapshotrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DeliverConfigSnapshotResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEREGEXPATTERNSETRESPONSE_H
 #define QTAWS_DELETEREGEXPATTERNSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "deleteregexpatternsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class DeleteRegexPatternSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

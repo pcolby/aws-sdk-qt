@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace mediapackage {
+namespace MediaPackage {
 
 class CreateOriginEndpointResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediapackage
+} // namespace MediaPackage
 } // namespace AWS
 
 #endif

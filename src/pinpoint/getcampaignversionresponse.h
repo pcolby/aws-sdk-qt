@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace pinpoint {
+namespace Pinpoint {
 
 class GetCampaignVersionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace pinpoint
+} // namespace Pinpoint
 } // namespace AWS
 
 #endif

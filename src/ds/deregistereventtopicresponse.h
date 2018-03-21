@@ -20,12 +20,12 @@
 #ifndef QTAWS_DEREGISTEREVENTTOPICRESPONSE_H
 #define QTAWS_DEREGISTEREVENTTOPICRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "deregistereventtopicrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DeregisterEventTopicResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

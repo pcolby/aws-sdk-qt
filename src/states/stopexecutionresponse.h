@@ -20,12 +20,12 @@
 #ifndef QTAWS_STOPEXECUTIONRESPONSE_H
 #define QTAWS_STOPEXECUTIONRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "stopexecutionrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class StopExecutionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

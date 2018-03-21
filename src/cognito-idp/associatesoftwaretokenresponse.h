@@ -20,12 +20,12 @@
 #ifndef QTAWS_ASSOCIATESOFTWARETOKENRESPONSE_H
 #define QTAWS_ASSOCIATESOFTWARETOKENRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "associatesoftwaretokenrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AssociateSoftwareTokenResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

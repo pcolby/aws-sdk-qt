@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace budgets {
+namespace Budgets {
 
 class DescribeNotificationsForBudgetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace budgets
+} // namespace Budgets
 } // namespace AWS
 
 #endif

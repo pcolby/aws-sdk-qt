@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETDIRECTORYLIMITSRESPONSE_H
 #define QTAWS_GETDIRECTORYLIMITSRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "getdirectorylimitsrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class GetDirectoryLimitsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

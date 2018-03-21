@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace kms {
+namespace KMS {
 
 class CancelKeyDeletionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace kms
+} // namespace KMS
 } // namespace AWS
 
 #endif

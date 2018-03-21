@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace route53domains {
+namespace Route53Domains {
 
 class UpdateTagsForDomainResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace route53domains
+} // namespace Route53Domains
 } // namespace AWS
 
 #endif

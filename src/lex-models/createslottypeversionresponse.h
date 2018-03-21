@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATESLOTTYPEVERSIONRESPONSE_H
 #define QTAWS_CREATESLOTTYPEVERSIONRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "createslottypeversionrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class CreateSlotTypeVersionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

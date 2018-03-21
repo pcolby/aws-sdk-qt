@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEBYTEMATCHSETRESPONSE_H
 #define QTAWS_UPDATEBYTEMATCHSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "updatebytematchsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class UpdateByteMatchSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

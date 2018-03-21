@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESCHEDULEDACTIONRESPONSE_H
 #define QTAWS_DELETESCHEDULEDACTIONRESPONSE_H
 
-#include "application-autoscalingresponse.h"
+#include "applicationautoscalingresponse.h"
 #include "deletescheduledactionrequest.h"
 
 namespace AWS {
 
-namespace application-autoscaling {
+namespace ApplicationAutoScaling {
 
 class DeleteScheduledActionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace application-autoscaling
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

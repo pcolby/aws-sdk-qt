@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace glue {
+namespace Glue {
 
 class UpdateDatabaseResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace glue
+} // namespace Glue
 } // namespace AWS
 
 #endif

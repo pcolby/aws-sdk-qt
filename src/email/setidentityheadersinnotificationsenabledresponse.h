@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDRESPONSE_H
 #define QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "setidentityheadersinnotificationsenabledrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class SetIdentityHeadersInNotificationsEnabledResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

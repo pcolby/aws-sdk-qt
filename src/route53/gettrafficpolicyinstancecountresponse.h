@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace route53 {
+namespace Route53 {
 
 class GetTrafficPolicyInstanceCountResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace route53
+} // namespace Route53
 } // namespace AWS
 
 #endif

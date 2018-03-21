@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace codedeploy {
+namespace CodeDeploy {
 
 class DeleteGitHubAccountTokenResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace codedeploy
+} // namespace CodeDeploy
 } // namespace AWS
 
 #endif

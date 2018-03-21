@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHDOMAINRESPONSE_H
 #define QTAWS_DESCRIBEELASTICSEARCHDOMAINRESPONSE_H
 
-#include "esresponse.h"
+#include "elasticsearchserviceresponse.h"
 #include "describeelasticsearchdomainrequest.h"
 
 namespace AWS {
 
-namespace es {
+namespace ElasticsearchService {
 
 class DescribeElasticsearchDomainResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace es
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

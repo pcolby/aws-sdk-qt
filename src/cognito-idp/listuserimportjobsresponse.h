@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTUSERIMPORTJOBSRESPONSE_H
 #define QTAWS_LISTUSERIMPORTJOBSRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "listuserimportjobsrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class ListUserImportJobsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

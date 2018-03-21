@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTREGEXPATTERNSETSRESPONSE_H
 #define QTAWS_LISTREGEXPATTERNSETSRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "listregexpatternsetsrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class ListRegexPatternSetsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

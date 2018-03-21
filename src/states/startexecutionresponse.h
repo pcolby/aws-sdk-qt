@@ -20,12 +20,12 @@
 #ifndef QTAWS_STARTEXECUTIONRESPONSE_H
 #define QTAWS_STARTEXECUTIONRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "startexecutionrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class StartExecutionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

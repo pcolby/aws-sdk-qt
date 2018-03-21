@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTEXECUTIONSRESPONSE_H
 #define QTAWS_LISTEXECUTIONSRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "listexecutionsrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class ListExecutionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

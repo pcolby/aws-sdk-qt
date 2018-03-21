@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace marketplacecommerceanalytics {
+namespace MarketplaceCommerceAnalytics {
 
 class StartSupportDataExportResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace marketplacecommerceanalytics
+} // namespace MarketplaceCommerceAnalytics
 } // namespace AWS
 
 #endif

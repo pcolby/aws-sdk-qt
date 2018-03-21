@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONRECORDERSTATUSRESPONSE_H
 #define QTAWS_DESCRIBECONFIGURATIONRECORDERSTATUSRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "describeconfigurationrecorderstatusrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DescribeConfigurationRecorderStatusResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

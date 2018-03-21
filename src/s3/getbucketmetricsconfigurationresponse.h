@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace s3 {
+namespace S3 {
 
 class GetBucketMetricsConfigurationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace s3
+} // namespace S3
 } // namespace AWS
 
 #endif

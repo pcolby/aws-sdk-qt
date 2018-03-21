@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBERESOURCESERVERRESPONSE_H
 #define QTAWS_DESCRIBERESOURCESERVERRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "describeresourceserverrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class DescribeResourceServerResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

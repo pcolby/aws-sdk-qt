@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETETRUSTRESPONSE_H
 #define QTAWS_DELETETRUSTRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "deletetrustrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DeleteTrustResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

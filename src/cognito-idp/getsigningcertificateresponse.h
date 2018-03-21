@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETSIGNINGCERTIFICATERESPONSE_H
 #define QTAWS_GETSIGNINGCERTIFICATERESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "getsigningcertificaterequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class GetSigningCertificateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

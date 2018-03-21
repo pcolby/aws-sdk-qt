@@ -20,12 +20,12 @@
 #ifndef QTAWS_SEARCHRESOURCESRESPONSE_H
 #define QTAWS_SEARCHRESOURCESRESPONSE_H
 
-#include "resource-groupsresponse.h"
+#include "resourcegroupsresponse.h"
 #include "searchresourcesrequest.h"
 
 namespace AWS {
 
-namespace resource-groups {
+namespace ResourceGroups {
 
 class SearchResourcesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace resource-groups
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

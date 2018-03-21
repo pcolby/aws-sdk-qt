@@ -20,12 +20,12 @@
 #ifndef QTAWS_SENDTASKSUCCESSRESPONSE_H
 #define QTAWS_SENDTASKSUCCESSRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "sendtasksuccessrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class SendTaskSuccessResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

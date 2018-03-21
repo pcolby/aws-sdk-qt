@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_H
 #define QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "listbootstrapactionsrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class ListBootstrapActionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

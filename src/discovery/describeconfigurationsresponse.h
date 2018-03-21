@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONSRESPONSE_H
 #define QTAWS_DESCRIBECONFIGURATIONSRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "describeconfigurationsrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class DescribeConfigurationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

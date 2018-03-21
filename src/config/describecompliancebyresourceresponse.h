@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBECOMPLIANCEBYRESOURCERESPONSE_H
 #define QTAWS_DESCRIBECOMPLIANCEBYRESOURCERESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "describecompliancebyresourcerequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DescribeComplianceByResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

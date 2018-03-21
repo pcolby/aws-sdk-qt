@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEDELIVERYCHANNELRESPONSE_H
 #define QTAWS_DELETEDELIVERYCHANNELRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "deletedeliverychannelrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DeleteDeliveryChannelResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

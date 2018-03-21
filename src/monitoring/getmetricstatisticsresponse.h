@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETMETRICSTATISTICSRESPONSE_H
 #define QTAWS_GETMETRICSTATISTICSRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "getmetricstatisticsrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class GetMetricStatisticsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

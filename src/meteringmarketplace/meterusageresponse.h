@@ -20,12 +20,12 @@
 #ifndef QTAWS_METERUSAGERESPONSE_H
 #define QTAWS_METERUSAGERESPONSE_H
 
-#include "meteringmarketplaceresponse.h"
+#include "marketplacemeteringresponse.h"
 #include "meterusagerequest.h"
 
 namespace AWS {
 
-namespace meteringmarketplace {
+namespace MarketplaceMetering {
 
 class MeterUsageResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace meteringmarketplace
+} // namespace MarketplaceMetering
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace mediastore {
+namespace MediaStore {
 
 class GetCorsPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediastore
+} // namespace MediaStore
 } // namespace AWS
 
 #endif

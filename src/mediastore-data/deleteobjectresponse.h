@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEOBJECTRESPONSE_H
 #define QTAWS_DELETEOBJECTRESPONSE_H
 
-#include "mediastore-dataresponse.h"
+#include "mediastoredataresponse.h"
 #include "deleteobjectrequest.h"
 
 namespace AWS {
 
-namespace mediastore-data {
+namespace MediaStoreData {
 
 class DeleteObjectResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediastore-data
+} // namespace MediaStoreData
 } // namespace AWS
 
 #endif

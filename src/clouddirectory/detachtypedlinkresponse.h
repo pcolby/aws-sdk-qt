@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace clouddirectory {
+namespace CloudDirectory {
 
 class DetachTypedLinkResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace clouddirectory
+} // namespace CloudDirectory
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEPROGRESSUPDATESTREAMRESPONSE_H
 #define QTAWS_DELETEPROGRESSUPDATESTREAMRESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "deleteprogressupdatestreamrequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class DeleteProgressUpdateStreamResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

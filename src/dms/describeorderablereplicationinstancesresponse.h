@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESRESPONSE_H
 #define QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "describeorderablereplicationinstancesrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DescribeOrderableReplicationInstancesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

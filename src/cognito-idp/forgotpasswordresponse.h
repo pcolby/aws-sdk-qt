@@ -20,12 +20,12 @@
 #ifndef QTAWS_FORGOTPASSWORDRESPONSE_H
 #define QTAWS_FORGOTPASSWORDRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "forgotpasswordrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class ForgotPasswordResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

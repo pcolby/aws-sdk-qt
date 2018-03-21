@@ -20,12 +20,12 @@
 #ifndef QTAWS_RESENDCONFIRMATIONCODERESPONSE_H
 #define QTAWS_RESENDCONFIRMATIONCODERESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "resendconfirmationcoderequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class ResendConfirmationCodeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

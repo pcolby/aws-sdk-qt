@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETBUILTININTENTSRESPONSE_H
 #define QTAWS_GETBUILTININTENTSRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "getbuiltinintentsrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class GetBuiltinIntentsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

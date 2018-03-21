@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_H
 #define QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_H
 
-#include "serverlessreporesponse.h"
+#include "serverlessapplicationrepositoryresponse.h"
 #include "createapplicationversionrequest.h"
 
 namespace AWS {
 
-namespace serverlessrepo {
+namespace ServerlessApplicationRepository {
 
 class CreateApplicationVersionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace serverlessrepo
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

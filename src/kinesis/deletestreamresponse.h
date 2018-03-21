@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace kinesis {
+namespace Kinesis {
 
 class DeleteStreamResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace kinesis
+} // namespace Kinesis
 } // namespace AWS
 
 #endif

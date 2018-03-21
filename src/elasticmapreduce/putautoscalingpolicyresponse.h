@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_H
 #define QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "putautoscalingpolicyrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class PutAutoScalingPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

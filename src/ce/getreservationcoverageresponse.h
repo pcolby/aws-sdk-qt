@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETRESERVATIONCOVERAGERESPONSE_H
 #define QTAWS_GETRESERVATIONCOVERAGERESPONSE_H
 
-#include "ceresponse.h"
+#include "costexplorerresponse.h"
 #include "getreservationcoveragerequest.h"
 
 namespace AWS {
 
-namespace ce {
+namespace CostExplorer {
 
 class GetReservationCoverageResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ce
+} // namespace CostExplorer
 } // namespace AWS
 
 #endif

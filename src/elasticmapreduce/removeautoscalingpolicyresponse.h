@@ -20,12 +20,12 @@
 #ifndef QTAWS_REMOVEAUTOSCALINGPOLICYRESPONSE_H
 #define QTAWS_REMOVEAUTOSCALINGPOLICYRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "removeautoscalingpolicyrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class RemoveAutoScalingPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

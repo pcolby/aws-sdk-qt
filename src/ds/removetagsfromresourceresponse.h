@@ -20,12 +20,12 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "removetagsfromresourcerequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class RemoveTagsFromResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

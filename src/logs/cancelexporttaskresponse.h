@@ -20,12 +20,12 @@
 #ifndef QTAWS_CANCELEXPORTTASKRESPONSE_H
 #define QTAWS_CANCELEXPORTTASKRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "cancelexporttaskrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class CancelExportTaskResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

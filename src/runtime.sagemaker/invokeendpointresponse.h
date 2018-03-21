@@ -20,12 +20,12 @@
 #ifndef QTAWS_INVOKEENDPOINTRESPONSE_H
 #define QTAWS_INVOKEENDPOINTRESPONSE_H
 
-#include "runtime.sagemakerresponse.h"
+#include "sagemakerruntimeresponse.h"
 #include "invokeendpointrequest.h"
 
 namespace AWS {
 
-namespace runtime.sagemaker {
+namespace SageMakerRuntime {
 
 class InvokeEndpointResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace runtime.sagemaker
+} // namespace SageMakerRuntime
 } // namespace AWS
 
 #endif

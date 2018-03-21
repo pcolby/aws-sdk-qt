@@ -20,12 +20,12 @@
 #ifndef QTAWS_SELECTRESPONSE_H
 #define QTAWS_SELECTRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "selectrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class SelectResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

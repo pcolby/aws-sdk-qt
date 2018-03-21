@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEDOMAINRESPONSE_H
 #define QTAWS_CREATEDOMAINRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "createdomainrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class CreateDomainResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

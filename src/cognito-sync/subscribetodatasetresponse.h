@@ -20,12 +20,12 @@
 #ifndef QTAWS_SUBSCRIBETODATASETRESPONSE_H
 #define QTAWS_SUBSCRIBETODATASETRESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "subscribetodatasetrequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class SubscribeToDatasetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

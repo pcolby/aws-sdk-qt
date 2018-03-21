@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace waf {
+namespace WAF {
 
 class ListRegexMatchSetsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf
+} // namespace WAF
 } // namespace AWS
 
 #endif

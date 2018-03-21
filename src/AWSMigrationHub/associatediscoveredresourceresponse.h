@@ -20,12 +20,12 @@
 #ifndef QTAWS_ASSOCIATEDISCOVEREDRESOURCERESPONSE_H
 #define QTAWS_ASSOCIATEDISCOVEREDRESOURCERESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "associatediscoveredresourcerequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class AssociateDiscoveredResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

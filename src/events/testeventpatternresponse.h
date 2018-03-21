@@ -20,12 +20,12 @@
 #ifndef QTAWS_TESTEVENTPATTERNRESPONSE_H
 #define QTAWS_TESTEVENTPATTERNRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "testeventpatternrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class TestEventPatternResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

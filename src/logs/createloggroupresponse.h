@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATELOGGROUPRESPONSE_H
 #define QTAWS_CREATELOGGROUPRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "createloggrouprequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class CreateLogGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEIDENTITIESRESPONSE_H
 #define QTAWS_DELETEIDENTITIESRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "deleteidentitiesrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class DeleteIdentitiesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

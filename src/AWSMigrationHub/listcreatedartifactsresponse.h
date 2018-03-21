@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTCREATEDARTIFACTSRESPONSE_H
 #define QTAWS_LISTCREATEDARTIFACTSRESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "listcreatedartifactsrequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class ListCreatedArtifactsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

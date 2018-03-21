@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEEXPORTTASKSRESPONSE_H
 #define QTAWS_DESCRIBEEXPORTTASKSRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "describeexporttasksrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class DescribeExportTasksResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

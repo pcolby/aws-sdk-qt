@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETRESPONSE_H
 #define QTAWS_UPDATEXSSMATCHSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "updatexssmatchsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class UpdateXssMatchSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

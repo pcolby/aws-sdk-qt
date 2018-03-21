@@ -20,12 +20,12 @@
 #ifndef QTAWS_STARTSCHEMAEXTENSIONRESPONSE_H
 #define QTAWS_STARTSCHEMAEXTENSIONRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "startschemaextensionrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class StartSchemaExtensionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

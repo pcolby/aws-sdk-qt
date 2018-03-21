@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATERECEIPTRULERESPONSE_H
 #define QTAWS_UPDATERECEIPTRULERESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "updatereceiptrulerequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class UpdateReceiptRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEWEBACLRESPONSE_H
 #define QTAWS_DELETEWEBACLRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "deletewebaclrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class DeleteWebACLResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

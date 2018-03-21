@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_H
 #define QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminuserglobalsignoutrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminUserGlobalSignOutResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

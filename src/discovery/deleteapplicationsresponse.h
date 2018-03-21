@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEAPPLICATIONSRESPONSE_H
 #define QTAWS_DELETEAPPLICATIONSRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "deleteapplicationsrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class DeleteApplicationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

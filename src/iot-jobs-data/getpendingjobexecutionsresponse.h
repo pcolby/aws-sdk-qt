@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_H
 #define QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_H
 
-#include "iot-jobs-dataresponse.h"
+#include "iotjobsdataplaneresponse.h"
 #include "getpendingjobexecutionsrequest.h"
 
 namespace AWS {
 
-namespace iot-jobs-data {
+namespace IoTJobsDataPlane {
 
 class GetPendingJobExecutionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iot-jobs-data
+} // namespace IoTJobsDataPlane
 } // namespace AWS
 
 #endif

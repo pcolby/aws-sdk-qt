@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace snowball {
+namespace Snowball {
 
 class CreateAddressResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace snowball
+} // namespace Snowball
 } // namespace AWS
 
 #endif

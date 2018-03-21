@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEDASHBOARDSRESPONSE_H
 #define QTAWS_DELETEDASHBOARDSRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "deletedashboardsrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class DeleteDashboardsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBERULERESPONSE_H
 #define QTAWS_DESCRIBERULERESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "describerulerequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class DescribeRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

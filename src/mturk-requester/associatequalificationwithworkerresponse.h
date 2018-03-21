@@ -20,12 +20,12 @@
 #ifndef QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERRESPONSE_H
 #define QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "associatequalificationwithworkerrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class AssociateQualificationWithWorkerResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESRESPONSE_H
 #define QTAWS_DESCRIBECERTIFICATESRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "describecertificatesrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DescribeCertificatesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

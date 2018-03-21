@@ -20,12 +20,12 @@
 #ifndef QTAWS_DISABLERADIUSRESPONSE_H
 #define QTAWS_DISABLERADIUSRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "disableradiusrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DisableRadiusResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

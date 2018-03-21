@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETECONFIGRULERESPONSE_H
 #define QTAWS_DELETECONFIGRULERESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "deleteconfigrulerequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DeleteConfigRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

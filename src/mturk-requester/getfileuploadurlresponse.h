@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETFILEUPLOADURLRESPONSE_H
 #define QTAWS_GETFILEUPLOADURLRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "getfileuploadurlrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class GetFileUploadURLResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

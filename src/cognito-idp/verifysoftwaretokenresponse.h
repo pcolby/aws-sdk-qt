@@ -20,12 +20,12 @@
 #ifndef QTAWS_VERIFYSOFTWARETOKENRESPONSE_H
 #define QTAWS_VERIFYSOFTWARETOKENRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "verifysoftwaretokenrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class VerifySoftwareTokenResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

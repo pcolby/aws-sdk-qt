@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace ssm {
+namespace SSM {
 
 class UpdateManagedInstanceRoleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ssm
+} // namespace SSM
 } // namespace AWS
 
 #endif

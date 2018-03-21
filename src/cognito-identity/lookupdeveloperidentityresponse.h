@@ -20,12 +20,12 @@
 #ifndef QTAWS_LOOKUPDEVELOPERIDENTITYRESPONSE_H
 #define QTAWS_LOOKUPDEVELOPERIDENTITYRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "lookupdeveloperidentityrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class LookupDeveloperIdentityResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

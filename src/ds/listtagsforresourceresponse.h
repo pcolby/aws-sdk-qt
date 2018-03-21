@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "listtagsforresourcerequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class ListTagsForResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

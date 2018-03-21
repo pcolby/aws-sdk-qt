@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace machinelearning {
+namespace MachineLearning {
 
 class CreateMLModelResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace machinelearning
+} // namespace MachineLearning
 } // namespace AWS
 
 #endif

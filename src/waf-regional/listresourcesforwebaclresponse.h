@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTRESOURCESFORWEBACLRESPONSE_H
 #define QTAWS_LISTRESOURCESFORWEBACLRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "listresourcesforwebaclrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class ListResourcesForWebACLResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

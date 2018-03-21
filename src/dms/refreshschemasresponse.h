@@ -20,12 +20,12 @@
 #ifndef QTAWS_REFRESHSCHEMASRESPONSE_H
 #define QTAWS_REFRESHSCHEMASRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "refreshschemasrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class RefreshSchemasResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

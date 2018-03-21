@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETRATEBASEDRULERESPONSE_H
 #define QTAWS_GETRATEBASEDRULERESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getratebasedrulerequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetRateBasedRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

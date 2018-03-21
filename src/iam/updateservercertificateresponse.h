@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace iam {
+namespace IAM {
 
 class UpdateServerCertificateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iam
+} // namespace IAM
 } // namespace AWS
 
 #endif

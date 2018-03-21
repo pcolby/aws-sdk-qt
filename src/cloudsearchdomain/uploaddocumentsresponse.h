@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloudsearchdomain {
+namespace CloudSearchDomain {
 
 class UploadDocumentsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloudsearchdomain
+} // namespace CloudSearchDomain
 } // namespace AWS
 
 #endif

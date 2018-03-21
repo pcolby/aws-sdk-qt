@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace dynamodb {
+namespace DynamoDB {
 
 class BatchGetItemResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dynamodb
+} // namespace DynamoDB
 } // namespace AWS
 
 #endif

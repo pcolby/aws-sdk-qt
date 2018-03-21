@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_H
 #define QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "getaccountsendingenabledrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class GetAccountSendingEnabledResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

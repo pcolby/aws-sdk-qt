@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETALARMSTATERESPONSE_H
 #define QTAWS_SETALARMSTATERESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "setalarmstaterequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class SetAlarmStateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

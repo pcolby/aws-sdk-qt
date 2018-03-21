@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETETHINGSHADOWRESPONSE_H
 #define QTAWS_DELETETHINGSHADOWRESPONSE_H
 
-#include "iot-dataresponse.h"
+#include "iotdataplaneresponse.h"
 #include "deletethingshadowrequest.h"
 
 namespace AWS {
 
-namespace iot-data {
+namespace IoTDataPlane {
 
 class DeleteThingShadowResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iot-data
+} // namespace IoTDataPlane
 } // namespace AWS
 
 #endif

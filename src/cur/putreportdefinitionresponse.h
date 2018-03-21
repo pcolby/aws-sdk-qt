@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTREPORTDEFINITIONRESPONSE_H
 #define QTAWS_PUTREPORTDEFINITIONRESPONSE_H
 
-#include "curresponse.h"
+#include "costandusagereportserviceresponse.h"
 #include "putreportdefinitionrequest.h"
 
 namespace AWS {
 
-namespace cur {
+namespace CostandUsageReportService {
 
 class PutReportDefinitionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cur
+} // namespace CostandUsageReportService
 } // namespace AWS
 
 #endif

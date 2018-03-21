@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTDESTINATIONPOLICYRESPONSE_H
 #define QTAWS_PUTDESTINATIONPOLICYRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "putdestinationpolicyrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class PutDestinationPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

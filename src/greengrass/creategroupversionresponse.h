@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace greengrass {
+namespace Greengrass {
 
 class CreateGroupVersionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace greengrass
+} // namespace Greengrass
 } // namespace AWS
 
 #endif

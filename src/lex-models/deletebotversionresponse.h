@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEBOTVERSIONRESPONSE_H
 #define QTAWS_DELETEBOTVERSIONRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "deletebotversionrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class DeleteBotVersionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace elasticbeanstalk {
+namespace ElasticBeanstalk {
 
 class ListAvailableSolutionStacksResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticbeanstalk
+} // namespace ElasticBeanstalk
 } // namespace AWS
 
 #endif

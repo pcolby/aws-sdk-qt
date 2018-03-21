@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTRULEGROUPSRESPONSE_H
 #define QTAWS_LISTRULEGROUPSRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "listrulegroupsrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class ListRuleGroupsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

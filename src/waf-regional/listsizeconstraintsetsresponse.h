@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_H
 #define QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "listsizeconstraintsetsrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class ListSizeConstraintSetsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

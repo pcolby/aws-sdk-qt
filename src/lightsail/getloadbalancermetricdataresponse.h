@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace lightsail {
+namespace Lightsail {
 
 class GetLoadBalancerMetricDataResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lightsail
+} // namespace Lightsail
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTCONFIGURATIONRECORDERRESPONSE_H
 #define QTAWS_PUTCONFIGURATIONRECORDERRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "putconfigurationrecorderrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class PutConfigurationRecorderResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

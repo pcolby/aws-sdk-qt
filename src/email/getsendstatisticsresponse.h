@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETSENDSTATISTICSRESPONSE_H
 #define QTAWS_GETSENDSTATISTICSRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "getsendstatisticsrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class GetSendStatisticsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

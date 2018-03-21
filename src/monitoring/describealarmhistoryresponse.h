@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEALARMHISTORYRESPONSE_H
 #define QTAWS_DESCRIBEALARMHISTORYRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "describealarmhistoryrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class DescribeAlarmHistoryResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

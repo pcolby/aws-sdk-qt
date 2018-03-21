@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_H
 #define QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_H
 
-#include "esresponse.h"
+#include "elasticsearchserviceresponse.h"
 #include "deleteelasticsearchdomainrequest.h"
 
 namespace AWS {
 
-namespace es {
+namespace ElasticsearchService {
 
 class DeleteElasticsearchDomainResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace es
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

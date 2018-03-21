@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBERECEIPTRULESETRESPONSE_H
 #define QTAWS_DESCRIBERECEIPTRULESETRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "describereceiptrulesetrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class DescribeReceiptRuleSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

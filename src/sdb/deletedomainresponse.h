@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEDOMAINRESPONSE_H
 #define QTAWS_DELETEDOMAINRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "deletedomainrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class DeleteDomainResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

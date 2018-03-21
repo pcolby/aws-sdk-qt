@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTRULESRESPONSE_H
 #define QTAWS_LISTRULESRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "listrulesrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class ListRulesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

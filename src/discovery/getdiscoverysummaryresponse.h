@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETDISCOVERYSUMMARYRESPONSE_H
 #define QTAWS_GETDISCOVERYSUMMARYRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "getdiscoverysummaryrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class GetDiscoverySummaryResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

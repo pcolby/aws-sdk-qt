@@ -20,12 +20,12 @@
 #ifndef QTAWS_NOTIFYAPPLICATIONSTATERESPONSE_H
 #define QTAWS_NOTIFYAPPLICATIONSTATERESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "notifyapplicationstaterequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class NotifyApplicationStateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_APPROVEASSIGNMENTRESPONSE_H
 #define QTAWS_APPROVEASSIGNMENTRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "approveassignmentrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class ApproveAssignmentResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

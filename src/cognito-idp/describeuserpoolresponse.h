@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEUSERPOOLRESPONSE_H
 #define QTAWS_DESCRIBEUSERPOOLRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "describeuserpoolrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class DescribeUserPoolResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

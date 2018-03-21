@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEBOTVERSIONRESPONSE_H
 #define QTAWS_CREATEBOTVERSIONRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "createbotversionrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class CreateBotVersionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

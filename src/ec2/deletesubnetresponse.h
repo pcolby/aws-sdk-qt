@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace ec2 {
+namespace EC2 {
 
 class DeleteSubnetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ec2
+} // namespace EC2
 } // namespace AWS
 
 #endif

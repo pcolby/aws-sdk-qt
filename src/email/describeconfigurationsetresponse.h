@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONSETRESPONSE_H
 #define QTAWS_DESCRIBECONFIGURATIONSETRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "describeconfigurationsetrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class DescribeConfigurationSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

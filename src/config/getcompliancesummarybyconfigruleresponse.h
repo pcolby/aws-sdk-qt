@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETCOMPLIANCESUMMARYBYCONFIGRULERESPONSE_H
 #define QTAWS_GETCOMPLIANCESUMMARYBYCONFIGRULERESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "getcompliancesummarybyconfigrulerequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class GetComplianceSummaryByConfigRuleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

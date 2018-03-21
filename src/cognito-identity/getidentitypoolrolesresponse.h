@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETIDENTITYPOOLROLESRESPONSE_H
 #define QTAWS_GETIDENTITYPOOLROLESRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "getidentitypoolrolesrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class GetIdentityPoolRolesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

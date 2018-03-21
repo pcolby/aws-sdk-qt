@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETCOGNITOEVENTSRESPONSE_H
 #define QTAWS_SETCOGNITOEVENTSRESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "setcognitoeventsrequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class SetCognitoEventsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

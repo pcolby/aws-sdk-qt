@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEDELIVERYCHANNELSRESPONSE_H
 #define QTAWS_DESCRIBEDELIVERYCHANNELSRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "describedeliverychannelsrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DescribeDeliveryChannelsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

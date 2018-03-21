@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEEVENTBUSRESPONSE_H
 #define QTAWS_DESCRIBEEVENTBUSRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "describeeventbusrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class DescribeEventBusResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

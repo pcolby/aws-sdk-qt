@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEDIRECTORYRESPONSE_H
 #define QTAWS_DELETEDIRECTORYRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "deletedirectoryrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DeleteDirectoryResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

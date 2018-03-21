@@ -20,12 +20,12 @@
 #ifndef QTAWS_MODIFYENDPOINTRESPONSE_H
 #define QTAWS_MODIFYENDPOINTRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "modifyendpointrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class ModifyEndpointResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

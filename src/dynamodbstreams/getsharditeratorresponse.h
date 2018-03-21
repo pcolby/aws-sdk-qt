@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace dynamodbstreams {
+namespace DynamoDBStreams {
 
 class GetShardIteratorResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dynamodbstreams
+} // namespace DynamoDBStreams
 } // namespace AWS
 
 #endif

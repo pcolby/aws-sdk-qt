@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBECLUSTERRESPONSE_H
 #define QTAWS_DESCRIBECLUSTERRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "describeclusterrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class DescribeClusterResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

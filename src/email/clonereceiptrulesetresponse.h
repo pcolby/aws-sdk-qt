@@ -20,12 +20,12 @@
 #ifndef QTAWS_CLONERECEIPTRULESETRESPONSE_H
 #define QTAWS_CLONERECEIPTRULESETRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "clonereceiptrulesetrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class CloneReceiptRuleSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

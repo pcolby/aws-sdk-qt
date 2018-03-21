@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETUTTERANCESVIEWRESPONSE_H
 #define QTAWS_GETUTTERANCESVIEWRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "getutterancesviewrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class GetUtterancesViewResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

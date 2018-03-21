@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETSQLINJECTIONMATCHSETRESPONSE_H
 #define QTAWS_GETSQLINJECTIONMATCHSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getsqlinjectionmatchsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetSqlInjectionMatchSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

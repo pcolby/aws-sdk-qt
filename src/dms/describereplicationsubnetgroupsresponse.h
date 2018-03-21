@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSRESPONSE_H
 #define QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "describereplicationsubnetgroupsrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DescribeReplicationSubnetGroupsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

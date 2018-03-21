@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETREGEXPATTERNSETRESPONSE_H
 #define QTAWS_GETREGEXPATTERNSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getregexpatternsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetRegexPatternSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

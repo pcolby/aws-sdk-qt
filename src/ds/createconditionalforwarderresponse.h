@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATECONDITIONALFORWARDERRESPONSE_H
 #define QTAWS_CREATECONDITIONALFORWARDERRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "createconditionalforwarderrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class CreateConditionalForwarderResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

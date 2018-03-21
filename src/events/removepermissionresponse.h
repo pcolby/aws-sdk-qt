@@ -20,12 +20,12 @@
 #ifndef QTAWS_REMOVEPERMISSIONRESPONSE_H
 #define QTAWS_REMOVEPERMISSIONRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "removepermissionrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class RemovePermissionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

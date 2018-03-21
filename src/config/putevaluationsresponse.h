@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTEVALUATIONSRESPONSE_H
 #define QTAWS_PUTEVALUATIONSRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "putevaluationsrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class PutEvaluationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

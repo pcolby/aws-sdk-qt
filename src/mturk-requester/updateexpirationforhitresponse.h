@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_H
 #define QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "updateexpirationforhitrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class UpdateExpirationForHITResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace kms {
+namespace KMS {
 
 class RetireGrantResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace kms
+} // namespace KMS
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETTAGSRESPONSE_H
 #define QTAWS_GETTAGSRESPONSE_H
 
-#include "ceresponse.h"
+#include "costexplorerresponse.h"
 #include "gettagsrequest.h"
 
 namespace AWS {
 
-namespace ce {
+namespace CostExplorer {
 
 class GetTagsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ce
+} // namespace CostExplorer
 } // namespace AWS
 
 #endif

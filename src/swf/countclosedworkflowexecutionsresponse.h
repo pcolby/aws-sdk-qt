@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace swf {
+namespace SWF {
 
 class CountClosedWorkflowExecutionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace swf
+} // namespace SWF
 } // namespace AWS
 
 #endif

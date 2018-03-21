@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINLISTUSERAUTHEVENTSRESPONSE_H
 #define QTAWS_ADMINLISTUSERAUTHEVENTSRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminlistuserautheventsrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminListUserAuthEventsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTATTRIBUTESRESPONSE_H
 #define QTAWS_PUTATTRIBUTESRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "putattributesrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class PutAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

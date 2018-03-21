@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTAPPLICATIONVERSIONSRESPONSE_H
 #define QTAWS_LISTAPPLICATIONVERSIONSRESPONSE_H
 
-#include "serverlessreporesponse.h"
+#include "serverlessapplicationrepositoryresponse.h"
 #include "listapplicationversionsrequest.h"
 
 namespace AWS {
 
-namespace serverlessrepo {
+namespace ServerlessApplicationRepository {
 
 class ListApplicationVersionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace serverlessrepo
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

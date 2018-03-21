@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETUICUSTOMIZATIONRESPONSE_H
 #define QTAWS_SETUICUSTOMIZATIONRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "setuicustomizationrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class SetUICustomizationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

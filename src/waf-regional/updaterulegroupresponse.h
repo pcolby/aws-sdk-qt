@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATERULEGROUPRESPONSE_H
 #define QTAWS_UPDATERULEGROUPRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "updaterulegrouprequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class UpdateRuleGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

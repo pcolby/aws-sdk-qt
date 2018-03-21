@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTITEMSRESPONSE_H
 #define QTAWS_LISTITEMSRESPONSE_H
 
-#include "mediastore-dataresponse.h"
+#include "mediastoredataresponse.h"
 #include "listitemsrequest.h"
 
 namespace AWS {
 
-namespace mediastore-data {
+namespace MediaStoreData {
 
 class ListItemsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediastore-data
+} // namespace MediaStoreData
 } // namespace AWS
 
 #endif

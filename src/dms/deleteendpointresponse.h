@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEENDPOINTRESPONSE_H
 #define QTAWS_DELETEENDPOINTRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "deleteendpointrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DeleteEndpointResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

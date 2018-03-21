@@ -20,12 +20,12 @@
 #ifndef QTAWS_TERMINATEJOBFLOWSRESPONSE_H
 #define QTAWS_TERMINATEJOBFLOWSRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "terminatejobflowsrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class TerminateJobFlowsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

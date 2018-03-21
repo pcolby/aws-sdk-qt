@@ -20,12 +20,12 @@
 #ifndef QTAWS_TESTMETRICFILTERRESPONSE_H
 #define QTAWS_TESTMETRICFILTERRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "testmetricfilterrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class TestMetricFilterResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

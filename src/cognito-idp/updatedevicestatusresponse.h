@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEDEVICESTATUSRESPONSE_H
 #define QTAWS_UPDATEDEVICESTATUSRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "updatedevicestatusrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class UpdateDeviceStatusResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

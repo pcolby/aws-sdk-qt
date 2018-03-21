@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace sts {
+namespace STS {
 
 class GetCallerIdentityResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sts
+} // namespace STS
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESPONSE_H
 #define QTAWS_UPDATEAPPLICATIONRESPONSE_H
 
-#include "serverlessreporesponse.h"
+#include "serverlessapplicationrepositoryresponse.h"
 #include "updateapplicationrequest.h"
 
 namespace AWS {
 
-namespace serverlessrepo {
+namespace ServerlessApplicationRepository {
 
 class UpdateApplicationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace serverlessrepo
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "addtagstoresourcerequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class AddTagsToResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

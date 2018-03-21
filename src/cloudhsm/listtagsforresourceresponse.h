@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloudhsm {
+namespace CloudHSM {
 
 class ListTagsForResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloudhsm
+} // namespace CloudHSM
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace shield {
+namespace Shield {
 
 class DescribeSubscriptionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace shield
+} // namespace Shield
 } // namespace AWS
 
 #endif

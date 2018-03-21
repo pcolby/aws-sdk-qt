@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace firehose {
+namespace Firehose {
 
 class DeleteDeliveryStreamResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace firehose
+} // namespace Firehose
 } // namespace AWS
 
 #endif

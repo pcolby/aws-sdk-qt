@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATETEMPLATERESPONSE_H
 #define QTAWS_UPDATETEMPLATERESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "updatetemplaterequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class UpdateTemplateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_H
 #define QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "getresourceconfighistoryrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class GetResourceConfigHistoryResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

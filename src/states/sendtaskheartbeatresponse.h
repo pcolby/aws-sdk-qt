@@ -20,12 +20,12 @@
 #ifndef QTAWS_SENDTASKHEARTBEATRESPONSE_H
 #define QTAWS_SENDTASKHEARTBEATRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "sendtaskheartbeatrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class SendTaskHeartbeatResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

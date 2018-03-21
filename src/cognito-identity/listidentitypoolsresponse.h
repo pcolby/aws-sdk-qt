@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTIDENTITYPOOLSRESPONSE_H
 #define QTAWS_LISTIDENTITYPOOLSRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "listidentitypoolsrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class ListIdentityPoolsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

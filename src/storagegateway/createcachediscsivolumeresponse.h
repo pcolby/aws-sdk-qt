@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace storagegateway {
+namespace StorageGateway {
 
 class CreateCachediSCSIVolumeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace storagegateway
+} // namespace StorageGateway
 } // namespace AWS
 
 #endif

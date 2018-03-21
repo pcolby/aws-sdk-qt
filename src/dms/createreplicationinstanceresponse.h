@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_CREATEREPLICATIONINSTANCERESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "createreplicationinstancerequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class CreateReplicationInstanceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

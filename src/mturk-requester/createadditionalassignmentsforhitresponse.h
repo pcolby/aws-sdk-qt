@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEADDITIONALASSIGNMENTSFORHITRESPONSE_H
 #define QTAWS_CREATEADDITIONALASSIGNMENTSFORHITRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "createadditionalassignmentsforhitrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class CreateAdditionalAssignmentsForHITResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

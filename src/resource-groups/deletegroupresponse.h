@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEGROUPRESPONSE_H
 #define QTAWS_DELETEGROUPRESPONSE_H
 
-#include "resource-groupsresponse.h"
+#include "resourcegroupsresponse.h"
 #include "deletegrouprequest.h"
 
 namespace AWS {
 
-namespace resource-groups {
+namespace ResourceGroups {
 
 class DeleteGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace resource-groups
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

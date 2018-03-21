@@ -20,12 +20,12 @@
 #ifndef QTAWS_STOPDATACOLLECTIONBYAGENTIDSRESPONSE_H
 #define QTAWS_STOPDATACOLLECTIONBYAGENTIDSRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "stopdatacollectionbyagentidsrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class StopDataCollectionByAgentIdsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

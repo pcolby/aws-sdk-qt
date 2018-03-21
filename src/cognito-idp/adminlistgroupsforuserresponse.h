@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINLISTGROUPSFORUSERRESPONSE_H
 #define QTAWS_ADMINLISTGROUPSFORUSERRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminlistgroupsforuserrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminListGroupsForUserResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

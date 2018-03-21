@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace elasticache {
+namespace ElastiCache {
 
 class DescribeSnapshotsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticache
+} // namespace ElastiCache
 } // namespace AWS
 
 #endif

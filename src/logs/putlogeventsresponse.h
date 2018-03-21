@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTLOGEVENTSRESPONSE_H
 #define QTAWS_PUTLOGEVENTSRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "putlogeventsrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class PutLogEventsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

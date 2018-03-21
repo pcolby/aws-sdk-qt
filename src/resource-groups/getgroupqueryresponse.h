@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETGROUPQUERYRESPONSE_H
 #define QTAWS_GETGROUPQUERYRESPONSE_H
 
-#include "resource-groupsresponse.h"
+#include "resourcegroupsresponse.h"
 #include "getgroupqueryrequest.h"
 
 namespace AWS {
 
-namespace resource-groups {
+namespace ResourceGroups {
 
 class GetGroupQueryResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace resource-groups
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

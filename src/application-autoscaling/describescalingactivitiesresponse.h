@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBESCALINGACTIVITIESRESPONSE_H
 #define QTAWS_DESCRIBESCALINGACTIVITIESRESPONSE_H
 
-#include "application-autoscalingresponse.h"
+#include "applicationautoscalingresponse.h"
 #include "describescalingactivitiesrequest.h"
 
 namespace AWS {
 
-namespace application-autoscaling {
+namespace ApplicationAutoScaling {
 
 class DescribeScalingActivitiesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace application-autoscaling
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

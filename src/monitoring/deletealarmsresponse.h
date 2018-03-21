@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEALARMSRESPONSE_H
 #define QTAWS_DELETEALARMSRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "deletealarmsrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class DeleteAlarmsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

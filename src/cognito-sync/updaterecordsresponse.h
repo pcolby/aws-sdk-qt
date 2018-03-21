@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATERECORDSRESPONSE_H
 #define QTAWS_UPDATERECORDSRESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "updaterecordsrequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class UpdateRecordsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

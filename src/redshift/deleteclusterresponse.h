@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace redshift {
+namespace Redshift {
 
 class DeleteClusterResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace redshift
+} // namespace Redshift
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESLOTTYPERESPONSE_H
 #define QTAWS_DELETESLOTTYPERESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "deleteslottyperequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class DeleteSlotTypeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

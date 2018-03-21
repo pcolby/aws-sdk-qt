@@ -20,12 +20,12 @@
 #ifndef QTAWS_UNTAGLOGGROUPRESPONSE_H
 #define QTAWS_UNTAGLOGGROUPRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "untagloggrouprequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class UntagLogGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

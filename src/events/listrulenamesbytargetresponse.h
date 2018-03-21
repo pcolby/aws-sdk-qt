@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTRULENAMESBYTARGETRESPONSE_H
 #define QTAWS_LISTRULENAMESBYTARGETRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "listrulenamesbytargetrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class ListRuleNamesByTargetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETUSERPOOLMFACONFIGRESPONSE_H
 #define QTAWS_GETUSERPOOLMFACONFIGRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "getuserpoolmfaconfigrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class GetUserPoolMfaConfigResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

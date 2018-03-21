@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEJOBEXECUTIONRESPONSE_H
 #define QTAWS_UPDATEJOBEXECUTIONRESPONSE_H
 
-#include "iot-jobs-dataresponse.h"
+#include "iotjobsdataplaneresponse.h"
 #include "updatejobexecutionrequest.h"
 
 namespace AWS {
 
-namespace iot-jobs-data {
+namespace IoTJobsDataPlane {
 
 class UpdateJobExecutionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iot-jobs-data
+} // namespace IoTJobsDataPlane
 } // namespace AWS
 
 #endif

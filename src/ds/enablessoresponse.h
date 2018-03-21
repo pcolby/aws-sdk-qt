@@ -20,12 +20,12 @@
 #ifndef QTAWS_ENABLESSORESPONSE_H
 #define QTAWS_ENABLESSORESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "enablessorequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class EnableSsoResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

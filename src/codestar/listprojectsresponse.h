@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace codestar {
+namespace CodeStar {
 
 class ListProjectsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace codestar
+} // namespace CodeStar
 } // namespace AWS
 
 #endif

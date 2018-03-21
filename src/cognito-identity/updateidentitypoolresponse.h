@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEIDENTITYPOOLRESPONSE_H
 #define QTAWS_UPDATEIDENTITYPOOLRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "updateidentitypoolrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class UpdateIdentityPoolResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

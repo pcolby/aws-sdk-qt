@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace inspector {
+namespace Inspector {
 
 class DeleteAssessmentTargetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace inspector
+} // namespace Inspector
 } // namespace AWS
 
 #endif

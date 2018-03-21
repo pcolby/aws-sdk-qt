@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace importexport {
+namespace ImportExport {
 
 class CreateJobResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace importexport
+} // namespace ImportExport
 } // namespace AWS
 
 #endif

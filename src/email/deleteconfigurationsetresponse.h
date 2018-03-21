@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETRESPONSE_H
 #define QTAWS_DELETECONFIGURATIONSETRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "deleteconfigurationsetrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class DeleteConfigurationSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

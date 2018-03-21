@@ -20,12 +20,12 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "rebootreplicationinstancerequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class RebootReplicationInstanceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

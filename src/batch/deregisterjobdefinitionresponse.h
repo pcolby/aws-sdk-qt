@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace batch {
+namespace Batch {
 
 class DeregisterJobDefinitionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace batch
+} // namespace Batch
 } // namespace AWS
 
 #endif

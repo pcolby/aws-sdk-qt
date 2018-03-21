@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTDOMAINSRESPONSE_H
 #define QTAWS_LISTDOMAINSRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "listdomainsrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class ListDomainsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

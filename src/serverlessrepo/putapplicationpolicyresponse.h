@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTAPPLICATIONPOLICYRESPONSE_H
 #define QTAWS_PUTAPPLICATIONPOLICYRESPONSE_H
 
-#include "serverlessreporesponse.h"
+#include "serverlessapplicationrepositoryresponse.h"
 #include "putapplicationpolicyrequest.h"
 
 namespace AWS {
 
-namespace serverlessrepo {
+namespace ServerlessApplicationRepository {
 
 class PutApplicationPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace serverlessrepo
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

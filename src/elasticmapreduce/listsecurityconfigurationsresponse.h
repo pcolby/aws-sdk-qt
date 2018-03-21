@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTSECURITYCONFIGURATIONSRESPONSE_H
 #define QTAWS_LISTSECURITYCONFIGURATIONSRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "listsecurityconfigurationsrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class ListSecurityConfigurationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

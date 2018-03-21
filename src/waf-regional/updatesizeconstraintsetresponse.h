@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATESIZECONSTRAINTSETRESPONSE_H
 #define QTAWS_UPDATESIZECONSTRAINTSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "updatesizeconstraintsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class UpdateSizeConstraintSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

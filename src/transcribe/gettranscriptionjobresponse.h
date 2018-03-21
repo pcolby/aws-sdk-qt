@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETTRANSCRIPTIONJOBRESPONSE_H
 #define QTAWS_GETTRANSCRIPTIONJOBRESPONSE_H
 
-#include "transcriberesponse.h"
+#include "transcribeserviceresponse.h"
 #include "gettranscriptionjobrequest.h"
 
 namespace AWS {
 
-namespace transcribe {
+namespace TranscribeService {
 
 class GetTranscriptionJobResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace transcribe
+} // namespace TranscribeService
 } // namespace AWS
 
 #endif

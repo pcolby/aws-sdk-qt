@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace mobile {
+namespace Mobile {
 
 class ExportBundleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mobile
+} // namespace Mobile
 } // namespace AWS
 
 #endif

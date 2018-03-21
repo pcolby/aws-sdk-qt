@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace glacier {
+namespace Glacier {
 
 class GetVaultNotificationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace glacier
+} // namespace Glacier
 } // namespace AWS
 
 #endif

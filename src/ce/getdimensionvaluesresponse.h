@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETDIMENSIONVALUESRESPONSE_H
 #define QTAWS_GETDIMENSIONVALUESRESPONSE_H
 
-#include "ceresponse.h"
+#include "costexplorerresponse.h"
 #include "getdimensionvaluesrequest.h"
 
 namespace AWS {
 
-namespace ce {
+namespace CostExplorer {
 
 class GetDimensionValuesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ce
+} // namespace CostExplorer
 } // namespace AWS
 
 #endif

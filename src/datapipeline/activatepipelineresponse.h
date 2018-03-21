@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace datapipeline {
+namespace DataPipeline {
 
 class ActivatePipelineResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace datapipeline
+} // namespace DataPipeline
 } // namespace AWS
 
 #endif

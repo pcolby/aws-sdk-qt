@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEREPORTDEFINITIONRESPONSE_H
 #define QTAWS_DELETEREPORTDEFINITIONRESPONSE_H
 
-#include "curresponse.h"
+#include "costandusagereportserviceresponse.h"
 #include "deletereportdefinitionrequest.h"
 
 namespace AWS {
 
-namespace cur {
+namespace CostandUsageReportService {
 
 class DeleteReportDefinitionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cur
+} // namespace CostandUsageReportService
 } // namespace AWS
 
 #endif

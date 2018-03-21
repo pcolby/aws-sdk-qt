@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTDOMAINNAMESRESPONSE_H
 #define QTAWS_LISTDOMAINNAMESRESPONSE_H
 
-#include "esresponse.h"
+#include "elasticsearchserviceresponse.h"
 #include "listdomainnamesrequest.h"
 
 namespace AWS {
 
-namespace es {
+namespace ElasticsearchService {
 
 class ListDomainNamesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace es
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEIDENTITYPOLICYRESPONSE_H
 #define QTAWS_DELETEIDENTITYPOLICYRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "deleteidentitypolicyrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class DeleteIdentityPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

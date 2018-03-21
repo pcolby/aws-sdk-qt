@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETECONFIGURATIONRECORDERRESPONSE_H
 #define QTAWS_DELETECONFIGURATIONRECORDERRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "deleteconfigurationrecorderrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DeleteConfigurationRecorderResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

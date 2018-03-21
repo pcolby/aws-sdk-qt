@@ -20,12 +20,12 @@
 #ifndef QTAWS_CONFIRMDEVICERESPONSE_H
 #define QTAWS_CONFIRMDEVICERESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "confirmdevicerequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class ConfirmDeviceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

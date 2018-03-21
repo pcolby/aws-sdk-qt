@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace appsync {
+namespace AppSync {
 
 class GetDataSourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace appsync
+} // namespace AppSync
 } // namespace AWS
 
 #endif

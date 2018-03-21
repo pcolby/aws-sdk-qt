@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETELOGGROUPRESPONSE_H
 #define QTAWS_DELETELOGGROUPRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "deleteloggrouprequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DeleteLogGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

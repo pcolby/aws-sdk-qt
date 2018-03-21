@@ -20,12 +20,12 @@
 #ifndef QTAWS_DEREGISTERSCALABLETARGETRESPONSE_H
 #define QTAWS_DEREGISTERSCALABLETARGETRESPONSE_H
 
-#include "application-autoscalingresponse.h"
+#include "applicationautoscalingresponse.h"
 #include "deregisterscalabletargetrequest.h"
 
 namespace AWS {
 
-namespace application-autoscaling {
+namespace ApplicationAutoScaling {
 
 class DeregisterScalableTargetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace application-autoscaling
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

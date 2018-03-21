@@ -20,12 +20,12 @@
 #ifndef QTAWS_ASSOCIATEWEBACLRESPONSE_H
 #define QTAWS_ASSOCIATEWEBACLRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "associatewebaclrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class AssociateWebACLResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

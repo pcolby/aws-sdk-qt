@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETQUALIFICATIONSCORERESPONSE_H
 #define QTAWS_GETQUALIFICATIONSCORERESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "getqualificationscorerequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class GetQualificationScoreResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

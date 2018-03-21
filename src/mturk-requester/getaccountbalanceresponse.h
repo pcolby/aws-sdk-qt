@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETACCOUNTBALANCERESPONSE_H
 #define QTAWS_GETACCOUNTBALANCERESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "getaccountbalancerequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class GetAccountBalanceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEREPLICATIONSUBNETGROUPRESPONSE_H
 #define QTAWS_CREATEREPLICATIONSUBNETGROUPRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "createreplicationsubnetgrouprequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class CreateReplicationSubnetGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

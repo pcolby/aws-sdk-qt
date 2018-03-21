@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace kinesisanalytics {
+namespace KinesisAnalytics {
 
 class DeleteApplicationInputProcessingConfigurationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace kinesisanalytics
+} // namespace KinesisAnalytics
 } // namespace AWS
 
 #endif

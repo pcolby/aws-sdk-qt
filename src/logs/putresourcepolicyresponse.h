@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTRESOURCEPOLICYRESPONSE_H
 #define QTAWS_PUTRESOURCEPOLICYRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "putresourcepolicyrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class PutResourcePolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

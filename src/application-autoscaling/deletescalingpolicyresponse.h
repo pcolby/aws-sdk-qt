@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESCALINGPOLICYRESPONSE_H
 #define QTAWS_DELETESCALINGPOLICYRESPONSE_H
 
-#include "application-autoscalingresponse.h"
+#include "applicationautoscalingresponse.h"
 #include "deletescalingpolicyrequest.h"
 
 namespace AWS {
 
-namespace application-autoscaling {
+namespace ApplicationAutoScaling {
 
 class DeleteScalingPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace application-autoscaling
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

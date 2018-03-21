@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEREPLICATIONSUBNETGROUPRESPONSE_H
 #define QTAWS_DELETEREPLICATIONSUBNETGROUPRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "deletereplicationsubnetgrouprequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DeleteReplicationSubnetGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

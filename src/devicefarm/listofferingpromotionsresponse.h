@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace devicefarm {
+namespace DeviceFarm {
 
 class ListOfferingPromotionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace devicefarm
+} // namespace DeviceFarm
 } // namespace AWS
 
 #endif

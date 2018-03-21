@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESQLINJECTIONMATCHSETRESPONSE_H
 #define QTAWS_DELETESQLINJECTIONMATCHSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "deletesqlinjectionmatchsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class DeleteSqlInjectionMatchSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

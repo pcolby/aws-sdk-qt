@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_H
 #define QTAWS_CREATETAGSRESPONSE_H
 
-#include "elasticfilesystemresponse.h"
+#include "efsresponse.h"
 #include "createtagsrequest.h"
 
 namespace AWS {
 
-namespace elasticfilesystem {
+namespace EFS {
 
 class CreateTagsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticfilesystem
+} // namespace EFS
 } // namespace AWS
 
 #endif

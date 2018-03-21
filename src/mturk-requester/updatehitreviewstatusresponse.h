@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_H
 #define QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "updatehitreviewstatusrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class UpdateHITReviewStatusResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

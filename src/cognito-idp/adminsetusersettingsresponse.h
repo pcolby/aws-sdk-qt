@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINSETUSERSETTINGSRESPONSE_H
 #define QTAWS_ADMINSETUSERSETTINGSRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminsetusersettingsrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminSetUserSettingsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

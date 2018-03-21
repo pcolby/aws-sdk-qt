@@ -20,12 +20,12 @@
 #ifndef QTAWS_SENDCUSTOMVERIFICATIONEMAILRESPONSE_H
 #define QTAWS_SENDCUSTOMVERIFICATIONEMAILRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "sendcustomverificationemailrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class SendCustomVerificationEmailResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

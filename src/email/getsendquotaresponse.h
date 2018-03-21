@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETSENDQUOTARESPONSE_H
 #define QTAWS_GETSENDQUOTARESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "getsendquotarequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class GetSendQuotaResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

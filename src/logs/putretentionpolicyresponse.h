@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTRETENTIONPOLICYRESPONSE_H
 #define QTAWS_PUTRETENTIONPOLICYRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "putretentionpolicyrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class PutRetentionPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEIDENTITYRESPONSE_H
 #define QTAWS_DESCRIBEIDENTITYRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "describeidentityrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class DescribeIdentityResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

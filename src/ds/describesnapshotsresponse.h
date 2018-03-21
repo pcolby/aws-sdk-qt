@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSRESPONSE_H
 #define QTAWS_DESCRIBESNAPSHOTSRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "describesnapshotsrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DescribeSnapshotsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace mq {
+namespace MQ {
 
 class DeleteUserResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mq
+} // namespace MQ
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETSIZECONSTRAINTSETRESPONSE_H
 #define QTAWS_GETSIZECONSTRAINTSETRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getsizeconstraintsetrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetSizeConstraintSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

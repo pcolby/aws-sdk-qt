@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTFRAGMENTSRESPONSE_H
 #define QTAWS_LISTFRAGMENTSRESPONSE_H
 
-#include "kinesis-video-archived-mediaresponse.h"
+#include "kinesisvideoarchivedmediaresponse.h"
 #include "listfragmentsrequest.h"
 
 namespace AWS {
 
-namespace kinesis-video-archived-media {
+namespace KinesisVideoArchivedMedia {
 
 class ListFragmentsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace kinesis-video-archived-media
+} // namespace KinesisVideoArchivedMedia
 } // namespace AWS
 
 #endif

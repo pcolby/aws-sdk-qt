@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEINTENTVERSIONRESPONSE_H
 #define QTAWS_DELETEINTENTVERSIONRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "deleteintentversionrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class DeleteIntentVersionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_DELETEREPLICATIONINSTANCERESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "deletereplicationinstancerequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DeleteReplicationInstanceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

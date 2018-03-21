@@ -77,7 +77,7 @@ bool Generator::generate(const QString &serviceFileName,
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
-    const QString classNamePrefix = getClassNamePrefix(metaData); /// @todo Do we need this anymore?
+    const QString classNamePrefix = getClassNamePrefix(metaData);
     const QString className =
         ((classNamePrefix.contains(QRegularExpression(QSL("^[^a-z]+$"))))
         ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
@@ -92,7 +92,7 @@ bool Generator::generate(const QString &serviceFileName,
 
     /// @todo Generate model classes.
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
-        generateModelClasses(projectDir, serviceFileName, operationName, description);
+        generateModelClasses(projectDir, classNamePrefix, operationName, description);
     }
 
     /// @todo Generate service client.

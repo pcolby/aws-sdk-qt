@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONFILTERSRESPONSE_H
 #define QTAWS_DESCRIBESUBSCRIPTIONFILTERSRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "describesubscriptionfiltersrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DescribeSubscriptionFiltersResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

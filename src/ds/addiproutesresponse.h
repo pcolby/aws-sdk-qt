@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADDIPROUTESRESPONSE_H
 #define QTAWS_ADDIPROUTESRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "addiproutesrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class AddIpRoutesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

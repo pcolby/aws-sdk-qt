@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETVISIBLETOALLUSERSRESPONSE_H
 #define QTAWS_SETVISIBLETOALLUSERSRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "setvisibletoallusersrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class SetVisibleToAllUsersResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

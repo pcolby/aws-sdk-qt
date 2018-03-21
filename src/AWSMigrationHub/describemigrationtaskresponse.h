@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEMIGRATIONTASKRESPONSE_H
 #define QTAWS_DESCRIBEMIGRATIONTASKRESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "describemigrationtaskrequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class DescribeMigrationTaskResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

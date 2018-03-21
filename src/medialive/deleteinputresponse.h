@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace medialive {
+namespace MediaLive {
 
 class DeleteInputResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace medialive
+} // namespace MediaLive
 } // namespace AWS
 
 #endif

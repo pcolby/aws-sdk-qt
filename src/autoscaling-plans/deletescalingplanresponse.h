@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESCALINGPLANRESPONSE_H
 #define QTAWS_DELETESCALINGPLANRESPONSE_H
 
-#include "autoscaling-plansresponse.h"
+#include "autoscalingplansresponse.h"
 #include "deletescalingplanrequest.h"
 
 namespace AWS {
 
-namespace autoscaling-plans {
+namespace AutoScalingPlans {
 
 class DeleteScalingPlanResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace autoscaling-plans
+} // namespace AutoScalingPlans
 } // namespace AWS
 
 #endif

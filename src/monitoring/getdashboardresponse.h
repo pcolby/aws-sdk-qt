@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETDASHBOARDRESPONSE_H
 #define QTAWS_GETDASHBOARDRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "getdashboardrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class GetDashboardResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

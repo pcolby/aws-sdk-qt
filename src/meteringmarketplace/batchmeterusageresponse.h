@@ -20,12 +20,12 @@
 #ifndef QTAWS_BATCHMETERUSAGERESPONSE_H
 #define QTAWS_BATCHMETERUSAGERESPONSE_H
 
-#include "meteringmarketplaceresponse.h"
+#include "marketplacemeteringresponse.h"
 #include "batchmeterusagerequest.h"
 
 namespace AWS {
 
-namespace meteringmarketplace {
+namespace MarketplaceMetering {
 
 class BatchMeterUsageResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace meteringmarketplace
+} // namespace MarketplaceMetering
 } // namespace AWS
 
 #endif

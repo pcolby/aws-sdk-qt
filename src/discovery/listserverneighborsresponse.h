@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTSERVERNEIGHBORSRESPONSE_H
 #define QTAWS_LISTSERVERNEIGHBORSRESPONSE_H
 
-#include "discoveryresponse.h"
+#include "applicationdiscoveryserviceresponse.h"
 #include "listserverneighborsrequest.h"
 
 namespace AWS {
 
-namespace discovery {
+namespace ApplicationDiscoveryService {
 
 class ListServerNeighborsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace discovery
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTMETRICFILTERRESPONSE_H
 #define QTAWS_PUTMETRICFILTERRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "putmetricfilterrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class PutMetricFilterResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

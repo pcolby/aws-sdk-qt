@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_H
 #define QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "createconfigurationseteventdestinationrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class CreateConfigurationSetEventDestinationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

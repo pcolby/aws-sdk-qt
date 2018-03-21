@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEMICROSOFTADRESPONSE_H
 #define QTAWS_CREATEMICROSOFTADRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "createmicrosoftadrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class CreateMicrosoftADResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace autoscaling {
+namespace AutoScaling {
 
 class DescribeTagsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace autoscaling
+} // namespace AutoScaling
 } // namespace AWS
 
 #endif

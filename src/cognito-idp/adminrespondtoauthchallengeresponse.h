@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINRESPONDTOAUTHCHALLENGERESPONSE_H
 #define QTAWS_ADMINRESPONDTOAUTHCHALLENGERESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminrespondtoauthchallengerequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminRespondToAuthChallengeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

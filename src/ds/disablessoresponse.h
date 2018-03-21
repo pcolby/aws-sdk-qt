@@ -20,12 +20,12 @@
 #ifndef QTAWS_DISABLESSORESPONSE_H
 #define QTAWS_DISABLESSORESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "disablessorequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DisableSsoResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

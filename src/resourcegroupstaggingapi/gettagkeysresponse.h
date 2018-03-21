@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace resourcegroupstaggingapi {
+namespace ResourceGroupsTaggingAPI {
 
 class GetTagKeysResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace resourcegroupstaggingapi
+} // namespace ResourceGroupsTaggingAPI
 } // namespace AWS
 
 #endif

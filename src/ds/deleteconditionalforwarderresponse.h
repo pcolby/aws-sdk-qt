@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETECONDITIONALFORWARDERRESPONSE_H
 #define QTAWS_DELETECONDITIONALFORWARDERRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "deleteconditionalforwarderrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DeleteConditionalForwarderResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

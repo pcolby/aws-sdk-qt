@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_H
 #define QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "describeeventsubscriptionsrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DescribeEventSubscriptionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

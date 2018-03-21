@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace servicediscovery {
+namespace ServiceDiscovery {
 
 class ListOperationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace servicediscovery
+} // namespace ServiceDiscovery
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace polly {
+namespace Polly {
 
 class ListLexiconsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace polly
+} // namespace Polly
 } // namespace AWS
 
 #endif

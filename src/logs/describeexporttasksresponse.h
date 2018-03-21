@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEEXPORTTASKSRESPONSE_H
 #define QTAWS_DESCRIBEEXPORTTASKSRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "describeexporttasksrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class DescribeExportTasksResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

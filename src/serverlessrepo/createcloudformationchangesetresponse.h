@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATECLOUDFORMATIONCHANGESETRESPONSE_H
 #define QTAWS_CREATECLOUDFORMATIONCHANGESETRESPONSE_H
 
-#include "serverlessreporesponse.h"
+#include "serverlessapplicationrepositoryresponse.h"
 #include "createcloudformationchangesetrequest.h"
 
 namespace AWS {
 
-namespace serverlessrepo {
+namespace ServerlessApplicationRepository {
 
 class CreateCloudFormationChangeSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace serverlessrepo
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

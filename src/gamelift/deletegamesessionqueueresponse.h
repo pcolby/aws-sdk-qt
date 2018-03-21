@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace gamelift {
+namespace GameLift {
 
 class DeleteGameSessionQueueResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace gamelift
+} // namespace GameLift
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTIDENTITYPOLICYRESPONSE_H
 #define QTAWS_PUTIDENTITYPOLICYRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "putidentitypolicyrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class PutIdentityPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

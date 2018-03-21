@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETCOSTANDUSAGERESPONSE_H
 #define QTAWS_GETCOSTANDUSAGERESPONSE_H
 
-#include "ceresponse.h"
+#include "costexplorerresponse.h"
 #include "getcostandusagerequest.h"
 
 namespace AWS {
 
-namespace ce {
+namespace CostExplorer {
 
 class GetCostAndUsageResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ce
+} // namespace CostExplorer
 } // namespace AWS
 
 #endif

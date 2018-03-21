@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace iot {
+namespace IoT {
 
 class ListOTAUpdatesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iot
+} // namespace IoT
 } // namespace AWS
 
 #endif

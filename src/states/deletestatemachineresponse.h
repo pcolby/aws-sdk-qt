@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESTATEMACHINERESPONSE_H
 #define QTAWS_DELETESTATEMACHINERESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "deletestatemachinerequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class DeleteStateMachineResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

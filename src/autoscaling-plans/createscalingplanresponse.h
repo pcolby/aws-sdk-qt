@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATESCALINGPLANRESPONSE_H
 #define QTAWS_CREATESCALINGPLANRESPONSE_H
 
-#include "autoscaling-plansresponse.h"
+#include "autoscalingplansresponse.h"
 #include "createscalingplanrequest.h"
 
 namespace AWS {
 
-namespace autoscaling-plans {
+namespace AutoScalingPlans {
 
 class CreateScalingPlanResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace autoscaling-plans
+} // namespace AutoScalingPlans
 } // namespace AWS
 
 #endif

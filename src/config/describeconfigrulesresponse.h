@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBECONFIGRULESRESPONSE_H
 #define QTAWS_DESCRIBECONFIGRULESRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "describeconfigrulesrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class DescribeConfigRulesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

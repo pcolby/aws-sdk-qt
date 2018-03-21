@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETCHANGETOKENRESPONSE_H
 #define QTAWS_GETCHANGETOKENRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getchangetokenrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetChangeTokenResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

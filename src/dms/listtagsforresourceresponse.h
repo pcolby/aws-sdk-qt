@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "listtagsforresourcerequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class ListTagsForResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

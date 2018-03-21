@@ -20,12 +20,12 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "removetagsfromresourcerequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class RemoveTagsFromResourceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

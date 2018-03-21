@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace apigateway {
+namespace APIGateway {
 
 class UpdateDeploymentResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace apigateway
+} // namespace APIGateway
 } // namespace AWS
 
 #endif

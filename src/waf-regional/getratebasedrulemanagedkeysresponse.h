@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_H
 #define QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getratebasedrulemanagedkeysrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetRateBasedRuleManagedKeysResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

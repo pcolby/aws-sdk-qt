@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_H
 #define QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "updatenumberofdomaincontrollersrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class UpdateNumberOfDomainControllersResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

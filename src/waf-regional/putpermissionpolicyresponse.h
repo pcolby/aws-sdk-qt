@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTPERMISSIONPOLICYRESPONSE_H
 #define QTAWS_PUTPERMISSIONPOLICYRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "putpermissionpolicyrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class PutPermissionPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

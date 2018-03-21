@@ -20,12 +20,12 @@
 #ifndef QTAWS_UNLINKIDENTITYRESPONSE_H
 #define QTAWS_UNLINKIDENTITYRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "unlinkidentityrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class UnlinkIdentityResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

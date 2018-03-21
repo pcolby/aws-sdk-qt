@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace comprehend {
+namespace Comprehend {
 
 class DetectSentimentResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace comprehend
+} // namespace Comprehend
 } // namespace AWS
 
 #endif

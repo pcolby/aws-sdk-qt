@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEDATASETRESPONSE_H
 #define QTAWS_DESCRIBEDATASETRESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "describedatasetrequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class DescribeDatasetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

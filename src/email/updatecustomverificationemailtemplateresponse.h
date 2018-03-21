@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_H
 #define QTAWS_UPDATECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "updatecustomverificationemailtemplaterequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class UpdateCustomVerificationEmailTemplateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

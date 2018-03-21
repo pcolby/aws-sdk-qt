@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINRESETUSERPASSWORDRESPONSE_H
 #define QTAWS_ADMINRESETUSERPASSWORDRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminresetuserpasswordrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminResetUserPasswordResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

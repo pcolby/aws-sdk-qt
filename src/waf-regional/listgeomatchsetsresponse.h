@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTGEOMATCHSETSRESPONSE_H
 #define QTAWS_LISTGEOMATCHSETSRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "listgeomatchsetsrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class ListGeoMatchSetsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

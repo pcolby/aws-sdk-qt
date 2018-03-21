@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDRESPONSE_H
 #define QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "setidentityfeedbackforwardingenabledrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class SetIdentityFeedbackForwardingEnabledResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

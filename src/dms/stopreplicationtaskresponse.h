@@ -20,12 +20,12 @@
 #ifndef QTAWS_STOPREPLICATIONTASKRESPONSE_H
 #define QTAWS_STOPREPLICATIONTASKRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "stopreplicationtaskrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class StopReplicationTaskResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

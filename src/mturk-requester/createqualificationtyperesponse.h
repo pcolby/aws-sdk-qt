@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEQUALIFICATIONTYPERESPONSE_H
 #define QTAWS_CREATEQUALIFICATIONTYPERESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "createqualificationtyperequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class CreateQualificationTypeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

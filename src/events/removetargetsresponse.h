@@ -20,12 +20,12 @@
 #ifndef QTAWS_REMOVETARGETSRESPONSE_H
 #define QTAWS_REMOVETARGETSRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "removetargetsrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class RemoveTargetsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

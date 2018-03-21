@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEATTRIBUTESRESPONSE_H
 #define QTAWS_DELETEATTRIBUTESRESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "deleteattributesrequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class DeleteAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

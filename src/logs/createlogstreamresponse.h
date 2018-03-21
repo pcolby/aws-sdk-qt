@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATELOGSTREAMRESPONSE_H
 #define QTAWS_CREATELOGSTREAMRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "createlogstreamrequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class CreateLogStreamResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

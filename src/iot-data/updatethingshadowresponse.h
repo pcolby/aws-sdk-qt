@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATETHINGSHADOWRESPONSE_H
 #define QTAWS_UPDATETHINGSHADOWRESPONSE_H
 
-#include "iot-dataresponse.h"
+#include "iotdataplaneresponse.h"
 #include "updatethingshadowrequest.h"
 
 namespace AWS {
 
-namespace iot-data {
+namespace IoTDataPlane {
 
 class UpdateThingShadowResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace iot-data
+} // namespace IoTDataPlane
 } // namespace AWS
 
 #endif

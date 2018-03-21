@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEWORKERBLOCKRESPONSE_H
 #define QTAWS_DELETEWORKERBLOCKRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "deleteworkerblockrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class DeleteWorkerBlockResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

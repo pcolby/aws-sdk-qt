@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_H
 #define QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_H
 
-#include "esresponse.h"
+#include "elasticsearchserviceresponse.h"
 #include "describeelasticsearchinstancetypelimitsrequest.h"
 
 namespace AWS {
 
-namespace es {
+namespace ElasticsearchService {
 
 class DescribeElasticsearchInstanceTypeLimitsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace es
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

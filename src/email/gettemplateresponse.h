@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETTEMPLATERESPONSE_H
 #define QTAWS_GETTEMPLATERESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "gettemplaterequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class GetTemplateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

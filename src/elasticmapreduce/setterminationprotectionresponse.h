@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETTERMINATIONPROTECTIONRESPONSE_H
 #define QTAWS_SETTERMINATIONPROTECTIONRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "setterminationprotectionrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class SetTerminationProtectionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

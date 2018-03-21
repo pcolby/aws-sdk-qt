@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloudformation {
+namespace CloudFormation {
 
 class DescribeChangeSetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloudformation
+} // namespace CloudFormation
 } // namespace AWS
 
 #endif

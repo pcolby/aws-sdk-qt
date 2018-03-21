@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEMOUNTTARGETRESPONSE_H
 #define QTAWS_DELETEMOUNTTARGETRESPONSE_H
 
-#include "elasticfilesystemresponse.h"
+#include "efsresponse.h"
 #include "deletemounttargetrequest.h"
 
 namespace AWS {
 
-namespace elasticfilesystem {
+namespace EFS {
 
 class DeleteMountTargetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticfilesystem
+} // namespace EFS
 } // namespace AWS
 
 #endif

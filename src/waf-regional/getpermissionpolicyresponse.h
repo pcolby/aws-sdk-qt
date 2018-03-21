@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETPERMISSIONPOLICYRESPONSE_H
 #define QTAWS_GETPERMISSIONPOLICYRESPONSE_H
 
-#include "waf-regionalresponse.h"
+#include "wafregionalresponse.h"
 #include "getpermissionpolicyrequest.h"
 
 namespace AWS {
 
-namespace waf-regional {
+namespace WAFRegional {
 
 class GetPermissionPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace waf-regional
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

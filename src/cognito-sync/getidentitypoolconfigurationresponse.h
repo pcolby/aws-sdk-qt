@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETIDENTITYPOOLCONFIGURATIONRESPONSE_H
 #define QTAWS_GETIDENTITYPOOLCONFIGURATIONRESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "getidentitypoolconfigurationrequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class GetIdentityPoolConfigurationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

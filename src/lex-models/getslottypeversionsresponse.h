@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETSLOTTYPEVERSIONSRESPONSE_H
 #define QTAWS_GETSLOTTYPEVERSIONSRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "getslottypeversionsrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class GetSlotTypeVersionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

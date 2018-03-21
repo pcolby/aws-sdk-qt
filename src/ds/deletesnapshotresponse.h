@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESNAPSHOTRESPONSE_H
 #define QTAWS_DELETESNAPSHOTRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "deletesnapshotrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DeleteSnapshotResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

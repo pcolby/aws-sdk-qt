@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTRESOURCEATTRIBUTESRESPONSE_H
 #define QTAWS_PUTRESOURCEATTRIBUTESRESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "putresourceattributesrequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class PutResourceAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

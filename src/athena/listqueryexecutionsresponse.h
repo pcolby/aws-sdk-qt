@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace athena {
+namespace Athena {
 
 class ListQueryExecutionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace athena
+} // namespace Athena
 } // namespace AWS
 
 #endif

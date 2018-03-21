@@ -20,12 +20,12 @@
 #ifndef QTAWS_STOPUSERIMPORTJOBRESPONSE_H
 #define QTAWS_STOPUSERIMPORTJOBRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "stopuserimportjobrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class StopUserImportJobResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETRISKCONFIGURATIONRESPONSE_H
 #define QTAWS_SETRISKCONFIGURATIONRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "setriskconfigurationrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class SetRiskConfigurationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

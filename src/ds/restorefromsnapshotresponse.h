@@ -20,12 +20,12 @@
 #ifndef QTAWS_RESTOREFROMSNAPSHOTRESPONSE_H
 #define QTAWS_RESTOREFROMSNAPSHOTRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "restorefromsnapshotrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class RestoreFromSnapshotResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

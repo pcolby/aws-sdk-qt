@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETOBJECTRESPONSE_H
 #define QTAWS_GETOBJECTRESPONSE_H
 
-#include "mediastore-dataresponse.h"
+#include "mediastoredataresponse.h"
 #include "getobjectrequest.h"
 
 namespace AWS {
 
-namespace mediastore-data {
+namespace MediaStoreData {
 
 class GetObjectResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediastore-data
+} // namespace MediaStoreData
 } // namespace AWS
 
 #endif

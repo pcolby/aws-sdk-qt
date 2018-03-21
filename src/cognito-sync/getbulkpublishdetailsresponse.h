@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETBULKPUBLISHDETAILSRESPONSE_H
 #define QTAWS_GETBULKPUBLISHDETAILSRESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "getbulkpublishdetailsrequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class GetBulkPublishDetailsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

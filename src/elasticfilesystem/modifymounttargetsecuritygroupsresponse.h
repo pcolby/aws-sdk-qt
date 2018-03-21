@@ -20,12 +20,12 @@
 #ifndef QTAWS_MODIFYMOUNTTARGETSECURITYGROUPSRESPONSE_H
 #define QTAWS_MODIFYMOUNTTARGETSECURITYGROUPSRESPONSE_H
 
-#include "elasticfilesystemresponse.h"
+#include "efsresponse.h"
 #include "modifymounttargetsecuritygroupsrequest.h"
 
 namespace AWS {
 
-namespace elasticfilesystem {
+namespace EFS {
 
 class ModifyMountTargetSecurityGroupsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticfilesystem
+} // namespace EFS
 } // namespace AWS
 
 #endif

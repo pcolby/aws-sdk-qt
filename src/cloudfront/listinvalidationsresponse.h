@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloudfront {
+namespace CloudFront {
 
 class ListInvalidationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloudfront
+} // namespace CloudFront
 } // namespace AWS
 
 #endif

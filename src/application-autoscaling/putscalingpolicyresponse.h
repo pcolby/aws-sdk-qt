@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTSCALINGPOLICYRESPONSE_H
 #define QTAWS_PUTSCALINGPOLICYRESPONSE_H
 
-#include "application-autoscalingresponse.h"
+#include "applicationautoscalingresponse.h"
 #include "putscalingpolicyrequest.h"
 
 namespace AWS {
 
-namespace application-autoscaling {
+namespace ApplicationAutoScaling {
 
 class PutScalingPolicyResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace application-autoscaling
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

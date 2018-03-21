@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTPERMISSIONRESPONSE_H
 #define QTAWS_PUTPERMISSIONRESPONSE_H
 
-#include "eventsresponse.h"
+#include "cloudwatcheventsresponse.h"
 #include "putpermissionrequest.h"
 
 namespace AWS {
 
-namespace events {
+namespace CloudWatchEvents {
 
 class PutPermissionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace events
+} // namespace CloudWatchEvents
 } // namespace AWS
 
 #endif

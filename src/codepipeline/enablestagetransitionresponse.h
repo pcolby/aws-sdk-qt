@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace codepipeline {
+namespace CodePipeline {
 
 class EnableStageTransitionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace codepipeline
+} // namespace CodePipeline
 } // namespace AWS
 
 #endif

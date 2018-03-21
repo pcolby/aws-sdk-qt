@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "deletesecurityconfigurationrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class DeleteSecurityConfigurationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

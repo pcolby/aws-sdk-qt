@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTOBJECTRESPONSE_H
 #define QTAWS_PUTOBJECTRESPONSE_H
 
-#include "mediastore-dataresponse.h"
+#include "mediastoredataresponse.h"
 #include "putobjectrequest.h"
 
 namespace AWS {
 
-namespace mediastore-data {
+namespace MediaStoreData {
 
 class PutObjectResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediastore-data
+} // namespace MediaStoreData
 } // namespace AWS
 
 #endif

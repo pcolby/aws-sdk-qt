@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATEGROUPQUERYRESPONSE_H
 #define QTAWS_UPDATEGROUPQUERYRESPONSE_H
 
-#include "resource-groupsresponse.h"
+#include "resourcegroupsresponse.h"
 #include "updategroupqueryrequest.h"
 
 namespace AWS {
 
-namespace resource-groups {
+namespace ResourceGroups {
 
 class UpdateGroupQueryResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace resource-groups
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

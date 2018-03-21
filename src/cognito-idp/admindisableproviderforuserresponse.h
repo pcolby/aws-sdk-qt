@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINDISABLEPROVIDERFORUSERRESPONSE_H
 #define QTAWS_ADMINDISABLEPROVIDERFORUSERRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "admindisableproviderforuserrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminDisableProviderForUserResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

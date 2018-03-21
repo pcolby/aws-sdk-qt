@@ -20,12 +20,12 @@
 #ifndef QTAWS_REGISTERSCALABLETARGETRESPONSE_H
 #define QTAWS_REGISTERSCALABLETARGETRESPONSE_H
 
-#include "application-autoscalingresponse.h"
+#include "applicationautoscalingresponse.h"
 #include "registerscalabletargetrequest.h"
 
 namespace AWS {
 
-namespace application-autoscaling {
+namespace ApplicationAutoScaling {
 
 class RegisterScalableTargetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace application-autoscaling
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

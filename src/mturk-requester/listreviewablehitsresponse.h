@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTREVIEWABLEHITSRESPONSE_H
 #define QTAWS_LISTREVIEWABLEHITSRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "listreviewablehitsrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class ListReviewableHITsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEELASTICSEARCHSERVICEROLERESPONSE_H
 #define QTAWS_DELETEELASTICSEARCHSERVICEROLERESPONSE_H
 
-#include "esresponse.h"
+#include "elasticsearchserviceresponse.h"
 #include "deleteelasticsearchservicerolerequest.h"
 
 namespace AWS {
 
-namespace es {
+namespace ElasticsearchService {
 
 class DeleteElasticsearchServiceRoleResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace es
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

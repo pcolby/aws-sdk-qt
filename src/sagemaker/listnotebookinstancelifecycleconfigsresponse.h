@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace sagemaker {
+namespace SageMaker {
 
 class ListNotebookInstanceLifecycleConfigsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sagemaker
+} // namespace SageMaker
 } // namespace AWS
 
 #endif

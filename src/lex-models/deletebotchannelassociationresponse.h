@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEBOTCHANNELASSOCIATIONRESPONSE_H
 #define QTAWS_DELETEBOTCHANNELASSOCIATIONRESPONSE_H
 
-#include "lex-modelsresponse.h"
+#include "lexmodelbuildingserviceresponse.h"
 #include "deletebotchannelassociationrequest.h"
 
 namespace AWS {
 
-namespace lex-models {
+namespace LexModelBuildingService {
 
 class DeleteBotChannelAssociationResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lex-models
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_REGISTERDEVICERESPONSE_H
 #define QTAWS_REGISTERDEVICERESPONSE_H
 
-#include "cognito-syncresponse.h"
+#include "cognitosyncresponse.h"
 #include "registerdevicerequest.h"
 
 namespace AWS {
 
-namespace cognito-sync {
+namespace CognitoSync {
 
 class RegisterDeviceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-sync
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_SETIDENTITYMAILFROMDOMAINRESPONSE_H
 #define QTAWS_SETIDENTITYMAILFROMDOMAINRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "setidentitymailfromdomainrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class SetIdentityMailFromDomainResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

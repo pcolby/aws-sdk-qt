@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADDCUSTOMATTRIBUTESRESPONSE_H
 #define QTAWS_ADDCUSTOMATTRIBUTESRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "addcustomattributesrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AddCustomAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

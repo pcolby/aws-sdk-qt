@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEACTIVITYRESPONSE_H
 #define QTAWS_DELETEACTIVITYRESPONSE_H
 
-#include "statesresponse.h"
+#include "sfnresponse.h"
 #include "deleteactivityrequest.h"
 
 namespace AWS {
 
-namespace states {
+namespace SFN {
 
 class DeleteActivityResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace states
+} // namespace SFN
 } // namespace AWS
 
 #endif

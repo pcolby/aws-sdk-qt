@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_H
 #define QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "getidentityverificationattributesrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class GetIdentityVerificationAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

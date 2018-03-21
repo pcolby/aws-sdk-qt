@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBETRUSTSRESPONSE_H
 #define QTAWS_DESCRIBETRUSTSRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "describetrustsrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class DescribeTrustsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

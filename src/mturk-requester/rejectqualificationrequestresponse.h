@@ -20,12 +20,12 @@
 #ifndef QTAWS_REJECTQUALIFICATIONREQUESTRESPONSE_H
 #define QTAWS_REJECTQUALIFICATIONREQUESTRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "rejectqualificationrequestrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class RejectQualificationRequestResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace lambda {
+namespace Lambda {
 
 class GetAccountSettingsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace lambda
+} // namespace Lambda
 } // namespace AWS
 
 #endif

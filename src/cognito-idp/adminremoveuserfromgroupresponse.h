@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_H
 #define QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminremoveuserfromgrouprequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminRemoveUserFromGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

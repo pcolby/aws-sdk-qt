@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace mobileanalytics {
+namespace MobileAnalytics {
 
 class PutEventsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mobileanalytics
+} // namespace MobileAnalytics
 } // namespace AWS
 
 #endif

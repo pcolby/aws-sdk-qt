@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace sns {
+namespace SNS {
 
 class ListPlatformApplicationsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sns
+} // namespace SNS
 } // namespace AWS
 
 #endif

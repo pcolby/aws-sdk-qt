@@ -20,12 +20,12 @@
 #ifndef QTAWS_DISASSOCIATECREATEDARTIFACTRESPONSE_H
 #define QTAWS_DISASSOCIATECREATEDARTIFACTRESPONSE_H
 
-#include "awsmigrationhubresponse.h"
+#include "migrationhubresponse.h"
 #include "disassociatecreatedartifactrequest.h"
 
 namespace AWS {
 
-namespace AWSMigrationHub {
+namespace MigrationHub {
 
 class DisassociateCreatedArtifactResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace AWSMigrationHub
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_STARTREPLICATIONTASKRESPONSE_H
 #define QTAWS_STARTREPLICATIONTASKRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "startreplicationtaskrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class StartReplicationTaskResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace mobile {
+namespace Mobile {
 
 class UpdateProjectResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mobile
+} // namespace Mobile
 } // namespace AWS
 
 #endif

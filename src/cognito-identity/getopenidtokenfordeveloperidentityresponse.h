@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETOPENIDTOKENFORDEVELOPERIDENTITYRESPONSE_H
 #define QTAWS_GETOPENIDTOKENFORDEVELOPERIDENTITYRESPONSE_H
 
-#include "cognito-identityresponse.h"
+#include "cognitoidentityresponse.h"
 #include "getopenidtokenfordeveloperidentityrequest.h"
 
 namespace AWS {
 
-namespace cognito-identity {
+namespace CognitoIdentity {
 
 class GetOpenIdTokenForDeveloperIdentityResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-identity
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "describeaccountattributesrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class DescribeAccountAttributesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

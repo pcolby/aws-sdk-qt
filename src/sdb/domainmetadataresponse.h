@@ -20,12 +20,12 @@
 #ifndef QTAWS_DOMAINMETADATARESPONSE_H
 #define QTAWS_DOMAINMETADATARESPONSE_H
 
-#include "sdbresponse.h"
+#include "simpledbresponse.h"
 #include "domainmetadatarequest.h"
 
 namespace AWS {
 
-namespace sdb {
+namespace SimpleDB {
 
 class DomainMetadataResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace sdb
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

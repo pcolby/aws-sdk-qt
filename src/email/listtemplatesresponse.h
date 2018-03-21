@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTTEMPLATESRESPONSE_H
 #define QTAWS_LISTTEMPLATESRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "listtemplatesrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class ListTemplatesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

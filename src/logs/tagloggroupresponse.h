@@ -20,12 +20,12 @@
 #ifndef QTAWS_TAGLOGGROUPRESPONSE_H
 #define QTAWS_TAGLOGGROUPRESPONSE_H
 
-#include "logsresponse.h"
+#include "cloudwatchlogsresponse.h"
 #include "tagloggrouprequest.h"
 
 namespace AWS {
 
-namespace logs {
+namespace CloudWatchLogs {
 
 class TagLogGroupResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace logs
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATERADIUSRESPONSE_H
 #define QTAWS_UPDATERADIUSRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "updateradiusrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class UpdateRadiusResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_PUTMETRICDATARESPONSE_H
 #define QTAWS_PUTMETRICDATARESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "putmetricdatarequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class PutMetricDataResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

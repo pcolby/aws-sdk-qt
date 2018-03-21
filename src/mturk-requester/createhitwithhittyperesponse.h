@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEHITWITHHITTYPERESPONSE_H
 #define QTAWS_CREATEHITWITHHITTYPERESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "createhitwithhittyperequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class CreateHITWithHITTypeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

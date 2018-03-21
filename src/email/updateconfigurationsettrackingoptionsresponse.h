@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 #define QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "updateconfigurationsettrackingoptionsrequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class UpdateConfigurationSetTrackingOptionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATECOMPUTERRESPONSE_H
 #define QTAWS_CREATECOMPUTERRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "createcomputerrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class CreateComputerResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_H
 #define QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "listreviewpolicyresultsforhitrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class ListReviewPolicyResultsForHITResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

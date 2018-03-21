@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace cloud9 {
+namespace Cloud9 {
 
 class CreateEnvironmentMembershipResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cloud9
+} // namespace Cloud9
 } // namespace AWS
 
 #endif

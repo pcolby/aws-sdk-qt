@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEALARMSFORMETRICRESPONSE_H
 #define QTAWS_DESCRIBEALARMSFORMETRICRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "describealarmsformetricrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class DescribeAlarmsForMetricResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

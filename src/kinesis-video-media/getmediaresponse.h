@@ -20,12 +20,12 @@
 #ifndef QTAWS_GETMEDIARESPONSE_H
 #define QTAWS_GETMEDIARESPONSE_H
 
-#include "kinesis-video-mediaresponse.h"
+#include "kinesisvideomediaresponse.h"
 #include "getmediarequest.h"
 
 namespace AWS {
 
-namespace kinesis-video-media {
+namespace KinesisVideoMedia {
 
 class GetMediaResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace kinesis-video-media
+} // namespace KinesisVideoMedia
 } // namespace AWS
 
 #endif

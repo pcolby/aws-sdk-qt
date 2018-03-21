@@ -20,12 +20,12 @@
 #ifndef QTAWS_STARTCONFIGURATIONRECORDERRESPONSE_H
 #define QTAWS_STARTCONFIGURATIONRECORDERRESPONSE_H
 
-#include "configresponse.h"
+#include "configserviceresponse.h"
 #include "startconfigurationrecorderrequest.h"
 
 namespace AWS {
 
-namespace config {
+namespace ConfigService {
 
 class StartConfigurationRecorderResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace config
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADDINSTANCEFLEETRESPONSE_H
 #define QTAWS_ADDINSTANCEFLEETRESPONSE_H
 
-#include "elasticmapreduceresponse.h"
+#include "emrresponse.h"
 #include "addinstancefleetrequest.h"
 
 namespace AWS {
 
-namespace elasticmapreduce {
+namespace EMR {
 
 class AddInstanceFleetResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticmapreduce
+} // namespace EMR
 } // namespace AWS
 
 #endif

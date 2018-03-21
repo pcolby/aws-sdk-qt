@@ -20,12 +20,12 @@
 #ifndef QTAWS_TESTCONNECTIONRESPONSE_H
 #define QTAWS_TESTCONNECTIONRESPONSE_H
 
-#include "dmsresponse.h"
+#include "databasemigrationserviceresponse.h"
 #include "testconnectionrequest.h"
 
 namespace AWS {
 
-namespace dms {
+namespace DatabaseMigrationService {
 
 class TestConnectionResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace dms
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_H
 #define QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_H
 
-#include "esresponse.h"
+#include "elasticsearchserviceresponse.h"
 #include "listelasticsearchinstancetypesrequest.h"
 
 namespace AWS {
 
-namespace es {
+namespace ElasticsearchService {
 
 class ListElasticsearchInstanceTypesResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace es
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

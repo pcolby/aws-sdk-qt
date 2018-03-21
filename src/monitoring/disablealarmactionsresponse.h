@@ -20,12 +20,12 @@
 #ifndef QTAWS_DISABLEALARMACTIONSRESPONSE_H
 #define QTAWS_DISABLEALARMACTIONSRESPONSE_H
 
-#include "monitoringresponse.h"
+#include "cloudwatchresponse.h"
 #include "disablealarmactionsrequest.h"
 
 namespace AWS {
 
-namespace monitoring {
+namespace CloudWatch {
 
 class DisableAlarmActionsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace monitoring
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

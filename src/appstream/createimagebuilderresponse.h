@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace appstream {
+namespace AppStream {
 
 class CreateImageBuilderResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace appstream
+} // namespace AppStream
 } // namespace AWS
 
 #endif

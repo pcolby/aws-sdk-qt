@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEDIRECTORYRESPONSE_H
 #define QTAWS_CREATEDIRECTORYRESPONSE_H
 
-#include "dsresponse.h"
+#include "directoryserviceresponse.h"
 #include "createdirectoryrequest.h"
 
 namespace AWS {
 
-namespace ds {
+namespace DirectoryService {
 
 class CreateDirectoryResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ds
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

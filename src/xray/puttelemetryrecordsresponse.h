@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace xray {
+namespace XRay {
 
 class PutTelemetryRecordsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace xray
+} // namespace XRay
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_LISTHITSFORQUALIFICATIONTYPERESPONSE_H
 #define QTAWS_LISTHITSFORQUALIFICATIONTYPERESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "listhitsforqualificationtyperequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class ListHITsForQualificationTypeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_H
 #define QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "updatenotificationsettingsrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class UpdateNotificationSettingsResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

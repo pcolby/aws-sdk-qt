@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace directconnect {
+namespace DirectConnect {
 
 class CreateDirectConnectGatewayResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace directconnect
+} // namespace DirectConnect
 } // namespace AWS
 
 #endif

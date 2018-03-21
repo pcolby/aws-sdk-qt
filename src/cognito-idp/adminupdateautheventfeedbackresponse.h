@@ -20,12 +20,12 @@
 #ifndef QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKRESPONSE_H
 #define QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKRESPONSE_H
 
-#include "cognito-idpresponse.h"
+#include "cognitoidentityproviderresponse.h"
 #include "adminupdateautheventfeedbackrequest.h"
 
 namespace AWS {
 
-namespace cognito-idp {
+namespace CognitoIdentityProvider {
 
 class AdminUpdateAuthEventFeedbackResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace cognito-idp
+} // namespace CognitoIdentityProvider
 } // namespace AWS
 
 #endif

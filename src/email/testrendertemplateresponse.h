@@ -20,12 +20,12 @@
 #ifndef QTAWS_TESTRENDERTEMPLATERESPONSE_H
 #define QTAWS_TESTRENDERTEMPLATERESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "testrendertemplaterequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class TestRenderTemplateResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

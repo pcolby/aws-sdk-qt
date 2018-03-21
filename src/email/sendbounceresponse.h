@@ -20,12 +20,12 @@
 #ifndef QTAWS_SENDBOUNCERESPONSE_H
 #define QTAWS_SENDBOUNCERESPONSE_H
 
-#include "emailresponse.h"
+#include "sesresponse.h"
 #include "sendbouncerequest.h"
 
 namespace AWS {
 
-namespace email {
+namespace SES {
 
 class SendBounceResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace email
+} // namespace SES
 } // namespace AWS
 
 #endif

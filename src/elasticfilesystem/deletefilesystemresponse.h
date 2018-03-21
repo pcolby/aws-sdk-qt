@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEFILESYSTEMRESPONSE_H
 #define QTAWS_DELETEFILESYSTEMRESPONSE_H
 
-#include "elasticfilesystemresponse.h"
+#include "efsresponse.h"
 #include "deletefilesystemrequest.h"
 
 namespace AWS {
 
-namespace elasticfilesystem {
+namespace EFS {
 
 class DeleteFileSystemResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace elasticfilesystem
+} // namespace EFS
 } // namespace AWS
 
 #endif

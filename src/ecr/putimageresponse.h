@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace ecr {
+namespace ECR {
 
 class PutImageResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace ecr
+} // namespace ECR
 } // namespace AWS
 
 #endif

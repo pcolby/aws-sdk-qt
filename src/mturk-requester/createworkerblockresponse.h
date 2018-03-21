@@ -20,12 +20,12 @@
 #ifndef QTAWS_CREATEWORKERBLOCKRESPONSE_H
 #define QTAWS_CREATEWORKERBLOCKRESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "createworkerblockrequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class CreateWorkerBlockResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DESCRIBEOBJECTRESPONSE_H
 #define QTAWS_DESCRIBEOBJECTRESPONSE_H
 
-#include "mediastore-dataresponse.h"
+#include "mediastoredataresponse.h"
 #include "describeobjectrequest.h"
 
 namespace AWS {
 
-namespace mediastore-data {
+namespace MediaStoreData {
 
 class DescribeObjectResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mediastore-data
+} // namespace MediaStoreData
 } // namespace AWS
 
 #endif

@@ -20,12 +20,12 @@
 #ifndef QTAWS_DELETEQUALIFICATIONTYPERESPONSE_H
 #define QTAWS_DELETEQUALIFICATIONTYPERESPONSE_H
 
-#include "mturk-requesterresponse.h"
+#include "mturkresponse.h"
 #include "deletequalificationtyperequest.h"
 
 namespace AWS {
 
-namespace mturk-requester {
+namespace MTurk {
 
 class DeleteQualificationTypeResponsePrivate;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace mturk-requester
+} // namespace MTurk
 } // namespace AWS
 
 #endif
