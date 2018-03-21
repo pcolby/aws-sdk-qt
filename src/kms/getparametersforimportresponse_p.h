@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPARAMETERSFORIMPORTRESPONSE_P_H
 #define QTAWS_GETPARAMETERSFORIMPORTRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "getparametersforimportrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GetParametersForImportResponse;
+
+class QTAWS_EXPORT GetParametersForImportResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetParametersForImportResponsePrivate(GetParametersForImportResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetParametersForImportResponse)
+    Q_DISABLE_COPY(GetParametersForImportResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

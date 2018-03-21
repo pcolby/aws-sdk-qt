@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETCORSRESPONSE_P_H
 #define QTAWS_GETBUCKETCORSRESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketcorsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketCorsResponse;
+
+class QTAWS_EXPORT GetBucketCorsResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketCorsResponsePrivate(GetBucketCorsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketCorsResponse)
+    Q_DISABLE_COPY(GetBucketCorsResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

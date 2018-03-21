@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPPLICATIONSRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONSRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "deleteapplicationsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DeleteApplicationsResponse;
+
+class QTAWS_EXPORT DeleteApplicationsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApplicationsResponsePrivate(DeleteApplicationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationsResponse)
+    Q_DISABLE_COPY(DeleteApplicationsResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

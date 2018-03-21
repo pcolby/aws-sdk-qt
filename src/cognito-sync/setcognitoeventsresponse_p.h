@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETCOGNITOEVENTSRESPONSE_P_H
 #define QTAWS_SETCOGNITOEVENTSRESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "setcognitoeventsrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class SetCognitoEventsResponse;
+
+class QTAWS_EXPORT SetCognitoEventsResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetCognitoEventsResponsePrivate(SetCognitoEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetCognitoEventsResponse)
+    Q_DISABLE_COPY(SetCognitoEventsResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

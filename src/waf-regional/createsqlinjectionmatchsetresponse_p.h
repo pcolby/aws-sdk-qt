@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESQLINJECTIONMATCHSETRESPONSE_P_H
 #define QTAWS_CREATESQLINJECTIONMATCHSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "createsqlinjectionmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateSqlInjectionMatchSetResponse;
+
+class QTAWS_EXPORT CreateSqlInjectionMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSqlInjectionMatchSetResponsePrivate(CreateSqlInjectionMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSqlInjectionMatchSetResponse)
+    Q_DISABLE_COPY(CreateSqlInjectionMatchSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBLOBRESPONSE_P_H
 #define QTAWS_GETBLOBRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "getblobrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetBlobResponse;
+
+class QTAWS_EXPORT GetBlobResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBlobResponsePrivate(GetBlobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBlobResponse)
+    Q_DISABLE_COPY(GetBlobResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

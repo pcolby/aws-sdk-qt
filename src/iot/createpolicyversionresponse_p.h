@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPOLICYVERSIONRESPONSE_P_H
 #define QTAWS_CREATEPOLICYVERSIONRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "createpolicyversionrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreatePolicyVersionResponse;
+
+class QTAWS_EXPORT CreatePolicyVersionResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePolicyVersionResponsePrivate(CreatePolicyVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePolicyVersionResponse)
+    Q_DISABLE_COPY(CreatePolicyVersionResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

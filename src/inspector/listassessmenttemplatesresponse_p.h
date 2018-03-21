@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTASSESSMENTTEMPLATESRESPONSE_P_H
 #define QTAWS_LISTASSESSMENTTEMPLATESRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "listassessmenttemplatesrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListAssessmentTemplatesResponse;
+
+class QTAWS_EXPORT ListAssessmentTemplatesResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAssessmentTemplatesResponsePrivate(ListAssessmentTemplatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssessmentTemplatesResponse)
+    Q_DISABLE_COPY(ListAssessmentTemplatesResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

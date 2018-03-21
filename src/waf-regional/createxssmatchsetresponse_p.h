@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEXSSMATCHSETRESPONSE_P_H
 #define QTAWS_CREATEXSSMATCHSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "createxssmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateXssMatchSetResponse;
+
+class QTAWS_EXPORT CreateXssMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateXssMatchSetResponsePrivate(CreateXssMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateXssMatchSetResponse)
+    Q_DISABLE_COPY(CreateXssMatchSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

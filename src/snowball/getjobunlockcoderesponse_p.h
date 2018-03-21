@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETJOBUNLOCKCODERESPONSE_P_H
 #define QTAWS_GETJOBUNLOCKCODERESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "getjobunlockcoderequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetJobUnlockCodeResponse;
+
+class QTAWS_EXPORT GetJobUnlockCodeResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetJobUnlockCodeResponsePrivate(GetJobUnlockCodeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobUnlockCodeResponse)
+    Q_DISABLE_COPY(GetJobUnlockCodeResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

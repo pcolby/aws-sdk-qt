@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONINSTANCETASKLOGSRESPONSE_P_H
 #define QTAWS_DESCRIBEREPLICATIONINSTANCETASKLOGSRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describereplicationinstancetasklogsrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeReplicationInstanceTaskLogsResponse;
+
+class QTAWS_EXPORT DescribeReplicationInstanceTaskLogsResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReplicationInstanceTaskLogsResponsePrivate(DescribeReplicationInstanceTaskLogsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReplicationInstanceTaskLogsResponse)
+    Q_DISABLE_COPY(DescribeReplicationInstanceTaskLogsResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

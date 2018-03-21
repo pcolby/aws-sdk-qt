@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 
+#include "kinesisanalyticsresponse.h"
+#include "deleteapplicationreferencedatasourcerequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DeleteApplicationReferenceDataSourceResponse;
+
+class QTAWS_EXPORT DeleteApplicationReferenceDataSourceResponsePrivate : public KinesisAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApplicationReferenceDataSourceResponsePrivate(DeleteApplicationReferenceDataSourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationReferenceDataSourceResponse)
+    Q_DISABLE_COPY(DeleteApplicationReferenceDataSourceResponsePrivate)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

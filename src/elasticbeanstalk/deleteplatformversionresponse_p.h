@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPLATFORMVERSIONRESPONSE_P_H
 #define QTAWS_DELETEPLATFORMVERSIONRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "deleteplatformversionrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DeletePlatformVersionResponse;
+
+class QTAWS_EXPORT DeletePlatformVersionResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePlatformVersionResponsePrivate(DeletePlatformVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePlatformVersionResponse)
+    Q_DISABLE_COPY(DeletePlatformVersionResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

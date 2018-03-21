@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGPROJECTRESPONSE_P_H
 #define QTAWS_UNTAGPROJECTRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "untagprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class UntagProjectResponse;
+
+class QTAWS_EXPORT UntagProjectResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagProjectResponsePrivate(UntagProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagProjectResponse)
+    Q_DISABLE_COPY(UntagProjectResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

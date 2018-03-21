@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESNAPSHOTCOPYGRANTRESPONSE_P_H
 #define QTAWS_CREATESNAPSHOTCOPYGRANTRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "createsnapshotcopygrantrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateSnapshotCopyGrantResponse;
+
+class QTAWS_EXPORT CreateSnapshotCopyGrantResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSnapshotCopyGrantResponsePrivate(CreateSnapshotCopyGrantResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSnapshotCopyGrantResponse)
+    Q_DISABLE_COPY(CreateSnapshotCopyGrantResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

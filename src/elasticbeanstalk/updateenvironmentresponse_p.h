@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEENVIRONMENTRESPONSE_P_H
 #define QTAWS_UPDATEENVIRONMENTRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updateenvironmentrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateEnvironmentResponse;
+
+class QTAWS_EXPORT UpdateEnvironmentResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateEnvironmentResponsePrivate(UpdateEnvironmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEnvironmentResponse)
+    Q_DISABLE_COPY(UpdateEnvironmentResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

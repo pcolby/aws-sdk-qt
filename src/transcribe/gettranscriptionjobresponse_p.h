@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTRANSCRIPTIONJOBRESPONSE_P_H
 #define QTAWS_GETTRANSCRIPTIONJOBRESPONSE_P_H
 
+#include "transcribeserviceresponse.h"
+#include "gettranscriptionjobrequest.h"
+
+namespace AWS {
+
+namespace TranscribeService {
+
+class GetTranscriptionJobResponse;
+
+class QTAWS_EXPORT GetTranscriptionJobResponsePrivate : public TranscribeServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTranscriptionJobResponsePrivate(GetTranscriptionJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTranscriptionJobResponse)
+    Q_DISABLE_COPY(GetTranscriptionJobResponsePrivate)
+
+};
+
+} // namespace TranscribeService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_VERIFYTRUSTRESPONSE_P_H
 #define QTAWS_VERIFYTRUSTRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "verifytrustrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class VerifyTrustResponse;
+
+class QTAWS_EXPORT VerifyTrustResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    VerifyTrustResponsePrivate(VerifyTrustResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyTrustResponse)
+    Q_DISABLE_COPY(VerifyTrustResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

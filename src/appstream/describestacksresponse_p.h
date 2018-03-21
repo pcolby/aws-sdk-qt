@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTACKSRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKSRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "describestacksrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeStacksResponse;
+
+class QTAWS_EXPORT DescribeStacksResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStacksResponsePrivate(DescribeStacksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStacksResponse)
+    Q_DISABLE_COPY(DescribeStacksResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

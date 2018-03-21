@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELIFECYCLEPOLICYRESPONSE_P_H
 #define QTAWS_DELETELIFECYCLEPOLICYRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "deletelifecyclepolicyrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DeleteLifecyclePolicyResponse;
+
+class QTAWS_EXPORT DeleteLifecyclePolicyResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLifecyclePolicyResponsePrivate(DeleteLifecyclePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLifecyclePolicyResponse)
+    Q_DISABLE_COPY(DeleteLifecyclePolicyResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

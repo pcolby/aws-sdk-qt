@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDJOBFLOWSTEPSRESPONSE_P_H
 #define QTAWS_ADDJOBFLOWSTEPSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "addjobflowstepsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class AddJobFlowStepsResponse;
+
+class QTAWS_EXPORT AddJobFlowStepsResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddJobFlowStepsResponsePrivate(AddJobFlowStepsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddJobFlowStepsResponse)
+    Q_DISABLE_COPY(AddJobFlowStepsResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

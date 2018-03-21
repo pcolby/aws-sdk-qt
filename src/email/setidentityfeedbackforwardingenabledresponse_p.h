@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDRESPONSE_P_H
 #define QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "setidentityfeedbackforwardingenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityFeedbackForwardingEnabledResponse;
+
+class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetIdentityFeedbackForwardingEnabledResponsePrivate(SetIdentityFeedbackForwardingEnabledResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityFeedbackForwardingEnabledResponse)
+    Q_DISABLE_COPY(SetIdentityFeedbackForwardingEnabledResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

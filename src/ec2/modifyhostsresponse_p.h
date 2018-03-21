@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYHOSTSRESPONSE_P_H
 #define QTAWS_MODIFYHOSTSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyhostsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyHostsResponse;
+
+class QTAWS_EXPORT ModifyHostsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyHostsResponsePrivate(ModifyHostsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyHostsResponse)
+    Q_DISABLE_COPY(ModifyHostsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

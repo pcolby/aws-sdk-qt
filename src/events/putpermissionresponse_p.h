@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTPERMISSIONRESPONSE_P_H
 #define QTAWS_PUTPERMISSIONRESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "putpermissionrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class PutPermissionResponse;
+
+class QTAWS_EXPORT PutPermissionResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutPermissionResponsePrivate(PutPermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutPermissionResponse)
+    Q_DISABLE_COPY(PutPermissionResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_FLUSHSTAGEAUTHORIZERSCACHERESPONSE_P_H
 #define QTAWS_FLUSHSTAGEAUTHORIZERSCACHERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "flushstageauthorizerscacherequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class FlushStageAuthorizersCacheResponse;
+
+class QTAWS_EXPORT FlushStageAuthorizersCacheResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    FlushStageAuthorizersCacheResponsePrivate(FlushStageAuthorizersCacheResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(FlushStageAuthorizersCacheResponse)
+    Q_DISABLE_COPY(FlushStageAuthorizersCacheResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

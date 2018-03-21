@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEBASEPATHMAPPINGRESPONSE_P_H
 #define QTAWS_UPDATEBASEPATHMAPPINGRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "updatebasepathmappingrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateBasePathMappingResponse;
+
+class QTAWS_EXPORT UpdateBasePathMappingResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateBasePathMappingResponsePrivate(UpdateBasePathMappingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBasePathMappingResponse)
+    Q_DISABLE_COPY(UpdateBasePathMappingResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

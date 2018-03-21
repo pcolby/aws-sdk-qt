@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEWORKERBLOCKRESPONSE_P_H
 #define QTAWS_DELETEWORKERBLOCKRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "deleteworkerblockrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteWorkerBlockResponse;
+
+class QTAWS_EXPORT DeleteWorkerBlockResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteWorkerBlockResponsePrivate(DeleteWorkerBlockResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteWorkerBlockResponse)
+    Q_DISABLE_COPY(DeleteWorkerBlockResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBUILDRESPONSE_P_H
 #define QTAWS_DELETEBUILDRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "deletebuildrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteBuildResponse;
+
+class QTAWS_EXPORT DeleteBuildResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBuildResponsePrivate(DeleteBuildResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBuildResponse)
+    Q_DISABLE_COPY(DeleteBuildResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

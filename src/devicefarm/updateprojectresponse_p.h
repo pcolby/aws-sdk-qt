@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPROJECTRESPONSE_P_H
 #define QTAWS_UPDATEPROJECTRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "updateprojectrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class UpdateProjectResponse;
+
+class QTAWS_EXPORT UpdateProjectResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateProjectResponsePrivate(UpdateProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateProjectResponse)
+    Q_DISABLE_COPY(UpdateProjectResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

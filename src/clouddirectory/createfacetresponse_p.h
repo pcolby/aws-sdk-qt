@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEFACETRESPONSE_P_H
 #define QTAWS_CREATEFACETRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "createfacetrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateFacetResponse;
+
+class QTAWS_EXPORT CreateFacetResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateFacetResponsePrivate(CreateFacetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateFacetResponse)
+    Q_DISABLE_COPY(CreateFacetResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

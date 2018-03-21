@@ -20,4 +20,31 @@
 #ifndef QTAWS_REJECTASSIGNMENTRESPONSE_P_H
 #define QTAWS_REJECTASSIGNMENTRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "rejectassignmentrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class RejectAssignmentResponse;
+
+class QTAWS_EXPORT RejectAssignmentResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RejectAssignmentResponsePrivate(RejectAssignmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RejectAssignmentResponse)
+    Q_DISABLE_COPY(RejectAssignmentResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

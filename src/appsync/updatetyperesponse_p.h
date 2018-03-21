@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETYPERESPONSE_P_H
 #define QTAWS_UPDATETYPERESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "updatetyperequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateTypeResponse;
+
+class QTAWS_EXPORT UpdateTypeResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTypeResponsePrivate(UpdateTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTypeResponse)
+    Q_DISABLE_COPY(UpdateTypeResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

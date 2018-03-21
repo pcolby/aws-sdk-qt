@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHGETTRACESRESPONSE_P_H
 #define QTAWS_BATCHGETTRACESRESPONSE_P_H
 
+#include "xrayresponse.h"
+#include "batchgettracesrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class BatchGetTracesResponse;
+
+class QTAWS_EXPORT BatchGetTracesResponsePrivate : public XRayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchGetTracesResponsePrivate(BatchGetTracesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetTracesResponse)
+    Q_DISABLE_COPY(BatchGetTracesResponsePrivate)
+
+};
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

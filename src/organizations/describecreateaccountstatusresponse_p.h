@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECREATEACCOUNTSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBECREATEACCOUNTSTATUSRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "describecreateaccountstatusrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeCreateAccountStatusResponse;
+
+class QTAWS_EXPORT DescribeCreateAccountStatusResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCreateAccountStatusResponsePrivate(DescribeCreateAccountStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCreateAccountStatusResponse)
+    Q_DISABLE_COPY(DescribeCreateAccountStatusResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

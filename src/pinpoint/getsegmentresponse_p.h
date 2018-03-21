@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSEGMENTRESPONSE_P_H
 #define QTAWS_GETSEGMENTRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getsegmentrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetSegmentResponse;
+
+class QTAWS_EXPORT GetSegmentResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSegmentResponsePrivate(GetSegmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSegmentResponse)
+    Q_DISABLE_COPY(GetSegmentResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

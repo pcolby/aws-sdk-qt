@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRESOURCEDATASYNCRESPONSE_P_H
 #define QTAWS_LISTRESOURCEDATASYNCRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "listresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListResourceDataSyncResponse;
+
+class QTAWS_EXPORT ListResourceDataSyncResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListResourceDataSyncResponsePrivate(ListResourceDataSyncResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourceDataSyncResponse)
+    Q_DISABLE_COPY(ListResourceDataSyncResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

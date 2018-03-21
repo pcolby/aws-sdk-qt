@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEREFRESHSCHEMASSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBEREFRESHSCHEMASSTATUSRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describerefreshschemasstatusrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeRefreshSchemasStatusResponse;
+
+class QTAWS_EXPORT DescribeRefreshSchemasStatusResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRefreshSchemasStatusResponsePrivate(DescribeRefreshSchemasStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRefreshSchemasStatusResponse)
+    Q_DISABLE_COPY(DescribeRefreshSchemasStatusResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

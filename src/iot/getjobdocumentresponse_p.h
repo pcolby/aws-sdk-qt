@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETJOBDOCUMENTRESPONSE_P_H
 #define QTAWS_GETJOBDOCUMENTRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "getjobdocumentrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetJobDocumentResponse;
+
+class QTAWS_EXPORT GetJobDocumentResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetJobDocumentResponsePrivate(GetJobDocumentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobDocumentResponse)
+    Q_DISABLE_COPY(GetJobDocumentResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

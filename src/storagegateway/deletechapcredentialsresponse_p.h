@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECHAPCREDENTIALSRESPONSE_P_H
 #define QTAWS_DELETECHAPCREDENTIALSRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "deletechapcredentialsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteChapCredentialsResponse;
+
+class QTAWS_EXPORT DeleteChapCredentialsResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteChapCredentialsResponsePrivate(DeleteChapCredentialsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteChapCredentialsResponse)
+    Q_DISABLE_COPY(DeleteChapCredentialsResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

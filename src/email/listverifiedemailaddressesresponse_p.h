@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTVERIFIEDEMAILADDRESSESRESPONSE_P_H
 #define QTAWS_LISTVERIFIEDEMAILADDRESSESRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "listverifiedemailaddressesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ListVerifiedEmailAddressesResponse;
+
+class QTAWS_EXPORT ListVerifiedEmailAddressesResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListVerifiedEmailAddressesResponsePrivate(ListVerifiedEmailAddressesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListVerifiedEmailAddressesResponse)
+    Q_DISABLE_COPY(ListVerifiedEmailAddressesResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

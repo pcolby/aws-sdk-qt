@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECUSTOMMETADATARESPONSE_P_H
 #define QTAWS_CREATECUSTOMMETADATARESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "createcustommetadatarequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateCustomMetadataResponse;
+
+class QTAWS_EXPORT CreateCustomMetadataResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCustomMetadataResponsePrivate(CreateCustomMetadataResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCustomMetadataResponse)
+    Q_DISABLE_COPY(CreateCustomMetadataResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

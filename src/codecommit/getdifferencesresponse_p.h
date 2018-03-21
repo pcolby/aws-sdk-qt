@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDIFFERENCESRESPONSE_P_H
 #define QTAWS_GETDIFFERENCESRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "getdifferencesrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetDifferencesResponse;
+
+class QTAWS_EXPORT GetDifferencesResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDifferencesResponsePrivate(GetDifferencesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDifferencesResponse)
+    Q_DISABLE_COPY(GetDifferencesResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

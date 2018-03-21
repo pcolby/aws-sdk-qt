@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEGROUPQUERYRESPONSE_P_H
 #define QTAWS_UPDATEGROUPQUERYRESPONSE_P_H
 
+#include "resourcegroupsresponse.h"
+#include "updategroupqueryrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class UpdateGroupQueryResponse;
+
+class QTAWS_EXPORT UpdateGroupQueryResponsePrivate : public ResourceGroupsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateGroupQueryResponsePrivate(UpdateGroupQueryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGroupQueryResponse)
+    Q_DISABLE_COPY(UpdateGroupQueryResponsePrivate)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

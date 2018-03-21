@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONRESPONSE_P_H
 #define QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "putscheduledupdategroupactionrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class PutScheduledUpdateGroupActionResponse;
+
+class QTAWS_EXPORT PutScheduledUpdateGroupActionResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutScheduledUpdateGroupActionResponsePrivate(PutScheduledUpdateGroupActionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutScheduledUpdateGroupActionResponse)
+    Q_DISABLE_COPY(PutScheduledUpdateGroupActionResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

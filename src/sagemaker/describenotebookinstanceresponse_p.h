@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBENOTEBOOKINSTANCERESPONSE_P_H
 #define QTAWS_DESCRIBENOTEBOOKINSTANCERESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "describenotebookinstancerequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DescribeNotebookInstanceResponse;
+
+class QTAWS_EXPORT DescribeNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeNotebookInstanceResponsePrivate(DescribeNotebookInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNotebookInstanceResponse)
+    Q_DISABLE_COPY(DescribeNotebookInstanceResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

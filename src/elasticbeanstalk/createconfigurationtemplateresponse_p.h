@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECONFIGURATIONTEMPLATERESPONSE_P_H
 #define QTAWS_CREATECONFIGURATIONTEMPLATERESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "createconfigurationtemplaterequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateConfigurationTemplateResponse;
+
+class QTAWS_EXPORT CreateConfigurationTemplateResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateConfigurationTemplateResponsePrivate(CreateConfigurationTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConfigurationTemplateResponse)
+    Q_DISABLE_COPY(CreateConfigurationTemplateResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

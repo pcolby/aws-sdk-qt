@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECLUSTERVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERVERSIONSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describeclusterversionsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeClusterVersionsResponse;
+
+class QTAWS_EXPORT DescribeClusterVersionsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeClusterVersionsResponsePrivate(DescribeClusterVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClusterVersionsResponse)
+    Q_DISABLE_COPY(DescribeClusterVersionsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

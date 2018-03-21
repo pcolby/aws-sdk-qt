@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETOPERATIONRESPONSE_P_H
 #define QTAWS_GETOPERATIONRESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "getoperationrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class GetOperationResponse;
+
+class QTAWS_EXPORT GetOperationResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetOperationResponsePrivate(GetOperationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetOperationResponse)
+    Q_DISABLE_COPY(GetOperationResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHINSTANCESFROMLOADBALANCERRESPONSE_P_H
 #define QTAWS_DETACHINSTANCESFROMLOADBALANCERRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "detachinstancesfromloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DetachInstancesFromLoadBalancerResponse;
+
+class QTAWS_EXPORT DetachInstancesFromLoadBalancerResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachInstancesFromLoadBalancerResponsePrivate(DetachInstancesFromLoadBalancerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachInstancesFromLoadBalancerResponse)
+    Q_DISABLE_COPY(DetachInstancesFromLoadBalancerResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

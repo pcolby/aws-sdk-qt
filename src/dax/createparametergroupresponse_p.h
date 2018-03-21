@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_CREATEPARAMETERGROUPRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "createparametergrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class CreateParameterGroupResponse;
+
+class QTAWS_EXPORT CreateParameterGroupResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateParameterGroupResponsePrivate(CreateParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateParameterGroupResponse)
+    Q_DISABLE_COPY(CreateParameterGroupResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

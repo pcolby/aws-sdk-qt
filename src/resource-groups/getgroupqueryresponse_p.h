@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETGROUPQUERYRESPONSE_P_H
 #define QTAWS_GETGROUPQUERYRESPONSE_P_H
 
+#include "resourcegroupsresponse.h"
+#include "getgroupqueryrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class GetGroupQueryResponse;
+
+class QTAWS_EXPORT GetGroupQueryResponsePrivate : public ResourceGroupsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetGroupQueryResponsePrivate(GetGroupQueryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetGroupQueryResponse)
+    Q_DISABLE_COPY(GetGroupQueryResponsePrivate)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

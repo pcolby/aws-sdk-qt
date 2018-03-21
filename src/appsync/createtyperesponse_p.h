@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETYPERESPONSE_P_H
 #define QTAWS_CREATETYPERESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "createtyperequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateTypeResponse;
+
+class QTAWS_EXPORT CreateTypeResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTypeResponsePrivate(CreateTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTypeResponse)
+    Q_DISABLE_COPY(CreateTypeResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

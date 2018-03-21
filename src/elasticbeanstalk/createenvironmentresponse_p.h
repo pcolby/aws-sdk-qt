@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEENVIRONMENTRESPONSE_P_H
 #define QTAWS_CREATEENVIRONMENTRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "createenvironmentrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateEnvironmentResponse;
+
+class QTAWS_EXPORT CreateEnvironmentResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateEnvironmentResponsePrivate(CreateEnvironmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateEnvironmentResponse)
+    Q_DISABLE_COPY(CreateEnvironmentResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

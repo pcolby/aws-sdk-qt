@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCONSTRAINTSFORPORTFOLIORESPONSE_P_H
 #define QTAWS_LISTCONSTRAINTSFORPORTFOLIORESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "listconstraintsforportfoliorequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListConstraintsForPortfolioResponse;
+
+class QTAWS_EXPORT ListConstraintsForPortfolioResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListConstraintsForPortfolioResponsePrivate(ListConstraintsForPortfolioResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListConstraintsForPortfolioResponse)
+    Q_DISABLE_COPY(ListConstraintsForPortfolioResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

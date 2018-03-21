@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEGATEWAYINFORMATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEGATEWAYINFORMATIONRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describegatewayinformationrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeGatewayInformationResponse;
+
+class QTAWS_EXPORT DescribeGatewayInformationResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeGatewayInformationResponsePrivate(DescribeGatewayInformationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeGatewayInformationResponse)
+    Q_DISABLE_COPY(DescribeGatewayInformationResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

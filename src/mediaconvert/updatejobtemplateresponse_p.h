@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEJOBTEMPLATERESPONSE_P_H
 #define QTAWS_UPDATEJOBTEMPLATERESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "updatejobtemplaterequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class UpdateJobTemplateResponse;
+
+class QTAWS_EXPORT UpdateJobTemplateResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateJobTemplateResponsePrivate(UpdateJobTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateJobTemplateResponse)
+    Q_DISABLE_COPY(UpdateJobTemplateResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

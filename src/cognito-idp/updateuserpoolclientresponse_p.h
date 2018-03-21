@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEUSERPOOLCLIENTRESPONSE_P_H
 #define QTAWS_UPDATEUSERPOOLCLIENTRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "updateuserpoolclientrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateUserPoolClientResponse;
+
+class QTAWS_EXPORT UpdateUserPoolClientResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateUserPoolClientResponsePrivate(UpdateUserPoolClientResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserPoolClientResponse)
+    Q_DISABLE_COPY(UpdateUserPoolClientResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

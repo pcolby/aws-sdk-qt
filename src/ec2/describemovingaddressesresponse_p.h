@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEMOVINGADDRESSESRESPONSE_P_H
 #define QTAWS_DESCRIBEMOVINGADDRESSESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describemovingaddressesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeMovingAddressesResponse;
+
+class QTAWS_EXPORT DescribeMovingAddressesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeMovingAddressesResponsePrivate(DescribeMovingAddressesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMovingAddressesResponse)
+    Q_DISABLE_COPY(DescribeMovingAddressesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

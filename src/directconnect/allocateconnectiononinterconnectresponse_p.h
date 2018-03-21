@@ -20,4 +20,31 @@
 #ifndef QTAWS_ALLOCATECONNECTIONONINTERCONNECTRESPONSE_P_H
 #define QTAWS_ALLOCATECONNECTIONONINTERCONNECTRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "allocateconnectiononinterconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class AllocateConnectionOnInterconnectResponse;
+
+class QTAWS_EXPORT AllocateConnectionOnInterconnectResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AllocateConnectionOnInterconnectResponsePrivate(AllocateConnectionOnInterconnectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AllocateConnectionOnInterconnectResponse)
+    Q_DISABLE_COPY(AllocateConnectionOnInterconnectResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

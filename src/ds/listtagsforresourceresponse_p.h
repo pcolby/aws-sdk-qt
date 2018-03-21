@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class ListTagsForResourceResponse;
+
+class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForResourceResponse)
+    Q_DISABLE_COPY(ListTagsForResourceResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

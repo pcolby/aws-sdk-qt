@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYEVENTSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_MODIFYEVENTSUBSCRIPTIONRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "modifyeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifyEventSubscriptionResponse;
+
+class QTAWS_EXPORT ModifyEventSubscriptionResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyEventSubscriptionResponsePrivate(ModifyEventSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyEventSubscriptionResponse)
+    Q_DISABLE_COPY(ModifyEventSubscriptionResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

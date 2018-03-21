@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVPNCONNECTIONROUTERESPONSE_P_H
 #define QTAWS_DELETEVPNCONNECTIONROUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletevpnconnectionrouterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpnConnectionRouteResponse;
+
+class QTAWS_EXPORT DeleteVpnConnectionRouteResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVpnConnectionRouteResponsePrivate(DeleteVpnConnectionRouteResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpnConnectionRouteResponse)
+    Q_DISABLE_COPY(DeleteVpnConnectionRouteResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

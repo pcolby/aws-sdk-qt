@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTCATALOGTOGLUERESPONSE_P_H
 #define QTAWS_IMPORTCATALOGTOGLUERESPONSE_P_H
 
+#include "glueresponse.h"
+#include "importcatalogtogluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class ImportCatalogToGlueResponse;
+
+class QTAWS_EXPORT ImportCatalogToGlueResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportCatalogToGlueResponsePrivate(ImportCatalogToGlueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportCatalogToGlueResponse)
+    Q_DISABLE_COPY(ImportCatalogToGlueResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

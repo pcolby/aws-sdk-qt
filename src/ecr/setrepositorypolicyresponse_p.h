@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETREPOSITORYPOLICYRESPONSE_P_H
 #define QTAWS_SETREPOSITORYPOLICYRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "setrepositorypolicyrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class SetRepositoryPolicyResponse;
+
+class QTAWS_EXPORT SetRepositoryPolicyResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetRepositoryPolicyResponsePrivate(SetRepositoryPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetRepositoryPolicyResponse)
+    Q_DISABLE_COPY(SetRepositoryPolicyResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

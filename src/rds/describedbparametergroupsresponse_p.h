@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDBPARAMETERGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBPARAMETERGROUPSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describedbparametergroupsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBParameterGroupsResponse;
+
+class QTAWS_EXPORT DescribeDBParameterGroupsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDBParameterGroupsResponsePrivate(DescribeDBParameterGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBParameterGroupsResponse)
+    Q_DISABLE_COPY(DescribeDBParameterGroupsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

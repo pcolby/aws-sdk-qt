@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updateconfigurationsettrackingoptionsrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetTrackingOptionsResponse;
+
+class QTAWS_EXPORT UpdateConfigurationSetTrackingOptionsResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConfigurationSetTrackingOptionsResponsePrivate(UpdateConfigurationSetTrackingOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationSetTrackingOptionsResponse)
+    Q_DISABLE_COPY(UpdateConfigurationSetTrackingOptionsResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

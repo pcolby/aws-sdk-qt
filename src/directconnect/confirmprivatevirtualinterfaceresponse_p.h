@@ -20,4 +20,31 @@
 #ifndef QTAWS_CONFIRMPRIVATEVIRTUALINTERFACERESPONSE_P_H
 #define QTAWS_CONFIRMPRIVATEVIRTUALINTERFACERESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "confirmprivatevirtualinterfacerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class ConfirmPrivateVirtualInterfaceResponse;
+
+class QTAWS_EXPORT ConfirmPrivateVirtualInterfaceResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ConfirmPrivateVirtualInterfaceResponsePrivate(ConfirmPrivateVirtualInterfaceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ConfirmPrivateVirtualInterfaceResponse)
+    Q_DISABLE_COPY(ConfirmPrivateVirtualInterfaceResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

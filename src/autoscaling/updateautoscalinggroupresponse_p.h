@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAUTOSCALINGGROUPRESPONSE_P_H
 #define QTAWS_UPDATEAUTOSCALINGGROUPRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "updateautoscalinggrouprequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class UpdateAutoScalingGroupResponse;
+
+class QTAWS_EXPORT UpdateAutoScalingGroupResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAutoScalingGroupResponsePrivate(UpdateAutoScalingGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAutoScalingGroupResponse)
+    Q_DISABLE_COPY(UpdateAutoScalingGroupResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

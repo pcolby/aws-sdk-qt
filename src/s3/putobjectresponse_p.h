@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTOBJECTRESPONSE_P_H
 #define QTAWS_PUTOBJECTRESPONSE_P_H
 
+#include "s3response.h"
+#include "putobjectrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutObjectResponse;
+
+class QTAWS_EXPORT PutObjectResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutObjectResponsePrivate(PutObjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutObjectResponse)
+    Q_DISABLE_COPY(PutObjectResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESNAPSHOTFROMVOLUMERECOVERYPOINTRESPONSE_P_H
 #define QTAWS_CREATESNAPSHOTFROMVOLUMERECOVERYPOINTRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "createsnapshotfromvolumerecoverypointrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class CreateSnapshotFromVolumeRecoveryPointResponse;
+
+class QTAWS_EXPORT CreateSnapshotFromVolumeRecoveryPointResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSnapshotFromVolumeRecoveryPointResponsePrivate(CreateSnapshotFromVolumeRecoveryPointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSnapshotFromVolumeRecoveryPointResponse)
+    Q_DISABLE_COPY(CreateSnapshotFromVolumeRecoveryPointResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

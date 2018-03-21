@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_P_H
 #define QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminuserglobalsignoutrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminUserGlobalSignOutResponse;
+
+class QTAWS_EXPORT AdminUserGlobalSignOutResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminUserGlobalSignOutResponsePrivate(AdminUserGlobalSignOutResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminUserGlobalSignOutResponse)
+    Q_DISABLE_COPY(AdminUserGlobalSignOutResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

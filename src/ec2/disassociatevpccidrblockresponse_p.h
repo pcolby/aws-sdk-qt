@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEVPCCIDRBLOCKRESPONSE_P_H
 #define QTAWS_DISASSOCIATEVPCCIDRBLOCKRESPONSE_P_H
 
+#include "ec2response.h"
+#include "disassociatevpccidrblockrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateVpcCidrBlockResponse;
+
+class QTAWS_EXPORT DisassociateVpcCidrBlockResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateVpcCidrBlockResponsePrivate(DisassociateVpcCidrBlockResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateVpcCidrBlockResponse)
+    Q_DISABLE_COPY(DisassociateVpcCidrBlockResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

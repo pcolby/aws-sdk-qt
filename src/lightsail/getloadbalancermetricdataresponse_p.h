@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETLOADBALANCERMETRICDATARESPONSE_P_H
 #define QTAWS_GETLOADBALANCERMETRICDATARESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getloadbalancermetricdatarequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetLoadBalancerMetricDataResponse;
+
+class QTAWS_EXPORT GetLoadBalancerMetricDataResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetLoadBalancerMetricDataResponsePrivate(GetLoadBalancerMetricDataResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetLoadBalancerMetricDataResponse)
+    Q_DISABLE_COPY(GetLoadBalancerMetricDataResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

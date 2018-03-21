@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTBROKERSRESPONSE_P_H
 #define QTAWS_LISTBROKERSRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "listbrokersrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class ListBrokersResponse;
+
+class QTAWS_EXPORT ListBrokersResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListBrokersResponsePrivate(ListBrokersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListBrokersResponse)
+    Q_DISABLE_COPY(ListBrokersResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

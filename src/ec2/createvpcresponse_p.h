@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEVPCRESPONSE_P_H
 #define QTAWS_CREATEVPCRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createvpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpcResponse;
+
+class QTAWS_EXPORT CreateVpcResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateVpcResponsePrivate(CreateVpcResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVpcResponse)
+    Q_DISABLE_COPY(CreateVpcResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

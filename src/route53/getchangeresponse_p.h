@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCHANGERESPONSE_P_H
 #define QTAWS_GETCHANGERESPONSE_P_H
 
+#include "route53response.h"
+#include "getchangerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetChangeResponse;
+
+class QTAWS_EXPORT GetChangeResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetChangeResponsePrivate(GetChangeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetChangeResponse)
+    Q_DISABLE_COPY(GetChangeResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

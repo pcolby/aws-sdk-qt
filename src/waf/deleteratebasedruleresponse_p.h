@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERATEBASEDRULERESPONSE_P_H
 #define QTAWS_DELETERATEBASEDRULERESPONSE_P_H
 
+#include "wafresponse.h"
+#include "deleteratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteRateBasedRuleResponse;
+
+class QTAWS_EXPORT DeleteRateBasedRuleResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRateBasedRuleResponsePrivate(DeleteRateBasedRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRateBasedRuleResponse)
+    Q_DISABLE_COPY(DeleteRateBasedRuleResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

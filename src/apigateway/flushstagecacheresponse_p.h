@@ -20,4 +20,31 @@
 #ifndef QTAWS_FLUSHSTAGECACHERESPONSE_P_H
 #define QTAWS_FLUSHSTAGECACHERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "flushstagecacherequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class FlushStageCacheResponse;
+
+class QTAWS_EXPORT FlushStageCacheResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    FlushStageCacheResponsePrivate(FlushStageCacheResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(FlushStageCacheResponse)
+    Q_DISABLE_COPY(FlushStageCacheResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

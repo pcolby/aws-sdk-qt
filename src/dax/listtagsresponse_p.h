@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSRESPONSE_P_H
 #define QTAWS_LISTTAGSRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "listtagsrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class ListTagsResponse;
+
+class QTAWS_EXPORT ListTagsResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsResponsePrivate(ListTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsResponse)
+    Q_DISABLE_COPY(ListTagsResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

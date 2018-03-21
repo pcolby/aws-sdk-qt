@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYIDFORMATRESPONSE_P_H
 #define QTAWS_MODIFYIDFORMATRESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyidformatrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyIdFormatResponse;
+
+class QTAWS_EXPORT ModifyIdFormatResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyIdFormatResponsePrivate(ModifyIdFormatResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyIdFormatResponse)
+    Q_DISABLE_COPY(ModifyIdFormatResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

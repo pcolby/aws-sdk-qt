@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESERVERENGINEATTRIBUTESRESPONSE_P_H
 #define QTAWS_UPDATESERVERENGINEATTRIBUTESRESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "updateserverengineattributesrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class UpdateServerEngineAttributesResponse;
+
+class QTAWS_EXPORT UpdateServerEngineAttributesResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateServerEngineAttributesResponsePrivate(UpdateServerEngineAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServerEngineAttributesResponse)
+    Q_DISABLE_COPY(UpdateServerEngineAttributesResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

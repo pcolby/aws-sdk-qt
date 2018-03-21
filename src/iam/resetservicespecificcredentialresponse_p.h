@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETSERVICESPECIFICCREDENTIALRESPONSE_P_H
 #define QTAWS_RESETSERVICESPECIFICCREDENTIALRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "resetservicespecificcredentialrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ResetServiceSpecificCredentialResponse;
+
+class QTAWS_EXPORT ResetServiceSpecificCredentialResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetServiceSpecificCredentialResponsePrivate(ResetServiceSpecificCredentialResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetServiceSpecificCredentialResponse)
+    Q_DISABLE_COPY(ResetServiceSpecificCredentialResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

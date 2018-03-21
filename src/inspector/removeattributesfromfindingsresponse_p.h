@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEATTRIBUTESFROMFINDINGSRESPONSE_P_H
 #define QTAWS_REMOVEATTRIBUTESFROMFINDINGSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "removeattributesfromfindingsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class RemoveAttributesFromFindingsResponse;
+
+class QTAWS_EXPORT RemoveAttributesFromFindingsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveAttributesFromFindingsResponsePrivate(RemoveAttributesFromFindingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveAttributesFromFindingsResponse)
+    Q_DISABLE_COPY(RemoveAttributesFromFindingsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

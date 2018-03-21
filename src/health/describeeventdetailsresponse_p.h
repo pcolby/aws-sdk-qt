@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEVENTDETAILSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTDETAILSRESPONSE_P_H
 
+#include "healthresponse.h"
+#include "describeeventdetailsrequest.h"
+
+namespace AWS {
+
+namespace Health {
+
+class DescribeEventDetailsResponse;
+
+class QTAWS_EXPORT DescribeEventDetailsResponsePrivate : public HealthResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEventDetailsResponsePrivate(DescribeEventDetailsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventDetailsResponse)
+    Q_DISABLE_COPY(DescribeEventDetailsResponsePrivate)
+
+};
+
+} // namespace Health
+} // namespace AWS
+
 #endif

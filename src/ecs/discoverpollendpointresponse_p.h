@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISCOVERPOLLENDPOINTRESPONSE_P_H
 #define QTAWS_DISCOVERPOLLENDPOINTRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "discoverpollendpointrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DiscoverPollEndpointResponse;
+
+class QTAWS_EXPORT DiscoverPollEndpointResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DiscoverPollEndpointResponsePrivate(DiscoverPollEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DiscoverPollEndpointResponse)
+    Q_DISABLE_COPY(DiscoverPollEndpointResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

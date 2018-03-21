@@ -20,4 +20,31 @@
 #ifndef QTAWS_SCHEDULERUNRESPONSE_P_H
 #define QTAWS_SCHEDULERUNRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "schedulerunrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ScheduleRunResponse;
+
+class QTAWS_EXPORT ScheduleRunResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ScheduleRunResponsePrivate(ScheduleRunResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ScheduleRunResponse)
+    Q_DISABLE_COPY(ScheduleRunResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_LISTCONFIGURATIONSRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "listconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class ListConfigurationsResponse;
+
+class QTAWS_EXPORT ListConfigurationsResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListConfigurationsResponsePrivate(ListConfigurationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListConfigurationsResponse)
+    Q_DISABLE_COPY(ListConfigurationsResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

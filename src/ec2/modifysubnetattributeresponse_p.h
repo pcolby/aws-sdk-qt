@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYSUBNETATTRIBUTERESPONSE_P_H
 #define QTAWS_MODIFYSUBNETATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifysubnetattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifySubnetAttributeResponse;
+
+class QTAWS_EXPORT ModifySubnetAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifySubnetAttributeResponsePrivate(ModifySubnetAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifySubnetAttributeResponse)
+    Q_DISABLE_COPY(ModifySubnetAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

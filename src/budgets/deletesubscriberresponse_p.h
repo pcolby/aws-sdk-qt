@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESUBSCRIBERRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIBERRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "deletesubscriberrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DeleteSubscriberResponse;
+
+class QTAWS_EXPORT DeleteSubscriberResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSubscriberResponsePrivate(DeleteSubscriberResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSubscriberResponse)
+    Q_DISABLE_COPY(DeleteSubscriberResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

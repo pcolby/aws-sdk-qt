@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTYPESRESPONSE_P_H
 #define QTAWS_LISTTYPESRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "listtypesrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListTypesResponse;
+
+class QTAWS_EXPORT ListTypesResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTypesResponsePrivate(ListTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTypesResponse)
+    Q_DISABLE_COPY(ListTypesResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

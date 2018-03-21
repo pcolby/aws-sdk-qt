@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETRISKCONFIGURATIONRESPONSE_P_H
 #define QTAWS_SETRISKCONFIGURATIONRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "setriskconfigurationrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetRiskConfigurationResponse;
+
+class QTAWS_EXPORT SetRiskConfigurationResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetRiskConfigurationResponsePrivate(SetRiskConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetRiskConfigurationResponse)
+    Q_DISABLE_COPY(SetRiskConfigurationResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLESTAGETRANSITIONRESPONSE_P_H
 #define QTAWS_ENABLESTAGETRANSITIONRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "enablestagetransitionrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class EnableStageTransitionResponse;
+
+class QTAWS_EXPORT EnableStageTransitionResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableStageTransitionResponsePrivate(EnableStageTransitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableStageTransitionResponse)
+    Q_DISABLE_COPY(EnableStageTransitionResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

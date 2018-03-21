@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTATTACHEDINDICESRESPONSE_P_H
 #define QTAWS_LISTATTACHEDINDICESRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "listattachedindicesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListAttachedIndicesResponse;
+
+class QTAWS_EXPORT ListAttachedIndicesResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAttachedIndicesResponsePrivate(ListAttachedIndicesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAttachedIndicesResponse)
+    Q_DISABLE_COPY(ListAttachedIndicesResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

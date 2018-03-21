@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEOBJECTRESPONSE_P_H
 #define QTAWS_DELETEOBJECTRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "deleteobjectrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DeleteObjectResponse;
+
+class QTAWS_EXPORT DeleteObjectResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteObjectResponsePrivate(DeleteObjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteObjectResponse)
+    Q_DISABLE_COPY(DeleteObjectResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

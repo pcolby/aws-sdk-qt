@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHCHECKLAYERAVAILABILITYRESPONSE_P_H
 #define QTAWS_BATCHCHECKLAYERAVAILABILITYRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "batchchecklayeravailabilityrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class BatchCheckLayerAvailabilityResponse;
+
+class QTAWS_EXPORT BatchCheckLayerAvailabilityResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchCheckLayerAvailabilityResponsePrivate(BatchCheckLayerAvailabilityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchCheckLayerAvailabilityResponse)
+    Q_DISABLE_COPY(BatchCheckLayerAvailabilityResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

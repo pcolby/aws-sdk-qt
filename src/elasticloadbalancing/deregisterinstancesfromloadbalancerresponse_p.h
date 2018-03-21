@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERRESPONSE_P_H
 #define QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "deregisterinstancesfromloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class DeregisterInstancesFromLoadBalancerResponse;
+
+class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterInstancesFromLoadBalancerResponsePrivate(DeregisterInstancesFromLoadBalancerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterInstancesFromLoadBalancerResponse)
+    Q_DISABLE_COPY(DeregisterInstancesFromLoadBalancerResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

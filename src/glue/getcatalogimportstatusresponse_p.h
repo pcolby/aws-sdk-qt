@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCATALOGIMPORTSTATUSRESPONSE_P_H
 #define QTAWS_GETCATALOGIMPORTSTATUSRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getcatalogimportstatusrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetCatalogImportStatusResponse;
+
+class QTAWS_EXPORT GetCatalogImportStatusResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCatalogImportStatusResponsePrivate(GetCatalogImportStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCatalogImportStatusResponse)
+    Q_DISABLE_COPY(GetCatalogImportStatusResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

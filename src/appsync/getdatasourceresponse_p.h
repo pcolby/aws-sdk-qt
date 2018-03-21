@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDATASOURCERESPONSE_P_H
 #define QTAWS_GETDATASOURCERESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "getdatasourcerequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetDataSourceResponse;
+
+class QTAWS_EXPORT GetDataSourceResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDataSourceResponsePrivate(GetDataSourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDataSourceResponse)
+    Q_DISABLE_COPY(GetDataSourceResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

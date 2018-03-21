@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCELEBRITYRECOGNITIONRESPONSE_P_H
 #define QTAWS_GETCELEBRITYRECOGNITIONRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "getcelebrityrecognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class GetCelebrityRecognitionResponse;
+
+class QTAWS_EXPORT GetCelebrityRecognitionResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCelebrityRecognitionResponsePrivate(GetCelebrityRecognitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCelebrityRecognitionResponse)
+    Q_DISABLE_COPY(GetCelebrityRecognitionResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINCREATEUSERRESPONSE_P_H
 #define QTAWS_ADMINCREATEUSERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "admincreateuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminCreateUserResponse;
+
+class QTAWS_EXPORT AdminCreateUserResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminCreateUserResponsePrivate(AdminCreateUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminCreateUserResponse)
+    Q_DISABLE_COPY(AdminCreateUserResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

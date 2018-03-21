@@ -20,4 +20,31 @@
 #ifndef QTAWS_TERMINATEJOBFLOWSRESPONSE_P_H
 #define QTAWS_TERMINATEJOBFLOWSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "terminatejobflowsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class TerminateJobFlowsResponse;
+
+class QTAWS_EXPORT TerminateJobFlowsResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TerminateJobFlowsResponsePrivate(TerminateJobFlowsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateJobFlowsResponse)
+    Q_DISABLE_COPY(TerminateJobFlowsResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTREAMPROCESSORRESPONSE_P_H
 #define QTAWS_DESCRIBESTREAMPROCESSORRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "describestreamprocessorrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DescribeStreamProcessorResponse;
+
+class QTAWS_EXPORT DescribeStreamProcessorResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStreamProcessorResponsePrivate(DescribeStreamProcessorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStreamProcessorResponse)
+    Q_DISABLE_COPY(DescribeStreamProcessorResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTLOCALDISKSRESPONSE_P_H
 #define QTAWS_LISTLOCALDISKSRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "listlocaldisksrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListLocalDisksResponse;
+
+class QTAWS_EXPORT ListLocalDisksResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListLocalDisksResponsePrivate(ListLocalDisksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListLocalDisksResponse)
+    Q_DISABLE_COPY(ListLocalDisksResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

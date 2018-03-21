@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEAPPRESPONSE_P_H
 #define QTAWS_CREATEAPPRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "createapprequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class CreateAppResponse;
+
+class QTAWS_EXPORT CreateAppResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateAppResponsePrivate(CreateAppResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAppResponse)
+    Q_DISABLE_COPY(CreateAppResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

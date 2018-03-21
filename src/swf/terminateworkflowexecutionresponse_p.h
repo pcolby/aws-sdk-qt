@@ -20,4 +20,31 @@
 #ifndef QTAWS_TERMINATEWORKFLOWEXECUTIONRESPONSE_P_H
 #define QTAWS_TERMINATEWORKFLOWEXECUTIONRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "terminateworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class TerminateWorkflowExecutionResponse;
+
+class QTAWS_EXPORT TerminateWorkflowExecutionResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TerminateWorkflowExecutionResponsePrivate(TerminateWorkflowExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateWorkflowExecutionResponse)
+    Q_DISABLE_COPY(TerminateWorkflowExecutionResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

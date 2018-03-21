@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETMEDIAFORFRAGMENTLISTRESPONSE_P_H
 #define QTAWS_GETMEDIAFORFRAGMENTLISTRESPONSE_P_H
 
+#include "kinesisvideoarchivedmediaresponse.h"
+#include "getmediaforfragmentlistrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideoArchivedMedia {
+
+class GetMediaForFragmentListResponse;
+
+class QTAWS_EXPORT GetMediaForFragmentListResponsePrivate : public KinesisVideoArchivedMediaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetMediaForFragmentListResponsePrivate(GetMediaForFragmentListResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetMediaForFragmentListResponse)
+    Q_DISABLE_COPY(GetMediaForFragmentListResponsePrivate)
+
+};
+
+} // namespace KinesisVideoArchivedMedia
+} // namespace AWS
+
 #endif

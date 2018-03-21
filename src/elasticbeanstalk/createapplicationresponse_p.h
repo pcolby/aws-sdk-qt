@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEAPPLICATIONRESPONSE_P_H
 #define QTAWS_CREATEAPPLICATIONRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "createapplicationrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateApplicationResponse;
+
+class QTAWS_EXPORT CreateApplicationResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateApplicationResponsePrivate(CreateApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateApplicationResponse)
+    Q_DISABLE_COPY(CreateApplicationResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

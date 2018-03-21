@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEMYUSERPROFILERESPONSE_P_H
 #define QTAWS_UPDATEMYUSERPROFILERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "updatemyuserprofilerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateMyUserProfileResponse;
+
+class QTAWS_EXPORT UpdateMyUserProfileResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateMyUserProfileResponsePrivate(UpdateMyUserProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateMyUserProfileResponse)
+    Q_DISABLE_COPY(UpdateMyUserProfileResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

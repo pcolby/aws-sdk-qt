@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPLOADARCHIVERESPONSE_P_H
 #define QTAWS_UPLOADARCHIVERESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "uploadarchiverequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class UploadArchiveResponse;
+
+class QTAWS_EXPORT UploadArchiveResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UploadArchiveResponsePrivate(UploadArchiveResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UploadArchiveResponse)
+    Q_DISABLE_COPY(UploadArchiveResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEUSERPROFILERESPONSE_P_H
 #define QTAWS_DELETEUSERPROFILERESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "deleteuserprofilerequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DeleteUserProfileResponse;
+
+class QTAWS_EXPORT DeleteUserProfileResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteUserProfileResponsePrivate(DeleteUserProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUserProfileResponse)
+    Q_DISABLE_COPY(DeleteUserProfileResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

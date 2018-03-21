@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETRAILSRESPONSE_P_H
 #define QTAWS_DESCRIBETRAILSRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "describetrailsrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class DescribeTrailsResponse;
+
+class QTAWS_EXPORT DescribeTrailsResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTrailsResponsePrivate(DescribeTrailsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTrailsResponse)
+    Q_DISABLE_COPY(DescribeTrailsResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

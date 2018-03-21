@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESTREAMINGDISTRIBUTIONRESPONSE_P_H
 #define QTAWS_DELETESTREAMINGDISTRIBUTIONRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "deletestreamingdistributionrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class DeleteStreamingDistributionResponse;
+
+class QTAWS_EXPORT DeleteStreamingDistributionResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteStreamingDistributionResponsePrivate(DeleteStreamingDistributionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStreamingDistributionResponse)
+    Q_DISABLE_COPY(DeleteStreamingDistributionResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

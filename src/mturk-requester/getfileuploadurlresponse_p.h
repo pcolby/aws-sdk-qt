@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETFILEUPLOADURLRESPONSE_P_H
 #define QTAWS_GETFILEUPLOADURLRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "getfileuploadurlrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetFileUploadURLResponse;
+
+class QTAWS_EXPORT GetFileUploadURLResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetFileUploadURLResponsePrivate(GetFileUploadURLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetFileUploadURLResponse)
+    Q_DISABLE_COPY(GetFileUploadURLResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

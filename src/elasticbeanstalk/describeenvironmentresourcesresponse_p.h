@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTRESOURCESRESPONSE_P_H
 #define QTAWS_DESCRIBEENVIRONMENTRESOURCESRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeenvironmentresourcesrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeEnvironmentResourcesResponse;
+
+class QTAWS_EXPORT DescribeEnvironmentResourcesResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEnvironmentResourcesResponsePrivate(DescribeEnvironmentResourcesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEnvironmentResourcesResponse)
+    Q_DISABLE_COPY(DescribeEnvironmentResourcesResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

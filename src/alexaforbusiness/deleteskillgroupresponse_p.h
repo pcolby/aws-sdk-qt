@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESKILLGROUPRESPONSE_P_H
 #define QTAWS_DELETESKILLGROUPRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "deleteskillgrouprequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class DeleteSkillGroupResponse;
+
+class QTAWS_EXPORT DeleteSkillGroupResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSkillGroupResponsePrivate(DeleteSkillGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSkillGroupResponse)
+    Q_DISABLE_COPY(DeleteSkillGroupResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

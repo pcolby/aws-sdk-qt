@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPROGRESSUPDATESTREAMRESPONSE_P_H
 #define QTAWS_CREATEPROGRESSUPDATESTREAMRESPONSE_P_H
 
+#include "migrationhubresponse.h"
+#include "createprogressupdatestreamrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class CreateProgressUpdateStreamResponse;
+
+class QTAWS_EXPORT CreateProgressUpdateStreamResponsePrivate : public MigrationHubResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateProgressUpdateStreamResponsePrivate(CreateProgressUpdateStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateProgressUpdateStreamResponse)
+    Q_DISABLE_COPY(CreateProgressUpdateStreamResponsePrivate)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

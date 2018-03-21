@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 #define QTAWS_ADDAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 
+#include "kinesisanalyticsresponse.h"
+#include "addapplicationreferencedatasourcerequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class AddApplicationReferenceDataSourceResponse;
+
+class QTAWS_EXPORT AddApplicationReferenceDataSourceResponsePrivate : public KinesisAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddApplicationReferenceDataSourceResponsePrivate(AddApplicationReferenceDataSourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddApplicationReferenceDataSourceResponse)
+    Q_DISABLE_COPY(AddApplicationReferenceDataSourceResponsePrivate)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

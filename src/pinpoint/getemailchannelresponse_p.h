@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETEMAILCHANNELRESPONSE_P_H
 #define QTAWS_GETEMAILCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getemailchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetEmailChannelResponse;
+
+class QTAWS_EXPORT GetEmailChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetEmailChannelResponsePrivate(GetEmailChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetEmailChannelResponse)
+    Q_DISABLE_COPY(GetEmailChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

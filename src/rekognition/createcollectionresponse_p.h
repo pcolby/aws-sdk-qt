@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECOLLECTIONRESPONSE_P_H
 #define QTAWS_CREATECOLLECTIONRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "createcollectionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class CreateCollectionResponse;
+
+class QTAWS_EXPORT CreateCollectionResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCollectionResponsePrivate(CreateCollectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCollectionResponse)
+    Q_DISABLE_COPY(CreateCollectionResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

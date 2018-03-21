@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCOREDEFINITIONRESPONSE_P_H
 #define QTAWS_GETCOREDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "getcoredefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetCoreDefinitionResponse;
+
+class QTAWS_EXPORT GetCoreDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCoreDefinitionResponsePrivate(GetCoreDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCoreDefinitionResponse)
+    Q_DISABLE_COPY(GetCoreDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATECONNECTORRESPONSE_P_H
 #define QTAWS_DISASSOCIATECONNECTORRESPONSE_P_H
 
+#include "smsresponse.h"
+#include "disassociateconnectorrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class DisassociateConnectorResponse;
+
+class QTAWS_EXPORT DisassociateConnectorResponsePrivate : public SMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateConnectorResponsePrivate(DisassociateConnectorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateConnectorResponse)
+    Q_DISABLE_COPY(DisassociateConnectorResponsePrivate)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

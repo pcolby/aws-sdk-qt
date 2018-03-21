@@ -20,4 +20,31 @@
 #ifndef QTAWS_REVOKESECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_REVOKESECURITYGROUPINGRESSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "revokesecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RevokeSecurityGroupIngressResponse;
+
+class QTAWS_EXPORT RevokeSecurityGroupIngressResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RevokeSecurityGroupIngressResponsePrivate(RevokeSecurityGroupIngressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RevokeSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(RevokeSecurityGroupIngressResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

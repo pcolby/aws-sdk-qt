@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEASSESSMENTTEMPLATERESPONSE_P_H
 #define QTAWS_DELETEASSESSMENTTEMPLATERESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "deleteassessmenttemplaterequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DeleteAssessmentTemplateResponse;
+
+class QTAWS_EXPORT DeleteAssessmentTemplateResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAssessmentTemplateResponsePrivate(DeleteAssessmentTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAssessmentTemplateResponse)
+    Q_DISABLE_COPY(DeleteAssessmentTemplateResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

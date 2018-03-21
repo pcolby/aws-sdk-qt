@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBGPPEERRESPONSE_P_H
 #define QTAWS_DELETEBGPPEERRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "deletebgppeerrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteBGPPeerResponse;
+
+class QTAWS_EXPORT DeleteBGPPeerResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBGPPeerResponsePrivate(DeleteBGPPeerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBGPPeerResponse)
+    Q_DISABLE_COPY(DeleteBGPPeerResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

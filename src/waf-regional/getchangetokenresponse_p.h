@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCHANGETOKENRESPONSE_P_H
 #define QTAWS_GETCHANGETOKENRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "getchangetokenrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetChangeTokenResponse;
+
+class QTAWS_EXPORT GetChangeTokenResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetChangeTokenResponsePrivate(GetChangeTokenResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetChangeTokenResponse)
+    Q_DISABLE_COPY(GetChangeTokenResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

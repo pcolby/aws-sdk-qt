@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELAGRESPONSE_P_H
 #define QTAWS_DELETELAGRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "deletelagrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteLagResponse;
+
+class QTAWS_EXPORT DeleteLagResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLagResponsePrivate(DeleteLagResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLagResponse)
+    Q_DISABLE_COPY(DeleteLagResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

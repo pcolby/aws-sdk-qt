@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECROSSACCOUNTACCESSROLERESPONSE_P_H
 #define QTAWS_DESCRIBECROSSACCOUNTACCESSROLERESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "describecrossaccountaccessrolerequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeCrossAccountAccessRoleResponse;
+
+class QTAWS_EXPORT DescribeCrossAccountAccessRoleResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCrossAccountAccessRoleResponsePrivate(DescribeCrossAccountAccessRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCrossAccountAccessRoleResponse)
+    Q_DISABLE_COPY(DescribeCrossAccountAccessRoleResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

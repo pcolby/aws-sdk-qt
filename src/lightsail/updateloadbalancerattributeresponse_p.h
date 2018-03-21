@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATELOADBALANCERATTRIBUTERESPONSE_P_H
 #define QTAWS_UPDATELOADBALANCERATTRIBUTERESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "updateloadbalancerattributerequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class UpdateLoadBalancerAttributeResponse;
+
+class QTAWS_EXPORT UpdateLoadBalancerAttributeResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateLoadBalancerAttributeResponsePrivate(UpdateLoadBalancerAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateLoadBalancerAttributeResponse)
+    Q_DISABLE_COPY(UpdateLoadBalancerAttributeResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

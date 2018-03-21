@@ -20,4 +20,31 @@
 #ifndef QTAWS_REPLACETOPICRULERESPONSE_P_H
 #define QTAWS_REPLACETOPICRULERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "replacetopicrulerequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ReplaceTopicRuleResponse;
+
+class QTAWS_EXPORT ReplaceTopicRuleResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ReplaceTopicRuleResponsePrivate(ReplaceTopicRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ReplaceTopicRuleResponse)
+    Q_DISABLE_COPY(ReplaceTopicRuleResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

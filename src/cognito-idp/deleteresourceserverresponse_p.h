@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERESOURCESERVERRESPONSE_P_H
 #define QTAWS_DELETERESOURCESERVERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "deleteresourceserverrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DeleteResourceServerResponse;
+
+class QTAWS_EXPORT DeleteResourceServerResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteResourceServerResponsePrivate(DeleteResourceServerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteResourceServerResponse)
+    Q_DISABLE_COPY(DeleteResourceServerResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

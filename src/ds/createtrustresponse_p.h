@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETRUSTRESPONSE_P_H
 #define QTAWS_CREATETRUSTRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "createtrustrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateTrustResponse;
+
+class QTAWS_EXPORT CreateTrustResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTrustResponsePrivate(CreateTrustResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTrustResponse)
+    Q_DISABLE_COPY(CreateTrustResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

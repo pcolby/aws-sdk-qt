@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "addtagstoresourcerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class AddTagsToResourceResponse;
+
+class QTAWS_EXPORT AddTagsToResourceResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsToResourceResponsePrivate(AddTagsToResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToResourceResponse)
+    Q_DISABLE_COPY(AddTagsToResourceResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

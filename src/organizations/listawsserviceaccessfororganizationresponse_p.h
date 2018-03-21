@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONRESPONSE_P_H
 #define QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listawsserviceaccessfororganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListAWSServiceAccessForOrganizationResponse;
+
+class QTAWS_EXPORT ListAWSServiceAccessForOrganizationResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAWSServiceAccessForOrganizationResponsePrivate(ListAWSServiceAccessForOrganizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAWSServiceAccessForOrganizationResponse)
+    Q_DISABLE_COPY(ListAWSServiceAccessForOrganizationResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

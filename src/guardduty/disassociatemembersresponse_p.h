@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERSRESPONSE_P_H
 #define QTAWS_DISASSOCIATEMEMBERSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "disassociatemembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DisassociateMembersResponse;
+
+class QTAWS_EXPORT DisassociateMembersResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateMembersResponsePrivate(DisassociateMembersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateMembersResponse)
+    Q_DISABLE_COPY(DisassociateMembersResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

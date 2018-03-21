@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEFACETFROMOBJECTRESPONSE_P_H
 #define QTAWS_REMOVEFACETFROMOBJECTRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "removefacetfromobjectrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class RemoveFacetFromObjectResponse;
+
+class QTAWS_EXPORT RemoveFacetFromObjectResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveFacetFromObjectResponsePrivate(RemoveFacetFromObjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveFacetFromObjectResponse)
+    Q_DISABLE_COPY(RemoveFacetFromObjectResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

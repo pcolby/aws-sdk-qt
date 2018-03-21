@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEMATCHMAKINGCONFIGURATIONRESPONSE_P_H
 #define QTAWS_CREATEMATCHMAKINGCONFIGURATIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "creatematchmakingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class CreateMatchmakingConfigurationResponse;
+
+class QTAWS_EXPORT CreateMatchmakingConfigurationResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateMatchmakingConfigurationResponsePrivate(CreateMatchmakingConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateMatchmakingConfigurationResponse)
+    Q_DISABLE_COPY(CreateMatchmakingConfigurationResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

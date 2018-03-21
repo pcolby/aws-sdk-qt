@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYVPCENDPOINTSERVICECONFIGURATIONRESPONSE_P_H
 #define QTAWS_MODIFYVPCENDPOINTSERVICECONFIGURATIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyvpcendpointserviceconfigurationrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcEndpointServiceConfigurationResponse;
+
+class QTAWS_EXPORT ModifyVpcEndpointServiceConfigurationResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyVpcEndpointServiceConfigurationResponsePrivate(ModifyVpcEndpointServiceConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyVpcEndpointServiceConfigurationResponse)
+    Q_DISABLE_COPY(ModifyVpcEndpointServiceConfigurationResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

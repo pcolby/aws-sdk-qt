@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLETOPICRULERESPONSE_P_H
 #define QTAWS_DISABLETOPICRULERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "disabletopicrulerequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DisableTopicRuleResponse;
+
+class QTAWS_EXPORT DisableTopicRuleResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableTopicRuleResponsePrivate(DisableTopicRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableTopicRuleResponse)
+    Q_DISABLE_COPY(DisableTopicRuleResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

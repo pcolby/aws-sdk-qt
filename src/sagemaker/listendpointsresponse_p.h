@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTENDPOINTSRESPONSE_P_H
 #define QTAWS_LISTENDPOINTSRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "listendpointsrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class ListEndpointsResponse;
+
+class QTAWS_EXPORT ListEndpointsResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListEndpointsResponsePrivate(ListEndpointsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListEndpointsResponse)
+    Q_DISABLE_COPY(ListEndpointsResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

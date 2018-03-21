@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBUCKETMETRICSCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEBUCKETMETRICSCONFIGURATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "deletebucketmetricsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketMetricsConfigurationResponse;
+
+class QTAWS_EXPORT DeleteBucketMetricsConfigurationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBucketMetricsConfigurationResponsePrivate(DeleteBucketMetricsConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBucketMetricsConfigurationResponse)
+    Q_DISABLE_COPY(DeleteBucketMetricsConfigurationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

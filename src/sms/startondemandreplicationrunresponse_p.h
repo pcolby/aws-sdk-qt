@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTONDEMANDREPLICATIONRUNRESPONSE_P_H
 #define QTAWS_STARTONDEMANDREPLICATIONRUNRESPONSE_P_H
 
+#include "smsresponse.h"
+#include "startondemandreplicationrunrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class StartOnDemandReplicationRunResponse;
+
+class QTAWS_EXPORT StartOnDemandReplicationRunResponsePrivate : public SMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartOnDemandReplicationRunResponsePrivate(StartOnDemandReplicationRunResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartOnDemandReplicationRunResponse)
+    Q_DISABLE_COPY(StartOnDemandReplicationRunResponsePrivate)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

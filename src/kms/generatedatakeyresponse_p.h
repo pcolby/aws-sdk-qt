@@ -20,4 +20,31 @@
 #ifndef QTAWS_GENERATEDATAKEYRESPONSE_P_H
 #define QTAWS_GENERATEDATAKEYRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "generatedatakeyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GenerateDataKeyResponse;
+
+class QTAWS_EXPORT GenerateDataKeyResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GenerateDataKeyResponsePrivate(GenerateDataKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GenerateDataKeyResponse)
+    Q_DISABLE_COPY(GenerateDataKeyResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

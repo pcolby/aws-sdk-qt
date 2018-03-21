@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETNETWORKPROFILERESPONSE_P_H
 #define QTAWS_GETNETWORKPROFILERESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "getnetworkprofilerequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetNetworkProfileResponse;
+
+class QTAWS_EXPORT GetNetworkProfileResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetNetworkProfileResponsePrivate(GetNetworkProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetNetworkProfileResponse)
+    Q_DISABLE_COPY(GetNetworkProfileResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

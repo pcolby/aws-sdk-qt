@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGOPTIONSRESPONSE_P_H
 #define QTAWS_LISTTAGOPTIONSRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "listtagoptionsrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListTagOptionsResponse;
+
+class QTAWS_EXPORT ListTagOptionsResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagOptionsResponsePrivate(ListTagOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagOptionsResponse)
+    Q_DISABLE_COPY(ListTagOptionsResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELISTENERCERTIFICATESRESPONSE_P_H
 #define QTAWS_DESCRIBELISTENERCERTIFICATESRESPONSE_P_H
 
+#include "elasticloadbalancingv2response.h"
+#include "describelistenercertificatesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DescribeListenerCertificatesResponse;
+
+class QTAWS_EXPORT DescribeListenerCertificatesResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeListenerCertificatesResponsePrivate(DescribeListenerCertificatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeListenerCertificatesResponse)
+    Q_DISABLE_COPY(DescribeListenerCertificatesResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

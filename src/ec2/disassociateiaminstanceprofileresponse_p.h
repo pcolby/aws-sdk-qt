@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEIAMINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_DISASSOCIATEIAMINSTANCEPROFILERESPONSE_P_H
 
+#include "ec2response.h"
+#include "disassociateiaminstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateIamInstanceProfileResponse;
+
+class QTAWS_EXPORT DisassociateIamInstanceProfileResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateIamInstanceProfileResponsePrivate(DisassociateIamInstanceProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateIamInstanceProfileResponse)
+    Q_DISABLE_COPY(DisassociateIamInstanceProfileResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

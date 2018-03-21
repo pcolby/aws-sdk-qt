@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERELASTICIPRESPONSE_P_H
 #define QTAWS_REGISTERELASTICIPRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "registerelasticiprequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RegisterElasticIpResponse;
+
+class QTAWS_EXPORT RegisterElasticIpResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterElasticIpResponsePrivate(RegisterElasticIpResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterElasticIpResponse)
+    Q_DISABLE_COPY(RegisterElasticIpResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

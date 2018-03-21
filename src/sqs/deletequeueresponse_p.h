@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEQUEUERESPONSE_P_H
 #define QTAWS_DELETEQUEUERESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "deletequeuerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class DeleteQueueResponse;
+
+class QTAWS_EXPORT DeleteQueueResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteQueueResponsePrivate(DeleteQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteQueueResponse)
+    Q_DISABLE_COPY(DeleteQueueResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

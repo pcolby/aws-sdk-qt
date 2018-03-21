@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEIPSETRESPONSE_P_H
 #define QTAWS_CREATEIPSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "createipsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateIPSetResponse;
+
+class QTAWS_EXPORT CreateIPSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateIPSetResponsePrivate(CreateIPSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateIPSetResponse)
+    Q_DISABLE_COPY(CreateIPSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

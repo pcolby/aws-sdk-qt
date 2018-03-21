@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETYPEDLINKFACETRESPONSE_P_H
 #define QTAWS_UPDATETYPEDLINKFACETRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "updatetypedlinkfacetrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpdateTypedLinkFacetResponse;
+
+class QTAWS_EXPORT UpdateTypedLinkFacetResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTypedLinkFacetResponsePrivate(UpdateTypedLinkFacetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTypedLinkFacetResponse)
+    Q_DISABLE_COPY(UpdateTypedLinkFacetResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

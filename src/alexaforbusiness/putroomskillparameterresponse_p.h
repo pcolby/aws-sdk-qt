@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTROOMSKILLPARAMETERRESPONSE_P_H
 #define QTAWS_PUTROOMSKILLPARAMETERRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "putroomskillparameterrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class PutRoomSkillParameterResponse;
+
+class QTAWS_EXPORT PutRoomSkillParameterResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutRoomSkillParameterResponsePrivate(PutRoomSkillParameterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutRoomSkillParameterResponse)
+    Q_DISABLE_COPY(PutRoomSkillParameterResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

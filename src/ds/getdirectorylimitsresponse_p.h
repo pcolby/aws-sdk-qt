@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDIRECTORYLIMITSRESPONSE_P_H
 #define QTAWS_GETDIRECTORYLIMITSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "getdirectorylimitsrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class GetDirectoryLimitsResponse;
+
+class QTAWS_EXPORT GetDirectoryLimitsResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDirectoryLimitsResponsePrivate(GetDirectoryLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDirectoryLimitsResponse)
+    Q_DISABLE_COPY(GetDirectoryLimitsResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

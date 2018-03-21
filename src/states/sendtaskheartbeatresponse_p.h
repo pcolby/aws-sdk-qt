@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDTASKHEARTBEATRESPONSE_P_H
 #define QTAWS_SENDTASKHEARTBEATRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "sendtaskheartbeatrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class SendTaskHeartbeatResponse;
+
+class QTAWS_EXPORT SendTaskHeartbeatResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendTaskHeartbeatResponsePrivate(SendTaskHeartbeatResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendTaskHeartbeatResponse)
+    Q_DISABLE_COPY(SendTaskHeartbeatResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

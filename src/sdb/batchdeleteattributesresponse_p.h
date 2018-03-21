@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHDELETEATTRIBUTESRESPONSE_P_H
 #define QTAWS_BATCHDELETEATTRIBUTESRESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "batchdeleteattributesrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class BatchDeleteAttributesResponse;
+
+class QTAWS_EXPORT BatchDeleteAttributesResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchDeleteAttributesResponsePrivate(BatchDeleteAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDeleteAttributesResponse)
+    Q_DISABLE_COPY(BatchDeleteAttributesResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

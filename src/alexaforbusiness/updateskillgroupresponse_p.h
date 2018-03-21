@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESKILLGROUPRESPONSE_P_H
 #define QTAWS_UPDATESKILLGROUPRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "updateskillgrouprequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class UpdateSkillGroupResponse;
+
+class QTAWS_EXPORT UpdateSkillGroupResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateSkillGroupResponsePrivate(UpdateSkillGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSkillGroupResponse)
+    Q_DISABLE_COPY(UpdateSkillGroupResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

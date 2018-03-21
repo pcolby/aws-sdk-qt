@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLEALLFEATURESRESPONSE_P_H
 #define QTAWS_ENABLEALLFEATURESRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "enableallfeaturesrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class EnableAllFeaturesResponse;
+
+class QTAWS_EXPORT EnableAllFeaturesResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableAllFeaturesResponsePrivate(EnableAllFeaturesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableAllFeaturesResponse)
+    Q_DISABLE_COPY(EnableAllFeaturesResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

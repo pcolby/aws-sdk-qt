@@ -20,4 +20,31 @@
 #ifndef QTAWS_MERGEDEVELOPERIDENTITIESRESPONSE_P_H
 #define QTAWS_MERGEDEVELOPERIDENTITIESRESPONSE_P_H
 
+#include "cognitoidentityresponse.h"
+#include "mergedeveloperidentitiesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class MergeDeveloperIdentitiesResponse;
+
+class QTAWS_EXPORT MergeDeveloperIdentitiesResponsePrivate : public CognitoIdentityResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    MergeDeveloperIdentitiesResponsePrivate(MergeDeveloperIdentitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(MergeDeveloperIdentitiesResponse)
+    Q_DISABLE_COPY(MergeDeveloperIdentitiesResponsePrivate)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

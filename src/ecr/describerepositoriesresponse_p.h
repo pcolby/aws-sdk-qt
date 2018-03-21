@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEREPOSITORIESRESPONSE_P_H
 #define QTAWS_DESCRIBEREPOSITORIESRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "describerepositoriesrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DescribeRepositoriesResponse;
+
+class QTAWS_EXPORT DescribeRepositoriesResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRepositoriesResponsePrivate(DescribeRepositoriesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRepositoriesResponse)
+    Q_DISABLE_COPY(DescribeRepositoriesResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

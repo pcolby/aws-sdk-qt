@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBUCKETENCRYPTIONRESPONSE_P_H
 #define QTAWS_DELETEBUCKETENCRYPTIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "deletebucketencryptionrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketEncryptionResponse;
+
+class QTAWS_EXPORT DeleteBucketEncryptionResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBucketEncryptionResponsePrivate(DeleteBucketEncryptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBucketEncryptionResponse)
+    Q_DISABLE_COPY(DeleteBucketEncryptionResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

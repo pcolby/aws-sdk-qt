@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHECKDOMAINTRANSFERABILITYRESPONSE_P_H
 #define QTAWS_CHECKDOMAINTRANSFERABILITYRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "checkdomaintransferabilityrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class CheckDomainTransferabilityResponse;
+
+class QTAWS_EXPORT CheckDomainTransferabilityResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CheckDomainTransferabilityResponsePrivate(CheckDomainTransferabilityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CheckDomainTransferabilityResponse)
+    Q_DISABLE_COPY(CheckDomainTransferabilityResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

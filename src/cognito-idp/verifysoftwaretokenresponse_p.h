@@ -20,4 +20,31 @@
 #ifndef QTAWS_VERIFYSOFTWARETOKENRESPONSE_P_H
 #define QTAWS_VERIFYSOFTWARETOKENRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "verifysoftwaretokenrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class VerifySoftwareTokenResponse;
+
+class QTAWS_EXPORT VerifySoftwareTokenResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    VerifySoftwareTokenResponsePrivate(VerifySoftwareTokenResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(VerifySoftwareTokenResponse)
+    Q_DISABLE_COPY(VerifySoftwareTokenResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_P_H
 #define QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminremoveuserfromgrouprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminRemoveUserFromGroupResponse;
+
+class QTAWS_EXPORT AdminRemoveUserFromGroupResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminRemoveUserFromGroupResponsePrivate(AdminRemoveUserFromGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminRemoveUserFromGroupResponse)
+    Q_DISABLE_COPY(AdminRemoveUserFromGroupResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESNAPSHOTRESPONSE_P_H
 #define QTAWS_CREATESNAPSHOTRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "createsnapshotrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateSnapshotResponse;
+
+class QTAWS_EXPORT CreateSnapshotResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSnapshotResponsePrivate(CreateSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSnapshotResponse)
+    Q_DISABLE_COPY(CreateSnapshotResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

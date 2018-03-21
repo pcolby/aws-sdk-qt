@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGATEWAYSRESPONSE_P_H
 #define QTAWS_LISTGATEWAYSRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "listgatewaysrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListGatewaysResponse;
+
+class QTAWS_EXPORT ListGatewaysResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGatewaysResponsePrivate(ListGatewaysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGatewaysResponse)
+    Q_DISABLE_COPY(ListGatewaysResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

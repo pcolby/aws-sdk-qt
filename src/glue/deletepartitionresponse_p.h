@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPARTITIONRESPONSE_P_H
 #define QTAWS_DELETEPARTITIONRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "deletepartitionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeletePartitionResponse;
+
+class QTAWS_EXPORT DeletePartitionResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePartitionResponsePrivate(DeletePartitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePartitionResponse)
+    Q_DISABLE_COPY(DeletePartitionResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

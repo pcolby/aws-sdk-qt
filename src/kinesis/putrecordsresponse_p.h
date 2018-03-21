@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTRECORDSRESPONSE_P_H
 #define QTAWS_PUTRECORDSRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "putrecordsrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class PutRecordsResponse;
+
+class QTAWS_EXPORT PutRecordsResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutRecordsResponsePrivate(PutRecordsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutRecordsResponse)
+    Q_DISABLE_COPY(PutRecordsResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

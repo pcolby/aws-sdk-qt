@@ -20,4 +20,31 @@
 #ifndef QTAWS_PROMOTEREADREPLICADBCLUSTERRESPONSE_P_H
 #define QTAWS_PROMOTEREADREPLICADBCLUSTERRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "promotereadreplicadbclusterrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class PromoteReadReplicaDBClusterResponse;
+
+class QTAWS_EXPORT PromoteReadReplicaDBClusterResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PromoteReadReplicaDBClusterResponsePrivate(PromoteReadReplicaDBClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PromoteReadReplicaDBClusterResponse)
+    Q_DISABLE_COPY(PromoteReadReplicaDBClusterResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

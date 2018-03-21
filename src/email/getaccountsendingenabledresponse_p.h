@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_P_H
 #define QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "getaccountsendingenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetAccountSendingEnabledResponse;
+
+class QTAWS_EXPORT GetAccountSendingEnabledResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAccountSendingEnabledResponsePrivate(GetAccountSendingEnabledResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountSendingEnabledResponse)
+    Q_DISABLE_COPY(GetAccountSendingEnabledResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

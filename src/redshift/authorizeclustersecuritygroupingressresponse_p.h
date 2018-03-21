@@ -20,4 +20,31 @@
 #ifndef QTAWS_AUTHORIZECLUSTERSECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_AUTHORIZECLUSTERSECURITYGROUPINGRESSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "authorizeclustersecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class AuthorizeClusterSecurityGroupIngressResponse;
+
+class QTAWS_EXPORT AuthorizeClusterSecurityGroupIngressResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AuthorizeClusterSecurityGroupIngressResponsePrivate(AuthorizeClusterSecurityGroupIngressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeClusterSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeClusterSecurityGroupIngressResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

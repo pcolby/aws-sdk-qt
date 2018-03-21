@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEENDPOINTRESPONSE_P_H
 #define QTAWS_UPDATEENDPOINTRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "updateendpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateEndpointResponse;
+
+class QTAWS_EXPORT UpdateEndpointResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateEndpointResponsePrivate(UpdateEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEndpointResponse)
+    Q_DISABLE_COPY(UpdateEndpointResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

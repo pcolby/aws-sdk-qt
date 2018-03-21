@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTENVIRONMENTSRESPONSE_P_H
 #define QTAWS_LISTENVIRONMENTSRESPONSE_P_H
 
+#include "cloud9response.h"
+#include "listenvironmentsrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class ListEnvironmentsResponse;
+
+class QTAWS_EXPORT ListEnvironmentsResponsePrivate : public Cloud9ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListEnvironmentsResponsePrivate(ListEnvironmentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListEnvironmentsResponse)
+    Q_DISABLE_COPY(ListEnvironmentsResponsePrivate)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

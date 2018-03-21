@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEINSTANCECUSTOMHEALTHSTATUSRESPONSE_P_H
 #define QTAWS_UPDATEINSTANCECUSTOMHEALTHSTATUSRESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "updateinstancecustomhealthstatusrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class UpdateInstanceCustomHealthStatusResponse;
+
+class QTAWS_EXPORT UpdateInstanceCustomHealthStatusResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateInstanceCustomHealthStatusResponsePrivate(UpdateInstanceCustomHealthStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateInstanceCustomHealthStatusResponse)
+    Q_DISABLE_COPY(UpdateInstanceCustomHealthStatusResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

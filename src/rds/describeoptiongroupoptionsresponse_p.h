@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEOPTIONGROUPOPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEOPTIONGROUPOPTIONSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describeoptiongroupoptionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeOptionGroupOptionsResponse;
+
+class QTAWS_EXPORT DescribeOptionGroupOptionsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeOptionGroupOptionsResponsePrivate(DescribeOptionGroupOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOptionGroupOptionsResponse)
+    Q_DISABLE_COPY(DescribeOptionGroupOptionsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

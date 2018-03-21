@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTINSTANCESRESPONSE_P_H
 #define QTAWS_LISTINSTANCESRESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "listinstancesrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class ListInstancesResponse;
+
+class QTAWS_EXPORT ListInstancesResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListInstancesResponsePrivate(ListInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListInstancesResponse)
+    Q_DISABLE_COPY(ListInstancesResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETCACHEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_RESETCACHEPARAMETERGROUPRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "resetcacheparametergrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ResetCacheParameterGroupResponse;
+
+class QTAWS_EXPORT ResetCacheParameterGroupResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetCacheParameterGroupResponsePrivate(ResetCacheParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetCacheParameterGroupResponse)
+    Q_DISABLE_COPY(ResetCacheParameterGroupResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

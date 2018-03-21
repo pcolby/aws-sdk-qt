@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEKEYRESPONSE_P_H
 #define QTAWS_DESCRIBEKEYRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "describekeyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DescribeKeyResponse;
+
+class QTAWS_EXPORT DescribeKeyResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeKeyResponsePrivate(DescribeKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeKeyResponse)
+    Q_DISABLE_COPY(DescribeKeyResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

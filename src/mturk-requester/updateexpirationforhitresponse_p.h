@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_P_H
 #define QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "updateexpirationforhitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateExpirationForHITResponse;
+
+class QTAWS_EXPORT UpdateExpirationForHITResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateExpirationForHITResponsePrivate(UpdateExpirationForHITResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateExpirationForHITResponse)
+    Q_DISABLE_COPY(UpdateExpirationForHITResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

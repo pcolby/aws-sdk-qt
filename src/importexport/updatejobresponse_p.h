@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEJOBRESPONSE_P_H
 #define QTAWS_UPDATEJOBRESPONSE_P_H
 
+#include "importexportresponse.h"
+#include "updatejobrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class UpdateJobResponse;
+
+class QTAWS_EXPORT UpdateJobResponsePrivate : public ImportExportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateJobResponsePrivate(UpdateJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateJobResponse)
+    Q_DISABLE_COPY(UpdateJobResponsePrivate)
+
+};
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

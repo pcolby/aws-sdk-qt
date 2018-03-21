@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVPNGATEWAYRESPONSE_P_H
 #define QTAWS_DELETEVPNGATEWAYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletevpngatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpnGatewayResponse;
+
+class QTAWS_EXPORT DeleteVpnGatewayResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVpnGatewayResponsePrivate(DeleteVpnGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpnGatewayResponse)
+    Q_DISABLE_COPY(DeleteVpnGatewayResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

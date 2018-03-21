@@ -20,4 +20,31 @@
 #ifndef QTAWS_AUTHORIZESNAPSHOTACCESSRESPONSE_P_H
 #define QTAWS_AUTHORIZESNAPSHOTACCESSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "authorizesnapshotaccessrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class AuthorizeSnapshotAccessResponse;
+
+class QTAWS_EXPORT AuthorizeSnapshotAccessResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AuthorizeSnapshotAccessResponsePrivate(AuthorizeSnapshotAccessResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeSnapshotAccessResponse)
+    Q_DISABLE_COPY(AuthorizeSnapshotAccessResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

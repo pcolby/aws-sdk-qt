@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEHEALTHCHECKRESPONSE_P_H
 #define QTAWS_DELETEHEALTHCHECKRESPONSE_P_H
 
+#include "route53response.h"
+#include "deletehealthcheckrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteHealthCheckResponse;
+
+class QTAWS_EXPORT DeleteHealthCheckResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteHealthCheckResponsePrivate(DeleteHealthCheckResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHealthCheckResponse)
+    Q_DISABLE_COPY(DeleteHealthCheckResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTJOBTEMPLATESRESPONSE_P_H
 #define QTAWS_LISTJOBTEMPLATESRESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "listjobtemplatesrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class ListJobTemplatesResponse;
+
+class QTAWS_EXPORT ListJobTemplatesResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListJobTemplatesResponsePrivate(ListJobTemplatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListJobTemplatesResponse)
+    Q_DISABLE_COPY(ListJobTemplatesResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

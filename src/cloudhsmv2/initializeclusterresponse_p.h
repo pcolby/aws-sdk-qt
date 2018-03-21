@@ -20,4 +20,31 @@
 #ifndef QTAWS_INITIALIZECLUSTERRESPONSE_P_H
 #define QTAWS_INITIALIZECLUSTERRESPONSE_P_H
 
+#include "cloudhsmv2response.h"
+#include "initializeclusterrequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class InitializeClusterResponse;
+
+class QTAWS_EXPORT InitializeClusterResponsePrivate : public CloudHSMV2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InitializeClusterResponsePrivate(InitializeClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InitializeClusterResponse)
+    Q_DISABLE_COPY(InitializeClusterResponsePrivate)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

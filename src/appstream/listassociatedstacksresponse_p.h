@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTASSOCIATEDSTACKSRESPONSE_P_H
 #define QTAWS_LISTASSOCIATEDSTACKSRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "listassociatedstacksrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class ListAssociatedStacksResponse;
+
+class QTAWS_EXPORT ListAssociatedStacksResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAssociatedStacksResponsePrivate(ListAssociatedStacksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssociatedStacksResponse)
+    Q_DISABLE_COPY(ListAssociatedStacksResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

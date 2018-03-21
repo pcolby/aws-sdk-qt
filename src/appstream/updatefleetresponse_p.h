@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEFLEETRESPONSE_P_H
 #define QTAWS_UPDATEFLEETRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "updatefleetrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class UpdateFleetResponse;
+
+class QTAWS_EXPORT UpdateFleetResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateFleetResponsePrivate(UpdateFleetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFleetResponse)
+    Q_DISABLE_COPY(UpdateFleetResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

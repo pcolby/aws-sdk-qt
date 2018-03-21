@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSEGRESSRESPONSE_P_H
 #define QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSEGRESSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "updatesecuritygroupruledescriptionsegressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class UpdateSecurityGroupRuleDescriptionsEgressResponse;
+
+class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate(UpdateSecurityGroupRuleDescriptionsEgressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSecurityGroupRuleDescriptionsEgressResponse)
+    Q_DISABLE_COPY(UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

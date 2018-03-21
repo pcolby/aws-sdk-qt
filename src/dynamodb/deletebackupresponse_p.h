@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBACKUPRESPONSE_P_H
 #define QTAWS_DELETEBACKUPRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "deletebackuprequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DeleteBackupResponse;
+
+class QTAWS_EXPORT DeleteBackupResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBackupResponsePrivate(DeleteBackupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBackupResponse)
+    Q_DISABLE_COPY(DeleteBackupResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

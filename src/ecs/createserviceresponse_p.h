@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESERVICERESPONSE_P_H
 #define QTAWS_CREATESERVICERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "createservicerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class CreateServiceResponse;
+
+class QTAWS_EXPORT CreateServiceResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateServiceResponsePrivate(CreateServiceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateServiceResponse)
+    Q_DISABLE_COPY(CreateServiceResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

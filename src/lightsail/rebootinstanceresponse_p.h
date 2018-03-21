@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBOOTINSTANCERESPONSE_P_H
 #define QTAWS_REBOOTINSTANCERESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "rebootinstancerequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class RebootInstanceResponse;
+
+class QTAWS_EXPORT RebootInstanceResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebootInstanceResponsePrivate(RebootInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebootInstanceResponse)
+    Q_DISABLE_COPY(RebootInstanceResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

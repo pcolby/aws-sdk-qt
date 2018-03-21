@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERESOURCESERVERRESPONSE_P_H
 #define QTAWS_UPDATERESOURCESERVERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "updateresourceserverrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateResourceServerResponse;
+
+class QTAWS_EXPORT UpdateResourceServerResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateResourceServerResponsePrivate(UpdateResourceServerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateResourceServerResponse)
+    Q_DISABLE_COPY(UpdateResourceServerResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

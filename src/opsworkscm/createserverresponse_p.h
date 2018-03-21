@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESERVERRESPONSE_P_H
 #define QTAWS_CREATESERVERRESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "createserverrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class CreateServerResponse;
+
+class QTAWS_EXPORT CreateServerResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateServerResponsePrivate(CreateServerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateServerResponse)
+    Q_DISABLE_COPY(CreateServerResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

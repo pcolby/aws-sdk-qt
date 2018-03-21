@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTACTIVITIESRESPONSE_P_H
 #define QTAWS_LISTACTIVITIESRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "listactivitiesrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class ListActivitiesResponse;
+
+class QTAWS_EXPORT ListActivitiesResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListActivitiesResponsePrivate(ListActivitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListActivitiesResponse)
+    Q_DISABLE_COPY(ListActivitiesResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

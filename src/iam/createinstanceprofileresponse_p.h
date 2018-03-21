@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_CREATEINSTANCEPROFILERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "createinstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateInstanceProfileResponse;
+
+class QTAWS_EXPORT CreateInstanceProfileResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateInstanceProfileResponsePrivate(CreateInstanceProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInstanceProfileResponse)
+    Q_DISABLE_COPY(CreateInstanceProfileResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

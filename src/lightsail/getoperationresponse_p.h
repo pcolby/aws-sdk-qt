@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETOPERATIONRESPONSE_P_H
 #define QTAWS_GETOPERATIONRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getoperationrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetOperationResponse;
+
+class QTAWS_EXPORT GetOperationResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetOperationResponsePrivate(GetOperationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetOperationResponse)
+    Q_DISABLE_COPY(GetOperationResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

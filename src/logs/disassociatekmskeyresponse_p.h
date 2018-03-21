@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEKMSKEYRESPONSE_P_H
 #define QTAWS_DISASSOCIATEKMSKEYRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "disassociatekmskeyrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DisassociateKmsKeyResponse;
+
+class QTAWS_EXPORT DisassociateKmsKeyResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateKmsKeyResponsePrivate(DisassociateKmsKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateKmsKeyResponse)
+    Q_DISABLE_COPY(DisassociateKmsKeyResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

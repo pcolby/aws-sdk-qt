@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACCOUNTSETTINGSRESPONSE_P_H
 #define QTAWS_GETACCOUNTSETTINGSRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "getaccountsettingsrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetAccountSettingsResponse;
+
+class QTAWS_EXPORT GetAccountSettingsResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAccountSettingsResponsePrivate(GetAccountSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountSettingsResponse)
+    Q_DISABLE_COPY(GetAccountSettingsResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

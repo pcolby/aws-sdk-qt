@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPLOADDOCUMENTSRESPONSE_P_H
 #define QTAWS_UPLOADDOCUMENTSRESPONSE_P_H
 
+#include "cloudsearchdomainresponse.h"
+#include "uploaddocumentsrequest.h"
+
+namespace AWS {
+
+namespace CloudSearchDomain {
+
+class UploadDocumentsResponse;
+
+class QTAWS_EXPORT UploadDocumentsResponsePrivate : public CloudSearchDomainResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UploadDocumentsResponsePrivate(UploadDocumentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UploadDocumentsResponse)
+    Q_DISABLE_COPY(UploadDocumentsResponsePrivate)
+
+};
+
+} // namespace CloudSearchDomain
+} // namespace AWS
+
 #endif

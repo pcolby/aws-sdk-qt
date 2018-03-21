@@ -20,4 +20,31 @@
 #ifndef QTAWS_INVALIDATEPROJECTCACHERESPONSE_P_H
 #define QTAWS_INVALIDATEPROJECTCACHERESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "invalidateprojectcacherequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class InvalidateProjectCacheResponse;
+
+class QTAWS_EXPORT InvalidateProjectCacheResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InvalidateProjectCacheResponsePrivate(InvalidateProjectCacheResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InvalidateProjectCacheResponse)
+    Q_DISABLE_COPY(InvalidateProjectCacheResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTNEXTPENDINGJOBEXECUTIONRESPONSE_P_H
 #define QTAWS_STARTNEXTPENDINGJOBEXECUTIONRESPONSE_P_H
 
+#include "iotjobsdataplaneresponse.h"
+#include "startnextpendingjobexecutionrequest.h"
+
+namespace AWS {
+
+namespace IoTJobsDataPlane {
+
+class StartNextPendingJobExecutionResponse;
+
+class QTAWS_EXPORT StartNextPendingJobExecutionResponsePrivate : public IoTJobsDataPlaneResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartNextPendingJobExecutionResponsePrivate(StartNextPendingJobExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartNextPendingJobExecutionResponse)
+    Q_DISABLE_COPY(StartNextPendingJobExecutionResponsePrivate)
+
+};
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS
+
 #endif

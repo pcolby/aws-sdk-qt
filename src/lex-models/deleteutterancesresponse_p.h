@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEUTTERANCESRESPONSE_P_H
 #define QTAWS_DELETEUTTERANCESRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "deleteutterancesrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteUtterancesResponse;
+
+class QTAWS_EXPORT DeleteUtterancesResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteUtterancesResponsePrivate(DeleteUtterancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUtterancesResponse)
+    Q_DISABLE_COPY(DeleteUtterancesResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEINTERNETGATEWAYRESPONSE_P_H
 #define QTAWS_DELETEINTERNETGATEWAYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deleteinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteInternetGatewayResponse;
+
+class QTAWS_EXPORT DeleteInternetGatewayResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteInternetGatewayResponsePrivate(DeleteInternetGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteInternetGatewayResponse)
+    Q_DISABLE_COPY(DeleteInternetGatewayResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

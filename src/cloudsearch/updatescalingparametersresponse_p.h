@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESCALINGPARAMETERSRESPONSE_P_H
 #define QTAWS_UPDATESCALINGPARAMETERSRESPONSE_P_H
 
+#include "cloudsearchresponse.h"
+#include "updatescalingparametersrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class UpdateScalingParametersResponse;
+
+class QTAWS_EXPORT UpdateScalingParametersResponsePrivate : public CloudSearchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateScalingParametersResponsePrivate(UpdateScalingParametersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateScalingParametersResponse)
+    Q_DISABLE_COPY(UpdateScalingParametersResponsePrivate)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

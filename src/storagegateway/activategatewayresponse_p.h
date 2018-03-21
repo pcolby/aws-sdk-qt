@@ -20,4 +20,31 @@
 #ifndef QTAWS_ACTIVATEGATEWAYRESPONSE_P_H
 #define QTAWS_ACTIVATEGATEWAYRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "activategatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ActivateGatewayResponse;
+
+class QTAWS_EXPORT ActivateGatewayResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ActivateGatewayResponsePrivate(ActivateGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ActivateGatewayResponse)
+    Q_DISABLE_COPY(ActivateGatewayResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

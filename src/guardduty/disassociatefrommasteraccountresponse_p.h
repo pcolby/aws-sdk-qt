@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEFROMMASTERACCOUNTRESPONSE_P_H
 #define QTAWS_DISASSOCIATEFROMMASTERACCOUNTRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "disassociatefrommasteraccountrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DisassociateFromMasterAccountResponse;
+
+class QTAWS_EXPORT DisassociateFromMasterAccountResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateFromMasterAccountResponsePrivate(DisassociateFromMasterAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateFromMasterAccountResponse)
+    Q_DISABLE_COPY(DisassociateFromMasterAccountResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

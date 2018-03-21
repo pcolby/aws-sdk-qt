@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEENVIRONMENTEC2RESPONSE_P_H
 #define QTAWS_CREATEENVIRONMENTEC2RESPONSE_P_H
 
+#include "cloud9response.h"
+#include "createenvironmentec2request.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class CreateEnvironmentEC2Response;
+
+class QTAWS_EXPORT CreateEnvironmentEC2ResponsePrivate : public Cloud9ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateEnvironmentEC2ResponsePrivate(CreateEnvironmentEC2Response * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateEnvironmentEC2Response)
+    Q_DISABLE_COPY(CreateEnvironmentEC2ResponsePrivate)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

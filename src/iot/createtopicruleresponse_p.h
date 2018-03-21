@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETOPICRULERESPONSE_P_H
 #define QTAWS_CREATETOPICRULERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "createtopicrulerequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateTopicRuleResponse;
+
+class QTAWS_EXPORT CreateTopicRuleResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTopicRuleResponsePrivate(CreateTopicRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTopicRuleResponse)
+    Q_DISABLE_COPY(CreateTopicRuleResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

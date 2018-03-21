@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERADIUSRESPONSE_P_H
 #define QTAWS_UPDATERADIUSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "updateradiusrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class UpdateRadiusResponse;
+
+class QTAWS_EXPORT UpdateRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateRadiusResponsePrivate(UpdateRadiusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRadiusResponse)
+    Q_DISABLE_COPY(UpdateRadiusResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

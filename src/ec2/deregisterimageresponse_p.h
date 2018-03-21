@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERIMAGERESPONSE_P_H
 #define QTAWS_DEREGISTERIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "deregisterimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeregisterImageResponse;
+
+class QTAWS_EXPORT DeregisterImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterImageResponsePrivate(DeregisterImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterImageResponse)
+    Q_DISABLE_COPY(DeregisterImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

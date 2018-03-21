@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEINPUTSECURITYGROUPRESPONSE_P_H
 #define QTAWS_DELETEINPUTSECURITYGROUPRESPONSE_P_H
 
+#include "medialiveresponse.h"
+#include "deleteinputsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class DeleteInputSecurityGroupResponse;
+
+class QTAWS_EXPORT DeleteInputSecurityGroupResponsePrivate : public MediaLiveResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteInputSecurityGroupResponsePrivate(DeleteInputSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteInputSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteInputSecurityGroupResponsePrivate)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

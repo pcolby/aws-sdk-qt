@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEVTLDEVICETYPERESPONSE_P_H
 #define QTAWS_UPDATEVTLDEVICETYPERESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "updatevtldevicetyperequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateVTLDeviceTypeResponse;
+
+class QTAWS_EXPORT UpdateVTLDeviceTypeResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateVTLDeviceTypeResponsePrivate(UpdateVTLDeviceTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateVTLDeviceTypeResponse)
+    Q_DISABLE_COPY(UpdateVTLDeviceTypeResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

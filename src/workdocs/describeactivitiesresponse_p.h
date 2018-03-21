@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEACTIVITIESRESPONSE_P_H
 #define QTAWS_DESCRIBEACTIVITIESRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "describeactivitiesrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeActivitiesResponse;
+
+class QTAWS_EXPORT DescribeActivitiesResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeActivitiesResponsePrivate(DescribeActivitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeActivitiesResponse)
+    Q_DISABLE_COPY(DescribeActivitiesResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

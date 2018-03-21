@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDETECTORSRESPONSE_P_H
 #define QTAWS_LISTDETECTORSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "listdetectorsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class ListDetectorsResponse;
+
+class QTAWS_EXPORT ListDetectorsResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDetectorsResponsePrivate(ListDetectorsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDetectorsResponse)
+    Q_DISABLE_COPY(ListDetectorsResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERECEIPTRULESETRESPONSE_P_H
 #define QTAWS_DELETERECEIPTRULESETRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deletereceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteReceiptRuleSetResponse;
+
+class QTAWS_EXPORT DeleteReceiptRuleSetResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteReceiptRuleSetResponsePrivate(DeleteReceiptRuleSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReceiptRuleSetResponse)
+    Q_DISABLE_COPY(DeleteReceiptRuleSetResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

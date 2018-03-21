@@ -20,4 +20,31 @@
 #ifndef QTAWS_GENERATEDATAKEYWITHOUTPLAINTEXTRESPONSE_P_H
 #define QTAWS_GENERATEDATAKEYWITHOUTPLAINTEXTRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "generatedatakeywithoutplaintextrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GenerateDataKeyWithoutPlaintextResponse;
+
+class QTAWS_EXPORT GenerateDataKeyWithoutPlaintextResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GenerateDataKeyWithoutPlaintextResponsePrivate(GenerateDataKeyWithoutPlaintextResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GenerateDataKeyWithoutPlaintextResponse)
+    Q_DISABLE_COPY(GenerateDataKeyWithoutPlaintextResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

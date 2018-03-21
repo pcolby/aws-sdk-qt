@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGEOMATCHSETSRESPONSE_P_H
 #define QTAWS_LISTGEOMATCHSETSRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "listgeomatchsetsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListGeoMatchSetsResponse;
+
+class QTAWS_EXPORT ListGeoMatchSetsResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGeoMatchSetsResponsePrivate(ListGeoMatchSetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGeoMatchSetsResponse)
+    Q_DISABLE_COPY(ListGeoMatchSetsResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

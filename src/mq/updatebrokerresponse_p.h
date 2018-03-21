@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEBROKERRESPONSE_P_H
 #define QTAWS_UPDATEBROKERRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "updatebrokerrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class UpdateBrokerResponse;
+
+class QTAWS_EXPORT UpdateBrokerResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateBrokerResponsePrivate(UpdateBrokerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBrokerResponse)
+    Q_DISABLE_COPY(UpdateBrokerResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

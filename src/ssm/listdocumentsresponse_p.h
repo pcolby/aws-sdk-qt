@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDOCUMENTSRESPONSE_P_H
 #define QTAWS_LISTDOCUMENTSRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "listdocumentsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListDocumentsResponse;
+
+class QTAWS_EXPORT ListDocumentsResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDocumentsResponsePrivate(ListDocumentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDocumentsResponse)
+    Q_DISABLE_COPY(ListDocumentsResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

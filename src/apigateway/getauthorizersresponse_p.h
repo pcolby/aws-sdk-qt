@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAUTHORIZERSRESPONSE_P_H
 #define QTAWS_GETAUTHORIZERSRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getauthorizersrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetAuthorizersResponse;
+
+class QTAWS_EXPORT GetAuthorizersResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAuthorizersResponsePrivate(GetAuthorizersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAuthorizersResponse)
+    Q_DISABLE_COPY(GetAuthorizersResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

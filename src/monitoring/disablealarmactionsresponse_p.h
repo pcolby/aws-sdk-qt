@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLEALARMACTIONSRESPONSE_P_H
 #define QTAWS_DISABLEALARMACTIONSRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "disablealarmactionsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DisableAlarmActionsResponse;
+
+class QTAWS_EXPORT DisableAlarmActionsResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableAlarmActionsResponsePrivate(DisableAlarmActionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableAlarmActionsResponse)
+    Q_DISABLE_COPY(DisableAlarmActionsResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

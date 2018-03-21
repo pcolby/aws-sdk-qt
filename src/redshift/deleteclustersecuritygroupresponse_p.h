@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECLUSTERSECURITYGROUPRESPONSE_P_H
 #define QTAWS_DELETECLUSTERSECURITYGROUPRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "deleteclustersecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteClusterSecurityGroupResponse;
+
+class QTAWS_EXPORT DeleteClusterSecurityGroupResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteClusterSecurityGroupResponsePrivate(DeleteClusterSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteClusterSecurityGroupResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

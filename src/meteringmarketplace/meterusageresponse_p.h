@@ -20,4 +20,31 @@
 #ifndef QTAWS_METERUSAGERESPONSE_P_H
 #define QTAWS_METERUSAGERESPONSE_P_H
 
+#include "marketplacemeteringresponse.h"
+#include "meterusagerequest.h"
+
+namespace AWS {
+
+namespace MarketplaceMetering {
+
+class MeterUsageResponse;
+
+class QTAWS_EXPORT MeterUsageResponsePrivate : public MarketplaceMeteringResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    MeterUsageResponsePrivate(MeterUsageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(MeterUsageResponse)
+    Q_DISABLE_COPY(MeterUsageResponsePrivate)
+
+};
+
+} // namespace MarketplaceMetering
+} // namespace AWS
+
 #endif

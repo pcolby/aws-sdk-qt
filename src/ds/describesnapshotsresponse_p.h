@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSRESPONSE_P_H
 #define QTAWS_DESCRIBESNAPSHOTSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "describesnapshotsrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeSnapshotsResponse;
+
+class QTAWS_EXPORT DescribeSnapshotsResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSnapshotsResponsePrivate(DescribeSnapshotsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSnapshotsResponse)
+    Q_DISABLE_COPY(DescribeSnapshotsResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

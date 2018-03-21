@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEFLEETRESPONSE_P_H
 #define QTAWS_DELETEFLEETRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "deletefleetrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteFleetResponse;
+
+class QTAWS_EXPORT DeleteFleetResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteFleetResponsePrivate(DeleteFleetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFleetResponse)
+    Q_DISABLE_COPY(DeleteFleetResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

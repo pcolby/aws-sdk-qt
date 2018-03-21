@@ -20,4 +20,31 @@
 #ifndef QTAWS_COPYIMAGERESPONSE_P_H
 #define QTAWS_COPYIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "copyimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CopyImageResponse;
+
+class QTAWS_EXPORT CopyImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CopyImageResponsePrivate(CopyImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CopyImageResponse)
+    Q_DISABLE_COPY(CopyImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

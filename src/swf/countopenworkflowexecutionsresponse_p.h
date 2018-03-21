@@ -20,4 +20,31 @@
 #ifndef QTAWS_COUNTOPENWORKFLOWEXECUTIONSRESPONSE_P_H
 #define QTAWS_COUNTOPENWORKFLOWEXECUTIONSRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "countopenworkflowexecutionsrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class CountOpenWorkflowExecutionsResponse;
+
+class QTAWS_EXPORT CountOpenWorkflowExecutionsResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CountOpenWorkflowExecutionsResponsePrivate(CountOpenWorkflowExecutionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CountOpenWorkflowExecutionsResponse)
+    Q_DISABLE_COPY(CountOpenWorkflowExecutionsResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

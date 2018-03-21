@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPLOADPARTCOPYRESPONSE_P_H
 #define QTAWS_UPLOADPARTCOPYRESPONSE_P_H
 
+#include "s3response.h"
+#include "uploadpartcopyrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class UploadPartCopyResponse;
+
+class QTAWS_EXPORT UploadPartCopyResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UploadPartCopyResponsePrivate(UploadPartCopyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UploadPartCopyResponse)
+    Q_DISABLE_COPY(UploadPartCopyResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

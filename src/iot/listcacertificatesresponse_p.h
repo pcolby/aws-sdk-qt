@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCACERTIFICATESRESPONSE_P_H
 #define QTAWS_LISTCACERTIFICATESRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listcacertificatesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListCACertificatesResponse;
+
+class QTAWS_EXPORT ListCACertificatesResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListCACertificatesResponsePrivate(ListCACertificatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListCACertificatesResponse)
+    Q_DISABLE_COPY(ListCACertificatesResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

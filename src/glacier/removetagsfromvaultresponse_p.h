@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVETAGSFROMVAULTRESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMVAULTRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "removetagsfromvaultrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class RemoveTagsFromVaultResponse;
+
+class QTAWS_EXPORT RemoveTagsFromVaultResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveTagsFromVaultResponsePrivate(RemoveTagsFromVaultResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromVaultResponse)
+    Q_DISABLE_COPY(RemoveTagsFromVaultResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

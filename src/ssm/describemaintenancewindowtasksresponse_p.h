@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEMAINTENANCEWINDOWTASKSRESPONSE_P_H
 #define QTAWS_DESCRIBEMAINTENANCEWINDOWTASKSRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describemaintenancewindowtasksrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeMaintenanceWindowTasksResponse;
+
+class QTAWS_EXPORT DescribeMaintenanceWindowTasksResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeMaintenanceWindowTasksResponsePrivate(DescribeMaintenanceWindowTasksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMaintenanceWindowTasksResponse)
+    Q_DISABLE_COPY(DescribeMaintenanceWindowTasksResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEVPNCONNECTIONRESPONSE_P_H
 #define QTAWS_CREATEVPNCONNECTIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createvpnconnectionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpnConnectionResponse;
+
+class QTAWS_EXPORT CreateVpnConnectionResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateVpnConnectionResponsePrivate(CreateVpnConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVpnConnectionResponse)
+    Q_DISABLE_COPY(CreateVpnConnectionResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_REFRESHTRUSTEDADVISORCHECKRESPONSE_P_H
 #define QTAWS_REFRESHTRUSTEDADVISORCHECKRESPONSE_P_H
 
+#include "supportresponse.h"
+#include "refreshtrustedadvisorcheckrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class RefreshTrustedAdvisorCheckResponse;
+
+class QTAWS_EXPORT RefreshTrustedAdvisorCheckResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RefreshTrustedAdvisorCheckResponsePrivate(RefreshTrustedAdvisorCheckResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RefreshTrustedAdvisorCheckResponse)
+    Q_DISABLE_COPY(RefreshTrustedAdvisorCheckResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

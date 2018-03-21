@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEPRECATEWORKFLOWTYPERESPONSE_P_H
 #define QTAWS_DEPRECATEWORKFLOWTYPERESPONSE_P_H
 
+#include "swfresponse.h"
+#include "deprecateworkflowtyperequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DeprecateWorkflowTypeResponse;
+
+class QTAWS_EXPORT DeprecateWorkflowTypeResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeprecateWorkflowTypeResponsePrivate(DeprecateWorkflowTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeprecateWorkflowTypeResponse)
+    Q_DISABLE_COPY(DeprecateWorkflowTypeResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

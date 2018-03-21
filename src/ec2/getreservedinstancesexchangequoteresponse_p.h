@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTERESPONSE_P_H
 #define QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "getreservedinstancesexchangequoterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetReservedInstancesExchangeQuoteResponse;
+
+class QTAWS_EXPORT GetReservedInstancesExchangeQuoteResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetReservedInstancesExchangeQuoteResponsePrivate(GetReservedInstancesExchangeQuoteResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetReservedInstancesExchangeQuoteResponse)
+    Q_DISABLE_COPY(GetReservedInstancesExchangeQuoteResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

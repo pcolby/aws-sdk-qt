@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETSTACKPOLICYRESPONSE_P_H
 #define QTAWS_SETSTACKPOLICYRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "setstackpolicyrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class SetStackPolicyResponse;
+
+class QTAWS_EXPORT SetStackPolicyResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetStackPolicyResponsePrivate(SetStackPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetStackPolicyResponse)
+    Q_DISABLE_COPY(SetStackPolicyResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

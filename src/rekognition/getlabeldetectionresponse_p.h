@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETLABELDETECTIONRESPONSE_P_H
 #define QTAWS_GETLABELDETECTIONRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "getlabeldetectionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class GetLabelDetectionResponse;
+
+class QTAWS_EXPORT GetLabelDetectionResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetLabelDetectionResponsePrivate(GetLabelDetectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetLabelDetectionResponse)
+    Q_DISABLE_COPY(GetLabelDetectionResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

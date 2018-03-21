@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_P_H
 #define QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "listsizeconstraintsetsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListSizeConstraintSetsResponse;
+
+class QTAWS_EXPORT ListSizeConstraintSetsResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListSizeConstraintSetsResponsePrivate(ListSizeConstraintSetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListSizeConstraintSetsResponse)
+    Q_DISABLE_COPY(ListSizeConstraintSetsResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

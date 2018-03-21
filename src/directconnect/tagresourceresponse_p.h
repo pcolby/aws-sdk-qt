@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class TagResourceResponse;
+
+class QTAWS_EXPORT TagResourceResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagResourceResponsePrivate(TagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceResponse)
+    Q_DISABLE_COPY(TagResourceResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

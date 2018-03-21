@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESCALINGPOLICYRESPONSE_P_H
 #define QTAWS_DELETESCALINGPOLICYRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "deletescalingpolicyrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteScalingPolicyResponse;
+
+class QTAWS_EXPORT DeleteScalingPolicyResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteScalingPolicyResponsePrivate(DeleteScalingPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteScalingPolicyResponse)
+    Q_DISABLE_COPY(DeleteScalingPolicyResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

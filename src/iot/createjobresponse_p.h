@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_P_H
 #define QTAWS_CREATEJOBRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "createjobrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateJobResponse;
+
+class QTAWS_EXPORT CreateJobResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateJobResponsePrivate(CreateJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateJobResponse)
+    Q_DISABLE_COPY(CreateJobResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

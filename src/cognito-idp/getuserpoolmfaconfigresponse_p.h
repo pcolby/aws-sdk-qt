@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETUSERPOOLMFACONFIGRESPONSE_P_H
 #define QTAWS_GETUSERPOOLMFACONFIGRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "getuserpoolmfaconfigrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetUserPoolMfaConfigResponse;
+
+class QTAWS_EXPORT GetUserPoolMfaConfigResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetUserPoolMfaConfigResponsePrivate(GetUserPoolMfaConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetUserPoolMfaConfigResponse)
+    Q_DISABLE_COPY(GetUserPoolMfaConfigResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

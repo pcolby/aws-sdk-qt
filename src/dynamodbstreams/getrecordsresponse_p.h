@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRECORDSRESPONSE_P_H
 #define QTAWS_GETRECORDSRESPONSE_P_H
 
+#include "dynamodbstreamsresponse.h"
+#include "getrecordsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDBStreams {
+
+class GetRecordsResponse;
+
+class QTAWS_EXPORT GetRecordsResponsePrivate : public DynamoDBStreamsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRecordsResponsePrivate(GetRecordsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRecordsResponse)
+    Q_DISABLE_COPY(GetRecordsResponsePrivate)
+
+};
+
+} // namespace DynamoDBStreams
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
+#include "daxresponse.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UntagResourceResponse;
+
+class QTAWS_EXPORT UntagResourceResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagResourceResponsePrivate(UntagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceResponse)
+    Q_DISABLE_COPY(UntagResourceResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

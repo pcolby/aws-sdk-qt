@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPHONENUMBERSOPTEDOUTRESPONSE_P_H
 #define QTAWS_LISTPHONENUMBERSOPTEDOUTRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "listphonenumbersoptedoutrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListPhoneNumbersOptedOutResponse;
+
+class QTAWS_EXPORT ListPhoneNumbersOptedOutResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPhoneNumbersOptedOutResponsePrivate(ListPhoneNumbersOptedOutResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPhoneNumbersOptedOutResponse)
+    Q_DISABLE_COPY(ListPhoneNumbersOptedOutResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

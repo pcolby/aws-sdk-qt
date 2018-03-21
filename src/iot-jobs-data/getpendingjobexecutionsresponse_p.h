@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_P_H
 #define QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_P_H
 
+#include "iotjobsdataplaneresponse.h"
+#include "getpendingjobexecutionsrequest.h"
+
+namespace AWS {
+
+namespace IoTJobsDataPlane {
+
+class GetPendingJobExecutionsResponse;
+
+class QTAWS_EXPORT GetPendingJobExecutionsResponsePrivate : public IoTJobsDataPlaneResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetPendingJobExecutionsResponsePrivate(GetPendingJobExecutionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetPendingJobExecutionsResponse)
+    Q_DISABLE_COPY(GetPendingJobExecutionsResponsePrivate)
+
+};
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS
+
 #endif

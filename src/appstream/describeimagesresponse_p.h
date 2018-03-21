@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEIMAGESRESPONSE_P_H
 #define QTAWS_DESCRIBEIMAGESRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "describeimagesrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeImagesResponse;
+
+class QTAWS_EXPORT DescribeImagesResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeImagesResponsePrivate(DescribeImagesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeImagesResponse)
+    Q_DISABLE_COPY(DescribeImagesResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

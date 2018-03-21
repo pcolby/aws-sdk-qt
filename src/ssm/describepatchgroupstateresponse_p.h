@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPATCHGROUPSTATERESPONSE_P_H
 #define QTAWS_DESCRIBEPATCHGROUPSTATERESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describepatchgroupstaterequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribePatchGroupStateResponse;
+
+class QTAWS_EXPORT DescribePatchGroupStateResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribePatchGroupStateResponsePrivate(DescribePatchGroupStateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePatchGroupStateResponse)
+    Q_DISABLE_COPY(DescribePatchGroupStateResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

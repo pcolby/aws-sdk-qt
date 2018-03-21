@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_P_H
 #define QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "rebootreplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class RebootReplicationInstanceResponse;
+
+class QTAWS_EXPORT RebootReplicationInstanceResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebootReplicationInstanceResponsePrivate(RebootReplicationInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebootReplicationInstanceResponse)
+    Q_DISABLE_COPY(RebootReplicationInstanceResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

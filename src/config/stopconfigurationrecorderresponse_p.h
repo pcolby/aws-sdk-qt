@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPCONFIGURATIONRECORDERRESPONSE_P_H
 #define QTAWS_STOPCONFIGURATIONRECORDERRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "stopconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class StopConfigurationRecorderResponse;
+
+class QTAWS_EXPORT StopConfigurationRecorderResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopConfigurationRecorderResponsePrivate(StopConfigurationRecorderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopConfigurationRecorderResponse)
+    Q_DISABLE_COPY(StopConfigurationRecorderResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

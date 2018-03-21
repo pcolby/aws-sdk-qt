@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECLUSTERRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "describeclusterrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeClusterResponse;
+
+class QTAWS_EXPORT DescribeClusterResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeClusterResponsePrivate(DescribeClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClusterResponse)
+    Q_DISABLE_COPY(DescribeClusterResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

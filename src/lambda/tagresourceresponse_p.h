@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class TagResourceResponse;
+
+class QTAWS_EXPORT TagResourceResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagResourceResponsePrivate(TagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceResponse)
+    Q_DISABLE_COPY(TagResourceResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

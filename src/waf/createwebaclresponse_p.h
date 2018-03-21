@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEWEBACLRESPONSE_P_H
 #define QTAWS_CREATEWEBACLRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "createwebaclrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateWebACLResponse;
+
+class QTAWS_EXPORT CreateWebACLResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateWebACLResponsePrivate(CreateWebACLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateWebACLResponse)
+    Q_DISABLE_COPY(CreateWebACLResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

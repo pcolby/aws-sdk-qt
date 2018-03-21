@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECOMMANDSRESPONSE_P_H
 #define QTAWS_DESCRIBECOMMANDSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describecommandsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeCommandsResponse;
+
+class QTAWS_EXPORT DescribeCommandsResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCommandsResponsePrivate(DescribeCommandsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCommandsResponse)
+    Q_DISABLE_COPY(DescribeCommandsResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

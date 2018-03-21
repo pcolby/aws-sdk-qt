@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDIRECTORYCONFIGRESPONSE_P_H
 #define QTAWS_UPDATEDIRECTORYCONFIGRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "updatedirectoryconfigrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class UpdateDirectoryConfigResponse;
+
+class QTAWS_EXPORT UpdateDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDirectoryConfigResponsePrivate(UpdateDirectoryConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDirectoryConfigResponse)
+    Q_DISABLE_COPY(UpdateDirectoryConfigResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

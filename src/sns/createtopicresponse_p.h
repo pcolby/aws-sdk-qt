@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETOPICRESPONSE_P_H
 #define QTAWS_CREATETOPICRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "createtopicrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class CreateTopicResponse;
+
+class QTAWS_EXPORT CreateTopicResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTopicResponsePrivate(CreateTopicResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTopicResponse)
+    Q_DISABLE_COPY(CreateTopicResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

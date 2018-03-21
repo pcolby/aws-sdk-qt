@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describereplicationsubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeReplicationSubnetGroupsResponse;
+
+class QTAWS_EXPORT DescribeReplicationSubnetGroupsResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReplicationSubnetGroupsResponsePrivate(DescribeReplicationSubnetGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReplicationSubnetGroupsResponse)
+    Q_DISABLE_COPY(DescribeReplicationSubnetGroupsResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

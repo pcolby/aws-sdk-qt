@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTJOBEXECUTIONSFORTHINGRESPONSE_P_H
 #define QTAWS_LISTJOBEXECUTIONSFORTHINGRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listjobexecutionsforthingrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListJobExecutionsForThingResponse;
+
+class QTAWS_EXPORT ListJobExecutionsForThingResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListJobExecutionsForThingResponsePrivate(ListJobExecutionsForThingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListJobExecutionsForThingResponse)
+    Q_DISABLE_COPY(ListJobExecutionsForThingResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

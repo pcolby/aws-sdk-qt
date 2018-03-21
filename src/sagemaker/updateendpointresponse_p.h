@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEENDPOINTRESPONSE_P_H
 #define QTAWS_UPDATEENDPOINTRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "updateendpointrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class UpdateEndpointResponse;
+
+class QTAWS_EXPORT UpdateEndpointResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateEndpointResponsePrivate(UpdateEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEndpointResponse)
+    Q_DISABLE_COPY(UpdateEndpointResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

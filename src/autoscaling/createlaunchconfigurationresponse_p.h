@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELAUNCHCONFIGURATIONRESPONSE_P_H
 #define QTAWS_CREATELAUNCHCONFIGURATIONRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "createlaunchconfigurationrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class CreateLaunchConfigurationResponse;
+
+class QTAWS_EXPORT CreateLaunchConfigurationResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLaunchConfigurationResponsePrivate(CreateLaunchConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLaunchConfigurationResponse)
+    Q_DISABLE_COPY(CreateLaunchConfigurationResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

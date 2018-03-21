@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPOLICIESRESPONSE_P_H
 #define QTAWS_LISTPOLICIESRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listpoliciesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListPoliciesResponse;
+
+class QTAWS_EXPORT ListPoliciesResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPoliciesResponsePrivate(ListPoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPoliciesResponse)
+    Q_DISABLE_COPY(ListPoliciesResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

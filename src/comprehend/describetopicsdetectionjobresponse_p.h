@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETOPICSDETECTIONJOBRESPONSE_P_H
 #define QTAWS_DESCRIBETOPICSDETECTIONJOBRESPONSE_P_H
 
+#include "comprehendresponse.h"
+#include "describetopicsdetectionjobrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class DescribeTopicsDetectionJobResponse;
+
+class QTAWS_EXPORT DescribeTopicsDetectionJobResponsePrivate : public ComprehendResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTopicsDetectionJobResponsePrivate(DescribeTopicsDetectionJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTopicsDetectionJobResponse)
+    Q_DISABLE_COPY(DescribeTopicsDetectionJobResponsePrivate)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERETENTIONPOLICYRESPONSE_P_H
 #define QTAWS_DELETERETENTIONPOLICYRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "deleteretentionpolicyrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteRetentionPolicyResponse;
+
+class QTAWS_EXPORT DeleteRetentionPolicyResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRetentionPolicyResponsePrivate(DeleteRetentionPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRetentionPolicyResponse)
+    Q_DISABLE_COPY(DeleteRetentionPolicyResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

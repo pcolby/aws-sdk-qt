@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPIKEYRESPONSE_P_H
 #define QTAWS_DELETEAPIKEYRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "deleteapikeyrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteApiKeyResponse;
+
+class QTAWS_EXPORT DeleteApiKeyResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApiKeyResponsePrivate(DeleteApiKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApiKeyResponse)
+    Q_DISABLE_COPY(DeleteApiKeyResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

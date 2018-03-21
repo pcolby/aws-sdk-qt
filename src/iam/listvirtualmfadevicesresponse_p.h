@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTVIRTUALMFADEVICESRESPONSE_P_H
 #define QTAWS_LISTVIRTUALMFADEVICESRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listvirtualmfadevicesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListVirtualMFADevicesResponse;
+
+class QTAWS_EXPORT ListVirtualMFADevicesResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListVirtualMFADevicesResponsePrivate(ListVirtualMFADevicesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListVirtualMFADevicesResponse)
+    Q_DISABLE_COPY(ListVirtualMFADevicesResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_BULKPUBLISHRESPONSE_P_H
 #define QTAWS_BULKPUBLISHRESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "bulkpublishrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class BulkPublishResponse;
+
+class QTAWS_EXPORT BulkPublishResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BulkPublishResponsePrivate(BulkPublishResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BulkPublishResponse)
+    Q_DISABLE_COPY(BulkPublishResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

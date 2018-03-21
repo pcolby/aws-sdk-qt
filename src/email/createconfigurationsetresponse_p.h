@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETRESPONSE_P_H
 #define QTAWS_CREATECONFIGURATIONSETRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "createconfigurationsetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateConfigurationSetResponse;
+
+class QTAWS_EXPORT CreateConfigurationSetResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateConfigurationSetResponsePrivate(CreateConfigurationSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConfigurationSetResponse)
+    Q_DISABLE_COPY(CreateConfigurationSetResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

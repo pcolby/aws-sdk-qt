@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDOMAINENTRYRESPONSE_P_H
 #define QTAWS_UPDATEDOMAINENTRYRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "updatedomainentryrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class UpdateDomainEntryResponse;
+
+class QTAWS_EXPORT UpdateDomainEntryResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDomainEntryResponsePrivate(UpdateDomainEntryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDomainEntryResponse)
+    Q_DISABLE_COPY(UpdateDomainEntryResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

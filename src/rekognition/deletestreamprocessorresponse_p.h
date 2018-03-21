@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESTREAMPROCESSORRESPONSE_P_H
 #define QTAWS_DELETESTREAMPROCESSORRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "deletestreamprocessorrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DeleteStreamProcessorResponse;
+
+class QTAWS_EXPORT DeleteStreamProcessorResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteStreamProcessorResponsePrivate(DeleteStreamProcessorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStreamProcessorResponse)
+    Q_DISABLE_COPY(DeleteStreamProcessorResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

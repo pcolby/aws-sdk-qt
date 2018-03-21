@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRULESRESPONSE_P_H
 #define QTAWS_LISTRULESRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "listrulesrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListRulesResponse;
+
+class QTAWS_EXPORT ListRulesResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRulesResponsePrivate(ListRulesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRulesResponse)
+    Q_DISABLE_COPY(ListRulesResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

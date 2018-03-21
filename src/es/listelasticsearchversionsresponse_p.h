@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_P_H
 #define QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "listelasticsearchversionsrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class ListElasticsearchVersionsResponse;
+
+class QTAWS_EXPORT ListElasticsearchVersionsResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListElasticsearchVersionsResponsePrivate(ListElasticsearchVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListElasticsearchVersionsResponse)
+    Q_DISABLE_COPY(ListElasticsearchVersionsResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

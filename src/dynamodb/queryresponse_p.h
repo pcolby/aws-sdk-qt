@@ -20,4 +20,31 @@
 #ifndef QTAWS_QUERYRESPONSE_P_H
 #define QTAWS_QUERYRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "queryrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class QueryResponse;
+
+class QTAWS_EXPORT QueryResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    QueryResponsePrivate(QueryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(QueryResponse)
+    Q_DISABLE_COPY(QueryResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

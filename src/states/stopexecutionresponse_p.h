@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPEXECUTIONRESPONSE_P_H
 #define QTAWS_STOPEXECUTIONRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "stopexecutionrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class StopExecutionResponse;
+
+class QTAWS_EXPORT StopExecutionResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopExecutionResponsePrivate(StopExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopExecutionResponse)
+    Q_DISABLE_COPY(StopExecutionResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

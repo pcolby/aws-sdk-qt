@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEINTENTVERSIONRESPONSE_P_H
 #define QTAWS_DELETEINTENTVERSIONRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "deleteintentversionrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteIntentVersionResponse;
+
+class QTAWS_EXPORT DeleteIntentVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteIntentVersionResponsePrivate(DeleteIntentVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIntentVersionResponse)
+    Q_DISABLE_COPY(DeleteIntentVersionResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECLUSTERPARAMETERGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERPARAMETERGROUPSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describeclusterparametergroupsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeClusterParameterGroupsResponse;
+
+class QTAWS_EXPORT DescribeClusterParameterGroupsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeClusterParameterGroupsResponsePrivate(DescribeClusterParameterGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClusterParameterGroupsResponse)
+    Q_DISABLE_COPY(DescribeClusterParameterGroupsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

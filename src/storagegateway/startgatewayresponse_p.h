@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTGATEWAYRESPONSE_P_H
 #define QTAWS_STARTGATEWAYRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "startgatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class StartGatewayResponse;
+
+class QTAWS_EXPORT StartGatewayResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartGatewayResponsePrivate(StartGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartGatewayResponse)
+    Q_DISABLE_COPY(StartGatewayResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

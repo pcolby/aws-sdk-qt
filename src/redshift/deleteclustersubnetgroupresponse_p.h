@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECLUSTERSUBNETGROUPRESPONSE_P_H
 #define QTAWS_DELETECLUSTERSUBNETGROUPRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "deleteclustersubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteClusterSubnetGroupResponse;
+
+class QTAWS_EXPORT DeleteClusterSubnetGroupResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteClusterSubnetGroupResponsePrivate(DeleteClusterSubnetGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterSubnetGroupResponse)
+    Q_DISABLE_COPY(DeleteClusterSubnetGroupResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

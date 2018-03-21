@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_P_H
 #define QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "updatenumberofdomaincontrollersrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class UpdateNumberOfDomainControllersResponse;
+
+class QTAWS_EXPORT UpdateNumberOfDomainControllersResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateNumberOfDomainControllersResponsePrivate(UpdateNumberOfDomainControllersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateNumberOfDomainControllersResponse)
+    Q_DISABLE_COPY(UpdateNumberOfDomainControllersResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELOADBALANCERLISTENERSRESPONSE_P_H
 #define QTAWS_DELETELOADBALANCERLISTENERSRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "deleteloadbalancerlistenersrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class DeleteLoadBalancerListenersResponse;
+
+class QTAWS_EXPORT DeleteLoadBalancerListenersResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLoadBalancerListenersResponsePrivate(DeleteLoadBalancerListenersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLoadBalancerListenersResponse)
+    Q_DISABLE_COPY(DeleteLoadBalancerListenersResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELCOMMANDRESPONSE_P_H
 #define QTAWS_CANCELCOMMANDRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "cancelcommandrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CancelCommandResponse;
+
+class QTAWS_EXPORT CancelCommandResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelCommandResponsePrivate(CancelCommandResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelCommandResponse)
+    Q_DISABLE_COPY(CancelCommandResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

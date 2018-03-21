@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERINSTANCERESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "deregisterinstancerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class DeregisterInstanceResponse;
+
+class QTAWS_EXPORT DeregisterInstanceResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterInstanceResponsePrivate(DeregisterInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterInstanceResponse)
+    Q_DISABLE_COPY(DeregisterInstanceResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

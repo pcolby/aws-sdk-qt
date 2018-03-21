@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEUSERRESPONSE_P_H
 #define QTAWS_UPDATEUSERRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "updateuserrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class UpdateUserResponse;
+
+class QTAWS_EXPORT UpdateUserResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateUserResponsePrivate(UpdateUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserResponse)
+    Q_DISABLE_COPY(UpdateUserResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

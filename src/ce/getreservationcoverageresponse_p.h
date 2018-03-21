@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESERVATIONCOVERAGERESPONSE_P_H
 #define QTAWS_GETRESERVATIONCOVERAGERESPONSE_P_H
 
+#include "costexplorerresponse.h"
+#include "getreservationcoveragerequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetReservationCoverageResponse;
+
+class QTAWS_EXPORT GetReservationCoverageResponsePrivate : public CostExplorerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetReservationCoverageResponsePrivate(GetReservationCoverageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetReservationCoverageResponse)
+    Q_DISABLE_COPY(GetReservationCoverageResponsePrivate)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

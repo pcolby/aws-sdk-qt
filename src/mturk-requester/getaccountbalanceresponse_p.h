@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACCOUNTBALANCERESPONSE_P_H
 #define QTAWS_GETACCOUNTBALANCERESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "getaccountbalancerequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetAccountBalanceResponse;
+
+class QTAWS_EXPORT GetAccountBalanceResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAccountBalanceResponsePrivate(GetAccountBalanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountBalanceResponse)
+    Q_DISABLE_COPY(GetAccountBalanceResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

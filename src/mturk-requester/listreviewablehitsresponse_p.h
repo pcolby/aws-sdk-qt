@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTREVIEWABLEHITSRESPONSE_P_H
 #define QTAWS_LISTREVIEWABLEHITSRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "listreviewablehitsrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListReviewableHITsResponse;
+
+class QTAWS_EXPORT ListReviewableHITsResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListReviewableHITsResponsePrivate(ListReviewableHITsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListReviewableHITsResponse)
+    Q_DISABLE_COPY(ListReviewableHITsResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

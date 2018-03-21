@@ -20,4 +20,31 @@
 #ifndef QTAWS_EXPIRESESSIONRESPONSE_P_H
 #define QTAWS_EXPIRESESSIONRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "expiresessionrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class ExpireSessionResponse;
+
+class QTAWS_EXPORT ExpireSessionResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ExpireSessionResponsePrivate(ExpireSessionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ExpireSessionResponse)
+    Q_DISABLE_COPY(ExpireSessionResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

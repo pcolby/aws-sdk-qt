@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDINSTANCESRESPONSE_P_H
 #define QTAWS_DESCRIBESCHEDULEDINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describescheduledinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeScheduledInstancesResponse;
+
+class QTAWS_EXPORT DescribeScheduledInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeScheduledInstancesResponsePrivate(DescribeScheduledInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScheduledInstancesResponse)
+    Q_DISABLE_COPY(DescribeScheduledInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

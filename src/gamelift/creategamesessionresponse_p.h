@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEGAMESESSIONRESPONSE_P_H
 #define QTAWS_CREATEGAMESESSIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "creategamesessionrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class CreateGameSessionResponse;
+
+class QTAWS_EXPORT CreateGameSessionResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateGameSessionResponsePrivate(CreateGameSessionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGameSessionResponse)
+    Q_DISABLE_COPY(CreateGameSessionResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

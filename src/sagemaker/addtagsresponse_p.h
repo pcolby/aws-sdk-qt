@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "addtagsrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class AddTagsResponse;
+
+class QTAWS_EXPORT AddTagsResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsResponsePrivate(AddTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsResponse)
+    Q_DISABLE_COPY(AddTagsResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

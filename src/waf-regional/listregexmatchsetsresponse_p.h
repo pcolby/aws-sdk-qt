@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTREGEXMATCHSETSRESPONSE_P_H
 #define QTAWS_LISTREGEXMATCHSETSRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "listregexmatchsetsrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListRegexMatchSetsResponse;
+
+class QTAWS_EXPORT ListRegexMatchSetsResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRegexMatchSetsResponsePrivate(ListRegexMatchSetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRegexMatchSetsResponse)
+    Q_DISABLE_COPY(ListRegexMatchSetsResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

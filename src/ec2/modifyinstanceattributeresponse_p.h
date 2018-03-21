@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYINSTANCEATTRIBUTERESPONSE_P_H
 #define QTAWS_MODIFYINSTANCEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyinstanceattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyInstanceAttributeResponse;
+
+class QTAWS_EXPORT ModifyInstanceAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyInstanceAttributeResponsePrivate(ModifyInstanceAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyInstanceAttributeResponse)
+    Q_DISABLE_COPY(ModifyInstanceAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

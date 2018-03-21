@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPIPELINESRESPONSE_P_H
 #define QTAWS_DESCRIBEPIPELINESRESPONSE_P_H
 
+#include "datapipelineresponse.h"
+#include "describepipelinesrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class DescribePipelinesResponse;
+
+class QTAWS_EXPORT DescribePipelinesResponsePrivate : public DataPipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribePipelinesResponsePrivate(DescribePipelinesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePipelinesResponse)
+    Q_DISABLE_COPY(DescribePipelinesResponsePrivate)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

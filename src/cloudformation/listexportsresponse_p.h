@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTEXPORTSRESPONSE_P_H
 #define QTAWS_LISTEXPORTSRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "listexportsrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ListExportsResponse;
+
+class QTAWS_EXPORT ListExportsResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListExportsResponsePrivate(ListExportsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListExportsResponse)
+    Q_DISABLE_COPY(ListExportsResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

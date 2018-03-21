@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESTREAMRESPONSE_P_H
 #define QTAWS_UPDATESTREAMRESPONSE_P_H
 
+#include "kinesisvideoresponse.h"
+#include "updatestreamrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class UpdateStreamResponse;
+
+class QTAWS_EXPORT UpdateStreamResponsePrivate : public KinesisVideoResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateStreamResponsePrivate(UpdateStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStreamResponse)
+    Q_DISABLE_COPY(UpdateStreamResponsePrivate)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

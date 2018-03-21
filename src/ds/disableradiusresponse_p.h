@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLERADIUSRESPONSE_P_H
 #define QTAWS_DISABLERADIUSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "disableradiusrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DisableRadiusResponse;
+
+class QTAWS_EXPORT DisableRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableRadiusResponsePrivate(DisableRadiusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableRadiusResponse)
+    Q_DISABLE_COPY(DisableRadiusResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

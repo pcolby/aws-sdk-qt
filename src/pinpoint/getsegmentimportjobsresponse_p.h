@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSEGMENTIMPORTJOBSRESPONSE_P_H
 #define QTAWS_GETSEGMENTIMPORTJOBSRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getsegmentimportjobsrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetSegmentImportJobsResponse;
+
+class QTAWS_EXPORT GetSegmentImportJobsResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSegmentImportJobsResponsePrivate(GetSegmentImportJobsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSegmentImportJobsResponse)
+    Q_DISABLE_COPY(GetSegmentImportJobsResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

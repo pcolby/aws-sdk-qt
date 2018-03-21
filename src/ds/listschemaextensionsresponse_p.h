@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSCHEMAEXTENSIONSRESPONSE_P_H
 #define QTAWS_LISTSCHEMAEXTENSIONSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "listschemaextensionsrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class ListSchemaExtensionsResponse;
+
+class QTAWS_EXPORT ListSchemaExtensionsResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListSchemaExtensionsResponsePrivate(ListSchemaExtensionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListSchemaExtensionsResponse)
+    Q_DISABLE_COPY(ListSchemaExtensionsResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

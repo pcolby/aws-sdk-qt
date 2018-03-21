@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVPNGATEWAYSRESPONSE_P_H
 #define QTAWS_DESCRIBEVPNGATEWAYSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describevpngatewaysrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpnGatewaysResponse;
+
+class QTAWS_EXPORT DescribeVpnGatewaysResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeVpnGatewaysResponsePrivate(DescribeVpnGatewaysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpnGatewaysResponse)
+    Q_DISABLE_COPY(DescribeVpnGatewaysResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

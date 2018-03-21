@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELOGGINGSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBELOGGINGSTATUSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describeloggingstatusrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeLoggingStatusResponse;
+
+class QTAWS_EXPORT DescribeLoggingStatusResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLoggingStatusResponsePrivate(DescribeLoggingStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLoggingStatusResponse)
+    Q_DISABLE_COPY(DescribeLoggingStatusResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

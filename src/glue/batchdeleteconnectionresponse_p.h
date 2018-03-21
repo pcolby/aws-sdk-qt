@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHDELETECONNECTIONRESPONSE_P_H
 #define QTAWS_BATCHDELETECONNECTIONRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "batchdeleteconnectionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class BatchDeleteConnectionResponse;
+
+class QTAWS_EXPORT BatchDeleteConnectionResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchDeleteConnectionResponsePrivate(BatchDeleteConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDeleteConnectionResponse)
+    Q_DISABLE_COPY(BatchDeleteConnectionResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

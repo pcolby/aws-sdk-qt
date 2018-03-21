@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESOURCESRESPONSE_P_H
 #define QTAWS_GETRESOURCESRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getresourcesrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetResourcesResponse;
+
+class QTAWS_EXPORT GetResourcesResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetResourcesResponsePrivate(GetResourcesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetResourcesResponse)
+    Q_DISABLE_COPY(GetResourcesResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

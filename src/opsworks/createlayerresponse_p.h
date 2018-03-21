@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELAYERRESPONSE_P_H
 #define QTAWS_CREATELAYERRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "createlayerrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateLayerResponse;
+
+class QTAWS_EXPORT CreateLayerResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLayerResponsePrivate(CreateLayerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLayerResponse)
+    Q_DISABLE_COPY(CreateLayerResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

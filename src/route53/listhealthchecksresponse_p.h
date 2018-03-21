@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTHEALTHCHECKSRESPONSE_P_H
 #define QTAWS_LISTHEALTHCHECKSRESPONSE_P_H
 
+#include "route53response.h"
+#include "listhealthchecksrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListHealthChecksResponse;
+
+class QTAWS_EXPORT ListHealthChecksResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListHealthChecksResponsePrivate(ListHealthChecksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListHealthChecksResponse)
+    Q_DISABLE_COPY(ListHealthChecksResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

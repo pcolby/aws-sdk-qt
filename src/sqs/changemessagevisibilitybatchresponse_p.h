@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYBATCHRESPONSE_P_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYBATCHRESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "changemessagevisibilitybatchrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ChangeMessageVisibilityBatchResponse;
+
+class QTAWS_EXPORT ChangeMessageVisibilityBatchResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ChangeMessageVisibilityBatchResponsePrivate(ChangeMessageVisibilityBatchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ChangeMessageVisibilityBatchResponse)
+    Q_DISABLE_COPY(ChangeMessageVisibilityBatchResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTAGKEYSRESPONSE_P_H
 #define QTAWS_GETTAGKEYSRESPONSE_P_H
 
+#include "resourcegroupstaggingapiresponse.h"
+#include "gettagkeysrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroupsTaggingAPI {
+
+class GetTagKeysResponse;
+
+class QTAWS_EXPORT GetTagKeysResponsePrivate : public ResourceGroupsTaggingAPIResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTagKeysResponsePrivate(GetTagKeysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTagKeysResponse)
+    Q_DISABLE_COPY(GetTagKeysResponsePrivate)
+
+};
+
+} // namespace ResourceGroupsTaggingAPI
+} // namespace AWS
+
 #endif

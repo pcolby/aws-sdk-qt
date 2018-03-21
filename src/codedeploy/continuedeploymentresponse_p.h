@@ -20,4 +20,31 @@
 #ifndef QTAWS_CONTINUEDEPLOYMENTRESPONSE_P_H
 #define QTAWS_CONTINUEDEPLOYMENTRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "continuedeploymentrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ContinueDeploymentResponse;
+
+class QTAWS_EXPORT ContinueDeploymentResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ContinueDeploymentResponsePrivate(ContinueDeploymentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ContinueDeploymentResponse)
+    Q_DISABLE_COPY(ContinueDeploymentResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

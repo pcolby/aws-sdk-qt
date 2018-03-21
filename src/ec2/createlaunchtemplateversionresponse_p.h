@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELAUNCHTEMPLATEVERSIONRESPONSE_P_H
 #define QTAWS_CREATELAUNCHTEMPLATEVERSIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createlaunchtemplateversionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateLaunchTemplateVersionResponse;
+
+class QTAWS_EXPORT CreateLaunchTemplateVersionResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLaunchTemplateVersionResponsePrivate(CreateLaunchTemplateVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLaunchTemplateVersionResponse)
+    Q_DISABLE_COPY(CreateLaunchTemplateVersionResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

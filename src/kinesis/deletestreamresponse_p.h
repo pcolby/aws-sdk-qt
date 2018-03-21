@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESTREAMRESPONSE_P_H
 #define QTAWS_DELETESTREAMRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "deletestreamrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class DeleteStreamResponse;
+
+class QTAWS_EXPORT DeleteStreamResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteStreamResponsePrivate(DeleteStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStreamResponse)
+    Q_DISABLE_COPY(DeleteStreamResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

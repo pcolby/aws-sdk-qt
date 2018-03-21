@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTBUCKETNOTIFICATIONRESPONSE_P_H
 #define QTAWS_PUTBUCKETNOTIFICATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "putbucketnotificationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketNotificationResponse;
+
+class QTAWS_EXPORT PutBucketNotificationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutBucketNotificationResponsePrivate(PutBucketNotificationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketNotificationResponse)
+    Q_DISABLE_COPY(PutBucketNotificationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOBJECTVERSIONSRESPONSE_P_H
 #define QTAWS_LISTOBJECTVERSIONSRESPONSE_P_H
 
+#include "s3response.h"
+#include "listobjectversionsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListObjectVersionsResponse;
+
+class QTAWS_EXPORT ListObjectVersionsResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListObjectVersionsResponsePrivate(ListObjectVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListObjectVersionsResponse)
+    Q_DISABLE_COPY(ListObjectVersionsResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

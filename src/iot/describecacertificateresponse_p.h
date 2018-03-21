@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECACERTIFICATERESPONSE_P_H
 #define QTAWS_DESCRIBECACERTIFICATERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "describecacertificaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeCACertificateResponse;
+
+class QTAWS_EXPORT DescribeCACertificateResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCACertificateResponsePrivate(DescribeCACertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCACertificateResponse)
+    Q_DISABLE_COPY(DescribeCACertificateResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

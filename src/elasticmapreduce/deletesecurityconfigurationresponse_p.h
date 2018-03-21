@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "deletesecurityconfigurationrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DeleteSecurityConfigurationResponse;
+
+class QTAWS_EXPORT DeleteSecurityConfigurationResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSecurityConfigurationResponsePrivate(DeleteSecurityConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSecurityConfigurationResponse)
+    Q_DISABLE_COPY(DeleteSecurityConfigurationResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

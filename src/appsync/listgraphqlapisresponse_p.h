@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGRAPHQLAPISRESPONSE_P_H
 #define QTAWS_LISTGRAPHQLAPISRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "listgraphqlapisrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListGraphqlApisResponse;
+
+class QTAWS_EXPORT ListGraphqlApisResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGraphqlApisResponsePrivate(ListGraphqlApisResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGraphqlApisResponse)
+    Q_DISABLE_COPY(ListGraphqlApisResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

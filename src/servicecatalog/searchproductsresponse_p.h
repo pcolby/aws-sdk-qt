@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHPRODUCTSRESPONSE_P_H
 #define QTAWS_SEARCHPRODUCTSRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "searchproductsrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class SearchProductsResponse;
+
+class QTAWS_EXPORT SearchProductsResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchProductsResponsePrivate(SearchProductsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchProductsResponse)
+    Q_DISABLE_COPY(SearchProductsResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

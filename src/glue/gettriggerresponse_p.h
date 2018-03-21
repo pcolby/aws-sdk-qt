@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTRIGGERRESPONSE_P_H
 #define QTAWS_GETTRIGGERRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "gettriggerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetTriggerResponse;
+
+class QTAWS_EXPORT GetTriggerResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTriggerResponsePrivate(GetTriggerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTriggerResponse)
+    Q_DISABLE_COPY(GetTriggerResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

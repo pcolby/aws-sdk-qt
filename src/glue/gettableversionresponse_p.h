@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTABLEVERSIONRESPONSE_P_H
 #define QTAWS_GETTABLEVERSIONRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "gettableversionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetTableVersionResponse;
+
+class QTAWS_EXPORT GetTableVersionResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTableVersionResponsePrivate(GetTableVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTableVersionResponse)
+    Q_DISABLE_COPY(GetTableVersionResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

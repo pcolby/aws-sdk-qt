@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDOMAINNAMESRESPONSE_P_H
 #define QTAWS_LISTDOMAINNAMESRESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "listdomainnamesrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class ListDomainNamesResponse;
+
+class QTAWS_EXPORT ListDomainNamesResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDomainNamesResponsePrivate(ListDomainNamesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDomainNamesResponse)
+    Q_DISABLE_COPY(ListDomainNamesResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

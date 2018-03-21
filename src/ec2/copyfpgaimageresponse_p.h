@@ -20,4 +20,31 @@
 #ifndef QTAWS_COPYFPGAIMAGERESPONSE_P_H
 #define QTAWS_COPYFPGAIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "copyfpgaimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CopyFpgaImageResponse;
+
+class QTAWS_EXPORT CopyFpgaImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CopyFpgaImageResponsePrivate(CopyFpgaImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CopyFpgaImageResponse)
+    Q_DISABLE_COPY(CopyFpgaImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

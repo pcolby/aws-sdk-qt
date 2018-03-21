@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETRESPONSE_P_H
 #define QTAWS_DELETECONFIGURATIONSETRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deleteconfigurationsetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteConfigurationSetResponse;
+
+class QTAWS_EXPORT DeleteConfigurationSetResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConfigurationSetResponsePrivate(DeleteConfigurationSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationSetResponse)
+    Q_DISABLE_COPY(DeleteConfigurationSetResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

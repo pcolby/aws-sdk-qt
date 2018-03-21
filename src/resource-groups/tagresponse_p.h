@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGRESPONSE_P_H
 #define QTAWS_TAGRESPONSE_P_H
 
+#include "resourcegroupsresponse.h"
+#include "tagrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class TagResponse;
+
+class QTAWS_EXPORT TagResponsePrivate : public ResourceGroupsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagResponsePrivate(TagResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagResponse)
+    Q_DISABLE_COPY(TagResponsePrivate)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

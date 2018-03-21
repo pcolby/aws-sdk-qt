@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describeorderabledbinstanceoptionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeOrderableDBInstanceOptionsResponse;
+
+class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeOrderableDBInstanceOptionsResponsePrivate(DescribeOrderableDBInstanceOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrderableDBInstanceOptionsResponse)
+    Q_DISABLE_COPY(DescribeOrderableDBInstanceOptionsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

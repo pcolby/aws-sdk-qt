@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCERESPONSE_P_H
 #define QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCERESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "getdeployablepatchsnapshotforinstancerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetDeployablePatchSnapshotForInstanceResponse;
+
+class QTAWS_EXPORT GetDeployablePatchSnapshotForInstanceResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDeployablePatchSnapshotForInstanceResponsePrivate(GetDeployablePatchSnapshotForInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDeployablePatchSnapshotForInstanceResponse)
+    Q_DISABLE_COPY(GetDeployablePatchSnapshotForInstanceResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

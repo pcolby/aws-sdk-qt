@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDESTINATIONRESPONSE_P_H
 #define QTAWS_DELETEDESTINATIONRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "deletedestinationrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteDestinationResponse;
+
+class QTAWS_EXPORT DeleteDestinationResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDestinationResponsePrivate(DeleteDestinationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDestinationResponse)
+    Q_DISABLE_COPY(DeleteDestinationResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

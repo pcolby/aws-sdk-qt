@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETUSERRESPONSE_P_H
 #define QTAWS_GETUSERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "getuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetUserResponse;
+
+class QTAWS_EXPORT GetUserResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetUserResponsePrivate(GetUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetUserResponse)
+    Q_DISABLE_COPY(GetUserResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

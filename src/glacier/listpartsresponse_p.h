@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPARTSRESPONSE_P_H
 #define QTAWS_LISTPARTSRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "listpartsrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class ListPartsResponse;
+
+class QTAWS_EXPORT ListPartsResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPartsResponsePrivate(ListPartsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPartsResponse)
+    Q_DISABLE_COPY(ListPartsResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

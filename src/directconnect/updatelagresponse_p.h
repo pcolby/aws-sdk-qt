@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATELAGRESPONSE_P_H
 #define QTAWS_UPDATELAGRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "updatelagrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class UpdateLagResponse;
+
+class QTAWS_EXPORT UpdateLagResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateLagResponsePrivate(UpdateLagResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateLagResponse)
+    Q_DISABLE_COPY(UpdateLagResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

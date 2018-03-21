@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDINSTANCEFLEETRESPONSE_P_H
 #define QTAWS_ADDINSTANCEFLEETRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "addinstancefleetrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class AddInstanceFleetResponse;
+
+class QTAWS_EXPORT AddInstanceFleetResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddInstanceFleetResponsePrivate(AddInstanceFleetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddInstanceFleetResponse)
+    Q_DISABLE_COPY(AddInstanceFleetResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

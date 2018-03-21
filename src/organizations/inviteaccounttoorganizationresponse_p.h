@@ -20,4 +20,31 @@
 #ifndef QTAWS_INVITEACCOUNTTOORGANIZATIONRESPONSE_P_H
 #define QTAWS_INVITEACCOUNTTOORGANIZATIONRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "inviteaccounttoorganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class InviteAccountToOrganizationResponse;
+
+class QTAWS_EXPORT InviteAccountToOrganizationResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InviteAccountToOrganizationResponsePrivate(InviteAccountToOrganizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InviteAccountToOrganizationResponse)
+    Q_DISABLE_COPY(InviteAccountToOrganizationResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

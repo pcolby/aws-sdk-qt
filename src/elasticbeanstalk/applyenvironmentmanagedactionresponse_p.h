@@ -20,4 +20,31 @@
 #ifndef QTAWS_APPLYENVIRONMENTMANAGEDACTIONRESPONSE_P_H
 #define QTAWS_APPLYENVIRONMENTMANAGEDACTIONRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "applyenvironmentmanagedactionrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ApplyEnvironmentManagedActionResponse;
+
+class QTAWS_EXPORT ApplyEnvironmentManagedActionResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ApplyEnvironmentManagedActionResponsePrivate(ApplyEnvironmentManagedActionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ApplyEnvironmentManagedActionResponse)
+    Q_DISABLE_COPY(ApplyEnvironmentManagedActionResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

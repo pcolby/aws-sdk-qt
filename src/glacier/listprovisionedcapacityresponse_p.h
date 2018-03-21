@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPROVISIONEDCAPACITYRESPONSE_P_H
 #define QTAWS_LISTPROVISIONEDCAPACITYRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "listprovisionedcapacityrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class ListProvisionedCapacityResponse;
+
+class QTAWS_EXPORT ListProvisionedCapacityResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListProvisionedCapacityResponsePrivate(ListProvisionedCapacityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListProvisionedCapacityResponse)
+    Q_DISABLE_COPY(ListProvisionedCapacityResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

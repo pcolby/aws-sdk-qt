@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECONTINUOUSBACKUPSRESPONSE_P_H
 #define QTAWS_DESCRIBECONTINUOUSBACKUPSRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "describecontinuousbackupsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeContinuousBackupsResponse;
+
+class QTAWS_EXPORT DescribeContinuousBackupsResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeContinuousBackupsResponsePrivate(DescribeContinuousBackupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeContinuousBackupsResponse)
+    Q_DISABLE_COPY(DescribeContinuousBackupsResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEGRAPHQLAPIRESPONSE_P_H
 #define QTAWS_UPDATEGRAPHQLAPIRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "updategraphqlapirequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateGraphqlApiResponse;
+
+class QTAWS_EXPORT UpdateGraphqlApiResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateGraphqlApiResponsePrivate(UpdateGraphqlApiResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGraphqlApiResponse)
+    Q_DISABLE_COPY(UpdateGraphqlApiResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

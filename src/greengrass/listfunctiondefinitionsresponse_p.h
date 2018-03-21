@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTFUNCTIONDEFINITIONSRESPONSE_P_H
 #define QTAWS_LISTFUNCTIONDEFINITIONSRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "listfunctiondefinitionsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListFunctionDefinitionsResponse;
+
+class QTAWS_EXPORT ListFunctionDefinitionsResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListFunctionDefinitionsResponsePrivate(ListFunctionDefinitionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListFunctionDefinitionsResponse)
+    Q_DISABLE_COPY(ListFunctionDefinitionsResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

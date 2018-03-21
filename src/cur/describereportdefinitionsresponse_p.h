@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEREPORTDEFINITIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEREPORTDEFINITIONSRESPONSE_P_H
 
+#include "costandusagereportserviceresponse.h"
+#include "describereportdefinitionsrequest.h"
+
+namespace AWS {
+
+namespace CostandUsageReportService {
+
+class DescribeReportDefinitionsResponse;
+
+class QTAWS_EXPORT DescribeReportDefinitionsResponsePrivate : public CostandUsageReportServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReportDefinitionsResponsePrivate(DescribeReportDefinitionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReportDefinitionsResponse)
+    Q_DISABLE_COPY(DescribeReportDefinitionsResponsePrivate)
+
+};
+
+} // namespace CostandUsageReportService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDISCOVEREDRESOURCECOUNTSRESPONSE_P_H
 #define QTAWS_GETDISCOVEREDRESOURCECOUNTSRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "getdiscoveredresourcecountsrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class GetDiscoveredResourceCountsResponse;
+
+class QTAWS_EXPORT GetDiscoveredResourceCountsResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDiscoveredResourceCountsResponsePrivate(GetDiscoveredResourceCountsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDiscoveredResourceCountsResponse)
+    Q_DISABLE_COPY(GetDiscoveredResourceCountsResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

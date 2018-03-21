@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDOMAINNAMESERVERSRESPONSE_P_H
 #define QTAWS_UPDATEDOMAINNAMESERVERSRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "updatedomainnameserversrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class UpdateDomainNameserversResponse;
+
+class QTAWS_EXPORT UpdateDomainNameserversResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDomainNameserversResponsePrivate(UpdateDomainNameserversResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDomainNameserversResponse)
+    Q_DISABLE_COPY(UpdateDomainNameserversResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

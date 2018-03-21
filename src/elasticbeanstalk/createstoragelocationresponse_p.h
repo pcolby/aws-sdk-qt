@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESTORAGELOCATIONRESPONSE_P_H
 #define QTAWS_CREATESTORAGELOCATIONRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "createstoragelocationrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateStorageLocationResponse;
+
+class QTAWS_EXPORT CreateStorageLocationResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateStorageLocationResponsePrivate(CreateStorageLocationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStorageLocationResponse)
+    Q_DISABLE_COPY(CreateStorageLocationResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

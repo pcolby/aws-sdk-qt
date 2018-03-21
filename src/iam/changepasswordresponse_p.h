@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHANGEPASSWORDRESPONSE_P_H
 #define QTAWS_CHANGEPASSWORDRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "changepasswordrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ChangePasswordResponse;
+
+class QTAWS_EXPORT ChangePasswordResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ChangePasswordResponsePrivate(ChangePasswordResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ChangePasswordResponse)
+    Q_DISABLE_COPY(ChangePasswordResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

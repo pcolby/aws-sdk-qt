@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERESOURCERESPONSE_P_H
 #define QTAWS_UPDATERESOURCERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "updateresourcerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateResourceResponse;
+
+class QTAWS_EXPORT UpdateResourceResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateResourceResponsePrivate(UpdateResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateResourceResponse)
+    Q_DISABLE_COPY(UpdateResourceResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

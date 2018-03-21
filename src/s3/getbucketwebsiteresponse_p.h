@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETWEBSITERESPONSE_P_H
 #define QTAWS_GETBUCKETWEBSITERESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketwebsiterequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketWebsiteResponse;
+
+class QTAWS_EXPORT GetBucketWebsiteResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketWebsiteResponsePrivate(GetBucketWebsiteResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketWebsiteResponse)
+    Q_DISABLE_COPY(GetBucketWebsiteResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

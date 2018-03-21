@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOFFERINGPROMOTIONSRESPONSE_P_H
 #define QTAWS_LISTOFFERINGPROMOTIONSRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "listofferingpromotionsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListOfferingPromotionsResponse;
+
+class QTAWS_EXPORT ListOfferingPromotionsResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOfferingPromotionsResponsePrivate(ListOfferingPromotionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOfferingPromotionsResponse)
+    Q_DISABLE_COPY(ListOfferingPromotionsResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

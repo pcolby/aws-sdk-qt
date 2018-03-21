@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBYTEMATCHSETRESPONSE_P_H
 #define QTAWS_DELETEBYTEMATCHSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "deletebytematchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteByteMatchSetResponse;
+
+class QTAWS_EXPORT DeleteByteMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteByteMatchSetResponsePrivate(DeleteByteMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteByteMatchSetResponse)
+    Q_DISABLE_COPY(DeleteByteMatchSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

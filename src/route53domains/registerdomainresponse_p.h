@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERDOMAINRESPONSE_P_H
 #define QTAWS_REGISTERDOMAINRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "registerdomainrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class RegisterDomainResponse;
+
+class QTAWS_EXPORT RegisterDomainResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterDomainResponsePrivate(RegisterDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterDomainResponse)
+    Q_DISABLE_COPY(RegisterDomainResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

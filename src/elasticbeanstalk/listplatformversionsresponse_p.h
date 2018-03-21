@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPLATFORMVERSIONSRESPONSE_P_H
 #define QTAWS_LISTPLATFORMVERSIONSRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "listplatformversionsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ListPlatformVersionsResponse;
+
+class QTAWS_EXPORT ListPlatformVersionsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPlatformVersionsResponsePrivate(ListPlatformVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPlatformVersionsResponse)
+    Q_DISABLE_COPY(ListPlatformVersionsResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

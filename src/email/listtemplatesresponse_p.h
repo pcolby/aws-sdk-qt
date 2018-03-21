@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTEMPLATESRESPONSE_P_H
 #define QTAWS_LISTTEMPLATESRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "listtemplatesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ListTemplatesResponse;
+
+class QTAWS_EXPORT ListTemplatesResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTemplatesResponsePrivate(ListTemplatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTemplatesResponse)
+    Q_DISABLE_COPY(ListTemplatesResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

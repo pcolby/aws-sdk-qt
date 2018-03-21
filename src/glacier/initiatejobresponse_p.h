@@ -20,4 +20,31 @@
 #ifndef QTAWS_INITIATEJOBRESPONSE_P_H
 #define QTAWS_INITIATEJOBRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "initiatejobrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class InitiateJobResponse;
+
+class QTAWS_EXPORT InitiateJobResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InitiateJobResponsePrivate(InitiateJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateJobResponse)
+    Q_DISABLE_COPY(InitiateJobResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

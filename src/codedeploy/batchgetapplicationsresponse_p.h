@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHGETAPPLICATIONSRESPONSE_P_H
 #define QTAWS_BATCHGETAPPLICATIONSRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "batchgetapplicationsrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class BatchGetApplicationsResponse;
+
+class QTAWS_EXPORT BatchGetApplicationsResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchGetApplicationsResponsePrivate(BatchGetApplicationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetApplicationsResponse)
+    Q_DISABLE_COPY(BatchGetApplicationsResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

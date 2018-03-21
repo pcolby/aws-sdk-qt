@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHTYPEDLINKRESPONSE_P_H
 #define QTAWS_DETACHTYPEDLINKRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "detachtypedlinkrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DetachTypedLinkResponse;
+
+class QTAWS_EXPORT DetachTypedLinkResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachTypedLinkResponsePrivate(DetachTypedLinkResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachTypedLinkResponse)
+    Q_DISABLE_COPY(DetachTypedLinkResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

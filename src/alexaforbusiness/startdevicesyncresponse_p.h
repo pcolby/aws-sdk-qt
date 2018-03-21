@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTDEVICESYNCRESPONSE_P_H
 #define QTAWS_STARTDEVICESYNCRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "startdevicesyncrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class StartDeviceSyncResponse;
+
+class QTAWS_EXPORT StartDeviceSyncResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartDeviceSyncResponsePrivate(StartDeviceSyncResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartDeviceSyncResponse)
+    Q_DISABLE_COPY(StartDeviceSyncResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_INDEXDOCUMENTSRESPONSE_P_H
 #define QTAWS_INDEXDOCUMENTSRESPONSE_P_H
 
+#include "cloudsearchresponse.h"
+#include "indexdocumentsrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class IndexDocumentsResponse;
+
+class QTAWS_EXPORT IndexDocumentsResponsePrivate : public CloudSearchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    IndexDocumentsResponsePrivate(IndexDocumentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(IndexDocumentsResponse)
+    Q_DISABLE_COPY(IndexDocumentsResponsePrivate)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

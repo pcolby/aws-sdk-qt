@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTEVENTSELECTORSRESPONSE_P_H
 #define QTAWS_PUTEVENTSELECTORSRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "puteventselectorsrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class PutEventSelectorsResponse;
+
+class QTAWS_EXPORT PutEventSelectorsResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutEventSelectorsResponsePrivate(PutEventSelectorsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutEventSelectorsResponse)
+    Q_DISABLE_COPY(PutEventSelectorsResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

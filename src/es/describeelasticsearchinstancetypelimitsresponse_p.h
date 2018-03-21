@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "describeelasticsearchinstancetypelimitsrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DescribeElasticsearchInstanceTypeLimitsResponse;
+
+class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeElasticsearchInstanceTypeLimitsResponsePrivate(DescribeElasticsearchInstanceTypeLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeElasticsearchInstanceTypeLimitsResponse)
+    Q_DISABLE_COPY(DescribeElasticsearchInstanceTypeLimitsResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

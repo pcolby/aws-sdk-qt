@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_P_H
 #define QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "listreviewpolicyresultsforhitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListReviewPolicyResultsForHITResponse;
+
+class QTAWS_EXPORT ListReviewPolicyResultsForHITResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListReviewPolicyResultsForHITResponsePrivate(ListReviewPolicyResultsForHITResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListReviewPolicyResultsForHITResponse)
+    Q_DISABLE_COPY(ListReviewPolicyResultsForHITResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

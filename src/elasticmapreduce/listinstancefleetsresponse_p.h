@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTINSTANCEFLEETSRESPONSE_P_H
 #define QTAWS_LISTINSTANCEFLEETSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "listinstancefleetsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListInstanceFleetsResponse;
+
+class QTAWS_EXPORT ListInstanceFleetsResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListInstanceFleetsResponsePrivate(ListInstanceFleetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListInstanceFleetsResponse)
+    Q_DISABLE_COPY(ListInstanceFleetsResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

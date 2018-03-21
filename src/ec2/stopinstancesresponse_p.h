@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPINSTANCESRESPONSE_P_H
 #define QTAWS_STOPINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "stopinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class StopInstancesResponse;
+
+class QTAWS_EXPORT StopInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopInstancesResponsePrivate(StopInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopInstancesResponse)
+    Q_DISABLE_COPY(StopInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

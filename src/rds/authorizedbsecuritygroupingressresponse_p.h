@@ -20,4 +20,31 @@
 #ifndef QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "authorizedbsecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class AuthorizeDBSecurityGroupIngressResponse;
+
+class QTAWS_EXPORT AuthorizeDBSecurityGroupIngressResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AuthorizeDBSecurityGroupIngressResponsePrivate(AuthorizeDBSecurityGroupIngressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeDBSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeDBSecurityGroupIngressResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

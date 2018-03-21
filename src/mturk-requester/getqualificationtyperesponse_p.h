@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETQUALIFICATIONTYPERESPONSE_P_H
 #define QTAWS_GETQUALIFICATIONTYPERESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "getqualificationtyperequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetQualificationTypeResponse;
+
+class QTAWS_EXPORT GetQualificationTypeResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetQualificationTypeResponsePrivate(GetQualificationTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetQualificationTypeResponse)
+    Q_DISABLE_COPY(GetQualificationTypeResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

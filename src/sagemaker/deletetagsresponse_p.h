@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_P_H
 #define QTAWS_DELETETAGSRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteTagsResponse;
+
+class QTAWS_EXPORT DeleteTagsResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTagsResponsePrivate(DeleteTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagsResponse)
+    Q_DISABLE_COPY(DeleteTagsResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDEFAULTBRANCHRESPONSE_P_H
 #define QTAWS_UPDATEDEFAULTBRANCHRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "updatedefaultbranchrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateDefaultBranchResponse;
+
+class QTAWS_EXPORT UpdateDefaultBranchResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDefaultBranchResponsePrivate(UpdateDefaultBranchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDefaultBranchResponse)
+    Q_DISABLE_COPY(UpdateDefaultBranchResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

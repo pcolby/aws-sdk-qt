@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 
+#include "cloudhsmv2response.h"
+#include "describeclustersrequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class DescribeClustersResponse;
+
+class QTAWS_EXPORT DescribeClustersResponsePrivate : public CloudHSMV2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeClustersResponsePrivate(DescribeClustersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClustersResponse)
+    Q_DISABLE_COPY(DescribeClustersResponsePrivate)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

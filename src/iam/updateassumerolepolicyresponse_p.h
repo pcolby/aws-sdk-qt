@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEASSUMEROLEPOLICYRESPONSE_P_H
 #define QTAWS_UPDATEASSUMEROLEPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateassumerolepolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateAssumeRolePolicyResponse;
+
+class QTAWS_EXPORT UpdateAssumeRolePolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAssumeRolePolicyResponsePrivate(UpdateAssumeRolePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAssumeRolePolicyResponse)
+    Q_DISABLE_COPY(UpdateAssumeRolePolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

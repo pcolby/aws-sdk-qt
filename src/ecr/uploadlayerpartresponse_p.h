@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPLOADLAYERPARTRESPONSE_P_H
 #define QTAWS_UPLOADLAYERPARTRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "uploadlayerpartrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class UploadLayerPartResponse;
+
+class QTAWS_EXPORT UploadLayerPartResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UploadLayerPartResponsePrivate(UploadLayerPartResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UploadLayerPartResponse)
+    Q_DISABLE_COPY(UploadLayerPartResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

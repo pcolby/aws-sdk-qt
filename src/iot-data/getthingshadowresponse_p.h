@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTHINGSHADOWRESPONSE_P_H
 #define QTAWS_GETTHINGSHADOWRESPONSE_P_H
 
+#include "iotdataplaneresponse.h"
+#include "getthingshadowrequest.h"
+
+namespace AWS {
+
+namespace IoTDataPlane {
+
+class GetThingShadowResponse;
+
+class QTAWS_EXPORT GetThingShadowResponsePrivate : public IoTDataPlaneResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetThingShadowResponsePrivate(GetThingShadowResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetThingShadowResponse)
+    Q_DISABLE_COPY(GetThingShadowResponsePrivate)
+
+};
+
+} // namespace IoTDataPlane
+} // namespace AWS
+
 #endif

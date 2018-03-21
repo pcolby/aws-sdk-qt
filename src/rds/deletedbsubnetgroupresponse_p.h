@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDBSUBNETGROUPRESPONSE_P_H
 #define QTAWS_DELETEDBSUBNETGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "deletedbsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteDBSubnetGroupResponse;
+
+class QTAWS_EXPORT DeleteDBSubnetGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDBSubnetGroupResponsePrivate(DeleteDBSubnetGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDBSubnetGroupResponse)
+    Q_DISABLE_COPY(DeleteDBSubnetGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

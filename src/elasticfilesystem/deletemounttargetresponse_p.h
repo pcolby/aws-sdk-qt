@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEMOUNTTARGETRESPONSE_P_H
 #define QTAWS_DELETEMOUNTTARGETRESPONSE_P_H
 
+#include "efsresponse.h"
+#include "deletemounttargetrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DeleteMountTargetResponse;
+
+class QTAWS_EXPORT DeleteMountTargetResponsePrivate : public EFSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteMountTargetResponsePrivate(DeleteMountTargetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMountTargetResponse)
+    Q_DISABLE_COPY(DeleteMountTargetResponsePrivate)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

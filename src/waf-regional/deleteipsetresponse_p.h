@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEIPSETRESPONSE_P_H
 #define QTAWS_DELETEIPSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "deleteipsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteIPSetResponse;
+
+class QTAWS_EXPORT DeleteIPSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteIPSetResponsePrivate(DeleteIPSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIPSetResponse)
+    Q_DISABLE_COPY(DeleteIPSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

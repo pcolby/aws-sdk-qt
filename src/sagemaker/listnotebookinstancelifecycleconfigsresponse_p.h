@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTNOTEBOOKINSTANCELIFECYCLECONFIGSRESPONSE_P_H
 #define QTAWS_LISTNOTEBOOKINSTANCELIFECYCLECONFIGSRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "listnotebookinstancelifecycleconfigsrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class ListNotebookInstanceLifecycleConfigsResponse;
+
+class QTAWS_EXPORT ListNotebookInstanceLifecycleConfigsResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListNotebookInstanceLifecycleConfigsResponsePrivate(ListNotebookInstanceLifecycleConfigsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListNotebookInstanceLifecycleConfigsResponse)
+    Q_DISABLE_COPY(ListNotebookInstanceLifecycleConfigsResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

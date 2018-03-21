@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPFLEETRESPONSE_P_H
 #define QTAWS_STOPFLEETRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "stopfleetrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class StopFleetResponse;
+
+class QTAWS_EXPORT StopFleetResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopFleetResponsePrivate(StopFleetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopFleetResponse)
+    Q_DISABLE_COPY(StopFleetResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

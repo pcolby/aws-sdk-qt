@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONDITIONALFORWARDERRESPONSE_P_H
 #define QTAWS_UPDATECONDITIONALFORWARDERRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "updateconditionalforwarderrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class UpdateConditionalForwarderResponse;
+
+class QTAWS_EXPORT UpdateConditionalForwarderResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConditionalForwarderResponsePrivate(UpdateConditionalForwarderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConditionalForwarderResponse)
+    Q_DISABLE_COPY(UpdateConditionalForwarderResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

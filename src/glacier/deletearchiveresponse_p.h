@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEARCHIVERESPONSE_P_H
 #define QTAWS_DELETEARCHIVERESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "deletearchiverequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class DeleteArchiveResponse;
+
+class QTAWS_EXPORT DeleteArchiveResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteArchiveResponsePrivate(DeleteArchiveResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteArchiveResponse)
+    Q_DISABLE_COPY(DeleteArchiveResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

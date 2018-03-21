@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESEGMENTRESPONSE_P_H
 #define QTAWS_DELETESEGMENTRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "deletesegmentrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteSegmentResponse;
+
+class QTAWS_EXPORT DeleteSegmentResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSegmentResponsePrivate(DeleteSegmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSegmentResponse)
+    Q_DISABLE_COPY(DeleteSegmentResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

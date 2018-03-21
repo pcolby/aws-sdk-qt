@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETRUSTEDADVISORCHECKSUMMARIESRESPONSE_P_H
 #define QTAWS_DESCRIBETRUSTEDADVISORCHECKSUMMARIESRESPONSE_P_H
 
+#include "supportresponse.h"
+#include "describetrustedadvisorchecksummariesrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeTrustedAdvisorCheckSummariesResponse;
+
+class QTAWS_EXPORT DescribeTrustedAdvisorCheckSummariesResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTrustedAdvisorCheckSummariesResponsePrivate(DescribeTrustedAdvisorCheckSummariesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTrustedAdvisorCheckSummariesResponse)
+    Q_DISABLE_COPY(DescribeTrustedAdvisorCheckSummariesResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

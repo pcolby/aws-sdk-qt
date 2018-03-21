@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTRESOURCEATTRIBUTESRESPONSE_P_H
 #define QTAWS_PUTRESOURCEATTRIBUTESRESPONSE_P_H
 
+#include "migrationhubresponse.h"
+#include "putresourceattributesrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class PutResourceAttributesResponse;
+
+class QTAWS_EXPORT PutResourceAttributesResponsePrivate : public MigrationHubResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutResourceAttributesResponsePrivate(PutResourceAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutResourceAttributesResponse)
+    Q_DISABLE_COPY(PutResourceAttributesResponsePrivate)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

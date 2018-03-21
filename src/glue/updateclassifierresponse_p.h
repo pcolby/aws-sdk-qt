@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECLASSIFIERRESPONSE_P_H
 #define QTAWS_UPDATECLASSIFIERRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "updateclassifierrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateClassifierResponse;
+
+class QTAWS_EXPORT UpdateClassifierResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateClassifierResponsePrivate(UpdateClassifierResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateClassifierResponse)
+    Q_DISABLE_COPY(UpdateClassifierResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

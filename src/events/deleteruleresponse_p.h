@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERULERESPONSE_P_H
 #define QTAWS_DELETERULERESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "deleterulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class DeleteRuleResponse;
+
+class QTAWS_EXPORT DeleteRuleResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRuleResponsePrivate(DeleteRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRuleResponse)
+    Q_DISABLE_COPY(DeleteRuleResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

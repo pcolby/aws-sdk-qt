@@ -20,4 +20,31 @@
 #ifndef QTAWS_VALIDATEPIPELINEDEFINITIONRESPONSE_P_H
 #define QTAWS_VALIDATEPIPELINEDEFINITIONRESPONSE_P_H
 
+#include "datapipelineresponse.h"
+#include "validatepipelinedefinitionrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class ValidatePipelineDefinitionResponse;
+
+class QTAWS_EXPORT ValidatePipelineDefinitionResponsePrivate : public DataPipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ValidatePipelineDefinitionResponsePrivate(ValidatePipelineDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ValidatePipelineDefinitionResponse)
+    Q_DISABLE_COPY(ValidatePipelineDefinitionResponsePrivate)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

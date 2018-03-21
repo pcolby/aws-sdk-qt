@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEHSMRESPONSE_P_H
 #define QTAWS_DESCRIBEHSMRESPONSE_P_H
 
+#include "cloudhsmresponse.h"
+#include "describehsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class DescribeHsmResponse;
+
+class QTAWS_EXPORT DescribeHsmResponsePrivate : public CloudHSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeHsmResponsePrivate(DescribeHsmResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHsmResponse)
+    Q_DISABLE_COPY(DescribeHsmResponsePrivate)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

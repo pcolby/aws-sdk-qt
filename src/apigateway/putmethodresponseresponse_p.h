@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTMETHODRESPONSERESPONSE_P_H
 #define QTAWS_PUTMETHODRESPONSERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "putmethodresponserequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class PutMethodResponseResponse;
+
+class QTAWS_EXPORT PutMethodResponseResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutMethodResponseResponsePrivate(PutMethodResponseResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutMethodResponseResponse)
+    Q_DISABLE_COPY(PutMethodResponseResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

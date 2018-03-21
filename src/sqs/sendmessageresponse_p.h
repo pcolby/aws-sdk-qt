@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDMESSAGERESPONSE_P_H
 #define QTAWS_SENDMESSAGERESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "sendmessagerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class SendMessageResponse;
+
+class QTAWS_EXPORT SendMessageResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendMessageResponsePrivate(SendMessageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendMessageResponse)
+    Q_DISABLE_COPY(SendMessageResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

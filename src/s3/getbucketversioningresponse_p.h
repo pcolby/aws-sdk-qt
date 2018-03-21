@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETVERSIONINGRESPONSE_P_H
 #define QTAWS_GETBUCKETVERSIONINGRESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketversioningrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketVersioningResponse;
+
+class QTAWS_EXPORT GetBucketVersioningResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketVersioningResponsePrivate(GetBucketVersioningResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketVersioningResponse)
+    Q_DISABLE_COPY(GetBucketVersioningResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

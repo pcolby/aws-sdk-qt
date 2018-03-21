@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUBLISHRESPONSE_P_H
 #define QTAWS_PUBLISHRESPONSE_P_H
 
+#include "iotdataplaneresponse.h"
+#include "publishrequest.h"
+
+namespace AWS {
+
+namespace IoTDataPlane {
+
+class PublishResponse;
+
+class QTAWS_EXPORT PublishResponsePrivate : public IoTDataPlaneResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PublishResponsePrivate(PublishResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PublishResponse)
+    Q_DISABLE_COPY(PublishResponsePrivate)
+
+};
+
+} // namespace IoTDataPlane
+} // namespace AWS
+
 #endif

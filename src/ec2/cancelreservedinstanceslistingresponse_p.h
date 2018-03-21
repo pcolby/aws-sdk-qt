@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELRESERVEDINSTANCESLISTINGRESPONSE_P_H
 #define QTAWS_CANCELRESERVEDINSTANCESLISTINGRESPONSE_P_H
 
+#include "ec2response.h"
+#include "cancelreservedinstanceslistingrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelReservedInstancesListingResponse;
+
+class QTAWS_EXPORT CancelReservedInstancesListingResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelReservedInstancesListingResponsePrivate(CancelReservedInstancesListingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelReservedInstancesListingResponse)
+    Q_DISABLE_COPY(CancelReservedInstancesListingResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

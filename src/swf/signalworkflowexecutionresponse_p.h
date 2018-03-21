@@ -20,4 +20,31 @@
 #ifndef QTAWS_SIGNALWORKFLOWEXECUTIONRESPONSE_P_H
 #define QTAWS_SIGNALWORKFLOWEXECUTIONRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "signalworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class SignalWorkflowExecutionResponse;
+
+class QTAWS_EXPORT SignalWorkflowExecutionResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SignalWorkflowExecutionResponsePrivate(SignalWorkflowExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SignalWorkflowExecutionResponse)
+    Q_DISABLE_COPY(SignalWorkflowExecutionResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

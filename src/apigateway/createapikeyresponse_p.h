@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEAPIKEYRESPONSE_P_H
 #define QTAWS_CREATEAPIKEYRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "createapikeyrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateApiKeyResponse;
+
+class QTAWS_EXPORT CreateApiKeyResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateApiKeyResponsePrivate(CreateApiKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateApiKeyResponse)
+    Q_DISABLE_COPY(CreateApiKeyResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

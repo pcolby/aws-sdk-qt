@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHANGETAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_CHANGETAGSFORRESOURCERESPONSE_P_H
 
+#include "route53response.h"
+#include "changetagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ChangeTagsForResourceResponse;
+
+class QTAWS_EXPORT ChangeTagsForResourceResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ChangeTagsForResourceResponsePrivate(ChangeTagsForResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ChangeTagsForResourceResponse)
+    Q_DISABLE_COPY(ChangeTagsForResourceResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

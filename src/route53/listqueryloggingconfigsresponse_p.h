@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTQUERYLOGGINGCONFIGSRESPONSE_P_H
 #define QTAWS_LISTQUERYLOGGINGCONFIGSRESPONSE_P_H
 
+#include "route53response.h"
+#include "listqueryloggingconfigsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListQueryLoggingConfigsResponse;
+
+class QTAWS_EXPORT ListQueryLoggingConfigsResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListQueryLoggingConfigsResponsePrivate(ListQueryLoggingConfigsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListQueryLoggingConfigsResponse)
+    Q_DISABLE_COPY(ListQueryLoggingConfigsResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

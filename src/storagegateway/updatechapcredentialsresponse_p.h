@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECHAPCREDENTIALSRESPONSE_P_H
 #define QTAWS_UPDATECHAPCREDENTIALSRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "updatechapcredentialsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateChapCredentialsResponse;
+
+class QTAWS_EXPORT UpdateChapCredentialsResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateChapCredentialsResponsePrivate(UpdateChapCredentialsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateChapCredentialsResponse)
+    Q_DISABLE_COPY(UpdateChapCredentialsResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

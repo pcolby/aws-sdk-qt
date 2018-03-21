@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINSTANCEEXPORTTASKRESPONSE_P_H
 #define QTAWS_CREATEINSTANCEEXPORTTASKRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createinstanceexporttaskrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateInstanceExportTaskResponse;
+
+class QTAWS_EXPORT CreateInstanceExportTaskResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateInstanceExportTaskResponsePrivate(CreateInstanceExportTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInstanceExportTaskResponse)
+    Q_DISABLE_COPY(CreateInstanceExportTaskResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

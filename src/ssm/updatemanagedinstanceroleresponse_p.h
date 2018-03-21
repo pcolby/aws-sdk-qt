@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEMANAGEDINSTANCEROLERESPONSE_P_H
 #define QTAWS_UPDATEMANAGEDINSTANCEROLERESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "updatemanagedinstancerolerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateManagedInstanceRoleResponse;
+
+class QTAWS_EXPORT UpdateManagedInstanceRoleResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateManagedInstanceRoleResponsePrivate(UpdateManagedInstanceRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateManagedInstanceRoleResponse)
+    Q_DISABLE_COPY(UpdateManagedInstanceRoleResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

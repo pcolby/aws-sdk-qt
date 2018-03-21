@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELSTEPSRESPONSE_P_H
 #define QTAWS_CANCELSTEPSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "cancelstepsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class CancelStepsResponse;
+
+class QTAWS_EXPORT CancelStepsResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelStepsResponsePrivate(CancelStepsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelStepsResponse)
+    Q_DISABLE_COPY(CancelStepsResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

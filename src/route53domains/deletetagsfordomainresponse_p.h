@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETAGSFORDOMAINRESPONSE_P_H
 #define QTAWS_DELETETAGSFORDOMAINRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "deletetagsfordomainrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class DeleteTagsForDomainResponse;
+
+class QTAWS_EXPORT DeleteTagsForDomainResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTagsForDomainResponsePrivate(DeleteTagsForDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagsForDomainResponse)
+    Q_DISABLE_COPY(DeleteTagsForDomainResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

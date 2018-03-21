@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTHINGTYPESRESPONSE_P_H
 #define QTAWS_LISTTHINGTYPESRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listthingtypesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListThingTypesResponse;
+
+class QTAWS_EXPORT ListThingTypesResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListThingTypesResponsePrivate(ListThingTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListThingTypesResponse)
+    Q_DISABLE_COPY(ListThingTypesResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

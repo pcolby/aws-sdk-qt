@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCURATEDENVIRONMENTIMAGESRESPONSE_P_H
 #define QTAWS_LISTCURATEDENVIRONMENTIMAGESRESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "listcuratedenvironmentimagesrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class ListCuratedEnvironmentImagesResponse;
+
+class QTAWS_EXPORT ListCuratedEnvironmentImagesResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListCuratedEnvironmentImagesResponsePrivate(ListCuratedEnvironmentImagesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListCuratedEnvironmentImagesResponse)
+    Q_DISABLE_COPY(ListCuratedEnvironmentImagesResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

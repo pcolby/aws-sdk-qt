@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETMETRICSCONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETBUCKETMETRICSCONFIGURATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketmetricsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketMetricsConfigurationResponse;
+
+class QTAWS_EXPORT GetBucketMetricsConfigurationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketMetricsConfigurationResponsePrivate(GetBucketMetricsConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketMetricsConfigurationResponse)
+    Q_DISABLE_COPY(GetBucketMetricsConfigurationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

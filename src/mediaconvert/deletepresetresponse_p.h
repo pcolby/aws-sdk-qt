@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPRESETRESPONSE_P_H
 #define QTAWS_DELETEPRESETRESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "deletepresetrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DeletePresetResponse;
+
+class QTAWS_EXPORT DeletePresetResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePresetResponsePrivate(DeletePresetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePresetResponse)
+    Q_DISABLE_COPY(DeletePresetResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

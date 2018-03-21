@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECASERESPONSE_P_H
 #define QTAWS_CREATECASERESPONSE_P_H
 
+#include "supportresponse.h"
+#include "createcaserequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class CreateCaseResponse;
+
+class QTAWS_EXPORT CreateCaseResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCaseResponsePrivate(CreateCaseResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCaseResponse)
+    Q_DISABLE_COPY(CreateCaseResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

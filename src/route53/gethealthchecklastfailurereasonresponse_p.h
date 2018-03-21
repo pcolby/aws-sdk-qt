@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETHEALTHCHECKLASTFAILUREREASONRESPONSE_P_H
 #define QTAWS_GETHEALTHCHECKLASTFAILUREREASONRESPONSE_P_H
 
+#include "route53response.h"
+#include "gethealthchecklastfailurereasonrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetHealthCheckLastFailureReasonResponse;
+
+class QTAWS_EXPORT GetHealthCheckLastFailureReasonResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetHealthCheckLastFailureReasonResponsePrivate(GetHealthCheckLastFailureReasonResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetHealthCheckLastFailureReasonResponse)
+    Q_DISABLE_COPY(GetHealthCheckLastFailureReasonResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

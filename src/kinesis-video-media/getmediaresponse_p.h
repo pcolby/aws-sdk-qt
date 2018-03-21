@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETMEDIARESPONSE_P_H
 #define QTAWS_GETMEDIARESPONSE_P_H
 
+#include "kinesisvideomediaresponse.h"
+#include "getmediarequest.h"
+
+namespace AWS {
+
+namespace KinesisVideoMedia {
+
+class GetMediaResponse;
+
+class QTAWS_EXPORT GetMediaResponsePrivate : public KinesisVideoMediaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetMediaResponsePrivate(GetMediaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetMediaResponse)
+    Q_DISABLE_COPY(GetMediaResponsePrivate)
+
+};
+
+} // namespace KinesisVideoMedia
+} // namespace AWS
+
 #endif

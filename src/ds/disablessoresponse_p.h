@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLESSORESPONSE_P_H
 #define QTAWS_DISABLESSORESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "disablessorequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DisableSsoResponse;
+
+class QTAWS_EXPORT DisableSsoResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableSsoResponsePrivate(DisableSsoResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableSsoResponse)
+    Q_DISABLE_COPY(DisableSsoResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

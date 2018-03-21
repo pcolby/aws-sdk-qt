@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETOPICRULERESPONSE_P_H
 #define QTAWS_DELETETOPICRULERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "deletetopicrulerequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteTopicRuleResponse;
+
+class QTAWS_EXPORT DeleteTopicRuleResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTopicRuleResponsePrivate(DeleteTopicRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTopicRuleResponse)
+    Q_DISABLE_COPY(DeleteTopicRuleResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

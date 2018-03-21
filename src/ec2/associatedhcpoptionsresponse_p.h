@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATEDHCPOPTIONSRESPONSE_P_H
 #define QTAWS_ASSOCIATEDHCPOPTIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "associatedhcpoptionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateDhcpOptionsResponse;
+
+class QTAWS_EXPORT AssociateDhcpOptionsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateDhcpOptionsResponsePrivate(AssociateDhcpOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateDhcpOptionsResponse)
+    Q_DISABLE_COPY(AssociateDhcpOptionsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

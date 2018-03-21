@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEROUTETABLESRESPONSE_P_H
 #define QTAWS_DESCRIBEROUTETABLESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeroutetablesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeRouteTablesResponse;
+
+class QTAWS_EXPORT DescribeRouteTablesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRouteTablesResponsePrivate(DescribeRouteTablesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRouteTablesResponse)
+    Q_DISABLE_COPY(DescribeRouteTablesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

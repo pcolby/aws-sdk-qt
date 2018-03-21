@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONFILTERRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIPTIONFILTERRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "deletesubscriptionfilterrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteSubscriptionFilterResponse;
+
+class QTAWS_EXPORT DeleteSubscriptionFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSubscriptionFilterResponsePrivate(DeleteSubscriptionFilterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSubscriptionFilterResponse)
+    Q_DISABLE_COPY(DeleteSubscriptionFilterResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

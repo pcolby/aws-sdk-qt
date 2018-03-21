@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCAMPAIGNVERSIONRESPONSE_P_H
 #define QTAWS_GETCAMPAIGNVERSIONRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getcampaignversionrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetCampaignVersionResponse;
+
+class QTAWS_EXPORT GetCampaignVersionResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCampaignVersionResponsePrivate(GetCampaignVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCampaignVersionResponse)
+    Q_DISABLE_COPY(GetCampaignVersionResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

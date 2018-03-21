@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREMOTEACCESSSESSIONRESPONSE_P_H
 #define QTAWS_DELETEREMOTEACCESSSESSIONRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "deleteremoteaccesssessionrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteRemoteAccessSessionResponse;
+
+class QTAWS_EXPORT DeleteRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRemoteAccessSessionResponsePrivate(DeleteRemoteAccessSessionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRemoteAccessSessionResponse)
+    Q_DISABLE_COPY(DeleteRemoteAccessSessionResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

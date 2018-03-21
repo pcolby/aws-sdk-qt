@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAUTOMATIONEXECUTIONRESPONSE_P_H
 #define QTAWS_GETAUTOMATIONEXECUTIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "getautomationexecutionrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetAutomationExecutionResponse;
+
+class QTAWS_EXPORT GetAutomationExecutionResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAutomationExecutionResponsePrivate(GetAutomationExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAutomationExecutionResponse)
+    Q_DISABLE_COPY(GetAutomationExecutionResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_NOTIFYWORKERSRESPONSE_P_H
 #define QTAWS_NOTIFYWORKERSRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "notifyworkersrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class NotifyWorkersResponse;
+
+class QTAWS_EXPORT NotifyWorkersResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    NotifyWorkersResponsePrivate(NotifyWorkersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(NotifyWorkersResponse)
+    Q_DISABLE_COPY(NotifyWorkersResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

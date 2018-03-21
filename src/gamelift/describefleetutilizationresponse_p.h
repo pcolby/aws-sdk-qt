@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFLEETUTILIZATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETUTILIZATIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describefleetutilizationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetUtilizationResponse;
+
+class QTAWS_EXPORT DescribeFleetUtilizationResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFleetUtilizationResponsePrivate(DescribeFleetUtilizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFleetUtilizationResponse)
+    Q_DISABLE_COPY(DescribeFleetUtilizationResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

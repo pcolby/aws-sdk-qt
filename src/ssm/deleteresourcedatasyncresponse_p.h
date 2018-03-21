@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERESOURCEDATASYNCRESPONSE_P_H
 #define QTAWS_DELETERESOURCEDATASYNCRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "deleteresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteResourceDataSyncResponse;
+
+class QTAWS_EXPORT DeleteResourceDataSyncResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteResourceDataSyncResponsePrivate(DeleteResourceDataSyncResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteResourceDataSyncResponse)
+    Q_DISABLE_COPY(DeleteResourceDataSyncResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

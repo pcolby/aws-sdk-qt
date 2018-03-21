@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETENATGATEWAYRESPONSE_P_H
 #define QTAWS_DELETENATGATEWAYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletenatgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteNatGatewayResponse;
+
+class QTAWS_EXPORT DeleteNatGatewayResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteNatGatewayResponsePrivate(DeleteNatGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNatGatewayResponse)
+    Q_DISABLE_COPY(DeleteNatGatewayResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

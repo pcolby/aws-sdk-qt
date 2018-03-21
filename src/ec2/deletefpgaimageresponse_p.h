@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEFPGAIMAGERESPONSE_P_H
 #define QTAWS_DELETEFPGAIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletefpgaimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteFpgaImageResponse;
+
+class QTAWS_EXPORT DeleteFpgaImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteFpgaImageResponsePrivate(DeleteFpgaImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFpgaImageResponse)
+    Q_DISABLE_COPY(DeleteFpgaImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

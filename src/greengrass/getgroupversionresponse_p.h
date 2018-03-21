@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETGROUPVERSIONRESPONSE_P_H
 #define QTAWS_GETGROUPVERSIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "getgroupversionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetGroupVersionResponse;
+
+class QTAWS_EXPORT GetGroupVersionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetGroupVersionResponsePrivate(GetGroupVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetGroupVersionResponse)
+    Q_DISABLE_COPY(GetGroupVersionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

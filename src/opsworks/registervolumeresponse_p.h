@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERVOLUMERESPONSE_P_H
 #define QTAWS_REGISTERVOLUMERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "registervolumerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RegisterVolumeResponse;
+
+class QTAWS_EXPORT RegisterVolumeResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterVolumeResponsePrivate(RegisterVolumeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterVolumeResponse)
+    Q_DISABLE_COPY(RegisterVolumeResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

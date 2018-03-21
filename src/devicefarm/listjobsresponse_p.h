@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTJOBSRESPONSE_P_H
 #define QTAWS_LISTJOBSRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "listjobsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListJobsResponse;
+
+class QTAWS_EXPORT ListJobsResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListJobsResponsePrivate(ListJobsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListJobsResponse)
+    Q_DISABLE_COPY(ListJobsResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

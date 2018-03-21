@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERDSDBINSTANCERESPONSE_P_H
 #define QTAWS_UPDATERDSDBINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "updaterdsdbinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateRdsDbInstanceResponse;
+
+class QTAWS_EXPORT UpdateRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateRdsDbInstanceResponsePrivate(UpdateRdsDbInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRdsDbInstanceResponse)
+    Q_DISABLE_COPY(UpdateRdsDbInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

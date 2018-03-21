@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAPPRESPONSE_P_H
 #define QTAWS_UPDATEAPPRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "updateapprequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateAppResponse;
+
+class QTAWS_EXPORT UpdateAppResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAppResponsePrivate(UpdateAppResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAppResponse)
+    Q_DISABLE_COPY(UpdateAppResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

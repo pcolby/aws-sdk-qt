@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETTOPICATTRIBUTESRESPONSE_P_H
 #define QTAWS_SETTOPICATTRIBUTESRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "settopicattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetTopicAttributesResponse;
+
+class QTAWS_EXPORT SetTopicAttributesResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetTopicAttributesResponsePrivate(SetTopicAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetTopicAttributesResponse)
+    Q_DISABLE_COPY(SetTopicAttributesResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

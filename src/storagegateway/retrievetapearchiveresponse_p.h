@@ -20,4 +20,31 @@
 #ifndef QTAWS_RETRIEVETAPEARCHIVERESPONSE_P_H
 #define QTAWS_RETRIEVETAPEARCHIVERESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "retrievetapearchiverequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class RetrieveTapeArchiveResponse;
+
+class QTAWS_EXPORT RetrieveTapeArchiveResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RetrieveTapeArchiveResponsePrivate(RetrieveTapeArchiveResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RetrieveTapeArchiveResponse)
+    Q_DISABLE_COPY(RetrieveTapeArchiveResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

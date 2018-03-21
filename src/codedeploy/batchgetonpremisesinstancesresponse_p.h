@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHGETONPREMISESINSTANCESRESPONSE_P_H
 #define QTAWS_BATCHGETONPREMISESINSTANCESRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "batchgetonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class BatchGetOnPremisesInstancesResponse;
+
+class QTAWS_EXPORT BatchGetOnPremisesInstancesResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchGetOnPremisesInstancesResponsePrivate(BatchGetOnPremisesInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetOnPremisesInstancesResponse)
+    Q_DISABLE_COPY(BatchGetOnPremisesInstancesResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

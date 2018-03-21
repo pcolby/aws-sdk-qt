@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDATTRIBUTESTOFINDINGSRESPONSE_P_H
 #define QTAWS_ADDATTRIBUTESTOFINDINGSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "addattributestofindingsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class AddAttributesToFindingsResponse;
+
+class QTAWS_EXPORT AddAttributesToFindingsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddAttributesToFindingsResponsePrivate(AddAttributesToFindingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddAttributesToFindingsResponse)
+    Q_DISABLE_COPY(AddAttributesToFindingsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

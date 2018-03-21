@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGLOBALTABLESRESPONSE_P_H
 #define QTAWS_LISTGLOBALTABLESRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "listglobaltablesrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ListGlobalTablesResponse;
+
+class QTAWS_EXPORT ListGlobalTablesResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGlobalTablesResponsePrivate(ListGlobalTablesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGlobalTablesResponse)
+    Q_DISABLE_COPY(ListGlobalTablesResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

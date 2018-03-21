@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 #define QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "createconfigurationseteventdestinationrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateConfigurationSetEventDestinationResponse;
+
+class QTAWS_EXPORT CreateConfigurationSetEventDestinationResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateConfigurationSetEventDestinationResponsePrivate(CreateConfigurationSetEventDestinationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConfigurationSetEventDestinationResponse)
+    Q_DISABLE_COPY(CreateConfigurationSetEventDestinationResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

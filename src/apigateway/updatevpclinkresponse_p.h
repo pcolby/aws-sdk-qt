@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEVPCLINKRESPONSE_P_H
 #define QTAWS_UPDATEVPCLINKRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "updatevpclinkrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateVpcLinkResponse;
+
+class QTAWS_EXPORT UpdateVpcLinkResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateVpcLinkResponsePrivate(UpdateVpcLinkResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateVpcLinkResponse)
+    Q_DISABLE_COPY(UpdateVpcLinkResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

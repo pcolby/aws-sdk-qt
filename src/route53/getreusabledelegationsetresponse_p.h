@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETREUSABLEDELEGATIONSETRESPONSE_P_H
 #define QTAWS_GETREUSABLEDELEGATIONSETRESPONSE_P_H
 
+#include "route53response.h"
+#include "getreusabledelegationsetrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetReusableDelegationSetResponse;
+
+class QTAWS_EXPORT GetReusableDelegationSetResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetReusableDelegationSetResponsePrivate(GetReusableDelegationSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetReusableDelegationSetResponse)
+    Q_DISABLE_COPY(GetReusableDelegationSetResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

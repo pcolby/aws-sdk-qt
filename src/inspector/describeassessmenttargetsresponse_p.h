@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEASSESSMENTTARGETSRESPONSE_P_H
 #define QTAWS_DESCRIBEASSESSMENTTARGETSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "describeassessmenttargetsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeAssessmentTargetsResponse;
+
+class QTAWS_EXPORT DescribeAssessmentTargetsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAssessmentTargetsResponsePrivate(DescribeAssessmentTargetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAssessmentTargetsResponse)
+    Q_DISABLE_COPY(DescribeAssessmentTargetsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

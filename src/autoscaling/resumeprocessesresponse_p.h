@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESUMEPROCESSESRESPONSE_P_H
 #define QTAWS_RESUMEPROCESSESRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "resumeprocessesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class ResumeProcessesResponse;
+
+class QTAWS_EXPORT ResumeProcessesResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResumeProcessesResponsePrivate(ResumeProcessesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResumeProcessesResponse)
+    Q_DISABLE_COPY(ResumeProcessesResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

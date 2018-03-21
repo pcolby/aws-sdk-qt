@@ -20,4 +20,31 @@
 #ifndef QTAWS_CLONESTACKRESPONSE_P_H
 #define QTAWS_CLONESTACKRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "clonestackrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CloneStackResponse;
+
+class QTAWS_EXPORT CloneStackResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CloneStackResponsePrivate(CloneStackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CloneStackResponse)
+    Q_DISABLE_COPY(CloneStackResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

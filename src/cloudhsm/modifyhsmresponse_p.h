@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYHSMRESPONSE_P_H
 #define QTAWS_MODIFYHSMRESPONSE_P_H
 
+#include "cloudhsmresponse.h"
+#include "modifyhsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class ModifyHsmResponse;
+
+class QTAWS_EXPORT ModifyHsmResponsePrivate : public CloudHSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyHsmResponsePrivate(ModifyHsmResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyHsmResponse)
+    Q_DISABLE_COPY(ModifyHsmResponsePrivate)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

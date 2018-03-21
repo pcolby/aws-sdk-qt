@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEACTIVATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEACTIVATIONSRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describeactivationsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeActivationsResponse;
+
+class QTAWS_EXPORT DescribeActivationsResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeActivationsResponsePrivate(DescribeActivationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeActivationsResponse)
+    Q_DISABLE_COPY(DescribeActivationsResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

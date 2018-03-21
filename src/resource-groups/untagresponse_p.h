@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGRESPONSE_P_H
 #define QTAWS_UNTAGRESPONSE_P_H
 
+#include "resourcegroupsresponse.h"
+#include "untagrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class UntagResponse;
+
+class QTAWS_EXPORT UntagResponsePrivate : public ResourceGroupsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagResponsePrivate(UntagResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResponse)
+    Q_DISABLE_COPY(UntagResponsePrivate)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

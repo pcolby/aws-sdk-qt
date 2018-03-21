@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCLUSTERSRESPONSE_P_H
 #define QTAWS_LISTCLUSTERSRESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "listclustersrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class ListClustersResponse;
+
+class QTAWS_EXPORT ListClustersResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListClustersResponsePrivate(ListClustersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListClustersResponse)
+    Q_DISABLE_COPY(ListClustersResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

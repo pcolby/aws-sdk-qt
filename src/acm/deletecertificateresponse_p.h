@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECERTIFICATERESPONSE_P_H
 #define QTAWS_DELETECERTIFICATERESPONSE_P_H
 
+#include "acmresponse.h"
+#include "deletecertificaterequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class DeleteCertificateResponse;
+
+class QTAWS_EXPORT DeleteCertificateResponsePrivate : public ACMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteCertificateResponsePrivate(DeleteCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCertificateResponse)
+    Q_DISABLE_COPY(DeleteCertificateResponsePrivate)
+
+};
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

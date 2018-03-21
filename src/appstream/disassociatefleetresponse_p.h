@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEFLEETRESPONSE_P_H
 #define QTAWS_DISASSOCIATEFLEETRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "disassociatefleetrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DisassociateFleetResponse;
+
+class QTAWS_EXPORT DisassociateFleetResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateFleetResponsePrivate(DisassociateFleetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateFleetResponse)
+    Q_DISABLE_COPY(DisassociateFleetResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

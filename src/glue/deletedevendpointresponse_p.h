@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDEVENDPOINTRESPONSE_P_H
 #define QTAWS_DELETEDEVENDPOINTRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "deletedevendpointrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteDevEndpointResponse;
+
+class QTAWS_EXPORT DeleteDevEndpointResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDevEndpointResponsePrivate(DeleteDevEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDevEndpointResponse)
+    Q_DISABLE_COPY(DeleteDevEndpointResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

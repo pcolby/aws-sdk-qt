@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTUNIQUEPROBLEMSRESPONSE_P_H
 #define QTAWS_LISTUNIQUEPROBLEMSRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "listuniqueproblemsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListUniqueProblemsResponse;
+
+class QTAWS_EXPORT ListUniqueProblemsResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListUniqueProblemsResponsePrivate(ListUniqueProblemsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListUniqueProblemsResponse)
+    Q_DISABLE_COPY(ListUniqueProblemsResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

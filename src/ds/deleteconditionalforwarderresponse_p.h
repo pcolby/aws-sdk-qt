@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONDITIONALFORWARDERRESPONSE_P_H
 #define QTAWS_DELETECONDITIONALFORWARDERRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "deleteconditionalforwarderrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeleteConditionalForwarderResponse;
+
+class QTAWS_EXPORT DeleteConditionalForwarderResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConditionalForwarderResponsePrivate(DeleteConditionalForwarderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConditionalForwarderResponse)
+    Q_DISABLE_COPY(DeleteConditionalForwarderResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBOTALIASRESPONSE_P_H
 #define QTAWS_DELETEBOTALIASRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "deletebotaliasrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteBotAliasResponse;
+
+class QTAWS_EXPORT DeleteBotAliasResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBotAliasResponsePrivate(DeleteBotAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBotAliasResponse)
+    Q_DISABLE_COPY(DeleteBotAliasResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEORUPDATETAGSRESPONSE_P_H
 #define QTAWS_CREATEORUPDATETAGSRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "createorupdatetagsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class CreateOrUpdateTagsResponse;
+
+class QTAWS_EXPORT CreateOrUpdateTagsResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateOrUpdateTagsResponsePrivate(CreateOrUpdateTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateOrUpdateTagsResponse)
+    Q_DISABLE_COPY(CreateOrUpdateTagsResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

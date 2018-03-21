@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHINDEXRESPONSE_P_H
 #define QTAWS_SEARCHINDEXRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "searchindexrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class SearchIndexResponse;
+
+class QTAWS_EXPORT SearchIndexResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchIndexResponsePrivate(SearchIndexResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchIndexResponse)
+    Q_DISABLE_COPY(SearchIndexResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

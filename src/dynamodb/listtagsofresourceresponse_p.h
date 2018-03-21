@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSOFRESOURCERESPONSE_P_H
 #define QTAWS_LISTTAGSOFRESOURCERESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "listtagsofresourcerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ListTagsOfResourceResponse;
+
+class QTAWS_EXPORT ListTagsOfResourceResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsOfResourceResponsePrivate(ListTagsOfResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsOfResourceResponse)
+    Q_DISABLE_COPY(ListTagsOfResourceResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

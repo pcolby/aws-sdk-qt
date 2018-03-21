@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREUSABLEDELEGATIONSETRESPONSE_P_H
 #define QTAWS_DELETEREUSABLEDELEGATIONSETRESPONSE_P_H
 
+#include "route53response.h"
+#include "deletereusabledelegationsetrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteReusableDelegationSetResponse;
+
+class QTAWS_EXPORT DeleteReusableDelegationSetResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteReusableDelegationSetResponsePrivate(DeleteReusableDelegationSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReusableDelegationSetResponse)
+    Q_DISABLE_COPY(DeleteReusableDelegationSetResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

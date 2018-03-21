@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTDATACOLLECTIONBYAGENTIDSRESPONSE_P_H
 #define QTAWS_STARTDATACOLLECTIONBYAGENTIDSRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "startdatacollectionbyagentidsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class StartDataCollectionByAgentIdsResponse;
+
+class QTAWS_EXPORT StartDataCollectionByAgentIdsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartDataCollectionByAgentIdsResponsePrivate(StartDataCollectionByAgentIdsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartDataCollectionByAgentIdsResponse)
+    Q_DISABLE_COPY(StartDataCollectionByAgentIdsResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

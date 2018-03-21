@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPPLICATIONPOLICYRESPONSE_P_H
 #define QTAWS_GETAPPLICATIONPOLICYRESPONSE_P_H
 
+#include "serverlessapplicationrepositoryresponse.h"
+#include "getapplicationpolicyrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class GetApplicationPolicyResponse;
+
+class QTAWS_EXPORT GetApplicationPolicyResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetApplicationPolicyResponsePrivate(GetApplicationPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationPolicyResponse)
+    Q_DISABLE_COPY(GetApplicationPolicyResponsePrivate)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

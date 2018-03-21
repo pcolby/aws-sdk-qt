@@ -20,4 +20,31 @@
 #ifndef QTAWS_PURCHASEPROVISIONEDCAPACITYRESPONSE_P_H
 #define QTAWS_PURCHASEPROVISIONEDCAPACITYRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "purchaseprovisionedcapacityrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class PurchaseProvisionedCapacityResponse;
+
+class QTAWS_EXPORT PurchaseProvisionedCapacityResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PurchaseProvisionedCapacityResponsePrivate(PurchaseProvisionedCapacityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseProvisionedCapacityResponse)
+    Q_DISABLE_COPY(PurchaseProvisionedCapacityResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

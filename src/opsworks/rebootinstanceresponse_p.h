@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBOOTINSTANCERESPONSE_P_H
 #define QTAWS_REBOOTINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "rebootinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RebootInstanceResponse;
+
+class QTAWS_EXPORT RebootInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebootInstanceResponsePrivate(RebootInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebootInstanceResponse)
+    Q_DISABLE_COPY(RebootInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

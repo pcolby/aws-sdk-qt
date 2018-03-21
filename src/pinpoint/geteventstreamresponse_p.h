@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETEVENTSTREAMRESPONSE_P_H
 #define QTAWS_GETEVENTSTREAMRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "geteventstreamrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetEventStreamResponse;
+
+class QTAWS_EXPORT GetEventStreamResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetEventStreamResponsePrivate(GetEventStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetEventStreamResponse)
+    Q_DISABLE_COPY(GetEventStreamResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

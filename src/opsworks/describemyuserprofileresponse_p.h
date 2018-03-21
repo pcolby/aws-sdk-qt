@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEMYUSERPROFILERESPONSE_P_H
 #define QTAWS_DESCRIBEMYUSERPROFILERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describemyuserprofilerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeMyUserProfileResponse;
+
+class QTAWS_EXPORT DescribeMyUserProfileResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeMyUserProfileResponsePrivate(DescribeMyUserProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMyUserProfileResponse)
+    Q_DISABLE_COPY(DescribeMyUserProfileResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

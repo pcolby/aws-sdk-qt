@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPROVISIONINGARTIFACTRESPONSE_P_H
 #define QTAWS_CREATEPROVISIONINGARTIFACTRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "createprovisioningartifactrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class CreateProvisioningArtifactResponse;
+
+class QTAWS_EXPORT CreateProvisioningArtifactResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateProvisioningArtifactResponsePrivate(CreateProvisioningArtifactResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateProvisioningArtifactResponse)
+    Q_DISABLE_COPY(CreateProvisioningArtifactResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

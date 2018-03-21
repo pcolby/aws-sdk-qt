@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEWORKERBLOCKRESPONSE_P_H
 #define QTAWS_CREATEWORKERBLOCKRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "createworkerblockrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class CreateWorkerBlockResponse;
+
+class QTAWS_EXPORT CreateWorkerBlockResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateWorkerBlockResponsePrivate(CreateWorkerBlockResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateWorkerBlockResponse)
+    Q_DISABLE_COPY(CreateWorkerBlockResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

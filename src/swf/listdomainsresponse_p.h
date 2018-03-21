@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDOMAINSRESPONSE_P_H
 #define QTAWS_LISTDOMAINSRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "listdomainsrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListDomainsResponse;
+
+class QTAWS_EXPORT ListDomainsResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDomainsResponsePrivate(ListDomainsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDomainsResponse)
+    Q_DISABLE_COPY(ListDomainsResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTPERSONTRACKINGRESPONSE_P_H
 #define QTAWS_STARTPERSONTRACKINGRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "startpersontrackingrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StartPersonTrackingResponse;
+
+class QTAWS_EXPORT StartPersonTrackingResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartPersonTrackingResponsePrivate(StartPersonTrackingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartPersonTrackingResponse)
+    Q_DISABLE_COPY(StartPersonTrackingResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

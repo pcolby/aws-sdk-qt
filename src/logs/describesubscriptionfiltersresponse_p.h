@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONFILTERSRESPONSE_P_H
 #define QTAWS_DESCRIBESUBSCRIPTIONFILTERSRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "describesubscriptionfiltersrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeSubscriptionFiltersResponse;
+
+class QTAWS_EXPORT DescribeSubscriptionFiltersResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSubscriptionFiltersResponsePrivate(DescribeSubscriptionFiltersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSubscriptionFiltersResponse)
+    Q_DISABLE_COPY(DescribeSubscriptionFiltersResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

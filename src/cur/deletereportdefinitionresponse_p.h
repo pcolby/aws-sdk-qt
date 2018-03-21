@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREPORTDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETEREPORTDEFINITIONRESPONSE_P_H
 
+#include "costandusagereportserviceresponse.h"
+#include "deletereportdefinitionrequest.h"
+
+namespace AWS {
+
+namespace CostandUsageReportService {
+
+class DeleteReportDefinitionResponse;
+
+class QTAWS_EXPORT DeleteReportDefinitionResponsePrivate : public CostandUsageReportServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteReportDefinitionResponsePrivate(DeleteReportDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReportDefinitionResponse)
+    Q_DISABLE_COPY(DeleteReportDefinitionResponsePrivate)
+
+};
+
+} // namespace CostandUsageReportService
+} // namespace AWS
+
 #endif

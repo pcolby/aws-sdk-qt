@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEHITRESPONSE_P_H
 #define QTAWS_DELETEHITRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "deletehitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteHITResponse;
+
+class QTAWS_EXPORT DeleteHITResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteHITResponsePrivate(DeleteHITResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHITResponse)
+    Q_DISABLE_COPY(DeleteHITResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECONNECTIONRESPONSE_P_H
 #define QTAWS_CREATECONNECTIONRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "createconnectionrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateConnectionResponse;
+
+class QTAWS_EXPORT CreateConnectionResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateConnectionResponsePrivate(CreateConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConnectionResponse)
+    Q_DISABLE_COPY(CreateConnectionResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

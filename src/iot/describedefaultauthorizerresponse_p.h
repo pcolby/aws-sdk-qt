@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDEFAULTAUTHORIZERRESPONSE_P_H
 #define QTAWS_DESCRIBEDEFAULTAUTHORIZERRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "describedefaultauthorizerrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeDefaultAuthorizerResponse;
+
+class QTAWS_EXPORT DescribeDefaultAuthorizerResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDefaultAuthorizerResponsePrivate(DescribeDefaultAuthorizerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDefaultAuthorizerResponse)
+    Q_DISABLE_COPY(DescribeDefaultAuthorizerResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDASHBOARDSRESPONSE_P_H
 #define QTAWS_DELETEDASHBOARDSRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "deletedashboardsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DeleteDashboardsResponse;
+
+class QTAWS_EXPORT DeleteDashboardsResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDashboardsResponsePrivate(DeleteDashboardsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDashboardsResponse)
+    Q_DISABLE_COPY(DeleteDashboardsResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

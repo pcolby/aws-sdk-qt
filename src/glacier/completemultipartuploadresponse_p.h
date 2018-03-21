@@ -20,4 +20,31 @@
 #ifndef QTAWS_COMPLETEMULTIPARTUPLOADRESPONSE_P_H
 #define QTAWS_COMPLETEMULTIPARTUPLOADRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "completemultipartuploadrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class CompleteMultipartUploadResponse;
+
+class QTAWS_EXPORT CompleteMultipartUploadResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CompleteMultipartUploadResponsePrivate(CompleteMultipartUploadResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CompleteMultipartUploadResponse)
+    Q_DISABLE_COPY(CompleteMultipartUploadResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

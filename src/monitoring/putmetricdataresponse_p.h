@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTMETRICDATARESPONSE_P_H
 #define QTAWS_PUTMETRICDATARESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "putmetricdatarequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class PutMetricDataResponse;
+
+class QTAWS_EXPORT PutMetricDataResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutMetricDataResponsePrivate(PutMetricDataResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutMetricDataResponse)
+    Q_DISABLE_COPY(PutMetricDataResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

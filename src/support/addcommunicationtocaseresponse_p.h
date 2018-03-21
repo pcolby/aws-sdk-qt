@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDCOMMUNICATIONTOCASERESPONSE_P_H
 #define QTAWS_ADDCOMMUNICATIONTOCASERESPONSE_P_H
 
+#include "supportresponse.h"
+#include "addcommunicationtocaserequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class AddCommunicationToCaseResponse;
+
+class QTAWS_EXPORT AddCommunicationToCaseResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddCommunicationToCaseResponsePrivate(AddCommunicationToCaseResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddCommunicationToCaseResponse)
+    Q_DISABLE_COPY(AddCommunicationToCaseResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

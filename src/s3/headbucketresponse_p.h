@@ -20,4 +20,31 @@
 #ifndef QTAWS_HEADBUCKETRESPONSE_P_H
 #define QTAWS_HEADBUCKETRESPONSE_P_H
 
+#include "s3response.h"
+#include "headbucketrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class HeadBucketResponse;
+
+class QTAWS_EXPORT HeadBucketResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    HeadBucketResponsePrivate(HeadBucketResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(HeadBucketResponse)
+    Q_DISABLE_COPY(HeadBucketResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

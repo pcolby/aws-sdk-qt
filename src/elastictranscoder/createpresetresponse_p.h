@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPRESETRESPONSE_P_H
 #define QTAWS_CREATEPRESETRESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "createpresetrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class CreatePresetResponse;
+
+class QTAWS_EXPORT CreatePresetResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePresetResponsePrivate(CreatePresetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePresetResponse)
+    Q_DISABLE_COPY(CreatePresetResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

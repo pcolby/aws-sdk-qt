@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEBUDGETRESPONSE_P_H
 #define QTAWS_UPDATEBUDGETRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "updatebudgetrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class UpdateBudgetResponse;
+
+class QTAWS_EXPORT UpdateBudgetResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateBudgetResponsePrivate(UpdateBudgetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBudgetResponse)
+    Q_DISABLE_COPY(UpdateBudgetResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

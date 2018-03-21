@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPPLICATIONRESPONSE_P_H
 #define QTAWS_GETAPPLICATIONRESPONSE_P_H
 
+#include "serverlessapplicationrepositoryresponse.h"
+#include "getapplicationrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class GetApplicationResponse;
+
+class QTAWS_EXPORT GetApplicationResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetApplicationResponsePrivate(GetApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationResponse)
+    Q_DISABLE_COPY(GetApplicationResponsePrivate)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

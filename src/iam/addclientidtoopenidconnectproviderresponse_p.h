@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERRESPONSE_P_H
 #define QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "addclientidtoopenidconnectproviderrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AddClientIDToOpenIDConnectProviderResponse;
+
+class QTAWS_EXPORT AddClientIDToOpenIDConnectProviderResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddClientIDToOpenIDConnectProviderResponsePrivate(AddClientIDToOpenIDConnectProviderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddClientIDToOpenIDConnectProviderResponse)
+    Q_DISABLE_COPY(AddClientIDToOpenIDConnectProviderResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

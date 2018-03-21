@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBUCKETLIFECYCLERESPONSE_P_H
 #define QTAWS_DELETEBUCKETLIFECYCLERESPONSE_P_H
 
+#include "s3response.h"
+#include "deletebucketlifecyclerequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketLifecycleResponse;
+
+class QTAWS_EXPORT DeleteBucketLifecycleResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBucketLifecycleResponsePrivate(DeleteBucketLifecycleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBucketLifecycleResponse)
+    Q_DISABLE_COPY(DeleteBucketLifecycleResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

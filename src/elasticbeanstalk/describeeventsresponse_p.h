@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeeventsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeEventsResponse;
+
+class QTAWS_EXPORT DescribeEventsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEventsResponsePrivate(DescribeEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventsResponse)
+    Q_DISABLE_COPY(DescribeEventsResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

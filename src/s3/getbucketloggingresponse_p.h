@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETLOGGINGRESPONSE_P_H
 #define QTAWS_GETBUCKETLOGGINGRESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketloggingrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketLoggingResponse;
+
+class QTAWS_EXPORT GetBucketLoggingResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketLoggingResponsePrivate(GetBucketLoggingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketLoggingResponse)
+    Q_DISABLE_COPY(GetBucketLoggingResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

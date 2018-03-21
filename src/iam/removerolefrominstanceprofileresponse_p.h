@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEROLEFROMINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_REMOVEROLEFROMINSTANCEPROFILERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "removerolefrominstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class RemoveRoleFromInstanceProfileResponse;
+
+class QTAWS_EXPORT RemoveRoleFromInstanceProfileResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveRoleFromInstanceProfileResponsePrivate(RemoveRoleFromInstanceProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveRoleFromInstanceProfileResponse)
+    Q_DISABLE_COPY(RemoveRoleFromInstanceProfileResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

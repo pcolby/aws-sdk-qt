@@ -20,4 +20,31 @@
 #ifndef QTAWS_EVALUATEEXPRESSIONRESPONSE_P_H
 #define QTAWS_EVALUATEEXPRESSIONRESPONSE_P_H
 
+#include "datapipelineresponse.h"
+#include "evaluateexpressionrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class EvaluateExpressionResponse;
+
+class QTAWS_EXPORT EvaluateExpressionResponsePrivate : public DataPipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EvaluateExpressionResponsePrivate(EvaluateExpressionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EvaluateExpressionResponse)
+    Q_DISABLE_COPY(EvaluateExpressionResponsePrivate)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

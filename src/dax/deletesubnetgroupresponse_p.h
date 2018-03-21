@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESUBNETGROUPRESPONSE_P_H
 #define QTAWS_DELETESUBNETGROUPRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "deletesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DeleteSubnetGroupResponse;
+
+class QTAWS_EXPORT DeleteSubnetGroupResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSubnetGroupResponsePrivate(DeleteSubnetGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSubnetGroupResponse)
+    Q_DISABLE_COPY(DeleteSubnetGroupResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

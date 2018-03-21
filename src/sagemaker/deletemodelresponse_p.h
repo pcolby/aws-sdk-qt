@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEMODELRESPONSE_P_H
 #define QTAWS_DELETEMODELRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "deletemodelrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteModelResponse;
+
+class QTAWS_EXPORT DeleteModelResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteModelResponsePrivate(DeleteModelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteModelResponse)
+    Q_DISABLE_COPY(DeleteModelResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

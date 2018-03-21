@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTYPERESPONSE_P_H
 #define QTAWS_GETTYPERESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "gettyperequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetTypeResponse;
+
+class QTAWS_EXPORT GetTypeResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTypeResponsePrivate(GetTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTypeResponse)
+    Q_DISABLE_COPY(GetTypeResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

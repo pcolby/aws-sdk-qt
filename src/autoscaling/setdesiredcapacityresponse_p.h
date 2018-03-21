@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETDESIREDCAPACITYRESPONSE_P_H
 #define QTAWS_SETDESIREDCAPACITYRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "setdesiredcapacityrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class SetDesiredCapacityResponse;
+
+class QTAWS_EXPORT SetDesiredCapacityResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetDesiredCapacityResponsePrivate(SetDesiredCapacityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetDesiredCapacityResponse)
+    Q_DISABLE_COPY(SetDesiredCapacityResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

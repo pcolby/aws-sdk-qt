@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEBAIDUCHANNELRESPONSE_P_H
 #define QTAWS_UPDATEBAIDUCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "updatebaiduchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateBaiduChannelResponse;
+
+class QTAWS_EXPORT UpdateBaiduChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateBaiduChannelResponsePrivate(UpdateBaiduChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBaiduChannelResponse)
+    Q_DISABLE_COPY(UpdateBaiduChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHINTERNETGATEWAYRESPONSE_P_H
 #define QTAWS_ATTACHINTERNETGATEWAYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "attachinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AttachInternetGatewayResponse;
+
+class QTAWS_EXPORT AttachInternetGatewayResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachInternetGatewayResponsePrivate(AttachInternetGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachInternetGatewayResponse)
+    Q_DISABLE_COPY(AttachInternetGatewayResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

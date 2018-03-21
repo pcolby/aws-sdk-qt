@@ -20,4 +20,31 @@
 #ifndef QTAWS_VERIFYUSERATTRIBUTERESPONSE_P_H
 #define QTAWS_VERIFYUSERATTRIBUTERESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "verifyuserattributerequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class VerifyUserAttributeResponse;
+
+class QTAWS_EXPORT VerifyUserAttributeResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    VerifyUserAttributeResponsePrivate(VerifyUserAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyUserAttributeResponse)
+    Q_DISABLE_COPY(VerifyUserAttributeResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

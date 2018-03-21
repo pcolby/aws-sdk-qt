@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTQUEUETAGSRESPONSE_P_H
 #define QTAWS_LISTQUEUETAGSRESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "listqueuetagsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ListQueueTagsResponse;
+
+class QTAWS_EXPORT ListQueueTagsResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListQueueTagsResponsePrivate(ListQueueTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListQueueTagsResponse)
+    Q_DISABLE_COPY(ListQueueTagsResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

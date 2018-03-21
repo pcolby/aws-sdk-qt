@@ -20,4 +20,31 @@
 #ifndef QTAWS_INVOKEENDPOINTRESPONSE_P_H
 #define QTAWS_INVOKEENDPOINTRESPONSE_P_H
 
+#include "sagemakerruntimeresponse.h"
+#include "invokeendpointrequest.h"
+
+namespace AWS {
+
+namespace SageMakerRuntime {
+
+class InvokeEndpointResponse;
+
+class QTAWS_EXPORT InvokeEndpointResponsePrivate : public SageMakerRuntimeResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InvokeEndpointResponsePrivate(InvokeEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InvokeEndpointResponse)
+    Q_DISABLE_COPY(InvokeEndpointResponsePrivate)
+
+};
+
+} // namespace SageMakerRuntime
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PREDICTRESPONSE_P_H
 #define QTAWS_PREDICTRESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "predictrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class PredictResponse;
+
+class QTAWS_EXPORT PredictResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PredictResponsePrivate(PredictResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PredictResponse)
+    Q_DISABLE_COPY(PredictResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

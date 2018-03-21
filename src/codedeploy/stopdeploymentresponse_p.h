@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPDEPLOYMENTRESPONSE_P_H
 #define QTAWS_STOPDEPLOYMENTRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "stopdeploymentrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class StopDeploymentResponse;
+
+class QTAWS_EXPORT StopDeploymentResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopDeploymentResponsePrivate(StopDeploymentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopDeploymentResponse)
+    Q_DISABLE_COPY(StopDeploymentResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

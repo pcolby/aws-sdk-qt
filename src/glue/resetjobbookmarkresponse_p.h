@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETJOBBOOKMARKRESPONSE_P_H
 #define QTAWS_RESETJOBBOOKMARKRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "resetjobbookmarkrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class ResetJobBookmarkResponse;
+
+class QTAWS_EXPORT ResetJobBookmarkResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetJobBookmarkResponsePrivate(ResetJobBookmarkResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetJobBookmarkResponse)
+    Q_DISABLE_COPY(ResetJobBookmarkResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

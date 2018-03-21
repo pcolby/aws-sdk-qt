@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTHAPGSRESPONSE_P_H
 #define QTAWS_LISTHAPGSRESPONSE_P_H
 
+#include "cloudhsmresponse.h"
+#include "listhapgsrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class ListHapgsResponse;
+
+class QTAWS_EXPORT ListHapgsResponsePrivate : public CloudHSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListHapgsResponsePrivate(ListHapgsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListHapgsResponse)
+    Q_DISABLE_COPY(ListHapgsResponsePrivate)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

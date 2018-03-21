@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETABLERESPONSE_P_H
 #define QTAWS_DESCRIBETABLERESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "describetablerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeTableResponse;
+
+class QTAWS_EXPORT DescribeTableResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTableResponsePrivate(DescribeTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTableResponse)
+    Q_DISABLE_COPY(DescribeTableResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

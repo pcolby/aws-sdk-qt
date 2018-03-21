@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIPTIONRESPONSE_P_H
 
+#include "shieldresponse.h"
+#include "deletesubscriptionrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DeleteSubscriptionResponse;
+
+class QTAWS_EXPORT DeleteSubscriptionResponsePrivate : public ShieldResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSubscriptionResponsePrivate(DeleteSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSubscriptionResponse)
+    Q_DISABLE_COPY(DeleteSubscriptionResponsePrivate)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

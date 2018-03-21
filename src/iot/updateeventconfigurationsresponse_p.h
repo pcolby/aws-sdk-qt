@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEEVENTCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_UPDATEEVENTCONFIGURATIONSRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "updateeventconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateEventConfigurationsResponse;
+
+class QTAWS_EXPORT UpdateEventConfigurationsResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateEventConfigurationsResponsePrivate(UpdateEventConfigurationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEventConfigurationsResponse)
+    Q_DISABLE_COPY(UpdateEventConfigurationsResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_TESTROLERESPONSE_P_H
 #define QTAWS_TESTROLERESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "testrolerequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class TestRoleResponse;
+
+class QTAWS_EXPORT TestRoleResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TestRoleResponsePrivate(TestRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TestRoleResponse)
+    Q_DISABLE_COPY(TestRoleResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

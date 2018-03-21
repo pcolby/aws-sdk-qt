@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEUSERIMPORTJOBRESPONSE_P_H
 #define QTAWS_DESCRIBEUSERIMPORTJOBRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "describeuserimportjobrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DescribeUserImportJobResponse;
+
+class QTAWS_EXPORT DescribeUserImportJobResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeUserImportJobResponsePrivate(DescribeUserImportJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeUserImportJobResponse)
+    Q_DISABLE_COPY(DescribeUserImportJobResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTACCOUNTSFORPARENTRESPONSE_P_H
 #define QTAWS_LISTACCOUNTSFORPARENTRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listaccountsforparentrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListAccountsForParentResponse;
+
+class QTAWS_EXPORT ListAccountsForParentResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAccountsForParentResponsePrivate(ListAccountsForParentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAccountsForParentResponse)
+    Q_DISABLE_COPY(ListAccountsForParentResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

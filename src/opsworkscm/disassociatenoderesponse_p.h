@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATENODERESPONSE_P_H
 #define QTAWS_DISASSOCIATENODERESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "disassociatenoderequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DisassociateNodeResponse;
+
+class QTAWS_EXPORT DisassociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateNodeResponsePrivate(DisassociateNodeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateNodeResponse)
+    Q_DISABLE_COPY(DisassociateNodeResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

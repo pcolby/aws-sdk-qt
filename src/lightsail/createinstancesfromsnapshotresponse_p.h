@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINSTANCESFROMSNAPSHOTRESPONSE_P_H
 #define QTAWS_CREATEINSTANCESFROMSNAPSHOTRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "createinstancesfromsnapshotrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateInstancesFromSnapshotResponse;
+
+class QTAWS_EXPORT CreateInstancesFromSnapshotResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateInstancesFromSnapshotResponsePrivate(CreateInstancesFromSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInstancesFromSnapshotResponse)
+    Q_DISABLE_COPY(CreateInstancesFromSnapshotResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

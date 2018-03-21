@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEALARMSRESPONSE_P_H
 #define QTAWS_DELETEALARMSRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "deletealarmsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DeleteAlarmsResponse;
+
+class QTAWS_EXPORT DeleteAlarmsResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAlarmsResponsePrivate(DeleteAlarmsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAlarmsResponse)
+    Q_DISABLE_COPY(DeleteAlarmsResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

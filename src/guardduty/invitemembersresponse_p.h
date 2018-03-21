@@ -20,4 +20,31 @@
 #ifndef QTAWS_INVITEMEMBERSRESPONSE_P_H
 #define QTAWS_INVITEMEMBERSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "invitemembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class InviteMembersResponse;
+
+class QTAWS_EXPORT InviteMembersResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InviteMembersResponsePrivate(InviteMembersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InviteMembersResponse)
+    Q_DISABLE_COPY(InviteMembersResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

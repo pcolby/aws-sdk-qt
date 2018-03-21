@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERECEIPTRULERESPONSE_P_H
 #define QTAWS_UPDATERECEIPTRULERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updatereceiptrulerequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateReceiptRuleResponse;
+
+class QTAWS_EXPORT UpdateReceiptRuleResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateReceiptRuleResponsePrivate(UpdateReceiptRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateReceiptRuleResponse)
+    Q_DISABLE_COPY(UpdateReceiptRuleResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

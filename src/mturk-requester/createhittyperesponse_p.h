@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEHITTYPERESPONSE_P_H
 #define QTAWS_CREATEHITTYPERESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "createhittyperequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class CreateHITTypeResponse;
+
+class QTAWS_EXPORT CreateHITTypeResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateHITTypeResponsePrivate(CreateHITTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateHITTypeResponse)
+    Q_DISABLE_COPY(CreateHITTypeResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

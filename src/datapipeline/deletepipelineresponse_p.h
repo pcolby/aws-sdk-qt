@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPIPELINERESPONSE_P_H
 #define QTAWS_DELETEPIPELINERESPONSE_P_H
 
+#include "datapipelineresponse.h"
+#include "deletepipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class DeletePipelineResponse;
+
+class QTAWS_EXPORT DeletePipelineResponsePrivate : public DataPipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePipelineResponsePrivate(DeletePipelineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePipelineResponse)
+    Q_DISABLE_COPY(DeletePipelineResponsePrivate)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESERVICEERRORSRESPONSE_P_H
 #define QTAWS_DESCRIBESERVICEERRORSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describeserviceerrorsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeServiceErrorsResponse;
+
+class QTAWS_EXPORT DescribeServiceErrorsResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeServiceErrorsResponsePrivate(DescribeServiceErrorsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServiceErrorsResponse)
+    Q_DISABLE_COPY(DescribeServiceErrorsResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

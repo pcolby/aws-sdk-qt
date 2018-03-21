@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATERESERVEDINSTANCESLISTINGRESPONSE_P_H
 #define QTAWS_CREATERESERVEDINSTANCESLISTINGRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createreservedinstanceslistingrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateReservedInstancesListingResponse;
+
+class QTAWS_EXPORT CreateReservedInstancesListingResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateReservedInstancesListingResponsePrivate(CreateReservedInstancesListingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateReservedInstancesListingResponse)
+    Q_DISABLE_COPY(CreateReservedInstancesListingResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

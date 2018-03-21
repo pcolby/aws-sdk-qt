@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDMESSAGEBATCHRESPONSE_P_H
 #define QTAWS_SENDMESSAGEBATCHRESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "sendmessagebatchrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class SendMessageBatchResponse;
+
+class QTAWS_EXPORT SendMessageBatchResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendMessageBatchResponsePrivate(SendMessageBatchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendMessageBatchResponse)
+    Q_DISABLE_COPY(SendMessageBatchResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

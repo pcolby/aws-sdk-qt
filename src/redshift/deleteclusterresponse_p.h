@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECLUSTERRESPONSE_P_H
 #define QTAWS_DELETECLUSTERRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "deleteclusterrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteClusterResponse;
+
+class QTAWS_EXPORT DeleteClusterResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteClusterResponsePrivate(DeleteClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterResponse)
+    Q_DISABLE_COPY(DeleteClusterResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

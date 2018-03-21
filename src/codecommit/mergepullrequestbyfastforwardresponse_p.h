@@ -20,4 +20,31 @@
 #ifndef QTAWS_MERGEPULLREQUESTBYFASTFORWARDRESPONSE_P_H
 #define QTAWS_MERGEPULLREQUESTBYFASTFORWARDRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "mergepullrequestbyfastforwardrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class MergePullRequestByFastForwardResponse;
+
+class QTAWS_EXPORT MergePullRequestByFastForwardResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    MergePullRequestByFastForwardResponsePrivate(MergePullRequestByFastForwardResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(MergePullRequestByFastForwardResponse)
+    Q_DISABLE_COPY(MergePullRequestByFastForwardResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

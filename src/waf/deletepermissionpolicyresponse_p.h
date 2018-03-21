@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPERMISSIONPOLICYRESPONSE_P_H
 #define QTAWS_DELETEPERMISSIONPOLICYRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "deletepermissionpolicyrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeletePermissionPolicyResponse;
+
+class QTAWS_EXPORT DeletePermissionPolicyResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePermissionPolicyResponsePrivate(DeletePermissionPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePermissionPolicyResponse)
+    Q_DISABLE_COPY(DeletePermissionPolicyResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

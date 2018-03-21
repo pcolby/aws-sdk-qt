@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDBSECURITYGROUPRESPONSE_P_H
 #define QTAWS_CREATEDBSECURITYGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "createdbsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBSecurityGroupResponse;
+
+class QTAWS_EXPORT CreateDBSecurityGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDBSecurityGroupResponsePrivate(CreateDBSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDBSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateDBSecurityGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

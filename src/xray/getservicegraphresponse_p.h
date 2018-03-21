@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSERVICEGRAPHRESPONSE_P_H
 #define QTAWS_GETSERVICEGRAPHRESPONSE_P_H
 
+#include "xrayresponse.h"
+#include "getservicegraphrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class GetServiceGraphResponse;
+
+class QTAWS_EXPORT GetServiceGraphResponsePrivate : public XRayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetServiceGraphResponsePrivate(GetServiceGraphResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetServiceGraphResponse)
+    Q_DISABLE_COPY(GetServiceGraphResponsePrivate)
+
+};
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

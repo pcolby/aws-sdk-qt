@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVPCPEERINGAUTHORIZATIONRESPONSE_P_H
 #define QTAWS_DELETEVPCPEERINGAUTHORIZATIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "deletevpcpeeringauthorizationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteVpcPeeringAuthorizationResponse;
+
+class QTAWS_EXPORT DeleteVpcPeeringAuthorizationResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVpcPeeringAuthorizationResponsePrivate(DeleteVpcPeeringAuthorizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcPeeringAuthorizationResponse)
+    Q_DISABLE_COPY(DeleteVpcPeeringAuthorizationResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

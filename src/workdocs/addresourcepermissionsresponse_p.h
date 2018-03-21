@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDRESOURCEPERMISSIONSRESPONSE_P_H
 #define QTAWS_ADDRESOURCEPERMISSIONSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "addresourcepermissionsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class AddResourcePermissionsResponse;
+
+class QTAWS_EXPORT AddResourcePermissionsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddResourcePermissionsResponsePrivate(AddResourcePermissionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddResourcePermissionsResponse)
+    Q_DISABLE_COPY(AddResourcePermissionsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

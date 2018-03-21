@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTEPRESPONSE_P_H
 #define QTAWS_DESCRIBESTEPRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "describesteprequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeStepResponse;
+
+class QTAWS_EXPORT DescribeStepResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStepResponsePrivate(DescribeStepResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStepResponse)
+    Q_DISABLE_COPY(DescribeStepResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

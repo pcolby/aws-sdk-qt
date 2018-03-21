@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYIMAGEATTRIBUTERESPONSE_P_H
 #define QTAWS_MODIFYIMAGEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyImageAttributeResponse;
+
+class QTAWS_EXPORT ModifyImageAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyImageAttributeResponsePrivate(ModifyImageAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyImageAttributeResponse)
+    Q_DISABLE_COPY(ModifyImageAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

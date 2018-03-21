@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESRESPONSE_P_H
 #define QTAWS_DESCRIBECERTIFICATESRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describecertificatesrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeCertificatesResponse;
+
+class QTAWS_EXPORT DescribeCertificatesResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCertificatesResponsePrivate(DescribeCertificatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCertificatesResponse)
+    Q_DISABLE_COPY(DescribeCertificatesResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

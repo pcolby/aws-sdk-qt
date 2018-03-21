@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPULLREQUESTDESCRIPTIONRESPONSE_P_H
 #define QTAWS_UPDATEPULLREQUESTDESCRIPTIONRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "updatepullrequestdescriptionrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdatePullRequestDescriptionResponse;
+
+class QTAWS_EXPORT UpdatePullRequestDescriptionResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdatePullRequestDescriptionResponsePrivate(UpdatePullRequestDescriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePullRequestDescriptionResponse)
+    Q_DISABLE_COPY(UpdatePullRequestDescriptionResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

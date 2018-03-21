@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAUTHEVENTFEEDBACKRESPONSE_P_H
 #define QTAWS_UPDATEAUTHEVENTFEEDBACKRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "updateautheventfeedbackrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateAuthEventFeedbackResponse;
+
+class QTAWS_EXPORT UpdateAuthEventFeedbackResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAuthEventFeedbackResponsePrivate(UpdateAuthEventFeedbackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAuthEventFeedbackResponse)
+    Q_DISABLE_COPY(UpdateAuthEventFeedbackResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

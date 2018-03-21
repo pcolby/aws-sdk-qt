@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEVPCPEERINGCONNECTIONRESPONSE_P_H
 #define QTAWS_CREATEVPCPEERINGCONNECTIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createvpcpeeringconnectionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpcPeeringConnectionResponse;
+
+class QTAWS_EXPORT CreateVpcPeeringConnectionResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateVpcPeeringConnectionResponsePrivate(CreateVpcPeeringConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVpcPeeringConnectionResponse)
+    Q_DISABLE_COPY(CreateVpcPeeringConnectionResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

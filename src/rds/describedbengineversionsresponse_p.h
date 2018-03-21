@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDBENGINEVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBENGINEVERSIONSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describedbengineversionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBEngineVersionsResponse;
+
+class QTAWS_EXPORT DescribeDBEngineVersionsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDBEngineVersionsResponsePrivate(DescribeDBEngineVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBEngineVersionsResponse)
+    Q_DISABLE_COPY(DescribeDBEngineVersionsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

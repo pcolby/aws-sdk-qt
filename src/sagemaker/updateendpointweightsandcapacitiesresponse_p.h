@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESRESPONSE_P_H
 #define QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "updateendpointweightsandcapacitiesrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class UpdateEndpointWeightsAndCapacitiesResponse;
+
+class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateEndpointWeightsAndCapacitiesResponsePrivate(UpdateEndpointWeightsAndCapacitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEndpointWeightsAndCapacitiesResponse)
+    Q_DISABLE_COPY(UpdateEndpointWeightsAndCapacitiesResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

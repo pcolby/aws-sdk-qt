@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDISKSNAPSHOTRESPONSE_P_H
 #define QTAWS_GETDISKSNAPSHOTRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getdisksnapshotrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetDiskSnapshotResponse;
+
+class QTAWS_EXPORT GetDiskSnapshotResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDiskSnapshotResponsePrivate(GetDiskSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDiskSnapshotResponse)
+    Q_DISABLE_COPY(GetDiskSnapshotResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

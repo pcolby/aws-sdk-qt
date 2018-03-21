@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEACCESSKEYRESPONSE_P_H
 #define QTAWS_CREATEACCESSKEYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "createaccesskeyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateAccessKeyResponse;
+
+class QTAWS_EXPORT CreateAccessKeyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateAccessKeyResponsePrivate(CreateAccessKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAccessKeyResponse)
+    Q_DISABLE_COPY(CreateAccessKeyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

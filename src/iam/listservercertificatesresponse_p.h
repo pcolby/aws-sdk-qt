@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSERVERCERTIFICATESRESPONSE_P_H
 #define QTAWS_LISTSERVERCERTIFICATESRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listservercertificatesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListServerCertificatesResponse;
+
+class QTAWS_EXPORT ListServerCertificatesResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListServerCertificatesResponsePrivate(ListServerCertificatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListServerCertificatesResponse)
+    Q_DISABLE_COPY(ListServerCertificatesResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

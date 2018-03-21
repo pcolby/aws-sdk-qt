@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELIFECYCLEHOOKRESPONSE_P_H
 #define QTAWS_DELETELIFECYCLEHOOKRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "deletelifecyclehookrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteLifecycleHookResponse;
+
+class QTAWS_EXPORT DeleteLifecycleHookResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLifecycleHookResponsePrivate(DeleteLifecycleHookResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLifecycleHookResponse)
+    Q_DISABLE_COPY(DeleteLifecycleHookResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEWEBHOOKRESPONSE_P_H
 #define QTAWS_CREATEWEBHOOKRESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "createwebhookrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class CreateWebhookResponse;
+
+class QTAWS_EXPORT CreateWebhookResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateWebhookResponsePrivate(CreateWebhookResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateWebhookResponse)
+    Q_DISABLE_COPY(CreateWebhookResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

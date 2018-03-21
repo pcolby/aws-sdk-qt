@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPRESETRESPONSE_P_H
 #define QTAWS_CREATEPRESETRESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "createpresetrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class CreatePresetResponse;
+
+class QTAWS_EXPORT CreatePresetResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePresetResponsePrivate(CreatePresetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePresetResponse)
+    Q_DISABLE_COPY(CreatePresetResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

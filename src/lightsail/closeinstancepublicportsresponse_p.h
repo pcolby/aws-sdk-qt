@@ -20,4 +20,31 @@
 #ifndef QTAWS_CLOSEINSTANCEPUBLICPORTSRESPONSE_P_H
 #define QTAWS_CLOSEINSTANCEPUBLICPORTSRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "closeinstancepublicportsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CloseInstancePublicPortsResponse;
+
+class QTAWS_EXPORT CloseInstancePublicPortsResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CloseInstancePublicPortsResponsePrivate(CloseInstancePublicPortsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CloseInstancePublicPortsResponse)
+    Q_DISABLE_COPY(CloseInstancePublicPortsResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

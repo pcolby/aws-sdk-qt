@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEAPPLICATIONSRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeapplicationsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeApplicationsResponse;
+
+class QTAWS_EXPORT DescribeApplicationsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeApplicationsResponsePrivate(DescribeApplicationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeApplicationsResponse)
+    Q_DISABLE_COPY(DescribeApplicationsResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

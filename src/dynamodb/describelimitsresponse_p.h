@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBELIMITSRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "describelimitsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeLimitsResponse;
+
+class QTAWS_EXPORT DescribeLimitsResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLimitsResponsePrivate(DescribeLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLimitsResponse)
+    Q_DISABLE_COPY(DescribeLimitsResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

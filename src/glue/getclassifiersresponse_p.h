@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCLASSIFIERSRESPONSE_P_H
 #define QTAWS_GETCLASSIFIERSRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getclassifiersrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetClassifiersResponse;
+
+class QTAWS_EXPORT GetClassifiersResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetClassifiersResponsePrivate(GetClassifiersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetClassifiersResponse)
+    Q_DISABLE_COPY(GetClassifiersResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

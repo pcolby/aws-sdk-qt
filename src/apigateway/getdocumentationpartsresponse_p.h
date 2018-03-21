@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDOCUMENTATIONPARTSRESPONSE_P_H
 #define QTAWS_GETDOCUMENTATIONPARTSRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getdocumentationpartsrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetDocumentationPartsResponse;
+
+class QTAWS_EXPORT GetDocumentationPartsResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDocumentationPartsResponsePrivate(GetDocumentationPartsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDocumentationPartsResponse)
+    Q_DISABLE_COPY(GetDocumentationPartsResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

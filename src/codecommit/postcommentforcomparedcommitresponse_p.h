@@ -20,4 +20,31 @@
 #ifndef QTAWS_POSTCOMMENTFORCOMPAREDCOMMITRESPONSE_P_H
 #define QTAWS_POSTCOMMENTFORCOMPAREDCOMMITRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "postcommentforcomparedcommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PostCommentForComparedCommitResponse;
+
+class QTAWS_EXPORT PostCommentForComparedCommitResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PostCommentForComparedCommitResponsePrivate(PostCommentForComparedCommitResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PostCommentForComparedCommitResponse)
+    Q_DISABLE_COPY(PostCommentForComparedCommitResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

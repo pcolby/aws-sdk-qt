@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETECTSENTIMENTRESPONSE_P_H
 #define QTAWS_DETECTSENTIMENTRESPONSE_P_H
 
+#include "comprehendresponse.h"
+#include "detectsentimentrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class DetectSentimentResponse;
+
+class QTAWS_EXPORT DetectSentimentResponsePrivate : public ComprehendResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetectSentimentResponsePrivate(DetectSentimentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetectSentimentResponse)
+    Q_DISABLE_COPY(DetectSentimentResponsePrivate)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

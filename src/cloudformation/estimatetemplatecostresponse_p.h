@@ -20,4 +20,31 @@
 #ifndef QTAWS_ESTIMATETEMPLATECOSTRESPONSE_P_H
 #define QTAWS_ESTIMATETEMPLATECOSTRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "estimatetemplatecostrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class EstimateTemplateCostResponse;
+
+class QTAWS_EXPORT EstimateTemplateCostResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EstimateTemplateCostResponsePrivate(EstimateTemplateCostResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EstimateTemplateCostResponse)
+    Q_DISABLE_COPY(EstimateTemplateCostResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

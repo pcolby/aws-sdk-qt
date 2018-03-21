@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSKILLGROUPRESPONSE_P_H
 #define QTAWS_GETSKILLGROUPRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "getskillgrouprequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetSkillGroupResponse;
+
+class QTAWS_EXPORT GetSkillGroupResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSkillGroupResponsePrivate(GetSkillGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSkillGroupResponse)
+    Q_DISABLE_COPY(GetSkillGroupResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

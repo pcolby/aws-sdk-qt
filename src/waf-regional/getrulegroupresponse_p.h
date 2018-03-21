@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRULEGROUPRESPONSE_P_H
 #define QTAWS_GETRULEGROUPRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "getrulegrouprequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetRuleGroupResponse;
+
+class QTAWS_EXPORT GetRuleGroupResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRuleGroupResponsePrivate(GetRuleGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRuleGroupResponse)
+    Q_DISABLE_COPY(GetRuleGroupResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

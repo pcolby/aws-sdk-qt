@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELABELSRESPONSE_P_H
 #define QTAWS_DELETELABELSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "deletelabelsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteLabelsResponse;
+
+class QTAWS_EXPORT DeleteLabelsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLabelsResponsePrivate(DeleteLabelsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLabelsResponse)
+    Q_DISABLE_COPY(DeleteLabelsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

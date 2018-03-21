@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHRESPONSE_P_H
 #define QTAWS_SEARCHRESPONSE_P_H
 
+#include "cloudsearchdomainresponse.h"
+#include "searchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearchDomain {
+
+class SearchResponse;
+
+class QTAWS_EXPORT SearchResponsePrivate : public CloudSearchDomainResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchResponsePrivate(SearchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchResponse)
+    Q_DISABLE_COPY(SearchResponsePrivate)
+
+};
+
+} // namespace CloudSearchDomain
+} // namespace AWS
+
 #endif

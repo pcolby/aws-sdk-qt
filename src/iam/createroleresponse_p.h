@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEROLERESPONSE_P_H
 #define QTAWS_CREATEROLERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "createrolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateRoleResponse;
+
+class QTAWS_EXPORT CreateRoleResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateRoleResponsePrivate(CreateRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRoleResponse)
+    Q_DISABLE_COPY(CreateRoleResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

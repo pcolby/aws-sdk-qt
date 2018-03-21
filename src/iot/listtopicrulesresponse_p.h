@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTOPICRULESRESPONSE_P_H
 #define QTAWS_LISTTOPICRULESRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listtopicrulesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListTopicRulesResponse;
+
+class QTAWS_EXPORT ListTopicRulesResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTopicRulesResponsePrivate(ListTopicRulesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTopicRulesResponse)
+    Q_DISABLE_COPY(ListTopicRulesResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

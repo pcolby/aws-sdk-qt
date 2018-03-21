@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELOGGROUPRESPONSE_P_H
 #define QTAWS_DELETELOGGROUPRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "deleteloggrouprequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteLogGroupResponse;
+
+class QTAWS_EXPORT DeleteLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLogGroupResponsePrivate(DeleteLogGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLogGroupResponse)
+    Q_DISABLE_COPY(DeleteLogGroupResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

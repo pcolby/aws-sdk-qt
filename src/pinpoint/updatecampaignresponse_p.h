@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECAMPAIGNRESPONSE_P_H
 #define QTAWS_UPDATECAMPAIGNRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "updatecampaignrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateCampaignResponse;
+
+class QTAWS_EXPORT UpdateCampaignResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateCampaignResponsePrivate(UpdateCampaignResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateCampaignResponse)
+    Q_DISABLE_COPY(UpdateCampaignResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

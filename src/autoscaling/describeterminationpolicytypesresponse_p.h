@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETERMINATIONPOLICYTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBETERMINATIONPOLICYTYPESRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describeterminationpolicytypesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeTerminationPolicyTypesResponse;
+
+class QTAWS_EXPORT DescribeTerminationPolicyTypesResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTerminationPolicyTypesResponsePrivate(DescribeTerminationPolicyTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTerminationPolicyTypesResponse)
+    Q_DISABLE_COPY(DescribeTerminationPolicyTypesResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATENETWORKPROFILERESPONSE_P_H
 #define QTAWS_UPDATENETWORKPROFILERESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "updatenetworkprofilerequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class UpdateNetworkProfileResponse;
+
+class QTAWS_EXPORT UpdateNetworkProfileResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateNetworkProfileResponsePrivate(UpdateNetworkProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateNetworkProfileResponse)
+    Q_DISABLE_COPY(UpdateNetworkProfileResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

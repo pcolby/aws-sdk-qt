@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVIRTUALGATEWAYSRESPONSE_P_H
 #define QTAWS_DESCRIBEVIRTUALGATEWAYSRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "describevirtualgatewaysrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DescribeVirtualGatewaysResponse;
+
+class QTAWS_EXPORT DescribeVirtualGatewaysResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeVirtualGatewaysResponsePrivate(DescribeVirtualGatewaysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVirtualGatewaysResponse)
+    Q_DISABLE_COPY(DescribeVirtualGatewaysResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

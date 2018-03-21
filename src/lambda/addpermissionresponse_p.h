@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDPERMISSIONRESPONSE_P_H
 #define QTAWS_ADDPERMISSIONRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "addpermissionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class AddPermissionResponse;
+
+class QTAWS_EXPORT AddPermissionResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddPermissionResponsePrivate(AddPermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddPermissionResponse)
+    Q_DISABLE_COPY(AddPermissionResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

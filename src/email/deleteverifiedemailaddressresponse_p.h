@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVERIFIEDEMAILADDRESSRESPONSE_P_H
 #define QTAWS_DELETEVERIFIEDEMAILADDRESSRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deleteverifiedemailaddressrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteVerifiedEmailAddressResponse;
+
+class QTAWS_EXPORT DeleteVerifiedEmailAddressResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVerifiedEmailAddressResponsePrivate(DeleteVerifiedEmailAddressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVerifiedEmailAddressResponse)
+    Q_DISABLE_COPY(DeleteVerifiedEmailAddressResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

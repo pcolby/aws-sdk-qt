@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETRIGGERRESPONSE_P_H
 #define QTAWS_UPDATETRIGGERRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "updatetriggerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateTriggerResponse;
+
+class QTAWS_EXPORT UpdateTriggerResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTriggerResponsePrivate(UpdateTriggerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTriggerResponse)
+    Q_DISABLE_COPY(UpdateTriggerResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

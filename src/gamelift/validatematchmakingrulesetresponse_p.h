@@ -20,4 +20,31 @@
 #ifndef QTAWS_VALIDATEMATCHMAKINGRULESETRESPONSE_P_H
 #define QTAWS_VALIDATEMATCHMAKINGRULESETRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "validatematchmakingrulesetrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class ValidateMatchmakingRuleSetResponse;
+
+class QTAWS_EXPORT ValidateMatchmakingRuleSetResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ValidateMatchmakingRuleSetResponsePrivate(ValidateMatchmakingRuleSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ValidateMatchmakingRuleSetResponse)
+    Q_DISABLE_COPY(ValidateMatchmakingRuleSetResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

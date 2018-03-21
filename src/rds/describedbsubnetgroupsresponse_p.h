@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDBSUBNETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBSUBNETGROUPSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describedbsubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBSubnetGroupsResponse;
+
+class QTAWS_EXPORT DescribeDBSubnetGroupsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDBSubnetGroupsResponsePrivate(DescribeDBSubnetGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBSubnetGroupsResponse)
+    Q_DISABLE_COPY(DescribeDBSubnetGroupsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

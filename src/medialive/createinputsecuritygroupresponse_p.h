@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINPUTSECURITYGROUPRESPONSE_P_H
 #define QTAWS_CREATEINPUTSECURITYGROUPRESPONSE_P_H
 
+#include "medialiveresponse.h"
+#include "createinputsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class CreateInputSecurityGroupResponse;
+
+class QTAWS_EXPORT CreateInputSecurityGroupResponsePrivate : public MediaLiveResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateInputSecurityGroupResponsePrivate(CreateInputSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInputSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateInputSecurityGroupResponsePrivate)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

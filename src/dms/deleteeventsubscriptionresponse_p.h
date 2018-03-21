@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "deleteeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteEventSubscriptionResponse;
+
+class QTAWS_EXPORT DeleteEventSubscriptionResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteEventSubscriptionResponsePrivate(DeleteEventSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEventSubscriptionResponse)
+    Q_DISABLE_COPY(DeleteEventSubscriptionResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

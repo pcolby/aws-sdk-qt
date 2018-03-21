@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAGGREGATEIDFORMATRESPONSE_P_H
 #define QTAWS_DESCRIBEAGGREGATEIDFORMATRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeaggregateidformatrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAggregateIdFormatResponse;
+
+class QTAWS_EXPORT DescribeAggregateIdFormatResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAggregateIdFormatResponsePrivate(DescribeAggregateIdFormatResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAggregateIdFormatResponse)
+    Q_DISABLE_COPY(DescribeAggregateIdFormatResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

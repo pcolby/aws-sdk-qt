@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describespotdatafeedsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSpotDatafeedSubscriptionResponse;
+
+class QTAWS_EXPORT DescribeSpotDatafeedSubscriptionResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSpotDatafeedSubscriptionResponsePrivate(DescribeSpotDatafeedSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSpotDatafeedSubscriptionResponse)
+    Q_DISABLE_COPY(DescribeSpotDatafeedSubscriptionResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

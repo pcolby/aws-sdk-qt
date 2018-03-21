@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETAGSRESPONSE_P_H
 #define QTAWS_DESCRIBETAGSRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "describetagsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class DescribeTagsResponse;
+
+class QTAWS_EXPORT DescribeTagsResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTagsResponsePrivate(DescribeTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagsResponse)
+    Q_DISABLE_COPY(DescribeTagsResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

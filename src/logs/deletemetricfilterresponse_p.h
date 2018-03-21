@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEMETRICFILTERRESPONSE_P_H
 #define QTAWS_DELETEMETRICFILTERRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "deletemetricfilterrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteMetricFilterResponse;
+
+class QTAWS_EXPORT DeleteMetricFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteMetricFilterResponsePrivate(DeleteMetricFilterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMetricFilterResponse)
+    Q_DISABLE_COPY(DeleteMetricFilterResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

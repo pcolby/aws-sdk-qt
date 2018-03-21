@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEHSMRESPONSE_P_H
 #define QTAWS_DELETEHSMRESPONSE_P_H
 
+#include "cloudhsmv2response.h"
+#include "deletehsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class DeleteHsmResponse;
+
+class QTAWS_EXPORT DeleteHsmResponsePrivate : public CloudHSMV2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteHsmResponsePrivate(DeleteHsmResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHsmResponse)
+    Q_DISABLE_COPY(DeleteHsmResponsePrivate)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

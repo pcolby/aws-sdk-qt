@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEWORKFLOWEXECUTIONRESPONSE_P_H
 #define QTAWS_DESCRIBEWORKFLOWEXECUTIONRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "describeworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeWorkflowExecutionResponse;
+
+class QTAWS_EXPORT DescribeWorkflowExecutionResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeWorkflowExecutionResponsePrivate(DescribeWorkflowExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkflowExecutionResponse)
+    Q_DISABLE_COPY(DescribeWorkflowExecutionResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

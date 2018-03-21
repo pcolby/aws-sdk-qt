@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETADMCHANNELRESPONSE_P_H
 #define QTAWS_GETADMCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getadmchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetAdmChannelResponse;
+
+class QTAWS_EXPORT GetAdmChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAdmChannelResponsePrivate(GetAdmChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAdmChannelResponse)
+    Q_DISABLE_COPY(GetAdmChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

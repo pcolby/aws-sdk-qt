@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEUSERRESPONSE_P_H
 #define QTAWS_DESCRIBEUSERRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "describeuserrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeUserResponse;
+
+class QTAWS_EXPORT DescribeUserResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeUserResponsePrivate(DescribeUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeUserResponse)
+    Q_DISABLE_COPY(DescribeUserResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

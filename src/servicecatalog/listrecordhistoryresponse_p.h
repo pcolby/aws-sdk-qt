@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRECORDHISTORYRESPONSE_P_H
 #define QTAWS_LISTRECORDHISTORYRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "listrecordhistoryrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListRecordHistoryResponse;
+
+class QTAWS_EXPORT ListRecordHistoryResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRecordHistoryResponsePrivate(ListRecordHistoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRecordHistoryResponse)
+    Q_DISABLE_COPY(ListRecordHistoryResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

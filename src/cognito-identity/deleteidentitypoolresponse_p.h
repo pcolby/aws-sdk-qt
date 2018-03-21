@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEIDENTITYPOOLRESPONSE_P_H
 #define QTAWS_DELETEIDENTITYPOOLRESPONSE_P_H
 
+#include "cognitoidentityresponse.h"
+#include "deleteidentitypoolrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class DeleteIdentityPoolResponse;
+
+class QTAWS_EXPORT DeleteIdentityPoolResponsePrivate : public CognitoIdentityResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteIdentityPoolResponsePrivate(DeleteIdentityPoolResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIdentityPoolResponse)
+    Q_DISABLE_COPY(DeleteIdentityPoolResponsePrivate)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

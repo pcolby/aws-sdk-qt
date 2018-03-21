@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESERVICELINKEDROLERESPONSE_P_H
 #define QTAWS_CREATESERVICELINKEDROLERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "createservicelinkedrolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateServiceLinkedRoleResponse;
+
+class QTAWS_EXPORT CreateServiceLinkedRoleResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateServiceLinkedRoleResponsePrivate(CreateServiceLinkedRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateServiceLinkedRoleResponse)
+    Q_DISABLE_COPY(CreateServiceLinkedRoleResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

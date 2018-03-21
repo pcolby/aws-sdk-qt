@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETMAPPINGRESPONSE_P_H
 #define QTAWS_GETMAPPINGRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getmappingrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetMappingResponse;
+
+class QTAWS_EXPORT GetMappingResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetMappingResponsePrivate(GetMappingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetMappingResponse)
+    Q_DISABLE_COPY(GetMappingResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

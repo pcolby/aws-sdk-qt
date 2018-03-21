@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRESOURCESFORTAGOPTIONRESPONSE_P_H
 #define QTAWS_LISTRESOURCESFORTAGOPTIONRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "listresourcesfortagoptionrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListResourcesForTagOptionResponse;
+
+class QTAWS_EXPORT ListResourcesForTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListResourcesForTagOptionResponsePrivate(ListResourcesForTagOptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourcesForTagOptionResponse)
+    Q_DISABLE_COPY(ListResourcesForTagOptionResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

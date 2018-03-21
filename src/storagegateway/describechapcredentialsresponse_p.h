@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECHAPCREDENTIALSRESPONSE_P_H
 #define QTAWS_DESCRIBECHAPCREDENTIALSRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describechapcredentialsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeChapCredentialsResponse;
+
+class QTAWS_EXPORT DescribeChapCredentialsResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeChapCredentialsResponsePrivate(DescribeChapCredentialsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeChapCredentialsResponse)
+    Q_DISABLE_COPY(DescribeChapCredentialsResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

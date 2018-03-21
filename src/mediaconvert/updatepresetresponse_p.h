@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPRESETRESPONSE_P_H
 #define QTAWS_UPDATEPRESETRESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "updatepresetrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class UpdatePresetResponse;
+
+class QTAWS_EXPORT UpdatePresetResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdatePresetResponsePrivate(UpdatePresetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePresetResponse)
+    Q_DISABLE_COPY(UpdatePresetResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

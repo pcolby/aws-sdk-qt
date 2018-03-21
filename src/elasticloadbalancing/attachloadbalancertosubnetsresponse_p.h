@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHLOADBALANCERTOSUBNETSRESPONSE_P_H
 #define QTAWS_ATTACHLOADBALANCERTOSUBNETSRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "attachloadbalancertosubnetsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class AttachLoadBalancerToSubnetsResponse;
+
+class QTAWS_EXPORT AttachLoadBalancerToSubnetsResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachLoadBalancerToSubnetsResponsePrivate(AttachLoadBalancerToSubnetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachLoadBalancerToSubnetsResponse)
+    Q_DISABLE_COPY(AttachLoadBalancerToSubnetsResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

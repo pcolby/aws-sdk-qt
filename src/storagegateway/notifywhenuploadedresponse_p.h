@@ -20,4 +20,31 @@
 #ifndef QTAWS_NOTIFYWHENUPLOADEDRESPONSE_P_H
 #define QTAWS_NOTIFYWHENUPLOADEDRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "notifywhenuploadedrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class NotifyWhenUploadedResponse;
+
+class QTAWS_EXPORT NotifyWhenUploadedResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    NotifyWhenUploadedResponsePrivate(NotifyWhenUploadedResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(NotifyWhenUploadedResponse)
+    Q_DISABLE_COPY(NotifyWhenUploadedResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETFOLDERPATHRESPONSE_P_H
 #define QTAWS_GETFOLDERPATHRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "getfolderpathrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetFolderPathResponse;
+
+class QTAWS_EXPORT GetFolderPathResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetFolderPathResponsePrivate(GetFolderPathResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetFolderPathResponse)
+    Q_DISABLE_COPY(GetFolderPathResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

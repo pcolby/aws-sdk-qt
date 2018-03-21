@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEACCESSKEYRESPONSE_P_H
 #define QTAWS_DELETEACCESSKEYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deleteaccesskeyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteAccessKeyResponse;
+
+class QTAWS_EXPORT DeleteAccessKeyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAccessKeyResponsePrivate(DeleteAccessKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAccessKeyResponse)
+    Q_DISABLE_COPY(DeleteAccessKeyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDACTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBESCHEDULEDACTIONSRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describescheduledactionsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeScheduledActionsResponse;
+
+class QTAWS_EXPORT DescribeScheduledActionsResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeScheduledActionsResponsePrivate(DescribeScheduledActionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScheduledActionsResponse)
+    Q_DISABLE_COPY(DescribeScheduledActionsResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

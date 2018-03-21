@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTARTAPPSERVERRESPONSE_P_H
 #define QTAWS_RESTARTAPPSERVERRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "restartappserverrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class RestartAppServerResponse;
+
+class QTAWS_EXPORT RestartAppServerResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestartAppServerResponsePrivate(RestartAppServerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestartAppServerResponse)
+    Q_DISABLE_COPY(RestartAppServerResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

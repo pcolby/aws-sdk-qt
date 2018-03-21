@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETLOADBASEDAUTOSCALINGRESPONSE_P_H
 #define QTAWS_SETLOADBASEDAUTOSCALINGRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "setloadbasedautoscalingrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class SetLoadBasedAutoScalingResponse;
+
+class QTAWS_EXPORT SetLoadBasedAutoScalingResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetLoadBasedAutoScalingResponsePrivate(SetLoadBasedAutoScalingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetLoadBasedAutoScalingResponse)
+    Q_DISABLE_COPY(SetLoadBasedAutoScalingResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

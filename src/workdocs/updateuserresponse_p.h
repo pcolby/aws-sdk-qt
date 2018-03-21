@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEUSERRESPONSE_P_H
 #define QTAWS_UPDATEUSERRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "updateuserrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class UpdateUserResponse;
+
+class QTAWS_EXPORT UpdateUserResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateUserResponsePrivate(UpdateUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserResponse)
+    Q_DISABLE_COPY(UpdateUserResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

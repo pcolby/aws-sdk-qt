@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTOREADDRESSTOCLASSICRESPONSE_P_H
 #define QTAWS_RESTOREADDRESSTOCLASSICRESPONSE_P_H
 
+#include "ec2response.h"
+#include "restoreaddresstoclassicrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RestoreAddressToClassicResponse;
+
+class QTAWS_EXPORT RestoreAddressToClassicResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestoreAddressToClassicResponsePrivate(RestoreAddressToClassicResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreAddressToClassicResponse)
+    Q_DISABLE_COPY(RestoreAddressToClassicResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESERVICESPECIFICCREDENTIALRESPONSE_P_H
 #define QTAWS_DELETESERVICESPECIFICCREDENTIALRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deleteservicespecificcredentialrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteServiceSpecificCredentialResponse;
+
+class QTAWS_EXPORT DeleteServiceSpecificCredentialResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteServiceSpecificCredentialResponsePrivate(DeleteServiceSpecificCredentialResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteServiceSpecificCredentialResponse)
+    Q_DISABLE_COPY(DeleteServiceSpecificCredentialResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

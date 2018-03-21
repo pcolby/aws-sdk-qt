@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDISKRESPONSE_P_H
 #define QTAWS_CREATEDISKRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "creatediskrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateDiskResponse;
+
+class QTAWS_EXPORT CreateDiskResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDiskResponsePrivate(CreateDiskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDiskResponse)
+    Q_DISABLE_COPY(CreateDiskResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

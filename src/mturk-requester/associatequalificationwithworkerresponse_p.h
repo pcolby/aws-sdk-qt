@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERRESPONSE_P_H
 #define QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "associatequalificationwithworkerrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class AssociateQualificationWithWorkerResponse;
+
+class QTAWS_EXPORT AssociateQualificationWithWorkerResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateQualificationWithWorkerResponsePrivate(AssociateQualificationWithWorkerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateQualificationWithWorkerResponse)
+    Q_DISABLE_COPY(AssociateQualificationWithWorkerResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

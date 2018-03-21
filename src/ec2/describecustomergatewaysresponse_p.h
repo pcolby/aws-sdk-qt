@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECUSTOMERGATEWAYSRESPONSE_P_H
 #define QTAWS_DESCRIBECUSTOMERGATEWAYSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describecustomergatewaysrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeCustomerGatewaysResponse;
+
+class QTAWS_EXPORT DescribeCustomerGatewaysResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCustomerGatewaysResponsePrivate(DescribeCustomerGatewaysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCustomerGatewaysResponse)
+    Q_DISABLE_COPY(DescribeCustomerGatewaysResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESERVERCERTIFICATERESPONSE_P_H
 #define QTAWS_UPDATESERVERCERTIFICATERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateservercertificaterequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateServerCertificateResponse;
+
+class QTAWS_EXPORT UpdateServerCertificateResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateServerCertificateResponsePrivate(UpdateServerCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServerCertificateResponse)
+    Q_DISABLE_COPY(UpdateServerCertificateResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

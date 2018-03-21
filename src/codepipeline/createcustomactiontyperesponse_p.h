@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECUSTOMACTIONTYPERESPONSE_P_H
 #define QTAWS_CREATECUSTOMACTIONTYPERESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "createcustomactiontyperequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class CreateCustomActionTypeResponse;
+
+class QTAWS_EXPORT CreateCustomActionTypeResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCustomActionTypeResponsePrivate(CreateCustomActionTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCustomActionTypeResponse)
+    Q_DISABLE_COPY(CreateCustomActionTypeResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

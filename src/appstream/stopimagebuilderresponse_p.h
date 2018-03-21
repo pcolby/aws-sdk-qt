@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPIMAGEBUILDERRESPONSE_P_H
 #define QTAWS_STOPIMAGEBUILDERRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "stopimagebuilderrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class StopImageBuilderResponse;
+
+class QTAWS_EXPORT StopImageBuilderResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopImageBuilderResponsePrivate(StopImageBuilderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopImageBuilderResponse)
+    Q_DISABLE_COPY(StopImageBuilderResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESEGMENTRESPONSE_P_H
 #define QTAWS_UPDATESEGMENTRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "updatesegmentrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateSegmentResponse;
+
+class QTAWS_EXPORT UpdateSegmentResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateSegmentResponsePrivate(UpdateSegmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSegmentResponse)
+    Q_DISABLE_COPY(UpdateSegmentResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

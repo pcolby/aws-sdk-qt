@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEREPOSITORYRESPONSE_P_H
 #define QTAWS_CREATEREPOSITORYRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "createrepositoryrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class CreateRepositoryResponse;
+
+class QTAWS_EXPORT CreateRepositoryResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateRepositoryResponsePrivate(CreateRepositoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRepositoryResponse)
+    Q_DISABLE_COPY(CreateRepositoryResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

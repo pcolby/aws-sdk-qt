@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETWEBACLRESPONSE_P_H
 #define QTAWS_GETWEBACLRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "getwebaclrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetWebACLResponse;
+
+class QTAWS_EXPORT GetWebACLResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetWebACLResponsePrivate(GetWebACLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetWebACLResponse)
+    Q_DISABLE_COPY(GetWebACLResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

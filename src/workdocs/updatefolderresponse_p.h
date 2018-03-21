@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEFOLDERRESPONSE_P_H
 #define QTAWS_UPDATEFOLDERRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "updatefolderrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class UpdateFolderResponse;
+
+class QTAWS_EXPORT UpdateFolderResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateFolderResponsePrivate(UpdateFolderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFolderResponse)
+    Q_DISABLE_COPY(UpdateFolderResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

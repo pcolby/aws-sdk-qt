@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEALIASRESPONSE_P_H
 #define QTAWS_DELETEALIASRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "deletealiasrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DeleteAliasResponse;
+
+class QTAWS_EXPORT DeleteAliasResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAliasResponsePrivate(DeleteAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAliasResponse)
+    Q_DISABLE_COPY(DeleteAliasResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

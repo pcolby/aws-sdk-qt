@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ListTagsForResourceResponse;
+
+class QTAWS_EXPORT ListTagsForResourceResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsForResourceResponsePrivate(ListTagsForResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForResourceResponse)
+    Q_DISABLE_COPY(ListTagsForResourceResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATECONNECTIONFROMLAGRESPONSE_P_H
 #define QTAWS_DISASSOCIATECONNECTIONFROMLAGRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "disassociateconnectionfromlagrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DisassociateConnectionFromLagResponse;
+
+class QTAWS_EXPORT DisassociateConnectionFromLagResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateConnectionFromLagResponsePrivate(DisassociateConnectionFromLagResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateConnectionFromLagResponse)
+    Q_DISABLE_COPY(DisassociateConnectionFromLagResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

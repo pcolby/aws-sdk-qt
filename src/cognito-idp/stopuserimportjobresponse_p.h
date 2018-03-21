@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPUSERIMPORTJOBRESPONSE_P_H
 #define QTAWS_STOPUSERIMPORTJOBRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "stopuserimportjobrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class StopUserImportJobResponse;
+
+class QTAWS_EXPORT StopUserImportJobResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopUserImportJobResponsePrivate(StopUserImportJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopUserImportJobResponse)
+    Q_DISABLE_COPY(StopUserImportJobResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

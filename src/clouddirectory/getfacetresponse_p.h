@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETFACETRESPONSE_P_H
 #define QTAWS_GETFACETRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "getfacetrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetFacetResponse;
+
+class QTAWS_EXPORT GetFacetResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetFacetResponsePrivate(GetFacetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetFacetResponse)
+    Q_DISABLE_COPY(GetFacetResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

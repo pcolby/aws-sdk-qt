@@ -20,4 +20,31 @@
 #ifndef QTAWS_REQUESTCANCELWORKFLOWEXECUTIONRESPONSE_P_H
 #define QTAWS_REQUESTCANCELWORKFLOWEXECUTIONRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "requestcancelworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RequestCancelWorkflowExecutionResponse;
+
+class QTAWS_EXPORT RequestCancelWorkflowExecutionResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RequestCancelWorkflowExecutionResponsePrivate(RequestCancelWorkflowExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RequestCancelWorkflowExecutionResponse)
+    Q_DISABLE_COPY(RequestCancelWorkflowExecutionResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

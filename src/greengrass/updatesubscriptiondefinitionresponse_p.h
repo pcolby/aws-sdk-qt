@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 #define QTAWS_UPDATESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "updatesubscriptiondefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateSubscriptionDefinitionResponse;
+
+class QTAWS_EXPORT UpdateSubscriptionDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateSubscriptionDefinitionResponsePrivate(UpdateSubscriptionDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSubscriptionDefinitionResponse)
+    Q_DISABLE_COPY(UpdateSubscriptionDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

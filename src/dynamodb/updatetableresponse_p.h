@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETABLERESPONSE_P_H
 #define QTAWS_UPDATETABLERESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "updatetablerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class UpdateTableResponse;
+
+class QTAWS_EXPORT UpdateTableResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTableResponsePrivate(UpdateTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTableResponse)
+    Q_DISABLE_COPY(UpdateTableResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

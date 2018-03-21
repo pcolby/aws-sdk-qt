@@ -20,4 +20,31 @@
 #ifndef QTAWS_DOMAINMETADATARESPONSE_P_H
 #define QTAWS_DOMAINMETADATARESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "domainmetadatarequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class DomainMetadataResponse;
+
+class QTAWS_EXPORT DomainMetadataResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DomainMetadataResponsePrivate(DomainMetadataResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DomainMetadataResponse)
+    Q_DISABLE_COPY(DomainMetadataResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

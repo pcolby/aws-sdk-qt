@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDIRECTORIESRESPONSE_P_H
 #define QTAWS_LISTDIRECTORIESRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "listdirectoriesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListDirectoriesResponse;
+
+class QTAWS_EXPORT ListDirectoriesResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDirectoriesResponsePrivate(ListDirectoriesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDirectoriesResponse)
+    Q_DISABLE_COPY(ListDirectoriesResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

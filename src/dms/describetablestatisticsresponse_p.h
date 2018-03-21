@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETABLESTATISTICSRESPONSE_P_H
 #define QTAWS_DESCRIBETABLESTATISTICSRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describetablestatisticsrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeTableStatisticsResponse;
+
+class QTAWS_EXPORT DescribeTableStatisticsResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTableStatisticsResponsePrivate(DescribeTableStatisticsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTableStatisticsResponse)
+    Q_DISABLE_COPY(DescribeTableStatisticsResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

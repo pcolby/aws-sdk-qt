@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEGRAPHQLAPIRESPONSE_P_H
 #define QTAWS_DELETEGRAPHQLAPIRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "deletegraphqlapirequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteGraphqlApiResponse;
+
+class QTAWS_EXPORT DeleteGraphqlApiResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteGraphqlApiResponsePrivate(DeleteGraphqlApiResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteGraphqlApiResponse)
+    Q_DISABLE_COPY(DeleteGraphqlApiResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

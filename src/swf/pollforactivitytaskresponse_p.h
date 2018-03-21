@@ -20,4 +20,31 @@
 #ifndef QTAWS_POLLFORACTIVITYTASKRESPONSE_P_H
 #define QTAWS_POLLFORACTIVITYTASKRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "pollforactivitytaskrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class PollForActivityTaskResponse;
+
+class QTAWS_EXPORT PollForActivityTaskResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PollForActivityTaskResponsePrivate(PollForActivityTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PollForActivityTaskResponse)
+    Q_DISABLE_COPY(PollForActivityTaskResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

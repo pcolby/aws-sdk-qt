@@ -20,4 +20,31 @@
 #ifndef QTAWS_RUNTASKRESPONSE_P_H
 #define QTAWS_RUNTASKRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "runtaskrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class RunTaskResponse;
+
+class QTAWS_EXPORT RunTaskResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RunTaskResponsePrivate(RunTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RunTaskResponse)
+    Q_DISABLE_COPY(RunTaskResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

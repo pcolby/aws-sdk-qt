@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECLUSTERRESPONSE_P_H
 #define QTAWS_DELETECLUSTERRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "deleteclusterrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeleteClusterResponse;
+
+class QTAWS_EXPORT DeleteClusterResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteClusterResponsePrivate(DeleteClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterResponse)
+    Q_DISABLE_COPY(DeleteClusterResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

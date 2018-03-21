@@ -20,4 +20,31 @@
 #ifndef QTAWS_EXECUTEPROVISIONEDPRODUCTPLANRESPONSE_P_H
 #define QTAWS_EXECUTEPROVISIONEDPRODUCTPLANRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "executeprovisionedproductplanrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ExecuteProvisionedProductPlanResponse;
+
+class QTAWS_EXPORT ExecuteProvisionedProductPlanResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ExecuteProvisionedProductPlanResponsePrivate(ExecuteProvisionedProductPlanResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ExecuteProvisionedProductPlanResponse)
+    Q_DISABLE_COPY(ExecuteProvisionedProductPlanResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

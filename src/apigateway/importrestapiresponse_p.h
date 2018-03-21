@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTRESTAPIRESPONSE_P_H
 #define QTAWS_IMPORTRESTAPIRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "importrestapirequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class ImportRestApiResponse;
+
+class QTAWS_EXPORT ImportRestApiResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportRestApiResponsePrivate(ImportRestApiResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportRestApiResponse)
+    Q_DISABLE_COPY(ImportRestApiResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

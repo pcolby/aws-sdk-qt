@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCONNECTORSRESPONSE_P_H
 #define QTAWS_GETCONNECTORSRESPONSE_P_H
 
+#include "smsresponse.h"
+#include "getconnectorsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class GetConnectorsResponse;
+
+class QTAWS_EXPORT GetConnectorsResponsePrivate : public SMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetConnectorsResponsePrivate(GetConnectorsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetConnectorsResponse)
+    Q_DISABLE_COPY(GetConnectorsResponsePrivate)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

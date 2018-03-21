@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_SETTAGSFORRESOURCERESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "settagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class SetTagsForResourceResponse;
+
+class QTAWS_EXPORT SetTagsForResourceResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetTagsForResourceResponsePrivate(SetTagsForResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetTagsForResourceResponse)
+    Q_DISABLE_COPY(SetTagsForResourceResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

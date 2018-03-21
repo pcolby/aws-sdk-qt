@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESPOTDATAFEEDSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DELETESPOTDATAFEEDSUBSCRIPTIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletespotdatafeedsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteSpotDatafeedSubscriptionResponse;
+
+class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSpotDatafeedSubscriptionResponsePrivate(DeleteSpotDatafeedSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSpotDatafeedSubscriptionResponse)
+    Q_DISABLE_COPY(DeleteSpotDatafeedSubscriptionResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

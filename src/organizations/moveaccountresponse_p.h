@@ -20,4 +20,31 @@
 #ifndef QTAWS_MOVEACCOUNTRESPONSE_P_H
 #define QTAWS_MOVEACCOUNTRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "moveaccountrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class MoveAccountResponse;
+
+class QTAWS_EXPORT MoveAccountResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    MoveAccountResponsePrivate(MoveAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(MoveAccountResponse)
+    Q_DISABLE_COPY(MoveAccountResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

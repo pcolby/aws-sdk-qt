@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTINDEXRESPONSE_P_H
 #define QTAWS_LISTINDEXRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "listindexrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListIndexResponse;
+
+class QTAWS_EXPORT ListIndexResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListIndexResponsePrivate(ListIndexResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListIndexResponse)
+    Q_DISABLE_COPY(ListIndexResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

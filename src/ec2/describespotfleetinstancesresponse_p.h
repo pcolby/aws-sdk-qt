@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESPOTFLEETINSTANCESRESPONSE_P_H
 #define QTAWS_DESCRIBESPOTFLEETINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describespotfleetinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSpotFleetInstancesResponse;
+
+class QTAWS_EXPORT DescribeSpotFleetInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSpotFleetInstancesResponsePrivate(DescribeSpotFleetInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSpotFleetInstancesResponse)
+    Q_DISABLE_COPY(DescribeSpotFleetInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

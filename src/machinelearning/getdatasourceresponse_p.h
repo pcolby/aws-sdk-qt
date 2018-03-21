@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDATASOURCERESPONSE_P_H
 #define QTAWS_GETDATASOURCERESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "getdatasourcerequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class GetDataSourceResponse;
+
+class QTAWS_EXPORT GetDataSourceResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDataSourceResponsePrivate(GetDataSourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDataSourceResponse)
+    Q_DISABLE_COPY(GetDataSourceResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

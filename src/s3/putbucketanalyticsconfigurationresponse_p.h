@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTBUCKETANALYTICSCONFIGURATIONRESPONSE_P_H
 #define QTAWS_PUTBUCKETANALYTICSCONFIGURATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "putbucketanalyticsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketAnalyticsConfigurationResponse;
+
+class QTAWS_EXPORT PutBucketAnalyticsConfigurationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutBucketAnalyticsConfigurationResponsePrivate(PutBucketAnalyticsConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketAnalyticsConfigurationResponse)
+    Q_DISABLE_COPY(PutBucketAnalyticsConfigurationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

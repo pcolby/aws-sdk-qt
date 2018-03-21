@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETMLMODELRESPONSE_P_H
 #define QTAWS_GETMLMODELRESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "getmlmodelrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class GetMLModelResponse;
+
+class QTAWS_EXPORT GetMLModelResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetMLModelResponsePrivate(GetMLModelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetMLModelResponse)
+    Q_DISABLE_COPY(GetMLModelResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

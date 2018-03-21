@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERDSDBINSTANCESRESPONSE_P_H
 #define QTAWS_DESCRIBERDSDBINSTANCESRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describerdsdbinstancesrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeRdsDbInstancesResponse;
+
+class QTAWS_EXPORT DescribeRdsDbInstancesResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRdsDbInstancesResponsePrivate(DescribeRdsDbInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRdsDbInstancesResponse)
+    Q_DISABLE_COPY(DescribeRdsDbInstancesResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESUBNETGROUPRESPONSE_P_H
 #define QTAWS_UPDATESUBNETGROUPRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "updatesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateSubnetGroupResponse;
+
+class QTAWS_EXPORT UpdateSubnetGroupResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateSubnetGroupResponsePrivate(UpdateSubnetGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSubnetGroupResponse)
+    Q_DISABLE_COPY(UpdateSubnetGroupResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

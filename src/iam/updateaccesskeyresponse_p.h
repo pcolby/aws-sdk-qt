@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEACCESSKEYRESPONSE_P_H
 #define QTAWS_UPDATEACCESSKEYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateaccesskeyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateAccessKeyResponse;
+
+class QTAWS_EXPORT UpdateAccessKeyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAccessKeyResponsePrivate(UpdateAccessKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAccessKeyResponse)
+    Q_DISABLE_COPY(UpdateAccessKeyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

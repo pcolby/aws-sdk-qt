@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONSETTINGSRESPONSE_P_H
 #define QTAWS_DESCRIBECONFIGURATIONSETTINGSRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeconfigurationsettingsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeConfigurationSettingsResponse;
+
+class QTAWS_EXPORT DescribeConfigurationSettingsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeConfigurationSettingsResponsePrivate(DescribeConfigurationSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigurationSettingsResponse)
+    Q_DISABLE_COPY(DescribeConfigurationSettingsResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

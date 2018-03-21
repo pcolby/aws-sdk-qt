@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_UPDATEPARAMETERGROUPRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "updateparametergrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateParameterGroupResponse;
+
+class QTAWS_EXPORT UpdateParameterGroupResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateParameterGroupResponsePrivate(UpdateParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateParameterGroupResponse)
+    Q_DISABLE_COPY(UpdateParameterGroupResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

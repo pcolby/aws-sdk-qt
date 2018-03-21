@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTYPEDLINKFACETINFORMATIONRESPONSE_P_H
 #define QTAWS_GETTYPEDLINKFACETINFORMATIONRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "gettypedlinkfacetinformationrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetTypedLinkFacetInformationResponse;
+
+class QTAWS_EXPORT GetTypedLinkFacetInformationResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTypedLinkFacetInformationResponsePrivate(GetTypedLinkFacetInformationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTypedLinkFacetInformationResponse)
+    Q_DISABLE_COPY(GetTypedLinkFacetInformationResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

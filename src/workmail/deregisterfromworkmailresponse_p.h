@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERFROMWORKMAILRESPONSE_P_H
 #define QTAWS_DEREGISTERFROMWORKMAILRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "deregisterfromworkmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeregisterFromWorkMailResponse;
+
+class QTAWS_EXPORT DeregisterFromWorkMailResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterFromWorkMailResponsePrivate(DeregisterFromWorkMailResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterFromWorkMailResponse)
+    Q_DISABLE_COPY(DeregisterFromWorkMailResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

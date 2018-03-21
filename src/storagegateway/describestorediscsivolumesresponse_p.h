@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTOREDISCSIVOLUMESRESPONSE_P_H
 #define QTAWS_DESCRIBESTOREDISCSIVOLUMESRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describestorediscsivolumesrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeStorediSCSIVolumesResponse;
+
+class QTAWS_EXPORT DescribeStorediSCSIVolumesResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStorediSCSIVolumesResponsePrivate(DescribeStorediSCSIVolumesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStorediSCSIVolumesResponse)
+    Q_DISABLE_COPY(DescribeStorediSCSIVolumesResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

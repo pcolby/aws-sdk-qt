@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEMESSAGEBATCHRESPONSE_P_H
 #define QTAWS_DELETEMESSAGEBATCHRESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "deletemessagebatchrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class DeleteMessageBatchResponse;
+
+class QTAWS_EXPORT DeleteMessageBatchResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteMessageBatchResponsePrivate(DeleteMessageBatchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMessageBatchResponse)
+    Q_DISABLE_COPY(DeleteMessageBatchResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

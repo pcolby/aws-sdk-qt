@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEFLEETRESPONSE_P_H
 #define QTAWS_DELETEFLEETRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "deletefleetrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteFleetResponse;
+
+class QTAWS_EXPORT DeleteFleetResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteFleetResponsePrivate(DeleteFleetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFleetResponse)
+    Q_DISABLE_COPY(DeleteFleetResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

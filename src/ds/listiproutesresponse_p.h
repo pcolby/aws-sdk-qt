@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTIPROUTESRESPONSE_P_H
 #define QTAWS_LISTIPROUTESRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "listiproutesrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class ListIpRoutesResponse;
+
+class QTAWS_EXPORT ListIpRoutesResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListIpRoutesResponsePrivate(ListIpRoutesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListIpRoutesResponse)
+    Q_DISABLE_COPY(ListIpRoutesResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

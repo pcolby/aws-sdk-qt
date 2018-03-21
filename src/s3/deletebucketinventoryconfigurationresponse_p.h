@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBUCKETINVENTORYCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEBUCKETINVENTORYCONFIGURATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "deletebucketinventoryconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketInventoryConfigurationResponse;
+
+class QTAWS_EXPORT DeleteBucketInventoryConfigurationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBucketInventoryConfigurationResponsePrivate(DeleteBucketInventoryConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBucketInventoryConfigurationResponse)
+    Q_DISABLE_COPY(DeleteBucketInventoryConfigurationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

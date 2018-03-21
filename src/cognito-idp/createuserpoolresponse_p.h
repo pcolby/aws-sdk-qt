@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEUSERPOOLRESPONSE_P_H
 #define QTAWS_CREATEUSERPOOLRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "createuserpoolrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class CreateUserPoolResponse;
+
+class QTAWS_EXPORT CreateUserPoolResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateUserPoolResponsePrivate(CreateUserPoolResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserPoolResponse)
+    Q_DISABLE_COPY(CreateUserPoolResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

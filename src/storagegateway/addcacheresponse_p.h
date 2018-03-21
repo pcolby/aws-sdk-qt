@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDCACHERESPONSE_P_H
 #define QTAWS_ADDCACHERESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "addcacherequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class AddCacheResponse;
+
+class QTAWS_EXPORT AddCacheResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddCacheResponsePrivate(AddCacheResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddCacheResponse)
+    Q_DISABLE_COPY(AddCacheResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ROTATECHANNELCREDENTIALSRESPONSE_P_H
 #define QTAWS_ROTATECHANNELCREDENTIALSRESPONSE_P_H
 
+#include "mediapackageresponse.h"
+#include "rotatechannelcredentialsrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class RotateChannelCredentialsResponse;
+
+class QTAWS_EXPORT RotateChannelCredentialsResponsePrivate : public MediaPackageResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RotateChannelCredentialsResponsePrivate(RotateChannelCredentialsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RotateChannelCredentialsResponse)
+    Q_DISABLE_COPY(RotateChannelCredentialsResponsePrivate)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

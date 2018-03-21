@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDOCUMENTATIONVERSIONRESPONSE_P_H
 #define QTAWS_DELETEDOCUMENTATIONVERSIONRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "deletedocumentationversionrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteDocumentationVersionResponse;
+
+class QTAWS_EXPORT DeleteDocumentationVersionResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDocumentationVersionResponsePrivate(DeleteDocumentationVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDocumentationVersionResponse)
+    Q_DISABLE_COPY(DeleteDocumentationVersionResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETERMINATIONPROTECTIONRESPONSE_P_H
 #define QTAWS_UPDATETERMINATIONPROTECTIONRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "updateterminationprotectionrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class UpdateTerminationProtectionResponse;
+
+class QTAWS_EXPORT UpdateTerminationProtectionResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTerminationProtectionResponsePrivate(UpdateTerminationProtectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTerminationProtectionResponse)
+    Q_DISABLE_COPY(UpdateTerminationProtectionResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

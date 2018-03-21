@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEACCOUNTPASSWORDPOLICYRESPONSE_P_H
 #define QTAWS_DELETEACCOUNTPASSWORDPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deleteaccountpasswordpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteAccountPasswordPolicyResponse;
+
+class QTAWS_EXPORT DeleteAccountPasswordPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAccountPasswordPolicyResponsePrivate(DeleteAccountPasswordPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAccountPasswordPolicyResponse)
+    Q_DISABLE_COPY(DeleteAccountPasswordPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

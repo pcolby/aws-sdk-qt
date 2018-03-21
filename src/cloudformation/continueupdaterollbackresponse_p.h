@@ -20,4 +20,31 @@
 #ifndef QTAWS_CONTINUEUPDATEROLLBACKRESPONSE_P_H
 #define QTAWS_CONTINUEUPDATEROLLBACKRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "continueupdaterollbackrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ContinueUpdateRollbackResponse;
+
+class QTAWS_EXPORT ContinueUpdateRollbackResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ContinueUpdateRollbackResponsePrivate(ContinueUpdateRollbackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ContinueUpdateRollbackResponse)
+    Q_DISABLE_COPY(ContinueUpdateRollbackResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

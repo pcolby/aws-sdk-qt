@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSFORVAULTRESPONSE_P_H
 #define QTAWS_LISTTAGSFORVAULTRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "listtagsforvaultrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class ListTagsForVaultResponse;
+
+class QTAWS_EXPORT ListTagsForVaultResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsForVaultResponsePrivate(ListTagsForVaultResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForVaultResponse)
+    Q_DISABLE_COPY(ListTagsForVaultResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

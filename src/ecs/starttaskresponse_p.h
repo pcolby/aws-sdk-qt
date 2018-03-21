@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTTASKRESPONSE_P_H
 #define QTAWS_STARTTASKRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "starttaskrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class StartTaskResponse;
+
+class QTAWS_EXPORT StartTaskResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartTaskResponsePrivate(StartTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartTaskResponse)
+    Q_DISABLE_COPY(StartTaskResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

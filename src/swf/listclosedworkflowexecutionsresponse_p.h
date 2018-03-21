@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCLOSEDWORKFLOWEXECUTIONSRESPONSE_P_H
 #define QTAWS_LISTCLOSEDWORKFLOWEXECUTIONSRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "listclosedworkflowexecutionsrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListClosedWorkflowExecutionsResponse;
+
+class QTAWS_EXPORT ListClosedWorkflowExecutionsResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListClosedWorkflowExecutionsResponsePrivate(ListClosedWorkflowExecutionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListClosedWorkflowExecutionsResponse)
+    Q_DISABLE_COPY(ListClosedWorkflowExecutionsResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

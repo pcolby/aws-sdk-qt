@@ -20,4 +20,31 @@
 #ifndef QTAWS_NOTIFYMIGRATIONTASKSTATERESPONSE_P_H
 #define QTAWS_NOTIFYMIGRATIONTASKSTATERESPONSE_P_H
 
+#include "migrationhubresponse.h"
+#include "notifymigrationtaskstaterequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class NotifyMigrationTaskStateResponse;
+
+class QTAWS_EXPORT NotifyMigrationTaskStateResponsePrivate : public MigrationHubResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    NotifyMigrationTaskStateResponsePrivate(NotifyMigrationTaskStateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(NotifyMigrationTaskStateResponse)
+    Q_DISABLE_COPY(NotifyMigrationTaskStateResponsePrivate)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

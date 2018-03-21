@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYCLUSTERRESPONSE_P_H
 #define QTAWS_MODIFYCLUSTERRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "modifyclusterrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifyClusterResponse;
+
+class QTAWS_EXPORT ModifyClusterResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyClusterResponsePrivate(ModifyClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyClusterResponse)
+    Q_DISABLE_COPY(ModifyClusterResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

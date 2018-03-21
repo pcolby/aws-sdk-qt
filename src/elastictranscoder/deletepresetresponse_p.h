@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPRESETRESPONSE_P_H
 #define QTAWS_DELETEPRESETRESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "deletepresetrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class DeletePresetResponse;
+
+class QTAWS_EXPORT DeletePresetResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePresetResponsePrivate(DeletePresetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePresetResponse)
+    Q_DISABLE_COPY(DeletePresetResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

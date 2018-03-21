@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERUNRESPONSE_P_H
 #define QTAWS_DELETERUNRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "deleterunrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteRunResponse;
+
+class QTAWS_EXPORT DeleteRunResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRunResponsePrivate(DeleteRunResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRunResponse)
+    Q_DISABLE_COPY(DeleteRunResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

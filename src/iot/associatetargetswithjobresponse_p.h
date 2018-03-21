@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATETARGETSWITHJOBRESPONSE_P_H
 #define QTAWS_ASSOCIATETARGETSWITHJOBRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "associatetargetswithjobrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class AssociateTargetsWithJobResponse;
+
+class QTAWS_EXPORT AssociateTargetsWithJobResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateTargetsWithJobResponsePrivate(AssociateTargetsWithJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateTargetsWithJobResponse)
+    Q_DISABLE_COPY(AssociateTargetsWithJobResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

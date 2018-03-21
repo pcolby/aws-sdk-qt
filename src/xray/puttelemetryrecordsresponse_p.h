@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTTELEMETRYRECORDSRESPONSE_P_H
 #define QTAWS_PUTTELEMETRYRECORDSRESPONSE_P_H
 
+#include "xrayresponse.h"
+#include "puttelemetryrecordsrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class PutTelemetryRecordsResponse;
+
+class QTAWS_EXPORT PutTelemetryRecordsResponsePrivate : public XRayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutTelemetryRecordsResponsePrivate(PutTelemetryRecordsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutTelemetryRecordsResponse)
+    Q_DISABLE_COPY(PutTelemetryRecordsResponsePrivate)
+
+};
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

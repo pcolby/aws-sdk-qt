@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESEVERITYLEVELSRESPONSE_P_H
 #define QTAWS_DESCRIBESEVERITYLEVELSRESPONSE_P_H
 
+#include "supportresponse.h"
+#include "describeseveritylevelsrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeSeverityLevelsResponse;
+
+class QTAWS_EXPORT DescribeSeverityLevelsResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSeverityLevelsResponsePrivate(DescribeSeverityLevelsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSeverityLevelsResponse)
+    Q_DISABLE_COPY(DescribeSeverityLevelsResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

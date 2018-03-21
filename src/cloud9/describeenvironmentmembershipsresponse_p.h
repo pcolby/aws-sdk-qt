@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSRESPONSE_P_H
 #define QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSRESPONSE_P_H
 
+#include "cloud9response.h"
+#include "describeenvironmentmembershipsrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DescribeEnvironmentMembershipsResponse;
+
+class QTAWS_EXPORT DescribeEnvironmentMembershipsResponsePrivate : public Cloud9ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEnvironmentMembershipsResponsePrivate(DescribeEnvironmentMembershipsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEnvironmentMembershipsResponse)
+    Q_DISABLE_COPY(DescribeEnvironmentMembershipsResponsePrivate)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

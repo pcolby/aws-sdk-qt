@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETIDENTITYPOOLROLESRESPONSE_P_H
 #define QTAWS_SETIDENTITYPOOLROLESRESPONSE_P_H
 
+#include "cognitoidentityresponse.h"
+#include "setidentitypoolrolesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class SetIdentityPoolRolesResponse;
+
+class QTAWS_EXPORT SetIdentityPoolRolesResponsePrivate : public CognitoIdentityResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetIdentityPoolRolesResponsePrivate(SetIdentityPoolRolesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityPoolRolesResponse)
+    Q_DISABLE_COPY(SetIdentityPoolRolesResponsePrivate)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

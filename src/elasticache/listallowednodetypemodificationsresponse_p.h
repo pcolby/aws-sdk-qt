@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSRESPONSE_P_H
 #define QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "listallowednodetypemodificationsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ListAllowedNodeTypeModificationsResponse;
+
+class QTAWS_EXPORT ListAllowedNodeTypeModificationsResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAllowedNodeTypeModificationsResponsePrivate(ListAllowedNodeTypeModificationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAllowedNodeTypeModificationsResponse)
+    Q_DISABLE_COPY(ListAllowedNodeTypeModificationsResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

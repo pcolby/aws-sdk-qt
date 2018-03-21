@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEALARMHISTORYRESPONSE_P_H
 #define QTAWS_DESCRIBEALARMHISTORYRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "describealarmhistoryrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DescribeAlarmHistoryResponse;
+
+class QTAWS_EXPORT DescribeAlarmHistoryResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAlarmHistoryResponsePrivate(DescribeAlarmHistoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAlarmHistoryResponse)
+    Q_DISABLE_COPY(DescribeAlarmHistoryResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

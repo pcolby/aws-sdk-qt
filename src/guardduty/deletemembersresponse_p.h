@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEMEMBERSRESPONSE_P_H
 #define QTAWS_DELETEMEMBERSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "deletemembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteMembersResponse;
+
+class QTAWS_EXPORT DeleteMembersResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteMembersResponsePrivate(DeleteMembersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMembersResponse)
+    Q_DISABLE_COPY(DeleteMembersResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETSUBNETSRESPONSE_P_H
 #define QTAWS_SETSUBNETSRESPONSE_P_H
 
+#include "elasticloadbalancingv2response.h"
+#include "setsubnetsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class SetSubnetsResponse;
+
+class QTAWS_EXPORT SetSubnetsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetSubnetsResponsePrivate(SetSubnetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetSubnetsResponse)
+    Q_DISABLE_COPY(SetSubnetsResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

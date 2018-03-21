@@ -20,4 +20,31 @@
 #ifndef QTAWS_TESTINVOKEAUTHORIZERRESPONSE_P_H
 #define QTAWS_TESTINVOKEAUTHORIZERRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "testinvokeauthorizerrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class TestInvokeAuthorizerResponse;
+
+class QTAWS_EXPORT TestInvokeAuthorizerResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TestInvokeAuthorizerResponsePrivate(TestInvokeAuthorizerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TestInvokeAuthorizerResponse)
+    Q_DISABLE_COPY(TestInvokeAuthorizerResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

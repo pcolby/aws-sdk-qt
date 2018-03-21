@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTIMAGERESPONSE_P_H
 #define QTAWS_IMPORTIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "importimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportImageResponse;
+
+class QTAWS_EXPORT ImportImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportImageResponsePrivate(ImportImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportImageResponse)
+    Q_DISABLE_COPY(ImportImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEBUILDRESPONSE_P_H
 #define QTAWS_UPDATEBUILDRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "updatebuildrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateBuildResponse;
+
+class QTAWS_EXPORT UpdateBuildResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateBuildResponsePrivate(UpdateBuildResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBuildResponse)
+    Q_DISABLE_COPY(UpdateBuildResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECOMPUTEENVIRONMENTSRESPONSE_P_H
 #define QTAWS_DESCRIBECOMPUTEENVIRONMENTSRESPONSE_P_H
 
+#include "batchresponse.h"
+#include "describecomputeenvironmentsrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DescribeComputeEnvironmentsResponse;
+
+class QTAWS_EXPORT DescribeComputeEnvironmentsResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeComputeEnvironmentsResponsePrivate(DescribeComputeEnvironmentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeComputeEnvironmentsResponse)
+    Q_DISABLE_COPY(DescribeComputeEnvironmentsResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEEVENTSTREAMRESPONSE_P_H
 #define QTAWS_DELETEEVENTSTREAMRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "deleteeventstreamrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteEventStreamResponse;
+
+class QTAWS_EXPORT DeleteEventStreamResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteEventStreamResponsePrivate(DeleteEventStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEventStreamResponse)
+    Q_DISABLE_COPY(DeleteEventStreamResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

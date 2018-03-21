@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETYPERESPONSE_P_H
 #define QTAWS_DELETETYPERESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "deletetyperequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteTypeResponse;
+
+class QTAWS_EXPORT DeleteTypeResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTypeResponsePrivate(DeleteTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTypeResponse)
+    Q_DISABLE_COPY(DeleteTypeResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETFEDERATIONTOKENRESPONSE_P_H
 #define QTAWS_GETFEDERATIONTOKENRESPONSE_P_H
 
+#include "stsresponse.h"
+#include "getfederationtokenrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class GetFederationTokenResponse;
+
+class QTAWS_EXPORT GetFederationTokenResponsePrivate : public STSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetFederationTokenResponsePrivate(GetFederationTokenResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetFederationTokenResponse)
+    Q_DISABLE_COPY(GetFederationTokenResponsePrivate)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

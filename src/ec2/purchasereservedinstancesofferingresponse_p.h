@@ -20,4 +20,31 @@
 #ifndef QTAWS_PURCHASERESERVEDINSTANCESOFFERINGRESPONSE_P_H
 #define QTAWS_PURCHASERESERVEDINSTANCESOFFERINGRESPONSE_P_H
 
+#include "ec2response.h"
+#include "purchasereservedinstancesofferingrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class PurchaseReservedInstancesOfferingResponse;
+
+class QTAWS_EXPORT PurchaseReservedInstancesOfferingResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PurchaseReservedInstancesOfferingResponsePrivate(PurchaseReservedInstancesOfferingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseReservedInstancesOfferingResponse)
+    Q_DISABLE_COPY(PurchaseReservedInstancesOfferingResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCHANGETOKENSTATUSRESPONSE_P_H
 #define QTAWS_GETCHANGETOKENSTATUSRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "getchangetokenstatusrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetChangeTokenStatusResponse;
+
+class QTAWS_EXPORT GetChangeTokenStatusResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetChangeTokenStatusResponsePrivate(GetChangeTokenStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetChangeTokenStatusResponse)
+    Q_DISABLE_COPY(GetChangeTokenStatusResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

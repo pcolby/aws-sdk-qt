@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELHANDSHAKERESPONSE_P_H
 #define QTAWS_CANCELHANDSHAKERESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "cancelhandshakerequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class CancelHandshakeResponse;
+
+class QTAWS_EXPORT CancelHandshakeResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelHandshakeResponsePrivate(CancelHandshakeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelHandshakeResponse)
+    Q_DISABLE_COPY(CancelHandshakeResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

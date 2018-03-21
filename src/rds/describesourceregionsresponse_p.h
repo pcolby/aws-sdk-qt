@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESOURCEREGIONSRESPONSE_P_H
 #define QTAWS_DESCRIBESOURCEREGIONSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describesourceregionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeSourceRegionsResponse;
+
+class QTAWS_EXPORT DescribeSourceRegionsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSourceRegionsResponsePrivate(DescribeSourceRegionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSourceRegionsResponse)
+    Q_DISABLE_COPY(DescribeSourceRegionsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPTASKRESPONSE_P_H
 #define QTAWS_STOPTASKRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "stoptaskrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class StopTaskResponse;
+
+class QTAWS_EXPORT StopTaskResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopTaskResponsePrivate(StopTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopTaskResponse)
+    Q_DISABLE_COPY(StopTaskResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

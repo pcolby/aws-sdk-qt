@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONRESPONSE_P_H
 #define QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "associateconfigurationitemstoapplicationrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class AssociateConfigurationItemsToApplicationResponse;
+
+class QTAWS_EXPORT AssociateConfigurationItemsToApplicationResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateConfigurationItemsToApplicationResponsePrivate(AssociateConfigurationItemsToApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateConfigurationItemsToApplicationResponse)
+    Q_DISABLE_COPY(AssociateConfigurationItemsToApplicationResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

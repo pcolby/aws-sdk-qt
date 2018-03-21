@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAFFECTEDENTITIESRESPONSE_P_H
 #define QTAWS_DESCRIBEAFFECTEDENTITIESRESPONSE_P_H
 
+#include "healthresponse.h"
+#include "describeaffectedentitiesrequest.h"
+
+namespace AWS {
+
+namespace Health {
+
+class DescribeAffectedEntitiesResponse;
+
+class QTAWS_EXPORT DescribeAffectedEntitiesResponsePrivate : public HealthResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAffectedEntitiesResponsePrivate(DescribeAffectedEntitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAffectedEntitiesResponse)
+    Q_DISABLE_COPY(DescribeAffectedEntitiesResponsePrivate)
+
+};
+
+} // namespace Health
+} // namespace AWS
+
 #endif

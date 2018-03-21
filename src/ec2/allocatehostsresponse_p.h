@@ -20,4 +20,31 @@
 #ifndef QTAWS_ALLOCATEHOSTSRESPONSE_P_H
 #define QTAWS_ALLOCATEHOSTSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "allocatehostsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AllocateHostsResponse;
+
+class QTAWS_EXPORT AllocateHostsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AllocateHostsResponsePrivate(AllocateHostsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AllocateHostsResponse)
+    Q_DISABLE_COPY(AllocateHostsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

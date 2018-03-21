@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETUSERSETTINGSRESPONSE_P_H
 #define QTAWS_SETUSERSETTINGSRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "setusersettingsrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetUserSettingsResponse;
+
+class QTAWS_EXPORT SetUserSettingsResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetUserSettingsResponsePrivate(SetUserSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetUserSettingsResponse)
+    Q_DISABLE_COPY(SetUserSettingsResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

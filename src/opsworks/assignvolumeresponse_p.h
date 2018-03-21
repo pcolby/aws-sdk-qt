@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSIGNVOLUMERESPONSE_P_H
 #define QTAWS_ASSIGNVOLUMERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "assignvolumerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class AssignVolumeResponse;
+
+class QTAWS_EXPORT AssignVolumeResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssignVolumeResponsePrivate(AssignVolumeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssignVolumeResponse)
+    Q_DISABLE_COPY(AssignVolumeResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

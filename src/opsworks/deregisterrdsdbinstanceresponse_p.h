@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERRDSDBINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERRDSDBINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "deregisterrdsdbinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterRdsDbInstanceResponse;
+
+class QTAWS_EXPORT DeregisterRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterRdsDbInstanceResponsePrivate(DeregisterRdsDbInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterRdsDbInstanceResponse)
+    Q_DISABLE_COPY(DeregisterRdsDbInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

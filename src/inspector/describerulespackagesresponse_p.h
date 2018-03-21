@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERULESPACKAGESRESPONSE_P_H
 #define QTAWS_DESCRIBERULESPACKAGESRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "describerulespackagesrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeRulesPackagesResponse;
+
+class QTAWS_EXPORT DescribeRulesPackagesResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRulesPackagesResponsePrivate(DescribeRulesPackagesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRulesPackagesResponse)
+    Q_DISABLE_COPY(DescribeRulesPackagesResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

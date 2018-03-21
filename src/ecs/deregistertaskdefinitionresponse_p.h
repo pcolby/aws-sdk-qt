@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERTASKDEFINITIONRESPONSE_P_H
 #define QTAWS_DEREGISTERTASKDEFINITIONRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "deregistertaskdefinitionrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeregisterTaskDefinitionResponse;
+
+class QTAWS_EXPORT DeregisterTaskDefinitionResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterTaskDefinitionResponsePrivate(DeregisterTaskDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterTaskDefinitionResponse)
+    Q_DISABLE_COPY(DeregisterTaskDefinitionResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "describeaccountlimitsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class DescribeAccountLimitsResponse;
+
+class QTAWS_EXPORT DescribeAccountLimitsResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAccountLimitsResponsePrivate(DescribeAccountLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountLimitsResponse)
+    Q_DISABLE_COPY(DescribeAccountLimitsResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

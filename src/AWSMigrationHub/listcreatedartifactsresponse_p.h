@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCREATEDARTIFACTSRESPONSE_P_H
 #define QTAWS_LISTCREATEDARTIFACTSRESPONSE_P_H
 
+#include "migrationhubresponse.h"
+#include "listcreatedartifactsrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class ListCreatedArtifactsResponse;
+
+class QTAWS_EXPORT ListCreatedArtifactsResponsePrivate : public MigrationHubResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListCreatedArtifactsResponsePrivate(ListCreatedArtifactsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListCreatedArtifactsResponse)
+    Q_DISABLE_COPY(ListCreatedArtifactsResponsePrivate)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

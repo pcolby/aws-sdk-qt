@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTCERTIFICATERESPONSE_P_H
 #define QTAWS_IMPORTCERTIFICATERESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "importcertificaterequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ImportCertificateResponse;
+
+class QTAWS_EXPORT ImportCertificateResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportCertificateResponsePrivate(ImportCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportCertificateResponse)
+    Q_DISABLE_COPY(ImportCertificateResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEENDPOINTRESPONSE_P_H
 #define QTAWS_DELETEENDPOINTRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "deleteendpointrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class DeleteEndpointResponse;
+
+class QTAWS_EXPORT DeleteEndpointResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteEndpointResponsePrivate(DeleteEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEndpointResponse)
+    Q_DISABLE_COPY(DeleteEndpointResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

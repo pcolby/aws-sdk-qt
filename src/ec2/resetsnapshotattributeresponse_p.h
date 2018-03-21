@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETSNAPSHOTATTRIBUTERESPONSE_P_H
 #define QTAWS_RESETSNAPSHOTATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "resetsnapshotattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetSnapshotAttributeResponse;
+
+class QTAWS_EXPORT ResetSnapshotAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetSnapshotAttributeResponsePrivate(ResetSnapshotAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetSnapshotAttributeResponse)
+    Q_DISABLE_COPY(ResetSnapshotAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

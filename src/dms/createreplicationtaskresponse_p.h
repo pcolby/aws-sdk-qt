@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEREPLICATIONTASKRESPONSE_P_H
 #define QTAWS_CREATEREPLICATIONTASKRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "createreplicationtaskrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class CreateReplicationTaskResponse;
+
+class QTAWS_EXPORT CreateReplicationTaskResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateReplicationTaskResponsePrivate(CreateReplicationTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateReplicationTaskResponse)
+    Q_DISABLE_COPY(CreateReplicationTaskResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

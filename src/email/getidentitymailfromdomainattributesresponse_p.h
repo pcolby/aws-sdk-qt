@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETIDENTITYMAILFROMDOMAINATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETIDENTITYMAILFROMDOMAINATTRIBUTESRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "getidentitymailfromdomainattributesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityMailFromDomainAttributesResponse;
+
+class QTAWS_EXPORT GetIdentityMailFromDomainAttributesResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIdentityMailFromDomainAttributesResponsePrivate(GetIdentityMailFromDomainAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityMailFromDomainAttributesResponse)
+    Q_DISABLE_COPY(GetIdentityMailFromDomainAttributesResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

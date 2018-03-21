@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPOLICYRESPONSE_P_H
 #define QTAWS_DELETEPOLICYRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "deletepolicyrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DeletePolicyResponse;
+
+class QTAWS_EXPORT DeletePolicyResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePolicyResponsePrivate(DeletePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePolicyResponse)
+    Q_DISABLE_COPY(DeletePolicyResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETATTRIBUTESRESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "getattributesrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class GetAttributesResponse;
+
+class QTAWS_EXPORT GetAttributesResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAttributesResponsePrivate(GetAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAttributesResponse)
+    Q_DISABLE_COPY(GetAttributesResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOPERATIONSRESPONSE_P_H
 #define QTAWS_LISTOPERATIONSRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "listoperationsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class ListOperationsResponse;
+
+class QTAWS_EXPORT ListOperationsResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOperationsResponsePrivate(ListOperationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOperationsResponse)
+    Q_DISABLE_COPY(ListOperationsResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDATASOURCERESPONSE_P_H
 #define QTAWS_UPDATEDATASOURCERESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "updatedatasourcerequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateDataSourceResponse;
+
+class QTAWS_EXPORT UpdateDataSourceResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDataSourceResponsePrivate(UpdateDataSourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDataSourceResponse)
+    Q_DISABLE_COPY(UpdateDataSourceResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

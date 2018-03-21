@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_P_H
 #define QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "setdefaultpolicyversionrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class SetDefaultPolicyVersionResponse;
+
+class QTAWS_EXPORT SetDefaultPolicyVersionResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetDefaultPolicyVersionResponsePrivate(SetDefaultPolicyVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetDefaultPolicyVersionResponse)
+    Q_DISABLE_COPY(SetDefaultPolicyVersionResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

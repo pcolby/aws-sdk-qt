@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELAYERSRESPONSE_P_H
 #define QTAWS_DESCRIBELAYERSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describelayersrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeLayersResponse;
+
+class QTAWS_EXPORT DescribeLayersResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLayersResponsePrivate(DescribeLayersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLayersResponse)
+    Q_DISABLE_COPY(DescribeLayersResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

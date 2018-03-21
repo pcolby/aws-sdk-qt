@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTBUCKETVERSIONINGRESPONSE_P_H
 #define QTAWS_PUTBUCKETVERSIONINGRESPONSE_P_H
 
+#include "s3response.h"
+#include "putbucketversioningrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketVersioningResponse;
+
+class QTAWS_EXPORT PutBucketVersioningResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutBucketVersioningResponsePrivate(PutBucketVersioningResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketVersioningResponse)
+    Q_DISABLE_COPY(PutBucketVersioningResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

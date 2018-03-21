@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDOCUMENTVERSIONSRESPONSE_P_H
 #define QTAWS_LISTDOCUMENTVERSIONSRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "listdocumentversionsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListDocumentVersionsResponse;
+
+class QTAWS_EXPORT ListDocumentVersionsResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDocumentVersionsResponsePrivate(ListDocumentVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDocumentVersionsResponse)
+    Q_DISABLE_COPY(ListDocumentVersionsResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTIMAGERESPONSE_P_H
 #define QTAWS_PUTIMAGERESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "putimagerequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class PutImageResponse;
+
+class QTAWS_EXPORT PutImageResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutImageResponsePrivate(PutImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutImageResponse)
+    Q_DISABLE_COPY(PutImageResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

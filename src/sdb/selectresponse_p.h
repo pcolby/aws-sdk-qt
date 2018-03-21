@@ -20,4 +20,31 @@
 #ifndef QTAWS_SELECTRESPONSE_P_H
 #define QTAWS_SELECTRESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "selectrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class SelectResponse;
+
+class QTAWS_EXPORT SelectResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SelectResponsePrivate(SelectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SelectResponse)
+    Q_DISABLE_COPY(SelectResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

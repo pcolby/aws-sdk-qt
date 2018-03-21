@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDUSERSMESSAGESRESPONSE_P_H
 #define QTAWS_SENDUSERSMESSAGESRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "sendusersmessagesrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class SendUsersMessagesResponse;
+
+class QTAWS_EXPORT SendUsersMessagesResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendUsersMessagesResponsePrivate(SendUsersMessagesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendUsersMessagesResponse)
+    Q_DISABLE_COPY(SendUsersMessagesResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

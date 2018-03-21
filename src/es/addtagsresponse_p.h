@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "addtagsrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class AddTagsResponse;
+
+class QTAWS_EXPORT AddTagsResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsResponsePrivate(AddTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsResponse)
+    Q_DISABLE_COPY(AddTagsResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

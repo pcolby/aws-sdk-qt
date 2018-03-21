@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVETAGSRESPONSE_P_H
 #define QTAWS_REMOVETAGSRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "removetagsrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class RemoveTagsResponse;
+
+class QTAWS_EXPORT RemoveTagsResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveTagsResponsePrivate(RemoveTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsResponse)
+    Q_DISABLE_COPY(RemoveTagsResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTACKSUMMARYRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKSUMMARYRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describestacksummaryrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeStackSummaryResponse;
+
+class QTAWS_EXPORT DescribeStackSummaryResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStackSummaryResponsePrivate(DescribeStackSummaryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStackSummaryResponse)
+    Q_DISABLE_COPY(DescribeStackSummaryResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

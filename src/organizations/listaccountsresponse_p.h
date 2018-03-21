@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTACCOUNTSRESPONSE_P_H
 #define QTAWS_LISTACCOUNTSRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listaccountsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListAccountsResponse;
+
+class QTAWS_EXPORT ListAccountsResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAccountsResponsePrivate(ListAccountsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAccountsResponse)
+    Q_DISABLE_COPY(ListAccountsResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERAIDARRAYSRESPONSE_P_H
 #define QTAWS_DESCRIBERAIDARRAYSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describeraidarraysrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeRaidArraysResponse;
+
+class QTAWS_EXPORT DescribeRaidArraysResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRaidArraysResponsePrivate(DescribeRaidArraysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRaidArraysResponse)
+    Q_DISABLE_COPY(DescribeRaidArraysResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

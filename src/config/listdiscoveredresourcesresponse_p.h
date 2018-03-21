@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDISCOVEREDRESOURCESRESPONSE_P_H
 #define QTAWS_LISTDISCOVEREDRESOURCESRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "listdiscoveredresourcesrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class ListDiscoveredResourcesResponse;
+
+class QTAWS_EXPORT ListDiscoveredResourcesResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDiscoveredResourcesResponsePrivate(ListDiscoveredResourcesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDiscoveredResourcesResponse)
+    Q_DISABLE_COPY(ListDiscoveredResourcesResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

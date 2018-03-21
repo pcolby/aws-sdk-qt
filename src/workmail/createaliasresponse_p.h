@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEALIASRESPONSE_P_H
 #define QTAWS_CREATEALIASRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "createaliasrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class CreateAliasResponse;
+
+class QTAWS_EXPORT CreateAliasResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateAliasResponsePrivate(CreateAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAliasResponse)
+    Q_DISABLE_COPY(CreateAliasResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

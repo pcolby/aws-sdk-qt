@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSHARDITERATORRESPONSE_P_H
 #define QTAWS_GETSHARDITERATORRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "getsharditeratorrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class GetShardIteratorResponse;
+
+class QTAWS_EXPORT GetShardIteratorResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetShardIteratorResponsePrivate(GetShardIteratorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetShardIteratorResponse)
+    Q_DISABLE_COPY(GetShardIteratorResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

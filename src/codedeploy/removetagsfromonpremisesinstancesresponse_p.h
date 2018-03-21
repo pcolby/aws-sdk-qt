@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVETAGSFROMONPREMISESINSTANCESRESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMONPREMISESINSTANCESRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "removetagsfromonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class RemoveTagsFromOnPremisesInstancesResponse;
+
+class QTAWS_EXPORT RemoveTagsFromOnPremisesInstancesResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveTagsFromOnPremisesInstancesResponsePrivate(RemoveTagsFromOnPremisesInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromOnPremisesInstancesResponse)
+    Q_DISABLE_COPY(RemoveTagsFromOnPremisesInstancesResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

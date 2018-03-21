@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATENODERESPONSE_P_H
 #define QTAWS_ASSOCIATENODERESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "associatenoderequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class AssociateNodeResponse;
+
+class QTAWS_EXPORT AssociateNodeResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateNodeResponsePrivate(AssociateNodeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateNodeResponse)
+    Q_DISABLE_COPY(AssociateNodeResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

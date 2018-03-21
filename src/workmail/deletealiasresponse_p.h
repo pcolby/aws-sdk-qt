@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEALIASRESPONSE_P_H
 #define QTAWS_DELETEALIASRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "deletealiasrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeleteAliasResponse;
+
+class QTAWS_EXPORT DeleteAliasResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAliasResponsePrivate(DeleteAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAliasResponse)
+    Q_DISABLE_COPY(DeleteAliasResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEGROUPPOLICYRESPONSE_P_H
 #define QTAWS_DELETEGROUPPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deletegrouppolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteGroupPolicyResponse;
+
+class QTAWS_EXPORT DeleteGroupPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteGroupPolicyResponsePrivate(DeleteGroupPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteGroupPolicyResponse)
+    Q_DISABLE_COPY(DeleteGroupPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

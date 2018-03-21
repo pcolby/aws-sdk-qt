@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEROLEDESCRIPTIONRESPONSE_P_H
 #define QTAWS_UPDATEROLEDESCRIPTIONRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateroledescriptionrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateRoleDescriptionResponse;
+
+class QTAWS_EXPORT UpdateRoleDescriptionResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateRoleDescriptionResponsePrivate(UpdateRoleDescriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRoleDescriptionResponse)
+    Q_DISABLE_COPY(UpdateRoleDescriptionResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

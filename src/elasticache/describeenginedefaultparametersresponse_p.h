@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "describeenginedefaultparametersrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeEngineDefaultParametersResponse;
+
+class QTAWS_EXPORT DescribeEngineDefaultParametersResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEngineDefaultParametersResponsePrivate(DescribeEngineDefaultParametersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEngineDefaultParametersResponse)
+    Q_DISABLE_COPY(DescribeEngineDefaultParametersResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

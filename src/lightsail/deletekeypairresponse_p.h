@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEKEYPAIRRESPONSE_P_H
 #define QTAWS_DELETEKEYPAIRRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "deletekeypairrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteKeyPairResponse;
+
+class QTAWS_EXPORT DeleteKeyPairResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteKeyPairResponsePrivate(DeleteKeyPairResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteKeyPairResponse)
+    Q_DISABLE_COPY(DeleteKeyPairResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDCUSTOMATTRIBUTESRESPONSE_P_H
 #define QTAWS_ADDCUSTOMATTRIBUTESRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "addcustomattributesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AddCustomAttributesResponse;
+
+class QTAWS_EXPORT AddCustomAttributesResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddCustomAttributesResponsePrivate(AddCustomAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddCustomAttributesResponse)
+    Q_DISABLE_COPY(AddCustomAttributesResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

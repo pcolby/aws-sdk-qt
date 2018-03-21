@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVETHINGFROMTHINGGROUPRESPONSE_P_H
 #define QTAWS_REMOVETHINGFROMTHINGGROUPRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "removethingfromthinggrouprequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class RemoveThingFromThingGroupResponse;
+
+class QTAWS_EXPORT RemoveThingFromThingGroupResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveThingFromThingGroupResponsePrivate(RemoveThingFromThingGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveThingFromThingGroupResponse)
+    Q_DISABLE_COPY(RemoveThingFromThingGroupResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

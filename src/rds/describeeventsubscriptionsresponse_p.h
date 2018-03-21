@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describeeventsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeEventSubscriptionsResponse;
+
+class QTAWS_EXPORT DescribeEventSubscriptionsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEventSubscriptionsResponsePrivate(DescribeEventSubscriptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventSubscriptionsResponse)
+    Q_DISABLE_COPY(DescribeEventSubscriptionsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEHOSTEDCONNECTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEHOSTEDCONNECTIONSRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "describehostedconnectionsrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DescribeHostedConnectionsResponse;
+
+class QTAWS_EXPORT DescribeHostedConnectionsResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeHostedConnectionsResponsePrivate(DescribeHostedConnectionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHostedConnectionsResponse)
+    Q_DISABLE_COPY(DescribeHostedConnectionsResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

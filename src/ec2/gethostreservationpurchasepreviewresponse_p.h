@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETHOSTRESERVATIONPURCHASEPREVIEWRESPONSE_P_H
 #define QTAWS_GETHOSTRESERVATIONPURCHASEPREVIEWRESPONSE_P_H
 
+#include "ec2response.h"
+#include "gethostreservationpurchasepreviewrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetHostReservationPurchasePreviewResponse;
+
+class QTAWS_EXPORT GetHostReservationPurchasePreviewResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetHostReservationPurchasePreviewResponsePrivate(GetHostReservationPurchasePreviewResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetHostReservationPurchasePreviewResponse)
+    Q_DISABLE_COPY(GetHostReservationPurchasePreviewResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

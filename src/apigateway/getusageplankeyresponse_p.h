@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETUSAGEPLANKEYRESPONSE_P_H
 #define QTAWS_GETUSAGEPLANKEYRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getusageplankeyrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetUsagePlanKeyResponse;
+
+class QTAWS_EXPORT GetUsagePlanKeyResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetUsagePlanKeyResponsePrivate(GetUsagePlanKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetUsagePlanKeyResponse)
+    Q_DISABLE_COPY(GetUsagePlanKeyResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

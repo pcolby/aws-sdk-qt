@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVETARGETSRESPONSE_P_H
 #define QTAWS_REMOVETARGETSRESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "removetargetsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class RemoveTargetsResponse;
+
+class QTAWS_EXPORT RemoveTargetsResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveTargetsResponsePrivate(RemoveTargetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTargetsResponse)
+    Q_DISABLE_COPY(RemoveTargetsResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

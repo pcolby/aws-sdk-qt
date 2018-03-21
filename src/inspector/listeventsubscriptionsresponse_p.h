@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTEVENTSUBSCRIPTIONSRESPONSE_P_H
 #define QTAWS_LISTEVENTSUBSCRIPTIONSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "listeventsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListEventSubscriptionsResponse;
+
+class QTAWS_EXPORT ListEventSubscriptionsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListEventSubscriptionsResponsePrivate(ListEventSubscriptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListEventSubscriptionsResponse)
+    Q_DISABLE_COPY(ListEventSubscriptionsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

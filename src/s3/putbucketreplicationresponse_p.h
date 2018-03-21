@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTBUCKETREPLICATIONRESPONSE_P_H
 #define QTAWS_PUTBUCKETREPLICATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "putbucketreplicationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketReplicationResponse;
+
+class QTAWS_EXPORT PutBucketReplicationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutBucketReplicationResponsePrivate(PutBucketReplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketReplicationResponse)
+    Q_DISABLE_COPY(PutBucketReplicationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

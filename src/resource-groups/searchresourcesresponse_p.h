@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHRESOURCESRESPONSE_P_H
 #define QTAWS_SEARCHRESOURCESRESPONSE_P_H
 
+#include "resourcegroupsresponse.h"
+#include "searchresourcesrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class SearchResourcesResponse;
+
+class QTAWS_EXPORT SearchResourcesResponsePrivate : public ResourceGroupsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchResourcesResponsePrivate(SearchResourcesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchResourcesResponse)
+    Q_DISABLE_COPY(SearchResourcesResponsePrivate)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

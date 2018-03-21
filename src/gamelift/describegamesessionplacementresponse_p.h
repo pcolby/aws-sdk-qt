@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEGAMESESSIONPLACEMENTRESPONSE_P_H
 #define QTAWS_DESCRIBEGAMESESSIONPLACEMENTRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describegamesessionplacementrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeGameSessionPlacementResponse;
+
+class QTAWS_EXPORT DescribeGameSessionPlacementResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeGameSessionPlacementResponsePrivate(DescribeGameSessionPlacementResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeGameSessionPlacementResponse)
+    Q_DISABLE_COPY(DescribeGameSessionPlacementResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTROOTSRESPONSE_P_H
 #define QTAWS_LISTROOTSRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listrootsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListRootsResponse;
+
+class QTAWS_EXPORT ListRootsResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRootsResponsePrivate(ListRootsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRootsResponse)
+    Q_DISABLE_COPY(ListRootsResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACCOUNTAUTHORIZATIONDETAILSRESPONSE_P_H
 #define QTAWS_GETACCOUNTAUTHORIZATIONDETAILSRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "getaccountauthorizationdetailsrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetAccountAuthorizationDetailsResponse;
+
+class QTAWS_EXPORT GetAccountAuthorizationDetailsResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAccountAuthorizationDetailsResponsePrivate(GetAccountAuthorizationDetailsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountAuthorizationDetailsResponse)
+    Q_DISABLE_COPY(GetAccountAuthorizationDetailsResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

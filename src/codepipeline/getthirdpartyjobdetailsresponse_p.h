@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTHIRDPARTYJOBDETAILSRESPONSE_P_H
 #define QTAWS_GETTHIRDPARTYJOBDETAILSRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "getthirdpartyjobdetailsrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class GetThirdPartyJobDetailsResponse;
+
+class QTAWS_EXPORT GetThirdPartyJobDetailsResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetThirdPartyJobDetailsResponsePrivate(GetThirdPartyJobDetailsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetThirdPartyJobDetailsResponse)
+    Q_DISABLE_COPY(GetThirdPartyJobDetailsResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

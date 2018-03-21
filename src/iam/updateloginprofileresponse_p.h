@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATELOGINPROFILERESPONSE_P_H
 #define QTAWS_UPDATELOGINPROFILERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateloginprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateLoginProfileResponse;
+
+class QTAWS_EXPORT UpdateLoginProfileResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateLoginProfileResponsePrivate(UpdateLoginProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateLoginProfileResponse)
+    Q_DISABLE_COPY(UpdateLoginProfileResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

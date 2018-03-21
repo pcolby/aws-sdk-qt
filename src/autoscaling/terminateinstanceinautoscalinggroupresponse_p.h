@@ -20,4 +20,31 @@
 #ifndef QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPRESPONSE_P_H
 #define QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "terminateinstanceinautoscalinggrouprequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class TerminateInstanceInAutoScalingGroupResponse;
+
+class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TerminateInstanceInAutoScalingGroupResponsePrivate(TerminateInstanceInAutoScalingGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateInstanceInAutoScalingGroupResponse)
+    Q_DISABLE_COPY(TerminateInstanceInAutoScalingGroupResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHFACESBYIMAGERESPONSE_P_H
 #define QTAWS_SEARCHFACESBYIMAGERESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "searchfacesbyimagerequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class SearchFacesByImageResponse;
+
+class QTAWS_EXPORT SearchFacesByImageResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchFacesByImageResponsePrivate(SearchFacesByImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchFacesByImageResponse)
+    Q_DISABLE_COPY(SearchFacesByImageResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

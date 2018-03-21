@@ -20,4 +20,31 @@
 #ifndef QTAWS_ARCHIVEFINDINGSRESPONSE_P_H
 #define QTAWS_ARCHIVEFINDINGSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "archivefindingsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class ArchiveFindingsResponse;
+
+class QTAWS_EXPORT ArchiveFindingsResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ArchiveFindingsResponsePrivate(ArchiveFindingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ArchiveFindingsResponse)
+    Q_DISABLE_COPY(ArchiveFindingsResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

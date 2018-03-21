@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDOMAINRESPONSE_P_H
 #define QTAWS_CREATEDOMAINRESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "createdomainrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class CreateDomainResponse;
+
+class QTAWS_EXPORT CreateDomainResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDomainResponsePrivate(CreateDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDomainResponse)
+    Q_DISABLE_COPY(CreateDomainResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

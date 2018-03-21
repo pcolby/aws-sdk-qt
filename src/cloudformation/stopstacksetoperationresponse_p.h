@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPSTACKSETOPERATIONRESPONSE_P_H
 #define QTAWS_STOPSTACKSETOPERATIONRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "stopstacksetoperationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class StopStackSetOperationResponse;
+
+class QTAWS_EXPORT StopStackSetOperationResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopStackSetOperationResponsePrivate(StopStackSetOperationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopStackSetOperationResponse)
+    Q_DISABLE_COPY(StopStackSetOperationResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

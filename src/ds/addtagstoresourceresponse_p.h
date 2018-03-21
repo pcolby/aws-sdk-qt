@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "addtagstoresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class AddTagsToResourceResponse;
+
+class QTAWS_EXPORT AddTagsToResourceResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsToResourceResponsePrivate(AddTagsToResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToResourceResponse)
+    Q_DISABLE_COPY(AddTagsToResourceResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

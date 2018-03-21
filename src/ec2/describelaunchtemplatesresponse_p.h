@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELAUNCHTEMPLATESRESPONSE_P_H
 #define QTAWS_DESCRIBELAUNCHTEMPLATESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describelaunchtemplatesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeLaunchTemplatesResponse;
+
+class QTAWS_EXPORT DescribeLaunchTemplatesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLaunchTemplatesResponsePrivate(DescribeLaunchTemplatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLaunchTemplatesResponse)
+    Q_DISABLE_COPY(DescribeLaunchTemplatesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

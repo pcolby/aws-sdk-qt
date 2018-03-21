@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBATCHPREDICTIONRESPONSE_P_H
 #define QTAWS_DELETEBATCHPREDICTIONRESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "deletebatchpredictionrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteBatchPredictionResponse;
+
+class QTAWS_EXPORT DeleteBatchPredictionResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBatchPredictionResponsePrivate(DeleteBatchPredictionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBatchPredictionResponse)
+    Q_DISABLE_COPY(DeleteBatchPredictionResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

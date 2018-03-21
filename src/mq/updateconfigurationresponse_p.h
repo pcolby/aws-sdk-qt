@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONFIGURATIONRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "updateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class UpdateConfigurationResponse;
+
+class QTAWS_EXPORT UpdateConfigurationResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConfigurationResponsePrivate(UpdateConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationResponse)
+    Q_DISABLE_COPY(UpdateConfigurationResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

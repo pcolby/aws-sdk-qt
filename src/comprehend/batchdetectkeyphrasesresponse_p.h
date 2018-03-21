@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHDETECTKEYPHRASESRESPONSE_P_H
 #define QTAWS_BATCHDETECTKEYPHRASESRESPONSE_P_H
 
+#include "comprehendresponse.h"
+#include "batchdetectkeyphrasesrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectKeyPhrasesResponse;
+
+class QTAWS_EXPORT BatchDetectKeyPhrasesResponsePrivate : public ComprehendResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchDetectKeyPhrasesResponsePrivate(BatchDetectKeyPhrasesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDetectKeyPhrasesResponse)
+    Q_DISABLE_COPY(BatchDetectKeyPhrasesResponsePrivate)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBACKUPRESPONSE_P_H
 #define QTAWS_DELETEBACKUPRESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "deletebackuprequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DeleteBackupResponse;
+
+class QTAWS_EXPORT DeleteBackupResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBackupResponsePrivate(DeleteBackupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBackupResponse)
+    Q_DISABLE_COPY(DeleteBackupResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

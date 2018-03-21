@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDOCUMENTDEFAULTVERSIONRESPONSE_P_H
 #define QTAWS_UPDATEDOCUMENTDEFAULTVERSIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "updatedocumentdefaultversionrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateDocumentDefaultVersionResponse;
+
+class QTAWS_EXPORT UpdateDocumentDefaultVersionResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDocumentDefaultVersionResponsePrivate(UpdateDocumentDefaultVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDocumentDefaultVersionResponse)
+    Q_DISABLE_COPY(UpdateDocumentDefaultVersionResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERTARGETSRESPONSE_P_H
 #define QTAWS_DEREGISTERTARGETSRESPONSE_P_H
 
+#include "elasticloadbalancingv2response.h"
+#include "deregistertargetsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DeregisterTargetsResponse;
+
+class QTAWS_EXPORT DeregisterTargetsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterTargetsResponsePrivate(DeregisterTargetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterTargetsResponse)
+    Q_DISABLE_COPY(DeregisterTargetsResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

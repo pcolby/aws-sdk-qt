@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDOCUMENTRESPONSE_P_H
 #define QTAWS_UPDATEDOCUMENTRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "updatedocumentrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class UpdateDocumentResponse;
+
+class QTAWS_EXPORT UpdateDocumentResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDocumentResponsePrivate(UpdateDocumentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDocumentResponse)
+    Q_DISABLE_COPY(UpdateDocumentResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

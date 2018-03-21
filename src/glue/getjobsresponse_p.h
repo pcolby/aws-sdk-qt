@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETJOBSRESPONSE_P_H
 #define QTAWS_GETJOBSRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getjobsrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetJobsResponse;
+
+class QTAWS_EXPORT GetJobsResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetJobsResponsePrivate(GetJobsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobsResponse)
+    Q_DISABLE_COPY(GetJobsResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

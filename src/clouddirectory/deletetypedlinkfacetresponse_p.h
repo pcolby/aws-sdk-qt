@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETYPEDLINKFACETRESPONSE_P_H
 #define QTAWS_DELETETYPEDLINKFACETRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "deletetypedlinkfacetrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DeleteTypedLinkFacetResponse;
+
+class QTAWS_EXPORT DeleteTypedLinkFacetResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTypedLinkFacetResponsePrivate(DeleteTypedLinkFacetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTypedLinkFacetResponse)
+    Q_DISABLE_COPY(DeleteTypedLinkFacetResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

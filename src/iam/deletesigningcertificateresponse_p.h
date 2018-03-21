@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESIGNINGCERTIFICATERESPONSE_P_H
 #define QTAWS_DELETESIGNINGCERTIFICATERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deletesigningcertificaterequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteSigningCertificateResponse;
+
+class QTAWS_EXPORT DeleteSigningCertificateResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSigningCertificateResponsePrivate(DeleteSigningCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSigningCertificateResponse)
+    Q_DISABLE_COPY(DeleteSigningCertificateResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

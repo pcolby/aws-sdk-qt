@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCONFIGRESPONSE_P_H
 #define QTAWS_GETCONFIGRESPONSE_P_H
 
+#include "cloudhsmresponse.h"
+#include "getconfigrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class GetConfigResponse;
+
+class QTAWS_EXPORT GetConfigResponsePrivate : public CloudHSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetConfigResponsePrivate(GetConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetConfigResponse)
+    Q_DISABLE_COPY(GetConfigResponsePrivate)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

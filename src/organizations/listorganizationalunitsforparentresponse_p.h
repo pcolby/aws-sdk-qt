@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTORGANIZATIONALUNITSFORPARENTRESPONSE_P_H
 #define QTAWS_LISTORGANIZATIONALUNITSFORPARENTRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listorganizationalunitsforparentrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListOrganizationalUnitsForParentResponse;
+
+class QTAWS_EXPORT ListOrganizationalUnitsForParentResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOrganizationalUnitsForParentResponsePrivate(ListOrganizationalUnitsForParentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOrganizationalUnitsForParentResponse)
+    Q_DISABLE_COPY(ListOrganizationalUnitsForParentResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

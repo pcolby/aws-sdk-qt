@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYRESPONSE_P_H
 #define QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "getcontextkeysforcustompolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetContextKeysForCustomPolicyResponse;
+
+class QTAWS_EXPORT GetContextKeysForCustomPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetContextKeysForCustomPolicyResponsePrivate(GetContextKeysForCustomPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetContextKeysForCustomPolicyResponse)
+    Q_DISABLE_COPY(GetContextKeysForCustomPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

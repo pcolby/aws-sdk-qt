@@ -20,4 +20,31 @@
 #ifndef QTAWS_REVOKEGRANTRESPONSE_P_H
 #define QTAWS_REVOKEGRANTRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "revokegrantrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class RevokeGrantResponse;
+
+class QTAWS_EXPORT RevokeGrantResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RevokeGrantResponsePrivate(RevokeGrantResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RevokeGrantResponse)
+    Q_DISABLE_COPY(RevokeGrantResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

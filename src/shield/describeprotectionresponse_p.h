@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPROTECTIONRESPONSE_P_H
 #define QTAWS_DESCRIBEPROTECTIONRESPONSE_P_H
 
+#include "shieldresponse.h"
+#include "describeprotectionrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DescribeProtectionResponse;
+
+class QTAWS_EXPORT DescribeProtectionResponsePrivate : public ShieldResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeProtectionResponsePrivate(DescribeProtectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProtectionResponse)
+    Q_DISABLE_COPY(DescribeProtectionResponsePrivate)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

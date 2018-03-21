@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLERADIUSRESPONSE_P_H
 #define QTAWS_ENABLERADIUSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "enableradiusrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class EnableRadiusResponse;
+
+class QTAWS_EXPORT EnableRadiusResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableRadiusResponsePrivate(EnableRadiusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableRadiusResponse)
+    Q_DISABLE_COPY(EnableRadiusResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

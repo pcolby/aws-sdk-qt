@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELJOBRESPONSE_P_H
 #define QTAWS_CANCELJOBRESPONSE_P_H
 
+#include "importexportresponse.h"
+#include "canceljobrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class CancelJobResponse;
+
+class QTAWS_EXPORT CancelJobResponsePrivate : public ImportExportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelJobResponsePrivate(CancelJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelJobResponse)
+    Q_DISABLE_COPY(CancelJobResponsePrivate)
+
+};
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

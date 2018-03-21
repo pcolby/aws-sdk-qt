@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETHREATINTELSETRESPONSE_P_H
 #define QTAWS_DELETETHREATINTELSETRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "deletethreatintelsetrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteThreatIntelSetResponse;
+
+class QTAWS_EXPORT DeleteThreatIntelSetResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteThreatIntelSetResponsePrivate(DeleteThreatIntelSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteThreatIntelSetResponse)
+    Q_DISABLE_COPY(DeleteThreatIntelSetResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

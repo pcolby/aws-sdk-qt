@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEMODELRESPONSE_P_H
 #define QTAWS_DESCRIBEMODELRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "describemodelrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DescribeModelResponse;
+
+class QTAWS_EXPORT DescribeModelResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeModelResponsePrivate(DescribeModelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeModelResponse)
+    Q_DISABLE_COPY(DescribeModelResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

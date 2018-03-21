@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTUSERSRESPONSE_P_H
 #define QTAWS_LISTUSERSRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listusersrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListUsersResponse;
+
+class QTAWS_EXPORT ListUsersResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListUsersResponsePrivate(ListUsersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListUsersResponse)
+    Q_DISABLE_COPY(ListUsersResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

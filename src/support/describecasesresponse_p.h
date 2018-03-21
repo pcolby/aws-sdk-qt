@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECASESRESPONSE_P_H
 #define QTAWS_DESCRIBECASESRESPONSE_P_H
 
+#include "supportresponse.h"
+#include "describecasesrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeCasesResponse;
+
+class QTAWS_EXPORT DescribeCasesResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCasesResponsePrivate(DescribeCasesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCasesResponse)
+    Q_DISABLE_COPY(DescribeCasesResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

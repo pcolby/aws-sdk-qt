@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETINSTANCEACCESSDETAILSRESPONSE_P_H
 #define QTAWS_GETINSTANCEACCESSDETAILSRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getinstanceaccessdetailsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetInstanceAccessDetailsResponse;
+
+class QTAWS_EXPORT GetInstanceAccessDetailsResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetInstanceAccessDetailsResponsePrivate(GetInstanceAccessDetailsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetInstanceAccessDetailsResponse)
+    Q_DISABLE_COPY(GetInstanceAccessDetailsResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

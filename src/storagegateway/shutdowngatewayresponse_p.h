@@ -20,4 +20,31 @@
 #ifndef QTAWS_SHUTDOWNGATEWAYRESPONSE_P_H
 #define QTAWS_SHUTDOWNGATEWAYRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "shutdowngatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ShutdownGatewayResponse;
+
+class QTAWS_EXPORT ShutdownGatewayResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ShutdownGatewayResponsePrivate(ShutdownGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ShutdownGatewayResponse)
+    Q_DISABLE_COPY(ShutdownGatewayResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

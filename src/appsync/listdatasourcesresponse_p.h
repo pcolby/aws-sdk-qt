@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDATASOURCESRESPONSE_P_H
 #define QTAWS_LISTDATASOURCESRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "listdatasourcesrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListDataSourcesResponse;
+
+class QTAWS_EXPORT ListDataSourcesResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDataSourcesResponsePrivate(ListDataSourcesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDataSourcesResponse)
+    Q_DISABLE_COPY(ListDataSourcesResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

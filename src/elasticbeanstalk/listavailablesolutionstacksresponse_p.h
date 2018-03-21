@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTAVAILABLESOLUTIONSTACKSRESPONSE_P_H
 #define QTAWS_LISTAVAILABLESOLUTIONSTACKSRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "listavailablesolutionstacksrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ListAvailableSolutionStacksResponse;
+
+class QTAWS_EXPORT ListAvailableSolutionStacksResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAvailableSolutionStacksResponsePrivate(ListAvailableSolutionStacksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAvailableSolutionStacksResponse)
+    Q_DISABLE_COPY(ListAvailableSolutionStacksResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHGETREPOSITORIESRESPONSE_P_H
 #define QTAWS_BATCHGETREPOSITORIESRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "batchgetrepositoriesrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class BatchGetRepositoriesResponse;
+
+class QTAWS_EXPORT BatchGetRepositoriesResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchGetRepositoriesResponsePrivate(BatchGetRepositoriesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetRepositoriesResponse)
+    Q_DISABLE_COPY(BatchGetRepositoriesResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

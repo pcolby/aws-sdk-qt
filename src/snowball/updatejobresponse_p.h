@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEJOBRESPONSE_P_H
 #define QTAWS_UPDATEJOBRESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "updatejobrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class UpdateJobResponse;
+
+class QTAWS_EXPORT UpdateJobResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateJobResponsePrivate(UpdateJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateJobResponse)
+    Q_DISABLE_COPY(UpdateJobResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

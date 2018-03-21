@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHINSTANCESTOLOADBALANCERRESPONSE_P_H
 #define QTAWS_ATTACHINSTANCESTOLOADBALANCERRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "attachinstancestoloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class AttachInstancesToLoadBalancerResponse;
+
+class QTAWS_EXPORT AttachInstancesToLoadBalancerResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachInstancesToLoadBalancerResponsePrivate(AttachInstancesToLoadBalancerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachInstancesToLoadBalancerResponse)
+    Q_DISABLE_COPY(AttachInstancesToLoadBalancerResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

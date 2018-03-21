@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEFINEINDEXFIELDRESPONSE_P_H
 #define QTAWS_DEFINEINDEXFIELDRESPONSE_P_H
 
+#include "cloudsearchresponse.h"
+#include "defineindexfieldrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DefineIndexFieldResponse;
+
+class QTAWS_EXPORT DefineIndexFieldResponsePrivate : public CloudSearchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DefineIndexFieldResponsePrivate(DefineIndexFieldResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DefineIndexFieldResponse)
+    Q_DISABLE_COPY(DefineIndexFieldResponsePrivate)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

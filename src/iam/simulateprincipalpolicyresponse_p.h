@@ -20,4 +20,31 @@
 #ifndef QTAWS_SIMULATEPRINCIPALPOLICYRESPONSE_P_H
 #define QTAWS_SIMULATEPRINCIPALPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "simulateprincipalpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class SimulatePrincipalPolicyResponse;
+
+class QTAWS_EXPORT SimulatePrincipalPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SimulatePrincipalPolicyResponsePrivate(SimulatePrincipalPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SimulatePrincipalPolicyResponse)
+    Q_DISABLE_COPY(SimulatePrincipalPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

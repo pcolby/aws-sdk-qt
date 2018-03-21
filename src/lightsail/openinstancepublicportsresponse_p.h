@@ -20,4 +20,31 @@
 #ifndef QTAWS_OPENINSTANCEPUBLICPORTSRESPONSE_P_H
 #define QTAWS_OPENINSTANCEPUBLICPORTSRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "openinstancepublicportsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class OpenInstancePublicPortsResponse;
+
+class QTAWS_EXPORT OpenInstancePublicPortsResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    OpenInstancePublicPortsResponsePrivate(OpenInstancePublicPortsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(OpenInstancePublicPortsResponse)
+    Q_DISABLE_COPY(OpenInstancePublicPortsResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

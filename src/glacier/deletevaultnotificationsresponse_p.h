@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVAULTNOTIFICATIONSRESPONSE_P_H
 #define QTAWS_DELETEVAULTNOTIFICATIONSRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "deletevaultnotificationsrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class DeleteVaultNotificationsResponse;
+
+class QTAWS_EXPORT DeleteVaultNotificationsResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVaultNotificationsResponsePrivate(DeleteVaultNotificationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVaultNotificationsResponse)
+    Q_DISABLE_COPY(DeleteVaultNotificationsResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

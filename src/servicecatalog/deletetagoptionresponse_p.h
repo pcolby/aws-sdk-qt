@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETAGOPTIONRESPONSE_P_H
 #define QTAWS_DELETETAGOPTIONRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "deletetagoptionrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeleteTagOptionResponse;
+
+class QTAWS_EXPORT DeleteTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTagOptionResponsePrivate(DeleteTagOptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagOptionResponse)
+    Q_DISABLE_COPY(DeleteTagOptionResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

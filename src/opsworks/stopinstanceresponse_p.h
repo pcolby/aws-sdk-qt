@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPINSTANCERESPONSE_P_H
 #define QTAWS_STOPINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "stopinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class StopInstanceResponse;
+
+class QTAWS_EXPORT StopInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopInstanceResponsePrivate(StopInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopInstanceResponse)
+    Q_DISABLE_COPY(StopInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

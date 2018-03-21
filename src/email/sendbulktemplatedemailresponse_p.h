@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDBULKTEMPLATEDEMAILRESPONSE_P_H
 #define QTAWS_SENDBULKTEMPLATEDEMAILRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "sendbulktemplatedemailrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendBulkTemplatedEmailResponse;
+
+class QTAWS_EXPORT SendBulkTemplatedEmailResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendBulkTemplatedEmailResponsePrivate(SendBulkTemplatedEmailResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendBulkTemplatedEmailResponse)
+    Q_DISABLE_COPY(SendBulkTemplatedEmailResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDIRECTORYCONFIGRESPONSE_P_H
 #define QTAWS_DELETEDIRECTORYCONFIGRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "deletedirectoryconfigrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteDirectoryConfigResponse;
+
+class QTAWS_EXPORT DeleteDirectoryConfigResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDirectoryConfigResponsePrivate(DeleteDirectoryConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDirectoryConfigResponse)
+    Q_DISABLE_COPY(DeleteDirectoryConfigResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

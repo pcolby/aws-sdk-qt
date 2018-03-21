@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDELIVERYSTREAMSRESPONSE_P_H
 #define QTAWS_LISTDELIVERYSTREAMSRESPONSE_P_H
 
+#include "firehoseresponse.h"
+#include "listdeliverystreamsrequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class ListDeliveryStreamsResponse;
+
+class QTAWS_EXPORT ListDeliveryStreamsResponsePrivate : public FirehoseResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDeliveryStreamsResponsePrivate(ListDeliveryStreamsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeliveryStreamsResponse)
+    Q_DISABLE_COPY(ListDeliveryStreamsResponsePrivate)
+
+};
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

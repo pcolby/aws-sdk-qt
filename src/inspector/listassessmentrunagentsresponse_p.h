@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTASSESSMENTRUNAGENTSRESPONSE_P_H
 #define QTAWS_LISTASSESSMENTRUNAGENTSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "listassessmentrunagentsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListAssessmentRunAgentsResponse;
+
+class QTAWS_EXPORT ListAssessmentRunAgentsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAssessmentRunAgentsResponsePrivate(ListAssessmentRunAgentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssessmentRunAgentsResponse)
+    Q_DISABLE_COPY(ListAssessmentRunAgentsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

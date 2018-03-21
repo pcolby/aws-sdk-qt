@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHNETWORKINTERFACERESPONSE_P_H
 #define QTAWS_ATTACHNETWORKINTERFACERESPONSE_P_H
 
+#include "ec2response.h"
+#include "attachnetworkinterfacerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AttachNetworkInterfaceResponse;
+
+class QTAWS_EXPORT AttachNetworkInterfaceResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachNetworkInterfaceResponsePrivate(AttachNetworkInterfaceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachNetworkInterfaceResponse)
+    Q_DISABLE_COPY(AttachNetworkInterfaceResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

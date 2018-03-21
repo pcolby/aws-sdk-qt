@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECERTIFICATEFROMCSRRESPONSE_P_H
 #define QTAWS_CREATECERTIFICATEFROMCSRRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "createcertificatefromcsrrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateCertificateFromCsrResponse;
+
+class QTAWS_EXPORT CreateCertificateFromCsrResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCertificateFromCsrResponsePrivate(CreateCertificateFromCsrResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCertificateFromCsrResponse)
+    Q_DISABLE_COPY(CreateCertificateFromCsrResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

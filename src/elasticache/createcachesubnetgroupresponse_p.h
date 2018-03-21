@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECACHESUBNETGROUPRESPONSE_P_H
 #define QTAWS_CREATECACHESUBNETGROUPRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "createcachesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateCacheSubnetGroupResponse;
+
+class QTAWS_EXPORT CreateCacheSubnetGroupResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCacheSubnetGroupResponsePrivate(CreateCacheSubnetGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCacheSubnetGroupResponse)
+    Q_DISABLE_COPY(CreateCacheSubnetGroupResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

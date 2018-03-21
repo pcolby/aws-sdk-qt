@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDEPLOYMENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEDEPLOYMENTSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describedeploymentsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeDeploymentsResponse;
+
+class QTAWS_EXPORT DescribeDeploymentsResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDeploymentsResponsePrivate(DescribeDeploymentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDeploymentsResponse)
+    Q_DISABLE_COPY(DescribeDeploymentsResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

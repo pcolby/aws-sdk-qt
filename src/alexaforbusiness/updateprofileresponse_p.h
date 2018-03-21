@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPROFILERESPONSE_P_H
 #define QTAWS_UPDATEPROFILERESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "updateprofilerequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class UpdateProfileResponse;
+
+class QTAWS_EXPORT UpdateProfileResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateProfileResponsePrivate(UpdateProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateProfileResponse)
+    Q_DISABLE_COPY(UpdateProfileResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDOCUMENTRESPONSE_P_H
 #define QTAWS_CREATEDOCUMENTRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "createdocumentrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateDocumentResponse;
+
+class QTAWS_EXPORT CreateDocumentResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDocumentResponsePrivate(CreateDocumentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDocumentResponse)
+    Q_DISABLE_COPY(CreateDocumentResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

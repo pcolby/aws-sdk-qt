@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDETECTORRESPONSE_P_H
 #define QTAWS_DELETEDETECTORRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "deletedetectorrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteDetectorResponse;
+
+class QTAWS_EXPORT DeleteDetectorResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDetectorResponsePrivate(DeleteDetectorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDetectorResponse)
+    Q_DISABLE_COPY(DeleteDetectorResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

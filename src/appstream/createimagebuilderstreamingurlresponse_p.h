@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEIMAGEBUILDERSTREAMINGURLRESPONSE_P_H
 #define QTAWS_CREATEIMAGEBUILDERSTREAMINGURLRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "createimagebuilderstreamingurlrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateImageBuilderStreamingURLResponse;
+
+class QTAWS_EXPORT CreateImageBuilderStreamingURLResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateImageBuilderStreamingURLResponsePrivate(CreateImageBuilderStreamingURLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateImageBuilderStreamingURLResponse)
+    Q_DISABLE_COPY(CreateImageBuilderStreamingURLResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

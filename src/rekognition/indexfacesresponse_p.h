@@ -20,4 +20,31 @@
 #ifndef QTAWS_INDEXFACESRESPONSE_P_H
 #define QTAWS_INDEXFACESRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "indexfacesrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class IndexFacesResponse;
+
+class QTAWS_EXPORT IndexFacesResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    IndexFacesResponsePrivate(IndexFacesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(IndexFacesResponse)
+    Q_DISABLE_COPY(IndexFacesResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

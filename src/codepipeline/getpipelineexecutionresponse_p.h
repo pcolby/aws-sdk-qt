@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPIPELINEEXECUTIONRESPONSE_P_H
 #define QTAWS_GETPIPELINEEXECUTIONRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "getpipelineexecutionrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class GetPipelineExecutionResponse;
+
+class QTAWS_EXPORT GetPipelineExecutionResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetPipelineExecutionResponsePrivate(GetPipelineExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetPipelineExecutionResponse)
+    Q_DISABLE_COPY(GetPipelineExecutionResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

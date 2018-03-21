@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATECONNECTIONWITHLAGRESPONSE_P_H
 #define QTAWS_ASSOCIATECONNECTIONWITHLAGRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "associateconnectionwithlagrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class AssociateConnectionWithLagResponse;
+
+class QTAWS_EXPORT AssociateConnectionWithLagResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateConnectionWithLagResponsePrivate(AssociateConnectionWithLagResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateConnectionWithLagResponse)
+    Q_DISABLE_COPY(AssociateConnectionWithLagResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETINTROSPECTIONSCHEMARESPONSE_P_H
 #define QTAWS_GETINTROSPECTIONSCHEMARESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "getintrospectionschemarequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetIntrospectionSchemaResponse;
+
+class QTAWS_EXPORT GetIntrospectionSchemaResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIntrospectionSchemaResponsePrivate(GetIntrospectionSchemaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIntrospectionSchemaResponse)
+    Q_DISABLE_COPY(GetIntrospectionSchemaResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

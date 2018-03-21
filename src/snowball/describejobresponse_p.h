@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEJOBRESPONSE_P_H
 #define QTAWS_DESCRIBEJOBRESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "describejobrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class DescribeJobResponse;
+
+class QTAWS_EXPORT DescribeJobResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeJobResponsePrivate(DescribeJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeJobResponse)
+    Q_DISABLE_COPY(DescribeJobResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

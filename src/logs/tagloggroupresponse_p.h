@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGLOGGROUPRESPONSE_P_H
 #define QTAWS_TAGLOGGROUPRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "tagloggrouprequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class TagLogGroupResponse;
+
+class QTAWS_EXPORT TagLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagLogGroupResponsePrivate(TagLogGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagLogGroupResponse)
+    Q_DISABLE_COPY(TagLogGroupResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

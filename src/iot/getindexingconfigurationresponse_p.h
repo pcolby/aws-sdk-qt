@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETINDEXINGCONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETINDEXINGCONFIGURATIONRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "getindexingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetIndexingConfigurationResponse;
+
+class QTAWS_EXPORT GetIndexingConfigurationResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIndexingConfigurationResponsePrivate(GetIndexingConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIndexingConfigurationResponse)
+    Q_DISABLE_COPY(GetIndexingConfigurationResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

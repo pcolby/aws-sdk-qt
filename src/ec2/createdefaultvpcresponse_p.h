@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDEFAULTVPCRESPONSE_P_H
 #define QTAWS_CREATEDEFAULTVPCRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createdefaultvpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateDefaultVpcResponse;
+
+class QTAWS_EXPORT CreateDefaultVpcResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDefaultVpcResponsePrivate(CreateDefaultVpcResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDefaultVpcResponse)
+    Q_DISABLE_COPY(CreateDefaultVpcResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

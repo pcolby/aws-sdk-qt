@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTBRANCHESRESPONSE_P_H
 #define QTAWS_LISTBRANCHESRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "listbranchesrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class ListBranchesResponse;
+
+class QTAWS_EXPORT ListBranchesResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListBranchesResponsePrivate(ListBranchesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListBranchesResponse)
+    Q_DISABLE_COPY(ListBranchesResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

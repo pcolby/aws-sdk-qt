@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTREAMSUMMARYRESPONSE_P_H
 #define QTAWS_DESCRIBESTREAMSUMMARYRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "describestreamsummaryrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class DescribeStreamSummaryResponse;
+
+class QTAWS_EXPORT DescribeStreamSummaryResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStreamSummaryResponsePrivate(DescribeStreamSummaryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStreamSummaryResponse)
+    Q_DISABLE_COPY(DescribeStreamSummaryResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

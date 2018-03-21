@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERDEVICERESPONSE_P_H
 #define QTAWS_REGISTERDEVICERESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "registerdevicerequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class RegisterDeviceResponse;
+
+class QTAWS_EXPORT RegisterDeviceResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterDeviceResponsePrivate(RegisterDeviceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterDeviceResponse)
+    Q_DISABLE_COPY(RegisterDeviceResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

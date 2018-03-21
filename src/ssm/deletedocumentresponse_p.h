@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDOCUMENTRESPONSE_P_H
 #define QTAWS_DELETEDOCUMENTRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "deletedocumentrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteDocumentResponse;
+
+class QTAWS_EXPORT DeleteDocumentResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDocumentResponsePrivate(DeleteDocumentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDocumentResponse)
+    Q_DISABLE_COPY(DeleteDocumentResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

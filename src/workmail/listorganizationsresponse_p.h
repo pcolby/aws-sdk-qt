@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTORGANIZATIONSRESPONSE_P_H
 #define QTAWS_LISTORGANIZATIONSRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "listorganizationsrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListOrganizationsResponse;
+
+class QTAWS_EXPORT ListOrganizationsResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOrganizationsResponsePrivate(ListOrganizationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOrganizationsResponse)
+    Q_DISABLE_COPY(ListOrganizationsResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

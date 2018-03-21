@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPNSVOIPCHANNELRESPONSE_P_H
 #define QTAWS_DELETEAPNSVOIPCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "deleteapnsvoipchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteApnsVoipChannelResponse;
+
+class QTAWS_EXPORT DeleteApnsVoipChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApnsVoipChannelResponsePrivate(DeleteApnsVoipChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApnsVoipChannelResponse)
+    Q_DISABLE_COPY(DeleteApnsVoipChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

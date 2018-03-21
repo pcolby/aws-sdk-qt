@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERECORDSRESPONSE_P_H
 #define QTAWS_UPDATERECORDSRESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "updaterecordsrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class UpdateRecordsResponse;
+
+class QTAWS_EXPORT UpdateRecordsResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateRecordsResponsePrivate(UpdateRecordsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRecordsResponse)
+    Q_DISABLE_COPY(UpdateRecordsResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

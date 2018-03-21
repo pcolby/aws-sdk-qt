@@ -20,4 +20,31 @@
 #ifndef QTAWS_CONNECTDIRECTORYRESPONSE_P_H
 #define QTAWS_CONNECTDIRECTORYRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "connectdirectoryrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class ConnectDirectoryResponse;
+
+class QTAWS_EXPORT ConnectDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ConnectDirectoryResponsePrivate(ConnectDirectoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ConnectDirectoryResponse)
+    Q_DISABLE_COPY(ConnectDirectoryResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

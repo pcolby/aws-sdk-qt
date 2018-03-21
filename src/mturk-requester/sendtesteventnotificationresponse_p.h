@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_P_H
 #define QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "sendtesteventnotificationrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class SendTestEventNotificationResponse;
+
+class QTAWS_EXPORT SendTestEventNotificationResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendTestEventNotificationResponsePrivate(SendTestEventNotificationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendTestEventNotificationResponse)
+    Q_DISABLE_COPY(SendTestEventNotificationResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

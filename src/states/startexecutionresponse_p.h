@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTEXECUTIONRESPONSE_P_H
 #define QTAWS_STARTEXECUTIONRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "startexecutionrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class StartExecutionResponse;
+
+class QTAWS_EXPORT StartExecutionResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartExecutionResponsePrivate(StartExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartExecutionResponse)
+    Q_DISABLE_COPY(StartExecutionResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

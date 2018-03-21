@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETUSERMFAPREFERENCERESPONSE_P_H
 #define QTAWS_SETUSERMFAPREFERENCERESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "setusermfapreferencerequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetUserMFAPreferenceResponse;
+
+class QTAWS_EXPORT SetUserMFAPreferenceResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetUserMFAPreferenceResponsePrivate(SetUserMFAPreferenceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetUserMFAPreferenceResponse)
+    Q_DISABLE_COPY(SetUserMFAPreferenceResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

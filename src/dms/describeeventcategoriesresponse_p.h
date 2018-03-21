@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describeeventcategoriesrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeEventCategoriesResponse;
+
+class QTAWS_EXPORT DescribeEventCategoriesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEventCategoriesResponsePrivate(DescribeEventCategoriesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventCategoriesResponse)
+    Q_DISABLE_COPY(DescribeEventCategoriesResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHOBJECTRESPONSE_P_H
 #define QTAWS_ATTACHOBJECTRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "attachobjectrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class AttachObjectResponse;
+
+class QTAWS_EXPORT AttachObjectResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachObjectResponsePrivate(AttachObjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachObjectResponse)
+    Q_DISABLE_COPY(AttachObjectResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

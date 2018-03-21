@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETUTTERANCESVIEWRESPONSE_P_H
 #define QTAWS_GETUTTERANCESVIEWRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "getutterancesviewrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetUtterancesViewResponse;
+
+class QTAWS_EXPORT GetUtterancesViewResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetUtterancesViewResponsePrivate(GetUtterancesViewResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetUtterancesViewResponse)
+    Q_DISABLE_COPY(GetUtterancesViewResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

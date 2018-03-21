@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESECURITYGROUPRESPONSE_P_H
 #define QTAWS_CREATESECURITYGROUPRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateSecurityGroupResponse;
+
+class QTAWS_EXPORT CreateSecurityGroupResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSecurityGroupResponsePrivate(CreateSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateSecurityGroupResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEASSOCIATIONRESPONSE_P_H
 #define QTAWS_UPDATEASSOCIATIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "updateassociationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateAssociationResponse;
+
+class QTAWS_EXPORT UpdateAssociationResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAssociationResponsePrivate(UpdateAssociationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAssociationResponse)
+    Q_DISABLE_COPY(UpdateAssociationResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

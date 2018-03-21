@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACTIVENAMESRESPONSE_P_H
 #define QTAWS_GETACTIVENAMESRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getactivenamesrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetActiveNamesResponse;
+
+class QTAWS_EXPORT GetActiveNamesResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetActiveNamesResponsePrivate(GetActiveNamesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetActiveNamesResponse)
+    Q_DISABLE_COPY(GetActiveNamesResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

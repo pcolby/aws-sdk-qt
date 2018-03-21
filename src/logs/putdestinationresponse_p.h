@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTDESTINATIONRESPONSE_P_H
 #define QTAWS_PUTDESTINATIONRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "putdestinationrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutDestinationResponse;
+
+class QTAWS_EXPORT PutDestinationResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutDestinationResponsePrivate(PutDestinationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutDestinationResponse)
+    Q_DISABLE_COPY(PutDestinationResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

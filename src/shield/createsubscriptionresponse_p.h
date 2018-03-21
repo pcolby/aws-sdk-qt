@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_CREATESUBSCRIPTIONRESPONSE_P_H
 
+#include "shieldresponse.h"
+#include "createsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class CreateSubscriptionResponse;
+
+class QTAWS_EXPORT CreateSubscriptionResponsePrivate : public ShieldResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSubscriptionResponsePrivate(CreateSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSubscriptionResponse)
+    Q_DISABLE_COPY(CreateSubscriptionResponsePrivate)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

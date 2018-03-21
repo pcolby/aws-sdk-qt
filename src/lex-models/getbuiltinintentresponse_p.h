@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUILTININTENTRESPONSE_P_H
 #define QTAWS_GETBUILTININTENTRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "getbuiltinintentrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBuiltinIntentResponse;
+
+class QTAWS_EXPORT GetBuiltinIntentResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBuiltinIntentResponsePrivate(GetBuiltinIntentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBuiltinIntentResponse)
+    Q_DISABLE_COPY(GetBuiltinIntentResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

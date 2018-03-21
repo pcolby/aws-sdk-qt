@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEBROKERRESPONSE_P_H
 #define QTAWS_DESCRIBEBROKERRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "describebrokerrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeBrokerResponse;
+
+class QTAWS_EXPORT DescribeBrokerResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeBrokerResponsePrivate(DescribeBrokerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBrokerResponse)
+    Q_DISABLE_COPY(DescribeBrokerResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

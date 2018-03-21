@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPIPELINESTATUSRESPONSE_P_H
 #define QTAWS_UPDATEPIPELINESTATUSRESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "updatepipelinestatusrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class UpdatePipelineStatusResponse;
+
+class QTAWS_EXPORT UpdatePipelineStatusResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdatePipelineStatusResponsePrivate(UpdatePipelineStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePipelineStatusResponse)
+    Q_DISABLE_COPY(UpdatePipelineStatusResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

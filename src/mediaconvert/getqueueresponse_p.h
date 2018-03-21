@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETQUEUERESPONSE_P_H
 #define QTAWS_GETQUEUERESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "getqueuerequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class GetQueueResponse;
+
+class QTAWS_EXPORT GetQueueResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetQueueResponsePrivate(GetQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetQueueResponse)
+    Q_DISABLE_COPY(GetQueueResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

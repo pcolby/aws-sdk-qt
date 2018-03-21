@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETVISIBLETOALLUSERSRESPONSE_P_H
 #define QTAWS_SETVISIBLETOALLUSERSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "setvisibletoallusersrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class SetVisibleToAllUsersResponse;
+
+class QTAWS_EXPORT SetVisibleToAllUsersResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetVisibleToAllUsersResponsePrivate(SetVisibleToAllUsersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetVisibleToAllUsersResponse)
+    Q_DISABLE_COPY(SetVisibleToAllUsersResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

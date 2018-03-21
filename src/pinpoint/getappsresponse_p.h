@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPPSRESPONSE_P_H
 #define QTAWS_GETAPPSRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getappsrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetAppsResponse;
+
+class QTAWS_EXPORT GetAppsResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAppsResponsePrivate(GetAppsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAppsResponse)
+    Q_DISABLE_COPY(GetAppsResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

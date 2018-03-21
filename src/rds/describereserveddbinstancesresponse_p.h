@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERESERVEDDBINSTANCESRESPONSE_P_H
 #define QTAWS_DESCRIBERESERVEDDBINSTANCESRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describereserveddbinstancesrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeReservedDBInstancesResponse;
+
+class QTAWS_EXPORT DescribeReservedDBInstancesResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReservedDBInstancesResponsePrivate(DescribeReservedDBInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReservedDBInstancesResponse)
+    Q_DISABLE_COPY(DescribeReservedDBInstancesResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

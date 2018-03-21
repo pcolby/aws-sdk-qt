@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATERECEIPTRULESETRESPONSE_P_H
 #define QTAWS_CREATERECEIPTRULESETRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "createreceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateReceiptRuleSetResponse;
+
+class QTAWS_EXPORT CreateReceiptRuleSetResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateReceiptRuleSetResponsePrivate(CreateReceiptRuleSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateReceiptRuleSetResponse)
+    Q_DISABLE_COPY(CreateReceiptRuleSetResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

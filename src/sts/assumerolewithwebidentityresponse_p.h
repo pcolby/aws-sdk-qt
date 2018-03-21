@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSUMEROLEWITHWEBIDENTITYRESPONSE_P_H
 #define QTAWS_ASSUMEROLEWITHWEBIDENTITYRESPONSE_P_H
 
+#include "stsresponse.h"
+#include "assumerolewithwebidentityrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class AssumeRoleWithWebIdentityResponse;
+
+class QTAWS_EXPORT AssumeRoleWithWebIdentityResponsePrivate : public STSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssumeRoleWithWebIdentityResponsePrivate(AssumeRoleWithWebIdentityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssumeRoleWithWebIdentityResponse)
+    Q_DISABLE_COPY(AssumeRoleWithWebIdentityResponsePrivate)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

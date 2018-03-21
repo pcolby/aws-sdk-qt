@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPPLICATIONSETTINGSRESPONSE_P_H
 #define QTAWS_GETAPPLICATIONSETTINGSRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getapplicationsettingsrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetApplicationSettingsResponse;
+
+class QTAWS_EXPORT GetApplicationSettingsResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetApplicationSettingsResponsePrivate(GetApplicationSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationSettingsResponse)
+    Q_DISABLE_COPY(GetApplicationSettingsResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

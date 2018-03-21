@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBASEPATHMAPPINGSRESPONSE_P_H
 #define QTAWS_GETBASEPATHMAPPINGSRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getbasepathmappingsrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetBasePathMappingsResponse;
+
+class QTAWS_EXPORT GetBasePathMappingsResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBasePathMappingsResponsePrivate(GetBasePathMappingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBasePathMappingsResponse)
+    Q_DISABLE_COPY(GetBasePathMappingsResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

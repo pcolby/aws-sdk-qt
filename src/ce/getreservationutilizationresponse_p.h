@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_P_H
 #define QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_P_H
 
+#include "costexplorerresponse.h"
+#include "getreservationutilizationrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetReservationUtilizationResponse;
+
+class QTAWS_EXPORT GetReservationUtilizationResponsePrivate : public CostExplorerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetReservationUtilizationResponsePrivate(GetReservationUtilizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetReservationUtilizationResponse)
+    Q_DISABLE_COPY(GetReservationUtilizationResponsePrivate)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

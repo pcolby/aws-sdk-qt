@@ -20,4 +20,31 @@
 #ifndef QTAWS_TESTFAILOVERRESPONSE_P_H
 #define QTAWS_TESTFAILOVERRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "testfailoverrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class TestFailoverResponse;
+
+class QTAWS_EXPORT TestFailoverResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TestFailoverResponsePrivate(TestFailoverResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TestFailoverResponse)
+    Q_DISABLE_COPY(TestFailoverResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

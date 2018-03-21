@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATEDEVICEWITHROOMRESPONSE_P_H
 #define QTAWS_ASSOCIATEDEVICEWITHROOMRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "associatedevicewithroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class AssociateDeviceWithRoomResponse;
+
+class QTAWS_EXPORT AssociateDeviceWithRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateDeviceWithRoomResponsePrivate(AssociateDeviceWithRoomResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateDeviceWithRoomResponse)
+    Q_DISABLE_COPY(AssociateDeviceWithRoomResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

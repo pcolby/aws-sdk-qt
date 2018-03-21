@@ -20,4 +20,31 @@
 #ifndef QTAWS_REENCRYPTRESPONSE_P_H
 #define QTAWS_REENCRYPTRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "reencryptrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ReEncryptResponse;
+
+class QTAWS_EXPORT ReEncryptResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ReEncryptResponsePrivate(ReEncryptResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ReEncryptResponse)
+    Q_DISABLE_COPY(ReEncryptResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

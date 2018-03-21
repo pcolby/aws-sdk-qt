@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEMOUNTTARGETRESPONSE_P_H
 #define QTAWS_CREATEMOUNTTARGETRESPONSE_P_H
 
+#include "efsresponse.h"
+#include "createmounttargetrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class CreateMountTargetResponse;
+
+class QTAWS_EXPORT CreateMountTargetResponsePrivate : public EFSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateMountTargetResponsePrivate(CreateMountTargetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateMountTargetResponse)
+    Q_DISABLE_COPY(CreateMountTargetResponsePrivate)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

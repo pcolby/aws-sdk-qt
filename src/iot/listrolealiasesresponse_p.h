@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTROLEALIASESRESPONSE_P_H
 #define QTAWS_LISTROLEALIASESRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listrolealiasesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListRoleAliasesResponse;
+
+class QTAWS_EXPORT ListRoleAliasesResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRoleAliasesResponsePrivate(ListRoleAliasesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRoleAliasesResponse)
+    Q_DISABLE_COPY(ListRoleAliasesResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTASKSRESPONSE_P_H
 #define QTAWS_LISTTASKSRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "listtasksrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListTasksResponse;
+
+class QTAWS_EXPORT ListTasksResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTasksResponsePrivate(ListTasksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTasksResponse)
+    Q_DISABLE_COPY(ListTasksResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

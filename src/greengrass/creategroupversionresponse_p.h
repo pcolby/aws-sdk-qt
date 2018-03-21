@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEGROUPVERSIONRESPONSE_P_H
 #define QTAWS_CREATEGROUPVERSIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "creategroupversionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateGroupVersionResponse;
+
+class QTAWS_EXPORT CreateGroupVersionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateGroupVersionResponsePrivate(CreateGroupVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGroupVersionResponse)
+    Q_DISABLE_COPY(CreateGroupVersionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

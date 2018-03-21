@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESCALINGPOLICYRESPONSE_P_H
 #define QTAWS_DELETESCALINGPOLICYRESPONSE_P_H
 
+#include "applicationautoscalingresponse.h"
+#include "deletescalingpolicyrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class DeleteScalingPolicyResponse;
+
+class QTAWS_EXPORT DeleteScalingPolicyResponsePrivate : public ApplicationAutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteScalingPolicyResponsePrivate(DeleteScalingPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteScalingPolicyResponse)
+    Q_DISABLE_COPY(DeleteScalingPolicyResponsePrivate)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

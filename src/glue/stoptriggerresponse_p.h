@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPTRIGGERRESPONSE_P_H
 #define QTAWS_STOPTRIGGERRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "stoptriggerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class StopTriggerResponse;
+
+class QTAWS_EXPORT StopTriggerResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopTriggerResponsePrivate(StopTriggerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopTriggerResponse)
+    Q_DISABLE_COPY(StopTriggerResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

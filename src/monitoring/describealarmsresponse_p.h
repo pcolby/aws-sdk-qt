@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEALARMSRESPONSE_P_H
 #define QTAWS_DESCRIBEALARMSRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "describealarmsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DescribeAlarmsResponse;
+
+class QTAWS_EXPORT DescribeAlarmsResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAlarmsResponsePrivate(DescribeAlarmsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAlarmsResponse)
+    Q_DISABLE_COPY(DescribeAlarmsResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

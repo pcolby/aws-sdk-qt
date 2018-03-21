@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDOMAINRESPONSE_P_H
 #define QTAWS_DESCRIBEDOMAINRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "describedomainrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeDomainResponse;
+
+class QTAWS_EXPORT DescribeDomainResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDomainResponsePrivate(DescribeDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDomainResponse)
+    Q_DISABLE_COPY(DescribeDomainResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

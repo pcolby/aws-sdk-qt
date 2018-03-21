@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class UntagResourceResponse;
+
+class QTAWS_EXPORT UntagResourceResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagResourceResponsePrivate(UntagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceResponse)
+    Q_DISABLE_COPY(UntagResourceResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_INITIATEDOCUMENTVERSIONUPLOADRESPONSE_P_H
 #define QTAWS_INITIATEDOCUMENTVERSIONUPLOADRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "initiatedocumentversionuploadrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class InitiateDocumentVersionUploadResponse;
+
+class QTAWS_EXPORT InitiateDocumentVersionUploadResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InitiateDocumentVersionUploadResponsePrivate(InitiateDocumentVersionUploadResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateDocumentVersionUploadResponse)
+    Q_DISABLE_COPY(InitiateDocumentVersionUploadResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

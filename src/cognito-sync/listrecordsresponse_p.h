@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRECORDSRESPONSE_P_H
 #define QTAWS_LISTRECORDSRESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "listrecordsrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class ListRecordsResponse;
+
+class QTAWS_EXPORT ListRecordsResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRecordsResponsePrivate(ListRecordsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRecordsResponse)
+    Q_DISABLE_COPY(ListRecordsResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

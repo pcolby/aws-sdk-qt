@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATETAGOPTIONFROMRESOURCERESPONSE_P_H
 #define QTAWS_DISASSOCIATETAGOPTIONFROMRESOURCERESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "disassociatetagoptionfromresourcerequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DisassociateTagOptionFromResourceResponse;
+
+class QTAWS_EXPORT DisassociateTagOptionFromResourceResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateTagOptionFromResourceResponsePrivate(DisassociateTagOptionFromResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateTagOptionFromResourceResponse)
+    Q_DISABLE_COPY(DisassociateTagOptionFromResourceResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

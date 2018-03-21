@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTCONFIGRULESEVALUATIONRESPONSE_P_H
 #define QTAWS_STARTCONFIGRULESEVALUATIONRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "startconfigrulesevaluationrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class StartConfigRulesEvaluationResponse;
+
+class QTAWS_EXPORT StartConfigRulesEvaluationResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartConfigRulesEvaluationResponsePrivate(StartConfigRulesEvaluationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartConfigRulesEvaluationResponse)
+    Q_DISABLE_COPY(StartConfigRulesEvaluationResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

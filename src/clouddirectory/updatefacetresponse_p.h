@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEFACETRESPONSE_P_H
 #define QTAWS_UPDATEFACETRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "updatefacetrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpdateFacetResponse;
+
+class QTAWS_EXPORT UpdateFacetResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateFacetResponsePrivate(UpdateFacetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFacetResponse)
+    Q_DISABLE_COPY(UpdateFacetResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

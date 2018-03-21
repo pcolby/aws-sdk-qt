@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHELASTICLOADBALANCERRESPONSE_P_H
 #define QTAWS_DETACHELASTICLOADBALANCERRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "detachelasticloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DetachElasticLoadBalancerResponse;
+
+class QTAWS_EXPORT DetachElasticLoadBalancerResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachElasticLoadBalancerResponsePrivate(DetachElasticLoadBalancerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachElasticLoadBalancerResponse)
+    Q_DISABLE_COPY(DetachElasticLoadBalancerResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

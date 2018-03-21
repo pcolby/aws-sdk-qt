@@ -20,4 +20,31 @@
 #ifndef QTAWS_COPYDBCLUSTERPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_COPYDBCLUSTERPARAMETERGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "copydbclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyDBClusterParameterGroupResponse;
+
+class QTAWS_EXPORT CopyDBClusterParameterGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CopyDBClusterParameterGroupResponsePrivate(CopyDBClusterParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CopyDBClusterParameterGroupResponse)
+    Q_DISABLE_COPY(CopyDBClusterParameterGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

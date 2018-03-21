@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACTIVITYTASKRESPONSE_P_H
 #define QTAWS_GETACTIVITYTASKRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "getactivitytaskrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class GetActivityTaskResponse;
+
+class QTAWS_EXPORT GetActivityTaskResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetActivityTaskResponsePrivate(GetActivityTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetActivityTaskResponse)
+    Q_DISABLE_COPY(GetActivityTaskResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

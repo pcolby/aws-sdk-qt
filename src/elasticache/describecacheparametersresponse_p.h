@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECACHEPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBECACHEPARAMETERSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "describecacheparametersrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeCacheParametersResponse;
+
+class QTAWS_EXPORT DescribeCacheParametersResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCacheParametersResponsePrivate(DescribeCacheParametersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCacheParametersResponse)
+    Q_DISABLE_COPY(DescribeCacheParametersResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

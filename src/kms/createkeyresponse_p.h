@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEKEYRESPONSE_P_H
 #define QTAWS_CREATEKEYRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "createkeyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class CreateKeyResponse;
+
+class QTAWS_EXPORT CreateKeyResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateKeyResponsePrivate(CreateKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateKeyResponse)
+    Q_DISABLE_COPY(CreateKeyResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

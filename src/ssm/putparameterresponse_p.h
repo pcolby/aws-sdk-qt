@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTPARAMETERRESPONSE_P_H
 #define QTAWS_PUTPARAMETERRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "putparameterrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class PutParameterResponse;
+
+class QTAWS_EXPORT PutParameterResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutParameterResponsePrivate(PutParameterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutParameterResponse)
+    Q_DISABLE_COPY(PutParameterResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

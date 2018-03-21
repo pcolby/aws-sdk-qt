@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYFPGAIMAGEATTRIBUTERESPONSE_P_H
 #define QTAWS_MODIFYFPGAIMAGEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyfpgaimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyFpgaImageAttributeResponse;
+
+class QTAWS_EXPORT ModifyFpgaImageAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyFpgaImageAttributeResponsePrivate(ModifyFpgaImageAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyFpgaImageAttributeResponse)
+    Q_DISABLE_COPY(ModifyFpgaImageAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

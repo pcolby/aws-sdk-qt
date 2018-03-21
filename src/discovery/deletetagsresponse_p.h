@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_P_H
 #define QTAWS_DELETETAGSRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DeleteTagsResponse;
+
+class QTAWS_EXPORT DeleteTagsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTagsResponsePrivate(DeleteTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagsResponse)
+    Q_DISABLE_COPY(DeleteTagsResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

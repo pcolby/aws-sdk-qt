@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updateconfigurationsetreputationmetricsenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetReputationMetricsEnabledResponse;
+
+class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(UpdateConfigurationSetReputationMetricsEnabledResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationSetReputationMetricsEnabledResponse)
+    Q_DISABLE_COPY(UpdateConfigurationSetReputationMetricsEnabledResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

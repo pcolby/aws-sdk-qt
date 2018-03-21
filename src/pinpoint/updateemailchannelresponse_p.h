@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEEMAILCHANNELRESPONSE_P_H
 #define QTAWS_UPDATEEMAILCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "updateemailchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateEmailChannelResponse;
+
+class QTAWS_EXPORT UpdateEmailChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateEmailChannelResponsePrivate(UpdateEmailChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEmailChannelResponse)
+    Q_DISABLE_COPY(UpdateEmailChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

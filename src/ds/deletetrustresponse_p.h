@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETRUSTRESPONSE_P_H
 #define QTAWS_DELETETRUSTRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "deletetrustrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeleteTrustResponse;
+
+class QTAWS_EXPORT DeleteTrustResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTrustResponsePrivate(DeleteTrustResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTrustResponse)
+    Q_DISABLE_COPY(DeleteTrustResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

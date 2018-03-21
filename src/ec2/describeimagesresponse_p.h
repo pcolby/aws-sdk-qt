@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEIMAGESRESPONSE_P_H
 #define QTAWS_DESCRIBEIMAGESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeimagesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeImagesResponse;
+
+class QTAWS_EXPORT DescribeImagesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeImagesResponsePrivate(DescribeImagesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeImagesResponse)
+    Q_DISABLE_COPY(DescribeImagesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

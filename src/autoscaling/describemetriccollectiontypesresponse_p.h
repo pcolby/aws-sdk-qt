@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEMETRICCOLLECTIONTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBEMETRICCOLLECTIONTYPESRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describemetriccollectiontypesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeMetricCollectionTypesResponse;
+
+class QTAWS_EXPORT DescribeMetricCollectionTypesResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeMetricCollectionTypesResponsePrivate(DescribeMetricCollectionTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMetricCollectionTypesResponse)
+    Q_DISABLE_COPY(DescribeMetricCollectionTypesResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

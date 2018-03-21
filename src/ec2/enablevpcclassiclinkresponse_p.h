@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLEVPCCLASSICLINKRESPONSE_P_H
 #define QTAWS_ENABLEVPCCLASSICLINKRESPONSE_P_H
 
+#include "ec2response.h"
+#include "enablevpcclassiclinkrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class EnableVpcClassicLinkResponse;
+
+class QTAWS_EXPORT EnableVpcClassicLinkResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableVpcClassicLinkResponsePrivate(EnableVpcClassicLinkResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableVpcClassicLinkResponse)
+    Q_DISABLE_COPY(EnableVpcClassicLinkResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

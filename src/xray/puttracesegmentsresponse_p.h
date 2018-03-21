@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTTRACESEGMENTSRESPONSE_P_H
 #define QTAWS_PUTTRACESEGMENTSRESPONSE_P_H
 
+#include "xrayresponse.h"
+#include "puttracesegmentsrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class PutTraceSegmentsResponse;
+
+class QTAWS_EXPORT PutTraceSegmentsResponsePrivate : public XRayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutTraceSegmentsResponsePrivate(PutTraceSegmentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutTraceSegmentsResponse)
+    Q_DISABLE_COPY(PutTraceSegmentsResponsePrivate)
+
+};
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

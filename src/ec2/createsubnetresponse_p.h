@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESUBNETRESPONSE_P_H
 #define QTAWS_CREATESUBNETRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createsubnetrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateSubnetResponse;
+
+class QTAWS_EXPORT CreateSubnetResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSubnetResponsePrivate(CreateSubnetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSubnetResponse)
+    Q_DISABLE_COPY(CreateSubnetResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

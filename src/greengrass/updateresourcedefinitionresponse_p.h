@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERESOURCEDEFINITIONRESPONSE_P_H
 #define QTAWS_UPDATERESOURCEDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "updateresourcedefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateResourceDefinitionResponse;
+
+class QTAWS_EXPORT UpdateResourceDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateResourceDefinitionResponsePrivate(UpdateResourceDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateResourceDefinitionResponse)
+    Q_DISABLE_COPY(UpdateResourceDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

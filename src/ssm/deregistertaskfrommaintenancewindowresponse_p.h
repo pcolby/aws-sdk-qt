@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERTASKFROMMAINTENANCEWINDOWRESPONSE_P_H
 #define QTAWS_DEREGISTERTASKFROMMAINTENANCEWINDOWRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "deregistertaskfrommaintenancewindowrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeregisterTaskFromMaintenanceWindowResponse;
+
+class QTAWS_EXPORT DeregisterTaskFromMaintenanceWindowResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterTaskFromMaintenanceWindowResponsePrivate(DeregisterTaskFromMaintenanceWindowResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterTaskFromMaintenanceWindowResponse)
+    Q_DISABLE_COPY(DeregisterTaskFromMaintenanceWindowResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRESOURCESRESPONSE_P_H
 #define QTAWS_LISTRESOURCESRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "listresourcesrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class ListResourcesResponse;
+
+class QTAWS_EXPORT ListResourcesResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListResourcesResponsePrivate(ListResourcesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourcesResponse)
+    Q_DISABLE_COPY(ListResourcesResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

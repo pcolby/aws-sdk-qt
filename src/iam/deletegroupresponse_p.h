@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEGROUPRESPONSE_P_H
 #define QTAWS_DELETEGROUPRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deletegrouprequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteGroupResponse;
+
+class QTAWS_EXPORT DeleteGroupResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteGroupResponsePrivate(DeleteGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteGroupResponse)
+    Q_DISABLE_COPY(DeleteGroupResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

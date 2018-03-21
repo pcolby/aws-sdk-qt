@@ -20,4 +20,31 @@
 #ifndef QTAWS_VERIFYDOMAINIDENTITYRESPONSE_P_H
 #define QTAWS_VERIFYDOMAINIDENTITYRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "verifydomainidentityrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class VerifyDomainIdentityResponse;
+
+class QTAWS_EXPORT VerifyDomainIdentityResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    VerifyDomainIdentityResponsePrivate(VerifyDomainIdentityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyDomainIdentityResponse)
+    Q_DISABLE_COPY(VerifyDomainIdentityResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

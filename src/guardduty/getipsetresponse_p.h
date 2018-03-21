@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETIPSETRESPONSE_P_H
 #define QTAWS_GETIPSETRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "getipsetrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetIPSetResponse;
+
+class QTAWS_EXPORT GetIPSetResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIPSetResponsePrivate(GetIPSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIPSetResponse)
+    Q_DISABLE_COPY(GetIPSetResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

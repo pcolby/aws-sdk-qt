@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBATCHPREDICTIONRESPONSE_P_H
 #define QTAWS_GETBATCHPREDICTIONRESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "getbatchpredictionrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class GetBatchPredictionResponse;
+
+class QTAWS_EXPORT GetBatchPredictionResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBatchPredictionResponsePrivate(GetBatchPredictionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBatchPredictionResponse)
+    Q_DISABLE_COPY(GetBatchPredictionResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEIMAGERESPONSE_P_H
 #define QTAWS_CREATEIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "createimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateImageResponse;
+
+class QTAWS_EXPORT CreateImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateImageResponsePrivate(CreateImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateImageResponse)
+    Q_DISABLE_COPY(CreateImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_POSTCOMMENTREPLYRESPONSE_P_H
 #define QTAWS_POSTCOMMENTREPLYRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "postcommentreplyrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PostCommentReplyResponse;
+
+class QTAWS_EXPORT PostCommentReplyResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PostCommentReplyResponsePrivate(PostCommentReplyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PostCommentReplyResponse)
+    Q_DISABLE_COPY(PostCommentReplyResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

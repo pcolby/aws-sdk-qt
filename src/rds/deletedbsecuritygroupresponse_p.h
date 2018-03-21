@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDBSECURITYGROUPRESPONSE_P_H
 #define QTAWS_DELETEDBSECURITYGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "deletedbsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteDBSecurityGroupResponse;
+
+class QTAWS_EXPORT DeleteDBSecurityGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDBSecurityGroupResponsePrivate(DeleteDBSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDBSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteDBSecurityGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

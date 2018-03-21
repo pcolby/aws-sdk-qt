@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETFPGAIMAGEATTRIBUTERESPONSE_P_H
 #define QTAWS_RESETFPGAIMAGEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "resetfpgaimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetFpgaImageAttributeResponse;
+
+class QTAWS_EXPORT ResetFpgaImageAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetFpgaImageAttributeResponsePrivate(ResetFpgaImageAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetFpgaImageAttributeResponse)
+    Q_DISABLE_COPY(ResetFpgaImageAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

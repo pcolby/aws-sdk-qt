@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESCRIPTRESPONSE_P_H
 #define QTAWS_CREATESCRIPTRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "createscriptrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateScriptResponse;
+
+class QTAWS_EXPORT CreateScriptResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateScriptResponsePrivate(CreateScriptResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateScriptResponse)
+    Q_DISABLE_COPY(CreateScriptResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

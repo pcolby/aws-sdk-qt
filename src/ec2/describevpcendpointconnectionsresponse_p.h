@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVPCENDPOINTCONNECTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEVPCENDPOINTCONNECTIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describevpcendpointconnectionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpcEndpointConnectionsResponse;
+
+class QTAWS_EXPORT DescribeVpcEndpointConnectionsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeVpcEndpointConnectionsResponsePrivate(DescribeVpcEndpointConnectionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpcEndpointConnectionsResponse)
+    Q_DISABLE_COPY(DescribeVpcEndpointConnectionsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

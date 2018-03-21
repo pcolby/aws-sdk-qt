@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLEAWSSERVICEACCESSRESPONSE_P_H
 #define QTAWS_DISABLEAWSSERVICEACCESSRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "disableawsserviceaccessrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DisableAWSServiceAccessResponse;
+
+class QTAWS_EXPORT DisableAWSServiceAccessResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableAWSServiceAccessResponsePrivate(DisableAWSServiceAccessResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableAWSServiceAccessResponse)
+    Q_DISABLE_COPY(DisableAWSServiceAccessResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

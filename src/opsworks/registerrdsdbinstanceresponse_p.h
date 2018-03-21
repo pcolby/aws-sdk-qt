@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERRDSDBINSTANCERESPONSE_P_H
 #define QTAWS_REGISTERRDSDBINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "registerrdsdbinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RegisterRdsDbInstanceResponse;
+
+class QTAWS_EXPORT RegisterRdsDbInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterRdsDbInstanceResponsePrivate(RegisterRdsDbInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterRdsDbInstanceResponse)
+    Q_DISABLE_COPY(RegisterRdsDbInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

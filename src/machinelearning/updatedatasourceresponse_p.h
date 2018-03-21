@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDATASOURCERESPONSE_P_H
 #define QTAWS_UPDATEDATASOURCERESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "updatedatasourcerequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class UpdateDataSourceResponse;
+
+class QTAWS_EXPORT UpdateDataSourceResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDataSourceResponsePrivate(UpdateDataSourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDataSourceResponse)
+    Q_DISABLE_COPY(UpdateDataSourceResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

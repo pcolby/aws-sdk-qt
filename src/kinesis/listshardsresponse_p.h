@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSHARDSRESPONSE_P_H
 #define QTAWS_LISTSHARDSRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "listshardsrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class ListShardsResponse;
+
+class QTAWS_EXPORT ListShardsResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListShardsResponsePrivate(ListShardsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListShardsResponse)
+    Q_DISABLE_COPY(ListShardsResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

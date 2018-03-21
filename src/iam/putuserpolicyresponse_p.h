@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTUSERPOLICYRESPONSE_P_H
 #define QTAWS_PUTUSERPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "putuserpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class PutUserPolicyResponse;
+
+class QTAWS_EXPORT PutUserPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutUserPolicyResponsePrivate(PutUserPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutUserPolicyResponse)
+    Q_DISABLE_COPY(PutUserPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

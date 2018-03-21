@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNSUBSCRIBERESPONSE_P_H
 #define QTAWS_UNSUBSCRIBERESPONSE_P_H
 
+#include "snsresponse.h"
+#include "unsubscriberequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class UnsubscribeResponse;
+
+class QTAWS_EXPORT UnsubscribeResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UnsubscribeResponsePrivate(UnsubscribeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UnsubscribeResponse)
+    Q_DISABLE_COPY(UnsubscribeResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

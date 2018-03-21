@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERTASKDEFINITIONRESPONSE_P_H
 #define QTAWS_REGISTERTASKDEFINITIONRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "registertaskdefinitionrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class RegisterTaskDefinitionResponse;
+
+class QTAWS_EXPORT RegisterTaskDefinitionResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterTaskDefinitionResponsePrivate(RegisterTaskDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterTaskDefinitionResponse)
+    Q_DISABLE_COPY(RegisterTaskDefinitionResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

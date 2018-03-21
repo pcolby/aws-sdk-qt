@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_DELETEINSTANCEPROFILERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deleteinstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteInstanceProfileResponse;
+
+class QTAWS_EXPORT DeleteInstanceProfileResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteInstanceProfileResponsePrivate(DeleteInstanceProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteInstanceProfileResponse)
+    Q_DISABLE_COPY(DeleteInstanceProfileResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

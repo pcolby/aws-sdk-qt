@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVPCRESPONSE_P_H
 #define QTAWS_DELETEVPCRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletevpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcResponse;
+
+class QTAWS_EXPORT DeleteVpcResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVpcResponsePrivate(DeleteVpcResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcResponse)
+    Q_DISABLE_COPY(DeleteVpcResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

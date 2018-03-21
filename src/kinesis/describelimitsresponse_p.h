@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBELIMITSRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "describelimitsrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class DescribeLimitsResponse;
+
+class QTAWS_EXPORT DescribeLimitsResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLimitsResponsePrivate(DescribeLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLimitsResponse)
+    Q_DISABLE_COPY(DescribeLimitsResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

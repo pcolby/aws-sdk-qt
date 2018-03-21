@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBANDWIDTHRATELIMITRESPONSE_P_H
 #define QTAWS_DELETEBANDWIDTHRATELIMITRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "deletebandwidthratelimitrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteBandwidthRateLimitResponse;
+
+class QTAWS_EXPORT DeleteBandwidthRateLimitResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBandwidthRateLimitResponsePrivate(DeleteBandwidthRateLimitResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBandwidthRateLimitResponse)
+    Q_DISABLE_COPY(DeleteBandwidthRateLimitResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

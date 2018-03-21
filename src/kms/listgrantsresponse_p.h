@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGRANTSRESPONSE_P_H
 #define QTAWS_LISTGRANTSRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "listgrantsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListGrantsResponse;
+
+class QTAWS_EXPORT ListGrantsResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGrantsResponsePrivate(ListGrantsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGrantsResponse)
+    Q_DISABLE_COPY(ListGrantsResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

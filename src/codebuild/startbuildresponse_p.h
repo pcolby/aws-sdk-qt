@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTBUILDRESPONSE_P_H
 #define QTAWS_STARTBUILDRESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "startbuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class StartBuildResponse;
+
+class QTAWS_EXPORT StartBuildResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartBuildResponsePrivate(StartBuildResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartBuildResponse)
+    Q_DISABLE_COPY(StartBuildResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

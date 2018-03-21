@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINTERCONNECTRESPONSE_P_H
 #define QTAWS_CREATEINTERCONNECTRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "createinterconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateInterconnectResponse;
+
+class QTAWS_EXPORT CreateInterconnectResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateInterconnectResponsePrivate(CreateInterconnectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInterconnectResponse)
+    Q_DISABLE_COPY(CreateInterconnectResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

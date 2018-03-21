@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETNETWORKINTERFACEATTRIBUTERESPONSE_P_H
 #define QTAWS_RESETNETWORKINTERFACEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "resetnetworkinterfaceattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetNetworkInterfaceAttributeResponse;
+
+class QTAWS_EXPORT ResetNetworkInterfaceAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetNetworkInterfaceAttributeResponsePrivate(ResetNetworkInterfaceAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetNetworkInterfaceAttributeResponse)
+    Q_DISABLE_COPY(ResetNetworkInterfaceAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

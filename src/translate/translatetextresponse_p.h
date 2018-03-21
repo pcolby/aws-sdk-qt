@@ -20,4 +20,31 @@
 #ifndef QTAWS_TRANSLATETEXTRESPONSE_P_H
 #define QTAWS_TRANSLATETEXTRESPONSE_P_H
 
+#include "translateresponse.h"
+#include "translatetextrequest.h"
+
+namespace AWS {
+
+namespace Translate {
+
+class TranslateTextResponse;
+
+class QTAWS_EXPORT TranslateTextResponsePrivate : public TranslateResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TranslateTextResponsePrivate(TranslateTextResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TranslateTextResponse)
+    Q_DISABLE_COPY(TranslateTextResponsePrivate)
+
+};
+
+} // namespace Translate
+} // namespace AWS
+
 #endif

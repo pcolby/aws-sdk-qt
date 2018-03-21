@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDBPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_CREATEDBPARAMETERGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "createdbparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBParameterGroupResponse;
+
+class QTAWS_EXPORT CreateDBParameterGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDBParameterGroupResponsePrivate(CreateDBParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDBParameterGroupResponse)
+    Q_DISABLE_COPY(CreateDBParameterGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

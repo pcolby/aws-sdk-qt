@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETTASKSTATUSRESPONSE_P_H
 #define QTAWS_SETTASKSTATUSRESPONSE_P_H
 
+#include "datapipelineresponse.h"
+#include "settaskstatusrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class SetTaskStatusResponse;
+
+class QTAWS_EXPORT SetTaskStatusResponsePrivate : public DataPipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetTaskStatusResponsePrivate(SetTaskStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetTaskStatusResponse)
+    Q_DISABLE_COPY(SetTaskStatusResponsePrivate)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

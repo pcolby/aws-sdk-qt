@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 
+#include "cloudhsmv2response.h"
+#include "describebackupsrequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class DescribeBackupsResponse;
+
+class QTAWS_EXPORT DescribeBackupsResponsePrivate : public CloudHSMV2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeBackupsResponsePrivate(DescribeBackupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBackupsResponse)
+    Q_DISABLE_COPY(DescribeBackupsResponsePrivate)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

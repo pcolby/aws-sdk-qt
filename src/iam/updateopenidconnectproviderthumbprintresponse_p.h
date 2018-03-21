@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEOPENIDCONNECTPROVIDERTHUMBPRINTRESPONSE_P_H
 #define QTAWS_UPDATEOPENIDCONNECTPROVIDERTHUMBPRINTRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateopenidconnectproviderthumbprintrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateOpenIDConnectProviderThumbprintResponse;
+
+class QTAWS_EXPORT UpdateOpenIDConnectProviderThumbprintResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateOpenIDConnectProviderThumbprintResponsePrivate(UpdateOpenIDConnectProviderThumbprintResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateOpenIDConnectProviderThumbprintResponse)
+    Q_DISABLE_COPY(UpdateOpenIDConnectProviderThumbprintResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

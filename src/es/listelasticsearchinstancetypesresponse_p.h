@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_P_H
 #define QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "listelasticsearchinstancetypesrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class ListElasticsearchInstanceTypesResponse;
+
+class QTAWS_EXPORT ListElasticsearchInstanceTypesResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListElasticsearchInstanceTypesResponsePrivate(ListElasticsearchInstanceTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListElasticsearchInstanceTypesResponse)
+    Q_DISABLE_COPY(ListElasticsearchInstanceTypesResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

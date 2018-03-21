@@ -20,4 +20,31 @@
 #ifndef QTAWS_ACCEPTQUALIFICATIONREQUESTRESPONSE_P_H
 #define QTAWS_ACCEPTQUALIFICATIONREQUESTRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "acceptqualificationrequestrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class AcceptQualificationRequestResponse;
+
+class QTAWS_EXPORT AcceptQualificationRequestResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AcceptQualificationRequestResponsePrivate(AcceptQualificationRequestResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AcceptQualificationRequestResponse)
+    Q_DISABLE_COPY(AcceptQualificationRequestResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

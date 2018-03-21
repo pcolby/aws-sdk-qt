@@ -20,4 +20,31 @@
 #ifndef QTAWS_ABORTENVIRONMENTUPDATERESPONSE_P_H
 #define QTAWS_ABORTENVIRONMENTUPDATERESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "abortenvironmentupdaterequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class AbortEnvironmentUpdateResponse;
+
+class QTAWS_EXPORT AbortEnvironmentUpdateResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AbortEnvironmentUpdateResponsePrivate(AbortEnvironmentUpdateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AbortEnvironmentUpdateResponse)
+    Q_DISABLE_COPY(AbortEnvironmentUpdateResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

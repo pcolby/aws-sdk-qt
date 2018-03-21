@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETAGSRESPONSE_P_H
 #define QTAWS_DESCRIBETAGSRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describetagsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeTagsResponse;
+
+class QTAWS_EXPORT DescribeTagsResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTagsResponsePrivate(DescribeTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagsResponse)
+    Q_DISABLE_COPY(DescribeTagsResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

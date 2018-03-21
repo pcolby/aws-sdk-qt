@@ -20,4 +20,31 @@
 #ifndef QTAWS_INCREASEREPLICATIONFACTORRESPONSE_P_H
 #define QTAWS_INCREASEREPLICATIONFACTORRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "increasereplicationfactorrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class IncreaseReplicationFactorResponse;
+
+class QTAWS_EXPORT IncreaseReplicationFactorResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    IncreaseReplicationFactorResponsePrivate(IncreaseReplicationFactorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(IncreaseReplicationFactorResponse)
+    Q_DISABLE_COPY(IncreaseReplicationFactorResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

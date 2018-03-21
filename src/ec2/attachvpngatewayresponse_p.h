@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHVPNGATEWAYRESPONSE_P_H
 #define QTAWS_ATTACHVPNGATEWAYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "attachvpngatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AttachVpnGatewayResponse;
+
+class QTAWS_EXPORT AttachVpnGatewayResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachVpnGatewayResponsePrivate(AttachVpnGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachVpnGatewayResponse)
+    Q_DISABLE_COPY(AttachVpnGatewayResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

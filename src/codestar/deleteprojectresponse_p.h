@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPROJECTRESPONSE_P_H
 #define QTAWS_DELETEPROJECTRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "deleteprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DeleteProjectResponse;
+
+class QTAWS_EXPORT DeleteProjectResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteProjectResponsePrivate(DeleteProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProjectResponse)
+    Q_DISABLE_COPY(DeleteProjectResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

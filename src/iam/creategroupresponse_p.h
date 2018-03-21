@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEGROUPRESPONSE_P_H
 #define QTAWS_CREATEGROUPRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "creategrouprequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateGroupResponse;
+
+class QTAWS_EXPORT CreateGroupResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateGroupResponsePrivate(CreateGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGroupResponse)
+    Q_DISABLE_COPY(CreateGroupResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

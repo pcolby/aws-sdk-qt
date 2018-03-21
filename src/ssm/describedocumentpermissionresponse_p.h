@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTPERMISSIONRESPONSE_P_H
 #define QTAWS_DESCRIBEDOCUMENTPERMISSIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describedocumentpermissionrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeDocumentPermissionResponse;
+
+class QTAWS_EXPORT DescribeDocumentPermissionResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDocumentPermissionResponsePrivate(DescribeDocumentPermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDocumentPermissionResponse)
+    Q_DISABLE_COPY(DescribeDocumentPermissionResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

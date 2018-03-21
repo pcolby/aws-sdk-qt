@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTACTIVITYTYPESRESPONSE_P_H
 #define QTAWS_LISTACTIVITYTYPESRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "listactivitytypesrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListActivityTypesResponse;
+
+class QTAWS_EXPORT ListActivityTypesResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListActivityTypesResponsePrivate(ListActivityTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListActivityTypesResponse)
+    Q_DISABLE_COPY(ListActivityTypesResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

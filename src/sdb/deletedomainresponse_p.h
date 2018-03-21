@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDOMAINRESPONSE_P_H
 #define QTAWS_DELETEDOMAINRESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "deletedomainrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class DeleteDomainResponse;
+
+class QTAWS_EXPORT DeleteDomainResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDomainResponsePrivate(DeleteDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDomainResponse)
+    Q_DISABLE_COPY(DeleteDomainResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

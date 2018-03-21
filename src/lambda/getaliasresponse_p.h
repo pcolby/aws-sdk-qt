@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETALIASRESPONSE_P_H
 #define QTAWS_GETALIASRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "getaliasrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetAliasResponse;
+
+class QTAWS_EXPORT GetAliasResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAliasResponsePrivate(GetAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAliasResponse)
+    Q_DISABLE_COPY(GetAliasResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

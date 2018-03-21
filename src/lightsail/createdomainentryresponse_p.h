@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDOMAINENTRYRESPONSE_P_H
 #define QTAWS_CREATEDOMAINENTRYRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "createdomainentryrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateDomainEntryResponse;
+
+class QTAWS_EXPORT CreateDomainEntryResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDomainEntryResponsePrivate(CreateDomainEntryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDomainEntryResponse)
+    Q_DISABLE_COPY(CreateDomainEntryResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

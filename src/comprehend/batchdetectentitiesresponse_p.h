@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHDETECTENTITIESRESPONSE_P_H
 #define QTAWS_BATCHDETECTENTITIESRESPONSE_P_H
 
+#include "comprehendresponse.h"
+#include "batchdetectentitiesrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectEntitiesResponse;
+
+class QTAWS_EXPORT BatchDetectEntitiesResponsePrivate : public ComprehendResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchDetectEntitiesResponsePrivate(BatchDetectEntitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDetectEntitiesResponse)
+    Q_DISABLE_COPY(BatchDetectEntitiesResponsePrivate)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

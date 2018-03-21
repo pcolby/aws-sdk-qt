@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATEROUTETABLERESPONSE_P_H
 #define QTAWS_ASSOCIATEROUTETABLERESPONSE_P_H
 
+#include "ec2response.h"
+#include "associateroutetablerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateRouteTableResponse;
+
+class QTAWS_EXPORT AssociateRouteTableResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateRouteTableResponsePrivate(AssociateRouteTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateRouteTableResponse)
+    Q_DISABLE_COPY(AssociateRouteTableResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

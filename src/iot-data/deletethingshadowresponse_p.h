@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETHINGSHADOWRESPONSE_P_H
 #define QTAWS_DELETETHINGSHADOWRESPONSE_P_H
 
+#include "iotdataplaneresponse.h"
+#include "deletethingshadowrequest.h"
+
+namespace AWS {
+
+namespace IoTDataPlane {
+
+class DeleteThingShadowResponse;
+
+class QTAWS_EXPORT DeleteThingShadowResponsePrivate : public IoTDataPlaneResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteThingShadowResponsePrivate(DeleteThingShadowResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteThingShadowResponse)
+    Q_DISABLE_COPY(DeleteThingShadowResponsePrivate)
+
+};
+
+} // namespace IoTDataPlane
+} // namespace AWS
+
 #endif

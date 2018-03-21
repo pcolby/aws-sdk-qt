@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSCHEMAASJSONRESPONSE_P_H
 #define QTAWS_GETSCHEMAASJSONRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "getschemaasjsonrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetSchemaAsJsonResponse;
+
+class QTAWS_EXPORT GetSchemaAsJsonResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSchemaAsJsonResponsePrivate(GetSchemaAsJsonResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSchemaAsJsonResponse)
+    Q_DISABLE_COPY(GetSchemaAsJsonResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

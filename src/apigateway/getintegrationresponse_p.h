@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETINTEGRATIONRESPONSE_P_H
 #define QTAWS_GETINTEGRATIONRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getintegrationrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetIntegrationResponse;
+
+class QTAWS_EXPORT GetIntegrationResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIntegrationResponsePrivate(GetIntegrationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIntegrationResponse)
+    Q_DISABLE_COPY(GetIntegrationResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

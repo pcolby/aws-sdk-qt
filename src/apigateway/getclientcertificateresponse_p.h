@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCLIENTCERTIFICATERESPONSE_P_H
 #define QTAWS_GETCLIENTCERTIFICATERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getclientcertificaterequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetClientCertificateResponse;
+
+class QTAWS_EXPORT GetClientCertificateResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetClientCertificateResponsePrivate(GetClientCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetClientCertificateResponse)
+    Q_DISABLE_COPY(GetClientCertificateResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

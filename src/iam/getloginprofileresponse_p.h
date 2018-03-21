@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETLOGINPROFILERESPONSE_P_H
 #define QTAWS_GETLOGINPROFILERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "getloginprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetLoginProfileResponse;
+
+class QTAWS_EXPORT GetLoginProfileResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetLoginProfileResponsePrivate(GetLoginProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetLoginProfileResponse)
+    Q_DISABLE_COPY(GetLoginProfileResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

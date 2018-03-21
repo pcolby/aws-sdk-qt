@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDOWNLOADURLFORLAYERRESPONSE_P_H
 #define QTAWS_GETDOWNLOADURLFORLAYERRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "getdownloadurlforlayerrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class GetDownloadUrlForLayerResponse;
+
+class QTAWS_EXPORT GetDownloadUrlForLayerResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDownloadUrlForLayerResponsePrivate(GetDownloadUrlForLayerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDownloadUrlForLayerResponse)
+    Q_DISABLE_COPY(GetDownloadUrlForLayerResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

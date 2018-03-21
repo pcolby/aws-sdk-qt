@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTOREDBCLUSTERFROMSNAPSHOTRESPONSE_P_H
 #define QTAWS_RESTOREDBCLUSTERFROMSNAPSHOTRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "restoredbclusterfromsnapshotrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBClusterFromSnapshotResponse;
+
+class QTAWS_EXPORT RestoreDBClusterFromSnapshotResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestoreDBClusterFromSnapshotResponsePrivate(RestoreDBClusterFromSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreDBClusterFromSnapshotResponse)
+    Q_DISABLE_COPY(RestoreDBClusterFromSnapshotResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

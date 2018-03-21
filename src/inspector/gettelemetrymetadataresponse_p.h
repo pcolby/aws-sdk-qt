@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTELEMETRYMETADATARESPONSE_P_H
 #define QTAWS_GETTELEMETRYMETADATARESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "gettelemetrymetadatarequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class GetTelemetryMetadataResponse;
+
+class QTAWS_EXPORT GetTelemetryMetadataResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTelemetryMetadataResponsePrivate(GetTelemetryMetadataResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTelemetryMetadataResponse)
+    Q_DISABLE_COPY(GetTelemetryMetadataResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

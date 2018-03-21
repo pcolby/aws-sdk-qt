@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTUSERSINGROUPRESPONSE_P_H
 #define QTAWS_LISTUSERSINGROUPRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "listusersingrouprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ListUsersInGroupResponse;
+
+class QTAWS_EXPORT ListUsersInGroupResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListUsersInGroupResponsePrivate(ListUsersInGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListUsersInGroupResponse)
+    Q_DISABLE_COPY(ListUsersInGroupResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

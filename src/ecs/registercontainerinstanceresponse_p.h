@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERCONTAINERINSTANCERESPONSE_P_H
 #define QTAWS_REGISTERCONTAINERINSTANCERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "registercontainerinstancerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class RegisterContainerInstanceResponse;
+
+class QTAWS_EXPORT RegisterContainerInstanceResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterContainerInstanceResponsePrivate(RegisterContainerInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterContainerInstanceResponse)
+    Q_DISABLE_COPY(RegisterContainerInstanceResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEAPPRESPONSE_P_H
 #define QTAWS_CREATEAPPRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "createapprequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateAppResponse;
+
+class QTAWS_EXPORT CreateAppResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateAppResponsePrivate(CreateAppResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAppResponse)
+    Q_DISABLE_COPY(CreateAppResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

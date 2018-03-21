@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCURRENTUSERRESPONSE_P_H
 #define QTAWS_GETCURRENTUSERRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "getcurrentuserrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetCurrentUserResponse;
+
+class QTAWS_EXPORT GetCurrentUserResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCurrentUserResponsePrivate(GetCurrentUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCurrentUserResponse)
+    Q_DISABLE_COPY(GetCurrentUserResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

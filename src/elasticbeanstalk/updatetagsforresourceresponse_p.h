@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_UPDATETAGSFORRESOURCERESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updatetagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateTagsForResourceResponse;
+
+class QTAWS_EXPORT UpdateTagsForResourceResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTagsForResourceResponsePrivate(UpdateTagsForResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTagsForResourceResponse)
+    Q_DISABLE_COPY(UpdateTagsForResourceResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

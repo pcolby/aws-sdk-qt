@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATERULERESPONSE_P_H
 #define QTAWS_CREATERULERESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "createrulerequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateRuleResponse;
+
+class QTAWS_EXPORT CreateRuleResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateRuleResponsePrivate(CreateRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRuleResponse)
+    Q_DISABLE_COPY(CreateRuleResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINTENTVERSIONRESPONSE_P_H
 #define QTAWS_CREATEINTENTVERSIONRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "createintentversionrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class CreateIntentVersionResponse;
+
+class QTAWS_EXPORT CreateIntentVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateIntentVersionResponsePrivate(CreateIntentVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateIntentVersionResponse)
+    Q_DISABLE_COPY(CreateIntentVersionResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

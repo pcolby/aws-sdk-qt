@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETKEYROTATIONSTATUSRESPONSE_P_H
 #define QTAWS_GETKEYROTATIONSTATUSRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "getkeyrotationstatusrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GetKeyRotationStatusResponse;
+
+class QTAWS_EXPORT GetKeyRotationStatusResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetKeyRotationStatusResponsePrivate(GetKeyRotationStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetKeyRotationStatusResponse)
+    Q_DISABLE_COPY(GetKeyRotationStatusResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

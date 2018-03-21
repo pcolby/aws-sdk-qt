@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESECURITYGROUPRESPONSE_P_H
 #define QTAWS_DELETESECURITYGROUPRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletesecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteSecurityGroupResponse;
+
+class QTAWS_EXPORT DeleteSecurityGroupResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSecurityGroupResponsePrivate(DeleteSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteSecurityGroupResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

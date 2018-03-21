@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCOMPLIANCESUMMARIESRESPONSE_P_H
 #define QTAWS_LISTCOMPLIANCESUMMARIESRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "listcompliancesummariesrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListComplianceSummariesResponse;
+
+class QTAWS_EXPORT ListComplianceSummariesResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListComplianceSummariesResponsePrivate(ListComplianceSummariesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListComplianceSummariesResponse)
+    Q_DISABLE_COPY(ListComplianceSummariesResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

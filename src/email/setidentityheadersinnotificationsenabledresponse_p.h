@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDRESPONSE_P_H
 #define QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "setidentityheadersinnotificationsenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityHeadersInNotificationsEnabledResponse;
+
+class QTAWS_EXPORT SetIdentityHeadersInNotificationsEnabledResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetIdentityHeadersInNotificationsEnabledResponsePrivate(SetIdentityHeadersInNotificationsEnabledResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityHeadersInNotificationsEnabledResponse)
+    Q_DISABLE_COPY(SetIdentityHeadersInNotificationsEnabledResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

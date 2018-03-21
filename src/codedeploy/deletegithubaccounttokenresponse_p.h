@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEGITHUBACCOUNTTOKENRESPONSE_P_H
 #define QTAWS_DELETEGITHUBACCOUNTTOKENRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "deletegithubaccounttokenrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeleteGitHubAccountTokenResponse;
+
+class QTAWS_EXPORT DeleteGitHubAccountTokenResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteGitHubAccountTokenResponsePrivate(DeleteGitHubAccountTokenResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteGitHubAccountTokenResponse)
+    Q_DISABLE_COPY(DeleteGitHubAccountTokenResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

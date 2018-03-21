@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTNETWORKPROFILESRESPONSE_P_H
 #define QTAWS_LISTNETWORKPROFILESRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "listnetworkprofilesrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListNetworkProfilesResponse;
+
+class QTAWS_EXPORT ListNetworkProfilesResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListNetworkProfilesResponsePrivate(ListNetworkProfilesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListNetworkProfilesResponse)
+    Q_DISABLE_COPY(ListNetworkProfilesResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

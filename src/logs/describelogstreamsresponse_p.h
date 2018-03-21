@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELOGSTREAMSRESPONSE_P_H
 #define QTAWS_DESCRIBELOGSTREAMSRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "describelogstreamsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeLogStreamsResponse;
+
+class QTAWS_EXPORT DescribeLogStreamsResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLogStreamsResponsePrivate(DescribeLogStreamsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLogStreamsResponse)
+    Q_DISABLE_COPY(DescribeLogStreamsResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHDISKRESPONSE_P_H
 #define QTAWS_DETACHDISKRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "detachdiskrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DetachDiskResponse;
+
+class QTAWS_EXPORT DetachDiskResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachDiskResponsePrivate(DetachDiskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachDiskResponse)
+    Q_DISABLE_COPY(DetachDiskResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

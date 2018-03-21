@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_P_H
 #define QTAWS_UPDATECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updatecustomverificationemailtemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateCustomVerificationEmailTemplateResponse;
+
+class QTAWS_EXPORT UpdateCustomVerificationEmailTemplateResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateCustomVerificationEmailTemplateResponsePrivate(UpdateCustomVerificationEmailTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateCustomVerificationEmailTemplateResponse)
+    Q_DISABLE_COPY(UpdateCustomVerificationEmailTemplateResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

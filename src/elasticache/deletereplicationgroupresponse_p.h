@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREPLICATIONGROUPRESPONSE_P_H
 #define QTAWS_DELETEREPLICATIONGROUPRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "deletereplicationgrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteReplicationGroupResponse;
+
+class QTAWS_EXPORT DeleteReplicationGroupResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteReplicationGroupResponsePrivate(DeleteReplicationGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReplicationGroupResponse)
+    Q_DISABLE_COPY(DeleteReplicationGroupResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

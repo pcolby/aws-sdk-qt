@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPROJECTRESPONSE_P_H
 #define QTAWS_DELETEPROJECTRESPONSE_P_H
 
+#include "mobileresponse.h"
+#include "deleteprojectrequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class DeleteProjectResponse;
+
+class QTAWS_EXPORT DeleteProjectResponsePrivate : public MobileResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteProjectResponsePrivate(DeleteProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProjectResponse)
+    Q_DISABLE_COPY(DeleteProjectResponsePrivate)
+
+};
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

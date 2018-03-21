@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "addsourceidentifiertosubscriptionrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class AddSourceIdentifierToSubscriptionResponse;
+
+class QTAWS_EXPORT AddSourceIdentifierToSubscriptionResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddSourceIdentifierToSubscriptionResponsePrivate(AddSourceIdentifierToSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddSourceIdentifierToSubscriptionResponse)
+    Q_DISABLE_COPY(AddSourceIdentifierToSubscriptionResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

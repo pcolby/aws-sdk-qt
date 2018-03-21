@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEGROUPSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "describegroupsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeGroupsResponse;
+
+class QTAWS_EXPORT DescribeGroupsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeGroupsResponsePrivate(DescribeGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeGroupsResponse)
+    Q_DISABLE_COPY(DescribeGroupsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSIGNPRIVATEIPADDRESSESRESPONSE_P_H
 #define QTAWS_ASSIGNPRIVATEIPADDRESSESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "assignprivateipaddressesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssignPrivateIpAddressesResponse;
+
+class QTAWS_EXPORT AssignPrivateIpAddressesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssignPrivateIpAddressesResponsePrivate(AssignPrivateIpAddressesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssignPrivateIpAddressesResponse)
+    Q_DISABLE_COPY(AssignPrivateIpAddressesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

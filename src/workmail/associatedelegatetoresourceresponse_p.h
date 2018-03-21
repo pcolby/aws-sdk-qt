@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATEDELEGATETORESOURCERESPONSE_P_H
 #define QTAWS_ASSOCIATEDELEGATETORESOURCERESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "associatedelegatetoresourcerequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class AssociateDelegateToResourceResponse;
+
+class QTAWS_EXPORT AssociateDelegateToResourceResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateDelegateToResourceResponsePrivate(AssociateDelegateToResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateDelegateToResourceResponse)
+    Q_DISABLE_COPY(AssociateDelegateToResourceResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

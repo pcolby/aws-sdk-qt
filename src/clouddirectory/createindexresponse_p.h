@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINDEXRESPONSE_P_H
 #define QTAWS_CREATEINDEXRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "createindexrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateIndexResponse;
+
+class QTAWS_EXPORT CreateIndexResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateIndexResponsePrivate(CreateIndexResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateIndexResponse)
+    Q_DISABLE_COPY(CreateIndexResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

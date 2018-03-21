@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTCLUSTERPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEENGINEDEFAULTCLUSTERPARAMETERSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describeenginedefaultclusterparametersrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeEngineDefaultClusterParametersResponse;
+
+class QTAWS_EXPORT DescribeEngineDefaultClusterParametersResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEngineDefaultClusterParametersResponsePrivate(DescribeEngineDefaultClusterParametersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEngineDefaultClusterParametersResponse)
+    Q_DISABLE_COPY(DescribeEngineDefaultClusterParametersResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

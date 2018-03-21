@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATENOTIFICATIONSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_CREATENOTIFICATIONSUBSCRIPTIONRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "createnotificationsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateNotificationSubscriptionResponse;
+
+class QTAWS_EXPORT CreateNotificationSubscriptionResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateNotificationSubscriptionResponsePrivate(CreateNotificationSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNotificationSubscriptionResponse)
+    Q_DISABLE_COPY(CreateNotificationSubscriptionResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

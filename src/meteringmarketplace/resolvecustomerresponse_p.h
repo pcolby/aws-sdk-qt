@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESOLVECUSTOMERRESPONSE_P_H
 #define QTAWS_RESOLVECUSTOMERRESPONSE_P_H
 
+#include "marketplacemeteringresponse.h"
+#include "resolvecustomerrequest.h"
+
+namespace AWS {
+
+namespace MarketplaceMetering {
+
+class ResolveCustomerResponse;
+
+class QTAWS_EXPORT ResolveCustomerResponsePrivate : public MarketplaceMeteringResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResolveCustomerResponsePrivate(ResolveCustomerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResolveCustomerResponse)
+    Q_DISABLE_COPY(ResolveCustomerResponsePrivate)
+
+};
+
+} // namespace MarketplaceMetering
+} // namespace AWS
+
 #endif

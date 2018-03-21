@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEBUNDLESRESPONSE_P_H
 #define QTAWS_DESCRIBEWORKSPACEBUNDLESRESPONSE_P_H
 
+#include "workspacesresponse.h"
+#include "describeworkspacebundlesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspaceBundlesResponse;
+
+class QTAWS_EXPORT DescribeWorkspaceBundlesResponsePrivate : public WorkSpacesResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeWorkspaceBundlesResponsePrivate(DescribeWorkspaceBundlesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkspaceBundlesResponse)
+    Q_DISABLE_COPY(DescribeWorkspaceBundlesResponsePrivate)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEACCOUNTSENDINGENABLEDRESPONSE_P_H
 #define QTAWS_UPDATEACCOUNTSENDINGENABLEDRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updateaccountsendingenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateAccountSendingEnabledResponse;
+
+class QTAWS_EXPORT UpdateAccountSendingEnabledResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAccountSendingEnabledResponsePrivate(UpdateAccountSendingEnabledResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAccountSendingEnabledResponse)
+    Q_DISABLE_COPY(UpdateAccountSendingEnabledResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

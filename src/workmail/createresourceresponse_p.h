@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATERESOURCERESPONSE_P_H
 #define QTAWS_CREATERESOURCERESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "createresourcerequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class CreateResourceResponse;
+
+class QTAWS_EXPORT CreateResourceResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateResourceResponsePrivate(CreateResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateResourceResponse)
+    Q_DISABLE_COPY(CreateResourceResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

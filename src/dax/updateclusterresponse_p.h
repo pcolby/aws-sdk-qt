@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECLUSTERRESPONSE_P_H
 #define QTAWS_UPDATECLUSTERRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "updateclusterrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateClusterResponse;
+
+class QTAWS_EXPORT UpdateClusterResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateClusterResponsePrivate(UpdateClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateClusterResponse)
+    Q_DISABLE_COPY(UpdateClusterResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCONNECTIONSRESPONSE_P_H
 #define QTAWS_GETCONNECTIONSRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getconnectionsrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetConnectionsResponse;
+
+class QTAWS_EXPORT GetConnectionsResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetConnectionsResponsePrivate(GetConnectionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetConnectionsResponse)
+    Q_DISABLE_COPY(GetConnectionsResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

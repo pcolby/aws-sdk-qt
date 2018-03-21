@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEIDENTITYRESPONSE_P_H
 #define QTAWS_DELETEIDENTITYRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deleteidentityrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteIdentityResponse;
+
+class QTAWS_EXPORT DeleteIdentityResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteIdentityResponsePrivate(DeleteIdentityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIdentityResponse)
+    Q_DISABLE_COPY(DeleteIdentityResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

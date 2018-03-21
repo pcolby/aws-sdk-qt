@@ -20,4 +20,31 @@
 #ifndef QTAWS_INVOKEASYNCRESPONSE_P_H
 #define QTAWS_INVOKEASYNCRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "invokeasyncrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class InvokeAsyncResponse;
+
+class QTAWS_EXPORT InvokeAsyncResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InvokeAsyncResponsePrivate(InvokeAsyncResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InvokeAsyncResponse)
+    Q_DISABLE_COPY(InvokeAsyncResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

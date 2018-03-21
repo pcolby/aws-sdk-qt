@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDISCOVERYSUMMARYRESPONSE_P_H
 #define QTAWS_GETDISCOVERYSUMMARYRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "getdiscoverysummaryrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class GetDiscoverySummaryResponse;
+
+class QTAWS_EXPORT GetDiscoverySummaryResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDiscoverySummaryResponsePrivate(GetDiscoverySummaryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDiscoverySummaryResponse)
+    Q_DISABLE_COPY(GetDiscoverySummaryResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

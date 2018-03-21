@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETABLEVERSIONRESPONSE_P_H
 #define QTAWS_DELETETABLEVERSIONRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "deletetableversionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteTableVersionResponse;
+
+class QTAWS_EXPORT DeleteTableVersionResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTableVersionResponsePrivate(DeleteTableVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTableVersionResponse)
+    Q_DISABLE_COPY(DeleteTableVersionResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

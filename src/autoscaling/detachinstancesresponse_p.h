@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHINSTANCESRESPONSE_P_H
 #define QTAWS_DETACHINSTANCESRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "detachinstancesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DetachInstancesResponse;
+
+class QTAWS_EXPORT DetachInstancesResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachInstancesResponsePrivate(DetachInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachInstancesResponse)
+    Q_DISABLE_COPY(DetachInstancesResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

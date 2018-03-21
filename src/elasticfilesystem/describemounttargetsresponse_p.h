@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEMOUNTTARGETSRESPONSE_P_H
 #define QTAWS_DESCRIBEMOUNTTARGETSRESPONSE_P_H
 
+#include "efsresponse.h"
+#include "describemounttargetsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeMountTargetsResponse;
+
+class QTAWS_EXPORT DescribeMountTargetsResponsePrivate : public EFSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeMountTargetsResponsePrivate(DescribeMountTargetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMountTargetsResponse)
+    Q_DISABLE_COPY(DescribeMountTargetsResponsePrivate)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

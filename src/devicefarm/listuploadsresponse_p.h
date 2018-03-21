@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTUPLOADSRESPONSE_P_H
 #define QTAWS_LISTUPLOADSRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "listuploadsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListUploadsResponse;
+
+class QTAWS_EXPORT ListUploadsResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListUploadsResponsePrivate(ListUploadsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListUploadsResponse)
+    Q_DISABLE_COPY(ListUploadsResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

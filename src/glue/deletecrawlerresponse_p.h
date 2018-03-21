@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECRAWLERRESPONSE_P_H
 #define QTAWS_DELETECRAWLERRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "deletecrawlerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteCrawlerResponse;
+
+class QTAWS_EXPORT DeleteCrawlerResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteCrawlerResponsePrivate(DeleteCrawlerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCrawlerResponse)
+    Q_DISABLE_COPY(DeleteCrawlerResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

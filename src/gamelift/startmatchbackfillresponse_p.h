@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTMATCHBACKFILLRESPONSE_P_H
 #define QTAWS_STARTMATCHBACKFILLRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "startmatchbackfillrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StartMatchBackfillResponse;
+
+class QTAWS_EXPORT StartMatchBackfillResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartMatchBackfillResponsePrivate(StartMatchBackfillResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartMatchBackfillResponse)
+    Q_DISABLE_COPY(StartMatchBackfillResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

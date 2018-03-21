@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETOBJECTACLRESPONSE_P_H
 #define QTAWS_GETOBJECTACLRESPONSE_P_H
 
+#include "s3response.h"
+#include "getobjectaclrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetObjectAclResponse;
+
+class QTAWS_EXPORT GetObjectAclResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetObjectAclResponsePrivate(GetObjectAclResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetObjectAclResponse)
+    Q_DISABLE_COPY(GetObjectAclResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

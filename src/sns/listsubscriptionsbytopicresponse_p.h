@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONSBYTOPICRESPONSE_P_H
 #define QTAWS_LISTSUBSCRIPTIONSBYTOPICRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "listsubscriptionsbytopicrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListSubscriptionsByTopicResponse;
+
+class QTAWS_EXPORT ListSubscriptionsByTopicResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListSubscriptionsByTopicResponsePrivate(ListSubscriptionsByTopicResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListSubscriptionsByTopicResponse)
+    Q_DISABLE_COPY(ListSubscriptionsByTopicResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

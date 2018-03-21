@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEENVIRONMENTCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEENVIRONMENTCONFIGURATIONRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "deleteenvironmentconfigurationrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DeleteEnvironmentConfigurationResponse;
+
+class QTAWS_EXPORT DeleteEnvironmentConfigurationResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteEnvironmentConfigurationResponsePrivate(DeleteEnvironmentConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEnvironmentConfigurationResponse)
+    Q_DISABLE_COPY(DeleteEnvironmentConfigurationResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

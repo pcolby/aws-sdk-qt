@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCLUSTERCREDENTIALSRESPONSE_P_H
 #define QTAWS_GETCLUSTERCREDENTIALSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "getclustercredentialsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class GetClusterCredentialsResponse;
+
+class QTAWS_EXPORT GetClusterCredentialsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetClusterCredentialsResponsePrivate(GetClusterCredentialsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetClusterCredentialsResponse)
+    Q_DISABLE_COPY(GetClusterCredentialsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

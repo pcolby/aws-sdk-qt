@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERESERVEDINSTANCESMODIFICATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBERESERVEDINSTANCESMODIFICATIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describereservedinstancesmodificationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeReservedInstancesModificationsResponse;
+
+class QTAWS_EXPORT DescribeReservedInstancesModificationsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReservedInstancesModificationsResponsePrivate(DescribeReservedInstancesModificationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReservedInstancesModificationsResponse)
+    Q_DISABLE_COPY(DescribeReservedInstancesModificationsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

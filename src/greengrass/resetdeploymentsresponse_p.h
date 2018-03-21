@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETDEPLOYMENTSRESPONSE_P_H
 #define QTAWS_RESETDEPLOYMENTSRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "resetdeploymentsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ResetDeploymentsResponse;
+
+class QTAWS_EXPORT ResetDeploymentsResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetDeploymentsResponsePrivate(ResetDeploymentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetDeploymentsResponse)
+    Q_DISABLE_COPY(ResetDeploymentsResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

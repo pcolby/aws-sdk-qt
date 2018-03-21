@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSAMPLEDREQUESTSRESPONSE_P_H
 #define QTAWS_GETSAMPLEDREQUESTSRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "getsampledrequestsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetSampledRequestsResponse;
+
+class QTAWS_EXPORT GetSampledRequestsResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSampledRequestsResponsePrivate(GetSampledRequestsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSampledRequestsResponse)
+    Q_DISABLE_COPY(GetSampledRequestsResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

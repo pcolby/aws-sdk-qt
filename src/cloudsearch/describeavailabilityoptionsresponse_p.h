@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYOPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEAVAILABILITYOPTIONSRESPONSE_P_H
 
+#include "cloudsearchresponse.h"
+#include "describeavailabilityoptionsrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DescribeAvailabilityOptionsResponse;
+
+class QTAWS_EXPORT DescribeAvailabilityOptionsResponsePrivate : public CloudSearchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAvailabilityOptionsResponsePrivate(DescribeAvailabilityOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAvailabilityOptionsResponse)
+    Q_DISABLE_COPY(DescribeAvailabilityOptionsResponsePrivate)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

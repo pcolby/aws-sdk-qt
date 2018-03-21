@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPLATFORMENDPOINTRESPONSE_P_H
 #define QTAWS_CREATEPLATFORMENDPOINTRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "createplatformendpointrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class CreatePlatformEndpointResponse;
+
+class QTAWS_EXPORT CreatePlatformEndpointResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePlatformEndpointResponsePrivate(CreatePlatformEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePlatformEndpointResponse)
+    Q_DISABLE_COPY(CreatePlatformEndpointResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

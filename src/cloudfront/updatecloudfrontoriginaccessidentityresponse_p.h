@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_P_H
 #define QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "updatecloudfrontoriginaccessidentityrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class UpdateCloudFrontOriginAccessIdentityResponse;
+
+class QTAWS_EXPORT UpdateCloudFrontOriginAccessIdentityResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateCloudFrontOriginAccessIdentityResponsePrivate(UpdateCloudFrontOriginAccessIdentityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateCloudFrontOriginAccessIdentityResponse)
+    Q_DISABLE_COPY(UpdateCloudFrontOriginAccessIdentityResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

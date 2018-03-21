@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETENDPOINTATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETENDPOINTATTRIBUTESRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "getendpointattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class GetEndpointAttributesResponse;
+
+class QTAWS_EXPORT GetEndpointAttributesResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetEndpointAttributesResponsePrivate(GetEndpointAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetEndpointAttributesResponse)
+    Q_DISABLE_COPY(GetEndpointAttributesResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

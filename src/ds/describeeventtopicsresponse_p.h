@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEVENTTOPICSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTTOPICSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "describeeventtopicsrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeEventTopicsResponse;
+
+class QTAWS_EXPORT DescribeEventTopicsResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEventTopicsResponsePrivate(DescribeEventTopicsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventTopicsResponse)
+    Q_DISABLE_COPY(DescribeEventTopicsResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

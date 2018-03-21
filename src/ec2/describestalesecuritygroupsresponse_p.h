@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTALESECURITYGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBESTALESECURITYGROUPSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describestalesecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeStaleSecurityGroupsResponse;
+
+class QTAWS_EXPORT DescribeStaleSecurityGroupsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStaleSecurityGroupsResponsePrivate(DescribeStaleSecurityGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStaleSecurityGroupsResponse)
+    Q_DISABLE_COPY(DescribeStaleSecurityGroupsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

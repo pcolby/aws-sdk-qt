@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPOLICIESFORTARGETRESPONSE_P_H
 #define QTAWS_LISTPOLICIESFORTARGETRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listpoliciesfortargetrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListPoliciesForTargetResponse;
+
+class QTAWS_EXPORT ListPoliciesForTargetResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPoliciesForTargetResponsePrivate(ListPoliciesForTargetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPoliciesForTargetResponse)
+    Q_DISABLE_COPY(ListPoliciesForTargetResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

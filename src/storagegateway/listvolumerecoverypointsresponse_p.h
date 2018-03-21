@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTVOLUMERECOVERYPOINTSRESPONSE_P_H
 #define QTAWS_LISTVOLUMERECOVERYPOINTSRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "listvolumerecoverypointsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListVolumeRecoveryPointsResponse;
+
+class QTAWS_EXPORT ListVolumeRecoveryPointsResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListVolumeRecoveryPointsResponsePrivate(ListVolumeRecoveryPointsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListVolumeRecoveryPointsResponse)
+    Q_DISABLE_COPY(ListVolumeRecoveryPointsResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

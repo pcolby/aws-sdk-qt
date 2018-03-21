@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECOMMENTRESPONSE_P_H
 #define QTAWS_UPDATECOMMENTRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "updatecommentrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateCommentResponse;
+
+class QTAWS_EXPORT UpdateCommentResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateCommentResponsePrivate(UpdateCommentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateCommentResponse)
+    Q_DISABLE_COPY(UpdateCommentResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

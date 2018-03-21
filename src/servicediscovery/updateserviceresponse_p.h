@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESERVICERESPONSE_P_H
 #define QTAWS_UPDATESERVICERESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "updateservicerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class UpdateServiceResponse;
+
+class QTAWS_EXPORT UpdateServiceResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateServiceResponsePrivate(UpdateServiceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServiceResponse)
+    Q_DISABLE_COPY(UpdateServiceResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

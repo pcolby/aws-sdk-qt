@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEOPTIONGROUPRESPONSE_P_H
 #define QTAWS_DELETEOPTIONGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "deleteoptiongrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteOptionGroupResponse;
+
+class QTAWS_EXPORT DeleteOptionGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteOptionGroupResponsePrivate(DeleteOptionGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteOptionGroupResponse)
+    Q_DISABLE_COPY(DeleteOptionGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

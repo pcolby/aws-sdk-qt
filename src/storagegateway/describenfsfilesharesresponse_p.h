@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBENFSFILESHARESRESPONSE_P_H
 #define QTAWS_DESCRIBENFSFILESHARESRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describenfsfilesharesrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeNFSFileSharesResponse;
+
+class QTAWS_EXPORT DescribeNFSFileSharesResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeNFSFileSharesResponsePrivate(DescribeNFSFileSharesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNFSFileSharesResponse)
+    Q_DISABLE_COPY(DescribeNFSFileSharesResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

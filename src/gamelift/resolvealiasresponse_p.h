@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESOLVEALIASRESPONSE_P_H
 #define QTAWS_RESOLVEALIASRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "resolvealiasrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class ResolveAliasResponse;
+
+class QTAWS_EXPORT ResolveAliasResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResolveAliasResponsePrivate(ResolveAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResolveAliasResponse)
+    Q_DISABLE_COPY(ResolveAliasResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

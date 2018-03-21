@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACCOUNTRESPONSE_P_H
 #define QTAWS_GETACCOUNTRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getaccountrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetAccountResponse;
+
+class QTAWS_EXPORT GetAccountResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAccountResponsePrivate(GetAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountResponse)
+    Q_DISABLE_COPY(GetAccountResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

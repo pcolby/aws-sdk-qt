@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETLAUNCHTEMPLATEDATARESPONSE_P_H
 #define QTAWS_GETLAUNCHTEMPLATEDATARESPONSE_P_H
 
+#include "ec2response.h"
+#include "getlaunchtemplatedatarequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetLaunchTemplateDataResponse;
+
+class QTAWS_EXPORT GetLaunchTemplateDataResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetLaunchTemplateDataResponsePrivate(GetLaunchTemplateDataResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetLaunchTemplateDataResponse)
+    Q_DISABLE_COPY(GetLaunchTemplateDataResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

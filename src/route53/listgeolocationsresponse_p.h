@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGEOLOCATIONSRESPONSE_P_H
 #define QTAWS_LISTGEOLOCATIONSRESPONSE_P_H
 
+#include "route53response.h"
+#include "listgeolocationsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListGeoLocationsResponse;
+
+class QTAWS_EXPORT ListGeoLocationsResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGeoLocationsResponsePrivate(ListGeoLocationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGeoLocationsResponse)
+    Q_DISABLE_COPY(ListGeoLocationsResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

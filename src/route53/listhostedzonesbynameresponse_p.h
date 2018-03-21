@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTHOSTEDZONESBYNAMERESPONSE_P_H
 #define QTAWS_LISTHOSTEDZONESBYNAMERESPONSE_P_H
 
+#include "route53response.h"
+#include "listhostedzonesbynamerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListHostedZonesByNameResponse;
+
+class QTAWS_EXPORT ListHostedZonesByNameResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListHostedZonesByNameResponsePrivate(ListHostedZonesByNameResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListHostedZonesByNameResponse)
+    Q_DISABLE_COPY(ListHostedZonesByNameResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

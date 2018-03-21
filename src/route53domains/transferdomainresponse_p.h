@@ -20,4 +20,31 @@
 #ifndef QTAWS_TRANSFERDOMAINRESPONSE_P_H
 #define QTAWS_TRANSFERDOMAINRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "transferdomainrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class TransferDomainResponse;
+
+class QTAWS_EXPORT TransferDomainResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TransferDomainResponsePrivate(TransferDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TransferDomainResponse)
+    Q_DISABLE_COPY(TransferDomainResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

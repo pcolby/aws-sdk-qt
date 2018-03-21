@@ -20,4 +20,31 @@
 #ifndef QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERRESPONSE_P_H
 #define QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "applysecuritygroupstoloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class ApplySecurityGroupsToLoadBalancerResponse;
+
+class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ApplySecurityGroupsToLoadBalancerResponsePrivate(ApplySecurityGroupsToLoadBalancerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ApplySecurityGroupsToLoadBalancerResponse)
+    Q_DISABLE_COPY(ApplySecurityGroupsToLoadBalancerResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

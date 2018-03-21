@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATERATEBASEDRULERESPONSE_P_H
 #define QTAWS_CREATERATEBASEDRULERESPONSE_P_H
 
+#include "wafresponse.h"
+#include "createratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateRateBasedRuleResponse;
+
+class QTAWS_EXPORT CreateRateBasedRuleResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateRateBasedRuleResponsePrivate(CreateRateBasedRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRateBasedRuleResponse)
+    Q_DISABLE_COPY(CreateRateBasedRuleResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

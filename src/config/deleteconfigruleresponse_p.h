@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONFIGRULERESPONSE_P_H
 #define QTAWS_DELETECONFIGRULERESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "deleteconfigrulerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeleteConfigRuleResponse;
+
+class QTAWS_EXPORT DeleteConfigRuleResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConfigRuleResponsePrivate(DeleteConfigRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigRuleResponse)
+    Q_DISABLE_COPY(DeleteConfigRuleResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

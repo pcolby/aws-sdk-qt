@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPLOADSERVERCERTIFICATERESPONSE_P_H
 #define QTAWS_UPLOADSERVERCERTIFICATERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "uploadservercertificaterequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UploadServerCertificateResponse;
+
+class QTAWS_EXPORT UploadServerCertificateResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UploadServerCertificateResponsePrivate(UploadServerCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UploadServerCertificateResponse)
+    Q_DISABLE_COPY(UploadServerCertificateResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

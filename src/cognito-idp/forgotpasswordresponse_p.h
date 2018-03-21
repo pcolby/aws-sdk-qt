@@ -20,4 +20,31 @@
 #ifndef QTAWS_FORGOTPASSWORDRESPONSE_P_H
 #define QTAWS_FORGOTPASSWORDRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "forgotpasswordrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ForgotPasswordResponse;
+
+class QTAWS_EXPORT ForgotPasswordResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ForgotPasswordResponsePrivate(ForgotPasswordResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ForgotPasswordResponse)
+    Q_DISABLE_COPY(ForgotPasswordResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

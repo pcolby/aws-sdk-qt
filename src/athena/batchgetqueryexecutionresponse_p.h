@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHGETQUERYEXECUTIONRESPONSE_P_H
 #define QTAWS_BATCHGETQUERYEXECUTIONRESPONSE_P_H
 
+#include "athenaresponse.h"
+#include "batchgetqueryexecutionrequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class BatchGetQueryExecutionResponse;
+
+class QTAWS_EXPORT BatchGetQueryExecutionResponsePrivate : public AthenaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchGetQueryExecutionResponsePrivate(BatchGetQueryExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetQueryExecutionResponse)
+    Q_DISABLE_COPY(BatchGetQueryExecutionResponsePrivate)
+
+};
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

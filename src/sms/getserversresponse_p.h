@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSERVERSRESPONSE_P_H
 #define QTAWS_GETSERVERSRESPONSE_P_H
 
+#include "smsresponse.h"
+#include "getserversrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class GetServersResponse;
+
+class QTAWS_EXPORT GetServersResponsePrivate : public SMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetServersResponsePrivate(GetServersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetServersResponse)
+    Q_DISABLE_COPY(GetServersResponsePrivate)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

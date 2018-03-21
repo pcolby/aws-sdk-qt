@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESOLVERRESPONSE_P_H
 #define QTAWS_GETRESOLVERRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "getresolverrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetResolverResponse;
+
+class QTAWS_EXPORT GetResolverResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetResolverResponsePrivate(GetResolverResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetResolverResponse)
+    Q_DISABLE_COPY(GetResolverResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

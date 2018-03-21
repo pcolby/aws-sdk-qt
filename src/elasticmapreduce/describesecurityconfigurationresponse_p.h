@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESECURITYCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DESCRIBESECURITYCONFIGURATIONRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "describesecurityconfigurationrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeSecurityConfigurationResponse;
+
+class QTAWS_EXPORT DescribeSecurityConfigurationResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSecurityConfigurationResponsePrivate(DescribeSecurityConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSecurityConfigurationResponse)
+    Q_DISABLE_COPY(DescribeSecurityConfigurationResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

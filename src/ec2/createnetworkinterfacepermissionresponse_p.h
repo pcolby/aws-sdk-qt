@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATENETWORKINTERFACEPERMISSIONRESPONSE_P_H
 #define QTAWS_CREATENETWORKINTERFACEPERMISSIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createnetworkinterfacepermissionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateNetworkInterfacePermissionResponse;
+
+class QTAWS_EXPORT CreateNetworkInterfacePermissionResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateNetworkInterfacePermissionResponsePrivate(CreateNetworkInterfacePermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNetworkInterfacePermissionResponse)
+    Q_DISABLE_COPY(CreateNetworkInterfacePermissionResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

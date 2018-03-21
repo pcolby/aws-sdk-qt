@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCOMMITRESPONSE_P_H
 #define QTAWS_GETCOMMITRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "getcommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetCommitResponse;
+
+class QTAWS_EXPORT GetCommitResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCommitResponsePrivate(GetCommitResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCommitResponse)
+    Q_DISABLE_COPY(GetCommitResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

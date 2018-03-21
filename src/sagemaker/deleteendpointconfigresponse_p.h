@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEENDPOINTCONFIGRESPONSE_P_H
 #define QTAWS_DELETEENDPOINTCONFIGRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "deleteendpointconfigrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteEndpointConfigResponse;
+
+class QTAWS_EXPORT DeleteEndpointConfigResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteEndpointConfigResponsePrivate(DeleteEndpointConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEndpointConfigResponse)
+    Q_DISABLE_COPY(DeleteEndpointConfigResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

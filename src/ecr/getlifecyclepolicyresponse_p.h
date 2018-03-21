@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETLIFECYCLEPOLICYRESPONSE_P_H
 #define QTAWS_GETLIFECYCLEPOLICYRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "getlifecyclepolicyrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class GetLifecyclePolicyResponse;
+
+class QTAWS_EXPORT GetLifecyclePolicyResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetLifecyclePolicyResponsePrivate(GetLifecyclePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetLifecyclePolicyResponse)
+    Q_DISABLE_COPY(GetLifecyclePolicyResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

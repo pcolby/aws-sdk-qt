@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describestackprovisioningparametersrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeStackProvisioningParametersResponse;
+
+class QTAWS_EXPORT DescribeStackProvisioningParametersResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStackProvisioningParametersResponsePrivate(DescribeStackProvisioningParametersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStackProvisioningParametersResponse)
+    Q_DISABLE_COPY(DescribeStackProvisioningParametersResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

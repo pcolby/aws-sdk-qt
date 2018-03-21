@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updateconfigurationsetsendingenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetSendingEnabledResponse;
+
+class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConfigurationSetSendingEnabledResponsePrivate(UpdateConfigurationSetSendingEnabledResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationSetSendingEnabledResponse)
+    Q_DISABLE_COPY(UpdateConfigurationSetSendingEnabledResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

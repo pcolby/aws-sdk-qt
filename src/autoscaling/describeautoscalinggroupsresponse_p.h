@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAUTOSCALINGGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEAUTOSCALINGGROUPSRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describeautoscalinggroupsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeAutoScalingGroupsResponse;
+
+class QTAWS_EXPORT DescribeAutoScalingGroupsResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAutoScalingGroupsResponsePrivate(DescribeAutoScalingGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAutoScalingGroupsResponse)
+    Q_DISABLE_COPY(DescribeAutoScalingGroupsResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

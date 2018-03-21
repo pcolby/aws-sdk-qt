@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESERVICEACCESSPOLICIESRESPONSE_P_H
 #define QTAWS_DESCRIBESERVICEACCESSPOLICIESRESPONSE_P_H
 
+#include "cloudsearchresponse.h"
+#include "describeserviceaccesspoliciesrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DescribeServiceAccessPoliciesResponse;
+
+class QTAWS_EXPORT DescribeServiceAccessPoliciesResponsePrivate : public CloudSearchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeServiceAccessPoliciesResponsePrivate(DescribeServiceAccessPoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServiceAccessPoliciesResponse)
+    Q_DISABLE_COPY(DescribeServiceAccessPoliciesResponsePrivate)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

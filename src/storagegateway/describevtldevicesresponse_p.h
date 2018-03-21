@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVTLDEVICESRESPONSE_P_H
 #define QTAWS_DESCRIBEVTLDEVICESRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describevtldevicesrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeVTLDevicesResponse;
+
+class QTAWS_EXPORT DescribeVTLDevicesResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeVTLDevicesResponsePrivate(DescribeVTLDevicesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVTLDevicesResponse)
+    Q_DISABLE_COPY(DescribeVTLDevicesResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

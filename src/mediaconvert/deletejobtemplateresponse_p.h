@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEJOBTEMPLATERESPONSE_P_H
 #define QTAWS_DELETEJOBTEMPLATERESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "deletejobtemplaterequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DeleteJobTemplateResponse;
+
+class QTAWS_EXPORT DeleteJobTemplateResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteJobTemplateResponsePrivate(DeleteJobTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteJobTemplateResponse)
+    Q_DISABLE_COPY(DeleteJobTemplateResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

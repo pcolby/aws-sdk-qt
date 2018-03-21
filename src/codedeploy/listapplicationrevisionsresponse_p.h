@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTAPPLICATIONREVISIONSRESPONSE_P_H
 #define QTAWS_LISTAPPLICATIONREVISIONSRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "listapplicationrevisionsrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListApplicationRevisionsResponse;
+
+class QTAWS_EXPORT ListApplicationRevisionsResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListApplicationRevisionsResponsePrivate(ListApplicationRevisionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListApplicationRevisionsResponse)
+    Q_DISABLE_COPY(ListApplicationRevisionsResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

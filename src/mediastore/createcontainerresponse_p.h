@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECONTAINERRESPONSE_P_H
 #define QTAWS_CREATECONTAINERRESPONSE_P_H
 
+#include "mediastoreresponse.h"
+#include "createcontainerrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class CreateContainerResponse;
+
+class QTAWS_EXPORT CreateContainerResponsePrivate : public MediaStoreResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateContainerResponsePrivate(CreateContainerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateContainerResponse)
+    Q_DISABLE_COPY(CreateContainerResponsePrivate)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

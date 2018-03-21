@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETPASSWORDRESPONSE_P_H
 #define QTAWS_RESETPASSWORDRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "resetpasswordrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ResetPasswordResponse;
+
+class QTAWS_EXPORT ResetPasswordResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetPasswordResponsePrivate(ResetPasswordResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetPasswordResponse)
+    Q_DISABLE_COPY(ResetPasswordResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

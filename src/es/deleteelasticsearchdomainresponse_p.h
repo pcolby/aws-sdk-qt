@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_P_H
 #define QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "deleteelasticsearchdomainrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DeleteElasticsearchDomainResponse;
+
+class QTAWS_EXPORT DeleteElasticsearchDomainResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteElasticsearchDomainResponsePrivate(DeleteElasticsearchDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteElasticsearchDomainResponse)
+    Q_DISABLE_COPY(DeleteElasticsearchDomainResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

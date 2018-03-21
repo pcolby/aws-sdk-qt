@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTAGSRESPONSE_P_H
 #define QTAWS_GETTAGSRESPONSE_P_H
 
+#include "costexplorerresponse.h"
+#include "gettagsrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetTagsResponse;
+
+class QTAWS_EXPORT GetTagsResponsePrivate : public CostExplorerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTagsResponsePrivate(GetTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTagsResponse)
+    Q_DISABLE_COPY(GetTagsResponsePrivate)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

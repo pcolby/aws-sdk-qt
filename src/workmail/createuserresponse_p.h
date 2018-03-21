@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEUSERRESPONSE_P_H
 #define QTAWS_CREATEUSERRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "createuserrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class CreateUserResponse;
+
+class QTAWS_EXPORT CreateUserResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateUserResponsePrivate(CreateUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserResponse)
+    Q_DISABLE_COPY(CreateUserResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

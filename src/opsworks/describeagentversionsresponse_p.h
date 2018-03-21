@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAGENTVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEAGENTVERSIONSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describeagentversionsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeAgentVersionsResponse;
+
+class QTAWS_EXPORT DescribeAgentVersionsResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAgentVersionsResponsePrivate(DescribeAgentVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAgentVersionsResponse)
+    Q_DISABLE_COPY(DescribeAgentVersionsResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

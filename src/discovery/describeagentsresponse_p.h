@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAGENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEAGENTSRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "describeagentsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DescribeAgentsResponse;
+
+class QTAWS_EXPORT DescribeAgentsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAgentsResponsePrivate(DescribeAgentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAgentsResponse)
+    Q_DISABLE_COPY(DescribeAgentsResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

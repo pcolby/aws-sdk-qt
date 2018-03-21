@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONFIGURATIONTEMPLATERESPONSE_P_H
 #define QTAWS_DELETECONFIGURATIONTEMPLATERESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "deleteconfigurationtemplaterequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DeleteConfigurationTemplateResponse;
+
+class QTAWS_EXPORT DeleteConfigurationTemplateResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConfigurationTemplateResponsePrivate(DeleteConfigurationTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationTemplateResponse)
+    Q_DISABLE_COPY(DeleteConfigurationTemplateResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

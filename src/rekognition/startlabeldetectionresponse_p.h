@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTLABELDETECTIONRESPONSE_P_H
 #define QTAWS_STARTLABELDETECTIONRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "startlabeldetectionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StartLabelDetectionResponse;
+
+class QTAWS_EXPORT StartLabelDetectionResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartLabelDetectionResponsePrivate(StartLabelDetectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartLabelDetectionResponse)
+    Q_DISABLE_COPY(StartLabelDetectionResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

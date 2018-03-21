@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDTEMPLATEDEMAILRESPONSE_P_H
 #define QTAWS_SENDTEMPLATEDEMAILRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "sendtemplatedemailrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendTemplatedEmailResponse;
+
+class QTAWS_EXPORT SendTemplatedEmailResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendTemplatedEmailResponsePrivate(SendTemplatedEmailResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendTemplatedEmailResponse)
+    Q_DISABLE_COPY(SendTemplatedEmailResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPPLICATIONREVISIONRESPONSE_P_H
 #define QTAWS_GETAPPLICATIONREVISIONRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "getapplicationrevisionrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetApplicationRevisionResponse;
+
+class QTAWS_EXPORT GetApplicationRevisionResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetApplicationRevisionResponsePrivate(GetApplicationRevisionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationRevisionResponse)
+    Q_DISABLE_COPY(GetApplicationRevisionResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

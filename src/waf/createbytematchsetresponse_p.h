@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEBYTEMATCHSETRESPONSE_P_H
 #define QTAWS_CREATEBYTEMATCHSETRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "createbytematchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateByteMatchSetResponse;
+
+class QTAWS_EXPORT CreateByteMatchSetResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateByteMatchSetResponsePrivate(CreateByteMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateByteMatchSetResponse)
+    Q_DISABLE_COPY(CreateByteMatchSetResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

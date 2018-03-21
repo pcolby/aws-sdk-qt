@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERJOBDEFINITIONRESPONSE_P_H
 #define QTAWS_REGISTERJOBDEFINITIONRESPONSE_P_H
 
+#include "batchresponse.h"
+#include "registerjobdefinitionrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class RegisterJobDefinitionResponse;
+
+class QTAWS_EXPORT RegisterJobDefinitionResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterJobDefinitionResponsePrivate(RegisterJobDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterJobDefinitionResponse)
+    Q_DISABLE_COPY(RegisterJobDefinitionResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

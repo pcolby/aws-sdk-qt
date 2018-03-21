@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEHOSTRESERVATIONOFFERINGSRESPONSE_P_H
 #define QTAWS_DESCRIBEHOSTRESERVATIONOFFERINGSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describehostreservationofferingsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeHostReservationOfferingsResponse;
+
+class QTAWS_EXPORT DescribeHostReservationOfferingsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeHostReservationOfferingsResponsePrivate(DescribeHostReservationOfferingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHostReservationOfferingsResponse)
+    Q_DISABLE_COPY(DescribeHostReservationOfferingsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

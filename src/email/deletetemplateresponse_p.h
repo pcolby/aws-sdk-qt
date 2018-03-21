@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETEMPLATERESPONSE_P_H
 #define QTAWS_DELETETEMPLATERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deletetemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteTemplateResponse;
+
+class QTAWS_EXPORT DeleteTemplateResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTemplateResponsePrivate(DeleteTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTemplateResponse)
+    Q_DISABLE_COPY(DeleteTemplateResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

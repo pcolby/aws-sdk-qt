@@ -20,4 +20,31 @@
 #ifndef QTAWS_SIGNUPRESPONSE_P_H
 #define QTAWS_SIGNUPRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "signuprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SignUpResponse;
+
+class QTAWS_EXPORT SignUpResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SignUpResponsePrivate(SignUpResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SignUpResponse)
+    Q_DISABLE_COPY(SignUpResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

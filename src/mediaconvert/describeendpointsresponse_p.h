@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENDPOINTSRESPONSE_P_H
 #define QTAWS_DESCRIBEENDPOINTSRESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "describeendpointsrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DescribeEndpointsResponse;
+
+class QTAWS_EXPORT DescribeEndpointsResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEndpointsResponsePrivate(DescribeEndpointsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEndpointsResponse)
+    Q_DISABLE_COPY(DescribeEndpointsResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

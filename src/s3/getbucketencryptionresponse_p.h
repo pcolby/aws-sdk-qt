@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETENCRYPTIONRESPONSE_P_H
 #define QTAWS_GETBUCKETENCRYPTIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketencryptionrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketEncryptionResponse;
+
+class QTAWS_EXPORT GetBucketEncryptionResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketEncryptionResponsePrivate(GetBucketEncryptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketEncryptionResponse)
+    Q_DISABLE_COPY(GetBucketEncryptionResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

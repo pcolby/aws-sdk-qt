@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEKEYPAIRRESPONSE_P_H
 #define QTAWS_DELETEKEYPAIRRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletekeypairrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteKeyPairResponse;
+
+class QTAWS_EXPORT DeleteKeyPairResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteKeyPairResponsePrivate(DeleteKeyPairResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteKeyPairResponse)
+    Q_DISABLE_COPY(DeleteKeyPairResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

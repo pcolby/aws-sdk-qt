@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPOLICYRESPONSE_P_H
 #define QTAWS_UPDATEPOLICYRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "updatepolicyrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class UpdatePolicyResponse;
+
+class QTAWS_EXPORT UpdatePolicyResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdatePolicyResponsePrivate(UpdatePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePolicyResponse)
+    Q_DISABLE_COPY(UpdatePolicyResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

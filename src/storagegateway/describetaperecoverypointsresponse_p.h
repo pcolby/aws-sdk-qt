@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETAPERECOVERYPOINTSRESPONSE_P_H
 #define QTAWS_DESCRIBETAPERECOVERYPOINTSRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describetaperecoverypointsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeTapeRecoveryPointsResponse;
+
+class QTAWS_EXPORT DescribeTapeRecoveryPointsResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTapeRecoveryPointsResponsePrivate(DescribeTapeRecoveryPointsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTapeRecoveryPointsResponse)
+    Q_DISABLE_COPY(DescribeTapeRecoveryPointsResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

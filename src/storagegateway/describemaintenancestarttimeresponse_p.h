@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEMAINTENANCESTARTTIMERESPONSE_P_H
 #define QTAWS_DESCRIBEMAINTENANCESTARTTIMERESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describemaintenancestarttimerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeMaintenanceStartTimeResponse;
+
+class QTAWS_EXPORT DescribeMaintenanceStartTimeResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeMaintenanceStartTimeResponsePrivate(DescribeMaintenanceStartTimeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMaintenanceStartTimeResponse)
+    Q_DISABLE_COPY(DescribeMaintenanceStartTimeResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTFLEETSRESPONSE_P_H
 #define QTAWS_LISTFLEETSRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "listfleetsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class ListFleetsResponse;
+
+class QTAWS_EXPORT ListFleetsResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListFleetsResponsePrivate(ListFleetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListFleetsResponse)
+    Q_DISABLE_COPY(ListFleetsResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

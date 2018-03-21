@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 #define QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "removepermissionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class RemovePermissionResponse;
+
+class QTAWS_EXPORT RemovePermissionResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemovePermissionResponsePrivate(RemovePermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemovePermissionResponse)
+    Q_DISABLE_COPY(RemovePermissionResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

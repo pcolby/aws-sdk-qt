@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETMETRICSTATISTICSRESPONSE_P_H
 #define QTAWS_GETMETRICSTATISTICSRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "getmetricstatisticsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class GetMetricStatisticsResponse;
+
+class QTAWS_EXPORT GetMetricStatisticsResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetMetricStatisticsResponsePrivate(GetMetricStatisticsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetMetricStatisticsResponse)
+    Q_DISABLE_COPY(GetMetricStatisticsResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

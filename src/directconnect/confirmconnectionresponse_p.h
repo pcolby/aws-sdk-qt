@@ -20,4 +20,31 @@
 #ifndef QTAWS_CONFIRMCONNECTIONRESPONSE_P_H
 #define QTAWS_CONFIRMCONNECTIONRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "confirmconnectionrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class ConfirmConnectionResponse;
+
+class QTAWS_EXPORT ConfirmConnectionResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ConfirmConnectionResponsePrivate(ConfirmConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ConfirmConnectionResponse)
+    Q_DISABLE_COPY(ConfirmConnectionResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEMICROSOFTADRESPONSE_P_H
 #define QTAWS_CREATEMICROSOFTADRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "createmicrosoftadrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateMicrosoftADResponse;
+
+class QTAWS_EXPORT CreateMicrosoftADResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateMicrosoftADResponsePrivate(CreateMicrosoftADResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateMicrosoftADResponse)
+    Q_DISABLE_COPY(CreateMicrosoftADResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

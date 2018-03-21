@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELOADBALANCERTLSCERTIFICATERESPONSE_P_H
 #define QTAWS_DELETELOADBALANCERTLSCERTIFICATERESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "deleteloadbalancertlscertificaterequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteLoadBalancerTlsCertificateResponse;
+
+class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLoadBalancerTlsCertificateResponsePrivate(DeleteLoadBalancerTlsCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLoadBalancerTlsCertificateResponse)
+    Q_DISABLE_COPY(DeleteLoadBalancerTlsCertificateResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

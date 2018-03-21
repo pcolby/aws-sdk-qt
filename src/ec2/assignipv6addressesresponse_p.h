@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSIGNIPV6ADDRESSESRESPONSE_P_H
 #define QTAWS_ASSIGNIPV6ADDRESSESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "assignipv6addressesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssignIpv6AddressesResponse;
+
+class QTAWS_EXPORT AssignIpv6AddressesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssignIpv6AddressesResponsePrivate(AssignIpv6AddressesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssignIpv6AddressesResponse)
+    Q_DISABLE_COPY(AssignIpv6AddressesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

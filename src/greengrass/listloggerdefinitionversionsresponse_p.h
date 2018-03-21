@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTLOGGERDEFINITIONVERSIONSRESPONSE_P_H
 #define QTAWS_LISTLOGGERDEFINITIONVERSIONSRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "listloggerdefinitionversionsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListLoggerDefinitionVersionsResponse;
+
+class QTAWS_EXPORT ListLoggerDefinitionVersionsResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListLoggerDefinitionVersionsResponsePrivate(ListLoggerDefinitionVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListLoggerDefinitionVersionsResponse)
+    Q_DISABLE_COPY(ListLoggerDefinitionVersionsResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

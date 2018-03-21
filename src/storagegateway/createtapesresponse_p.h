@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETAPESRESPONSE_P_H
 #define QTAWS_CREATETAPESRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "createtapesrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class CreateTapesResponse;
+
+class QTAWS_EXPORT CreateTapesResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTapesResponsePrivate(CreateTapesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTapesResponse)
+    Q_DISABLE_COPY(CreateTapesResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

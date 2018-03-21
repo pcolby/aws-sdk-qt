@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHDELETEIMAGERESPONSE_P_H
 #define QTAWS_BATCHDELETEIMAGERESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "batchdeleteimagerequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class BatchDeleteImageResponse;
+
+class QTAWS_EXPORT BatchDeleteImageResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchDeleteImageResponsePrivate(BatchDeleteImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDeleteImageResponse)
+    Q_DISABLE_COPY(BatchDeleteImageResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

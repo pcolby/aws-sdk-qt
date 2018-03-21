@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEORGANIZATIONALUNITRESPONSE_P_H
 #define QTAWS_UPDATEORGANIZATIONALUNITRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "updateorganizationalunitrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class UpdateOrganizationalUnitResponse;
+
+class QTAWS_EXPORT UpdateOrganizationalUnitResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateOrganizationalUnitResponsePrivate(UpdateOrganizationalUnitResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateOrganizationalUnitResponse)
+    Q_DISABLE_COPY(UpdateOrganizationalUnitResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

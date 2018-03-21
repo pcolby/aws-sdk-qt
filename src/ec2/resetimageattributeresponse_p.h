@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETIMAGEATTRIBUTERESPONSE_P_H
 #define QTAWS_RESETIMAGEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "resetimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetImageAttributeResponse;
+
+class QTAWS_EXPORT ResetImageAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetImageAttributeResponsePrivate(ResetImageAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetImageAttributeResponse)
+    Q_DISABLE_COPY(ResetImageAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

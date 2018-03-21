@@ -20,4 +20,31 @@
 #ifndef QTAWS_PURGEQUEUERESPONSE_P_H
 #define QTAWS_PURGEQUEUERESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "purgequeuerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class PurgeQueueResponse;
+
+class QTAWS_EXPORT PurgeQueueResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PurgeQueueResponsePrivate(PurgeQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PurgeQueueResponse)
+    Q_DISABLE_COPY(PurgeQueueResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

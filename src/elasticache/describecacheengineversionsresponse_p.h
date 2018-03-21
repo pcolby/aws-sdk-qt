@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECACHEENGINEVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBECACHEENGINEVERSIONSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "describecacheengineversionsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeCacheEngineVersionsResponse;
+
+class QTAWS_EXPORT DescribeCacheEngineVersionsResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCacheEngineVersionsResponsePrivate(DescribeCacheEngineVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCacheEngineVersionsResponse)
+    Q_DISABLE_COPY(DescribeCacheEngineVersionsResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

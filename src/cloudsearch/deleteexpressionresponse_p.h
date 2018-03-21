@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEEXPRESSIONRESPONSE_P_H
 #define QTAWS_DELETEEXPRESSIONRESPONSE_P_H
 
+#include "cloudsearchresponse.h"
+#include "deleteexpressionrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DeleteExpressionResponse;
+
+class QTAWS_EXPORT DeleteExpressionResponsePrivate : public CloudSearchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteExpressionResponsePrivate(DeleteExpressionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteExpressionResponse)
+    Q_DISABLE_COPY(DeleteExpressionResponsePrivate)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

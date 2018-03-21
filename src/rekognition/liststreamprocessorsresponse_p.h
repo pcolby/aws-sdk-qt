@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSTREAMPROCESSORSRESPONSE_P_H
 #define QTAWS_LISTSTREAMPROCESSORSRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "liststreamprocessorsrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class ListStreamProcessorsResponse;
+
+class QTAWS_EXPORT ListStreamProcessorsResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListStreamProcessorsResponsePrivate(ListStreamProcessorsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListStreamProcessorsResponse)
+    Q_DISABLE_COPY(ListStreamProcessorsResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

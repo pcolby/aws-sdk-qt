@@ -20,4 +20,31 @@
 #ifndef QTAWS_TERMINATEJOBRESPONSE_P_H
 #define QTAWS_TERMINATEJOBRESPONSE_P_H
 
+#include "batchresponse.h"
+#include "terminatejobrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class TerminateJobResponse;
+
+class QTAWS_EXPORT TerminateJobResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TerminateJobResponsePrivate(TerminateJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateJobResponse)
+    Q_DISABLE_COPY(TerminateJobResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

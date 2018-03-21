@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONRESPONSE_P_H
 #define QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "createdirectconnectgatewayassociationrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateDirectConnectGatewayAssociationResponse;
+
+class QTAWS_EXPORT CreateDirectConnectGatewayAssociationResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDirectConnectGatewayAssociationResponsePrivate(CreateDirectConnectGatewayAssociationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDirectConnectGatewayAssociationResponse)
+    Q_DISABLE_COPY(CreateDirectConnectGatewayAssociationResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

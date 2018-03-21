@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEIMAGEBUILDERRESPONSE_P_H
 #define QTAWS_DELETEIMAGEBUILDERRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "deleteimagebuilderrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteImageBuilderResponse;
+
+class QTAWS_EXPORT DeleteImageBuilderResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteImageBuilderResponsePrivate(DeleteImageBuilderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteImageBuilderResponse)
+    Q_DISABLE_COPY(DeleteImageBuilderResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

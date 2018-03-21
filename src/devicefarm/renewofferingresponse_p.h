@@ -20,4 +20,31 @@
 #ifndef QTAWS_RENEWOFFERINGRESPONSE_P_H
 #define QTAWS_RENEWOFFERINGRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "renewofferingrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class RenewOfferingResponse;
+
+class QTAWS_EXPORT RenewOfferingResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RenewOfferingResponsePrivate(RenewOfferingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RenewOfferingResponse)
+    Q_DISABLE_COPY(RenewOfferingResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

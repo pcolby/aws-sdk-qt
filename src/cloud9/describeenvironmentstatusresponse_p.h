@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBEENVIRONMENTSTATUSRESPONSE_P_H
 
+#include "cloud9response.h"
+#include "describeenvironmentstatusrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DescribeEnvironmentStatusResponse;
+
+class QTAWS_EXPORT DescribeEnvironmentStatusResponsePrivate : public Cloud9ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEnvironmentStatusResponsePrivate(DescribeEnvironmentStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEnvironmentStatusResponse)
+    Q_DISABLE_COPY(DescribeEnvironmentStatusResponsePrivate)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

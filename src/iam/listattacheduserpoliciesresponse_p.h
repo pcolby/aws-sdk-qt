@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTATTACHEDUSERPOLICIESRESPONSE_P_H
 #define QTAWS_LISTATTACHEDUSERPOLICIESRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listattacheduserpoliciesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAttachedUserPoliciesResponse;
+
+class QTAWS_EXPORT ListAttachedUserPoliciesResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAttachedUserPoliciesResponsePrivate(ListAttachedUserPoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAttachedUserPoliciesResponse)
+    Q_DISABLE_COPY(ListAttachedUserPoliciesResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

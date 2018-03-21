@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEOPTIONGROUPRESPONSE_P_H
 #define QTAWS_CREATEOPTIONGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "createoptiongrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateOptionGroupResponse;
+
+class QTAWS_EXPORT CreateOptionGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateOptionGroupResponsePrivate(CreateOptionGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateOptionGroupResponse)
+    Q_DISABLE_COPY(CreateOptionGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

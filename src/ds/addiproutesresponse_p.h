@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDIPROUTESRESPONSE_P_H
 #define QTAWS_ADDIPROUTESRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "addiproutesrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class AddIpRoutesResponse;
+
+class QTAWS_EXPORT AddIpRoutesResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddIpRoutesResponsePrivate(AddIpRoutesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddIpRoutesResponse)
+    Q_DISABLE_COPY(AddIpRoutesResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

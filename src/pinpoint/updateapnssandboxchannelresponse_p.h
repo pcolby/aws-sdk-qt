@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAPNSSANDBOXCHANNELRESPONSE_P_H
 #define QTAWS_UPDATEAPNSSANDBOXCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "updateapnssandboxchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateApnsSandboxChannelResponse;
+
+class QTAWS_EXPORT UpdateApnsSandboxChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateApnsSandboxChannelResponsePrivate(UpdateApnsSandboxChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApnsSandboxChannelResponse)
+    Q_DISABLE_COPY(UpdateApnsSandboxChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

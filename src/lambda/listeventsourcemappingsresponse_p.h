@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTEVENTSOURCEMAPPINGSRESPONSE_P_H
 #define QTAWS_LISTEVENTSOURCEMAPPINGSRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "listeventsourcemappingsrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class ListEventSourceMappingsResponse;
+
+class QTAWS_EXPORT ListEventSourceMappingsResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListEventSourceMappingsResponsePrivate(ListEventSourceMappingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListEventSourceMappingsResponse)
+    Q_DISABLE_COPY(ListEventSourceMappingsResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

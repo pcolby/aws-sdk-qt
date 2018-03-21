@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEALLRESOURCEPERMISSIONSRESPONSE_P_H
 #define QTAWS_REMOVEALLRESOURCEPERMISSIONSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "removeallresourcepermissionsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class RemoveAllResourcePermissionsResponse;
+
+class QTAWS_EXPORT RemoveAllResourcePermissionsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveAllResourcePermissionsResponsePrivate(RemoveAllResourcePermissionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveAllResourcePermissionsResponse)
+    Q_DISABLE_COPY(RemoveAllResourcePermissionsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

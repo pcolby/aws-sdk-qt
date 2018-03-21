@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEJOBEXECUTIONRESPONSE_P_H
 #define QTAWS_DESCRIBEJOBEXECUTIONRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "describejobexecutionrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeJobExecutionResponse;
+
+class QTAWS_EXPORT DescribeJobExecutionResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeJobExecutionResponsePrivate(DescribeJobExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeJobExecutionResponse)
+    Q_DISABLE_COPY(DescribeJobExecutionResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

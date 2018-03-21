@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEQUALIFICATIONTYPERESPONSE_P_H
 #define QTAWS_UPDATEQUALIFICATIONTYPERESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "updatequalificationtyperequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateQualificationTypeResponse;
+
+class QTAWS_EXPORT UpdateQualificationTypeResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateQualificationTypeResponsePrivate(UpdateQualificationTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateQualificationTypeResponse)
+    Q_DISABLE_COPY(UpdateQualificationTypeResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVOLUMESTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBEVOLUMESTATUSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describevolumestatusrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVolumeStatusResponse;
+
+class QTAWS_EXPORT DescribeVolumeStatusResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeVolumeStatusResponsePrivate(DescribeVolumeStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVolumeStatusResponse)
+    Q_DISABLE_COPY(DescribeVolumeStatusResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

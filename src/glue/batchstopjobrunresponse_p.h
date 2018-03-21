@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHSTOPJOBRUNRESPONSE_P_H
 #define QTAWS_BATCHSTOPJOBRUNRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "batchstopjobrunrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class BatchStopJobRunResponse;
+
+class QTAWS_EXPORT BatchStopJobRunResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchStopJobRunResponsePrivate(BatchStopJobRunResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchStopJobRunResponse)
+    Q_DISABLE_COPY(BatchStopJobRunResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

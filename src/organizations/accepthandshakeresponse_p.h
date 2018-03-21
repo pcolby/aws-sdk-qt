@@ -20,4 +20,31 @@
 #ifndef QTAWS_ACCEPTHANDSHAKERESPONSE_P_H
 #define QTAWS_ACCEPTHANDSHAKERESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "accepthandshakerequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class AcceptHandshakeResponse;
+
+class QTAWS_EXPORT AcceptHandshakeResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AcceptHandshakeResponsePrivate(AcceptHandshakeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AcceptHandshakeResponse)
+    Q_DISABLE_COPY(AcceptHandshakeResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

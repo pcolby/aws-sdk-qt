@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTFACESRESPONSE_P_H
 #define QTAWS_LISTFACESRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "listfacesrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class ListFacesResponse;
+
+class QTAWS_EXPORT ListFacesResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListFacesResponsePrivate(ListFacesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListFacesResponse)
+    Q_DISABLE_COPY(ListFacesResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

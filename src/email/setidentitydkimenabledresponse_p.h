@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETIDENTITYDKIMENABLEDRESPONSE_P_H
 #define QTAWS_SETIDENTITYDKIMENABLEDRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "setidentitydkimenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityDkimEnabledResponse;
+
+class QTAWS_EXPORT SetIdentityDkimEnabledResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetIdentityDkimEnabledResponsePrivate(SetIdentityDkimEnabledResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityDkimEnabledResponse)
+    Q_DISABLE_COPY(SetIdentityDkimEnabledResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETLEXICONRESPONSE_P_H
 #define QTAWS_GETLEXICONRESPONSE_P_H
 
+#include "pollyresponse.h"
+#include "getlexiconrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class GetLexiconResponse;
+
+class QTAWS_EXPORT GetLexiconResponsePrivate : public PollyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetLexiconResponsePrivate(GetLexiconResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetLexiconResponse)
+    Q_DISABLE_COPY(GetLexiconResponsePrivate)
+
+};
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

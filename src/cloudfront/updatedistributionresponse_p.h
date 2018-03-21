@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDISTRIBUTIONRESPONSE_P_H
 #define QTAWS_UPDATEDISTRIBUTIONRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "updatedistributionrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class UpdateDistributionResponse;
+
+class QTAWS_EXPORT UpdateDistributionResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDistributionResponsePrivate(UpdateDistributionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDistributionResponse)
+    Q_DISABLE_COPY(UpdateDistributionResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

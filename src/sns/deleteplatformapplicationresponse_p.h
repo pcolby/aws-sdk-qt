@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPLATFORMAPPLICATIONRESPONSE_P_H
 #define QTAWS_DELETEPLATFORMAPPLICATIONRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "deleteplatformapplicationrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class DeletePlatformApplicationResponse;
+
+class QTAWS_EXPORT DeletePlatformApplicationResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePlatformApplicationResponsePrivate(DeletePlatformApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePlatformApplicationResponse)
+    Q_DISABLE_COPY(DeletePlatformApplicationResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

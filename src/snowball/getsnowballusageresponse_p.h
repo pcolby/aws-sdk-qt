@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSNOWBALLUSAGERESPONSE_P_H
 #define QTAWS_GETSNOWBALLUSAGERESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "getsnowballusagerequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetSnowballUsageResponse;
+
+class QTAWS_EXPORT GetSnowballUsageResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSnowballUsageResponsePrivate(GetSnowballUsageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSnowballUsageResponse)
+    Q_DISABLE_COPY(GetSnowballUsageResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

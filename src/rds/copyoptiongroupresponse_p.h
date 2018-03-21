@@ -20,4 +20,31 @@
 #ifndef QTAWS_COPYOPTIONGROUPRESPONSE_P_H
 #define QTAWS_COPYOPTIONGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "copyoptiongrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyOptionGroupResponse;
+
+class QTAWS_EXPORT CopyOptionGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CopyOptionGroupResponsePrivate(CopyOptionGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CopyOptionGroupResponse)
+    Q_DISABLE_COPY(CopyOptionGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

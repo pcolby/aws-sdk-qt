@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSNAPSHOTLIMITSRESPONSE_P_H
 #define QTAWS_GETSNAPSHOTLIMITSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "getsnapshotlimitsrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class GetSnapshotLimitsResponse;
+
+class QTAWS_EXPORT GetSnapshotLimitsResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSnapshotLimitsResponsePrivate(GetSnapshotLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSnapshotLimitsResponse)
+    Q_DISABLE_COPY(GetSnapshotLimitsResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

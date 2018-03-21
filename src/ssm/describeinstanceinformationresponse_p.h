@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINSTANCEINFORMATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEINFORMATIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describeinstanceinformationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstanceInformationResponse;
+
+class QTAWS_EXPORT DescribeInstanceInformationResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeInstanceInformationResponsePrivate(DescribeInstanceInformationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstanceInformationResponse)
+    Q_DISABLE_COPY(DescribeInstanceInformationResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEHITTYPEOFHITRESPONSE_P_H
 #define QTAWS_UPDATEHITTYPEOFHITRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "updatehittypeofhitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateHITTypeOfHITResponse;
+
+class QTAWS_EXPORT UpdateHITTypeOfHITResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateHITTypeOfHITResponsePrivate(UpdateHITTypeOfHITResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateHITTypeOfHITResponse)
+    Q_DISABLE_COPY(UpdateHITTypeOfHITResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

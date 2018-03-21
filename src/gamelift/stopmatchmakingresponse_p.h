@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPMATCHMAKINGRESPONSE_P_H
 #define QTAWS_STOPMATCHMAKINGRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "stopmatchmakingrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StopMatchmakingResponse;
+
+class QTAWS_EXPORT StopMatchmakingResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopMatchmakingResponsePrivate(StopMatchmakingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopMatchmakingResponse)
+    Q_DISABLE_COPY(StopMatchmakingResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

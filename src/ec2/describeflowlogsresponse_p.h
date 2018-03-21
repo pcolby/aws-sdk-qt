@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFLOWLOGSRESPONSE_P_H
 #define QTAWS_DESCRIBEFLOWLOGSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeflowlogsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeFlowLogsResponse;
+
+class QTAWS_EXPORT DescribeFlowLogsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFlowLogsResponsePrivate(DescribeFlowLogsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFlowLogsResponse)
+    Q_DISABLE_COPY(DescribeFlowLogsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

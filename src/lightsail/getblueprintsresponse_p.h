@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBLUEPRINTSRESPONSE_P_H
 #define QTAWS_GETBLUEPRINTSRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getblueprintsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetBlueprintsResponse;
+
+class QTAWS_EXPORT GetBlueprintsResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBlueprintsResponsePrivate(GetBlueprintsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBlueprintsResponse)
+    Q_DISABLE_COPY(GetBlueprintsResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

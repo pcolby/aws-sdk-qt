@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYSNAPSHOTCOPYRETENTIONPERIODRESPONSE_P_H
 #define QTAWS_MODIFYSNAPSHOTCOPYRETENTIONPERIODRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "modifysnapshotcopyretentionperiodrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifySnapshotCopyRetentionPeriodResponse;
+
+class QTAWS_EXPORT ModifySnapshotCopyRetentionPeriodResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifySnapshotCopyRetentionPeriodResponsePrivate(ModifySnapshotCopyRetentionPeriodResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifySnapshotCopyRetentionPeriodResponse)
+    Q_DISABLE_COPY(ModifySnapshotCopyRetentionPeriodResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

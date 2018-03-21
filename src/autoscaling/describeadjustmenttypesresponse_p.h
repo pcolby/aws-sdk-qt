@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEADJUSTMENTTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBEADJUSTMENTTYPESRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describeadjustmenttypesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeAdjustmentTypesResponse;
+
+class QTAWS_EXPORT DescribeAdjustmentTypesResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAdjustmentTypesResponsePrivate(DescribeAdjustmentTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAdjustmentTypesResponse)
+    Q_DISABLE_COPY(DescribeAdjustmentTypesResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

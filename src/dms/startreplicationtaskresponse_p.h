@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTREPLICATIONTASKRESPONSE_P_H
 #define QTAWS_STARTREPLICATIONTASKRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "startreplicationtaskrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class StartReplicationTaskResponse;
+
+class QTAWS_EXPORT StartReplicationTaskResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartReplicationTaskResponsePrivate(StartReplicationTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartReplicationTaskResponse)
+    Q_DISABLE_COPY(StartReplicationTaskResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

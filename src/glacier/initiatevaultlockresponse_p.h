@@ -20,4 +20,31 @@
 #ifndef QTAWS_INITIATEVAULTLOCKRESPONSE_P_H
 #define QTAWS_INITIATEVAULTLOCKRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "initiatevaultlockrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class InitiateVaultLockResponse;
+
+class QTAWS_EXPORT InitiateVaultLockResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    InitiateVaultLockResponsePrivate(InitiateVaultLockResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateVaultLockResponse)
+    Q_DISABLE_COPY(InitiateVaultLockResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREPLICATIONJOBRESPONSE_P_H
 #define QTAWS_DELETEREPLICATIONJOBRESPONSE_P_H
 
+#include "smsresponse.h"
+#include "deletereplicationjobrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class DeleteReplicationJobResponse;
+
+class QTAWS_EXPORT DeleteReplicationJobResponsePrivate : public SMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteReplicationJobResponsePrivate(DeleteReplicationJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReplicationJobResponse)
+    Q_DISABLE_COPY(DeleteReplicationJobResponsePrivate)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTMIGRATIONTASKRESPONSE_P_H
 #define QTAWS_IMPORTMIGRATIONTASKRESPONSE_P_H
 
+#include "migrationhubresponse.h"
+#include "importmigrationtaskrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class ImportMigrationTaskResponse;
+
+class QTAWS_EXPORT ImportMigrationTaskResponsePrivate : public MigrationHubResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportMigrationTaskResponsePrivate(ImportMigrationTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportMigrationTaskResponse)
+    Q_DISABLE_COPY(ImportMigrationTaskResponsePrivate)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

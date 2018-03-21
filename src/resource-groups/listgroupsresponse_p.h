@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGROUPSRESPONSE_P_H
 #define QTAWS_LISTGROUPSRESPONSE_P_H
 
+#include "resourcegroupsresponse.h"
+#include "listgroupsrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class ListGroupsResponse;
+
+class QTAWS_EXPORT ListGroupsResponsePrivate : public ResourceGroupsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGroupsResponsePrivate(ListGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupsResponse)
+    Q_DISABLE_COPY(ListGroupsResponsePrivate)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

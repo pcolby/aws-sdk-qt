@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYLISTENERRESPONSE_P_H
 #define QTAWS_MODIFYLISTENERRESPONSE_P_H
 
+#include "elasticloadbalancingv2response.h"
+#include "modifylistenerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class ModifyListenerResponse;
+
+class QTAWS_EXPORT ModifyListenerResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyListenerResponsePrivate(ModifyListenerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyListenerResponse)
+    Q_DISABLE_COPY(ModifyListenerResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

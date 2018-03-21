@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEMLMODELRESPONSE_P_H
 #define QTAWS_DELETEMLMODELRESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "deletemlmodelrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteMLModelResponse;
+
+class QTAWS_EXPORT DeleteMLModelResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteMLModelResponsePrivate(DeleteMLModelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMLModelResponse)
+    Q_DISABLE_COPY(DeleteMLModelResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

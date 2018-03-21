@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEALIASRESPONSE_P_H
 #define QTAWS_UPDATEALIASRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "updatealiasrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class UpdateAliasResponse;
+
+class QTAWS_EXPORT UpdateAliasResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAliasResponsePrivate(UpdateAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAliasResponse)
+    Q_DISABLE_COPY(UpdateAliasResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

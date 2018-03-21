@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINADDUSERTOGROUPRESPONSE_P_H
 #define QTAWS_ADMINADDUSERTOGROUPRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminaddusertogrouprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminAddUserToGroupResponse;
+
+class QTAWS_EXPORT AdminAddUserToGroupResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminAddUserToGroupResponsePrivate(AdminAddUserToGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminAddUserToGroupResponse)
+    Q_DISABLE_COPY(AdminAddUserToGroupResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

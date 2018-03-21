@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPRIMARYEMAILADDRESSRESPONSE_P_H
 #define QTAWS_UPDATEPRIMARYEMAILADDRESSRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "updateprimaryemailaddressrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class UpdatePrimaryEmailAddressResponse;
+
+class QTAWS_EXPORT UpdatePrimaryEmailAddressResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdatePrimaryEmailAddressResponsePrivate(UpdatePrimaryEmailAddressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePrimaryEmailAddressResponse)
+    Q_DISABLE_COPY(UpdatePrimaryEmailAddressResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

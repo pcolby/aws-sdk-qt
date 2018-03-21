@@ -20,4 +20,31 @@
 #ifndef QTAWS_VERIFYDOMAINDKIMRESPONSE_P_H
 #define QTAWS_VERIFYDOMAINDKIMRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "verifydomaindkimrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class VerifyDomainDkimResponse;
+
+class QTAWS_EXPORT VerifyDomainDkimResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    VerifyDomainDkimResponsePrivate(VerifyDomainDkimResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyDomainDkimResponse)
+    Q_DISABLE_COPY(VerifyDomainDkimResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTREPOSITORYTRIGGERSRESPONSE_P_H
 #define QTAWS_PUTREPOSITORYTRIGGERSRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "putrepositorytriggersrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PutRepositoryTriggersResponse;
+
+class QTAWS_EXPORT PutRepositoryTriggersResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutRepositoryTriggersResponsePrivate(PutRepositoryTriggersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutRepositoryTriggersResponse)
+    Q_DISABLE_COPY(PutRepositoryTriggersResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

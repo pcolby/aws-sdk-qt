@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETUPLOADRESPONSE_P_H
 #define QTAWS_GETUPLOADRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "getuploadrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetUploadResponse;
+
+class QTAWS_EXPORT GetUploadResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetUploadResponsePrivate(GetUploadResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetUploadResponse)
+    Q_DISABLE_COPY(GetUploadResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

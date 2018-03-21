@@ -20,4 +20,31 @@
 #ifndef QTAWS_AUTHORIZESECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_AUTHORIZESECURITYGROUPINGRESSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "authorizesecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AuthorizeSecurityGroupIngressResponse;
+
+class QTAWS_EXPORT AuthorizeSecurityGroupIngressResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AuthorizeSecurityGroupIngressResponsePrivate(AuthorizeSecurityGroupIngressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeSecurityGroupIngressResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDCOMMANDRESPONSE_P_H
 #define QTAWS_SENDCOMMANDRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "sendcommandrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class SendCommandResponse;
+
+class QTAWS_EXPORT SendCommandResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendCommandResponsePrivate(SendCommandResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendCommandResponse)
+    Q_DISABLE_COPY(SendCommandResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

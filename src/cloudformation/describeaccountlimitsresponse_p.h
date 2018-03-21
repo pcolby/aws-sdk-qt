@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "describeaccountlimitsrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DescribeAccountLimitsResponse;
+
+class QTAWS_EXPORT DescribeAccountLimitsResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAccountLimitsResponsePrivate(DescribeAccountLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountLimitsResponse)
+    Q_DISABLE_COPY(DescribeAccountLimitsResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

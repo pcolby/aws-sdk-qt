@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTEXPORTTASKRESPONSE_P_H
 #define QTAWS_STARTEXPORTTASKRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "startexporttaskrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class StartExportTaskResponse;
+
+class QTAWS_EXPORT StartExportTaskResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartExportTaskResponsePrivate(StartExportTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartExportTaskResponse)
+    Q_DISABLE_COPY(StartExportTaskResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

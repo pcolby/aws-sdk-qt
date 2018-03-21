@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTIPSETSRESPONSE_P_H
 #define QTAWS_LISTIPSETSRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "listipsetsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListIPSetsResponse;
+
+class QTAWS_EXPORT ListIPSetsResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListIPSetsResponsePrivate(ListIPSetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListIPSetsResponse)
+    Q_DISABLE_COPY(ListIPSetsResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

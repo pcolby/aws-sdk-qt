@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPORTFOLIORESPONSE_P_H
 #define QTAWS_DELETEPORTFOLIORESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "deleteportfoliorequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeletePortfolioResponse;
+
+class QTAWS_EXPORT DeletePortfolioResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePortfolioResponsePrivate(DeletePortfolioResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePortfolioResponse)
+    Q_DISABLE_COPY(DeletePortfolioResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

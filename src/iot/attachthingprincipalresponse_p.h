@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHTHINGPRINCIPALRESPONSE_P_H
 #define QTAWS_ATTACHTHINGPRINCIPALRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "attachthingprincipalrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class AttachThingPrincipalResponse;
+
+class QTAWS_EXPORT AttachThingPrincipalResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachThingPrincipalResponsePrivate(AttachThingPrincipalResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachThingPrincipalResponse)
+    Q_DISABLE_COPY(AttachThingPrincipalResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

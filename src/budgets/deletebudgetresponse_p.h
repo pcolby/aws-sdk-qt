@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBUDGETRESPONSE_P_H
 #define QTAWS_DELETEBUDGETRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "deletebudgetrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DeleteBudgetResponse;
+
+class QTAWS_EXPORT DeleteBudgetResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBudgetResponsePrivate(DeleteBudgetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBudgetResponse)
+    Q_DISABLE_COPY(DeleteBudgetResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

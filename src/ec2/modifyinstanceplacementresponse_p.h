@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYINSTANCEPLACEMENTRESPONSE_P_H
 #define QTAWS_MODIFYINSTANCEPLACEMENTRESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyinstanceplacementrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyInstancePlacementResponse;
+
+class QTAWS_EXPORT ModifyInstancePlacementResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyInstancePlacementResponsePrivate(ModifyInstancePlacementResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyInstancePlacementResponse)
+    Q_DISABLE_COPY(ModifyInstancePlacementResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

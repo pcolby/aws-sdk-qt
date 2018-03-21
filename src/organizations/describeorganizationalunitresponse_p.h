@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONALUNITRESPONSE_P_H
 #define QTAWS_DESCRIBEORGANIZATIONALUNITRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "describeorganizationalunitrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeOrganizationalUnitResponse;
+
+class QTAWS_EXPORT DescribeOrganizationalUnitResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeOrganizationalUnitResponsePrivate(DescribeOrganizationalUnitResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrganizationalUnitResponse)
+    Q_DISABLE_COPY(DescribeOrganizationalUnitResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

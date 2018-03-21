@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSFORPROJECTRESPONSE_P_H
 #define QTAWS_LISTTAGSFORPROJECTRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "listtagsforprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class ListTagsForProjectResponse;
+
+class QTAWS_EXPORT ListTagsForProjectResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsForProjectResponsePrivate(ListTagsForProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForProjectResponse)
+    Q_DISABLE_COPY(ListTagsForProjectResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTCONTAINERPOLICYRESPONSE_P_H
 #define QTAWS_PUTCONTAINERPOLICYRESPONSE_P_H
 
+#include "mediastoreresponse.h"
+#include "putcontainerpolicyrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class PutContainerPolicyResponse;
+
+class QTAWS_EXPORT PutContainerPolicyResponsePrivate : public MediaStoreResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutContainerPolicyResponsePrivate(PutContainerPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutContainerPolicyResponse)
+    Q_DISABLE_COPY(PutContainerPolicyResponsePrivate)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

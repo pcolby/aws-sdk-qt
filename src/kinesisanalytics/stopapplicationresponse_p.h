@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPAPPLICATIONRESPONSE_P_H
 #define QTAWS_STOPAPPLICATIONRESPONSE_P_H
 
+#include "kinesisanalyticsresponse.h"
+#include "stopapplicationrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class StopApplicationResponse;
+
+class QTAWS_EXPORT StopApplicationResponsePrivate : public KinesisAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopApplicationResponsePrivate(StopApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopApplicationResponse)
+    Q_DISABLE_COPY(StopApplicationResponsePrivate)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

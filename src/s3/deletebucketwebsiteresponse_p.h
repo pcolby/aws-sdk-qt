@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBUCKETWEBSITERESPONSE_P_H
 #define QTAWS_DELETEBUCKETWEBSITERESPONSE_P_H
 
+#include "s3response.h"
+#include "deletebucketwebsiterequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketWebsiteResponse;
+
+class QTAWS_EXPORT DeleteBucketWebsiteResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBucketWebsiteResponsePrivate(DeleteBucketWebsiteResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBucketWebsiteResponse)
+    Q_DISABLE_COPY(DeleteBucketWebsiteResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

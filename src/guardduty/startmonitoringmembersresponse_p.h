@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTMONITORINGMEMBERSRESPONSE_P_H
 #define QTAWS_STARTMONITORINGMEMBERSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "startmonitoringmembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class StartMonitoringMembersResponse;
+
+class QTAWS_EXPORT StartMonitoringMembersResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartMonitoringMembersResponsePrivate(StartMonitoringMembersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartMonitoringMembersResponse)
+    Q_DISABLE_COPY(StartMonitoringMembersResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

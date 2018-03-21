@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELEXICONRESPONSE_P_H
 #define QTAWS_DELETELEXICONRESPONSE_P_H
 
+#include "pollyresponse.h"
+#include "deletelexiconrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class DeleteLexiconResponse;
+
+class QTAWS_EXPORT DeleteLexiconResponsePrivate : public PollyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLexiconResponsePrivate(DeleteLexiconResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLexiconResponse)
+    Q_DISABLE_COPY(DeleteLexiconResponsePrivate)
+
+};
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_SYNTHESIZESPEECHRESPONSE_P_H
 #define QTAWS_SYNTHESIZESPEECHRESPONSE_P_H
 
+#include "pollyresponse.h"
+#include "synthesizespeechrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class SynthesizeSpeechResponse;
+
+class QTAWS_EXPORT SynthesizeSpeechResponsePrivate : public PollyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SynthesizeSpeechResponsePrivate(SynthesizeSpeechResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SynthesizeSpeechResponse)
+    Q_DISABLE_COPY(SynthesizeSpeechResponsePrivate)
+
+};
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

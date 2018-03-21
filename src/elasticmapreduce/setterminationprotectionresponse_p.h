@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETTERMINATIONPROTECTIONRESPONSE_P_H
 #define QTAWS_SETTERMINATIONPROTECTIONRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "setterminationprotectionrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class SetTerminationProtectionResponse;
+
+class QTAWS_EXPORT SetTerminationProtectionResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetTerminationProtectionResponsePrivate(SetTerminationProtectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetTerminationProtectionResponse)
+    Q_DISABLE_COPY(SetTerminationProtectionResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

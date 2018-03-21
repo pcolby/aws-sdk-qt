@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 #define QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deleteconfigurationsettrackingoptionsrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteConfigurationSetTrackingOptionsResponse;
+
+class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConfigurationSetTrackingOptionsResponsePrivate(DeleteConfigurationSetTrackingOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationSetTrackingOptionsResponse)
+    Q_DISABLE_COPY(DeleteConfigurationSetTrackingOptionsResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

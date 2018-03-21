@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTORESERVERRESPONSE_P_H
 #define QTAWS_RESTORESERVERRESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "restoreserverrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class RestoreServerResponse;
+
+class QTAWS_EXPORT RestoreServerResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestoreServerResponsePrivate(RestoreServerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreServerResponse)
+    Q_DISABLE_COPY(RestoreServerResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

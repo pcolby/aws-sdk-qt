@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEROLERESPONSE_P_H
 #define QTAWS_DELETEROLERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deleterolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteRoleResponse;
+
+class QTAWS_EXPORT DeleteRoleResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRoleResponsePrivate(DeleteRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRoleResponse)
+    Q_DISABLE_COPY(DeleteRoleResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

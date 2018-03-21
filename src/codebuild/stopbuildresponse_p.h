@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPBUILDRESPONSE_P_H
 #define QTAWS_STOPBUILDRESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "stopbuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class StopBuildResponse;
+
+class QTAWS_EXPORT StopBuildResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopBuildResponsePrivate(StopBuildResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopBuildResponse)
+    Q_DISABLE_COPY(StopBuildResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

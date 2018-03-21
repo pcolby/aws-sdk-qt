@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETSUBSCRIPTIONATTRIBUTESRESPONSE_P_H
 #define QTAWS_SETSUBSCRIPTIONATTRIBUTESRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "setsubscriptionattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetSubscriptionAttributesResponse;
+
+class QTAWS_EXPORT SetSubscriptionAttributesResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetSubscriptionAttributesResponsePrivate(SetSubscriptionAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetSubscriptionAttributesResponse)
+    Q_DISABLE_COPY(SetSubscriptionAttributesResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

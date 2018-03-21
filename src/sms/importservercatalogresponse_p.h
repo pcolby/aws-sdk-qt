@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTSERVERCATALOGRESPONSE_P_H
 #define QTAWS_IMPORTSERVERCATALOGRESPONSE_P_H
 
+#include "smsresponse.h"
+#include "importservercatalogrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class ImportServerCatalogResponse;
+
+class QTAWS_EXPORT ImportServerCatalogResponsePrivate : public SMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportServerCatalogResponsePrivate(ImportServerCatalogResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportServerCatalogResponse)
+    Q_DISABLE_COPY(ImportServerCatalogResponsePrivate)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

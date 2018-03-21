@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBOOTNODERESPONSE_P_H
 #define QTAWS_REBOOTNODERESPONSE_P_H
 
+#include "daxresponse.h"
+#include "rebootnoderequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class RebootNodeResponse;
+
+class QTAWS_EXPORT RebootNodeResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebootNodeResponsePrivate(RebootNodeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebootNodeResponse)
+    Q_DISABLE_COPY(RebootNodeResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

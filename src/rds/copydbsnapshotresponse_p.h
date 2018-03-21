@@ -20,4 +20,31 @@
 #ifndef QTAWS_COPYDBSNAPSHOTRESPONSE_P_H
 #define QTAWS_COPYDBSNAPSHOTRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "copydbsnapshotrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyDBSnapshotResponse;
+
+class QTAWS_EXPORT CopyDBSnapshotResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CopyDBSnapshotResponsePrivate(CopyDBSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CopyDBSnapshotResponse)
+    Q_DISABLE_COPY(CopyDBSnapshotResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

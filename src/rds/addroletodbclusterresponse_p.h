@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDROLETODBCLUSTERRESPONSE_P_H
 #define QTAWS_ADDROLETODBCLUSTERRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "addroletodbclusterrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class AddRoleToDBClusterResponse;
+
+class QTAWS_EXPORT AddRoleToDBClusterResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddRoleToDBClusterResponsePrivate(AddRoleToDBClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddRoleToDBClusterResponse)
+    Q_DISABLE_COPY(AddRoleToDBClusterResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

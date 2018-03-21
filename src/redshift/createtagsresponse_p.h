@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_P_H
 #define QTAWS_CREATETAGSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "createtagsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateTagsResponse;
+
+class QTAWS_EXPORT CreateTagsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTagsResponsePrivate(CreateTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTagsResponse)
+    Q_DISABLE_COPY(CreateTagsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

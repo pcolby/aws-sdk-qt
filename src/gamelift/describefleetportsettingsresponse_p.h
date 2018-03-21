@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFLEETPORTSETTINGSRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETPORTSETTINGSRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describefleetportsettingsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetPortSettingsResponse;
+
+class QTAWS_EXPORT DescribeFleetPortSettingsResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFleetPortSettingsResponsePrivate(DescribeFleetPortSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFleetPortSettingsResponse)
+    Q_DISABLE_COPY(DescribeFleetPortSettingsResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

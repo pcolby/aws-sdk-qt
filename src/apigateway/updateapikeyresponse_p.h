@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAPIKEYRESPONSE_P_H
 #define QTAWS_UPDATEAPIKEYRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "updateapikeyrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateApiKeyResponse;
+
+class QTAWS_EXPORT UpdateApiKeyResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateApiKeyResponsePrivate(UpdateApiKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApiKeyResponse)
+    Q_DISABLE_COPY(UpdateApiKeyResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

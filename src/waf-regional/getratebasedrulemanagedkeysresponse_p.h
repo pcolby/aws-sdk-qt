@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_P_H
 #define QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "getratebasedrulemanagedkeysrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetRateBasedRuleManagedKeysResponse;
+
+class QTAWS_EXPORT GetRateBasedRuleManagedKeysResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRateBasedRuleManagedKeysResponsePrivate(GetRateBasedRuleManagedKeysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRateBasedRuleManagedKeysResponse)
+    Q_DISABLE_COPY(GetRateBasedRuleManagedKeysResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

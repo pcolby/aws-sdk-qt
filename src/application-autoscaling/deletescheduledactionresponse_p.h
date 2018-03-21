@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESCHEDULEDACTIONRESPONSE_P_H
 #define QTAWS_DELETESCHEDULEDACTIONRESPONSE_P_H
 
+#include "applicationautoscalingresponse.h"
+#include "deletescheduledactionrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class DeleteScheduledActionResponse;
+
+class QTAWS_EXPORT DeleteScheduledActionResponsePrivate : public ApplicationAutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteScheduledActionResponsePrivate(DeleteScheduledActionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteScheduledActionResponse)
+    Q_DISABLE_COPY(DeleteScheduledActionResponsePrivate)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

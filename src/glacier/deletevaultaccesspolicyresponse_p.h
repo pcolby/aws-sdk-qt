@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVAULTACCESSPOLICYRESPONSE_P_H
 #define QTAWS_DELETEVAULTACCESSPOLICYRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "deletevaultaccesspolicyrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class DeleteVaultAccessPolicyResponse;
+
+class QTAWS_EXPORT DeleteVaultAccessPolicyResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVaultAccessPolicyResponsePrivate(DeleteVaultAccessPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVaultAccessPolicyResponse)
+    Q_DISABLE_COPY(DeleteVaultAccessPolicyResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

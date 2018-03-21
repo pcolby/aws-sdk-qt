@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTMETRICSRESPONSE_P_H
 #define QTAWS_LISTMETRICSRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "listmetricsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class ListMetricsResponse;
+
+class QTAWS_EXPORT ListMetricsResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListMetricsResponsePrivate(ListMetricsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListMetricsResponse)
+    Q_DISABLE_COPY(ListMetricsResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

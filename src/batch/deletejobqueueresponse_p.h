@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEJOBQUEUERESPONSE_P_H
 #define QTAWS_DELETEJOBQUEUERESPONSE_P_H
 
+#include "batchresponse.h"
+#include "deletejobqueuerequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DeleteJobQueueResponse;
+
+class QTAWS_EXPORT DeleteJobQueueResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteJobQueueResponsePrivate(DeleteJobQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteJobQueueResponse)
+    Q_DISABLE_COPY(DeleteJobQueueResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

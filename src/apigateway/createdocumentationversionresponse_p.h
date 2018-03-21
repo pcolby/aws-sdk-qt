@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDOCUMENTATIONVERSIONRESPONSE_P_H
 #define QTAWS_CREATEDOCUMENTATIONVERSIONRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "createdocumentationversionrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateDocumentationVersionResponse;
+
+class QTAWS_EXPORT CreateDocumentationVersionResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDocumentationVersionResponsePrivate(CreateDocumentationVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDocumentationVersionResponse)
+    Q_DISABLE_COPY(CreateDocumentationVersionResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

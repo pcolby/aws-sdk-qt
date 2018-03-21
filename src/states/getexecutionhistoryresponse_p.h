@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETEXECUTIONHISTORYRESPONSE_P_H
 #define QTAWS_GETEXECUTIONHISTORYRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "getexecutionhistoryrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class GetExecutionHistoryResponse;
+
+class QTAWS_EXPORT GetExecutionHistoryResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetExecutionHistoryResponsePrivate(GetExecutionHistoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetExecutionHistoryResponse)
+    Q_DISABLE_COPY(GetExecutionHistoryResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

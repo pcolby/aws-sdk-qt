@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTEMPLATERESPONSE_P_H
 #define QTAWS_GETTEMPLATERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "gettemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetTemplateResponse;
+
+class QTAWS_EXPORT GetTemplateResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTemplateResponsePrivate(GetTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTemplateResponse)
+    Q_DISABLE_COPY(GetTemplateResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

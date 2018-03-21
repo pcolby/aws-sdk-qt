@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTIDENTITYPROVIDERSRESPONSE_P_H
 #define QTAWS_LISTIDENTITYPROVIDERSRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "listidentityprovidersrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ListIdentityProvidersResponse;
+
+class QTAWS_EXPORT ListIdentityProvidersResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListIdentityProvidersResponsePrivate(ListIdentityProvidersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListIdentityProvidersResponse)
+    Q_DISABLE_COPY(ListIdentityProvidersResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

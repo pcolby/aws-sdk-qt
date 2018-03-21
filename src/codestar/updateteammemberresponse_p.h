@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETEAMMEMBERRESPONSE_P_H
 #define QTAWS_UPDATETEAMMEMBERRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "updateteammemberrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class UpdateTeamMemberResponse;
+
+class QTAWS_EXPORT UpdateTeamMemberResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTeamMemberResponsePrivate(UpdateTeamMemberResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTeamMemberResponse)
+    Q_DISABLE_COPY(UpdateTeamMemberResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

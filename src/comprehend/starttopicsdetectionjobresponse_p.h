@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTTOPICSDETECTIONJOBRESPONSE_P_H
 #define QTAWS_STARTTOPICSDETECTIONJOBRESPONSE_P_H
 
+#include "comprehendresponse.h"
+#include "starttopicsdetectionjobrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class StartTopicsDetectionJobResponse;
+
+class QTAWS_EXPORT StartTopicsDetectionJobResponsePrivate : public ComprehendResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartTopicsDetectionJobResponsePrivate(StartTopicsDetectionJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartTopicsDetectionJobResponse)
+    Q_DISABLE_COPY(StartTopicsDetectionJobResponsePrivate)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

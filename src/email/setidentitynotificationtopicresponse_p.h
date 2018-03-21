@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETIDENTITYNOTIFICATIONTOPICRESPONSE_P_H
 #define QTAWS_SETIDENTITYNOTIFICATIONTOPICRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "setidentitynotificationtopicrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityNotificationTopicResponse;
+
+class QTAWS_EXPORT SetIdentityNotificationTopicResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetIdentityNotificationTopicResponsePrivate(SetIdentityNotificationTopicResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityNotificationTopicResponse)
+    Q_DISABLE_COPY(SetIdentityNotificationTopicResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

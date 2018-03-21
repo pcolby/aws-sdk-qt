@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHLOADBALANCERSRESPONSE_P_H
 #define QTAWS_ATTACHLOADBALANCERSRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "attachloadbalancersrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class AttachLoadBalancersResponse;
+
+class QTAWS_EXPORT AttachLoadBalancersResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachLoadBalancersResponsePrivate(AttachLoadBalancersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachLoadBalancersResponse)
+    Q_DISABLE_COPY(AttachLoadBalancersResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

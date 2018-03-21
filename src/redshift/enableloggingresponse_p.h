@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLELOGGINGRESPONSE_P_H
 #define QTAWS_ENABLELOGGINGRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "enableloggingrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class EnableLoggingResponse;
+
+class QTAWS_EXPORT EnableLoggingResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableLoggingResponsePrivate(EnableLoggingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableLoggingResponse)
+    Q_DISABLE_COPY(EnableLoggingResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

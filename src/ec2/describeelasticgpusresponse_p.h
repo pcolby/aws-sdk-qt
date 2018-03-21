@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEELASTICGPUSRESPONSE_P_H
 #define QTAWS_DESCRIBEELASTICGPUSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeelasticgpusrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeElasticGpusResponse;
+
+class QTAWS_EXPORT DescribeElasticGpusResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeElasticGpusResponsePrivate(DescribeElasticGpusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeElasticGpusResponse)
+    Q_DISABLE_COPY(DescribeElasticGpusResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

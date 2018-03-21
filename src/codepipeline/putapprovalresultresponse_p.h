@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTAPPROVALRESULTRESPONSE_P_H
 #define QTAWS_PUTAPPROVALRESULTRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "putapprovalresultrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PutApprovalResultResponse;
+
+class QTAWS_EXPORT PutApprovalResultResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutApprovalResultResponsePrivate(PutApprovalResultResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutApprovalResultResponse)
+    Q_DISABLE_COPY(PutApprovalResultResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

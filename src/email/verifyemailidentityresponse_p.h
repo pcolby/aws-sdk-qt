@@ -20,4 +20,31 @@
 #ifndef QTAWS_VERIFYEMAILIDENTITYRESPONSE_P_H
 #define QTAWS_VERIFYEMAILIDENTITYRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "verifyemailidentityrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class VerifyEmailIdentityResponse;
+
+class QTAWS_EXPORT VerifyEmailIdentityResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    VerifyEmailIdentityResponsePrivate(VerifyEmailIdentityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyEmailIdentityResponse)
+    Q_DISABLE_COPY(VerifyEmailIdentityResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

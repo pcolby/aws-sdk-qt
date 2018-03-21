@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETRULEPRIORITIESRESPONSE_P_H
 #define QTAWS_SETRULEPRIORITIESRESPONSE_P_H
 
+#include "elasticloadbalancingv2response.h"
+#include "setruleprioritiesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class SetRulePrioritiesResponse;
+
+class QTAWS_EXPORT SetRulePrioritiesResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetRulePrioritiesResponsePrivate(SetRulePrioritiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetRulePrioritiesResponse)
+    Q_DISABLE_COPY(SetRulePrioritiesResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

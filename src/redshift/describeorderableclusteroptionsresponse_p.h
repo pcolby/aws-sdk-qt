@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describeorderableclusteroptionsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeOrderableClusterOptionsResponse;
+
+class QTAWS_EXPORT DescribeOrderableClusterOptionsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeOrderableClusterOptionsResponsePrivate(DescribeOrderableClusterOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrderableClusterOptionsResponse)
+    Q_DISABLE_COPY(DescribeOrderableClusterOptionsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

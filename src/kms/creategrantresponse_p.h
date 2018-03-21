@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEGRANTRESPONSE_P_H
 #define QTAWS_CREATEGRANTRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "creategrantrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class CreateGrantResponse;
+
+class QTAWS_EXPORT CreateGrantResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateGrantResponsePrivate(CreateGrantResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGrantResponse)
+    Q_DISABLE_COPY(CreateGrantResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

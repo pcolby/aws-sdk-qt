@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECOPYPRODUCTSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBECOPYPRODUCTSTATUSRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "describecopyproductstatusrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeCopyProductStatusResponse;
+
+class QTAWS_EXPORT DescribeCopyProductStatusResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCopyProductStatusResponsePrivate(DescribeCopyProductStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCopyProductStatusResponse)
+    Q_DISABLE_COPY(DescribeCopyProductStatusResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPGRADEAPPLIEDSCHEMARESPONSE_P_H
 #define QTAWS_UPGRADEAPPLIEDSCHEMARESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "upgradeappliedschemarequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpgradeAppliedSchemaResponse;
+
+class QTAWS_EXPORT UpgradeAppliedSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpgradeAppliedSchemaResponsePrivate(UpgradeAppliedSchemaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpgradeAppliedSchemaResponse)
+    Q_DISABLE_COPY(UpgradeAppliedSchemaResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSCHEDULERESPONSE_P_H
 #define QTAWS_DESCRIBESNAPSHOTSCHEDULERESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describesnapshotschedulerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeSnapshotScheduleResponse;
+
+class QTAWS_EXPORT DescribeSnapshotScheduleResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSnapshotScheduleResponsePrivate(DescribeSnapshotScheduleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSnapshotScheduleResponse)
+    Q_DISABLE_COPY(DescribeSnapshotScheduleResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

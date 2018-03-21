@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDOMAINCONTROLLERSRESPONSE_P_H
 #define QTAWS_DESCRIBEDOMAINCONTROLLERSRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "describedomaincontrollersrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeDomainControllersResponse;
+
+class QTAWS_EXPORT DescribeDomainControllersResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDomainControllersResponsePrivate(DescribeDomainControllersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDomainControllersResponse)
+    Q_DISABLE_COPY(DescribeDomainControllersResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRECEIPTFILTERSRESPONSE_P_H
 #define QTAWS_LISTRECEIPTFILTERSRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "listreceiptfiltersrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ListReceiptFiltersResponse;
+
+class QTAWS_EXPORT ListReceiptFiltersResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListReceiptFiltersResponsePrivate(ListReceiptFiltersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListReceiptFiltersResponse)
+    Q_DISABLE_COPY(ListReceiptFiltersResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

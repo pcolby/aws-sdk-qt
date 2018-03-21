@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
+#include "cloudhsmv2response.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class UntagResourceResponse;
+
+class QTAWS_EXPORT UntagResourceResponsePrivate : public CloudHSMV2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagResourceResponsePrivate(UntagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceResponse)
+    Q_DISABLE_COPY(UntagResourceResponsePrivate)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

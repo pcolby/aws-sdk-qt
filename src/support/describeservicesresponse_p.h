@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESERVICESRESPONSE_P_H
 #define QTAWS_DESCRIBESERVICESRESPONSE_P_H
 
+#include "supportresponse.h"
+#include "describeservicesrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeServicesResponse;
+
+class QTAWS_EXPORT DescribeServicesResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeServicesResponsePrivate(DescribeServicesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServicesResponse)
+    Q_DISABLE_COPY(DescribeServicesResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHLOADBALANCERFROMSUBNETSRESPONSE_P_H
 #define QTAWS_DETACHLOADBALANCERFROMSUBNETSRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "detachloadbalancerfromsubnetsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class DetachLoadBalancerFromSubnetsResponse;
+
+class QTAWS_EXPORT DetachLoadBalancerFromSubnetsResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachLoadBalancerFromSubnetsResponsePrivate(DetachLoadBalancerFromSubnetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachLoadBalancerFromSubnetsResponse)
+    Q_DISABLE_COPY(DetachLoadBalancerFromSubnetsResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

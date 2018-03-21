@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTLOGEVENTSRESPONSE_P_H
 #define QTAWS_PUTLOGEVENTSRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "putlogeventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutLogEventsResponse;
+
+class QTAWS_EXPORT PutLogEventsResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutLogEventsResponsePrivate(PutLogEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutLogEventsResponse)
+    Q_DISABLE_COPY(PutLogEventsResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

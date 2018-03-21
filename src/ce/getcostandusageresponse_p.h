@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCOSTANDUSAGERESPONSE_P_H
 #define QTAWS_GETCOSTANDUSAGERESPONSE_P_H
 
+#include "costexplorerresponse.h"
+#include "getcostandusagerequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetCostAndUsageResponse;
+
+class QTAWS_EXPORT GetCostAndUsageResponsePrivate : public CostExplorerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCostAndUsageResponsePrivate(GetCostAndUsageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCostAndUsageResponse)
+    Q_DISABLE_COPY(GetCostAndUsageResponsePrivate)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

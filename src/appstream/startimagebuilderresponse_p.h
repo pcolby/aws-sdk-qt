@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTIMAGEBUILDERRESPONSE_P_H
 #define QTAWS_STARTIMAGEBUILDERRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "startimagebuilderrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class StartImageBuilderResponse;
+
+class QTAWS_EXPORT StartImageBuilderResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartImageBuilderResponsePrivate(StartImageBuilderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartImageBuilderResponse)
+    Q_DISABLE_COPY(StartImageBuilderResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

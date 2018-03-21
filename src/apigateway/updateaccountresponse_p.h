@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEACCOUNTRESPONSE_P_H
 #define QTAWS_UPDATEACCOUNTRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "updateaccountrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateAccountResponse;
+
+class QTAWS_EXPORT UpdateAccountResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAccountResponsePrivate(UpdateAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAccountResponse)
+    Q_DISABLE_COPY(UpdateAccountResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

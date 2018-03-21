@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUBLISHVERSIONRESPONSE_P_H
 #define QTAWS_PUBLISHVERSIONRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "publishversionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class PublishVersionResponse;
+
+class QTAWS_EXPORT PublishVersionResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PublishVersionResponsePrivate(PublishVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PublishVersionResponse)
+    Q_DISABLE_COPY(PublishVersionResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

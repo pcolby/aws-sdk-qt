@@ -20,4 +20,31 @@
 #ifndef QTAWS_TESTCONNECTIONRESPONSE_P_H
 #define QTAWS_TESTCONNECTIONRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "testconnectionrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class TestConnectionResponse;
+
+class QTAWS_EXPORT TestConnectionResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TestConnectionResponsePrivate(TestConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TestConnectionResponse)
+    Q_DISABLE_COPY(TestConnectionResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

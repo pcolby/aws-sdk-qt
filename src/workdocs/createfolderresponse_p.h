@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEFOLDERRESPONSE_P_H
 #define QTAWS_CREATEFOLDERRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "createfolderrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateFolderResponse;
+
+class QTAWS_EXPORT CreateFolderResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateFolderResponsePrivate(CreateFolderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateFolderResponse)
+    Q_DISABLE_COPY(CreateFolderResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

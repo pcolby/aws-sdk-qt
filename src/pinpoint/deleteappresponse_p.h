@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPPRESPONSE_P_H
 #define QTAWS_DELETEAPPRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "deleteapprequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteAppResponse;
+
+class QTAWS_EXPORT DeleteAppResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAppResponsePrivate(DeleteAppResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAppResponse)
+    Q_DISABLE_COPY(DeleteAppResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

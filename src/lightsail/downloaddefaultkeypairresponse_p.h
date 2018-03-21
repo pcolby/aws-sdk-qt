@@ -20,4 +20,31 @@
 #ifndef QTAWS_DOWNLOADDEFAULTKEYPAIRRESPONSE_P_H
 #define QTAWS_DOWNLOADDEFAULTKEYPAIRRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "downloaddefaultkeypairrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DownloadDefaultKeyPairResponse;
+
+class QTAWS_EXPORT DownloadDefaultKeyPairResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DownloadDefaultKeyPairResponsePrivate(DownloadDefaultKeyPairResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DownloadDefaultKeyPairResponse)
+    Q_DISABLE_COPY(DownloadDefaultKeyPairResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

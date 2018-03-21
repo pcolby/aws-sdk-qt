@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEDISCOVEREDRESOURCERESPONSE_P_H
 #define QTAWS_DISASSOCIATEDISCOVEREDRESOURCERESPONSE_P_H
 
+#include "migrationhubresponse.h"
+#include "disassociatediscoveredresourcerequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class DisassociateDiscoveredResourceResponse;
+
+class QTAWS_EXPORT DisassociateDiscoveredResourceResponsePrivate : public MigrationHubResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateDiscoveredResourceResponsePrivate(DisassociateDiscoveredResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateDiscoveredResourceResponse)
+    Q_DISABLE_COPY(DisassociateDiscoveredResourceResponsePrivate)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

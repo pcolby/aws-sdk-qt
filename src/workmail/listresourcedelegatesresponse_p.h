@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRESOURCEDELEGATESRESPONSE_P_H
 #define QTAWS_LISTRESOURCEDELEGATESRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "listresourcedelegatesrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListResourceDelegatesResponse;
+
+class QTAWS_EXPORT ListResourceDelegatesResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListResourceDelegatesResponsePrivate(ListResourceDelegatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourceDelegatesResponse)
+    Q_DISABLE_COPY(ListResourceDelegatesResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

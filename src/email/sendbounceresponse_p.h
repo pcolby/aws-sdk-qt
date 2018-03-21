@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDBOUNCERESPONSE_P_H
 #define QTAWS_SENDBOUNCERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "sendbouncerequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendBounceResponse;
+
+class QTAWS_EXPORT SendBounceResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendBounceResponsePrivate(SendBounceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendBounceResponse)
+    Q_DISABLE_COPY(SendBounceResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

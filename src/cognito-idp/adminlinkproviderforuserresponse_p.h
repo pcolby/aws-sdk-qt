@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINLINKPROVIDERFORUSERRESPONSE_P_H
 #define QTAWS_ADMINLINKPROVIDERFORUSERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminlinkproviderforuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminLinkProviderForUserResponse;
+
+class QTAWS_EXPORT AdminLinkProviderForUserResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminLinkProviderForUserResponsePrivate(AdminLinkProviderForUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminLinkProviderForUserResponse)
+    Q_DISABLE_COPY(AdminLinkProviderForUserResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

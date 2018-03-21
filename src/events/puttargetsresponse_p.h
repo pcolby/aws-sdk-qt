@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTTARGETSRESPONSE_P_H
 #define QTAWS_PUTTARGETSRESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "puttargetsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class PutTargetsResponse;
+
+class QTAWS_EXPORT PutTargetsResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutTargetsResponsePrivate(PutTargetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutTargetsResponse)
+    Q_DISABLE_COPY(PutTargetsResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

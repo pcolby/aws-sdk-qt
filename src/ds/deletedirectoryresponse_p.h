@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDIRECTORYRESPONSE_P_H
 #define QTAWS_DELETEDIRECTORYRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "deletedirectoryrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeleteDirectoryResponse;
+
+class QTAWS_EXPORT DeleteDirectoryResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDirectoryResponsePrivate(DeleteDirectoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDirectoryResponse)
+    Q_DISABLE_COPY(DeleteDirectoryResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

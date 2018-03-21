@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECLUSTERSUBNETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERSUBNETGROUPSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describeclustersubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeClusterSubnetGroupsResponse;
+
+class QTAWS_EXPORT DescribeClusterSubnetGroupsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeClusterSubnetGroupsResponsePrivate(DescribeClusterSubnetGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClusterSubnetGroupsResponse)
+    Q_DISABLE_COPY(DescribeClusterSubnetGroupsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

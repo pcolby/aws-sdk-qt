@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELOADBALANCERTARGETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBELOADBALANCERTARGETGROUPSRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describeloadbalancertargetgroupsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeLoadBalancerTargetGroupsResponse;
+
+class QTAWS_EXPORT DescribeLoadBalancerTargetGroupsResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLoadBalancerTargetGroupsResponsePrivate(DescribeLoadBalancerTargetGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLoadBalancerTargetGroupsResponse)
+    Q_DISABLE_COPY(DescribeLoadBalancerTargetGroupsResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

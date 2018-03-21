@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELAYERRESPONSE_P_H
 #define QTAWS_DELETELAYERRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "deletelayerrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeleteLayerResponse;
+
+class QTAWS_EXPORT DeleteLayerResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLayerResponsePrivate(DeleteLayerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLayerResponse)
+    Q_DISABLE_COPY(DeleteLayerResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

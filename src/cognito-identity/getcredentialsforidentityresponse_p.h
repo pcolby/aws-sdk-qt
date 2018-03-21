@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCREDENTIALSFORIDENTITYRESPONSE_P_H
 #define QTAWS_GETCREDENTIALSFORIDENTITYRESPONSE_P_H
 
+#include "cognitoidentityresponse.h"
+#include "getcredentialsforidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class GetCredentialsForIdentityResponse;
+
+class QTAWS_EXPORT GetCredentialsForIdentityResponsePrivate : public CognitoIdentityResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCredentialsForIdentityResponsePrivate(GetCredentialsForIdentityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCredentialsForIdentityResponse)
+    Q_DISABLE_COPY(GetCredentialsForIdentityResponsePrivate)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

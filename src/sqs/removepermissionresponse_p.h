@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 #define QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "removepermissionrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class RemovePermissionResponse;
+
+class QTAWS_EXPORT RemovePermissionResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemovePermissionResponsePrivate(RemovePermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemovePermissionResponse)
+    Q_DISABLE_COPY(RemovePermissionResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

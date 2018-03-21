@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describeinstancepatchstatesforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstancePatchStatesForPatchGroupResponse;
+
+class QTAWS_EXPORT DescribeInstancePatchStatesForPatchGroupResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeInstancePatchStatesForPatchGroupResponsePrivate(DescribeInstancePatchStatesForPatchGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstancePatchStatesForPatchGroupResponse)
+    Q_DISABLE_COPY(DescribeInstancePatchStatesForPatchGroupResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

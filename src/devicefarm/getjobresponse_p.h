@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETJOBRESPONSE_P_H
 #define QTAWS_GETJOBRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "getjobrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetJobResponse;
+
+class QTAWS_EXPORT GetJobResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetJobResponsePrivate(GetJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobResponse)
+    Q_DISABLE_COPY(GetJobResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

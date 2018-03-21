@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_P_H
 #define QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "disassociatequalificationfromworkerrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DisassociateQualificationFromWorkerResponse;
+
+class QTAWS_EXPORT DisassociateQualificationFromWorkerResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateQualificationFromWorkerResponsePrivate(DisassociateQualificationFromWorkerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateQualificationFromWorkerResponse)
+    Q_DISABLE_COPY(DisassociateQualificationFromWorkerResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

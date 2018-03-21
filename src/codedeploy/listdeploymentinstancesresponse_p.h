@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDEPLOYMENTINSTANCESRESPONSE_P_H
 #define QTAWS_LISTDEPLOYMENTINSTANCESRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "listdeploymentinstancesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListDeploymentInstancesResponse;
+
+class QTAWS_EXPORT ListDeploymentInstancesResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDeploymentInstancesResponsePrivate(ListDeploymentInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeploymentInstancesResponse)
+    Q_DISABLE_COPY(ListDeploymentInstancesResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

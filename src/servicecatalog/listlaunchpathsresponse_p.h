@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTLAUNCHPATHSRESPONSE_P_H
 #define QTAWS_LISTLAUNCHPATHSRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "listlaunchpathsrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListLaunchPathsResponse;
+
+class QTAWS_EXPORT ListLaunchPathsResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListLaunchPathsResponsePrivate(ListLaunchPathsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListLaunchPathsResponse)
+    Q_DISABLE_COPY(ListLaunchPathsResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

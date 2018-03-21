@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEQUEUERESPONSE_P_H
 #define QTAWS_DELETEQUEUERESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "deletequeuerequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DeleteQueueResponse;
+
+class QTAWS_EXPORT DeleteQueueResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteQueueResponsePrivate(DeleteQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteQueueResponse)
+    Q_DISABLE_COPY(DeleteQueueResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTASSIGNMENTSFORHITRESPONSE_P_H
 #define QTAWS_LISTASSIGNMENTSFORHITRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "listassignmentsforhitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListAssignmentsForHITResponse;
+
+class QTAWS_EXPORT ListAssignmentsForHITResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAssignmentsForHITResponsePrivate(ListAssignmentsForHITResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssignmentsForHITResponse)
+    Q_DISABLE_COPY(ListAssignmentsForHITResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

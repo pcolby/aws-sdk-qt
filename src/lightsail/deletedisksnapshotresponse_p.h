@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDISKSNAPSHOTRESPONSE_P_H
 #define QTAWS_DELETEDISKSNAPSHOTRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "deletedisksnapshotrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteDiskSnapshotResponse;
+
+class QTAWS_EXPORT DeleteDiskSnapshotResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDiskSnapshotResponsePrivate(DeleteDiskSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDiskSnapshotResponse)
+    Q_DISABLE_COPY(DeleteDiskSnapshotResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTSUPPORTDATAEXPORTRESPONSE_P_H
 #define QTAWS_STARTSUPPORTDATAEXPORTRESPONSE_P_H
 
+#include "marketplacecommerceanalyticsresponse.h"
+#include "startsupportdataexportrequest.h"
+
+namespace AWS {
+
+namespace MarketplaceCommerceAnalytics {
+
+class StartSupportDataExportResponse;
+
+class QTAWS_EXPORT StartSupportDataExportResponsePrivate : public MarketplaceCommerceAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartSupportDataExportResponsePrivate(StartSupportDataExportResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartSupportDataExportResponse)
+    Q_DISABLE_COPY(StartSupportDataExportResponsePrivate)
+
+};
+
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS
+
 #endif

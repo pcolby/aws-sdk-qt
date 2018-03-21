@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESTATEMACHINERESPONSE_P_H
 #define QTAWS_CREATESTATEMACHINERESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "createstatemachinerequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class CreateStateMachineResponse;
+
+class QTAWS_EXPORT CreateStateMachineResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateStateMachineResponsePrivate(CreateStateMachineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStateMachineResponse)
+    Q_DISABLE_COPY(CreateStateMachineResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

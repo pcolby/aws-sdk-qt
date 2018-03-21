@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHECKDOMAINAVAILABILITYRESPONSE_P_H
 #define QTAWS_CHECKDOMAINAVAILABILITYRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "checkdomainavailabilityrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class CheckDomainAvailabilityResponse;
+
+class QTAWS_EXPORT CheckDomainAvailabilityResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CheckDomainAvailabilityResponsePrivate(CheckDomainAvailabilityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CheckDomainAvailabilityResponse)
+    Q_DISABLE_COPY(CheckDomainAvailabilityResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETIMEBASEDAUTOSCALINGRESPONSE_P_H
 #define QTAWS_DESCRIBETIMEBASEDAUTOSCALINGRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describetimebasedautoscalingrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeTimeBasedAutoScalingResponse;
+
+class QTAWS_EXPORT DescribeTimeBasedAutoScalingResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTimeBasedAutoScalingResponsePrivate(DescribeTimeBasedAutoScalingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTimeBasedAutoScalingResponse)
+    Q_DISABLE_COPY(DescribeTimeBasedAutoScalingResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

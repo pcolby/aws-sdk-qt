@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSTOSTREAMRESPONSE_P_H
 #define QTAWS_ADDTAGSTOSTREAMRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "addtagstostreamrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class AddTagsToStreamResponse;
+
+class QTAWS_EXPORT AddTagsToStreamResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsToStreamResponsePrivate(AddTagsToStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToStreamResponse)
+    Q_DISABLE_COPY(AddTagsToStreamResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

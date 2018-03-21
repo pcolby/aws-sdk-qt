@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDATTACHMENTSTOSETRESPONSE_P_H
 #define QTAWS_ADDATTACHMENTSTOSETRESPONSE_P_H
 
+#include "supportresponse.h"
+#include "addattachmentstosetrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class AddAttachmentsToSetResponse;
+
+class QTAWS_EXPORT AddAttachmentsToSetResponsePrivate : public SupportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddAttachmentsToSetResponsePrivate(AddAttachmentsToSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddAttachmentsToSetResponse)
+    Q_DISABLE_COPY(AddAttachmentsToSetResponsePrivate)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

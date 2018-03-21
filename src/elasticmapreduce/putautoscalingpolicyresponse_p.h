@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_P_H
 #define QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "putautoscalingpolicyrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class PutAutoScalingPolicyResponse;
+
+class QTAWS_EXPORT PutAutoScalingPolicyResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutAutoScalingPolicyResponsePrivate(PutAutoScalingPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutAutoScalingPolicyResponse)
+    Q_DISABLE_COPY(PutAutoScalingPolicyResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

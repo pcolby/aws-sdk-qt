@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPLATFORMAPPLICATIONRESPONSE_P_H
 #define QTAWS_CREATEPLATFORMAPPLICATIONRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "createplatformapplicationrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class CreatePlatformApplicationResponse;
+
+class QTAWS_EXPORT CreatePlatformApplicationResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePlatformApplicationResponsePrivate(CreatePlatformApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePlatformApplicationResponse)
+    Q_DISABLE_COPY(CreatePlatformApplicationResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

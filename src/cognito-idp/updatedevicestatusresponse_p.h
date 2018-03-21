@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDEVICESTATUSRESPONSE_P_H
 #define QTAWS_UPDATEDEVICESTATUSRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "updatedevicestatusrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateDeviceStatusResponse;
+
+class QTAWS_EXPORT UpdateDeviceStatusResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDeviceStatusResponsePrivate(UpdateDeviceStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDeviceStatusResponse)
+    Q_DISABLE_COPY(UpdateDeviceStatusResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

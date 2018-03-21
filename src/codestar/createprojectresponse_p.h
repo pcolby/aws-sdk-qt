@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPROJECTRESPONSE_P_H
 #define QTAWS_CREATEPROJECTRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "createprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class CreateProjectResponse;
+
+class QTAWS_EXPORT CreateProjectResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateProjectResponsePrivate(CreateProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateProjectResponse)
+    Q_DISABLE_COPY(CreateProjectResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

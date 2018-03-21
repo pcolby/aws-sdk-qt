@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETQUERYEXECUTIONRESPONSE_P_H
 #define QTAWS_GETQUERYEXECUTIONRESPONSE_P_H
 
+#include "athenaresponse.h"
+#include "getqueryexecutionrequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class GetQueryExecutionResponse;
+
+class QTAWS_EXPORT GetQueryExecutionResponsePrivate : public AthenaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetQueryExecutionResponsePrivate(GetQueryExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetQueryExecutionResponse)
+    Q_DISABLE_COPY(GetQueryExecutionResponsePrivate)
+
+};
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

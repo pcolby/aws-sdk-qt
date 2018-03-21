@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEWEBACLRESPONSE_P_H
 #define QTAWS_DELETEWEBACLRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "deletewebaclrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteWebACLResponse;
+
+class QTAWS_EXPORT DeleteWebACLResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteWebACLResponsePrivate(DeleteWebACLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteWebACLResponse)
+    Q_DISABLE_COPY(DeleteWebACLResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

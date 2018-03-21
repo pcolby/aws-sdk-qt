@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPCRAWLERRESPONSE_P_H
 #define QTAWS_STOPCRAWLERRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "stopcrawlerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class StopCrawlerResponse;
+
+class QTAWS_EXPORT StopCrawlerResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopCrawlerResponsePrivate(StopCrawlerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopCrawlerResponse)
+    Q_DISABLE_COPY(StopCrawlerResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHOBJECTRESPONSE_P_H
 #define QTAWS_DETACHOBJECTRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "detachobjectrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DetachObjectResponse;
+
+class QTAWS_EXPORT DetachObjectResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachObjectResponsePrivate(DetachObjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachObjectResponse)
+    Q_DISABLE_COPY(DetachObjectResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

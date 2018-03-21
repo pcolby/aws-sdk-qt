@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_P_H
 #define QTAWS_CREATEJOBRESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "createjobrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class CreateJobResponse;
+
+class QTAWS_EXPORT CreateJobResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateJobResponsePrivate(CreateJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateJobResponse)
+    Q_DISABLE_COPY(CreateJobResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

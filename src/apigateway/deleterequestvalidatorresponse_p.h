@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREQUESTVALIDATORRESPONSE_P_H
 #define QTAWS_DELETEREQUESTVALIDATORRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "deleterequestvalidatorrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteRequestValidatorResponse;
+
+class QTAWS_EXPORT DeleteRequestValidatorResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRequestValidatorResponsePrivate(DeleteRequestValidatorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRequestValidatorResponse)
+    Q_DISABLE_COPY(DeleteRequestValidatorResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

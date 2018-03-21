@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRATEBASEDRULERESPONSE_P_H
 #define QTAWS_GETRATEBASEDRULERESPONSE_P_H
 
+#include "wafresponse.h"
+#include "getratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetRateBasedRuleResponse;
+
+class QTAWS_EXPORT GetRateBasedRuleResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRateBasedRuleResponsePrivate(GetRateBasedRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRateBasedRuleResponse)
+    Q_DISABLE_COPY(GetRateBasedRuleResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

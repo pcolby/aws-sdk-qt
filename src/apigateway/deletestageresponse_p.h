@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESTAGERESPONSE_P_H
 #define QTAWS_DELETESTAGERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "deletestagerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteStageResponse;
+
+class QTAWS_EXPORT DeleteStageResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteStageResponsePrivate(DeleteStageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStageResponse)
+    Q_DISABLE_COPY(DeleteStageResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

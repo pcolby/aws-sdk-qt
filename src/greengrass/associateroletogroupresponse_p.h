@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATEROLETOGROUPRESPONSE_P_H
 #define QTAWS_ASSOCIATEROLETOGROUPRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "associateroletogrouprequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class AssociateRoleToGroupResponse;
+
+class QTAWS_EXPORT AssociateRoleToGroupResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateRoleToGroupResponsePrivate(AssociateRoleToGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateRoleToGroupResponse)
+    Q_DISABLE_COPY(AssociateRoleToGroupResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

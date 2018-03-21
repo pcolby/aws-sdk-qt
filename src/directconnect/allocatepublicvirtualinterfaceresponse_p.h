@@ -20,4 +20,31 @@
 #ifndef QTAWS_ALLOCATEPUBLICVIRTUALINTERFACERESPONSE_P_H
 #define QTAWS_ALLOCATEPUBLICVIRTUALINTERFACERESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "allocatepublicvirtualinterfacerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class AllocatePublicVirtualInterfaceResponse;
+
+class QTAWS_EXPORT AllocatePublicVirtualInterfaceResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AllocatePublicVirtualInterfaceResponsePrivate(AllocatePublicVirtualInterfaceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AllocatePublicVirtualInterfaceResponse)
+    Q_DISABLE_COPY(AllocatePublicVirtualInterfaceResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

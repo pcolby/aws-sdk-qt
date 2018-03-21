@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHPOLICYRESPONSE_P_H
 #define QTAWS_DETACHPOLICYRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "detachpolicyrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DetachPolicyResponse;
+
+class QTAWS_EXPORT DetachPolicyResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachPolicyResponsePrivate(DetachPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachPolicyResponse)
+    Q_DISABLE_COPY(DetachPolicyResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describeaccountattributesrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeAccountAttributesResponse;
+
+class QTAWS_EXPORT DescribeAccountAttributesResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAccountAttributesResponsePrivate(DescribeAccountAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountAttributesResponse)
+    Q_DISABLE_COPY(DescribeAccountAttributesResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

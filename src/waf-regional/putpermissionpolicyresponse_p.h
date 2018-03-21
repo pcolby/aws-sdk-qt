@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTPERMISSIONPOLICYRESPONSE_P_H
 #define QTAWS_PUTPERMISSIONPOLICYRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "putpermissionpolicyrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class PutPermissionPolicyResponse;
+
+class QTAWS_EXPORT PutPermissionPolicyResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutPermissionPolicyResponsePrivate(PutPermissionPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutPermissionPolicyResponse)
+    Q_DISABLE_COPY(PutPermissionPolicyResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

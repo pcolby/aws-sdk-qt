@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEIDENTITIESRESPONSE_P_H
 #define QTAWS_DELETEIDENTITIESRESPONSE_P_H
 
+#include "cognitoidentityresponse.h"
+#include "deleteidentitiesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class DeleteIdentitiesResponse;
+
+class QTAWS_EXPORT DeleteIdentitiesResponsePrivate : public CognitoIdentityResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteIdentitiesResponsePrivate(DeleteIdentitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIdentitiesResponse)
+    Q_DISABLE_COPY(DeleteIdentitiesResponsePrivate)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

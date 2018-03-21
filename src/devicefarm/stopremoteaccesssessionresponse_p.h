@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPREMOTEACCESSSESSIONRESPONSE_P_H
 #define QTAWS_STOPREMOTEACCESSSESSIONRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "stopremoteaccesssessionrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class StopRemoteAccessSessionResponse;
+
+class QTAWS_EXPORT StopRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopRemoteAccessSessionResponsePrivate(StopRemoteAccessSessionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopRemoteAccessSessionResponse)
+    Q_DISABLE_COPY(StopRemoteAccessSessionResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

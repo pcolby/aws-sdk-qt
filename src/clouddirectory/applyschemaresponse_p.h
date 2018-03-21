@@ -20,4 +20,31 @@
 #ifndef QTAWS_APPLYSCHEMARESPONSE_P_H
 #define QTAWS_APPLYSCHEMARESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "applyschemarequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ApplySchemaResponse;
+
+class QTAWS_EXPORT ApplySchemaResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ApplySchemaResponsePrivate(ApplySchemaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ApplySchemaResponse)
+    Q_DISABLE_COPY(ApplySchemaResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

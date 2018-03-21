@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPRINCIPALIDFORMATRESPONSE_P_H
 #define QTAWS_DESCRIBEPRINCIPALIDFORMATRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeprincipalidformatrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribePrincipalIdFormatResponse;
+
+class QTAWS_EXPORT DescribePrincipalIdFormatResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribePrincipalIdFormatResponsePrivate(DescribePrincipalIdFormatResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePrincipalIdFormatResponse)
+    Q_DISABLE_COPY(DescribePrincipalIdFormatResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

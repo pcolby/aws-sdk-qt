@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERECSCLUSTERRESPONSE_P_H
 #define QTAWS_DEREGISTERECSCLUSTERRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "deregisterecsclusterrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterEcsClusterResponse;
+
+class QTAWS_EXPORT DeregisterEcsClusterResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterEcsClusterResponsePrivate(DeregisterEcsClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterEcsClusterResponse)
+    Q_DISABLE_COPY(DeregisterEcsClusterResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

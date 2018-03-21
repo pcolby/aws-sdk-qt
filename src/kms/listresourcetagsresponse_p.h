@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRESOURCETAGSRESPONSE_P_H
 #define QTAWS_LISTRESOURCETAGSRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "listresourcetagsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListResourceTagsResponse;
+
+class QTAWS_EXPORT ListResourceTagsResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListResourceTagsResponsePrivate(ListResourceTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourceTagsResponse)
+    Q_DISABLE_COPY(ListResourceTagsResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

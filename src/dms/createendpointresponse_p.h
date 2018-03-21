@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEENDPOINTRESPONSE_P_H
 #define QTAWS_CREATEENDPOINTRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "createendpointrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class CreateEndpointResponse;
+
+class QTAWS_EXPORT CreateEndpointResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateEndpointResponsePrivate(CreateEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateEndpointResponse)
+    Q_DISABLE_COPY(CreateEndpointResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

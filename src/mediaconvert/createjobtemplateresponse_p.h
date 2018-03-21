@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEJOBTEMPLATERESPONSE_P_H
 #define QTAWS_CREATEJOBTEMPLATERESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "createjobtemplaterequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class CreateJobTemplateResponse;
+
+class QTAWS_EXPORT CreateJobTemplateResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateJobTemplateResponsePrivate(CreateJobTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateJobTemplateResponse)
+    Q_DISABLE_COPY(CreateJobTemplateResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

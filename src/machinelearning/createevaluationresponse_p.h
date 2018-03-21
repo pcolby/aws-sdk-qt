@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEEVALUATIONRESPONSE_P_H
 #define QTAWS_CREATEEVALUATIONRESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "createevaluationrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class CreateEvaluationResponse;
+
+class QTAWS_EXPORT CreateEvaluationResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateEvaluationResponsePrivate(CreateEvaluationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateEvaluationResponse)
+    Q_DISABLE_COPY(CreateEvaluationResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

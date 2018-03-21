@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPERMISSIONPOLICYRESPONSE_P_H
 #define QTAWS_DELETEPERMISSIONPOLICYRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "deletepermissionpolicyrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeletePermissionPolicyResponse;
+
+class QTAWS_EXPORT DeletePermissionPolicyResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePermissionPolicyResponsePrivate(DeletePermissionPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePermissionPolicyResponse)
+    Q_DISABLE_COPY(DeletePermissionPolicyResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

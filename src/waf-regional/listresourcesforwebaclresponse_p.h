@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRESOURCESFORWEBACLRESPONSE_P_H
 #define QTAWS_LISTRESOURCESFORWEBACLRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "listresourcesforwebaclrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListResourcesForWebACLResponse;
+
+class QTAWS_EXPORT ListResourcesForWebACLResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListResourcesForWebACLResponsePrivate(ListResourcesForWebACLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourcesForWebACLResponse)
+    Q_DISABLE_COPY(ListResourcesForWebACLResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

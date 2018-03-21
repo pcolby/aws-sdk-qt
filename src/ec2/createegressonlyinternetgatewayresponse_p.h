@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEEGRESSONLYINTERNETGATEWAYRESPONSE_P_H
 #define QTAWS_CREATEEGRESSONLYINTERNETGATEWAYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createegressonlyinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateEgressOnlyInternetGatewayResponse;
+
+class QTAWS_EXPORT CreateEgressOnlyInternetGatewayResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateEgressOnlyInternetGatewayResponsePrivate(CreateEgressOnlyInternetGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateEgressOnlyInternetGatewayResponse)
+    Q_DISABLE_COPY(CreateEgressOnlyInternetGatewayResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

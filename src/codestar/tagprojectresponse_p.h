@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGPROJECTRESPONSE_P_H
 #define QTAWS_TAGPROJECTRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "tagprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class TagProjectResponse;
+
+class QTAWS_EXPORT TagProjectResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagProjectResponsePrivate(TagProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagProjectResponse)
+    Q_DISABLE_COPY(TagProjectResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

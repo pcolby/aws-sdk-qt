@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELUNACLIENTRESPONSE_P_H
 #define QTAWS_CREATELUNACLIENTRESPONSE_P_H
 
+#include "cloudhsmresponse.h"
+#include "createlunaclientrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class CreateLunaClientResponse;
+
+class QTAWS_EXPORT CreateLunaClientResponsePrivate : public CloudHSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLunaClientResponsePrivate(CreateLunaClientResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLunaClientResponse)
+    Q_DISABLE_COPY(CreateLunaClientResponsePrivate)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

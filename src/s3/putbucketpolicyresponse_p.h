@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTBUCKETPOLICYRESPONSE_P_H
 #define QTAWS_PUTBUCKETPOLICYRESPONSE_P_H
 
+#include "s3response.h"
+#include "putbucketpolicyrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketPolicyResponse;
+
+class QTAWS_EXPORT PutBucketPolicyResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutBucketPolicyResponsePrivate(PutBucketPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketPolicyResponse)
+    Q_DISABLE_COPY(PutBucketPolicyResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

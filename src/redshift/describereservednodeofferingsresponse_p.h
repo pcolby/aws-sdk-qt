@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERESERVEDNODEOFFERINGSRESPONSE_P_H
 #define QTAWS_DESCRIBERESERVEDNODEOFFERINGSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describereservednodeofferingsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeReservedNodeOfferingsResponse;
+
+class QTAWS_EXPORT DescribeReservedNodeOfferingsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReservedNodeOfferingsResponsePrivate(DescribeReservedNodeOfferingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReservedNodeOfferingsResponse)
+    Q_DISABLE_COPY(DescribeReservedNodeOfferingsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

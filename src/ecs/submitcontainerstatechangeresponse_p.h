@@ -20,4 +20,31 @@
 #ifndef QTAWS_SUBMITCONTAINERSTATECHANGERESPONSE_P_H
 #define QTAWS_SUBMITCONTAINERSTATECHANGERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "submitcontainerstatechangerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class SubmitContainerStateChangeResponse;
+
+class QTAWS_EXPORT SubmitContainerStateChangeResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SubmitContainerStateChangeResponsePrivate(SubmitContainerStateChangeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SubmitContainerStateChangeResponse)
+    Q_DISABLE_COPY(SubmitContainerStateChangeResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

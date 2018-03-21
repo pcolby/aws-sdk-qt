@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEVPCFROMHOSTEDZONERESPONSE_P_H
 #define QTAWS_DISASSOCIATEVPCFROMHOSTEDZONERESPONSE_P_H
 
+#include "route53response.h"
+#include "disassociatevpcfromhostedzonerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DisassociateVPCFromHostedZoneResponse;
+
+class QTAWS_EXPORT DisassociateVPCFromHostedZoneResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateVPCFromHostedZoneResponsePrivate(DisassociateVPCFromHostedZoneResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateVPCFromHostedZoneResponse)
+    Q_DISABLE_COPY(DisassociateVPCFromHostedZoneResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETWORKFLOWEXECUTIONHISTORYRESPONSE_P_H
 #define QTAWS_GETWORKFLOWEXECUTIONHISTORYRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "getworkflowexecutionhistoryrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class GetWorkflowExecutionHistoryResponse;
+
+class QTAWS_EXPORT GetWorkflowExecutionHistoryResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetWorkflowExecutionHistoryResponsePrivate(GetWorkflowExecutionHistoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetWorkflowExecutionHistoryResponse)
+    Q_DISABLE_COPY(GetWorkflowExecutionHistoryResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

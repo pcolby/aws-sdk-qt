@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
+#include "elasticloadbalancingv2response.h"
+#include "addtagsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class AddTagsResponse;
+
+class QTAWS_EXPORT AddTagsResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsResponsePrivate(AddTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsResponse)
+    Q_DISABLE_COPY(AddTagsResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

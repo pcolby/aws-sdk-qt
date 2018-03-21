@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPATCHBASELINERESPONSE_P_H
 #define QTAWS_DELETEPATCHBASELINERESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "deletepatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeletePatchBaselineResponse;
+
+class QTAWS_EXPORT DeletePatchBaselineResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePatchBaselineResponsePrivate(DeletePatchBaselineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePatchBaselineResponse)
+    Q_DISABLE_COPY(DeletePatchBaselineResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

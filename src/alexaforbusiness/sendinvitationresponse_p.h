@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDINVITATIONRESPONSE_P_H
 #define QTAWS_SENDINVITATIONRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "sendinvitationrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class SendInvitationResponse;
+
+class QTAWS_EXPORT SendInvitationResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendInvitationResponsePrivate(SendInvitationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendInvitationResponse)
+    Q_DISABLE_COPY(SendInvitationResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

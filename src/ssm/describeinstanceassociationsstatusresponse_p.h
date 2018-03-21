@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINSTANCEASSOCIATIONSSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEASSOCIATIONSSTATUSRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describeinstanceassociationsstatusrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstanceAssociationsStatusResponse;
+
+class QTAWS_EXPORT DescribeInstanceAssociationsStatusResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeInstanceAssociationsStatusResponsePrivate(DescribeInstanceAssociationsStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstanceAssociationsStatusResponse)
+    Q_DISABLE_COPY(DescribeInstanceAssociationsStatusResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

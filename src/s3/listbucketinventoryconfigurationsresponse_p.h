@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTBUCKETINVENTORYCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_LISTBUCKETINVENTORYCONFIGURATIONSRESPONSE_P_H
 
+#include "s3response.h"
+#include "listbucketinventoryconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListBucketInventoryConfigurationsResponse;
+
+class QTAWS_EXPORT ListBucketInventoryConfigurationsResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListBucketInventoryConfigurationsResponsePrivate(ListBucketInventoryConfigurationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListBucketInventoryConfigurationsResponse)
+    Q_DISABLE_COPY(ListBucketInventoryConfigurationsResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

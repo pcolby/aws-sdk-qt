@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETABLERESPONSE_P_H
 #define QTAWS_DELETETABLERESPONSE_P_H
 
+#include "glueresponse.h"
+#include "deletetablerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteTableResponse;
+
+class QTAWS_EXPORT DeleteTableResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTableResponsePrivate(DeleteTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTableResponse)
+    Q_DISABLE_COPY(DeleteTableResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSRESPONSE_P_H
 
+#include "workspacesresponse.h"
+#include "describeworkspacesconnectionstatusrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspacesConnectionStatusResponse;
+
+class QTAWS_EXPORT DescribeWorkspacesConnectionStatusResponsePrivate : public WorkSpacesResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeWorkspacesConnectionStatusResponsePrivate(DescribeWorkspacesConnectionStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkspacesConnectionStatusResponse)
+    Q_DISABLE_COPY(DescribeWorkspacesConnectionStatusResponsePrivate)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

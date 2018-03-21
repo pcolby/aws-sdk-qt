@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETGRAPHQLAPIRESPONSE_P_H
 #define QTAWS_GETGRAPHQLAPIRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "getgraphqlapirequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetGraphqlApiResponse;
+
+class QTAWS_EXPORT GetGraphqlApiResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetGraphqlApiResponsePrivate(GetGraphqlApiResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetGraphqlApiResponse)
+    Q_DISABLE_COPY(GetGraphqlApiResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

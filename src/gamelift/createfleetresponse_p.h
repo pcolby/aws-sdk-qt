@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEFLEETRESPONSE_P_H
 #define QTAWS_CREATEFLEETRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "createfleetrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class CreateFleetResponse;
+
+class QTAWS_EXPORT CreateFleetResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateFleetResponsePrivate(CreateFleetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateFleetResponse)
+    Q_DISABLE_COPY(CreateFleetResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

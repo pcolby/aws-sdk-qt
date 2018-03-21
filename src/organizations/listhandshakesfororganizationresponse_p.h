@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTHANDSHAKESFORORGANIZATIONRESPONSE_P_H
 #define QTAWS_LISTHANDSHAKESFORORGANIZATIONRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listhandshakesfororganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListHandshakesForOrganizationResponse;
+
+class QTAWS_EXPORT ListHandshakesForOrganizationResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListHandshakesForOrganizationResponsePrivate(ListHandshakesForOrganizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListHandshakesForOrganizationResponse)
+    Q_DISABLE_COPY(ListHandshakesForOrganizationResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

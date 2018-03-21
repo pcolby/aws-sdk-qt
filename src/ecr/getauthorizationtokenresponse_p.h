@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAUTHORIZATIONTOKENRESPONSE_P_H
 #define QTAWS_GETAUTHORIZATIONTOKENRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "getauthorizationtokenrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class GetAuthorizationTokenResponse;
+
+class QTAWS_EXPORT GetAuthorizationTokenResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAuthorizationTokenResponsePrivate(GetAuthorizationTokenResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAuthorizationTokenResponse)
+    Q_DISABLE_COPY(GetAuthorizationTokenResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

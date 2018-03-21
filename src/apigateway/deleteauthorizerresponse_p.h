@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAUTHORIZERRESPONSE_P_H
 #define QTAWS_DELETEAUTHORIZERRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "deleteauthorizerrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteAuthorizerResponse;
+
+class QTAWS_EXPORT DeleteAuthorizerResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAuthorizerResponsePrivate(DeleteAuthorizerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAuthorizerResponse)
+    Q_DISABLE_COPY(DeleteAuthorizerResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

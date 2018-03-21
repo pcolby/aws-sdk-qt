@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDIRECTORIESRESPONSE_P_H
 #define QTAWS_DESCRIBEDIRECTORIESRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "describedirectoriesrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeDirectoriesResponse;
+
+class QTAWS_EXPORT DescribeDirectoriesResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDirectoriesResponsePrivate(DescribeDirectoriesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDirectoriesResponse)
+    Q_DISABLE_COPY(DescribeDirectoriesResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

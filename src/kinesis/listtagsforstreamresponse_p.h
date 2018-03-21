@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSFORSTREAMRESPONSE_P_H
 #define QTAWS_LISTTAGSFORSTREAMRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "listtagsforstreamrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class ListTagsForStreamResponse;
+
+class QTAWS_EXPORT ListTagsForStreamResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsForStreamResponsePrivate(ListTagsForStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForStreamResponse)
+    Q_DISABLE_COPY(ListTagsForStreamResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGSTREAMRESPONSE_P_H
 #define QTAWS_UNTAGSTREAMRESPONSE_P_H
 
+#include "kinesisvideoresponse.h"
+#include "untagstreamrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class UntagStreamResponse;
+
+class QTAWS_EXPORT UntagStreamResponsePrivate : public KinesisVideoResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagStreamResponsePrivate(UntagStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagStreamResponse)
+    Q_DISABLE_COPY(UntagStreamResponsePrivate)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

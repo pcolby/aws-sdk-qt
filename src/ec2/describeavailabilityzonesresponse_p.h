@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYZONESRESPONSE_P_H
 #define QTAWS_DESCRIBEAVAILABILITYZONESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeavailabilityzonesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAvailabilityZonesResponse;
+
+class QTAWS_EXPORT DescribeAvailabilityZonesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAvailabilityZonesResponsePrivate(DescribeAvailabilityZonesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAvailabilityZonesResponse)
+    Q_DISABLE_COPY(DescribeAvailabilityZonesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

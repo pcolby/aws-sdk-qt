@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETQUEUEURLRESPONSE_P_H
 #define QTAWS_GETQUEUEURLRESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "getqueueurlrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class GetQueueUrlResponse;
+
+class QTAWS_EXPORT GetQueueUrlResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetQueueUrlResponsePrivate(GetQueueUrlResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetQueueUrlResponse)
+    Q_DISABLE_COPY(GetQueueUrlResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

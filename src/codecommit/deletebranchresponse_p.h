@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEBRANCHRESPONSE_P_H
 #define QTAWS_DELETEBRANCHRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "deletebranchrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class DeleteBranchResponse;
+
+class QTAWS_EXPORT DeleteBranchResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteBranchResponsePrivate(DeleteBranchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBranchResponse)
+    Q_DISABLE_COPY(DeleteBranchResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

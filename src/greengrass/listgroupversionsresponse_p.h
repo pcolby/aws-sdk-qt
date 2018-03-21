@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGROUPVERSIONSRESPONSE_P_H
 #define QTAWS_LISTGROUPVERSIONSRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "listgroupversionsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListGroupVersionsResponse;
+
+class QTAWS_EXPORT ListGroupVersionsResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGroupVersionsResponsePrivate(ListGroupVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupVersionsResponse)
+    Q_DISABLE_COPY(ListGroupVersionsResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

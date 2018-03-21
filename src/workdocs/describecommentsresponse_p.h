@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECOMMENTSRESPONSE_P_H
 #define QTAWS_DESCRIBECOMMENTSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "describecommentsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeCommentsResponse;
+
+class QTAWS_EXPORT DescribeCommentsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCommentsResponsePrivate(DescribeCommentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCommentsResponse)
+    Q_DISABLE_COPY(DescribeCommentsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

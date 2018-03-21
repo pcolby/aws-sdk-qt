@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPLATFORMAPPLICATIONATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETPLATFORMAPPLICATIONATTRIBUTESRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "getplatformapplicationattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class GetPlatformApplicationAttributesResponse;
+
+class QTAWS_EXPORT GetPlatformApplicationAttributesResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetPlatformApplicationAttributesResponsePrivate(GetPlatformApplicationAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetPlatformApplicationAttributesResponse)
+    Q_DISABLE_COPY(GetPlatformApplicationAttributesResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTCOMPLIANCEITEMSRESPONSE_P_H
 #define QTAWS_PUTCOMPLIANCEITEMSRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "putcomplianceitemsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class PutComplianceItemsResponse;
+
+class QTAWS_EXPORT PutComplianceItemsResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutComplianceItemsResponsePrivate(PutComplianceItemsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutComplianceItemsResponse)
+    Q_DISABLE_COPY(PutComplianceItemsResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

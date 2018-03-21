@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTDELIVERYCHANNELRESPONSE_P_H
 #define QTAWS_PUTDELIVERYCHANNELRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "putdeliverychannelrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutDeliveryChannelResponse;
+
+class QTAWS_EXPORT PutDeliveryChannelResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutDeliveryChannelResponsePrivate(PutDeliveryChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutDeliveryChannelResponse)
+    Q_DISABLE_COPY(PutDeliveryChannelResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

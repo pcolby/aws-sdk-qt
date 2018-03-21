@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTORIGINENDPOINTSRESPONSE_P_H
 #define QTAWS_LISTORIGINENDPOINTSRESPONSE_P_H
 
+#include "mediapackageresponse.h"
+#include "listoriginendpointsrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class ListOriginEndpointsResponse;
+
+class QTAWS_EXPORT ListOriginEndpointsResponsePrivate : public MediaPackageResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOriginEndpointsResponsePrivate(ListOriginEndpointsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOriginEndpointsResponse)
+    Q_DISABLE_COPY(ListOriginEndpointsResponsePrivate)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEATTRIBUTESRESPONSE_P_H
 #define QTAWS_DELETEATTRIBUTESRESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "deleteattributesrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class DeleteAttributesResponse;
+
+class QTAWS_EXPORT DeleteAttributesResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAttributesResponsePrivate(DeleteAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAttributesResponse)
+    Q_DISABLE_COPY(DeleteAttributesResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

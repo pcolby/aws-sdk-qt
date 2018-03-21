@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEACTIVITYRESPONSE_P_H
 #define QTAWS_DELETEACTIVITYRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "deleteactivityrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DeleteActivityResponse;
+
+class QTAWS_EXPORT DeleteActivityResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteActivityResponsePrivate(DeleteActivityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteActivityResponse)
+    Q_DISABLE_COPY(DeleteActivityResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

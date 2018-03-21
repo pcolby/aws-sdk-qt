@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLERULERESPONSE_P_H
 #define QTAWS_ENABLERULERESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "enablerulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class EnableRuleResponse;
+
+class QTAWS_EXPORT EnableRuleResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableRuleResponsePrivate(EnableRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableRuleResponse)
+    Q_DISABLE_COPY(EnableRuleResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

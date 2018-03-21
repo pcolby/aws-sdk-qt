@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEUSAGEPLANRESPONSE_P_H
 #define QTAWS_DELETEUSAGEPLANRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "deleteusageplanrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteUsagePlanResponse;
+
+class QTAWS_EXPORT DeleteUsagePlanResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteUsagePlanResponsePrivate(DeleteUsagePlanResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUsagePlanResponse)
+    Q_DISABLE_COPY(DeleteUsagePlanResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERONPREMISESINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERONPREMISESINSTANCERESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "deregisteronpremisesinstancerequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeregisterOnPremisesInstanceResponse;
+
+class QTAWS_EXPORT DeregisterOnPremisesInstanceResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterOnPremisesInstanceResponsePrivate(DeregisterOnPremisesInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterOnPremisesInstanceResponse)
+    Q_DISABLE_COPY(DeregisterOnPremisesInstanceResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

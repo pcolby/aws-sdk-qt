@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESIZECONSTRAINTSETRESPONSE_P_H
 #define QTAWS_UPDATESIZECONSTRAINTSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "updatesizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateSizeConstraintSetResponse;
+
+class QTAWS_EXPORT UpdateSizeConstraintSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateSizeConstraintSetResponsePrivate(UpdateSizeConstraintSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSizeConstraintSetResponse)
+    Q_DISABLE_COPY(UpdateSizeConstraintSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_P_H
 #define QTAWS_CREATETAGSRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "createtagsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class CreateTagsResponse;
+
+class QTAWS_EXPORT CreateTagsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTagsResponsePrivate(CreateTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTagsResponse)
+    Q_DISABLE_COPY(CreateTagsResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

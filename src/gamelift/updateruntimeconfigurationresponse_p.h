@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERUNTIMECONFIGURATIONRESPONSE_P_H
 #define QTAWS_UPDATERUNTIMECONFIGURATIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "updateruntimeconfigurationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateRuntimeConfigurationResponse;
+
+class QTAWS_EXPORT UpdateRuntimeConfigurationResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateRuntimeConfigurationResponsePrivate(UpdateRuntimeConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRuntimeConfigurationResponse)
+    Q_DISABLE_COPY(UpdateRuntimeConfigurationResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

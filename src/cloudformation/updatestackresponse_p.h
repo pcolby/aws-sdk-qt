@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESTACKRESPONSE_P_H
 #define QTAWS_UPDATESTACKRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "updatestackrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class UpdateStackResponse;
+
+class QTAWS_EXPORT UpdateStackResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateStackResponsePrivate(UpdateStackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStackResponse)
+    Q_DISABLE_COPY(UpdateStackResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

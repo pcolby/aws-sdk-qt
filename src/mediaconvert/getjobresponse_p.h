@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETJOBRESPONSE_P_H
 #define QTAWS_GETJOBRESPONSE_P_H
 
+#include "mediaconvertresponse.h"
+#include "getjobrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class GetJobResponse;
+
+class QTAWS_EXPORT GetJobResponsePrivate : public MediaConvertResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetJobResponsePrivate(GetJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobResponse)
+    Q_DISABLE_COPY(GetJobResponsePrivate)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

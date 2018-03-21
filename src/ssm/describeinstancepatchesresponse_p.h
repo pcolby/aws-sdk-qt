@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINSTANCEPATCHESRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEPATCHESRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describeinstancepatchesrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstancePatchesResponse;
+
+class QTAWS_EXPORT DescribeInstancePatchesResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeInstancePatchesResponsePrivate(DescribeInstancePatchesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstancePatchesResponse)
+    Q_DISABLE_COPY(DescribeInstancePatchesResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPRUNRESPONSE_P_H
 #define QTAWS_STOPRUNRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "stoprunrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class StopRunResponse;
+
+class QTAWS_EXPORT StopRunResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopRunResponsePrivate(StopRunResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopRunResponse)
+    Q_DISABLE_COPY(StopRunResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

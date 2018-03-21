@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSUBSCRIBEDRULEGROUPSRESPONSE_P_H
 #define QTAWS_LISTSUBSCRIBEDRULEGROUPSRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "listsubscribedrulegroupsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListSubscribedRuleGroupsResponse;
+
+class QTAWS_EXPORT ListSubscribedRuleGroupsResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListSubscribedRuleGroupsResponsePrivate(ListSubscribedRuleGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListSubscribedRuleGroupsResponse)
+    Q_DISABLE_COPY(ListSubscribedRuleGroupsResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

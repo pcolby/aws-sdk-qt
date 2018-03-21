@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEMEMBERSRESPONSE_P_H
 #define QTAWS_CREATEMEMBERSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "createmembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class CreateMembersResponse;
+
+class QTAWS_EXPORT CreateMembersResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateMembersResponsePrivate(CreateMembersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateMembersResponse)
+    Q_DISABLE_COPY(CreateMembersResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

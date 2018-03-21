@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDOCUMENTRESPONSE_P_H
 #define QTAWS_GETDOCUMENTRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "getdocumentrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetDocumentResponse;
+
+class QTAWS_EXPORT GetDocumentResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDocumentResponsePrivate(GetDocumentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDocumentResponse)
+    Q_DISABLE_COPY(GetDocumentResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

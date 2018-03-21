@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEFUNCTIONCONFIGURATIONRESPONSE_P_H
 #define QTAWS_UPDATEFUNCTIONCONFIGURATIONRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "updatefunctionconfigurationrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateFunctionConfigurationResponse;
+
+class QTAWS_EXPORT UpdateFunctionConfigurationResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateFunctionConfigurationResponsePrivate(UpdateFunctionConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFunctionConfigurationResponse)
+    Q_DISABLE_COPY(UpdateFunctionConfigurationResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

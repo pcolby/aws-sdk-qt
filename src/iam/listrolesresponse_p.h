@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTROLESRESPONSE_P_H
 #define QTAWS_LISTROLESRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listrolesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListRolesResponse;
+
+class QTAWS_EXPORT ListRolesResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRolesResponsePrivate(ListRolesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRolesResponse)
+    Q_DISABLE_COPY(ListRolesResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

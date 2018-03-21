@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOPENIDCONNECTPROVIDERSRESPONSE_P_H
 #define QTAWS_LISTOPENIDCONNECTPROVIDERSRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listopenidconnectprovidersrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListOpenIDConnectProvidersResponse;
+
+class QTAWS_EXPORT ListOpenIDConnectProvidersResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOpenIDConnectProvidersResponsePrivate(ListOpenIDConnectProvidersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOpenIDConnectProvidersResponse)
+    Q_DISABLE_COPY(ListOpenIDConnectProvidersResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

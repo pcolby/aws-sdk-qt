@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEQUALIFICATIONTYPERESPONSE_P_H
 #define QTAWS_DELETEQUALIFICATIONTYPERESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "deletequalificationtyperequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteQualificationTypeResponse;
+
+class QTAWS_EXPORT DeleteQualificationTypeResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteQualificationTypeResponsePrivate(DeleteQualificationTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteQualificationTypeResponse)
+    Q_DISABLE_COPY(DeleteQualificationTypeResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

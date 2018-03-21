@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESESSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBESESSIONSRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "describesessionsrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeSessionsResponse;
+
+class QTAWS_EXPORT DescribeSessionsResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSessionsResponsePrivate(DescribeSessionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSessionsResponse)
+    Q_DISABLE_COPY(DescribeSessionsResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

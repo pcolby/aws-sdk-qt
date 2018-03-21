@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERIMAGERESPONSE_P_H
 #define QTAWS_REGISTERIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "registerimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RegisterImageResponse;
+
+class QTAWS_EXPORT RegisterImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterImageResponsePrivate(RegisterImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterImageResponse)
+    Q_DISABLE_COPY(RegisterImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

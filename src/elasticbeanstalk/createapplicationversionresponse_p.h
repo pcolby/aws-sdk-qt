@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_P_H
 #define QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "createapplicationversionrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateApplicationVersionResponse;
+
+class QTAWS_EXPORT CreateApplicationVersionResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateApplicationVersionResponsePrivate(CreateApplicationVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateApplicationVersionResponse)
+    Q_DISABLE_COPY(CreateApplicationVersionResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

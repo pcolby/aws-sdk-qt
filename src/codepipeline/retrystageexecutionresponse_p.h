@@ -20,4 +20,31 @@
 #ifndef QTAWS_RETRYSTAGEEXECUTIONRESPONSE_P_H
 #define QTAWS_RETRYSTAGEEXECUTIONRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "retrystageexecutionrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class RetryStageExecutionResponse;
+
+class QTAWS_EXPORT RetryStageExecutionResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RetryStageExecutionResponsePrivate(RetryStageExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RetryStageExecutionResponse)
+    Q_DISABLE_COPY(RetryStageExecutionResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDBLOGFILESRESPONSE_P_H
 #define QTAWS_DESCRIBEDBLOGFILESRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describedblogfilesrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBLogFilesResponse;
+
+class QTAWS_EXPORT DescribeDBLogFilesResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDBLogFilesResponsePrivate(DescribeDBLogFilesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBLogFilesResponse)
+    Q_DISABLE_COPY(DescribeDBLogFilesResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

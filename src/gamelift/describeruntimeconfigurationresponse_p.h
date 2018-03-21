@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERUNTIMECONFIGURATIONRESPONSE_P_H
 #define QTAWS_DESCRIBERUNTIMECONFIGURATIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describeruntimeconfigurationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeRuntimeConfigurationResponse;
+
+class QTAWS_EXPORT DescribeRuntimeConfigurationResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRuntimeConfigurationResponsePrivate(DescribeRuntimeConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRuntimeConfigurationResponse)
+    Q_DISABLE_COPY(DescribeRuntimeConfigurationResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

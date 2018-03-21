@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBOOTINSTANCESRESPONSE_P_H
 #define QTAWS_REBOOTINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "rebootinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RebootInstancesResponse;
+
+class QTAWS_EXPORT RebootInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebootInstancesResponsePrivate(RebootInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebootInstancesResponse)
+    Q_DISABLE_COPY(RebootInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

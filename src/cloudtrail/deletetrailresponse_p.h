@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETETRAILRESPONSE_P_H
 #define QTAWS_DELETETRAILRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "deletetrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class DeleteTrailResponse;
+
+class QTAWS_EXPORT DeleteTrailResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteTrailResponsePrivate(DeleteTrailResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTrailResponse)
+    Q_DISABLE_COPY(DeleteTrailResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

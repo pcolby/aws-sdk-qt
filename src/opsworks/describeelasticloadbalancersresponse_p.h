@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEELASTICLOADBALANCERSRESPONSE_P_H
 #define QTAWS_DESCRIBEELASTICLOADBALANCERSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "describeelasticloadbalancersrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeElasticLoadBalancersResponse;
+
+class QTAWS_EXPORT DescribeElasticLoadBalancersResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeElasticLoadBalancersResponsePrivate(DescribeElasticLoadBalancersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeElasticLoadBalancersResponse)
+    Q_DISABLE_COPY(DescribeElasticLoadBalancersResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

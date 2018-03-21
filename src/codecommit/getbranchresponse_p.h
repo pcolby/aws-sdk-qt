@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBRANCHRESPONSE_P_H
 #define QTAWS_GETBRANCHRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "getbranchrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetBranchResponse;
+
+class QTAWS_EXPORT GetBranchResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBranchResponsePrivate(GetBranchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBranchResponse)
+    Q_DISABLE_COPY(GetBranchResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFLEETCAPACITYRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETCAPACITYRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describefleetcapacityrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetCapacityResponse;
+
+class QTAWS_EXPORT DescribeFleetCapacityResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFleetCapacityResponsePrivate(DescribeFleetCapacityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFleetCapacityResponse)
+    Q_DISABLE_COPY(DescribeFleetCapacityResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

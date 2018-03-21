@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESTAPISRESPONSE_P_H
 #define QTAWS_GETRESTAPISRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getrestapisrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetRestApisResponse;
+
+class QTAWS_EXPORT GetRestApisResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRestApisResponsePrivate(GetRestApisResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRestApisResponse)
+    Q_DISABLE_COPY(GetRestApisResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

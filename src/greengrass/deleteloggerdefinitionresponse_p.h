@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELOGGERDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETELOGGERDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "deleteloggerdefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteLoggerDefinitionResponse;
+
+class QTAWS_EXPORT DeleteLoggerDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLoggerDefinitionResponsePrivate(DeleteLoggerDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLoggerDefinitionResponse)
+    Q_DISABLE_COPY(DeleteLoggerDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

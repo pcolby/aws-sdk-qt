@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESLOTTYPEVERSIONRESPONSE_P_H
 #define QTAWS_CREATESLOTTYPEVERSIONRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "createslottypeversionrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class CreateSlotTypeVersionResponse;
+
+class QTAWS_EXPORT CreateSlotTypeVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSlotTypeVersionResponsePrivate(CreateSlotTypeVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSlotTypeVersionResponse)
+    Q_DISABLE_COPY(CreateSlotTypeVersionResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

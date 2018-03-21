@@ -20,4 +20,31 @@
 #ifndef QTAWS_CONFIRMDEVICERESPONSE_P_H
 #define QTAWS_CONFIRMDEVICERESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "confirmdevicerequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ConfirmDeviceResponse;
+
+class QTAWS_EXPORT ConfirmDeviceResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ConfirmDeviceResponsePrivate(ConfirmDeviceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ConfirmDeviceResponse)
+    Q_DISABLE_COPY(ConfirmDeviceResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

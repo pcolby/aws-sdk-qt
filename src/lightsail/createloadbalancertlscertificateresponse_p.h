@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELOADBALANCERTLSCERTIFICATERESPONSE_P_H
 #define QTAWS_CREATELOADBALANCERTLSCERTIFICATERESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "createloadbalancertlscertificaterequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateLoadBalancerTlsCertificateResponse;
+
+class QTAWS_EXPORT CreateLoadBalancerTlsCertificateResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLoadBalancerTlsCertificateResponsePrivate(CreateLoadBalancerTlsCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLoadBalancerTlsCertificateResponse)
+    Q_DISABLE_COPY(CreateLoadBalancerTlsCertificateResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

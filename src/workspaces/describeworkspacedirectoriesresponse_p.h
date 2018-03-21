@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEDIRECTORIESRESPONSE_P_H
 #define QTAWS_DESCRIBEWORKSPACEDIRECTORIESRESPONSE_P_H
 
+#include "workspacesresponse.h"
+#include "describeworkspacedirectoriesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspaceDirectoriesResponse;
+
+class QTAWS_EXPORT DescribeWorkspaceDirectoriesResponsePrivate : public WorkSpacesResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeWorkspaceDirectoriesResponsePrivate(DescribeWorkspaceDirectoriesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkspaceDirectoriesResponse)
+    Q_DISABLE_COPY(DescribeWorkspaceDirectoriesResponsePrivate)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

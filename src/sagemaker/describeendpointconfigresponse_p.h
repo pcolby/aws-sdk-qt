@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENDPOINTCONFIGRESPONSE_P_H
 #define QTAWS_DESCRIBEENDPOINTCONFIGRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "describeendpointconfigrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DescribeEndpointConfigResponse;
+
+class QTAWS_EXPORT DescribeEndpointConfigResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEndpointConfigResponsePrivate(DescribeEndpointConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEndpointConfigResponse)
+    Q_DISABLE_COPY(DescribeEndpointConfigResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

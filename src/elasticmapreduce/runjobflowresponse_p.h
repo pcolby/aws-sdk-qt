@@ -20,4 +20,31 @@
 #ifndef QTAWS_RUNJOBFLOWRESPONSE_P_H
 #define QTAWS_RUNJOBFLOWRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "runjobflowrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class RunJobFlowResponse;
+
+class QTAWS_EXPORT RunJobFlowResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RunJobFlowResponsePrivate(RunJobFlowResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RunJobFlowResponse)
+    Q_DISABLE_COPY(RunJobFlowResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

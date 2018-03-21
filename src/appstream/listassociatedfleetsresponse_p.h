@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTASSOCIATEDFLEETSRESPONSE_P_H
 #define QTAWS_LISTASSOCIATEDFLEETSRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "listassociatedfleetsrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class ListAssociatedFleetsResponse;
+
+class QTAWS_EXPORT ListAssociatedFleetsResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAssociatedFleetsResponsePrivate(ListAssociatedFleetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssociatedFleetsResponse)
+    Q_DISABLE_COPY(ListAssociatedFleetsResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

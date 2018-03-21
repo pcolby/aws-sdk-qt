@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSTREAMINGDISTRIBUTIONCONFIGRESPONSE_P_H
 #define QTAWS_GETSTREAMINGDISTRIBUTIONCONFIGRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "getstreamingdistributionconfigrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class GetStreamingDistributionConfigResponse;
+
+class QTAWS_EXPORT GetStreamingDistributionConfigResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetStreamingDistributionConfigResponsePrivate(GetStreamingDistributionConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetStreamingDistributionConfigResponse)
+    Q_DISABLE_COPY(GetStreamingDistributionConfigResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

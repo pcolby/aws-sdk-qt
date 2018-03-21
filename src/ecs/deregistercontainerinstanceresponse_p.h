@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERCONTAINERINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERCONTAINERINSTANCERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "deregistercontainerinstancerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeregisterContainerInstanceResponse;
+
+class QTAWS_EXPORT DeregisterContainerInstanceResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterContainerInstanceResponsePrivate(DeregisterContainerInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterContainerInstanceResponse)
+    Q_DISABLE_COPY(DeregisterContainerInstanceResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

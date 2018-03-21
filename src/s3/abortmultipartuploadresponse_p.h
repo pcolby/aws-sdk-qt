@@ -20,4 +20,31 @@
 #ifndef QTAWS_ABORTMULTIPARTUPLOADRESPONSE_P_H
 #define QTAWS_ABORTMULTIPARTUPLOADRESPONSE_P_H
 
+#include "s3response.h"
+#include "abortmultipartuploadrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class AbortMultipartUploadResponse;
+
+class QTAWS_EXPORT AbortMultipartUploadResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AbortMultipartUploadResponsePrivate(AbortMultipartUploadResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AbortMultipartUploadResponse)
+    Q_DISABLE_COPY(AbortMultipartUploadResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

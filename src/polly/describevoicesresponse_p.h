@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVOICESRESPONSE_P_H
 #define QTAWS_DESCRIBEVOICESRESPONSE_P_H
 
+#include "pollyresponse.h"
+#include "describevoicesrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class DescribeVoicesResponse;
+
+class QTAWS_EXPORT DescribeVoicesResponsePrivate : public PollyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeVoicesResponsePrivate(DescribeVoicesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVoicesResponse)
+    Q_DISABLE_COPY(DescribeVoicesResponsePrivate)
+
+};
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

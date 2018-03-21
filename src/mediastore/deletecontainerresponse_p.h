@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONTAINERRESPONSE_P_H
 #define QTAWS_DELETECONTAINERRESPONSE_P_H
 
+#include "mediastoreresponse.h"
+#include "deletecontainerrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class DeleteContainerResponse;
+
+class QTAWS_EXPORT DeleteContainerResponsePrivate : public MediaStoreResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteContainerResponsePrivate(DeleteContainerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteContainerResponse)
+    Q_DISABLE_COPY(DeleteContainerResponsePrivate)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEUSERPROFILERESPONSE_P_H
 #define QTAWS_DELETEUSERPROFILERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "deleteuserprofilerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeleteUserProfileResponse;
+
+class QTAWS_EXPORT DeleteUserProfileResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteUserProfileResponsePrivate(DeleteUserProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUserProfileResponse)
+    Q_DISABLE_COPY(DeleteUserProfileResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

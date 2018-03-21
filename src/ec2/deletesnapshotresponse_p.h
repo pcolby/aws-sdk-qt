@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESNAPSHOTRESPONSE_P_H
 #define QTAWS_DELETESNAPSHOTRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletesnapshotrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteSnapshotResponse;
+
+class QTAWS_EXPORT DeleteSnapshotResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSnapshotResponsePrivate(DeleteSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSnapshotResponse)
+    Q_DISABLE_COPY(DeleteSnapshotResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

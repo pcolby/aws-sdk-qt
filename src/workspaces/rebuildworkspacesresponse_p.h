@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBUILDWORKSPACESRESPONSE_P_H
 #define QTAWS_REBUILDWORKSPACESRESPONSE_P_H
 
+#include "workspacesresponse.h"
+#include "rebuildworkspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class RebuildWorkspacesResponse;
+
+class QTAWS_EXPORT RebuildWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebuildWorkspacesResponsePrivate(RebuildWorkspacesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebuildWorkspacesResponse)
+    Q_DISABLE_COPY(RebuildWorkspacesResponsePrivate)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

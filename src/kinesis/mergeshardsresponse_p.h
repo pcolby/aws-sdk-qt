@@ -20,4 +20,31 @@
 #ifndef QTAWS_MERGESHARDSRESPONSE_P_H
 #define QTAWS_MERGESHARDSRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "mergeshardsrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class MergeShardsResponse;
+
+class QTAWS_EXPORT MergeShardsResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    MergeShardsResponsePrivate(MergeShardsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(MergeShardsResponse)
+    Q_DISABLE_COPY(MergeShardsResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

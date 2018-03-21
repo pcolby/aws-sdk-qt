@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETLOGGERDEFINITIONVERSIONRESPONSE_P_H
 #define QTAWS_GETLOGGERDEFINITIONVERSIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "getloggerdefinitionversionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetLoggerDefinitionVersionResponse;
+
+class QTAWS_EXPORT GetLoggerDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetLoggerDefinitionVersionResponsePrivate(GetLoggerDefinitionVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetLoggerDefinitionVersionResponse)
+    Q_DISABLE_COPY(GetLoggerDefinitionVersionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_POLLFORTHIRDPARTYJOBSRESPONSE_P_H
 #define QTAWS_POLLFORTHIRDPARTYJOBSRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "pollforthirdpartyjobsrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PollForThirdPartyJobsResponse;
+
+class QTAWS_EXPORT PollForThirdPartyJobsResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PollForThirdPartyJobsResponsePrivate(PollForThirdPartyJobsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PollForThirdPartyJobsResponse)
+    Q_DISABLE_COPY(PollForThirdPartyJobsResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTACTIONTYPESRESPONSE_P_H
 #define QTAWS_LISTACTIONTYPESRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "listactiontypesrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class ListActionTypesResponse;
+
+class QTAWS_EXPORT ListActionTypesResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListActionTypesResponsePrivate(ListActionTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListActionTypesResponse)
+    Q_DISABLE_COPY(ListActionTypesResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

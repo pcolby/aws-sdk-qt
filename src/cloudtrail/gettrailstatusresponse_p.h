@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTRAILSTATUSRESPONSE_P_H
 #define QTAWS_GETTRAILSTATUSRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "gettrailstatusrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class GetTrailStatusResponse;
+
+class QTAWS_EXPORT GetTrailStatusResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTrailStatusResponsePrivate(GetTrailStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTrailStatusResponse)
+    Q_DISABLE_COPY(GetTrailStatusResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

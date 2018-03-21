@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESTATEMACHINERESPONSE_P_H
 #define QTAWS_UPDATESTATEMACHINERESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "updatestatemachinerequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class UpdateStateMachineResponse;
+
+class QTAWS_EXPORT UpdateStateMachineResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateStateMachineResponsePrivate(UpdateStateMachineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStateMachineResponse)
+    Q_DISABLE_COPY(UpdateStateMachineResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

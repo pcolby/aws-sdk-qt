@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPUBLICKEYSRESPONSE_P_H
 #define QTAWS_LISTPUBLICKEYSRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "listpublickeysrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class ListPublicKeysResponse;
+
+class QTAWS_EXPORT ListPublicKeysResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPublicKeysResponsePrivate(ListPublicKeysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPublicKeysResponse)
+    Q_DISABLE_COPY(ListPublicKeysResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GENERATECREDENTIALREPORTRESPONSE_P_H
 #define QTAWS_GENERATECREDENTIALREPORTRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "generatecredentialreportrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GenerateCredentialReportResponse;
+
+class QTAWS_EXPORT GenerateCredentialReportResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GenerateCredentialReportResponsePrivate(GenerateCredentialReportResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GenerateCredentialReportResponse)
+    Q_DISABLE_COPY(GenerateCredentialReportResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

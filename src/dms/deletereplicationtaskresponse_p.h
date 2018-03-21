@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREPLICATIONTASKRESPONSE_P_H
 #define QTAWS_DELETEREPLICATIONTASKRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "deletereplicationtaskrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteReplicationTaskResponse;
+
+class QTAWS_EXPORT DeleteReplicationTaskResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteReplicationTaskResponsePrivate(DeleteReplicationTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReplicationTaskResponse)
+    Q_DISABLE_COPY(DeleteReplicationTaskResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_REJECTVPCENDPOINTCONNECTIONSRESPONSE_P_H
 #define QTAWS_REJECTVPCENDPOINTCONNECTIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "rejectvpcendpointconnectionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RejectVpcEndpointConnectionsResponse;
+
+class QTAWS_EXPORT RejectVpcEndpointConnectionsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RejectVpcEndpointConnectionsResponsePrivate(RejectVpcEndpointConnectionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RejectVpcEndpointConnectionsResponse)
+    Q_DISABLE_COPY(RejectVpcEndpointConnectionsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

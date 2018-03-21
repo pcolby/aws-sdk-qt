@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTFINDINGSRESPONSE_P_H
 #define QTAWS_LISTFINDINGSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "listfindingsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListFindingsResponse;
+
+class QTAWS_EXPORT ListFindingsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListFindingsResponsePrivate(ListFindingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListFindingsResponse)
+    Q_DISABLE_COPY(ListFindingsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

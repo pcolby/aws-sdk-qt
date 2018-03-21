@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEREPOSITORYNAMERESPONSE_P_H
 #define QTAWS_UPDATEREPOSITORYNAMERESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "updaterepositorynamerequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateRepositoryNameResponse;
+
+class QTAWS_EXPORT UpdateRepositoryNameResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateRepositoryNameResponsePrivate(UpdateRepositoryNameResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRepositoryNameResponse)
+    Q_DISABLE_COPY(UpdateRepositoryNameResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

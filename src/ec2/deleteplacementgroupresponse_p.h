@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPLACEMENTGROUPRESPONSE_P_H
 #define QTAWS_DELETEPLACEMENTGROUPRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deleteplacementgrouprequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeletePlacementGroupResponse;
+
+class QTAWS_EXPORT DeletePlacementGroupResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePlacementGroupResponsePrivate(DeletePlacementGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePlacementGroupResponse)
+    Q_DISABLE_COPY(DeletePlacementGroupResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

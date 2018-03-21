@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTVOLUMERESPONSE_P_H
 #define QTAWS_IMPORTVOLUMERESPONSE_P_H
 
+#include "ec2response.h"
+#include "importvolumerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportVolumeResponse;
+
+class QTAWS_EXPORT ImportVolumeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportVolumeResponsePrivate(ImportVolumeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportVolumeResponse)
+    Q_DISABLE_COPY(ImportVolumeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

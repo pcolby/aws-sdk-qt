@@ -20,4 +20,31 @@
 #ifndef QTAWS_TESTRENDERTEMPLATERESPONSE_P_H
 #define QTAWS_TESTRENDERTEMPLATERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "testrendertemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class TestRenderTemplateResponse;
+
+class QTAWS_EXPORT TestRenderTemplateResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TestRenderTemplateResponsePrivate(TestRenderTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TestRenderTemplateResponse)
+    Q_DISABLE_COPY(TestRenderTemplateResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETINSTANCEPROTECTIONRESPONSE_P_H
 #define QTAWS_SETINSTANCEPROTECTIONRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "setinstanceprotectionrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class SetInstanceProtectionResponse;
+
+class QTAWS_EXPORT SetInstanceProtectionResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetInstanceProtectionResponsePrivate(SetInstanceProtectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetInstanceProtectionResponse)
+    Q_DISABLE_COPY(SetInstanceProtectionResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

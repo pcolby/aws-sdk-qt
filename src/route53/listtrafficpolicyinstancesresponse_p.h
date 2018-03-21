@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTRAFFICPOLICYINSTANCESRESPONSE_P_H
 #define QTAWS_LISTTRAFFICPOLICYINSTANCESRESPONSE_P_H
 
+#include "route53response.h"
+#include "listtrafficpolicyinstancesrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListTrafficPolicyInstancesResponse;
+
+class QTAWS_EXPORT ListTrafficPolicyInstancesResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTrafficPolicyInstancesResponsePrivate(ListTrafficPolicyInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTrafficPolicyInstancesResponse)
+    Q_DISABLE_COPY(ListTrafficPolicyInstancesResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

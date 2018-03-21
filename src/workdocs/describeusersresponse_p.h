@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEUSERSRESPONSE_P_H
 #define QTAWS_DESCRIBEUSERSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "describeusersrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeUsersResponse;
+
+class QTAWS_EXPORT DescribeUsersResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeUsersResponsePrivate(DescribeUsersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeUsersResponse)
+    Q_DISABLE_COPY(DescribeUsersResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

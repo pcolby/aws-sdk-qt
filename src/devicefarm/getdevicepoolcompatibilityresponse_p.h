@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDEVICEPOOLCOMPATIBILITYRESPONSE_P_H
 #define QTAWS_GETDEVICEPOOLCOMPATIBILITYRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "getdevicepoolcompatibilityrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetDevicePoolCompatibilityResponse;
+
+class QTAWS_EXPORT GetDevicePoolCompatibilityResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDevicePoolCompatibilityResponsePrivate(GetDevicePoolCompatibilityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDevicePoolCompatibilityResponse)
+    Q_DISABLE_COPY(GetDevicePoolCompatibilityResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

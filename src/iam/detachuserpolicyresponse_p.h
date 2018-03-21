@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHUSERPOLICYRESPONSE_P_H
 #define QTAWS_DETACHUSERPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "detachuserpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DetachUserPolicyResponse;
+
+class QTAWS_EXPORT DetachUserPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachUserPolicyResponsePrivate(DetachUserPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachUserPolicyResponse)
+    Q_DISABLE_COPY(DetachUserPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

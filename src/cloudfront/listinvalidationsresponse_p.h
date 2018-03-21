@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTINVALIDATIONSRESPONSE_P_H
 #define QTAWS_LISTINVALIDATIONSRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "listinvalidationsrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListInvalidationsResponse;
+
+class QTAWS_EXPORT ListInvalidationsResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListInvalidationsResponsePrivate(ListInvalidationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListInvalidationsResponse)
+    Q_DISABLE_COPY(ListInvalidationsResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

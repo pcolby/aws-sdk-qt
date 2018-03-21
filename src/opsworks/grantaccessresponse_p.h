@@ -20,4 +20,31 @@
 #ifndef QTAWS_GRANTACCESSRESPONSE_P_H
 #define QTAWS_GRANTACCESSRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "grantaccessrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class GrantAccessResponse;
+
+class QTAWS_EXPORT GrantAccessResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GrantAccessResponsePrivate(GrantAccessResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GrantAccessResponse)
+    Q_DISABLE_COPY(GrantAccessResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

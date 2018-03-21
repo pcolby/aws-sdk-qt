@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPPLIEDSCHEMAVERSIONRESPONSE_P_H
 #define QTAWS_GETAPPLIEDSCHEMAVERSIONRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "getappliedschemaversionrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetAppliedSchemaVersionResponse;
+
+class QTAWS_EXPORT GetAppliedSchemaVersionResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAppliedSchemaVersionResponsePrivate(GetAppliedSchemaVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAppliedSchemaVersionResponse)
+    Q_DISABLE_COPY(GetAppliedSchemaVersionResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECONFIGURATIONRESPONSE_P_H
 #define QTAWS_CREATECONFIGURATIONRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "createconfigurationrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class CreateConfigurationResponse;
+
+class QTAWS_EXPORT CreateConfigurationResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateConfigurationResponsePrivate(CreateConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConfigurationResponse)
+    Q_DISABLE_COPY(CreateConfigurationResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

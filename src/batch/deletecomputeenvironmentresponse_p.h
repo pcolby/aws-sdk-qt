@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECOMPUTEENVIRONMENTRESPONSE_P_H
 #define QTAWS_DELETECOMPUTEENVIRONMENTRESPONSE_P_H
 
+#include "batchresponse.h"
+#include "deletecomputeenvironmentrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DeleteComputeEnvironmentResponse;
+
+class QTAWS_EXPORT DeleteComputeEnvironmentResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteComputeEnvironmentResponsePrivate(DeleteComputeEnvironmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteComputeEnvironmentResponse)
+    Q_DISABLE_COPY(DeleteComputeEnvironmentResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

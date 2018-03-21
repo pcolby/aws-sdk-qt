@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTOREFROMSNAPSHOTRESPONSE_P_H
 #define QTAWS_RESTOREFROMSNAPSHOTRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "restorefromsnapshotrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class RestoreFromSnapshotResponse;
+
+class QTAWS_EXPORT RestoreFromSnapshotResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestoreFromSnapshotResponsePrivate(RestoreFromSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreFromSnapshotResponse)
+    Q_DISABLE_COPY(RestoreFromSnapshotResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

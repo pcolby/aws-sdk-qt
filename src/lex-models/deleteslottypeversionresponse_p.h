@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESLOTTYPEVERSIONRESPONSE_P_H
 #define QTAWS_DELETESLOTTYPEVERSIONRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "deleteslottypeversionrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteSlotTypeVersionResponse;
+
+class QTAWS_EXPORT DeleteSlotTypeVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSlotTypeVersionResponsePrivate(DeleteSlotTypeVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSlotTypeVersionResponse)
+    Q_DISABLE_COPY(DeleteSlotTypeVersionResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

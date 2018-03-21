@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
+#include "datapipelineresponse.h"
+#include "addtagsrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class AddTagsResponse;
+
+class QTAWS_EXPORT AddTagsResponsePrivate : public DataPipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsResponsePrivate(AddTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsResponse)
+    Q_DISABLE_COPY(AddTagsResponsePrivate)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

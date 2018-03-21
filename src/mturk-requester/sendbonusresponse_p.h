@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDBONUSRESPONSE_P_H
 #define QTAWS_SENDBONUSRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "sendbonusrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class SendBonusResponse;
+
+class QTAWS_EXPORT SendBonusResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendBonusResponsePrivate(SendBonusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendBonusResponse)
+    Q_DISABLE_COPY(SendBonusResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

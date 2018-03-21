@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCLOUDFRONTORIGINACCESSIDENTITIESRESPONSE_P_H
 #define QTAWS_LISTCLOUDFRONTORIGINACCESSIDENTITIESRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "listcloudfrontoriginaccessidentitiesrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListCloudFrontOriginAccessIdentitiesResponse;
+
+class QTAWS_EXPORT ListCloudFrontOriginAccessIdentitiesResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListCloudFrontOriginAccessIdentitiesResponsePrivate(ListCloudFrontOriginAccessIdentitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListCloudFrontOriginAccessIdentitiesResponse)
+    Q_DISABLE_COPY(ListCloudFrontOriginAccessIdentitiesResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

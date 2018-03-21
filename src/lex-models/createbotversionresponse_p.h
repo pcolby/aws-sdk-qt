@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEBOTVERSIONRESPONSE_P_H
 #define QTAWS_CREATEBOTVERSIONRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "createbotversionrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class CreateBotVersionResponse;
+
+class QTAWS_EXPORT CreateBotVersionResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateBotVersionResponsePrivate(CreateBotVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateBotVersionResponse)
+    Q_DISABLE_COPY(CreateBotVersionResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHROLEPOLICYRESPONSE_P_H
 #define QTAWS_ATTACHROLEPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "attachrolepolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AttachRolePolicyResponse;
+
+class QTAWS_EXPORT AttachRolePolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachRolePolicyResponsePrivate(AttachRolePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachRolePolicyResponse)
+    Q_DISABLE_COPY(AttachRolePolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

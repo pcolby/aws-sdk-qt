@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTVPCASSOCIATIONAUTHORIZATIONSRESPONSE_P_H
 #define QTAWS_LISTVPCASSOCIATIONAUTHORIZATIONSRESPONSE_P_H
 
+#include "route53response.h"
+#include "listvpcassociationauthorizationsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListVPCAssociationAuthorizationsResponse;
+
+class QTAWS_EXPORT ListVPCAssociationAuthorizationsResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListVPCAssociationAuthorizationsResponsePrivate(ListVPCAssociationAuthorizationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListVPCAssociationAuthorizationsResponse)
+    Q_DISABLE_COPY(ListVPCAssociationAuthorizationsResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

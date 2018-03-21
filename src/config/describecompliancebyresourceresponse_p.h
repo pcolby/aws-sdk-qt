@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECOMPLIANCEBYRESOURCERESPONSE_P_H
 #define QTAWS_DESCRIBECOMPLIANCEBYRESOURCERESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "describecompliancebyresourcerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeComplianceByResourceResponse;
+
+class QTAWS_EXPORT DescribeComplianceByResourceResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeComplianceByResourceResponsePrivate(DescribeComplianceByResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeComplianceByResourceResponse)
+    Q_DISABLE_COPY(DescribeComplianceByResourceResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

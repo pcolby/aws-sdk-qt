@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATELAYERRESPONSE_P_H
 #define QTAWS_UPDATELAYERRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "updatelayerrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateLayerResponse;
+
+class QTAWS_EXPORT UpdateLayerResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateLayerResponsePrivate(UpdateLayerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateLayerResponse)
+    Q_DISABLE_COPY(UpdateLayerResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

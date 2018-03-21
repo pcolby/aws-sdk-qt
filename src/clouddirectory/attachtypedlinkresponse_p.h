@@ -20,4 +20,31 @@
 #ifndef QTAWS_ATTACHTYPEDLINKRESPONSE_P_H
 #define QTAWS_ATTACHTYPEDLINKRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "attachtypedlinkrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class AttachTypedLinkResponse;
+
+class QTAWS_EXPORT AttachTypedLinkResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AttachTypedLinkResponsePrivate(AttachTypedLinkResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AttachTypedLinkResponse)
+    Q_DISABLE_COPY(AttachTypedLinkResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPLATFORMAPPLICATIONSRESPONSE_P_H
 #define QTAWS_LISTPLATFORMAPPLICATIONSRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "listplatformapplicationsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListPlatformApplicationsResponse;
+
+class QTAWS_EXPORT ListPlatformApplicationsResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPlatformApplicationsResponsePrivate(ListPlatformApplicationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPlatformApplicationsResponse)
+    Q_DISABLE_COPY(ListPlatformApplicationsResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

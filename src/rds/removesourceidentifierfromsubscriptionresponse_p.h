@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVESOURCEIDENTIFIERFROMSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_REMOVESOURCEIDENTIFIERFROMSUBSCRIPTIONRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "removesourceidentifierfromsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RemoveSourceIdentifierFromSubscriptionResponse;
+
+class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveSourceIdentifierFromSubscriptionResponsePrivate(RemoveSourceIdentifierFromSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveSourceIdentifierFromSubscriptionResponse)
+    Q_DISABLE_COPY(RemoveSourceIdentifierFromSubscriptionResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

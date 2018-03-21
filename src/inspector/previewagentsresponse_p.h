@@ -20,4 +20,31 @@
 #ifndef QTAWS_PREVIEWAGENTSRESPONSE_P_H
 #define QTAWS_PREVIEWAGENTSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "previewagentsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class PreviewAgentsResponse;
+
+class QTAWS_EXPORT PreviewAgentsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PreviewAgentsResponsePrivate(PreviewAgentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PreviewAgentsResponse)
+    Q_DISABLE_COPY(PreviewAgentsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

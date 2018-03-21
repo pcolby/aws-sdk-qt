@@ -20,4 +20,31 @@
 #ifndef QTAWS_CONFIRMSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_CONFIRMSUBSCRIPTIONRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "confirmsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ConfirmSubscriptionResponse;
+
+class QTAWS_EXPORT ConfirmSubscriptionResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ConfirmSubscriptionResponsePrivate(ConfirmSubscriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ConfirmSubscriptionResponse)
+    Q_DISABLE_COPY(ConfirmSubscriptionResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

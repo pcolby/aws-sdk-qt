@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSTOONPREMISESINSTANCESRESPONSE_P_H
 #define QTAWS_ADDTAGSTOONPREMISESINSTANCESRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "addtagstoonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class AddTagsToOnPremisesInstancesResponse;
+
+class QTAWS_EXPORT AddTagsToOnPremisesInstancesResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsToOnPremisesInstancesResponsePrivate(AddTagsToOnPremisesInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToOnPremisesInstancesResponse)
+    Q_DISABLE_COPY(AddTagsToOnPremisesInstancesResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

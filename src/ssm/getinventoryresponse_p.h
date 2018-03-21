@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETINVENTORYRESPONSE_P_H
 #define QTAWS_GETINVENTORYRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "getinventoryrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetInventoryResponse;
+
+class QTAWS_EXPORT GetInventoryResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetInventoryResponsePrivate(GetInventoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetInventoryResponse)
+    Q_DISABLE_COPY(GetInventoryResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESMSCHANNELRESPONSE_P_H
 #define QTAWS_DELETESMSCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "deletesmschannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteSmsChannelResponse;
+
+class QTAWS_EXPORT DeleteSmsChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSmsChannelResponsePrivate(DeleteSmsChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSmsChannelResponse)
+    Q_DISABLE_COPY(DeleteSmsChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

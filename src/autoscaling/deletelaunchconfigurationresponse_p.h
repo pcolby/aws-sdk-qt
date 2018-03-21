@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELAUNCHCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETELAUNCHCONFIGURATIONRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "deletelaunchconfigurationrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteLaunchConfigurationResponse;
+
+class QTAWS_EXPORT DeleteLaunchConfigurationResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLaunchConfigurationResponsePrivate(DeleteLaunchConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLaunchConfigurationResponse)
+    Q_DISABLE_COPY(DeleteLaunchConfigurationResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

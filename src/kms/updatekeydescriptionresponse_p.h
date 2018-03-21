@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEKEYDESCRIPTIONRESPONSE_P_H
 #define QTAWS_UPDATEKEYDESCRIPTIONRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "updatekeydescriptionrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class UpdateKeyDescriptionResponse;
+
+class QTAWS_EXPORT UpdateKeyDescriptionResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateKeyDescriptionResponsePrivate(UpdateKeyDescriptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateKeyDescriptionResponse)
+    Q_DISABLE_COPY(UpdateKeyDescriptionResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

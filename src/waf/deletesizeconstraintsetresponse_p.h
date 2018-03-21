@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESIZECONSTRAINTSETRESPONSE_P_H
 #define QTAWS_DELETESIZECONSTRAINTSETRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "deletesizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteSizeConstraintSetResponse;
+
+class QTAWS_EXPORT DeleteSizeConstraintSetResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSizeConstraintSetResponsePrivate(DeleteSizeConstraintSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSizeConstraintSetResponse)
+    Q_DISABLE_COPY(DeleteSizeConstraintSetResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

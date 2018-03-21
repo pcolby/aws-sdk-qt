@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHPRODUCTSASADMINRESPONSE_P_H
 #define QTAWS_SEARCHPRODUCTSASADMINRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "searchproductsasadminrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class SearchProductsAsAdminResponse;
+
+class QTAWS_EXPORT SearchProductsAsAdminResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchProductsAsAdminResponsePrivate(SearchProductsAsAdminResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchProductsAsAdminResponse)
+    Q_DISABLE_COPY(SearchProductsAsAdminResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

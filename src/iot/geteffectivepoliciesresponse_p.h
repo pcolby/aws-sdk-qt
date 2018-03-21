@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETEFFECTIVEPOLICIESRESPONSE_P_H
 #define QTAWS_GETEFFECTIVEPOLICIESRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "geteffectivepoliciesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetEffectivePoliciesResponse;
+
+class QTAWS_EXPORT GetEffectivePoliciesResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetEffectivePoliciesResponsePrivate(GetEffectivePoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetEffectivePoliciesResponse)
+    Q_DISABLE_COPY(GetEffectivePoliciesResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

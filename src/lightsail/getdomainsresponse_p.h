@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDOMAINSRESPONSE_P_H
 #define QTAWS_GETDOMAINSRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getdomainsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetDomainsResponse;
+
+class QTAWS_EXPORT GetDomainsResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDomainsResponsePrivate(GetDomainsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDomainsResponse)
+    Q_DISABLE_COPY(GetDomainsResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

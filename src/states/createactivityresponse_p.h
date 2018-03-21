@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEACTIVITYRESPONSE_P_H
 #define QTAWS_CREATEACTIVITYRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "createactivityrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class CreateActivityResponse;
+
+class QTAWS_EXPORT CreateActivityResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateActivityResponsePrivate(CreateActivityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateActivityResponse)
+    Q_DISABLE_COPY(CreateActivityResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

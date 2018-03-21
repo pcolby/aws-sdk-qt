@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPROJECTSRESPONSE_P_H
 #define QTAWS_LISTPROJECTSRESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "listprojectsrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class ListProjectsResponse;
+
+class QTAWS_EXPORT ListProjectsResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListProjectsResponsePrivate(ListProjectsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListProjectsResponse)
+    Q_DISABLE_COPY(ListProjectsResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

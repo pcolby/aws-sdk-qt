@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUILTINSLOTTYPESRESPONSE_P_H
 #define QTAWS_GETBUILTINSLOTTYPESRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "getbuiltinslottypesrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBuiltinSlotTypesResponse;
+
+class QTAWS_EXPORT GetBuiltinSlotTypesResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBuiltinSlotTypesResponsePrivate(GetBuiltinSlotTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBuiltinSlotTypesResponse)
+    Q_DISABLE_COPY(GetBuiltinSlotTypesResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

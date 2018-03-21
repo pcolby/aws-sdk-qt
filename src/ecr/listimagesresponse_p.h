@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTIMAGESRESPONSE_P_H
 #define QTAWS_LISTIMAGESRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "listimagesrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class ListImagesResponse;
+
+class QTAWS_EXPORT ListImagesResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListImagesResponsePrivate(ListImagesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListImagesResponse)
+    Q_DISABLE_COPY(ListImagesResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

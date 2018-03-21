@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEORGANIZATIONRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "describeorganizationrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DescribeOrganizationResponse;
+
+class QTAWS_EXPORT DescribeOrganizationResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeOrganizationResponsePrivate(DescribeOrganizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrganizationResponse)
+    Q_DISABLE_COPY(DescribeOrganizationResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEVENTBUSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTBUSRESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "describeeventbusrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class DescribeEventBusResponse;
+
+class QTAWS_EXPORT DescribeEventBusResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEventBusResponsePrivate(DescribeEventBusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventBusResponse)
+    Q_DISABLE_COPY(DescribeEventBusResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

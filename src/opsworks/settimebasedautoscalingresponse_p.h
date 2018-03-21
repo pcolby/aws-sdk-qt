@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETTIMEBASEDAUTOSCALINGRESPONSE_P_H
 #define QTAWS_SETTIMEBASEDAUTOSCALINGRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "settimebasedautoscalingrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class SetTimeBasedAutoScalingResponse;
+
+class QTAWS_EXPORT SetTimeBasedAutoScalingResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetTimeBasedAutoScalingResponsePrivate(SetTimeBasedAutoScalingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetTimeBasedAutoScalingResponse)
+    Q_DISABLE_COPY(SetTimeBasedAutoScalingResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

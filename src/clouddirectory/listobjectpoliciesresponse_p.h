@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOBJECTPOLICIESRESPONSE_P_H
 #define QTAWS_LISTOBJECTPOLICIESRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "listobjectpoliciesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListObjectPoliciesResponse;
+
+class QTAWS_EXPORT ListObjectPoliciesResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListObjectPoliciesResponsePrivate(ListObjectPoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListObjectPoliciesResponse)
+    Q_DISABLE_COPY(ListObjectPoliciesResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

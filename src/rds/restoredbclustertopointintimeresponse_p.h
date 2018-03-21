@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTOREDBCLUSTERTOPOINTINTIMERESPONSE_P_H
 #define QTAWS_RESTOREDBCLUSTERTOPOINTINTIMERESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "restoredbclustertopointintimerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBClusterToPointInTimeResponse;
+
+class QTAWS_EXPORT RestoreDBClusterToPointInTimeResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestoreDBClusterToPointInTimeResponsePrivate(RestoreDBClusterToPointInTimeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreDBClusterToPointInTimeResponse)
+    Q_DISABLE_COPY(RestoreDBClusterToPointInTimeResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

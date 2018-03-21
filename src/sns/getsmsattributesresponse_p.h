@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSMSATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETSMSATTRIBUTESRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "getsmsattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class GetSMSAttributesResponse;
+
+class QTAWS_EXPORT GetSMSAttributesResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSMSAttributesResponsePrivate(GetSMSAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSMSAttributesResponse)
+    Q_DISABLE_COPY(GetSMSAttributesResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

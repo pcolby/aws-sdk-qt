@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTACCESSKEYSRESPONSE_P_H
 #define QTAWS_LISTACCESSKEYSRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listaccesskeysrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAccessKeysResponse;
+
+class QTAWS_EXPORT ListAccessKeysResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAccessKeysResponsePrivate(ListAccessKeysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAccessKeysResponse)
+    Q_DISABLE_COPY(ListAccessKeysResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

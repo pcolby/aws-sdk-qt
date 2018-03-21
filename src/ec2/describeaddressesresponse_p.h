@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEADDRESSESRESPONSE_P_H
 #define QTAWS_DESCRIBEADDRESSESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeaddressesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAddressesResponse;
+
+class QTAWS_EXPORT DescribeAddressesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAddressesResponsePrivate(DescribeAddressesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAddressesResponse)
+    Q_DISABLE_COPY(DescribeAddressesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

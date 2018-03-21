@@ -20,4 +20,31 @@
 #ifndef QTAWS_BUNDLEINSTANCERESPONSE_P_H
 #define QTAWS_BUNDLEINSTANCERESPONSE_P_H
 
+#include "ec2response.h"
+#include "bundleinstancerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class BundleInstanceResponse;
+
+class QTAWS_EXPORT BundleInstanceResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BundleInstanceResponsePrivate(BundleInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BundleInstanceResponse)
+    Q_DISABLE_COPY(BundleInstanceResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

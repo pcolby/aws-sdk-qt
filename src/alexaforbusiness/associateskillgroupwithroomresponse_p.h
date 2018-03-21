@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATESKILLGROUPWITHROOMRESPONSE_P_H
 #define QTAWS_ASSOCIATESKILLGROUPWITHROOMRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "associateskillgroupwithroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class AssociateSkillGroupWithRoomResponse;
+
+class QTAWS_EXPORT AssociateSkillGroupWithRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateSkillGroupWithRoomResponsePrivate(AssociateSkillGroupWithRoomResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateSkillGroupWithRoomResponse)
+    Q_DISABLE_COPY(AssociateSkillGroupWithRoomResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

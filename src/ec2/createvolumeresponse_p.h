@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEVOLUMERESPONSE_P_H
 #define QTAWS_CREATEVOLUMERESPONSE_P_H
 
+#include "ec2response.h"
+#include "createvolumerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVolumeResponse;
+
+class QTAWS_EXPORT CreateVolumeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateVolumeResponsePrivate(CreateVolumeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVolumeResponse)
+    Q_DISABLE_COPY(CreateVolumeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

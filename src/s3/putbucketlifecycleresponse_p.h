@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTBUCKETLIFECYCLERESPONSE_P_H
 #define QTAWS_PUTBUCKETLIFECYCLERESPONSE_P_H
 
+#include "s3response.h"
+#include "putbucketlifecyclerequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketLifecycleResponse;
+
+class QTAWS_EXPORT PutBucketLifecycleResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutBucketLifecycleResponsePrivate(PutBucketLifecycleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketLifecycleResponse)
+    Q_DISABLE_COPY(PutBucketLifecycleResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

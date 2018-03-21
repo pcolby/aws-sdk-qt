@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCOMMANDINVOCATIONRESPONSE_P_H
 #define QTAWS_GETCOMMANDINVOCATIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "getcommandinvocationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetCommandInvocationResponse;
+
+class QTAWS_EXPORT GetCommandInvocationResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCommandInvocationResponsePrivate(GetCommandInvocationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCommandInvocationResponse)
+    Q_DISABLE_COPY(GetCommandInvocationResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

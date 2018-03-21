@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYDBINSTANCERESPONSE_P_H
 #define QTAWS_MODIFYDBINSTANCERESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "modifydbinstancerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBInstanceResponse;
+
+class QTAWS_EXPORT ModifyDBInstanceResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyDBInstanceResponsePrivate(ModifyDBInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyDBInstanceResponse)
+    Q_DISABLE_COPY(ModifyDBInstanceResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

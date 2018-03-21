@@ -20,4 +20,31 @@
 #ifndef QTAWS_DECLINEHANDSHAKERESPONSE_P_H
 #define QTAWS_DECLINEHANDSHAKERESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "declinehandshakerequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DeclineHandshakeResponse;
+
+class QTAWS_EXPORT DeclineHandshakeResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeclineHandshakeResponsePrivate(DeclineHandshakeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeclineHandshakeResponse)
+    Q_DISABLE_COPY(DeclineHandshakeResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

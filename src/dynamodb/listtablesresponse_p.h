@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTABLESRESPONSE_P_H
 #define QTAWS_LISTTABLESRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "listtablesrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ListTablesResponse;
+
+class QTAWS_EXPORT ListTablesResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTablesResponsePrivate(ListTablesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTablesResponse)
+    Q_DISABLE_COPY(ListTablesResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

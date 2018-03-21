@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESEGMENTRESPONSE_P_H
 #define QTAWS_CREATESEGMENTRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "createsegmentrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class CreateSegmentResponse;
+
+class QTAWS_EXPORT CreateSegmentResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSegmentResponsePrivate(CreateSegmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSegmentResponse)
+    Q_DISABLE_COPY(CreateSegmentResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

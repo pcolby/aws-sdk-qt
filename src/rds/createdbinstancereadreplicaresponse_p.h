@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDBINSTANCEREADREPLICARESPONSE_P_H
 #define QTAWS_CREATEDBINSTANCEREADREPLICARESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "createdbinstancereadreplicarequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBInstanceReadReplicaResponse;
+
+class QTAWS_EXPORT CreateDBInstanceReadReplicaResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDBInstanceReadReplicaResponsePrivate(CreateDBInstanceReadReplicaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDBInstanceReadReplicaResponse)
+    Q_DISABLE_COPY(CreateDBInstanceReadReplicaResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

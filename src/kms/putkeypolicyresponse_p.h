@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTKEYPOLICYRESPONSE_P_H
 #define QTAWS_PUTKEYPOLICYRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "putkeypolicyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class PutKeyPolicyResponse;
+
+class QTAWS_EXPORT PutKeyPolicyResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutKeyPolicyResponsePrivate(PutKeyPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutKeyPolicyResponse)
+    Q_DISABLE_COPY(PutKeyPolicyResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

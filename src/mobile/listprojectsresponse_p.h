@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPROJECTSRESPONSE_P_H
 #define QTAWS_LISTPROJECTSRESPONSE_P_H
 
+#include "mobileresponse.h"
+#include "listprojectsrequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class ListProjectsResponse;
+
+class QTAWS_EXPORT ListProjectsResponsePrivate : public MobileResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListProjectsResponsePrivate(ListProjectsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListProjectsResponse)
+    Q_DISABLE_COPY(ListProjectsResponsePrivate)
+
+};
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

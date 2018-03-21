@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETFINDINGSSTATISTICSRESPONSE_P_H
 #define QTAWS_GETFINDINGSSTATISTICSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "getfindingsstatisticsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetFindingsStatisticsResponse;
+
+class QTAWS_EXPORT GetFindingsStatisticsResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetFindingsStatisticsResponsePrivate(GetFindingsStatisticsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetFindingsStatisticsResponse)
+    Q_DISABLE_COPY(GetFindingsStatisticsResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

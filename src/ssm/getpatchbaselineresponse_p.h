@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPATCHBASELINERESPONSE_P_H
 #define QTAWS_GETPATCHBASELINERESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "getpatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetPatchBaselineResponse;
+
+class QTAWS_EXPORT GetPatchBaselineResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetPatchBaselineResponsePrivate(GetPatchBaselineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetPatchBaselineResponse)
+    Q_DISABLE_COPY(GetPatchBaselineResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

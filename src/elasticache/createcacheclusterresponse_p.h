@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECACHECLUSTERRESPONSE_P_H
 #define QTAWS_CREATECACHECLUSTERRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "createcacheclusterrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateCacheClusterResponse;
+
+class QTAWS_EXPORT CreateCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCacheClusterResponsePrivate(CreateCacheClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCacheClusterResponse)
+    Q_DISABLE_COPY(CreateCacheClusterResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

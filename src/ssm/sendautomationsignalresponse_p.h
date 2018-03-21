@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDAUTOMATIONSIGNALRESPONSE_P_H
 #define QTAWS_SENDAUTOMATIONSIGNALRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "sendautomationsignalrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class SendAutomationSignalResponse;
+
+class QTAWS_EXPORT SendAutomationSignalResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendAutomationSignalResponsePrivate(SendAutomationSignalResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendAutomationSignalResponse)
+    Q_DISABLE_COPY(SendAutomationSignalResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

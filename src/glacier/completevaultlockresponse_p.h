@@ -20,4 +20,31 @@
 #ifndef QTAWS_COMPLETEVAULTLOCKRESPONSE_P_H
 #define QTAWS_COMPLETEVAULTLOCKRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "completevaultlockrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class CompleteVaultLockResponse;
+
+class QTAWS_EXPORT CompleteVaultLockResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CompleteVaultLockResponsePrivate(CompleteVaultLockResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CompleteVaultLockResponse)
+    Q_DISABLE_COPY(CompleteVaultLockResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

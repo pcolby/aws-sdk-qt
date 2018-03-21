@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERESIZERESPONSE_P_H
 #define QTAWS_DESCRIBERESIZERESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describeresizerequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeResizeResponse;
+
+class QTAWS_EXPORT DescribeResizeResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeResizeResponsePrivate(DescribeResizeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeResizeResponse)
+    Q_DISABLE_COPY(DescribeResizeResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

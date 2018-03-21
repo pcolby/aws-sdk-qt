@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREGEXMATCHSETRESPONSE_P_H
 #define QTAWS_DELETEREGEXMATCHSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "deleteregexmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteRegexMatchSetResponse;
+
+class QTAWS_EXPORT DeleteRegexMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRegexMatchSetResponsePrivate(DeleteRegexMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRegexMatchSetResponse)
+    Q_DISABLE_COPY(DeleteRegexMatchSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

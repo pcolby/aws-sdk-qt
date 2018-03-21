@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEHSMCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEHSMCONFIGURATIONSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describehsmconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeHsmConfigurationsResponse;
+
+class QTAWS_EXPORT DescribeHsmConfigurationsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeHsmConfigurationsResponsePrivate(DescribeHsmConfigurationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHsmConfigurationsResponse)
+    Q_DISABLE_COPY(DescribeHsmConfigurationsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

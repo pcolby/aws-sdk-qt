@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLESNAPSHOTCOPYRESPONSE_P_H
 #define QTAWS_DISABLESNAPSHOTCOPYRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "disablesnapshotcopyrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DisableSnapshotCopyResponse;
+
+class QTAWS_EXPORT DisableSnapshotCopyResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableSnapshotCopyResponsePrivate(DisableSnapshotCopyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableSnapshotCopyResponse)
+    Q_DISABLE_COPY(DisableSnapshotCopyResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

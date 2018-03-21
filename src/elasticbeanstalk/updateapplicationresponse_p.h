@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 #define QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updateapplicationrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateApplicationResponse;
+
+class QTAWS_EXPORT UpdateApplicationResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateApplicationResponsePrivate(UpdateApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApplicationResponse)
+    Q_DISABLE_COPY(UpdateApplicationResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

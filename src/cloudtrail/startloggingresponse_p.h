@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTLOGGINGRESPONSE_P_H
 #define QTAWS_STARTLOGGINGRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "startloggingrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class StartLoggingResponse;
+
+class QTAWS_EXPORT StartLoggingResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartLoggingResponsePrivate(StartLoggingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartLoggingResponse)
+    Q_DISABLE_COPY(StartLoggingResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEROUTERESPONSE_P_H
 #define QTAWS_CREATEROUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "createrouterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateRouteResponse;
+
+class QTAWS_EXPORT CreateRouteResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateRouteResponsePrivate(CreateRouteResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRouteResponse)
+    Q_DISABLE_COPY(CreateRouteResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

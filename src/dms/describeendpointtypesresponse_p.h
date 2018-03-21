@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEENDPOINTTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBEENDPOINTTYPESRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describeendpointtypesrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeEndpointTypesResponse;
+
+class QTAWS_EXPORT DescribeEndpointTypesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEndpointTypesResponsePrivate(DescribeEndpointTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEndpointTypesResponse)
+    Q_DISABLE_COPY(DescribeEndpointTypesResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

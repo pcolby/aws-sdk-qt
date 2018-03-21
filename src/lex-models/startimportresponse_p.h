@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTIMPORTRESPONSE_P_H
 #define QTAWS_STARTIMPORTRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "startimportrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class StartImportResponse;
+
+class QTAWS_EXPORT StartImportResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartImportResponsePrivate(StartImportResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartImportResponse)
+    Q_DISABLE_COPY(StartImportResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

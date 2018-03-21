@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPNSSANDBOXCHANNELRESPONSE_P_H
 #define QTAWS_DELETEAPNSSANDBOXCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "deleteapnssandboxchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteApnsSandboxChannelResponse;
+
+class QTAWS_EXPORT DeleteApnsSandboxChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApnsSandboxChannelResponsePrivate(DeleteApnsSandboxChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApnsSandboxChannelResponse)
+    Q_DISABLE_COPY(DeleteApnsSandboxChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

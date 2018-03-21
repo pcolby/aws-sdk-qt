@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEAPIKEYRESPONSE_P_H
 #define QTAWS_CREATEAPIKEYRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "createapikeyrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateApiKeyResponse;
+
+class QTAWS_EXPORT CreateApiKeyResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateApiKeyResponsePrivate(CreateApiKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateApiKeyResponse)
+    Q_DISABLE_COPY(CreateApiKeyResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

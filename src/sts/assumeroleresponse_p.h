@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSUMEROLERESPONSE_P_H
 #define QTAWS_ASSUMEROLERESPONSE_P_H
 
+#include "stsresponse.h"
+#include "assumerolerequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class AssumeRoleResponse;
+
+class QTAWS_EXPORT AssumeRoleResponsePrivate : public STSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssumeRoleResponsePrivate(AssumeRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssumeRoleResponse)
+    Q_DISABLE_COPY(AssumeRoleResponsePrivate)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

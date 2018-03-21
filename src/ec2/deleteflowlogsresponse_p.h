@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEFLOWLOGSRESPONSE_P_H
 #define QTAWS_DELETEFLOWLOGSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deleteflowlogsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteFlowLogsResponse;
+
+class QTAWS_EXPORT DeleteFlowLogsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteFlowLogsResponsePrivate(DeleteFlowLogsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFlowLogsResponse)
+    Q_DISABLE_COPY(DeleteFlowLogsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

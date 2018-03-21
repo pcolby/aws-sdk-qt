@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINDISABLEPROVIDERFORUSERRESPONSE_P_H
 #define QTAWS_ADMINDISABLEPROVIDERFORUSERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "admindisableproviderforuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminDisableProviderForUserResponse;
+
+class QTAWS_EXPORT AdminDisableProviderForUserResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminDisableProviderForUserResponsePrivate(AdminDisableProviderForUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminDisableProviderForUserResponse)
+    Q_DISABLE_COPY(AdminDisableProviderForUserResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

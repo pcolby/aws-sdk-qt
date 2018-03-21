@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSHIPPINGLABELRESPONSE_P_H
 #define QTAWS_GETSHIPPINGLABELRESPONSE_P_H
 
+#include "importexportresponse.h"
+#include "getshippinglabelrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class GetShippingLabelResponse;
+
+class QTAWS_EXPORT GetShippingLabelResponsePrivate : public ImportExportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetShippingLabelResponsePrivate(GetShippingLabelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetShippingLabelResponse)
+    Q_DISABLE_COPY(GetShippingLabelResponsePrivate)
+
+};
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINSETUSERSETTINGSRESPONSE_P_H
 #define QTAWS_ADMINSETUSERSETTINGSRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminsetusersettingsrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminSetUserSettingsResponse;
+
+class QTAWS_EXPORT AdminSetUserSettingsResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminSetUserSettingsResponsePrivate(AdminSetUserSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminSetUserSettingsResponse)
+    Q_DISABLE_COPY(AdminSetUserSettingsResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

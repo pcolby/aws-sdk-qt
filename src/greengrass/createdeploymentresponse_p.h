@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDEPLOYMENTRESPONSE_P_H
 #define QTAWS_CREATEDEPLOYMENTRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "createdeploymentrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateDeploymentResponse;
+
+class QTAWS_EXPORT CreateDeploymentResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDeploymentResponsePrivate(CreateDeploymentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDeploymentResponse)
+    Q_DISABLE_COPY(CreateDeploymentResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

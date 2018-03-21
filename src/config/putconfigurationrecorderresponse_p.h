@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTCONFIGURATIONRECORDERRESPONSE_P_H
 #define QTAWS_PUTCONFIGURATIONRECORDERRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "putconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutConfigurationRecorderResponse;
+
+class QTAWS_EXPORT PutConfigurationRecorderResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutConfigurationRecorderResponsePrivate(PutConfigurationRecorderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutConfigurationRecorderResponse)
+    Q_DISABLE_COPY(PutConfigurationRecorderResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

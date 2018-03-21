@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINSTANCESHEALTHRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCESHEALTHRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeinstanceshealthrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeInstancesHealthResponse;
+
+class QTAWS_EXPORT DescribeInstancesHealthResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeInstancesHealthResponsePrivate(DescribeInstancesHealthResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstancesHealthResponse)
+    Q_DISABLE_COPY(DescribeInstancesHealthResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEORIGINENDPOINTRESPONSE_P_H
 #define QTAWS_UPDATEORIGINENDPOINTRESPONSE_P_H
 
+#include "mediapackageresponse.h"
+#include "updateoriginendpointrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class UpdateOriginEndpointResponse;
+
+class QTAWS_EXPORT UpdateOriginEndpointResponsePrivate : public MediaPackageResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateOriginEndpointResponsePrivate(UpdateOriginEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateOriginEndpointResponse)
+    Q_DISABLE_COPY(UpdateOriginEndpointResponsePrivate)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

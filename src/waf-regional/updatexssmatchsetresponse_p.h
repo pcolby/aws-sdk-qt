@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETRESPONSE_P_H
 #define QTAWS_UPDATEXSSMATCHSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "updatexssmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateXssMatchSetResponse;
+
+class QTAWS_EXPORT UpdateXssMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateXssMatchSetResponsePrivate(UpdateXssMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateXssMatchSetResponse)
+    Q_DISABLE_COPY(UpdateXssMatchSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

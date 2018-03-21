@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECOMPUTERRESPONSE_P_H
 #define QTAWS_CREATECOMPUTERRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "createcomputerrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateComputerResponse;
+
+class QTAWS_EXPORT CreateComputerResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateComputerResponsePrivate(CreateComputerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateComputerResponse)
+    Q_DISABLE_COPY(CreateComputerResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

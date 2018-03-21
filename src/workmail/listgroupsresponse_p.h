@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGROUPSRESPONSE_P_H
 #define QTAWS_LISTGROUPSRESPONSE_P_H
 
+#include "workmailresponse.h"
+#include "listgroupsrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListGroupsResponse;
+
+class QTAWS_EXPORT ListGroupsResponsePrivate : public WorkMailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGroupsResponsePrivate(ListGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupsResponse)
+    Q_DISABLE_COPY(ListGroupsResponsePrivate)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

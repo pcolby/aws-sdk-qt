@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTHINGREGISTRATIONTASKREPORTSRESPONSE_P_H
 #define QTAWS_LISTTHINGREGISTRATIONTASKREPORTSRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listthingregistrationtaskreportsrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListThingRegistrationTaskReportsResponse;
+
+class QTAWS_EXPORT ListThingRegistrationTaskReportsResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListThingRegistrationTaskReportsResponsePrivate(ListThingRegistrationTaskReportsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListThingRegistrationTaskReportsResponse)
+    Q_DISABLE_COPY(ListThingRegistrationTaskReportsResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

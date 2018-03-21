@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updateconfigurationseteventdestinationrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetEventDestinationResponse;
+
+class QTAWS_EXPORT UpdateConfigurationSetEventDestinationResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConfigurationSetEventDestinationResponsePrivate(UpdateConfigurationSetEventDestinationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationSetEventDestinationResponse)
+    Q_DISABLE_COPY(UpdateConfigurationSetEventDestinationResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

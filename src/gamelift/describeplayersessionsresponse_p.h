@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPLAYERSESSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEPLAYERSESSIONSRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describeplayersessionsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribePlayerSessionsResponse;
+
+class QTAWS_EXPORT DescribePlayerSessionsResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribePlayerSessionsResponsePrivate(DescribePlayerSessionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePlayerSessionsResponse)
+    Q_DISABLE_COPY(DescribePlayerSessionsResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

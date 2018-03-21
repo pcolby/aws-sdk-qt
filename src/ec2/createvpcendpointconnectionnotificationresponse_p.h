@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEVPCENDPOINTCONNECTIONNOTIFICATIONRESPONSE_P_H
 #define QTAWS_CREATEVPCENDPOINTCONNECTIONNOTIFICATIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createvpcendpointconnectionnotificationrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpcEndpointConnectionNotificationResponse;
+
+class QTAWS_EXPORT CreateVpcEndpointConnectionNotificationResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateVpcEndpointConnectionNotificationResponsePrivate(CreateVpcEndpointConnectionNotificationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVpcEndpointConnectionNotificationResponse)
+    Q_DISABLE_COPY(CreateVpcEndpointConnectionNotificationResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

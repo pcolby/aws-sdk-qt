@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKFAILEDRESPONSE_P_H
 #define QTAWS_RESPONDACTIVITYTASKFAILEDRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "respondactivitytaskfailedrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RespondActivityTaskFailedResponse;
+
+class QTAWS_EXPORT RespondActivityTaskFailedResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RespondActivityTaskFailedResponsePrivate(RespondActivityTaskFailedResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RespondActivityTaskFailedResponse)
+    Q_DISABLE_COPY(RespondActivityTaskFailedResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

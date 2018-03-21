@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTKEYPAIRRESPONSE_P_H
 #define QTAWS_IMPORTKEYPAIRRESPONSE_P_H
 
+#include "ec2response.h"
+#include "importkeypairrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportKeyPairResponse;
+
+class QTAWS_EXPORT ImportKeyPairResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportKeyPairResponsePrivate(ImportKeyPairResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportKeyPairResponse)
+    Q_DISABLE_COPY(ImportKeyPairResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

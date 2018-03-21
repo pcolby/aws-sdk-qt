@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEUSERPROFILERESPONSE_P_H
 #define QTAWS_DESCRIBEUSERPROFILERESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "describeuserprofilerequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DescribeUserProfileResponse;
+
+class QTAWS_EXPORT DescribeUserProfileResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeUserProfileResponsePrivate(DescribeUserProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeUserProfileResponse)
+    Q_DISABLE_COPY(DescribeUserProfileResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

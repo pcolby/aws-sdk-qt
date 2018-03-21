@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEEVENTSOURCEMAPPINGRESPONSE_P_H
 #define QTAWS_DELETEEVENTSOURCEMAPPINGRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "deleteeventsourcemappingrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class DeleteEventSourceMappingResponse;
+
+class QTAWS_EXPORT DeleteEventSourceMappingResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteEventSourceMappingResponsePrivate(DeleteEventSourceMappingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEventSourceMappingResponse)
+    Q_DISABLE_COPY(DeleteEventSourceMappingResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

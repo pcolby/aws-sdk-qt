@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETRAININGJOBRESPONSE_P_H
 #define QTAWS_CREATETRAININGJOBRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "createtrainingjobrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class CreateTrainingJobResponse;
+
+class QTAWS_EXPORT CreateTrainingJobResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTrainingJobResponsePrivate(CreateTrainingJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTrainingJobResponse)
+    Q_DISABLE_COPY(CreateTrainingJobResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

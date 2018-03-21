@@ -20,4 +20,31 @@
 #ifndef QTAWS_SCANRESPONSE_P_H
 #define QTAWS_SCANRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "scanrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ScanResponse;
+
+class QTAWS_EXPORT ScanResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ScanResponsePrivate(ScanResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ScanResponse)
+    Q_DISABLE_COPY(ScanResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

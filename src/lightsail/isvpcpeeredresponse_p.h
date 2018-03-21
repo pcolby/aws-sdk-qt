@@ -20,4 +20,31 @@
 #ifndef QTAWS_ISVPCPEEREDRESPONSE_P_H
 #define QTAWS_ISVPCPEEREDRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "isvpcpeeredrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class IsVpcPeeredResponse;
+
+class QTAWS_EXPORT IsVpcPeeredResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    IsVpcPeeredResponsePrivate(IsVpcPeeredResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(IsVpcPeeredResponse)
+    Q_DISABLE_COPY(IsVpcPeeredResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

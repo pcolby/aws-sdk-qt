@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTBOTRESPONSE_P_H
 #define QTAWS_PUTBOTRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "putbotrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class PutBotResponse;
+
+class QTAWS_EXPORT PutBotResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutBotResponsePrivate(PutBotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutBotResponse)
+    Q_DISABLE_COPY(PutBotResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

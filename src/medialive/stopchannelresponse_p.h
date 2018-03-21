@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPCHANNELRESPONSE_P_H
 #define QTAWS_STOPCHANNELRESPONSE_P_H
 
+#include "medialiveresponse.h"
+#include "stopchannelrequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class StopChannelResponse;
+
+class QTAWS_EXPORT StopChannelResponsePrivate : public MediaLiveResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopChannelResponsePrivate(StopChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopChannelResponse)
+    Q_DISABLE_COPY(StopChannelResponsePrivate)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEJOBQUEUESRESPONSE_P_H
 #define QTAWS_DESCRIBEJOBQUEUESRESPONSE_P_H
 
+#include "batchresponse.h"
+#include "describejobqueuesrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DescribeJobQueuesResponse;
+
+class QTAWS_EXPORT DescribeJobQueuesResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeJobQueuesResponsePrivate(DescribeJobQueuesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeJobQueuesResponse)
+    Q_DISABLE_COPY(DescribeJobQueuesResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

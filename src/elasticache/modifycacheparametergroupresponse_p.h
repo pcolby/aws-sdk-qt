@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYCACHEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_MODIFYCACHEPARAMETERGROUPRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "modifycacheparametergrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ModifyCacheParameterGroupResponse;
+
+class QTAWS_EXPORT ModifyCacheParameterGroupResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyCacheParameterGroupResponsePrivate(ModifyCacheParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyCacheParameterGroupResponse)
+    Q_DISABLE_COPY(ModifyCacheParameterGroupResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

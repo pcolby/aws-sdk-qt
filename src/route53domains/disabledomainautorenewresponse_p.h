@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLEDOMAINAUTORENEWRESPONSE_P_H
 #define QTAWS_DISABLEDOMAINAUTORENEWRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "disabledomainautorenewrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class DisableDomainAutoRenewResponse;
+
+class QTAWS_EXPORT DisableDomainAutoRenewResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableDomainAutoRenewResponsePrivate(DisableDomainAutoRenewResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableDomainAutoRenewResponse)
+    Q_DISABLE_COPY(DisableDomainAutoRenewResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERINSTANCESWITHLOADBALANCERRESPONSE_P_H
 #define QTAWS_REGISTERINSTANCESWITHLOADBALANCERRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "registerinstanceswithloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class RegisterInstancesWithLoadBalancerResponse;
+
+class QTAWS_EXPORT RegisterInstancesWithLoadBalancerResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterInstancesWithLoadBalancerResponsePrivate(RegisterInstancesWithLoadBalancerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterInstancesWithLoadBalancerResponse)
+    Q_DISABLE_COPY(RegisterInstancesWithLoadBalancerResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESOURCEDEFINITIONVERSIONRESPONSE_P_H
 #define QTAWS_GETRESOURCEDEFINITIONVERSIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "getresourcedefinitionversionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetResourceDefinitionVersionResponse;
+
+class QTAWS_EXPORT GetResourceDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetResourceDefinitionVersionResponsePrivate(GetResourceDefinitionVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetResourceDefinitionVersionResponse)
+    Q_DISABLE_COPY(GetResourceDefinitionVersionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

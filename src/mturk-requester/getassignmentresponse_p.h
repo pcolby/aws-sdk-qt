@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETASSIGNMENTRESPONSE_P_H
 #define QTAWS_GETASSIGNMENTRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "getassignmentrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetAssignmentResponse;
+
+class QTAWS_EXPORT GetAssignmentResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAssignmentResponsePrivate(GetAssignmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAssignmentResponse)
+    Q_DISABLE_COPY(GetAssignmentResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

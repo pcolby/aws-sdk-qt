@@ -20,4 +20,31 @@
 #ifndef QTAWS_VALIDATECONFIGURATIONSETTINGSRESPONSE_P_H
 #define QTAWS_VALIDATECONFIGURATIONSETTINGSRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "validateconfigurationsettingsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ValidateConfigurationSettingsResponse;
+
+class QTAWS_EXPORT ValidateConfigurationSettingsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ValidateConfigurationSettingsResponsePrivate(ValidateConfigurationSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ValidateConfigurationSettingsResponse)
+    Q_DISABLE_COPY(ValidateConfigurationSettingsResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPARAMETERSBYPATHRESPONSE_P_H
 #define QTAWS_GETPARAMETERSBYPATHRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "getparametersbypathrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetParametersByPathResponse;
+
+class QTAWS_EXPORT GetParametersByPathResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetParametersByPathResponsePrivate(GetParametersByPathResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetParametersByPathResponse)
+    Q_DISABLE_COPY(GetParametersByPathResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

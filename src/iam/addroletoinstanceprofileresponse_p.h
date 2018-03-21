@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDROLETOINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_ADDROLETOINSTANCEPROFILERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "addroletoinstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AddRoleToInstanceProfileResponse;
+
+class QTAWS_EXPORT AddRoleToInstanceProfileResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddRoleToInstanceProfileResponsePrivate(AddRoleToInstanceProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddRoleToInstanceProfileResponse)
+    Q_DISABLE_COPY(AddRoleToInstanceProfileResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERESOURCEPOLICIESRESPONSE_P_H
 #define QTAWS_DESCRIBERESOURCEPOLICIESRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "describeresourcepoliciesrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeResourcePoliciesResponse;
+
+class QTAWS_EXPORT DescribeResourcePoliciesResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeResourcePoliciesResponsePrivate(DescribeResourcePoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeResourcePoliciesResponse)
+    Q_DISABLE_COPY(DescribeResourcePoliciesResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

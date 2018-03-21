@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSIGNINGCERTIFICATESRESPONSE_P_H
 #define QTAWS_LISTSIGNINGCERTIFICATESRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listsigningcertificatesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListSigningCertificatesResponse;
+
+class QTAWS_EXPORT ListSigningCertificatesResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListSigningCertificatesResponsePrivate(ListSigningCertificatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListSigningCertificatesResponse)
+    Q_DISABLE_COPY(ListSigningCertificatesResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

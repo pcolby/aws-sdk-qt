@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDEVICERESPONSE_P_H
 #define QTAWS_UPDATEDEVICERESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "updatedevicerequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class UpdateDeviceResponse;
+
+class QTAWS_EXPORT UpdateDeviceResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDeviceResponsePrivate(UpdateDeviceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDeviceResponse)
+    Q_DISABLE_COPY(UpdateDeviceResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

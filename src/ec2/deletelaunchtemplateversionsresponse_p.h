@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELAUNCHTEMPLATEVERSIONSRESPONSE_P_H
 #define QTAWS_DELETELAUNCHTEMPLATEVERSIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletelaunchtemplateversionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteLaunchTemplateVersionsResponse;
+
+class QTAWS_EXPORT DeleteLaunchTemplateVersionsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLaunchTemplateVersionsResponsePrivate(DeleteLaunchTemplateVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLaunchTemplateVersionsResponse)
+    Q_DISABLE_COPY(DeleteLaunchTemplateVersionsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

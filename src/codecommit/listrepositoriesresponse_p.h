@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTREPOSITORIESRESPONSE_P_H
 #define QTAWS_LISTREPOSITORIESRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "listrepositoriesrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class ListRepositoriesResponse;
+
+class QTAWS_EXPORT ListRepositoriesResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRepositoriesResponsePrivate(ListRepositoriesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRepositoriesResponse)
+    Q_DISABLE_COPY(ListRepositoriesResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

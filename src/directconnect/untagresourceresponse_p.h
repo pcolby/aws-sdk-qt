@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class UntagResourceResponse;
+
+class QTAWS_EXPORT UntagResourceResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagResourceResponsePrivate(UntagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceResponse)
+    Q_DISABLE_COPY(UntagResourceResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

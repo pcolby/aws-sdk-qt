@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEOTAUPDATERESPONSE_P_H
 #define QTAWS_DELETEOTAUPDATERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "deleteotaupdaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteOTAUpdateResponse;
+
+class QTAWS_EXPORT DeleteOTAUpdateResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteOTAUpdateResponsePrivate(DeleteOTAUpdateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteOTAUpdateResponse)
+    Q_DISABLE_COPY(DeleteOTAUpdateResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

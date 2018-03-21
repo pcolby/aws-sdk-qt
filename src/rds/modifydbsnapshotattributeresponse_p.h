@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYDBSNAPSHOTATTRIBUTERESPONSE_P_H
 #define QTAWS_MODIFYDBSNAPSHOTATTRIBUTERESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "modifydbsnapshotattributerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBSnapshotAttributeResponse;
+
+class QTAWS_EXPORT ModifyDBSnapshotAttributeResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyDBSnapshotAttributeResponsePrivate(ModifyDBSnapshotAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyDBSnapshotAttributeResponse)
+    Q_DISABLE_COPY(ModifyDBSnapshotAttributeResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

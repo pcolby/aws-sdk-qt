@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEGEOMATCHSETRESPONSE_P_H
 #define QTAWS_CREATEGEOMATCHSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "creategeomatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateGeoMatchSetResponse;
+
+class QTAWS_EXPORT CreateGeoMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateGeoMatchSetResponsePrivate(CreateGeoMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGeoMatchSetResponse)
+    Q_DISABLE_COPY(CreateGeoMatchSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

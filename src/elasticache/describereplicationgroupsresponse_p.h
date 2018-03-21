@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEREPLICATIONGROUPSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "describereplicationgroupsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeReplicationGroupsResponse;
+
+class QTAWS_EXPORT DescribeReplicationGroupsResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReplicationGroupsResponsePrivate(DescribeReplicationGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReplicationGroupsResponse)
+    Q_DISABLE_COPY(DescribeReplicationGroupsResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

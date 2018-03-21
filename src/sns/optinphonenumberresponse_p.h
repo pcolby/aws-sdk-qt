@@ -20,4 +20,31 @@
 #ifndef QTAWS_OPTINPHONENUMBERRESPONSE_P_H
 #define QTAWS_OPTINPHONENUMBERRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "optinphonenumberrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class OptInPhoneNumberResponse;
+
+class QTAWS_EXPORT OptInPhoneNumberResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    OptInPhoneNumberResponsePrivate(OptInPhoneNumberResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(OptInPhoneNumberResponse)
+    Q_DISABLE_COPY(OptInPhoneNumberResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

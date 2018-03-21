@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETKEYPAIRSRESPONSE_P_H
 #define QTAWS_GETKEYPAIRSRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getkeypairsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetKeyPairsResponse;
+
+class QTAWS_EXPORT GetKeyPairsResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetKeyPairsResponsePrivate(GetKeyPairsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetKeyPairsResponse)
+    Q_DISABLE_COPY(GetKeyPairsResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

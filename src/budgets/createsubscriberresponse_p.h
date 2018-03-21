@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESUBSCRIBERRESPONSE_P_H
 #define QTAWS_CREATESUBSCRIBERRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "createsubscriberrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class CreateSubscriberResponse;
+
+class QTAWS_EXPORT CreateSubscriberResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSubscriberResponsePrivate(CreateSubscriberResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSubscriberResponse)
+    Q_DISABLE_COPY(CreateSubscriberResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

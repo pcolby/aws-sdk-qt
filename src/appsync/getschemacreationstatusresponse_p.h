@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSCHEMACREATIONSTATUSRESPONSE_P_H
 #define QTAWS_GETSCHEMACREATIONSTATUSRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "getschemacreationstatusrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetSchemaCreationStatusResponse;
+
+class QTAWS_EXPORT GetSchemaCreationStatusResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSchemaCreationStatusResponsePrivate(GetSchemaCreationStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSchemaCreationStatusResponse)
+    Q_DISABLE_COPY(GetSchemaCreationStatusResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVPCPEERINGCONNECTIONRESPONSE_P_H
 #define QTAWS_DELETEVPCPEERINGCONNECTIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletevpcpeeringconnectionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcPeeringConnectionResponse;
+
+class QTAWS_EXPORT DeleteVpcPeeringConnectionResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVpcPeeringConnectionResponsePrivate(DeleteVpcPeeringConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcPeeringConnectionResponse)
+    Q_DISABLE_COPY(DeleteVpcPeeringConnectionResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELBUNDLETASKRESPONSE_P_H
 #define QTAWS_CANCELBUNDLETASKRESPONSE_P_H
 
+#include "ec2response.h"
+#include "cancelbundletaskrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelBundleTaskResponse;
+
+class QTAWS_EXPORT CancelBundleTaskResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelBundleTaskResponsePrivate(CancelBundleTaskResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelBundleTaskResponse)
+    Q_DISABLE_COPY(CancelBundleTaskResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELUPDATESTACKRESPONSE_P_H
 #define QTAWS_CANCELUPDATESTACKRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "cancelupdatestackrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class CancelUpdateStackResponse;
+
+class QTAWS_EXPORT CancelUpdateStackResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelUpdateStackResponsePrivate(CancelUpdateStackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelUpdateStackResponse)
+    Q_DISABLE_COPY(CancelUpdateStackResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

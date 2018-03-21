@@ -20,4 +20,31 @@
 #ifndef QTAWS_RELOADTABLESRESPONSE_P_H
 #define QTAWS_RELOADTABLESRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "reloadtablesrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ReloadTablesResponse;
+
+class QTAWS_EXPORT ReloadTablesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ReloadTablesResponsePrivate(ReloadTablesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ReloadTablesResponse)
+    Q_DISABLE_COPY(ReloadTablesResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

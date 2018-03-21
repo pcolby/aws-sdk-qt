@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETIDENTITYPOLICIESRESPONSE_P_H
 #define QTAWS_GETIDENTITYPOLICIESRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "getidentitypoliciesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityPoliciesResponse;
+
+class QTAWS_EXPORT GetIdentityPoliciesResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIdentityPoliciesResponsePrivate(GetIdentityPoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityPoliciesResponse)
+    Q_DISABLE_COPY(GetIdentityPoliciesResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

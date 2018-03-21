@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLERESPONSE_P_H
 #define QTAWS_DELETESERVICELINKEDROLERESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "deleteservicelinkedrolerequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class DeleteServiceLinkedRoleResponse;
+
+class QTAWS_EXPORT DeleteServiceLinkedRoleResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteServiceLinkedRoleResponsePrivate(DeleteServiceLinkedRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteServiceLinkedRoleResponse)
+    Q_DISABLE_COPY(DeleteServiceLinkedRoleResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

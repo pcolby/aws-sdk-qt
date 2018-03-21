@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTCRAWLERSCHEDULERESPONSE_P_H
 #define QTAWS_STARTCRAWLERSCHEDULERESPONSE_P_H
 
+#include "glueresponse.h"
+#include "startcrawlerschedulerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class StartCrawlerScheduleResponse;
+
+class QTAWS_EXPORT StartCrawlerScheduleResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartCrawlerScheduleResponsePrivate(StartCrawlerScheduleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartCrawlerScheduleResponse)
+    Q_DISABLE_COPY(StartCrawlerScheduleResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

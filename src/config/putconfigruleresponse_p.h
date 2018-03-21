@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTCONFIGRULERESPONSE_P_H
 #define QTAWS_PUTCONFIGRULERESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "putconfigrulerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutConfigRuleResponse;
+
+class QTAWS_EXPORT PutConfigRuleResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutConfigRuleResponsePrivate(PutConfigRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutConfigRuleResponse)
+    Q_DISABLE_COPY(PutConfigRuleResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

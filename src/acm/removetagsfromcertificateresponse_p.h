@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVETAGSFROMCERTIFICATERESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMCERTIFICATERESPONSE_P_H
 
+#include "acmresponse.h"
+#include "removetagsfromcertificaterequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class RemoveTagsFromCertificateResponse;
+
+class QTAWS_EXPORT RemoveTagsFromCertificateResponsePrivate : public ACMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveTagsFromCertificateResponsePrivate(RemoveTagsFromCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromCertificateResponse)
+    Q_DISABLE_COPY(RemoveTagsFromCertificateResponsePrivate)
+
+};
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

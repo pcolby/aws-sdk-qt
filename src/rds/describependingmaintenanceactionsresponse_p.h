@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describependingmaintenanceactionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribePendingMaintenanceActionsResponse;
+
+class QTAWS_EXPORT DescribePendingMaintenanceActionsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribePendingMaintenanceActionsResponsePrivate(DescribePendingMaintenanceActionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePendingMaintenanceActionsResponse)
+    Q_DISABLE_COPY(DescribePendingMaintenanceActionsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

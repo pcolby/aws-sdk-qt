@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEOBJECTRESPONSE_P_H
 #define QTAWS_DESCRIBEOBJECTRESPONSE_P_H
 
+#include "mediastoredataresponse.h"
+#include "describeobjectrequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class DescribeObjectResponse;
+
+class QTAWS_EXPORT DescribeObjectResponsePrivate : public MediaStoreDataResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeObjectResponsePrivate(DescribeObjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeObjectResponse)
+    Q_DISABLE_COPY(DescribeObjectResponsePrivate)
+
+};
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETGROUPCERTIFICATECONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETGROUPCERTIFICATECONFIGURATIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "getgroupcertificateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetGroupCertificateConfigurationResponse;
+
+class QTAWS_EXPORT GetGroupCertificateConfigurationResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetGroupCertificateConfigurationResponsePrivate(GetGroupCertificateConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetGroupCertificateConfigurationResponse)
+    Q_DISABLE_COPY(GetGroupCertificateConfigurationResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

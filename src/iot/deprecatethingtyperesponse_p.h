@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEPRECATETHINGTYPERESPONSE_P_H
 #define QTAWS_DEPRECATETHINGTYPERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "deprecatethingtyperequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeprecateThingTypeResponse;
+
+class QTAWS_EXPORT DeprecateThingTypeResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeprecateThingTypeResponsePrivate(DeprecateThingTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeprecateThingTypeResponse)
+    Q_DISABLE_COPY(DeprecateThingTypeResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

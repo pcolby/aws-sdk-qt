@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEBUNDLETASKSRESPONSE_P_H
 #define QTAWS_DESCRIBEBUNDLETASKSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describebundletasksrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeBundleTasksResponse;
+
+class QTAWS_EXPORT DescribeBundleTasksResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeBundleTasksResponsePrivate(DescribeBundleTasksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBundleTasksResponse)
+    Q_DISABLE_COPY(DescribeBundleTasksResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

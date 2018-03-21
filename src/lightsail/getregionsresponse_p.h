@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETREGIONSRESPONSE_P_H
 #define QTAWS_GETREGIONSRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getregionsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetRegionsResponse;
+
+class QTAWS_EXPORT GetRegionsResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRegionsResponsePrivate(GetRegionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRegionsResponse)
+    Q_DISABLE_COPY(GetRegionsResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

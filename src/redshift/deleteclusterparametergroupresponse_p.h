@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECLUSTERPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_DELETECLUSTERPARAMETERGROUPRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "deleteclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteClusterParameterGroupResponse;
+
+class QTAWS_EXPORT DeleteClusterParameterGroupResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteClusterParameterGroupResponsePrivate(DeleteClusterParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterParameterGroupResponse)
+    Q_DISABLE_COPY(DeleteClusterParameterGroupResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

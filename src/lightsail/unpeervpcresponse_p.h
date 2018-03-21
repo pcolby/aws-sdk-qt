@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNPEERVPCRESPONSE_P_H
 #define QTAWS_UNPEERVPCRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "unpeervpcrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class UnpeerVpcResponse;
+
+class QTAWS_EXPORT UnpeerVpcResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UnpeerVpcResponsePrivate(UnpeerVpcResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UnpeerVpcResponse)
+    Q_DISABLE_COPY(UnpeerVpcResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

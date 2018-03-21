@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVOLUMERESPONSE_P_H
 #define QTAWS_DELETEVOLUMERESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletevolumerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVolumeResponse;
+
+class QTAWS_EXPORT DeleteVolumeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVolumeResponsePrivate(DeleteVolumeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVolumeResponse)
+    Q_DISABLE_COPY(DeleteVolumeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

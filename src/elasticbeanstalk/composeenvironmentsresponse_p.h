@@ -20,4 +20,31 @@
 #ifndef QTAWS_COMPOSEENVIRONMENTSRESPONSE_P_H
 #define QTAWS_COMPOSEENVIRONMENTSRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "composeenvironmentsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ComposeEnvironmentsResponse;
+
+class QTAWS_EXPORT ComposeEnvironmentsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ComposeEnvironmentsResponsePrivate(ComposeEnvironmentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ComposeEnvironmentsResponse)
+    Q_DISABLE_COPY(ComposeEnvironmentsResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

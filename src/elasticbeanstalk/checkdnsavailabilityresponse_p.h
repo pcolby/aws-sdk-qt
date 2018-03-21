@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHECKDNSAVAILABILITYRESPONSE_P_H
 #define QTAWS_CHECKDNSAVAILABILITYRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "checkdnsavailabilityrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CheckDNSAvailabilityResponse;
+
+class QTAWS_EXPORT CheckDNSAvailabilityResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CheckDNSAvailabilityResponsePrivate(CheckDNSAvailabilityResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CheckDNSAvailabilityResponse)
+    Q_DISABLE_COPY(CheckDNSAvailabilityResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

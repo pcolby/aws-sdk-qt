@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEFUNCTIONRESPONSE_P_H
 #define QTAWS_DELETEFUNCTIONRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "deletefunctionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class DeleteFunctionResponse;
+
+class QTAWS_EXPORT DeleteFunctionResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteFunctionResponsePrivate(DeleteFunctionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFunctionResponse)
+    Q_DISABLE_COPY(DeleteFunctionResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

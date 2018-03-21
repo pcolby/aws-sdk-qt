@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATENETWORKACLENTRYRESPONSE_P_H
 #define QTAWS_CREATENETWORKACLENTRYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createnetworkaclentryrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateNetworkAclEntryResponse;
+
+class QTAWS_EXPORT CreateNetworkAclEntryResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateNetworkAclEntryResponsePrivate(CreateNetworkAclEntryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNetworkAclEntryResponse)
+    Q_DISABLE_COPY(CreateNetworkAclEntryResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

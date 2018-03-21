@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLEVGWROUTEPROPAGATIONRESPONSE_P_H
 #define QTAWS_ENABLEVGWROUTEPROPAGATIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "enablevgwroutepropagationrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class EnableVgwRoutePropagationResponse;
+
+class QTAWS_EXPORT EnableVgwRoutePropagationResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableVgwRoutePropagationResponsePrivate(EnableVgwRoutePropagationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableVgwRoutePropagationResponse)
+    Q_DISABLE_COPY(EnableVgwRoutePropagationResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

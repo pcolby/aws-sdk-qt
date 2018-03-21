@@ -20,4 +20,31 @@
 #ifndef QTAWS_INCREASESTREAMRETENTIONPERIODRESPONSE_P_H
 #define QTAWS_INCREASESTREAMRETENTIONPERIODRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "increasestreamretentionperiodrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class IncreaseStreamRetentionPeriodResponse;
+
+class QTAWS_EXPORT IncreaseStreamRetentionPeriodResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    IncreaseStreamRetentionPeriodResponsePrivate(IncreaseStreamRetentionPeriodResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(IncreaseStreamRetentionPeriodResponse)
+    Q_DISABLE_COPY(IncreaseStreamRetentionPeriodResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

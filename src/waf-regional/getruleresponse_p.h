@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRULERESPONSE_P_H
 #define QTAWS_GETRULERESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "getrulerequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetRuleResponse;
+
+class QTAWS_EXPORT GetRuleResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRuleResponsePrivate(GetRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRuleResponse)
+    Q_DISABLE_COPY(GetRuleResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

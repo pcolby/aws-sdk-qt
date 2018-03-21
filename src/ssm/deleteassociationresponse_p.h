@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEASSOCIATIONRESPONSE_P_H
 #define QTAWS_DELETEASSOCIATIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "deleteassociationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteAssociationResponse;
+
+class QTAWS_EXPORT DeleteAssociationResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAssociationResponsePrivate(DeleteAssociationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAssociationResponse)
+    Q_DISABLE_COPY(DeleteAssociationResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

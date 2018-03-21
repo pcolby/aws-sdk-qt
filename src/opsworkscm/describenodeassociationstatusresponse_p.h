@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBENODEASSOCIATIONSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBENODEASSOCIATIONSTATUSRESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "describenodeassociationstatusrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeNodeAssociationStatusResponse;
+
+class QTAWS_EXPORT DescribeNodeAssociationStatusResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeNodeAssociationStatusResponsePrivate(DescribeNodeAssociationStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNodeAssociationStatusResponse)
+    Q_DISABLE_COPY(DescribeNodeAssociationStatusResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

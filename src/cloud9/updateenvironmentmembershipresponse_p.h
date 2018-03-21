@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEENVIRONMENTMEMBERSHIPRESPONSE_P_H
 #define QTAWS_UPDATEENVIRONMENTMEMBERSHIPRESPONSE_P_H
 
+#include "cloud9response.h"
+#include "updateenvironmentmembershiprequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class UpdateEnvironmentMembershipResponse;
+
+class QTAWS_EXPORT UpdateEnvironmentMembershipResponsePrivate : public Cloud9ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateEnvironmentMembershipResponsePrivate(UpdateEnvironmentMembershipResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEnvironmentMembershipResponse)
+    Q_DISABLE_COPY(UpdateEnvironmentMembershipResponsePrivate)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

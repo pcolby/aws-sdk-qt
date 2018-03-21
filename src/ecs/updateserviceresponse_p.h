@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESERVICERESPONSE_P_H
 #define QTAWS_UPDATESERVICERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "updateservicerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class UpdateServiceResponse;
+
+class QTAWS_EXPORT UpdateServiceResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateServiceResponsePrivate(UpdateServiceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServiceResponse)
+    Q_DISABLE_COPY(UpdateServiceResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLEMETRICSCOLLECTIONRESPONSE_P_H
 #define QTAWS_DISABLEMETRICSCOLLECTIONRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "disablemetricscollectionrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DisableMetricsCollectionResponse;
+
+class QTAWS_EXPORT DisableMetricsCollectionResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableMetricsCollectionResponsePrivate(DisableMetricsCollectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableMetricsCollectionResponse)
+    Q_DISABLE_COPY(DisableMetricsCollectionResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

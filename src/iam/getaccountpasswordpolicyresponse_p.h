@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACCOUNTPASSWORDPOLICYRESPONSE_P_H
 #define QTAWS_GETACCOUNTPASSWORDPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "getaccountpasswordpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetAccountPasswordPolicyResponse;
+
+class QTAWS_EXPORT GetAccountPasswordPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAccountPasswordPolicyResponsePrivate(GetAccountPasswordPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountPasswordPolicyResponse)
+    Q_DISABLE_COPY(GetAccountPasswordPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

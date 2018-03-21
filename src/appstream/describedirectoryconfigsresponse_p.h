@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDIRECTORYCONFIGSRESPONSE_P_H
 #define QTAWS_DESCRIBEDIRECTORYCONFIGSRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "describedirectoryconfigsrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeDirectoryConfigsResponse;
+
+class QTAWS_EXPORT DescribeDirectoryConfigsResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDirectoryConfigsResponsePrivate(DescribeDirectoryConfigsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDirectoryConfigsResponse)
+    Q_DISABLE_COPY(DescribeDirectoryConfigsResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

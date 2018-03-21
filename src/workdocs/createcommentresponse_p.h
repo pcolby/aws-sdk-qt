@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECOMMENTRESPONSE_P_H
 #define QTAWS_CREATECOMMENTRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "createcommentrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateCommentResponse;
+
+class QTAWS_EXPORT CreateCommentResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCommentResponsePrivate(CreateCommentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCommentResponse)
+    Q_DISABLE_COPY(CreateCommentResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

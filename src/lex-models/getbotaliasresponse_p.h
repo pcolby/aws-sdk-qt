@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBOTALIASRESPONSE_P_H
 #define QTAWS_GETBOTALIASRESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "getbotaliasrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBotAliasResponse;
+
+class QTAWS_EXPORT GetBotAliasResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBotAliasResponsePrivate(GetBotAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBotAliasResponse)
+    Q_DISABLE_COPY(GetBotAliasResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

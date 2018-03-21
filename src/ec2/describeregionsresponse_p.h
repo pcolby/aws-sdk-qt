@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEREGIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEREGIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeregionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeRegionsResponse;
+
+class QTAWS_EXPORT DescribeRegionsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRegionsResponsePrivate(DescribeRegionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRegionsResponse)
+    Q_DISABLE_COPY(DescribeRegionsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETOFFERINGSTATUSRESPONSE_P_H
 #define QTAWS_GETOFFERINGSTATUSRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "getofferingstatusrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetOfferingStatusResponse;
+
+class QTAWS_EXPORT GetOfferingStatusResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetOfferingStatusResponsePrivate(GetOfferingStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetOfferingStatusResponse)
+    Q_DISABLE_COPY(GetOfferingStatusResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

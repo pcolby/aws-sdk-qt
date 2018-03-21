@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECLOUDFORMATIONCHANGESETRESPONSE_P_H
 #define QTAWS_CREATECLOUDFORMATIONCHANGESETRESPONSE_P_H
 
+#include "serverlessapplicationrepositoryresponse.h"
+#include "createcloudformationchangesetrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class CreateCloudFormationChangeSetResponse;
+
+class QTAWS_EXPORT CreateCloudFormationChangeSetResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCloudFormationChangeSetResponsePrivate(CreateCloudFormationChangeSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCloudFormationChangeSetResponse)
+    Q_DISABLE_COPY(CreateCloudFormationChangeSetResponsePrivate)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

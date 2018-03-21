@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDIMENSIONVALUESRESPONSE_P_H
 #define QTAWS_GETDIMENSIONVALUESRESPONSE_P_H
 
+#include "costexplorerresponse.h"
+#include "getdimensionvaluesrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetDimensionValuesResponse;
+
+class QTAWS_EXPORT GetDimensionValuesResponsePrivate : public CostExplorerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDimensionValuesResponsePrivate(GetDimensionValuesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDimensionValuesResponse)
+    Q_DISABLE_COPY(GetDimensionValuesResponsePrivate)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

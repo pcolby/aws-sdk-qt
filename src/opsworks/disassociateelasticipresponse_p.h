@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEELASTICIPRESPONSE_P_H
 #define QTAWS_DISASSOCIATEELASTICIPRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "disassociateelasticiprequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DisassociateElasticIpResponse;
+
+class QTAWS_EXPORT DisassociateElasticIpResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateElasticIpResponsePrivate(DisassociateElasticIpResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateElasticIpResponse)
+    Q_DISABLE_COPY(DisassociateElasticIpResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

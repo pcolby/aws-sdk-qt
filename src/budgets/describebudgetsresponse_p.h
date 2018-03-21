@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEBUDGETSRESPONSE_P_H
 #define QTAWS_DESCRIBEBUDGETSRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "describebudgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DescribeBudgetsResponse;
+
+class QTAWS_EXPORT DescribeBudgetsResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeBudgetsResponsePrivate(DescribeBudgetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBudgetsResponse)
+    Q_DISABLE_COPY(DescribeBudgetsResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

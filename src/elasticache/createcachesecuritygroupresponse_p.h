@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECACHESECURITYGROUPRESPONSE_P_H
 #define QTAWS_CREATECACHESECURITYGROUPRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "createcachesecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateCacheSecurityGroupResponse;
+
+class QTAWS_EXPORT CreateCacheSecurityGroupResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCacheSecurityGroupResponsePrivate(CreateCacheSecurityGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCacheSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateCacheSecurityGroupResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETIMETOLIVERESPONSE_P_H
 #define QTAWS_DESCRIBETIMETOLIVERESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "describetimetoliverequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeTimeToLiveResponse;
+
+class QTAWS_EXPORT DescribeTimeToLiveResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTimeToLiveResponsePrivate(DescribeTimeToLiveResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTimeToLiveResponse)
+    Q_DISABLE_COPY(DescribeTimeToLiveResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

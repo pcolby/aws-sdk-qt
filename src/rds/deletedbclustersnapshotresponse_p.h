@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDBCLUSTERSNAPSHOTRESPONSE_P_H
 #define QTAWS_DELETEDBCLUSTERSNAPSHOTRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "deletedbclustersnapshotrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteDBClusterSnapshotResponse;
+
+class QTAWS_EXPORT DeleteDBClusterSnapshotResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDBClusterSnapshotResponsePrivate(DeleteDBClusterSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDBClusterSnapshotResponse)
+    Q_DISABLE_COPY(DeleteDBClusterSnapshotResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

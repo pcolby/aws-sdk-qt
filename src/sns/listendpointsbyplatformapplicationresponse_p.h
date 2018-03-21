@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONRESPONSE_P_H
 #define QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONRESPONSE_P_H
 
+#include "snsresponse.h"
+#include "listendpointsbyplatformapplicationrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListEndpointsByPlatformApplicationResponse;
+
+class QTAWS_EXPORT ListEndpointsByPlatformApplicationResponsePrivate : public SNSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListEndpointsByPlatformApplicationResponsePrivate(ListEndpointsByPlatformApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListEndpointsByPlatformApplicationResponse)
+    Q_DISABLE_COPY(ListEndpointsByPlatformApplicationResponsePrivate)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNASSIGNINSTANCERESPONSE_P_H
 #define QTAWS_UNASSIGNINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "unassigninstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UnassignInstanceResponse;
+
+class QTAWS_EXPORT UnassignInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UnassignInstanceResponsePrivate(UnassignInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UnassignInstanceResponse)
+    Q_DISABLE_COPY(UnassignInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

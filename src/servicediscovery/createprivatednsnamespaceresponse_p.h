@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPRIVATEDNSNAMESPACERESPONSE_P_H
 #define QTAWS_CREATEPRIVATEDNSNAMESPACERESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "createprivatednsnamespacerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class CreatePrivateDnsNamespaceResponse;
+
+class QTAWS_EXPORT CreatePrivateDnsNamespaceResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePrivateDnsNamespaceResponsePrivate(CreatePrivateDnsNamespaceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePrivateDnsNamespaceResponse)
+    Q_DISABLE_COPY(CreatePrivateDnsNamespaceResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

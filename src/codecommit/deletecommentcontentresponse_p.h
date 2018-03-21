@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECOMMENTCONTENTRESPONSE_P_H
 #define QTAWS_DELETECOMMENTCONTENTRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "deletecommentcontentrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class DeleteCommentContentResponse;
+
+class QTAWS_EXPORT DeleteCommentContentResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteCommentContentResponsePrivate(DeleteCommentContentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCommentContentResponse)
+    Q_DISABLE_COPY(DeleteCommentContentResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

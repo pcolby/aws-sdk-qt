@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETJOBMANIFESTRESPONSE_P_H
 #define QTAWS_GETJOBMANIFESTRESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "getjobmanifestrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetJobManifestResponse;
+
+class QTAWS_EXPORT GetJobManifestResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetJobManifestResponsePrivate(GetJobManifestResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobManifestResponse)
+    Q_DISABLE_COPY(GetJobManifestResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEHOSTEDZONECOMMENTRESPONSE_P_H
 #define QTAWS_UPDATEHOSTEDZONECOMMENTRESPONSE_P_H
 
+#include "route53response.h"
+#include "updatehostedzonecommentrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class UpdateHostedZoneCommentResponse;
+
+class QTAWS_EXPORT UpdateHostedZoneCommentResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateHostedZoneCommentResponsePrivate(UpdateHostedZoneCommentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateHostedZoneCommentResponse)
+    Q_DISABLE_COPY(UpdateHostedZoneCommentResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEHOSTEDZONERESPONSE_P_H
 #define QTAWS_DELETEHOSTEDZONERESPONSE_P_H
 
+#include "route53response.h"
+#include "deletehostedzonerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteHostedZoneResponse;
+
+class QTAWS_EXPORT DeleteHostedZoneResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteHostedZoneResponsePrivate(DeleteHostedZoneResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHostedZoneResponse)
+    Q_DISABLE_COPY(DeleteHostedZoneResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

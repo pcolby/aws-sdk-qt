@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATEADDRESSRESPONSE_P_H
 #define QTAWS_ASSOCIATEADDRESSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "associateaddressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateAddressResponse;
+
+class QTAWS_EXPORT AssociateAddressResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateAddressResponsePrivate(AssociateAddressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateAddressResponse)
+    Q_DISABLE_COPY(AssociateAddressResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

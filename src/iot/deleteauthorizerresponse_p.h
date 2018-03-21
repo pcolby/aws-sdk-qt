@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAUTHORIZERRESPONSE_P_H
 #define QTAWS_DELETEAUTHORIZERRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "deleteauthorizerrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteAuthorizerResponse;
+
+class QTAWS_EXPORT DeleteAuthorizerResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAuthorizerResponsePrivate(DeleteAuthorizerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAuthorizerResponse)
+    Q_DISABLE_COPY(DeleteAuthorizerResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

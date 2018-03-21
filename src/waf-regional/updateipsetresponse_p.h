@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEIPSETRESPONSE_P_H
 #define QTAWS_UPDATEIPSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "updateipsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateIPSetResponse;
+
+class QTAWS_EXPORT UpdateIPSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateIPSetResponsePrivate(UpdateIPSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateIPSetResponse)
+    Q_DISABLE_COPY(UpdateIPSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEFUNCTIONCODERESPONSE_P_H
 #define QTAWS_UPDATEFUNCTIONCODERESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "updatefunctioncoderequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateFunctionCodeResponse;
+
+class QTAWS_EXPORT UpdateFunctionCodeResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateFunctionCodeResponsePrivate(UpdateFunctionCodeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFunctionCodeResponse)
+    Q_DISABLE_COPY(UpdateFunctionCodeResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

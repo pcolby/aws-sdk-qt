@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTKEYSRESPONSE_P_H
 #define QTAWS_LISTKEYSRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "listkeysrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListKeysResponse;
+
+class QTAWS_EXPORT ListKeysResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListKeysResponsePrivate(ListKeysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListKeysResponse)
+    Q_DISABLE_COPY(ListKeysResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

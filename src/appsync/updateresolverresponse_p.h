@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATERESOLVERRESPONSE_P_H
 #define QTAWS_UPDATERESOLVERRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "updateresolverrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateResolverResponse;
+
+class QTAWS_EXPORT UpdateResolverResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateResolverResponsePrivate(UpdateResolverResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateResolverResponse)
+    Q_DISABLE_COPY(UpdateResolverResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

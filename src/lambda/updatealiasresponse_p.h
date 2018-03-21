@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEALIASRESPONSE_P_H
 #define QTAWS_UPDATEALIASRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "updatealiasrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateAliasResponse;
+
+class QTAWS_EXPORT UpdateAliasResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAliasResponsePrivate(UpdateAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAliasResponse)
+    Q_DISABLE_COPY(UpdateAliasResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

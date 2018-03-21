@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETASSESSMENTREPORTRESPONSE_P_H
 #define QTAWS_GETASSESSMENTREPORTRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "getassessmentreportrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class GetAssessmentReportResponse;
+
+class QTAWS_EXPORT GetAssessmentReportResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAssessmentReportResponsePrivate(GetAssessmentReportResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAssessmentReportResponse)
+    Q_DISABLE_COPY(GetAssessmentReportResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

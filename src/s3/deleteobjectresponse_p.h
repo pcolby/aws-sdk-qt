@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEOBJECTRESPONSE_P_H
 #define QTAWS_DELETEOBJECTRESPONSE_P_H
 
+#include "s3response.h"
+#include "deleteobjectrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteObjectResponse;
+
+class QTAWS_EXPORT DeleteObjectResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteObjectResponsePrivate(DeleteObjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteObjectResponse)
+    Q_DISABLE_COPY(DeleteObjectResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

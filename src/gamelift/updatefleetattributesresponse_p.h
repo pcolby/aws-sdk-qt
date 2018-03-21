@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEFLEETATTRIBUTESRESPONSE_P_H
 #define QTAWS_UPDATEFLEETATTRIBUTESRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "updatefleetattributesrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateFleetAttributesResponse;
+
+class QTAWS_EXPORT UpdateFleetAttributesResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateFleetAttributesResponsePrivate(UpdateFleetAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFleetAttributesResponse)
+    Q_DISABLE_COPY(UpdateFleetAttributesResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

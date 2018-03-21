@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETENAMESPACERESPONSE_P_H
 #define QTAWS_DELETENAMESPACERESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "deletenamespacerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class DeleteNamespaceResponse;
+
+class QTAWS_EXPORT DeleteNamespaceResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteNamespaceResponsePrivate(DeleteNamespaceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNamespaceResponse)
+    Q_DISABLE_COPY(DeleteNamespaceResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

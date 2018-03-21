@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCLUSTERJOBSRESPONSE_P_H
 #define QTAWS_LISTCLUSTERJOBSRESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "listclusterjobsrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class ListClusterJobsResponse;
+
+class QTAWS_EXPORT ListClusterJobsResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListClusterJobsResponsePrivate(ListClusterJobsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListClusterJobsResponse)
+    Q_DISABLE_COPY(ListClusterJobsResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

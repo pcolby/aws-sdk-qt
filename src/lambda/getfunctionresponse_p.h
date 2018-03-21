@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETFUNCTIONRESPONSE_P_H
 #define QTAWS_GETFUNCTIONRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "getfunctionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetFunctionResponse;
+
+class QTAWS_EXPORT GetFunctionResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetFunctionResponsePrivate(GetFunctionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetFunctionResponse)
+    Q_DISABLE_COPY(GetFunctionResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

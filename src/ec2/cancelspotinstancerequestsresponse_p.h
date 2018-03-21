@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELSPOTINSTANCEREQUESTSRESPONSE_P_H
 #define QTAWS_CANCELSPOTINSTANCEREQUESTSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "cancelspotinstancerequestsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelSpotInstanceRequestsResponse;
+
+class QTAWS_EXPORT CancelSpotInstanceRequestsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelSpotInstanceRequestsResponsePrivate(CancelSpotInstanceRequestsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelSpotInstanceRequestsResponse)
+    Q_DISABLE_COPY(CancelSpotInstanceRequestsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

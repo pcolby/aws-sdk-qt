@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLERESPONSE_P_H
 #define QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLERESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updateapplicationresourcelifecyclerequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateApplicationResourceLifecycleResponse;
+
+class QTAWS_EXPORT UpdateApplicationResourceLifecycleResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateApplicationResourceLifecycleResponsePrivate(UpdateApplicationResourceLifecycleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApplicationResourceLifecycleResponse)
+    Q_DISABLE_COPY(UpdateApplicationResourceLifecycleResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

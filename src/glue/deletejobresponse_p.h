@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEJOBRESPONSE_P_H
 #define QTAWS_DELETEJOBRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "deletejobrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteJobResponse;
+
+class QTAWS_EXPORT DeleteJobResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteJobResponsePrivate(DeleteJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteJobResponse)
+    Q_DISABLE_COPY(DeleteJobResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

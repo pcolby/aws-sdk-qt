@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTITEMRESPONSE_P_H
 #define QTAWS_PUTITEMRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "putitemrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class PutItemResponse;
+
+class QTAWS_EXPORT PutItemResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutItemResponsePrivate(PutItemResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutItemResponse)
+    Q_DISABLE_COPY(PutItemResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSDKTYPERESPONSE_P_H
 #define QTAWS_GETSDKTYPERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getsdktyperequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetSdkTypeResponse;
+
+class QTAWS_EXPORT GetSdkTypeResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSdkTypeResponsePrivate(GetSdkTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSdkTypeResponse)
+    Q_DISABLE_COPY(GetSdkTypeResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

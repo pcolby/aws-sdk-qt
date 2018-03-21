@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETLOADBALANCERPOLICIESOFLISTENERRESPONSE_P_H
 #define QTAWS_SETLOADBALANCERPOLICIESOFLISTENERRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "setloadbalancerpoliciesoflistenerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class SetLoadBalancerPoliciesOfListenerResponse;
+
+class QTAWS_EXPORT SetLoadBalancerPoliciesOfListenerResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetLoadBalancerPoliciesOfListenerResponsePrivate(SetLoadBalancerPoliciesOfListenerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetLoadBalancerPoliciesOfListenerResponse)
+    Q_DISABLE_COPY(SetLoadBalancerPoliciesOfListenerResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

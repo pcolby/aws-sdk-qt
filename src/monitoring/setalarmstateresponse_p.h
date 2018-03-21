@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETALARMSTATERESPONSE_P_H
 #define QTAWS_SETALARMSTATERESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "setalarmstaterequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class SetAlarmStateResponse;
+
+class QTAWS_EXPORT SetAlarmStateResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetAlarmStateResponsePrivate(SetAlarmStateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetAlarmStateResponse)
+    Q_DISABLE_COPY(SetAlarmStateResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

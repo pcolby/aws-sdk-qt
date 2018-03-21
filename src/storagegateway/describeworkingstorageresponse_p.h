@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEWORKINGSTORAGERESPONSE_P_H
 #define QTAWS_DESCRIBEWORKINGSTORAGERESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "describeworkingstoragerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeWorkingStorageResponse;
+
+class QTAWS_EXPORT DescribeWorkingStorageResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeWorkingStorageResponsePrivate(DescribeWorkingStorageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkingStorageResponse)
+    Q_DISABLE_COPY(DescribeWorkingStorageResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

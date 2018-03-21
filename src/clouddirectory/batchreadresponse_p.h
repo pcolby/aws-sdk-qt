@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHREADRESPONSE_P_H
 #define QTAWS_BATCHREADRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "batchreadrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class BatchReadResponse;
+
+class QTAWS_EXPORT BatchReadResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchReadResponsePrivate(BatchReadResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchReadResponse)
+    Q_DISABLE_COPY(BatchReadResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

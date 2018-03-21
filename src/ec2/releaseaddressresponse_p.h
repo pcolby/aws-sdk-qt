@@ -20,4 +20,31 @@
 #ifndef QTAWS_RELEASEADDRESSRESPONSE_P_H
 #define QTAWS_RELEASEADDRESSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "releaseaddressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReleaseAddressResponse;
+
+class QTAWS_EXPORT ReleaseAddressResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ReleaseAddressResponsePrivate(ReleaseAddressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ReleaseAddressResponse)
+    Q_DISABLE_COPY(ReleaseAddressResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

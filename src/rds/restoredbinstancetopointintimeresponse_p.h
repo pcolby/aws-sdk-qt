@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTOREDBINSTANCETOPOINTINTIMERESPONSE_P_H
 #define QTAWS_RESTOREDBINSTANCETOPOINTINTIMERESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "restoredbinstancetopointintimerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBInstanceToPointInTimeResponse;
+
+class QTAWS_EXPORT RestoreDBInstanceToPointInTimeResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestoreDBInstanceToPointInTimeResponsePrivate(RestoreDBInstanceToPointInTimeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreDBInstanceToPointInTimeResponse)
+    Q_DISABLE_COPY(RestoreDBInstanceToPointInTimeResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

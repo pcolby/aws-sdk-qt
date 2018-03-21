@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEADDRESSRESPONSE_P_H
 #define QTAWS_DISASSOCIATEADDRESSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "disassociateaddressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateAddressResponse;
+
+class QTAWS_EXPORT DisassociateAddressResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateAddressResponsePrivate(DisassociateAddressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateAddressResponse)
+    Q_DISABLE_COPY(DisassociateAddressResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

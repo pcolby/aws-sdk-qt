@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESAMLPROVIDERRESPONSE_P_H
 #define QTAWS_DELETESAMLPROVIDERRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deletesamlproviderrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteSAMLProviderResponse;
+
+class QTAWS_EXPORT DeleteSAMLProviderResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSAMLProviderResponsePrivate(DeleteSAMLProviderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSAMLProviderResponse)
+    Q_DISABLE_COPY(DeleteSAMLProviderResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

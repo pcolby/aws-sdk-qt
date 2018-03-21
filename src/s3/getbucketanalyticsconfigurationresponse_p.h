@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETANALYTICSCONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETBUCKETANALYTICSCONFIGURATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketanalyticsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketAnalyticsConfigurationResponse;
+
+class QTAWS_EXPORT GetBucketAnalyticsConfigurationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketAnalyticsConfigurationResponsePrivate(GetBucketAnalyticsConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketAnalyticsConfigurationResponse)
+    Q_DISABLE_COPY(GetBucketAnalyticsConfigurationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

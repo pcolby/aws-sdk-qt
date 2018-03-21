@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDOMAINSUGGESTIONSRESPONSE_P_H
 #define QTAWS_GETDOMAINSUGGESTIONSRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "getdomainsuggestionsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class GetDomainSuggestionsResponse;
+
+class QTAWS_EXPORT GetDomainSuggestionsResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDomainSuggestionsResponsePrivate(GetDomainSuggestionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDomainSuggestionsResponse)
+    Q_DISABLE_COPY(GetDomainSuggestionsResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPROFILERESPONSE_P_H
 #define QTAWS_GETPROFILERESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "getprofilerequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetProfileResponse;
+
+class QTAWS_EXPORT GetProfileResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetProfileResponsePrivate(GetProfileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetProfileResponse)
+    Q_DISABLE_COPY(GetProfileResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

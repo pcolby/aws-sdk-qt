@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPPLICATIONOUTPUTRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONOUTPUTRESPONSE_P_H
 
+#include "kinesisanalyticsresponse.h"
+#include "deleteapplicationoutputrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DeleteApplicationOutputResponse;
+
+class QTAWS_EXPORT DeleteApplicationOutputResponsePrivate : public KinesisAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApplicationOutputResponsePrivate(DeleteApplicationOutputResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationOutputResponse)
+    Q_DISABLE_COPY(DeleteApplicationOutputResponsePrivate)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

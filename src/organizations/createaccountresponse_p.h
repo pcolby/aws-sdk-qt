@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEACCOUNTRESPONSE_P_H
 #define QTAWS_CREATEACCOUNTRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "createaccountrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class CreateAccountResponse;
+
+class QTAWS_EXPORT CreateAccountResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateAccountResponsePrivate(CreateAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAccountResponse)
+    Q_DISABLE_COPY(CreateAccountResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

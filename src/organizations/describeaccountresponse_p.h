@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEACCOUNTRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "describeaccountrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeAccountResponse;
+
+class QTAWS_EXPORT DescribeAccountResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAccountResponsePrivate(DescribeAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountResponse)
+    Q_DISABLE_COPY(DescribeAccountResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

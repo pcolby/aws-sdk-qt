@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEASSESSMENTTARGETRESPONSE_P_H
 #define QTAWS_UPDATEASSESSMENTTARGETRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "updateassessmenttargetrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class UpdateAssessmentTargetResponse;
+
+class QTAWS_EXPORT UpdateAssessmentTargetResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAssessmentTargetResponsePrivate(UpdateAssessmentTargetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAssessmentTargetResponse)
+    Q_DISABLE_COPY(UpdateAssessmentTargetResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

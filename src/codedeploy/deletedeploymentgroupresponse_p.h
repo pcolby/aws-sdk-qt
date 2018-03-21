@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDEPLOYMENTGROUPRESPONSE_P_H
 #define QTAWS_DELETEDEPLOYMENTGROUPRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "deletedeploymentgrouprequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeleteDeploymentGroupResponse;
+
+class QTAWS_EXPORT DeleteDeploymentGroupResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDeploymentGroupResponsePrivate(DeleteDeploymentGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDeploymentGroupResponse)
+    Q_DISABLE_COPY(DeleteDeploymentGroupResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

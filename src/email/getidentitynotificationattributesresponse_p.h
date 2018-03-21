@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "getidentitynotificationattributesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityNotificationAttributesResponse;
+
+class QTAWS_EXPORT GetIdentityNotificationAttributesResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIdentityNotificationAttributesResponsePrivate(GetIdentityNotificationAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityNotificationAttributesResponse)
+    Q_DISABLE_COPY(GetIdentityNotificationAttributesResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

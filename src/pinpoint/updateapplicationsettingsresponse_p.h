@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEAPPLICATIONSETTINGSRESPONSE_P_H
 #define QTAWS_UPDATEAPPLICATIONSETTINGSRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "updateapplicationsettingsrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateApplicationSettingsResponse;
+
+class QTAWS_EXPORT UpdateApplicationSettingsResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateApplicationSettingsResponsePrivate(UpdateApplicationSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApplicationSettingsResponse)
+    Q_DISABLE_COPY(UpdateApplicationSettingsResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

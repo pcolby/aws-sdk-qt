@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_P_H
 #define QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "updatehitreviewstatusrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateHITReviewStatusResponse;
+
+class QTAWS_EXPORT UpdateHITReviewStatusResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateHITReviewStatusResponsePrivate(UpdateHITReviewStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateHITReviewStatusResponse)
+    Q_DISABLE_COPY(UpdateHITReviewStatusResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

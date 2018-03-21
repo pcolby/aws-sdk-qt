@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHCLASSICLINKVPCRESPONSE_P_H
 #define QTAWS_DETACHCLASSICLINKVPCRESPONSE_P_H
 
+#include "ec2response.h"
+#include "detachclassiclinkvpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DetachClassicLinkVpcResponse;
+
+class QTAWS_EXPORT DetachClassicLinkVpcResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachClassicLinkVpcResponsePrivate(DetachClassicLinkVpcResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachClassicLinkVpcResponse)
+    Q_DISABLE_COPY(DetachClassicLinkVpcResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

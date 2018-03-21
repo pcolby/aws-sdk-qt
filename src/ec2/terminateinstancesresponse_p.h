@@ -20,4 +20,31 @@
 #ifndef QTAWS_TERMINATEINSTANCESRESPONSE_P_H
 #define QTAWS_TERMINATEINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "terminateinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class TerminateInstancesResponse;
+
+class QTAWS_EXPORT TerminateInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TerminateInstancesResponsePrivate(TerminateInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateInstancesResponse)
+    Q_DISABLE_COPY(TerminateInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

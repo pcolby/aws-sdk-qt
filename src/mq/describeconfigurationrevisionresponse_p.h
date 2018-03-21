@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONREVISIONRESPONSE_P_H
 #define QTAWS_DESCRIBECONFIGURATIONREVISIONRESPONSE_P_H
 
+#include "mqresponse.h"
+#include "describeconfigurationrevisionrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeConfigurationRevisionResponse;
+
+class QTAWS_EXPORT DescribeConfigurationRevisionResponsePrivate : public MQResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeConfigurationRevisionResponsePrivate(DescribeConfigurationRevisionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigurationRevisionResponse)
+    Q_DISABLE_COPY(DescribeConfigurationRevisionResponsePrivate)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

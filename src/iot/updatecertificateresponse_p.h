@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECERTIFICATERESPONSE_P_H
 #define QTAWS_UPDATECERTIFICATERESPONSE_P_H
 
+#include "iotresponse.h"
+#include "updatecertificaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateCertificateResponse;
+
+class QTAWS_EXPORT UpdateCertificateResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateCertificateResponsePrivate(UpdateCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateCertificateResponse)
+    Q_DISABLE_COPY(UpdateCertificateResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

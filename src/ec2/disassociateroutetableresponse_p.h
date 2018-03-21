@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEROUTETABLERESPONSE_P_H
 #define QTAWS_DISASSOCIATEROUTETABLERESPONSE_P_H
 
+#include "ec2response.h"
+#include "disassociateroutetablerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateRouteTableResponse;
+
+class QTAWS_EXPORT DisassociateRouteTableResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateRouteTableResponsePrivate(DisassociateRouteTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateRouteTableResponse)
+    Q_DISABLE_COPY(DisassociateRouteTableResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

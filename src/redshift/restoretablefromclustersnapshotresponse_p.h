@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESTORETABLEFROMCLUSTERSNAPSHOTRESPONSE_P_H
 #define QTAWS_RESTORETABLEFROMCLUSTERSNAPSHOTRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "restoretablefromclustersnapshotrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RestoreTableFromClusterSnapshotResponse;
+
+class QTAWS_EXPORT RestoreTableFromClusterSnapshotResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RestoreTableFromClusterSnapshotResponsePrivate(RestoreTableFromClusterSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreTableFromClusterSnapshotResponse)
+    Q_DISABLE_COPY(RestoreTableFromClusterSnapshotResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

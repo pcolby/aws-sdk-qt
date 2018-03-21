@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class TagResourceResponse;
+
+class QTAWS_EXPORT TagResourceResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagResourceResponsePrivate(TagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceResponse)
+    Q_DISABLE_COPY(TagResourceResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

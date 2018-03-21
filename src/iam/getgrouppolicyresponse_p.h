@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETGROUPPOLICYRESPONSE_P_H
 #define QTAWS_GETGROUPPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "getgrouppolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetGroupPolicyResponse;
+
+class QTAWS_EXPORT GetGroupPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetGroupPolicyResponsePrivate(GetGroupPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetGroupPolicyResponse)
+    Q_DISABLE_COPY(GetGroupPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

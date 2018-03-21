@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTACCOUNTALIASESRESPONSE_P_H
 #define QTAWS_LISTACCOUNTALIASESRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "listaccountaliasesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAccountAliasesResponse;
+
+class QTAWS_EXPORT ListAccountAliasesResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAccountAliasesResponsePrivate(ListAccountAliasesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAccountAliasesResponse)
+    Q_DISABLE_COPY(ListAccountAliasesResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

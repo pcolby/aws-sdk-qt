@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "describeconfigruleevaluationstatusrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeConfigRuleEvaluationStatusResponse;
+
+class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeConfigRuleEvaluationStatusResponsePrivate(DescribeConfigRuleEvaluationStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigRuleEvaluationStatusResponse)
+    Q_DISABLE_COPY(DescribeConfigRuleEvaluationStatusResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

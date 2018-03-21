@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDEVENDPOINTRESPONSE_P_H
 #define QTAWS_UPDATEDEVENDPOINTRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "updatedevendpointrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateDevEndpointResponse;
+
+class QTAWS_EXPORT UpdateDevEndpointResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDevEndpointResponsePrivate(UpdateDevEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDevEndpointResponse)
+    Q_DISABLE_COPY(UpdateDevEndpointResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

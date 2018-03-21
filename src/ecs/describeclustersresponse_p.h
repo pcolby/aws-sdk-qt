@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "describeclustersrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DescribeClustersResponse;
+
+class QTAWS_EXPORT DescribeClustersResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeClustersResponsePrivate(DescribeClustersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClustersResponse)
+    Q_DISABLE_COPY(DescribeClustersResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

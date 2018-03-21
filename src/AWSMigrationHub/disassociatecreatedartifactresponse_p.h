@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATECREATEDARTIFACTRESPONSE_P_H
 #define QTAWS_DISASSOCIATECREATEDARTIFACTRESPONSE_P_H
 
+#include "migrationhubresponse.h"
+#include "disassociatecreatedartifactrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class DisassociateCreatedArtifactResponse;
+
+class QTAWS_EXPORT DisassociateCreatedArtifactResponsePrivate : public MigrationHubResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateCreatedArtifactResponsePrivate(DisassociateCreatedArtifactResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateCreatedArtifactResponse)
+    Q_DISABLE_COPY(DisassociateCreatedArtifactResponsePrivate)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

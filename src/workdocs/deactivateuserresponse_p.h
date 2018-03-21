@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEACTIVATEUSERRESPONSE_P_H
 #define QTAWS_DEACTIVATEUSERRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "deactivateuserrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeactivateUserResponse;
+
+class QTAWS_EXPORT DeactivateUserResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeactivateUserResponsePrivate(DeactivateUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeactivateUserResponse)
+    Q_DISABLE_COPY(DeactivateUserResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

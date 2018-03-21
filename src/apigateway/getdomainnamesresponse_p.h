@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDOMAINNAMESRESPONSE_P_H
 #define QTAWS_GETDOMAINNAMESRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getdomainnamesrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetDomainNamesResponse;
+
+class QTAWS_EXPORT GetDomainNamesResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDomainNamesResponsePrivate(GetDomainNamesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDomainNamesResponse)
+    Q_DISABLE_COPY(GetDomainNamesResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

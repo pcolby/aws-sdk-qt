@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTRATEBASEDRULESRESPONSE_P_H
 #define QTAWS_LISTRATEBASEDRULESRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "listratebasedrulesrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListRateBasedRulesResponse;
+
+class QTAWS_EXPORT ListRateBasedRulesResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListRateBasedRulesResponsePrivate(ListRateBasedRulesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListRateBasedRulesResponse)
+    Q_DISABLE_COPY(ListRateBasedRulesResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_MOVEADDRESSTOVPCRESPONSE_P_H
 #define QTAWS_MOVEADDRESSTOVPCRESPONSE_P_H
 
+#include "ec2response.h"
+#include "moveaddresstovpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class MoveAddressToVpcResponse;
+
+class QTAWS_EXPORT MoveAddressToVpcResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    MoveAddressToVpcResponsePrivate(MoveAddressToVpcResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(MoveAddressToVpcResponse)
+    Q_DISABLE_COPY(MoveAddressToVpcResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

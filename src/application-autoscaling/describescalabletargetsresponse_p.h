@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESCALABLETARGETSRESPONSE_P_H
 #define QTAWS_DESCRIBESCALABLETARGETSRESPONSE_P_H
 
+#include "applicationautoscalingresponse.h"
+#include "describescalabletargetsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class DescribeScalableTargetsResponse;
+
+class QTAWS_EXPORT DescribeScalableTargetsResponsePrivate : public ApplicationAutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeScalableTargetsResponsePrivate(DescribeScalableTargetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScalableTargetsResponse)
+    Q_DISABLE_COPY(DescribeScalableTargetsResponsePrivate)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

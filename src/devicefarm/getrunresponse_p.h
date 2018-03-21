@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRUNRESPONSE_P_H
 #define QTAWS_GETRUNRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "getrunrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetRunResponse;
+
+class QTAWS_EXPORT GetRunResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRunResponsePrivate(GetRunResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRunResponse)
+    Q_DISABLE_COPY(GetRunResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

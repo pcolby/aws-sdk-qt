@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESNAPSHOTRESPONSE_P_H
 #define QTAWS_DELETESNAPSHOTRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "deletesnapshotrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteSnapshotResponse;
+
+class QTAWS_EXPORT DeleteSnapshotResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSnapshotResponsePrivate(DeleteSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSnapshotResponse)
+    Q_DISABLE_COPY(DeleteSnapshotResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

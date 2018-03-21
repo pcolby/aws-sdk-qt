@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETOPERATIONSFORRESOURCERESPONSE_P_H
 #define QTAWS_GETOPERATIONSFORRESOURCERESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getoperationsforresourcerequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetOperationsForResourceResponse;
+
+class QTAWS_EXPORT GetOperationsForResourceResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetOperationsForResourceResponsePrivate(GetOperationsForResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetOperationsForResourceResponse)
+    Q_DISABLE_COPY(GetOperationsForResourceResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

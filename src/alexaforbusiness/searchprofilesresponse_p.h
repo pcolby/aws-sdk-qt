@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHPROFILESRESPONSE_P_H
 #define QTAWS_SEARCHPROFILESRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "searchprofilesrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class SearchProfilesResponse;
+
+class QTAWS_EXPORT SearchProfilesResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchProfilesResponsePrivate(SearchProfilesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchProfilesResponse)
+    Q_DISABLE_COPY(SearchProfilesResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

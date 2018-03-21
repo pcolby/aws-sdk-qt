@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONNECTIONRESPONSE_P_H
 #define QTAWS_DELETECONNECTIONRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "deleteconnectionrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteConnectionResponse;
+
+class QTAWS_EXPORT DeleteConnectionResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConnectionResponsePrivate(DeleteConnectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConnectionResponse)
+    Q_DISABLE_COPY(DeleteConnectionResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

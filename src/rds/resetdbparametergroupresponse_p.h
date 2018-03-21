@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETDBPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_RESETDBPARAMETERGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "resetdbparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ResetDBParameterGroupResponse;
+
+class QTAWS_EXPORT ResetDBParameterGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetDBParameterGroupResponsePrivate(ResetDBParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetDBParameterGroupResponse)
+    Q_DISABLE_COPY(ResetDBParameterGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

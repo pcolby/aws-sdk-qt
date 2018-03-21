@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINLISTGROUPSFORUSERRESPONSE_P_H
 #define QTAWS_ADMINLISTGROUPSFORUSERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminlistgroupsforuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminListGroupsForUserResponse;
+
+class QTAWS_EXPORT AdminListGroupsForUserResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminListGroupsForUserResponsePrivate(AdminListGroupsForUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminListGroupsForUserResponse)
+    Q_DISABLE_COPY(AdminListGroupsForUserResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

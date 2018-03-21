@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLEPOLICYTYPERESPONSE_P_H
 #define QTAWS_ENABLEPOLICYTYPERESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "enablepolicytyperequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class EnablePolicyTypeResponse;
+
+class QTAWS_EXPORT EnablePolicyTypeResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnablePolicyTypeResponsePrivate(EnablePolicyTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnablePolicyTypeResponse)
+    Q_DISABLE_COPY(EnablePolicyTypeResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTALIASESRESPONSE_P_H
 #define QTAWS_LISTALIASESRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "listaliasesrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListAliasesResponse;
+
+class QTAWS_EXPORT ListAliasesResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAliasesResponsePrivate(ListAliasesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAliasesResponse)
+    Q_DISABLE_COPY(ListAliasesResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

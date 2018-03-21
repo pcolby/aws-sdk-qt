@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNSUBSCRIBEFROMDATASETRESPONSE_P_H
 #define QTAWS_UNSUBSCRIBEFROMDATASETRESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "unsubscribefromdatasetrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class UnsubscribeFromDatasetResponse;
+
+class QTAWS_EXPORT UnsubscribeFromDatasetResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UnsubscribeFromDatasetResponsePrivate(UnsubscribeFromDatasetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UnsubscribeFromDatasetResponse)
+    Q_DISABLE_COPY(UnsubscribeFromDatasetResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

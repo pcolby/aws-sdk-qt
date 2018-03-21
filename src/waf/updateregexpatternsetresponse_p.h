@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEREGEXPATTERNSETRESPONSE_P_H
 #define QTAWS_UPDATEREGEXPATTERNSETRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "updateregexpatternsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateRegexPatternSetResponse;
+
+class QTAWS_EXPORT UpdateRegexPatternSetResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateRegexPatternSetResponsePrivate(UpdateRegexPatternSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRegexPatternSetResponse)
+    Q_DISABLE_COPY(UpdateRegexPatternSetResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

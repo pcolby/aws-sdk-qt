@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETATTRIBUTEVALUESRESPONSE_P_H
 #define QTAWS_GETATTRIBUTEVALUESRESPONSE_P_H
 
+#include "pricingresponse.h"
+#include "getattributevaluesrequest.h"
+
+namespace AWS {
+
+namespace Pricing {
+
+class GetAttributeValuesResponse;
+
+class QTAWS_EXPORT GetAttributeValuesResponsePrivate : public PricingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAttributeValuesResponsePrivate(GetAttributeValuesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAttributeValuesResponse)
+    Q_DISABLE_COPY(GetAttributeValuesResponsePrivate)
+
+};
+
+} // namespace Pricing
+} // namespace AWS
+
 #endif

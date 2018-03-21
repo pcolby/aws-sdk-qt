@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSTATUSRESPONSE_P_H
 #define QTAWS_GETSTATUSRESPONSE_P_H
 
+#include "importexportresponse.h"
+#include "getstatusrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class GetStatusResponse;
+
+class QTAWS_EXPORT GetStatusResponsePrivate : public ImportExportResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetStatusResponsePrivate(GetStatusResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetStatusResponse)
+    Q_DISABLE_COPY(GetStatusResponsePrivate)
+
+};
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

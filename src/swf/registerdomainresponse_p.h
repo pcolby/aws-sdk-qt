@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERDOMAINRESPONSE_P_H
 #define QTAWS_REGISTERDOMAINRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "registerdomainrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RegisterDomainResponse;
+
+class QTAWS_EXPORT RegisterDomainResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterDomainResponsePrivate(RegisterDomainResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterDomainResponse)
+    Q_DISABLE_COPY(RegisterDomainResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

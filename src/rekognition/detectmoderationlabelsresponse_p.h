@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETECTMODERATIONLABELSRESPONSE_P_H
 #define QTAWS_DETECTMODERATIONLABELSRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "detectmoderationlabelsrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DetectModerationLabelsResponse;
+
+class QTAWS_EXPORT DetectModerationLabelsResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetectModerationLabelsResponsePrivate(DetectModerationLabelsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetectModerationLabelsResponse)
+    Q_DISABLE_COPY(DetectModerationLabelsResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

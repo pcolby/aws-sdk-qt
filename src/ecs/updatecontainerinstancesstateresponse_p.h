@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONTAINERINSTANCESSTATERESPONSE_P_H
 #define QTAWS_UPDATECONTAINERINSTANCESSTATERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "updatecontainerinstancesstaterequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class UpdateContainerInstancesStateResponse;
+
+class QTAWS_EXPORT UpdateContainerInstancesStateResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateContainerInstancesStateResponsePrivate(UpdateContainerInstancesStateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateContainerInstancesStateResponse)
+    Q_DISABLE_COPY(UpdateContainerInstancesStateResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

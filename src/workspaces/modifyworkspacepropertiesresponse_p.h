@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYWORKSPACEPROPERTIESRESPONSE_P_H
 #define QTAWS_MODIFYWORKSPACEPROPERTIESRESPONSE_P_H
 
+#include "workspacesresponse.h"
+#include "modifyworkspacepropertiesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class ModifyWorkspacePropertiesResponse;
+
+class QTAWS_EXPORT ModifyWorkspacePropertiesResponsePrivate : public WorkSpacesResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyWorkspacePropertiesResponsePrivate(ModifyWorkspacePropertiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyWorkspacePropertiesResponse)
+    Q_DISABLE_COPY(ModifyWorkspacePropertiesResponsePrivate)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

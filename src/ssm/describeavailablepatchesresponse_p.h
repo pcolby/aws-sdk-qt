@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEAVAILABLEPATCHESRESPONSE_P_H
 #define QTAWS_DESCRIBEAVAILABLEPATCHESRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "describeavailablepatchesrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeAvailablePatchesResponse;
+
+class QTAWS_EXPORT DescribeAvailablePatchesResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAvailablePatchesResponsePrivate(DescribeAvailablePatchesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAvailablePatchesResponse)
+    Q_DISABLE_COPY(DescribeAvailablePatchesResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

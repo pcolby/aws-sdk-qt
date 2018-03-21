@@ -20,4 +20,31 @@
 #ifndef QTAWS_RELEASESTATICIPRESPONSE_P_H
 #define QTAWS_RELEASESTATICIPRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "releasestaticiprequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class ReleaseStaticIpResponse;
+
+class QTAWS_EXPORT ReleaseStaticIpResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ReleaseStaticIpResponsePrivate(ReleaseStaticIpResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ReleaseStaticIpResponse)
+    Q_DISABLE_COPY(ReleaseStaticIpResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

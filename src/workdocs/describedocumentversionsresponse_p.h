@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEDOCUMENTVERSIONSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "describedocumentversionsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeDocumentVersionsResponse;
+
+class QTAWS_EXPORT DescribeDocumentVersionsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDocumentVersionsResponsePrivate(DescribeDocumentVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDocumentVersionsResponse)
+    Q_DISABLE_COPY(DescribeDocumentVersionsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

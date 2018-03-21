@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETAGOPTIONRESPONSE_P_H
 #define QTAWS_UPDATETAGOPTIONRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "updatetagoptionrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdateTagOptionResponse;
+
+class QTAWS_EXPORT UpdateTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTagOptionResponsePrivate(UpdateTagOptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTagOptionResponse)
+    Q_DISABLE_COPY(UpdateTagOptionResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

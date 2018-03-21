@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "describebackupsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeBackupsResponse;
+
+class QTAWS_EXPORT DescribeBackupsResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeBackupsResponsePrivate(DescribeBackupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBackupsResponse)
+    Q_DISABLE_COPY(DescribeBackupsResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

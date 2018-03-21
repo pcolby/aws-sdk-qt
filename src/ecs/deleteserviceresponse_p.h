@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESERVICERESPONSE_P_H
 #define QTAWS_DELETESERVICERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "deleteservicerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeleteServiceResponse;
+
+class QTAWS_EXPORT DeleteServiceResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteServiceResponsePrivate(DeleteServiceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteServiceResponse)
+    Q_DISABLE_COPY(DeleteServiceResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

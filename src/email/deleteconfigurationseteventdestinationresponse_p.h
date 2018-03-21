@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 #define QTAWS_DELETECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deleteconfigurationseteventdestinationrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteConfigurationSetEventDestinationResponse;
+
+class QTAWS_EXPORT DeleteConfigurationSetEventDestinationResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConfigurationSetEventDestinationResponsePrivate(DeleteConfigurationSetEventDestinationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationSetEventDestinationResponse)
+    Q_DISABLE_COPY(DeleteConfigurationSetEventDestinationResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

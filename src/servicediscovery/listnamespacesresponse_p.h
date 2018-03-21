@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTNAMESPACESRESPONSE_P_H
 #define QTAWS_LISTNAMESPACESRESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "listnamespacesrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class ListNamespacesResponse;
+
+class QTAWS_EXPORT ListNamespacesResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListNamespacesResponsePrivate(ListNamespacesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListNamespacesResponse)
+    Q_DISABLE_COPY(ListNamespacesResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

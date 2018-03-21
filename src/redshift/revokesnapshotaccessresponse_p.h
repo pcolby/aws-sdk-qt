@@ -20,4 +20,31 @@
 #ifndef QTAWS_REVOKESNAPSHOTACCESSRESPONSE_P_H
 #define QTAWS_REVOKESNAPSHOTACCESSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "revokesnapshotaccessrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RevokeSnapshotAccessResponse;
+
+class QTAWS_EXPORT RevokeSnapshotAccessResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RevokeSnapshotAccessResponsePrivate(RevokeSnapshotAccessResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RevokeSnapshotAccessResponse)
+    Q_DISABLE_COPY(RevokeSnapshotAccessResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTEVENTSRESPONSE_P_H
 #define QTAWS_PUTEVENTSRESPONSE_P_H
 
+#include "mobileanalyticsresponse.h"
+#include "puteventsrequest.h"
+
+namespace AWS {
+
+namespace MobileAnalytics {
+
+class PutEventsResponse;
+
+class QTAWS_EXPORT PutEventsResponsePrivate : public MobileAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutEventsResponsePrivate(PutEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutEventsResponse)
+    Q_DISABLE_COPY(PutEventsResponsePrivate)
+
+};
+
+} // namespace MobileAnalytics
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEROLEALIASRESPONSE_P_H
 #define QTAWS_DESCRIBEROLEALIASRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "describerolealiasrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeRoleAliasResponse;
+
+class QTAWS_EXPORT DescribeRoleAliasResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRoleAliasResponsePrivate(DescribeRoleAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRoleAliasResponse)
+    Q_DISABLE_COPY(DescribeRoleAliasResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETENTITLEMENTSRESPONSE_P_H
 #define QTAWS_GETENTITLEMENTSRESPONSE_P_H
 
+#include "marketplaceentitlementserviceresponse.h"
+#include "getentitlementsrequest.h"
+
+namespace AWS {
+
+namespace MarketplaceEntitlementService {
+
+class GetEntitlementsResponse;
+
+class QTAWS_EXPORT GetEntitlementsResponsePrivate : public MarketplaceEntitlementServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetEntitlementsResponsePrivate(GetEntitlementsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetEntitlementsResponse)
+    Q_DISABLE_COPY(GetEntitlementsResponsePrivate)
+
+};
+
+} // namespace MarketplaceEntitlementService
+} // namespace AWS
+
 #endif

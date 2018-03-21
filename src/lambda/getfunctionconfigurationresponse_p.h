@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETFUNCTIONCONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETFUNCTIONCONFIGURATIONRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "getfunctionconfigurationrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetFunctionConfigurationResponse;
+
+class QTAWS_EXPORT GetFunctionConfigurationResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetFunctionConfigurationResponsePrivate(GetFunctionConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetFunctionConfigurationResponse)
+    Q_DISABLE_COPY(GetFunctionConfigurationResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

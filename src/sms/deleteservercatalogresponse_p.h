@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESERVERCATALOGRESPONSE_P_H
 #define QTAWS_DELETESERVERCATALOGRESPONSE_P_H
 
+#include "smsresponse.h"
+#include "deleteservercatalogrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class DeleteServerCatalogResponse;
+
+class QTAWS_EXPORT DeleteServerCatalogResponsePrivate : public SMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteServerCatalogResponsePrivate(DeleteServerCatalogResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteServerCatalogResponse)
+    Q_DISABLE_COPY(DeleteServerCatalogResponsePrivate)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

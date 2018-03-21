@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESRESPONSE_P_H
 #define QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describeorderablereplicationinstancesrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeOrderableReplicationInstancesResponse;
+
+class QTAWS_EXPORT DescribeOrderableReplicationInstancesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeOrderableReplicationInstancesResponsePrivate(DescribeOrderableReplicationInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrderableReplicationInstancesResponse)
+    Q_DISABLE_COPY(DescribeOrderableReplicationInstancesResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

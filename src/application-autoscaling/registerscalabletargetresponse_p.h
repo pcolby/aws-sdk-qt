@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERSCALABLETARGETRESPONSE_P_H
 #define QTAWS_REGISTERSCALABLETARGETRESPONSE_P_H
 
+#include "applicationautoscalingresponse.h"
+#include "registerscalabletargetrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class RegisterScalableTargetResponse;
+
+class QTAWS_EXPORT RegisterScalableTargetResponsePrivate : public ApplicationAutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterScalableTargetResponsePrivate(RegisterScalableTargetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterScalableTargetResponse)
+    Q_DISABLE_COPY(RegisterScalableTargetResponsePrivate)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

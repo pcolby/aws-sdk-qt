@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECLUSTERSECURITYGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERSECURITYGROUPSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describeclustersecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeClusterSecurityGroupsResponse;
+
+class QTAWS_EXPORT DescribeClusterSecurityGroupsResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeClusterSecurityGroupsResponsePrivate(DescribeClusterSecurityGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClusterSecurityGroupsResponse)
+    Q_DISABLE_COPY(DescribeClusterSecurityGroupsResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

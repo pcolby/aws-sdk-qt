@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDATAFLOWGRAPHRESPONSE_P_H
 #define QTAWS_GETDATAFLOWGRAPHRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getdataflowgraphrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetDataflowGraphResponse;
+
+class QTAWS_EXPORT GetDataflowGraphResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDataflowGraphResponsePrivate(GetDataflowGraphResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDataflowGraphResponse)
+    Q_DISABLE_COPY(GetDataflowGraphResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

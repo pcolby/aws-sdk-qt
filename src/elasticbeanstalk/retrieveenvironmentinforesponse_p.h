@@ -20,4 +20,31 @@
 #ifndef QTAWS_RETRIEVEENVIRONMENTINFORESPONSE_P_H
 #define QTAWS_RETRIEVEENVIRONMENTINFORESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "retrieveenvironmentinforequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class RetrieveEnvironmentInfoResponse;
+
+class QTAWS_EXPORT RetrieveEnvironmentInfoResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RetrieveEnvironmentInfoResponsePrivate(RetrieveEnvironmentInfoResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RetrieveEnvironmentInfoResponse)
+    Q_DISABLE_COPY(RetrieveEnvironmentInfoResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

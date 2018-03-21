@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEREPOSITORYRESPONSE_P_H
 #define QTAWS_DELETEREPOSITORYRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "deleterepositoryrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DeleteRepositoryResponse;
+
+class QTAWS_EXPORT DeleteRepositoryResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRepositoryResponsePrivate(DeleteRepositoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRepositoryResponse)
+    Q_DISABLE_COPY(DeleteRepositoryResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

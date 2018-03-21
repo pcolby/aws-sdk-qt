@@ -20,4 +20,31 @@
 #ifndef QTAWS_IMPORTSNAPSHOTRESPONSE_P_H
 #define QTAWS_IMPORTSNAPSHOTRESPONSE_P_H
 
+#include "ec2response.h"
+#include "importsnapshotrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportSnapshotResponse;
+
+class QTAWS_EXPORT ImportSnapshotResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ImportSnapshotResponsePrivate(ImportSnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ImportSnapshotResponse)
+    Q_DISABLE_COPY(ImportSnapshotResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

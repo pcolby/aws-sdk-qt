@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSAMPLESRESPONSE_P_H
 #define QTAWS_LISTSAMPLESRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "listsamplesrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListSamplesResponse;
+
+class QTAWS_EXPORT ListSamplesResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListSamplesResponsePrivate(ListSamplesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListSamplesResponse)
+    Q_DISABLE_COPY(ListSamplesResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

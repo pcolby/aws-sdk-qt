@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPIPELINEEXECUTIONSRESPONSE_P_H
 #define QTAWS_LISTPIPELINEEXECUTIONSRESPONSE_P_H
 
+#include "codepipelineresponse.h"
+#include "listpipelineexecutionsrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class ListPipelineExecutionsResponse;
+
+class QTAWS_EXPORT ListPipelineExecutionsResponsePrivate : public CodePipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPipelineExecutionsResponsePrivate(ListPipelineExecutionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPipelineExecutionsResponse)
+    Q_DISABLE_COPY(ListPipelineExecutionsResponsePrivate)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

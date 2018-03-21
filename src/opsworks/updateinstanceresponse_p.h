@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEINSTANCERESPONSE_P_H
 #define QTAWS_UPDATEINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "updateinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateInstanceResponse;
+
+class QTAWS_EXPORT UpdateInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateInstanceResponsePrivate(UpdateInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateInstanceResponse)
+    Q_DISABLE_COPY(UpdateInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

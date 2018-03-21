@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEPRINCIPALFROMPORTFOLIORESPONSE_P_H
 #define QTAWS_DISASSOCIATEPRINCIPALFROMPORTFOLIORESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "disassociateprincipalfromportfoliorequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DisassociatePrincipalFromPortfolioResponse;
+
+class QTAWS_EXPORT DisassociatePrincipalFromPortfolioResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociatePrincipalFromPortfolioResponsePrivate(DisassociatePrincipalFromPortfolioResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociatePrincipalFromPortfolioResponse)
+    Q_DISABLE_COPY(DisassociatePrincipalFromPortfolioResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

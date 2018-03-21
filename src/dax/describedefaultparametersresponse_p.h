@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDEFAULTPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEDEFAULTPARAMETERSRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "describedefaultparametersrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DescribeDefaultParametersResponse;
+
+class QTAWS_EXPORT DescribeDefaultParametersResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDefaultParametersResponsePrivate(DescribeDefaultParametersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDefaultParametersResponse)
+    Q_DISABLE_COPY(DescribeDefaultParametersResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

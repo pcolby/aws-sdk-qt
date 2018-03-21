@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYDBPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_MODIFYDBPARAMETERGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "modifydbparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBParameterGroupResponse;
+
+class QTAWS_EXPORT ModifyDBParameterGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyDBParameterGroupResponsePrivate(ModifyDBParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyDBParameterGroupResponse)
+    Q_DISABLE_COPY(ModifyDBParameterGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

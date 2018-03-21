@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBOOTCLUSTERRESPONSE_P_H
 #define QTAWS_REBOOTCLUSTERRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "rebootclusterrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RebootClusterResponse;
+
+class QTAWS_EXPORT RebootClusterResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebootClusterResponsePrivate(RebootClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebootClusterResponse)
+    Q_DISABLE_COPY(RebootClusterResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

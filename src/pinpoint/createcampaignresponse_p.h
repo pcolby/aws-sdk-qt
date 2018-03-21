@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATECAMPAIGNRESPONSE_P_H
 #define QTAWS_CREATECAMPAIGNRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "createcampaignrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class CreateCampaignResponse;
+
+class QTAWS_EXPORT CreateCampaignResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateCampaignResponsePrivate(CreateCampaignResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCampaignResponse)
+    Q_DISABLE_COPY(CreateCampaignResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

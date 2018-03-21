@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYLOADBALANCERATTRIBUTESRESPONSE_P_H
 #define QTAWS_MODIFYLOADBALANCERATTRIBUTESRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "modifyloadbalancerattributesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class ModifyLoadBalancerAttributesResponse;
+
+class QTAWS_EXPORT ModifyLoadBalancerAttributesResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyLoadBalancerAttributesResponsePrivate(ModifyLoadBalancerAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyLoadBalancerAttributesResponse)
+    Q_DISABLE_COPY(ModifyLoadBalancerAttributesResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

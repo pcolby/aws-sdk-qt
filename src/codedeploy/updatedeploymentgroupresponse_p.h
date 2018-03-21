@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDEPLOYMENTGROUPRESPONSE_P_H
 #define QTAWS_UPDATEDEPLOYMENTGROUPRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "updatedeploymentgrouprequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class UpdateDeploymentGroupResponse;
+
+class QTAWS_EXPORT UpdateDeploymentGroupResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDeploymentGroupResponsePrivate(UpdateDeploymentGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDeploymentGroupResponse)
+    Q_DISABLE_COPY(UpdateDeploymentGroupResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

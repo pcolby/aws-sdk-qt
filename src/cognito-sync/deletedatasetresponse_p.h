@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDATASETRESPONSE_P_H
 #define QTAWS_DELETEDATASETRESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "deletedatasetrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class DeleteDatasetResponse;
+
+class QTAWS_EXPORT DeleteDatasetResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDatasetResponsePrivate(DeleteDatasetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDatasetResponse)
+    Q_DISABLE_COPY(DeleteDatasetResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

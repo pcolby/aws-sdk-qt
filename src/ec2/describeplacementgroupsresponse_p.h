@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPLACEMENTGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEPLACEMENTGROUPSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeplacementgroupsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribePlacementGroupsResponse;
+
+class QTAWS_EXPORT DescribePlacementGroupsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribePlacementGroupsResponsePrivate(DescribePlacementGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePlacementGroupsResponse)
+    Q_DISABLE_COPY(DescribePlacementGroupsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

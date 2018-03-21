@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECOMPUTEENVIRONMENTRESPONSE_P_H
 #define QTAWS_UPDATECOMPUTEENVIRONMENTRESPONSE_P_H
 
+#include "batchresponse.h"
+#include "updatecomputeenvironmentrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class UpdateComputeEnvironmentResponse;
+
+class QTAWS_EXPORT UpdateComputeEnvironmentResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateComputeEnvironmentResponsePrivate(UpdateComputeEnvironmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateComputeEnvironmentResponse)
+    Q_DISABLE_COPY(UpdateComputeEnvironmentResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

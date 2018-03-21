@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDOMAINCONTACTPRIVACYRESPONSE_P_H
 #define QTAWS_UPDATEDOMAINCONTACTPRIVACYRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "updatedomaincontactprivacyrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class UpdateDomainContactPrivacyResponse;
+
+class QTAWS_EXPORT UpdateDomainContactPrivacyResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDomainContactPrivacyResponsePrivate(UpdateDomainContactPrivacyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDomainContactPrivacyResponse)
+    Q_DISABLE_COPY(UpdateDomainContactPrivacyResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

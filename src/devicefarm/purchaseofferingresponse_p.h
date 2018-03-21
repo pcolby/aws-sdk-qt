@@ -20,4 +20,31 @@
 #ifndef QTAWS_PURCHASEOFFERINGRESPONSE_P_H
 #define QTAWS_PURCHASEOFFERINGRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "purchaseofferingrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class PurchaseOfferingResponse;
+
+class QTAWS_EXPORT PurchaseOfferingResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PurchaseOfferingResponsePrivate(PurchaseOfferingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseOfferingResponse)
+    Q_DISABLE_COPY(PurchaseOfferingResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

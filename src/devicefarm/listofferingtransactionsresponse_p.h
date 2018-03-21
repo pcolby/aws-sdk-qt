@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOFFERINGTRANSACTIONSRESPONSE_P_H
 #define QTAWS_LISTOFFERINGTRANSACTIONSRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "listofferingtransactionsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListOfferingTransactionsResponse;
+
+class QTAWS_EXPORT ListOfferingTransactionsResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOfferingTransactionsResponsePrivate(ListOfferingTransactionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOfferingTransactionsResponse)
+    Q_DISABLE_COPY(ListOfferingTransactionsResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

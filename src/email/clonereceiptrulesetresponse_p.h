@@ -20,4 +20,31 @@
 #ifndef QTAWS_CLONERECEIPTRULESETRESPONSE_P_H
 #define QTAWS_CLONERECEIPTRULESETRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "clonereceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CloneReceiptRuleSetResponse;
+
+class QTAWS_EXPORT CloneReceiptRuleSetResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CloneReceiptRuleSetResponsePrivate(CloneReceiptRuleSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CloneReceiptRuleSetResponse)
+    Q_DISABLE_COPY(CloneReceiptRuleSetResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

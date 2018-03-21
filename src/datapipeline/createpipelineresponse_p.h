@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPIPELINERESPONSE_P_H
 #define QTAWS_CREATEPIPELINERESPONSE_P_H
 
+#include "datapipelineresponse.h"
+#include "createpipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class CreatePipelineResponse;
+
+class QTAWS_EXPORT CreatePipelineResponsePrivate : public DataPipelineResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePipelineResponsePrivate(CreatePipelineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePipelineResponse)
+    Q_DISABLE_COPY(CreatePipelineResponsePrivate)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

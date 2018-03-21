@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINPUTRESPONSE_P_H
 #define QTAWS_CREATEINPUTRESPONSE_P_H
 
+#include "medialiveresponse.h"
+#include "createinputrequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class CreateInputResponse;
+
+class QTAWS_EXPORT CreateInputResponsePrivate : public MediaLiveResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateInputResponsePrivate(CreateInputResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInputResponse)
+    Q_DISABLE_COPY(CreateInputResponsePrivate)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

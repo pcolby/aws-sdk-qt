@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTEREVENTTOPICRESPONSE_P_H
 #define QTAWS_DEREGISTEREVENTTOPICRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "deregistereventtopicrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeregisterEventTopicResponse;
+
+class QTAWS_EXPORT DeregisterEventTopicResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterEventTopicResponsePrivate(DeregisterEventTopicResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterEventTopicResponse)
+    Q_DISABLE_COPY(DeregisterEventTopicResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

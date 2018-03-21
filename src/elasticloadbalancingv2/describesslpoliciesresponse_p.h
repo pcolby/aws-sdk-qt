@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESSLPOLICIESRESPONSE_P_H
 #define QTAWS_DESCRIBESSLPOLICIESRESPONSE_P_H
 
+#include "elasticloadbalancingv2response.h"
+#include "describesslpoliciesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DescribeSSLPoliciesResponse;
+
+class QTAWS_EXPORT DescribeSSLPoliciesResponsePrivate : public ElasticLoadBalancingv2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSSLPoliciesResponsePrivate(DescribeSSLPoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSSLPoliciesResponse)
+    Q_DISABLE_COPY(DescribeSSLPoliciesResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

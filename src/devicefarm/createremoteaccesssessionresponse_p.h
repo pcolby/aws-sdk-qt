@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEREMOTEACCESSSESSIONRESPONSE_P_H
 #define QTAWS_CREATEREMOTEACCESSSESSIONRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "createremoteaccesssessionrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class CreateRemoteAccessSessionResponse;
+
+class QTAWS_EXPORT CreateRemoteAccessSessionResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateRemoteAccessSessionResponsePrivate(CreateRemoteAccessSessionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRemoteAccessSessionResponse)
+    Q_DISABLE_COPY(CreateRemoteAccessSessionResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

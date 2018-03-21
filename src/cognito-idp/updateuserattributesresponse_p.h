@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEUSERATTRIBUTESRESPONSE_P_H
 #define QTAWS_UPDATEUSERATTRIBUTESRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "updateuserattributesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateUserAttributesResponse;
+
+class QTAWS_EXPORT UpdateUserAttributesResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateUserAttributesResponsePrivate(UpdateUserAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserAttributesResponse)
+    Q_DISABLE_COPY(UpdateUserAttributesResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

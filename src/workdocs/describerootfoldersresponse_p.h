@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEROOTFOLDERSRESPONSE_P_H
 #define QTAWS_DESCRIBEROOTFOLDERSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "describerootfoldersrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeRootFoldersResponse;
+
+class QTAWS_EXPORT DescribeRootFoldersResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeRootFoldersResponsePrivate(DescribeRootFoldersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRootFoldersResponse)
+    Q_DISABLE_COPY(DescribeRootFoldersResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

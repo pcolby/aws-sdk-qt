@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEHSMCLIENTCERTIFICATERESPONSE_P_H
 #define QTAWS_DELETEHSMCLIENTCERTIFICATERESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "deletehsmclientcertificaterequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteHsmClientCertificateResponse;
+
+class QTAWS_EXPORT DeleteHsmClientCertificateResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteHsmClientCertificateResponsePrivate(DeleteHsmClientCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHsmClientCertificateResponse)
+    Q_DISABLE_COPY(DeleteHsmClientCertificateResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

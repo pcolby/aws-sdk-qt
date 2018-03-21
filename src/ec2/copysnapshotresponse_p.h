@@ -20,4 +20,31 @@
 #ifndef QTAWS_COPYSNAPSHOTRESPONSE_P_H
 #define QTAWS_COPYSNAPSHOTRESPONSE_P_H
 
+#include "ec2response.h"
+#include "copysnapshotrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CopySnapshotResponse;
+
+class QTAWS_EXPORT CopySnapshotResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CopySnapshotResponsePrivate(CopySnapshotResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CopySnapshotResponse)
+    Q_DISABLE_COPY(CopySnapshotResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

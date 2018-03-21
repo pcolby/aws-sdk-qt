@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERVOLUMERESPONSE_P_H
 #define QTAWS_DEREGISTERVOLUMERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "deregistervolumerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterVolumeResponse;
+
+class QTAWS_EXPORT DeregisterVolumeResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterVolumeResponsePrivate(DeregisterVolumeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterVolumeResponse)
+    Q_DISABLE_COPY(DeregisterVolumeResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

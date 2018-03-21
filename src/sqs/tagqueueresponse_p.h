@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGQUEUERESPONSE_P_H
 #define QTAWS_TAGQUEUERESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "tagqueuerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class TagQueueResponse;
+
+class QTAWS_EXPORT TagQueueResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagQueueResponsePrivate(TagQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagQueueResponse)
+    Q_DISABLE_COPY(TagQueueResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

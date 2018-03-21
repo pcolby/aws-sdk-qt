@@ -20,4 +20,31 @@
 #ifndef QTAWS_RETIREGRANTRESPONSE_P_H
 #define QTAWS_RETIREGRANTRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "retiregrantrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class RetireGrantResponse;
+
+class QTAWS_EXPORT RetireGrantResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RetireGrantResponsePrivate(RetireGrantResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RetireGrantResponse)
+    Q_DISABLE_COPY(RetireGrantResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DETACHROLEPOLICYRESPONSE_P_H
 #define QTAWS_DETACHROLEPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "detachrolepolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DetachRolePolicyResponse;
+
+class QTAWS_EXPORT DetachRolePolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DetachRolePolicyResponsePrivate(DetachRolePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DetachRolePolicyResponse)
+    Q_DISABLE_COPY(DetachRolePolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

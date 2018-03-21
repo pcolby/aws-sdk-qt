@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "deletesubscriptiondefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteSubscriptionDefinitionResponse;
+
+class QTAWS_EXPORT DeleteSubscriptionDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSubscriptionDefinitionResponsePrivate(DeleteSubscriptionDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSubscriptionDefinitionResponse)
+    Q_DISABLE_COPY(DeleteSubscriptionDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

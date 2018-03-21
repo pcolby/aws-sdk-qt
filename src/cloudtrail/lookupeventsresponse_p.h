@@ -20,4 +20,31 @@
 #ifndef QTAWS_LOOKUPEVENTSRESPONSE_P_H
 #define QTAWS_LOOKUPEVENTSRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "lookupeventsrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class LookupEventsResponse;
+
+class QTAWS_EXPORT LookupEventsResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    LookupEventsResponsePrivate(LookupEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(LookupEventsResponse)
+    Q_DISABLE_COPY(LookupEventsResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONSTRAINTRESPONSE_P_H
 #define QTAWS_UPDATECONSTRAINTRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "updateconstraintrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdateConstraintResponse;
+
+class QTAWS_EXPORT UpdateConstraintResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConstraintResponsePrivate(UpdateConstraintResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConstraintResponse)
+    Q_DISABLE_COPY(UpdateConstraintResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEJOBEXECUTIONRESPONSE_P_H
 #define QTAWS_UPDATEJOBEXECUTIONRESPONSE_P_H
 
+#include "iotjobsdataplaneresponse.h"
+#include "updatejobexecutionrequest.h"
+
+namespace AWS {
+
+namespace IoTJobsDataPlane {
+
+class UpdateJobExecutionResponse;
+
+class QTAWS_EXPORT UpdateJobExecutionResponsePrivate : public IoTJobsDataPlaneResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateJobExecutionResponsePrivate(UpdateJobExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateJobExecutionResponse)
+    Q_DISABLE_COPY(UpdateJobExecutionResponsePrivate)
+
+};
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS
+
 #endif

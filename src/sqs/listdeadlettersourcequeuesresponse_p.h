@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDEADLETTERSOURCEQUEUESRESPONSE_P_H
 #define QTAWS_LISTDEADLETTERSOURCEQUEUESRESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "listdeadlettersourcequeuesrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ListDeadLetterSourceQueuesResponse;
+
+class QTAWS_EXPORT ListDeadLetterSourceQueuesResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDeadLetterSourceQueuesResponsePrivate(ListDeadLetterSourceQueuesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeadLetterSourceQueuesResponse)
+    Q_DISABLE_COPY(ListDeadLetterSourceQueuesResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

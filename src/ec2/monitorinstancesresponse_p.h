@@ -20,4 +20,31 @@
 #ifndef QTAWS_MONITORINSTANCESRESPONSE_P_H
 #define QTAWS_MONITORINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "monitorinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class MonitorInstancesResponse;
+
+class QTAWS_EXPORT MonitorInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    MonitorInstancesResponsePrivate(MonitorInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(MonitorInstancesResponse)
+    Q_DISABLE_COPY(MonitorInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

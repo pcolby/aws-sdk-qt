@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERESOURCEGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBERESOURCEGROUPSRESPONSE_P_H
 
+#include "inspectorresponse.h"
+#include "describeresourcegroupsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeResourceGroupsResponse;
+
+class QTAWS_EXPORT DescribeResourceGroupsResponsePrivate : public InspectorResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeResourceGroupsResponsePrivate(DescribeResourceGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeResourceGroupsResponse)
+    Q_DISABLE_COPY(DescribeResourceGroupsResponsePrivate)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

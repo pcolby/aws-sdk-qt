@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDATASOURCERESPONSE_P_H
 #define QTAWS_DELETEDATASOURCERESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "deletedatasourcerequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteDataSourceResponse;
+
+class QTAWS_EXPORT DeleteDataSourceResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDataSourceResponsePrivate(DeleteDataSourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDataSourceResponse)
+    Q_DISABLE_COPY(DeleteDataSourceResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

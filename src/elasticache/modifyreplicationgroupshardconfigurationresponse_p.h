@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYREPLICATIONGROUPSHARDCONFIGURATIONRESPONSE_P_H
 #define QTAWS_MODIFYREPLICATIONGROUPSHARDCONFIGURATIONRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "modifyreplicationgroupshardconfigurationrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ModifyReplicationGroupShardConfigurationResponse;
+
+class QTAWS_EXPORT ModifyReplicationGroupShardConfigurationResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyReplicationGroupShardConfigurationResponsePrivate(ModifyReplicationGroupShardConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyReplicationGroupShardConfigurationResponse)
+    Q_DISABLE_COPY(ModifyReplicationGroupShardConfigurationResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

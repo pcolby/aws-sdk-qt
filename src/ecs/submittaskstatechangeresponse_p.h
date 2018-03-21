@@ -20,4 +20,31 @@
 #ifndef QTAWS_SUBMITTASKSTATECHANGERESPONSE_P_H
 #define QTAWS_SUBMITTASKSTATECHANGERESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "submittaskstatechangerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class SubmitTaskStateChangeResponse;
+
+class QTAWS_EXPORT SubmitTaskStateChangeResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SubmitTaskStateChangeResponsePrivate(SubmitTaskStateChangeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SubmitTaskStateChangeResponse)
+    Q_DISABLE_COPY(SubmitTaskStateChangeResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

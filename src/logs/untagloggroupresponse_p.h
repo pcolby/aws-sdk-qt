@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGLOGGROUPRESPONSE_P_H
 #define QTAWS_UNTAGLOGGROUPRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "untagloggrouprequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class UntagLogGroupResponse;
+
+class QTAWS_EXPORT UntagLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagLogGroupResponsePrivate(UntagLogGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagLogGroupResponse)
+    Q_DISABLE_COPY(UntagLogGroupResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

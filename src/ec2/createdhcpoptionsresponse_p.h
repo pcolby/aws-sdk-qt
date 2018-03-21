@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDHCPOPTIONSRESPONSE_P_H
 #define QTAWS_CREATEDHCPOPTIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createdhcpoptionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateDhcpOptionsResponse;
+
+class QTAWS_EXPORT CreateDhcpOptionsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDhcpOptionsResponsePrivate(CreateDhcpOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDhcpOptionsResponse)
+    Q_DISABLE_COPY(CreateDhcpOptionsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEREGISTERINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERINSTANCERESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "deregisterinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterInstanceResponse;
+
+class QTAWS_EXPORT DeregisterInstanceResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeregisterInstanceResponsePrivate(DeregisterInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterInstanceResponse)
+    Q_DISABLE_COPY(DeregisterInstanceResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTREAMRESPONSE_P_H
 #define QTAWS_DESCRIBESTREAMRESPONSE_P_H
 
+#include "kinesisvideoresponse.h"
+#include "describestreamrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class DescribeStreamResponse;
+
+class QTAWS_EXPORT DescribeStreamResponsePrivate : public KinesisVideoResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStreamResponsePrivate(DescribeStreamResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStreamResponse)
+    Q_DISABLE_COPY(DescribeStreamResponsePrivate)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DECREASEREPLICATIONFACTORRESPONSE_P_H
 #define QTAWS_DECREASEREPLICATIONFACTORRESPONSE_P_H
 
+#include "daxresponse.h"
+#include "decreasereplicationfactorrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DecreaseReplicationFactorResponse;
+
+class QTAWS_EXPORT DecreaseReplicationFactorResponsePrivate : public DAXResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DecreaseReplicationFactorResponsePrivate(DecreaseReplicationFactorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DecreaseReplicationFactorResponse)
+    Q_DISABLE_COPY(DecreaseReplicationFactorResponsePrivate)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

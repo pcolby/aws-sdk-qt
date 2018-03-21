@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYCLUSTERIAMROLESRESPONSE_P_H
 #define QTAWS_MODIFYCLUSTERIAMROLESRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "modifyclusteriamrolesrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifyClusterIamRolesResponse;
+
+class QTAWS_EXPORT ModifyClusterIamRolesResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyClusterIamRolesResponsePrivate(ModifyClusterIamRolesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyClusterIamRolesResponse)
+    Q_DISABLE_COPY(ModifyClusterIamRolesResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

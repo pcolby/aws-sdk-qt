@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEROLEFROMGROUPRESPONSE_P_H
 #define QTAWS_DISASSOCIATEROLEFROMGROUPRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "disassociaterolefromgrouprequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DisassociateRoleFromGroupResponse;
+
+class QTAWS_EXPORT DisassociateRoleFromGroupResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateRoleFromGroupResponsePrivate(DisassociateRoleFromGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateRoleFromGroupResponse)
+    Q_DISABLE_COPY(DisassociateRoleFromGroupResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

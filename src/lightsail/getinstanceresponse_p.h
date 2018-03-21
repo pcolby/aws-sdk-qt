@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETINSTANCERESPONSE_P_H
 #define QTAWS_GETINSTANCERESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getinstancerequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetInstanceResponse;
+
+class QTAWS_EXPORT GetInstanceResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetInstanceResponsePrivate(GetInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetInstanceResponse)
+    Q_DISABLE_COPY(GetInstanceResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

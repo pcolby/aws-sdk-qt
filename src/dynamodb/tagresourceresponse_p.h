@@ -20,4 +20,31 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class TagResourceResponse;
+
+class QTAWS_EXPORT TagResourceResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TagResourceResponsePrivate(TagResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceResponse)
+    Q_DISABLE_COPY(TagResourceResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

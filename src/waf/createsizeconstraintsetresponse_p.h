@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESIZECONSTRAINTSETRESPONSE_P_H
 #define QTAWS_CREATESIZECONSTRAINTSETRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "createsizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateSizeConstraintSetResponse;
+
+class QTAWS_EXPORT CreateSizeConstraintSetResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSizeConstraintSetResponsePrivate(CreateSizeConstraintSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSizeConstraintSetResponse)
+    Q_DISABLE_COPY(CreateSizeConstraintSetResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

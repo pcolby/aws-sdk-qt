@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTDASHBOARDRESPONSE_P_H
 #define QTAWS_PUTDASHBOARDRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "putdashboardrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class PutDashboardResponse;
+
+class QTAWS_EXPORT PutDashboardResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutDashboardResponsePrivate(PutDashboardResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutDashboardResponse)
+    Q_DISABLE_COPY(PutDashboardResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

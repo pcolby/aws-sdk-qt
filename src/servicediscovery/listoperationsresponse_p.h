@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOPERATIONSRESPONSE_P_H
 #define QTAWS_LISTOPERATIONSRESPONSE_P_H
 
+#include "servicediscoveryresponse.h"
+#include "listoperationsrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class ListOperationsResponse;
+
+class QTAWS_EXPORT ListOperationsResponsePrivate : public ServiceDiscoveryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOperationsResponsePrivate(ListOperationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOperationsResponse)
+    Q_DISABLE_COPY(ListOperationsResponsePrivate)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

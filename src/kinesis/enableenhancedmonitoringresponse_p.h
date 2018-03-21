@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENABLEENHANCEDMONITORINGRESPONSE_P_H
 #define QTAWS_ENABLEENHANCEDMONITORINGRESPONSE_P_H
 
+#include "kinesisresponse.h"
+#include "enableenhancedmonitoringrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class EnableEnhancedMonitoringResponse;
+
+class QTAWS_EXPORT EnableEnhancedMonitoringResponsePrivate : public KinesisResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnableEnhancedMonitoringResponsePrivate(EnableEnhancedMonitoringResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnableEnhancedMonitoringResponse)
+    Q_DISABLE_COPY(EnableEnhancedMonitoringResponsePrivate)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

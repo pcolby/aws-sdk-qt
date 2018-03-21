@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEORIGINENDPOINTRESPONSE_P_H
 #define QTAWS_CREATEORIGINENDPOINTRESPONSE_P_H
 
+#include "mediapackageresponse.h"
+#include "createoriginendpointrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class CreateOriginEndpointResponse;
+
+class QTAWS_EXPORT CreateOriginEndpointResponsePrivate : public MediaPackageResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateOriginEndpointResponsePrivate(CreateOriginEndpointResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateOriginEndpointResponse)
+    Q_DISABLE_COPY(CreateOriginEndpointResponsePrivate)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

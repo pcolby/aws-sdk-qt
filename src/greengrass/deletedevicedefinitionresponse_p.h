@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDEVICEDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETEDEVICEDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "deletedevicedefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteDeviceDefinitionResponse;
+
+class QTAWS_EXPORT DeleteDeviceDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDeviceDefinitionResponsePrivate(DeleteDeviceDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDeviceDefinitionResponse)
+    Q_DISABLE_COPY(DeleteDeviceDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

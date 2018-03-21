@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPIPELINERESPONSE_P_H
 #define QTAWS_DELETEPIPELINERESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "deletepipelinerequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class DeletePipelineResponse;
+
+class QTAWS_EXPORT DeletePipelineResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePipelineResponsePrivate(DeletePipelineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePipelineResponse)
+    Q_DISABLE_COPY(DeletePipelineResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHDOMAINCONFIGRESPONSE_P_H
 #define QTAWS_DESCRIBEELASTICSEARCHDOMAINCONFIGRESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "describeelasticsearchdomainconfigrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DescribeElasticsearchDomainConfigResponse;
+
+class QTAWS_EXPORT DescribeElasticsearchDomainConfigResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeElasticsearchDomainConfigResponsePrivate(DescribeElasticsearchDomainConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeElasticsearchDomainConfigResponse)
+    Q_DISABLE_COPY(DescribeElasticsearchDomainConfigResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

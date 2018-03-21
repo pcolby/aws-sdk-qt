@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEADDRESSRESPONSE_P_H
 #define QTAWS_DESCRIBEADDRESSRESPONSE_P_H
 
+#include "snowballresponse.h"
+#include "describeaddressrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class DescribeAddressResponse;
+
+class QTAWS_EXPORT DescribeAddressResponsePrivate : public SnowballResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAddressResponsePrivate(DescribeAddressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAddressResponse)
+    Q_DISABLE_COPY(DescribeAddressResponsePrivate)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

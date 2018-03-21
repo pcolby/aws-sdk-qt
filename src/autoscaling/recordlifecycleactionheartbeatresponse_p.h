@@ -20,4 +20,31 @@
 #ifndef QTAWS_RECORDLIFECYCLEACTIONHEARTBEATRESPONSE_P_H
 #define QTAWS_RECORDLIFECYCLEACTIONHEARTBEATRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "recordlifecycleactionheartbeatrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class RecordLifecycleActionHeartbeatResponse;
+
+class QTAWS_EXPORT RecordLifecycleActionHeartbeatResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RecordLifecycleActionHeartbeatResponsePrivate(RecordLifecycleActionHeartbeatResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RecordLifecycleActionHeartbeatResponse)
+    Q_DISABLE_COPY(RecordLifecycleActionHeartbeatResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

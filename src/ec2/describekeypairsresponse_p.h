@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEKEYPAIRSRESPONSE_P_H
 #define QTAWS_DESCRIBEKEYPAIRSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describekeypairsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeKeyPairsResponse;
+
+class QTAWS_EXPORT DescribeKeyPairsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeKeyPairsResponsePrivate(DescribeKeyPairsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeKeyPairsResponse)
+    Q_DISABLE_COPY(DescribeKeyPairsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEUSERDEFINEDFUNCTIONRESPONSE_P_H
 #define QTAWS_CREATEUSERDEFINEDFUNCTIONRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "createuserdefinedfunctionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateUserDefinedFunctionResponse;
+
+class QTAWS_EXPORT CreateUserDefinedFunctionResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateUserDefinedFunctionResponsePrivate(CreateUserDefinedFunctionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserDefinedFunctionResponse)
+    Q_DISABLE_COPY(CreateUserDefinedFunctionResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

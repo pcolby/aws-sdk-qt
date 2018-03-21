@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESCHEMASRESPONSE_P_H
 #define QTAWS_DESCRIBESCHEMASRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describeschemasrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeSchemasResponse;
+
+class QTAWS_EXPORT DescribeSchemasResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSchemasResponsePrivate(DescribeSchemasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSchemasResponse)
+    Q_DISABLE_COPY(DescribeSchemasResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

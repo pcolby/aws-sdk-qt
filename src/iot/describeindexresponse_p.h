@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINDEXRESPONSE_P_H
 #define QTAWS_DESCRIBEINDEXRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "describeindexrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeIndexResponse;
+
+class QTAWS_EXPORT DescribeIndexResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeIndexResponsePrivate(DescribeIndexResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIndexResponse)
+    Q_DISABLE_COPY(DescribeIndexResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

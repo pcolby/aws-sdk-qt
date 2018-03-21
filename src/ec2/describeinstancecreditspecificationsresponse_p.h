@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINSTANCECREDITSPECIFICATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCECREDITSPECIFICATIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeinstancecreditspecificationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeInstanceCreditSpecificationsResponse;
+
+class QTAWS_EXPORT DescribeInstanceCreditSpecificationsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeInstanceCreditSpecificationsResponsePrivate(DescribeInstanceCreditSpecificationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstanceCreditSpecificationsResponse)
+    Q_DISABLE_COPY(DescribeInstanceCreditSpecificationsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

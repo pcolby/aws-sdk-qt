@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESCALINGACTIVITIESRESPONSE_P_H
 #define QTAWS_DESCRIBESCALINGACTIVITIESRESPONSE_P_H
 
+#include "applicationautoscalingresponse.h"
+#include "describescalingactivitiesrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class DescribeScalingActivitiesResponse;
+
+class QTAWS_EXPORT DescribeScalingActivitiesResponsePrivate : public ApplicationAutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeScalingActivitiesResponsePrivate(DescribeScalingActivitiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScalingActivitiesResponse)
+    Q_DISABLE_COPY(DescribeScalingActivitiesResponsePrivate)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

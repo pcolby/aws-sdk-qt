@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEASSOCIATIONBATCHRESPONSE_P_H
 #define QTAWS_CREATEASSOCIATIONBATCHRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "createassociationbatchrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateAssociationBatchResponse;
+
+class QTAWS_EXPORT CreateAssociationBatchResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateAssociationBatchResponsePrivate(CreateAssociationBatchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAssociationBatchResponse)
+    Q_DISABLE_COPY(CreateAssociationBatchResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

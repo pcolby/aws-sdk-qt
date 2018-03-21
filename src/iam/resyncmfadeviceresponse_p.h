@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESYNCMFADEVICERESPONSE_P_H
 #define QTAWS_RESYNCMFADEVICERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "resyncmfadevicerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ResyncMFADeviceResponse;
+
+class QTAWS_EXPORT ResyncMFADeviceResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResyncMFADeviceResponsePrivate(ResyncMFADeviceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResyncMFADeviceResponse)
+    Q_DISABLE_COPY(ResyncMFADeviceResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

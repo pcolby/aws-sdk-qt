@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETACCOUNTSUMMARYRESPONSE_P_H
 #define QTAWS_GETACCOUNTSUMMARYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "getaccountsummaryrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetAccountSummaryResponse;
+
+class QTAWS_EXPORT GetAccountSummaryResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetAccountSummaryResponsePrivate(GetAccountSummaryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountSummaryResponse)
+    Q_DISABLE_COPY(GetAccountSummaryResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

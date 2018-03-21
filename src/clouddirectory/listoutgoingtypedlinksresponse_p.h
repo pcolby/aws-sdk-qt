@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTOUTGOINGTYPEDLINKSRESPONSE_P_H
 #define QTAWS_LISTOUTGOINGTYPEDLINKSRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "listoutgoingtypedlinksrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListOutgoingTypedLinksResponse;
+
+class QTAWS_EXPORT ListOutgoingTypedLinksResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListOutgoingTypedLinksResponsePrivate(ListOutgoingTypedLinksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListOutgoingTypedLinksResponse)
+    Q_DISABLE_COPY(ListOutgoingTypedLinksResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

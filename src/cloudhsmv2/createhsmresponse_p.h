@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEHSMRESPONSE_P_H
 #define QTAWS_CREATEHSMRESPONSE_P_H
 
+#include "cloudhsmv2response.h"
+#include "createhsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class CreateHsmResponse;
+
+class QTAWS_EXPORT CreateHsmResponsePrivate : public CloudHSMV2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateHsmResponsePrivate(CreateHsmResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateHsmResponse)
+    Q_DISABLE_COPY(CreateHsmResponsePrivate)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

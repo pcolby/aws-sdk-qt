@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDELIVERYCHANNELRESPONSE_P_H
 #define QTAWS_DELETEDELIVERYCHANNELRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "deletedeliverychannelrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeleteDeliveryChannelResponse;
+
+class QTAWS_EXPORT DeleteDeliveryChannelResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDeliveryChannelResponsePrivate(DeleteDeliveryChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDeliveryChannelResponse)
+    Q_DISABLE_COPY(DeleteDeliveryChannelResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYVOLUMEATTRIBUTERESPONSE_P_H
 #define QTAWS_MODIFYVOLUMEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "modifyvolumeattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVolumeAttributeResponse;
+
+class QTAWS_EXPORT ModifyVolumeAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyVolumeAttributeResponsePrivate(ModifyVolumeAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyVolumeAttributeResponse)
+    Q_DISABLE_COPY(ModifyVolumeAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

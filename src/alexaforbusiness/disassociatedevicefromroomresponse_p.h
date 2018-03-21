@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATEDEVICEFROMROOMRESPONSE_P_H
 #define QTAWS_DISASSOCIATEDEVICEFROMROOMRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "disassociatedevicefromroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class DisassociateDeviceFromRoomResponse;
+
+class QTAWS_EXPORT DisassociateDeviceFromRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateDeviceFromRoomResponsePrivate(DisassociateDeviceFromRoomResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateDeviceFromRoomResponse)
+    Q_DISABLE_COPY(DisassociateDeviceFromRoomResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEBACKUPRESPONSE_P_H
 #define QTAWS_DESCRIBEBACKUPRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "describebackuprequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeBackupResponse;
+
+class QTAWS_EXPORT DescribeBackupResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeBackupResponsePrivate(DescribeBackupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBackupResponse)
+    Q_DISABLE_COPY(DescribeBackupResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

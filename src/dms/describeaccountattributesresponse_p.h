@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 
+#include "databasemigrationserviceresponse.h"
+#include "describeaccountattributesrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeAccountAttributesResponse;
+
+class QTAWS_EXPORT DescribeAccountAttributesResponsePrivate : public DatabaseMigrationServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeAccountAttributesResponsePrivate(DescribeAccountAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountAttributesResponse)
+    Q_DISABLE_COPY(DescribeAccountAttributesResponsePrivate)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

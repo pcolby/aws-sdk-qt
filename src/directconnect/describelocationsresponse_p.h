@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELOCATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBELOCATIONSRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "describelocationsrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DescribeLocationsResponse;
+
+class QTAWS_EXPORT DescribeLocationsResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLocationsResponsePrivate(DescribeLocationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLocationsResponse)
+    Q_DISABLE_COPY(DescribeLocationsResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

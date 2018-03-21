@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECOREDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETECOREDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "deletecoredefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteCoreDefinitionResponse;
+
+class QTAWS_EXPORT DeleteCoreDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteCoreDefinitionResponsePrivate(DeleteCoreDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCoreDefinitionResponse)
+    Q_DISABLE_COPY(DeleteCoreDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

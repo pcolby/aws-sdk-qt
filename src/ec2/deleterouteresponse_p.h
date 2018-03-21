@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEROUTERESPONSE_P_H
 #define QTAWS_DELETEROUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "deleterouterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteRouteResponse;
+
+class QTAWS_EXPORT DeleteRouteResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRouteResponsePrivate(DeleteRouteResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRouteResponse)
+    Q_DISABLE_COPY(DeleteRouteResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

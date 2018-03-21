@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEWEBACLRESPONSE_P_H
 #define QTAWS_UPDATEWEBACLRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "updatewebaclrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateWebACLResponse;
+
+class QTAWS_EXPORT UpdateWebACLResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateWebACLResponsePrivate(UpdateWebACLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateWebACLResponse)
+    Q_DISABLE_COPY(UpdateWebACLResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

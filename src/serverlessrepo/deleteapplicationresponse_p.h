@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPPLICATIONRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONRESPONSE_P_H
 
+#include "serverlessapplicationrepositoryresponse.h"
+#include "deleteapplicationrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class DeleteApplicationResponse;
+
+class QTAWS_EXPORT DeleteApplicationResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApplicationResponsePrivate(DeleteApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationResponse)
+    Q_DISABLE_COPY(DeleteApplicationResponsePrivate)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

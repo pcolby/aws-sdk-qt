@@ -20,4 +20,31 @@
 #ifndef QTAWS_REJECTPORTFOLIOSHARERESPONSE_P_H
 #define QTAWS_REJECTPORTFOLIOSHARERESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "rejectportfoliosharerequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class RejectPortfolioShareResponse;
+
+class QTAWS_EXPORT RejectPortfolioShareResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RejectPortfolioShareResponsePrivate(RejectPortfolioShareResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RejectPortfolioShareResponse)
+    Q_DISABLE_COPY(RejectPortfolioShareResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

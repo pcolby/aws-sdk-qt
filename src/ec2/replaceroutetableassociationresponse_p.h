@@ -20,4 +20,31 @@
 #ifndef QTAWS_REPLACEROUTETABLEASSOCIATIONRESPONSE_P_H
 #define QTAWS_REPLACEROUTETABLEASSOCIATIONRESPONSE_P_H
 
+#include "ec2response.h"
+#include "replaceroutetableassociationrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReplaceRouteTableAssociationResponse;
+
+class QTAWS_EXPORT ReplaceRouteTableAssociationResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ReplaceRouteTableAssociationResponsePrivate(ReplaceRouteTableAssociationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ReplaceRouteTableAssociationResponse)
+    Q_DISABLE_COPY(ReplaceRouteTableAssociationResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

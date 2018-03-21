@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETREQUESTVALIDATORRESPONSE_P_H
 #define QTAWS_GETREQUESTVALIDATORRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getrequestvalidatorrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetRequestValidatorResponse;
+
+class QTAWS_EXPORT GetRequestValidatorResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRequestValidatorResponsePrivate(GetRequestValidatorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRequestValidatorResponse)
+    Q_DISABLE_COPY(GetRequestValidatorResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

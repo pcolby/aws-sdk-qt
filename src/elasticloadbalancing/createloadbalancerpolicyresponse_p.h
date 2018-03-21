@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELOADBALANCERPOLICYRESPONSE_P_H
 #define QTAWS_CREATELOADBALANCERPOLICYRESPONSE_P_H
 
+#include "elasticloadbalancingresponse.h"
+#include "createloadbalancerpolicyrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class CreateLoadBalancerPolicyResponse;
+
+class QTAWS_EXPORT CreateLoadBalancerPolicyResponsePrivate : public ElasticLoadBalancingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLoadBalancerPolicyResponsePrivate(CreateLoadBalancerPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLoadBalancerPolicyResponse)
+    Q_DISABLE_COPY(CreateLoadBalancerPolicyResponsePrivate)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

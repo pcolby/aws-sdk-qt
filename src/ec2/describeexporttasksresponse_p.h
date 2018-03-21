@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEXPORTTASKSRESPONSE_P_H
 #define QTAWS_DESCRIBEEXPORTTASKSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeexporttasksrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeExportTasksResponse;
+
+class QTAWS_EXPORT DescribeExportTasksResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeExportTasksResponsePrivate(DescribeExportTasksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeExportTasksResponse)
+    Q_DISABLE_COPY(DescribeExportTasksResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

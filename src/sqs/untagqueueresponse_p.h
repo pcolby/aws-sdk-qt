@@ -20,4 +20,31 @@
 #ifndef QTAWS_UNTAGQUEUERESPONSE_P_H
 #define QTAWS_UNTAGQUEUERESPONSE_P_H
 
+#include "sqsresponse.h"
+#include "untagqueuerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class UntagQueueResponse;
+
+class QTAWS_EXPORT UntagQueueResponsePrivate : public SQSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UntagQueueResponsePrivate(UntagQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UntagQueueResponse)
+    Q_DISABLE_COPY(UntagQueueResponsePrivate)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

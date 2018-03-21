@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETPERMISSIONRESPONSE_P_H
 #define QTAWS_SETPERMISSIONRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "setpermissionrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class SetPermissionResponse;
+
+class QTAWS_EXPORT SetPermissionResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetPermissionResponsePrivate(SetPermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetPermissionResponse)
+    Q_DISABLE_COPY(SetPermissionResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

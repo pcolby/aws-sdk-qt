@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATENOTIFICATIONRESPONSE_P_H
 #define QTAWS_UPDATENOTIFICATIONRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "updatenotificationrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class UpdateNotificationResponse;
+
+class QTAWS_EXPORT UpdateNotificationResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateNotificationResponsePrivate(UpdateNotificationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateNotificationResponse)
+    Q_DISABLE_COPY(UpdateNotificationResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

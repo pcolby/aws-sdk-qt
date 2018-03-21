@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEJOBQUEUERESPONSE_P_H
 #define QTAWS_CREATEJOBQUEUERESPONSE_P_H
 
+#include "batchresponse.h"
+#include "createjobqueuerequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class CreateJobQueueResponse;
+
+class QTAWS_EXPORT CreateJobQueueResponsePrivate : public BatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateJobQueueResponsePrivate(CreateJobQueueResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateJobQueueResponse)
+    Q_DISABLE_COPY(CreateJobQueueResponsePrivate)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

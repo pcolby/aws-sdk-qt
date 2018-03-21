@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTMETRICALARMRESPONSE_P_H
 #define QTAWS_PUTMETRICALARMRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "putmetricalarmrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class PutMetricAlarmResponse;
+
+class QTAWS_EXPORT PutMetricAlarmResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutMetricAlarmResponsePrivate(PutMetricAlarmResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutMetricAlarmResponse)
+    Q_DISABLE_COPY(PutMetricAlarmResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

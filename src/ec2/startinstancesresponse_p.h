@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTINSTANCESRESPONSE_P_H
 #define QTAWS_STARTINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "startinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class StartInstancesResponse;
+
+class QTAWS_EXPORT StartInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartInstancesResponsePrivate(StartInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartInstancesResponse)
+    Q_DISABLE_COPY(StartInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

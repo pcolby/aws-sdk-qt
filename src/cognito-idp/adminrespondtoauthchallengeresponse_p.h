@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINRESPONDTOAUTHCHALLENGERESPONSE_P_H
 #define QTAWS_ADMINRESPONDTOAUTHCHALLENGERESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminrespondtoauthchallengerequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminRespondToAuthChallengeResponse;
+
+class QTAWS_EXPORT AdminRespondToAuthChallengeResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminRespondToAuthChallengeResponsePrivate(AdminRespondToAuthChallengeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminRespondToAuthChallengeResponse)
+    Q_DISABLE_COPY(AdminRespondToAuthChallengeResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

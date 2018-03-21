@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPRODUCTASADMINRESPONSE_P_H
 #define QTAWS_DESCRIBEPRODUCTASADMINRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "describeproductasadminrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeProductAsAdminResponse;
+
+class QTAWS_EXPORT DescribeProductAsAdminResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeProductAsAdminResponsePrivate(DescribeProductAsAdminResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProductAsAdminResponse)
+    Q_DISABLE_COPY(DescribeProductAsAdminResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

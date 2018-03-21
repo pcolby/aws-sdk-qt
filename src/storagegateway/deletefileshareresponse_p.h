@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEFILESHARERESPONSE_P_H
 #define QTAWS_DELETEFILESHARERESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "deletefilesharerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteFileShareResponse;
+
+class QTAWS_EXPORT DeleteFileShareResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteFileShareResponsePrivate(DeleteFileShareResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFileShareResponse)
+    Q_DISABLE_COPY(DeleteFileShareResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

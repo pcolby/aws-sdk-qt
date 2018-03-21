@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDHCPOPTIONSRESPONSE_P_H
 #define QTAWS_DELETEDHCPOPTIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletedhcpoptionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteDhcpOptionsResponse;
+
+class QTAWS_EXPORT DeleteDhcpOptionsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDhcpOptionsResponsePrivate(DeleteDhcpOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDhcpOptionsResponse)
+    Q_DISABLE_COPY(DeleteDhcpOptionsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

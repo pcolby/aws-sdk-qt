@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETHINGGROUPSFORTHINGRESPONSE_P_H
 #define QTAWS_UPDATETHINGGROUPSFORTHINGRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "updatethinggroupsforthingrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateThingGroupsForThingResponse;
+
+class QTAWS_EXPORT UpdateThingGroupsForThingResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateThingGroupsForThingResponsePrivate(UpdateThingGroupsForThingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateThingGroupsForThingResponse)
+    Q_DISABLE_COPY(UpdateThingGroupsForThingResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

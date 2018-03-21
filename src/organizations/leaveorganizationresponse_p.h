@@ -20,4 +20,31 @@
 #ifndef QTAWS_LEAVEORGANIZATIONRESPONSE_P_H
 #define QTAWS_LEAVEORGANIZATIONRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "leaveorganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class LeaveOrganizationResponse;
+
+class QTAWS_EXPORT LeaveOrganizationResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    LeaveOrganizationResponsePrivate(LeaveOrganizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(LeaveOrganizationResponse)
+    Q_DISABLE_COPY(LeaveOrganizationResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETRAFFICPOLICYCOMMENTRESPONSE_P_H
 #define QTAWS_UPDATETRAFFICPOLICYCOMMENTRESPONSE_P_H
 
+#include "route53response.h"
+#include "updatetrafficpolicycommentrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class UpdateTrafficPolicyCommentResponse;
+
+class QTAWS_EXPORT UpdateTrafficPolicyCommentResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTrafficPolicyCommentResponsePrivate(UpdateTrafficPolicyCommentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTrafficPolicyCommentResponse)
+    Q_DISABLE_COPY(UpdateTrafficPolicyCommentResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

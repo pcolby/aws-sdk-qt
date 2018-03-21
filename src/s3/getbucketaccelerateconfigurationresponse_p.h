@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETBUCKETACCELERATECONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETBUCKETACCELERATECONFIGURATIONRESPONSE_P_H
 
+#include "s3response.h"
+#include "getbucketaccelerateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketAccelerateConfigurationResponse;
+
+class QTAWS_EXPORT GetBucketAccelerateConfigurationResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetBucketAccelerateConfigurationResponsePrivate(GetBucketAccelerateConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketAccelerateConfigurationResponse)
+    Q_DISABLE_COPY(GetBucketAccelerateConfigurationResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

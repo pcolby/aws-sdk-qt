@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESETINSTANCEATTRIBUTERESPONSE_P_H
 #define QTAWS_RESETINSTANCEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "resetinstanceattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetInstanceAttributeResponse;
+
+class QTAWS_EXPORT ResetInstanceAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResetInstanceAttributeResponsePrivate(ResetInstanceAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResetInstanceAttributeResponse)
+    Q_DISABLE_COPY(ResetInstanceAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

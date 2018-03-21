@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETROOMRESPONSE_P_H
 #define QTAWS_GETROOMRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "getroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetRoomResponse;
+
+class QTAWS_EXPORT GetRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetRoomResponsePrivate(GetRoomResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetRoomResponse)
+    Q_DISABLE_COPY(GetRoomResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATESOFTWARETOKENRESPONSE_P_H
 #define QTAWS_ASSOCIATESOFTWARETOKENRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "associatesoftwaretokenrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AssociateSoftwareTokenResponse;
+
+class QTAWS_EXPORT AssociateSoftwareTokenResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateSoftwareTokenResponsePrivate(AssociateSoftwareTokenResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateSoftwareTokenResponse)
+    Q_DISABLE_COPY(AssociateSoftwareTokenResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

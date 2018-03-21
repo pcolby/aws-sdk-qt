@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPOLICYRESPONSE_P_H
 #define QTAWS_CREATEPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "createpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreatePolicyResponse;
+
+class QTAWS_EXPORT CreatePolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePolicyResponsePrivate(CreatePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePolicyResponse)
+    Q_DISABLE_COPY(CreatePolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

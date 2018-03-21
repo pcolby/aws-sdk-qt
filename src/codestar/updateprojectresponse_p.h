@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPROJECTRESPONSE_P_H
 #define QTAWS_UPDATEPROJECTRESPONSE_P_H
 
+#include "codestarresponse.h"
+#include "updateprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class UpdateProjectResponse;
+
+class QTAWS_EXPORT UpdateProjectResponsePrivate : public CodeStarResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateProjectResponsePrivate(UpdateProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateProjectResponse)
+    Q_DISABLE_COPY(UpdateProjectResponsePrivate)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

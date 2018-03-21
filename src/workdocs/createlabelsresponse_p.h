@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELABELSRESPONSE_P_H
 #define QTAWS_CREATELABELSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "createlabelsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateLabelsResponse;
+
+class QTAWS_EXPORT CreateLabelsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLabelsResponsePrivate(CreateLabelsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLabelsResponse)
+    Q_DISABLE_COPY(CreateLabelsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

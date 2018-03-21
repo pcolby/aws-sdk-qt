@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEIDENTITYIDFORMATRESPONSE_P_H
 #define QTAWS_DESCRIBEIDENTITYIDFORMATRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeidentityidformatrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeIdentityIdFormatResponse;
+
+class QTAWS_EXPORT DescribeIdentityIdFormatResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeIdentityIdFormatResponsePrivate(DescribeIdentityIdFormatResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIdentityIdFormatResponse)
+    Q_DISABLE_COPY(DescribeIdentityIdFormatResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

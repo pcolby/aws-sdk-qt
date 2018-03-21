@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_LISTCONFIGURATIONSRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "listconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class ListConfigurationsResponse;
+
+class QTAWS_EXPORT ListConfigurationsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListConfigurationsResponsePrivate(ListConfigurationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListConfigurationsResponse)
+    Q_DISABLE_COPY(ListConfigurationsResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

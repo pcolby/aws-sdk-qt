@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEFILESYSTEMRESPONSE_P_H
 #define QTAWS_DELETEFILESYSTEMRESPONSE_P_H
 
+#include "efsresponse.h"
+#include "deletefilesystemrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DeleteFileSystemResponse;
+
+class QTAWS_EXPORT DeleteFileSystemResponsePrivate : public EFSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteFileSystemResponsePrivate(DeleteFileSystemResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFileSystemResponse)
+    Q_DISABLE_COPY(DeleteFileSystemResponsePrivate)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

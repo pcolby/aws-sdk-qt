@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEIDENTITYUSAGERESPONSE_P_H
 #define QTAWS_DESCRIBEIDENTITYUSAGERESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "describeidentityusagerequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class DescribeIdentityUsageResponse;
+
+class QTAWS_EXPORT DescribeIdentityUsageResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeIdentityUsageResponsePrivate(DescribeIdentityUsageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIdentityUsageResponse)
+    Q_DISABLE_COPY(DescribeIdentityUsageResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

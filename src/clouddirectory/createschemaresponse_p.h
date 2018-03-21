@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESCHEMARESPONSE_P_H
 #define QTAWS_CREATESCHEMARESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "createschemarequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateSchemaResponse;
+
+class QTAWS_EXPORT CreateSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSchemaResponsePrivate(CreateSchemaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSchemaResponse)
+    Q_DISABLE_COPY(CreateSchemaResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

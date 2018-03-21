@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERTHINGRESPONSE_P_H
 #define QTAWS_REGISTERTHINGRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "registerthingrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class RegisterThingResponse;
+
+class QTAWS_EXPORT RegisterThingResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterThingResponsePrivate(RegisterThingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterThingResponse)
+    Q_DISABLE_COPY(RegisterThingResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

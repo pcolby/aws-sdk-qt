@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEINSTANCESRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describeinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeInstancesResponse;
+
+class QTAWS_EXPORT DescribeInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeInstancesResponsePrivate(DescribeInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstancesResponse)
+    Q_DISABLE_COPY(DescribeInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

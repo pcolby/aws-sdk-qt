@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEIMPORTEDKEYMATERIALRESPONSE_P_H
 #define QTAWS_DELETEIMPORTEDKEYMATERIALRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "deleteimportedkeymaterialrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DeleteImportedKeyMaterialResponse;
+
+class QTAWS_EXPORT DeleteImportedKeyMaterialResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteImportedKeyMaterialResponsePrivate(DeleteImportedKeyMaterialResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteImportedKeyMaterialResponse)
+    Q_DISABLE_COPY(DeleteImportedKeyMaterialResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

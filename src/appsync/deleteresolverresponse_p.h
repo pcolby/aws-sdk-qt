@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERESOLVERRESPONSE_P_H
 #define QTAWS_DELETERESOLVERRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "deleteresolverrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteResolverResponse;
+
+class QTAWS_EXPORT DeleteResolverResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteResolverResponsePrivate(DeleteResolverResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteResolverResponse)
+    Q_DISABLE_COPY(DeleteResolverResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

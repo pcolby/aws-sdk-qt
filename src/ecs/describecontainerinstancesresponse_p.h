@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECONTAINERINSTANCESRESPONSE_P_H
 #define QTAWS_DESCRIBECONTAINERINSTANCESRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "describecontainerinstancesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DescribeContainerInstancesResponse;
+
+class QTAWS_EXPORT DescribeContainerInstancesResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeContainerInstancesResponsePrivate(DescribeContainerInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeContainerInstancesResponse)
+    Q_DISABLE_COPY(DescribeContainerInstancesResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

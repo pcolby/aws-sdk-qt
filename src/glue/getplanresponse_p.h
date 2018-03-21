@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPLANRESPONSE_P_H
 #define QTAWS_GETPLANRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getplanrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetPlanResponse;
+
+class QTAWS_EXPORT GetPlanResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetPlanResponsePrivate(GetPlanResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetPlanResponse)
+    Q_DISABLE_COPY(GetPlanResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

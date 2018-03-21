@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETABLERESPONSE_P_H
 #define QTAWS_CREATETABLERESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "createtablerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class CreateTableResponse;
+
+class QTAWS_EXPORT CreateTableResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTableResponsePrivate(CreateTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTableResponse)
+    Q_DISABLE_COPY(CreateTableResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

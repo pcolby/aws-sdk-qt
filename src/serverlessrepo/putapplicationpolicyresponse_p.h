@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTAPPLICATIONPOLICYRESPONSE_P_H
 #define QTAWS_PUTAPPLICATIONPOLICYRESPONSE_P_H
 
+#include "serverlessapplicationrepositoryresponse.h"
+#include "putapplicationpolicyrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class PutApplicationPolicyResponse;
+
+class QTAWS_EXPORT PutApplicationPolicyResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutApplicationPolicyResponsePrivate(PutApplicationPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutApplicationPolicyResponse)
+    Q_DISABLE_COPY(PutApplicationPolicyResponsePrivate)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

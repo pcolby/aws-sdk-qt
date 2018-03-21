@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_P_H
 #define QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "listbootstrapactionsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListBootstrapActionsResponse;
+
+class QTAWS_EXPORT ListBootstrapActionsResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListBootstrapActionsResponsePrivate(ListBootstrapActionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListBootstrapActionsResponse)
+    Q_DISABLE_COPY(ListBootstrapActionsResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

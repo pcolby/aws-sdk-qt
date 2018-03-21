@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPULLREQUESTSRESPONSE_P_H
 #define QTAWS_LISTPULLREQUESTSRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "listpullrequestsrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class ListPullRequestsResponse;
+
+class QTAWS_EXPORT ListPullRequestsResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPullRequestsResponsePrivate(ListPullRequestsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPullRequestsResponse)
+    Q_DISABLE_COPY(ListPullRequestsResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

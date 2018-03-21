@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESTACKRESPONSE_P_H
 #define QTAWS_CREATESTACKRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "createstackrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateStackResponse;
+
+class QTAWS_EXPORT CreateStackResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateStackResponsePrivate(CreateStackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStackResponse)
+    Q_DISABLE_COPY(CreateStackResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPNSVOIPCHANNELRESPONSE_P_H
 #define QTAWS_GETAPNSVOIPCHANNELRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getapnsvoipchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetApnsVoipChannelResponse;
+
+class QTAWS_EXPORT GetApnsVoipChannelResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetApnsVoipChannelResponsePrivate(GetApnsVoipChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetApnsVoipChannelResponse)
+    Q_DISABLE_COPY(GetApnsVoipChannelResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBECACHESUBNETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBECACHESUBNETGROUPSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "describecachesubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeCacheSubnetGroupsResponse;
+
+class QTAWS_EXPORT DescribeCacheSubnetGroupsResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeCacheSubnetGroupsResponsePrivate(DescribeCacheSubnetGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCacheSubnetGroupsResponse)
+    Q_DISABLE_COPY(DescribeCacheSubnetGroupsResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

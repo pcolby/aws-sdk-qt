@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSTREAMINGDISTRIBUTIONSRESPONSE_P_H
 #define QTAWS_LISTSTREAMINGDISTRIBUTIONSRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "liststreamingdistributionsrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListStreamingDistributionsResponse;
+
+class QTAWS_EXPORT ListStreamingDistributionsResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListStreamingDistributionsResponsePrivate(ListStreamingDistributionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListStreamingDistributionsResponse)
+    Q_DISABLE_COPY(ListStreamingDistributionsResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

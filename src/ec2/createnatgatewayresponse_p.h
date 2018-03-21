@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATENATGATEWAYRESPONSE_P_H
 #define QTAWS_CREATENATGATEWAYRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createnatgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateNatGatewayResponse;
+
+class QTAWS_EXPORT CreateNatGatewayResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateNatGatewayResponsePrivate(CreateNatGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNatGatewayResponse)
+    Q_DISABLE_COPY(CreateNatGatewayResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

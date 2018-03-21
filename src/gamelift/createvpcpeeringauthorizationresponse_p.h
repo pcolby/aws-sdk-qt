@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEVPCPEERINGAUTHORIZATIONRESPONSE_P_H
 #define QTAWS_CREATEVPCPEERINGAUTHORIZATIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "createvpcpeeringauthorizationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class CreateVpcPeeringAuthorizationResponse;
+
+class QTAWS_EXPORT CreateVpcPeeringAuthorizationResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateVpcPeeringAuthorizationResponsePrivate(CreateVpcPeeringAuthorizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVpcPeeringAuthorizationResponse)
+    Q_DISABLE_COPY(CreateVpcPeeringAuthorizationResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

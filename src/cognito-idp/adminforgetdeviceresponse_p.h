@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINFORGETDEVICERESPONSE_P_H
 #define QTAWS_ADMINFORGETDEVICERESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminforgetdevicerequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminForgetDeviceResponse;
+
+class QTAWS_EXPORT AdminForgetDeviceResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminForgetDeviceResponsePrivate(AdminForgetDeviceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminForgetDeviceResponse)
+    Q_DISABLE_COPY(AdminForgetDeviceResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

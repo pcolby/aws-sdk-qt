@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETEXPORTJOBRESPONSE_P_H
 #define QTAWS_GETEXPORTJOBRESPONSE_P_H
 
+#include "pinpointresponse.h"
+#include "getexportjobrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetExportJobResponse;
+
+class QTAWS_EXPORT GetExportJobResponsePrivate : public PinpointResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetExportJobResponsePrivate(GetExportJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetExportJobResponse)
+    Q_DISABLE_COPY(GetExportJobResponsePrivate)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

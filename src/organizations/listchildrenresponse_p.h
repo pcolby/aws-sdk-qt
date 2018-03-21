@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTCHILDRENRESPONSE_P_H
 #define QTAWS_LISTCHILDRENRESPONSE_P_H
 
+#include "organizationsresponse.h"
+#include "listchildrenrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListChildrenResponse;
+
+class QTAWS_EXPORT ListChildrenResponsePrivate : public OrganizationsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListChildrenResponsePrivate(ListChildrenResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListChildrenResponse)
+    Q_DISABLE_COPY(ListChildrenResponsePrivate)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

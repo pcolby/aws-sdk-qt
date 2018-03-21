@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTABLERESPONSE_P_H
 #define QTAWS_GETTABLERESPONSE_P_H
 
+#include "glueresponse.h"
+#include "gettablerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetTableResponse;
+
+class QTAWS_EXPORT GetTableResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTableResponsePrivate(GetTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTableResponse)
+    Q_DISABLE_COPY(GetTableResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

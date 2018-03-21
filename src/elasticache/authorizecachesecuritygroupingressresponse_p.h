@@ -20,4 +20,31 @@
 #ifndef QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "authorizecachesecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class AuthorizeCacheSecurityGroupIngressResponse;
+
+class QTAWS_EXPORT AuthorizeCacheSecurityGroupIngressResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AuthorizeCacheSecurityGroupIngressResponsePrivate(AuthorizeCacheSecurityGroupIngressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeCacheSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeCacheSecurityGroupIngressResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPORTFOLIORESPONSE_P_H
 #define QTAWS_UPDATEPORTFOLIORESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "updateportfoliorequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdatePortfolioResponse;
+
+class QTAWS_EXPORT UpdatePortfolioResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdatePortfolioResponsePrivate(UpdatePortfolioResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePortfolioResponse)
+    Q_DISABLE_COPY(UpdatePortfolioResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

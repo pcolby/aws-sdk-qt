@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "removetagsfromresourcerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class RemoveTagsFromResourceResponse;
+
+class QTAWS_EXPORT RemoveTagsFromResourceResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveTagsFromResourceResponsePrivate(RemoveTagsFromResourceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromResourceResponse)
+    Q_DISABLE_COPY(RemoveTagsFromResourceResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESTREAMINGDISTRIBUTIONWITHTAGSRESPONSE_P_H
 #define QTAWS_CREATESTREAMINGDISTRIBUTIONWITHTAGSRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "createstreamingdistributionwithtagsrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class CreateStreamingDistributionWithTagsResponse;
+
+class QTAWS_EXPORT CreateStreamingDistributionWithTagsResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateStreamingDistributionWithTagsResponsePrivate(CreateStreamingDistributionWithTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStreamingDistributionWithTagsResponse)
+    Q_DISABLE_COPY(CreateStreamingDistributionWithTagsResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

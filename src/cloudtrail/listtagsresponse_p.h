@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSRESPONSE_P_H
 #define QTAWS_LISTTAGSRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "listtagsrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class ListTagsResponse;
+
+class QTAWS_EXPORT ListTagsResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsResponsePrivate(ListTagsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsResponse)
+    Q_DISABLE_COPY(ListTagsResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

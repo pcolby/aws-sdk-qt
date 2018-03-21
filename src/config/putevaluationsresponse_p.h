@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTEVALUATIONSRESPONSE_P_H
 #define QTAWS_PUTEVALUATIONSRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "putevaluationsrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutEvaluationsResponse;
+
+class QTAWS_EXPORT PutEvaluationsResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutEvaluationsResponsePrivate(PutEvaluationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutEvaluationsResponse)
+    Q_DISABLE_COPY(PutEvaluationsResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

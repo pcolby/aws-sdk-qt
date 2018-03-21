@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESAMPLEFINDINGSRESPONSE_P_H
 #define QTAWS_CREATESAMPLEFINDINGSRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "createsamplefindingsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class CreateSampleFindingsResponse;
+
+class QTAWS_EXPORT CreateSampleFindingsResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateSampleFindingsResponsePrivate(CreateSampleFindingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSampleFindingsResponse)
+    Q_DISABLE_COPY(CreateSampleFindingsResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

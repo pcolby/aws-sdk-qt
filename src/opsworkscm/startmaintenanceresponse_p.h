@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTMAINTENANCERESPONSE_P_H
 #define QTAWS_STARTMAINTENANCERESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "startmaintenancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class StartMaintenanceResponse;
+
+class QTAWS_EXPORT StartMaintenanceResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartMaintenanceResponsePrivate(StartMaintenanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartMaintenanceResponse)
+    Q_DISABLE_COPY(StartMaintenanceResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

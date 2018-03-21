@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBETAGOPTIONRESPONSE_P_H
 #define QTAWS_DESCRIBETAGOPTIONRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "describetagoptionrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeTagOptionResponse;
+
+class QTAWS_EXPORT DescribeTagOptionResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeTagOptionResponsePrivate(DescribeTagOptionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagOptionResponse)
+    Q_DISABLE_COPY(DescribeTagOptionResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

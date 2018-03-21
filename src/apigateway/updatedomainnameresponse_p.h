@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDOMAINNAMERESPONSE_P_H
 #define QTAWS_UPDATEDOMAINNAMERESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "updatedomainnamerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateDomainNameResponse;
+
+class QTAWS_EXPORT UpdateDomainNameResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDomainNameResponsePrivate(UpdateDomainNameResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDomainNameResponse)
+    Q_DISABLE_COPY(UpdateDomainNameResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

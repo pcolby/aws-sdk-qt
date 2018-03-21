@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "getidentityverificationattributesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityVerificationAttributesResponse;
+
+class QTAWS_EXPORT GetIdentityVerificationAttributesResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetIdentityVerificationAttributesResponsePrivate(GetIdentityVerificationAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityVerificationAttributesResponse)
+    Q_DISABLE_COPY(GetIdentityVerificationAttributesResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

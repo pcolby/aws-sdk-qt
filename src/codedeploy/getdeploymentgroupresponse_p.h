@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDEPLOYMENTGROUPRESPONSE_P_H
 #define QTAWS_GETDEPLOYMENTGROUPRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "getdeploymentgrouprequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetDeploymentGroupResponse;
+
+class QTAWS_EXPORT GetDeploymentGroupResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDeploymentGroupResponsePrivate(GetDeploymentGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDeploymentGroupResponse)
+    Q_DISABLE_COPY(GetDeploymentGroupResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESOLVEROOMRESPONSE_P_H
 #define QTAWS_RESOLVEROOMRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "resolveroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class ResolveRoomResponse;
+
+class QTAWS_EXPORT ResolveRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResolveRoomResponsePrivate(ResolveRoomResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResolveRoomResponse)
+    Q_DISABLE_COPY(ResolveRoomResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPTRAININGJOBRESPONSE_P_H
 #define QTAWS_STOPTRAININGJOBRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "stoptrainingjobrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class StopTrainingJobResponse;
+
+class QTAWS_EXPORT StopTrainingJobResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopTrainingJobResponsePrivate(StopTrainingJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopTrainingJobResponse)
+    Q_DISABLE_COPY(StopTrainingJobResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

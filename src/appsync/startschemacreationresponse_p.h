@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTSCHEMACREATIONRESPONSE_P_H
 #define QTAWS_STARTSCHEMACREATIONRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "startschemacreationrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class StartSchemaCreationResponse;
+
+class QTAWS_EXPORT StartSchemaCreationResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartSchemaCreationResponsePrivate(StartSchemaCreationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartSchemaCreationResponse)
+    Q_DISABLE_COPY(StartSchemaCreationResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

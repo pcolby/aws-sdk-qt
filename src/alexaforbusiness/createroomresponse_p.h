@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEROOMRESPONSE_P_H
 #define QTAWS_CREATEROOMRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "createroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class CreateRoomResponse;
+
+class QTAWS_EXPORT CreateRoomResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateRoomResponsePrivate(CreateRoomResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRoomResponse)
+    Q_DISABLE_COPY(CreateRoomResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

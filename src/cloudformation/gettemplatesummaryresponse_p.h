@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETTEMPLATESUMMARYRESPONSE_P_H
 #define QTAWS_GETTEMPLATESUMMARYRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "gettemplatesummaryrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class GetTemplateSummaryResponse;
+
+class QTAWS_EXPORT GetTemplateSummaryResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetTemplateSummaryResponsePrivate(GetTemplateSummaryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetTemplateSummaryResponse)
+    Q_DISABLE_COPY(GetTemplateSummaryResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

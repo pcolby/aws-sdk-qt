@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEHSMCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEHSMCONFIGURATIONRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "deletehsmconfigurationrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteHsmConfigurationResponse;
+
+class QTAWS_EXPORT DeleteHsmConfigurationResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteHsmConfigurationResponsePrivate(DeleteHsmConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHsmConfigurationResponse)
+    Q_DISABLE_COPY(DeleteHsmConfigurationResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

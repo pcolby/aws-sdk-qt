@@ -20,4 +20,31 @@
 #ifndef QTAWS_DEACTIVATEMFADEVICERESPONSE_P_H
 #define QTAWS_DEACTIVATEMFADEVICERESPONSE_P_H
 
+#include "iamresponse.h"
+#include "deactivatemfadevicerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeactivateMFADeviceResponse;
+
+class QTAWS_EXPORT DeactivateMFADeviceResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeactivateMFADeviceResponsePrivate(DeactivateMFADeviceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeactivateMFADeviceResponse)
+    Q_DISABLE_COPY(DeactivateMFADeviceResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

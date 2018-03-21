@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTCHANNELRESPONSE_P_H
 #define QTAWS_STARTCHANNELRESPONSE_P_H
 
+#include "medialiveresponse.h"
+#include "startchannelrequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class StartChannelResponse;
+
+class QTAWS_EXPORT StartChannelResponsePrivate : public MediaLiveResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartChannelResponsePrivate(StartChannelResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartChannelResponse)
+    Q_DISABLE_COPY(StartChannelResponsePrivate)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLEGATEWAYRESPONSE_P_H
 #define QTAWS_DISABLEGATEWAYRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "disablegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DisableGatewayResponse;
+
+class QTAWS_EXPORT DisableGatewayResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableGatewayResponsePrivate(DisableGatewayResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableGatewayResponse)
+    Q_DISABLE_COPY(DisableGatewayResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

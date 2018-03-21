@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGITHUBACCOUNTTOKENNAMESRESPONSE_P_H
 #define QTAWS_LISTGITHUBACCOUNTTOKENNAMESRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "listgithubaccounttokennamesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListGitHubAccountTokenNamesResponse;
+
+class QTAWS_EXPORT ListGitHubAccountTokenNamesResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGitHubAccountTokenNamesResponsePrivate(ListGitHubAccountTokenNamesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGitHubAccountTokenNamesResponse)
+    Q_DISABLE_COPY(ListGitHubAccountTokenNamesResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

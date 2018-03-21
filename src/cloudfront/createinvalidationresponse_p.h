@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEINVALIDATIONRESPONSE_P_H
 #define QTAWS_CREATEINVALIDATIONRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "createinvalidationrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class CreateInvalidationResponse;
+
+class QTAWS_EXPORT CreateInvalidationResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateInvalidationResponsePrivate(CreateInvalidationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInvalidationResponse)
+    Q_DISABLE_COPY(CreateInvalidationResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

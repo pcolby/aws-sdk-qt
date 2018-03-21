@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDETECTORRESPONSE_P_H
 #define QTAWS_UPDATEDETECTORRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "updatedetectorrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class UpdateDetectorResponse;
+
+class QTAWS_EXPORT UpdateDetectorResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDetectorResponsePrivate(UpdateDetectorResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDetectorResponse)
+    Q_DISABLE_COPY(UpdateDetectorResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

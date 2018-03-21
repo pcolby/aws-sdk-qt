@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTFUNCTIONSRESPONSE_P_H
 #define QTAWS_LISTFUNCTIONSRESPONSE_P_H
 
+#include "lambdaresponse.h"
+#include "listfunctionsrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class ListFunctionsResponse;
+
+class QTAWS_EXPORT ListFunctionsResponsePrivate : public LambdaResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListFunctionsResponsePrivate(ListFunctionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListFunctionsResponse)
+    Q_DISABLE_COPY(ListFunctionsResponsePrivate)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

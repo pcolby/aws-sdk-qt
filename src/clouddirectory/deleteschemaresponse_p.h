@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESCHEMARESPONSE_P_H
 #define QTAWS_DELETESCHEMARESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "deleteschemarequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DeleteSchemaResponse;
+
+class QTAWS_EXPORT DeleteSchemaResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteSchemaResponsePrivate(DeleteSchemaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSchemaResponse)
+    Q_DISABLE_COPY(DeleteSchemaResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHDETECTSENTIMENTRESPONSE_P_H
 #define QTAWS_BATCHDETECTSENTIMENTRESPONSE_P_H
 
+#include "comprehendresponse.h"
+#include "batchdetectsentimentrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectSentimentResponse;
+
+class QTAWS_EXPORT BatchDetectSentimentResponsePrivate : public ComprehendResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchDetectSentimentResponsePrivate(BatchDetectSentimentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDetectSentimentResponse)
+    Q_DISABLE_COPY(BatchDetectSentimentResponsePrivate)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSTEPSRESPONSE_P_H
 #define QTAWS_LISTSTEPSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "liststepsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListStepsResponse;
+
+class QTAWS_EXPORT ListStepsResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListStepsResponsePrivate(ListStepsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListStepsResponse)
+    Q_DISABLE_COPY(ListStepsResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

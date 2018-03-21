@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEACCOUNTPASSWORDPOLICYRESPONSE_P_H
 #define QTAWS_UPDATEACCOUNTPASSWORDPOLICYRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateaccountpasswordpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateAccountPasswordPolicyResponse;
+
+class QTAWS_EXPORT UpdateAccountPasswordPolicyResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateAccountPasswordPolicyResponsePrivate(UpdateAccountPasswordPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAccountPasswordPolicyResponse)
+    Q_DISABLE_COPY(UpdateAccountPasswordPolicyResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

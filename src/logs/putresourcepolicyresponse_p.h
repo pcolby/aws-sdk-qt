@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTRESOURCEPOLICYRESPONSE_P_H
 #define QTAWS_PUTRESOURCEPOLICYRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "putresourcepolicyrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutResourcePolicyResponse;
+
+class QTAWS_EXPORT PutResourcePolicyResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutResourcePolicyResponsePrivate(PutResourcePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutResourcePolicyResponse)
+    Q_DISABLE_COPY(PutResourcePolicyResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

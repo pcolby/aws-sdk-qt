@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTARGETSBYRULERESPONSE_P_H
 #define QTAWS_LISTTARGETSBYRULERESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "listtargetsbyrulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class ListTargetsByRuleResponse;
+
+class QTAWS_EXPORT ListTargetsByRuleResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTargetsByRuleResponsePrivate(ListTargetsByRuleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTargetsByRuleResponse)
+    Q_DISABLE_COPY(ListTargetsByRuleResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

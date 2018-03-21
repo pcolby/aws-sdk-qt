@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDBCLUSTERSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBCLUSTERSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describedbclustersrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBClustersResponse;
+
+class QTAWS_EXPORT DescribeDBClustersResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDBClustersResponsePrivate(DescribeDBClustersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBClustersResponse)
+    Q_DISABLE_COPY(DescribeDBClustersResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

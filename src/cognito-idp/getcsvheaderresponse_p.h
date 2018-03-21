@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCSVHEADERRESPONSE_P_H
 #define QTAWS_GETCSVHEADERRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "getcsvheaderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetCSVHeaderResponse;
+
+class QTAWS_EXPORT GetCSVHeaderResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCSVHeaderResponsePrivate(GetCSVHeaderResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCSVHeaderResponse)
+    Q_DISABLE_COPY(GetCSVHeaderResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

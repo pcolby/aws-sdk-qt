@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECACHEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_DELETECACHEPARAMETERGROUPRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "deletecacheparametergrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteCacheParameterGroupResponse;
+
+class QTAWS_EXPORT DeleteCacheParameterGroupResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteCacheParameterGroupResponsePrivate(DeleteCacheParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCacheParameterGroupResponse)
+    Q_DISABLE_COPY(DeleteCacheParameterGroupResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

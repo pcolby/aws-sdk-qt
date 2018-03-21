@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECRAWLERRESPONSE_P_H
 #define QTAWS_UPDATECRAWLERRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "updatecrawlerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateCrawlerResponse;
+
+class QTAWS_EXPORT UpdateCrawlerResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateCrawlerResponsePrivate(UpdateCrawlerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateCrawlerResponse)
+    Q_DISABLE_COPY(UpdateCrawlerResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEGROUPRESPONSE_P_H
 #define QTAWS_UPDATEGROUPRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updategrouprequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateGroupResponse;
+
+class QTAWS_EXPORT UpdateGroupResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateGroupResponsePrivate(UpdateGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGroupResponse)
+    Q_DISABLE_COPY(UpdateGroupResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

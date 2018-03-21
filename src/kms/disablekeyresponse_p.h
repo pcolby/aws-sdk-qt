@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLEKEYRESPONSE_P_H
 #define QTAWS_DISABLEKEYRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "disablekeyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DisableKeyResponse;
+
+class QTAWS_EXPORT DisableKeyResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableKeyResponsePrivate(DisableKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableKeyResponse)
+    Q_DISABLE_COPY(DisableKeyResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ROTATEENCRYPTIONKEYRESPONSE_P_H
 #define QTAWS_ROTATEENCRYPTIONKEYRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "rotateencryptionkeyrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RotateEncryptionKeyResponse;
+
+class QTAWS_EXPORT RotateEncryptionKeyResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RotateEncryptionKeyResponsePrivate(RotateEncryptionKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RotateEncryptionKeyResponse)
+    Q_DISABLE_COPY(RotateEncryptionKeyResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

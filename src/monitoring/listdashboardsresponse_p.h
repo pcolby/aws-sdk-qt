@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDASHBOARDSRESPONSE_P_H
 #define QTAWS_LISTDASHBOARDSRESPONSE_P_H
 
+#include "cloudwatchresponse.h"
+#include "listdashboardsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class ListDashboardsResponse;
+
+class QTAWS_EXPORT ListDashboardsResponsePrivate : public CloudWatchResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDashboardsResponsePrivate(ListDashboardsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDashboardsResponse)
+    Q_DISABLE_COPY(ListDashboardsResponsePrivate)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

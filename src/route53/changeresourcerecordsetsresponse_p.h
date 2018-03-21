@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHANGERESOURCERECORDSETSRESPONSE_P_H
 #define QTAWS_CHANGERESOURCERECORDSETSRESPONSE_P_H
 
+#include "route53response.h"
+#include "changeresourcerecordsetsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ChangeResourceRecordSetsResponse;
+
+class QTAWS_EXPORT ChangeResourceRecordSetsResponsePrivate : public Route53ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ChangeResourceRecordSetsResponsePrivate(ChangeResourceRecordSetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ChangeResourceRecordSetsResponse)
+    Q_DISABLE_COPY(ChangeResourceRecordSetsResponsePrivate)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

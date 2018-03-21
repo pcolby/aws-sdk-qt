@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEINSTANCERESPONSE_P_H
 #define QTAWS_DELETEINSTANCERESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "deleteinstancerequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteInstanceResponse;
+
+class QTAWS_EXPORT DeleteInstanceResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteInstanceResponsePrivate(DeleteInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteInstanceResponse)
+    Q_DISABLE_COPY(DeleteInstanceResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

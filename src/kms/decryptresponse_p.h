@@ -20,4 +20,31 @@
 #ifndef QTAWS_DECRYPTRESPONSE_P_H
 #define QTAWS_DECRYPTRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "decryptrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DecryptResponse;
+
+class QTAWS_EXPORT DecryptResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DecryptResponsePrivate(DecryptResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DecryptResponse)
+    Q_DISABLE_COPY(DecryptResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

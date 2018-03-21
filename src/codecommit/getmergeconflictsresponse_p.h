@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETMERGECONFLICTSRESPONSE_P_H
 #define QTAWS_GETMERGECONFLICTSRESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "getmergeconflictsrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetMergeConflictsResponse;
+
+class QTAWS_EXPORT GetMergeConflictsResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetMergeConflictsResponsePrivate(GetMergeConflictsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetMergeConflictsResponse)
+    Q_DISABLE_COPY(GetMergeConflictsResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

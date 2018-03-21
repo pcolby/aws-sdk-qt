@@ -20,4 +20,31 @@
 #ifndef QTAWS_VALIDATETEMPLATERESPONSE_P_H
 #define QTAWS_VALIDATETEMPLATERESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "validatetemplaterequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ValidateTemplateResponse;
+
+class QTAWS_EXPORT ValidateTemplateResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ValidateTemplateResponsePrivate(ValidateTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ValidateTemplateResponse)
+    Q_DISABLE_COPY(ValidateTemplateResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

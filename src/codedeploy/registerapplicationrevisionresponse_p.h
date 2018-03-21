@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERAPPLICATIONREVISIONRESPONSE_P_H
 #define QTAWS_REGISTERAPPLICATIONREVISIONRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "registerapplicationrevisionrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class RegisterApplicationRevisionResponse;
+
+class QTAWS_EXPORT RegisterApplicationRevisionResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterApplicationRevisionResponsePrivate(RegisterApplicationRevisionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterApplicationRevisionResponse)
+    Q_DISABLE_COPY(RegisterApplicationRevisionResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_P_H
 #define QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "getresourceconfighistoryrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class GetResourceConfigHistoryResponse;
+
+class QTAWS_EXPORT GetResourceConfigHistoryResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetResourceConfigHistoryResponsePrivate(GetResourceConfigHistoryResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetResourceConfigHistoryResponse)
+    Q_DISABLE_COPY(GetResourceConfigHistoryResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

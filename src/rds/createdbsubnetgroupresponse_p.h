@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDBSUBNETGROUPRESPONSE_P_H
 #define QTAWS_CREATEDBSUBNETGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "createdbsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBSubnetGroupResponse;
+
+class QTAWS_EXPORT CreateDBSubnetGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDBSubnetGroupResponsePrivate(CreateDBSubnetGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDBSubnetGroupResponse)
+    Q_DISABLE_COPY(CreateDBSubnetGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

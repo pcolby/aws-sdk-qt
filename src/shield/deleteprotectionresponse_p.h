@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPROTECTIONRESPONSE_P_H
 #define QTAWS_DELETEPROTECTIONRESPONSE_P_H
 
+#include "shieldresponse.h"
+#include "deleteprotectionrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DeleteProtectionResponse;
+
+class QTAWS_EXPORT DeleteProtectionResponsePrivate : public ShieldResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteProtectionResponsePrivate(DeleteProtectionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProtectionResponse)
+    Q_DISABLE_COPY(DeleteProtectionResponsePrivate)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

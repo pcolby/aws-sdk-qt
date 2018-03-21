@@ -20,4 +20,31 @@
 #ifndef QTAWS_EXECUTECHANGESETRESPONSE_P_H
 #define QTAWS_EXECUTECHANGESETRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "executechangesetrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ExecuteChangeSetResponse;
+
+class QTAWS_EXPORT ExecuteChangeSetResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ExecuteChangeSetResponsePrivate(ExecuteChangeSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ExecuteChangeSetResponse)
+    Q_DISABLE_COPY(ExecuteChangeSetResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

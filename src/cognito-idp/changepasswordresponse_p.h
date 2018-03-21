@@ -20,4 +20,31 @@
 #ifndef QTAWS_CHANGEPASSWORDRESPONSE_P_H
 #define QTAWS_CHANGEPASSWORDRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "changepasswordrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ChangePasswordResponse;
+
+class QTAWS_EXPORT ChangePasswordResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ChangePasswordResponsePrivate(ChangePasswordResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ChangePasswordResponse)
+    Q_DISABLE_COPY(ChangePasswordResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

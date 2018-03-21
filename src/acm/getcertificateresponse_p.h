@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCERTIFICATERESPONSE_P_H
 #define QTAWS_GETCERTIFICATERESPONSE_P_H
 
+#include "acmresponse.h"
+#include "getcertificaterequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class GetCertificateResponse;
+
+class QTAWS_EXPORT GetCertificateResponsePrivate : public ACMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCertificateResponsePrivate(GetCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCertificateResponse)
+    Q_DISABLE_COPY(GetCertificateResponsePrivate)
+
+};
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPROJECTRESPONSE_P_H
 #define QTAWS_GETPROJECTRESPONSE_P_H
 
+#include "devicefarmresponse.h"
+#include "getprojectrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetProjectResponse;
+
+class QTAWS_EXPORT GetProjectResponsePrivate : public DeviceFarmResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetProjectResponsePrivate(GetProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetProjectResponse)
+    Q_DISABLE_COPY(GetProjectResponsePrivate)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATENOTIFICATIONRESPONSE_P_H
 #define QTAWS_CREATENOTIFICATIONRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "createnotificationrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class CreateNotificationResponse;
+
+class QTAWS_EXPORT CreateNotificationResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateNotificationResponsePrivate(CreateNotificationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNotificationResponse)
+    Q_DISABLE_COPY(CreateNotificationResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

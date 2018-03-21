@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEIPROUTESRESPONSE_P_H
 #define QTAWS_REMOVEIPROUTESRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "removeiproutesrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class RemoveIpRoutesResponse;
+
+class QTAWS_EXPORT RemoveIpRoutesResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemoveIpRoutesResponsePrivate(RemoveIpRoutesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveIpRoutesResponse)
+    Q_DISABLE_COPY(RemoveIpRoutesResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

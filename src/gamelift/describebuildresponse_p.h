@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEBUILDRESPONSE_P_H
 #define QTAWS_DESCRIBEBUILDRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describebuildrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeBuildResponse;
+
+class QTAWS_EXPORT DescribeBuildResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeBuildResponsePrivate(DescribeBuildResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBuildResponse)
+    Q_DISABLE_COPY(DescribeBuildResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

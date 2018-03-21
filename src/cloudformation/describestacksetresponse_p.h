@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTACKSETRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKSETRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "describestacksetrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DescribeStackSetResponse;
+
+class QTAWS_EXPORT DescribeStackSetResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStackSetResponsePrivate(DescribeStackSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStackSetResponse)
+    Q_DISABLE_COPY(DescribeStackSetResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDEVICEDEFINITIONRESPONSE_P_H
 #define QTAWS_CREATEDEVICEDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "createdevicedefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateDeviceDefinitionResponse;
+
+class QTAWS_EXPORT CreateDeviceDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDeviceDefinitionResponsePrivate(CreateDeviceDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDeviceDefinitionResponse)
+    Q_DISABLE_COPY(CreateDeviceDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

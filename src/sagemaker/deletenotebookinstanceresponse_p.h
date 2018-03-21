@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETENOTEBOOKINSTANCERESPONSE_P_H
 #define QTAWS_DELETENOTEBOOKINSTANCERESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "deletenotebookinstancerequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteNotebookInstanceResponse;
+
+class QTAWS_EXPORT DeleteNotebookInstanceResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteNotebookInstanceResponsePrivate(DeleteNotebookInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNotebookInstanceResponse)
+    Q_DISABLE_COPY(DeleteNotebookInstanceResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

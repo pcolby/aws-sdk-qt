@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHPUTATTRIBUTESRESPONSE_P_H
 #define QTAWS_BATCHPUTATTRIBUTESRESPONSE_P_H
 
+#include "simpledbresponse.h"
+#include "batchputattributesrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class BatchPutAttributesResponse;
+
+class QTAWS_EXPORT BatchPutAttributesResponsePrivate : public SimpleDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchPutAttributesResponsePrivate(BatchPutAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchPutAttributesResponse)
+    Q_DISABLE_COPY(BatchPutAttributesResponsePrivate)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

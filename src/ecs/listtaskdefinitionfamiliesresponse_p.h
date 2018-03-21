@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTASKDEFINITIONFAMILIESRESPONSE_P_H
 #define QTAWS_LISTTASKDEFINITIONFAMILIESRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "listtaskdefinitionfamiliesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListTaskDefinitionFamiliesResponse;
+
+class QTAWS_EXPORT ListTaskDefinitionFamiliesResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTaskDefinitionFamiliesResponsePrivate(ListTaskDefinitionFamiliesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTaskDefinitionFamiliesResponse)
+    Q_DISABLE_COPY(ListTaskDefinitionFamiliesResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

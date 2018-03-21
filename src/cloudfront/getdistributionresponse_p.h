@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDISTRIBUTIONRESPONSE_P_H
 #define QTAWS_GETDISTRIBUTIONRESPONSE_P_H
 
+#include "cloudfrontresponse.h"
+#include "getdistributionrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class GetDistributionResponse;
+
+class QTAWS_EXPORT GetDistributionResponsePrivate : public CloudFrontResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDistributionResponsePrivate(GetDistributionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDistributionResponse)
+    Q_DISABLE_COPY(GetDistributionResponsePrivate)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

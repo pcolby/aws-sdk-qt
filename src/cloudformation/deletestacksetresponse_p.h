@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESTACKSETRESPONSE_P_H
 #define QTAWS_DELETESTACKSETRESPONSE_P_H
 
+#include "cloudformationresponse.h"
+#include "deletestacksetrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DeleteStackSetResponse;
+
+class QTAWS_EXPORT DeleteStackSetResponsePrivate : public CloudFormationResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteStackSetResponsePrivate(DeleteStackSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStackSetResponse)
+    Q_DISABLE_COPY(DeleteStackSetResponsePrivate)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

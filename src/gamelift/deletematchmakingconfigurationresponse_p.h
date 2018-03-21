@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEMATCHMAKINGCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEMATCHMAKINGCONFIGURATIONRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "deletematchmakingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteMatchmakingConfigurationResponse;
+
+class QTAWS_EXPORT DeleteMatchmakingConfigurationResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteMatchmakingConfigurationResponsePrivate(DeleteMatchmakingConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMatchmakingConfigurationResponse)
+    Q_DISABLE_COPY(DeleteMatchmakingConfigurationResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

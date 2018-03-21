@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEGLOBALTABLERESPONSE_P_H
 #define QTAWS_CREATEGLOBALTABLERESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "createglobaltablerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class CreateGlobalTableResponse;
+
+class QTAWS_EXPORT CreateGlobalTableResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateGlobalTableResponsePrivate(CreateGlobalTableResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGlobalTableResponse)
+    Q_DISABLE_COPY(CreateGlobalTableResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

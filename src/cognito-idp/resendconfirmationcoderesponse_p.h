@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESENDCONFIRMATIONCODERESPONSE_P_H
 #define QTAWS_RESENDCONFIRMATIONCODERESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "resendconfirmationcoderequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ResendConfirmationCodeResponse;
+
+class QTAWS_EXPORT ResendConfirmationCodeResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ResendConfirmationCodeResponsePrivate(ResendConfirmationCodeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ResendConfirmationCodeResponse)
+    Q_DISABLE_COPY(ResendConfirmationCodeResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

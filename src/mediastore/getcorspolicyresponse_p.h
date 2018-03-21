@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCORSPOLICYRESPONSE_P_H
 #define QTAWS_GETCORSPOLICYRESPONSE_P_H
 
+#include "mediastoreresponse.h"
+#include "getcorspolicyrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class GetCorsPolicyResponse;
+
+class QTAWS_EXPORT GetCorsPolicyResponsePrivate : public MediaStoreResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetCorsPolicyResponsePrivate(GetCorsPolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetCorsPolicyResponse)
+    Q_DISABLE_COPY(GetCorsPolicyResponsePrivate)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDATABASERESPONSE_P_H
 #define QTAWS_CREATEDATABASERESPONSE_P_H
 
+#include "glueresponse.h"
+#include "createdatabaserequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateDatabaseResponse;
+
+class QTAWS_EXPORT CreateDatabaseResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDatabaseResponsePrivate(CreateDatabaseResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDatabaseResponse)
+    Q_DISABLE_COPY(CreateDatabaseResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

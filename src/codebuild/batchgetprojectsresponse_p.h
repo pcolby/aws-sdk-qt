@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHGETPROJECTSRESPONSE_P_H
 #define QTAWS_BATCHGETPROJECTSRESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "batchgetprojectsrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class BatchGetProjectsResponse;
+
+class QTAWS_EXPORT BatchGetProjectsResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchGetProjectsResponsePrivate(BatchGetProjectsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetProjectsResponse)
+    Q_DISABLE_COPY(BatchGetProjectsResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

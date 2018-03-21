@@ -20,4 +20,31 @@
 #ifndef QTAWS_ALLOCATEADDRESSRESPONSE_P_H
 #define QTAWS_ALLOCATEADDRESSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "allocateaddressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AllocateAddressResponse;
+
+class QTAWS_EXPORT AllocateAddressResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AllocateAddressResponsePrivate(AllocateAddressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AllocateAddressResponse)
+    Q_DISABLE_COPY(AllocateAddressResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESUBNETSRESPONSE_P_H
 #define QTAWS_DESCRIBESUBNETSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "describesubnetsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSubnetsResponse;
+
+class QTAWS_EXPORT DescribeSubnetsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSubnetsResponsePrivate(DescribeSubnetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSubnetsResponse)
+    Q_DISABLE_COPY(DescribeSubnetsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

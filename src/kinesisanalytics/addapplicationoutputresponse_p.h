@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDAPPLICATIONOUTPUTRESPONSE_P_H
 #define QTAWS_ADDAPPLICATIONOUTPUTRESPONSE_P_H
 
+#include "kinesisanalyticsresponse.h"
+#include "addapplicationoutputrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class AddApplicationOutputResponse;
+
+class QTAWS_EXPORT AddApplicationOutputResponsePrivate : public KinesisAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddApplicationOutputResponsePrivate(AddApplicationOutputResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddApplicationOutputResponse)
+    Q_DISABLE_COPY(AddApplicationOutputResponsePrivate)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

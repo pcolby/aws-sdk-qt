@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESCALINGPOLICIESRESPONSE_P_H
 #define QTAWS_DESCRIBESCALINGPOLICIESRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describescalingpoliciesrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeScalingPoliciesResponse;
+
+class QTAWS_EXPORT DescribeScalingPoliciesResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeScalingPoliciesResponsePrivate(DescribeScalingPoliciesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScalingPoliciesResponse)
+    Q_DISABLE_COPY(DescribeScalingPoliciesResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

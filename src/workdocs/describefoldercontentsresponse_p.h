@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFOLDERCONTENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEFOLDERCONTENTSRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "describefoldercontentsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeFolderContentsResponse;
+
+class QTAWS_EXPORT DescribeFolderContentsResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFolderContentsResponsePrivate(DescribeFolderContentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFolderContentsResponse)
+    Q_DISABLE_COPY(DescribeFolderContentsResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETITEMRESPONSE_P_H
 #define QTAWS_GETITEMRESPONSE_P_H
 
+#include "dynamodbresponse.h"
+#include "getitemrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class GetItemResponse;
+
+class QTAWS_EXPORT GetItemResponsePrivate : public DynamoDBResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetItemResponsePrivate(GetItemResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetItemResponse)
+    Q_DISABLE_COPY(GetItemResponsePrivate)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

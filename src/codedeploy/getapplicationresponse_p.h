@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETAPPLICATIONRESPONSE_P_H
 #define QTAWS_GETAPPLICATIONRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "getapplicationrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetApplicationResponse;
+
+class QTAWS_EXPORT GetApplicationResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetApplicationResponsePrivate(GetApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationResponse)
+    Q_DISABLE_COPY(GetApplicationResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

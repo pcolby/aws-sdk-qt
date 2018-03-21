@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEHSMCLIENTCERTIFICATESRESPONSE_P_H
 #define QTAWS_DESCRIBEHSMCLIENTCERTIFICATESRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "describehsmclientcertificatesrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeHsmClientCertificatesResponse;
+
+class QTAWS_EXPORT DescribeHsmClientCertificatesResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeHsmClientCertificatesResponsePrivate(DescribeHsmClientCertificatesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHsmClientCertificatesResponse)
+    Q_DISABLE_COPY(DescribeHsmClientCertificatesResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

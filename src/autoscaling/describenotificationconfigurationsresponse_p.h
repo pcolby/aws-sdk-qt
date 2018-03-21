@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describenotificationconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeNotificationConfigurationsResponse;
+
+class QTAWS_EXPORT DescribeNotificationConfigurationsResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeNotificationConfigurationsResponsePrivate(DescribeNotificationConfigurationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNotificationConfigurationsResponse)
+    Q_DISABLE_COPY(DescribeNotificationConfigurationsResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

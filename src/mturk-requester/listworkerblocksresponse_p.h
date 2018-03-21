@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTWORKERBLOCKSRESPONSE_P_H
 #define QTAWS_LISTWORKERBLOCKSRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "listworkerblocksrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListWorkerBlocksResponse;
+
+class QTAWS_EXPORT ListWorkerBlocksResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListWorkerBlocksResponsePrivate(ListWorkerBlocksResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListWorkerBlocksResponse)
+    Q_DISABLE_COPY(ListWorkerBlocksResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

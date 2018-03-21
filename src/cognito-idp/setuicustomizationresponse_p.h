@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETUICUSTOMIZATIONRESPONSE_P_H
 #define QTAWS_SETUICUSTOMIZATIONRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "setuicustomizationrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetUICustomizationResponse;
+
+class QTAWS_EXPORT SetUICustomizationResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetUICustomizationResponsePrivate(SetUICustomizationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetUICustomizationResponse)
+    Q_DISABLE_COPY(SetUICustomizationResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYINSTANCEGROUPSRESPONSE_P_H
 #define QTAWS_MODIFYINSTANCEGROUPSRESPONSE_P_H
 
+#include "emrresponse.h"
+#include "modifyinstancegroupsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ModifyInstanceGroupsResponse;
+
+class QTAWS_EXPORT ModifyInstanceGroupsResponsePrivate : public EMRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyInstanceGroupsResponsePrivate(ModifyInstanceGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyInstanceGroupsResponse)
+    Q_DISABLE_COPY(ModifyInstanceGroupsResponsePrivate)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

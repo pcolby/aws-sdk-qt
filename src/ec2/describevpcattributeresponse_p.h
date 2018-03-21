@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVPCATTRIBUTERESPONSE_P_H
 #define QTAWS_DESCRIBEVPCATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "describevpcattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpcAttributeResponse;
+
+class QTAWS_EXPORT DescribeVpcAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeVpcAttributeResponsePrivate(DescribeVpcAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpcAttributeResponse)
+    Q_DISABLE_COPY(DescribeVpcAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

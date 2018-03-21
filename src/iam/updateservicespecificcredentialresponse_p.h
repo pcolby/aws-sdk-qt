@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESERVICESPECIFICCREDENTIALRESPONSE_P_H
 #define QTAWS_UPDATESERVICESPECIFICCREDENTIALRESPONSE_P_H
 
+#include "iamresponse.h"
+#include "updateservicespecificcredentialrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateServiceSpecificCredentialResponse;
+
+class QTAWS_EXPORT UpdateServiceSpecificCredentialResponsePrivate : public IAMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateServiceSpecificCredentialResponsePrivate(UpdateServiceSpecificCredentialResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServiceSpecificCredentialResponse)
+    Q_DISABLE_COPY(UpdateServiceSpecificCredentialResponsePrivate)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEDEPLOYMENTCONFIGRESPONSE_P_H
 #define QTAWS_DELETEDEPLOYMENTCONFIGRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "deletedeploymentconfigrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeleteDeploymentConfigResponse;
+
+class QTAWS_EXPORT DeleteDeploymentConfigResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteDeploymentConfigResponsePrivate(DeleteDeploymentConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDeploymentConfigResponse)
+    Q_DISABLE_COPY(DeleteDeploymentConfigResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

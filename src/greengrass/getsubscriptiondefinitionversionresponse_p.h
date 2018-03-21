@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSUBSCRIPTIONDEFINITIONVERSIONRESPONSE_P_H
 #define QTAWS_GETSUBSCRIPTIONDEFINITIONVERSIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "getsubscriptiondefinitionversionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetSubscriptionDefinitionVersionResponse;
+
+class QTAWS_EXPORT GetSubscriptionDefinitionVersionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSubscriptionDefinitionVersionResponsePrivate(GetSubscriptionDefinitionVersionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSubscriptionDefinitionVersionResponse)
+    Q_DISABLE_COPY(GetSubscriptionDefinitionVersionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEOBJECTATTRIBUTESRESPONSE_P_H
 #define QTAWS_UPDATEOBJECTATTRIBUTESRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "updateobjectattributesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpdateObjectAttributesResponse;
+
+class QTAWS_EXPORT UpdateObjectAttributesResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateObjectAttributesResponsePrivate(UpdateObjectAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateObjectAttributesResponse)
+    Q_DISABLE_COPY(UpdateObjectAttributesResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

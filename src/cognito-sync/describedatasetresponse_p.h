@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEDATASETRESPONSE_P_H
 #define QTAWS_DESCRIBEDATASETRESPONSE_P_H
 
+#include "cognitosyncresponse.h"
+#include "describedatasetrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class DescribeDatasetResponse;
+
+class QTAWS_EXPORT DescribeDatasetResponsePrivate : public CognitoSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeDatasetResponsePrivate(DescribeDatasetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDatasetResponse)
+    Q_DISABLE_COPY(DescribeDatasetResponsePrivate)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

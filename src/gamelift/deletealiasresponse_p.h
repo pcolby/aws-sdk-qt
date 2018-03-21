@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEALIASRESPONSE_P_H
 #define QTAWS_DELETEALIASRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "deletealiasrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteAliasResponse;
+
+class QTAWS_EXPORT DeleteAliasResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteAliasResponsePrivate(DeleteAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAliasResponse)
+    Q_DISABLE_COPY(DeleteAliasResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

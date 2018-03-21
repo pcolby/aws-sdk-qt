@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPGAMESESSIONPLACEMENTRESPONSE_P_H
 #define QTAWS_STOPGAMESESSIONPLACEMENTRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "stopgamesessionplacementrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StopGameSessionPlacementResponse;
+
+class QTAWS_EXPORT StopGameSessionPlacementResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopGameSessionPlacementResponsePrivate(StopGameSessionPlacementResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopGameSessionPlacementResponse)
+    Q_DISABLE_COPY(StopGameSessionPlacementResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

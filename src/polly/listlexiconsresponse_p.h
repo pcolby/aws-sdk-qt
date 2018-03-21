@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTLEXICONSRESPONSE_P_H
 #define QTAWS_LISTLEXICONSRESPONSE_P_H
 
+#include "pollyresponse.h"
+#include "listlexiconsrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class ListLexiconsResponse;
+
+class QTAWS_EXPORT ListLexiconsResponsePrivate : public PollyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListLexiconsResponsePrivate(ListLexiconsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListLexiconsResponse)
+    Q_DISABLE_COPY(ListLexiconsResponsePrivate)
+
+};
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

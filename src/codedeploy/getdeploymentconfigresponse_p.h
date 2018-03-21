@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETDEPLOYMENTCONFIGRESPONSE_P_H
 #define QTAWS_GETDEPLOYMENTCONFIGRESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "getdeploymentconfigrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetDeploymentConfigResponse;
+
+class QTAWS_EXPORT GetDeploymentConfigResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetDeploymentConfigResponsePrivate(GetDeploymentConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetDeploymentConfigResponse)
+    Q_DISABLE_COPY(GetDeploymentConfigResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

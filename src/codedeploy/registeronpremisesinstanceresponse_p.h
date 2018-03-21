@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERONPREMISESINSTANCERESPONSE_P_H
 #define QTAWS_REGISTERONPREMISESINSTANCERESPONSE_P_H
 
+#include "codedeployresponse.h"
+#include "registeronpremisesinstancerequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class RegisterOnPremisesInstanceResponse;
+
+class QTAWS_EXPORT RegisterOnPremisesInstanceResponsePrivate : public CodeDeployResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterOnPremisesInstanceResponsePrivate(RegisterOnPremisesInstanceResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterOnPremisesInstanceResponse)
+    Q_DISABLE_COPY(RegisterOnPremisesInstanceResponsePrivate)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

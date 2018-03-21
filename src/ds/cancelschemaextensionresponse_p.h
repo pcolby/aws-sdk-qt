@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_P_H
 #define QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_P_H
 
+#include "directoryserviceresponse.h"
+#include "cancelschemaextensionrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CancelSchemaExtensionResponse;
+
+class QTAWS_EXPORT CancelSchemaExtensionResponsePrivate : public DirectoryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelSchemaExtensionResponsePrivate(CancelSchemaExtensionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelSchemaExtensionResponse)
+    Q_DISABLE_COPY(CancelSchemaExtensionResponsePrivate)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

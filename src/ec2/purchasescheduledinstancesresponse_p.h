@@ -20,4 +20,31 @@
 #ifndef QTAWS_PURCHASESCHEDULEDINSTANCESRESPONSE_P_H
 #define QTAWS_PURCHASESCHEDULEDINSTANCESRESPONSE_P_H
 
+#include "ec2response.h"
+#include "purchasescheduledinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class PurchaseScheduledInstancesResponse;
+
+class QTAWS_EXPORT PurchaseScheduledInstancesResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PurchaseScheduledInstancesResponsePrivate(PurchaseScheduledInstancesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseScheduledInstancesResponse)
+    Q_DISABLE_COPY(PurchaseScheduledInstancesResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTFILERESPONSE_P_H
 #define QTAWS_PUTFILERESPONSE_P_H
 
+#include "codecommitresponse.h"
+#include "putfilerequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PutFileResponse;
+
+class QTAWS_EXPORT PutFileResponsePrivate : public CodeCommitResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutFileResponsePrivate(PutFileResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutFileResponse)
+    Q_DISABLE_COPY(PutFileResponsePrivate)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

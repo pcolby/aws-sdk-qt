@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELAGRESPONSE_P_H
 #define QTAWS_CREATELAGRESPONSE_P_H
 
+#include "directconnectresponse.h"
+#include "createlagrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateLagResponse;
+
+class QTAWS_EXPORT CreateLagResponsePrivate : public DirectConnectResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLagResponsePrivate(CreateLagResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLagResponse)
+    Q_DISABLE_COPY(CreateLagResponsePrivate)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_SETV2LOGGINGOPTIONSRESPONSE_P_H
 #define QTAWS_SETV2LOGGINGOPTIONSRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "setv2loggingoptionsrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class SetV2LoggingOptionsResponse;
+
+class QTAWS_EXPORT SetV2LoggingOptionsResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SetV2LoggingOptionsResponsePrivate(SetV2LoggingOptionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SetV2LoggingOptionsResponse)
+    Q_DISABLE_COPY(SetV2LoggingOptionsResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

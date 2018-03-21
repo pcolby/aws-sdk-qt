@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEJOBRESPONSE_P_H
 #define QTAWS_DESCRIBEJOBRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "describejobrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class DescribeJobResponse;
+
+class QTAWS_EXPORT DescribeJobResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeJobResponsePrivate(DescribeJobResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeJobResponse)
+    Q_DISABLE_COPY(DescribeJobResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

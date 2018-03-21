@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBERESERVEDCACHENODESOFFERINGSRESPONSE_P_H
 #define QTAWS_DESCRIBERESERVEDCACHENODESOFFERINGSRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "describereservedcachenodesofferingsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeReservedCacheNodesOfferingsResponse;
+
+class QTAWS_EXPORT DescribeReservedCacheNodesOfferingsResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeReservedCacheNodesOfferingsResponsePrivate(DescribeReservedCacheNodesOfferingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReservedCacheNodesOfferingsResponse)
+    Q_DISABLE_COPY(DescribeReservedCacheNodesOfferingsResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

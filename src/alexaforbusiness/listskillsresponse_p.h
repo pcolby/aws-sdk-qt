@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSKILLSRESPONSE_P_H
 #define QTAWS_LISTSKILLSRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "listskillsrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class ListSkillsResponse;
+
+class QTAWS_EXPORT ListSkillsResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListSkillsResponsePrivate(ListSkillsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListSkillsResponse)
+    Q_DISABLE_COPY(ListSkillsResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

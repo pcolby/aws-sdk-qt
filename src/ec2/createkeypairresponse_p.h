@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEKEYPAIRRESPONSE_P_H
 #define QTAWS_CREATEKEYPAIRRESPONSE_P_H
 
+#include "ec2response.h"
+#include "createkeypairrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateKeyPairResponse;
+
+class QTAWS_EXPORT CreateKeyPairResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateKeyPairResponsePrivate(CreateKeyPairResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateKeyPairResponse)
+    Q_DISABLE_COPY(CreateKeyPairResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

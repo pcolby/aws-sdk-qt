@@ -20,4 +20,31 @@
 #ifndef QTAWS_ENTERSTANDBYRESPONSE_P_H
 #define QTAWS_ENTERSTANDBYRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "enterstandbyrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class EnterStandbyResponse;
+
+class QTAWS_EXPORT EnterStandbyResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    EnterStandbyResponsePrivate(EnterStandbyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(EnterStandbyResponse)
+    Q_DISABLE_COPY(EnterStandbyResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

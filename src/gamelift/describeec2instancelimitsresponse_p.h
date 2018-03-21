@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEC2INSTANCELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBEEC2INSTANCELIMITSRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "describeec2instancelimitsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeEC2InstanceLimitsResponse;
+
+class QTAWS_EXPORT DescribeEC2InstanceLimitsResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEC2InstanceLimitsResponsePrivate(DescribeEC2InstanceLimitsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEC2InstanceLimitsResponse)
+    Q_DISABLE_COPY(DescribeEC2InstanceLimitsResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

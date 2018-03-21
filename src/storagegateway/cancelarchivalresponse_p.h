@@ -20,4 +20,31 @@
 #ifndef QTAWS_CANCELARCHIVALRESPONSE_P_H
 #define QTAWS_CANCELARCHIVALRESPONSE_P_H
 
+#include "storagegatewayresponse.h"
+#include "cancelarchivalrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class CancelArchivalResponse;
+
+class QTAWS_EXPORT CancelArchivalResponsePrivate : public StorageGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CancelArchivalResponsePrivate(CancelArchivalResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CancelArchivalResponse)
+    Q_DISABLE_COPY(CancelArchivalResponsePrivate)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

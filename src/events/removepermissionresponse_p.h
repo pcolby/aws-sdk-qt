@@ -20,4 +20,31 @@
 #ifndef QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 #define QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 
+#include "cloudwatcheventsresponse.h"
+#include "removepermissionrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class RemovePermissionResponse;
+
+class QTAWS_EXPORT RemovePermissionResponsePrivate : public CloudWatchEventsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RemovePermissionResponsePrivate(RemovePermissionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RemovePermissionResponse)
+    Q_DISABLE_COPY(RemovePermissionResponsePrivate)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

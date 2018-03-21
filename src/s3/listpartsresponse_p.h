@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTPARTSRESPONSE_P_H
 #define QTAWS_LISTPARTSRESPONSE_P_H
 
+#include "s3response.h"
+#include "listpartsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListPartsResponse;
+
+class QTAWS_EXPORT ListPartsResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListPartsResponsePrivate(ListPartsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListPartsResponse)
+    Q_DISABLE_COPY(ListPartsResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

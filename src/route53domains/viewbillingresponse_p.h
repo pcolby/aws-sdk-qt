@@ -20,4 +20,31 @@
 #ifndef QTAWS_VIEWBILLINGRESPONSE_P_H
 #define QTAWS_VIEWBILLINGRESPONSE_P_H
 
+#include "route53domainsresponse.h"
+#include "viewbillingrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class ViewBillingResponse;
+
+class QTAWS_EXPORT ViewBillingResponsePrivate : public Route53DomainsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ViewBillingResponsePrivate(ViewBillingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ViewBillingResponse)
+    Q_DISABLE_COPY(ViewBillingResponsePrivate)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

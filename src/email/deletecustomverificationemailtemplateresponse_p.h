@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_P_H
 #define QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "deletecustomverificationemailtemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteCustomVerificationEmailTemplateResponse;
+
+class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteCustomVerificationEmailTemplateResponsePrivate(DeleteCustomVerificationEmailTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCustomVerificationEmailTemplateResponse)
+    Q_DISABLE_COPY(DeleteCustomVerificationEmailTemplateResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

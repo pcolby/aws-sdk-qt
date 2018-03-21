@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDTASKFAILURERESPONSE_P_H
 #define QTAWS_SENDTASKFAILURERESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "sendtaskfailurerequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class SendTaskFailureResponse;
+
+class QTAWS_EXPORT SendTaskFailureResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendTaskFailureResponsePrivate(SendTaskFailureResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendTaskFailureResponse)
+    Q_DISABLE_COPY(SendTaskFailureResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

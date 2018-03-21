@@ -20,4 +20,31 @@
 #ifndef QTAWS_ABORTVAULTLOCKRESPONSE_P_H
 #define QTAWS_ABORTVAULTLOCKRESPONSE_P_H
 
+#include "glacierresponse.h"
+#include "abortvaultlockrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class AbortVaultLockResponse;
+
+class QTAWS_EXPORT AbortVaultLockResponsePrivate : public GlacierResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AbortVaultLockResponsePrivate(AbortVaultLockResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AbortVaultLockResponse)
+    Q_DISABLE_COPY(AbortVaultLockResponsePrivate)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

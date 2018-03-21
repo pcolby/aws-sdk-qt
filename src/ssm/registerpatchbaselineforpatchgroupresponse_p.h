@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPRESPONSE_P_H
 #define QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "registerpatchbaselineforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class RegisterPatchBaselineForPatchGroupResponse;
+
+class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterPatchBaselineForPatchGroupResponsePrivate(RegisterPatchBaselineForPatchGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterPatchBaselineForPatchGroupResponse)
+    Q_DISABLE_COPY(RegisterPatchBaselineForPatchGroupResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

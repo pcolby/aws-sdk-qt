@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_P_H
 
+#include "kinesisanalyticsresponse.h"
+#include "deleteapplicationinputprocessingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DeleteApplicationInputProcessingConfigurationResponse;
+
+class QTAWS_EXPORT DeleteApplicationInputProcessingConfigurationResponsePrivate : public KinesisAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApplicationInputProcessingConfigurationResponsePrivate(DeleteApplicationInputProcessingConfigurationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationInputProcessingConfigurationResponse)
+    Q_DISABLE_COPY(DeleteApplicationInputProcessingConfigurationResponsePrivate)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

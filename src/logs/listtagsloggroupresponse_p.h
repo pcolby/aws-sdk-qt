@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTAGSLOGGROUPRESPONSE_P_H
 #define QTAWS_LISTTAGSLOGGROUPRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "listtagsloggrouprequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class ListTagsLogGroupResponse;
+
+class QTAWS_EXPORT ListTagsLogGroupResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListTagsLogGroupResponsePrivate(ListTagsLogGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsLogGroupResponse)
+    Q_DISABLE_COPY(ListTagsLogGroupResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

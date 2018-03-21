@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_P_H
 #define QTAWS_DELETENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "deletenotebookinstancelifecycleconfigrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteNotebookInstanceLifecycleConfigResponse;
+
+class QTAWS_EXPORT DeleteNotebookInstanceLifecycleConfigResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteNotebookInstanceLifecycleConfigResponsePrivate(DeleteNotebookInstanceLifecycleConfigResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNotebookInstanceLifecycleConfigResponse)
+    Q_DISABLE_COPY(DeleteNotebookInstanceLifecycleConfigResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

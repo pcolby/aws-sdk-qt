@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETOBJECTINFORMATIONRESPONSE_P_H
 #define QTAWS_GETOBJECTINFORMATIONRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "getobjectinformationrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetObjectInformationResponse;
+
+class QTAWS_EXPORT GetObjectInformationResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetObjectInformationResponsePrivate(GetObjectInformationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetObjectInformationResponse)
+    Q_DISABLE_COPY(GetObjectInformationResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTAPPLICATIONRESPONSE_P_H
 #define QTAWS_STARTAPPLICATIONRESPONSE_P_H
 
+#include "kinesisanalyticsresponse.h"
+#include "startapplicationrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class StartApplicationResponse;
+
+class QTAWS_EXPORT StartApplicationResponsePrivate : public KinesisAnalyticsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartApplicationResponsePrivate(StartApplicationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartApplicationResponse)
+    Q_DISABLE_COPY(StartApplicationResponsePrivate)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

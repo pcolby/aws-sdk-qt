@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTSTACKRESPONSE_P_H
 #define QTAWS_STARTSTACKRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "startstackrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class StartStackResponse;
+
+class QTAWS_EXPORT StartStackResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartStackResponsePrivate(StartStackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartStackResponse)
+    Q_DISABLE_COPY(StartStackResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINCONFIRMSIGNUPRESPONSE_P_H
 #define QTAWS_ADMINCONFIRMSIGNUPRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminconfirmsignuprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminConfirmSignUpResponse;
+
+class QTAWS_EXPORT AdminConfirmSignUpResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminConfirmSignUpResponsePrivate(AdminConfirmSignUpResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminConfirmSignUpResponse)
+    Q_DISABLE_COPY(AdminConfirmSignUpResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEELASTICSEARCHSERVICEROLERESPONSE_P_H
 #define QTAWS_DELETEELASTICSEARCHSERVICEROLERESPONSE_P_H
 
+#include "elasticsearchserviceresponse.h"
+#include "deleteelasticsearchservicerolerequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DeleteElasticsearchServiceRoleResponse;
+
+class QTAWS_EXPORT DeleteElasticsearchServiceRoleResponsePrivate : public ElasticsearchServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteElasticsearchServiceRoleResponsePrivate(DeleteElasticsearchServiceRoleResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteElasticsearchServiceRoleResponse)
+    Q_DISABLE_COPY(DeleteElasticsearchServiceRoleResponsePrivate)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

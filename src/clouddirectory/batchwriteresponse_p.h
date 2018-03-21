@@ -20,4 +20,31 @@
 #ifndef QTAWS_BATCHWRITERESPONSE_P_H
 #define QTAWS_BATCHWRITERESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "batchwriterequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class BatchWriteResponse;
+
+class QTAWS_EXPORT BatchWriteResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    BatchWriteResponsePrivate(BatchWriteResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(BatchWriteResponse)
+    Q_DISABLE_COPY(BatchWriteResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

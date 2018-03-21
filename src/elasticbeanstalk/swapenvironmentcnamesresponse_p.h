@@ -20,4 +20,31 @@
 #ifndef QTAWS_SWAPENVIRONMENTCNAMESRESPONSE_P_H
 #define QTAWS_SWAPENVIRONMENTCNAMESRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "swapenvironmentcnamesrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class SwapEnvironmentCNAMEsResponse;
+
+class QTAWS_EXPORT SwapEnvironmentCNAMEsResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SwapEnvironmentCNAMEsResponsePrivate(SwapEnvironmentCNAMEsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SwapEnvironmentCNAMEsResponse)
+    Q_DISABLE_COPY(SwapEnvironmentCNAMEsResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

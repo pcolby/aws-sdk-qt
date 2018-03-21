@@ -20,4 +20,31 @@
 #ifndef QTAWS_READPIPELINERESPONSE_P_H
 #define QTAWS_READPIPELINERESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "readpipelinerequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class ReadPipelineResponse;
+
+class QTAWS_EXPORT ReadPipelineResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ReadPipelineResponsePrivate(ReadPipelineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ReadPipelineResponse)
+    Q_DISABLE_COPY(ReadPipelineResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

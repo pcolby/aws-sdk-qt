@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERULEGROUPRESPONSE_P_H
 #define QTAWS_DELETERULEGROUPRESPONSE_P_H
 
+#include "wafresponse.h"
+#include "deleterulegrouprequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteRuleGroupResponse;
+
+class QTAWS_EXPORT DeleteRuleGroupResponsePrivate : public WAFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRuleGroupResponsePrivate(DeleteRuleGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRuleGroupResponse)
+    Q_DISABLE_COPY(DeleteRuleGroupResponsePrivate)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

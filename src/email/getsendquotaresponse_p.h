@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSENDQUOTARESPONSE_P_H
 #define QTAWS_GETSENDQUOTARESPONSE_P_H
 
+#include "sesresponse.h"
+#include "getsendquotarequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetSendQuotaResponse;
+
+class QTAWS_EXPORT GetSendQuotaResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSendQuotaResponsePrivate(GetSendQuotaResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSendQuotaResponse)
+    Q_DISABLE_COPY(GetSendQuotaResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

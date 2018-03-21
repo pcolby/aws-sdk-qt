@@ -20,4 +20,31 @@
 #ifndef QTAWS_TERMINATEENVIRONMENTRESPONSE_P_H
 #define QTAWS_TERMINATEENVIRONMENTRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "terminateenvironmentrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class TerminateEnvironmentResponse;
+
+class QTAWS_EXPORT TerminateEnvironmentResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    TerminateEnvironmentResponsePrivate(TerminateEnvironmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateEnvironmentResponse)
+    Q_DISABLE_COPY(TerminateEnvironmentResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTREPORTDEFINITIONRESPONSE_P_H
 #define QTAWS_PUTREPORTDEFINITIONRESPONSE_P_H
 
+#include "costandusagereportserviceresponse.h"
+#include "putreportdefinitionrequest.h"
+
+namespace AWS {
+
+namespace CostandUsageReportService {
+
+class PutReportDefinitionResponse;
+
+class QTAWS_EXPORT PutReportDefinitionResponsePrivate : public CostandUsageReportServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutReportDefinitionResponsePrivate(PutReportDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutReportDefinitionResponse)
+    Q_DISABLE_COPY(PutReportDefinitionResponsePrivate)
+
+};
+
+} // namespace CostandUsageReportService
+} // namespace AWS
+
 #endif

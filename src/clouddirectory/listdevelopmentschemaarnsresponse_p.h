@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTDEVELOPMENTSCHEMAARNSRESPONSE_P_H
 #define QTAWS_LISTDEVELOPMENTSCHEMAARNSRESPONSE_P_H
 
+#include "clouddirectoryresponse.h"
+#include "listdevelopmentschemaarnsrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListDevelopmentSchemaArnsResponse;
+
+class QTAWS_EXPORT ListDevelopmentSchemaArnsResponsePrivate : public CloudDirectoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListDevelopmentSchemaArnsResponsePrivate(ListDevelopmentSchemaArnsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListDevelopmentSchemaArnsResponse)
+    Q_DISABLE_COPY(ListDevelopmentSchemaArnsResponsePrivate)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELOADBALANCERRESPONSE_P_H
 #define QTAWS_DELETELOADBALANCERRESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "deleteloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteLoadBalancerResponse;
+
+class QTAWS_EXPORT DeleteLoadBalancerResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLoadBalancerResponsePrivate(DeleteLoadBalancerResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLoadBalancerResponse)
+    Q_DISABLE_COPY(DeleteLoadBalancerResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

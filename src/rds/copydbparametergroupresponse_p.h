@@ -20,4 +20,31 @@
 #ifndef QTAWS_COPYDBPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_COPYDBPARAMETERGROUPRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "copydbparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyDBParameterGroupResponse;
+
+class QTAWS_EXPORT CopyDBParameterGroupResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CopyDBParameterGroupResponsePrivate(CopyDBParameterGroupResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CopyDBParameterGroupResponse)
+    Q_DISABLE_COPY(CopyDBParameterGroupResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

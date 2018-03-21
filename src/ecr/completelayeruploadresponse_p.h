@@ -20,4 +20,31 @@
 #ifndef QTAWS_COMPLETELAYERUPLOADRESPONSE_P_H
 #define QTAWS_COMPLETELAYERUPLOADRESPONSE_P_H
 
+#include "ecrresponse.h"
+#include "completelayeruploadrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class CompleteLayerUploadResponse;
+
+class QTAWS_EXPORT CompleteLayerUploadResponsePrivate : public ECRResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CompleteLayerUploadResponsePrivate(CompleteLayerUploadResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CompleteLayerUploadResponse)
+    Q_DISABLE_COPY(CompleteLayerUploadResponsePrivate)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

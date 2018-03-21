@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATERESOURCEDATASYNCRESPONSE_P_H
 #define QTAWS_CREATERESOURCEDATASYNCRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "createresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateResourceDataSyncResponse;
+
+class QTAWS_EXPORT CreateResourceDataSyncResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateResourceDataSyncResponsePrivate(CreateResourceDataSyncResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateResourceDataSyncResponse)
+    Q_DISABLE_COPY(CreateResourceDataSyncResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

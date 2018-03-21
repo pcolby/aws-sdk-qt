@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATELOGGERDEFINITIONRESPONSE_P_H
 #define QTAWS_CREATELOGGERDEFINITIONRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "createloggerdefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateLoggerDefinitionResponse;
+
+class QTAWS_EXPORT CreateLoggerDefinitionResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateLoggerDefinitionResponsePrivate(CreateLoggerDefinitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLoggerDefinitionResponse)
+    Q_DISABLE_COPY(CreateLoggerDefinitionResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

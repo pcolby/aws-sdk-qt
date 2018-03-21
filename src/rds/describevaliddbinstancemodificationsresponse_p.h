@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "describevaliddbinstancemodificationsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeValidDBInstanceModificationsResponse;
+
+class QTAWS_EXPORT DescribeValidDBInstanceModificationsResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeValidDBInstanceModificationsResponsePrivate(DescribeValidDBInstanceModificationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeValidDBInstanceModificationsResponse)
+    Q_DISABLE_COPY(DescribeValidDBInstanceModificationsResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

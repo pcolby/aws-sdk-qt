@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETINSTANCEMETRICDATARESPONSE_P_H
 #define QTAWS_GETINSTANCEMETRICDATARESPONSE_P_H
 
+#include "lightsailresponse.h"
+#include "getinstancemetricdatarequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetInstanceMetricDataResponse;
+
+class QTAWS_EXPORT GetInstanceMetricDataResponsePrivate : public LightsailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetInstanceMetricDataResponsePrivate(GetInstanceMetricDataResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetInstanceMetricDataResponse)
+    Q_DISABLE_COPY(GetInstanceMetricDataResponsePrivate)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

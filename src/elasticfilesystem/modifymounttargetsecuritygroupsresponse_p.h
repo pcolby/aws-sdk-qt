@@ -20,4 +20,31 @@
 #ifndef QTAWS_MODIFYMOUNTTARGETSECURITYGROUPSRESPONSE_P_H
 #define QTAWS_MODIFYMOUNTTARGETSECURITYGROUPSRESPONSE_P_H
 
+#include "efsresponse.h"
+#include "modifymounttargetsecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class ModifyMountTargetSecurityGroupsResponse;
+
+class QTAWS_EXPORT ModifyMountTargetSecurityGroupsResponsePrivate : public EFSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ModifyMountTargetSecurityGroupsResponsePrivate(ModifyMountTargetSecurityGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyMountTargetSecurityGroupsResponse)
+    Q_DISABLE_COPY(ModifyMountTargetSecurityGroupsResponsePrivate)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

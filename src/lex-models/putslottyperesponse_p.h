@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTSLOTTYPERESPONSE_P_H
 #define QTAWS_PUTSLOTTYPERESPONSE_P_H
 
+#include "lexmodelbuildingserviceresponse.h"
+#include "putslottyperequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class PutSlotTypeResponse;
+
+class QTAWS_EXPORT PutSlotTypeResponsePrivate : public LexModelBuildingServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutSlotTypeResponsePrivate(PutSlotTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutSlotTypeResponse)
+    Q_DISABLE_COPY(PutSlotTypeResponsePrivate)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEAPIKEYRESPONSE_P_H
 #define QTAWS_DELETEAPIKEYRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "deleteapikeyrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteApiKeyResponse;
+
+class QTAWS_EXPORT DeleteApiKeyResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteApiKeyResponsePrivate(DeleteApiKeyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApiKeyResponse)
+    Q_DISABLE_COPY(DeleteApiKeyResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETERESOURCEPOLICYRESPONSE_P_H
 #define QTAWS_DELETERESOURCEPOLICYRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "deleteresourcepolicyrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteResourcePolicyResponse;
+
+class QTAWS_EXPORT DeleteResourcePolicyResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteResourcePolicyResponsePrivate(DeleteResourcePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteResourcePolicyResponse)
+    Q_DISABLE_COPY(DeleteResourcePolicyResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

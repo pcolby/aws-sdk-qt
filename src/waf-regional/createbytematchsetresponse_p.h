@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEBYTEMATCHSETRESPONSE_P_H
 #define QTAWS_CREATEBYTEMATCHSETRESPONSE_P_H
 
+#include "wafregionalresponse.h"
+#include "createbytematchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateByteMatchSetResponse;
+
+class QTAWS_EXPORT CreateByteMatchSetResponsePrivate : public WAFRegionalResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateByteMatchSetResponsePrivate(CreateByteMatchSetResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateByteMatchSetResponse)
+    Q_DISABLE_COPY(CreateByteMatchSetResponsePrivate)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

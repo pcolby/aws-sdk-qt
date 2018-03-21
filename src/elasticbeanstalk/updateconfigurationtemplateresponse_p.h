@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATECONFIGURATIONTEMPLATERESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONTEMPLATERESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updateconfigurationtemplaterequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateConfigurationTemplateResponse;
+
+class QTAWS_EXPORT UpdateConfigurationTemplateResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateConfigurationTemplateResponsePrivate(UpdateConfigurationTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationTemplateResponse)
+    Q_DISABLE_COPY(UpdateConfigurationTemplateResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

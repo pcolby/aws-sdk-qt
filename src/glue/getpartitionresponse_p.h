@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETPARTITIONRESPONSE_P_H
 #define QTAWS_GETPARTITIONRESPONSE_P_H
 
+#include "glueresponse.h"
+#include "getpartitionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetPartitionResponse;
+
+class QTAWS_EXPORT GetPartitionResponsePrivate : public GlueResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetPartitionResponsePrivate(GetPartitionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetPartitionResponse)
+    Q_DISABLE_COPY(GetPartitionResponsePrivate)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

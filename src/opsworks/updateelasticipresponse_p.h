@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEELASTICIPRESPONSE_P_H
 #define QTAWS_UPDATEELASTICIPRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "updateelasticiprequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateElasticIpResponse;
+
+class QTAWS_EXPORT UpdateElasticIpResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateElasticIpResponsePrivate(UpdateElasticIpResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateElasticIpResponse)
+    Q_DISABLE_COPY(UpdateElasticIpResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

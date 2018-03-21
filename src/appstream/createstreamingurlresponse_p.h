@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATESTREAMINGURLRESPONSE_P_H
 #define QTAWS_CREATESTREAMINGURLRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "createstreamingurlrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateStreamingURLResponse;
+
+class QTAWS_EXPORT CreateStreamingURLResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateStreamingURLResponsePrivate(CreateStreamingURLResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStreamingURLResponse)
+    Q_DISABLE_COPY(CreateStreamingURLResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTITEMSRESPONSE_P_H
 #define QTAWS_LISTITEMSRESPONSE_P_H
 
+#include "mediastoredataresponse.h"
+#include "listitemsrequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class ListItemsResponse;
+
+class QTAWS_EXPORT ListItemsResponsePrivate : public MediaStoreDataResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListItemsResponsePrivate(ListItemsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListItemsResponse)
+    Q_DISABLE_COPY(ListItemsResponsePrivate)
+
+};
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

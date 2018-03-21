@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTJOBSBYPIPELINERESPONSE_P_H
 #define QTAWS_LISTJOBSBYPIPELINERESPONSE_P_H
 
+#include "elastictranscoderresponse.h"
+#include "listjobsbypipelinerequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class ListJobsByPipelineResponse;
+
+class QTAWS_EXPORT ListJobsByPipelineResponsePrivate : public ElasticTranscoderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListJobsByPipelineResponsePrivate(ListJobsByPipelineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListJobsByPipelineResponse)
+    Q_DISABLE_COPY(ListJobsByPipelineResponsePrivate)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

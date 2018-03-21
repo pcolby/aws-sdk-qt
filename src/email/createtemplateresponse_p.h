@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATETEMPLATERESPONSE_P_H
 #define QTAWS_CREATETEMPLATERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "createtemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateTemplateResponse;
+
+class QTAWS_EXPORT CreateTemplateResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateTemplateResponsePrivate(CreateTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTemplateResponse)
+    Q_DISABLE_COPY(CreateTemplateResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

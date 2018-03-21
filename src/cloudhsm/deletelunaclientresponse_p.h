@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETELUNACLIENTRESPONSE_P_H
 #define QTAWS_DELETELUNACLIENTRESPONSE_P_H
 
+#include "cloudhsmresponse.h"
+#include "deletelunaclientrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class DeleteLunaClientResponse;
+
+class QTAWS_EXPORT DeleteLunaClientResponsePrivate : public CloudHSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteLunaClientResponsePrivate(DeleteLunaClientResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLunaClientResponse)
+    Q_DISABLE_COPY(DeleteLunaClientResponsePrivate)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

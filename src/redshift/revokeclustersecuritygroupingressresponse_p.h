@@ -20,4 +20,31 @@
 #ifndef QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSRESPONSE_P_H
 
+#include "redshiftresponse.h"
+#include "revokeclustersecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RevokeClusterSecurityGroupIngressResponse;
+
+class QTAWS_EXPORT RevokeClusterSecurityGroupIngressResponsePrivate : public RedshiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RevokeClusterSecurityGroupIngressResponsePrivate(RevokeClusterSecurityGroupIngressResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RevokeClusterSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(RevokeClusterSecurityGroupIngressResponsePrivate)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

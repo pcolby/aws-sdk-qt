@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSENDSTATISTICSRESPONSE_P_H
 #define QTAWS_GETSENDSTATISTICSRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "getsendstatisticsrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetSendStatisticsResponse;
+
+class QTAWS_EXPORT GetSendStatisticsResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSendStatisticsResponsePrivate(GetSendStatisticsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSendStatisticsResponse)
+    Q_DISABLE_COPY(GetSendStatisticsResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

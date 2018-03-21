@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFILESYSTEMSRESPONSE_P_H
 #define QTAWS_DESCRIBEFILESYSTEMSRESPONSE_P_H
 
+#include "efsresponse.h"
+#include "describefilesystemsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeFileSystemsResponse;
+
+class QTAWS_EXPORT DescribeFileSystemsResponsePrivate : public EFSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFileSystemsResponsePrivate(DescribeFileSystemsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFileSystemsResponse)
+    Q_DISABLE_COPY(DescribeFileSystemsResponsePrivate)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

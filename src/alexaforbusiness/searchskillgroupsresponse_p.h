@@ -20,4 +20,31 @@
 #ifndef QTAWS_SEARCHSKILLGROUPSRESPONSE_P_H
 #define QTAWS_SEARCHSKILLGROUPSRESPONSE_P_H
 
+#include "alexaforbusinessresponse.h"
+#include "searchskillgroupsrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class SearchSkillGroupsResponse;
+
+class QTAWS_EXPORT SearchSkillGroupsResponsePrivate : public AlexaForBusinessResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SearchSkillGroupsResponsePrivate(SearchSkillGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SearchSkillGroupsResponse)
+    Q_DISABLE_COPY(SearchSkillGroupsResponsePrivate)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

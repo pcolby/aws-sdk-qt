@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETRAILRESPONSE_P_H
 #define QTAWS_UPDATETRAILRESPONSE_P_H
 
+#include "cloudtrailresponse.h"
+#include "updatetrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class UpdateTrailResponse;
+
+class QTAWS_EXPORT UpdateTrailResponsePrivate : public CloudTrailResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTrailResponsePrivate(UpdateTrailResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTrailResponse)
+    Q_DISABLE_COPY(UpdateTrailResponsePrivate)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEACTIVATIONRESPONSE_P_H
 #define QTAWS_DELETEACTIVATIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "deleteactivationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteActivationResponse;
+
+class QTAWS_EXPORT DeleteActivationResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteActivationResponsePrivate(DeleteActivationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteActivationResponse)
+    Q_DISABLE_COPY(DeleteActivationResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

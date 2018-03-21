@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMS3RESPONSE_P_H
 #define QTAWS_CREATEDATASOURCEFROMS3RESPONSE_P_H
 
+#include "machinelearningresponse.h"
+#include "createdatasourcefroms3request.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class CreateDataSourceFromS3Response;
+
+class QTAWS_EXPORT CreateDataSourceFromS3ResponsePrivate : public MachineLearningResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateDataSourceFromS3ResponsePrivate(CreateDataSourceFromS3Response * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDataSourceFromS3Response)
+    Q_DISABLE_COPY(CreateDataSourceFromS3ResponsePrivate)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

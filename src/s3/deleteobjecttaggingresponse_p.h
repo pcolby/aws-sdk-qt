@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEOBJECTTAGGINGRESPONSE_P_H
 #define QTAWS_DELETEOBJECTTAGGINGRESPONSE_P_H
 
+#include "s3response.h"
+#include "deleteobjecttaggingrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteObjectTaggingResponse;
+
+class QTAWS_EXPORT DeleteObjectTaggingResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteObjectTaggingResponsePrivate(DeleteObjectTaggingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteObjectTaggingResponse)
+    Q_DISABLE_COPY(DeleteObjectTaggingResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

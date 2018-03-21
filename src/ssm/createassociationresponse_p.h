@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEASSOCIATIONRESPONSE_P_H
 #define QTAWS_CREATEASSOCIATIONRESPONSE_P_H
 
+#include "ssmresponse.h"
+#include "createassociationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateAssociationResponse;
+
+class QTAWS_EXPORT CreateAssociationResponsePrivate : public SSMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateAssociationResponsePrivate(CreateAssociationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAssociationResponse)
+    Q_DISABLE_COPY(CreateAssociationResponsePrivate)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

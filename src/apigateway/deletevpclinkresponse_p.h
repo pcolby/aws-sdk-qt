@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVPCLINKRESPONSE_P_H
 #define QTAWS_DELETEVPCLINKRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "deletevpclinkrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteVpcLinkResponse;
+
+class QTAWS_EXPORT DeleteVpcLinkResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVpcLinkResponsePrivate(DeleteVpcLinkResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcLinkResponse)
+    Q_DISABLE_COPY(DeleteVpcLinkResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

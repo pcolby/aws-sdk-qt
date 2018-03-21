@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETMODELSRESPONSE_P_H
 #define QTAWS_GETMODELSRESPONSE_P_H
 
+#include "apigatewayresponse.h"
+#include "getmodelsrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetModelsResponse;
+
+class QTAWS_EXPORT GetModelsResponsePrivate : public APIGatewayResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetModelsResponsePrivate(GetModelsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetModelsResponse)
+    Q_DISABLE_COPY(GetModelsResponsePrivate)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

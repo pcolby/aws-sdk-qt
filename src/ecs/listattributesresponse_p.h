@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTATTRIBUTESRESPONSE_P_H
 #define QTAWS_LISTATTRIBUTESRESPONSE_P_H
 
+#include "ecsresponse.h"
+#include "listattributesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListAttributesResponse;
+
+class QTAWS_EXPORT ListAttributesResponsePrivate : public ECSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListAttributesResponsePrivate(ListAttributesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListAttributesResponse)
+    Q_DISABLE_COPY(ListAttributesResponsePrivate)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

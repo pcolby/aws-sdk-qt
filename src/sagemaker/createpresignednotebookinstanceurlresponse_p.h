@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLRESPONSE_P_H
 #define QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLRESPONSE_P_H
 
+#include "sagemakerresponse.h"
+#include "createpresignednotebookinstanceurlrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class CreatePresignedNotebookInstanceUrlResponse;
+
+class QTAWS_EXPORT CreatePresignedNotebookInstanceUrlResponsePrivate : public SageMakerResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreatePresignedNotebookInstanceUrlResponsePrivate(CreatePresignedNotebookInstanceUrlResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePresignedNotebookInstanceUrlResponse)
+    Q_DISABLE_COPY(CreatePresignedNotebookInstanceUrlResponsePrivate)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_ASSOCIATESERVICEROLETOACCOUNTRESPONSE_P_H
 #define QTAWS_ASSOCIATESERVICEROLETOACCOUNTRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "associateserviceroletoaccountrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class AssociateServiceRoleToAccountResponse;
+
+class QTAWS_EXPORT AssociateServiceRoleToAccountResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AssociateServiceRoleToAccountResponsePrivate(AssociateServiceRoleToAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateServiceRoleToAccountResponse)
+    Q_DISABLE_COPY(AssociateServiceRoleToAccountResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

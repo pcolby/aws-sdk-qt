@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADDTAGSTOCERTIFICATERESPONSE_P_H
 #define QTAWS_ADDTAGSTOCERTIFICATERESPONSE_P_H
 
+#include "acmresponse.h"
+#include "addtagstocertificaterequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class AddTagsToCertificateResponse;
+
+class QTAWS_EXPORT AddTagsToCertificateResponsePrivate : public ACMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AddTagsToCertificateResponsePrivate(AddTagsToCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToCertificateResponse)
+    Q_DISABLE_COPY(AddTagsToCertificateResponsePrivate)
+
+};
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

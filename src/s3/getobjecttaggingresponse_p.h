@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETOBJECTTAGGINGRESPONSE_P_H
 #define QTAWS_GETOBJECTTAGGINGRESPONSE_P_H
 
+#include "s3response.h"
+#include "getobjecttaggingrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetObjectTaggingResponse;
+
+class QTAWS_EXPORT GetObjectTaggingResponsePrivate : public S3ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetObjectTaggingResponsePrivate(GetObjectTaggingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetObjectTaggingResponse)
+    Q_DISABLE_COPY(GetObjectTaggingResponsePrivate)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

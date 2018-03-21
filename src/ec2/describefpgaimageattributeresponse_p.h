@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFPGAIMAGEATTRIBUTERESPONSE_P_H
 #define QTAWS_DESCRIBEFPGAIMAGEATTRIBUTERESPONSE_P_H
 
+#include "ec2response.h"
+#include "describefpgaimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeFpgaImageAttributeResponse;
+
+class QTAWS_EXPORT DescribeFpgaImageAttributeResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFpgaImageAttributeResponsePrivate(DescribeFpgaImageAttributeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFpgaImageAttributeResponse)
+    Q_DISABLE_COPY(DescribeFpgaImageAttributeResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

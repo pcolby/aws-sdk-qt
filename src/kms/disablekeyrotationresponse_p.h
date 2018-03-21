@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISABLEKEYROTATIONRESPONSE_P_H
 #define QTAWS_DISABLEKEYROTATIONRESPONSE_P_H
 
+#include "kmsresponse.h"
+#include "disablekeyrotationrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DisableKeyRotationResponse;
+
+class QTAWS_EXPORT DisableKeyRotationResponsePrivate : public KMSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisableKeyRotationResponsePrivate(DisableKeyRotationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisableKeyRotationResponse)
+    Q_DISABLE_COPY(DisableKeyRotationResponsePrivate)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

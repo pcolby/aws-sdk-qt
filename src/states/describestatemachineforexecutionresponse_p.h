@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONRESPONSE_P_H
 #define QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONRESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "describestatemachineforexecutionrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DescribeStateMachineForExecutionResponse;
+
+class QTAWS_EXPORT DescribeStateMachineForExecutionResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeStateMachineForExecutionResponsePrivate(DescribeStateMachineForExecutionResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStateMachineForExecutionResponse)
+    Q_DISABLE_COPY(DescribeStateMachineForExecutionResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

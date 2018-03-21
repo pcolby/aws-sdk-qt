@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEFLEETSRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETSRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "describefleetsrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeFleetsResponse;
+
+class QTAWS_EXPORT DescribeFleetsResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeFleetsResponsePrivate(DescribeFleetsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFleetsResponse)
+    Q_DISABLE_COPY(DescribeFleetsResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

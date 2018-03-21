@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETCOMPLIANCESUMMARYBYRESOURCETYPERESPONSE_P_H
 #define QTAWS_GETCOMPLIANCESUMMARYBYRESOURCETYPERESPONSE_P_H
 
+#include "configserviceresponse.h"
+#include "getcompliancesummarybyresourcetyperequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class GetComplianceSummaryByResourceTypeResponse;
+
+class QTAWS_EXPORT GetComplianceSummaryByResourceTypeResponsePrivate : public ConfigServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetComplianceSummaryByResourceTypeResponsePrivate(GetComplianceSummaryByResourceTypeResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetComplianceSummaryByResourceTypeResponse)
+    Q_DISABLE_COPY(GetComplianceSummaryByResourceTypeResponsePrivate)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

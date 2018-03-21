@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTGROUPCERTIFICATEAUTHORITIESRESPONSE_P_H
 #define QTAWS_LISTGROUPCERTIFICATEAUTHORITIESRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "listgroupcertificateauthoritiesrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListGroupCertificateAuthoritiesResponse;
+
+class QTAWS_EXPORT ListGroupCertificateAuthoritiesResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListGroupCertificateAuthoritiesResponsePrivate(ListGroupCertificateAuthoritiesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupCertificateAuthoritiesResponse)
+    Q_DISABLE_COPY(ListGroupCertificateAuthoritiesResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

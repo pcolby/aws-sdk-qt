@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTAPPLICATIONVERSIONSRESPONSE_P_H
 #define QTAWS_LISTAPPLICATIONVERSIONSRESPONSE_P_H
 
+#include "serverlessapplicationrepositoryresponse.h"
+#include "listapplicationversionsrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class ListApplicationVersionsResponse;
+
+class QTAWS_EXPORT ListApplicationVersionsResponsePrivate : public ServerlessApplicationRepositoryResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListApplicationVersionsResponsePrivate(ListApplicationVersionsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListApplicationVersionsResponse)
+    Q_DISABLE_COPY(ListApplicationVersionsResponsePrivate)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

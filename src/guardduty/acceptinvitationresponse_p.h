@@ -20,4 +20,31 @@
 #ifndef QTAWS_ACCEPTINVITATIONRESPONSE_P_H
 #define QTAWS_ACCEPTINVITATIONRESPONSE_P_H
 
+#include "guarddutyresponse.h"
+#include "acceptinvitationrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class AcceptInvitationResponse;
+
+class QTAWS_EXPORT AcceptInvitationResponsePrivate : public GuardDutyResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AcceptInvitationResponsePrivate(AcceptInvitationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AcceptInvitationResponse)
+    Q_DISABLE_COPY(AcceptInvitationResponsePrivate)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

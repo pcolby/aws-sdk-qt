@@ -20,4 +20,31 @@
 #ifndef QTAWS_ADMINLISTUSERAUTHEVENTSRESPONSE_P_H
 #define QTAWS_ADMINLISTUSERAUTHEVENTSRESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "adminlistuserautheventsrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminListUserAuthEventsResponse;
+
+class QTAWS_EXPORT AdminListUserAuthEventsResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    AdminListUserAuthEventsResponsePrivate(AdminListUserAuthEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(AdminListUserAuthEventsResponse)
+    Q_DISABLE_COPY(AdminListUserAuthEventsResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_STARTFACESEARCHRESPONSE_P_H
 #define QTAWS_STARTFACESEARCHRESPONSE_P_H
 
+#include "rekognitionresponse.h"
+#include "startfacesearchrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StartFaceSearchResponse;
+
+class QTAWS_EXPORT StartFaceSearchResponsePrivate : public RekognitionResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StartFaceSearchResponsePrivate(StartFaceSearchResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StartFaceSearchResponse)
+    Q_DISABLE_COPY(StartFaceSearchResponsePrivate)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

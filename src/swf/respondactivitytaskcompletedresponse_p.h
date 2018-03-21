@@ -20,4 +20,31 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKCOMPLETEDRESPONSE_P_H
 #define QTAWS_RESPONDACTIVITYTASKCOMPLETEDRESPONSE_P_H
 
+#include "swfresponse.h"
+#include "respondactivitytaskcompletedrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RespondActivityTaskCompletedResponse;
+
+class QTAWS_EXPORT RespondActivityTaskCompletedResponsePrivate : public SWFResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RespondActivityTaskCompletedResponsePrivate(RespondActivityTaskCompletedResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RespondActivityTaskCompletedResponse)
+    Q_DISABLE_COPY(RespondActivityTaskCompletedResponsePrivate)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DISASSOCIATESERVICEROLEFROMACCOUNTRESPONSE_P_H
 #define QTAWS_DISASSOCIATESERVICEROLEFROMACCOUNTRESPONSE_P_H
 
+#include "greengrassresponse.h"
+#include "disassociateservicerolefromaccountrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DisassociateServiceRoleFromAccountResponse;
+
+class QTAWS_EXPORT DisassociateServiceRoleFromAccountResponsePrivate : public GreengrassResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DisassociateServiceRoleFromAccountResponsePrivate(DisassociateServiceRoleFromAccountResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateServiceRoleFromAccountResponse)
+    Q_DISABLE_COPY(DisassociateServiceRoleFromAccountResponsePrivate)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

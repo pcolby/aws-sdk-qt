@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEROLEALIASRESPONSE_P_H
 #define QTAWS_DELETEROLEALIASRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "deleterolealiasrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteRoleAliasResponse;
+
+class QTAWS_EXPORT DeleteRoleAliasResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteRoleAliasResponsePrivate(DeleteRoleAliasResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRoleAliasResponse)
+    Q_DISABLE_COPY(DeleteRoleAliasResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

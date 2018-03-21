@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATESTACKRESPONSE_P_H
 #define QTAWS_UPDATESTACKRESPONSE_P_H
 
+#include "appstreamresponse.h"
+#include "updatestackrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class UpdateStackResponse;
+
+class QTAWS_EXPORT UpdateStackResponsePrivate : public AppStreamResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateStackResponsePrivate(UpdateStackResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStackResponse)
+    Q_DISABLE_COPY(UpdateStackResponsePrivate)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

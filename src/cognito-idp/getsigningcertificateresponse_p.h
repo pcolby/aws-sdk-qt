@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETSIGNINGCERTIFICATERESPONSE_P_H
 #define QTAWS_GETSIGNINGCERTIFICATERESPONSE_P_H
 
+#include "cognitoidentityproviderresponse.h"
+#include "getsigningcertificaterequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetSigningCertificateResponse;
+
+class QTAWS_EXPORT GetSigningCertificateResponsePrivate : public CognitoIdentityProviderResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetSigningCertificateResponsePrivate(GetSigningCertificateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetSigningCertificateResponse)
+    Q_DISABLE_COPY(GetSigningCertificateResponsePrivate)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

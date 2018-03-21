@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEPROJECTRESPONSE_P_H
 #define QTAWS_UPDATEPROJECTRESPONSE_P_H
 
+#include "codebuildresponse.h"
+#include "updateprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class UpdateProjectResponse;
+
+class QTAWS_EXPORT UpdateProjectResponsePrivate : public CodeBuildResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateProjectResponsePrivate(UpdateProjectResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateProjectResponse)
+    Q_DISABLE_COPY(UpdateProjectResponsePrivate)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

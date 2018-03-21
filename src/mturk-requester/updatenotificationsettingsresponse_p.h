@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_P_H
 #define QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "updatenotificationsettingsrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateNotificationSettingsResponse;
+
+class QTAWS_EXPORT UpdateNotificationSettingsResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateNotificationSettingsResponsePrivate(UpdateNotificationSettingsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateNotificationSettingsResponse)
+    Q_DISABLE_COPY(UpdateNotificationSettingsResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

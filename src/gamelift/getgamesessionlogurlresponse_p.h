@@ -20,4 +20,31 @@
 #ifndef QTAWS_GETGAMESESSIONLOGURLRESPONSE_P_H
 #define QTAWS_GETGAMESESSIONLOGURLRESPONSE_P_H
 
+#include "gameliftresponse.h"
+#include "getgamesessionlogurlrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class GetGameSessionLogUrlResponse;
+
+class QTAWS_EXPORT GetGameSessionLogUrlResponsePrivate : public GameLiftResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    GetGameSessionLogUrlResponsePrivate(GetGameSessionLogUrlResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(GetGameSessionLogUrlResponse)
+    Q_DISABLE_COPY(GetGameSessionLogUrlResponsePrivate)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 
+#include "opsworkscmresponse.h"
+#include "describeeventsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeEventsResponse;
+
+class QTAWS_EXPORT DescribeEventsResponsePrivate : public OpsWorksCMResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeEventsResponsePrivate(DescribeEventsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventsResponse)
+    Q_DISABLE_COPY(DescribeEventsResponsePrivate)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

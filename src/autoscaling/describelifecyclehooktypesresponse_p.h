@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBELIFECYCLEHOOKTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBELIFECYCLEHOOKTYPESRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "describelifecyclehooktypesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeLifecycleHookTypesResponse;
+
+class QTAWS_EXPORT DescribeLifecycleHookTypesResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeLifecycleHookTypesResponsePrivate(DescribeLifecycleHookTypesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLifecycleHookTypesResponse)
+    Q_DISABLE_COPY(DescribeLifecycleHookTypesResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

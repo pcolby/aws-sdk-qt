@@ -20,4 +20,31 @@
 #ifndef QTAWS_REGISTERECSCLUSTERRESPONSE_P_H
 #define QTAWS_REGISTERECSCLUSTERRESPONSE_P_H
 
+#include "opsworksresponse.h"
+#include "registerecsclusterrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RegisterEcsClusterResponse;
+
+class QTAWS_EXPORT RegisterEcsClusterResponsePrivate : public OpsWorksResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RegisterEcsClusterResponsePrivate(RegisterEcsClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterEcsClusterResponse)
+    Q_DISABLE_COPY(RegisterEcsClusterResponsePrivate)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

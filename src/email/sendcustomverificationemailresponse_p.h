@@ -20,4 +20,31 @@
 #ifndef QTAWS_SENDCUSTOMVERIFICATIONEMAILRESPONSE_P_H
 #define QTAWS_SENDCUSTOMVERIFICATIONEMAILRESPONSE_P_H
 
+#include "sesresponse.h"
+#include "sendcustomverificationemailrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendCustomVerificationEmailResponse;
+
+class QTAWS_EXPORT SendCustomVerificationEmailResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    SendCustomVerificationEmailResponsePrivate(SendCustomVerificationEmailResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(SendCustomVerificationEmailResponse)
+    Q_DISABLE_COPY(SendCustomVerificationEmailResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

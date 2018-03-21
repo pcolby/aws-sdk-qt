@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEPOLICYRESPONSE_P_H
 #define QTAWS_DELETEPOLICYRESPONSE_P_H
 
+#include "autoscalingresponse.h"
+#include "deletepolicyrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeletePolicyResponse;
+
+class QTAWS_EXPORT DeletePolicyResponsePrivate : public AutoScalingResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeletePolicyResponsePrivate(DeletePolicyResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePolicyResponse)
+    Q_DISABLE_COPY(DeletePolicyResponsePrivate)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

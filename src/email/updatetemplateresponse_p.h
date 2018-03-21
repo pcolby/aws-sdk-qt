@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATETEMPLATERESPONSE_P_H
 #define QTAWS_UPDATETEMPLATERESPONSE_P_H
 
+#include "sesresponse.h"
+#include "updatetemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateTemplateResponse;
+
+class QTAWS_EXPORT UpdateTemplateResponsePrivate : public SESResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateTemplateResponsePrivate(UpdateTemplateResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTemplateResponse)
+    Q_DISABLE_COPY(UpdateTemplateResponsePrivate)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

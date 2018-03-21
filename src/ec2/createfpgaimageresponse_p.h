@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATEFPGAIMAGERESPONSE_P_H
 #define QTAWS_CREATEFPGAIMAGERESPONSE_P_H
 
+#include "ec2response.h"
+#include "createfpgaimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateFpgaImageResponse;
+
+class QTAWS_EXPORT CreateFpgaImageResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateFpgaImageResponsePrivate(CreateFpgaImageResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateFpgaImageResponse)
+    Q_DISABLE_COPY(CreateFpgaImageResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

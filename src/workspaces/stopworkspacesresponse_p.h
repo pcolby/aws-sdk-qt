@@ -20,4 +20,31 @@
 #ifndef QTAWS_STOPWORKSPACESRESPONSE_P_H
 #define QTAWS_STOPWORKSPACESRESPONSE_P_H
 
+#include "workspacesresponse.h"
+#include "stopworkspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class StopWorkspacesResponse;
+
+class QTAWS_EXPORT StopWorkspacesResponsePrivate : public WorkSpacesResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    StopWorkspacesResponsePrivate(StopWorkspacesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(StopWorkspacesResponse)
+    Q_DISABLE_COPY(StopWorkspacesResponsePrivate)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_PUTSUBSCRIPTIONFILTERRESPONSE_P_H
 #define QTAWS_PUTSUBSCRIPTIONFILTERRESPONSE_P_H
 
+#include "cloudwatchlogsresponse.h"
+#include "putsubscriptionfilterrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutSubscriptionFilterResponse;
+
+class QTAWS_EXPORT PutSubscriptionFilterResponsePrivate : public CloudWatchLogsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PutSubscriptionFilterResponsePrivate(PutSubscriptionFilterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PutSubscriptionFilterResponse)
+    Q_DISABLE_COPY(PutSubscriptionFilterResponsePrivate)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

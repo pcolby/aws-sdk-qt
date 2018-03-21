@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTTHINGGROUPSRESPONSE_P_H
 #define QTAWS_LISTTHINGGROUPSRESPONSE_P_H
 
+#include "iotresponse.h"
+#include "listthinggroupsrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListThingGroupsResponse;
+
+class QTAWS_EXPORT ListThingGroupsResponsePrivate : public IoTResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListThingGroupsResponsePrivate(ListThingGroupsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListThingGroupsResponse)
+    Q_DISABLE_COPY(ListThingGroupsResponsePrivate)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

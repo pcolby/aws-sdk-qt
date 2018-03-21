@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTBUNDLESRESPONSE_P_H
 #define QTAWS_LISTBUNDLESRESPONSE_P_H
 
+#include "mobileresponse.h"
+#include "listbundlesrequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class ListBundlesResponse;
+
+class QTAWS_EXPORT ListBundlesResponsePrivate : public MobileResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListBundlesResponsePrivate(ListBundlesResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListBundlesResponse)
+    Q_DISABLE_COPY(ListBundlesResponsePrivate)
+
+};
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

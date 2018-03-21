@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECONSTRAINTRESPONSE_P_H
 #define QTAWS_DELETECONSTRAINTRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "deleteconstraintrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeleteConstraintResponse;
+
+class QTAWS_EXPORT DeleteConstraintResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteConstraintResponsePrivate(DeleteConstraintResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConstraintResponse)
+    Q_DISABLE_COPY(DeleteConstraintResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

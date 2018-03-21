@@ -20,4 +20,31 @@
 #ifndef QTAWS_PURCHASERESERVEDDBINSTANCESOFFERINGRESPONSE_P_H
 #define QTAWS_PURCHASERESERVEDDBINSTANCESOFFERINGRESPONSE_P_H
 
+#include "rdsresponse.h"
+#include "purchasereserveddbinstancesofferingrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class PurchaseReservedDBInstancesOfferingResponse;
+
+class QTAWS_EXPORT PurchaseReservedDBInstancesOfferingResponsePrivate : public RDSResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    PurchaseReservedDBInstancesOfferingResponsePrivate(PurchaseReservedDBInstancesOfferingResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseReservedDBInstancesOfferingResponse)
+    Q_DISABLE_COPY(PurchaseReservedDBInstancesOfferingResponsePrivate)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

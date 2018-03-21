@@ -20,4 +20,31 @@
 #ifndef QTAWS_UPDATEDESTINATIONRESPONSE_P_H
 #define QTAWS_UPDATEDESTINATIONRESPONSE_P_H
 
+#include "firehoseresponse.h"
+#include "updatedestinationrequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class UpdateDestinationResponse;
+
+class QTAWS_EXPORT UpdateDestinationResponsePrivate : public FirehoseResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    UpdateDestinationResponsePrivate(UpdateDestinationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDestinationResponse)
+    Q_DISABLE_COPY(UpdateDestinationResponsePrivate)
+
+};
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

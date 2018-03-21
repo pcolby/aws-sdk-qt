@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETESTATEMACHINERESPONSE_P_H
 #define QTAWS_DELETESTATEMACHINERESPONSE_P_H
 
+#include "sfnresponse.h"
+#include "deletestatemachinerequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DeleteStateMachineResponse;
+
+class QTAWS_EXPORT DeleteStateMachineResponsePrivate : public SFNResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteStateMachineResponsePrivate(DeleteStateMachineResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStateMachineResponse)
+    Q_DISABLE_COPY(DeleteStateMachineResponsePrivate)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

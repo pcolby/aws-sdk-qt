@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTSERVERNEIGHBORSRESPONSE_P_H
 #define QTAWS_LISTSERVERNEIGHBORSRESPONSE_P_H
 
+#include "applicationdiscoveryserviceresponse.h"
+#include "listserverneighborsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class ListServerNeighborsResponse;
+
+class QTAWS_EXPORT ListServerNeighborsResponsePrivate : public ApplicationDiscoveryServiceResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListServerNeighborsResponsePrivate(ListServerNeighborsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListServerNeighborsResponse)
+    Q_DISABLE_COPY(ListServerNeighborsResponsePrivate)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

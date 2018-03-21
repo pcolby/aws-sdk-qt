@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPROVISIONEDPRODUCTRESPONSE_P_H
 #define QTAWS_DESCRIBEPROVISIONEDPRODUCTRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "describeprovisionedproductrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeProvisionedProductResponse;
+
+class QTAWS_EXPORT DescribeProvisionedProductResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeProvisionedProductResponsePrivate(DescribeProvisionedProductResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProvisionedProductResponse)
+    Q_DISABLE_COPY(DescribeProvisionedProductResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

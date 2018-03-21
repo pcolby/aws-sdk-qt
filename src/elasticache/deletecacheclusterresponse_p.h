@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETECACHECLUSTERRESPONSE_P_H
 #define QTAWS_DELETECACHECLUSTERRESPONSE_P_H
 
+#include "elasticacheresponse.h"
+#include "deletecacheclusterrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteCacheClusterResponse;
+
+class QTAWS_EXPORT DeleteCacheClusterResponsePrivate : public ElastiCacheResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteCacheClusterResponsePrivate(DeleteCacheClusterResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCacheClusterResponse)
+    Q_DISABLE_COPY(DeleteCacheClusterResponsePrivate)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

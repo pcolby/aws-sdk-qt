@@ -20,4 +20,31 @@
 #ifndef QTAWS_ACTIVATEUSERRESPONSE_P_H
 #define QTAWS_ACTIVATEUSERRESPONSE_P_H
 
+#include "workdocsresponse.h"
+#include "activateuserrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class ActivateUserResponse;
+
+class QTAWS_EXPORT ActivateUserResponsePrivate : public WorkDocsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ActivateUserResponsePrivate(ActivateUserResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ActivateUserResponse)
+    Q_DISABLE_COPY(ActivateUserResponsePrivate)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

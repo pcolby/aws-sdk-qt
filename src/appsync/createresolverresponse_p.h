@@ -20,4 +20,31 @@
 #ifndef QTAWS_CREATERESOLVERRESPONSE_P_H
 #define QTAWS_CREATERESOLVERRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "createresolverrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateResolverResponse;
+
+class QTAWS_EXPORT CreateResolverResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    CreateResolverResponsePrivate(CreateResolverResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(CreateResolverResponse)
+    Q_DISABLE_COPY(CreateResolverResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

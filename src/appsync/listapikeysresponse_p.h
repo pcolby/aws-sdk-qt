@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTAPIKEYSRESPONSE_P_H
 #define QTAWS_LISTAPIKEYSRESPONSE_P_H
 
+#include "appsyncresponse.h"
+#include "listapikeysrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListApiKeysResponse;
+
+class QTAWS_EXPORT ListApiKeysResponsePrivate : public AppSyncResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListApiKeysResponsePrivate(ListApiKeysResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListApiKeysResponse)
+    Q_DISABLE_COPY(ListApiKeysResponsePrivate)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

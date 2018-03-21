@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONRESPONSE_P_H
 #define QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONRESPONSE_P_H
 
+#include "budgetsresponse.h"
+#include "describesubscribersfornotificationrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DescribeSubscribersForNotificationResponse;
+
+class QTAWS_EXPORT DescribeSubscribersForNotificationResponsePrivate : public BudgetsResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeSubscribersForNotificationResponsePrivate(DescribeSubscribersForNotificationResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSubscribersForNotificationResponse)
+    Q_DISABLE_COPY(DescribeSubscribersForNotificationResponsePrivate)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEINPUTRESPONSE_P_H
 #define QTAWS_DELETEINPUTRESPONSE_P_H
 
+#include "medialiveresponse.h"
+#include "deleteinputrequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class DeleteInputResponse;
+
+class QTAWS_EXPORT DeleteInputResponsePrivate : public MediaLiveResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteInputResponsePrivate(DeleteInputResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteInputResponse)
+    Q_DISABLE_COPY(DeleteInputResponsePrivate)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

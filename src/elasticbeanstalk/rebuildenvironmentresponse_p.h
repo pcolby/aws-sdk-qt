@@ -20,4 +20,31 @@
 #ifndef QTAWS_REBUILDENVIRONMENTRESPONSE_P_H
 #define QTAWS_REBUILDENVIRONMENTRESPONSE_P_H
 
+#include "elasticbeanstalkresponse.h"
+#include "rebuildenvironmentrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class RebuildEnvironmentResponse;
+
+class QTAWS_EXPORT RebuildEnvironmentResponsePrivate : public ElasticBeanstalkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    RebuildEnvironmentResponsePrivate(RebuildEnvironmentResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(RebuildEnvironmentResponse)
+    Q_DISABLE_COPY(RebuildEnvironmentResponsePrivate)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

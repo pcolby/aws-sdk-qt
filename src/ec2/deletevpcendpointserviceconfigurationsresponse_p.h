@@ -20,4 +20,31 @@
 #ifndef QTAWS_DELETEVPCENDPOINTSERVICECONFIGURATIONSRESPONSE_P_H
 #define QTAWS_DELETEVPCENDPOINTSERVICECONFIGURATIONSRESPONSE_P_H
 
+#include "ec2response.h"
+#include "deletevpcendpointserviceconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcEndpointServiceConfigurationsResponse;
+
+class QTAWS_EXPORT DeleteVpcEndpointServiceConfigurationsResponsePrivate : public EC2ResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DeleteVpcEndpointServiceConfigurationsResponsePrivate(DeleteVpcEndpointServiceConfigurationsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcEndpointServiceConfigurationsResponse)
+    Q_DISABLE_COPY(DeleteVpcEndpointServiceConfigurationsResponsePrivate)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_LISTBONUSPAYMENTSRESPONSE_P_H
 #define QTAWS_LISTBONUSPAYMENTSRESPONSE_P_H
 
+#include "mturkresponse.h"
+#include "listbonuspaymentsrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListBonusPaymentsResponse;
+
+class QTAWS_EXPORT ListBonusPaymentsResponsePrivate : public MTurkResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    ListBonusPaymentsResponsePrivate(ListBonusPaymentsResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(ListBonusPaymentsResponse)
+    Q_DISABLE_COPY(ListBonusPaymentsResponsePrivate)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,31 @@
 #ifndef QTAWS_DESCRIBEPROVISIONINGPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEPROVISIONINGPARAMETERSRESPONSE_P_H
 
+#include "servicecatalogresponse.h"
+#include "describeprovisioningparametersrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeProvisioningParametersResponse;
+
+class QTAWS_EXPORT DescribeProvisioningParametersResponsePrivate : public ServiceCatalogResponsePrivate {
+    Q_OBJECT
+
+public:
+
+    DescribeProvisioningParametersResponsePrivate(DescribeProvisioningParametersResponse * const q);
+
+    void parseResponse(QXmlStreamReader &xml);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProvisioningParametersResponse)
+    Q_DISABLE_COPY(DescribeProvisioningParametersResponsePrivate)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif
