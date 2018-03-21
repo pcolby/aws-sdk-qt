@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new AddUserToGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddUserToGroupResponse::AddUserToGroupResponse(
-
-/**
  * @brief  Constructs a new AddUserToGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

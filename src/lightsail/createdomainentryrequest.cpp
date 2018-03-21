@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new CreateDomainEntryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateDomainEntryResponse::CreateDomainEntryResponse(
-
-/**
  * @brief  Constructs a new CreateDomainEntryRequest object by copying another.
  *
  * @param  other  Instance to copy.

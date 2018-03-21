@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new DeleteLoggerDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLoggerDefinitionResponse::DeleteLoggerDefinitionResponse(
-
-/**
  * @brief  Constructs a new DeleteLoggerDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketEncryptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketEncryptionResponse::GetBucketEncryptionResponse(
-
-/**
  * @brief  Constructs a new GetBucketEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

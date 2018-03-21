@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new DescribeUserPoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeUserPoolResponse::DescribeUserPoolResponse(
-
-/**
  * @brief  Constructs a new DescribeUserPoolRequest object by copying another.
  *
  * @param  other  Instance to copy.

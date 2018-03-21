@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new DescribePullRequestEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribePullRequestEventsResponse::DescribePullRequestEventsResponse(
-
-/**
  * @brief  Constructs a new DescribePullRequestEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.

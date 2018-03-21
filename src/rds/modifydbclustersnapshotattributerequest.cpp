@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new ModifyDBClusterSnapshotAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyDBClusterSnapshotAttributeResponse::ModifyDBClusterSnapshotAttributeResponse(
-
-/**
  * @brief  Constructs a new ModifyDBClusterSnapshotAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.

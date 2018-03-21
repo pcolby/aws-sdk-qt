@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteNetworkInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteNetworkInterfaceResponse::DeleteNetworkInterfaceResponse(
-
-/**
  * @brief  Constructs a new DeleteNetworkInterfaceRequest object by copying another.
  *
  * @param  other  Instance to copy.

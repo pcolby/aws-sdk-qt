@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new DeleteBranchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBranchResponse::DeleteBranchResponse(
-
-/**
  * @brief  Constructs a new DeleteBranchRequest object by copying another.
  *
  * @param  other  Instance to copy.

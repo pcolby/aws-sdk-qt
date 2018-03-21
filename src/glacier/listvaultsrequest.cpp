@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new ListVaultsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListVaultsResponse::ListVaultsResponse(
-
-/**
  * @brief  Constructs a new ListVaultsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new ListHandshakesForOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListHandshakesForOrganizationResponse::ListHandshakesForOrganizationResponse(
-
-/**
  * @brief  Constructs a new ListHandshakesForOrganizationRequest object by copying another.
  *
  * @param  other  Instance to copy.

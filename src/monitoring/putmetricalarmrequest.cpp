@@ -34,15 +34,6 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new PutMetricAlarmResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutMetricAlarmResponse::PutMetricAlarmResponse(
-
-/**
  * @brief  Constructs a new PutMetricAlarmRequest object by copying another.
  *
  * @param  other  Instance to copy.

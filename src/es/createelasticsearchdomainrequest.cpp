@@ -34,15 +34,6 @@ namespace ElasticsearchService {
  */
 
 /**
- * @brief  Constructs a new CreateElasticsearchDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateElasticsearchDomainResponse::CreateElasticsearchDomainResponse(
-
-/**
  * @brief  Constructs a new CreateElasticsearchDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new DeleteRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteRateBasedRuleResponse::DeleteRateBasedRuleResponse(
-
-/**
  * @brief  Constructs a new DeleteRateBasedRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

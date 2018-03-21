@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new DeleteLagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLagResponse::DeleteLagResponse(
-
-/**
  * @brief  Constructs a new DeleteLagRequest object by copying another.
  *
  * @param  other  Instance to copy.

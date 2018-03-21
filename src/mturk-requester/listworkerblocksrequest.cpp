@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new ListWorkerBlocksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListWorkerBlocksResponse::ListWorkerBlocksResponse(
-
-/**
  * @brief  Constructs a new ListWorkerBlocksRequest object by copying another.
  *
  * @param  other  Instance to copy.

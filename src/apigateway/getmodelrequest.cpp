@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetModelResponse::GetModelResponse(
-
-/**
  * @brief  Constructs a new GetModelRequest object by copying another.
  *
  * @param  other  Instance to copy.

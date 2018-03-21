@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new ResetCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResetCacheResponse::ResetCacheResponse(
-
-/**
  * @brief  Constructs a new ResetCacheRequest object by copying another.
  *
  * @param  other  Instance to copy.

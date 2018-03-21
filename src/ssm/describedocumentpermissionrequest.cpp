@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeDocumentPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDocumentPermissionResponse::DescribeDocumentPermissionResponse(
-
-/**
  * @brief  Constructs a new DescribeDocumentPermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.

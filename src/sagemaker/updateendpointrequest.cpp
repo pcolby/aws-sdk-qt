@@ -34,15 +34,6 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new UpdateEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateEndpointResponse::UpdateEndpointResponse(
-
-/**
  * @brief  Constructs a new UpdateEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

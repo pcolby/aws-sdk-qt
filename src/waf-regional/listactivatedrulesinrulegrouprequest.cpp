@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new ListActivatedRulesInRuleGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListActivatedRulesInRuleGroupResponse::ListActivatedRulesInRuleGroupResponse(
-
-/**
  * @brief  Constructs a new ListActivatedRulesInRuleGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

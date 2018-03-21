@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new UpdateSizeConstraintSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSizeConstraintSetResponse::UpdateSizeConstraintSetResponse(
-
-/**
  * @brief  Constructs a new UpdateSizeConstraintSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

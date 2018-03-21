@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new SetRulePrioritiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetRulePrioritiesResponse::SetRulePrioritiesResponse(
-
-/**
  * @brief  Constructs a new SetRulePrioritiesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new RegisterTargetWithMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterTargetWithMaintenanceWindowResponse::RegisterTargetWithMaintenanceWindowResponse(
-
-/**
  * @brief  Constructs a new RegisterTargetWithMaintenanceWindowRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new ListDocumentVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListDocumentVersionsResponse::ListDocumentVersionsResponse(
-
-/**
  * @brief  Constructs a new ListDocumentVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

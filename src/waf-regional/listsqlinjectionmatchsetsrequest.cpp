@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new ListSqlInjectionMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
-
-/**
  * @brief  Constructs a new ListSqlInjectionMatchSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new UpdateOrganizationalUnitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateOrganizationalUnitResponse::UpdateOrganizationalUnitResponse(
-
-/**
  * @brief  Constructs a new UpdateOrganizationalUnitRequest object by copying another.
  *
  * @param  other  Instance to copy.

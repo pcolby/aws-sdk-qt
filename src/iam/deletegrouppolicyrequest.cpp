@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteGroupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteGroupPolicyResponse::DeleteGroupPolicyResponse(
-
-/**
  * @brief  Constructs a new DeleteGroupPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new ListPublicKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListPublicKeysResponse::ListPublicKeysResponse(
-
-/**
  * @brief  Constructs a new ListPublicKeysRequest object by copying another.
  *
  * @param  other  Instance to copy.

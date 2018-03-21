@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListSigningCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListSigningCertificatesResponse::ListSigningCertificatesResponse(
-
-/**
  * @brief  Constructs a new ListSigningCertificatesRequest object by copying another.
  *
  * @param  other  Instance to copy.

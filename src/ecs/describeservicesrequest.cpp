@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new DescribeServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeServicesResponse::DescribeServicesResponse(
-
-/**
  * @brief  Constructs a new DescribeServicesRequest object by copying another.
  *
  * @param  other  Instance to copy.

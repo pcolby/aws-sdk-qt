@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new ListServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListServicesResponse::ListServicesResponse(
-
-/**
  * @brief  Constructs a new ListServicesRequest object by copying another.
  *
  * @param  other  Instance to copy.

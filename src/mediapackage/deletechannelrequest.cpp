@@ -34,15 +34,6 @@ namespace MediaPackage {
  */
 
 /**
- * @brief  Constructs a new DeleteChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteChannelResponse::DeleteChannelResponse(
-
-/**
  * @brief  Constructs a new DeleteChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

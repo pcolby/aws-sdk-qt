@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new ModifyDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyDBParameterGroupResponse::ModifyDBParameterGroupResponse(
-
-/**
  * @brief  Constructs a new ModifyDBParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

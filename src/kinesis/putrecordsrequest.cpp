@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new PutRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutRecordsResponse::PutRecordsResponse(
-
-/**
  * @brief  Constructs a new PutRecordsRequest object by copying another.
  *
  * @param  other  Instance to copy.

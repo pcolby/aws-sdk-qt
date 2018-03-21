@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new CreateCustomActionTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCustomActionTypeResponse::CreateCustomActionTypeResponse(
-
-/**
  * @brief  Constructs a new CreateCustomActionTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

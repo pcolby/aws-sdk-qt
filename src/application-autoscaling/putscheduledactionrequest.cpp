@@ -34,15 +34,6 @@ namespace ApplicationAutoScaling {
  */
 
 /**
- * @brief  Constructs a new PutScheduledActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutScheduledActionResponse::PutScheduledActionResponse(
-
-/**
  * @brief  Constructs a new PutScheduledActionRequest object by copying another.
  *
  * @param  other  Instance to copy.

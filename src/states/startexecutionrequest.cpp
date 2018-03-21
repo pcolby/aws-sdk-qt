@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new StartExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartExecutionResponse::StartExecutionResponse(
-
-/**
  * @brief  Constructs a new StartExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

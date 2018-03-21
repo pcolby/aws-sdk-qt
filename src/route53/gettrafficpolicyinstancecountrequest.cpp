@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new GetTrafficPolicyInstanceCountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTrafficPolicyInstanceCountResponse::GetTrafficPolicyInstanceCountResponse(
-
-/**
  * @brief  Constructs a new GetTrafficPolicyInstanceCountRequest object by copying another.
  *
  * @param  other  Instance to copy.

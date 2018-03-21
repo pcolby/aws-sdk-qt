@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new ModifyInstanceFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyInstanceFleetResponse::ModifyInstanceFleetResponse(
-
-/**
  * @brief  Constructs a new ModifyInstanceFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.

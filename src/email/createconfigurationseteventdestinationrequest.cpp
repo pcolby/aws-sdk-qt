@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new CreateConfigurationSetEventDestinationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDestinationResponse(
-
-/**
  * @brief  Constructs a new CreateConfigurationSetEventDestinationRequest object by copying another.
  *
  * @param  other  Instance to copy.

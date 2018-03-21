@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new RemoveAccountFromOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveAccountFromOrganizationResponse::RemoveAccountFromOrganizationResponse(
-
-/**
  * @brief  Constructs a new RemoveAccountFromOrganizationRequest object by copying another.
  *
  * @param  other  Instance to copy.

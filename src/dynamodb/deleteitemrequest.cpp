@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new DeleteItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteItemResponse::DeleteItemResponse(
-
-/**
  * @brief  Constructs a new DeleteItemRequest object by copying another.
  *
  * @param  other  Instance to copy.

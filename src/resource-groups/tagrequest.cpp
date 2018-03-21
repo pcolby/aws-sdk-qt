@@ -34,15 +34,6 @@ namespace ResourceGroups {
  */
 
 /**
- * @brief  Constructs a new TagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TagResponse::TagResponse(
-
-/**
  * @brief  Constructs a new TagRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new GetDataflowGraphResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDataflowGraphResponse::GetDataflowGraphResponse(
-
-/**
  * @brief  Constructs a new GetDataflowGraphRequest object by copying another.
  *
  * @param  other  Instance to copy.

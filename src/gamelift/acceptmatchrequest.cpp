@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new AcceptMatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AcceptMatchResponse::AcceptMatchResponse(
-
-/**
  * @brief  Constructs a new AcceptMatchRequest object by copying another.
  *
  * @param  other  Instance to copy.

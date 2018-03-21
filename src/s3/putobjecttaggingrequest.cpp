@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutObjectTaggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutObjectTaggingResponse::PutObjectTaggingResponse(
-
-/**
  * @brief  Constructs a new PutObjectTaggingRequest object by copying another.
  *
  * @param  other  Instance to copy.

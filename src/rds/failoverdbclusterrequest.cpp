@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new FailoverDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-FailoverDBClusterResponse::FailoverDBClusterResponse(
-
-/**
  * @brief  Constructs a new FailoverDBClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

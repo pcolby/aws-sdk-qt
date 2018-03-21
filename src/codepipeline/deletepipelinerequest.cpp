@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new DeletePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeletePipelineResponse::DeletePipelineResponse(
-
-/**
  * @brief  Constructs a new DeletePipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.

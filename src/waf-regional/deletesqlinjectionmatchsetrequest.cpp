@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new DeleteSqlInjectionMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSqlInjectionMatchSetResponse::DeleteSqlInjectionMatchSetResponse(
-
-/**
  * @brief  Constructs a new DeleteSqlInjectionMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

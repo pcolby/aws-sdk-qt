@@ -34,15 +34,6 @@ namespace Budgets {
  */
 
 /**
- * @brief  Constructs a new DescribeBudgetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeBudgetResponse::DescribeBudgetResponse(
-
-/**
  * @brief  Constructs a new DescribeBudgetRequest object by copying another.
  *
  * @param  other  Instance to copy.

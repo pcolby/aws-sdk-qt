@@ -34,15 +34,6 @@ namespace SimpleDB {
  */
 
 /**
- * @brief  Constructs a new DeleteAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteAttributesResponse::DeleteAttributesResponse(
-
-/**
  * @brief  Constructs a new DeleteAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

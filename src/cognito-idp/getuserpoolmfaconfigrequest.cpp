@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new GetUserPoolMfaConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetUserPoolMfaConfigResponse::GetUserPoolMfaConfigResponse(
-
-/**
  * @brief  Constructs a new GetUserPoolMfaConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.

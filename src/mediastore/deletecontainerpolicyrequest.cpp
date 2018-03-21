@@ -34,15 +34,6 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new DeleteContainerPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteContainerPolicyResponse::DeleteContainerPolicyResponse(
-
-/**
  * @brief  Constructs a new DeleteContainerPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

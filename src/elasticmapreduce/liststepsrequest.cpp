@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new ListStepsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListStepsResponse::ListStepsResponse(
-
-/**
  * @brief  Constructs a new ListStepsRequest object by copying another.
  *
  * @param  other  Instance to copy.

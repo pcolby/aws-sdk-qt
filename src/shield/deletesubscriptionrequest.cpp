@@ -34,15 +34,6 @@ namespace Shield {
  */
 
 /**
- * @brief  Constructs a new DeleteSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSubscriptionResponse::DeleteSubscriptionResponse(
-
-/**
  * @brief  Constructs a new DeleteSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

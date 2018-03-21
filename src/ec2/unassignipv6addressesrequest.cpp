@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new UnassignIpv6AddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UnassignIpv6AddressesResponse::UnassignIpv6AddressesResponse(
-
-/**
  * @brief  Constructs a new UnassignIpv6AddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.

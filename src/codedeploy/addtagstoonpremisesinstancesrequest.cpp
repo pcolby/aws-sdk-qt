@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new AddTagsToOnPremisesInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddTagsToOnPremisesInstancesResponse::AddTagsToOnPremisesInstancesResponse(
-
-/**
  * @brief  Constructs a new AddTagsToOnPremisesInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

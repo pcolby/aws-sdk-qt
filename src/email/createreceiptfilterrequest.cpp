@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new CreateReceiptFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateReceiptFilterResponse::CreateReceiptFilterResponse(
-
-/**
  * @brief  Constructs a new CreateReceiptFilterRequest object by copying another.
  *
  * @param  other  Instance to copy.

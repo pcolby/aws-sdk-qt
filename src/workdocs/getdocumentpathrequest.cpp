@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new GetDocumentPathResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDocumentPathResponse::GetDocumentPathResponse(
-
-/**
  * @brief  Constructs a new GetDocumentPathRequest object by copying another.
  *
  * @param  other  Instance to copy.

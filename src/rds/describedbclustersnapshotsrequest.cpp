@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeDBClusterSnapshotsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDBClusterSnapshotsResponse::DescribeDBClusterSnapshotsResponse(
-
-/**
  * @brief  Constructs a new DescribeDBClusterSnapshotsRequest object by copying another.
  *
  * @param  other  Instance to copy.

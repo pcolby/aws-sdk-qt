@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new ModifyReplicationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyReplicationTaskResponse::ModifyReplicationTaskResponse(
-
-/**
  * @brief  Constructs a new ModifyReplicationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

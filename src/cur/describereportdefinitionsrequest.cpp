@@ -34,15 +34,6 @@ namespace CostandUsageReportService {
  */
 
 /**
- * @brief  Constructs a new DescribeReportDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeReportDefinitionsResponse::DescribeReportDefinitionsResponse(
-
-/**
  * @brief  Constructs a new DescribeReportDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new DeleteIdentityProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteIdentityProviderResponse::DeleteIdentityProviderResponse(
-
-/**
  * @brief  Constructs a new DeleteIdentityProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.

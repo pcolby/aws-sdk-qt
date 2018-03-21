@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new ReorderReceiptRuleSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ReorderReceiptRuleSetResponse::ReorderReceiptRuleSetResponse(
-
-/**
  * @brief  Constructs a new ReorderReceiptRuleSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

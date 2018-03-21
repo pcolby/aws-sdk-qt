@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ModifyInstanceAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyInstanceAttributeResponse::ModifyInstanceAttributeResponse(
-
-/**
  * @brief  Constructs a new ModifyInstanceAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.

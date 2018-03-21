@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new DeleteCacheParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteCacheParameterGroupResponse::DeleteCacheParameterGroupResponse(
-
-/**
  * @brief  Constructs a new DeleteCacheParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

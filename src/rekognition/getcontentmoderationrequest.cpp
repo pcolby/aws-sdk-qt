@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new GetContentModerationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetContentModerationResponse::GetContentModerationResponse(
-
-/**
  * @brief  Constructs a new GetContentModerationRequest object by copying another.
  *
  * @param  other  Instance to copy.

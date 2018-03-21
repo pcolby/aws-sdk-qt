@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeMaintenanceWindowsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeMaintenanceWindowsResponse::DescribeMaintenanceWindowsResponse(
-
-/**
  * @brief  Constructs a new DescribeMaintenanceWindowsRequest object by copying another.
  *
  * @param  other  Instance to copy.

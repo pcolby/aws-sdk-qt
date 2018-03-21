@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new DescribeOrderableReplicationInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeOrderableReplicationInstancesResponse::DescribeOrderableReplicationInstancesResponse(
-
-/**
  * @brief  Constructs a new DescribeOrderableReplicationInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

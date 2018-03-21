@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new ListAppliedSchemaArnsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAppliedSchemaArnsResponse::ListAppliedSchemaArnsResponse(
-
-/**
  * @brief  Constructs a new ListAppliedSchemaArnsRequest object by copying another.
  *
  * @param  other  Instance to copy.

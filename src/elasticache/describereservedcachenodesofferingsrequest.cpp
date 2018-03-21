@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new DescribeReservedCacheNodesOfferingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeReservedCacheNodesOfferingsResponse::DescribeReservedCacheNodesOfferingsResponse(
-
-/**
  * @brief  Constructs a new DescribeReservedCacheNodesOfferingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

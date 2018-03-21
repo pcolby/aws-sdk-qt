@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new CreateIntentVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateIntentVersionResponse::CreateIntentVersionResponse(
-
-/**
  * @brief  Constructs a new CreateIntentVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

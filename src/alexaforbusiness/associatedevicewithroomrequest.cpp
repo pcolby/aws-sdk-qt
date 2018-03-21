@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new AssociateDeviceWithRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateDeviceWithRoomResponse::AssociateDeviceWithRoomResponse(
-
-/**
  * @brief  Constructs a new AssociateDeviceWithRoomRequest object by copying another.
  *
  * @param  other  Instance to copy.

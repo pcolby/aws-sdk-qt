@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new DeleteCacheSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteCacheSubnetGroupResponse::DeleteCacheSubnetGroupResponse(
-
-/**
  * @brief  Constructs a new DeleteCacheSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new SetIdentityDkimEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetIdentityDkimEnabledResponse::SetIdentityDkimEnabledResponse(
-
-/**
  * @brief  Constructs a new SetIdentityDkimEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.

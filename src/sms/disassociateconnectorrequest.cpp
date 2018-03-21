@@ -34,15 +34,6 @@ namespace SMS {
  */
 
 /**
- * @brief  Constructs a new DisassociateConnectorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateConnectorResponse::DisassociateConnectorResponse(
-
-/**
  * @brief  Constructs a new DisassociateConnectorRequest object by copying another.
  *
  * @param  other  Instance to copy.

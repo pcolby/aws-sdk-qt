@@ -34,15 +34,6 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new PutEventSelectorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutEventSelectorsResponse::PutEventSelectorsResponse(
-
-/**
  * @brief  Constructs a new PutEventSelectorsRequest object by copying another.
  *
  * @param  other  Instance to copy.

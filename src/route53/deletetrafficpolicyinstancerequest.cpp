@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new DeleteTrafficPolicyInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTrafficPolicyInstanceResponse::DeleteTrafficPolicyInstanceResponse(
-
-/**
  * @brief  Constructs a new DeleteTrafficPolicyInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

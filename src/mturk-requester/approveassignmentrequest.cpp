@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new ApproveAssignmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ApproveAssignmentResponse::ApproveAssignmentResponse(
-
-/**
  * @brief  Constructs a new ApproveAssignmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

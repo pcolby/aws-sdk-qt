@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new CreateCertificateFromCsrResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCertificateFromCsrResponse::CreateCertificateFromCsrResponse(
-
-/**
  * @brief  Constructs a new CreateCertificateFromCsrRequest object by copying another.
  *
  * @param  other  Instance to copy.

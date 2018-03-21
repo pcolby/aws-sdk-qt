@@ -34,15 +34,6 @@ namespace ServiceDiscovery {
  */
 
 /**
- * @brief  Constructs a new DeleteServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteServiceResponse::DeleteServiceResponse(
-
-/**
  * @brief  Constructs a new DeleteServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteTapeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTapeResponse::DeleteTapeResponse(
-
-/**
  * @brief  Constructs a new DeleteTapeRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new GetItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetItemResponse::GetItemResponse(
-
-/**
  * @brief  Constructs a new GetItemRequest object by copying another.
  *
  * @param  other  Instance to copy.

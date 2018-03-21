@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new ListConstraintsForPortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListConstraintsForPortfolioResponse::ListConstraintsForPortfolioResponse(
-
-/**
  * @brief  Constructs a new ListConstraintsForPortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.

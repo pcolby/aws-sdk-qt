@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new GetAuthorizationTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
-
-/**
  * @brief  Constructs a new GetAuthorizationTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.

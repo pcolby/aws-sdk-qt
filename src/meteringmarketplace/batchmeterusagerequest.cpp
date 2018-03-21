@@ -34,15 +34,6 @@ namespace MarketplaceMetering {
  */
 
 /**
- * @brief  Constructs a new BatchMeterUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchMeterUsageResponse::BatchMeterUsageResponse(
-
-/**
  * @brief  Constructs a new BatchMeterUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.

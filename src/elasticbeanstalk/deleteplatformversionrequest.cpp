@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new DeletePlatformVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeletePlatformVersionResponse::DeletePlatformVersionResponse(
-
-/**
  * @brief  Constructs a new DeletePlatformVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

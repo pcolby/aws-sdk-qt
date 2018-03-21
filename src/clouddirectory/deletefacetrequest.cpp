@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new DeleteFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteFacetResponse::DeleteFacetResponse(
-
-/**
  * @brief  Constructs a new DeleteFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.

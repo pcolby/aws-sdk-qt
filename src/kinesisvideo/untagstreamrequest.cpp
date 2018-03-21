@@ -34,15 +34,6 @@ namespace KinesisVideo {
  */
 
 /**
- * @brief  Constructs a new UntagStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UntagStreamResponse::UntagStreamResponse(
-
-/**
  * @brief  Constructs a new UntagStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

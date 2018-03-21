@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new GetUtterancesViewResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetUtterancesViewResponse::GetUtterancesViewResponse(
-
-/**
  * @brief  Constructs a new GetUtterancesViewRequest object by copying another.
  *
  * @param  other  Instance to copy.

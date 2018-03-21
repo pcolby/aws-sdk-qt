@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeOrderableDBInstanceOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsResponse(
-
-/**
  * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

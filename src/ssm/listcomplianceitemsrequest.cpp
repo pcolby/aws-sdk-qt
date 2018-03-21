@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new ListComplianceItemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListComplianceItemsResponse::ListComplianceItemsResponse(
-
-/**
  * @brief  Constructs a new ListComplianceItemsRequest object by copying another.
  *
  * @param  other  Instance to copy.

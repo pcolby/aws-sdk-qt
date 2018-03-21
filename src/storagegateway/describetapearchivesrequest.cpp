@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DescribeTapeArchivesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTapeArchivesResponse::DescribeTapeArchivesResponse(
-
-/**
  * @brief  Constructs a new DescribeTapeArchivesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new DescribeStreamSummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeStreamSummaryResponse::DescribeStreamSummaryResponse(
-
-/**
  * @brief  Constructs a new DescribeStreamSummaryRequest object by copying another.
  *
  * @param  other  Instance to copy.

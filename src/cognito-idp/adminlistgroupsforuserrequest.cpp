@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminListGroupsForUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminListGroupsForUserResponse::AdminListGroupsForUserResponse(
-
-/**
  * @brief  Constructs a new AdminListGroupsForUserRequest object by copying another.
  *
  * @param  other  Instance to copy.

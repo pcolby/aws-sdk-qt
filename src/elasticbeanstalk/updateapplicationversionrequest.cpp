@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new UpdateApplicationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateApplicationVersionResponse::UpdateApplicationVersionResponse(
-
-/**
  * @brief  Constructs a new UpdateApplicationVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new DescribeEventTopicsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEventTopicsResponse::DescribeEventTopicsResponse(
-
-/**
  * @brief  Constructs a new DescribeEventTopicsRequest object by copying another.
  *
  * @param  other  Instance to copy.

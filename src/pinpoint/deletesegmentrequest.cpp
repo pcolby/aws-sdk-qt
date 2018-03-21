@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new DeleteSegmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSegmentResponse::DeleteSegmentResponse(
-
-/**
  * @brief  Constructs a new DeleteSegmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

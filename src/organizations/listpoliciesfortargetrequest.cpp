@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new ListPoliciesForTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListPoliciesForTargetResponse::ListPoliciesForTargetResponse(
-
-/**
  * @brief  Constructs a new ListPoliciesForTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.

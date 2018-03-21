@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new DeleteBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBuildResponse::DeleteBuildResponse(
-
-/**
  * @brief  Constructs a new DeleteBuildRequest object by copying another.
  *
  * @param  other  Instance to copy.

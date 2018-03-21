@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new ListCoreDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListCoreDefinitionsResponse::ListCoreDefinitionsResponse(
-
-/**
  * @brief  Constructs a new ListCoreDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

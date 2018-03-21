@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new SetEndpointAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetEndpointAttributesResponse::SetEndpointAttributesResponse(
-
-/**
  * @brief  Constructs a new SetEndpointAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

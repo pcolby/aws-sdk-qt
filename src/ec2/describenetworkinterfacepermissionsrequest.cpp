@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeNetworkInterfacePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeNetworkInterfacePermissionsResponse::DescribeNetworkInterfacePermissionsResponse(
-
-/**
  * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

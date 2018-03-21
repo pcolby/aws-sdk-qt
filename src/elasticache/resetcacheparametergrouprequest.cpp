@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new ResetCacheParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResetCacheParameterGroupResponse::ResetCacheParameterGroupResponse(
-
-/**
  * @brief  Constructs a new ResetCacheParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

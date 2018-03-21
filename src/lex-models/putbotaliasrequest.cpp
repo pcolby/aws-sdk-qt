@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new PutBotAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBotAliasResponse::PutBotAliasResponse(
-
-/**
  * @brief  Constructs a new PutBotAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.

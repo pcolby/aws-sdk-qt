@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVpcClassicLinkDnsSupportResponse::DescribeVpcClassicLinkDnsSupportResponse(
-
-/**
  * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequest object by copying another.
  *
  * @param  other  Instance to copy.

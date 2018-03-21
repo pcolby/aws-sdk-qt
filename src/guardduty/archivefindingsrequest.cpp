@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new ArchiveFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ArchiveFindingsResponse::ArchiveFindingsResponse(
-
-/**
  * @brief  Constructs a new ArchiveFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new DeleteRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteRuleResponse::DeleteRuleResponse(
-
-/**
  * @brief  Constructs a new DeleteRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new StopConfigurationRecorderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopConfigurationRecorderResponse::StopConfigurationRecorderResponse(
-
-/**
  * @brief  Constructs a new StopConfigurationRecorderRequest object by copying another.
  *
  * @param  other  Instance to copy.

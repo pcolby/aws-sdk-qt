@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new AssociateElasticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateElasticIpResponse::AssociateElasticIpResponse(
-
-/**
  * @brief  Constructs a new AssociateElasticIpRequest object by copying another.
  *
  * @param  other  Instance to copy.

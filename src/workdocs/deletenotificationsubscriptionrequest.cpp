@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new DeleteNotificationSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteNotificationSubscriptionResponse::DeleteNotificationSubscriptionResponse(
-
-/**
  * @brief  Constructs a new DeleteNotificationSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

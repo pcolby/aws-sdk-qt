@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DescribeResizeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeResizeResponse::DescribeResizeResponse(
-
-/**
  * @brief  Constructs a new DescribeResizeRequest object by copying another.
  *
  * @param  other  Instance to copy.

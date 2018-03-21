@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new StartDeviceSyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartDeviceSyncResponse::StartDeviceSyncResponse(
-
-/**
  * @brief  Constructs a new StartDeviceSyncRequest object by copying another.
  *
  * @param  other  Instance to copy.

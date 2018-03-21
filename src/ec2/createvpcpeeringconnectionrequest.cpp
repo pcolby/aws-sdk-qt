@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateVpcPeeringConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateVpcPeeringConnectionResponse::CreateVpcPeeringConnectionResponse(
-
-/**
  * @brief  Constructs a new CreateVpcPeeringConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

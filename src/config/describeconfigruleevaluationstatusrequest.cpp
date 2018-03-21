@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new DescribeConfigRuleEvaluationStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeConfigRuleEvaluationStatusResponse::DescribeConfigRuleEvaluationStatusResponse(
-
-/**
  * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

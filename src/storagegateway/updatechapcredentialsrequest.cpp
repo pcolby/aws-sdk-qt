@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateChapCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateChapCredentialsResponse::UpdateChapCredentialsResponse(
-
-/**
  * @brief  Constructs a new UpdateChapCredentialsRequest object by copying another.
  *
  * @param  other  Instance to copy.

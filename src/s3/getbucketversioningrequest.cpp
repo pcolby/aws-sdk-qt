@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketVersioningResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketVersioningResponse::GetBucketVersioningResponse(
-
-/**
  * @brief  Constructs a new GetBucketVersioningRequest object by copying another.
  *
  * @param  other  Instance to copy.

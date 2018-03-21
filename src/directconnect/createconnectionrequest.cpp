@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new CreateConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateConnectionResponse::CreateConnectionResponse(
-
-/**
  * @brief  Constructs a new CreateConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

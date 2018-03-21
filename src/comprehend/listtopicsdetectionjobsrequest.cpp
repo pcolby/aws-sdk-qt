@@ -34,15 +34,6 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new ListTopicsDetectionJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTopicsDetectionJobsResponse::ListTopicsDetectionJobsResponse(
-
-/**
  * @brief  Constructs a new ListTopicsDetectionJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.

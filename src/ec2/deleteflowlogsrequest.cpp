@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteFlowLogsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteFlowLogsResponse::DeleteFlowLogsResponse(
-
-/**
  * @brief  Constructs a new DeleteFlowLogsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new UpdateMLModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateMLModelResponse::UpdateMLModelResponse(
-
-/**
  * @brief  Constructs a new UpdateMLModelRequest object by copying another.
  *
  * @param  other  Instance to copy.

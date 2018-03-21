@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new DeprecateWorkflowTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeprecateWorkflowTypeResponse::DeprecateWorkflowTypeResponse(
-
-/**
  * @brief  Constructs a new DeprecateWorkflowTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

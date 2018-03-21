@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new TestInvokeMethodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TestInvokeMethodResponse::TestInvokeMethodResponse(
-
-/**
  * @brief  Constructs a new TestInvokeMethodRequest object by copying another.
  *
  * @param  other  Instance to copy.

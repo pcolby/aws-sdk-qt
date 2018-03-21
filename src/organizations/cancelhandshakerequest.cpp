@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new CancelHandshakeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelHandshakeResponse::CancelHandshakeResponse(
-
-/**
  * @brief  Constructs a new CancelHandshakeRequest object by copying another.
  *
  * @param  other  Instance to copy.

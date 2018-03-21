@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new UpdateAutoScalingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateAutoScalingGroupResponse::UpdateAutoScalingGroupResponse(
-
-/**
  * @brief  Constructs a new UpdateAutoScalingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

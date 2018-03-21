@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new DeregisterEventTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterEventTopicResponse::DeregisterEventTopicResponse(
-
-/**
  * @brief  Constructs a new DeregisterEventTopicRequest object by copying another.
  *
  * @param  other  Instance to copy.

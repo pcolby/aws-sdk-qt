@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new StartMatchBackfillResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartMatchBackfillResponse::StartMatchBackfillResponse(
-
-/**
  * @brief  Constructs a new StartMatchBackfillRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new GetKeyPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetKeyPolicyResponse::GetKeyPolicyResponse(
-
-/**
  * @brief  Constructs a new GetKeyPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

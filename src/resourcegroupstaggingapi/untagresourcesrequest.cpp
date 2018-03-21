@@ -34,15 +34,6 @@ namespace ResourceGroupsTaggingAPI {
  */
 
 /**
- * @brief  Constructs a new UntagResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UntagResourcesResponse::UntagResourcesResponse(
-
-/**
  * @brief  Constructs a new UntagResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.

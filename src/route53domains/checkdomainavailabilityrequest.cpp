@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new CheckDomainAvailabilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CheckDomainAvailabilityResponse::CheckDomainAvailabilityResponse(
-
-/**
  * @brief  Constructs a new CheckDomainAvailabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DownloadDBLogFilePortionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
-
-/**
  * @brief  Constructs a new DownloadDBLogFilePortionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new CloneStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CloneStackResponse::CloneStackResponse(
-
-/**
  * @brief  Constructs a new CloneStackRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new DeleteAssessmentTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteAssessmentTargetResponse::DeleteAssessmentTargetResponse(
-
-/**
  * @brief  Constructs a new DeleteAssessmentTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.

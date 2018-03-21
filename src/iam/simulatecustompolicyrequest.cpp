@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new SimulateCustomPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SimulateCustomPolicyResponse::SimulateCustomPolicyResponse(
-
-/**
  * @brief  Constructs a new SimulateCustomPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

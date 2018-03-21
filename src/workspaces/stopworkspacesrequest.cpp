@@ -34,15 +34,6 @@ namespace WorkSpaces {
  */
 
 /**
- * @brief  Constructs a new StopWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopWorkspacesResponse::StopWorkspacesResponse(
-
-/**
  * @brief  Constructs a new StopWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.

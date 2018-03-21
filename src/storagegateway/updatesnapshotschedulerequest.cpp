@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateSnapshotScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSnapshotScheduleResponse::UpdateSnapshotScheduleResponse(
-
-/**
  * @brief  Constructs a new UpdateSnapshotScheduleRequest object by copying another.
  *
  * @param  other  Instance to copy.

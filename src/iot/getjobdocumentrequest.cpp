@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new GetJobDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetJobDocumentResponse::GetJobDocumentResponse(
-
-/**
  * @brief  Constructs a new GetJobDocumentRequest object by copying another.
  *
  * @param  other  Instance to copy.

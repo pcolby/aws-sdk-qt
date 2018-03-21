@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new AttachStaticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachStaticIpResponse::AttachStaticIpResponse(
-
-/**
  * @brief  Constructs a new AttachStaticIpRequest object by copying another.
  *
  * @param  other  Instance to copy.

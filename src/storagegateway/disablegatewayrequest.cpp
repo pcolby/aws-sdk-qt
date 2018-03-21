@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DisableGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableGatewayResponse::DisableGatewayResponse(
-
-/**
  * @brief  Constructs a new DisableGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.

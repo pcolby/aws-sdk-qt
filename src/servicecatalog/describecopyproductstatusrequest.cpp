@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DescribeCopyProductStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeCopyProductStatusResponse::DescribeCopyProductStatusResponse(
-
-/**
  * @brief  Constructs a new DescribeCopyProductStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

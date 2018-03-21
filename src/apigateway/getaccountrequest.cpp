@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAccountResponse::GetAccountResponse(
-
-/**
  * @brief  Constructs a new GetAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.

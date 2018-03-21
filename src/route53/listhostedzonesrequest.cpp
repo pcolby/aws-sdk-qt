@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new ListHostedZonesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListHostedZonesResponse::ListHostedZonesResponse(
-
-/**
  * @brief  Constructs a new ListHostedZonesRequest object by copying another.
  *
  * @param  other  Instance to copy.

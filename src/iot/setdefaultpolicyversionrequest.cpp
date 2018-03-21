@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new SetDefaultPolicyVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
-
-/**
  * @brief  Constructs a new SetDefaultPolicyVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

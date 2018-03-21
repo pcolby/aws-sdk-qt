@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new StartSchemaExtensionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartSchemaExtensionResponse::StartSchemaExtensionResponse(
-
-/**
  * @brief  Constructs a new StartSchemaExtensionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDirectConnectGatewayAssociationsResponse::DescribeDirectConnectGatewayAssociationsResponse(
-
-/**
  * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

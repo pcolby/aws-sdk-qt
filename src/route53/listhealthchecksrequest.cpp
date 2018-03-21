@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new ListHealthChecksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListHealthChecksResponse::ListHealthChecksResponse(
-
-/**
  * @brief  Constructs a new ListHealthChecksRequest object by copying another.
  *
  * @param  other  Instance to copy.

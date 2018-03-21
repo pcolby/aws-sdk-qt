@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new DeleteThreatIntelSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteThreatIntelSetResponse::DeleteThreatIntelSetResponse(
-
-/**
  * @brief  Constructs a new DeleteThreatIntelSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new PutSchemaFromJsonResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutSchemaFromJsonResponse::PutSchemaFromJsonResponse(
-
-/**
  * @brief  Constructs a new PutSchemaFromJsonRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new ListTablesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTablesResponse::ListTablesResponse(
-
-/**
  * @brief  Constructs a new ListTablesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Firehose {
  */
 
 /**
- * @brief  Constructs a new PutRecordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutRecordResponse::PutRecordResponse(
-
-/**
  * @brief  Constructs a new PutRecordRequest object by copying another.
  *
  * @param  other  Instance to copy.

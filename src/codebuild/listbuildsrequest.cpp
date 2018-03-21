@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new ListBuildsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListBuildsResponse::ListBuildsResponse(
-
-/**
  * @brief  Constructs a new ListBuildsRequest object by copying another.
  *
  * @param  other  Instance to copy.

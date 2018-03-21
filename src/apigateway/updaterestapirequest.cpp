@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateRestApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRestApiResponse::UpdateRestApiResponse(
-
-/**
  * @brief  Constructs a new UpdateRestApiRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new AbortVaultLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AbortVaultLockResponse::AbortVaultLockResponse(
-
-/**
  * @brief  Constructs a new AbortVaultLockRequest object by copying another.
  *
  * @param  other  Instance to copy.

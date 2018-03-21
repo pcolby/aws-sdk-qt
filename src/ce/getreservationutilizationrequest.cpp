@@ -34,15 +34,6 @@ namespace CostExplorer {
  */
 
 /**
- * @brief  Constructs a new GetReservationUtilizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetReservationUtilizationResponse::GetReservationUtilizationResponse(
-
-/**
  * @brief  Constructs a new GetReservationUtilizationRequest object by copying another.
  *
  * @param  other  Instance to copy.

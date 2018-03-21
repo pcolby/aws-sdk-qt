@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new CreateUserDefinedFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateUserDefinedFunctionResponse::CreateUserDefinedFunctionResponse(
-
-/**
  * @brief  Constructs a new CreateUserDefinedFunctionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new DescribeRefreshSchemasStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeRefreshSchemasStatusResponse::DescribeRefreshSchemasStatusResponse(
-
-/**
  * @brief  Constructs a new DescribeRefreshSchemasStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new StopUserImportJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopUserImportJobResponse::StopUserImportJobResponse(
-
-/**
  * @brief  Constructs a new StopUserImportJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

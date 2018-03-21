@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new ListGrantsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListGrantsResponse::ListGrantsResponse(
-
-/**
  * @brief  Constructs a new ListGrantsRequest object by copying another.
  *
  * @param  other  Instance to copy.

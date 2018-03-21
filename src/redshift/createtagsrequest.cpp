@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new CreateTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateTagsResponse::CreateTagsResponse(
-
-/**
  * @brief  Constructs a new CreateTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

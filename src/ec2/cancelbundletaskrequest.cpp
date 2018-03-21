@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CancelBundleTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelBundleTaskResponse::CancelBundleTaskResponse(
-
-/**
  * @brief  Constructs a new CancelBundleTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

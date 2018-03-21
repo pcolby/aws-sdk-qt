@@ -34,15 +34,6 @@ namespace MigrationHub {
  */
 
 /**
- * @brief  Constructs a new DeleteProgressUpdateStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteProgressUpdateStreamResponse::DeleteProgressUpdateStreamResponse(
-
-/**
  * @brief  Constructs a new DeleteProgressUpdateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

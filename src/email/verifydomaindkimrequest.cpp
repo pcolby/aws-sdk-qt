@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new VerifyDomainDkimResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-VerifyDomainDkimResponse::VerifyDomainDkimResponse(
-
-/**
  * @brief  Constructs a new VerifyDomainDkimRequest object by copying another.
  *
  * @param  other  Instance to copy.

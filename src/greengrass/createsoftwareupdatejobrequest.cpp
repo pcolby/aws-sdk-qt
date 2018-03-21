@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new CreateSoftwareUpdateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSoftwareUpdateJobResponse::CreateSoftwareUpdateJobResponse(
-
-/**
  * @brief  Constructs a new CreateSoftwareUpdateJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

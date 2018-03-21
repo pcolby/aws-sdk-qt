@@ -34,15 +34,6 @@ namespace LexRuntimeService {
  */
 
 /**
- * @brief  Constructs a new PostContentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PostContentResponse::PostContentResponse(
-
-/**
  * @brief  Constructs a new PostContentRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new RestoreDBClusterToPointInTimeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
-
-/**
  * @brief  Constructs a new RestoreDBClusterToPointInTimeRequest object by copying another.
  *
  * @param  other  Instance to copy.

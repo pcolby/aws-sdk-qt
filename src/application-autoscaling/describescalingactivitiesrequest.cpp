@@ -34,15 +34,6 @@ namespace ApplicationAutoScaling {
  */
 
 /**
- * @brief  Constructs a new DescribeScalingActivitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeScalingActivitiesResponse::DescribeScalingActivitiesResponse(
-
-/**
  * @brief  Constructs a new DescribeScalingActivitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.

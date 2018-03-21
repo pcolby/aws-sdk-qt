@@ -34,15 +34,6 @@ namespace WorkSpaces {
  */
 
 /**
- * @brief  Constructs a new DeleteTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTagsResponse::DeleteTagsResponse(
-
-/**
  * @brief  Constructs a new DeleteTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

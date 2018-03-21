@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new GenerateDataKeyWithoutPlaintextResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GenerateDataKeyWithoutPlaintextResponse::GenerateDataKeyWithoutPlaintextResponse(
-
-/**
  * @brief  Constructs a new GenerateDataKeyWithoutPlaintextRequest object by copying another.
  *
  * @param  other  Instance to copy.

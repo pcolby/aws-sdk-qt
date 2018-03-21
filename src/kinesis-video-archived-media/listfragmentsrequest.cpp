@@ -34,15 +34,6 @@ namespace KinesisVideoArchivedMedia {
  */
 
 /**
- * @brief  Constructs a new ListFragmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListFragmentsResponse::ListFragmentsResponse(
-
-/**
  * @brief  Constructs a new ListFragmentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new ActivateGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ActivateGatewayResponse::ActivateGatewayResponse(
-
-/**
  * @brief  Constructs a new ActivateGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new PutAutoScalingPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutAutoScalingPolicyResponse::PutAutoScalingPolicyResponse(
-
-/**
  * @brief  Constructs a new PutAutoScalingPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

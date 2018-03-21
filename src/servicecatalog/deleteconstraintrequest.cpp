@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DeleteConstraintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteConstraintResponse::DeleteConstraintResponse(
-
-/**
  * @brief  Constructs a new DeleteConstraintRequest object by copying another.
  *
  * @param  other  Instance to copy.

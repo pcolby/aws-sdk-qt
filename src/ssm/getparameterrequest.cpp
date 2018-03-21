@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new GetParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetParameterResponse::GetParameterResponse(
-
-/**
  * @brief  Constructs a new GetParameterRequest object by copying another.
  *
  * @param  other  Instance to copy.

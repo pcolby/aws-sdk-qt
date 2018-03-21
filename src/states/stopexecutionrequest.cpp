@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new StopExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopExecutionResponse::StopExecutionResponse(
-
-/**
  * @brief  Constructs a new StopExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

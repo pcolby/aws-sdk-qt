@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new StopRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopRunResponse::StopRunResponse(
-
-/**
  * @brief  Constructs a new StopRunRequest object by copying another.
  *
  * @param  other  Instance to copy.

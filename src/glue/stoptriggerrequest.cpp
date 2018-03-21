@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new StopTriggerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopTriggerResponse::StopTriggerResponse(
-
-/**
  * @brief  Constructs a new StopTriggerRequest object by copying another.
  *
  * @param  other  Instance to copy.

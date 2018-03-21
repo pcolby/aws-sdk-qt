@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new PutGatewayResponseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutGatewayResponseResponse::PutGatewayResponseResponse(
-
-/**
  * @brief  Constructs a new PutGatewayResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.

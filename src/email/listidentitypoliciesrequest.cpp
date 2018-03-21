@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new ListIdentityPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListIdentityPoliciesResponse::ListIdentityPoliciesResponse(
-
-/**
  * @brief  Constructs a new ListIdentityPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

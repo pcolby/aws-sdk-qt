@@ -34,15 +34,6 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new BatchDetectEntitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchDetectEntitiesResponse::BatchDetectEntitiesResponse(
-
-/**
  * @brief  Constructs a new BatchDetectEntitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.

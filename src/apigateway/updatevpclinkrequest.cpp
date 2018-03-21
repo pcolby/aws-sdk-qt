@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateVpcLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateVpcLinkResponse::UpdateVpcLinkResponse(
-
-/**
  * @brief  Constructs a new UpdateVpcLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.

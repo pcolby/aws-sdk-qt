@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new RegisterCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterCertificateResponse::RegisterCertificateResponse(
-
-/**
  * @brief  Constructs a new RegisterCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

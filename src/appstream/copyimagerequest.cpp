@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new CopyImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CopyImageResponse::CopyImageResponse(
-
-/**
  * @brief  Constructs a new CopyImageRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DescribeElasticLoadBalancersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeElasticLoadBalancersResponse::DescribeElasticLoadBalancersResponse(
-
-/**
  * @brief  Constructs a new DescribeElasticLoadBalancersRequest object by copying another.
  *
  * @param  other  Instance to copy.

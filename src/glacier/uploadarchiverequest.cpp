@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new UploadArchiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UploadArchiveResponse::UploadArchiveResponse(
-
-/**
  * @brief  Constructs a new UploadArchiveRequest object by copying another.
  *
  * @param  other  Instance to copy.

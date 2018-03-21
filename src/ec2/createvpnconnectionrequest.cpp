@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateVpnConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateVpnConnectionResponse::CreateVpnConnectionResponse(
-
-/**
  * @brief  Constructs a new CreateVpnConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

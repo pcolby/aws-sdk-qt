@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new UpdateServiceSpecificCredentialResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateServiceSpecificCredentialResponse::UpdateServiceSpecificCredentialResponse(
-
-/**
  * @brief  Constructs a new UpdateServiceSpecificCredentialRequest object by copying another.
  *
  * @param  other  Instance to copy.

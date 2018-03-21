@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new CreateLagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateLagResponse::CreateLagResponse(
-
-/**
  * @brief  Constructs a new CreateLagRequest object by copying another.
  *
  * @param  other  Instance to copy.

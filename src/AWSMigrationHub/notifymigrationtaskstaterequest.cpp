@@ -34,15 +34,6 @@ namespace MigrationHub {
  */
 
 /**
- * @brief  Constructs a new NotifyMigrationTaskStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-NotifyMigrationTaskStateResponse::NotifyMigrationTaskStateResponse(
-
-/**
  * @brief  Constructs a new NotifyMigrationTaskStateRequest object by copying another.
  *
  * @param  other  Instance to copy.

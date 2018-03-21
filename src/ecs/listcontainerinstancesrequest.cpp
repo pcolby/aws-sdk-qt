@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new ListContainerInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListContainerInstancesResponse::ListContainerInstancesResponse(
-
-/**
  * @brief  Constructs a new ListContainerInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new ConnectDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ConnectDirectoryResponse::ConnectDirectoryResponse(
-
-/**
  * @brief  Constructs a new ConnectDirectoryRequest object by copying another.
  *
  * @param  other  Instance to copy.

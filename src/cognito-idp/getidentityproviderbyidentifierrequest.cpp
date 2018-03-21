@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new GetIdentityProviderByIdentifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetIdentityProviderByIdentifierResponse::GetIdentityProviderByIdentifierResponse(
-
-/**
  * @brief  Constructs a new GetIdentityProviderByIdentifierRequest object by copying another.
  *
  * @param  other  Instance to copy.

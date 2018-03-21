@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new DeleteWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteWebACLResponse::DeleteWebACLResponse(
-
-/**
  * @brief  Constructs a new DeleteWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.

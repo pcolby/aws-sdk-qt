@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new GetCredentialsForIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCredentialsForIdentityResponse::GetCredentialsForIdentityResponse(
-
-/**
  * @brief  Constructs a new GetCredentialsForIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.

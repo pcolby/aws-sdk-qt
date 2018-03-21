@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new DeleteConfigurationSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
-
-/**
  * @brief  Constructs a new DeleteConfigurationSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new ListActivitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListActivitiesResponse::ListActivitiesResponse(
-
-/**
  * @brief  Constructs a new ListActivitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.

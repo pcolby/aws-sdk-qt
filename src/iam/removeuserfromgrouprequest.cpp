@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new RemoveUserFromGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveUserFromGroupResponse::RemoveUserFromGroupResponse(
-
-/**
  * @brief  Constructs a new RemoveUserFromGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

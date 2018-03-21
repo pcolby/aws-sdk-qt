@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new GenerateRandomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GenerateRandomResponse::GenerateRandomResponse(
-
-/**
  * @brief  Constructs a new GenerateRandomRequest object by copying another.
  *
  * @param  other  Instance to copy.

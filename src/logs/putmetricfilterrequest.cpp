@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new PutMetricFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutMetricFilterResponse::PutMetricFilterResponse(
-
-/**
  * @brief  Constructs a new PutMetricFilterRequest object by copying another.
  *
  * @param  other  Instance to copy.

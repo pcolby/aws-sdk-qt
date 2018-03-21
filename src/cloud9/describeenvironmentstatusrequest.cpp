@@ -34,15 +34,6 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new DescribeEnvironmentStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEnvironmentStatusResponse::DescribeEnvironmentStatusResponse(
-
-/**
  * @brief  Constructs a new DescribeEnvironmentStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

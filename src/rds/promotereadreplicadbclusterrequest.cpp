@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new PromoteReadReplicaDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PromoteReadReplicaDBClusterResponse::PromoteReadReplicaDBClusterResponse(
-
-/**
  * @brief  Constructs a new PromoteReadReplicaDBClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

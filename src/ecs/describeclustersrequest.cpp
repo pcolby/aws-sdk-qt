@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new DescribeClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeClustersResponse::DescribeClustersResponse(
-
-/**
  * @brief  Constructs a new DescribeClustersRequest object by copying another.
  *
  * @param  other  Instance to copy.

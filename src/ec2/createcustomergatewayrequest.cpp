@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateCustomerGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCustomerGatewayResponse::CreateCustomerGatewayResponse(
-
-/**
  * @brief  Constructs a new CreateCustomerGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.

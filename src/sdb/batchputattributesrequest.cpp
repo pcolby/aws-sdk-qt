@@ -34,15 +34,6 @@ namespace SimpleDB {
  */
 
 /**
- * @brief  Constructs a new BatchPutAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchPutAttributesResponse::BatchPutAttributesResponse(
-
-/**
  * @brief  Constructs a new BatchPutAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new DeleteComputeEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteComputeEnvironmentResponse::DeleteComputeEnvironmentResponse(
-
-/**
  * @brief  Constructs a new DeleteComputeEnvironmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

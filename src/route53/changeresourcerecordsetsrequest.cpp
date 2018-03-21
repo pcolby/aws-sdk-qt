@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new ChangeResourceRecordSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ChangeResourceRecordSetsResponse::ChangeResourceRecordSetsResponse(
-
-/**
  * @brief  Constructs a new ChangeResourceRecordSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

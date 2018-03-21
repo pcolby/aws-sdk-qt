@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new RetrieveDomainAuthCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RetrieveDomainAuthCodeResponse::RetrieveDomainAuthCodeResponse(
-
-/**
  * @brief  Constructs a new RetrieveDomainAuthCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.

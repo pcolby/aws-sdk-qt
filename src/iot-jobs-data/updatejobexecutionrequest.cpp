@@ -34,15 +34,6 @@ namespace IoTJobsDataPlane {
  */
 
 /**
- * @brief  Constructs a new UpdateJobExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateJobExecutionResponse::UpdateJobExecutionResponse(
-
-/**
  * @brief  Constructs a new UpdateJobExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

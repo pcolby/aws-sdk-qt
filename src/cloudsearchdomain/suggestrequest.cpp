@@ -34,15 +34,6 @@ namespace CloudSearchDomain {
  */
 
 /**
- * @brief  Constructs a new SuggestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SuggestResponse::SuggestResponse(
-
-/**
  * @brief  Constructs a new SuggestRequest object by copying another.
  *
  * @param  other  Instance to copy.

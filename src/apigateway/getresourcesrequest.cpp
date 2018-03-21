@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetResourcesResponse::GetResourcesResponse(
-
-/**
  * @brief  Constructs a new GetResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.

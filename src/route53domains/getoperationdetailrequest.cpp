@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new GetOperationDetailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetOperationDetailResponse::GetOperationDetailResponse(
-
-/**
  * @brief  Constructs a new GetOperationDetailRequest object by copying another.
  *
  * @param  other  Instance to copy.

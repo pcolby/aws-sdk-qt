@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new StopInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopInstanceResponse::StopInstanceResponse(
-
-/**
  * @brief  Constructs a new StopInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

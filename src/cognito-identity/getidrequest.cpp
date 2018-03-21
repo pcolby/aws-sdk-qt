@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new GetIdResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetIdResponse::GetIdResponse(
-
-/**
  * @brief  Constructs a new GetIdRequest object by copying another.
  *
  * @param  other  Instance to copy.

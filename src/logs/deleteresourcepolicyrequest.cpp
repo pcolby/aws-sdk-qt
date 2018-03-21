@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new DeleteResourcePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
-
-/**
  * @brief  Constructs a new DeleteResourcePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

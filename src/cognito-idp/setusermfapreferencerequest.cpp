@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new SetUserMFAPreferenceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetUserMFAPreferenceResponse::SetUserMFAPreferenceResponse(
-
-/**
  * @brief  Constructs a new SetUserMFAPreferenceRequest object by copying another.
  *
  * @param  other  Instance to copy.

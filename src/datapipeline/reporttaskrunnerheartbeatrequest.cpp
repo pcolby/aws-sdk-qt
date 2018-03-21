@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new ReportTaskRunnerHeartbeatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ReportTaskRunnerHeartbeatResponse::ReportTaskRunnerHeartbeatResponse(
-
-/**
  * @brief  Constructs a new ReportTaskRunnerHeartbeatRequest object by copying another.
  *
  * @param  other  Instance to copy.

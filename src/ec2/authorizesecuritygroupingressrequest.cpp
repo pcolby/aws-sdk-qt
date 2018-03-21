@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AuthorizeSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AuthorizeSecurityGroupIngressResponse::AuthorizeSecurityGroupIngressResponse(
-
-/**
  * @brief  Constructs a new AuthorizeSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.

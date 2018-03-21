@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new CreateCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCommentResponse::CreateCommentResponse(
-
-/**
  * @brief  Constructs a new CreateCommentRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new ListDeploymentInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListDeploymentInstancesResponse::ListDeploymentInstancesResponse(
-
-/**
  * @brief  Constructs a new ListDeploymentInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

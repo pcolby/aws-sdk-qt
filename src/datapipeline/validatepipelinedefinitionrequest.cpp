@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new ValidatePipelineDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ValidatePipelineDefinitionResponse::ValidatePipelineDefinitionResponse(
-
-/**
  * @brief  Constructs a new ValidatePipelineDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

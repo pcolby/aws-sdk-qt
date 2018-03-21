@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new AcknowledgeJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AcknowledgeJobResponse::AcknowledgeJobResponse(
-
-/**
  * @brief  Constructs a new AcknowledgeJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

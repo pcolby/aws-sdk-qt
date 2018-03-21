@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DetachGroupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachGroupPolicyResponse::DetachGroupPolicyResponse(
-
-/**
  * @brief  Constructs a new DetachGroupPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

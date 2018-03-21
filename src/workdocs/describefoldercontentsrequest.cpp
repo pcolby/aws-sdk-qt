@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new DescribeFolderContentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeFolderContentsResponse::DescribeFolderContentsResponse(
-
-/**
  * @brief  Constructs a new DescribeFolderContentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

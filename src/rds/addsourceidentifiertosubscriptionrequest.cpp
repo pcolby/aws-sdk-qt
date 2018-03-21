@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new AddSourceIdentifierToSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResponse(
-
-/**
  * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new BulkPublishResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BulkPublishResponse::BulkPublishResponse(
-
-/**
  * @brief  Constructs a new BulkPublishRequest object by copying another.
  *
  * @param  other  Instance to copy.

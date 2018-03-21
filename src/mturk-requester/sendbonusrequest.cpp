@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new SendBonusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendBonusResponse::SendBonusResponse(
-
-/**
  * @brief  Constructs a new SendBonusRequest object by copying another.
  *
  * @param  other  Instance to copy.

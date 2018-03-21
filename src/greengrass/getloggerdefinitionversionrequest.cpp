@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new GetLoggerDefinitionVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetLoggerDefinitionVersionResponse::GetLoggerDefinitionVersionResponse(
-
-/**
  * @brief  Constructs a new GetLoggerDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

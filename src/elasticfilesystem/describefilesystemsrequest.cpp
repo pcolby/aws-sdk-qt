@@ -34,15 +34,6 @@ namespace EFS {
  */
 
 /**
- * @brief  Constructs a new DescribeFileSystemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeFileSystemsResponse::DescribeFileSystemsResponse(
-
-/**
  * @brief  Constructs a new DescribeFileSystemsRequest object by copying another.
  *
  * @param  other  Instance to copy.

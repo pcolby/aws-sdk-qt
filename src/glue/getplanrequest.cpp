@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new GetPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetPlanResponse::GetPlanResponse(
-
-/**
  * @brief  Constructs a new GetPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.

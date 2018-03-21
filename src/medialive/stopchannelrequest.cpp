@@ -34,15 +34,6 @@ namespace MediaLive {
  */
 
 /**
- * @brief  Constructs a new StopChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopChannelResponse::StopChannelResponse(
-
-/**
  * @brief  Constructs a new StopChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

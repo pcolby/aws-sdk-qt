@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new CreateServiceLinkedRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateServiceLinkedRoleResponse::CreateServiceLinkedRoleResponse(
-
-/**
  * @brief  Constructs a new CreateServiceLinkedRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.

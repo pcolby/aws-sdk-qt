@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new SendTaskSuccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendTaskSuccessResponse::SendTaskSuccessResponse(
-
-/**
  * @brief  Constructs a new SendTaskSuccessRequest object by copying another.
  *
  * @param  other  Instance to copy.

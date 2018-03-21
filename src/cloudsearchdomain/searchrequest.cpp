@@ -34,15 +34,6 @@ namespace CloudSearchDomain {
  */
 
 /**
- * @brief  Constructs a new SearchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SearchResponse::SearchResponse(
-
-/**
  * @brief  Constructs a new SearchRequest object by copying another.
  *
  * @param  other  Instance to copy.

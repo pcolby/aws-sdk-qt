@@ -34,15 +34,6 @@ namespace AutoScalingPlans {
  */
 
 /**
- * @brief  Constructs a new DeleteScalingPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteScalingPlanResponse::DeleteScalingPlanResponse(
-
-/**
  * @brief  Constructs a new DeleteScalingPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.

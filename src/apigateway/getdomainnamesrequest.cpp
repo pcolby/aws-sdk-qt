@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetDomainNamesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDomainNamesResponse::GetDomainNamesResponse(
-
-/**
  * @brief  Constructs a new GetDomainNamesRequest object by copying another.
  *
  * @param  other  Instance to copy.

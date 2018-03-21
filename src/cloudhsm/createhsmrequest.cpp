@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new CreateHsmResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateHsmResponse::CreateHsmResponse(
-
-/**
  * @brief  Constructs a new CreateHsmRequest object by copying another.
  *
  * @param  other  Instance to copy.

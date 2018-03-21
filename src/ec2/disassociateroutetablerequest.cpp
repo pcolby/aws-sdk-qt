@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DisassociateRouteTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateRouteTableResponse::DisassociateRouteTableResponse(
-
-/**
  * @brief  Constructs a new DisassociateRouteTableRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new SetIdentityMailFromDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetIdentityMailFromDomainResponse::SetIdentityMailFromDomainResponse(
-
-/**
  * @brief  Constructs a new SetIdentityMailFromDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

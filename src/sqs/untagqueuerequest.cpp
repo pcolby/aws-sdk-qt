@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new UntagQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UntagQueueResponse::UntagQueueResponse(
-
-/**
  * @brief  Constructs a new UntagQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.

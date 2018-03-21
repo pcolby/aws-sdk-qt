@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new ListStackSetOperationResultsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListStackSetOperationResultsResponse::ListStackSetOperationResultsResponse(
-
-/**
  * @brief  Constructs a new ListStackSetOperationResultsRequest object by copying another.
  *
  * @param  other  Instance to copy.

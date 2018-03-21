@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new VerifyEmailIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-VerifyEmailIdentityResponse::VerifyEmailIdentityResponse(
-
-/**
  * @brief  Constructs a new VerifyEmailIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.

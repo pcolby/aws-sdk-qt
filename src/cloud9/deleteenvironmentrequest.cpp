@@ -34,15 +34,6 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new DeleteEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEnvironmentResponse::DeleteEnvironmentResponse(
-
-/**
  * @brief  Constructs a new DeleteEnvironmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

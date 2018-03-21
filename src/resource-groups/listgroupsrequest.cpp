@@ -34,15 +34,6 @@ namespace ResourceGroups {
  */
 
 /**
- * @brief  Constructs a new ListGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListGroupsResponse::ListGroupsResponse(
-
-/**
  * @brief  Constructs a new ListGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

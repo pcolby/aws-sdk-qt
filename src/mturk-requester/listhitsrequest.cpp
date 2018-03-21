@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new ListHITsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListHITsResponse::ListHITsResponse(
-
-/**
  * @brief  Constructs a new ListHITsRequest object by copying another.
  *
  * @param  other  Instance to copy.

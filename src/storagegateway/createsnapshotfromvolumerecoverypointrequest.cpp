@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSnapshotFromVolumeRecoveryPointResponse::CreateSnapshotFromVolumeRecoveryPointResponse(
-
-/**
  * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequest object by copying another.
  *
  * @param  other  Instance to copy.

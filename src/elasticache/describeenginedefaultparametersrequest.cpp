@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new DescribeEngineDefaultParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEngineDefaultParametersResponse::DescribeEngineDefaultParametersResponse(
-
-/**
  * @brief  Constructs a new DescribeEngineDefaultParametersRequest object by copying another.
  *
  * @param  other  Instance to copy.

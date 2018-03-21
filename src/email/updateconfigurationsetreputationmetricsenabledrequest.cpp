@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetReputationMetricsEnabledResponse(
-
-/**
  * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.

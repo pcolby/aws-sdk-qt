@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new ListIdentitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListIdentitiesResponse::ListIdentitiesResponse(
-
-/**
  * @brief  Constructs a new ListIdentitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteNatGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteNatGatewayResponse::DeleteNatGatewayResponse(
-
-/**
  * @brief  Constructs a new DeleteNatGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new GetTelemetryMetadataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTelemetryMetadataResponse::GetTelemetryMetadataResponse(
-
-/**
  * @brief  Constructs a new GetTelemetryMetadataRequest object by copying another.
  *
  * @param  other  Instance to copy.

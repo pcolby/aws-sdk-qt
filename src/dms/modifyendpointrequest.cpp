@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new ModifyEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyEndpointResponse::ModifyEndpointResponse(
-
-/**
  * @brief  Constructs a new ModifyEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

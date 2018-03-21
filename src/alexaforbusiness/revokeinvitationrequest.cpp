@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new RevokeInvitationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RevokeInvitationResponse::RevokeInvitationResponse(
-
-/**
  * @brief  Constructs a new RevokeInvitationRequest object by copying another.
  *
  * @param  other  Instance to copy.

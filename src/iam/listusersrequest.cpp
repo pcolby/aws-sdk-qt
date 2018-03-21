@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListUsersResponse::ListUsersResponse(
-
-/**
  * @brief  Constructs a new ListUsersRequest object by copying another.
  *
  * @param  other  Instance to copy.

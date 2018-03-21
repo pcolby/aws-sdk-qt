@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new UpdateApiKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateApiKeyResponse::UpdateApiKeyResponse(
-
-/**
  * @brief  Constructs a new UpdateApiKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.

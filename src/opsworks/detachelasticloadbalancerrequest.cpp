@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DetachElasticLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachElasticLoadBalancerResponse::DetachElasticLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new DetachElasticLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

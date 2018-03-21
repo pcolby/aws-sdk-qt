@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new UpdateFunctionCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateFunctionCodeResponse::UpdateFunctionCodeResponse(
-
-/**
  * @brief  Constructs a new UpdateFunctionCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.

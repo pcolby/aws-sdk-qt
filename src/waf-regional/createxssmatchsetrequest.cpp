@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new CreateXssMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateXssMatchSetResponse::CreateXssMatchSetResponse(
-
-/**
  * @brief  Constructs a new CreateXssMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

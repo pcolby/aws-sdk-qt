@@ -34,15 +34,6 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new DeleteEnvironmentMembershipResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEnvironmentMembershipResponse::DeleteEnvironmentMembershipResponse(
-
-/**
  * @brief  Constructs a new DeleteEnvironmentMembershipRequest object by copying another.
  *
  * @param  other  Instance to copy.

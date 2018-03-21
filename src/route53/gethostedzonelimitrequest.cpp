@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new GetHostedZoneLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetHostedZoneLimitResponse::GetHostedZoneLimitResponse(
-
-/**
  * @brief  Constructs a new GetHostedZoneLimitRequest object by copying another.
  *
  * @param  other  Instance to copy.

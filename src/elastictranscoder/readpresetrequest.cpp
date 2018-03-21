@@ -34,15 +34,6 @@ namespace ElasticTranscoder {
  */
 
 /**
- * @brief  Constructs a new ReadPresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ReadPresetResponse::ReadPresetResponse(
-
-/**
  * @brief  Constructs a new ReadPresetRequest object by copying another.
  *
  * @param  other  Instance to copy.

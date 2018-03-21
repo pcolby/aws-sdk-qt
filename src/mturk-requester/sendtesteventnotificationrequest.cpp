@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new SendTestEventNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendTestEventNotificationResponse::SendTestEventNotificationResponse(
-
-/**
  * @brief  Constructs a new SendTestEventNotificationRequest object by copying another.
  *
  * @param  other  Instance to copy.

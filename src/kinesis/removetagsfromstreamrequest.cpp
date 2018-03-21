@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new RemoveTagsFromStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveTagsFromStreamResponse::RemoveTagsFromStreamResponse(
-
-/**
  * @brief  Constructs a new RemoveTagsFromStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

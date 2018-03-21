@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new UpdateRegexMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRegexMatchSetResponse::UpdateRegexMatchSetResponse(
-
-/**
  * @brief  Constructs a new UpdateRegexMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

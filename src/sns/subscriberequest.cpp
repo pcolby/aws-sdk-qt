@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new SubscribeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SubscribeResponse::SubscribeResponse(
-
-/**
  * @brief  Constructs a new SubscribeRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new DisassociateServiceRoleFromAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateServiceRoleFromAccountResponse::DisassociateServiceRoleFromAccountResponse(
-
-/**
  * @brief  Constructs a new DisassociateServiceRoleFromAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.

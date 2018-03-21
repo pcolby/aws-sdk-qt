@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new DeleteMetricFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteMetricFilterResponse::DeleteMetricFilterResponse(
-
-/**
  * @brief  Constructs a new DeleteMetricFilterRequest object by copying another.
  *
  * @param  other  Instance to copy.

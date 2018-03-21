@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new DeleteEmailChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEmailChannelResponse::DeleteEmailChannelResponse(
-
-/**
  * @brief  Constructs a new DeleteEmailChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

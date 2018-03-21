@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new GetMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetMappingResponse::GetMappingResponse(
-
-/**
  * @brief  Constructs a new GetMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.

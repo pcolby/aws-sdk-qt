@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new PutComplianceItemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutComplianceItemsResponse::PutComplianceItemsResponse(
-
-/**
  * @brief  Constructs a new PutComplianceItemsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new DeleteEndpointConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEndpointConfigResponse::DeleteEndpointConfigResponse(
-
-/**
  * @brief  Constructs a new DeleteEndpointConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.

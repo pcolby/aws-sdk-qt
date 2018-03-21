@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new DeleteLabelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLabelsResponse::DeleteLabelsResponse(
-
-/**
  * @brief  Constructs a new DeleteLabelsRequest object by copying another.
  *
  * @param  other  Instance to copy.

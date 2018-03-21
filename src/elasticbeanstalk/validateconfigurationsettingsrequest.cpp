@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new ValidateConfigurationSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ValidateConfigurationSettingsResponse::ValidateConfigurationSettingsResponse(
-
-/**
  * @brief  Constructs a new ValidateConfigurationSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new SetQueueAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetQueueAttributesResponse::SetQueueAttributesResponse(
-
-/**
  * @brief  Constructs a new SetQueueAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

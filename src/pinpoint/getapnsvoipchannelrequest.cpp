@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new GetApnsVoipChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetApnsVoipChannelResponse::GetApnsVoipChannelResponse(
-
-/**
  * @brief  Constructs a new GetApnsVoipChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

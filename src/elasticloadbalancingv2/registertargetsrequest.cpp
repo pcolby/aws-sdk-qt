@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new RegisterTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterTargetsResponse::RegisterTargetsResponse(
-
-/**
  * @brief  Constructs a new RegisterTargetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

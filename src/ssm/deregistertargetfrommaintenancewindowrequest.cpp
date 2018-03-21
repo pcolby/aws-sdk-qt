@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterTargetFromMaintenanceWindowResponse::DeregisterTargetFromMaintenanceWindowResponse(
-
-/**
  * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowRequest object by copying another.
  *
  * @param  other  Instance to copy.

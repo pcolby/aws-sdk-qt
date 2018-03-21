@@ -34,15 +34,6 @@ namespace Firehose {
  */
 
 /**
- * @brief  Constructs a new CreateDeliveryStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateDeliveryStreamResponse::CreateDeliveryStreamResponse(
-
-/**
  * @brief  Constructs a new CreateDeliveryStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

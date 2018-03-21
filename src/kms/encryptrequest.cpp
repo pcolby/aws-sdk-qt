@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new EncryptResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EncryptResponse::EncryptResponse(
-
-/**
  * @brief  Constructs a new EncryptRequest object by copying another.
  *
  * @param  other  Instance to copy.

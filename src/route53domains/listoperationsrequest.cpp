@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new ListOperationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListOperationsResponse::ListOperationsResponse(
-
-/**
  * @brief  Constructs a new ListOperationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

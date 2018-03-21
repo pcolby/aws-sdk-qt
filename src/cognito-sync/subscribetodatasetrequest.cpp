@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new SubscribeToDatasetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SubscribeToDatasetResponse::SubscribeToDatasetResponse(
-
-/**
  * @brief  Constructs a new SubscribeToDatasetRequest object by copying another.
  *
  * @param  other  Instance to copy.

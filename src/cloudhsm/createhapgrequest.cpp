@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new CreateHapgResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateHapgResponse::CreateHapgResponse(
-
-/**
  * @brief  Constructs a new CreateHapgRequest object by copying another.
  *
  * @param  other  Instance to copy.

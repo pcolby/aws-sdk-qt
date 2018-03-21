@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new CompareFacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CompareFacesResponse::CompareFacesResponse(
-
-/**
  * @brief  Constructs a new CompareFacesRequest object by copying another.
  *
  * @param  other  Instance to copy.

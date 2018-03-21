@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketAnalyticsConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketAnalyticsConfigurationResponse::PutBucketAnalyticsConfigurationResponse(
-
-/**
  * @brief  Constructs a new PutBucketAnalyticsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new RegisterTaskDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterTaskDefinitionResponse::RegisterTaskDefinitionResponse(
-
-/**
  * @brief  Constructs a new RegisterTaskDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new PublishResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PublishResponse::PublishResponse(
-
-/**
  * @brief  Constructs a new PublishRequest object by copying another.
  *
  * @param  other  Instance to copy.

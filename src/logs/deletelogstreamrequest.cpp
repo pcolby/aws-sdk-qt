@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new DeleteLogStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLogStreamResponse::DeleteLogStreamResponse(
-
-/**
  * @brief  Constructs a new DeleteLogStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

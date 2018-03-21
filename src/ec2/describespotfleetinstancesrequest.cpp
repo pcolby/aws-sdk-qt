@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeSpotFleetInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeSpotFleetInstancesResponse::DescribeSpotFleetInstancesResponse(
-
-/**
  * @brief  Constructs a new DescribeSpotFleetInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

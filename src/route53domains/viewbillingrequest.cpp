@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new ViewBillingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ViewBillingResponse::ViewBillingResponse(
-
-/**
  * @brief  Constructs a new ViewBillingRequest object by copying another.
  *
  * @param  other  Instance to copy.

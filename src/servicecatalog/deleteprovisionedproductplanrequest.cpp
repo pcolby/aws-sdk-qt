@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DeleteProvisionedProductPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteProvisionedProductPlanResponse::DeleteProvisionedProductPlanResponse(
-
-/**
  * @brief  Constructs a new DeleteProvisionedProductPlanRequest object by copying another.
  *
  * @param  other  Instance to copy.

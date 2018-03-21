@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new BatchCheckLayerAvailabilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchCheckLayerAvailabilityResponse::BatchCheckLayerAvailabilityResponse(
-
-/**
  * @brief  Constructs a new BatchCheckLayerAvailabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.

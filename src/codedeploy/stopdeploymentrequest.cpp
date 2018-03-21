@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new StopDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopDeploymentResponse::StopDeploymentResponse(
-
-/**
  * @brief  Constructs a new StopDeploymentRequest object by copying another.
  *
  * @param  other  Instance to copy.

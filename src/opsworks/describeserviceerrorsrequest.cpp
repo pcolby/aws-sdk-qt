@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DescribeServiceErrorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeServiceErrorsResponse::DescribeServiceErrorsResponse(
-
-/**
  * @brief  Constructs a new DescribeServiceErrorsRequest object by copying another.
  *
  * @param  other  Instance to copy.

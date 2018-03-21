@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminDisableProviderForUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminDisableProviderForUserResponse::AdminDisableProviderForUserResponse(
-
-/**
  * @brief  Constructs a new AdminDisableProviderForUserRequest object by copying another.
  *
  * @param  other  Instance to copy.

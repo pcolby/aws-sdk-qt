@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new DeleteGameSessionQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteGameSessionQueueResponse::DeleteGameSessionQueueResponse(
-
-/**
  * @brief  Constructs a new DeleteGameSessionQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.

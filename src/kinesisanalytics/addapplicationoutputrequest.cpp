@@ -34,15 +34,6 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new AddApplicationOutputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddApplicationOutputResponse::AddApplicationOutputResponse(
-
-/**
  * @brief  Constructs a new AddApplicationOutputRequest object by copying another.
  *
  * @param  other  Instance to copy.

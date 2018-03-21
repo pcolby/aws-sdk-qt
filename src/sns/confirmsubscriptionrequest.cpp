@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new ConfirmSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ConfirmSubscriptionResponse::ConfirmSubscriptionResponse(
-
-/**
  * @brief  Constructs a new ConfirmSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

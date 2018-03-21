@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCloudFrontOriginAccessIdentityConfigResponse::GetCloudFrontOriginAccessIdentityConfigResponse(
-
-/**
  * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.

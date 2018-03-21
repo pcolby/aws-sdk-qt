@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new CloneReceiptRuleSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CloneReceiptRuleSetResponse::CloneReceiptRuleSetResponse(
-
-/**
  * @brief  Constructs a new CloneReceiptRuleSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

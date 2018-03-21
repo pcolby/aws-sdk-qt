@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new ListVPCAssociationAuthorizationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListVPCAssociationAuthorizationsResponse::ListVPCAssociationAuthorizationsResponse(
-
-/**
  * @brief  Constructs a new ListVPCAssociationAuthorizationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

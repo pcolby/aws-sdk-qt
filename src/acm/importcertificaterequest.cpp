@@ -34,15 +34,6 @@ namespace ACM {
  */
 
 /**
- * @brief  Constructs a new ImportCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ImportCertificateResponse::ImportCertificateResponse(
-
-/**
  * @brief  Constructs a new ImportCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new CreateReplicationInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateReplicationInstanceResponse::CreateReplicationInstanceResponse(
-
-/**
  * @brief  Constructs a new CreateReplicationInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

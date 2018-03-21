@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new GetPatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetPatchBaselineResponse::GetPatchBaselineResponse(
-
-/**
  * @brief  Constructs a new GetPatchBaselineRequest object by copying another.
  *
  * @param  other  Instance to copy.

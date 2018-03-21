@@ -34,15 +34,6 @@ namespace ServerlessApplicationRepository {
  */
 
 /**
- * @brief  Constructs a new GetApplicationPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetApplicationPolicyResponse::GetApplicationPolicyResponse(
-
-/**
  * @brief  Constructs a new GetApplicationPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

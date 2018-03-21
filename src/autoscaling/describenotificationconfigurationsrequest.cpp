@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new DescribeNotificationConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeNotificationConfigurationsResponse::DescribeNotificationConfigurationsResponse(
-
-/**
  * @brief  Constructs a new DescribeNotificationConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

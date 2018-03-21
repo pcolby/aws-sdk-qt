@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteInternetGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteInternetGatewayResponse::DeleteInternetGatewayResponse(
-
-/**
  * @brief  Constructs a new DeleteInternetGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new StartApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartApplicationResponse::StartApplicationResponse(
-
-/**
  * @brief  Constructs a new StartApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new RemoveAllResourcePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveAllResourcePermissionsResponse::RemoveAllResourcePermissionsResponse(
-
-/**
  * @brief  Constructs a new RemoveAllResourcePermissionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

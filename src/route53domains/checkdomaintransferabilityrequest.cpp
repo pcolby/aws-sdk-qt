@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new CheckDomainTransferabilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CheckDomainTransferabilityResponse::CheckDomainTransferabilityResponse(
-
-/**
  * @brief  Constructs a new CheckDomainTransferabilityRequest object by copying another.
  *
  * @param  other  Instance to copy.

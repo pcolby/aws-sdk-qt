@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new CreateStreamingDistributionWithTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateStreamingDistributionWithTagsResponse::CreateStreamingDistributionWithTagsResponse(
-
-/**
  * @brief  Constructs a new CreateStreamingDistributionWithTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

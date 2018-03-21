@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new GetThreatIntelSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetThreatIntelSetResponse::GetThreatIntelSetResponse(
-
-/**
  * @brief  Constructs a new GetThreatIntelSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

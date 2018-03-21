@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new ListMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListMembersResponse::ListMembersResponse(
-
-/**
  * @brief  Constructs a new ListMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.

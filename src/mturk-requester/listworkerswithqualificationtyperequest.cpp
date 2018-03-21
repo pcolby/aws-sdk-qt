@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new ListWorkersWithQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListWorkersWithQualificationTypeResponse::ListWorkersWithQualificationTypeResponse(
-
-/**
  * @brief  Constructs a new ListWorkersWithQualificationTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

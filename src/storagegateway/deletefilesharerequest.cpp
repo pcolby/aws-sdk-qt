@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteFileShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteFileShareResponse::DeleteFileShareResponse(
-
-/**
  * @brief  Constructs a new DeleteFileShareRequest object by copying another.
  *
  * @param  other  Instance to copy.

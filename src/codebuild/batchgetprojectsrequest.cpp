@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new BatchGetProjectsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchGetProjectsResponse::BatchGetProjectsResponse(
-
-/**
  * @brief  Constructs a new BatchGetProjectsRequest object by copying another.
  *
  * @param  other  Instance to copy.

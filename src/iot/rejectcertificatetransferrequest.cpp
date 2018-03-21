@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new RejectCertificateTransferResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RejectCertificateTransferResponse::RejectCertificateTransferResponse(
-
-/**
  * @brief  Constructs a new RejectCertificateTransferRequest object by copying another.
  *
  * @param  other  Instance to copy.

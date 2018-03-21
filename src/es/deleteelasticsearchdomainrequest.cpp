@@ -34,15 +34,6 @@ namespace ElasticsearchService {
  */
 
 /**
- * @brief  Constructs a new DeleteElasticsearchDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteElasticsearchDomainResponse::DeleteElasticsearchDomainResponse(
-
-/**
  * @brief  Constructs a new DeleteElasticsearchDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

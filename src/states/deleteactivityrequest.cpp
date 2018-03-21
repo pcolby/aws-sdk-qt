@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new DeleteActivityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteActivityResponse::DeleteActivityResponse(
-
-/**
  * @brief  Constructs a new DeleteActivityRequest object by copying another.
  *
  * @param  other  Instance to copy.

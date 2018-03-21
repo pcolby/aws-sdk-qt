@@ -34,15 +34,6 @@ namespace WorkSpaces {
  */
 
 /**
- * @brief  Constructs a new ModifyWorkspacePropertiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyWorkspacePropertiesResponse::ModifyWorkspacePropertiesResponse(
-
-/**
  * @brief  Constructs a new ModifyWorkspacePropertiesRequest object by copying another.
  *
  * @param  other  Instance to copy.

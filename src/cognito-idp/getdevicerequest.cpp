@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new GetDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDeviceResponse::GetDeviceResponse(
-
-/**
  * @brief  Constructs a new GetDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new UpdateRegexPatternSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRegexPatternSetResponse::UpdateRegexPatternSetResponse(
-
-/**
  * @brief  Constructs a new UpdateRegexPatternSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

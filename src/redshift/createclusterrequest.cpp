@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new CreateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateClusterResponse::CreateClusterResponse(
-
-/**
  * @brief  Constructs a new CreateClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

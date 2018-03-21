@@ -34,15 +34,6 @@ namespace Snowball {
  */
 
 /**
- * @brief  Constructs a new GetSnowballUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetSnowballUsageResponse::GetSnowballUsageResponse(
-
-/**
  * @brief  Constructs a new GetSnowballUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.

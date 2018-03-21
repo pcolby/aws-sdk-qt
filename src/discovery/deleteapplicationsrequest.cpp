@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new DeleteApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteApplicationsResponse::DeleteApplicationsResponse(
-
-/**
  * @brief  Constructs a new DeleteApplicationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

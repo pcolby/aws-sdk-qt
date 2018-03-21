@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new SetUserSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetUserSettingsResponse::SetUserSettingsResponse(
-
-/**
  * @brief  Constructs a new SetUserSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

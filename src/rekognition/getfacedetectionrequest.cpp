@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new GetFaceDetectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetFaceDetectionResponse::GetFaceDetectionResponse(
-
-/**
  * @brief  Constructs a new GetFaceDetectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new PutEvaluationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutEvaluationsResponse::PutEvaluationsResponse(
-
-/**
  * @brief  Constructs a new PutEvaluationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribePrincipalIdFormatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribePrincipalIdFormatResponse::DescribePrincipalIdFormatResponse(
-
-/**
  * @brief  Constructs a new DescribePrincipalIdFormatRequest object by copying another.
  *
  * @param  other  Instance to copy.

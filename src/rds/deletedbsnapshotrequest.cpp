@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DeleteDBSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDBSnapshotResponse::DeleteDBSnapshotResponse(
-
-/**
  * @brief  Constructs a new DeleteDBSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.

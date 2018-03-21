@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new SetPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetPermissionResponse::SetPermissionResponse(
-
-/**
  * @brief  Constructs a new SetPermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.

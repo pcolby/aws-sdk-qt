@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new SendTaskHeartbeatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendTaskHeartbeatResponse::SendTaskHeartbeatResponse(
-
-/**
  * @brief  Constructs a new SendTaskHeartbeatRequest object by copying another.
  *
  * @param  other  Instance to copy.

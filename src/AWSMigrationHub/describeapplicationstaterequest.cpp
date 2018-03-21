@@ -34,15 +34,6 @@ namespace MigrationHub {
  */
 
 /**
- * @brief  Constructs a new DescribeApplicationStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeApplicationStateResponse::DescribeApplicationStateResponse(
-
-/**
  * @brief  Constructs a new DescribeApplicationStateRequest object by copying another.
  *
  * @param  other  Instance to copy.

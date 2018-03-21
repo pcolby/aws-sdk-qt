@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new RegisterEcsClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterEcsClusterResponse::RegisterEcsClusterResponse(
-
-/**
  * @brief  Constructs a new RegisterEcsClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

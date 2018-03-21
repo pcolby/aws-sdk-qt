@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new IndexDocumentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-IndexDocumentsResponse::IndexDocumentsResponse(
-
-/**
  * @brief  Constructs a new IndexDocumentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

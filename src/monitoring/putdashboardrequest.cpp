@@ -34,15 +34,6 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new PutDashboardResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutDashboardResponse::PutDashboardResponse(
-
-/**
  * @brief  Constructs a new PutDashboardRequest object by copying another.
  *
  * @param  other  Instance to copy.

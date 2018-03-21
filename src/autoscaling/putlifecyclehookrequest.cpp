@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new PutLifecycleHookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutLifecycleHookResponse::PutLifecycleHookResponse(
-
-/**
  * @brief  Constructs a new PutLifecycleHookRequest object by copying another.
  *
  * @param  other  Instance to copy.

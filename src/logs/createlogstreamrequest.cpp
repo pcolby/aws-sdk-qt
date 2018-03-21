@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new CreateLogStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateLogStreamResponse::CreateLogStreamResponse(
-
-/**
  * @brief  Constructs a new CreateLogStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ServiceDiscovery {
  */
 
 /**
- * @brief  Constructs a new GetNamespaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetNamespaceResponse::GetNamespaceResponse(
-
-/**
  * @brief  Constructs a new GetNamespaceRequest object by copying another.
  *
  * @param  other  Instance to copy.

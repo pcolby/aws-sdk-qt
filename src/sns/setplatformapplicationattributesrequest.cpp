@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new SetPlatformApplicationAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetPlatformApplicationAttributesResponse::SetPlatformApplicationAttributesResponse(
-
-/**
  * @brief  Constructs a new SetPlatformApplicationAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

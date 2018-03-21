@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteConfigurationSetTrackingOptionsResponse::DeleteConfigurationSetTrackingOptionsResponse(
-
-/**
  * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

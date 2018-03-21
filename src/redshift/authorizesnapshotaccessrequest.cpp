@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new AuthorizeSnapshotAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AuthorizeSnapshotAccessResponse::AuthorizeSnapshotAccessResponse(
-
-/**
  * @brief  Constructs a new AuthorizeSnapshotAccessRequest object by copying another.
  *
  * @param  other  Instance to copy.

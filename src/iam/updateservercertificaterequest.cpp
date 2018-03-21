@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new UpdateServerCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateServerCertificateResponse::UpdateServerCertificateResponse(
-
-/**
  * @brief  Constructs a new UpdateServerCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

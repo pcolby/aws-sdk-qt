@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DeregisterManagedInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
-
-/**
  * @brief  Constructs a new DeregisterManagedInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

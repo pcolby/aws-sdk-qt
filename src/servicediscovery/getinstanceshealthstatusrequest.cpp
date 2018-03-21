@@ -34,15 +34,6 @@ namespace ServiceDiscovery {
  */
 
 /**
- * @brief  Constructs a new GetInstancesHealthStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetInstancesHealthStatusResponse::GetInstancesHealthStatusResponse(
-
-/**
  * @brief  Constructs a new GetInstancesHealthStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

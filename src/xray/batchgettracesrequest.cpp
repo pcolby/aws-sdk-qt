@@ -34,15 +34,6 @@ namespace XRay {
  */
 
 /**
- * @brief  Constructs a new BatchGetTracesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchGetTracesResponse::BatchGetTracesResponse(
-
-/**
  * @brief  Constructs a new BatchGetTracesRequest object by copying another.
  *
  * @param  other  Instance to copy.

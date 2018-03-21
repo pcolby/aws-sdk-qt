@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new GrantAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GrantAccessResponse::GrantAccessResponse(
-
-/**
  * @brief  Constructs a new GrantAccessRequest object by copying another.
  *
  * @param  other  Instance to copy.

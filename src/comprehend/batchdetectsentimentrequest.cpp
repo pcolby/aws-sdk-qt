@@ -34,15 +34,6 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new BatchDetectSentimentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchDetectSentimentResponse::BatchDetectSentimentResponse(
-
-/**
  * @brief  Constructs a new BatchDetectSentimentRequest object by copying another.
  *
  * @param  other  Instance to copy.

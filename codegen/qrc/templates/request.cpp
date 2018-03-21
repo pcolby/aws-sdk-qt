@@ -16,15 +16,6 @@ namespace {{ServiceName}} {
  */
 
 /**
- * @brief  Constructs a new {{OperationName}}Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-{{OperationName}}Response::{{OperationName}}Response(
-
-/**
  * @brief  Constructs a new {{OperationName}}Request object by copying another.
  *
  * @param  other  Instance to copy.

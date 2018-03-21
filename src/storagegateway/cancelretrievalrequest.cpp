@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new CancelRetrievalResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelRetrievalResponse::CancelRetrievalResponse(
-
-/**
  * @brief  Constructs a new CancelRetrievalRequest object by copying another.
  *
  * @param  other  Instance to copy.

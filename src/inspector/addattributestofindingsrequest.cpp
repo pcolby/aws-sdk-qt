@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new AddAttributesToFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddAttributesToFindingsResponse::AddAttributesToFindingsResponse(
-
-/**
  * @brief  Constructs a new AddAttributesToFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

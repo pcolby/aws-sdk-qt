@@ -34,15 +34,6 @@ namespace MediaLive {
  */
 
 /**
- * @brief  Constructs a new DeleteInputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteInputResponse::DeleteInputResponse(
-
-/**
  * @brief  Constructs a new DeleteInputRequest object by copying another.
  *
  * @param  other  Instance to copy.

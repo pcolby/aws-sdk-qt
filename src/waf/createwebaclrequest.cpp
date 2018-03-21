@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new CreateWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateWebACLResponse::CreateWebACLResponse(
-
-/**
  * @brief  Constructs a new CreateWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.

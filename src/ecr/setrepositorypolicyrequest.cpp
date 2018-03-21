@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new SetRepositoryPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetRepositoryPolicyResponse::SetRepositoryPolicyResponse(
-
-/**
  * @brief  Constructs a new SetRepositoryPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

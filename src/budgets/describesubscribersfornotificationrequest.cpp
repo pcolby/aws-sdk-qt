@@ -34,15 +34,6 @@ namespace Budgets {
  */
 
 /**
- * @brief  Constructs a new DescribeSubscribersForNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeSubscribersForNotificationResponse::DescribeSubscribersForNotificationResponse(
-
-/**
  * @brief  Constructs a new DescribeSubscribersForNotificationRequest object by copying another.
  *
  * @param  other  Instance to copy.

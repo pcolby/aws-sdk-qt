@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new DeleteSizeConstraintSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSizeConstraintSetResponse::DeleteSizeConstraintSetResponse(
-
-/**
  * @brief  Constructs a new DeleteSizeConstraintSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

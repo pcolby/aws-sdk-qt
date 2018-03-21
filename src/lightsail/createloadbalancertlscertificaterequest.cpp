@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new CreateLoadBalancerTlsCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateLoadBalancerTlsCertificateResponse::CreateLoadBalancerTlsCertificateResponse(
-
-/**
  * @brief  Constructs a new CreateLoadBalancerTlsCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

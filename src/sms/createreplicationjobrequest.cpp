@@ -34,15 +34,6 @@ namespace SMS {
  */
 
 /**
- * @brief  Constructs a new CreateReplicationJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateReplicationJobResponse::CreateReplicationJobResponse(
-
-/**
  * @brief  Constructs a new CreateReplicationJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

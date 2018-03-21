@@ -34,15 +34,6 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new DescribeEventBusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEventBusResponse::DescribeEventBusResponse(
-
-/**
  * @brief  Constructs a new DescribeEventBusRequest object by copying another.
  *
  * @param  other  Instance to copy.

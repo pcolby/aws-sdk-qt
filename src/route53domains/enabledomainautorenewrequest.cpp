@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new EnableDomainAutoRenewResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EnableDomainAutoRenewResponse::EnableDomainAutoRenewResponse(
-
-/**
  * @brief  Constructs a new EnableDomainAutoRenewRequest object by copying another.
  *
  * @param  other  Instance to copy.

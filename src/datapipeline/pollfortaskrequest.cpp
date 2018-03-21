@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new PollForTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PollForTaskResponse::PollForTaskResponse(
-
-/**
  * @brief  Constructs a new PollForTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

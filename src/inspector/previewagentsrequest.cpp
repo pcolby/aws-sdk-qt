@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new PreviewAgentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PreviewAgentsResponse::PreviewAgentsResponse(
-
-/**
  * @brief  Constructs a new PreviewAgentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

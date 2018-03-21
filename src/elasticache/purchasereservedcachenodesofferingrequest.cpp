@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new PurchaseReservedCacheNodesOfferingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PurchaseReservedCacheNodesOfferingResponse::PurchaseReservedCacheNodesOfferingResponse(
-
-/**
  * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateReservedInstancesListingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateReservedInstancesListingResponse::CreateReservedInstancesListingResponse(
-
-/**
  * @brief  Constructs a new CreateReservedInstancesListingRequest object by copying another.
  *
  * @param  other  Instance to copy.

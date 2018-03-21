@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new GetActivityTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetActivityTaskResponse::GetActivityTaskResponse(
-
-/**
  * @brief  Constructs a new GetActivityTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

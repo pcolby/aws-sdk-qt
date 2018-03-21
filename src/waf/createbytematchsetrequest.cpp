@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new CreateByteMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateByteMatchSetResponse::CreateByteMatchSetResponse(
-
-/**
  * @brief  Constructs a new CreateByteMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetUsageResponse::GetUsageResponse(
-
-/**
  * @brief  Constructs a new GetUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.

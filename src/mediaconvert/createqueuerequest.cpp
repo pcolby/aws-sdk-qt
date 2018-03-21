@@ -34,15 +34,6 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new CreateQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateQueueResponse::CreateQueueResponse(
-
-/**
  * @brief  Constructs a new CreateQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.

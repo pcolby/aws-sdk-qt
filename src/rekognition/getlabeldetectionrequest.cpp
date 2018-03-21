@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new GetLabelDetectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetLabelDetectionResponse::GetLabelDetectionResponse(
-
-/**
  * @brief  Constructs a new GetLabelDetectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

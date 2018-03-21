@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new GetFunctionDefinitionVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetFunctionDefinitionVersionResponse::GetFunctionDefinitionVersionResponse(
-
-/**
  * @brief  Constructs a new GetFunctionDefinitionVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

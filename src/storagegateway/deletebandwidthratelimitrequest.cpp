@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteBandwidthRateLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBandwidthRateLimitResponse::DeleteBandwidthRateLimitResponse(
-
-/**
  * @brief  Constructs a new DeleteBandwidthRateLimitRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new GetResourceConfigHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetResourceConfigHistoryResponse::GetResourceConfigHistoryResponse(
-
-/**
  * @brief  Constructs a new GetResourceConfigHistoryRequest object by copying another.
  *
  * @param  other  Instance to copy.

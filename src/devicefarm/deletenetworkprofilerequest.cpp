@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new DeleteNetworkProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteNetworkProfileResponse::DeleteNetworkProfileResponse(
-
-/**
  * @brief  Constructs a new DeleteNetworkProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

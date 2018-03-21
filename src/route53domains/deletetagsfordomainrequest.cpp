@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new DeleteTagsForDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTagsForDomainResponse::DeleteTagsForDomainResponse(
-
-/**
  * @brief  Constructs a new DeleteTagsForDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

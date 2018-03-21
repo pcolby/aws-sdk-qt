@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new DisassociateKmsKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateKmsKeyResponse::DisassociateKmsKeyResponse(
-
-/**
  * @brief  Constructs a new DisassociateKmsKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.

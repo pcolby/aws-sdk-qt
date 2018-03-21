@@ -34,15 +34,6 @@ namespace Polly {
  */
 
 /**
- * @brief  Constructs a new DeleteLexiconResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLexiconResponse::DeleteLexiconResponse(
-
-/**
  * @brief  Constructs a new DeleteLexiconRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateBandwidthRateLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateBandwidthRateLimitResponse::UpdateBandwidthRateLimitResponse(
-
-/**
  * @brief  Constructs a new UpdateBandwidthRateLimitRequest object by copying another.
  *
  * @param  other  Instance to copy.

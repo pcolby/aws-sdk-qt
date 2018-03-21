@@ -34,15 +34,6 @@ namespace ElasticTranscoder {
  */
 
 /**
- * @brief  Constructs a new CreatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreatePipelineResponse::CreatePipelineResponse(
-
-/**
  * @brief  Constructs a new CreatePipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new DeleteMLModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteMLModelResponse::DeleteMLModelResponse(
-
-/**
  * @brief  Constructs a new DeleteMLModelRequest object by copying another.
  *
  * @param  other  Instance to copy.

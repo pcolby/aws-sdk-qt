@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DeleteProvisioningArtifactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteProvisioningArtifactResponse::DeleteProvisioningArtifactResponse(
-
-/**
  * @brief  Constructs a new DeleteProvisioningArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.

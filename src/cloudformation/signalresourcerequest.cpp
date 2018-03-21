@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new SignalResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SignalResourceResponse::SignalResourceResponse(
-
-/**
  * @brief  Constructs a new SignalResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

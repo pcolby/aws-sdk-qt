@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteOpenIDConnectProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
-
-/**
  * @brief  Constructs a new DeleteOpenIDConnectProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.

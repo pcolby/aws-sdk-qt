@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new ListRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListRecordsResponse::ListRecordsResponse(
-
-/**
  * @brief  Constructs a new ListRecordsRequest object by copying another.
  *
  * @param  other  Instance to copy.

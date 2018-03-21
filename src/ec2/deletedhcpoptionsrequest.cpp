@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteDhcpOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDhcpOptionsResponse::DeleteDhcpOptionsResponse(
-
-/**
  * @brief  Constructs a new DeleteDhcpOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

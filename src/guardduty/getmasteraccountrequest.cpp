@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new GetMasterAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetMasterAccountResponse::GetMasterAccountResponse(
-
-/**
  * @brief  Constructs a new GetMasterAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.

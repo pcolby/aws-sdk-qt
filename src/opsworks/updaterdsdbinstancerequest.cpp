@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new UpdateRdsDbInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRdsDbInstanceResponse::UpdateRdsDbInstanceResponse(
-
-/**
  * @brief  Constructs a new UpdateRdsDbInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

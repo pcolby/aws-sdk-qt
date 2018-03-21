@@ -34,15 +34,6 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new RemoveTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveTargetsResponse::RemoveTargetsResponse(
-
-/**
  * @brief  Constructs a new RemoveTargetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

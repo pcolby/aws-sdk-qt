@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new ListTypedLinkFacetAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTypedLinkFacetAttributesResponse::ListTypedLinkFacetAttributesResponse(
-
-/**
  * @brief  Constructs a new ListTypedLinkFacetAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

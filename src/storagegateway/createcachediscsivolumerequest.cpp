@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new CreateCachediSCSIVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCachediSCSIVolumeResponse::CreateCachediSCSIVolumeResponse(
-
-/**
  * @brief  Constructs a new CreateCachediSCSIVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.

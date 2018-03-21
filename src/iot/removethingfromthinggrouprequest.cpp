@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new RemoveThingFromThingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveThingFromThingGroupResponse::RemoveThingFromThingGroupResponse(
-
-/**
  * @brief  Constructs a new RemoveThingFromThingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

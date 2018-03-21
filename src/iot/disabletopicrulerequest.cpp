@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DisableTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableTopicRuleResponse::DisableTopicRuleResponse(
-
-/**
  * @brief  Constructs a new DisableTopicRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

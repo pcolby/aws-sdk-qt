@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new ListQueueTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListQueueTagsResponse::ListQueueTagsResponse(
-
-/**
  * @brief  Constructs a new ListQueueTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

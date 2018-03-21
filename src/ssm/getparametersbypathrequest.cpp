@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new GetParametersByPathResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetParametersByPathResponse::GetParametersByPathResponse(
-
-/**
  * @brief  Constructs a new GetParametersByPathRequest object by copying another.
  *
  * @param  other  Instance to copy.

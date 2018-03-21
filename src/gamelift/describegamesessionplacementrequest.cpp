@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new DescribeGameSessionPlacementResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeGameSessionPlacementResponse::DescribeGameSessionPlacementResponse(
-
-/**
  * @brief  Constructs a new DescribeGameSessionPlacementRequest object by copying another.
  *
  * @param  other  Instance to copy.

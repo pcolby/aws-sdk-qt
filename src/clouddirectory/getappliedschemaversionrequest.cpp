@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new GetAppliedSchemaVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAppliedSchemaVersionResponse::GetAppliedSchemaVersionResponse(
-
-/**
  * @brief  Constructs a new GetAppliedSchemaVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

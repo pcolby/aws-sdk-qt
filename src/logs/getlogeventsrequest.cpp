@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new GetLogEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetLogEventsResponse::GetLogEventsResponse(
-
-/**
  * @brief  Constructs a new GetLogEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new GetShardIteratorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetShardIteratorResponse::GetShardIteratorResponse(
-
-/**
  * @brief  Constructs a new GetShardIteratorRequest object by copying another.
  *
  * @param  other  Instance to copy.

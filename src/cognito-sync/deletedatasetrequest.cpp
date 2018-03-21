@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new DeleteDatasetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDatasetResponse::DeleteDatasetResponse(
-
-/**
  * @brief  Constructs a new DeleteDatasetRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Snowball {
  */
 
 /**
- * @brief  Constructs a new GetJobUnlockCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetJobUnlockCodeResponse::GetJobUnlockCodeResponse(
-
-/**
  * @brief  Constructs a new GetJobUnlockCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.

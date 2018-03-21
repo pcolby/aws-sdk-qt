@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new UpdateGcmChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateGcmChannelResponse::UpdateGcmChannelResponse(
-
-/**
  * @brief  Constructs a new UpdateGcmChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

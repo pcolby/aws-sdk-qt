@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new RegisterDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterDomainResponse::RegisterDomainResponse(
-
-/**
  * @brief  Constructs a new RegisterDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

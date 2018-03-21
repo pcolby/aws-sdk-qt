@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new GetAccessKeyLastUsedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAccessKeyLastUsedResponse::GetAccessKeyLastUsedResponse(
-
-/**
  * @brief  Constructs a new GetAccessKeyLastUsedRequest object by copying another.
  *
  * @param  other  Instance to copy.

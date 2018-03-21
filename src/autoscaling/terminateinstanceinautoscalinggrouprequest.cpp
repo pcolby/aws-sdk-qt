@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new TerminateInstanceInAutoScalingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TerminateInstanceInAutoScalingGroupResponse::TerminateInstanceInAutoScalingGroupResponse(
-
-/**
  * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

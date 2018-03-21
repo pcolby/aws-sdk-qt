@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new EnableDomainTransferLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EnableDomainTransferLockResponse::EnableDomainTransferLockResponse(
-
-/**
  * @brief  Constructs a new EnableDomainTransferLockRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new UpdateSubscriptionDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSubscriptionDefinitionResponse::UpdateSubscriptionDefinitionResponse(
-
-/**
  * @brief  Constructs a new UpdateSubscriptionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

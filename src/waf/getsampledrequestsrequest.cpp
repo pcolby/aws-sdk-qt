@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new GetSampledRequestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetSampledRequestsResponse::GetSampledRequestsResponse(
-
-/**
  * @brief  Constructs a new GetSampledRequestsRequest object by copying another.
  *
  * @param  other  Instance to copy.

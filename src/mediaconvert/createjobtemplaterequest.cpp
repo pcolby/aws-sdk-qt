@@ -34,15 +34,6 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new CreateJobTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateJobTemplateResponse::CreateJobTemplateResponse(
-
-/**
  * @brief  Constructs a new CreateJobTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MQ {
  */
 
 /**
- * @brief  Constructs a new ListConfigurationRevisionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListConfigurationRevisionsResponse::ListConfigurationRevisionsResponse(
-
-/**
  * @brief  Constructs a new ListConfigurationRevisionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

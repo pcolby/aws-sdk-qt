@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new ListRegexPatternSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
-
-/**
  * @brief  Constructs a new ListRegexPatternSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new DeletePresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeletePresetResponse::DeletePresetResponse(
-
-/**
  * @brief  Constructs a new DeletePresetRequest object by copying another.
  *
  * @param  other  Instance to copy.

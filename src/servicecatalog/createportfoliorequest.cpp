@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new CreatePortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreatePortfolioResponse::CreatePortfolioResponse(
-
-/**
  * @brief  Constructs a new CreatePortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabledResponse(
-
-/**
  * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.

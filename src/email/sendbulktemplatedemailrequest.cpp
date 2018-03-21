@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new SendBulkTemplatedEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendBulkTemplatedEmailResponse::SendBulkTemplatedEmailResponse(
-
-/**
  * @brief  Constructs a new SendBulkTemplatedEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.

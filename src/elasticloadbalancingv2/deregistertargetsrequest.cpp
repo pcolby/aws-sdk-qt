@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new DeregisterTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterTargetsResponse::DeregisterTargetsResponse(
-
-/**
  * @brief  Constructs a new DeregisterTargetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

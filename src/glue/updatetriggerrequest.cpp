@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new UpdateTriggerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateTriggerResponse::UpdateTriggerResponse(
-
-/**
  * @brief  Constructs a new UpdateTriggerRequest object by copying another.
  *
  * @param  other  Instance to copy.

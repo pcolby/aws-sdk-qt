@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new ModifyReplicationGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyReplicationGroupResponse::ModifyReplicationGroupResponse(
-
-/**
  * @brief  Constructs a new ModifyReplicationGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

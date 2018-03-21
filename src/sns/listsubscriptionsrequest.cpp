@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new ListSubscriptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListSubscriptionsResponse::ListSubscriptionsResponse(
-
-/**
  * @brief  Constructs a new ListSubscriptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

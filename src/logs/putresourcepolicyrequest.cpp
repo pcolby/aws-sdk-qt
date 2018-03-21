@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new PutResourcePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutResourcePolicyResponse::PutResourcePolicyResponse(
-
-/**
  * @brief  Constructs a new PutResourcePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DeleteSuggesterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSuggesterResponse::DeleteSuggesterResponse(
-
-/**
  * @brief  Constructs a new DeleteSuggesterRequest object by copying another.
  *
  * @param  other  Instance to copy.

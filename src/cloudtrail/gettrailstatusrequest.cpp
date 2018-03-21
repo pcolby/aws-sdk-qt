@@ -34,15 +34,6 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new GetTrailStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTrailStatusResponse::GetTrailStatusResponse(
-
-/**
  * @brief  Constructs a new GetTrailStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new InvalidateProjectCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-InvalidateProjectCacheResponse::InvalidateProjectCacheResponse(
-
-/**
  * @brief  Constructs a new InvalidateProjectCacheRequest object by copying another.
  *
  * @param  other  Instance to copy.

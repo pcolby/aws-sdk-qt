@@ -34,15 +34,6 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new DeleteContainerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteContainerResponse::DeleteContainerResponse(
-
-/**
  * @brief  Constructs a new DeleteContainerRequest object by copying another.
  *
  * @param  other  Instance to copy.

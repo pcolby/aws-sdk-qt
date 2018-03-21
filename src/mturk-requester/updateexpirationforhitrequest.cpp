@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new UpdateExpirationForHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateExpirationForHITResponse::UpdateExpirationForHITResponse(
-
-/**
  * @brief  Constructs a new UpdateExpirationForHITRequest object by copying another.
  *
  * @param  other  Instance to copy.

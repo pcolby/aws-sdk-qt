@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new DescribeStackEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeStackEventsResponse::DescribeStackEventsResponse(
-
-/**
  * @brief  Constructs a new DescribeStackEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.

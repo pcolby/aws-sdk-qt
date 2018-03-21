@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new ListAssociationVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAssociationVersionsResponse::ListAssociationVersionsResponse(
-
-/**
  * @brief  Constructs a new ListAssociationVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

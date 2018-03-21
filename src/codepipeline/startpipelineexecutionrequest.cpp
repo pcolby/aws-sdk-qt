@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new StartPipelineExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartPipelineExecutionResponse::StartPipelineExecutionResponse(
-
-/**
  * @brief  Constructs a new StartPipelineExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

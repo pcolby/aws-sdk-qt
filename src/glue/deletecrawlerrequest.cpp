@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new DeleteCrawlerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteCrawlerResponse::DeleteCrawlerResponse(
-
-/**
  * @brief  Constructs a new DeleteCrawlerRequest object by copying another.
  *
  * @param  other  Instance to copy.

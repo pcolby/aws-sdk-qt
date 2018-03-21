@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new ListStreamingDistributionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListStreamingDistributionsResponse::ListStreamingDistributionsResponse(
-
-/**
  * @brief  Constructs a new ListStreamingDistributionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

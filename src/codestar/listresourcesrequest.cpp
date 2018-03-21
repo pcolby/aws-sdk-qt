@@ -34,15 +34,6 @@ namespace CodeStar {
  */
 
 /**
- * @brief  Constructs a new ListResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListResourcesResponse::ListResourcesResponse(
-
-/**
  * @brief  Constructs a new ListResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.

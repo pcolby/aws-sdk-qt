@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new SearchDevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SearchDevicesResponse::SearchDevicesResponse(
-
-/**
  * @brief  Constructs a new SearchDevicesRequest object by copying another.
  *
  * @param  other  Instance to copy.

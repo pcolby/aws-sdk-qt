@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new CreateLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateLoadBalancerResponse::CreateLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new CreateLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

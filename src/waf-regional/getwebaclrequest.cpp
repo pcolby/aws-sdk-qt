@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new GetWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetWebACLResponse::GetWebACLResponse(
-
-/**
  * @brief  Constructs a new GetWebACLRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListAccountAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAccountAliasesResponse::ListAccountAliasesResponse(
-
-/**
  * @brief  Constructs a new ListAccountAliasesRequest object by copying another.
  *
  * @param  other  Instance to copy.

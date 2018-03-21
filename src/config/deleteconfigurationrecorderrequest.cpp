@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new DeleteConfigurationRecorderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteConfigurationRecorderResponse::DeleteConfigurationRecorderResponse(
-
-/**
  * @brief  Constructs a new DeleteConfigurationRecorderRequest object by copying another.
  *
  * @param  other  Instance to copy.

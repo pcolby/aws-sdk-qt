@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteVpcLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteVpcLinkResponse::DeleteVpcLinkResponse(
-
-/**
  * @brief  Constructs a new DeleteVpcLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new GetSubscriptionAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetSubscriptionAttributesResponse::GetSubscriptionAttributesResponse(
-
-/**
  * @brief  Constructs a new GetSubscriptionAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

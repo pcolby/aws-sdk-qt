@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new ResetJobBookmarkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResetJobBookmarkResponse::ResetJobBookmarkResponse(
-
-/**
  * @brief  Constructs a new ResetJobBookmarkRequest object by copying another.
  *
  * @param  other  Instance to copy.

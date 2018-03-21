@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new UpdateHITTypeOfHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateHITTypeOfHITResponse::UpdateHITTypeOfHITResponse(
-
-/**
  * @brief  Constructs a new UpdateHITTypeOfHITRequest object by copying another.
  *
  * @param  other  Instance to copy.

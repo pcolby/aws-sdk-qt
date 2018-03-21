@@ -34,15 +34,6 @@ namespace ApplicationAutoScaling {
  */
 
 /**
- * @brief  Constructs a new DeregisterScalableTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterScalableTargetResponse::DeregisterScalableTargetResponse(
-
-/**
  * @brief  Constructs a new DeregisterScalableTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new BatchGetImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchGetImageResponse::BatchGetImageResponse(
-
-/**
  * @brief  Constructs a new BatchGetImageRequest object by copying another.
  *
  * @param  other  Instance to copy.

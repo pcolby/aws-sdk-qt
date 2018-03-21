@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AuthorizeClusterSecurityGroupIngressResponse::AuthorizeClusterSecurityGroupIngressResponse(
-
-/**
  * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.

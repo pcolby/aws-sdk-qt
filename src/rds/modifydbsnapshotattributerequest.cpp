@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new ModifyDBSnapshotAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyDBSnapshotAttributeResponse::ModifyDBSnapshotAttributeResponse(
-
-/**
  * @brief  Constructs a new ModifyDBSnapshotAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.

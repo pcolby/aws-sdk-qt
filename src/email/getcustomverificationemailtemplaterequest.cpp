@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new GetCustomVerificationEmailTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCustomVerificationEmailTemplateResponse::GetCustomVerificationEmailTemplateResponse(
-
-/**
  * @brief  Constructs a new GetCustomVerificationEmailTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.

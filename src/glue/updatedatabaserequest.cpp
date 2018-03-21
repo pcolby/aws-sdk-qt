@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new UpdateDatabaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateDatabaseResponse::UpdateDatabaseResponse(
-
-/**
  * @brief  Constructs a new UpdateDatabaseRequest object by copying another.
  *
  * @param  other  Instance to copy.

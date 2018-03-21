@@ -34,15 +34,6 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateEndpointWeightsAndCapacitiesResponse::UpdateEndpointWeightsAndCapacitiesResponse(
-
-/**
  * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequest object by copying another.
  *
  * @param  other  Instance to copy.

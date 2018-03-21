@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new AssignInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssignInstanceResponse::AssignInstanceResponse(
-
-/**
  * @brief  Constructs a new AssignInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

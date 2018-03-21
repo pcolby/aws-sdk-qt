@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new DescribeConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeConnectionsResponse::DescribeConnectionsResponse(
-
-/**
  * @brief  Constructs a new DescribeConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

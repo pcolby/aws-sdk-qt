@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new DescribeListenersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeListenersResponse::DescribeListenersResponse(
-
-/**
  * @brief  Constructs a new DescribeListenersRequest object by copying another.
  *
  * @param  other  Instance to copy.

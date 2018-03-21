@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new GetFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetFacetResponse::GetFacetResponse(
-
-/**
  * @brief  Constructs a new GetFacetRequest object by copying another.
  *
  * @param  other  Instance to copy.

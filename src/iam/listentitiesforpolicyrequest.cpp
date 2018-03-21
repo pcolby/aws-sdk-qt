@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListEntitiesForPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListEntitiesForPolicyResponse::ListEntitiesForPolicyResponse(
-
-/**
  * @brief  Constructs a new ListEntitiesForPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

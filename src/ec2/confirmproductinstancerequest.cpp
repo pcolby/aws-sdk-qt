@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ConfirmProductInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ConfirmProductInstanceResponse::ConfirmProductInstanceResponse(
-
-/**
  * @brief  Constructs a new ConfirmProductInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

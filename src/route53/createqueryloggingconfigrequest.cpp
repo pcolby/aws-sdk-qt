@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new CreateQueryLoggingConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateQueryLoggingConfigResponse::CreateQueryLoggingConfigResponse(
-
-/**
  * @brief  Constructs a new CreateQueryLoggingConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.

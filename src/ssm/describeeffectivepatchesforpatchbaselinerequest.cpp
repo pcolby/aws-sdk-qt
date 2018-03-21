@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEffectivePatchesForPatchBaselineResponse::DescribeEffectivePatchesForPatchBaselineResponse(
-
-/**
  * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequest object by copying another.
  *
  * @param  other  Instance to copy.

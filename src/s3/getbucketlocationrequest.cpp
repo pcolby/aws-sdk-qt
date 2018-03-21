@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketLocationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketLocationResponse::GetBucketLocationResponse(
-
-/**
  * @brief  Constructs a new GetBucketLocationRequest object by copying another.
  *
  * @param  other  Instance to copy.

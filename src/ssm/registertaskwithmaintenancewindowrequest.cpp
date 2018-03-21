@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new RegisterTaskWithMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterTaskWithMaintenanceWindowResponse::RegisterTaskWithMaintenanceWindowResponse(
-
-/**
  * @brief  Constructs a new RegisterTaskWithMaintenanceWindowRequest object by copying another.
  *
  * @param  other  Instance to copy.

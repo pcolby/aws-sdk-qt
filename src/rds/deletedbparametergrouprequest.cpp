@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DeleteDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDBParameterGroupResponse::DeleteDBParameterGroupResponse(
-
-/**
  * @brief  Constructs a new DeleteDBParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteUsagePlanKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteUsagePlanKeyResponse::DeleteUsagePlanKeyResponse(
-
-/**
  * @brief  Constructs a new DeleteUsagePlanKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.

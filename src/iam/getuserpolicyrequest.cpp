@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new GetUserPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetUserPolicyResponse::GetUserPolicyResponse(
-
-/**
  * @brief  Constructs a new GetUserPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

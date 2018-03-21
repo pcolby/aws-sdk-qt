@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new ModifyInstanceGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyInstanceGroupsResponse::ModifyInstanceGroupsResponse(
-
-/**
  * @brief  Constructs a new ModifyInstanceGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new UpdateResolverResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateResolverResponse::UpdateResolverResponse(
-
-/**
  * @brief  Constructs a new UpdateResolverRequest object by copying another.
  *
  * @param  other  Instance to copy.

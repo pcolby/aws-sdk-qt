@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new CreateCacheClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCacheClusterResponse::CreateCacheClusterResponse(
-
-/**
  * @brief  Constructs a new CreateCacheClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

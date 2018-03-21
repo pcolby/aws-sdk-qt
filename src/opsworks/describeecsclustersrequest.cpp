@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DescribeEcsClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEcsClustersResponse::DescribeEcsClustersResponse(
-
-/**
  * @brief  Constructs a new DescribeEcsClustersRequest object by copying another.
  *
  * @param  other  Instance to copy.

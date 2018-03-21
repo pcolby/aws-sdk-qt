@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminUpdateUserAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminUpdateUserAttributesResponse::AdminUpdateUserAttributesResponse(
-
-/**
  * @brief  Constructs a new AdminUpdateUserAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

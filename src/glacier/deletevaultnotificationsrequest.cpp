@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new DeleteVaultNotificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteVaultNotificationsResponse::DeleteVaultNotificationsResponse(
-
-/**
  * @brief  Constructs a new DeleteVaultNotificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

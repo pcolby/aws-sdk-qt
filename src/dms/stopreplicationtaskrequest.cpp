@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new StopReplicationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopReplicationTaskResponse::StopReplicationTaskResponse(
-
-/**
  * @brief  Constructs a new StopReplicationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeDBSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
-
-/**
  * @brief  Constructs a new DescribeDBSubnetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

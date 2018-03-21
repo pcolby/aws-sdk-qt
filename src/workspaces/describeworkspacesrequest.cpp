@@ -34,15 +34,6 @@ namespace WorkSpaces {
  */
 
 /**
- * @brief  Constructs a new DescribeWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeWorkspacesResponse::DescribeWorkspacesResponse(
-
-/**
  * @brief  Constructs a new DescribeWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.

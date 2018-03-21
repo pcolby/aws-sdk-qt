@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new GetConnectivityInfoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetConnectivityInfoResponse::GetConnectivityInfoResponse(
-
-/**
  * @brief  Constructs a new GetConnectivityInfoRequest object by copying another.
  *
  * @param  other  Instance to copy.

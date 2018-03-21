@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new PredictResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PredictResponse::PredictResponse(
-
-/**
  * @brief  Constructs a new PredictRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new DeleteBatchPredictionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBatchPredictionResponse::DeleteBatchPredictionResponse(
-
-/**
  * @brief  Constructs a new DeleteBatchPredictionRequest object by copying another.
  *
  * @param  other  Instance to copy.

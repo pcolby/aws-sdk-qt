@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeInstanceInformationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeInstanceInformationResponse::DescribeInstanceInformationResponse(
-
-/**
  * @brief  Constructs a new DescribeInstanceInformationRequest object by copying another.
  *
  * @param  other  Instance to copy.

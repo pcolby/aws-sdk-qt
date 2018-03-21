@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new DeleteReusableDelegationSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteReusableDelegationSetResponse::DeleteReusableDelegationSetResponse(
-
-/**
  * @brief  Constructs a new DeleteReusableDelegationSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

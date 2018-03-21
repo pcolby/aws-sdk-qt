@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new ListTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTypesResponse::ListTypesResponse(
-
-/**
  * @brief  Constructs a new ListTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.

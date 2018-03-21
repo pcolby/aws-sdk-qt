@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new ActivatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ActivatePipelineResponse::ActivatePipelineResponse(
-
-/**
  * @brief  Constructs a new ActivatePipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.

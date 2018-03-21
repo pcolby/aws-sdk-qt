@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new ListVolumeRecoveryPointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListVolumeRecoveryPointsResponse::ListVolumeRecoveryPointsResponse(
-
-/**
  * @brief  Constructs a new ListVolumeRecoveryPointsRequest object by copying another.
  *
  * @param  other  Instance to copy.

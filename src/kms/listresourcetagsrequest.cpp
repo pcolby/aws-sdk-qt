@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new ListResourceTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListResourceTagsResponse::ListResourceTagsResponse(
-
-/**
  * @brief  Constructs a new ListResourceTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

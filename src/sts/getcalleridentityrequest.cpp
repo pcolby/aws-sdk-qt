@@ -34,15 +34,6 @@ namespace STS {
  */
 
 /**
- * @brief  Constructs a new GetCallerIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCallerIdentityResponse::GetCallerIdentityResponse(
-
-/**
  * @brief  Constructs a new GetCallerIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new SetV2LoggingLevelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetV2LoggingLevelResponse::SetV2LoggingLevelResponse(
-
-/**
  * @brief  Constructs a new SetV2LoggingLevelRequest object by copying another.
  *
  * @param  other  Instance to copy.

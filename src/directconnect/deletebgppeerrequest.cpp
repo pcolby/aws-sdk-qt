@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new DeleteBGPPeerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBGPPeerResponse::DeleteBGPPeerResponse(
-
-/**
  * @brief  Constructs a new DeleteBGPPeerRequest object by copying another.
  *
  * @param  other  Instance to copy.

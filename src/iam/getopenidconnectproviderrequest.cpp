@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new GetOpenIDConnectProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetOpenIDConnectProviderResponse::GetOpenIDConnectProviderResponse(
-
-/**
  * @brief  Constructs a new GetOpenIDConnectProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.

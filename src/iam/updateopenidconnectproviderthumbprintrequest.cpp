@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateOpenIDConnectProviderThumbprintResponse::UpdateOpenIDConnectProviderThumbprintResponse(
-
-/**
  * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequest object by copying another.
  *
  * @param  other  Instance to copy.

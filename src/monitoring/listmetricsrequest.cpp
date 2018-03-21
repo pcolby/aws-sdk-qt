@@ -34,15 +34,6 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new ListMetricsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListMetricsResponse::ListMetricsResponse(
-
-/**
  * @brief  Constructs a new ListMetricsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new GetLifecyclePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetLifecyclePolicyResponse::GetLifecyclePolicyResponse(
-
-/**
  * @brief  Constructs a new GetLifecyclePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

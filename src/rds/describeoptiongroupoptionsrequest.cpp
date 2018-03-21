@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeOptionGroupOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeOptionGroupOptionsResponse::DescribeOptionGroupOptionsResponse(
-
-/**
  * @brief  Constructs a new DescribeOptionGroupOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

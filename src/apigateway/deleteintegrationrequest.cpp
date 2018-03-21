@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteIntegrationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteIntegrationResponse::DeleteIntegrationResponse(
-
-/**
  * @brief  Constructs a new DeleteIntegrationRequest object by copying another.
  *
  * @param  other  Instance to copy.

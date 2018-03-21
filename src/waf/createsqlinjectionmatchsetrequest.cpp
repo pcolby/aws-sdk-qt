@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new CreateSqlInjectionMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSqlInjectionMatchSetResponse::CreateSqlInjectionMatchSetResponse(
-
-/**
  * @brief  Constructs a new CreateSqlInjectionMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

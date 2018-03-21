@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketWebsiteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketWebsiteResponse::GetBucketWebsiteResponse(
-
-/**
  * @brief  Constructs a new GetBucketWebsiteRequest object by copying another.
  *
  * @param  other  Instance to copy.

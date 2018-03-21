@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new UpdateClassifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateClassifierResponse::UpdateClassifierResponse(
-
-/**
  * @brief  Constructs a new UpdateClassifierRequest object by copying another.
  *
  * @param  other  Instance to copy.

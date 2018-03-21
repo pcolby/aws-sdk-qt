@@ -34,15 +34,6 @@ namespace OpsWorksCM {
  */
 
 /**
- * @brief  Constructs a new DescribeAccountAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
-
-/**
  * @brief  Constructs a new DescribeAccountAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new DeleteJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteJobResponse::DeleteJobResponse(
-
-/**
  * @brief  Constructs a new DeleteJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

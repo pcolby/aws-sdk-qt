@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new CreateAssociationBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateAssociationBatchResponse::CreateAssociationBatchResponse(
-
-/**
  * @brief  Constructs a new CreateAssociationBatchRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new GetContainerPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetContainerPolicyResponse::GetContainerPolicyResponse(
-
-/**
  * @brief  Constructs a new GetContainerPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

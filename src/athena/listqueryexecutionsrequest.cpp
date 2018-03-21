@@ -34,15 +34,6 @@ namespace Athena {
  */
 
 /**
- * @brief  Constructs a new ListQueryExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListQueryExecutionsResponse::ListQueryExecutionsResponse(
-
-/**
  * @brief  Constructs a new ListQueryExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

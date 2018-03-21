@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new CreateResourceServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateResourceServerResponse::CreateResourceServerResponse(
-
-/**
  * @brief  Constructs a new CreateResourceServerRequest object by copying another.
  *
  * @param  other  Instance to copy.

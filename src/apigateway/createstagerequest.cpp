@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new CreateStageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateStageResponse::CreateStageResponse(
-
-/**
  * @brief  Constructs a new CreateStageRequest object by copying another.
  *
  * @param  other  Instance to copy.

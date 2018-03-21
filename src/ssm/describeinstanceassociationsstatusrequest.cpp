@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeInstanceAssociationsStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeInstanceAssociationsStatusResponse::DescribeInstanceAssociationsStatusResponse(
-
-/**
  * @brief  Constructs a new DescribeInstanceAssociationsStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

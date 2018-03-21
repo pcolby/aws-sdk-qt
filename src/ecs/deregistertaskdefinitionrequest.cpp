@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new DeregisterTaskDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterTaskDefinitionResponse::DeregisterTaskDefinitionResponse(
-
-/**
  * @brief  Constructs a new DeregisterTaskDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

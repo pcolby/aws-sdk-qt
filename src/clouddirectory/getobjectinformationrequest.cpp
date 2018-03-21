@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new GetObjectInformationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetObjectInformationResponse::GetObjectInformationResponse(
-
-/**
  * @brief  Constructs a new GetObjectInformationRequest object by copying another.
  *
  * @param  other  Instance to copy.

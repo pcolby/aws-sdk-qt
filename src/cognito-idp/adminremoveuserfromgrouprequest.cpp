@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminRemoveUserFromGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminRemoveUserFromGroupResponse::AdminRemoveUserFromGroupResponse(
-
-/**
  * @brief  Constructs a new AdminRemoveUserFromGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

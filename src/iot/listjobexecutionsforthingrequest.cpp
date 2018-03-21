@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new ListJobExecutionsForThingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListJobExecutionsForThingResponse::ListJobExecutionsForThingResponse(
-
-/**
  * @brief  Constructs a new ListJobExecutionsForThingRequest object by copying another.
  *
  * @param  other  Instance to copy.

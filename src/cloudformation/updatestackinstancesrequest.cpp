@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new UpdateStackInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateStackInstancesResponse::UpdateStackInstancesResponse(
-
-/**
  * @brief  Constructs a new UpdateStackInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

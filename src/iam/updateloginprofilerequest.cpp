@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new UpdateLoginProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateLoginProfileResponse::UpdateLoginProfileResponse(
-
-/**
  * @brief  Constructs a new UpdateLoginProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

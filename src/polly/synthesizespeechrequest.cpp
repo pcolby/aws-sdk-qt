@@ -34,15 +34,6 @@ namespace Polly {
  */
 
 /**
- * @brief  Constructs a new SynthesizeSpeechResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SynthesizeSpeechResponse::SynthesizeSpeechResponse(
-
-/**
  * @brief  Constructs a new SynthesizeSpeechRequest object by copying another.
  *
  * @param  other  Instance to copy.

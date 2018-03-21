@@ -34,15 +34,6 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new BatchDetectKeyPhrasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchDetectKeyPhrasesResponse::BatchDetectKeyPhrasesResponse(
-
-/**
  * @brief  Constructs a new BatchDetectKeyPhrasesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteMethodResponseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteMethodResponseResponse::DeleteMethodResponseResponse(
-
-/**
  * @brief  Constructs a new DeleteMethodResponseRequest object by copying another.
  *
  * @param  other  Instance to copy.

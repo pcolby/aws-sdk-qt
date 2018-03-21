@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new CreateMultipartUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateMultipartUploadResponse::CreateMultipartUploadResponse(
-
-/**
  * @brief  Constructs a new CreateMultipartUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.

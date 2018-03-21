@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeDBParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDBParametersResponse::DescribeDBParametersResponse(
-
-/**
  * @brief  Constructs a new DescribeDBParametersRequest object by copying another.
  *
  * @param  other  Instance to copy.

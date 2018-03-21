@@ -34,15 +34,6 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new DeleteSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSubnetGroupResponse::DeleteSubnetGroupResponse(
-
-/**
  * @brief  Constructs a new DeleteSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new SearchProductsAsAdminResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SearchProductsAsAdminResponse::SearchProductsAsAdminResponse(
-
-/**
  * @brief  Constructs a new SearchProductsAsAdminRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DeleteExpressionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteExpressionResponse::DeleteExpressionResponse(
-
-/**
  * @brief  Constructs a new DeleteExpressionRequest object by copying another.
  *
  * @param  other  Instance to copy.

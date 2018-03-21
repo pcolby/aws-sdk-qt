@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new GetRegexPatternSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRegexPatternSetResponse::GetRegexPatternSetResponse(
-
-/**
  * @brief  Constructs a new GetRegexPatternSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

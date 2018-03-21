@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new RecordActivityTaskHeartbeatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RecordActivityTaskHeartbeatResponse::RecordActivityTaskHeartbeatResponse(
-
-/**
  * @brief  Constructs a new RecordActivityTaskHeartbeatRequest object by copying another.
  *
  * @param  other  Instance to copy.

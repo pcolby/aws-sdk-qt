@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDocumentResponse::DescribeDocumentResponse(
-
-/**
  * @brief  Constructs a new DescribeDocumentRequest object by copying another.
  *
  * @param  other  Instance to copy.

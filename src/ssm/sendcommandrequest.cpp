@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new SendCommandResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendCommandResponse::SendCommandResponse(
-
-/**
  * @brief  Constructs a new SendCommandRequest object by copying another.
  *
  * @param  other  Instance to copy.

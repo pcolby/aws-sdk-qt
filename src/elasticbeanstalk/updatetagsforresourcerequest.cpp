@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new UpdateTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateTagsForResourceResponse::UpdateTagsForResourceResponse(
-
-/**
  * @brief  Constructs a new UpdateTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

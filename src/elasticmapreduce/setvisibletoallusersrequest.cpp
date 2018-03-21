@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new SetVisibleToAllUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetVisibleToAllUsersResponse::SetVisibleToAllUsersResponse(
-
-/**
  * @brief  Constructs a new SetVisibleToAllUsersRequest object by copying another.
  *
  * @param  other  Instance to copy.

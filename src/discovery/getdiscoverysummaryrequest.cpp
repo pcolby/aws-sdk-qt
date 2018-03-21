@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new GetDiscoverySummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
-
-/**
  * @brief  Constructs a new GetDiscoverySummaryRequest object by copying another.
  *
  * @param  other  Instance to copy.

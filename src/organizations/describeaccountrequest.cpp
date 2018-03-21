@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new DescribeAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeAccountResponse::DescribeAccountResponse(
-
-/**
  * @brief  Constructs a new DescribeAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.

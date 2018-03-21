@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new GetStackPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetStackPolicyResponse::GetStackPolicyResponse(
-
-/**
  * @brief  Constructs a new GetStackPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

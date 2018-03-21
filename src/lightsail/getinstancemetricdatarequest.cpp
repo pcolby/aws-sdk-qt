@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new GetInstanceMetricDataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetInstanceMetricDataResponse::GetInstanceMetricDataResponse(
-
-/**
  * @brief  Constructs a new GetInstanceMetricDataRequest object by copying another.
  *
  * @param  other  Instance to copy.

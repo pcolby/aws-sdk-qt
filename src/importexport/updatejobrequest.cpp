@@ -34,15 +34,6 @@ namespace ImportExport {
  */
 
 /**
- * @brief  Constructs a new UpdateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateJobResponse::UpdateJobResponse(
-
-/**
  * @brief  Constructs a new UpdateJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

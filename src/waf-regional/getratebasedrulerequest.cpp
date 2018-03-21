@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new GetRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRateBasedRuleResponse::GetRateBasedRuleResponse(
-
-/**
  * @brief  Constructs a new GetRateBasedRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

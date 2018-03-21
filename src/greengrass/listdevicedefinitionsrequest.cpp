@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new ListDeviceDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListDeviceDefinitionsResponse::ListDeviceDefinitionsResponse(
-
-/**
  * @brief  Constructs a new ListDeviceDefinitionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

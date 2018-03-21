@@ -34,15 +34,6 @@ namespace AutoScalingPlans {
  */
 
 /**
- * @brief  Constructs a new DescribeScalingPlanResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeScalingPlanResourcesResponse::DescribeScalingPlanResourcesResponse(
-
-/**
  * @brief  Constructs a new DescribeScalingPlanResourcesRequest object by copying another.
  *
  * @param  other  Instance to copy.

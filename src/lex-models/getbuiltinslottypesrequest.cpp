@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new GetBuiltinSlotTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBuiltinSlotTypesResponse::GetBuiltinSlotTypesResponse(
-
-/**
  * @brief  Constructs a new GetBuiltinSlotTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketAclResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketAclResponse::PutBucketAclResponse(
-
-/**
  * @brief  Constructs a new PutBucketAclRequest object by copying another.
  *
  * @param  other  Instance to copy.

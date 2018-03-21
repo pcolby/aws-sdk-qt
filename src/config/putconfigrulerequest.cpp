@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new PutConfigRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutConfigRuleResponse::PutConfigRuleResponse(
-
-/**
  * @brief  Constructs a new PutConfigRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

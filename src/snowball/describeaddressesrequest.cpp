@@ -34,15 +34,6 @@ namespace Snowball {
  */
 
 /**
- * @brief  Constructs a new DescribeAddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeAddressesResponse::DescribeAddressesResponse(
-
-/**
  * @brief  Constructs a new DescribeAddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.

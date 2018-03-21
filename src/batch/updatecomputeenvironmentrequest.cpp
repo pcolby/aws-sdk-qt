@@ -34,15 +34,6 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new UpdateComputeEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateComputeEnvironmentResponse::UpdateComputeEnvironmentResponse(
-
-/**
  * @brief  Constructs a new UpdateComputeEnvironmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

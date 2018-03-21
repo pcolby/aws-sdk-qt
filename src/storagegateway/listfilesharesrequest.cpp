@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new ListFileSharesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListFileSharesResponse::ListFileSharesResponse(
-
-/**
  * @brief  Constructs a new ListFileSharesRequest object by copying another.
  *
  * @param  other  Instance to copy.

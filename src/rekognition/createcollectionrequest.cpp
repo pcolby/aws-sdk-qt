@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new CreateCollectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCollectionResponse::CreateCollectionResponse(
-
-/**
  * @brief  Constructs a new CreateCollectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

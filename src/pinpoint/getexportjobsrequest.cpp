@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new GetExportJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetExportJobsResponse::GetExportJobsResponse(
-
-/**
  * @brief  Constructs a new GetExportJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ServiceDiscovery {
  */
 
 /**
- * @brief  Constructs a new CreatePublicDnsNamespaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreatePublicDnsNamespaceResponse::CreatePublicDnsNamespaceResponse(
-
-/**
  * @brief  Constructs a new CreatePublicDnsNamespaceRequest object by copying another.
  *
  * @param  other  Instance to copy.

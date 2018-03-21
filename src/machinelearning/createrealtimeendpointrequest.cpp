@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new CreateRealtimeEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateRealtimeEndpointResponse::CreateRealtimeEndpointResponse(
-
-/**
  * @brief  Constructs a new CreateRealtimeEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

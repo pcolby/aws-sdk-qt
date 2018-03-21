@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new CreateKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateKeyResponse::CreateKeyResponse(
-
-/**
  * @brief  Constructs a new CreateKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.

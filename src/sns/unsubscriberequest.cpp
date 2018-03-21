@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new UnsubscribeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UnsubscribeResponse::UnsubscribeResponse(
-
-/**
  * @brief  Constructs a new UnsubscribeRequest object by copying another.
  *
  * @param  other  Instance to copy.

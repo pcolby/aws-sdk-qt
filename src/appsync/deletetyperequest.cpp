@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new DeleteTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTypeResponse::DeleteTypeResponse(
-
-/**
  * @brief  Constructs a new DeleteTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

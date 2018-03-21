@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new UpdateDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateDistributionResponse::UpdateDistributionResponse(
-
-/**
  * @brief  Constructs a new UpdateDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.

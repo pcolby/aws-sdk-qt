@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new RemoveTagsFromVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveTagsFromVaultResponse::RemoveTagsFromVaultResponse(
-
-/**
  * @brief  Constructs a new RemoveTagsFromVaultRequest object by copying another.
  *
  * @param  other  Instance to copy.

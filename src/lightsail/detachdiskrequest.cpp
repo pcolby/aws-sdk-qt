@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new DetachDiskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachDiskResponse::DetachDiskResponse(
-
-/**
  * @brief  Constructs a new DetachDiskRequest object by copying another.
  *
  * @param  other  Instance to copy.

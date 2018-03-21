@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSecurityGroupResponse::CreateSecurityGroupResponse(
-
-/**
  * @brief  Constructs a new CreateSecurityGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

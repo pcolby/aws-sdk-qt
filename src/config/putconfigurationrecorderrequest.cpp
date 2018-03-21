@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new PutConfigurationRecorderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutConfigurationRecorderResponse::PutConfigurationRecorderResponse(
-
-/**
  * @brief  Constructs a new PutConfigurationRecorderRequest object by copying another.
  *
  * @param  other  Instance to copy.

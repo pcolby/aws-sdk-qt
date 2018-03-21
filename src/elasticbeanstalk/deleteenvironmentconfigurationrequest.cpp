@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new DeleteEnvironmentConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEnvironmentConfigurationResponse::DeleteEnvironmentConfigurationResponse(
-
-/**
  * @brief  Constructs a new DeleteEnvironmentConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

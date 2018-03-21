@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new SetSubnetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetSubnetsResponse::SetSubnetsResponse(
-
-/**
  * @brief  Constructs a new SetSubnetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

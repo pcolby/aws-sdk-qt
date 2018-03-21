@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DeletePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeletePolicyResponse::DeletePolicyResponse(
-
-/**
  * @brief  Constructs a new DeletePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

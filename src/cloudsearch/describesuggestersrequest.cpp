@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DescribeSuggestersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeSuggestersResponse::DescribeSuggestersResponse(
-
-/**
  * @brief  Constructs a new DescribeSuggestersRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new UpdateTrafficPolicyCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateTrafficPolicyCommentResponse::UpdateTrafficPolicyCommentResponse(
-
-/**
  * @brief  Constructs a new UpdateTrafficPolicyCommentRequest object by copying another.
  *
  * @param  other  Instance to copy.

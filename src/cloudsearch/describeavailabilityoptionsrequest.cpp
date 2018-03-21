@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DescribeAvailabilityOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeAvailabilityOptionsResponse::DescribeAvailabilityOptionsResponse(
-
-/**
  * @brief  Constructs a new DescribeAvailabilityOptionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

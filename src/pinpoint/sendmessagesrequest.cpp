@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new SendMessagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendMessagesResponse::SendMessagesResponse(
-
-/**
  * @brief  Constructs a new SendMessagesRequest object by copying another.
  *
  * @param  other  Instance to copy.

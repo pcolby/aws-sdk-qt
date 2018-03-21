@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new PutInventoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutInventoryResponse::PutInventoryResponse(
-
-/**
  * @brief  Constructs a new PutInventoryRequest object by copying another.
  *
  * @param  other  Instance to copy.

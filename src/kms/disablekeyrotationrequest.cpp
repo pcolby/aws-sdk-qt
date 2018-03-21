@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new DisableKeyRotationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableKeyRotationResponse::DisableKeyRotationResponse(
-
-/**
  * @brief  Constructs a new DisableKeyRotationRequest object by copying another.
  *
  * @param  other  Instance to copy.

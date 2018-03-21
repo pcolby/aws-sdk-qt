@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new TransferDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TransferDomainResponse::TransferDomainResponse(
-
-/**
  * @brief  Constructs a new TransferDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

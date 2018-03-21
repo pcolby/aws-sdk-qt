@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DeregisterEcsClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterEcsClusterResponse::DeregisterEcsClusterResponse(
-
-/**
  * @brief  Constructs a new DeregisterEcsClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

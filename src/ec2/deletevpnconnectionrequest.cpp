@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteVpnConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteVpnConnectionResponse::DeleteVpnConnectionResponse(
-
-/**
  * @brief  Constructs a new DeleteVpnConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new DetectSentimentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetectSentimentResponse::DetectSentimentResponse(
-
-/**
  * @brief  Constructs a new DetectSentimentRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DeleteRoleAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteRoleAliasResponse::DeleteRoleAliasResponse(
-
-/**
  * @brief  Constructs a new DeleteRoleAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.

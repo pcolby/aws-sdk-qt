@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new BatchGetOnPremisesInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchGetOnPremisesInstancesResponse::BatchGetOnPremisesInstancesResponse(
-
-/**
  * @brief  Constructs a new BatchGetOnPremisesInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

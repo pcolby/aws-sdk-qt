@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CancelSpotInstanceRequestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelSpotInstanceRequestsResponse::CancelSpotInstanceRequestsResponse(
-
-/**
  * @brief  Constructs a new CancelSpotInstanceRequestsRequest object by copying another.
  *
  * @param  other  Instance to copy.

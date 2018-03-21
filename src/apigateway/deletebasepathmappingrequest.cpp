@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteBasePathMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBasePathMappingResponse::DeleteBasePathMappingResponse(
-
-/**
  * @brief  Constructs a new DeleteBasePathMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.

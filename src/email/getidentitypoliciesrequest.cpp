@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new GetIdentityPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetIdentityPoliciesResponse::GetIdentityPoliciesResponse(
-
-/**
  * @brief  Constructs a new GetIdentityPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

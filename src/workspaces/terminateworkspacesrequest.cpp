@@ -34,15 +34,6 @@ namespace WorkSpaces {
  */
 
 /**
- * @brief  Constructs a new TerminateWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TerminateWorkspacesResponse::TerminateWorkspacesResponse(
-
-/**
  * @brief  Constructs a new TerminateWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.

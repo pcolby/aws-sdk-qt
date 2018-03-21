@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new StopDataCollectionByAgentIdsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopDataCollectionByAgentIdsResponse::StopDataCollectionByAgentIdsResponse(
-
-/**
  * @brief  Constructs a new StopDataCollectionByAgentIdsRequest object by copying another.
  *
  * @param  other  Instance to copy.

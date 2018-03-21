@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new DeleteFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteFunctionResponse::DeleteFunctionResponse(
-
-/**
  * @brief  Constructs a new DeleteFunctionRequest object by copying another.
  *
  * @param  other  Instance to copy.

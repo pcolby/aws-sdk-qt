@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new SetTerminationProtectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetTerminationProtectionResponse::SetTerminationProtectionResponse(
-
-/**
  * @brief  Constructs a new SetTerminationProtectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new DeleteDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDistributionResponse::DeleteDistributionResponse(
-
-/**
  * @brief  Constructs a new DeleteDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.

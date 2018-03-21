@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new DeleteImageBuilderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteImageBuilderResponse::DeleteImageBuilderResponse(
-
-/**
  * @brief  Constructs a new DeleteImageBuilderRequest object by copying another.
  *
  * @param  other  Instance to copy.

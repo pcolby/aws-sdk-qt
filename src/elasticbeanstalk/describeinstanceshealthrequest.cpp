@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new DescribeInstancesHealthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeInstancesHealthResponse::DescribeInstancesHealthResponse(
-
-/**
  * @brief  Constructs a new DescribeInstancesHealthRequest object by copying another.
  *
  * @param  other  Instance to copy.

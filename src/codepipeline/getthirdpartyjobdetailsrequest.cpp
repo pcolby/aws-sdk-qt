@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new GetThirdPartyJobDetailsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetThirdPartyJobDetailsResponse::GetThirdPartyJobDetailsResponse(
-
-/**
  * @brief  Constructs a new GetThirdPartyJobDetailsRequest object by copying another.
  *
  * @param  other  Instance to copy.

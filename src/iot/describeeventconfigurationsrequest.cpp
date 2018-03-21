@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DescribeEventConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEventConfigurationsResponse::DescribeEventConfigurationsResponse(
-
-/**
  * @brief  Constructs a new DescribeEventConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

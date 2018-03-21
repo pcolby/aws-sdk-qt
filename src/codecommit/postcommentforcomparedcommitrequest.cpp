@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new PostCommentForComparedCommitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PostCommentForComparedCommitResponse::PostCommentForComparedCommitResponse(
-
-/**
  * @brief  Constructs a new PostCommentForComparedCommitRequest object by copying another.
  *
  * @param  other  Instance to copy.

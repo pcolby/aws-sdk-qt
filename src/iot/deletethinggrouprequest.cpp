@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DeleteThingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteThingGroupResponse::DeleteThingGroupResponse(
-
-/**
  * @brief  Constructs a new DeleteThingGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new CreateMicrosoftADResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateMicrosoftADResponse::CreateMicrosoftADResponse(
-
-/**
  * @brief  Constructs a new CreateMicrosoftADRequest object by copying another.
  *
  * @param  other  Instance to copy.

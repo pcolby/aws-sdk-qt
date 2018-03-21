@@ -34,15 +34,6 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new DescribeParameterGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeParameterGroupsResponse::DescribeParameterGroupsResponse(
-
-/**
  * @brief  Constructs a new DescribeParameterGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

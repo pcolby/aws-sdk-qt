@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new RespondActivityTaskCanceledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RespondActivityTaskCanceledResponse::RespondActivityTaskCanceledResponse(
-
-/**
  * @brief  Constructs a new RespondActivityTaskCanceledRequest object by copying another.
  *
  * @param  other  Instance to copy.

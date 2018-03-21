@@ -34,15 +34,6 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new LookupEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-LookupEventsResponse::LookupEventsResponse(
-
-/**
  * @brief  Constructs a new LookupEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.

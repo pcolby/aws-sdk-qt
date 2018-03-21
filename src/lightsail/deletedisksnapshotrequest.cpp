@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new DeleteDiskSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDiskSnapshotResponse::DeleteDiskSnapshotResponse(
-
-/**
  * @brief  Constructs a new DeleteDiskSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.

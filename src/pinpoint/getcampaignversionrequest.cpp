@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new GetCampaignVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCampaignVersionResponse::GetCampaignVersionResponse(
-
-/**
  * @brief  Constructs a new GetCampaignVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

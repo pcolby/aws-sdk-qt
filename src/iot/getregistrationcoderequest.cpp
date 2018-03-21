@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new GetRegistrationCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRegistrationCodeResponse::GetRegistrationCodeResponse(
-
-/**
  * @brief  Constructs a new GetRegistrationCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.

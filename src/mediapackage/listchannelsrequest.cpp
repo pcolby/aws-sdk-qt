@@ -34,15 +34,6 @@ namespace MediaPackage {
  */
 
 /**
- * @brief  Constructs a new ListChannelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListChannelsResponse::ListChannelsResponse(
-
-/**
  * @brief  Constructs a new ListChannelsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new ListFleetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListFleetsResponse::ListFleetsResponse(
-
-/**
  * @brief  Constructs a new ListFleetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MediaPackage {
  */
 
 /**
- * @brief  Constructs a new RotateChannelCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RotateChannelCredentialsResponse::RotateChannelCredentialsResponse(
-
-/**
  * @brief  Constructs a new RotateChannelCredentialsRequest object by copying another.
  *
  * @param  other  Instance to copy.

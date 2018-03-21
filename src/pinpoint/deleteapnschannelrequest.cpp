@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new DeleteApnsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteApnsChannelResponse::DeleteApnsChannelResponse(
-
-/**
  * @brief  Constructs a new DeleteApnsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

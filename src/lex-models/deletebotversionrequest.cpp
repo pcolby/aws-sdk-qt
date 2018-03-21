@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new DeleteBotVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBotVersionResponse::DeleteBotVersionResponse(
-
-/**
  * @brief  Constructs a new DeleteBotVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

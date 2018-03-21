@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new ListLocalDisksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListLocalDisksResponse::ListLocalDisksResponse(
-
-/**
  * @brief  Constructs a new ListLocalDisksRequest object by copying another.
  *
  * @param  other  Instance to copy.

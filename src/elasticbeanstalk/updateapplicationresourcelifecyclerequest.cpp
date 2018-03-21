@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new UpdateApplicationResourceLifecycleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateApplicationResourceLifecycleResponse::UpdateApplicationResourceLifecycleResponse(
-
-/**
  * @brief  Constructs a new UpdateApplicationResourceLifecycleRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new CreateBGPPeerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateBGPPeerResponse::CreateBGPPeerResponse(
-
-/**
  * @brief  Constructs a new CreateBGPPeerRequest object by copying another.
  *
  * @param  other  Instance to copy.

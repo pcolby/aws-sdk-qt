@@ -34,15 +34,6 @@ namespace Athena {
  */
 
 /**
- * @brief  Constructs a new CreateNamedQueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateNamedQueryResponse::CreateNamedQueryResponse(
-
-/**
  * @brief  Constructs a new CreateNamedQueryRequest object by copying another.
  *
  * @param  other  Instance to copy.

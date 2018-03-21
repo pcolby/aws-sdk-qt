@@ -34,15 +34,6 @@ namespace ApplicationAutoScaling {
  */
 
 /**
- * @brief  Constructs a new PutScalingPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutScalingPolicyResponse::PutScalingPolicyResponse(
-
-/**
  * @brief  Constructs a new PutScalingPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new GetGroupCertificateAuthorityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetGroupCertificateAuthorityResponse::GetGroupCertificateAuthorityResponse(
-
-/**
  * @brief  Constructs a new GetGroupCertificateAuthorityRequest object by copying another.
  *
  * @param  other  Instance to copy.

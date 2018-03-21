@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new StopFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopFleetResponse::StopFleetResponse(
-
-/**
  * @brief  Constructs a new StopFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.

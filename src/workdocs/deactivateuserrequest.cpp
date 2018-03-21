@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new DeactivateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeactivateUserResponse::DeactivateUserResponse(
-
-/**
  * @brief  Constructs a new DeactivateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.

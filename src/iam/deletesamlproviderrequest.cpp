@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteSAMLProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSAMLProviderResponse::DeleteSAMLProviderResponse(
-
-/**
  * @brief  Constructs a new DeleteSAMLProviderRequest object by copying another.
  *
  * @param  other  Instance to copy.

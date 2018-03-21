@@ -34,15 +34,6 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new DeleteTrailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTrailResponse::DeleteTrailResponse(
-
-/**
  * @brief  Constructs a new DeleteTrailRequest object by copying another.
  *
  * @param  other  Instance to copy.

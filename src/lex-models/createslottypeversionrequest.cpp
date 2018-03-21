@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new CreateSlotTypeVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSlotTypeVersionResponse::CreateSlotTypeVersionResponse(
-
-/**
  * @brief  Constructs a new CreateSlotTypeVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

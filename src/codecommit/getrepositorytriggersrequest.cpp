@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new GetRepositoryTriggersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRepositoryTriggersResponse::GetRepositoryTriggersResponse(
-
-/**
  * @brief  Constructs a new GetRepositoryTriggersRequest object by copying another.
  *
  * @param  other  Instance to copy.

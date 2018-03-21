@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DescribeDefaultClusterParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDefaultClusterParametersResponse::DescribeDefaultClusterParametersResponse(
-
-/**
  * @brief  Constructs a new DescribeDefaultClusterParametersRequest object by copying another.
  *
  * @param  other  Instance to copy.

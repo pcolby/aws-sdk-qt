@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new ListAssignmentsForHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAssignmentsForHITResponse::ListAssignmentsForHITResponse(
-
-/**
  * @brief  Constructs a new ListAssignmentsForHITRequest object by copying another.
  *
  * @param  other  Instance to copy.

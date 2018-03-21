@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new UpdateDomainNameserversResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateDomainNameserversResponse::UpdateDomainNameserversResponse(
-
-/**
  * @brief  Constructs a new UpdateDomainNameserversRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new DeleteInvitationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteInvitationsResponse::DeleteInvitationsResponse(
-
-/**
  * @brief  Constructs a new DeleteInvitationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new DisassociateQualificationFromWorkerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateQualificationFromWorkerResponse::DisassociateQualificationFromWorkerResponse(
-
-/**
  * @brief  Constructs a new DisassociateQualificationFromWorkerRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new UpdateStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateStreamResponse::UpdateStreamResponse(
-
-/**
  * @brief  Constructs a new UpdateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

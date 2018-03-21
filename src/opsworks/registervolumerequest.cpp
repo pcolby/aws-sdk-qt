@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new RegisterVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterVolumeResponse::RegisterVolumeResponse(
-
-/**
  * @brief  Constructs a new RegisterVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.

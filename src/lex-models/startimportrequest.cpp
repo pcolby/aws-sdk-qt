@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new StartImportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartImportResponse::StartImportResponse(
-
-/**
  * @brief  Constructs a new StartImportRequest object by copying another.
  *
  * @param  other  Instance to copy.

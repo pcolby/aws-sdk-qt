@@ -34,15 +34,6 @@ namespace CodeStar {
  */
 
 /**
- * @brief  Constructs a new DescribeUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeUserProfileResponse::DescribeUserProfileResponse(
-
-/**
  * @brief  Constructs a new DescribeUserProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

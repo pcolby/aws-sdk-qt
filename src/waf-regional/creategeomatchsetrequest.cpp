@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new CreateGeoMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateGeoMatchSetResponse::CreateGeoMatchSetResponse(
-
-/**
  * @brief  Constructs a new CreateGeoMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DeleteLayerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLayerResponse::DeleteLayerResponse(
-
-/**
  * @brief  Constructs a new DeleteLayerRequest object by copying another.
  *
  * @param  other  Instance to copy.

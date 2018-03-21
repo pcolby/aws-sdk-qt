@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new CreateLayerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateLayerResponse::CreateLayerResponse(
-
-/**
  * @brief  Constructs a new CreateLayerRequest object by copying another.
  *
  * @param  other  Instance to copy.

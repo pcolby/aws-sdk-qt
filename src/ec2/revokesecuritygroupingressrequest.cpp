@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new RevokeSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RevokeSecurityGroupIngressResponse::RevokeSecurityGroupIngressResponse(
-
-/**
  * @brief  Constructs a new RevokeSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.

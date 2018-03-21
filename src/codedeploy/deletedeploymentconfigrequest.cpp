@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new DeleteDeploymentConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDeploymentConfigResponse::DeleteDeploymentConfigResponse(
-
-/**
  * @brief  Constructs a new DeleteDeploymentConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.

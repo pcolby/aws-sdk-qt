@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new CountOpenWorkflowExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CountOpenWorkflowExecutionsResponse::CountOpenWorkflowExecutionsResponse(
-
-/**
  * @brief  Constructs a new CountOpenWorkflowExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

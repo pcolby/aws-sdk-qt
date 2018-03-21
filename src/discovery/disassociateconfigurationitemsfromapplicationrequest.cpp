@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateConfigurationItemsFromApplicationResponse::DisassociateConfigurationItemsFromApplicationResponse(
-
-/**
  * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationRequest object by copying another.
  *
  * @param  other  Instance to copy.

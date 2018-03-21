@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new CreateReplicationSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateReplicationSubnetGroupResponse::CreateReplicationSubnetGroupResponse(
-
-/**
  * @brief  Constructs a new CreateReplicationSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

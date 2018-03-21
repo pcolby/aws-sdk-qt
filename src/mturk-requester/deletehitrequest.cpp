@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new DeleteHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteHITResponse::DeleteHITResponse(
-
-/**
  * @brief  Constructs a new DeleteHITRequest object by copying another.
  *
  * @param  other  Instance to copy.

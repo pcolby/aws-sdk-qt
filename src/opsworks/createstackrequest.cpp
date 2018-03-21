@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new CreateStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateStackResponse::CreateStackResponse(
-
-/**
  * @brief  Constructs a new CreateStackRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new DeleteHapgResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteHapgResponse::DeleteHapgResponse(
-
-/**
  * @brief  Constructs a new DeleteHapgRequest object by copying another.
  *
  * @param  other  Instance to copy.

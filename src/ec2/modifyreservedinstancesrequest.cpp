@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ModifyReservedInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyReservedInstancesResponse::ModifyReservedInstancesResponse(
-
-/**
  * @brief  Constructs a new ModifyReservedInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

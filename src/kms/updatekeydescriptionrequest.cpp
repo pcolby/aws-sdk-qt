@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new UpdateKeyDescriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateKeyDescriptionResponse::UpdateKeyDescriptionResponse(
-
-/**
  * @brief  Constructs a new UpdateKeyDescriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MediaStoreData {
  */
 
 /**
- * @brief  Constructs a new DeleteObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteObjectResponse::DeleteObjectResponse(
-
-/**
  * @brief  Constructs a new DeleteObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.

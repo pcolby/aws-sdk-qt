@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DescribeConstraintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeConstraintResponse::DescribeConstraintResponse(
-
-/**
  * @brief  Constructs a new DescribeConstraintRequest object by copying another.
  *
  * @param  other  Instance to copy.

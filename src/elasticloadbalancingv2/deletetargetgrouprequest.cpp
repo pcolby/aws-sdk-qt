@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new DeleteTargetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTargetGroupResponse::DeleteTargetGroupResponse(
-
-/**
  * @brief  Constructs a new DeleteTargetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new CreateResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateResourceResponse::CreateResourceResponse(
-
-/**
  * @brief  Constructs a new CreateResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

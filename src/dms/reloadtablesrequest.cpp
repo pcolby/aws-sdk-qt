@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new ReloadTablesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ReloadTablesResponse::ReloadTablesResponse(
-
-/**
  * @brief  Constructs a new ReloadTablesRequest object by copying another.
  *
  * @param  other  Instance to copy.

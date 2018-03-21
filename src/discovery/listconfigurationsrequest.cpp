@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new ListConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListConfigurationsResponse::ListConfigurationsResponse(
-
-/**
  * @brief  Constructs a new ListConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

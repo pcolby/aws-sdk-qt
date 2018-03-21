@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new GetInstanceSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetInstanceSnapshotResponse::GetInstanceSnapshotResponse(
-
-/**
  * @brief  Constructs a new GetInstanceSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.

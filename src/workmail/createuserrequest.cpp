@@ -34,15 +34,6 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new CreateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateUserResponse::CreateUserResponse(
-
-/**
  * @brief  Constructs a new CreateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.

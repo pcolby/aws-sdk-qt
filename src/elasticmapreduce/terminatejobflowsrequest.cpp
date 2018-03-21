@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new TerminateJobFlowsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TerminateJobFlowsResponse::TerminateJobFlowsResponse(
-
-/**
  * @brief  Constructs a new TerminateJobFlowsRequest object by copying another.
  *
  * @param  other  Instance to copy.

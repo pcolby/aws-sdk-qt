@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new GetIdentityPoolConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetIdentityPoolConfigurationResponse::GetIdentityPoolConfigurationResponse(
-
-/**
  * @brief  Constructs a new GetIdentityPoolConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

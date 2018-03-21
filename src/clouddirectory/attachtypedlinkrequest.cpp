@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new AttachTypedLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachTypedLinkResponse::AttachTypedLinkResponse(
-
-/**
  * @brief  Constructs a new AttachTypedLinkRequest object by copying another.
  *
  * @param  other  Instance to copy.

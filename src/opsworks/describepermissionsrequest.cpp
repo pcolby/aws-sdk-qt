@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DescribePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribePermissionsResponse::DescribePermissionsResponse(
-
-/**
  * @brief  Constructs a new DescribePermissionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

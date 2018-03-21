@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new EnableSsoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EnableSsoResponse::EnableSsoResponse(
-
-/**
  * @brief  Constructs a new EnableSsoRequest object by copying another.
  *
  * @param  other  Instance to copy.

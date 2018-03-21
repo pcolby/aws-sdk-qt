@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new UpdateIdentityPoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateIdentityPoolResponse::UpdateIdentityPoolResponse(
-
-/**
  * @brief  Constructs a new UpdateIdentityPoolRequest object by copying another.
  *
  * @param  other  Instance to copy.

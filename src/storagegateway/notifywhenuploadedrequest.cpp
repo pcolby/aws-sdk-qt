@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new NotifyWhenUploadedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-NotifyWhenUploadedResponse::NotifyWhenUploadedResponse(
-
-/**
  * @brief  Constructs a new NotifyWhenUploadedRequest object by copying another.
  *
  * @param  other  Instance to copy.

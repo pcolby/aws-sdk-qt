@@ -34,15 +34,6 @@ namespace CloudTrail {
  */
 
 /**
- * @brief  Constructs a new DescribeTrailsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTrailsResponse::DescribeTrailsResponse(
-
-/**
  * @brief  Constructs a new DescribeTrailsRequest object by copying another.
  *
  * @param  other  Instance to copy.

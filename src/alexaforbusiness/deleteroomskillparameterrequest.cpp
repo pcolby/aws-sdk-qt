@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new DeleteRoomSkillParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteRoomSkillParameterResponse::DeleteRoomSkillParameterResponse(
-
-/**
  * @brief  Constructs a new DeleteRoomSkillParameterRequest object by copying another.
  *
  * @param  other  Instance to copy.

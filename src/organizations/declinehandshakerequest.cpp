@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new DeclineHandshakeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeclineHandshakeResponse::DeclineHandshakeResponse(
-
-/**
  * @brief  Constructs a new DeclineHandshakeRequest object by copying another.
  *
  * @param  other  Instance to copy.

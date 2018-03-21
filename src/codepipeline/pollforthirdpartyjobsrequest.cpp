@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new PollForThirdPartyJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PollForThirdPartyJobsResponse::PollForThirdPartyJobsResponse(
-
-/**
  * @brief  Constructs a new PollForThirdPartyJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.

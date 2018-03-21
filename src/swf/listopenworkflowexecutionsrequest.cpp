@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new ListOpenWorkflowExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListOpenWorkflowExecutionsResponse::ListOpenWorkflowExecutionsResponse(
-
-/**
  * @brief  Constructs a new ListOpenWorkflowExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

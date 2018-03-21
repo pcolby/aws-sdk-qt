@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new ListBucketAnalyticsConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListBucketAnalyticsConfigurationsResponse::ListBucketAnalyticsConfigurationsResponse(
-
-/**
  * @brief  Constructs a new ListBucketAnalyticsConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

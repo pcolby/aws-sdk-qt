@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new StopMonitoringMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopMonitoringMembersResponse::StopMonitoringMembersResponse(
-
-/**
  * @brief  Constructs a new StopMonitoringMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.

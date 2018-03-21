@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new RemoveRoleFromInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveRoleFromInstanceProfileResponse::RemoveRoleFromInstanceProfileResponse(
-
-/**
  * @brief  Constructs a new RemoveRoleFromInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

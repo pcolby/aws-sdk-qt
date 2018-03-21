@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeFlowLogsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeFlowLogsResponse::DescribeFlowLogsResponse(
-
-/**
  * @brief  Constructs a new DescribeFlowLogsRequest object by copying another.
  *
  * @param  other  Instance to copy.

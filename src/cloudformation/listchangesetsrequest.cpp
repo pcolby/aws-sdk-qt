@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new ListChangeSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListChangeSetsResponse::ListChangeSetsResponse(
-
-/**
  * @brief  Constructs a new ListChangeSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

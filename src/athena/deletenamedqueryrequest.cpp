@@ -34,15 +34,6 @@ namespace Athena {
  */
 
 /**
- * @brief  Constructs a new DeleteNamedQueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteNamedQueryResponse::DeleteNamedQueryResponse(
-
-/**
  * @brief  Constructs a new DeleteNamedQueryRequest object by copying another.
  *
  * @param  other  Instance to copy.

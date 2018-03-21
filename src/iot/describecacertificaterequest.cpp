@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DescribeCACertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeCACertificateResponse::DescribeCACertificateResponse(
-
-/**
  * @brief  Constructs a new DescribeCACertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

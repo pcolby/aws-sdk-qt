@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new ListGeoLocationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListGeoLocationsResponse::ListGeoLocationsResponse(
-
-/**
  * @brief  Constructs a new ListGeoLocationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

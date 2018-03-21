@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new DeleteCustomMetadataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteCustomMetadataResponse::DeleteCustomMetadataResponse(
-
-/**
  * @brief  Constructs a new DeleteCustomMetadataRequest object by copying another.
  *
  * @param  other  Instance to copy.

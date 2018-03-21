@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ModifyVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyVolumeResponse::ModifyVolumeResponse(
-
-/**
  * @brief  Constructs a new ModifyVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new GetFunctionConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetFunctionConfigurationResponse::GetFunctionConfigurationResponse(
-
-/**
  * @brief  Constructs a new GetFunctionConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

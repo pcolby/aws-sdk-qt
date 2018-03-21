@@ -34,15 +34,6 @@ namespace Pricing {
  */
 
 /**
- * @brief  Constructs a new GetAttributeValuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAttributeValuesResponse::GetAttributeValuesResponse(
-
-/**
  * @brief  Constructs a new GetAttributeValuesRequest object by copying another.
  *
  * @param  other  Instance to copy.

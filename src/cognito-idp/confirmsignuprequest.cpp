@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new ConfirmSignUpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ConfirmSignUpResponse::ConfirmSignUpResponse(
-
-/**
  * @brief  Constructs a new ConfirmSignUpRequest object by copying another.
  *
  * @param  other  Instance to copy.

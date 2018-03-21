@@ -34,15 +34,6 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new DescribeRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeRuleResponse::DescribeRuleResponse(
-
-/**
  * @brief  Constructs a new DescribeRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

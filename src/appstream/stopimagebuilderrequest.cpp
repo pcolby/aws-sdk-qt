@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new StopImageBuilderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopImageBuilderResponse::StopImageBuilderResponse(
-
-/**
  * @brief  Constructs a new StopImageBuilderRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new DescribeBatchPredictionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeBatchPredictionsResponse::DescribeBatchPredictionsResponse(
-
-/**
  * @brief  Constructs a new DescribeBatchPredictionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

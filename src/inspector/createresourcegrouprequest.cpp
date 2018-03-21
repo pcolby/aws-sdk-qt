@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new CreateResourceGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateResourceGroupResponse::CreateResourceGroupResponse(
-
-/**
  * @brief  Constructs a new CreateResourceGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

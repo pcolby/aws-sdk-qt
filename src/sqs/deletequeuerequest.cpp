@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new DeleteQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteQueueResponse::DeleteQueueResponse(
-
-/**
  * @brief  Constructs a new DeleteQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.

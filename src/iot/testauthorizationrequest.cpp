@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new TestAuthorizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TestAuthorizationResponse::TestAuthorizationResponse(
-
-/**
  * @brief  Constructs a new TestAuthorizationRequest object by copying another.
  *
  * @param  other  Instance to copy.

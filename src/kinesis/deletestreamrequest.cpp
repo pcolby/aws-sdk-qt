@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new DeleteStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteStreamResponse::DeleteStreamResponse(
-
-/**
  * @brief  Constructs a new DeleteStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

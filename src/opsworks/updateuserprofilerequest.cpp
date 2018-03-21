@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new UpdateUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateUserProfileResponse::UpdateUserProfileResponse(
-
-/**
  * @brief  Constructs a new UpdateUserProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

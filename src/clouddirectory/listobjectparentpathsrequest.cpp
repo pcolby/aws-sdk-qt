@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new ListObjectParentPathsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListObjectParentPathsResponse::ListObjectParentPathsResponse(
-
-/**
  * @brief  Constructs a new ListObjectParentPathsRequest object by copying another.
  *
  * @param  other  Instance to copy.

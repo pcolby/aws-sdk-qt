@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DeleteCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteCertificateResponse::DeleteCertificateResponse(
-
-/**
  * @brief  Constructs a new DeleteCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

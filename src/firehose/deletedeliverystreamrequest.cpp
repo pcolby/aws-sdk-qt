@@ -34,15 +34,6 @@ namespace Firehose {
  */
 
 /**
- * @brief  Constructs a new DeleteDeliveryStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDeliveryStreamResponse::DeleteDeliveryStreamResponse(
-
-/**
  * @brief  Constructs a new DeleteDeliveryStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

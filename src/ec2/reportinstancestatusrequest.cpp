@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ReportInstanceStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ReportInstanceStatusResponse::ReportInstanceStatusResponse(
-
-/**
  * @brief  Constructs a new ReportInstanceStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new DescribeScalingPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeScalingPoliciesResponse::DescribeScalingPoliciesResponse(
-
-/**
  * @brief  Constructs a new DescribeScalingPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

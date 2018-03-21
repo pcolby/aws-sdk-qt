@@ -34,15 +34,6 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new ListTargetsByRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTargetsByRuleResponse::ListTargetsByRuleResponse(
-
-/**
  * @brief  Constructs a new ListTargetsByRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

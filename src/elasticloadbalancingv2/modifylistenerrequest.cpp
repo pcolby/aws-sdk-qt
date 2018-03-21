@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new ModifyListenerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyListenerResponse::ModifyListenerResponse(
-
-/**
  * @brief  Constructs a new ModifyListenerRequest object by copying another.
  *
  * @param  other  Instance to copy.

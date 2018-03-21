@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new DeactivatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeactivatePipelineResponse::DeactivatePipelineResponse(
-
-/**
  * @brief  Constructs a new DeactivatePipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.

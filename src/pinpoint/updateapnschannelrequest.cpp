@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new UpdateApnsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateApnsChannelResponse::UpdateApnsChannelResponse(
-
-/**
  * @brief  Constructs a new UpdateApnsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

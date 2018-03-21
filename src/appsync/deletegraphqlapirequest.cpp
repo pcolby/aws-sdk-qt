@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new DeleteGraphqlApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteGraphqlApiResponse::DeleteGraphqlApiResponse(
-
-/**
  * @brief  Constructs a new DeleteGraphqlApiRequest object by copying another.
  *
  * @param  other  Instance to copy.

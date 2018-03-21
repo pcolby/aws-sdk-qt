@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new DetachLoadBalancerFromSubnetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachLoadBalancerFromSubnetsResponse::DetachLoadBalancerFromSubnetsResponse(
-
-/**
  * @brief  Constructs a new DetachLoadBalancerFromSubnetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

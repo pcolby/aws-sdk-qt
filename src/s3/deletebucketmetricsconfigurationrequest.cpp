@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new DeleteBucketMetricsConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBucketMetricsConfigurationResponse::DeleteBucketMetricsConfigurationResponse(
-
-/**
  * @brief  Constructs a new DeleteBucketMetricsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new PutJobFailureResultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutJobFailureResultResponse::PutJobFailureResultResponse(
-
-/**
  * @brief  Constructs a new PutJobFailureResultRequest object by copying another.
  *
  * @param  other  Instance to copy.

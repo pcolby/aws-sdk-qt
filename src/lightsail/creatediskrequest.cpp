@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new CreateDiskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateDiskResponse::CreateDiskResponse(
-
-/**
  * @brief  Constructs a new CreateDiskRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new CancelJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelJobResponse::CancelJobResponse(
-
-/**
  * @brief  Constructs a new CancelJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

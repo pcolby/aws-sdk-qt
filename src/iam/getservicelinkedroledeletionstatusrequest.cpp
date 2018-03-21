@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetServiceLinkedRoleDeletionStatusResponse::GetServiceLinkedRoleDeletionStatusResponse(
-
-/**
  * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

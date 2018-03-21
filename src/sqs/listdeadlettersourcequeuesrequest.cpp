@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new ListDeadLetterSourceQueuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListDeadLetterSourceQueuesResponse::ListDeadLetterSourceQueuesResponse(
-
-/**
  * @brief  Constructs a new ListDeadLetterSourceQueuesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DescribeGatewayInformationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeGatewayInformationResponse::DescribeGatewayInformationResponse(
-
-/**
  * @brief  Constructs a new DescribeGatewayInformationRequest object by copying another.
  *
  * @param  other  Instance to copy.

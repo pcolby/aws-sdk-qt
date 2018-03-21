@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetRequestValidatorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRequestValidatorsResponse::GetRequestValidatorsResponse(
-
-/**
  * @brief  Constructs a new GetRequestValidatorsRequest object by copying another.
  *
  * @param  other  Instance to copy.

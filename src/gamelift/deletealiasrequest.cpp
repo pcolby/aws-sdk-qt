@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new DeleteAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteAliasResponse::DeleteAliasResponse(
-
-/**
  * @brief  Constructs a new DeleteAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.

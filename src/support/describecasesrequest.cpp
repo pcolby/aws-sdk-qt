@@ -34,15 +34,6 @@ namespace Support {
  */
 
 /**
- * @brief  Constructs a new DescribeCasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeCasesResponse::DescribeCasesResponse(
-
-/**
  * @brief  Constructs a new DescribeCasesRequest object by copying another.
  *
  * @param  other  Instance to copy.

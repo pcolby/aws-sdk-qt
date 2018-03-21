@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new VerifyTrustResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-VerifyTrustResponse::VerifyTrustResponse(
-
-/**
  * @brief  Constructs a new VerifyTrustRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AllocateAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AllocateAddressResponse::AllocateAddressResponse(
-
-/**
  * @brief  Constructs a new AllocateAddressRequest object by copying another.
  *
  * @param  other  Instance to copy.

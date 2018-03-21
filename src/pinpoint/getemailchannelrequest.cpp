@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new GetEmailChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetEmailChannelResponse::GetEmailChannelResponse(
-
-/**
  * @brief  Constructs a new GetEmailChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new CreateResourceDataSyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateResourceDataSyncResponse::CreateResourceDataSyncResponse(
-
-/**
  * @brief  Constructs a new CreateResourceDataSyncRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteAccountAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteAccountAliasResponse::DeleteAccountAliasResponse(
-
-/**
  * @brief  Constructs a new DeleteAccountAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.

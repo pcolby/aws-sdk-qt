@@ -34,15 +34,6 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new SetAlarmStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetAlarmStateResponse::SetAlarmStateResponse(
-
-/**
  * @brief  Constructs a new SetAlarmStateRequest object by copying another.
  *
  * @param  other  Instance to copy.

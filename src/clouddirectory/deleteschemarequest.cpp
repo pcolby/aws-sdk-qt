@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new DeleteSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSchemaResponse::DeleteSchemaResponse(
-
-/**
  * @brief  Constructs a new DeleteSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.

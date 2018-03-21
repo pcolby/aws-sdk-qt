@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateRouteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateRouteResponse::CreateRouteResponse(
-
-/**
  * @brief  Constructs a new CreateRouteRequest object by copying another.
  *
  * @param  other  Instance to copy.

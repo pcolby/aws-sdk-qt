@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new UpdateHostedZoneCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateHostedZoneCommentResponse::UpdateHostedZoneCommentResponse(
-
-/**
  * @brief  Constructs a new UpdateHostedZoneCommentRequest object by copying another.
  *
  * @param  other  Instance to copy.

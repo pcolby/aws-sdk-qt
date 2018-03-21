@@ -34,15 +34,6 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new DeregisterJobDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterJobDefinitionResponse::DeregisterJobDefinitionResponse(
-
-/**
  * @brief  Constructs a new DeregisterJobDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

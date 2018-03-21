@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new DescribeDirectoryConfigsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDirectoryConfigsResponse::DescribeDirectoryConfigsResponse(
-
-/**
  * @brief  Constructs a new DescribeDirectoryConfigsRequest object by copying another.
  *
  * @param  other  Instance to copy.

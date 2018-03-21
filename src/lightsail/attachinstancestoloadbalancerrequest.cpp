@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new AttachInstancesToLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachInstancesToLoadBalancerResponse::AttachInstancesToLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new AttachInstancesToLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

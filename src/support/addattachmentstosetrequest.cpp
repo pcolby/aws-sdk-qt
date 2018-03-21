@@ -34,15 +34,6 @@ namespace Support {
  */
 
 /**
- * @brief  Constructs a new AddAttachmentsToSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddAttachmentsToSetResponse::AddAttachmentsToSetResponse(
-
-/**
  * @brief  Constructs a new AddAttachmentsToSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

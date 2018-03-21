@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new DescribeExportConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeExportConfigurationsResponse::DescribeExportConfigurationsResponse(
-
-/**
  * @brief  Constructs a new DescribeExportConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

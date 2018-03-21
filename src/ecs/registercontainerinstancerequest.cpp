@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new RegisterContainerInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterContainerInstanceResponse::RegisterContainerInstanceResponse(
-
-/**
  * @brief  Constructs a new RegisterContainerInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

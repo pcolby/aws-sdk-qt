@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new DescribeResourcePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeResourcePermissionsResponse::DescribeResourcePermissionsResponse(
-
-/**
  * @brief  Constructs a new DescribeResourcePermissionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

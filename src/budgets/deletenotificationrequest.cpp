@@ -34,15 +34,6 @@ namespace Budgets {
  */
 
 /**
- * @brief  Constructs a new DeleteNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteNotificationResponse::DeleteNotificationResponse(
-
-/**
  * @brief  Constructs a new DeleteNotificationRequest object by copying another.
  *
  * @param  other  Instance to copy.

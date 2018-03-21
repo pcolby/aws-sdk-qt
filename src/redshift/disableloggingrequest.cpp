@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DisableLoggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableLoggingResponse::DisableLoggingResponse(
-
-/**
  * @brief  Constructs a new DisableLoggingRequest object by copying another.
  *
  * @param  other  Instance to copy.

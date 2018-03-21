@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new AddFacetToObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddFacetToObjectResponse::AddFacetToObjectResponse(
-
-/**
  * @brief  Constructs a new AddFacetToObjectRequest object by copying another.
  *
  * @param  other  Instance to copy.

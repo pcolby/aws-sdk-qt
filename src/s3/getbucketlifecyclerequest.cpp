@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketLifecycleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketLifecycleResponse::GetBucketLifecycleResponse(
-
-/**
  * @brief  Constructs a new GetBucketLifecycleRequest object by copying another.
  *
  * @param  other  Instance to copy.

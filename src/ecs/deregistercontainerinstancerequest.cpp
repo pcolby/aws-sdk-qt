@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new DeregisterContainerInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
-
-/**
  * @brief  Constructs a new DeregisterContainerInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

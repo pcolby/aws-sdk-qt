@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new ListIpRoutesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListIpRoutesResponse::ListIpRoutesResponse(
-
-/**
  * @brief  Constructs a new ListIpRoutesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new RespondActivityTaskFailedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
-
-/**
  * @brief  Constructs a new RespondActivityTaskFailedRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ApplicationAutoScaling {
  */
 
 /**
- * @brief  Constructs a new RegisterScalableTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterScalableTargetResponse::RegisterScalableTargetResponse(
-
-/**
  * @brief  Constructs a new RegisterScalableTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.

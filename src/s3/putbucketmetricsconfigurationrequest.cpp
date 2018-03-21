@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketMetricsConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketMetricsConfigurationResponse::PutBucketMetricsConfigurationResponse(
-
-/**
  * @brief  Constructs a new PutBucketMetricsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

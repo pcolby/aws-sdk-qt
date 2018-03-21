@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new AuthorizeDBSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AuthorizeDBSecurityGroupIngressResponse::AuthorizeDBSecurityGroupIngressResponse(
-
-/**
  * @brief  Constructs a new AuthorizeDBSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.

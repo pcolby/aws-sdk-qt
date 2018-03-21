@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new TagQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TagQueueResponse::TagQueueResponse(
-
-/**
  * @brief  Constructs a new TagQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.

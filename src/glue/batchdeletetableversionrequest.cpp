@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new BatchDeleteTableVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchDeleteTableVersionResponse::BatchDeleteTableVersionResponse(
-
-/**
  * @brief  Constructs a new BatchDeleteTableVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new DeleteJobTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteJobTemplateResponse::DeleteJobTemplateResponse(
-
-/**
  * @brief  Constructs a new DeleteJobTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.

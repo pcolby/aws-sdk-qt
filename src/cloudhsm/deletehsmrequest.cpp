@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new DeleteHsmResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteHsmResponse::DeleteHsmResponse(
-
-/**
  * @brief  Constructs a new DeleteHsmRequest object by copying another.
  *
  * @param  other  Instance to copy.

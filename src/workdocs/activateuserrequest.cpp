@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new ActivateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ActivateUserResponse::ActivateUserResponse(
-
-/**
  * @brief  Constructs a new ActivateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.

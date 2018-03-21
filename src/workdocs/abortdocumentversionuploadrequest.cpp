@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new AbortDocumentVersionUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AbortDocumentVersionUploadResponse::AbortDocumentVersionUploadResponse(
-
-/**
  * @brief  Constructs a new AbortDocumentVersionUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.

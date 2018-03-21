@@ -34,15 +34,6 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new DescribeSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeSubnetGroupsResponse::DescribeSubnetGroupsResponse(
-
-/**
  * @brief  Constructs a new DescribeSubnetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

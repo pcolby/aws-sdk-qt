@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new AddTagsToStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddTagsToStreamResponse::AddTagsToStreamResponse(
-
-/**
  * @brief  Constructs a new AddTagsToStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

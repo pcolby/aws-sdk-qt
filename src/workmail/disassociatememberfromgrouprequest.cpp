@@ -34,15 +34,6 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new DisassociateMemberFromGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateMemberFromGroupResponse::DisassociateMemberFromGroupResponse(
-
-/**
  * @brief  Constructs a new DisassociateMemberFromGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

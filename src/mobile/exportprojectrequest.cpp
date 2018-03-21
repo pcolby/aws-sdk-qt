@@ -34,15 +34,6 @@ namespace Mobile {
  */
 
 /**
- * @brief  Constructs a new ExportProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ExportProjectResponse::ExportProjectResponse(
-
-/**
  * @brief  Constructs a new ExportProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.

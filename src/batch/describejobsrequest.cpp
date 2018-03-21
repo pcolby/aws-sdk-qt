@@ -34,15 +34,6 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new DescribeJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeJobsResponse::DescribeJobsResponse(
-
-/**
  * @brief  Constructs a new DescribeJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.

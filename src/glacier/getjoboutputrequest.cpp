@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new GetJobOutputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetJobOutputResponse::GetJobOutputResponse(
-
-/**
  * @brief  Constructs a new GetJobOutputRequest object by copying another.
  *
  * @param  other  Instance to copy.

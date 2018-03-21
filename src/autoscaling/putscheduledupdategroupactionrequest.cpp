@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new PutScheduledUpdateGroupActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutScheduledUpdateGroupActionResponse::PutScheduledUpdateGroupActionResponse(
-
-/**
  * @brief  Constructs a new PutScheduledUpdateGroupActionRequest object by copying another.
  *
  * @param  other  Instance to copy.

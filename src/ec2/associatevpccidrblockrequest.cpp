@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AssociateVpcCidrBlockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateVpcCidrBlockResponse::AssociateVpcCidrBlockResponse(
-
-/**
  * @brief  Constructs a new AssociateVpcCidrBlockRequest object by copying another.
  *
  * @param  other  Instance to copy.

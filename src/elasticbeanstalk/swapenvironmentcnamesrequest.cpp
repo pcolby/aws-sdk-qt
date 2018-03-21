@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new SwapEnvironmentCNAMEsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SwapEnvironmentCNAMEsResponse::SwapEnvironmentCNAMEsResponse(
-
-/**
  * @brief  Constructs a new SwapEnvironmentCNAMEsRequest object by copying another.
  *
  * @param  other  Instance to copy.

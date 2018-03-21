@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new GetChangeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetChangeResponse::GetChangeResponse(
-
-/**
  * @brief  Constructs a new GetChangeRequest object by copying another.
  *
  * @param  other  Instance to copy.

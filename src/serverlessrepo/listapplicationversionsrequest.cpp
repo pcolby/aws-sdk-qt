@@ -34,15 +34,6 @@ namespace ServerlessApplicationRepository {
  */
 
 /**
- * @brief  Constructs a new ListApplicationVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListApplicationVersionsResponse::ListApplicationVersionsResponse(
-
-/**
  * @brief  Constructs a new ListApplicationVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

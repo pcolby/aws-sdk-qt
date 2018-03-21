@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new UpdateSkillGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSkillGroupResponse::UpdateSkillGroupResponse(
-
-/**
  * @brief  Constructs a new UpdateSkillGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

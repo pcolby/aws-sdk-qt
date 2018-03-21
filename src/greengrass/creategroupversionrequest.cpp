@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new CreateGroupVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateGroupVersionResponse::CreateGroupVersionResponse(
-
-/**
  * @brief  Constructs a new CreateGroupVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

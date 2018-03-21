@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new UpdateContainerInstancesStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateContainerInstancesStateResponse::UpdateContainerInstancesStateResponse(
-
-/**
  * @brief  Constructs a new UpdateContainerInstancesStateRequest object by copying another.
  *
  * @param  other  Instance to copy.

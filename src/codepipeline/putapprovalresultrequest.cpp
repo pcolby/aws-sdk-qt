@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new PutApprovalResultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutApprovalResultResponse::PutApprovalResultResponse(
-
-/**
  * @brief  Constructs a new PutApprovalResultRequest object by copying another.
  *
  * @param  other  Instance to copy.

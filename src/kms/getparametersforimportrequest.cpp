@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new GetParametersForImportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetParametersForImportResponse::GetParametersForImportResponse(
-
-/**
  * @brief  Constructs a new GetParametersForImportRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new CreateEnvironmentEC2Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateEnvironmentEC2Response::CreateEnvironmentEC2Response(
-
-/**
  * @brief  Constructs a new CreateEnvironmentEC2Request object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new SendEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendEmailResponse::SendEmailResponse(
-
-/**
  * @brief  Constructs a new SendEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.

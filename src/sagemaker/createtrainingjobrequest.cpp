@@ -34,15 +34,6 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new CreateTrainingJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateTrainingJobResponse::CreateTrainingJobResponse(
-
-/**
  * @brief  Constructs a new CreateTrainingJobRequest object by copying another.
  *
  * @param  other  Instance to copy.

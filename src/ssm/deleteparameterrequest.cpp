@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DeleteParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteParameterResponse::DeleteParameterResponse(
-
-/**
  * @brief  Constructs a new DeleteParameterRequest object by copying another.
  *
  * @param  other  Instance to copy.

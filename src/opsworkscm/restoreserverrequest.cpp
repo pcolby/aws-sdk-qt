@@ -34,15 +34,6 @@ namespace OpsWorksCM {
  */
 
 /**
- * @brief  Constructs a new RestoreServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RestoreServerResponse::RestoreServerResponse(
-
-/**
  * @brief  Constructs a new RestoreServerRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteDocumentationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDocumentationVersionResponse::DeleteDocumentationVersionResponse(
-
-/**
  * @brief  Constructs a new DeleteDocumentationVersionRequest object by copying another.
  *
  * @param  other  Instance to copy.

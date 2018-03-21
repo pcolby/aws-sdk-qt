@@ -34,15 +34,6 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new DisassociateDelegateFromResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateDelegateFromResourceResponse::DisassociateDelegateFromResourceResponse(
-
-/**
  * @brief  Constructs a new DisassociateDelegateFromResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

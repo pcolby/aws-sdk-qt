@@ -34,15 +34,6 @@ namespace Mobile {
  */
 
 /**
- * @brief  Constructs a new ListBundlesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListBundlesResponse::ListBundlesResponse(
-
-/**
  * @brief  Constructs a new ListBundlesRequest object by copying another.
  *
  * @param  other  Instance to copy.

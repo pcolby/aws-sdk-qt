@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new RemovePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemovePermissionResponse::RemovePermissionResponse(
-
-/**
  * @brief  Constructs a new RemovePermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new TerminateProvisionedProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TerminateProvisionedProductResponse::TerminateProvisionedProductResponse(
-
-/**
  * @brief  Constructs a new TerminateProvisionedProductRequest object by copying another.
  *
  * @param  other  Instance to copy.

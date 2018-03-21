@@ -34,15 +34,6 @@ namespace Polly {
  */
 
 /**
- * @brief  Constructs a new PutLexiconResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutLexiconResponse::PutLexiconResponse(
-
-/**
  * @brief  Constructs a new PutLexiconRequest object by copying another.
  *
  * @param  other  Instance to copy.

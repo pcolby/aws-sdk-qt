@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new ListRunsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListRunsResponse::ListRunsResponse(
-
-/**
  * @brief  Constructs a new ListRunsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DisableSnapshotCopyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableSnapshotCopyResponse::DisableSnapshotCopyResponse(
-
-/**
  * @brief  Constructs a new DisableSnapshotCopyRequest object by copying another.
  *
  * @param  other  Instance to copy.

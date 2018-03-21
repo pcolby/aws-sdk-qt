@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new FilterLogEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-FilterLogEventsResponse::FilterLogEventsResponse(
-
-/**
  * @brief  Constructs a new FilterLogEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.

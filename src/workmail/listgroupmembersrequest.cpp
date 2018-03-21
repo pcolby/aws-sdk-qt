@@ -34,15 +34,6 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new ListGroupMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListGroupMembersResponse::ListGroupMembersResponse(
-
-/**
  * @brief  Constructs a new ListGroupMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new BatchReadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchReadResponse::BatchReadResponse(
-
-/**
  * @brief  Constructs a new BatchReadRequest object by copying another.
  *
  * @param  other  Instance to copy.

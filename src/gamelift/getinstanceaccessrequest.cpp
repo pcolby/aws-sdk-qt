@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new GetInstanceAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetInstanceAccessResponse::GetInstanceAccessResponse(
-
-/**
  * @brief  Constructs a new GetInstanceAccessRequest object by copying another.
  *
  * @param  other  Instance to copy.

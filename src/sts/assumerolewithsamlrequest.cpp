@@ -34,15 +34,6 @@ namespace STS {
  */
 
 /**
- * @brief  Constructs a new AssumeRoleWithSAMLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
-
-/**
  * @brief  Constructs a new AssumeRoleWithSAMLRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteLaunchTemplateVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLaunchTemplateVersionsResponse::DeleteLaunchTemplateVersionsResponse(
-
-/**
  * @brief  Constructs a new DeleteLaunchTemplateVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

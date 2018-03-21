@@ -34,15 +34,6 @@ namespace ElasticTranscoder {
  */
 
 /**
- * @brief  Constructs a new ListJobsByStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListJobsByStatusResponse::ListJobsByStatusResponse(
-
-/**
  * @brief  Constructs a new ListJobsByStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

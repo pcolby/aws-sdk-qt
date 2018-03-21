@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new GetConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetConnectionsResponse::GetConnectionsResponse(
-
-/**
  * @brief  Constructs a new GetConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

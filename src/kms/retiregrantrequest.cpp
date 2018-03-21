@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new RetireGrantResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RetireGrantResponse::RetireGrantResponse(
-
-/**
  * @brief  Constructs a new RetireGrantRequest object by copying another.
  *
  * @param  other  Instance to copy.

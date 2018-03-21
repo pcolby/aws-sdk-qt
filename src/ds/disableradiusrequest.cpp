@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new DisableRadiusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableRadiusResponse::DisableRadiusResponse(
-
-/**
  * @brief  Constructs a new DisableRadiusRequest object by copying another.
  *
  * @param  other  Instance to copy.

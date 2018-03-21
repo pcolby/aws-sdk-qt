@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new SetTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetTagsForResourceResponse::SetTagsForResourceResponse(
-
-/**
  * @brief  Constructs a new SetTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

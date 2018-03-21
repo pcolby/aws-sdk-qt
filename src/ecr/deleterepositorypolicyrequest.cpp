@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new DeleteRepositoryPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteRepositoryPolicyResponse::DeleteRepositoryPolicyResponse(
-
-/**
  * @brief  Constructs a new DeleteRepositoryPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new CreateProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateProfileResponse::CreateProfileResponse(
-
-/**
  * @brief  Constructs a new CreateProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

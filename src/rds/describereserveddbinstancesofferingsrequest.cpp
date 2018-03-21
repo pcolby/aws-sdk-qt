@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeReservedDBInstancesOfferingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeReservedDBInstancesOfferingsResponse::DescribeReservedDBInstancesOfferingsResponse(
-
-/**
  * @brief  Constructs a new DescribeReservedDBInstancesOfferingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

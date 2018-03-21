@@ -34,15 +34,6 @@ namespace IoTDataPlane {
  */
 
 /**
- * @brief  Constructs a new DeleteThingShadowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteThingShadowResponse::DeleteThingShadowResponse(
-
-/**
  * @brief  Constructs a new DeleteThingShadowRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new CreateBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateBuildResponse::CreateBuildResponse(
-
-/**
  * @brief  Constructs a new CreateBuildRequest object by copying another.
  *
  * @param  other  Instance to copy.

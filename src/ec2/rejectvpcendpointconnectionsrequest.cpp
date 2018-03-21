@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new RejectVpcEndpointConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RejectVpcEndpointConnectionsResponse::RejectVpcEndpointConnectionsResponse(
-
-/**
  * @brief  Constructs a new RejectVpcEndpointConnectionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

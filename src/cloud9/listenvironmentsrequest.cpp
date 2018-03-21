@@ -34,15 +34,6 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new ListEnvironmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListEnvironmentsResponse::ListEnvironmentsResponse(
-
-/**
  * @brief  Constructs a new ListEnvironmentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DeleteEventSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
-
-/**
  * @brief  Constructs a new DeleteEventSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

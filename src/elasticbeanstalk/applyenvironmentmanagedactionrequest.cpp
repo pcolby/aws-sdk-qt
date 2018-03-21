@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new ApplyEnvironmentManagedActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ApplyEnvironmentManagedActionResponse::ApplyEnvironmentManagedActionResponse(
-
-/**
  * @brief  Constructs a new ApplyEnvironmentManagedActionRequest object by copying another.
  *
  * @param  other  Instance to copy.

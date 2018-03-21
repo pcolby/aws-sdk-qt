@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new StartThingRegistrationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartThingRegistrationTaskResponse::StartThingRegistrationTaskResponse(
-
-/**
  * @brief  Constructs a new StartThingRegistrationTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

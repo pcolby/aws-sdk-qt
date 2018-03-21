@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new RestoreDBClusterFromS3Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RestoreDBClusterFromS3Response::RestoreDBClusterFromS3Response(
-
-/**
  * @brief  Constructs a new RestoreDBClusterFromS3Request object by copying another.
  *
  * @param  other  Instance to copy.

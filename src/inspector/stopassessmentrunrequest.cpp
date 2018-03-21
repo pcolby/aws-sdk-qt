@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new StopAssessmentRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopAssessmentRunResponse::StopAssessmentRunResponse(
-
-/**
  * @brief  Constructs a new StopAssessmentRunRequest object by copying another.
  *
  * @param  other  Instance to copy.

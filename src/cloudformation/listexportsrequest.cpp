@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new ListExportsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListExportsResponse::ListExportsResponse(
-
-/**
  * @brief  Constructs a new ListExportsRequest object by copying another.
  *
  * @param  other  Instance to copy.

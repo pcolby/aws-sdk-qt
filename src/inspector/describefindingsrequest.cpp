@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new DescribeFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeFindingsResponse::DescribeFindingsResponse(
-
-/**
  * @brief  Constructs a new DescribeFindingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

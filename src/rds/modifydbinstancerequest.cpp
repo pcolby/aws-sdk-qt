@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new ModifyDBInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyDBInstanceResponse::ModifyDBInstanceResponse(
-
-/**
  * @brief  Constructs a new ModifyDBInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

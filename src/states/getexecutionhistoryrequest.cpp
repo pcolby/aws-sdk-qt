@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new GetExecutionHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetExecutionHistoryResponse::GetExecutionHistoryResponse(
-
-/**
  * @brief  Constructs a new GetExecutionHistoryRequest object by copying another.
  *
  * @param  other  Instance to copy.

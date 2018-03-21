@@ -34,15 +34,6 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new GetCorsPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCorsPolicyResponse::GetCorsPolicyResponse(
-
-/**
  * @brief  Constructs a new GetCorsPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

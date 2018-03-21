@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new DeliverConfigSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeliverConfigSnapshotResponse::DeliverConfigSnapshotResponse(
-
-/**
  * @brief  Constructs a new DeliverConfigSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.

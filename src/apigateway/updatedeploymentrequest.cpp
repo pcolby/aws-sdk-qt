@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateDeploymentResponse::UpdateDeploymentResponse(
-
-/**
  * @brief  Constructs a new UpdateDeploymentRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new CreatePlatformEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
-
-/**
  * @brief  Constructs a new CreatePlatformEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

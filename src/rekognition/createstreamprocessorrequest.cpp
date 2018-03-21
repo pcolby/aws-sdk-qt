@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new CreateStreamProcessorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateStreamProcessorResponse::CreateStreamProcessorResponse(
-
-/**
  * @brief  Constructs a new CreateStreamProcessorRequest object by copying another.
  *
  * @param  other  Instance to copy.

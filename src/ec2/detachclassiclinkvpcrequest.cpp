@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DetachClassicLinkVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachClassicLinkVpcResponse::DetachClassicLinkVpcResponse(
-
-/**
  * @brief  Constructs a new DetachClassicLinkVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.

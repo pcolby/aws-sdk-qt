@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AssignIpv6AddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssignIpv6AddressesResponse::AssignIpv6AddressesResponse(
-
-/**
  * @brief  Constructs a new AssignIpv6AddressesRequest object by copying another.
  *
  * @param  other  Instance to copy.

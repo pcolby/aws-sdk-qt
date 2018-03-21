@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new ForgetDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ForgetDeviceResponse::ForgetDeviceResponse(
-
-/**
  * @brief  Constructs a new ForgetDeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.

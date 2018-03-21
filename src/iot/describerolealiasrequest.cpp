@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DescribeRoleAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeRoleAliasResponse::DescribeRoleAliasResponse(
-
-/**
  * @brief  Constructs a new DescribeRoleAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.

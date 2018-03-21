@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new AssociateSkillGroupWithRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateSkillGroupWithRoomResponse::AssociateSkillGroupWithRoomResponse(
-
-/**
  * @brief  Constructs a new AssociateSkillGroupWithRoomRequest object by copying another.
  *
  * @param  other  Instance to copy.

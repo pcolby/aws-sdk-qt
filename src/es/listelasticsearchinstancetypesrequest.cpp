@@ -34,15 +34,6 @@ namespace ElasticsearchService {
  */
 
 /**
- * @brief  Constructs a new ListElasticsearchInstanceTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListElasticsearchInstanceTypesResponse::ListElasticsearchInstanceTypesResponse(
-
-/**
  * @brief  Constructs a new ListElasticsearchInstanceTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.

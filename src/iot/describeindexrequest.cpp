@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DescribeIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeIndexResponse::DescribeIndexResponse(
-
-/**
  * @brief  Constructs a new DescribeIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.

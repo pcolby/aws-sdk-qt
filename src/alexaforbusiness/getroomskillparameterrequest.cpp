@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new GetRoomSkillParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRoomSkillParameterResponse::GetRoomSkillParameterResponse(
-
-/**
  * @brief  Constructs a new GetRoomSkillParameterRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DescribeStorediSCSIVolumesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeStorediSCSIVolumesResponse::DescribeStorediSCSIVolumesResponse(
-
-/**
  * @brief  Constructs a new DescribeStorediSCSIVolumesRequest object by copying another.
  *
  * @param  other  Instance to copy.

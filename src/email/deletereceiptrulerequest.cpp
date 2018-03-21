@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new DeleteReceiptRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteReceiptRuleResponse::DeleteReceiptRuleResponse(
-
-/**
  * @brief  Constructs a new DeleteReceiptRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

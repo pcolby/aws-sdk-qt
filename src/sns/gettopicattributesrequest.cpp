@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new GetTopicAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTopicAttributesResponse::GetTopicAttributesResponse(
-
-/**
  * @brief  Constructs a new GetTopicAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

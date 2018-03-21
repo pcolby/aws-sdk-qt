@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new SetIdentityPoolRolesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetIdentityPoolRolesResponse::SetIdentityPoolRolesResponse(
-
-/**
  * @brief  Constructs a new SetIdentityPoolRolesRequest object by copying another.
  *
  * @param  other  Instance to copy.

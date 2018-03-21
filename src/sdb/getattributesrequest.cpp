@@ -34,15 +34,6 @@ namespace SimpleDB {
  */
 
 /**
- * @brief  Constructs a new GetAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAttributesResponse::GetAttributesResponse(
-
-/**
  * @brief  Constructs a new GetAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new MergePullRequestByFastForwardResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-MergePullRequestByFastForwardResponse::MergePullRequestByFastForwardResponse(
-
-/**
  * @brief  Constructs a new MergePullRequestByFastForwardRequest object by copying another.
  *
  * @param  other  Instance to copy.

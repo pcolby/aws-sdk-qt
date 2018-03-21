@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new GetEventStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetEventStreamResponse::GetEventStreamResponse(
-
-/**
  * @brief  Constructs a new GetEventStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

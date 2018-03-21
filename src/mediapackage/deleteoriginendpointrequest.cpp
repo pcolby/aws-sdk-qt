@@ -34,15 +34,6 @@ namespace MediaPackage {
  */
 
 /**
- * @brief  Constructs a new DeleteOriginEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteOriginEndpointResponse::DeleteOriginEndpointResponse(
-
-/**
  * @brief  Constructs a new DeleteOriginEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

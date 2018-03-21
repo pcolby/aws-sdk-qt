@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new UpdateAccountSendingEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateAccountSendingEnabledResponse::UpdateAccountSendingEnabledResponse(
-
-/**
  * @brief  Constructs a new UpdateAccountSendingEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.

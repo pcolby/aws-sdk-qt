@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new UpdateFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateFleetResponse::UpdateFleetResponse(
-
-/**
  * @brief  Constructs a new UpdateFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.

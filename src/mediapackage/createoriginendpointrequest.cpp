@@ -34,15 +34,6 @@ namespace MediaPackage {
  */
 
 /**
- * @brief  Constructs a new CreateOriginEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateOriginEndpointResponse::CreateOriginEndpointResponse(
-
-/**
  * @brief  Constructs a new CreateOriginEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

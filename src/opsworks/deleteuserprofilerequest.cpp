@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new DeleteUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteUserProfileResponse::DeleteUserProfileResponse(
-
-/**
  * @brief  Constructs a new DeleteUserProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

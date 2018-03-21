@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new DescribeGlobalTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeGlobalTableResponse::DescribeGlobalTableResponse(
-
-/**
  * @brief  Constructs a new DescribeGlobalTableRequest object by copying another.
  *
  * @param  other  Instance to copy.

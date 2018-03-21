@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new GetRolePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRolePolicyResponse::GetRolePolicyResponse(
-
-/**
  * @brief  Constructs a new GetRolePolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

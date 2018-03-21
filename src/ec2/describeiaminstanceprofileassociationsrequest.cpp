@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeIamInstanceProfileAssociationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeIamInstanceProfileAssociationsResponse::DescribeIamInstanceProfileAssociationsResponse(
-
-/**
  * @brief  Constructs a new DescribeIamInstanceProfileAssociationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

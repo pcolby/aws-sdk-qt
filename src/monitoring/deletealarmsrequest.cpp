@@ -34,15 +34,6 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new DeleteAlarmsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteAlarmsResponse::DeleteAlarmsResponse(
-
-/**
  * @brief  Constructs a new DeleteAlarmsRequest object by copying another.
  *
  * @param  other  Instance to copy.

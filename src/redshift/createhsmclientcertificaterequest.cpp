@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new CreateHsmClientCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateHsmClientCertificateResponse::CreateHsmClientCertificateResponse(
-
-/**
  * @brief  Constructs a new CreateHsmClientCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

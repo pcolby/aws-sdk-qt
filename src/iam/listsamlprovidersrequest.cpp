@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListSAMLProvidersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListSAMLProvidersResponse::ListSAMLProvidersResponse(
-
-/**
  * @brief  Constructs a new ListSAMLProvidersRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
-
-/**
  * @brief  Constructs a new DeleteInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

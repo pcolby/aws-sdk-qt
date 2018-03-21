@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new GetTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTopicRuleResponse::GetTopicRuleResponse(
-
-/**
  * @brief  Constructs a new GetTopicRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

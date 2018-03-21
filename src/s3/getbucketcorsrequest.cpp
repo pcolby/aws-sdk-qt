@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketCorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketCorsResponse::GetBucketCorsResponse(
-
-/**
  * @brief  Constructs a new GetBucketCorsRequest object by copying another.
  *
  * @param  other  Instance to copy.

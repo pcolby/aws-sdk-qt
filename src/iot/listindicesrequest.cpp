@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new ListIndicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListIndicesResponse::ListIndicesResponse(
-
-/**
  * @brief  Constructs a new ListIndicesRequest object by copying another.
  *
  * @param  other  Instance to copy.

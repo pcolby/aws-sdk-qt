@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new UntagLogGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UntagLogGroupResponse::UntagLogGroupResponse(
-
-/**
  * @brief  Constructs a new UntagLogGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

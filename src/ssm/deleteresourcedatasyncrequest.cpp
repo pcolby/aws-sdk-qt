@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DeleteResourceDataSyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteResourceDataSyncResponse::DeleteResourceDataSyncResponse(
-
-/**
  * @brief  Constructs a new DeleteResourceDataSyncRequest object by copying another.
  *
  * @param  other  Instance to copy.

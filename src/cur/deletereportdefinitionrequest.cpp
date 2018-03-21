@@ -34,15 +34,6 @@ namespace CostandUsageReportService {
  */
 
 /**
- * @brief  Constructs a new DeleteReportDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteReportDefinitionResponse::DeleteReportDefinitionResponse(
-
-/**
  * @brief  Constructs a new DeleteReportDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

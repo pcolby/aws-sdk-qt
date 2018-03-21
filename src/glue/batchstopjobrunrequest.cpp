@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new BatchStopJobRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchStopJobRunResponse::BatchStopJobRunResponse(
-
-/**
  * @brief  Constructs a new BatchStopJobRunRequest object by copying another.
  *
  * @param  other  Instance to copy.

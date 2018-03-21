@@ -34,15 +34,6 @@ namespace Mobile {
  */
 
 /**
- * @brief  Constructs a new ExportBundleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ExportBundleResponse::ExportBundleResponse(
-
-/**
  * @brief  Constructs a new ExportBundleRequest object by copying another.
  *
  * @param  other  Instance to copy.

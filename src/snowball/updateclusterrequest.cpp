@@ -34,15 +34,6 @@ namespace Snowball {
  */
 
 /**
- * @brief  Constructs a new UpdateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateClusterResponse::UpdateClusterResponse(
-
-/**
  * @brief  Constructs a new UpdateClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

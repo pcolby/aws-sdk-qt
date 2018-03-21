@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new DeleteInterconnectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteInterconnectResponse::DeleteInterconnectResponse(
-
-/**
  * @brief  Constructs a new DeleteInterconnectRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace KinesisVideo {
  */
 
 /**
- * @brief  Constructs a new ListTagsForStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTagsForStreamResponse::ListTagsForStreamResponse(
-
-/**
  * @brief  Constructs a new ListTagsForStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

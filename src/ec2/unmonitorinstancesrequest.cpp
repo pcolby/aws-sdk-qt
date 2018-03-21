@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new UnmonitorInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UnmonitorInstancesResponse::UnmonitorInstancesResponse(
-
-/**
  * @brief  Constructs a new UnmonitorInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

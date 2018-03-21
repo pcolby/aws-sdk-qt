@@ -34,15 +34,6 @@ namespace ResourceGroups {
  */
 
 /**
- * @brief  Constructs a new UpdateGroupQueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateGroupQueryResponse::UpdateGroupQueryResponse(
-
-/**
  * @brief  Constructs a new UpdateGroupQueryRequest object by copying another.
  *
  * @param  other  Instance to copy.

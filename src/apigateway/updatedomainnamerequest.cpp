@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateDomainNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateDomainNameResponse::UpdateDomainNameResponse(
-
-/**
  * @brief  Constructs a new UpdateDomainNameRequest object by copying another.
  *
  * @param  other  Instance to copy.

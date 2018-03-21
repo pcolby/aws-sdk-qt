@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new ModifyRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyRuleResponse::ModifyRuleResponse(
-
-/**
  * @brief  Constructs a new ModifyRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

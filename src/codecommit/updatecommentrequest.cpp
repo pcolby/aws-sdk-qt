@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new UpdateCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateCommentResponse::UpdateCommentResponse(
-
-/**
  * @brief  Constructs a new UpdateCommentRequest object by copying another.
  *
  * @param  other  Instance to copy.

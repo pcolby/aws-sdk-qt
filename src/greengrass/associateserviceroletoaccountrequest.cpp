@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new AssociateServiceRoleToAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateServiceRoleToAccountResponse::AssociateServiceRoleToAccountResponse(
-
-/**
  * @brief  Constructs a new AssociateServiceRoleToAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.

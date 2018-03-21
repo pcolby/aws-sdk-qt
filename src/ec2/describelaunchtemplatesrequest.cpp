@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeLaunchTemplatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeLaunchTemplatesResponse::DescribeLaunchTemplatesResponse(
-
-/**
  * @brief  Constructs a new DescribeLaunchTemplatesRequest object by copying another.
  *
  * @param  other  Instance to copy.

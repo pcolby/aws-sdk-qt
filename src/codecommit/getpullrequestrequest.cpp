@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new GetPullRequestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetPullRequestResponse::GetPullRequestResponse(
-
-/**
  * @brief  Constructs a new GetPullRequestRequest object by copying another.
  *
  * @param  other  Instance to copy.

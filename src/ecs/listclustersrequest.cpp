@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new ListClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListClustersResponse::ListClustersResponse(
-
-/**
  * @brief  Constructs a new ListClustersRequest object by copying another.
  *
  * @param  other  Instance to copy.

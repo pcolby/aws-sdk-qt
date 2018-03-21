@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new CreateSecurityConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSecurityConfigurationResponse::CreateSecurityConfigurationResponse(
-
-/**
  * @brief  Constructs a new CreateSecurityConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

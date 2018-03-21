@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new GetBotAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBotAliasResponse::GetBotAliasResponse(
-
-/**
  * @brief  Constructs a new GetBotAliasRequest object by copying another.
  *
  * @param  other  Instance to copy.

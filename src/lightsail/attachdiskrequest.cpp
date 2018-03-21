@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new AttachDiskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachDiskResponse::AttachDiskResponse(
-
-/**
  * @brief  Constructs a new AttachDiskRequest object by copying another.
  *
  * @param  other  Instance to copy.

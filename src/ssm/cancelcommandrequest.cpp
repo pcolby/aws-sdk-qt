@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new CancelCommandResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelCommandResponse::CancelCommandResponse(
-
-/**
  * @brief  Constructs a new CancelCommandRequest object by copying another.
  *
  * @param  other  Instance to copy.

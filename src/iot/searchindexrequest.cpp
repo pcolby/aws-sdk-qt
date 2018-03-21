@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new SearchIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SearchIndexResponse::SearchIndexResponse(
-
-/**
  * @brief  Constructs a new SearchIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.

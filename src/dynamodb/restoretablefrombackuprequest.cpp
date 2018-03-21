@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new RestoreTableFromBackupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
-
-/**
  * @brief  Constructs a new RestoreTableFromBackupRequest object by copying another.
  *
  * @param  other  Instance to copy.

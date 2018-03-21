@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DeleteDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDomainResponse::DeleteDomainResponse(
-
-/**
  * @brief  Constructs a new DeleteDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

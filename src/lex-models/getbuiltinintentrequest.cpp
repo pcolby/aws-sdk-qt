@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new GetBuiltinIntentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBuiltinIntentResponse::GetBuiltinIntentResponse(
-
-/**
  * @brief  Constructs a new GetBuiltinIntentRequest object by copying another.
  *
  * @param  other  Instance to copy.

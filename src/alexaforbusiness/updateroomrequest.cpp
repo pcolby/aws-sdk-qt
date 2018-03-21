@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new UpdateRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRoomResponse::UpdateRoomResponse(
-
-/**
  * @brief  Constructs a new UpdateRoomRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new GetAutomationExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAutomationExecutionResponse::GetAutomationExecutionResponse(
-
-/**
  * @brief  Constructs a new GetAutomationExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

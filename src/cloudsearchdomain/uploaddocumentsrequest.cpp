@@ -34,15 +34,6 @@ namespace CloudSearchDomain {
  */
 
 /**
- * @brief  Constructs a new UploadDocumentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UploadDocumentsResponse::UploadDocumentsResponse(
-
-/**
  * @brief  Constructs a new UploadDocumentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new DisableDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableDirectoryResponse::DisableDirectoryResponse(
-
-/**
  * @brief  Constructs a new DisableDirectoryRequest object by copying another.
  *
  * @param  other  Instance to copy.

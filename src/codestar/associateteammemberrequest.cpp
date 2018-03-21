@@ -34,15 +34,6 @@ namespace CodeStar {
  */
 
 /**
- * @brief  Constructs a new AssociateTeamMemberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateTeamMemberResponse::AssociateTeamMemberResponse(
-
-/**
  * @brief  Constructs a new AssociateTeamMemberRequest object by copying another.
  *
  * @param  other  Instance to copy.

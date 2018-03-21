@@ -34,15 +34,6 @@ namespace Support {
  */
 
 /**
- * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTrustedAdvisorCheckRefreshStatusesResponse::DescribeTrustedAdvisorCheckRefreshStatusesResponse(
-
-/**
  * @brief  Constructs a new DescribeTrustedAdvisorCheckRefreshStatusesRequest object by copying another.
  *
  * @param  other  Instance to copy.

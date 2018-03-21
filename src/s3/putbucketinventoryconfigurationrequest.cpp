@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketInventoryConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketInventoryConfigurationResponse::PutBucketInventoryConfigurationResponse(
-
-/**
  * @brief  Constructs a new PutBucketInventoryConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

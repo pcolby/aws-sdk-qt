@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new DeleteGitHubAccountTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteGitHubAccountTokenResponse::DeleteGitHubAccountTokenResponse(
-
-/**
  * @brief  Constructs a new DeleteGitHubAccountTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.

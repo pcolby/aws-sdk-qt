@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new UpdateTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateTemplateResponse::UpdateTemplateResponse(
-
-/**
  * @brief  Constructs a new UpdateTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.

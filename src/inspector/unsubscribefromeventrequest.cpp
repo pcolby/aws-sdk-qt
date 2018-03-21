@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new UnsubscribeFromEventResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UnsubscribeFromEventResponse::UnsubscribeFromEventResponse(
-
-/**
  * @brief  Constructs a new UnsubscribeFromEventRequest object by copying another.
  *
  * @param  other  Instance to copy.

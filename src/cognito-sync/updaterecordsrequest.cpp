@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new UpdateRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRecordsResponse::UpdateRecordsResponse(
-
-/**
  * @brief  Constructs a new UpdateRecordsRequest object by copying another.
  *
  * @param  other  Instance to copy.

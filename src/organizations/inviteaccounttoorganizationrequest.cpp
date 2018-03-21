@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new InviteAccountToOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-InviteAccountToOrganizationResponse::InviteAccountToOrganizationResponse(
-
-/**
  * @brief  Constructs a new InviteAccountToOrganizationRequest object by copying another.
  *
  * @param  other  Instance to copy.

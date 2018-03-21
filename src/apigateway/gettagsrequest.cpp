@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTagsResponse::GetTagsResponse(
-
-/**
  * @brief  Constructs a new GetTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new SetDesiredCapacityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetDesiredCapacityResponse::SetDesiredCapacityResponse(
-
-/**
  * @brief  Constructs a new SetDesiredCapacityRequest object by copying another.
  *
  * @param  other  Instance to copy.

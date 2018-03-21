@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new DeprecateActivityTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeprecateActivityTypeResponse::DeprecateActivityTypeResponse(
-
-/**
  * @brief  Constructs a new DeprecateActivityTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

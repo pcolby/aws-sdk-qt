@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new DeleteStreamingDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteStreamingDistributionResponse::DeleteStreamingDistributionResponse(
-
-/**
  * @brief  Constructs a new DeleteStreamingDistributionRequest object by copying another.
  *
  * @param  other  Instance to copy.

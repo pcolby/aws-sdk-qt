@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new ListCuratedEnvironmentImagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListCuratedEnvironmentImagesResponse::ListCuratedEnvironmentImagesResponse(
-
-/**
  * @brief  Constructs a new ListCuratedEnvironmentImagesRequest object by copying another.
  *
  * @param  other  Instance to copy.

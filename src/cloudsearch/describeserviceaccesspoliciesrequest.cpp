@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DescribeServiceAccessPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeServiceAccessPoliciesResponse::DescribeServiceAccessPoliciesResponse(
-
-/**
  * @brief  Constructs a new DescribeServiceAccessPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

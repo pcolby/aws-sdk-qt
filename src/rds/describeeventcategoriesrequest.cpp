@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeEventCategoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
-
-/**
  * @brief  Constructs a new DescribeEventCategoriesRequest object by copying another.
  *
  * @param  other  Instance to copy.

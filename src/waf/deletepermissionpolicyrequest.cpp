@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new DeletePermissionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeletePermissionPolicyResponse::DeletePermissionPolicyResponse(
-
-/**
  * @brief  Constructs a new DeletePermissionPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

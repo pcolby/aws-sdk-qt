@@ -34,15 +34,6 @@ namespace MediaLive {
  */
 
 /**
- * @brief  Constructs a new StartChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartChannelResponse::StartChannelResponse(
-
-/**
  * @brief  Constructs a new StartChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

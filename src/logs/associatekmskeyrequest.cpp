@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new AssociateKmsKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateKmsKeyResponse::AssociateKmsKeyResponse(
-
-/**
  * @brief  Constructs a new AssociateKmsKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new UpdateRadiusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRadiusResponse::UpdateRadiusResponse(
-
-/**
  * @brief  Constructs a new UpdateRadiusRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Budgets {
  */
 
 /**
- * @brief  Constructs a new DeleteSubscriberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSubscriberResponse::DeleteSubscriberResponse(
-
-/**
  * @brief  Constructs a new DeleteSubscriberRequest object by copying another.
  *
  * @param  other  Instance to copy.

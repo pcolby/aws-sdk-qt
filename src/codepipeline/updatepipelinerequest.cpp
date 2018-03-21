@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new UpdatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdatePipelineResponse::UpdatePipelineResponse(
-
-/**
  * @brief  Constructs a new UpdatePipelineRequest object by copying another.
  *
  * @param  other  Instance to copy.

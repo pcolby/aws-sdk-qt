@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new StartPersonTrackingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartPersonTrackingResponse::StartPersonTrackingResponse(
-
-/**
  * @brief  Constructs a new StartPersonTrackingRequest object by copying another.
  *
  * @param  other  Instance to copy.

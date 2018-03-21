@@ -34,15 +34,6 @@ namespace CostandUsageReportService {
  */
 
 /**
- * @brief  Constructs a new PutReportDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutReportDefinitionResponse::PutReportDefinitionResponse(
-
-/**
  * @brief  Constructs a new PutReportDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new GetSuiteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetSuiteResponse::GetSuiteResponse(
-
-/**
  * @brief  Constructs a new GetSuiteRequest object by copying another.
  *
  * @param  other  Instance to copy.

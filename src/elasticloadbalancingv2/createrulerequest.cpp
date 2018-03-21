@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new CreateRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateRuleResponse::CreateRuleResponse(
-
-/**
  * @brief  Constructs a new CreateRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

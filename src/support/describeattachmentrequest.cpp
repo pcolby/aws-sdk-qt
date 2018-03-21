@@ -34,15 +34,6 @@ namespace Support {
  */
 
 /**
- * @brief  Constructs a new DescribeAttachmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeAttachmentResponse::DescribeAttachmentResponse(
-
-/**
  * @brief  Constructs a new DescribeAttachmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

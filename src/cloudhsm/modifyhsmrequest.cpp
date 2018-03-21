@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new ModifyHsmResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyHsmResponse::ModifyHsmResponse(
-
-/**
  * @brief  Constructs a new ModifyHsmRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeNetworkAclsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeNetworkAclsResponse::DescribeNetworkAclsResponse(
-
-/**
  * @brief  Constructs a new DescribeNetworkAclsRequest object by copying another.
  *
  * @param  other  Instance to copy.

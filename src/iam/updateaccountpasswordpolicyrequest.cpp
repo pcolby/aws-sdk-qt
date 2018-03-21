@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new UpdateAccountPasswordPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateAccountPasswordPolicyResponse::UpdateAccountPasswordPolicyResponse(
-
-/**
  * @brief  Constructs a new UpdateAccountPasswordPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

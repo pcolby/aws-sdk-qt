@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new AcceptHandshakeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AcceptHandshakeResponse::AcceptHandshakeResponse(
-
-/**
  * @brief  Constructs a new AcceptHandshakeRequest object by copying another.
  *
  * @param  other  Instance to copy.

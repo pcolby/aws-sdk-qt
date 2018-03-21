@@ -34,15 +34,6 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new DisableRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableRuleResponse::DisableRuleResponse(
-
-/**
  * @brief  Constructs a new DisableRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

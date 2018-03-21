@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new CreateQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateQualificationTypeResponse::CreateQualificationTypeResponse(
-
-/**
  * @brief  Constructs a new CreateQualificationTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

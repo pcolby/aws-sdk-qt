@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new UpdateFleetPortSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateFleetPortSettingsResponse::UpdateFleetPortSettingsResponse(
-
-/**
  * @brief  Constructs a new UpdateFleetPortSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

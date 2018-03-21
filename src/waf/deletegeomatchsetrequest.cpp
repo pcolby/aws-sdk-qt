@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new DeleteGeoMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
-
-/**
  * @brief  Constructs a new DeleteGeoMatchSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

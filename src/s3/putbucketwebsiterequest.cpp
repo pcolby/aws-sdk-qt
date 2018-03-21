@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketWebsiteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketWebsiteResponse::PutBucketWebsiteResponse(
-
-/**
  * @brief  Constructs a new PutBucketWebsiteRequest object by copying another.
  *
  * @param  other  Instance to copy.

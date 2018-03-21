@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new PutGroupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutGroupPolicyResponse::PutGroupPolicyResponse(
-
-/**
  * @brief  Constructs a new PutGroupPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

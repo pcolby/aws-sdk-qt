@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminUserGlobalSignOutResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminUserGlobalSignOutResponse::AdminUserGlobalSignOutResponse(
-
-/**
  * @brief  Constructs a new AdminUserGlobalSignOutRequest object by copying another.
  *
  * @param  other  Instance to copy.

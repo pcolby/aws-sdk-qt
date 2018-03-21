@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new ListPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListPoliciesResponse::ListPoliciesResponse(
-
-/**
  * @brief  Constructs a new ListPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

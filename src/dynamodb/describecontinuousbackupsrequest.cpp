@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new DescribeContinuousBackupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeContinuousBackupsResponse::DescribeContinuousBackupsResponse(
-
-/**
  * @brief  Constructs a new DescribeContinuousBackupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

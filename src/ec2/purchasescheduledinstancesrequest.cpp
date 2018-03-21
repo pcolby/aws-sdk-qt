@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new PurchaseScheduledInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PurchaseScheduledInstancesResponse::PurchaseScheduledInstancesResponse(
-
-/**
  * @brief  Constructs a new PurchaseScheduledInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

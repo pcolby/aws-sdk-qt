@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new GetCognitoEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCognitoEventsResponse::GetCognitoEventsResponse(
-
-/**
  * @brief  Constructs a new GetCognitoEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.

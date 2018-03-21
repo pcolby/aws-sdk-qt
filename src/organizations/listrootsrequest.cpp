@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new ListRootsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListRootsResponse::ListRootsResponse(
-
-/**
  * @brief  Constructs a new ListRootsRequest object by copying another.
  *
  * @param  other  Instance to copy.

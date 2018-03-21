@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new ResendConfirmationCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResendConfirmationCodeResponse::ResendConfirmationCodeResponse(
-
-/**
  * @brief  Constructs a new ResendConfirmationCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.

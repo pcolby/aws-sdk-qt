@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new ListTagsOfResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTagsOfResourceResponse::ListTagsOfResourceResponse(
-
-/**
  * @brief  Constructs a new ListTagsOfResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new DeleteStackSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteStackSetResponse::DeleteStackSetResponse(
-
-/**
  * @brief  Constructs a new DeleteStackSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

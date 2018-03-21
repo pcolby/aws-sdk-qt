@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new PutDeliveryChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutDeliveryChannelResponse::PutDeliveryChannelResponse(
-
-/**
  * @brief  Constructs a new PutDeliveryChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

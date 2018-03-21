@@ -34,15 +34,6 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new DeleteApplicationOutputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteApplicationOutputResponse::DeleteApplicationOutputResponse(
-
-/**
  * @brief  Constructs a new DeleteApplicationOutputRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new DescribeStepResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeStepResponse::DescribeStepResponse(
-
-/**
  * @brief  Constructs a new DescribeStepRequest object by copying another.
  *
  * @param  other  Instance to copy.

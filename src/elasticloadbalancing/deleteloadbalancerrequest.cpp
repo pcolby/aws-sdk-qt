@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new DeleteLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new DeleteLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

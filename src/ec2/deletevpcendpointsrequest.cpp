@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteVpcEndpointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteVpcEndpointsResponse::DeleteVpcEndpointsResponse(
-
-/**
  * @brief  Constructs a new DeleteVpcEndpointsRequest object by copying another.
  *
  * @param  other  Instance to copy.

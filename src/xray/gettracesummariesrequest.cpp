@@ -34,15 +34,6 @@ namespace XRay {
  */
 
 /**
- * @brief  Constructs a new GetTraceSummariesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTraceSummariesResponse::GetTraceSummariesResponse(
-
-/**
  * @brief  Constructs a new GetTraceSummariesRequest object by copying another.
  *
  * @param  other  Instance to copy.

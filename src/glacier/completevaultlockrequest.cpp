@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new CompleteVaultLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CompleteVaultLockResponse::CompleteVaultLockResponse(
-
-/**
  * @brief  Constructs a new CompleteVaultLockRequest object by copying another.
  *
  * @param  other  Instance to copy.

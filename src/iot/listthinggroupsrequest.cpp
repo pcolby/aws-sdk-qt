@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new ListThingGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListThingGroupsResponse::ListThingGroupsResponse(
-
-/**
  * @brief  Constructs a new ListThingGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

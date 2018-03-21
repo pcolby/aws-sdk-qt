@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new UpdateApplicationSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateApplicationSettingsResponse::UpdateApplicationSettingsResponse(
-
-/**
  * @brief  Constructs a new UpdateApplicationSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

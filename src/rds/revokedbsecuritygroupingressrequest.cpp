@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new RevokeDBSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RevokeDBSecurityGroupIngressResponse::RevokeDBSecurityGroupIngressResponse(
-
-/**
  * @brief  Constructs a new RevokeDBSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.

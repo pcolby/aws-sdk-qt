@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new ListWorkflowTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListWorkflowTypesResponse::ListWorkflowTypesResponse(
-
-/**
  * @brief  Constructs a new ListWorkflowTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.

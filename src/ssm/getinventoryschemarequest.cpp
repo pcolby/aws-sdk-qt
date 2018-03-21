@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new GetInventorySchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetInventorySchemaResponse::GetInventorySchemaResponse(
-
-/**
  * @brief  Constructs a new GetInventorySchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.

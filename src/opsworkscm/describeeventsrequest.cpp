@@ -34,15 +34,6 @@ namespace OpsWorksCM {
  */
 
 /**
- * @brief  Constructs a new DescribeEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEventsResponse::DescribeEventsResponse(
-
-/**
  * @brief  Constructs a new DescribeEventsRequest object by copying another.
  *
  * @param  other  Instance to copy.

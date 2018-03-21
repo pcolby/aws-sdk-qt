@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new DeleteApnsSandboxChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteApnsSandboxChannelResponse::DeleteApnsSandboxChannelResponse(
-
-/**
  * @brief  Constructs a new DeleteApnsSandboxChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new TerminateInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TerminateInstancesResponse::TerminateInstancesResponse(
-
-/**
  * @brief  Constructs a new TerminateInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

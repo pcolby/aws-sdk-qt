@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new StopMatchmakingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopMatchmakingResponse::StopMatchmakingResponse(
-
-/**
  * @brief  Constructs a new StopMatchmakingRequest object by copying another.
  *
  * @param  other  Instance to copy.

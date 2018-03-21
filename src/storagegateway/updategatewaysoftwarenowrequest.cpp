@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateGatewaySoftwareNowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateGatewaySoftwareNowResponse::UpdateGatewaySoftwareNowResponse(
-
-/**
  * @brief  Constructs a new UpdateGatewaySoftwareNowRequest object by copying another.
  *
  * @param  other  Instance to copy.

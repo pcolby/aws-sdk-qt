@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new ProvisionProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ProvisionProductResponse::ProvisionProductResponse(
-
-/**
  * @brief  Constructs a new ProvisionProductRequest object by copying another.
  *
  * @param  other  Instance to copy.

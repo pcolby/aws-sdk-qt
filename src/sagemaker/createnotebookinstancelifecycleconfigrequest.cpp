@@ -34,15 +34,6 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new CreateNotebookInstanceLifecycleConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateNotebookInstanceLifecycleConfigResponse::CreateNotebookInstanceLifecycleConfigResponse(
-
-/**
  * @brief  Constructs a new CreateNotebookInstanceLifecycleConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.

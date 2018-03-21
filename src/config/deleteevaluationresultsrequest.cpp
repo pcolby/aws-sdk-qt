@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new DeleteEvaluationResultsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEvaluationResultsResponse::DeleteEvaluationResultsResponse(
-
-/**
  * @brief  Constructs a new DeleteEvaluationResultsRequest object by copying another.
  *
  * @param  other  Instance to copy.

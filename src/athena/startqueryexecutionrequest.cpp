@@ -34,15 +34,6 @@ namespace Athena {
  */
 
 /**
- * @brief  Constructs a new StartQueryExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartQueryExecutionResponse::StartQueryExecutionResponse(
-
-/**
  * @brief  Constructs a new StartQueryExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

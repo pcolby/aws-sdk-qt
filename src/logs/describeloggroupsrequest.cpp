@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new DescribeLogGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeLogGroupsResponse::DescribeLogGroupsResponse(
-
-/**
  * @brief  Constructs a new DescribeLogGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

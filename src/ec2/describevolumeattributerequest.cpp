@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeVolumeAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVolumeAttributeResponse::DescribeVolumeAttributeResponse(
-
-/**
  * @brief  Constructs a new DescribeVolumeAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.

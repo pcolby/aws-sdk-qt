@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ResetSnapshotAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResetSnapshotAttributeResponse::ResetSnapshotAttributeResponse(
-
-/**
  * @brief  Constructs a new ResetSnapshotAttributeRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new PutImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutImageResponse::PutImageResponse(
-
-/**
  * @brief  Constructs a new PutImageRequest object by copying another.
  *
  * @param  other  Instance to copy.

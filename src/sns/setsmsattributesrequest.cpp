@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new SetSMSAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetSMSAttributesResponse::SetSMSAttributesResponse(
-
-/**
  * @brief  Constructs a new SetSMSAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

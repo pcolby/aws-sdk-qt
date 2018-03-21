@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new ShutdownGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ShutdownGatewayResponse::ShutdownGatewayResponse(
-
-/**
  * @brief  Constructs a new ShutdownGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.

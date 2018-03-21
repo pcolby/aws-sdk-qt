@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new InvokeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-InvokeResponse::InvokeResponse(
-
-/**
  * @brief  Constructs a new InvokeRequest object by copying another.
  *
  * @param  other  Instance to copy.

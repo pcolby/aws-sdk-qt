@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetIntegrationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetIntegrationResponse::GetIntegrationResponse(
-
-/**
  * @brief  Constructs a new GetIntegrationRequest object by copying another.
  *
  * @param  other  Instance to copy.

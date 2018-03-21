@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new UpdateAuthEventFeedbackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateAuthEventFeedbackResponse::UpdateAuthEventFeedbackResponse(
-
-/**
  * @brief  Constructs a new UpdateAuthEventFeedbackRequest object by copying another.
  *
  * @param  other  Instance to copy.

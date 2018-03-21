@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new UpdateIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateIPSetResponse::UpdateIPSetResponse(
-
-/**
  * @brief  Constructs a new UpdateIPSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

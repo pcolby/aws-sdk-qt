@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new ListTapesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTapesResponse::ListTapesResponse(
-
-/**
  * @brief  Constructs a new ListTapesRequest object by copying another.
  *
  * @param  other  Instance to copy.

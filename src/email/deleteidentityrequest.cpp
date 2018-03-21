@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new DeleteIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteIdentityResponse::DeleteIdentityResponse(
-
-/**
  * @brief  Constructs a new DeleteIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new GetContactReachabilityStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetContactReachabilityStatusResponse::GetContactReachabilityStatusResponse(
-
-/**
  * @brief  Constructs a new GetContactReachabilityStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

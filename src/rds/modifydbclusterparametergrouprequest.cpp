@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new ModifyDBClusterParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyDBClusterParameterGroupResponse::ModifyDBClusterParameterGroupResponse(
-
-/**
  * @brief  Constructs a new ModifyDBClusterParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

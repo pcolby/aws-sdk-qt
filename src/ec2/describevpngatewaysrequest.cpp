@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeVpnGatewaysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVpnGatewaysResponse::DescribeVpnGatewaysResponse(
-
-/**
  * @brief  Constructs a new DescribeVpnGatewaysRequest object by copying another.
  *
  * @param  other  Instance to copy.

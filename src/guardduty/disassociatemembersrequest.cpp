@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new DisassociateMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateMembersResponse::DisassociateMembersResponse(
-
-/**
  * @brief  Constructs a new DisassociateMembersRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteServiceLinkedRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteServiceLinkedRoleResponse::DeleteServiceLinkedRoleResponse(
-
-/**
  * @brief  Constructs a new DeleteServiceLinkedRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.

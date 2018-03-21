@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new ListPrincipalsForPortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListPrincipalsForPortfolioResponse::ListPrincipalsForPortfolioResponse(
-
-/**
  * @brief  Constructs a new ListPrincipalsForPortfolioRequest object by copying another.
  *
  * @param  other  Instance to copy.

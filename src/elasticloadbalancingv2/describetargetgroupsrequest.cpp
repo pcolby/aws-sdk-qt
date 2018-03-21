@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new DescribeTargetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTargetGroupsResponse::DescribeTargetGroupsResponse(
-
-/**
  * @brief  Constructs a new DescribeTargetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

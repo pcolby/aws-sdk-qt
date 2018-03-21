@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new GetChangeTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetChangeTokenResponse::GetChangeTokenResponse(
-
-/**
  * @brief  Constructs a new GetChangeTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.

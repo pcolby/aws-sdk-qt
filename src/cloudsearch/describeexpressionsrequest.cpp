@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DescribeExpressionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeExpressionsResponse::DescribeExpressionsResponse(
-
-/**
  * @brief  Constructs a new DescribeExpressionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MarketplaceCommerceAnalytics {
  */
 
 /**
- * @brief  Constructs a new StartSupportDataExportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartSupportDataExportResponse::StartSupportDataExportResponse(
-
-/**
  * @brief  Constructs a new StartSupportDataExportRequest object by copying another.
  *
  * @param  other  Instance to copy.

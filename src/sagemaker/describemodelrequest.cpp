@@ -34,15 +34,6 @@ namespace SageMaker {
  */
 
 /**
- * @brief  Constructs a new DescribeModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeModelResponse::DescribeModelResponse(
-
-/**
  * @brief  Constructs a new DescribeModelRequest object by copying another.
  *
  * @param  other  Instance to copy.

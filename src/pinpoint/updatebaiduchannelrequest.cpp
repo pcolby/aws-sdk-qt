@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new UpdateBaiduChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateBaiduChannelResponse::UpdateBaiduChannelResponse(
-
-/**
  * @brief  Constructs a new UpdateBaiduChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

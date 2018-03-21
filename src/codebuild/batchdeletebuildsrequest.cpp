@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new BatchDeleteBuildsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchDeleteBuildsResponse::BatchDeleteBuildsResponse(
-
-/**
  * @brief  Constructs a new BatchDeleteBuildsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new GetRuleGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetRuleGroupResponse::GetRuleGroupResponse(
-
-/**
  * @brief  Constructs a new GetRuleGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

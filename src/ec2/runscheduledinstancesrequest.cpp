@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new RunScheduledInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RunScheduledInstancesResponse::RunScheduledInstancesResponse(
-
-/**
  * @brief  Constructs a new RunScheduledInstancesRequest object by copying another.
  *
  * @param  other  Instance to copy.

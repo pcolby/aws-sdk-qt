@@ -34,15 +34,6 @@ namespace MigrationHub {
  */
 
 /**
- * @brief  Constructs a new ListProgressUpdateStreamsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListProgressUpdateStreamsResponse::ListProgressUpdateStreamsResponse(
-
-/**
  * @brief  Constructs a new ListProgressUpdateStreamsRequest object by copying another.
  *
  * @param  other  Instance to copy.

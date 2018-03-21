@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new StopBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopBuildResponse::StopBuildResponse(
-
-/**
  * @brief  Constructs a new StopBuildRequest object by copying another.
  *
  * @param  other  Instance to copy.

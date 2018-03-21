@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new DeleteRequestValidatorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
-
-/**
  * @brief  Constructs a new DeleteRequestValidatorRequest object by copying another.
  *
  * @param  other  Instance to copy.

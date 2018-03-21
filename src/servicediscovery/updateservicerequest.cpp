@@ -34,15 +34,6 @@ namespace ServiceDiscovery {
  */
 
 /**
- * @brief  Constructs a new UpdateServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateServiceResponse::UpdateServiceResponse(
-
-/**
  * @brief  Constructs a new UpdateServiceRequest object by copying another.
  *
  * @param  other  Instance to copy.

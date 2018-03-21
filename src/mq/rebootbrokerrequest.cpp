@@ -34,15 +34,6 @@ namespace MQ {
  */
 
 /**
- * @brief  Constructs a new RebootBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RebootBrokerResponse::RebootBrokerResponse(
-
-/**
  * @brief  Constructs a new RebootBrokerRequest object by copying another.
  *
  * @param  other  Instance to copy.

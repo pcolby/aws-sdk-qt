@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new ListObjectsV2Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListObjectsV2Response::ListObjectsV2Response(
-
-/**
  * @brief  Constructs a new ListObjectsV2Request object by copying another.
  *
  * @param  other  Instance to copy.

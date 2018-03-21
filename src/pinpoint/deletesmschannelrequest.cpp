@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new DeleteSmsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSmsChannelResponse::DeleteSmsChannelResponse(
-
-/**
  * @brief  Constructs a new DeleteSmsChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

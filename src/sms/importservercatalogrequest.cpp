@@ -34,15 +34,6 @@ namespace SMS {
  */
 
 /**
- * @brief  Constructs a new ImportServerCatalogResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ImportServerCatalogResponse::ImportServerCatalogResponse(
-
-/**
  * @brief  Constructs a new ImportServerCatalogRequest object by copying another.
  *
  * @param  other  Instance to copy.

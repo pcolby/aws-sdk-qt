@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetLoadBalancerPoliciesOfListenerResponse::SetLoadBalancerPoliciesOfListenerResponse(
-
-/**
  * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequest object by copying another.
  *
  * @param  other  Instance to copy.

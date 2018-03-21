@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new RejectQualificationRequestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RejectQualificationRequestResponse::RejectQualificationRequestResponse(
-
-/**
  * @brief  Constructs a new RejectQualificationRequestRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new ResetPasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResetPasswordResponse::ResetPasswordResponse(
-
-/**
  * @brief  Constructs a new ResetPasswordRequest object by copying another.
  *
  * @param  other  Instance to copy.

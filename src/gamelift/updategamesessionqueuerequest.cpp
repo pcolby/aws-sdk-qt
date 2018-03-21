@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new UpdateGameSessionQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateGameSessionQueueResponse::UpdateGameSessionQueueResponse(
-
-/**
  * @brief  Constructs a new UpdateGameSessionQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.

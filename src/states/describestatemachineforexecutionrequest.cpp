@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new DescribeStateMachineForExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeStateMachineForExecutionResponse::DescribeStateMachineForExecutionResponse(
-
-/**
  * @brief  Constructs a new DescribeStateMachineForExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

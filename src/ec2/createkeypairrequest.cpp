@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateKeyPairResponse::CreateKeyPairResponse(
-
-/**
  * @brief  Constructs a new CreateKeyPairRequest object by copying another.
  *
  * @param  other  Instance to copy.

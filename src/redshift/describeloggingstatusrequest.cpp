@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DescribeLoggingStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeLoggingStatusResponse::DescribeLoggingStatusResponse(
-
-/**
  * @brief  Constructs a new DescribeLoggingStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

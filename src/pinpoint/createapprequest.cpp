@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new CreateAppResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateAppResponse::CreateAppResponse(
-
-/**
  * @brief  Constructs a new CreateAppRequest object by copying another.
  *
  * @param  other  Instance to copy.

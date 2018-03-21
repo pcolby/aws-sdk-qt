@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AssociateRouteTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateRouteTableResponse::AssociateRouteTableResponse(
-
-/**
  * @brief  Constructs a new AssociateRouteTableRequest object by copying another.
  *
  * @param  other  Instance to copy.

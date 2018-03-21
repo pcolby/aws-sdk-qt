@@ -34,15 +34,6 @@ namespace Route53Domains {
  */
 
 /**
- * @brief  Constructs a new UpdateTagsForDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateTagsForDomainResponse::UpdateTagsForDomainResponse(
-
-/**
  * @brief  Constructs a new UpdateTagsForDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

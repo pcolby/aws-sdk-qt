@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new AddPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddPermissionResponse::AddPermissionResponse(
-
-/**
  * @brief  Constructs a new AddPermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new CancelExportTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelExportTaskResponse::CancelExportTaskResponse(
-
-/**
  * @brief  Constructs a new CancelExportTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

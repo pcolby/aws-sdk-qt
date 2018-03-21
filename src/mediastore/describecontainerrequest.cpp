@@ -34,15 +34,6 @@ namespace MediaStore {
  */
 
 /**
- * @brief  Constructs a new DescribeContainerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeContainerResponse::DescribeContainerResponse(
-
-/**
  * @brief  Constructs a new DescribeContainerRequest object by copying another.
  *
  * @param  other  Instance to copy.

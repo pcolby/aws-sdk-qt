@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new BundleInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BundleInstanceResponse::BundleInstanceResponse(
-
-/**
  * @brief  Constructs a new BundleInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

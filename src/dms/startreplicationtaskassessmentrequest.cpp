@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new StartReplicationTaskAssessmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartReplicationTaskAssessmentResponse::StartReplicationTaskAssessmentResponse(
-
-/**
  * @brief  Constructs a new StartReplicationTaskAssessmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

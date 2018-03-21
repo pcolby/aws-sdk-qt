@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new TerminateWorkflowExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TerminateWorkflowExecutionResponse::TerminateWorkflowExecutionResponse(
-
-/**
  * @brief  Constructs a new TerminateWorkflowExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

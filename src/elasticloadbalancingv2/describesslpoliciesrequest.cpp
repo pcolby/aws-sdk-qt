@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new DescribeSSLPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeSSLPoliciesResponse::DescribeSSLPoliciesResponse(
-
-/**
  * @brief  Constructs a new DescribeSSLPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

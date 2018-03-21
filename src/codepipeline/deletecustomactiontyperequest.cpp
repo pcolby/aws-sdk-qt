@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new DeleteCustomActionTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteCustomActionTypeResponse::DeleteCustomActionTypeResponse(
-
-/**
  * @brief  Constructs a new DeleteCustomActionTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new DeleteDevicePoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDevicePoolResponse::DeleteDevicePoolResponse(
-
-/**
  * @brief  Constructs a new DeleteDevicePoolRequest object by copying another.
  *
  * @param  other  Instance to copy.

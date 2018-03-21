@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new UpdateCampaignResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateCampaignResponse::UpdateCampaignResponse(
-
-/**
  * @brief  Constructs a new UpdateCampaignRequest object by copying another.
  *
  * @param  other  Instance to copy.

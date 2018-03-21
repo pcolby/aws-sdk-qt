@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new DescribeInstanceHealthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeInstanceHealthResponse::DescribeInstanceHealthResponse(
-
-/**
  * @brief  Constructs a new DescribeInstanceHealthRequest object by copying another.
  *
  * @param  other  Instance to copy.

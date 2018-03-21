@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new UpdateDevicePoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateDevicePoolResponse::UpdateDevicePoolResponse(
-
-/**
  * @brief  Constructs a new UpdateDevicePoolRequest object by copying another.
  *
  * @param  other  Instance to copy.

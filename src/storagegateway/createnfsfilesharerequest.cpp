@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new CreateNFSFileShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateNFSFileShareResponse::CreateNFSFileShareResponse(
-
-/**
  * @brief  Constructs a new CreateNFSFileShareRequest object by copying another.
  *
  * @param  other  Instance to copy.

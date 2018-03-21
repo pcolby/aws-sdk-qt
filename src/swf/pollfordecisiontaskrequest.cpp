@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new PollForDecisionTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PollForDecisionTaskResponse::PollForDecisionTaskResponse(
-
-/**
  * @brief  Constructs a new PollForDecisionTaskRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new UpdateRuntimeConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRuntimeConfigurationResponse::UpdateRuntimeConfigurationResponse(
-
-/**
  * @brief  Constructs a new UpdateRuntimeConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

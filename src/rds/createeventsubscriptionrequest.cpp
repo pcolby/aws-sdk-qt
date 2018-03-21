@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new CreateEventSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
-
-/**
  * @brief  Constructs a new CreateEventSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DeprecateThingTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeprecateThingTypeResponse::DeprecateThingTypeResponse(
-
-/**
  * @brief  Constructs a new DeprecateThingTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

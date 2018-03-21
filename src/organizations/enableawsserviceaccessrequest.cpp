@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new EnableAWSServiceAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EnableAWSServiceAccessResponse::EnableAWSServiceAccessResponse(
-
-/**
  * @brief  Constructs a new EnableAWSServiceAccessRequest object by copying another.
  *
  * @param  other  Instance to copy.

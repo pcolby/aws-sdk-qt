@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new GetFindingsStatisticsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetFindingsStatisticsResponse::GetFindingsStatisticsResponse(
-
-/**
  * @brief  Constructs a new GetFindingsStatisticsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifySnapshotCopyRetentionPeriodResponse::ModifySnapshotCopyRetentionPeriodResponse(
-
-/**
  * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequest object by copying another.
  *
  * @param  other  Instance to copy.

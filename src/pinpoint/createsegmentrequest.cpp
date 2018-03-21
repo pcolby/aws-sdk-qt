@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new CreateSegmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSegmentResponse::CreateSegmentResponse(
-
-/**
  * @brief  Constructs a new CreateSegmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

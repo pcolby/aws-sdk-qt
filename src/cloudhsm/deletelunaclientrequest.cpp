@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new DeleteLunaClientResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLunaClientResponse::DeleteLunaClientResponse(
-
-/**
  * @brief  Constructs a new DeleteLunaClientRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DeleteActivationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteActivationResponse::DeleteActivationResponse(
-
-/**
  * @brief  Constructs a new DeleteActivationRequest object by copying another.
  *
  * @param  other  Instance to copy.

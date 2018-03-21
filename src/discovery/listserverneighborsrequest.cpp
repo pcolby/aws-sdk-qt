@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new ListServerNeighborsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListServerNeighborsResponse::ListServerNeighborsResponse(
-
-/**
  * @brief  Constructs a new ListServerNeighborsRequest object by copying another.
  *
  * @param  other  Instance to copy.

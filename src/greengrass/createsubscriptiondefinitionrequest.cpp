@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new CreateSubscriptionDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateSubscriptionDefinitionResponse::CreateSubscriptionDefinitionResponse(
-
-/**
  * @brief  Constructs a new CreateSubscriptionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminInitiateAuthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminInitiateAuthResponse::AdminInitiateAuthResponse(
-
-/**
  * @brief  Constructs a new AdminInitiateAuthRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new DeleteClassifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteClassifierResponse::DeleteClassifierResponse(
-
-/**
  * @brief  Constructs a new DeleteClassifierRequest object by copying another.
  *
  * @param  other  Instance to copy.

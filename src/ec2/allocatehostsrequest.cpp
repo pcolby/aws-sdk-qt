@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AllocateHostsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AllocateHostsResponse::AllocateHostsResponse(
-
-/**
  * @brief  Constructs a new AllocateHostsRequest object by copying another.
  *
  * @param  other  Instance to copy.

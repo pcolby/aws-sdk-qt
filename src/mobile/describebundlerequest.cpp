@@ -34,15 +34,6 @@ namespace Mobile {
  */
 
 /**
- * @brief  Constructs a new DescribeBundleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeBundleResponse::DescribeBundleResponse(
-
-/**
  * @brief  Constructs a new DescribeBundleRequest object by copying another.
  *
  * @param  other  Instance to copy.

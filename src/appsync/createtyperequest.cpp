@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new CreateTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateTypeResponse::CreateTypeResponse(
-
-/**
  * @brief  Constructs a new CreateTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

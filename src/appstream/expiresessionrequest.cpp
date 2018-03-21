@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new ExpireSessionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ExpireSessionResponse::ExpireSessionResponse(
-
-/**
  * @brief  Constructs a new ExpireSessionRequest object by copying another.
  *
  * @param  other  Instance to copy.

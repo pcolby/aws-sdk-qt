@@ -34,15 +34,6 @@ namespace Cloud9 {
  */
 
 /**
- * @brief  Constructs a new CreateEnvironmentMembershipResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateEnvironmentMembershipResponse::CreateEnvironmentMembershipResponse(
-
-/**
  * @brief  Constructs a new CreateEnvironmentMembershipRequest object by copying another.
  *
  * @param  other  Instance to copy.

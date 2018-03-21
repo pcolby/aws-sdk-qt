@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new DescribeTimeToLiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTimeToLiveResponse::DescribeTimeToLiveResponse(
-
-/**
  * @brief  Constructs a new DescribeTimeToLiveRequest object by copying another.
  *
  * @param  other  Instance to copy.

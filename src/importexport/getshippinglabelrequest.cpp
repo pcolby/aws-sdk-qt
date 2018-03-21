@@ -34,15 +34,6 @@ namespace ImportExport {
  */
 
 /**
- * @brief  Constructs a new GetShippingLabelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetShippingLabelResponse::GetShippingLabelResponse(
-
-/**
  * @brief  Constructs a new GetShippingLabelRequest object by copying another.
  *
  * @param  other  Instance to copy.

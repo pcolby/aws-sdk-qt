@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AttachVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachVolumeResponse::AttachVolumeResponse(
-
-/**
  * @brief  Constructs a new AttachVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.

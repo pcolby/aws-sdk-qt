@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new CancelSchemaExtensionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CancelSchemaExtensionResponse::CancelSchemaExtensionResponse(
-
-/**
  * @brief  Constructs a new CancelSchemaExtensionRequest object by copying another.
  *
  * @param  other  Instance to copy.

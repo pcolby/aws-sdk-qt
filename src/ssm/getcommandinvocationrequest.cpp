@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new GetCommandInvocationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCommandInvocationResponse::GetCommandInvocationResponse(
-
-/**
  * @brief  Constructs a new GetCommandInvocationRequest object by copying another.
  *
  * @param  other  Instance to copy.

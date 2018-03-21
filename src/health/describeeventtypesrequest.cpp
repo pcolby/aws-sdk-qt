@@ -34,15 +34,6 @@ namespace Health {
  */
 
 /**
- * @brief  Constructs a new DescribeEventTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEventTypesResponse::DescribeEventTypesResponse(
-
-/**
  * @brief  Constructs a new DescribeEventTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.

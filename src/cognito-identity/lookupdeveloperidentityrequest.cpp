@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new LookupDeveloperIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-LookupDeveloperIdentityResponse::LookupDeveloperIdentityResponse(
-
-/**
  * @brief  Constructs a new LookupDeveloperIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.

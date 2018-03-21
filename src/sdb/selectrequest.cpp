@@ -34,15 +34,6 @@ namespace SimpleDB {
  */
 
 /**
- * @brief  Constructs a new SelectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SelectResponse::SelectResponse(
-
-/**
  * @brief  Constructs a new SelectRequest object by copying another.
  *
  * @param  other  Instance to copy.

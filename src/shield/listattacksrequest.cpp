@@ -34,15 +34,6 @@ namespace Shield {
  */
 
 /**
- * @brief  Constructs a new ListAttacksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAttacksResponse::ListAttacksResponse(
-
-/**
  * @brief  Constructs a new ListAttacksRequest object by copying another.
  *
  * @param  other  Instance to copy.

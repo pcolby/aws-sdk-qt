@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ReplaceRouteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ReplaceRouteResponse::ReplaceRouteResponse(
-
-/**
  * @brief  Constructs a new ReplaceRouteRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new PutRetentionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutRetentionPolicyResponse::PutRetentionPolicyResponse(
-
-/**
  * @brief  Constructs a new PutRetentionPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

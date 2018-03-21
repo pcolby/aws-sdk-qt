@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new UpdateConfigurationTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateConfigurationTemplateResponse::UpdateConfigurationTemplateResponse(
-
-/**
  * @brief  Constructs a new UpdateConfigurationTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.

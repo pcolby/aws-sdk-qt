@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeValidDBInstanceModificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeValidDBInstanceModificationsResponse::DescribeValidDBInstanceModificationsResponse(
-
-/**
  * @brief  Constructs a new DescribeValidDBInstanceModificationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

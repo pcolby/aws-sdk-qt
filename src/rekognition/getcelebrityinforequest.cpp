@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new GetCelebrityInfoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCelebrityInfoResponse::GetCelebrityInfoResponse(
-
-/**
  * @brief  Constructs a new GetCelebrityInfoRequest object by copying another.
  *
  * @param  other  Instance to copy.

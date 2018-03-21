@@ -34,15 +34,6 @@ namespace WAFRegional {
  */
 
 /**
- * @brief  Constructs a new ListSizeConstraintSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
-
-/**
  * @brief  Constructs a new ListSizeConstraintSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

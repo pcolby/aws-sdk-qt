@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketRequestPaymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketRequestPaymentResponse::GetBucketRequestPaymentResponse(
-
-/**
  * @brief  Constructs a new GetBucketRequestPaymentRequest object by copying another.
  *
  * @param  other  Instance to copy.

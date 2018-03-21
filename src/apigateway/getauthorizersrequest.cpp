@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetAuthorizersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAuthorizersResponse::GetAuthorizersResponse(
-
-/**
  * @brief  Constructs a new GetAuthorizersRequest object by copying another.
  *
  * @param  other  Instance to copy.

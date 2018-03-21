@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new GetAccountBalanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAccountBalanceResponse::GetAccountBalanceResponse(
-
-/**
  * @brief  Constructs a new GetAccountBalanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ACM {
  */
 
 /**
- * @brief  Constructs a new ResendValidationEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResendValidationEmailResponse::ResendValidationEmailResponse(
-
-/**
  * @brief  Constructs a new ResendValidationEmailRequest object by copying another.
  *
  * @param  other  Instance to copy.

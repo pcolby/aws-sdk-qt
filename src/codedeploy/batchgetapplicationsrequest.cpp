@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new BatchGetApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchGetApplicationsResponse::BatchGetApplicationsResponse(
-
-/**
  * @brief  Constructs a new BatchGetApplicationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

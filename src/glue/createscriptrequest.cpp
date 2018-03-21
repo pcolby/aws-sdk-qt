@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new CreateScriptResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateScriptResponse::CreateScriptResponse(
-
-/**
  * @brief  Constructs a new CreateScriptRequest object by copying another.
  *
  * @param  other  Instance to copy.

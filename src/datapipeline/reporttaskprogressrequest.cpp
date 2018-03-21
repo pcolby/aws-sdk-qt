@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new ReportTaskProgressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ReportTaskProgressResponse::ReportTaskProgressResponse(
-
-/**
  * @brief  Constructs a new ReportTaskProgressRequest object by copying another.
  *
  * @param  other  Instance to copy.

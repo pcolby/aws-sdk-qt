@@ -34,15 +34,6 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new IncreaseReplicationFactorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-IncreaseReplicationFactorResponse::IncreaseReplicationFactorResponse(
-
-/**
  * @brief  Constructs a new IncreaseReplicationFactorRequest object by copying another.
  *
  * @param  other  Instance to copy.

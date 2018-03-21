@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new UpdateSSHPublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSSHPublicKeyResponse::UpdateSSHPublicKeyResponse(
-
-/**
  * @brief  Constructs a new UpdateSSHPublicKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.

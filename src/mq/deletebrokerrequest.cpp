@@ -34,15 +34,6 @@ namespace MQ {
  */
 
 /**
- * @brief  Constructs a new DeleteBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBrokerResponse::DeleteBrokerResponse(
-
-/**
  * @brief  Constructs a new DeleteBrokerRequest object by copying another.
  *
  * @param  other  Instance to copy.

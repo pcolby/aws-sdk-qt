@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new EnableStageTransitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EnableStageTransitionResponse::EnableStageTransitionResponse(
-
-/**
  * @brief  Constructs a new EnableStageTransitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

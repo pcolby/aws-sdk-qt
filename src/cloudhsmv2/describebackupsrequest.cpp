@@ -34,15 +34,6 @@ namespace CloudHSMV2 {
  */
 
 /**
- * @brief  Constructs a new DescribeBackupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeBackupsResponse::DescribeBackupsResponse(
-
-/**
  * @brief  Constructs a new DescribeBackupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace KMS {
  */
 
 /**
- * @brief  Constructs a new GetKeyRotationStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetKeyRotationStatusResponse::GetKeyRotationStatusResponse(
-
-/**
  * @brief  Constructs a new GetKeyRotationStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

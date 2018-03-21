@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new CreatePublicVirtualInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreatePublicVirtualInterfaceResponse::CreatePublicVirtualInterfaceResponse(
-
-/**
  * @brief  Constructs a new CreatePublicVirtualInterfaceRequest object by copying another.
  *
  * @param  other  Instance to copy.

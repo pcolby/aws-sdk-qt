@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DeletePatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeletePatchBaselineResponse::DeletePatchBaselineResponse(
-
-/**
  * @brief  Constructs a new DeletePatchBaselineRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new PurchaseProvisionedCapacityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PurchaseProvisionedCapacityResponse::PurchaseProvisionedCapacityResponse(
-
-/**
  * @brief  Constructs a new PurchaseProvisionedCapacityRequest object by copying another.
  *
  * @param  other  Instance to copy.

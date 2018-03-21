@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new ListDeploymentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListDeploymentsResponse::ListDeploymentsResponse(
-
-/**
  * @brief  Constructs a new ListDeploymentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

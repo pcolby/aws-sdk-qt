@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new CreateBackupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateBackupResponse::CreateBackupResponse(
-
-/**
  * @brief  Constructs a new CreateBackupRequest object by copying another.
  *
  * @param  other  Instance to copy.

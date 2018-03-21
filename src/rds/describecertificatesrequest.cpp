@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeCertificatesResponse::DescribeCertificatesResponse(
-
-/**
  * @brief  Constructs a new DescribeCertificatesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace IoTDataPlane {
  */
 
 /**
- * @brief  Constructs a new UpdateThingShadowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateThingShadowResponse::UpdateThingShadowResponse(
-
-/**
  * @brief  Constructs a new UpdateThingShadowRequest object by copying another.
  *
  * @param  other  Instance to copy.

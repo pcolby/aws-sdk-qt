@@ -34,15 +34,6 @@ namespace SageMakerRuntime {
  */
 
 /**
- * @brief  Constructs a new InvokeEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-InvokeEndpointResponse::InvokeEndpointResponse(
-
-/**
  * @brief  Constructs a new InvokeEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

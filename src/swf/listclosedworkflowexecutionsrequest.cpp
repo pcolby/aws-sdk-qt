@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new ListClosedWorkflowExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListClosedWorkflowExecutionsResponse::ListClosedWorkflowExecutionsResponse(
-
-/**
  * @brief  Constructs a new ListClosedWorkflowExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

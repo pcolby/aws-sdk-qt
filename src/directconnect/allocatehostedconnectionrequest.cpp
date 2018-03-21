@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new AllocateHostedConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AllocateHostedConnectionResponse::AllocateHostedConnectionResponse(
-
-/**
  * @brief  Constructs a new AllocateHostedConnectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminConfirmSignUpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminConfirmSignUpResponse::AdminConfirmSignUpResponse(
-
-/**
  * @brief  Constructs a new AdminConfirmSignUpRequest object by copying another.
  *
  * @param  other  Instance to copy.

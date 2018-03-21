@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new ListIdentityPoolUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListIdentityPoolUsageResponse::ListIdentityPoolUsageResponse(
-
-/**
  * @brief  Constructs a new ListIdentityPoolUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.

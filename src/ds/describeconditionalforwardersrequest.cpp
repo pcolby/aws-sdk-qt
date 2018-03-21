@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new DescribeConditionalForwardersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeConditionalForwardersResponse::DescribeConditionalForwardersResponse(
-
-/**
  * @brief  Constructs a new DescribeConditionalForwardersRequest object by copying another.
  *
  * @param  other  Instance to copy.

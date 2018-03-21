@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new AssociateQualificationWithWorkerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateQualificationWithWorkerResponse::AssociateQualificationWithWorkerResponse(
-
-/**
  * @brief  Constructs a new AssociateQualificationWithWorkerRequest object by copying another.
  *
  * @param  other  Instance to copy.

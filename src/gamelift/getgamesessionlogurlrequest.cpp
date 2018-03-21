@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new GetGameSessionLogUrlResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetGameSessionLogUrlResponse::GetGameSessionLogUrlResponse(
-
-/**
  * @brief  Constructs a new GetGameSessionLogUrlRequest object by copying another.
  *
  * @param  other  Instance to copy.

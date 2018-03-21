@@ -34,15 +34,6 @@ namespace MQ {
  */
 
 /**
- * @brief  Constructs a new CreateBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateBrokerResponse::CreateBrokerResponse(
-
-/**
  * @brief  Constructs a new CreateBrokerRequest object by copying another.
  *
  * @param  other  Instance to copy.

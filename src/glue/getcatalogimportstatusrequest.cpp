@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new GetCatalogImportStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetCatalogImportStatusResponse::GetCatalogImportStatusResponse(
-
-/**
  * @brief  Constructs a new GetCatalogImportStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

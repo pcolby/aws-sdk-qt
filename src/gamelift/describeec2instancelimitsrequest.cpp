@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new DescribeEC2InstanceLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEC2InstanceLimitsResponse::DescribeEC2InstanceLimitsResponse(
-
-/**
  * @brief  Constructs a new DescribeEC2InstanceLimitsRequest object by copying another.
  *
  * @param  other  Instance to copy.

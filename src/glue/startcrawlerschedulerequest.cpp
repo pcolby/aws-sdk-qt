@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new StartCrawlerScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartCrawlerScheduleResponse::StartCrawlerScheduleResponse(
-
-/**
  * @brief  Constructs a new StartCrawlerScheduleRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new DeleteDestinationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDestinationResponse::DeleteDestinationResponse(
-
-/**
  * @brief  Constructs a new DeleteDestinationRequest object by copying another.
  *
  * @param  other  Instance to copy.

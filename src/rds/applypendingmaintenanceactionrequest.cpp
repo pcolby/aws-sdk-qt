@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new ApplyPendingMaintenanceActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ApplyPendingMaintenanceActionResponse::ApplyPendingMaintenanceActionResponse(
-
-/**
  * @brief  Constructs a new ApplyPendingMaintenanceActionRequest object by copying another.
  *
  * @param  other  Instance to copy.

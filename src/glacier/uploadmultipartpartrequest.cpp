@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new UploadMultipartPartResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UploadMultipartPartResponse::UploadMultipartPartResponse(
-
-/**
  * @brief  Constructs a new UploadMultipartPartRequest object by copying another.
  *
  * @param  other  Instance to copy.

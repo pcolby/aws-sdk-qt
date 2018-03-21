@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new CreateBasePathMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateBasePathMappingResponse::CreateBasePathMappingResponse(
-
-/**
  * @brief  Constructs a new CreateBasePathMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.

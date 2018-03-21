@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new ListTaskDefinitionFamiliesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTaskDefinitionFamiliesResponse::ListTaskDefinitionFamiliesResponse(
-
-/**
  * @brief  Constructs a new ListTaskDefinitionFamiliesRequest object by copying another.
  *
  * @param  other  Instance to copy.

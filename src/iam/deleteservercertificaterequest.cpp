@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteServerCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteServerCertificateResponse::DeleteServerCertificateResponse(
-
-/**
  * @brief  Constructs a new DeleteServerCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

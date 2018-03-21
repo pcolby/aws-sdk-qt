@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new StopAutomationExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StopAutomationExecutionResponse::StopAutomationExecutionResponse(
-
-/**
  * @brief  Constructs a new StopAutomationExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

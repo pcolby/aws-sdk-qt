@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new TestDNSAnswerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TestDNSAnswerResponse::TestDNSAnswerResponse(
-
-/**
  * @brief  Constructs a new TestDNSAnswerRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new DescribeApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeApplicationsResponse::DescribeApplicationsResponse(
-
-/**
  * @brief  Constructs a new DescribeApplicationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

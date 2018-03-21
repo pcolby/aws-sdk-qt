@@ -34,15 +34,6 @@ namespace MediaConvert {
  */
 
 /**
- * @brief  Constructs a new ListPresetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListPresetsResponse::ListPresetsResponse(
-
-/**
  * @brief  Constructs a new ListPresetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

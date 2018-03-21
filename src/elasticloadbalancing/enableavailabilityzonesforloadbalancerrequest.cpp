@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new EnableAvailabilityZonesForLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EnableAvailabilityZonesForLoadBalancerResponse::EnableAvailabilityZonesForLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new EnableAvailabilityZonesForLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

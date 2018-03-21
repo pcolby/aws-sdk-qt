@@ -34,15 +34,6 @@ namespace ApplicationDiscoveryService {
  */
 
 /**
- * @brief  Constructs a new DescribeAgentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeAgentsResponse::DescribeAgentsResponse(
-
-/**
  * @brief  Constructs a new DescribeAgentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

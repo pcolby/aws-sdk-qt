@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new GetUserAttributeVerificationCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetUserAttributeVerificationCodeResponse::GetUserAttributeVerificationCodeResponse(
-
-/**
  * @brief  Constructs a new GetUserAttributeVerificationCodeRequest object by copying another.
  *
  * @param  other  Instance to copy.

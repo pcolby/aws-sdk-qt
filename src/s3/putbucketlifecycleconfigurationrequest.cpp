@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketLifecycleConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketLifecycleConfigurationResponse::PutBucketLifecycleConfigurationResponse(
-
-/**
  * @brief  Constructs a new PutBucketLifecycleConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

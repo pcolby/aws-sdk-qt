@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DescribeUploadBufferResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeUploadBufferResponse::DescribeUploadBufferResponse(
-
-/**
  * @brief  Constructs a new DescribeUploadBufferRequest object by copying another.
  *
  * @param  other  Instance to copy.

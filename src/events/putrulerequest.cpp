@@ -34,15 +34,6 @@ namespace CloudWatchEvents {
  */
 
 /**
- * @brief  Constructs a new PutRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutRuleResponse::PutRuleResponse(
-
-/**
  * @brief  Constructs a new PutRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

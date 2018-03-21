@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new RemoveTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveTagsResponse::RemoveTagsResponse(
-
-/**
  * @brief  Constructs a new RemoveTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

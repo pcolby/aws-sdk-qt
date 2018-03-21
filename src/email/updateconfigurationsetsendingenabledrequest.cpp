@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new UpdateConfigurationSetSendingEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateConfigurationSetSendingEnabledResponse::UpdateConfigurationSetSendingEnabledResponse(
-
-/**
  * @brief  Constructs a new UpdateConfigurationSetSendingEnabledRequest object by copying another.
  *
  * @param  other  Instance to copy.

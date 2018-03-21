@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new RestoreDBInstanceToPointInTimeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RestoreDBInstanceToPointInTimeResponse::RestoreDBInstanceToPointInTimeResponse(
-
-/**
  * @brief  Constructs a new RestoreDBInstanceToPointInTimeRequest object by copying another.
  *
  * @param  other  Instance to copy.

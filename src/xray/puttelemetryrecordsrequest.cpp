@@ -34,15 +34,6 @@ namespace XRay {
  */
 
 /**
- * @brief  Constructs a new PutTelemetryRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutTelemetryRecordsResponse::PutTelemetryRecordsResponse(
-
-/**
  * @brief  Constructs a new PutTelemetryRecordsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new TestRenderTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TestRenderTemplateResponse::TestRenderTemplateResponse(
-
-/**
  * @brief  Constructs a new TestRenderTemplateRequest object by copying another.
  *
  * @param  other  Instance to copy.

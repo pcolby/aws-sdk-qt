@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new SendMessageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SendMessageResponse::SendMessageResponse(
-
-/**
  * @brief  Constructs a new SendMessageRequest object by copying another.
  *
  * @param  other  Instance to copy.

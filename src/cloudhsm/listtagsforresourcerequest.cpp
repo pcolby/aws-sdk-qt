@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new ListTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTagsForResourceResponse::ListTagsForResourceResponse(
-
-/**
  * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new DeleteLaunchConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteLaunchConfigurationResponse::DeleteLaunchConfigurationResponse(
-
-/**
  * @brief  Constructs a new DeleteLaunchConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

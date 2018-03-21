@@ -34,15 +34,6 @@ namespace TranscribeService {
  */
 
 /**
- * @brief  Constructs a new ListTranscriptionJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTranscriptionJobsResponse::ListTranscriptionJobsResponse(
-
-/**
  * @brief  Constructs a new ListTranscriptionJobsRequest object by copying another.
  *
  * @param  other  Instance to copy.

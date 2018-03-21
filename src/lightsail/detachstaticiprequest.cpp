@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new DetachStaticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachStaticIpResponse::DetachStaticIpResponse(
-
-/**
  * @brief  Constructs a new DetachStaticIpRequest object by copying another.
  *
  * @param  other  Instance to copy.

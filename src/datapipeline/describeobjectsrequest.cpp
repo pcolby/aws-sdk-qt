@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new DescribeObjectsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeObjectsResponse::DescribeObjectsResponse(
-
-/**
  * @brief  Constructs a new DescribeObjectsRequest object by copying another.
  *
  * @param  other  Instance to copy.

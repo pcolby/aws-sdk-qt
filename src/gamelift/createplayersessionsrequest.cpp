@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new CreatePlayerSessionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreatePlayerSessionsResponse::CreatePlayerSessionsResponse(
-
-/**
  * @brief  Constructs a new CreatePlayerSessionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

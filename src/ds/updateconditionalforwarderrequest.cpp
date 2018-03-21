@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new UpdateConditionalForwarderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateConditionalForwarderResponse::UpdateConditionalForwarderResponse(
-
-/**
  * @brief  Constructs a new UpdateConditionalForwarderRequest object by copying another.
  *
  * @param  other  Instance to copy.

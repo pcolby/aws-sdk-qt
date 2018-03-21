@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new RotateEncryptionKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RotateEncryptionKeyResponse::RotateEncryptionKeyResponse(
-
-/**
  * @brief  Constructs a new RotateEncryptionKeyRequest object by copying another.
  *
  * @param  other  Instance to copy.

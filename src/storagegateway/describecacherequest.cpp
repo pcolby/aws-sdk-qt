@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DescribeCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeCacheResponse::DescribeCacheResponse(
-
-/**
  * @brief  Constructs a new DescribeCacheRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new EnableVolumeIOResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EnableVolumeIOResponse::EnableVolumeIOResponse(
-
-/**
  * @brief  Constructs a new EnableVolumeIORequest object by copying another.
  *
  * @param  other  Instance to copy.

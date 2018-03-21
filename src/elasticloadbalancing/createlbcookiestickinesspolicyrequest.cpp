@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new CreateLBCookieStickinessPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateLBCookieStickinessPolicyResponse::CreateLBCookieStickinessPolicyResponse(
-
-/**
  * @brief  Constructs a new CreateLBCookieStickinessPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

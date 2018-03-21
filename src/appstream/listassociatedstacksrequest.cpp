@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new ListAssociatedStacksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAssociatedStacksResponse::ListAssociatedStacksResponse(
-
-/**
  * @brief  Constructs a new ListAssociatedStacksRequest object by copying another.
  *
  * @param  other  Instance to copy.

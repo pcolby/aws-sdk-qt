@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new ListLunaClientsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListLunaClientsResponse::ListLunaClientsResponse(
-
-/**
  * @brief  Constructs a new ListLunaClientsRequest object by copying another.
  *
  * @param  other  Instance to copy.

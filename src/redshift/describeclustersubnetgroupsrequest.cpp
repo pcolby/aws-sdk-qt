@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DescribeClusterSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeClusterSubnetGroupsResponse::DescribeClusterSubnetGroupsResponse(
-
-/**
  * @brief  Constructs a new DescribeClusterSubnetGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

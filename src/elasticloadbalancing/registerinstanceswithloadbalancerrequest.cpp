@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new RegisterInstancesWithLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RegisterInstancesWithLoadBalancerResponse::RegisterInstancesWithLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new RegisterInstancesWithLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

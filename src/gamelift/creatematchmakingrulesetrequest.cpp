@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new CreateMatchmakingRuleSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateMatchmakingRuleSetResponse::CreateMatchmakingRuleSetResponse(
-
-/**
  * @brief  Constructs a new CreateMatchmakingRuleSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

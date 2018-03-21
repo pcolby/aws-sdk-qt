@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new PutEventStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutEventStreamResponse::PutEventStreamResponse(
-
-/**
  * @brief  Constructs a new PutEventStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

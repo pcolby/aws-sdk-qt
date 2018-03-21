@@ -34,15 +34,6 @@ namespace OpsWorksCM {
  */
 
 /**
- * @brief  Constructs a new UpdateServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateServerResponse::UpdateServerResponse(
-
-/**
  * @brief  Constructs a new UpdateServerRequest object by copying another.
  *
  * @param  other  Instance to copy.

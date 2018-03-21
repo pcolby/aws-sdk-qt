@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new UpdateFolderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateFolderResponse::UpdateFolderResponse(
-
-/**
  * @brief  Constructs a new UpdateFolderRequest object by copying another.
  *
  * @param  other  Instance to copy.

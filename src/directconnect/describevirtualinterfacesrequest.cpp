@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new DescribeVirtualInterfacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVirtualInterfacesResponse::DescribeVirtualInterfacesResponse(
-
-/**
  * @brief  Constructs a new DescribeVirtualInterfacesRequest object by copying another.
  *
  * @param  other  Instance to copy.

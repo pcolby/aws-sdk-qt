@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new ListUploadsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListUploadsResponse::ListUploadsResponse(
-
-/**
  * @brief  Constructs a new ListUploadsRequest object by copying another.
  *
  * @param  other  Instance to copy.

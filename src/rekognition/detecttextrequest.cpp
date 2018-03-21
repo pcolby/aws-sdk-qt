@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new DetectTextResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetectTextResponse::DetectTextResponse(
-
-/**
  * @brief  Constructs a new DetectTextRequest object by copying another.
  *
  * @param  other  Instance to copy.

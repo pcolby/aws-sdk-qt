@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new RemoveTagsFromResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
-
-/**
  * @brief  Constructs a new RemoveTagsFromResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

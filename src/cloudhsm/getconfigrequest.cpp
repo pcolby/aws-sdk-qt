@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new GetConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetConfigResponse::GetConfigResponse(
-
-/**
  * @brief  Constructs a new GetConfigRequest object by copying another.
  *
  * @param  other  Instance to copy.

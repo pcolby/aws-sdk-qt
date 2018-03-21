@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new DetachFromIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachFromIndexResponse::DetachFromIndexResponse(
-
-/**
  * @brief  Constructs a new DetachFromIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.

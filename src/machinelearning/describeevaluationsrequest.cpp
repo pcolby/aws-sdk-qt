@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new DescribeEvaluationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEvaluationsResponse::DescribeEvaluationsResponse(
-
-/**
  * @brief  Constructs a new DescribeEvaluationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

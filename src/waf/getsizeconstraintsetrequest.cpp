@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new GetSizeConstraintSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
-
-/**
  * @brief  Constructs a new GetSizeConstraintSetRequest object by copying another.
  *
  * @param  other  Instance to copy.

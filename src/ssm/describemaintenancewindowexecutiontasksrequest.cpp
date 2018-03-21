@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeMaintenanceWindowExecutionTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeMaintenanceWindowExecutionTasksResponse::DescribeMaintenanceWindowExecutionTasksResponse(
-
-/**
  * @brief  Constructs a new DescribeMaintenanceWindowExecutionTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace OpsWorks {
  */
 
 /**
- * @brief  Constructs a new SetLoadBasedAutoScalingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetLoadBasedAutoScalingResponse::SetLoadBasedAutoScalingResponse(
-
-/**
  * @brief  Constructs a new SetLoadBasedAutoScalingRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AttachClassicLinkVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachClassicLinkVpcResponse::AttachClassicLinkVpcResponse(
-
-/**
  * @brief  Constructs a new AttachClassicLinkVpcRequest object by copying another.
  *
  * @param  other  Instance to copy.

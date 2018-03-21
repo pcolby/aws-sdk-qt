@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new AttachLoadBalancersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachLoadBalancersResponse::AttachLoadBalancersResponse(
-
-/**
  * @brief  Constructs a new AttachLoadBalancersRequest object by copying another.
  *
  * @param  other  Instance to copy.

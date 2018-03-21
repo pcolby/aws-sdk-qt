@@ -34,15 +34,6 @@ namespace STS {
  */
 
 /**
- * @brief  Constructs a new GetFederationTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetFederationTokenResponse::GetFederationTokenResponse(
-
-/**
  * @brief  Constructs a new GetFederationTokenRequest object by copying another.
  *
  * @param  other  Instance to copy.

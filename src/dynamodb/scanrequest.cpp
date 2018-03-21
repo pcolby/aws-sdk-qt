@@ -34,15 +34,6 @@ namespace DynamoDB {
  */
 
 /**
- * @brief  Constructs a new ScanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ScanResponse::ScanResponse(
-
-/**
  * @brief  Constructs a new ScanRequest object by copying another.
  *
  * @param  other  Instance to copy.

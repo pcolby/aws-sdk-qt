@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ImportVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ImportVolumeResponse::ImportVolumeResponse(
-
-/**
  * @brief  Constructs a new ImportVolumeRequest object by copying another.
  *
  * @param  other  Instance to copy.

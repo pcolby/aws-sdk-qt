@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new GetDifferencesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDifferencesResponse::GetDifferencesResponse(
-
-/**
  * @brief  Constructs a new GetDifferencesRequest object by copying another.
  *
  * @param  other  Instance to copy.

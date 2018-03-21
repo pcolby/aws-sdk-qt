@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new UpdateRepositoryNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateRepositoryNameResponse::UpdateRepositoryNameResponse(
-
-/**
  * @brief  Constructs a new UpdateRepositoryNameRequest object by copying another.
  *
  * @param  other  Instance to copy.

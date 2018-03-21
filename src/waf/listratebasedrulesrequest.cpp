@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new ListRateBasedRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListRateBasedRulesResponse::ListRateBasedRulesResponse(
-
-/**
  * @brief  Constructs a new ListRateBasedRulesRequest object by copying another.
  *
  * @param  other  Instance to copy.

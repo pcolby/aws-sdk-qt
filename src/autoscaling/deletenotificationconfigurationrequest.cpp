@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new DeleteNotificationConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteNotificationConfigurationResponse::DeleteNotificationConfigurationResponse(
-
-/**
  * @brief  Constructs a new DeleteNotificationConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

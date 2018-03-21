@@ -34,15 +34,6 @@ namespace Greengrass {
  */
 
 /**
- * @brief  Constructs a new DeleteFunctionDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteFunctionDefinitionResponse::DeleteFunctionDefinitionResponse(
-
-/**
  * @brief  Constructs a new DeleteFunctionDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

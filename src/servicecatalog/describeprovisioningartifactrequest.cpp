@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DescribeProvisioningArtifactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeProvisioningArtifactResponse::DescribeProvisioningArtifactResponse(
-
-/**
  * @brief  Constructs a new DescribeProvisioningArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.

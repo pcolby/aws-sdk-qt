@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new EstimateTemplateCostResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-EstimateTemplateCostResponse::EstimateTemplateCostResponse(
-
-/**
  * @brief  Constructs a new EstimateTemplateCostRequest object by copying another.
  *
  * @param  other  Instance to copy.

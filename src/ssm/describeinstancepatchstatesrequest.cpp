@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new DescribeInstancePatchStatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeInstancePatchStatesResponse::DescribeInstancePatchStatesResponse(
-
-/**
  * @brief  Constructs a new DescribeInstancePatchStatesRequest object by copying another.
  *
  * @param  other  Instance to copy.

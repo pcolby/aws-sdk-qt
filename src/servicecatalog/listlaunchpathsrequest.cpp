@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new ListLaunchPathsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListLaunchPathsResponse::ListLaunchPathsResponse(
-
-/**
  * @brief  Constructs a new ListLaunchPathsRequest object by copying another.
  *
  * @param  other  Instance to copy.

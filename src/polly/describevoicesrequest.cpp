@@ -34,15 +34,6 @@ namespace Polly {
  */
 
 /**
- * @brief  Constructs a new DescribeVoicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVoicesResponse::DescribeVoicesResponse(
-
-/**
  * @brief  Constructs a new DescribeVoicesRequest object by copying another.
  *
  * @param  other  Instance to copy.

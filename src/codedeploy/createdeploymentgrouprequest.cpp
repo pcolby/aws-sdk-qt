@@ -34,15 +34,6 @@ namespace CodeDeploy {
  */
 
 /**
- * @brief  Constructs a new CreateDeploymentGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateDeploymentGroupResponse::CreateDeploymentGroupResponse(
-
-/**
  * @brief  Constructs a new CreateDeploymentGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

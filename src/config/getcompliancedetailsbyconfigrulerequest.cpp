@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new GetComplianceDetailsByConfigRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetComplianceDetailsByConfigRuleResponse::GetComplianceDetailsByConfigRuleResponse(
-
-/**
  * @brief  Constructs a new GetComplianceDetailsByConfigRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

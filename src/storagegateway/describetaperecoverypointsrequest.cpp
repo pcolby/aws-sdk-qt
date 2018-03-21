@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DescribeTapeRecoveryPointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTapeRecoveryPointsResponse::DescribeTapeRecoveryPointsResponse(
-
-/**
  * @brief  Constructs a new DescribeTapeRecoveryPointsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Health {
  */
 
 /**
- * @brief  Constructs a new DescribeEntityAggregatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeEntityAggregatesResponse::DescribeEntityAggregatesResponse(
-
-/**
  * @brief  Constructs a new DescribeEntityAggregatesRequest object by copying another.
  *
  * @param  other  Instance to copy.

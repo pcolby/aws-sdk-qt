@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminUpdateDeviceStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminUpdateDeviceStatusResponse::AdminUpdateDeviceStatusResponse(
-
-/**
  * @brief  Constructs a new AdminUpdateDeviceStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Mobile {
  */
 
 /**
- * @brief  Constructs a new DescribeProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeProjectResponse::DescribeProjectResponse(
-
-/**
  * @brief  Constructs a new DescribeProjectRequest object by copying another.
  *
  * @param  other  Instance to copy.

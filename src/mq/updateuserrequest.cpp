@@ -34,15 +34,6 @@ namespace MQ {
  */
 
 /**
- * @brief  Constructs a new UpdateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateUserResponse::UpdateUserResponse(
-
-/**
  * @brief  Constructs a new UpdateUserRequest object by copying another.
  *
  * @param  other  Instance to copy.

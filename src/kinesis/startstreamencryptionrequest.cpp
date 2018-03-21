@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new StartStreamEncryptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartStreamEncryptionResponse::StartStreamEncryptionResponse(
-
-/**
  * @brief  Constructs a new StartStreamEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

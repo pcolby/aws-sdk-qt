@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new DescribeListenerCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeListenerCertificatesResponse::DescribeListenerCertificatesResponse(
-
-/**
  * @brief  Constructs a new DescribeListenerCertificatesRequest object by copying another.
  *
  * @param  other  Instance to copy.

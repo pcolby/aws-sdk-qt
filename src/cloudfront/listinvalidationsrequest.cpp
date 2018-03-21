@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new ListInvalidationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListInvalidationsResponse::ListInvalidationsResponse(
-
-/**
  * @brief  Constructs a new ListInvalidationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

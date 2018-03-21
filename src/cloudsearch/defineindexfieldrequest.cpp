@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DefineIndexFieldResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DefineIndexFieldResponse::DefineIndexFieldResponse(
-
-/**
  * @brief  Constructs a new DefineIndexFieldRequest object by copying another.
  *
  * @param  other  Instance to copy.

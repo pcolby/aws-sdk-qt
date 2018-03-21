@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new GetHostedZoneCountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetHostedZoneCountResponse::GetHostedZoneCountResponse(
-
-/**
  * @brief  Constructs a new GetHostedZoneCountRequest object by copying another.
  *
  * @param  other  Instance to copy.

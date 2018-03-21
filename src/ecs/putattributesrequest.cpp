@@ -34,15 +34,6 @@ namespace ECS {
  */
 
 /**
- * @brief  Constructs a new PutAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutAttributesResponse::PutAttributesResponse(
-
-/**
  * @brief  Constructs a new PutAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

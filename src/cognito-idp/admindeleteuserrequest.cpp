@@ -34,15 +34,6 @@ namespace CognitoIdentityProvider {
  */
 
 /**
- * @brief  Constructs a new AdminDeleteUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AdminDeleteUserResponse::AdminDeleteUserResponse(
-
-/**
  * @brief  Constructs a new AdminDeleteUserRequest object by copying another.
  *
  * @param  other  Instance to copy.

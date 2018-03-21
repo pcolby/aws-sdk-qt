@@ -34,15 +34,6 @@ namespace MigrationHub {
  */
 
 /**
- * @brief  Constructs a new DisassociateCreatedArtifactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateCreatedArtifactResponse::DisassociateCreatedArtifactResponse(
-
-/**
  * @brief  Constructs a new DisassociateCreatedArtifactRequest object by copying another.
  *
  * @param  other  Instance to copy.

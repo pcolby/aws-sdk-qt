@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new ResetDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResetDBParameterGroupResponse::ResetDBParameterGroupResponse(
-
-/**
  * @brief  Constructs a new ResetDBParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

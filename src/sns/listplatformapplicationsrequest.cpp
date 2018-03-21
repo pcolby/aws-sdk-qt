@@ -34,15 +34,6 @@ namespace SNS {
  */
 
 /**
- * @brief  Constructs a new ListPlatformApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListPlatformApplicationsResponse::ListPlatformApplicationsResponse(
-
-/**
  * @brief  Constructs a new ListPlatformApplicationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

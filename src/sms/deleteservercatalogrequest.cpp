@@ -34,15 +34,6 @@ namespace SMS {
  */
 
 /**
- * @brief  Constructs a new DeleteServerCatalogResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteServerCatalogResponse::DeleteServerCatalogResponse(
-
-/**
  * @brief  Constructs a new DeleteServerCatalogRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new AttachPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AttachPolicyResponse::AttachPolicyResponse(
-
-/**
  * @brief  Constructs a new AttachPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

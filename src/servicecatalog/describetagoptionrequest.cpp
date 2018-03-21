@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DescribeTagOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTagOptionResponse::DescribeTagOptionResponse(
-
-/**
  * @brief  Constructs a new DescribeTagOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace MTurk {
  */
 
 /**
- * @brief  Constructs a new GetFileUploadURLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetFileUploadURLResponse::GetFileUploadURLResponse(
-
-/**
  * @brief  Constructs a new GetFileUploadURLRequest object by copying another.
  *
  * @param  other  Instance to copy.

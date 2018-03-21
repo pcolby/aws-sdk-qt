@@ -34,15 +34,6 @@ namespace AutoScaling {
  */
 
 /**
- * @brief  Constructs a new DisableMetricsCollectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableMetricsCollectionResponse::DisableMetricsCollectionResponse(
-
-/**
  * @brief  Constructs a new DisableMetricsCollectionRequest object by copying another.
  *
  * @param  other  Instance to copy.

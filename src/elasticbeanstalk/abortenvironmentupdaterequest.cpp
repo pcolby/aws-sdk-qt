@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new AbortEnvironmentUpdateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AbortEnvironmentUpdateResponse::AbortEnvironmentUpdateResponse(
-
-/**
  * @brief  Constructs a new AbortEnvironmentUpdateRequest object by copying another.
  *
  * @param  other  Instance to copy.

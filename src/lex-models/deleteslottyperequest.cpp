@@ -34,15 +34,6 @@ namespace LexModelBuildingService {
  */
 
 /**
- * @brief  Constructs a new DeleteSlotTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSlotTypeResponse::DeleteSlotTypeResponse(
-
-/**
  * @brief  Constructs a new DeleteSlotTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

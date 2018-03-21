@@ -34,15 +34,6 @@ namespace CloudFront {
  */
 
 /**
- * @brief  Constructs a new GetInvalidationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetInvalidationResponse::GetInvalidationResponse(
-
-/**
  * @brief  Constructs a new GetInvalidationRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new DescribeVTLDevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVTLDevicesResponse::DescribeVTLDevicesResponse(
-
-/**
  * @brief  Constructs a new DescribeVTLDevicesRequest object by copying another.
  *
  * @param  other  Instance to copy.

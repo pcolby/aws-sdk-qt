@@ -34,15 +34,6 @@ namespace WorkDocs {
  */
 
 /**
- * @brief  Constructs a new DescribeDocumentVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDocumentVersionsResponse::DescribeDocumentVersionsResponse(
-
-/**
  * @brief  Constructs a new DescribeDocumentVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

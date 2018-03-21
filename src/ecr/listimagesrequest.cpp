@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new ListImagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListImagesResponse::ListImagesResponse(
-
-/**
  * @brief  Constructs a new ListImagesRequest object by copying another.
  *
  * @param  other  Instance to copy.

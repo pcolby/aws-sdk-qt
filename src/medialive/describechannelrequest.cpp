@@ -34,15 +34,6 @@ namespace MediaLive {
  */
 
 /**
- * @brief  Constructs a new DescribeChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeChannelResponse::DescribeChannelResponse(
-
-/**
  * @brief  Constructs a new DescribeChannelRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DeleteClusterParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteClusterParameterGroupResponse::DeleteClusterParameterGroupResponse(
-
-/**
  * @brief  Constructs a new DeleteClusterParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

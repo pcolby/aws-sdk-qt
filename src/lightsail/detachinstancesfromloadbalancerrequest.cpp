@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new DetachInstancesFromLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DetachInstancesFromLoadBalancerResponse::DetachInstancesFromLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new DetachInstancesFromLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

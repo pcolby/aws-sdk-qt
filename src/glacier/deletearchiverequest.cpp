@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new DeleteArchiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteArchiveResponse::DeleteArchiveResponse(
-
-/**
  * @brief  Constructs a new DeleteArchiveRequest object by copying another.
  *
  * @param  other  Instance to copy.

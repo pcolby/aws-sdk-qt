@@ -34,15 +34,6 @@ namespace StorageGateway {
  */
 
 /**
- * @brief  Constructs a new UpdateVTLDeviceTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateVTLDeviceTypeResponse::UpdateVTLDeviceTypeResponse(
-
-/**
  * @brief  Constructs a new UpdateVTLDeviceTypeRequest object by copying another.
  *
  * @param  other  Instance to copy.

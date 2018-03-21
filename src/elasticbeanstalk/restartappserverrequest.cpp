@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new RestartAppServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RestartAppServerResponse::RestartAppServerResponse(
-
-/**
  * @brief  Constructs a new RestartAppServerRequest object by copying another.
  *
  * @param  other  Instance to copy.

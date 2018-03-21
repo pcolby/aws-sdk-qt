@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketEncryptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketEncryptionResponse::PutBucketEncryptionResponse(
-
-/**
  * @brief  Constructs a new PutBucketEncryptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

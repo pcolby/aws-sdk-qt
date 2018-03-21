@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new ListSkillsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListSkillsResponse::ListSkillsResponse(
-
-/**
  * @brief  Constructs a new ListSkillsRequest object by copying another.
  *
  * @param  other  Instance to copy.

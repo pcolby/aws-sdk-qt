@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new ListIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListIndexResponse::ListIndexResponse(
-
-/**
  * @brief  Constructs a new ListIndexRequest object by copying another.
  *
  * @param  other  Instance to copy.

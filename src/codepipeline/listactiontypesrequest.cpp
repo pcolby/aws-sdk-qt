@@ -34,15 +34,6 @@ namespace CodePipeline {
  */
 
 /**
- * @brief  Constructs a new ListActionTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListActionTypesResponse::ListActionTypesResponse(
-
-/**
  * @brief  Constructs a new ListActionTypesRequest object by copying another.
  *
  * @param  other  Instance to copy.

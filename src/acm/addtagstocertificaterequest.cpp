@@ -34,15 +34,6 @@ namespace ACM {
  */
 
 /**
- * @brief  Constructs a new AddTagsToCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddTagsToCertificateResponse::AddTagsToCertificateResponse(
-
-/**
  * @brief  Constructs a new AddTagsToCertificateRequest object by copying another.
  *
  * @param  other  Instance to copy.

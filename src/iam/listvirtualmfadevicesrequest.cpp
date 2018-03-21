@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListVirtualMFADevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListVirtualMFADevicesResponse::ListVirtualMFADevicesResponse(
-
-/**
  * @brief  Constructs a new ListVirtualMFADevicesRequest object by copying another.
  *
  * @param  other  Instance to copy.

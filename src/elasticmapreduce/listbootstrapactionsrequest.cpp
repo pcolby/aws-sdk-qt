@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new ListBootstrapActionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListBootstrapActionsResponse::ListBootstrapActionsResponse(
-
-/**
  * @brief  Constructs a new ListBootstrapActionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

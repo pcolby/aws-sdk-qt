@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DeleteFpgaImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteFpgaImageResponse::DeleteFpgaImageResponse(
-
-/**
  * @brief  Constructs a new DeleteFpgaImageRequest object by copying another.
  *
  * @param  other  Instance to copy.

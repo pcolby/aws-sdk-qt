@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new StartWorkflowExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartWorkflowExecutionResponse::StartWorkflowExecutionResponse(
-
-/**
  * @brief  Constructs a new StartWorkflowExecutionRequest object by copying another.
  *
  * @param  other  Instance to copy.

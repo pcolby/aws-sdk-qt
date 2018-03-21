@@ -34,15 +34,6 @@ namespace MachineLearning {
  */
 
 /**
- * @brief  Constructs a new DeleteEvaluationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteEvaluationResponse::DeleteEvaluationResponse(
-
-/**
  * @brief  Constructs a new DeleteEvaluationRequest object by copying another.
  *
  * @param  other  Instance to copy.

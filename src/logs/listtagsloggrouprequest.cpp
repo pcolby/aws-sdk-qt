@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new ListTagsLogGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTagsLogGroupResponse::ListTagsLogGroupResponse(
-
-/**
  * @brief  Constructs a new ListTagsLogGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

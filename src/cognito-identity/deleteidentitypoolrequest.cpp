@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new DeleteIdentityPoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteIdentityPoolResponse::DeleteIdentityPoolResponse(
-
-/**
  * @brief  Constructs a new DeleteIdentityPoolRequest object by copying another.
  *
  * @param  other  Instance to copy.

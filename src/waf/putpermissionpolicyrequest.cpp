@@ -34,15 +34,6 @@ namespace WAF {
  */
 
 /**
- * @brief  Constructs a new PutPermissionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutPermissionPolicyResponse::PutPermissionPolicyResponse(
-
-/**
  * @brief  Constructs a new PutPermissionPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

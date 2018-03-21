@@ -34,15 +34,6 @@ namespace DataPipeline {
  */
 
 /**
- * @brief  Constructs a new PutPipelineDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutPipelineDefinitionResponse::PutPipelineDefinitionResponse(
-
-/**
  * @brief  Constructs a new PutPipelineDefinitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

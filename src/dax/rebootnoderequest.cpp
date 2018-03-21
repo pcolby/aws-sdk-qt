@@ -34,15 +34,6 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new RebootNodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RebootNodeResponse::RebootNodeResponse(
-
-/**
  * @brief  Constructs a new RebootNodeRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace KinesisVideo {
  */
 
 /**
- * @brief  Constructs a new CreateStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateStreamResponse::CreateStreamResponse(
-
-/**
  * @brief  Constructs a new CreateStreamRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new GetSnapshotLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetSnapshotLimitsResponse::GetSnapshotLimitsResponse(
-
-/**
  * @brief  Constructs a new GetSnapshotLimitsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new PurchaseHostReservationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PurchaseHostReservationResponse::PurchaseHostReservationResponse(
-
-/**
  * @brief  Constructs a new PurchaseHostReservationRequest object by copying another.
  *
  * @param  other  Instance to copy.

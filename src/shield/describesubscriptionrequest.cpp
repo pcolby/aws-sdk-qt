@@ -34,15 +34,6 @@ namespace Shield {
  */
 
 /**
- * @brief  Constructs a new DescribeSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeSubscriptionResponse::DescribeSubscriptionResponse(
-
-/**
  * @brief  Constructs a new DescribeSubscriptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

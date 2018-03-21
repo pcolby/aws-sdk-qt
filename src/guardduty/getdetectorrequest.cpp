@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new GetDetectorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDetectorResponse::GetDetectorResponse(
-
-/**
  * @brief  Constructs a new GetDetectorRequest object by copying another.
  *
  * @param  other  Instance to copy.

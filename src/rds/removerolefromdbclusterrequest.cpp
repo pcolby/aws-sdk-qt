@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new RemoveRoleFromDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RemoveRoleFromDBClusterResponse::RemoveRoleFromDBClusterResponse(
-
-/**
  * @brief  Constructs a new RemoveRoleFromDBClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

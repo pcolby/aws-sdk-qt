@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new ListIPSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListIPSetsResponse::ListIPSetsResponse(
-
-/**
  * @brief  Constructs a new ListIPSetsRequest object by copying another.
  *
  * @param  other  Instance to copy.

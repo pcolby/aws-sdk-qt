@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListInstanceProfilesForRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListInstanceProfilesForRoleResponse::ListInstanceProfilesForRoleResponse(
-
-/**
  * @brief  Constructs a new ListInstanceProfilesForRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.

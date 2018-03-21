@@ -34,15 +34,6 @@ namespace Batch {
  */
 
 /**
- * @brief  Constructs a new DescribeComputeEnvironmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeComputeEnvironmentsResponse::DescribeComputeEnvironmentsResponse(
-
-/**
  * @brief  Constructs a new DescribeComputeEnvironmentsRequest object by copying another.
  *
  * @param  other  Instance to copy.

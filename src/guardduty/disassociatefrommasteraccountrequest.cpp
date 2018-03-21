@@ -34,15 +34,6 @@ namespace GuardDuty {
  */
 
 /**
- * @brief  Constructs a new DisassociateFromMasterAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateFromMasterAccountResponse::DisassociateFromMasterAccountResponse(
-
-/**
  * @brief  Constructs a new DisassociateFromMasterAccountRequest object by copying another.
  *
  * @param  other  Instance to copy.

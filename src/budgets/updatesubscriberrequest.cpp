@@ -34,15 +34,6 @@ namespace Budgets {
  */
 
 /**
- * @brief  Constructs a new UpdateSubscriberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSubscriberResponse::UpdateSubscriberResponse(
-
-/**
  * @brief  Constructs a new UpdateSubscriberRequest object by copying another.
  *
  * @param  other  Instance to copy.

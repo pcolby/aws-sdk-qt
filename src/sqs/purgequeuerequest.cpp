@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new PurgeQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PurgeQueueResponse::PurgeQueueResponse(
-
-/**
  * @brief  Constructs a new PurgeQueueRequest object by copying another.
  *
  * @param  other  Instance to copy.

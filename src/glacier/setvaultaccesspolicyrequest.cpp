@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new SetVaultAccessPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetVaultAccessPolicyResponse::SetVaultAccessPolicyResponse(
-
-/**
  * @brief  Constructs a new SetVaultAccessPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

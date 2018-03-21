@@ -34,15 +34,6 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteApplicationInputProcessingConfigurationResponse::DeleteApplicationInputProcessingConfigurationResponse(
-
-/**
  * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

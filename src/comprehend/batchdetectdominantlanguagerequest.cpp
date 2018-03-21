@@ -34,15 +34,6 @@ namespace Comprehend {
  */
 
 /**
- * @brief  Constructs a new BatchDetectDominantLanguageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-BatchDetectDominantLanguageResponse::BatchDetectDominantLanguageResponse(
-
-/**
  * @brief  Constructs a new BatchDetectDominantLanguageRequest object by copying another.
  *
  * @param  other  Instance to copy.

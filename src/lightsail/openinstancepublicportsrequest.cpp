@@ -34,15 +34,6 @@ namespace Lightsail {
  */
 
 /**
- * @brief  Constructs a new OpenInstancePublicPortsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-OpenInstancePublicPortsResponse::OpenInstancePublicPortsResponse(
-
-/**
  * @brief  Constructs a new OpenInstancePublicPortsRequest object by copying another.
  *
  * @param  other  Instance to copy.

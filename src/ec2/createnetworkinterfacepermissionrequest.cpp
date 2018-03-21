@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new CreateNetworkInterfacePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateNetworkInterfacePermissionResponse::CreateNetworkInterfacePermissionResponse(
-
-/**
  * @brief  Constructs a new CreateNetworkInterfacePermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.

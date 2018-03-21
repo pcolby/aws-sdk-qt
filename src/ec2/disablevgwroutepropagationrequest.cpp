@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DisableVgwRoutePropagationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisableVgwRoutePropagationResponse::DisableVgwRoutePropagationResponse(
-
-/**
  * @brief  Constructs a new DisableVgwRoutePropagationRequest object by copying another.
  *
  * @param  other  Instance to copy.

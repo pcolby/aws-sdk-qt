@@ -34,15 +34,6 @@ namespace Shield {
  */
 
 /**
- * @brief  Constructs a new GetSubscriptionStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetSubscriptionStateResponse::GetSubscriptionStateResponse(
-
-/**
  * @brief  Constructs a new GetSubscriptionStateRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new AbortMultipartUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AbortMultipartUploadResponse::AbortMultipartUploadResponse(
-
-/**
  * @brief  Constructs a new AbortMultipartUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.

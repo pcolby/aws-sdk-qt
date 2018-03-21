@@ -34,15 +34,6 @@ namespace CloudHSM {
  */
 
 /**
- * @brief  Constructs a new ListAvailableZonesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAvailableZonesResponse::ListAvailableZonesResponse(
-
-/**
  * @brief  Constructs a new ListAvailableZonesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new DescribeDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDomainResponse::DescribeDomainResponse(
-
-/**
  * @brief  Constructs a new DescribeDomainRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ConfigService {
  */
 
 /**
- * @brief  Constructs a new GetDiscoveredResourceCountsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDiscoveredResourceCountsResponse::GetDiscoveredResourceCountsResponse(
-
-/**
  * @brief  Constructs a new GetDiscoveredResourceCountsRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Organizations {
  */
 
 /**
- * @brief  Constructs a new ListCreateAccountStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListCreateAccountStatusResponse::ListCreateAccountStatusResponse(
-
-/**
  * @brief  Constructs a new ListCreateAccountStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

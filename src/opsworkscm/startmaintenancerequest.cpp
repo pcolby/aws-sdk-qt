@@ -34,15 +34,6 @@ namespace OpsWorksCM {
  */
 
 /**
- * @brief  Constructs a new StartMaintenanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartMaintenanceResponse::StartMaintenanceResponse(
-
-/**
  * @brief  Constructs a new StartMaintenanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

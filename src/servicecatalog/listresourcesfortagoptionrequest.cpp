@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new ListResourcesForTagOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListResourcesForTagOptionResponse::ListResourcesForTagOptionResponse(
-
-/**
  * @brief  Constructs a new ListResourcesForTagOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new DescribeCacheSecurityGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeCacheSecurityGroupsResponse::DescribeCacheSecurityGroupsResponse(
-
-/**
  * @brief  Constructs a new DescribeCacheSecurityGroupsRequest object by copying another.
  *
  * @param  other  Instance to copy.

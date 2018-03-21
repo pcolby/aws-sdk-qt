@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new ChangeTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ChangeTagsForResourceResponse::ChangeTagsForResourceResponse(
-
-/**
  * @brief  Constructs a new ChangeTagsForResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

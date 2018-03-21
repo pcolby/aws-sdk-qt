@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new TerminateEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-TerminateEnvironmentResponse::TerminateEnvironmentResponse(
-
-/**
  * @brief  Constructs a new TerminateEnvironmentRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new GetPartitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetPartitionResponse::GetPartitionResponse(
-
-/**
  * @brief  Constructs a new GetPartitionRequest object by copying another.
  *
  * @param  other  Instance to copy.

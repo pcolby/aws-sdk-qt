@@ -34,15 +34,6 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new AddApplicationInputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddApplicationInputResponse::AddApplicationInputResponse(
-
-/**
  * @brief  Constructs a new AddApplicationInputRequest object by copying another.
  *
  * @param  other  Instance to copy.

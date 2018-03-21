@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new DescribeTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeTagsResponse::DescribeTagsResponse(
-
-/**
  * @brief  Constructs a new DescribeTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

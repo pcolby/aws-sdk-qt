@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DeleteDBClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDBClusterSnapshotResponse::DeleteDBClusterSnapshotResponse(
-
-/**
  * @brief  Constructs a new DeleteDBClusterSnapshotRequest object by copying another.
  *
  * @param  other  Instance to copy.

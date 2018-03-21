@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new DeleteResolverResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteResolverResponse::DeleteResolverResponse(
-
-/**
  * @brief  Constructs a new DeleteResolverRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace SMS {
  */
 
 /**
- * @brief  Constructs a new GetServersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetServersResponse::GetServersResponse(
-
-/**
  * @brief  Constructs a new GetServersRequest object by copying another.
  *
  * @param  other  Instance to copy.

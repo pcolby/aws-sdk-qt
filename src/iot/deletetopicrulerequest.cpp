@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new DeleteTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteTopicRuleResponse::DeleteTopicRuleResponse(
-
-/**
  * @brief  Constructs a new DeleteTopicRuleRequest object by copying another.
  *
  * @param  other  Instance to copy.

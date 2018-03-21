@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketMetricsConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketMetricsConfigurationResponse::GetBucketMetricsConfigurationResponse(
-
-/**
  * @brief  Constructs a new GetBucketMetricsConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

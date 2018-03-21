@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new StartJobRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartJobRunResponse::StartJobRunResponse(
-
-/**
  * @brief  Constructs a new StartJobRunRequest object by copying another.
  *
  * @param  other  Instance to copy.

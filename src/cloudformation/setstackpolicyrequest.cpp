@@ -34,15 +34,6 @@ namespace CloudFormation {
  */
 
 /**
- * @brief  Constructs a new SetStackPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetStackPolicyResponse::SetStackPolicyResponse(
-
-/**
  * @brief  Constructs a new SetStackPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

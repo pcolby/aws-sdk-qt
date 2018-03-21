@@ -34,15 +34,6 @@ namespace Pinpoint {
  */
 
 /**
- * @brief  Constructs a new UpdateEndpointsBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateEndpointsBatchResponse::UpdateEndpointsBatchResponse(
-
-/**
  * @brief  Constructs a new UpdateEndpointsBatchRequest object by copying another.
  *
  * @param  other  Instance to copy.

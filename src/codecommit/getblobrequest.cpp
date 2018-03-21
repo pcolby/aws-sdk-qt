@@ -34,15 +34,6 @@ namespace CodeCommit {
  */
 
 /**
- * @brief  Constructs a new GetBlobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBlobResponse::GetBlobResponse(
-
-/**
  * @brief  Constructs a new GetBlobRequest object by copying another.
  *
  * @param  other  Instance to copy.

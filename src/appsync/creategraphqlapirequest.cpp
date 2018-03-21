@@ -34,15 +34,6 @@ namespace AppSync {
  */
 
 /**
- * @brief  Constructs a new CreateGraphqlApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateGraphqlApiResponse::CreateGraphqlApiResponse(
-
-/**
  * @brief  Constructs a new CreateGraphqlApiRequest object by copying another.
  *
  * @param  other  Instance to copy.

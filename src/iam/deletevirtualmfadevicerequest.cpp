@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new DeleteVirtualMFADeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
-
-/**
  * @brief  Constructs a new DeleteVirtualMFADeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.

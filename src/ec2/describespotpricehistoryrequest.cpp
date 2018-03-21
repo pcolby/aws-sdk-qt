@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeSpotPriceHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeSpotPriceHistoryResponse::DescribeSpotPriceHistoryResponse(
-
-/**
  * @brief  Constructs a new DescribeSpotPriceHistoryRequest object by copying another.
  *
  * @param  other  Instance to copy.

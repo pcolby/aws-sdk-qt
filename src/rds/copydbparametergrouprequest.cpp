@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new CopyDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
-
-/**
  * @brief  Constructs a new CopyDBParameterGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

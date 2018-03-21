@@ -34,15 +34,6 @@ namespace ElastiCache {
  */
 
 /**
- * @brief  Constructs a new CreateCacheSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateCacheSubnetGroupResponse::CreateCacheSubnetGroupResponse(
-
-/**
  * @brief  Constructs a new CreateCacheSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

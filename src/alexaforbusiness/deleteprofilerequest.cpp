@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new DeleteProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteProfileResponse::DeleteProfileResponse(
-
-/**
  * @brief  Constructs a new DeleteProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

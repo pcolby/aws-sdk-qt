@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new GetPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetPolicyResponse::GetPolicyResponse(
-
-/**
  * @brief  Constructs a new GetPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

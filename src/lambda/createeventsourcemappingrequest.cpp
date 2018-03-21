@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new CreateEventSourceMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateEventSourceMappingResponse::CreateEventSourceMappingResponse(
-
-/**
  * @brief  Constructs a new CreateEventSourceMappingRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new AssociateVPCWithHostedZoneResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateVPCWithHostedZoneResponse::AssociateVPCWithHostedZoneResponse(
-
-/**
  * @brief  Constructs a new AssociateVPCWithHostedZoneRequest object by copying another.
  *
  * @param  other  Instance to copy.

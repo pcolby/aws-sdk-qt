@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new GetAccountSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetAccountSettingsResponse::GetAccountSettingsResponse(
-
-/**
  * @brief  Constructs a new GetAccountSettingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

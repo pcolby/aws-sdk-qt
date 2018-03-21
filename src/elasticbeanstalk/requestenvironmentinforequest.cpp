@@ -34,15 +34,6 @@ namespace ElasticBeanstalk {
  */
 
 /**
- * @brief  Constructs a new RequestEnvironmentInfoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RequestEnvironmentInfoResponse::RequestEnvironmentInfoResponse(
-
-/**
  * @brief  Constructs a new RequestEnvironmentInfoRequest object by copying another.
  *
  * @param  other  Instance to copy.

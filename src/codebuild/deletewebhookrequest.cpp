@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new DeleteWebhookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteWebhookResponse::DeleteWebhookResponse(
-
-/**
  * @brief  Constructs a new DeleteWebhookRequest object by copying another.
  *
  * @param  other  Instance to copy.

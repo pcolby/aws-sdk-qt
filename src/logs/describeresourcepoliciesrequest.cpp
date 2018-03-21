@@ -34,15 +34,6 @@ namespace CloudWatchLogs {
  */
 
 /**
- * @brief  Constructs a new DescribeResourcePoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeResourcePoliciesResponse::DescribeResourcePoliciesResponse(
-
-/**
  * @brief  Constructs a new DescribeResourcePoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

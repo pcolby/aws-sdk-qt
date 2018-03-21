@@ -34,15 +34,6 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /**
- * @brief  Constructs a new ModifyLoadBalancerAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyLoadBalancerAttributesResponse::ModifyLoadBalancerAttributesResponse(
-
-/**
  * @brief  Constructs a new ModifyLoadBalancerAttributesRequest object by copying another.
  *
  * @param  other  Instance to copy.

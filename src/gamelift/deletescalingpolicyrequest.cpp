@@ -34,15 +34,6 @@ namespace GameLift {
  */
 
 /**
- * @brief  Constructs a new DeleteScalingPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
-
-/**
  * @brief  Constructs a new DeleteScalingPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

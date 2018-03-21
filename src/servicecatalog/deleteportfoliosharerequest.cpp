@@ -34,15 +34,6 @@ namespace ServiceCatalog {
  */
 
 /**
- * @brief  Constructs a new DeletePortfolioShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeletePortfolioShareResponse::DeletePortfolioShareResponse(
-
-/**
  * @brief  Constructs a new DeletePortfolioShareRequest object by copying another.
  *
  * @param  other  Instance to copy.

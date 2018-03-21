@@ -34,15 +34,6 @@ namespace CognitoSync {
  */
 
 /**
- * @brief  Constructs a new DescribeIdentityUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeIdentityUsageResponse::DescribeIdentityUsageResponse(
-
-/**
  * @brief  Constructs a new DescribeIdentityUsageRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVpcEndpointServiceConfigurationsResponse::DescribeVpcEndpointServiceConfigurationsResponse(
-
-/**
  * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsRequest object by copying another.
  *
  * @param  other  Instance to copy.

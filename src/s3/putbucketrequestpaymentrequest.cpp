@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new PutBucketRequestPaymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-PutBucketRequestPaymentResponse::PutBucketRequestPaymentResponse(
-
-/**
  * @brief  Constructs a new PutBucketRequestPaymentRequest object by copying another.
  *
  * @param  other  Instance to copy.

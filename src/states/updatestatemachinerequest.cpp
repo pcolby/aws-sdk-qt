@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new UpdateStateMachineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateStateMachineResponse::UpdateStateMachineResponse(
-
-/**
  * @brief  Constructs a new UpdateStateMachineRequest object by copying another.
  *
  * @param  other  Instance to copy.

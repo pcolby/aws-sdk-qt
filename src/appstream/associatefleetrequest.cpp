@@ -34,15 +34,6 @@ namespace AppStream {
  */
 
 /**
- * @brief  Constructs a new AssociateFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AssociateFleetResponse::AssociateFleetResponse(
-
-/**
  * @brief  Constructs a new AssociateFleetRequest object by copying another.
  *
  * @param  other  Instance to copy.

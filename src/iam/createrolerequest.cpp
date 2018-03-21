@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new CreateRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateRoleResponse::CreateRoleResponse(
-
-/**
  * @brief  Constructs a new CreateRoleRequest object by copying another.
  *
  * @param  other  Instance to copy.

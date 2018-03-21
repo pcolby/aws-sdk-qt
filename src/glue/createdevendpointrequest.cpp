@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new CreateDevEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateDevEndpointResponse::CreateDevEndpointResponse(
-
-/**
  * @brief  Constructs a new CreateDevEndpointRequest object by copying another.
  *
  * @param  other  Instance to copy.

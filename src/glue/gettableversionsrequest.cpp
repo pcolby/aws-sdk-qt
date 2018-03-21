@@ -34,15 +34,6 @@ namespace Glue {
  */
 
 /**
- * @brief  Constructs a new GetTableVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTableVersionsResponse::GetTableVersionsResponse(
-
-/**
  * @brief  Constructs a new GetTableVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

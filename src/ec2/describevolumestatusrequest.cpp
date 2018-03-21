@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new DescribeVolumeStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeVolumeStatusResponse::DescribeVolumeStatusResponse(
-
-/**
  * @brief  Constructs a new DescribeVolumeStatusRequest object by copying another.
  *
  * @param  other  Instance to copy.

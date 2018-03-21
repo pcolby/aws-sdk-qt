@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new ModifyIdFormatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyIdFormatResponse::ModifyIdFormatResponse(
-
-/**
  * @brief  Constructs a new ModifyIdFormatRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace KinesisAnalytics {
  */
 
 /**
- * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddApplicationCloudWatchLoggingOptionResponse::AddApplicationCloudWatchLoggingOptionResponse(
-
-/**
  * @brief  Constructs a new AddApplicationCloudWatchLoggingOptionRequest object by copying another.
  *
  * @param  other  Instance to copy.

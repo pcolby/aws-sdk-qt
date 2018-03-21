@@ -34,15 +34,6 @@ namespace EFS {
  */
 
 /**
- * @brief  Constructs a new CreateMountTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateMountTargetResponse::CreateMountTargetResponse(
-
-/**
  * @brief  Constructs a new CreateMountTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.

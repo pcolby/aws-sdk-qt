@@ -34,15 +34,6 @@ namespace SFN {
  */
 
 /**
- * @brief  Constructs a new ListExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListExecutionsResponse::ListExecutionsResponse(
-
-/**
  * @brief  Constructs a new ListExecutionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

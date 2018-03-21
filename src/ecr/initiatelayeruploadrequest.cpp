@@ -34,15 +34,6 @@ namespace ECR {
  */
 
 /**
- * @brief  Constructs a new InitiateLayerUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-InitiateLayerUploadResponse::InitiateLayerUploadResponse(
-
-/**
  * @brief  Constructs a new InitiateLayerUploadRequest object by copying another.
  *
  * @param  other  Instance to copy.

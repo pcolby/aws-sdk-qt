@@ -34,15 +34,6 @@ namespace DirectConnect {
  */
 
 /**
- * @brief  Constructs a new DeleteDirectConnectGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDirectConnectGatewayResponse::DeleteDirectConnectGatewayResponse(
-
-/**
  * @brief  Constructs a new DeleteDirectConnectGatewayRequest object by copying another.
  *
  * @param  other  Instance to copy.

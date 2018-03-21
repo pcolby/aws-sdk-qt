@@ -34,15 +34,6 @@ namespace Inspector {
  */
 
 /**
- * @brief  Constructs a new UpdateAssessmentTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateAssessmentTargetResponse::UpdateAssessmentTargetResponse(
-
-/**
  * @brief  Constructs a new UpdateAssessmentTargetRequest object by copying another.
  *
  * @param  other  Instance to copy.

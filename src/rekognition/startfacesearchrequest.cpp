@@ -34,15 +34,6 @@ namespace Rekognition {
  */
 
 /**
- * @brief  Constructs a new StartFaceSearchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-StartFaceSearchResponse::StartFaceSearchResponse(
-
-/**
  * @brief  Constructs a new StartFaceSearchRequest object by copying another.
  *
  * @param  other  Instance to copy.

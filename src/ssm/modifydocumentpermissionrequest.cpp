@@ -34,15 +34,6 @@ namespace SSM {
  */
 
 /**
- * @brief  Constructs a new ModifyDocumentPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ModifyDocumentPermissionResponse::ModifyDocumentPermissionResponse(
-
-/**
  * @brief  Constructs a new ModifyDocumentPermissionRequest object by copying another.
  *
  * @param  other  Instance to copy.

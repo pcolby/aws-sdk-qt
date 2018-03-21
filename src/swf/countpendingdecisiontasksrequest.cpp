@@ -34,15 +34,6 @@ namespace SWF {
  */
 
 /**
- * @brief  Constructs a new CountPendingDecisionTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CountPendingDecisionTasksResponse::CountPendingDecisionTasksResponse(
-
-/**
  * @brief  Constructs a new CountPendingDecisionTasksRequest object by copying another.
  *
  * @param  other  Instance to copy.

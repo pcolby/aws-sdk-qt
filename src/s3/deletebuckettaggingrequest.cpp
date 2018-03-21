@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new DeleteBucketTaggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteBucketTaggingResponse::DeleteBucketTaggingResponse(
-
-/**
  * @brief  Constructs a new DeleteBucketTaggingRequest object by copying another.
  *
  * @param  other  Instance to copy.

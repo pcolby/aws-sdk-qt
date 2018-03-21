@@ -34,15 +34,6 @@ namespace Route53 {
  */
 
 /**
- * @brief  Constructs a new DisassociateVPCFromHostedZoneResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DisassociateVPCFromHostedZoneResponse::DisassociateVPCFromHostedZoneResponse(
-
-/**
  * @brief  Constructs a new DisassociateVPCFromHostedZoneRequest object by copying another.
  *
  * @param  other  Instance to copy.

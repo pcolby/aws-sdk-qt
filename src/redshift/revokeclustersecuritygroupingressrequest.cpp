@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new RevokeClusterSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RevokeClusterSecurityGroupIngressResponse::RevokeClusterSecurityGroupIngressResponse(
-
-/**
  * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequest object by copying another.
  *
  * @param  other  Instance to copy.

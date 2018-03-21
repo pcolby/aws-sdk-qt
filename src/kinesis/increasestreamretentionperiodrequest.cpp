@@ -34,15 +34,6 @@ namespace Kinesis {
  */
 
 /**
- * @brief  Constructs a new IncreaseStreamRetentionPeriodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-IncreaseStreamRetentionPeriodResponse::IncreaseStreamRetentionPeriodResponse(
-
-/**
  * @brief  Constructs a new IncreaseStreamRetentionPeriodRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace DAX {
  */
 
 /**
- * @brief  Constructs a new UpdateSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSubnetGroupResponse::UpdateSubnetGroupResponse(
-
-/**
  * @brief  Constructs a new UpdateSubnetGroupRequest object by copying another.
  *
  * @param  other  Instance to copy.

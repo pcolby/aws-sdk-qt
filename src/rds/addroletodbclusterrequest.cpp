@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new AddRoleToDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AddRoleToDBClusterResponse::AddRoleToDBClusterResponse(
-
-/**
  * @brief  Constructs a new AddRoleToDBClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

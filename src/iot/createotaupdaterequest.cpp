@@ -34,15 +34,6 @@ namespace IoT {
  */
 
 /**
- * @brief  Constructs a new CreateOTAUpdateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateOTAUpdateResponse::CreateOTAUpdateResponse(
-
-/**
  * @brief  Constructs a new CreateOTAUpdateRequest object by copying another.
  *
  * @param  other  Instance to copy.

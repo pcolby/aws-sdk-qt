@@ -34,15 +34,6 @@ namespace SES {
  */
 
 /**
- * @brief  Constructs a new SetIdentityNotificationTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-SetIdentityNotificationTopicResponse::SetIdentityNotificationTopicResponse(
-
-/**
  * @brief  Constructs a new SetIdentityNotificationTopicRequest object by copying another.
  *
  * @param  other  Instance to copy.

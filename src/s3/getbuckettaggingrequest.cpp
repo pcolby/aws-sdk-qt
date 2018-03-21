@@ -34,15 +34,6 @@ namespace S3 {
  */
 
 /**
- * @brief  Constructs a new GetBucketTaggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetBucketTaggingResponse::GetBucketTaggingResponse(
-
-/**
  * @brief  Constructs a new GetBucketTaggingRequest object by copying another.
  *
  * @param  other  Instance to copy.

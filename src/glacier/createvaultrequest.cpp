@@ -34,15 +34,6 @@ namespace Glacier {
  */
 
 /**
- * @brief  Constructs a new CreateVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateVaultResponse::CreateVaultResponse(
-
-/**
  * @brief  Constructs a new CreateVaultRequest object by copying another.
  *
  * @param  other  Instance to copy.

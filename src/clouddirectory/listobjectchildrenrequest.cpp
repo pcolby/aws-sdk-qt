@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new ListObjectChildrenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListObjectChildrenResponse::ListObjectChildrenResponse(
-
-/**
  * @brief  Constructs a new ListObjectChildrenRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new DescribeDBEngineVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
-
-/**
  * @brief  Constructs a new DescribeDBEngineVersionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

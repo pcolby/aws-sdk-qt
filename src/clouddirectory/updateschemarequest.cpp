@@ -34,15 +34,6 @@ namespace CloudDirectory {
  */
 
 /**
- * @brief  Constructs a new UpdateSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-UpdateSchemaResponse::UpdateSchemaResponse(
-
-/**
  * @brief  Constructs a new UpdateSchemaRequest object by copying another.
  *
  * @param  other  Instance to copy.

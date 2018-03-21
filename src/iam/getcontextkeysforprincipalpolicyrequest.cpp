@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new GetContextKeysForPrincipalPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetContextKeysForPrincipalPolicyResponse::GetContextKeysForPrincipalPolicyResponse(
-
-/**
  * @brief  Constructs a new GetContextKeysForPrincipalPolicyRequest object by copying another.
  *
  * @param  other  Instance to copy.

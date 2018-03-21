@@ -34,15 +34,6 @@ namespace EMR {
  */
 
 /**
- * @brief  Constructs a new DeleteSecurityConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
-
-/**
  * @brief  Constructs a new DeleteSecurityConfigurationRequest object by copying another.
  *
  * @param  other  Instance to copy.

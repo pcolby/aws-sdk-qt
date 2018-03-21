@@ -34,15 +34,6 @@ namespace CloudSearch {
  */
 
 /**
- * @brief  Constructs a new DescribeScalingParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeScalingParametersResponse::DescribeScalingParametersResponse(
-
-/**
  * @brief  Constructs a new DescribeScalingParametersRequest object by copying another.
  *
  * @param  other  Instance to copy.

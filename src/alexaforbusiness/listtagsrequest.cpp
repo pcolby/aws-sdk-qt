@@ -34,15 +34,6 @@ namespace AlexaForBusiness {
  */
 
 /**
- * @brief  Constructs a new ListTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListTagsResponse::ListTagsResponse(
-
-/**
  * @brief  Constructs a new ListTagsRequest object by copying another.
  *
  * @param  other  Instance to copy.

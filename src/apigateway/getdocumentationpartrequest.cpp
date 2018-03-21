@@ -34,15 +34,6 @@ namespace APIGateway {
  */
 
 /**
- * @brief  Constructs a new GetDocumentationPartResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetDocumentationPartResponse::GetDocumentationPartResponse(
-
-/**
  * @brief  Constructs a new GetDocumentationPartRequest object by copying another.
  *
  * @param  other  Instance to copy.

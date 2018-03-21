@@ -34,15 +34,6 @@ namespace CloudHSMV2 {
  */
 
 /**
- * @brief  Constructs a new InitializeClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-InitializeClusterResponse::InitializeClusterResponse(
-
-/**
  * @brief  Constructs a new InitializeClusterRequest object by copying another.
  *
  * @param  other  Instance to copy.

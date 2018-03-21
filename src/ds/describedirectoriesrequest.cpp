@@ -34,15 +34,6 @@ namespace DirectoryService {
  */
 
 /**
- * @brief  Constructs a new DescribeDirectoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeDirectoriesResponse::DescribeDirectoriesResponse(
-
-/**
  * @brief  Constructs a new DescribeDirectoriesRequest object by copying another.
  *
  * @param  other  Instance to copy.

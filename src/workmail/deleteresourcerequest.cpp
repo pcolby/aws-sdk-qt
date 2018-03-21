@@ -34,15 +34,6 @@ namespace WorkMail {
  */
 
 /**
- * @brief  Constructs a new DeleteResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteResourceResponse::DeleteResourceResponse(
-
-/**
  * @brief  Constructs a new DeleteResourceRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Redshift {
  */
 
 /**
- * @brief  Constructs a new DescribeReservedNodeOfferingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DescribeReservedNodeOfferingsResponse::DescribeReservedNodeOfferingsResponse(
-
-/**
  * @brief  Constructs a new DescribeReservedNodeOfferingsRequest object by copying another.
  *
  * @param  other  Instance to copy.

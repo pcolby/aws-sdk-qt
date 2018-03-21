@@ -34,15 +34,6 @@ namespace WorkSpaces {
  */
 
 /**
- * @brief  Constructs a new RebootWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RebootWorkspacesResponse::RebootWorkspacesResponse(
-
-/**
  * @brief  Constructs a new RebootWorkspacesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace Lambda {
  */
 
 /**
- * @brief  Constructs a new ListFunctionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListFunctionsResponse::ListFunctionsResponse(
-
-/**
  * @brief  Constructs a new ListFunctionsRequest object by copying another.
  *
  * @param  other  Instance to copy.

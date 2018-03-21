@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ResyncMFADeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ResyncMFADeviceResponse::ResyncMFADeviceResponse(
-
-/**
  * @brief  Constructs a new ResyncMFADeviceRequest object by copying another.
  *
  * @param  other  Instance to copy.

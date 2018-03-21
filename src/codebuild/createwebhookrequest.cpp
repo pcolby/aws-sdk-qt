@@ -34,15 +34,6 @@ namespace CodeBuild {
  */
 
 /**
- * @brief  Constructs a new CreateWebhookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateWebhookResponse::CreateWebhookResponse(
-
-/**
  * @brief  Constructs a new CreateWebhookRequest object by copying another.
  *
  * @param  other  Instance to copy.

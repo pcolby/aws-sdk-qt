@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new GetInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetInstanceProfileResponse::GetInstanceProfileResponse(
-
-/**
  * @brief  Constructs a new GetInstanceProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

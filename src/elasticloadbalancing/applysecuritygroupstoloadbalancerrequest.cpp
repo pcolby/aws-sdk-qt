@@ -34,15 +34,6 @@ namespace ElasticLoadBalancing {
  */
 
 /**
- * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ApplySecurityGroupsToLoadBalancerResponse::ApplySecurityGroupsToLoadBalancerResponse(
-
-/**
  * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace CloudWatch {
  */
 
 /**
- * @brief  Constructs a new DeleteDashboardsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteDashboardsResponse::DeleteDashboardsResponse(
-
-/**
  * @brief  Constructs a new DeleteDashboardsRequest object by copying another.
  *
  * @param  other  Instance to copy.

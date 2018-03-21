@@ -34,15 +34,6 @@ namespace XRay {
  */
 
 /**
- * @brief  Constructs a new GetTraceGraphResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetTraceGraphResponse::GetTraceGraphResponse(
-
-/**
  * @brief  Constructs a new GetTraceGraphRequest object by copying another.
  *
  * @param  other  Instance to copy.

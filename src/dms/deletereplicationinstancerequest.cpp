@@ -34,15 +34,6 @@ namespace DatabaseMigrationService {
  */
 
 /**
- * @brief  Constructs a new DeleteReplicationInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-DeleteReplicationInstanceResponse::DeleteReplicationInstanceResponse(
-
-/**
  * @brief  Constructs a new DeleteReplicationInstanceRequest object by copying another.
  *
  * @param  other  Instance to copy.

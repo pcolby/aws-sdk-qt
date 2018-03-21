@@ -34,15 +34,6 @@ namespace EC2 {
  */
 
 /**
- * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-AcceptReservedInstancesExchangeQuoteResponse::AcceptReservedInstancesExchangeQuoteResponse(
-
-/**
  * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequest object by copying another.
  *
  * @param  other  Instance to copy.

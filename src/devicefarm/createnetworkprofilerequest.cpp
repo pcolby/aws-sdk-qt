@@ -34,15 +34,6 @@ namespace DeviceFarm {
  */
 
 /**
- * @brief  Constructs a new CreateNetworkProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-CreateNetworkProfileResponse::CreateNetworkProfileResponse(
-
-/**
  * @brief  Constructs a new CreateNetworkProfileRequest object by copying another.
  *
  * @param  other  Instance to copy.

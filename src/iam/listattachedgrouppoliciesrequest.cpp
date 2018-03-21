@@ -34,15 +34,6 @@ namespace IAM {
  */
 
 /**
- * @brief  Constructs a new ListAttachedGroupPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ListAttachedGroupPoliciesResponse::ListAttachedGroupPoliciesResponse(
-
-/**
  * @brief  Constructs a new ListAttachedGroupPoliciesRequest object by copying another.
  *
  * @param  other  Instance to copy.

@@ -34,15 +34,6 @@ namespace RDS {
  */
 
 /**
- * @brief  Constructs a new RestoreDBInstanceFromS3Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-RestoreDBInstanceFromS3Response::RestoreDBInstanceFromS3Response(
-
-/**
  * @brief  Constructs a new RestoreDBInstanceFromS3Request object by copying another.
  *
  * @param  other  Instance to copy.

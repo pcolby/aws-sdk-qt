@@ -34,15 +34,6 @@ namespace CognitoIdentity {
  */
 
 /**
- * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-GetOpenIdTokenForDeveloperIdentityResponse::GetOpenIdTokenForDeveloperIdentityResponse(
-
-/**
  * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityRequest object by copying another.
  *
  * @param  other  Instance to copy.

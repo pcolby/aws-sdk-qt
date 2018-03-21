@@ -34,15 +34,6 @@ namespace SQS {
  */
 
 /**
- * @brief  Constructs a new ChangeMessageVisibilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
- */
-ChangeMessageVisibilityResponse::ChangeMessageVisibilityResponse(
-
-/**
  * @brief  Constructs a new ChangeMessageVisibilityRequest object by copying another.
  *
  * @param  other  Instance to copy.
