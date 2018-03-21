@@ -39,7 +39,7 @@ Generator::Generator(const QDir &outputDir)
 
     const QDir dir(QSL(":/templates"));
     foreach (const QString &name, dir.entryList(QDir::Files|QDir::Readable)) {
-        qDebug() << "loading template" << name;
+        qInfo() << "loading template" << name;
         const auto tmplate = engine.loadByName(name);
         if (tmplate->error()) {
             qWarning() << "error loading template" << name << tmplate->errorString();
@@ -72,7 +72,7 @@ bool Generator::generate(const QFileInfoList &descriptions)
 bool Generator::generate(const QString &serviceFileName,
                          const QJsonObject &description)
 {
-    qDebug() << "generating service" << serviceFileName;
+    qInfo() << "generating service" << serviceFileName;
     outputDir.mkdir(serviceFileName);
     headers.clear();
     sources.clear();
@@ -258,6 +258,7 @@ bool Generator::render(const QString &templateName, Grantlee::Context &context,
 void Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
                                  const QString &outputPathName, const QString className)
 {
+    /// @todo Explicit set class name in context?
     foreach (const QString &extension, QStringList() << QSL(".cpp") << QSL(".h") << QSL("_p.h")) {
         render(templateBaseName + extension, context, outputPathName, className.toLower() + extension);
         ((extension == QSL(".cpp")) ? sources : headers).append(className.toLower() + extension);
