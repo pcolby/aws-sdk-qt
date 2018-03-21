@@ -87,18 +87,15 @@ bool Generator::generate(const QString &serviceFileName,
         }
     }
     context.insert(QSL("operations"), operations);
-    render(QSL("client.cpp"), context, projectDir, className.toLower() + QSL(".cpp"));
-    render(QSL("client.h"),   context, projectDir, className.toLower() + QSL(".h"));
-    render(QSL("client_p.h"), context, projectDir, className.toLower() + QSL("_p.h"));
+    renderClassFiles(QSL("client"), context, projectDir, className);
     context.pop();
 
     /// @todo Generate ancillary project files.
     context.push();
-    context.insert(QSL("HeaderFiles"), QStringList()
-                   << QSL("%1.h").arg(className.toLower())
-                   << QSL("%1_p.h").arg(className.toLower()));
-    context.insert(QSL("SourceFiles"), QStringList()
-                   << QSL("%1.cpp").arg(className.toLower()));
+    headers.sort();
+    sources.sort();
+    context.insert(QSL("HeaderFiles"), headers);
+    context.insert(QSL("SourceFiles"), sources);
     render(QSL("service.pro"), context, projectDir, serviceFileName + QSL(".pro"));
     context.pop();
     return true;
@@ -234,9 +231,10 @@ bool Generator::render(const QString &templateName, Grantlee::Context &context,
 }
 
 void Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
-                                 const QString &outputPathName, const QString className) const
+                                 const QString &outputPathName, const QString className)
 {
     foreach (const QString &extension, QStringList() << QSL(".cpp") << QSL(".h") << QSL("_p.h")) {
         render(templateBaseName + extension, context, outputPathName, className.toLower() + extension);
+        ((extension == QSL(".cpp")) ? sources : headers).append(className.toLower() + extension);
     }
 }

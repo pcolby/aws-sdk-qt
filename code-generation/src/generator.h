@@ -44,10 +44,11 @@ protected:
                 const QString &outputDirName, const QString &outputFileName) const;
 
     void renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
-                          const QString &outputPathName, const QString className) const;
+                          const QString &outputPathName, const QString className);
 
 private:
     QDir outputDir;
     Grantlee::Engine engine;
     QMap<QString, Grantlee::Template> templates;
+    QStringList sources, headers;
 };
