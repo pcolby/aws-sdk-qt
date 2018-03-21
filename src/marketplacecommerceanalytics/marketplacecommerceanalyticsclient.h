@@ -32,7 +32,9 @@ namespace AWS {
 namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClientPrivate;
+class GenerateDataSetRequest;
 class GenerateDataSetResponse;
+class StartSupportDataExportRequest;
 class StartSupportDataExportResponse;
 
 class QTAWS_EXPORT MarketplaceCommerceAnalyticsClient : public AwsAbstractClient {

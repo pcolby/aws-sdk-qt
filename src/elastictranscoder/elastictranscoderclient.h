@@ -32,22 +32,39 @@ namespace AWS {
 namespace ElasticTranscoder {
 
 class ElasticTranscoderClientPrivate;
+class CancelJobRequest;
 class CancelJobResponse;
+class CreateJobRequest;
 class CreateJobResponse;
+class CreatePipelineRequest;
 class CreatePipelineResponse;
+class CreatePresetRequest;
 class CreatePresetResponse;
+class DeletePipelineRequest;
 class DeletePipelineResponse;
+class DeletePresetRequest;
 class DeletePresetResponse;
+class ListJobsByPipelineRequest;
 class ListJobsByPipelineResponse;
+class ListJobsByStatusRequest;
 class ListJobsByStatusResponse;
+class ListPipelinesRequest;
 class ListPipelinesResponse;
+class ListPresetsRequest;
 class ListPresetsResponse;
+class ReadJobRequest;
 class ReadJobResponse;
+class ReadPipelineRequest;
 class ReadPipelineResponse;
+class ReadPresetRequest;
 class ReadPresetResponse;
+class TestRoleRequest;
 class TestRoleResponse;
+class UpdatePipelineRequest;
 class UpdatePipelineResponse;
+class UpdatePipelineNotificationsRequest;
 class UpdatePipelineNotificationsResponse;
+class UpdatePipelineStatusRequest;
 class UpdatePipelineStatusResponse;
 
 class QTAWS_EXPORT ElasticTranscoderClient : public AwsAbstractClient {

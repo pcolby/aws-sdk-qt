@@ -32,22 +32,39 @@ namespace AWS {
 namespace MQ {
 
 class MqClientPrivate;
+class CreateBrokerRequest;
 class CreateBrokerResponse;
+class CreateConfigurationRequest;
 class CreateConfigurationResponse;
+class CreateUserRequest;
 class CreateUserResponse;
+class DeleteBrokerRequest;
 class DeleteBrokerResponse;
+class DeleteUserRequest;
 class DeleteUserResponse;
+class DescribeBrokerRequest;
 class DescribeBrokerResponse;
+class DescribeConfigurationRequest;
 class DescribeConfigurationResponse;
+class DescribeConfigurationRevisionRequest;
 class DescribeConfigurationRevisionResponse;
+class DescribeUserRequest;
 class DescribeUserResponse;
+class ListBrokersRequest;
 class ListBrokersResponse;
+class ListConfigurationRevisionsRequest;
 class ListConfigurationRevisionsResponse;
+class ListConfigurationsRequest;
 class ListConfigurationsResponse;
+class ListUsersRequest;
 class ListUsersResponse;
+class RebootBrokerRequest;
 class RebootBrokerResponse;
+class UpdateBrokerRequest;
 class UpdateBrokerResponse;
+class UpdateConfigurationRequest;
 class UpdateConfigurationResponse;
+class UpdateUserRequest;
 class UpdateUserResponse;
 
 class QTAWS_EXPORT MqClient : public AwsAbstractClient {

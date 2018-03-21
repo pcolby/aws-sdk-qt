@@ -32,15 +32,25 @@ namespace AWS {
 namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingClientPrivate;
+class DeleteScalingPolicyRequest;
 class DeleteScalingPolicyResponse;
+class DeleteScheduledActionRequest;
 class DeleteScheduledActionResponse;
+class DeregisterScalableTargetRequest;
 class DeregisterScalableTargetResponse;
+class DescribeScalableTargetsRequest;
 class DescribeScalableTargetsResponse;
+class DescribeScalingActivitiesRequest;
 class DescribeScalingActivitiesResponse;
+class DescribeScalingPoliciesRequest;
 class DescribeScalingPoliciesResponse;
+class DescribeScheduledActionsRequest;
 class DescribeScheduledActionsResponse;
+class PutScalingPolicyRequest;
 class PutScalingPolicyResponse;
+class PutScheduledActionRequest;
 class PutScheduledActionResponse;
+class RegisterScalableTargetRequest;
 class RegisterScalableTargetResponse;
 
 class QTAWS_EXPORT ApplicationAutoScalingClient : public AwsAbstractClient {

@@ -32,23 +32,41 @@ namespace AWS {
 namespace CognitoIdentity {
 
 class CognitoIdentityClientPrivate;
+class CreateIdentityPoolRequest;
 class CreateIdentityPoolResponse;
+class DeleteIdentitiesRequest;
 class DeleteIdentitiesResponse;
+class DeleteIdentityPoolRequest;
 class DeleteIdentityPoolResponse;
+class DescribeIdentityRequest;
 class DescribeIdentityResponse;
+class DescribeIdentityPoolRequest;
 class DescribeIdentityPoolResponse;
+class GetCredentialsForIdentityRequest;
 class GetCredentialsForIdentityResponse;
+class GetIdRequest;
 class GetIdResponse;
+class GetIdentityPoolRolesRequest;
 class GetIdentityPoolRolesResponse;
+class GetOpenIdTokenRequest;
 class GetOpenIdTokenResponse;
+class GetOpenIdTokenForDeveloperIdentityRequest;
 class GetOpenIdTokenForDeveloperIdentityResponse;
+class ListIdentitiesRequest;
 class ListIdentitiesResponse;
+class ListIdentityPoolsRequest;
 class ListIdentityPoolsResponse;
+class LookupDeveloperIdentityRequest;
 class LookupDeveloperIdentityResponse;
+class MergeDeveloperIdentitiesRequest;
 class MergeDeveloperIdentitiesResponse;
+class SetIdentityPoolRolesRequest;
 class SetIdentityPoolRolesResponse;
+class UnlinkDeveloperIdentityRequest;
 class UnlinkDeveloperIdentityResponse;
+class UnlinkIdentityRequest;
 class UnlinkIdentityResponse;
+class UpdateIdentityPoolRequest;
 class UpdateIdentityPoolResponse;
 
 class QTAWS_EXPORT CognitoIdentityClient : public AwsAbstractClient {

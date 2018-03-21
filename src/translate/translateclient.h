@@ -32,6 +32,7 @@ namespace AWS {
 namespace Translate {
 
 class TranslateClientPrivate;
+class TranslateTextRequest;
 class TranslateTextResponse;
 
 class QTAWS_EXPORT TranslateClient : public AwsAbstractClient {

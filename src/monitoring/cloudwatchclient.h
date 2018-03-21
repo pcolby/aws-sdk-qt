@@ -32,20 +32,35 @@ namespace AWS {
 namespace CloudWatch {
 
 class CloudWatchClientPrivate;
+class DeleteAlarmsRequest;
 class DeleteAlarmsResponse;
+class DeleteDashboardsRequest;
 class DeleteDashboardsResponse;
+class DescribeAlarmHistoryRequest;
 class DescribeAlarmHistoryResponse;
+class DescribeAlarmsRequest;
 class DescribeAlarmsResponse;
+class DescribeAlarmsForMetricRequest;
 class DescribeAlarmsForMetricResponse;
+class DisableAlarmActionsRequest;
 class DisableAlarmActionsResponse;
+class EnableAlarmActionsRequest;
 class EnableAlarmActionsResponse;
+class GetDashboardRequest;
 class GetDashboardResponse;
+class GetMetricStatisticsRequest;
 class GetMetricStatisticsResponse;
+class ListDashboardsRequest;
 class ListDashboardsResponse;
+class ListMetricsRequest;
 class ListMetricsResponse;
+class PutDashboardRequest;
 class PutDashboardResponse;
+class PutMetricAlarmRequest;
 class PutMetricAlarmResponse;
+class PutMetricDataRequest;
 class PutMetricDataResponse;
+class SetAlarmStateRequest;
 class SetAlarmStateResponse;
 
 class QTAWS_EXPORT CloudWatchClient : public AwsAbstractClient {

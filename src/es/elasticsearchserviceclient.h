@@ -32,19 +32,31 @@ namespace AWS {
 namespace ElasticsearchService {
 
 class ElasticsearchServiceClientPrivate;
+class AddTagsRequest;
 class AddTagsResponse;
+class CreateElasticsearchDomainRequest;
 class CreateElasticsearchDomainResponse;
+class DeleteElasticsearchDomainRequest;
 class DeleteElasticsearchDomainResponse;
 class DeleteElasticsearchServiceRoleResponse;
+class DescribeElasticsearchDomainRequest;
 class DescribeElasticsearchDomainResponse;
+class DescribeElasticsearchDomainConfigRequest;
 class DescribeElasticsearchDomainConfigResponse;
+class DescribeElasticsearchDomainsRequest;
 class DescribeElasticsearchDomainsResponse;
+class DescribeElasticsearchInstanceTypeLimitsRequest;
 class DescribeElasticsearchInstanceTypeLimitsResponse;
 class ListDomainNamesResponse;
+class ListElasticsearchInstanceTypesRequest;
 class ListElasticsearchInstanceTypesResponse;
+class ListElasticsearchVersionsRequest;
 class ListElasticsearchVersionsResponse;
+class ListTagsRequest;
 class ListTagsResponse;
+class RemoveTagsRequest;
 class RemoveTagsResponse;
+class UpdateElasticsearchDomainConfigRequest;
 class UpdateElasticsearchDomainConfigResponse;
 
 class QTAWS_EXPORT ElasticsearchServiceClient : public AwsAbstractClient {

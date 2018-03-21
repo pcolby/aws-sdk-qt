@@ -32,14 +32,23 @@ namespace AWS {
 namespace Mobile {
 
 class MobileClientPrivate;
+class CreateProjectRequest;
 class CreateProjectResponse;
+class DeleteProjectRequest;
 class DeleteProjectResponse;
+class DescribeBundleRequest;
 class DescribeBundleResponse;
+class DescribeProjectRequest;
 class DescribeProjectResponse;
+class ExportBundleRequest;
 class ExportBundleResponse;
+class ExportProjectRequest;
 class ExportProjectResponse;
+class ListBundlesRequest;
 class ListBundlesResponse;
+class ListProjectsRequest;
 class ListProjectsResponse;
+class UpdateProjectRequest;
 class UpdateProjectResponse;
 
 class QTAWS_EXPORT MobileClient : public AwsAbstractClient {

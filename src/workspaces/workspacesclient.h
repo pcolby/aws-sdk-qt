@@ -32,19 +32,33 @@ namespace AWS {
 namespace WorkSpaces {
 
 class WorkSpacesClientPrivate;
+class CreateTagsRequest;
 class CreateTagsResponse;
+class CreateWorkspacesRequest;
 class CreateWorkspacesResponse;
+class DeleteTagsRequest;
 class DeleteTagsResponse;
+class DescribeTagsRequest;
 class DescribeTagsResponse;
+class DescribeWorkspaceBundlesRequest;
 class DescribeWorkspaceBundlesResponse;
+class DescribeWorkspaceDirectoriesRequest;
 class DescribeWorkspaceDirectoriesResponse;
+class DescribeWorkspacesRequest;
 class DescribeWorkspacesResponse;
+class DescribeWorkspacesConnectionStatusRequest;
 class DescribeWorkspacesConnectionStatusResponse;
+class ModifyWorkspacePropertiesRequest;
 class ModifyWorkspacePropertiesResponse;
+class RebootWorkspacesRequest;
 class RebootWorkspacesResponse;
+class RebuildWorkspacesRequest;
 class RebuildWorkspacesResponse;
+class StartWorkspacesRequest;
 class StartWorkspacesResponse;
+class StopWorkspacesRequest;
 class StopWorkspacesResponse;
+class TerminateWorkspacesRequest;
 class TerminateWorkspacesResponse;
 
 class QTAWS_EXPORT WorkSpacesClient : public AwsAbstractClient {

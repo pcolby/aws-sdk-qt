@@ -32,15 +32,25 @@ namespace AWS {
 namespace CloudHSMV2 {
 
 class CloudHSMV2ClientPrivate;
+class CreateClusterRequest;
 class CreateClusterResponse;
+class CreateHsmRequest;
 class CreateHsmResponse;
+class DeleteClusterRequest;
 class DeleteClusterResponse;
+class DeleteHsmRequest;
 class DeleteHsmResponse;
+class DescribeBackupsRequest;
 class DescribeBackupsResponse;
+class DescribeClustersRequest;
 class DescribeClustersResponse;
+class InitializeClusterRequest;
 class InitializeClusterResponse;
+class ListTagsRequest;
 class ListTagsResponse;
+class TagResourceRequest;
 class TagResourceResponse;
+class UntagResourceRequest;
 class UntagResourceResponse;
 
 class QTAWS_EXPORT CloudHSMV2Client : public AwsAbstractClient {

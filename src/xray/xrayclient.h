@@ -32,11 +32,17 @@ namespace AWS {
 namespace XRay {
 
 class XRayClientPrivate;
+class BatchGetTracesRequest;
 class BatchGetTracesResponse;
+class GetServiceGraphRequest;
 class GetServiceGraphResponse;
+class GetTraceGraphRequest;
 class GetTraceGraphResponse;
+class GetTraceSummariesRequest;
 class GetTraceSummariesResponse;
+class PutTelemetryRecordsRequest;
 class PutTelemetryRecordsResponse;
+class PutTraceSegmentsRequest;
 class PutTraceSegmentsResponse;
 
 class QTAWS_EXPORT XRayClient : public AwsAbstractClient {

@@ -32,15 +32,25 @@ namespace AWS {
 namespace MediaStore {
 
 class MediaStoreClientPrivate;
+class CreateContainerRequest;
 class CreateContainerResponse;
+class DeleteContainerRequest;
 class DeleteContainerResponse;
+class DeleteContainerPolicyRequest;
 class DeleteContainerPolicyResponse;
+class DeleteCorsPolicyRequest;
 class DeleteCorsPolicyResponse;
+class DescribeContainerRequest;
 class DescribeContainerResponse;
+class GetContainerPolicyRequest;
 class GetContainerPolicyResponse;
+class GetCorsPolicyRequest;
 class GetCorsPolicyResponse;
+class ListContainersRequest;
 class ListContainersResponse;
+class PutContainerPolicyRequest;
 class PutContainerPolicyResponse;
+class PutCorsPolicyRequest;
 class PutCorsPolicyResponse;
 
 class QTAWS_EXPORT MediaStoreClient : public AwsAbstractClient {

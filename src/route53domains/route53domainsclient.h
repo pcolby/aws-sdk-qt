@@ -32,29 +32,53 @@ namespace AWS {
 namespace Route53Domains {
 
 class Route53DomainsClientPrivate;
+class CheckDomainAvailabilityRequest;
 class CheckDomainAvailabilityResponse;
+class CheckDomainTransferabilityRequest;
 class CheckDomainTransferabilityResponse;
+class DeleteTagsForDomainRequest;
 class DeleteTagsForDomainResponse;
+class DisableDomainAutoRenewRequest;
 class DisableDomainAutoRenewResponse;
+class DisableDomainTransferLockRequest;
 class DisableDomainTransferLockResponse;
+class EnableDomainAutoRenewRequest;
 class EnableDomainAutoRenewResponse;
+class EnableDomainTransferLockRequest;
 class EnableDomainTransferLockResponse;
+class GetContactReachabilityStatusRequest;
 class GetContactReachabilityStatusResponse;
+class GetDomainDetailRequest;
 class GetDomainDetailResponse;
+class GetDomainSuggestionsRequest;
 class GetDomainSuggestionsResponse;
+class GetOperationDetailRequest;
 class GetOperationDetailResponse;
+class ListDomainsRequest;
 class ListDomainsResponse;
+class ListOperationsRequest;
 class ListOperationsResponse;
+class ListTagsForDomainRequest;
 class ListTagsForDomainResponse;
+class RegisterDomainRequest;
 class RegisterDomainResponse;
+class RenewDomainRequest;
 class RenewDomainResponse;
+class ResendContactReachabilityEmailRequest;
 class ResendContactReachabilityEmailResponse;
+class RetrieveDomainAuthCodeRequest;
 class RetrieveDomainAuthCodeResponse;
+class TransferDomainRequest;
 class TransferDomainResponse;
+class UpdateDomainContactRequest;
 class UpdateDomainContactResponse;
+class UpdateDomainContactPrivacyRequest;
 class UpdateDomainContactPrivacyResponse;
+class UpdateDomainNameserversRequest;
 class UpdateDomainNameserversResponse;
+class UpdateTagsForDomainRequest;
 class UpdateTagsForDomainResponse;
+class ViewBillingRequest;
 class ViewBillingResponse;
 
 class QTAWS_EXPORT Route53DomainsClient : public AwsAbstractClient {

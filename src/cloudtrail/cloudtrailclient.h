@@ -32,19 +32,33 @@ namespace AWS {
 namespace CloudTrail {
 
 class CloudTrailClientPrivate;
+class AddTagsRequest;
 class AddTagsResponse;
+class CreateTrailRequest;
 class CreateTrailResponse;
+class DeleteTrailRequest;
 class DeleteTrailResponse;
+class DescribeTrailsRequest;
 class DescribeTrailsResponse;
+class GetEventSelectorsRequest;
 class GetEventSelectorsResponse;
+class GetTrailStatusRequest;
 class GetTrailStatusResponse;
+class ListPublicKeysRequest;
 class ListPublicKeysResponse;
+class ListTagsRequest;
 class ListTagsResponse;
+class LookupEventsRequest;
 class LookupEventsResponse;
+class PutEventSelectorsRequest;
 class PutEventSelectorsResponse;
+class RemoveTagsRequest;
 class RemoveTagsResponse;
+class StartLoggingRequest;
 class StartLoggingResponse;
+class StopLoggingRequest;
 class StopLoggingResponse;
+class UpdateTrailRequest;
 class UpdateTrailResponse;
 
 class QTAWS_EXPORT CloudTrailClient : public AwsAbstractClient {

@@ -32,24 +32,43 @@ namespace AWS {
 namespace SFN {
 
 class SfnClientPrivate;
+class CreateActivityRequest;
 class CreateActivityResponse;
+class CreateStateMachineRequest;
 class CreateStateMachineResponse;
+class DeleteActivityRequest;
 class DeleteActivityResponse;
+class DeleteStateMachineRequest;
 class DeleteStateMachineResponse;
+class DescribeActivityRequest;
 class DescribeActivityResponse;
+class DescribeExecutionRequest;
 class DescribeExecutionResponse;
+class DescribeStateMachineRequest;
 class DescribeStateMachineResponse;
+class DescribeStateMachineForExecutionRequest;
 class DescribeStateMachineForExecutionResponse;
+class GetActivityTaskRequest;
 class GetActivityTaskResponse;
+class GetExecutionHistoryRequest;
 class GetExecutionHistoryResponse;
+class ListActivitiesRequest;
 class ListActivitiesResponse;
+class ListExecutionsRequest;
 class ListExecutionsResponse;
+class ListStateMachinesRequest;
 class ListStateMachinesResponse;
+class SendTaskFailureRequest;
 class SendTaskFailureResponse;
+class SendTaskHeartbeatRequest;
 class SendTaskHeartbeatResponse;
+class SendTaskSuccessRequest;
 class SendTaskSuccessResponse;
+class StartExecutionRequest;
 class StartExecutionResponse;
+class StopExecutionRequest;
 class StopExecutionResponse;
+class UpdateStateMachineRequest;
 class UpdateStateMachineResponse;
 
 class QTAWS_EXPORT SfnClient : public AwsAbstractClient {

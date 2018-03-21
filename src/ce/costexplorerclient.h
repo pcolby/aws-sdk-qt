@@ -32,10 +32,15 @@ namespace AWS {
 namespace CostExplorer {
 
 class CostExplorerClientPrivate;
+class GetCostAndUsageRequest;
 class GetCostAndUsageResponse;
+class GetDimensionValuesRequest;
 class GetDimensionValuesResponse;
+class GetReservationCoverageRequest;
 class GetReservationCoverageResponse;
+class GetReservationUtilizationRequest;
 class GetReservationUtilizationResponse;
+class GetTagsRequest;
 class GetTagsResponse;
 
 class QTAWS_EXPORT CostExplorerClient : public AwsAbstractClient {

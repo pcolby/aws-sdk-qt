@@ -32,11 +32,17 @@ namespace AWS {
 namespace ImportExport {
 
 class ImportExportClientPrivate;
+class CancelJobRequest;
 class CancelJobResponse;
+class CreateJobRequest;
 class CreateJobResponse;
+class GetShippingLabelRequest;
 class GetShippingLabelResponse;
+class GetStatusRequest;
 class GetStatusResponse;
+class ListJobsRequest;
 class ListJobsResponse;
+class UpdateJobRequest;
 class UpdateJobResponse;
 
 class QTAWS_EXPORT ImportExportClient : public AwsAbstractClient {

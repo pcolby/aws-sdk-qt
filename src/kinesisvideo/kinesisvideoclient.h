@@ -32,15 +32,25 @@ namespace AWS {
 namespace KinesisVideo {
 
 class KinesisVideoClientPrivate;
+class CreateStreamRequest;
 class CreateStreamResponse;
+class DeleteStreamRequest;
 class DeleteStreamResponse;
+class DescribeStreamRequest;
 class DescribeStreamResponse;
+class GetDataEndpointRequest;
 class GetDataEndpointResponse;
+class ListStreamsRequest;
 class ListStreamsResponse;
+class ListTagsForStreamRequest;
 class ListTagsForStreamResponse;
+class TagStreamRequest;
 class TagStreamResponse;
+class UntagStreamRequest;
 class UntagStreamResponse;
+class UpdateDataRetentionRequest;
 class UpdateDataRetentionResponse;
+class UpdateStreamRequest;
 class UpdateStreamResponse;
 
 class QTAWS_EXPORT KinesisVideoClient : public AwsAbstractClient {

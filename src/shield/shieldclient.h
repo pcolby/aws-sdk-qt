@@ -32,15 +32,25 @@ namespace AWS {
 namespace Shield {
 
 class ShieldClientPrivate;
+class CreateProtectionRequest;
 class CreateProtectionResponse;
+class CreateSubscriptionRequest;
 class CreateSubscriptionResponse;
+class DeleteProtectionRequest;
 class DeleteProtectionResponse;
+class DeleteSubscriptionRequest;
 class DeleteSubscriptionResponse;
+class DescribeAttackRequest;
 class DescribeAttackResponse;
+class DescribeProtectionRequest;
 class DescribeProtectionResponse;
+class DescribeSubscriptionRequest;
 class DescribeSubscriptionResponse;
+class GetSubscriptionStateRequest;
 class GetSubscriptionStateResponse;
+class ListAttacksRequest;
 class ListAttacksResponse;
+class ListProtectionsRequest;
 class ListProtectionsResponse;
 
 class QTAWS_EXPORT ShieldClient : public AwsAbstractClient {

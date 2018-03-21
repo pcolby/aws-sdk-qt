@@ -32,27 +32,49 @@ namespace AWS {
 namespace ECR {
 
 class EcrClientPrivate;
+class BatchCheckLayerAvailabilityRequest;
 class BatchCheckLayerAvailabilityResponse;
+class BatchDeleteImageRequest;
 class BatchDeleteImageResponse;
+class BatchGetImageRequest;
 class BatchGetImageResponse;
+class CompleteLayerUploadRequest;
 class CompleteLayerUploadResponse;
+class CreateRepositoryRequest;
 class CreateRepositoryResponse;
+class DeleteLifecyclePolicyRequest;
 class DeleteLifecyclePolicyResponse;
+class DeleteRepositoryRequest;
 class DeleteRepositoryResponse;
+class DeleteRepositoryPolicyRequest;
 class DeleteRepositoryPolicyResponse;
+class DescribeImagesRequest;
 class DescribeImagesResponse;
+class DescribeRepositoriesRequest;
 class DescribeRepositoriesResponse;
+class GetAuthorizationTokenRequest;
 class GetAuthorizationTokenResponse;
+class GetDownloadUrlForLayerRequest;
 class GetDownloadUrlForLayerResponse;
+class GetLifecyclePolicyRequest;
 class GetLifecyclePolicyResponse;
+class GetLifecyclePolicyPreviewRequest;
 class GetLifecyclePolicyPreviewResponse;
+class GetRepositoryPolicyRequest;
 class GetRepositoryPolicyResponse;
+class InitiateLayerUploadRequest;
 class InitiateLayerUploadResponse;
+class ListImagesRequest;
 class ListImagesResponse;
+class PutImageRequest;
 class PutImageResponse;
+class PutLifecyclePolicyRequest;
 class PutLifecyclePolicyResponse;
+class SetRepositoryPolicyRequest;
 class SetRepositoryPolicyResponse;
+class StartLifecyclePolicyPreviewRequest;
 class StartLifecyclePolicyPreviewResponse;
+class UploadLayerPartRequest;
 class UploadLayerPartResponse;
 
 class QTAWS_EXPORT EcrClient : public AwsAbstractClient {

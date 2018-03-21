@@ -32,6 +32,7 @@ namespace AWS {
 namespace MobileAnalytics {
 
 class MobileAnalyticsClientPrivate;
+class PutEventsRequest;
 class PutEventsResponse;
 
 class QTAWS_EXPORT MobileAnalyticsClient : public AwsAbstractClient {

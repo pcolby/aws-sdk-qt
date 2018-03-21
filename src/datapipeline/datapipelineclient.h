@@ -32,24 +32,43 @@ namespace AWS {
 namespace DataPipeline {
 
 class DataPipelineClientPrivate;
+class ActivatePipelineRequest;
 class ActivatePipelineResponse;
+class AddTagsRequest;
 class AddTagsResponse;
+class CreatePipelineRequest;
 class CreatePipelineResponse;
+class DeactivatePipelineRequest;
 class DeactivatePipelineResponse;
+class DeletePipelineRequest;
 class DeletePipelineResponse;
+class DescribeObjectsRequest;
 class DescribeObjectsResponse;
+class DescribePipelinesRequest;
 class DescribePipelinesResponse;
+class EvaluateExpressionRequest;
 class EvaluateExpressionResponse;
+class GetPipelineDefinitionRequest;
 class GetPipelineDefinitionResponse;
+class ListPipelinesRequest;
 class ListPipelinesResponse;
+class PollForTaskRequest;
 class PollForTaskResponse;
+class PutPipelineDefinitionRequest;
 class PutPipelineDefinitionResponse;
+class QueryObjectsRequest;
 class QueryObjectsResponse;
+class RemoveTagsRequest;
 class RemoveTagsResponse;
+class ReportTaskProgressRequest;
 class ReportTaskProgressResponse;
+class ReportTaskRunnerHeartbeatRequest;
 class ReportTaskRunnerHeartbeatResponse;
+class SetStatusRequest;
 class SetStatusResponse;
+class SetTaskStatusRequest;
 class SetTaskStatusResponse;
+class ValidatePipelineDefinitionRequest;
 class ValidatePipelineDefinitionResponse;
 
 class QTAWS_EXPORT DataPipelineClient : public AwsAbstractClient {

@@ -32,16 +32,27 @@ namespace AWS {
 namespace Comprehend {
 
 class ComprehendClientPrivate;
+class BatchDetectDominantLanguageRequest;
 class BatchDetectDominantLanguageResponse;
+class BatchDetectEntitiesRequest;
 class BatchDetectEntitiesResponse;
+class BatchDetectKeyPhrasesRequest;
 class BatchDetectKeyPhrasesResponse;
+class BatchDetectSentimentRequest;
 class BatchDetectSentimentResponse;
+class DescribeTopicsDetectionJobRequest;
 class DescribeTopicsDetectionJobResponse;
+class DetectDominantLanguageRequest;
 class DetectDominantLanguageResponse;
+class DetectEntitiesRequest;
 class DetectEntitiesResponse;
+class DetectKeyPhrasesRequest;
 class DetectKeyPhrasesResponse;
+class DetectSentimentRequest;
 class DetectSentimentResponse;
+class ListTopicsDetectionJobsRequest;
 class ListTopicsDetectionJobsResponse;
+class StartTopicsDetectionJobRequest;
 class StartTopicsDetectionJobResponse;
 
 class QTAWS_EXPORT ComprehendClient : public AwsAbstractClient {

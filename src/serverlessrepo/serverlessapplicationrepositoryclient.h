@@ -32,15 +32,25 @@ namespace AWS {
 namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClientPrivate;
+class CreateApplicationRequest;
 class CreateApplicationResponse;
+class CreateApplicationVersionRequest;
 class CreateApplicationVersionResponse;
+class CreateCloudFormationChangeSetRequest;
 class CreateCloudFormationChangeSetResponse;
+class DeleteApplicationRequest;
 class DeleteApplicationResponse;
+class GetApplicationRequest;
 class GetApplicationResponse;
+class GetApplicationPolicyRequest;
 class GetApplicationPolicyResponse;
+class ListApplicationVersionsRequest;
 class ListApplicationVersionsResponse;
+class ListApplicationsRequest;
 class ListApplicationsResponse;
+class PutApplicationPolicyRequest;
 class PutApplicationPolicyResponse;
+class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
 class QTAWS_EXPORT ServerlessApplicationRepositoryClient : public AwsAbstractClient {

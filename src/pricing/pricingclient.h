@@ -32,8 +32,11 @@ namespace AWS {
 namespace Pricing {
 
 class PricingClientPrivate;
+class DescribeServicesRequest;
 class DescribeServicesResponse;
+class GetAttributeValuesRequest;
 class GetAttributeValuesResponse;
+class GetProductsRequest;
 class GetProductsResponse;
 
 class QTAWS_EXPORT PricingClient : public AwsAbstractClient {

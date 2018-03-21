@@ -32,9 +32,13 @@ namespace AWS {
 namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneClientPrivate;
+class DescribeJobExecutionRequest;
 class DescribeJobExecutionResponse;
+class GetPendingJobExecutionsRequest;
 class GetPendingJobExecutionsResponse;
+class StartNextPendingJobExecutionRequest;
 class StartNextPendingJobExecutionResponse;
+class UpdateJobExecutionRequest;
 class UpdateJobExecutionResponse;
 
 class QTAWS_EXPORT IoTJobsDataPlaneClient : public AwsAbstractClient {

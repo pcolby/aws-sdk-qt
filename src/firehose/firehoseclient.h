@@ -32,12 +32,19 @@ namespace AWS {
 namespace Firehose {
 
 class FirehoseClientPrivate;
+class CreateDeliveryStreamRequest;
 class CreateDeliveryStreamResponse;
+class DeleteDeliveryStreamRequest;
 class DeleteDeliveryStreamResponse;
+class DescribeDeliveryStreamRequest;
 class DescribeDeliveryStreamResponse;
+class ListDeliveryStreamsRequest;
 class ListDeliveryStreamsResponse;
+class PutRecordRequest;
 class PutRecordResponse;
+class PutRecordBatchRequest;
 class PutRecordBatchResponse;
+class UpdateDestinationRequest;
 class UpdateDestinationResponse;
 
 class QTAWS_EXPORT FirehoseClient : public AwsAbstractClient {

@@ -32,8 +32,11 @@ namespace AWS {
 namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClientPrivate;
+class DeleteReportDefinitionRequest;
 class DeleteReportDefinitionResponse;
+class DescribeReportDefinitionsRequest;
 class DescribeReportDefinitionsResponse;
+class PutReportDefinitionRequest;
 class PutReportDefinitionResponse;
 
 class QTAWS_EXPORT CostandUsageReportServiceClient : public AwsAbstractClient {

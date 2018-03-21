@@ -32,15 +32,25 @@ namespace AWS {
 namespace ACM {
 
 class AcmClientPrivate;
+class AddTagsToCertificateRequest;
 class AddTagsToCertificateResponse;
+class DeleteCertificateRequest;
 class DeleteCertificateResponse;
+class DescribeCertificateRequest;
 class DescribeCertificateResponse;
+class GetCertificateRequest;
 class GetCertificateResponse;
+class ImportCertificateRequest;
 class ImportCertificateResponse;
+class ListCertificatesRequest;
 class ListCertificatesResponse;
+class ListTagsForCertificateRequest;
 class ListTagsForCertificateResponse;
+class RemoveTagsFromCertificateRequest;
 class RemoveTagsFromCertificateResponse;
+class RequestCertificateRequest;
 class RequestCertificateResponse;
+class ResendValidationEmailRequest;
 class ResendValidationEmailResponse;
 
 class QTAWS_EXPORT AcmClient : public AwsAbstractClient {

@@ -32,28 +32,51 @@ namespace AWS {
 namespace Kinesis {
 
 class KinesisClientPrivate;
+class AddTagsToStreamRequest;
 class AddTagsToStreamResponse;
+class CreateStreamRequest;
 class CreateStreamResponse;
+class DecreaseStreamRetentionPeriodRequest;
 class DecreaseStreamRetentionPeriodResponse;
+class DeleteStreamRequest;
 class DeleteStreamResponse;
+class DescribeLimitsRequest;
 class DescribeLimitsResponse;
+class DescribeStreamRequest;
 class DescribeStreamResponse;
+class DescribeStreamSummaryRequest;
 class DescribeStreamSummaryResponse;
+class DisableEnhancedMonitoringRequest;
 class DisableEnhancedMonitoringResponse;
+class EnableEnhancedMonitoringRequest;
 class EnableEnhancedMonitoringResponse;
+class GetRecordsRequest;
 class GetRecordsResponse;
+class GetShardIteratorRequest;
 class GetShardIteratorResponse;
+class IncreaseStreamRetentionPeriodRequest;
 class IncreaseStreamRetentionPeriodResponse;
+class ListShardsRequest;
 class ListShardsResponse;
+class ListStreamsRequest;
 class ListStreamsResponse;
+class ListTagsForStreamRequest;
 class ListTagsForStreamResponse;
+class MergeShardsRequest;
 class MergeShardsResponse;
+class PutRecordRequest;
 class PutRecordResponse;
+class PutRecordsRequest;
 class PutRecordsResponse;
+class RemoveTagsFromStreamRequest;
 class RemoveTagsFromStreamResponse;
+class SplitShardRequest;
 class SplitShardResponse;
+class StartStreamEncryptionRequest;
 class StartStreamEncryptionResponse;
+class StopStreamEncryptionRequest;
 class StopStreamEncryptionResponse;
+class UpdateShardCountRequest;
 class UpdateShardCountResponse;
 
 class QTAWS_EXPORT KinesisClient : public AwsAbstractClient {

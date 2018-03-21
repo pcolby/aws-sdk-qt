@@ -32,11 +32,17 @@ namespace AWS {
 namespace Polly {
 
 class PollyClientPrivate;
+class DeleteLexiconRequest;
 class DeleteLexiconResponse;
+class DescribeVoicesRequest;
 class DescribeVoicesResponse;
+class GetLexiconRequest;
 class GetLexiconResponse;
+class ListLexiconsRequest;
 class ListLexiconsResponse;
+class PutLexiconRequest;
 class PutLexiconResponse;
+class SynthesizeSpeechRequest;
 class SynthesizeSpeechResponse;
 
 class QTAWS_EXPORT PollyClient : public AwsAbstractClient {

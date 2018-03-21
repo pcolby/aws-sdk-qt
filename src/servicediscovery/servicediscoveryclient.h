@@ -32,23 +32,41 @@ namespace AWS {
 namespace ServiceDiscovery {
 
 class ServiceDiscoveryClientPrivate;
+class CreatePrivateDnsNamespaceRequest;
 class CreatePrivateDnsNamespaceResponse;
+class CreatePublicDnsNamespaceRequest;
 class CreatePublicDnsNamespaceResponse;
+class CreateServiceRequest;
 class CreateServiceResponse;
+class DeleteNamespaceRequest;
 class DeleteNamespaceResponse;
+class DeleteServiceRequest;
 class DeleteServiceResponse;
+class DeregisterInstanceRequest;
 class DeregisterInstanceResponse;
+class GetInstanceRequest;
 class GetInstanceResponse;
+class GetInstancesHealthStatusRequest;
 class GetInstancesHealthStatusResponse;
+class GetNamespaceRequest;
 class GetNamespaceResponse;
+class GetOperationRequest;
 class GetOperationResponse;
+class GetServiceRequest;
 class GetServiceResponse;
+class ListInstancesRequest;
 class ListInstancesResponse;
+class ListNamespacesRequest;
 class ListNamespacesResponse;
+class ListOperationsRequest;
 class ListOperationsResponse;
+class ListServicesRequest;
 class ListServicesResponse;
+class RegisterInstanceRequest;
 class RegisterInstanceResponse;
+class UpdateInstanceCustomHealthStatusRequest;
 class UpdateInstanceCustomHealthStatusResponse;
+class UpdateServiceRequest;
 class UpdateServiceResponse;
 
 class QTAWS_EXPORT ServiceDiscoveryClient : public AwsAbstractClient {

@@ -32,8 +32,11 @@ namespace AWS {
 namespace MarketplaceMetering {
 
 class MarketplaceMeteringClientPrivate;
+class BatchMeterUsageRequest;
 class BatchMeterUsageResponse;
+class MeterUsageRequest;
 class MeterUsageResponse;
+class ResolveCustomerRequest;
 class ResolveCustomerResponse;
 
 class QTAWS_EXPORT MarketplaceMeteringClient : public AwsAbstractClient {

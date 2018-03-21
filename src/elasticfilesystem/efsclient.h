@@ -32,16 +32,27 @@ namespace AWS {
 namespace EFS {
 
 class EfsClientPrivate;
+class CreateFileSystemRequest;
 class CreateFileSystemResponse;
+class CreateMountTargetRequest;
 class CreateMountTargetResponse;
+class CreateTagsRequest;
 class CreateTagsResponse;
+class DeleteFileSystemRequest;
 class DeleteFileSystemResponse;
+class DeleteMountTargetRequest;
 class DeleteMountTargetResponse;
+class DeleteTagsRequest;
 class DeleteTagsResponse;
+class DescribeFileSystemsRequest;
 class DescribeFileSystemsResponse;
+class DescribeMountTargetSecurityGroupsRequest;
 class DescribeMountTargetSecurityGroupsResponse;
+class DescribeMountTargetsRequest;
 class DescribeMountTargetsResponse;
+class DescribeTagsRequest;
 class DescribeTagsResponse;
+class ModifyMountTargetSecurityGroupsRequest;
 class ModifyMountTargetSecurityGroupsResponse;
 
 class QTAWS_EXPORT EfsClient : public AwsAbstractClient {

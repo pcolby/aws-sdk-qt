@@ -32,16 +32,27 @@ namespace AWS {
 namespace Athena {
 
 class AthenaClientPrivate;
+class BatchGetNamedQueryRequest;
 class BatchGetNamedQueryResponse;
+class BatchGetQueryExecutionRequest;
 class BatchGetQueryExecutionResponse;
+class CreateNamedQueryRequest;
 class CreateNamedQueryResponse;
+class DeleteNamedQueryRequest;
 class DeleteNamedQueryResponse;
+class GetNamedQueryRequest;
 class GetNamedQueryResponse;
+class GetQueryExecutionRequest;
 class GetQueryExecutionResponse;
+class GetQueryResultsRequest;
 class GetQueryResultsResponse;
+class ListNamedQueriesRequest;
 class ListNamedQueriesResponse;
+class ListQueryExecutionsRequest;
 class ListQueryExecutionsResponse;
+class StartQueryExecutionRequest;
 class StartQueryExecutionResponse;
+class StopQueryExecutionRequest;
 class StopQueryExecutionResponse;
 
 class QTAWS_EXPORT AthenaClient : public AwsAbstractClient {

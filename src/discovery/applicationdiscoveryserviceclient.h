@@ -32,24 +32,42 @@ namespace AWS {
 namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceClientPrivate;
+class AssociateConfigurationItemsToApplicationRequest;
 class AssociateConfigurationItemsToApplicationResponse;
+class CreateApplicationRequest;
 class CreateApplicationResponse;
+class CreateTagsRequest;
 class CreateTagsResponse;
+class DeleteApplicationsRequest;
 class DeleteApplicationsResponse;
+class DeleteTagsRequest;
 class DeleteTagsResponse;
+class DescribeAgentsRequest;
 class DescribeAgentsResponse;
+class DescribeConfigurationsRequest;
 class DescribeConfigurationsResponse;
+class DescribeExportConfigurationsRequest;
 class DescribeExportConfigurationsResponse;
+class DescribeExportTasksRequest;
 class DescribeExportTasksResponse;
+class DescribeTagsRequest;
 class DescribeTagsResponse;
+class DisassociateConfigurationItemsFromApplicationRequest;
 class DisassociateConfigurationItemsFromApplicationResponse;
 class ExportConfigurationsResponse;
+class GetDiscoverySummaryRequest;
 class GetDiscoverySummaryResponse;
+class ListConfigurationsRequest;
 class ListConfigurationsResponse;
+class ListServerNeighborsRequest;
 class ListServerNeighborsResponse;
+class StartDataCollectionByAgentIdsRequest;
 class StartDataCollectionByAgentIdsResponse;
+class StartExportTaskRequest;
 class StartExportTaskResponse;
+class StopDataCollectionByAgentIdsRequest;
 class StopDataCollectionByAgentIdsResponse;
+class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
 class QTAWS_EXPORT ApplicationDiscoveryServiceClient : public AwsAbstractClient {

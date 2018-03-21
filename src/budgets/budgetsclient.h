@@ -32,18 +32,31 @@ namespace AWS {
 namespace Budgets {
 
 class BudgetsClientPrivate;
+class CreateBudgetRequest;
 class CreateBudgetResponse;
+class CreateNotificationRequest;
 class CreateNotificationResponse;
+class CreateSubscriberRequest;
 class CreateSubscriberResponse;
+class DeleteBudgetRequest;
 class DeleteBudgetResponse;
+class DeleteNotificationRequest;
 class DeleteNotificationResponse;
+class DeleteSubscriberRequest;
 class DeleteSubscriberResponse;
+class DescribeBudgetRequest;
 class DescribeBudgetResponse;
+class DescribeBudgetsRequest;
 class DescribeBudgetsResponse;
+class DescribeNotificationsForBudgetRequest;
 class DescribeNotificationsForBudgetResponse;
+class DescribeSubscribersForNotificationRequest;
 class DescribeSubscribersForNotificationResponse;
+class UpdateBudgetRequest;
 class UpdateBudgetResponse;
+class UpdateNotificationRequest;
 class UpdateNotificationResponse;
+class UpdateSubscriberRequest;
 class UpdateSubscriberResponse;
 
 class QTAWS_EXPORT BudgetsClient : public AwsAbstractClient {

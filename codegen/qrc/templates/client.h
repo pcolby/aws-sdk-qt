@@ -15,7 +15,10 @@ namespace AWS {
 namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
-{% for name in operations.keys %}
+{% for name,op in operations.items %}
+{% if op.input.shape %}
+class {{name}}Request;
+{% endif %}
 class {{name}}Response;
 {% endfor %}
 

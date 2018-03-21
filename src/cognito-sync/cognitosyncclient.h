@@ -32,22 +32,39 @@ namespace AWS {
 namespace CognitoSync {
 
 class CognitoSyncClientPrivate;
+class BulkPublishRequest;
 class BulkPublishResponse;
+class DeleteDatasetRequest;
 class DeleteDatasetResponse;
+class DescribeDatasetRequest;
 class DescribeDatasetResponse;
+class DescribeIdentityPoolUsageRequest;
 class DescribeIdentityPoolUsageResponse;
+class DescribeIdentityUsageRequest;
 class DescribeIdentityUsageResponse;
+class GetBulkPublishDetailsRequest;
 class GetBulkPublishDetailsResponse;
+class GetCognitoEventsRequest;
 class GetCognitoEventsResponse;
+class GetIdentityPoolConfigurationRequest;
 class GetIdentityPoolConfigurationResponse;
+class ListDatasetsRequest;
 class ListDatasetsResponse;
+class ListIdentityPoolUsageRequest;
 class ListIdentityPoolUsageResponse;
+class ListRecordsRequest;
 class ListRecordsResponse;
+class RegisterDeviceRequest;
 class RegisterDeviceResponse;
+class SetCognitoEventsRequest;
 class SetCognitoEventsResponse;
+class SetIdentityPoolConfigurationRequest;
 class SetIdentityPoolConfigurationResponse;
+class SubscribeToDatasetRequest;
 class SubscribeToDatasetResponse;
+class UnsubscribeFromDatasetRequest;
 class UnsubscribeFromDatasetResponse;
+class UpdateRecordsRequest;
 class UpdateRecordsResponse;
 
 class QTAWS_EXPORT CognitoSyncClient : public AwsAbstractClient {

@@ -32,9 +32,13 @@ namespace AWS {
 namespace IoTDataPlane {
 
 class IoTDataPlaneClientPrivate;
+class DeleteThingShadowRequest;
 class DeleteThingShadowResponse;
+class GetThingShadowRequest;
 class GetThingShadowResponse;
+class PublishRequest;
 class PublishResponse;
+class UpdateThingShadowRequest;
 class UpdateThingShadowResponse;
 
 class QTAWS_EXPORT IoTDataPlaneClient : public AwsAbstractClient {

@@ -32,8 +32,11 @@ namespace AWS {
 namespace TranscribeService {
 
 class TranscribeServiceClientPrivate;
+class GetTranscriptionJobRequest;
 class GetTranscriptionJobResponse;
+class ListTranscriptionJobsRequest;
 class ListTranscriptionJobsResponse;
+class StartTranscriptionJobRequest;
 class StartTranscriptionJobResponse;
 
 class QTAWS_EXPORT TranscribeServiceClient : public AwsAbstractClient {

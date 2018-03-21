@@ -32,10 +32,15 @@ namespace AWS {
 namespace MediaStoreData {
 
 class MediaStoreDataClientPrivate;
+class DeleteObjectRequest;
 class DeleteObjectResponse;
+class DescribeObjectRequest;
 class DescribeObjectResponse;
+class GetObjectRequest;
 class GetObjectResponse;
+class ListItemsRequest;
 class ListItemsResponse;
+class PutObjectRequest;
 class PutObjectResponse;
 
 class QTAWS_EXPORT MediaStoreDataClient : public AwsAbstractClient {

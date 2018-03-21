@@ -32,21 +32,37 @@ namespace AWS {
 namespace Batch {
 
 class BatchClientPrivate;
+class CancelJobRequest;
 class CancelJobResponse;
+class CreateComputeEnvironmentRequest;
 class CreateComputeEnvironmentResponse;
+class CreateJobQueueRequest;
 class CreateJobQueueResponse;
+class DeleteComputeEnvironmentRequest;
 class DeleteComputeEnvironmentResponse;
+class DeleteJobQueueRequest;
 class DeleteJobQueueResponse;
+class DeregisterJobDefinitionRequest;
 class DeregisterJobDefinitionResponse;
+class DescribeComputeEnvironmentsRequest;
 class DescribeComputeEnvironmentsResponse;
+class DescribeJobDefinitionsRequest;
 class DescribeJobDefinitionsResponse;
+class DescribeJobQueuesRequest;
 class DescribeJobQueuesResponse;
+class DescribeJobsRequest;
 class DescribeJobsResponse;
+class ListJobsRequest;
 class ListJobsResponse;
+class RegisterJobDefinitionRequest;
 class RegisterJobDefinitionResponse;
+class SubmitJobRequest;
 class SubmitJobResponse;
+class TerminateJobRequest;
 class TerminateJobResponse;
+class UpdateComputeEnvironmentRequest;
 class UpdateComputeEnvironmentResponse;
+class UpdateJobQueueRequest;
 class UpdateJobQueueResponse;
 
 class QTAWS_EXPORT BatchClient : public AwsAbstractClient {

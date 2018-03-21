@@ -32,16 +32,27 @@ namespace AWS {
 namespace MediaPackage {
 
 class MediaPackageClientPrivate;
+class CreateChannelRequest;
 class CreateChannelResponse;
+class CreateOriginEndpointRequest;
 class CreateOriginEndpointResponse;
+class DeleteChannelRequest;
 class DeleteChannelResponse;
+class DeleteOriginEndpointRequest;
 class DeleteOriginEndpointResponse;
+class DescribeChannelRequest;
 class DescribeChannelResponse;
+class DescribeOriginEndpointRequest;
 class DescribeOriginEndpointResponse;
+class ListChannelsRequest;
 class ListChannelsResponse;
+class ListOriginEndpointsRequest;
 class ListOriginEndpointsResponse;
+class RotateChannelCredentialsRequest;
 class RotateChannelCredentialsResponse;
+class UpdateChannelRequest;
 class UpdateChannelResponse;
+class UpdateOriginEndpointRequest;
 class UpdateOriginEndpointResponse;
 
 class QTAWS_EXPORT MediaPackageClient : public AwsAbstractClient {

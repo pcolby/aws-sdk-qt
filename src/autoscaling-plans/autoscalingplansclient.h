@@ -32,9 +32,13 @@ namespace AWS {
 namespace AutoScalingPlans {
 
 class AutoScalingPlansClientPrivate;
+class CreateScalingPlanRequest;
 class CreateScalingPlanResponse;
+class DeleteScalingPlanRequest;
 class DeleteScalingPlanResponse;
+class DescribeScalingPlanResourcesRequest;
 class DescribeScalingPlanResourcesResponse;
+class DescribeScalingPlansRequest;
 class DescribeScalingPlansResponse;
 
 class QTAWS_EXPORT AutoScalingPlansClient : public AwsAbstractClient {

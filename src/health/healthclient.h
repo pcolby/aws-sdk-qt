@@ -32,11 +32,17 @@ namespace AWS {
 namespace Health {
 
 class HealthClientPrivate;
+class DescribeAffectedEntitiesRequest;
 class DescribeAffectedEntitiesResponse;
+class DescribeEntityAggregatesRequest;
 class DescribeEntityAggregatesResponse;
+class DescribeEventAggregatesRequest;
 class DescribeEventAggregatesResponse;
+class DescribeEventDetailsRequest;
 class DescribeEventDetailsResponse;
+class DescribeEventTypesRequest;
 class DescribeEventTypesResponse;
+class DescribeEventsRequest;
 class DescribeEventsResponse;
 
 class QTAWS_EXPORT HealthClient : public AwsAbstractClient {

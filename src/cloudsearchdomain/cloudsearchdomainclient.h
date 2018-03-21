@@ -32,8 +32,11 @@ namespace AWS {
 namespace CloudSearchDomain {
 
 class CloudSearchDomainClientPrivate;
+class SearchRequest;
 class SearchResponse;
+class SuggestRequest;
 class SuggestResponse;
+class UploadDocumentsRequest;
 class UploadDocumentsResponse;
 
 class QTAWS_EXPORT CloudSearchDomainClient : public AwsAbstractClient {

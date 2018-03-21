@@ -32,20 +32,35 @@ namespace AWS {
 namespace CodeBuild {
 
 class CodeBuildClientPrivate;
+class BatchDeleteBuildsRequest;
 class BatchDeleteBuildsResponse;
+class BatchGetBuildsRequest;
 class BatchGetBuildsResponse;
+class BatchGetProjectsRequest;
 class BatchGetProjectsResponse;
+class CreateProjectRequest;
 class CreateProjectResponse;
+class CreateWebhookRequest;
 class CreateWebhookResponse;
+class DeleteProjectRequest;
 class DeleteProjectResponse;
+class DeleteWebhookRequest;
 class DeleteWebhookResponse;
+class InvalidateProjectCacheRequest;
 class InvalidateProjectCacheResponse;
+class ListBuildsRequest;
 class ListBuildsResponse;
+class ListBuildsForProjectRequest;
 class ListBuildsForProjectResponse;
+class ListCuratedEnvironmentImagesRequest;
 class ListCuratedEnvironmentImagesResponse;
+class ListProjectsRequest;
 class ListProjectsResponse;
+class StartBuildRequest;
 class StartBuildResponse;
+class StopBuildRequest;
 class StopBuildResponse;
+class UpdateProjectRequest;
 class UpdateProjectResponse;
 
 class QTAWS_EXPORT CodeBuildClient : public AwsAbstractClient {

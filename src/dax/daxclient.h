@@ -32,26 +32,47 @@ namespace AWS {
 namespace DAX {
 
 class DaxClientPrivate;
+class CreateClusterRequest;
 class CreateClusterResponse;
+class CreateParameterGroupRequest;
 class CreateParameterGroupResponse;
+class CreateSubnetGroupRequest;
 class CreateSubnetGroupResponse;
+class DecreaseReplicationFactorRequest;
 class DecreaseReplicationFactorResponse;
+class DeleteClusterRequest;
 class DeleteClusterResponse;
+class DeleteParameterGroupRequest;
 class DeleteParameterGroupResponse;
+class DeleteSubnetGroupRequest;
 class DeleteSubnetGroupResponse;
+class DescribeClustersRequest;
 class DescribeClustersResponse;
+class DescribeDefaultParametersRequest;
 class DescribeDefaultParametersResponse;
+class DescribeEventsRequest;
 class DescribeEventsResponse;
+class DescribeParameterGroupsRequest;
 class DescribeParameterGroupsResponse;
+class DescribeParametersRequest;
 class DescribeParametersResponse;
+class DescribeSubnetGroupsRequest;
 class DescribeSubnetGroupsResponse;
+class IncreaseReplicationFactorRequest;
 class IncreaseReplicationFactorResponse;
+class ListTagsRequest;
 class ListTagsResponse;
+class RebootNodeRequest;
 class RebootNodeResponse;
+class TagResourceRequest;
 class TagResourceResponse;
+class UntagResourceRequest;
 class UntagResourceResponse;
+class UpdateClusterRequest;
 class UpdateClusterResponse;
+class UpdateParameterGroupRequest;
 class UpdateParameterGroupResponse;
+class UpdateSubnetGroupRequest;
 class UpdateSubnetGroupResponse;
 
 class QTAWS_EXPORT DaxClient : public AwsAbstractClient {

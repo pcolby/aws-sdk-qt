@@ -32,20 +32,35 @@ namespace AWS {
 namespace OpsWorksCM {
 
 class OpsWorksCMClientPrivate;
+class AssociateNodeRequest;
 class AssociateNodeResponse;
+class CreateBackupRequest;
 class CreateBackupResponse;
+class CreateServerRequest;
 class CreateServerResponse;
+class DeleteBackupRequest;
 class DeleteBackupResponse;
+class DeleteServerRequest;
 class DeleteServerResponse;
+class DescribeAccountAttributesRequest;
 class DescribeAccountAttributesResponse;
+class DescribeBackupsRequest;
 class DescribeBackupsResponse;
+class DescribeEventsRequest;
 class DescribeEventsResponse;
+class DescribeNodeAssociationStatusRequest;
 class DescribeNodeAssociationStatusResponse;
+class DescribeServersRequest;
 class DescribeServersResponse;
+class DisassociateNodeRequest;
 class DisassociateNodeResponse;
+class RestoreServerRequest;
 class RestoreServerResponse;
+class StartMaintenanceRequest;
 class StartMaintenanceResponse;
+class UpdateServerRequest;
 class UpdateServerResponse;
+class UpdateServerEngineAttributesRequest;
 class UpdateServerEngineAttributesResponse;
 
 class QTAWS_EXPORT OpsWorksCMClient : public AwsAbstractClient {

@@ -32,6 +32,7 @@ namespace AWS {
 namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClientPrivate;
+class GetEntitlementsRequest;
 class GetEntitlementsResponse;
 
 class QTAWS_EXPORT MarketplaceEntitlementServiceClient : public AwsAbstractClient {

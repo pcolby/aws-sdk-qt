@@ -32,15 +32,25 @@ namespace AWS {
 namespace Cloud9 {
 
 class Cloud9ClientPrivate;
+class CreateEnvironmentEC2Request;
 class CreateEnvironmentEC2Response;
+class CreateEnvironmentMembershipRequest;
 class CreateEnvironmentMembershipResponse;
+class DeleteEnvironmentRequest;
 class DeleteEnvironmentResponse;
+class DeleteEnvironmentMembershipRequest;
 class DeleteEnvironmentMembershipResponse;
+class DescribeEnvironmentMembershipsRequest;
 class DescribeEnvironmentMembershipsResponse;
+class DescribeEnvironmentStatusRequest;
 class DescribeEnvironmentStatusResponse;
+class DescribeEnvironmentsRequest;
 class DescribeEnvironmentsResponse;
+class ListEnvironmentsRequest;
 class ListEnvironmentsResponse;
+class UpdateEnvironmentRequest;
 class UpdateEnvironmentResponse;
+class UpdateEnvironmentMembershipRequest;
 class UpdateEnvironmentMembershipResponse;
 
 class QTAWS_EXPORT Cloud9Client : public AwsAbstractClient {

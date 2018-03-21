@@ -32,12 +32,19 @@ namespace AWS {
 namespace STS {
 
 class StsClientPrivate;
+class AssumeRoleRequest;
 class AssumeRoleResponse;
+class AssumeRoleWithSAMLRequest;
 class AssumeRoleWithSAMLResponse;
+class AssumeRoleWithWebIdentityRequest;
 class AssumeRoleWithWebIdentityResponse;
+class DecodeAuthorizationMessageRequest;
 class DecodeAuthorizationMessageResponse;
+class GetCallerIdentityRequest;
 class GetCallerIdentityResponse;
+class GetFederationTokenRequest;
 class GetFederationTokenResponse;
+class GetSessionTokenRequest;
 class GetSessionTokenResponse;
 
 class QTAWS_EXPORT StsClient : public AwsAbstractClient {

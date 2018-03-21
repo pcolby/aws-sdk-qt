@@ -32,19 +32,33 @@ namespace AWS {
 namespace Support {
 
 class SupportClientPrivate;
+class AddAttachmentsToSetRequest;
 class AddAttachmentsToSetResponse;
+class AddCommunicationToCaseRequest;
 class AddCommunicationToCaseResponse;
+class CreateCaseRequest;
 class CreateCaseResponse;
+class DescribeAttachmentRequest;
 class DescribeAttachmentResponse;
+class DescribeCasesRequest;
 class DescribeCasesResponse;
+class DescribeCommunicationsRequest;
 class DescribeCommunicationsResponse;
+class DescribeServicesRequest;
 class DescribeServicesResponse;
+class DescribeSeverityLevelsRequest;
 class DescribeSeverityLevelsResponse;
+class DescribeTrustedAdvisorCheckRefreshStatusesRequest;
 class DescribeTrustedAdvisorCheckRefreshStatusesResponse;
+class DescribeTrustedAdvisorCheckResultRequest;
 class DescribeTrustedAdvisorCheckResultResponse;
+class DescribeTrustedAdvisorCheckSummariesRequest;
 class DescribeTrustedAdvisorCheckSummariesResponse;
+class DescribeTrustedAdvisorChecksRequest;
 class DescribeTrustedAdvisorChecksResponse;
+class RefreshTrustedAdvisorCheckRequest;
 class RefreshTrustedAdvisorCheckResponse;
+class ResolveCaseRequest;
 class ResolveCaseResponse;
 
 class QTAWS_EXPORT SupportClient : public AwsAbstractClient {

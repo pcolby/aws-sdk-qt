@@ -32,22 +32,39 @@ namespace AWS {
 namespace KinesisAnalytics {
 
 class KinesisAnalyticsClientPrivate;
+class AddApplicationCloudWatchLoggingOptionRequest;
 class AddApplicationCloudWatchLoggingOptionResponse;
+class AddApplicationInputRequest;
 class AddApplicationInputResponse;
+class AddApplicationInputProcessingConfigurationRequest;
 class AddApplicationInputProcessingConfigurationResponse;
+class AddApplicationOutputRequest;
 class AddApplicationOutputResponse;
+class AddApplicationReferenceDataSourceRequest;
 class AddApplicationReferenceDataSourceResponse;
+class CreateApplicationRequest;
 class CreateApplicationResponse;
+class DeleteApplicationRequest;
 class DeleteApplicationResponse;
+class DeleteApplicationCloudWatchLoggingOptionRequest;
 class DeleteApplicationCloudWatchLoggingOptionResponse;
+class DeleteApplicationInputProcessingConfigurationRequest;
 class DeleteApplicationInputProcessingConfigurationResponse;
+class DeleteApplicationOutputRequest;
 class DeleteApplicationOutputResponse;
+class DeleteApplicationReferenceDataSourceRequest;
 class DeleteApplicationReferenceDataSourceResponse;
+class DescribeApplicationRequest;
 class DescribeApplicationResponse;
+class DiscoverInputSchemaRequest;
 class DiscoverInputSchemaResponse;
+class ListApplicationsRequest;
 class ListApplicationsResponse;
+class StartApplicationRequest;
 class StartApplicationResponse;
+class StopApplicationRequest;
 class StopApplicationResponse;
+class UpdateApplicationRequest;
 class UpdateApplicationResponse;
 
 class QTAWS_EXPORT KinesisAnalyticsClient : public AwsAbstractClient {

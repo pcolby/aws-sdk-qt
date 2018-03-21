@@ -32,20 +32,35 @@ namespace AWS {
 namespace MediaLive {
 
 class MediaLiveClientPrivate;
+class CreateChannelRequest;
 class CreateChannelResponse;
+class CreateInputRequest;
 class CreateInputResponse;
+class CreateInputSecurityGroupRequest;
 class CreateInputSecurityGroupResponse;
+class DeleteChannelRequest;
 class DeleteChannelResponse;
+class DeleteInputRequest;
 class DeleteInputResponse;
+class DeleteInputSecurityGroupRequest;
 class DeleteInputSecurityGroupResponse;
+class DescribeChannelRequest;
 class DescribeChannelResponse;
+class DescribeInputRequest;
 class DescribeInputResponse;
+class DescribeInputSecurityGroupRequest;
 class DescribeInputSecurityGroupResponse;
+class ListChannelsRequest;
 class ListChannelsResponse;
+class ListInputSecurityGroupsRequest;
 class ListInputSecurityGroupsResponse;
+class ListInputsRequest;
 class ListInputsResponse;
+class StartChannelRequest;
 class StartChannelResponse;
+class StopChannelRequest;
 class StopChannelResponse;
+class UpdateChannelRequest;
 class UpdateChannelResponse;
 
 class QTAWS_EXPORT MediaLiveClient : public AwsAbstractClient {

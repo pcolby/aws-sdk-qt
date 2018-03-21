@@ -32,9 +32,13 @@ namespace AWS {
 namespace DynamoDBStreams {
 
 class DynamoDBStreamsClientPrivate;
+class DescribeStreamRequest;
 class DescribeStreamResponse;
+class GetRecordsRequest;
 class GetRecordsResponse;
+class GetShardIteratorRequest;
 class GetShardIteratorResponse;
+class ListStreamsRequest;
 class ListStreamsResponse;
 
 class QTAWS_EXPORT DynamoDBStreamsClient : public AwsAbstractClient {

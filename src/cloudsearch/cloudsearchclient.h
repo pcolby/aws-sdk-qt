@@ -32,29 +32,52 @@ namespace AWS {
 namespace CloudSearch {
 
 class CloudSearchClientPrivate;
+class BuildSuggestersRequest;
 class BuildSuggestersResponse;
+class CreateDomainRequest;
 class CreateDomainResponse;
+class DefineAnalysisSchemeRequest;
 class DefineAnalysisSchemeResponse;
+class DefineExpressionRequest;
 class DefineExpressionResponse;
+class DefineIndexFieldRequest;
 class DefineIndexFieldResponse;
+class DefineSuggesterRequest;
 class DefineSuggesterResponse;
+class DeleteAnalysisSchemeRequest;
 class DeleteAnalysisSchemeResponse;
+class DeleteDomainRequest;
 class DeleteDomainResponse;
+class DeleteExpressionRequest;
 class DeleteExpressionResponse;
+class DeleteIndexFieldRequest;
 class DeleteIndexFieldResponse;
+class DeleteSuggesterRequest;
 class DeleteSuggesterResponse;
+class DescribeAnalysisSchemesRequest;
 class DescribeAnalysisSchemesResponse;
+class DescribeAvailabilityOptionsRequest;
 class DescribeAvailabilityOptionsResponse;
+class DescribeDomainsRequest;
 class DescribeDomainsResponse;
+class DescribeExpressionsRequest;
 class DescribeExpressionsResponse;
+class DescribeIndexFieldsRequest;
 class DescribeIndexFieldsResponse;
+class DescribeScalingParametersRequest;
 class DescribeScalingParametersResponse;
+class DescribeServiceAccessPoliciesRequest;
 class DescribeServiceAccessPoliciesResponse;
+class DescribeSuggestersRequest;
 class DescribeSuggestersResponse;
+class IndexDocumentsRequest;
 class IndexDocumentsResponse;
 class ListDomainNamesResponse;
+class UpdateAvailabilityOptionsRequest;
 class UpdateAvailabilityOptionsResponse;
+class UpdateScalingParametersRequest;
 class UpdateScalingParametersResponse;
+class UpdateServiceAccessPoliciesRequest;
 class UpdateServiceAccessPoliciesResponse;
 
 class QTAWS_EXPORT CloudSearchClient : public AwsAbstractClient {

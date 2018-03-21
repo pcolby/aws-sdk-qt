@@ -32,22 +32,39 @@ namespace AWS {
 namespace Snowball {
 
 class SnowballClientPrivate;
+class CancelClusterRequest;
 class CancelClusterResponse;
+class CancelJobRequest;
 class CancelJobResponse;
+class CreateAddressRequest;
 class CreateAddressResponse;
+class CreateClusterRequest;
 class CreateClusterResponse;
+class CreateJobRequest;
 class CreateJobResponse;
+class DescribeAddressRequest;
 class DescribeAddressResponse;
+class DescribeAddressesRequest;
 class DescribeAddressesResponse;
+class DescribeClusterRequest;
 class DescribeClusterResponse;
+class DescribeJobRequest;
 class DescribeJobResponse;
+class GetJobManifestRequest;
 class GetJobManifestResponse;
+class GetJobUnlockCodeRequest;
 class GetJobUnlockCodeResponse;
+class GetSnowballUsageRequest;
 class GetSnowballUsageResponse;
+class ListClusterJobsRequest;
 class ListClusterJobsResponse;
+class ListClustersRequest;
 class ListClustersResponse;
+class ListJobsRequest;
 class ListJobsResponse;
+class UpdateClusterRequest;
 class UpdateClusterResponse;
+class UpdateJobRequest;
 class UpdateJobResponse;
 
 class QTAWS_EXPORT SnowballClient : public AwsAbstractClient {

@@ -32,17 +32,29 @@ namespace AWS {
 namespace ResourceGroups {
 
 class ResourceGroupsClientPrivate;
+class CreateGroupRequest;
 class CreateGroupResponse;
+class DeleteGroupRequest;
 class DeleteGroupResponse;
+class GetGroupRequest;
 class GetGroupResponse;
+class GetGroupQueryRequest;
 class GetGroupQueryResponse;
+class GetTagsRequest;
 class GetTagsResponse;
+class ListGroupResourcesRequest;
 class ListGroupResourcesResponse;
+class ListGroupsRequest;
 class ListGroupsResponse;
+class SearchResourcesRequest;
 class SearchResourcesResponse;
+class TagRequest;
 class TagResponse;
+class UntagRequest;
 class UntagResponse;
+class UpdateGroupRequest;
 class UpdateGroupResponse;
+class UpdateGroupQueryRequest;
 class UpdateGroupQueryResponse;
 
 class QTAWS_EXPORT ResourceGroupsClient : public AwsAbstractClient {

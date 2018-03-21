@@ -32,15 +32,25 @@ namespace AWS {
 namespace SimpleDB {
 
 class SimpleDBClientPrivate;
+class BatchDeleteAttributesRequest;
 class BatchDeleteAttributesResponse;
+class BatchPutAttributesRequest;
 class BatchPutAttributesResponse;
+class CreateDomainRequest;
 class CreateDomainResponse;
+class DeleteAttributesRequest;
 class DeleteAttributesResponse;
+class DeleteDomainRequest;
 class DeleteDomainResponse;
+class DomainMetadataRequest;
 class DomainMetadataResponse;
+class GetAttributesRequest;
 class GetAttributesResponse;
+class ListDomainsRequest;
 class ListDomainsResponse;
+class PutAttributesRequest;
 class PutAttributesResponse;
+class SelectRequest;
 class SelectResponse;
 
 class QTAWS_EXPORT SimpleDBClient : public AwsAbstractClient {

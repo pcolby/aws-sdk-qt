@@ -32,20 +32,35 @@ namespace AWS {
 namespace CloudWatchEvents {
 
 class CloudWatchEventsClientPrivate;
+class DeleteRuleRequest;
 class DeleteRuleResponse;
+class DescribeEventBusRequest;
 class DescribeEventBusResponse;
+class DescribeRuleRequest;
 class DescribeRuleResponse;
+class DisableRuleRequest;
 class DisableRuleResponse;
+class EnableRuleRequest;
 class EnableRuleResponse;
+class ListRuleNamesByTargetRequest;
 class ListRuleNamesByTargetResponse;
+class ListRulesRequest;
 class ListRulesResponse;
+class ListTargetsByRuleRequest;
 class ListTargetsByRuleResponse;
+class PutEventsRequest;
 class PutEventsResponse;
+class PutPermissionRequest;
 class PutPermissionResponse;
+class PutRuleRequest;
 class PutRuleResponse;
+class PutTargetsRequest;
 class PutTargetsResponse;
+class RemovePermissionRequest;
 class RemovePermissionResponse;
+class RemoveTargetsRequest;
 class RemoveTargetsResponse;
+class TestEventPatternRequest;
 class TestEventPatternResponse;
 
 class QTAWS_EXPORT CloudWatchEventsClient : public AwsAbstractClient {

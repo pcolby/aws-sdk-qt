@@ -32,25 +32,45 @@ namespace AWS {
 namespace MediaConvert {
 
 class MediaConvertClientPrivate;
+class CancelJobRequest;
 class CancelJobResponse;
+class CreateJobRequest;
 class CreateJobResponse;
+class CreateJobTemplateRequest;
 class CreateJobTemplateResponse;
+class CreatePresetRequest;
 class CreatePresetResponse;
+class CreateQueueRequest;
 class CreateQueueResponse;
+class DeleteJobTemplateRequest;
 class DeleteJobTemplateResponse;
+class DeletePresetRequest;
 class DeletePresetResponse;
+class DeleteQueueRequest;
 class DeleteQueueResponse;
+class DescribeEndpointsRequest;
 class DescribeEndpointsResponse;
+class GetJobRequest;
 class GetJobResponse;
+class GetJobTemplateRequest;
 class GetJobTemplateResponse;
+class GetPresetRequest;
 class GetPresetResponse;
+class GetQueueRequest;
 class GetQueueResponse;
+class ListJobTemplatesRequest;
 class ListJobTemplatesResponse;
+class ListJobsRequest;
 class ListJobsResponse;
+class ListPresetsRequest;
 class ListPresetsResponse;
+class ListQueuesRequest;
 class ListQueuesResponse;
+class UpdateJobTemplateRequest;
 class UpdateJobTemplateResponse;
+class UpdatePresetRequest;
 class UpdatePresetResponse;
+class UpdateQueueRequest;
 class UpdateQueueResponse;
 
 class QTAWS_EXPORT MediaConvertClient : public AwsAbstractClient {

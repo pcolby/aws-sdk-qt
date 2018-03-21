@@ -32,16 +32,27 @@ namespace AWS {
 namespace SMS {
 
 class SmsClientPrivate;
+class CreateReplicationJobRequest;
 class CreateReplicationJobResponse;
+class DeleteReplicationJobRequest;
 class DeleteReplicationJobResponse;
+class DeleteServerCatalogRequest;
 class DeleteServerCatalogResponse;
+class DisassociateConnectorRequest;
 class DisassociateConnectorResponse;
+class GetConnectorsRequest;
 class GetConnectorsResponse;
+class GetReplicationJobsRequest;
 class GetReplicationJobsResponse;
+class GetReplicationRunsRequest;
 class GetReplicationRunsResponse;
+class GetServersRequest;
 class GetServersResponse;
+class ImportServerCatalogRequest;
 class ImportServerCatalogResponse;
+class StartOnDemandReplicationRunRequest;
 class StartOnDemandReplicationRunResponse;
+class UpdateReplicationJobRequest;
 class UpdateReplicationJobResponse;
 
 class QTAWS_EXPORT SmsClient : public AwsAbstractClient {

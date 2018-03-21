@@ -32,6 +32,7 @@ namespace AWS {
 namespace SageMakerRuntime {
 
 class SageMakerRuntimeClientPrivate;
+class InvokeEndpointRequest;
 class InvokeEndpointResponse;
 
 class QTAWS_EXPORT SageMakerRuntimeClient : public AwsAbstractClient {

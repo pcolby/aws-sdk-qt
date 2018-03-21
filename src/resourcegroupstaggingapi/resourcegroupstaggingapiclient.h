@@ -32,10 +32,15 @@ namespace AWS {
 namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIClientPrivate;
+class GetResourcesRequest;
 class GetResourcesResponse;
+class GetTagKeysRequest;
 class GetTagKeysResponse;
+class GetTagValuesRequest;
 class GetTagValuesResponse;
+class TagResourcesRequest;
 class TagResourcesResponse;
+class UntagResourcesRequest;
 class UntagResourcesResponse;
 
 class QTAWS_EXPORT ResourceGroupsTaggingAPIClient : public AwsAbstractClient {

@@ -32,7 +32,9 @@ namespace AWS {
 namespace KinesisVideoArchivedMedia {
 
 class KinesisVideoArchivedMediaClientPrivate;
+class GetMediaForFragmentListRequest;
 class GetMediaForFragmentListResponse;
+class ListFragmentsRequest;
 class ListFragmentsResponse;
 
 class QTAWS_EXPORT KinesisVideoArchivedMediaClient : public AwsAbstractClient {

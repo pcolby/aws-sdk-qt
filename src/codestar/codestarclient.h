@@ -32,23 +32,41 @@ namespace AWS {
 namespace CodeStar {
 
 class CodeStarClientPrivate;
+class AssociateTeamMemberRequest;
 class AssociateTeamMemberResponse;
+class CreateProjectRequest;
 class CreateProjectResponse;
+class CreateUserProfileRequest;
 class CreateUserProfileResponse;
+class DeleteProjectRequest;
 class DeleteProjectResponse;
+class DeleteUserProfileRequest;
 class DeleteUserProfileResponse;
+class DescribeProjectRequest;
 class DescribeProjectResponse;
+class DescribeUserProfileRequest;
 class DescribeUserProfileResponse;
+class DisassociateTeamMemberRequest;
 class DisassociateTeamMemberResponse;
+class ListProjectsRequest;
 class ListProjectsResponse;
+class ListResourcesRequest;
 class ListResourcesResponse;
+class ListTagsForProjectRequest;
 class ListTagsForProjectResponse;
+class ListTeamMembersRequest;
 class ListTeamMembersResponse;
+class ListUserProfilesRequest;
 class ListUserProfilesResponse;
+class TagProjectRequest;
 class TagProjectResponse;
+class UntagProjectRequest;
 class UntagProjectResponse;
+class UpdateProjectRequest;
 class UpdateProjectResponse;
+class UpdateTeamMemberRequest;
 class UpdateTeamMemberResponse;
+class UpdateUserProfileRequest;
 class UpdateUserProfileResponse;
 
 class QTAWS_EXPORT CodeStarClient : public AwsAbstractClient {

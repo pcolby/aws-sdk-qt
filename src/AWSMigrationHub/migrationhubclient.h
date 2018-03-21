@@ -32,21 +32,37 @@ namespace AWS {
 namespace MigrationHub {
 
 class MigrationHubClientPrivate;
+class AssociateCreatedArtifactRequest;
 class AssociateCreatedArtifactResponse;
+class AssociateDiscoveredResourceRequest;
 class AssociateDiscoveredResourceResponse;
+class CreateProgressUpdateStreamRequest;
 class CreateProgressUpdateStreamResponse;
+class DeleteProgressUpdateStreamRequest;
 class DeleteProgressUpdateStreamResponse;
+class DescribeApplicationStateRequest;
 class DescribeApplicationStateResponse;
+class DescribeMigrationTaskRequest;
 class DescribeMigrationTaskResponse;
+class DisassociateCreatedArtifactRequest;
 class DisassociateCreatedArtifactResponse;
+class DisassociateDiscoveredResourceRequest;
 class DisassociateDiscoveredResourceResponse;
+class ImportMigrationTaskRequest;
 class ImportMigrationTaskResponse;
+class ListCreatedArtifactsRequest;
 class ListCreatedArtifactsResponse;
+class ListDiscoveredResourcesRequest;
 class ListDiscoveredResourcesResponse;
+class ListMigrationTasksRequest;
 class ListMigrationTasksResponse;
+class ListProgressUpdateStreamsRequest;
 class ListProgressUpdateStreamsResponse;
+class NotifyApplicationStateRequest;
 class NotifyApplicationStateResponse;
+class NotifyMigrationTaskStateRequest;
 class NotifyMigrationTaskStateResponse;
+class PutResourceAttributesRequest;
 class PutResourceAttributesResponse;
 
 class QTAWS_EXPORT MigrationHubClient : public AwsAbstractClient {

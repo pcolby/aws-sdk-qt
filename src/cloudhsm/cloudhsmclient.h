@@ -32,25 +32,45 @@ namespace AWS {
 namespace CloudHSM {
 
 class CloudHSMClientPrivate;
+class AddTagsToResourceRequest;
 class AddTagsToResourceResponse;
+class CreateHapgRequest;
 class CreateHapgResponse;
+class CreateHsmRequest;
 class CreateHsmResponse;
+class CreateLunaClientRequest;
 class CreateLunaClientResponse;
+class DeleteHapgRequest;
 class DeleteHapgResponse;
+class DeleteHsmRequest;
 class DeleteHsmResponse;
+class DeleteLunaClientRequest;
 class DeleteLunaClientResponse;
+class DescribeHapgRequest;
 class DescribeHapgResponse;
+class DescribeHsmRequest;
 class DescribeHsmResponse;
+class DescribeLunaClientRequest;
 class DescribeLunaClientResponse;
+class GetConfigRequest;
 class GetConfigResponse;
+class ListAvailableZonesRequest;
 class ListAvailableZonesResponse;
+class ListHapgsRequest;
 class ListHapgsResponse;
+class ListHsmsRequest;
 class ListHsmsResponse;
+class ListLunaClientsRequest;
 class ListLunaClientsResponse;
+class ListTagsForResourceRequest;
 class ListTagsForResourceResponse;
+class ModifyHapgRequest;
 class ModifyHapgResponse;
+class ModifyHsmRequest;
 class ModifyHsmResponse;
+class ModifyLunaClientRequest;
 class ModifyLunaClientResponse;
+class RemoveTagsFromResourceRequest;
 class RemoveTagsFromResourceResponse;
 
 class QTAWS_EXPORT CloudHSMClient : public AwsAbstractClient {

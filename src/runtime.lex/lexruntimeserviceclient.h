@@ -32,7 +32,9 @@ namespace AWS {
 namespace LexRuntimeService {
 
 class LexRuntimeServiceClientPrivate;
+class PostContentRequest;
 class PostContentResponse;
+class PostTextRequest;
 class PostTextResponse;
 
 class QTAWS_EXPORT LexRuntimeServiceClient : public AwsAbstractClient {

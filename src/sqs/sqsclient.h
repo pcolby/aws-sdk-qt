@@ -32,25 +32,45 @@ namespace AWS {
 namespace SQS {
 
 class SqsClientPrivate;
+class AddPermissionRequest;
 class AddPermissionResponse;
+class ChangeMessageVisibilityRequest;
 class ChangeMessageVisibilityResponse;
+class ChangeMessageVisibilityBatchRequest;
 class ChangeMessageVisibilityBatchResponse;
+class CreateQueueRequest;
 class CreateQueueResponse;
+class DeleteMessageRequest;
 class DeleteMessageResponse;
+class DeleteMessageBatchRequest;
 class DeleteMessageBatchResponse;
+class DeleteQueueRequest;
 class DeleteQueueResponse;
+class GetQueueAttributesRequest;
 class GetQueueAttributesResponse;
+class GetQueueUrlRequest;
 class GetQueueUrlResponse;
+class ListDeadLetterSourceQueuesRequest;
 class ListDeadLetterSourceQueuesResponse;
+class ListQueueTagsRequest;
 class ListQueueTagsResponse;
+class ListQueuesRequest;
 class ListQueuesResponse;
+class PurgeQueueRequest;
 class PurgeQueueResponse;
+class ReceiveMessageRequest;
 class ReceiveMessageResponse;
+class RemovePermissionRequest;
 class RemovePermissionResponse;
+class SendMessageRequest;
 class SendMessageResponse;
+class SendMessageBatchRequest;
 class SendMessageBatchResponse;
+class SetQueueAttributesRequest;
 class SetQueueAttributesResponse;
+class TagQueueRequest;
 class TagQueueResponse;
+class UntagQueueRequest;
 class UntagQueueResponse;
 
 class QTAWS_EXPORT SqsClient : public AwsAbstractClient {
