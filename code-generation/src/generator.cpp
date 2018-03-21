@@ -75,8 +75,6 @@ bool Generator::generate(const QString &serviceFileName,
         generateModelClasses(projectDir, operationName, description);
     }
 
-    /// @todo Generate request / response classes.
-
     /// @todo Generate service client.
     context.push();
     QVariantMap operations = context.lookup(QSL("operations")).toMap();
@@ -171,9 +169,7 @@ bool Generator::generateModelClasses(const QString &projectDir, const QString &o
         context.push();
         const QString requestClassName = operationName + QSL("Request");
         context.insert(QSL("ClassName"), requestClassName);
-        render(QSL("request.cpp"), context, projectDir, requestClassName.toLower() + QSL(".cpp"));
-        render(QSL("request.h"),   context, projectDir, requestClassName.toLower() + QSL(".h"));
-        render(QSL("request_p.h"), context, projectDir, requestClassName.toLower() + QSL("_p.h"));
+        renderClassFiles(QSL("request"), context, projectDir, requestClassName);
         context.pop();
     }
 
@@ -181,9 +177,7 @@ bool Generator::generateModelClasses(const QString &projectDir, const QString &o
     context.push();
     const QString responseClassName = operationName + QSL("Response");
     context.insert(QSL("ClassName"), responseClassName);
-    render(QSL("response.cpp"), context, projectDir, responseClassName.toLower() + QSL(".cpp"));
-    render(QSL("response.h"),   context, projectDir, responseClassName.toLower() + QSL(".h"));
-    render(QSL("response_p.h"), context, projectDir, responseClassName.toLower() + QSL("_p.h"));
+    renderClassFiles(QSL("response"), context, projectDir, responseClassName);
     context.pop();
     return true;
 }
@@ -237,4 +231,12 @@ bool Generator::render(const QString &templateName, Grantlee::Context &context,
                        const QString &outputDirName, const QString &outputFileName) const
 {
     return render(templateName, context, outputDirName + QLatin1Char('/') + outputFileName);
+}
+
+void Generator::renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
+                                 const QString &outputPathName, const QString className) const
+{
+    foreach (const QString &extension, QStringList() << QSL(".cpp") << QSL(".h") << QSL("_p.h")) {
+        render(templateBaseName + extension, context, outputPathName, className.toLower() + extension);
+    }
 }

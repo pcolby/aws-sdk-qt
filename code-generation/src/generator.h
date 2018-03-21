@@ -31,7 +31,10 @@ public:
 
 protected:
     static QStringList formatHtmlDocumentation(const QString &html);
-    bool generateModelClasses(const QString &projectDir, const QString &operationName, const QJsonObject &description);
+
+    bool generateModelClasses(const QString &projectDir, const QString &operationName,
+                              const QJsonObject &description);
+
     static QString getClassNamePrefix(const QJsonObject &metaData);
 
     bool render(const QString &templateName, Grantlee::Context &context,
@@ -39,6 +42,9 @@ protected:
 
     bool render(const QString &templateName, Grantlee::Context &context,
                 const QString &outputDirName, const QString &outputFileName) const;
+
+    void renderClassFiles(const QString &templateBaseName, Grantlee::Context &context,
+                          const QString &outputPathName, const QString className) const;
 
 private:
     QDir outputDir;
