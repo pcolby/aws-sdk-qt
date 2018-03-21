@@ -1,6 +1,6 @@
 include(../../common.pri)
 
-TARGET = sqs2
+TARGET = sqs
 TEMPLATE = lib
 QT -= gui
 QT += network
