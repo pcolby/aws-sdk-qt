@@ -10,24 +10,8 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
-    acmclient.h \
-    acmclient_p.h \
-    addtagstocertificaterequest.h \
-    addtagstocertificaterequest_p.h \
-    addtagstocertificateresponse.h \
-    addtagstocertificateresponse_p.h \
-    alexaforbusinessclient.h \
-    alexaforbusinessclient_p.h \
     apigatewayclient.h \
     apigatewayclient_p.h \
-    associatedevicewithroomrequest.h \
-    associatedevicewithroomrequest_p.h \
-    associatedevicewithroomresponse.h \
-    associatedevicewithroomresponse_p.h \
-    associateskillgroupwithroomrequest.h \
-    associateskillgroupwithroomrequest_p.h \
-    associateskillgroupwithroomresponse.h \
-    associateskillgroupwithroomresponse_p.h \
     createapikeyrequest.h \
     createapikeyrequest_p.h \
     createapikeyresponse.h \
@@ -60,10 +44,6 @@ HEADERS += \
     createmodelrequest_p.h \
     createmodelresponse.h \
     createmodelresponse_p.h \
-    createprofilerequest.h \
-    createprofilerequest_p.h \
-    createprofileresponse.h \
-    createprofileresponse_p.h \
     createrequestvalidatorrequest.h \
     createrequestvalidatorrequest_p.h \
     createrequestvalidatorresponse.h \
@@ -76,14 +56,6 @@ HEADERS += \
     createrestapirequest_p.h \
     createrestapiresponse.h \
     createrestapiresponse_p.h \
-    createroomrequest.h \
-    createroomrequest_p.h \
-    createroomresponse.h \
-    createroomresponse_p.h \
-    createskillgrouprequest.h \
-    createskillgrouprequest_p.h \
-    createskillgroupresponse.h \
-    createskillgroupresponse_p.h \
     createstagerequest.h \
     createstagerequest_p.h \
     createstageresponse.h \
@@ -96,10 +68,6 @@ HEADERS += \
     createusageplanrequest_p.h \
     createusageplanresponse.h \
     createusageplanresponse_p.h \
-    createuserrequest.h \
-    createuserrequest_p.h \
-    createuserresponse.h \
-    createuserresponse_p.h \
     createvpclinkrequest.h \
     createvpclinkrequest_p.h \
     createvpclinkresponse.h \
@@ -116,10 +84,6 @@ HEADERS += \
     deletebasepathmappingrequest_p.h \
     deletebasepathmappingresponse.h \
     deletebasepathmappingresponse_p.h \
-    deletecertificaterequest.h \
-    deletecertificaterequest_p.h \
-    deletecertificateresponse.h \
-    deletecertificateresponse_p.h \
     deleteclientcertificaterequest.h \
     deleteclientcertificaterequest_p.h \
     deleteclientcertificateresponse.h \
@@ -164,10 +128,6 @@ HEADERS += \
     deletemodelrequest_p.h \
     deletemodelresponse.h \
     deletemodelresponse_p.h \
-    deleteprofilerequest.h \
-    deleteprofilerequest_p.h \
-    deleteprofileresponse.h \
-    deleteprofileresponse_p.h \
     deleterequestvalidatorrequest.h \
     deleterequestvalidatorrequest_p.h \
     deleterequestvalidatorresponse.h \
@@ -180,18 +140,6 @@ HEADERS += \
     deleterestapirequest_p.h \
     deleterestapiresponse.h \
     deleterestapiresponse_p.h \
-    deleteroomrequest.h \
-    deleteroomrequest_p.h \
-    deleteroomresponse.h \
-    deleteroomresponse_p.h \
-    deleteroomskillparameterrequest.h \
-    deleteroomskillparameterrequest_p.h \
-    deleteroomskillparameterresponse.h \
-    deleteroomskillparameterresponse_p.h \
-    deleteskillgrouprequest.h \
-    deleteskillgrouprequest_p.h \
-    deleteskillgroupresponse.h \
-    deleteskillgroupresponse_p.h \
     deletestagerequest.h \
     deletestagerequest_p.h \
     deletestageresponse.h \
@@ -204,26 +152,10 @@ HEADERS += \
     deleteusageplanrequest_p.h \
     deleteusageplanresponse.h \
     deleteusageplanresponse_p.h \
-    deleteuserrequest.h \
-    deleteuserrequest_p.h \
-    deleteuserresponse.h \
-    deleteuserresponse_p.h \
     deletevpclinkrequest.h \
     deletevpclinkrequest_p.h \
     deletevpclinkresponse.h \
     deletevpclinkresponse_p.h \
-    describecertificaterequest.h \
-    describecertificaterequest_p.h \
-    describecertificateresponse.h \
-    describecertificateresponse_p.h \
-    disassociatedevicefromroomrequest.h \
-    disassociatedevicefromroomrequest_p.h \
-    disassociatedevicefromroomresponse.h \
-    disassociatedevicefromroomresponse_p.h \
-    disassociateskillgroupfromroomrequest.h \
-    disassociateskillgroupfromroomrequest_p.h \
-    disassociateskillgroupfromroomresponse.h \
-    disassociateskillgroupfromroomresponse_p.h \
     flushstageauthorizerscacherequest.h \
     flushstageauthorizerscacherequest_p.h \
     flushstageauthorizerscacheresponse.h \
@@ -264,10 +196,6 @@ HEADERS += \
     getbasepathmappingsrequest_p.h \
     getbasepathmappingsresponse.h \
     getbasepathmappingsresponse_p.h \
-    getcertificaterequest.h \
-    getcertificaterequest_p.h \
-    getcertificateresponse.h \
-    getcertificateresponse_p.h \
     getclientcertificaterequest.h \
     getclientcertificaterequest_p.h \
     getclientcertificateresponse.h \
@@ -284,10 +212,6 @@ HEADERS += \
     getdeploymentsrequest_p.h \
     getdeploymentsresponse.h \
     getdeploymentsresponse_p.h \
-    getdevicerequest.h \
-    getdevicerequest_p.h \
-    getdeviceresponse.h \
-    getdeviceresponse_p.h \
     getdocumentationpartrequest.h \
     getdocumentationpartrequest_p.h \
     getdocumentationpartresponse.h \
@@ -352,10 +276,6 @@ HEADERS += \
     getmodeltemplaterequest_p.h \
     getmodeltemplateresponse.h \
     getmodeltemplateresponse_p.h \
-    getprofilerequest.h \
-    getprofilerequest_p.h \
-    getprofileresponse.h \
-    getprofileresponse_p.h \
     getrequestvalidatorrequest.h \
     getrequestvalidatorrequest_p.h \
     getrequestvalidatorresponse.h \
@@ -380,14 +300,6 @@ HEADERS += \
     getrestapisrequest_p.h \
     getrestapisresponse.h \
     getrestapisresponse_p.h \
-    getroomrequest.h \
-    getroomrequest_p.h \
-    getroomresponse.h \
-    getroomresponse_p.h \
-    getroomskillparameterrequest.h \
-    getroomskillparameterrequest_p.h \
-    getroomskillparameterresponse.h \
-    getroomskillparameterresponse_p.h \
     getsdkrequest.h \
     getsdkrequest_p.h \
     getsdkresponse.h \
@@ -400,10 +312,6 @@ HEADERS += \
     getsdktypesrequest_p.h \
     getsdktypesresponse.h \
     getsdktypesresponse_p.h \
-    getskillgrouprequest.h \
-    getskillgrouprequest_p.h \
-    getskillgroupresponse.h \
-    getskillgroupresponse_p.h \
     getstagerequest.h \
     getstagerequest_p.h \
     getstageresponse.h \
@@ -448,10 +356,6 @@ HEADERS += \
     importapikeysrequest_p.h \
     importapikeysresponse.h \
     importapikeysresponse_p.h \
-    importcertificaterequest.h \
-    importcertificaterequest_p.h \
-    importcertificateresponse.h \
-    importcertificateresponse_p.h \
     importdocumentationpartsrequest.h \
     importdocumentationpartsrequest_p.h \
     importdocumentationpartsresponse.h \
@@ -460,22 +364,6 @@ HEADERS += \
     importrestapirequest_p.h \
     importrestapiresponse.h \
     importrestapiresponse_p.h \
-    listcertificatesrequest.h \
-    listcertificatesrequest_p.h \
-    listcertificatesresponse.h \
-    listcertificatesresponse_p.h \
-    listskillsrequest.h \
-    listskillsrequest_p.h \
-    listskillsresponse.h \
-    listskillsresponse_p.h \
-    listtagsforcertificaterequest.h \
-    listtagsforcertificaterequest_p.h \
-    listtagsforcertificateresponse.h \
-    listtagsforcertificateresponse_p.h \
-    listtagsrequest.h \
-    listtagsrequest_p.h \
-    listtagsresponse.h \
-    listtagsresponse_p.h \
     putgatewayresponserequest.h \
     putgatewayresponserequest_p.h \
     putgatewayresponseresponse.h \
@@ -500,65 +388,9 @@ HEADERS += \
     putrestapirequest_p.h \
     putrestapiresponse.h \
     putrestapiresponse_p.h \
-    putroomskillparameterrequest.h \
-    putroomskillparameterrequest_p.h \
-    putroomskillparameterresponse.h \
-    putroomskillparameterresponse_p.h \
-    removetagsfromcertificaterequest.h \
-    removetagsfromcertificaterequest_p.h \
-    removetagsfromcertificateresponse.h \
-    removetagsfromcertificateresponse_p.h \
-    requestcertificaterequest.h \
-    requestcertificaterequest_p.h \
-    requestcertificateresponse.h \
-    requestcertificateresponse_p.h \
-    resendvalidationemailrequest.h \
-    resendvalidationemailrequest_p.h \
-    resendvalidationemailresponse.h \
-    resendvalidationemailresponse_p.h \
-    resolveroomrequest.h \
-    resolveroomrequest_p.h \
-    resolveroomresponse.h \
-    resolveroomresponse_p.h \
-    revokeinvitationrequest.h \
-    revokeinvitationrequest_p.h \
-    revokeinvitationresponse.h \
-    revokeinvitationresponse_p.h \
-    searchdevicesrequest.h \
-    searchdevicesrequest_p.h \
-    searchdevicesresponse.h \
-    searchdevicesresponse_p.h \
-    searchprofilesrequest.h \
-    searchprofilesrequest_p.h \
-    searchprofilesresponse.h \
-    searchprofilesresponse_p.h \
-    searchroomsrequest.h \
-    searchroomsrequest_p.h \
-    searchroomsresponse.h \
-    searchroomsresponse_p.h \
-    searchskillgroupsrequest.h \
-    searchskillgroupsrequest_p.h \
-    searchskillgroupsresponse.h \
-    searchskillgroupsresponse_p.h \
-    searchusersrequest.h \
-    searchusersrequest_p.h \
-    searchusersresponse.h \
-    searchusersresponse_p.h \
-    sendinvitationrequest.h \
-    sendinvitationrequest_p.h \
-    sendinvitationresponse.h \
-    sendinvitationresponse_p.h \
-    startdevicesyncrequest.h \
-    startdevicesyncrequest_p.h \
-    startdevicesyncresponse.h \
-    startdevicesyncresponse_p.h \
-    tagresourcerequest.h \
     tagresourcerequest.h \
     tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
     tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse_p.h \
     tagresourceresponse_p.h \
     testinvokeauthorizerrequest.h \
     testinvokeauthorizerrequest_p.h \
@@ -569,12 +401,8 @@ HEADERS += \
     testinvokemethodresponse.h \
     testinvokemethodresponse_p.h \
     untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest_p.h \
     untagresourcerequest_p.h \
     untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse_p.h \
     untagresourceresponse_p.h \
     updateaccountrequest.h \
     updateaccountrequest_p.h \
@@ -600,10 +428,6 @@ HEADERS += \
     updatedeploymentrequest_p.h \
     updatedeploymentresponse.h \
     updatedeploymentresponse_p.h \
-    updatedevicerequest.h \
-    updatedevicerequest_p.h \
-    updatedeviceresponse.h \
-    updatedeviceresponse_p.h \
     updatedocumentationpartrequest.h \
     updatedocumentationpartrequest_p.h \
     updatedocumentationpartresponse.h \
@@ -640,10 +464,6 @@ HEADERS += \
     updatemodelrequest_p.h \
     updatemodelresponse.h \
     updatemodelresponse_p.h \
-    updateprofilerequest.h \
-    updateprofilerequest_p.h \
-    updateprofileresponse.h \
-    updateprofileresponse_p.h \
     updaterequestvalidatorrequest.h \
     updaterequestvalidatorrequest_p.h \
     updaterequestvalidatorresponse.h \
@@ -656,14 +476,6 @@ HEADERS += \
     updaterestapirequest_p.h \
     updaterestapiresponse.h \
     updaterestapiresponse_p.h \
-    updateroomrequest.h \
-    updateroomrequest_p.h \
-    updateroomresponse.h \
-    updateroomresponse_p.h \
-    updateskillgrouprequest.h \
-    updateskillgrouprequest_p.h \
-    updateskillgroupresponse.h \
-    updateskillgroupresponse_p.h \
     updatestagerequest.h \
     updatestagerequest_p.h \
     updatestageresponse.h \
@@ -682,15 +494,7 @@ HEADERS += \
     updatevpclinkresponse_p.h \
 
 SOURCES += \
-    acmclient.cpp \
-    addtagstocertificaterequest.cpp \
-    addtagstocertificateresponse.cpp \
-    alexaforbusinessclient.cpp \
     apigatewayclient.cpp \
-    associatedevicewithroomrequest.cpp \
-    associatedevicewithroomresponse.cpp \
-    associateskillgroupwithroomrequest.cpp \
-    associateskillgroupwithroomresponse.cpp \
     createapikeyrequest.cpp \
     createapikeyresponse.cpp \
     createauthorizerrequest.cpp \
@@ -707,26 +511,18 @@ SOURCES += \
     createdomainnameresponse.cpp \
     createmodelrequest.cpp \
     createmodelresponse.cpp \
-    createprofilerequest.cpp \
-    createprofileresponse.cpp \
     createrequestvalidatorrequest.cpp \
     createrequestvalidatorresponse.cpp \
     createresourcerequest.cpp \
     createresourceresponse.cpp \
     createrestapirequest.cpp \
     createrestapiresponse.cpp \
-    createroomrequest.cpp \
-    createroomresponse.cpp \
-    createskillgrouprequest.cpp \
-    createskillgroupresponse.cpp \
     createstagerequest.cpp \
     createstageresponse.cpp \
     createusageplankeyrequest.cpp \
     createusageplankeyresponse.cpp \
     createusageplanrequest.cpp \
     createusageplanresponse.cpp \
-    createuserrequest.cpp \
-    createuserresponse.cpp \
     createvpclinkrequest.cpp \
     createvpclinkresponse.cpp \
     deleteapikeyrequest.cpp \
@@ -735,8 +531,6 @@ SOURCES += \
     deleteauthorizerresponse.cpp \
     deletebasepathmappingrequest.cpp \
     deletebasepathmappingresponse.cpp \
-    deletecertificaterequest.cpp \
-    deletecertificateresponse.cpp \
     deleteclientcertificaterequest.cpp \
     deleteclientcertificateresponse.cpp \
     deletedeploymentrequest.cpp \
@@ -759,36 +553,20 @@ SOURCES += \
     deletemethodresponseresponse.cpp \
     deletemodelrequest.cpp \
     deletemodelresponse.cpp \
-    deleteprofilerequest.cpp \
-    deleteprofileresponse.cpp \
     deleterequestvalidatorrequest.cpp \
     deleterequestvalidatorresponse.cpp \
     deleteresourcerequest.cpp \
     deleteresourceresponse.cpp \
     deleterestapirequest.cpp \
     deleterestapiresponse.cpp \
-    deleteroomrequest.cpp \
-    deleteroomresponse.cpp \
-    deleteroomskillparameterrequest.cpp \
-    deleteroomskillparameterresponse.cpp \
-    deleteskillgrouprequest.cpp \
-    deleteskillgroupresponse.cpp \
     deletestagerequest.cpp \
     deletestageresponse.cpp \
     deleteusageplankeyrequest.cpp \
     deleteusageplankeyresponse.cpp \
     deleteusageplanrequest.cpp \
     deleteusageplanresponse.cpp \
-    deleteuserrequest.cpp \
-    deleteuserresponse.cpp \
     deletevpclinkrequest.cpp \
     deletevpclinkresponse.cpp \
-    describecertificaterequest.cpp \
-    describecertificateresponse.cpp \
-    disassociatedevicefromroomrequest.cpp \
-    disassociatedevicefromroomresponse.cpp \
-    disassociateskillgroupfromroomrequest.cpp \
-    disassociateskillgroupfromroomresponse.cpp \
     flushstageauthorizerscacherequest.cpp \
     flushstageauthorizerscacheresponse.cpp \
     flushstagecacherequest.cpp \
@@ -809,8 +587,6 @@ SOURCES += \
     getbasepathmappingresponse.cpp \
     getbasepathmappingsrequest.cpp \
     getbasepathmappingsresponse.cpp \
-    getcertificaterequest.cpp \
-    getcertificateresponse.cpp \
     getclientcertificaterequest.cpp \
     getclientcertificateresponse.cpp \
     getclientcertificatesrequest.cpp \
@@ -819,8 +595,6 @@ SOURCES += \
     getdeploymentresponse.cpp \
     getdeploymentsrequest.cpp \
     getdeploymentsresponse.cpp \
-    getdevicerequest.cpp \
-    getdeviceresponse.cpp \
     getdocumentationpartrequest.cpp \
     getdocumentationpartresponse.cpp \
     getdocumentationpartsrequest.cpp \
@@ -853,8 +627,6 @@ SOURCES += \
     getmodelsresponse.cpp \
     getmodeltemplaterequest.cpp \
     getmodeltemplateresponse.cpp \
-    getprofilerequest.cpp \
-    getprofileresponse.cpp \
     getrequestvalidatorrequest.cpp \
     getrequestvalidatorresponse.cpp \
     getrequestvalidatorsrequest.cpp \
@@ -867,18 +639,12 @@ SOURCES += \
     getrestapiresponse.cpp \
     getrestapisrequest.cpp \
     getrestapisresponse.cpp \
-    getroomrequest.cpp \
-    getroomresponse.cpp \
-    getroomskillparameterrequest.cpp \
-    getroomskillparameterresponse.cpp \
     getsdkrequest.cpp \
     getsdkresponse.cpp \
     getsdktyperequest.cpp \
     getsdktyperesponse.cpp \
     getsdktypesrequest.cpp \
     getsdktypesresponse.cpp \
-    getskillgrouprequest.cpp \
-    getskillgroupresponse.cpp \
     getstagerequest.cpp \
     getstageresponse.cpp \
     getstagesrequest.cpp \
@@ -901,20 +667,10 @@ SOURCES += \
     getvpclinksresponse.cpp \
     importapikeysrequest.cpp \
     importapikeysresponse.cpp \
-    importcertificaterequest.cpp \
-    importcertificateresponse.cpp \
     importdocumentationpartsrequest.cpp \
     importdocumentationpartsresponse.cpp \
     importrestapirequest.cpp \
     importrestapiresponse.cpp \
-    listcertificatesrequest.cpp \
-    listcertificatesresponse.cpp \
-    listskillsrequest.cpp \
-    listskillsresponse.cpp \
-    listtagsforcertificaterequest.cpp \
-    listtagsforcertificateresponse.cpp \
-    listtagsrequest.cpp \
-    listtagsresponse.cpp \
     putgatewayresponserequest.cpp \
     putgatewayresponseresponse.cpp \
     putintegrationrequest.cpp \
@@ -927,43 +683,13 @@ SOURCES += \
     putmethodresponseresponse.cpp \
     putrestapirequest.cpp \
     putrestapiresponse.cpp \
-    putroomskillparameterrequest.cpp \
-    putroomskillparameterresponse.cpp \
-    removetagsfromcertificaterequest.cpp \
-    removetagsfromcertificateresponse.cpp \
-    requestcertificaterequest.cpp \
-    requestcertificateresponse.cpp \
-    resendvalidationemailrequest.cpp \
-    resendvalidationemailresponse.cpp \
-    resolveroomrequest.cpp \
-    resolveroomresponse.cpp \
-    revokeinvitationrequest.cpp \
-    revokeinvitationresponse.cpp \
-    searchdevicesrequest.cpp \
-    searchdevicesresponse.cpp \
-    searchprofilesrequest.cpp \
-    searchprofilesresponse.cpp \
-    searchroomsrequest.cpp \
-    searchroomsresponse.cpp \
-    searchskillgroupsrequest.cpp \
-    searchskillgroupsresponse.cpp \
-    searchusersrequest.cpp \
-    searchusersresponse.cpp \
-    sendinvitationrequest.cpp \
-    sendinvitationresponse.cpp \
-    startdevicesyncrequest.cpp \
-    startdevicesyncresponse.cpp \
     tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourceresponse.cpp \
     tagresourceresponse.cpp \
     testinvokeauthorizerrequest.cpp \
     testinvokeauthorizerresponse.cpp \
     testinvokemethodrequest.cpp \
     testinvokemethodresponse.cpp \
     untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourceresponse.cpp \
     untagresourceresponse.cpp \
     updateaccountrequest.cpp \
     updateaccountresponse.cpp \
@@ -977,8 +703,6 @@ SOURCES += \
     updateclientcertificateresponse.cpp \
     updatedeploymentrequest.cpp \
     updatedeploymentresponse.cpp \
-    updatedevicerequest.cpp \
-    updatedeviceresponse.cpp \
     updatedocumentationpartrequest.cpp \
     updatedocumentationpartresponse.cpp \
     updatedocumentationversionrequest.cpp \
@@ -997,18 +721,12 @@ SOURCES += \
     updatemethodresponseresponse.cpp \
     updatemodelrequest.cpp \
     updatemodelresponse.cpp \
-    updateprofilerequest.cpp \
-    updateprofileresponse.cpp \
     updaterequestvalidatorrequest.cpp \
     updaterequestvalidatorresponse.cpp \
     updateresourcerequest.cpp \
     updateresourceresponse.cpp \
     updaterestapirequest.cpp \
     updaterestapiresponse.cpp \
-    updateroomrequest.cpp \
-    updateroomresponse.cpp \
-    updateskillgrouprequest.cpp \
-    updateskillgroupresponse.cpp \
     updatestagerequest.cpp \
     updatestageresponse.cpp \
     updateusageplanrequest.cpp \

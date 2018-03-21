@@ -74,6 +74,8 @@ bool Generator::generate(const QString &serviceFileName,
 {
     qDebug() << "generating service" << serviceFileName;
     outputDir.mkdir(serviceFileName);
+    headers.clear();
+    sources.clear();
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();

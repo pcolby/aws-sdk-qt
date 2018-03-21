@@ -10,12 +10,6 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
-    acmclient.h \
-    acmclient_p.h \
-    addtagstocertificaterequest.h \
-    addtagstocertificaterequest_p.h \
-    addtagstocertificateresponse.h \
-    addtagstocertificateresponse_p.h \
     alexaforbusinessclient.h \
     alexaforbusinessclient_p.h \
     associatedevicewithroomrequest.h \
@@ -42,10 +36,6 @@ HEADERS += \
     createuserrequest_p.h \
     createuserresponse.h \
     createuserresponse_p.h \
-    deletecertificaterequest.h \
-    deletecertificaterequest_p.h \
-    deletecertificateresponse.h \
-    deletecertificateresponse_p.h \
     deleteprofilerequest.h \
     deleteprofilerequest_p.h \
     deleteprofileresponse.h \
@@ -66,10 +56,6 @@ HEADERS += \
     deleteuserrequest_p.h \
     deleteuserresponse.h \
     deleteuserresponse_p.h \
-    describecertificaterequest.h \
-    describecertificaterequest_p.h \
-    describecertificateresponse.h \
-    describecertificateresponse_p.h \
     disassociatedevicefromroomrequest.h \
     disassociatedevicefromroomrequest_p.h \
     disassociatedevicefromroomresponse.h \
@@ -78,10 +64,6 @@ HEADERS += \
     disassociateskillgroupfromroomrequest_p.h \
     disassociateskillgroupfromroomresponse.h \
     disassociateskillgroupfromroomresponse_p.h \
-    getcertificaterequest.h \
-    getcertificaterequest_p.h \
-    getcertificateresponse.h \
-    getcertificateresponse_p.h \
     getdevicerequest.h \
     getdevicerequest_p.h \
     getdeviceresponse.h \
@@ -102,22 +84,10 @@ HEADERS += \
     getskillgrouprequest_p.h \
     getskillgroupresponse.h \
     getskillgroupresponse_p.h \
-    importcertificaterequest.h \
-    importcertificaterequest_p.h \
-    importcertificateresponse.h \
-    importcertificateresponse_p.h \
-    listcertificatesrequest.h \
-    listcertificatesrequest_p.h \
-    listcertificatesresponse.h \
-    listcertificatesresponse_p.h \
     listskillsrequest.h \
     listskillsrequest_p.h \
     listskillsresponse.h \
     listskillsresponse_p.h \
-    listtagsforcertificaterequest.h \
-    listtagsforcertificaterequest_p.h \
-    listtagsforcertificateresponse.h \
-    listtagsforcertificateresponse_p.h \
     listtagsrequest.h \
     listtagsrequest_p.h \
     listtagsresponse.h \
@@ -126,18 +96,6 @@ HEADERS += \
     putroomskillparameterrequest_p.h \
     putroomskillparameterresponse.h \
     putroomskillparameterresponse_p.h \
-    removetagsfromcertificaterequest.h \
-    removetagsfromcertificaterequest_p.h \
-    removetagsfromcertificateresponse.h \
-    removetagsfromcertificateresponse_p.h \
-    requestcertificaterequest.h \
-    requestcertificaterequest_p.h \
-    requestcertificateresponse.h \
-    requestcertificateresponse_p.h \
-    resendvalidationemailrequest.h \
-    resendvalidationemailrequest_p.h \
-    resendvalidationemailresponse.h \
-    resendvalidationemailresponse_p.h \
     resolveroomrequest.h \
     resolveroomrequest_p.h \
     resolveroomresponse.h \
@@ -200,9 +158,6 @@ HEADERS += \
     updateskillgroupresponse_p.h \
 
 SOURCES += \
-    acmclient.cpp \
-    addtagstocertificaterequest.cpp \
-    addtagstocertificateresponse.cpp \
     alexaforbusinessclient.cpp \
     associatedevicewithroomrequest.cpp \
     associatedevicewithroomresponse.cpp \
@@ -216,8 +171,6 @@ SOURCES += \
     createskillgroupresponse.cpp \
     createuserrequest.cpp \
     createuserresponse.cpp \
-    deletecertificaterequest.cpp \
-    deletecertificateresponse.cpp \
     deleteprofilerequest.cpp \
     deleteprofileresponse.cpp \
     deleteroomrequest.cpp \
@@ -228,14 +181,10 @@ SOURCES += \
     deleteskillgroupresponse.cpp \
     deleteuserrequest.cpp \
     deleteuserresponse.cpp \
-    describecertificaterequest.cpp \
-    describecertificateresponse.cpp \
     disassociatedevicefromroomrequest.cpp \
     disassociatedevicefromroomresponse.cpp \
     disassociateskillgroupfromroomrequest.cpp \
     disassociateskillgroupfromroomresponse.cpp \
-    getcertificaterequest.cpp \
-    getcertificateresponse.cpp \
     getdevicerequest.cpp \
     getdeviceresponse.cpp \
     getprofilerequest.cpp \
@@ -246,24 +195,12 @@ SOURCES += \
     getroomskillparameterresponse.cpp \
     getskillgrouprequest.cpp \
     getskillgroupresponse.cpp \
-    importcertificaterequest.cpp \
-    importcertificateresponse.cpp \
-    listcertificatesrequest.cpp \
-    listcertificatesresponse.cpp \
     listskillsrequest.cpp \
     listskillsresponse.cpp \
-    listtagsforcertificaterequest.cpp \
-    listtagsforcertificateresponse.cpp \
     listtagsrequest.cpp \
     listtagsresponse.cpp \
     putroomskillparameterrequest.cpp \
     putroomskillparameterresponse.cpp \
-    removetagsfromcertificaterequest.cpp \
-    removetagsfromcertificateresponse.cpp \
-    requestcertificaterequest.cpp \
-    requestcertificateresponse.cpp \
-    resendvalidationemailrequest.cpp \
-    resendvalidationemailresponse.cpp \
     resolveroomrequest.cpp \
     resolveroomresponse.cpp \
     revokeinvitationrequest.cpp \

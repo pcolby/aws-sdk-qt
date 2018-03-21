@@ -22,200 +22,14 @@ HEADERS += \
     acceptvpcpeeringconnectionrequest_p.h \
     acceptvpcpeeringconnectionresponse.h \
     acceptvpcpeeringconnectionresponse_p.h \
-    acknowledgejobrequest.h \
-    acknowledgejobrequest_p.h \
-    acknowledgejobresponse.h \
-    acknowledgejobresponse_p.h \
-    acknowledgethirdpartyjobrequest.h \
-    acknowledgethirdpartyjobrequest_p.h \
-    acknowledgethirdpartyjobresponse.h \
-    acknowledgethirdpartyjobresponse_p.h \
-    acmclient.h \
-    acmclient_p.h \
-    activatepipelinerequest.h \
-    activatepipelinerequest_p.h \
-    activatepipelineresponse.h \
-    activatepipelineresponse_p.h \
-    addcustomattributesrequest.h \
-    addcustomattributesrequest_p.h \
-    addcustomattributesresponse.h \
-    addcustomattributesresponse_p.h \
-    addfacettoobjectrequest.h \
-    addfacettoobjectrequest_p.h \
-    addfacettoobjectresponse.h \
-    addfacettoobjectresponse_p.h \
-    addiproutesrequest.h \
-    addiproutesrequest_p.h \
-    addiproutesresponse.h \
-    addiproutesresponse_p.h \
-    addtagsrequest.h \
-    addtagsrequest.h \
-    addtagsrequest_p.h \
-    addtagsrequest_p.h \
-    addtagsresponse.h \
-    addtagsresponse.h \
-    addtagsresponse_p.h \
-    addtagsresponse_p.h \
-    addtagstocertificaterequest.h \
-    addtagstocertificaterequest_p.h \
-    addtagstocertificateresponse.h \
-    addtagstocertificateresponse_p.h \
-    addtagstoonpremisesinstancesrequest.h \
-    addtagstoonpremisesinstancesrequest_p.h \
-    addtagstoonpremisesinstancesresponse.h \
-    addtagstoonpremisesinstancesresponse_p.h \
-    addtagstoresourcerequest.h \
-    addtagstoresourcerequest.h \
-    addtagstoresourcerequest.h \
-    addtagstoresourcerequest_p.h \
-    addtagstoresourcerequest_p.h \
-    addtagstoresourcerequest_p.h \
-    addtagstoresourceresponse.h \
-    addtagstoresourceresponse.h \
-    addtagstoresourceresponse.h \
-    addtagstoresourceresponse_p.h \
-    addtagstoresourceresponse_p.h \
-    addtagstoresourceresponse_p.h \
-    adminaddusertogrouprequest.h \
-    adminaddusertogrouprequest_p.h \
-    adminaddusertogroupresponse.h \
-    adminaddusertogroupresponse_p.h \
-    adminconfirmsignuprequest.h \
-    adminconfirmsignuprequest_p.h \
-    adminconfirmsignupresponse.h \
-    adminconfirmsignupresponse_p.h \
-    admincreateuserrequest.h \
-    admincreateuserrequest_p.h \
-    admincreateuserresponse.h \
-    admincreateuserresponse_p.h \
-    admindeleteuserattributesrequest.h \
-    admindeleteuserattributesrequest_p.h \
-    admindeleteuserattributesresponse.h \
-    admindeleteuserattributesresponse_p.h \
-    admindeleteuserrequest.h \
-    admindeleteuserrequest_p.h \
-    admindeleteuserresponse.h \
-    admindeleteuserresponse_p.h \
-    admindisableproviderforuserrequest.h \
-    admindisableproviderforuserrequest_p.h \
-    admindisableproviderforuserresponse.h \
-    admindisableproviderforuserresponse_p.h \
-    admindisableuserrequest.h \
-    admindisableuserrequest_p.h \
-    admindisableuserresponse.h \
-    admindisableuserresponse_p.h \
-    adminenableuserrequest.h \
-    adminenableuserrequest_p.h \
-    adminenableuserresponse.h \
-    adminenableuserresponse_p.h \
-    adminforgetdevicerequest.h \
-    adminforgetdevicerequest_p.h \
-    adminforgetdeviceresponse.h \
-    adminforgetdeviceresponse_p.h \
-    admingetdevicerequest.h \
-    admingetdevicerequest_p.h \
-    admingetdeviceresponse.h \
-    admingetdeviceresponse_p.h \
-    admingetuserrequest.h \
-    admingetuserrequest_p.h \
-    admingetuserresponse.h \
-    admingetuserresponse_p.h \
-    admininitiateauthrequest.h \
-    admininitiateauthrequest_p.h \
-    admininitiateauthresponse.h \
-    admininitiateauthresponse_p.h \
-    adminlinkproviderforuserrequest.h \
-    adminlinkproviderforuserrequest_p.h \
-    adminlinkproviderforuserresponse.h \
-    adminlinkproviderforuserresponse_p.h \
-    adminlistdevicesrequest.h \
-    adminlistdevicesrequest_p.h \
-    adminlistdevicesresponse.h \
-    adminlistdevicesresponse_p.h \
-    adminlistgroupsforuserrequest.h \
-    adminlistgroupsforuserrequest_p.h \
-    adminlistgroupsforuserresponse.h \
-    adminlistgroupsforuserresponse_p.h \
-    adminlistuserautheventsrequest.h \
-    adminlistuserautheventsrequest_p.h \
-    adminlistuserautheventsresponse.h \
-    adminlistuserautheventsresponse_p.h \
-    adminremoveuserfromgrouprequest.h \
-    adminremoveuserfromgrouprequest_p.h \
-    adminremoveuserfromgroupresponse.h \
-    adminremoveuserfromgroupresponse_p.h \
-    adminresetuserpasswordrequest.h \
-    adminresetuserpasswordrequest_p.h \
-    adminresetuserpasswordresponse.h \
-    adminresetuserpasswordresponse_p.h \
-    adminrespondtoauthchallengerequest.h \
-    adminrespondtoauthchallengerequest_p.h \
-    adminrespondtoauthchallengeresponse.h \
-    adminrespondtoauthchallengeresponse_p.h \
-    adminsetusermfapreferencerequest.h \
-    adminsetusermfapreferencerequest_p.h \
-    adminsetusermfapreferenceresponse.h \
-    adminsetusermfapreferenceresponse_p.h \
-    adminsetusersettingsrequest.h \
-    adminsetusersettingsrequest_p.h \
-    adminsetusersettingsresponse.h \
-    adminsetusersettingsresponse_p.h \
-    adminupdateautheventfeedbackrequest.h \
-    adminupdateautheventfeedbackrequest_p.h \
-    adminupdateautheventfeedbackresponse.h \
-    adminupdateautheventfeedbackresponse_p.h \
-    adminupdatedevicestatusrequest.h \
-    adminupdatedevicestatusrequest_p.h \
-    adminupdatedevicestatusresponse.h \
-    adminupdatedevicestatusresponse_p.h \
-    adminupdateuserattributesrequest.h \
-    adminupdateuserattributesrequest_p.h \
-    adminupdateuserattributesresponse.h \
-    adminupdateuserattributesresponse_p.h \
-    adminuserglobalsignoutrequest.h \
-    adminuserglobalsignoutrequest_p.h \
-    adminuserglobalsignoutresponse.h \
-    adminuserglobalsignoutresponse_p.h \
-    alexaforbusinessclient.h \
-    alexaforbusinessclient_p.h \
     allocateaddressrequest.h \
     allocateaddressrequest_p.h \
     allocateaddressresponse.h \
     allocateaddressresponse_p.h \
-    allocateconnectiononinterconnectrequest.h \
-    allocateconnectiononinterconnectrequest_p.h \
-    allocateconnectiononinterconnectresponse.h \
-    allocateconnectiononinterconnectresponse_p.h \
-    allocatehostedconnectionrequest.h \
-    allocatehostedconnectionrequest_p.h \
-    allocatehostedconnectionresponse.h \
-    allocatehostedconnectionresponse_p.h \
     allocatehostsrequest.h \
     allocatehostsrequest_p.h \
     allocatehostsresponse.h \
     allocatehostsresponse_p.h \
-    allocateprivatevirtualinterfacerequest.h \
-    allocateprivatevirtualinterfacerequest_p.h \
-    allocateprivatevirtualinterfaceresponse.h \
-    allocateprivatevirtualinterfaceresponse_p.h \
-    allocatepublicvirtualinterfacerequest.h \
-    allocatepublicvirtualinterfacerequest_p.h \
-    allocatepublicvirtualinterfaceresponse.h \
-    allocatepublicvirtualinterfaceresponse_p.h \
-    apigatewayclient.h \
-    apigatewayclient_p.h \
-    applicationautoscalingclient.h \
-    applicationautoscalingclient_p.h \
-    applicationdiscoveryserviceclient.h \
-    applicationdiscoveryserviceclient_p.h \
-    applyschemarequest.h \
-    applyschemarequest_p.h \
-    applyschemaresponse.h \
-    applyschemaresponse_p.h \
-    appstreamclient.h \
-    appstreamclient_p.h \
-    appsyncclient.h \
-    appsyncclient_p.h \
     assignipv6addressesrequest.h \
     assignipv6addressesrequest_p.h \
     assignipv6addressesresponse.h \
@@ -228,38 +42,10 @@ HEADERS += \
     associateaddressrequest_p.h \
     associateaddressresponse.h \
     associateaddressresponse_p.h \
-    associateconfigurationitemstoapplicationrequest.h \
-    associateconfigurationitemstoapplicationrequest_p.h \
-    associateconfigurationitemstoapplicationresponse.h \
-    associateconfigurationitemstoapplicationresponse_p.h \
-    associateconnectionwithlagrequest.h \
-    associateconnectionwithlagrequest_p.h \
-    associateconnectionwithlagresponse.h \
-    associateconnectionwithlagresponse_p.h \
-    associatecreatedartifactrequest.h \
-    associatecreatedartifactrequest_p.h \
-    associatecreatedartifactresponse.h \
-    associatecreatedartifactresponse_p.h \
-    associatedevicewithroomrequest.h \
-    associatedevicewithroomrequest_p.h \
-    associatedevicewithroomresponse.h \
-    associatedevicewithroomresponse_p.h \
     associatedhcpoptionsrequest.h \
     associatedhcpoptionsrequest_p.h \
     associatedhcpoptionsresponse.h \
     associatedhcpoptionsresponse_p.h \
-    associatediscoveredresourcerequest.h \
-    associatediscoveredresourcerequest_p.h \
-    associatediscoveredresourceresponse.h \
-    associatediscoveredresourceresponse_p.h \
-    associatefleetrequest.h \
-    associatefleetrequest_p.h \
-    associatefleetresponse.h \
-    associatefleetresponse_p.h \
-    associatehostedconnectionrequest.h \
-    associatehostedconnectionrequest_p.h \
-    associatehostedconnectionresponse.h \
-    associatehostedconnectionresponse_p.h \
     associateiaminstanceprofilerequest.h \
     associateiaminstanceprofilerequest_p.h \
     associateiaminstanceprofileresponse.h \
@@ -268,72 +54,26 @@ HEADERS += \
     associateroutetablerequest_p.h \
     associateroutetableresponse.h \
     associateroutetableresponse_p.h \
-    associateskillgroupwithroomrequest.h \
-    associateskillgroupwithroomrequest_p.h \
-    associateskillgroupwithroomresponse.h \
-    associateskillgroupwithroomresponse_p.h \
-    associatesoftwaretokenrequest.h \
-    associatesoftwaretokenrequest_p.h \
-    associatesoftwaretokenresponse.h \
-    associatesoftwaretokenresponse_p.h \
     associatesubnetcidrblockrequest.h \
     associatesubnetcidrblockrequest_p.h \
     associatesubnetcidrblockresponse.h \
     associatesubnetcidrblockresponse_p.h \
-    associateteammemberrequest.h \
-    associateteammemberrequest_p.h \
-    associateteammemberresponse.h \
-    associateteammemberresponse_p.h \
-    associatevirtualinterfacerequest.h \
-    associatevirtualinterfacerequest_p.h \
-    associatevirtualinterfaceresponse.h \
-    associatevirtualinterfaceresponse_p.h \
     associatevpccidrblockrequest.h \
     associatevpccidrblockrequest_p.h \
     associatevpccidrblockresponse.h \
     associatevpccidrblockresponse_p.h \
-    athenaclient.h \
-    athenaclient_p.h \
     attachclassiclinkvpcrequest.h \
     attachclassiclinkvpcrequest_p.h \
     attachclassiclinkvpcresponse.h \
     attachclassiclinkvpcresponse_p.h \
-    attachinstancesrequest.h \
-    attachinstancesrequest_p.h \
-    attachinstancesresponse.h \
-    attachinstancesresponse_p.h \
     attachinternetgatewayrequest.h \
     attachinternetgatewayrequest_p.h \
     attachinternetgatewayresponse.h \
     attachinternetgatewayresponse_p.h \
-    attachloadbalancersrequest.h \
-    attachloadbalancersrequest_p.h \
-    attachloadbalancersresponse.h \
-    attachloadbalancersresponse_p.h \
-    attachloadbalancertargetgroupsrequest.h \
-    attachloadbalancertargetgroupsrequest_p.h \
-    attachloadbalancertargetgroupsresponse.h \
-    attachloadbalancertargetgroupsresponse_p.h \
     attachnetworkinterfacerequest.h \
     attachnetworkinterfacerequest_p.h \
     attachnetworkinterfaceresponse.h \
     attachnetworkinterfaceresponse_p.h \
-    attachobjectrequest.h \
-    attachobjectrequest_p.h \
-    attachobjectresponse.h \
-    attachobjectresponse_p.h \
-    attachpolicyrequest.h \
-    attachpolicyrequest_p.h \
-    attachpolicyresponse.h \
-    attachpolicyresponse_p.h \
-    attachtoindexrequest.h \
-    attachtoindexrequest_p.h \
-    attachtoindexresponse.h \
-    attachtoindexresponse_p.h \
-    attachtypedlinkrequest.h \
-    attachtypedlinkrequest_p.h \
-    attachtypedlinkresponse.h \
-    attachtypedlinkresponse_p.h \
     attachvolumerequest.h \
     attachvolumerequest_p.h \
     attachvolumeresponse.h \
@@ -350,102 +90,6 @@ HEADERS += \
     authorizesecuritygroupingressrequest_p.h \
     authorizesecuritygroupingressresponse.h \
     authorizesecuritygroupingressresponse_p.h \
-    autoscalingclient.h \
-    autoscalingclient_p.h \
-    autoscalingplansclient.h \
-    autoscalingplansclient_p.h \
-    batchclient.h \
-    batchclient_p.h \
-    batchdeletebuildsrequest.h \
-    batchdeletebuildsrequest_p.h \
-    batchdeletebuildsresponse.h \
-    batchdeletebuildsresponse_p.h \
-    batchdetectdominantlanguagerequest.h \
-    batchdetectdominantlanguagerequest_p.h \
-    batchdetectdominantlanguageresponse.h \
-    batchdetectdominantlanguageresponse_p.h \
-    batchdetectentitiesrequest.h \
-    batchdetectentitiesrequest_p.h \
-    batchdetectentitiesresponse.h \
-    batchdetectentitiesresponse_p.h \
-    batchdetectkeyphrasesrequest.h \
-    batchdetectkeyphrasesrequest_p.h \
-    batchdetectkeyphrasesresponse.h \
-    batchdetectkeyphrasesresponse_p.h \
-    batchdetectsentimentrequest.h \
-    batchdetectsentimentrequest_p.h \
-    batchdetectsentimentresponse.h \
-    batchdetectsentimentresponse_p.h \
-    batchgetapplicationrevisionsrequest.h \
-    batchgetapplicationrevisionsrequest_p.h \
-    batchgetapplicationrevisionsresponse.h \
-    batchgetapplicationrevisionsresponse_p.h \
-    batchgetapplicationsrequest.h \
-    batchgetapplicationsrequest_p.h \
-    batchgetapplicationsresponse.h \
-    batchgetapplicationsresponse_p.h \
-    batchgetbuildsrequest.h \
-    batchgetbuildsrequest_p.h \
-    batchgetbuildsresponse.h \
-    batchgetbuildsresponse_p.h \
-    batchgetdeploymentgroupsrequest.h \
-    batchgetdeploymentgroupsrequest_p.h \
-    batchgetdeploymentgroupsresponse.h \
-    batchgetdeploymentgroupsresponse_p.h \
-    batchgetdeploymentinstancesrequest.h \
-    batchgetdeploymentinstancesrequest_p.h \
-    batchgetdeploymentinstancesresponse.h \
-    batchgetdeploymentinstancesresponse_p.h \
-    batchgetdeploymentsrequest.h \
-    batchgetdeploymentsrequest_p.h \
-    batchgetdeploymentsresponse.h \
-    batchgetdeploymentsresponse_p.h \
-    batchgetitemrequest.h \
-    batchgetitemrequest_p.h \
-    batchgetitemresponse.h \
-    batchgetitemresponse_p.h \
-    batchgetnamedqueryrequest.h \
-    batchgetnamedqueryrequest_p.h \
-    batchgetnamedqueryresponse.h \
-    batchgetnamedqueryresponse_p.h \
-    batchgetonpremisesinstancesrequest.h \
-    batchgetonpremisesinstancesrequest_p.h \
-    batchgetonpremisesinstancesresponse.h \
-    batchgetonpremisesinstancesresponse_p.h \
-    batchgetprojectsrequest.h \
-    batchgetprojectsrequest_p.h \
-    batchgetprojectsresponse.h \
-    batchgetprojectsresponse_p.h \
-    batchgetqueryexecutionrequest.h \
-    batchgetqueryexecutionrequest_p.h \
-    batchgetqueryexecutionresponse.h \
-    batchgetqueryexecutionresponse_p.h \
-    batchgetrepositoriesrequest.h \
-    batchgetrepositoriesrequest_p.h \
-    batchgetrepositoriesresponse.h \
-    batchgetrepositoriesresponse_p.h \
-    batchreadrequest.h \
-    batchreadrequest_p.h \
-    batchreadresponse.h \
-    batchreadresponse_p.h \
-    batchwriteitemrequest.h \
-    batchwriteitemrequest_p.h \
-    batchwriteitemresponse.h \
-    batchwriteitemresponse_p.h \
-    batchwriterequest.h \
-    batchwriterequest_p.h \
-    batchwriteresponse.h \
-    batchwriteresponse_p.h \
-    budgetsclient.h \
-    budgetsclient_p.h \
-    buildsuggestersrequest.h \
-    buildsuggestersrequest_p.h \
-    buildsuggestersresponse.h \
-    buildsuggestersresponse_p.h \
-    bulkpublishrequest.h \
-    bulkpublishrequest_p.h \
-    bulkpublishresponse.h \
-    bulkpublishresponse_p.h \
     bundleinstancerequest.h \
     bundleinstancerequest_p.h \
     bundleinstanceresponse.h \
@@ -466,18 +110,10 @@ HEADERS += \
     cancelimporttaskrequest_p.h \
     cancelimporttaskresponse.h \
     cancelimporttaskresponse_p.h \
-    canceljobrequest.h \
-    canceljobrequest_p.h \
-    canceljobresponse.h \
-    canceljobresponse_p.h \
     cancelreservedinstanceslistingrequest.h \
     cancelreservedinstanceslistingrequest_p.h \
     cancelreservedinstanceslistingresponse.h \
     cancelreservedinstanceslistingresponse_p.h \
-    cancelschemaextensionrequest.h \
-    cancelschemaextensionrequest_p.h \
-    cancelschemaextensionresponse.h \
-    cancelschemaextensionresponse_p.h \
     cancelspotfleetrequestsrequest.h \
     cancelspotfleetrequestsrequest_p.h \
     cancelspotfleetrequestsresponse.h \
@@ -486,208 +122,26 @@ HEADERS += \
     cancelspotinstancerequestsrequest_p.h \
     cancelspotinstancerequestsresponse.h \
     cancelspotinstancerequestsresponse_p.h \
-    cancelupdatestackrequest.h \
-    cancelupdatestackrequest_p.h \
-    cancelupdatestackresponse.h \
-    cancelupdatestackresponse_p.h \
-    changepasswordrequest.h \
-    changepasswordrequest_p.h \
-    changepasswordresponse.h \
-    changepasswordresponse_p.h \
-    cloud9client.h \
-    cloud9client_p.h \
-    clouddirectoryclient.h \
-    clouddirectoryclient_p.h \
-    cloudformationclient.h \
-    cloudformationclient_p.h \
-    cloudfrontclient.h \
-    cloudfrontclient_p.h \
-    cloudhsmclient.h \
-    cloudhsmclient_p.h \
-    cloudhsmv2client.h \
-    cloudhsmv2client_p.h \
-    cloudsearchclient.h \
-    cloudsearchclient_p.h \
-    cloudsearchdomainclient.h \
-    cloudsearchdomainclient_p.h \
-    cloudtrailclient.h \
-    cloudtrailclient_p.h \
-    codebuildclient.h \
-    codebuildclient_p.h \
-    codecommitclient.h \
-    codecommitclient_p.h \
-    codedeployclient.h \
-    codedeployclient_p.h \
-    codepipelineclient.h \
-    codepipelineclient_p.h \
-    codestarclient.h \
-    codestarclient_p.h \
-    cognitoidentityclient.h \
-    cognitoidentityclient_p.h \
-    cognitoidentityproviderclient.h \
-    cognitoidentityproviderclient_p.h \
-    cognitosyncclient.h \
-    cognitosyncclient_p.h \
-    completelifecycleactionrequest.h \
-    completelifecycleactionrequest_p.h \
-    completelifecycleactionresponse.h \
-    completelifecycleactionresponse_p.h \
-    comprehendclient.h \
-    comprehendclient_p.h \
-    configserviceclient.h \
-    configserviceclient_p.h \
-    confirmconnectionrequest.h \
-    confirmconnectionrequest_p.h \
-    confirmconnectionresponse.h \
-    confirmconnectionresponse_p.h \
-    confirmdevicerequest.h \
-    confirmdevicerequest_p.h \
-    confirmdeviceresponse.h \
-    confirmdeviceresponse_p.h \
-    confirmforgotpasswordrequest.h \
-    confirmforgotpasswordrequest_p.h \
-    confirmforgotpasswordresponse.h \
-    confirmforgotpasswordresponse_p.h \
-    confirmprivatevirtualinterfacerequest.h \
-    confirmprivatevirtualinterfacerequest_p.h \
-    confirmprivatevirtualinterfaceresponse.h \
-    confirmprivatevirtualinterfaceresponse_p.h \
     confirmproductinstancerequest.h \
     confirmproductinstancerequest_p.h \
     confirmproductinstanceresponse.h \
     confirmproductinstanceresponse_p.h \
-    confirmpublicvirtualinterfacerequest.h \
-    confirmpublicvirtualinterfacerequest_p.h \
-    confirmpublicvirtualinterfaceresponse.h \
-    confirmpublicvirtualinterfaceresponse_p.h \
-    confirmsignuprequest.h \
-    confirmsignuprequest_p.h \
-    confirmsignupresponse.h \
-    confirmsignupresponse_p.h \
-    connectdirectoryrequest.h \
-    connectdirectoryrequest_p.h \
-    connectdirectoryresponse.h \
-    connectdirectoryresponse_p.h \
-    continuedeploymentrequest.h \
-    continuedeploymentrequest_p.h \
-    continuedeploymentresponse.h \
-    continuedeploymentresponse_p.h \
-    continueupdaterollbackrequest.h \
-    continueupdaterollbackrequest_p.h \
-    continueupdaterollbackresponse.h \
-    continueupdaterollbackresponse_p.h \
     copyfpgaimagerequest.h \
     copyfpgaimagerequest_p.h \
     copyfpgaimageresponse.h \
     copyfpgaimageresponse_p.h \
     copyimagerequest.h \
-    copyimagerequest.h \
-    copyimagerequest_p.h \
     copyimagerequest_p.h \
     copyimageresponse.h \
-    copyimageresponse.h \
-    copyimageresponse_p.h \
     copyimageresponse_p.h \
     copysnapshotrequest.h \
     copysnapshotrequest_p.h \
     copysnapshotresponse.h \
     copysnapshotresponse_p.h \
-    costandusagereportserviceclient.h \
-    costandusagereportserviceclient_p.h \
-    costexplorerclient.h \
-    costexplorerclient_p.h \
-    createaliasrequest.h \
-    createaliasrequest_p.h \
-    createaliasresponse.h \
-    createaliasresponse_p.h \
-    createapikeyrequest.h \
-    createapikeyrequest.h \
-    createapikeyrequest_p.h \
-    createapikeyrequest_p.h \
-    createapikeyresponse.h \
-    createapikeyresponse.h \
-    createapikeyresponse_p.h \
-    createapikeyresponse_p.h \
-    createapplicationrequest.h \
-    createapplicationrequest.h \
-    createapplicationrequest_p.h \
-    createapplicationrequest_p.h \
-    createapplicationresponse.h \
-    createapplicationresponse.h \
-    createapplicationresponse_p.h \
-    createapplicationresponse_p.h \
-    createauthorizerrequest.h \
-    createauthorizerrequest_p.h \
-    createauthorizerresponse.h \
-    createauthorizerresponse_p.h \
-    createautoscalinggrouprequest.h \
-    createautoscalinggrouprequest_p.h \
-    createautoscalinggroupresponse.h \
-    createautoscalinggroupresponse_p.h \
-    createbackuprequest.h \
-    createbackuprequest_p.h \
-    createbackupresponse.h \
-    createbackupresponse_p.h \
-    createbasepathmappingrequest.h \
-    createbasepathmappingrequest_p.h \
-    createbasepathmappingresponse.h \
-    createbasepathmappingresponse_p.h \
-    createbgppeerrequest.h \
-    createbgppeerrequest_p.h \
-    createbgppeerresponse.h \
-    createbgppeerresponse_p.h \
-    createbranchrequest.h \
-    createbranchrequest_p.h \
-    createbranchresponse.h \
-    createbranchresponse_p.h \
-    createbudgetrequest.h \
-    createbudgetrequest_p.h \
-    createbudgetresponse.h \
-    createbudgetresponse_p.h \
-    createchangesetrequest.h \
-    createchangesetrequest_p.h \
-    createchangesetresponse.h \
-    createchangesetresponse_p.h \
-    createcloudfrontoriginaccessidentityrequest.h \
-    createcloudfrontoriginaccessidentityrequest_p.h \
-    createcloudfrontoriginaccessidentityresponse.h \
-    createcloudfrontoriginaccessidentityresponse_p.h \
-    createclusterrequest.h \
-    createclusterrequest.h \
-    createclusterrequest_p.h \
-    createclusterrequest_p.h \
-    createclusterresponse.h \
-    createclusterresponse.h \
-    createclusterresponse_p.h \
-    createclusterresponse_p.h \
-    createcomputeenvironmentrequest.h \
-    createcomputeenvironmentrequest_p.h \
-    createcomputeenvironmentresponse.h \
-    createcomputeenvironmentresponse_p.h \
-    createcomputerrequest.h \
-    createcomputerrequest_p.h \
-    createcomputerresponse.h \
-    createcomputerresponse_p.h \
-    createconditionalforwarderrequest.h \
-    createconditionalforwarderrequest_p.h \
-    createconditionalforwarderresponse.h \
-    createconditionalforwarderresponse_p.h \
-    createconnectionrequest.h \
-    createconnectionrequest_p.h \
-    createconnectionresponse.h \
-    createconnectionresponse_p.h \
-    createcustomactiontyperequest.h \
-    createcustomactiontyperequest_p.h \
-    createcustomactiontyperesponse.h \
-    createcustomactiontyperesponse_p.h \
     createcustomergatewayrequest.h \
     createcustomergatewayrequest_p.h \
     createcustomergatewayresponse.h \
     createcustomergatewayresponse_p.h \
-    createdatasourcerequest.h \
-    createdatasourcerequest_p.h \
-    createdatasourceresponse.h \
-    createdatasourceresponse_p.h \
     createdefaultsubnetrequest.h \
     createdefaultsubnetrequest_p.h \
     createdefaultsubnetresponse.h \
@@ -696,102 +150,14 @@ HEADERS += \
     createdefaultvpcrequest_p.h \
     createdefaultvpcresponse.h \
     createdefaultvpcresponse_p.h \
-    createdeploymentconfigrequest.h \
-    createdeploymentconfigrequest_p.h \
-    createdeploymentconfigresponse.h \
-    createdeploymentconfigresponse_p.h \
-    createdeploymentgrouprequest.h \
-    createdeploymentgrouprequest_p.h \
-    createdeploymentgroupresponse.h \
-    createdeploymentgroupresponse_p.h \
-    createdeploymentrequest.h \
-    createdeploymentrequest.h \
-    createdeploymentrequest_p.h \
-    createdeploymentrequest_p.h \
-    createdeploymentresponse.h \
-    createdeploymentresponse.h \
-    createdeploymentresponse_p.h \
-    createdeploymentresponse_p.h \
-    createdevicepoolrequest.h \
-    createdevicepoolrequest_p.h \
-    createdevicepoolresponse.h \
-    createdevicepoolresponse_p.h \
     createdhcpoptionsrequest.h \
     createdhcpoptionsrequest_p.h \
     createdhcpoptionsresponse.h \
     createdhcpoptionsresponse_p.h \
-    createdirectconnectgatewayassociationrequest.h \
-    createdirectconnectgatewayassociationrequest_p.h \
-    createdirectconnectgatewayassociationresponse.h \
-    createdirectconnectgatewayassociationresponse_p.h \
-    createdirectconnectgatewayrequest.h \
-    createdirectconnectgatewayrequest_p.h \
-    createdirectconnectgatewayresponse.h \
-    createdirectconnectgatewayresponse_p.h \
-    createdirectoryconfigrequest.h \
-    createdirectoryconfigrequest_p.h \
-    createdirectoryconfigresponse.h \
-    createdirectoryconfigresponse_p.h \
-    createdirectoryrequest.h \
-    createdirectoryrequest.h \
-    createdirectoryrequest_p.h \
-    createdirectoryrequest_p.h \
-    createdirectoryresponse.h \
-    createdirectoryresponse.h \
-    createdirectoryresponse_p.h \
-    createdirectoryresponse_p.h \
-    createdistributionrequest.h \
-    createdistributionrequest_p.h \
-    createdistributionresponse.h \
-    createdistributionresponse_p.h \
-    createdistributionwithtagsrequest.h \
-    createdistributionwithtagsrequest_p.h \
-    createdistributionwithtagsresponse.h \
-    createdistributionwithtagsresponse_p.h \
-    createdocumentationpartrequest.h \
-    createdocumentationpartrequest_p.h \
-    createdocumentationpartresponse.h \
-    createdocumentationpartresponse_p.h \
-    createdocumentationversionrequest.h \
-    createdocumentationversionrequest_p.h \
-    createdocumentationversionresponse.h \
-    createdocumentationversionresponse_p.h \
-    createdomainnamerequest.h \
-    createdomainnamerequest_p.h \
-    createdomainnameresponse.h \
-    createdomainnameresponse_p.h \
-    createdomainrequest.h \
-    createdomainrequest_p.h \
-    createdomainresponse.h \
-    createdomainresponse_p.h \
     createegressonlyinternetgatewayrequest.h \
     createegressonlyinternetgatewayrequest_p.h \
     createegressonlyinternetgatewayresponse.h \
     createegressonlyinternetgatewayresponse_p.h \
-    createendpointrequest.h \
-    createendpointrequest_p.h \
-    createendpointresponse.h \
-    createendpointresponse_p.h \
-    createenvironmentec2request.h \
-    createenvironmentec2request_p.h \
-    createenvironmentec2response.h \
-    createenvironmentec2response_p.h \
-    createenvironmentmembershiprequest.h \
-    createenvironmentmembershiprequest_p.h \
-    createenvironmentmembershipresponse.h \
-    createenvironmentmembershipresponse_p.h \
-    createeventsubscriptionrequest.h \
-    createeventsubscriptionrequest_p.h \
-    createeventsubscriptionresponse.h \
-    createeventsubscriptionresponse_p.h \
-    createfacetrequest.h \
-    createfacetrequest_p.h \
-    createfacetresponse.h \
-    createfacetresponse_p.h \
-    createfleetrequest.h \
-    createfleetrequest_p.h \
-    createfleetresponse.h \
-    createfleetresponse_p.h \
     createflowlogsrequest.h \
     createflowlogsrequest_p.h \
     createflowlogsresponse.h \
@@ -800,86 +166,22 @@ HEADERS += \
     createfpgaimagerequest_p.h \
     createfpgaimageresponse.h \
     createfpgaimageresponse_p.h \
-    createglobaltablerequest.h \
-    createglobaltablerequest_p.h \
-    createglobaltableresponse.h \
-    createglobaltableresponse_p.h \
-    creategraphqlapirequest.h \
-    creategraphqlapirequest_p.h \
-    creategraphqlapiresponse.h \
-    creategraphqlapiresponse_p.h \
-    creategrouprequest.h \
-    creategrouprequest_p.h \
-    creategroupresponse.h \
-    creategroupresponse_p.h \
-    createhapgrequest.h \
-    createhapgrequest_p.h \
-    createhapgresponse.h \
-    createhapgresponse_p.h \
-    createhsmrequest.h \
-    createhsmrequest.h \
-    createhsmrequest_p.h \
-    createhsmrequest_p.h \
-    createhsmresponse.h \
-    createhsmresponse.h \
-    createhsmresponse_p.h \
-    createhsmresponse_p.h \
-    createidentitypoolrequest.h \
-    createidentitypoolrequest_p.h \
-    createidentitypoolresponse.h \
-    createidentitypoolresponse_p.h \
-    createidentityproviderrequest.h \
-    createidentityproviderrequest_p.h \
-    createidentityproviderresponse.h \
-    createidentityproviderresponse_p.h \
-    createimagebuilderrequest.h \
-    createimagebuilderrequest_p.h \
-    createimagebuilderresponse.h \
-    createimagebuilderresponse_p.h \
-    createimagebuilderstreamingurlrequest.h \
-    createimagebuilderstreamingurlrequest_p.h \
-    createimagebuilderstreamingurlresponse.h \
-    createimagebuilderstreamingurlresponse_p.h \
     createimagerequest.h \
     createimagerequest_p.h \
     createimageresponse.h \
     createimageresponse_p.h \
-    createindexrequest.h \
-    createindexrequest_p.h \
-    createindexresponse.h \
-    createindexresponse_p.h \
     createinstanceexporttaskrequest.h \
     createinstanceexporttaskrequest_p.h \
     createinstanceexporttaskresponse.h \
     createinstanceexporttaskresponse_p.h \
-    createinterconnectrequest.h \
-    createinterconnectrequest_p.h \
-    createinterconnectresponse.h \
-    createinterconnectresponse_p.h \
     createinternetgatewayrequest.h \
     createinternetgatewayrequest_p.h \
     createinternetgatewayresponse.h \
     createinternetgatewayresponse_p.h \
-    createinvalidationrequest.h \
-    createinvalidationrequest_p.h \
-    createinvalidationresponse.h \
-    createinvalidationresponse_p.h \
-    createjobqueuerequest.h \
-    createjobqueuerequest_p.h \
-    createjobqueueresponse.h \
-    createjobqueueresponse_p.h \
     createkeypairrequest.h \
     createkeypairrequest_p.h \
     createkeypairresponse.h \
     createkeypairresponse_p.h \
-    createlagrequest.h \
-    createlagrequest_p.h \
-    createlagresponse.h \
-    createlagresponse_p.h \
-    createlaunchconfigurationrequest.h \
-    createlaunchconfigurationrequest_p.h \
-    createlaunchconfigurationresponse.h \
-    createlaunchconfigurationresponse_p.h \
     createlaunchtemplaterequest.h \
     createlaunchtemplaterequest_p.h \
     createlaunchtemplateresponse.h \
@@ -888,22 +190,6 @@ HEADERS += \
     createlaunchtemplateversionrequest_p.h \
     createlaunchtemplateversionresponse.h \
     createlaunchtemplateversionresponse_p.h \
-    createlunaclientrequest.h \
-    createlunaclientrequest_p.h \
-    createlunaclientresponse.h \
-    createlunaclientresponse_p.h \
-    createmicrosoftadrequest.h \
-    createmicrosoftadrequest_p.h \
-    createmicrosoftadresponse.h \
-    createmicrosoftadresponse_p.h \
-    createmodelrequest.h \
-    createmodelrequest_p.h \
-    createmodelresponse.h \
-    createmodelresponse_p.h \
-    createnamedqueryrequest.h \
-    createnamedqueryrequest_p.h \
-    createnamedqueryresponse.h \
-    createnamedqueryresponse_p.h \
     createnatgatewayrequest.h \
     createnatgatewayrequest_p.h \
     createnatgatewayresponse.h \
@@ -924,118 +210,14 @@ HEADERS += \
     createnetworkinterfacerequest_p.h \
     createnetworkinterfaceresponse.h \
     createnetworkinterfaceresponse_p.h \
-    createnetworkprofilerequest.h \
-    createnetworkprofilerequest_p.h \
-    createnetworkprofileresponse.h \
-    createnetworkprofileresponse_p.h \
-    createnotificationrequest.h \
-    createnotificationrequest_p.h \
-    createnotificationresponse.h \
-    createnotificationresponse_p.h \
-    createobjectrequest.h \
-    createobjectrequest_p.h \
-    createobjectresponse.h \
-    createobjectresponse_p.h \
-    createorupdatetagsrequest.h \
-    createorupdatetagsrequest_p.h \
-    createorupdatetagsresponse.h \
-    createorupdatetagsresponse_p.h \
-    createparametergrouprequest.h \
-    createparametergrouprequest_p.h \
-    createparametergroupresponse.h \
-    createparametergroupresponse_p.h \
-    createpipelinerequest.h \
-    createpipelinerequest.h \
-    createpipelinerequest_p.h \
-    createpipelinerequest_p.h \
-    createpipelineresponse.h \
-    createpipelineresponse.h \
-    createpipelineresponse_p.h \
-    createpipelineresponse_p.h \
     createplacementgrouprequest.h \
     createplacementgrouprequest_p.h \
     createplacementgroupresponse.h \
     createplacementgroupresponse_p.h \
-    createprivatevirtualinterfacerequest.h \
-    createprivatevirtualinterfacerequest_p.h \
-    createprivatevirtualinterfaceresponse.h \
-    createprivatevirtualinterfaceresponse_p.h \
-    createprofilerequest.h \
-    createprofilerequest_p.h \
-    createprofileresponse.h \
-    createprofileresponse_p.h \
-    createprogressupdatestreamrequest.h \
-    createprogressupdatestreamrequest_p.h \
-    createprogressupdatestreamresponse.h \
-    createprogressupdatestreamresponse_p.h \
-    createprojectrequest.h \
-    createprojectrequest.h \
-    createprojectrequest.h \
-    createprojectrequest_p.h \
-    createprojectrequest_p.h \
-    createprojectrequest_p.h \
-    createprojectresponse.h \
-    createprojectresponse.h \
-    createprojectresponse.h \
-    createprojectresponse_p.h \
-    createprojectresponse_p.h \
-    createprojectresponse_p.h \
-    createpublicvirtualinterfacerequest.h \
-    createpublicvirtualinterfacerequest_p.h \
-    createpublicvirtualinterfaceresponse.h \
-    createpublicvirtualinterfaceresponse_p.h \
-    createpullrequestrequest.h \
-    createpullrequestrequest_p.h \
-    createpullrequestresponse.h \
-    createpullrequestresponse_p.h \
-    createremoteaccesssessionrequest.h \
-    createremoteaccesssessionrequest_p.h \
-    createremoteaccesssessionresponse.h \
-    createremoteaccesssessionresponse_p.h \
-    createreplicationinstancerequest.h \
-    createreplicationinstancerequest_p.h \
-    createreplicationinstanceresponse.h \
-    createreplicationinstanceresponse_p.h \
-    createreplicationsubnetgrouprequest.h \
-    createreplicationsubnetgrouprequest_p.h \
-    createreplicationsubnetgroupresponse.h \
-    createreplicationsubnetgroupresponse_p.h \
-    createreplicationtaskrequest.h \
-    createreplicationtaskrequest_p.h \
-    createreplicationtaskresponse.h \
-    createreplicationtaskresponse_p.h \
-    createrepositoryrequest.h \
-    createrepositoryrequest_p.h \
-    createrepositoryresponse.h \
-    createrepositoryresponse_p.h \
-    createrequestvalidatorrequest.h \
-    createrequestvalidatorrequest_p.h \
-    createrequestvalidatorresponse.h \
-    createrequestvalidatorresponse_p.h \
     createreservedinstanceslistingrequest.h \
     createreservedinstanceslistingrequest_p.h \
     createreservedinstanceslistingresponse.h \
     createreservedinstanceslistingresponse_p.h \
-    createresolverrequest.h \
-    createresolverrequest_p.h \
-    createresolverresponse.h \
-    createresolverresponse_p.h \
-    createresourcerequest.h \
-    createresourcerequest_p.h \
-    createresourceresponse.h \
-    createresourceresponse_p.h \
-    createresourceserverrequest.h \
-    createresourceserverrequest_p.h \
-    createresourceserverresponse.h \
-    createresourceserverresponse_p.h \
-    createrestapirequest.h \
-    createrestapirequest_p.h \
-    createrestapiresponse.h \
-    createrestapiresponse_p.h \
-    createroomrequest.h \
-    createroomrequest_p.h \
-    createroomresponse.h \
-    createroomresponse_p.h \
     createrouterequest.h \
     createrouterequest_p.h \
     createrouteresponse.h \
@@ -1044,142 +226,26 @@ HEADERS += \
     createroutetablerequest_p.h \
     createroutetableresponse.h \
     createroutetableresponse_p.h \
-    createscalingplanrequest.h \
-    createscalingplanrequest_p.h \
-    createscalingplanresponse.h \
-    createscalingplanresponse_p.h \
-    createschemarequest.h \
-    createschemarequest_p.h \
-    createschemaresponse.h \
-    createschemaresponse_p.h \
     createsecuritygrouprequest.h \
     createsecuritygrouprequest_p.h \
     createsecuritygroupresponse.h \
     createsecuritygroupresponse_p.h \
-    createskillgrouprequest.h \
-    createskillgrouprequest_p.h \
-    createskillgroupresponse.h \
-    createskillgroupresponse_p.h \
-    createsnapshotrequest.h \
     createsnapshotrequest.h \
     createsnapshotrequest_p.h \
-    createsnapshotrequest_p.h \
     createsnapshotresponse.h \
-    createsnapshotresponse.h \
-    createsnapshotresponse_p.h \
     createsnapshotresponse_p.h \
     createspotdatafeedsubscriptionrequest.h \
     createspotdatafeedsubscriptionrequest_p.h \
     createspotdatafeedsubscriptionresponse.h \
     createspotdatafeedsubscriptionresponse_p.h \
-    createstackinstancesrequest.h \
-    createstackinstancesrequest_p.h \
-    createstackinstancesresponse.h \
-    createstackinstancesresponse_p.h \
-    createstackrequest.h \
-    createstackrequest.h \
-    createstackrequest_p.h \
-    createstackrequest_p.h \
-    createstackresponse.h \
-    createstackresponse.h \
-    createstackresponse_p.h \
-    createstackresponse_p.h \
-    createstacksetrequest.h \
-    createstacksetrequest_p.h \
-    createstacksetresponse.h \
-    createstacksetresponse_p.h \
-    createstagerequest.h \
-    createstagerequest_p.h \
-    createstageresponse.h \
-    createstageresponse_p.h \
-    createstreamingdistributionrequest.h \
-    createstreamingdistributionrequest_p.h \
-    createstreamingdistributionresponse.h \
-    createstreamingdistributionresponse_p.h \
-    createstreamingdistributionwithtagsrequest.h \
-    createstreamingdistributionwithtagsrequest_p.h \
-    createstreamingdistributionwithtagsresponse.h \
-    createstreamingdistributionwithtagsresponse_p.h \
-    createstreamingurlrequest.h \
-    createstreamingurlrequest_p.h \
-    createstreamingurlresponse.h \
-    createstreamingurlresponse_p.h \
-    createsubnetgrouprequest.h \
-    createsubnetgrouprequest_p.h \
-    createsubnetgroupresponse.h \
-    createsubnetgroupresponse_p.h \
     createsubnetrequest.h \
     createsubnetrequest_p.h \
     createsubnetresponse.h \
     createsubnetresponse_p.h \
-    createsubscriberrequest.h \
-    createsubscriberrequest_p.h \
-    createsubscriberresponse.h \
-    createsubscriberresponse_p.h \
-    createtablerequest.h \
-    createtablerequest_p.h \
-    createtableresponse.h \
-    createtableresponse_p.h \
-    createtagsrequest.h \
     createtagsrequest.h \
     createtagsrequest_p.h \
-    createtagsrequest_p.h \
-    createtagsresponse.h \
     createtagsresponse.h \
     createtagsresponse_p.h \
-    createtagsresponse_p.h \
-    createtrailrequest.h \
-    createtrailrequest_p.h \
-    createtrailresponse.h \
-    createtrailresponse_p.h \
-    createtrustrequest.h \
-    createtrustrequest_p.h \
-    createtrustresponse.h \
-    createtrustresponse_p.h \
-    createtypedlinkfacetrequest.h \
-    createtypedlinkfacetrequest_p.h \
-    createtypedlinkfacetresponse.h \
-    createtypedlinkfacetresponse_p.h \
-    createtyperequest.h \
-    createtyperequest_p.h \
-    createtyperesponse.h \
-    createtyperesponse_p.h \
-    createuploadrequest.h \
-    createuploadrequest_p.h \
-    createuploadresponse.h \
-    createuploadresponse_p.h \
-    createusageplankeyrequest.h \
-    createusageplankeyrequest_p.h \
-    createusageplankeyresponse.h \
-    createusageplankeyresponse_p.h \
-    createusageplanrequest.h \
-    createusageplanrequest_p.h \
-    createusageplanresponse.h \
-    createusageplanresponse_p.h \
-    createuserimportjobrequest.h \
-    createuserimportjobrequest_p.h \
-    createuserimportjobresponse.h \
-    createuserimportjobresponse_p.h \
-    createuserpoolclientrequest.h \
-    createuserpoolclientrequest_p.h \
-    createuserpoolclientresponse.h \
-    createuserpoolclientresponse_p.h \
-    createuserpooldomainrequest.h \
-    createuserpooldomainrequest_p.h \
-    createuserpooldomainresponse.h \
-    createuserpooldomainresponse_p.h \
-    createuserpoolrequest.h \
-    createuserpoolrequest_p.h \
-    createuserpoolresponse.h \
-    createuserpoolresponse_p.h \
-    createuserprofilerequest.h \
-    createuserprofilerequest_p.h \
-    createuserprofileresponse.h \
-    createuserprofileresponse_p.h \
-    createuserrequest.h \
-    createuserrequest_p.h \
-    createuserresponse.h \
-    createuserresponse_p.h \
     createvolumerequest.h \
     createvolumerequest_p.h \
     createvolumeresponse.h \
@@ -1196,10 +262,6 @@ HEADERS += \
     createvpcendpointserviceconfigurationrequest_p.h \
     createvpcendpointserviceconfigurationresponse.h \
     createvpcendpointserviceconfigurationresponse_p.h \
-    createvpclinkrequest.h \
-    createvpclinkrequest_p.h \
-    createvpclinkresponse.h \
-    createvpclinkresponse_p.h \
     createvpcpeeringconnectionrequest.h \
     createvpcpeeringconnectionrequest_p.h \
     createvpcpeeringconnectionresponse.h \
@@ -1220,256 +282,18 @@ HEADERS += \
     createvpngatewayrequest_p.h \
     createvpngatewayresponse.h \
     createvpngatewayresponse_p.h \
-    createwebhookrequest.h \
-    createwebhookrequest_p.h \
-    createwebhookresponse.h \
-    createwebhookresponse_p.h \
-    databasemigrationserviceclient.h \
-    databasemigrationserviceclient_p.h \
-    datapipelineclient.h \
-    datapipelineclient_p.h \
-    daxclient.h \
-    daxclient_p.h \
-    deactivatepipelinerequest.h \
-    deactivatepipelinerequest_p.h \
-    deactivatepipelineresponse.h \
-    deactivatepipelineresponse_p.h \
-    decreasereplicationfactorrequest.h \
-    decreasereplicationfactorrequest_p.h \
-    decreasereplicationfactorresponse.h \
-    decreasereplicationfactorresponse_p.h \
-    defineanalysisschemerequest.h \
-    defineanalysisschemerequest_p.h \
-    defineanalysisschemeresponse.h \
-    defineanalysisschemeresponse_p.h \
-    defineexpressionrequest.h \
-    defineexpressionrequest_p.h \
-    defineexpressionresponse.h \
-    defineexpressionresponse_p.h \
-    defineindexfieldrequest.h \
-    defineindexfieldrequest_p.h \
-    defineindexfieldresponse.h \
-    defineindexfieldresponse_p.h \
-    definesuggesterrequest.h \
-    definesuggesterrequest_p.h \
-    definesuggesterresponse.h \
-    definesuggesterresponse_p.h \
-    deleteanalysisschemerequest.h \
-    deleteanalysisschemerequest_p.h \
-    deleteanalysisschemeresponse.h \
-    deleteanalysisschemeresponse_p.h \
-    deleteapikeyrequest.h \
-    deleteapikeyrequest.h \
-    deleteapikeyrequest_p.h \
-    deleteapikeyrequest_p.h \
-    deleteapikeyresponse.h \
-    deleteapikeyresponse.h \
-    deleteapikeyresponse_p.h \
-    deleteapikeyresponse_p.h \
-    deleteapplicationrequest.h \
-    deleteapplicationrequest_p.h \
-    deleteapplicationresponse.h \
-    deleteapplicationresponse_p.h \
-    deleteapplicationsrequest.h \
-    deleteapplicationsrequest_p.h \
-    deleteapplicationsresponse.h \
-    deleteapplicationsresponse_p.h \
-    deleteauthorizerrequest.h \
-    deleteauthorizerrequest_p.h \
-    deleteauthorizerresponse.h \
-    deleteauthorizerresponse_p.h \
-    deleteautoscalinggrouprequest.h \
-    deleteautoscalinggrouprequest_p.h \
-    deleteautoscalinggroupresponse.h \
-    deleteautoscalinggroupresponse_p.h \
-    deletebackuprequest.h \
-    deletebackuprequest_p.h \
-    deletebackupresponse.h \
-    deletebackupresponse_p.h \
-    deletebasepathmappingrequest.h \
-    deletebasepathmappingrequest_p.h \
-    deletebasepathmappingresponse.h \
-    deletebasepathmappingresponse_p.h \
-    deletebgppeerrequest.h \
-    deletebgppeerrequest_p.h \
-    deletebgppeerresponse.h \
-    deletebgppeerresponse_p.h \
-    deletebranchrequest.h \
-    deletebranchrequest_p.h \
-    deletebranchresponse.h \
-    deletebranchresponse_p.h \
-    deletebudgetrequest.h \
-    deletebudgetrequest_p.h \
-    deletebudgetresponse.h \
-    deletebudgetresponse_p.h \
-    deletecertificaterequest.h \
-    deletecertificaterequest.h \
-    deletecertificaterequest_p.h \
-    deletecertificaterequest_p.h \
-    deletecertificateresponse.h \
-    deletecertificateresponse.h \
-    deletecertificateresponse_p.h \
-    deletecertificateresponse_p.h \
-    deletechangesetrequest.h \
-    deletechangesetrequest_p.h \
-    deletechangesetresponse.h \
-    deletechangesetresponse_p.h \
-    deleteclientcertificaterequest.h \
-    deleteclientcertificaterequest_p.h \
-    deleteclientcertificateresponse.h \
-    deleteclientcertificateresponse_p.h \
-    deletecloudfrontoriginaccessidentityrequest.h \
-    deletecloudfrontoriginaccessidentityrequest_p.h \
-    deletecloudfrontoriginaccessidentityresponse.h \
-    deletecloudfrontoriginaccessidentityresponse_p.h \
-    deleteclusterrequest.h \
-    deleteclusterrequest.h \
-    deleteclusterrequest_p.h \
-    deleteclusterrequest_p.h \
-    deleteclusterresponse.h \
-    deleteclusterresponse.h \
-    deleteclusterresponse_p.h \
-    deleteclusterresponse_p.h \
-    deletecommentcontentrequest.h \
-    deletecommentcontentrequest_p.h \
-    deletecommentcontentresponse.h \
-    deletecommentcontentresponse_p.h \
-    deletecomputeenvironmentrequest.h \
-    deletecomputeenvironmentrequest_p.h \
-    deletecomputeenvironmentresponse.h \
-    deletecomputeenvironmentresponse_p.h \
-    deleteconditionalforwarderrequest.h \
-    deleteconditionalforwarderrequest_p.h \
-    deleteconditionalforwarderresponse.h \
-    deleteconditionalforwarderresponse_p.h \
-    deleteconfigrulerequest.h \
-    deleteconfigrulerequest_p.h \
-    deleteconfigruleresponse.h \
-    deleteconfigruleresponse_p.h \
-    deleteconfigurationrecorderrequest.h \
-    deleteconfigurationrecorderrequest_p.h \
-    deleteconfigurationrecorderresponse.h \
-    deleteconfigurationrecorderresponse_p.h \
-    deleteconnectionrequest.h \
-    deleteconnectionrequest_p.h \
-    deleteconnectionresponse.h \
-    deleteconnectionresponse_p.h \
-    deletecustomactiontyperequest.h \
-    deletecustomactiontyperequest_p.h \
-    deletecustomactiontyperesponse.h \
-    deletecustomactiontyperesponse_p.h \
     deletecustomergatewayrequest.h \
     deletecustomergatewayrequest_p.h \
     deletecustomergatewayresponse.h \
     deletecustomergatewayresponse_p.h \
-    deletedatasetrequest.h \
-    deletedatasetrequest_p.h \
-    deletedatasetresponse.h \
-    deletedatasetresponse_p.h \
-    deletedatasourcerequest.h \
-    deletedatasourcerequest_p.h \
-    deletedatasourceresponse.h \
-    deletedatasourceresponse_p.h \
-    deletedeliverychannelrequest.h \
-    deletedeliverychannelrequest_p.h \
-    deletedeliverychannelresponse.h \
-    deletedeliverychannelresponse_p.h \
-    deletedeploymentconfigrequest.h \
-    deletedeploymentconfigrequest_p.h \
-    deletedeploymentconfigresponse.h \
-    deletedeploymentconfigresponse_p.h \
-    deletedeploymentgrouprequest.h \
-    deletedeploymentgrouprequest_p.h \
-    deletedeploymentgroupresponse.h \
-    deletedeploymentgroupresponse_p.h \
-    deletedeploymentrequest.h \
-    deletedeploymentrequest_p.h \
-    deletedeploymentresponse.h \
-    deletedeploymentresponse_p.h \
-    deletedevicepoolrequest.h \
-    deletedevicepoolrequest_p.h \
-    deletedevicepoolresponse.h \
-    deletedevicepoolresponse_p.h \
     deletedhcpoptionsrequest.h \
     deletedhcpoptionsrequest_p.h \
     deletedhcpoptionsresponse.h \
     deletedhcpoptionsresponse_p.h \
-    deletedirectconnectgatewayassociationrequest.h \
-    deletedirectconnectgatewayassociationrequest_p.h \
-    deletedirectconnectgatewayassociationresponse.h \
-    deletedirectconnectgatewayassociationresponse_p.h \
-    deletedirectconnectgatewayrequest.h \
-    deletedirectconnectgatewayrequest_p.h \
-    deletedirectconnectgatewayresponse.h \
-    deletedirectconnectgatewayresponse_p.h \
-    deletedirectoryconfigrequest.h \
-    deletedirectoryconfigrequest_p.h \
-    deletedirectoryconfigresponse.h \
-    deletedirectoryconfigresponse_p.h \
-    deletedirectoryrequest.h \
-    deletedirectoryrequest.h \
-    deletedirectoryrequest_p.h \
-    deletedirectoryrequest_p.h \
-    deletedirectoryresponse.h \
-    deletedirectoryresponse.h \
-    deletedirectoryresponse_p.h \
-    deletedirectoryresponse_p.h \
-    deletedistributionrequest.h \
-    deletedistributionrequest_p.h \
-    deletedistributionresponse.h \
-    deletedistributionresponse_p.h \
-    deletedocumentationpartrequest.h \
-    deletedocumentationpartrequest_p.h \
-    deletedocumentationpartresponse.h \
-    deletedocumentationpartresponse_p.h \
-    deletedocumentationversionrequest.h \
-    deletedocumentationversionrequest_p.h \
-    deletedocumentationversionresponse.h \
-    deletedocumentationversionresponse_p.h \
-    deletedomainnamerequest.h \
-    deletedomainnamerequest_p.h \
-    deletedomainnameresponse.h \
-    deletedomainnameresponse_p.h \
-    deletedomainrequest.h \
-    deletedomainrequest_p.h \
-    deletedomainresponse.h \
-    deletedomainresponse_p.h \
     deleteegressonlyinternetgatewayrequest.h \
     deleteegressonlyinternetgatewayrequest_p.h \
     deleteegressonlyinternetgatewayresponse.h \
     deleteegressonlyinternetgatewayresponse_p.h \
-    deleteendpointrequest.h \
-    deleteendpointrequest_p.h \
-    deleteendpointresponse.h \
-    deleteendpointresponse_p.h \
-    deleteenvironmentmembershiprequest.h \
-    deleteenvironmentmembershiprequest_p.h \
-    deleteenvironmentmembershipresponse.h \
-    deleteenvironmentmembershipresponse_p.h \
-    deleteenvironmentrequest.h \
-    deleteenvironmentrequest_p.h \
-    deleteenvironmentresponse.h \
-    deleteenvironmentresponse_p.h \
-    deleteevaluationresultsrequest.h \
-    deleteevaluationresultsrequest_p.h \
-    deleteevaluationresultsresponse.h \
-    deleteevaluationresultsresponse_p.h \
-    deleteeventsubscriptionrequest.h \
-    deleteeventsubscriptionrequest_p.h \
-    deleteeventsubscriptionresponse.h \
-    deleteeventsubscriptionresponse_p.h \
-    deleteexpressionrequest.h \
-    deleteexpressionrequest_p.h \
-    deleteexpressionresponse.h \
-    deleteexpressionresponse_p.h \
-    deletefacetrequest.h \
-    deletefacetrequest_p.h \
-    deletefacetresponse.h \
-    deletefacetresponse_p.h \
-    deletefleetrequest.h \
-    deletefleetrequest_p.h \
-    deletefleetresponse.h \
-    deletefleetresponse_p.h \
     deleteflowlogsrequest.h \
     deleteflowlogsrequest_p.h \
     deleteflowlogsresponse.h \
@@ -1478,94 +302,14 @@ HEADERS += \
     deletefpgaimagerequest_p.h \
     deletefpgaimageresponse.h \
     deletefpgaimageresponse_p.h \
-    deletegatewayresponserequest.h \
-    deletegatewayresponserequest_p.h \
-    deletegatewayresponseresponse.h \
-    deletegatewayresponseresponse_p.h \
-    deletegithubaccounttokenrequest.h \
-    deletegithubaccounttokenrequest_p.h \
-    deletegithubaccounttokenresponse.h \
-    deletegithubaccounttokenresponse_p.h \
-    deletegraphqlapirequest.h \
-    deletegraphqlapirequest_p.h \
-    deletegraphqlapiresponse.h \
-    deletegraphqlapiresponse_p.h \
-    deletegrouprequest.h \
-    deletegrouprequest_p.h \
-    deletegroupresponse.h \
-    deletegroupresponse_p.h \
-    deletehapgrequest.h \
-    deletehapgrequest_p.h \
-    deletehapgresponse.h \
-    deletehapgresponse_p.h \
-    deletehsmrequest.h \
-    deletehsmrequest.h \
-    deletehsmrequest_p.h \
-    deletehsmrequest_p.h \
-    deletehsmresponse.h \
-    deletehsmresponse.h \
-    deletehsmresponse_p.h \
-    deletehsmresponse_p.h \
-    deleteidentitiesrequest.h \
-    deleteidentitiesrequest_p.h \
-    deleteidentitiesresponse.h \
-    deleteidentitiesresponse_p.h \
-    deleteidentitypoolrequest.h \
-    deleteidentitypoolrequest_p.h \
-    deleteidentitypoolresponse.h \
-    deleteidentitypoolresponse_p.h \
-    deleteidentityproviderrequest.h \
-    deleteidentityproviderrequest_p.h \
-    deleteidentityproviderresponse.h \
-    deleteidentityproviderresponse_p.h \
-    deleteimagebuilderrequest.h \
-    deleteimagebuilderrequest_p.h \
-    deleteimagebuilderresponse.h \
-    deleteimagebuilderresponse_p.h \
-    deleteimagerequest.h \
-    deleteimagerequest_p.h \
-    deleteimageresponse.h \
-    deleteimageresponse_p.h \
-    deleteindexfieldrequest.h \
-    deleteindexfieldrequest_p.h \
-    deleteindexfieldresponse.h \
-    deleteindexfieldresponse_p.h \
-    deleteintegrationrequest.h \
-    deleteintegrationrequest_p.h \
-    deleteintegrationresponse.h \
-    deleteintegrationresponse_p.h \
-    deleteintegrationresponserequest.h \
-    deleteintegrationresponserequest_p.h \
-    deleteintegrationresponseresponse.h \
-    deleteintegrationresponseresponse_p.h \
-    deleteinterconnectrequest.h \
-    deleteinterconnectrequest_p.h \
-    deleteinterconnectresponse.h \
-    deleteinterconnectresponse_p.h \
     deleteinternetgatewayrequest.h \
     deleteinternetgatewayrequest_p.h \
     deleteinternetgatewayresponse.h \
     deleteinternetgatewayresponse_p.h \
-    deleteitemrequest.h \
-    deleteitemrequest_p.h \
-    deleteitemresponse.h \
-    deleteitemresponse_p.h \
-    deletejobqueuerequest.h \
-    deletejobqueuerequest_p.h \
-    deletejobqueueresponse.h \
-    deletejobqueueresponse_p.h \
     deletekeypairrequest.h \
     deletekeypairrequest_p.h \
     deletekeypairresponse.h \
     deletekeypairresponse_p.h \
-    deletelagrequest.h \
-    deletelagrequest_p.h \
-    deletelagresponse.h \
-    deletelagresponse_p.h \
-    deletelaunchconfigurationrequest.h \
-    deletelaunchconfigurationrequest_p.h \
-    deletelaunchconfigurationresponse.h \
-    deletelaunchconfigurationresponse_p.h \
     deletelaunchtemplaterequest.h \
     deletelaunchtemplaterequest_p.h \
     deletelaunchtemplateresponse.h \
@@ -1574,30 +318,6 @@ HEADERS += \
     deletelaunchtemplateversionsrequest_p.h \
     deletelaunchtemplateversionsresponse.h \
     deletelaunchtemplateversionsresponse_p.h \
-    deletelifecyclehookrequest.h \
-    deletelifecyclehookrequest_p.h \
-    deletelifecyclehookresponse.h \
-    deletelifecyclehookresponse_p.h \
-    deletelunaclientrequest.h \
-    deletelunaclientrequest_p.h \
-    deletelunaclientresponse.h \
-    deletelunaclientresponse_p.h \
-    deletemethodrequest.h \
-    deletemethodrequest_p.h \
-    deletemethodresponse.h \
-    deletemethodresponse_p.h \
-    deletemethodresponserequest.h \
-    deletemethodresponserequest_p.h \
-    deletemethodresponseresponse.h \
-    deletemethodresponseresponse_p.h \
-    deletemodelrequest.h \
-    deletemodelrequest_p.h \
-    deletemodelresponse.h \
-    deletemodelresponse_p.h \
-    deletenamedqueryrequest.h \
-    deletenamedqueryrequest_p.h \
-    deletenamedqueryresponse.h \
-    deletenamedqueryresponse_p.h \
     deletenatgatewayrequest.h \
     deletenatgatewayrequest_p.h \
     deletenatgatewayresponse.h \
@@ -1618,114 +338,10 @@ HEADERS += \
     deletenetworkinterfacerequest_p.h \
     deletenetworkinterfaceresponse.h \
     deletenetworkinterfaceresponse_p.h \
-    deletenetworkprofilerequest.h \
-    deletenetworkprofilerequest_p.h \
-    deletenetworkprofileresponse.h \
-    deletenetworkprofileresponse_p.h \
-    deletenotificationconfigurationrequest.h \
-    deletenotificationconfigurationrequest_p.h \
-    deletenotificationconfigurationresponse.h \
-    deletenotificationconfigurationresponse_p.h \
-    deletenotificationrequest.h \
-    deletenotificationrequest_p.h \
-    deletenotificationresponse.h \
-    deletenotificationresponse_p.h \
-    deleteobjectrequest.h \
-    deleteobjectrequest_p.h \
-    deleteobjectresponse.h \
-    deleteobjectresponse_p.h \
-    deleteparametergrouprequest.h \
-    deleteparametergrouprequest_p.h \
-    deleteparametergroupresponse.h \
-    deleteparametergroupresponse_p.h \
-    deletepipelinerequest.h \
-    deletepipelinerequest.h \
-    deletepipelinerequest_p.h \
-    deletepipelinerequest_p.h \
-    deletepipelineresponse.h \
-    deletepipelineresponse.h \
-    deletepipelineresponse_p.h \
-    deletepipelineresponse_p.h \
     deleteplacementgrouprequest.h \
     deleteplacementgrouprequest_p.h \
     deleteplacementgroupresponse.h \
     deleteplacementgroupresponse_p.h \
-    deletepolicyrequest.h \
-    deletepolicyrequest_p.h \
-    deletepolicyresponse.h \
-    deletepolicyresponse_p.h \
-    deleteprofilerequest.h \
-    deleteprofilerequest_p.h \
-    deleteprofileresponse.h \
-    deleteprofileresponse_p.h \
-    deleteprogressupdatestreamrequest.h \
-    deleteprogressupdatestreamrequest_p.h \
-    deleteprogressupdatestreamresponse.h \
-    deleteprogressupdatestreamresponse_p.h \
-    deleteprojectrequest.h \
-    deleteprojectrequest.h \
-    deleteprojectrequest.h \
-    deleteprojectrequest_p.h \
-    deleteprojectrequest_p.h \
-    deleteprojectrequest_p.h \
-    deleteprojectresponse.h \
-    deleteprojectresponse.h \
-    deleteprojectresponse.h \
-    deleteprojectresponse_p.h \
-    deleteprojectresponse_p.h \
-    deleteprojectresponse_p.h \
-    deleteremoteaccesssessionrequest.h \
-    deleteremoteaccesssessionrequest_p.h \
-    deleteremoteaccesssessionresponse.h \
-    deleteremoteaccesssessionresponse_p.h \
-    deletereplicationinstancerequest.h \
-    deletereplicationinstancerequest_p.h \
-    deletereplicationinstanceresponse.h \
-    deletereplicationinstanceresponse_p.h \
-    deletereplicationsubnetgrouprequest.h \
-    deletereplicationsubnetgrouprequest_p.h \
-    deletereplicationsubnetgroupresponse.h \
-    deletereplicationsubnetgroupresponse_p.h \
-    deletereplicationtaskrequest.h \
-    deletereplicationtaskrequest_p.h \
-    deletereplicationtaskresponse.h \
-    deletereplicationtaskresponse_p.h \
-    deletereportdefinitionrequest.h \
-    deletereportdefinitionrequest_p.h \
-    deletereportdefinitionresponse.h \
-    deletereportdefinitionresponse_p.h \
-    deleterepositoryrequest.h \
-    deleterepositoryrequest_p.h \
-    deleterepositoryresponse.h \
-    deleterepositoryresponse_p.h \
-    deleterequestvalidatorrequest.h \
-    deleterequestvalidatorrequest_p.h \
-    deleterequestvalidatorresponse.h \
-    deleterequestvalidatorresponse_p.h \
-    deleteresolverrequest.h \
-    deleteresolverrequest_p.h \
-    deleteresolverresponse.h \
-    deleteresolverresponse_p.h \
-    deleteresourcerequest.h \
-    deleteresourcerequest_p.h \
-    deleteresourceresponse.h \
-    deleteresourceresponse_p.h \
-    deleteresourceserverrequest.h \
-    deleteresourceserverrequest_p.h \
-    deleteresourceserverresponse.h \
-    deleteresourceserverresponse_p.h \
-    deleterestapirequest.h \
-    deleterestapirequest_p.h \
-    deleterestapiresponse.h \
-    deleterestapiresponse_p.h \
-    deleteroomrequest.h \
-    deleteroomrequest_p.h \
-    deleteroomresponse.h \
-    deleteroomresponse_p.h \
-    deleteroomskillparameterrequest.h \
-    deleteroomskillparameterrequest_p.h \
-    deleteroomskillparameterresponse.h \
-    deleteroomskillparameterresponse_p.h \
     deleterouterequest.h \
     deleterouterequest_p.h \
     deleterouteresponse.h \
@@ -1734,170 +350,26 @@ HEADERS += \
     deleteroutetablerequest_p.h \
     deleteroutetableresponse.h \
     deleteroutetableresponse_p.h \
-    deleterunrequest.h \
-    deleterunrequest_p.h \
-    deleterunresponse.h \
-    deleterunresponse_p.h \
-    deletescalingplanrequest.h \
-    deletescalingplanrequest_p.h \
-    deletescalingplanresponse.h \
-    deletescalingplanresponse_p.h \
-    deletescalingpolicyrequest.h \
-    deletescalingpolicyrequest_p.h \
-    deletescalingpolicyresponse.h \
-    deletescalingpolicyresponse_p.h \
-    deletescheduledactionrequest.h \
-    deletescheduledactionrequest.h \
-    deletescheduledactionrequest_p.h \
-    deletescheduledactionrequest_p.h \
-    deletescheduledactionresponse.h \
-    deletescheduledactionresponse.h \
-    deletescheduledactionresponse_p.h \
-    deletescheduledactionresponse_p.h \
-    deleteschemarequest.h \
-    deleteschemarequest_p.h \
-    deleteschemaresponse.h \
-    deleteschemaresponse_p.h \
     deletesecuritygrouprequest.h \
     deletesecuritygrouprequest_p.h \
     deletesecuritygroupresponse.h \
     deletesecuritygroupresponse_p.h \
-    deleteservicelinkedrolerequest.h \
-    deleteservicelinkedrolerequest_p.h \
-    deleteservicelinkedroleresponse.h \
-    deleteservicelinkedroleresponse_p.h \
-    deleteskillgrouprequest.h \
-    deleteskillgrouprequest_p.h \
-    deleteskillgroupresponse.h \
-    deleteskillgroupresponse_p.h \
-    deletesnapshotrequest.h \
     deletesnapshotrequest.h \
     deletesnapshotrequest_p.h \
-    deletesnapshotrequest_p.h \
     deletesnapshotresponse.h \
-    deletesnapshotresponse.h \
-    deletesnapshotresponse_p.h \
     deletesnapshotresponse_p.h \
     deletespotdatafeedsubscriptionrequest.h \
     deletespotdatafeedsubscriptionrequest_p.h \
     deletespotdatafeedsubscriptionresponse.h \
     deletespotdatafeedsubscriptionresponse_p.h \
-    deletestackinstancesrequest.h \
-    deletestackinstancesrequest_p.h \
-    deletestackinstancesresponse.h \
-    deletestackinstancesresponse_p.h \
-    deletestackrequest.h \
-    deletestackrequest.h \
-    deletestackrequest_p.h \
-    deletestackrequest_p.h \
-    deletestackresponse.h \
-    deletestackresponse.h \
-    deletestackresponse_p.h \
-    deletestackresponse_p.h \
-    deletestacksetrequest.h \
-    deletestacksetrequest_p.h \
-    deletestacksetresponse.h \
-    deletestacksetresponse_p.h \
-    deletestagerequest.h \
-    deletestagerequest_p.h \
-    deletestageresponse.h \
-    deletestageresponse_p.h \
-    deletestreamingdistributionrequest.h \
-    deletestreamingdistributionrequest_p.h \
-    deletestreamingdistributionresponse.h \
-    deletestreamingdistributionresponse_p.h \
-    deletesubnetgrouprequest.h \
-    deletesubnetgrouprequest_p.h \
-    deletesubnetgroupresponse.h \
-    deletesubnetgroupresponse_p.h \
     deletesubnetrequest.h \
     deletesubnetrequest_p.h \
     deletesubnetresponse.h \
     deletesubnetresponse_p.h \
-    deletesubscriberrequest.h \
-    deletesubscriberrequest_p.h \
-    deletesubscriberresponse.h \
-    deletesubscriberresponse_p.h \
-    deletesuggesterrequest.h \
-    deletesuggesterrequest_p.h \
-    deletesuggesterresponse.h \
-    deletesuggesterresponse_p.h \
-    deletetablerequest.h \
-    deletetablerequest_p.h \
-    deletetableresponse.h \
-    deletetableresponse_p.h \
-    deletetagsrequest.h \
-    deletetagsrequest.h \
     deletetagsrequest.h \
     deletetagsrequest_p.h \
-    deletetagsrequest_p.h \
-    deletetagsrequest_p.h \
-    deletetagsresponse.h \
-    deletetagsresponse.h \
     deletetagsresponse.h \
     deletetagsresponse_p.h \
-    deletetagsresponse_p.h \
-    deletetagsresponse_p.h \
-    deletetrailrequest.h \
-    deletetrailrequest_p.h \
-    deletetrailresponse.h \
-    deletetrailresponse_p.h \
-    deletetrustrequest.h \
-    deletetrustrequest_p.h \
-    deletetrustresponse.h \
-    deletetrustresponse_p.h \
-    deletetypedlinkfacetrequest.h \
-    deletetypedlinkfacetrequest_p.h \
-    deletetypedlinkfacetresponse.h \
-    deletetypedlinkfacetresponse_p.h \
-    deletetyperequest.h \
-    deletetyperequest_p.h \
-    deletetyperesponse.h \
-    deletetyperesponse_p.h \
-    deleteuploadrequest.h \
-    deleteuploadrequest_p.h \
-    deleteuploadresponse.h \
-    deleteuploadresponse_p.h \
-    deleteusageplankeyrequest.h \
-    deleteusageplankeyrequest_p.h \
-    deleteusageplankeyresponse.h \
-    deleteusageplankeyresponse_p.h \
-    deleteusageplanrequest.h \
-    deleteusageplanrequest_p.h \
-    deleteusageplanresponse.h \
-    deleteusageplanresponse_p.h \
-    deleteuserattributesrequest.h \
-    deleteuserattributesrequest_p.h \
-    deleteuserattributesresponse.h \
-    deleteuserattributesresponse_p.h \
-    deleteuserpoolclientrequest.h \
-    deleteuserpoolclientrequest_p.h \
-    deleteuserpoolclientresponse.h \
-    deleteuserpoolclientresponse_p.h \
-    deleteuserpooldomainrequest.h \
-    deleteuserpooldomainrequest_p.h \
-    deleteuserpooldomainresponse.h \
-    deleteuserpooldomainresponse_p.h \
-    deleteuserpoolrequest.h \
-    deleteuserpoolrequest_p.h \
-    deleteuserpoolresponse.h \
-    deleteuserpoolresponse_p.h \
-    deleteuserprofilerequest.h \
-    deleteuserprofilerequest_p.h \
-    deleteuserprofileresponse.h \
-    deleteuserprofileresponse_p.h \
-    deleteuserrequest.h \
-    deleteuserrequest.h \
-    deleteuserrequest_p.h \
-    deleteuserrequest_p.h \
-    deleteuserresponse.h \
-    deleteuserresponse.h \
-    deleteuserresponse_p.h \
-    deleteuserresponse_p.h \
-    deletevirtualinterfacerequest.h \
-    deletevirtualinterfacerequest_p.h \
-    deletevirtualinterfaceresponse.h \
-    deletevirtualinterfaceresponse_p.h \
     deletevolumerequest.h \
     deletevolumerequest_p.h \
     deletevolumeresponse.h \
@@ -1914,10 +386,6 @@ HEADERS += \
     deletevpcendpointsrequest_p.h \
     deletevpcendpointsresponse.h \
     deletevpcendpointsresponse_p.h \
-    deletevpclinkrequest.h \
-    deletevpclinkrequest_p.h \
-    deletevpclinkresponse.h \
-    deletevpclinkresponse_p.h \
     deletevpcpeeringconnectionrequest.h \
     deletevpcpeeringconnectionrequest_p.h \
     deletevpcpeeringconnectionresponse.h \
@@ -1938,188 +406,34 @@ HEADERS += \
     deletevpngatewayrequest_p.h \
     deletevpngatewayresponse.h \
     deletevpngatewayresponse_p.h \
-    deletewebhookrequest.h \
-    deletewebhookrequest_p.h \
-    deletewebhookresponse.h \
-    deletewebhookresponse_p.h \
-    deliverconfigsnapshotrequest.h \
-    deliverconfigsnapshotrequest_p.h \
-    deliverconfigsnapshotresponse.h \
-    deliverconfigsnapshotresponse_p.h \
-    deregistereventtopicrequest.h \
-    deregistereventtopicrequest_p.h \
-    deregistereventtopicresponse.h \
-    deregistereventtopicresponse_p.h \
     deregisterimagerequest.h \
     deregisterimagerequest_p.h \
     deregisterimageresponse.h \
     deregisterimageresponse_p.h \
-    deregisterjobdefinitionrequest.h \
-    deregisterjobdefinitionrequest_p.h \
-    deregisterjobdefinitionresponse.h \
-    deregisterjobdefinitionresponse_p.h \
-    deregisteronpremisesinstancerequest.h \
-    deregisteronpremisesinstancerequest_p.h \
-    deregisteronpremisesinstanceresponse.h \
-    deregisteronpremisesinstanceresponse_p.h \
-    deregisterscalabletargetrequest.h \
-    deregisterscalabletargetrequest_p.h \
-    deregisterscalabletargetresponse.h \
-    deregisterscalabletargetresponse_p.h \
-    describeaccountattributesrequest.h \
     describeaccountattributesrequest.h \
     describeaccountattributesrequest_p.h \
-    describeaccountattributesrequest_p.h \
-    describeaccountattributesresponse.h \
     describeaccountattributesresponse.h \
     describeaccountattributesresponse_p.h \
-    describeaccountattributesresponse_p.h \
-    describeaccountlimitsrequest.h \
-    describeaccountlimitsrequest_p.h \
-    describeaccountlimitsresponse.h \
-    describeaccountlimitsresponse.h \
-    describeaccountlimitsresponse_p.h \
-    describeaccountlimitsresponse_p.h \
     describeaddressesrequest.h \
     describeaddressesrequest_p.h \
     describeaddressesresponse.h \
     describeaddressesresponse_p.h \
-    describeadjustmenttypesresponse.h \
-    describeadjustmenttypesresponse_p.h \
-    describeagentsrequest.h \
-    describeagentsrequest_p.h \
-    describeagentsresponse.h \
-    describeagentsresponse_p.h \
     describeaggregateidformatrequest.h \
     describeaggregateidformatrequest_p.h \
     describeaggregateidformatresponse.h \
     describeaggregateidformatresponse_p.h \
-    describeanalysisschemesrequest.h \
-    describeanalysisschemesrequest_p.h \
-    describeanalysisschemesresponse.h \
-    describeanalysisschemesresponse_p.h \
-    describeapplicationstaterequest.h \
-    describeapplicationstaterequest_p.h \
-    describeapplicationstateresponse.h \
-    describeapplicationstateresponse_p.h \
-    describeautoscalinggroupsrequest.h \
-    describeautoscalinggroupsrequest_p.h \
-    describeautoscalinggroupsresponse.h \
-    describeautoscalinggroupsresponse_p.h \
-    describeautoscalinginstancesrequest.h \
-    describeautoscalinginstancesrequest_p.h \
-    describeautoscalinginstancesresponse.h \
-    describeautoscalinginstancesresponse_p.h \
-    describeautoscalingnotificationtypesresponse.h \
-    describeautoscalingnotificationtypesresponse_p.h \
-    describeavailabilityoptionsrequest.h \
-    describeavailabilityoptionsrequest_p.h \
-    describeavailabilityoptionsresponse.h \
-    describeavailabilityoptionsresponse_p.h \
     describeavailabilityzonesrequest.h \
     describeavailabilityzonesrequest_p.h \
     describeavailabilityzonesresponse.h \
     describeavailabilityzonesresponse_p.h \
-    describebackuprequest.h \
-    describebackuprequest_p.h \
-    describebackupresponse.h \
-    describebackupresponse_p.h \
-    describebackupsrequest.h \
-    describebackupsrequest_p.h \
-    describebackupsresponse.h \
-    describebackupsresponse_p.h \
-    describebudgetrequest.h \
-    describebudgetrequest_p.h \
-    describebudgetresponse.h \
-    describebudgetresponse_p.h \
-    describebudgetsrequest.h \
-    describebudgetsrequest_p.h \
-    describebudgetsresponse.h \
-    describebudgetsresponse_p.h \
     describebundletasksrequest.h \
     describebundletasksrequest_p.h \
     describebundletasksresponse.h \
     describebundletasksresponse_p.h \
-    describecertificaterequest.h \
-    describecertificaterequest_p.h \
-    describecertificateresponse.h \
-    describecertificateresponse_p.h \
-    describecertificatesrequest.h \
-    describecertificatesrequest_p.h \
-    describecertificatesresponse.h \
-    describecertificatesresponse_p.h \
-    describechangesetrequest.h \
-    describechangesetrequest_p.h \
-    describechangesetresponse.h \
-    describechangesetresponse_p.h \
     describeclassiclinkinstancesrequest.h \
     describeclassiclinkinstancesrequest_p.h \
     describeclassiclinkinstancesresponse.h \
     describeclassiclinkinstancesresponse_p.h \
-    describeclustersrequest.h \
-    describeclustersrequest.h \
-    describeclustersrequest_p.h \
-    describeclustersrequest_p.h \
-    describeclustersresponse.h \
-    describeclustersresponse.h \
-    describeclustersresponse_p.h \
-    describeclustersresponse_p.h \
-    describecompliancebyconfigrulerequest.h \
-    describecompliancebyconfigrulerequest_p.h \
-    describecompliancebyconfigruleresponse.h \
-    describecompliancebyconfigruleresponse_p.h \
-    describecompliancebyresourcerequest.h \
-    describecompliancebyresourcerequest_p.h \
-    describecompliancebyresourceresponse.h \
-    describecompliancebyresourceresponse_p.h \
-    describecomputeenvironmentsrequest.h \
-    describecomputeenvironmentsrequest_p.h \
-    describecomputeenvironmentsresponse.h \
-    describecomputeenvironmentsresponse_p.h \
-    describeconditionalforwardersrequest.h \
-    describeconditionalforwardersrequest_p.h \
-    describeconditionalforwardersresponse.h \
-    describeconditionalforwardersresponse_p.h \
-    describeconfigruleevaluationstatusrequest.h \
-    describeconfigruleevaluationstatusrequest_p.h \
-    describeconfigruleevaluationstatusresponse.h \
-    describeconfigruleevaluationstatusresponse_p.h \
-    describeconfigrulesrequest.h \
-    describeconfigrulesrequest_p.h \
-    describeconfigrulesresponse.h \
-    describeconfigrulesresponse_p.h \
-    describeconfigurationrecordersrequest.h \
-    describeconfigurationrecordersrequest_p.h \
-    describeconfigurationrecordersresponse.h \
-    describeconfigurationrecordersresponse_p.h \
-    describeconfigurationrecorderstatusrequest.h \
-    describeconfigurationrecorderstatusrequest_p.h \
-    describeconfigurationrecorderstatusresponse.h \
-    describeconfigurationrecorderstatusresponse_p.h \
-    describeconfigurationsrequest.h \
-    describeconfigurationsrequest_p.h \
-    describeconfigurationsresponse.h \
-    describeconfigurationsresponse_p.h \
-    describeconnectionloarequest.h \
-    describeconnectionloarequest_p.h \
-    describeconnectionloaresponse.h \
-    describeconnectionloaresponse_p.h \
-    describeconnectionsoninterconnectrequest.h \
-    describeconnectionsoninterconnectrequest_p.h \
-    describeconnectionsoninterconnectresponse.h \
-    describeconnectionsoninterconnectresponse_p.h \
-    describeconnectionsrequest.h \
-    describeconnectionsrequest.h \
-    describeconnectionsrequest_p.h \
-    describeconnectionsrequest_p.h \
-    describeconnectionsresponse.h \
-    describeconnectionsresponse.h \
-    describeconnectionsresponse_p.h \
-    describeconnectionsresponse_p.h \
-    describecontinuousbackupsrequest.h \
-    describecontinuousbackupsrequest_p.h \
-    describecontinuousbackupsresponse.h \
-    describecontinuousbackupsresponse_p.h \
     describeconversiontasksrequest.h \
     describeconversiontasksrequest_p.h \
     describeconversiontasksresponse.h \
@@ -2128,54 +442,10 @@ HEADERS += \
     describecustomergatewaysrequest_p.h \
     describecustomergatewaysresponse.h \
     describecustomergatewaysresponse_p.h \
-    describedatasetrequest.h \
-    describedatasetrequest_p.h \
-    describedatasetresponse.h \
-    describedatasetresponse_p.h \
-    describedefaultparametersrequest.h \
-    describedefaultparametersrequest_p.h \
-    describedefaultparametersresponse.h \
-    describedefaultparametersresponse_p.h \
-    describedeliverychannelsrequest.h \
-    describedeliverychannelsrequest_p.h \
-    describedeliverychannelsresponse.h \
-    describedeliverychannelsresponse_p.h \
-    describedeliverychannelstatusrequest.h \
-    describedeliverychannelstatusrequest_p.h \
-    describedeliverychannelstatusresponse.h \
-    describedeliverychannelstatusresponse_p.h \
     describedhcpoptionsrequest.h \
     describedhcpoptionsrequest_p.h \
     describedhcpoptionsresponse.h \
     describedhcpoptionsresponse_p.h \
-    describedirectconnectgatewayassociationsrequest.h \
-    describedirectconnectgatewayassociationsrequest_p.h \
-    describedirectconnectgatewayassociationsresponse.h \
-    describedirectconnectgatewayassociationsresponse_p.h \
-    describedirectconnectgatewayattachmentsrequest.h \
-    describedirectconnectgatewayattachmentsrequest_p.h \
-    describedirectconnectgatewayattachmentsresponse.h \
-    describedirectconnectgatewayattachmentsresponse_p.h \
-    describedirectconnectgatewaysrequest.h \
-    describedirectconnectgatewaysrequest_p.h \
-    describedirectconnectgatewaysresponse.h \
-    describedirectconnectgatewaysresponse_p.h \
-    describedirectoriesrequest.h \
-    describedirectoriesrequest_p.h \
-    describedirectoriesresponse.h \
-    describedirectoriesresponse_p.h \
-    describedirectoryconfigsrequest.h \
-    describedirectoryconfigsrequest_p.h \
-    describedirectoryconfigsresponse.h \
-    describedirectoryconfigsresponse_p.h \
-    describedomaincontrollersrequest.h \
-    describedomaincontrollersrequest_p.h \
-    describedomaincontrollersresponse.h \
-    describedomaincontrollersresponse_p.h \
-    describedomainsrequest.h \
-    describedomainsrequest_p.h \
-    describedomainsresponse.h \
-    describedomainsresponse_p.h \
     describeegressonlyinternetgatewaysrequest.h \
     describeegressonlyinternetgatewaysrequest_p.h \
     describeegressonlyinternetgatewaysresponse.h \
@@ -2184,66 +454,10 @@ HEADERS += \
     describeelasticgpusrequest_p.h \
     describeelasticgpusresponse.h \
     describeelasticgpusresponse_p.h \
-    describeendpointsrequest.h \
-    describeendpointsrequest_p.h \
-    describeendpointsresponse.h \
-    describeendpointsresponse_p.h \
-    describeendpointtypesrequest.h \
-    describeendpointtypesrequest_p.h \
-    describeendpointtypesresponse.h \
-    describeendpointtypesresponse_p.h \
-    describeenvironmentmembershipsrequest.h \
-    describeenvironmentmembershipsrequest_p.h \
-    describeenvironmentmembershipsresponse.h \
-    describeenvironmentmembershipsresponse_p.h \
-    describeenvironmentsrequest.h \
-    describeenvironmentsrequest_p.h \
-    describeenvironmentsresponse.h \
-    describeenvironmentsresponse_p.h \
-    describeenvironmentstatusrequest.h \
-    describeenvironmentstatusrequest_p.h \
-    describeenvironmentstatusresponse.h \
-    describeenvironmentstatusresponse_p.h \
-    describeeventcategoriesrequest.h \
-    describeeventcategoriesrequest_p.h \
-    describeeventcategoriesresponse.h \
-    describeeventcategoriesresponse_p.h \
-    describeeventsrequest.h \
-    describeeventsrequest.h \
-    describeeventsrequest_p.h \
-    describeeventsrequest_p.h \
-    describeeventsresponse.h \
-    describeeventsresponse.h \
-    describeeventsresponse_p.h \
-    describeeventsresponse_p.h \
-    describeeventsubscriptionsrequest.h \
-    describeeventsubscriptionsrequest_p.h \
-    describeeventsubscriptionsresponse.h \
-    describeeventsubscriptionsresponse_p.h \
-    describeeventtopicsrequest.h \
-    describeeventtopicsrequest_p.h \
-    describeeventtopicsresponse.h \
-    describeeventtopicsresponse_p.h \
-    describeexportconfigurationsrequest.h \
-    describeexportconfigurationsrequest_p.h \
-    describeexportconfigurationsresponse.h \
-    describeexportconfigurationsresponse_p.h \
-    describeexporttasksrequest.h \
     describeexporttasksrequest.h \
     describeexporttasksrequest_p.h \
-    describeexporttasksrequest_p.h \
-    describeexporttasksresponse.h \
     describeexporttasksresponse.h \
     describeexporttasksresponse_p.h \
-    describeexporttasksresponse_p.h \
-    describeexpressionsrequest.h \
-    describeexpressionsrequest_p.h \
-    describeexpressionsresponse.h \
-    describeexpressionsresponse_p.h \
-    describefleetsrequest.h \
-    describefleetsrequest_p.h \
-    describefleetsresponse.h \
-    describefleetsresponse_p.h \
     describeflowlogsrequest.h \
     describeflowlogsrequest_p.h \
     describeflowlogsresponse.h \
@@ -2256,18 +470,6 @@ HEADERS += \
     describefpgaimagesrequest_p.h \
     describefpgaimagesresponse.h \
     describefpgaimagesresponse_p.h \
-    describeglobaltablerequest.h \
-    describeglobaltablerequest_p.h \
-    describeglobaltableresponse.h \
-    describeglobaltableresponse_p.h \
-    describehapgrequest.h \
-    describehapgrequest_p.h \
-    describehapgresponse.h \
-    describehapgresponse_p.h \
-    describehostedconnectionsrequest.h \
-    describehostedconnectionsrequest_p.h \
-    describehostedconnectionsresponse.h \
-    describehostedconnectionsresponse_p.h \
     describehostreservationofferingsrequest.h \
     describehostreservationofferingsrequest_p.h \
     describehostreservationofferingsresponse.h \
@@ -2280,10 +482,6 @@ HEADERS += \
     describehostsrequest_p.h \
     describehostsresponse.h \
     describehostsresponse_p.h \
-    describehsmrequest.h \
-    describehsmrequest_p.h \
-    describehsmresponse.h \
-    describehsmresponse_p.h \
     describeiaminstanceprofileassociationsrequest.h \
     describeiaminstanceprofileassociationsrequest_p.h \
     describeiaminstanceprofileassociationsresponse.h \
@@ -2292,26 +490,6 @@ HEADERS += \
     describeidentityidformatrequest_p.h \
     describeidentityidformatresponse.h \
     describeidentityidformatresponse_p.h \
-    describeidentitypoolrequest.h \
-    describeidentitypoolrequest_p.h \
-    describeidentitypoolresponse.h \
-    describeidentitypoolresponse_p.h \
-    describeidentitypoolusagerequest.h \
-    describeidentitypoolusagerequest_p.h \
-    describeidentitypoolusageresponse.h \
-    describeidentitypoolusageresponse_p.h \
-    describeidentityproviderrequest.h \
-    describeidentityproviderrequest_p.h \
-    describeidentityproviderresponse.h \
-    describeidentityproviderresponse_p.h \
-    describeidentityrequest.h \
-    describeidentityrequest_p.h \
-    describeidentityresponse.h \
-    describeidentityresponse_p.h \
-    describeidentityusagerequest.h \
-    describeidentityusagerequest_p.h \
-    describeidentityusageresponse.h \
-    describeidentityusageresponse_p.h \
     describeidformatrequest.h \
     describeidformatrequest_p.h \
     describeidformatresponse.h \
@@ -2320,17 +498,9 @@ HEADERS += \
     describeimageattributerequest_p.h \
     describeimageattributeresponse.h \
     describeimageattributeresponse_p.h \
-    describeimagebuildersrequest.h \
-    describeimagebuildersrequest_p.h \
-    describeimagebuildersresponse.h \
-    describeimagebuildersresponse_p.h \
-    describeimagesrequest.h \
     describeimagesrequest.h \
     describeimagesrequest_p.h \
-    describeimagesrequest_p.h \
     describeimagesresponse.h \
-    describeimagesresponse.h \
-    describeimagesresponse_p.h \
     describeimagesresponse_p.h \
     describeimportimagetasksrequest.h \
     describeimportimagetasksrequest_p.h \
@@ -2340,10 +510,6 @@ HEADERS += \
     describeimportsnapshottasksrequest_p.h \
     describeimportsnapshottasksresponse.h \
     describeimportsnapshottasksresponse_p.h \
-    describeindexfieldsrequest.h \
-    describeindexfieldsrequest_p.h \
-    describeindexfieldsresponse.h \
-    describeindexfieldsresponse_p.h \
     describeinstanceattributerequest.h \
     describeinstanceattributerequest_p.h \
     describeinstanceattributeresponse.h \
@@ -2360,42 +526,14 @@ HEADERS += \
     describeinstancestatusrequest_p.h \
     describeinstancestatusresponse.h \
     describeinstancestatusresponse_p.h \
-    describeinterconnectloarequest.h \
-    describeinterconnectloarequest_p.h \
-    describeinterconnectloaresponse.h \
-    describeinterconnectloaresponse_p.h \
-    describeinterconnectsrequest.h \
-    describeinterconnectsrequest_p.h \
-    describeinterconnectsresponse.h \
-    describeinterconnectsresponse_p.h \
     describeinternetgatewaysrequest.h \
     describeinternetgatewaysrequest_p.h \
     describeinternetgatewaysresponse.h \
     describeinternetgatewaysresponse_p.h \
-    describejobdefinitionsrequest.h \
-    describejobdefinitionsrequest_p.h \
-    describejobdefinitionsresponse.h \
-    describejobdefinitionsresponse_p.h \
-    describejobqueuesrequest.h \
-    describejobqueuesrequest_p.h \
-    describejobqueuesresponse.h \
-    describejobqueuesresponse_p.h \
-    describejobsrequest.h \
-    describejobsrequest_p.h \
-    describejobsresponse.h \
-    describejobsresponse_p.h \
     describekeypairsrequest.h \
     describekeypairsrequest_p.h \
     describekeypairsresponse.h \
     describekeypairsresponse_p.h \
-    describelagsrequest.h \
-    describelagsrequest_p.h \
-    describelagsresponse.h \
-    describelagsresponse_p.h \
-    describelaunchconfigurationsrequest.h \
-    describelaunchconfigurationsrequest_p.h \
-    describelaunchconfigurationsresponse.h \
-    describelaunchconfigurationsresponse_p.h \
     describelaunchtemplatesrequest.h \
     describelaunchtemplatesrequest_p.h \
     describelaunchtemplatesresponse.h \
@@ -2404,40 +542,6 @@ HEADERS += \
     describelaunchtemplateversionsrequest_p.h \
     describelaunchtemplateversionsresponse.h \
     describelaunchtemplateversionsresponse_p.h \
-    describelifecyclehooksrequest.h \
-    describelifecyclehooksrequest_p.h \
-    describelifecyclehooksresponse.h \
-    describelifecyclehooksresponse_p.h \
-    describelifecyclehooktypesresponse.h \
-    describelifecyclehooktypesresponse_p.h \
-    describelimitsrequest.h \
-    describelimitsrequest_p.h \
-    describelimitsresponse.h \
-    describelimitsresponse_p.h \
-    describeloadbalancersrequest.h \
-    describeloadbalancersrequest_p.h \
-    describeloadbalancersresponse.h \
-    describeloadbalancersresponse_p.h \
-    describeloadbalancertargetgroupsrequest.h \
-    describeloadbalancertargetgroupsrequest_p.h \
-    describeloadbalancertargetgroupsresponse.h \
-    describeloadbalancertargetgroupsresponse_p.h \
-    describeloarequest.h \
-    describeloarequest_p.h \
-    describeloaresponse.h \
-    describeloaresponse_p.h \
-    describelocationsresponse.h \
-    describelocationsresponse_p.h \
-    describelunaclientrequest.h \
-    describelunaclientrequest_p.h \
-    describelunaclientresponse.h \
-    describelunaclientresponse_p.h \
-    describemetriccollectiontypesresponse.h \
-    describemetriccollectiontypesresponse_p.h \
-    describemigrationtaskrequest.h \
-    describemigrationtaskrequest_p.h \
-    describemigrationtaskresponse.h \
-    describemigrationtaskresponse_p.h \
     describemovingaddressesrequest.h \
     describemovingaddressesrequest_p.h \
     describemovingaddressesresponse.h \
@@ -2462,42 +566,10 @@ HEADERS += \
     describenetworkinterfacesrequest_p.h \
     describenetworkinterfacesresponse.h \
     describenetworkinterfacesresponse_p.h \
-    describenotificationconfigurationsrequest.h \
-    describenotificationconfigurationsrequest_p.h \
-    describenotificationconfigurationsresponse.h \
-    describenotificationconfigurationsresponse_p.h \
-    describenotificationsforbudgetrequest.h \
-    describenotificationsforbudgetrequest_p.h \
-    describenotificationsforbudgetresponse.h \
-    describenotificationsforbudgetresponse_p.h \
-    describeobjectsrequest.h \
-    describeobjectsrequest_p.h \
-    describeobjectsresponse.h \
-    describeobjectsresponse_p.h \
-    describeorderablereplicationinstancesrequest.h \
-    describeorderablereplicationinstancesrequest_p.h \
-    describeorderablereplicationinstancesresponse.h \
-    describeorderablereplicationinstancesresponse_p.h \
-    describeparametergroupsrequest.h \
-    describeparametergroupsrequest_p.h \
-    describeparametergroupsresponse.h \
-    describeparametergroupsresponse_p.h \
-    describeparametersrequest.h \
-    describeparametersrequest_p.h \
-    describeparametersresponse.h \
-    describeparametersresponse_p.h \
-    describepipelinesrequest.h \
-    describepipelinesrequest_p.h \
-    describepipelinesresponse.h \
-    describepipelinesresponse_p.h \
     describeplacementgroupsrequest.h \
     describeplacementgroupsrequest_p.h \
     describeplacementgroupsresponse.h \
     describeplacementgroupsresponse_p.h \
-    describepoliciesrequest.h \
-    describepoliciesrequest_p.h \
-    describepoliciesresponse.h \
-    describepoliciesresponse_p.h \
     describeprefixlistsrequest.h \
     describeprefixlistsrequest_p.h \
     describeprefixlistsresponse.h \
@@ -2506,46 +578,10 @@ HEADERS += \
     describeprincipalidformatrequest_p.h \
     describeprincipalidformatresponse.h \
     describeprincipalidformatresponse_p.h \
-    describeprojectrequest.h \
-    describeprojectrequest_p.h \
-    describeprojectresponse.h \
-    describeprojectresponse_p.h \
-    describepullrequesteventsrequest.h \
-    describepullrequesteventsrequest_p.h \
-    describepullrequesteventsresponse.h \
-    describepullrequesteventsresponse_p.h \
-    describerefreshschemasstatusrequest.h \
-    describerefreshschemasstatusrequest_p.h \
-    describerefreshschemasstatusresponse.h \
-    describerefreshschemasstatusresponse_p.h \
     describeregionsrequest.h \
     describeregionsrequest_p.h \
     describeregionsresponse.h \
     describeregionsresponse_p.h \
-    describereplicationinstancesrequest.h \
-    describereplicationinstancesrequest_p.h \
-    describereplicationinstancesresponse.h \
-    describereplicationinstancesresponse_p.h \
-    describereplicationinstancetasklogsrequest.h \
-    describereplicationinstancetasklogsrequest_p.h \
-    describereplicationinstancetasklogsresponse.h \
-    describereplicationinstancetasklogsresponse_p.h \
-    describereplicationsubnetgroupsrequest.h \
-    describereplicationsubnetgroupsrequest_p.h \
-    describereplicationsubnetgroupsresponse.h \
-    describereplicationsubnetgroupsresponse_p.h \
-    describereplicationtaskassessmentresultsrequest.h \
-    describereplicationtaskassessmentresultsrequest_p.h \
-    describereplicationtaskassessmentresultsresponse.h \
-    describereplicationtaskassessmentresultsresponse_p.h \
-    describereplicationtasksrequest.h \
-    describereplicationtasksrequest_p.h \
-    describereplicationtasksresponse.h \
-    describereplicationtasksresponse_p.h \
-    describereportdefinitionsrequest.h \
-    describereportdefinitionsrequest_p.h \
-    describereportdefinitionsresponse.h \
-    describereportdefinitionsresponse_p.h \
     describereservedinstanceslistingsrequest.h \
     describereservedinstanceslistingsrequest_p.h \
     describereservedinstanceslistingsresponse.h \
@@ -2562,56 +598,10 @@ HEADERS += \
     describereservedinstancesrequest_p.h \
     describereservedinstancesresponse.h \
     describereservedinstancesresponse_p.h \
-    describeresourceserverrequest.h \
-    describeresourceserverrequest_p.h \
-    describeresourceserverresponse.h \
-    describeresourceserverresponse_p.h \
-    describeriskconfigurationrequest.h \
-    describeriskconfigurationrequest_p.h \
-    describeriskconfigurationresponse.h \
-    describeriskconfigurationresponse_p.h \
     describeroutetablesrequest.h \
     describeroutetablesrequest_p.h \
     describeroutetablesresponse.h \
     describeroutetablesresponse_p.h \
-    describescalabletargetsrequest.h \
-    describescalabletargetsrequest_p.h \
-    describescalabletargetsresponse.h \
-    describescalabletargetsresponse_p.h \
-    describescalingactivitiesrequest.h \
-    describescalingactivitiesrequest.h \
-    describescalingactivitiesrequest_p.h \
-    describescalingactivitiesrequest_p.h \
-    describescalingactivitiesresponse.h \
-    describescalingactivitiesresponse.h \
-    describescalingactivitiesresponse_p.h \
-    describescalingactivitiesresponse_p.h \
-    describescalingparametersrequest.h \
-    describescalingparametersrequest_p.h \
-    describescalingparametersresponse.h \
-    describescalingparametersresponse_p.h \
-    describescalingplanresourcesrequest.h \
-    describescalingplanresourcesrequest_p.h \
-    describescalingplanresourcesresponse.h \
-    describescalingplanresourcesresponse_p.h \
-    describescalingplansrequest.h \
-    describescalingplansrequest_p.h \
-    describescalingplansresponse.h \
-    describescalingplansresponse_p.h \
-    describescalingpoliciesrequest.h \
-    describescalingpoliciesrequest_p.h \
-    describescalingpoliciesresponse.h \
-    describescalingpoliciesresponse_p.h \
-    describescalingprocesstypesresponse.h \
-    describescalingprocesstypesresponse_p.h \
-    describescheduledactionsrequest.h \
-    describescheduledactionsrequest.h \
-    describescheduledactionsrequest_p.h \
-    describescheduledactionsrequest_p.h \
-    describescheduledactionsresponse.h \
-    describescheduledactionsresponse.h \
-    describescheduledactionsresponse_p.h \
-    describescheduledactionsresponse_p.h \
     describescheduledinstanceavailabilityrequest.h \
     describescheduledinstanceavailabilityrequest_p.h \
     describescheduledinstanceavailabilityresponse.h \
@@ -2620,10 +610,6 @@ HEADERS += \
     describescheduledinstancesrequest_p.h \
     describescheduledinstancesresponse.h \
     describescheduledinstancesresponse_p.h \
-    describeschemasrequest.h \
-    describeschemasrequest_p.h \
-    describeschemasresponse.h \
-    describeschemasresponse_p.h \
     describesecuritygroupreferencesrequest.h \
     describesecuritygroupreferencesrequest_p.h \
     describesecuritygroupreferencesresponse.h \
@@ -2632,25 +618,13 @@ HEADERS += \
     describesecuritygroupsrequest_p.h \
     describesecuritygroupsresponse.h \
     describesecuritygroupsresponse_p.h \
-    describeserviceaccesspoliciesrequest.h \
-    describeserviceaccesspoliciesrequest_p.h \
-    describeserviceaccesspoliciesresponse.h \
-    describeserviceaccesspoliciesresponse_p.h \
-    describesessionsrequest.h \
-    describesessionsrequest_p.h \
-    describesessionsresponse.h \
-    describesessionsresponse_p.h \
     describesnapshotattributerequest.h \
     describesnapshotattributerequest_p.h \
     describesnapshotattributeresponse.h \
     describesnapshotattributeresponse_p.h \
     describesnapshotsrequest.h \
-    describesnapshotsrequest.h \
-    describesnapshotsrequest_p.h \
     describesnapshotsrequest_p.h \
     describesnapshotsresponse.h \
-    describesnapshotsresponse.h \
-    describesnapshotsresponse_p.h \
     describesnapshotsresponse_p.h \
     describespotdatafeedsubscriptionrequest.h \
     describespotdatafeedsubscriptionrequest_p.h \
@@ -2676,130 +650,18 @@ HEADERS += \
     describespotpricehistoryrequest_p.h \
     describespotpricehistoryresponse.h \
     describespotpricehistoryresponse_p.h \
-    describestackeventsrequest.h \
-    describestackeventsrequest_p.h \
-    describestackeventsresponse.h \
-    describestackeventsresponse_p.h \
-    describestackinstancerequest.h \
-    describestackinstancerequest_p.h \
-    describestackinstanceresponse.h \
-    describestackinstanceresponse_p.h \
-    describestackresourcerequest.h \
-    describestackresourcerequest_p.h \
-    describestackresourceresponse.h \
-    describestackresourceresponse_p.h \
-    describestackresourcesrequest.h \
-    describestackresourcesrequest_p.h \
-    describestackresourcesresponse.h \
-    describestackresourcesresponse_p.h \
-    describestacksetoperationrequest.h \
-    describestacksetoperationrequest_p.h \
-    describestacksetoperationresponse.h \
-    describestacksetoperationresponse_p.h \
-    describestacksetrequest.h \
-    describestacksetrequest_p.h \
-    describestacksetresponse.h \
-    describestacksetresponse_p.h \
-    describestacksrequest.h \
-    describestacksrequest.h \
-    describestacksrequest_p.h \
-    describestacksrequest_p.h \
-    describestacksresponse.h \
-    describestacksresponse.h \
-    describestacksresponse_p.h \
-    describestacksresponse_p.h \
     describestalesecuritygroupsrequest.h \
     describestalesecuritygroupsrequest_p.h \
     describestalesecuritygroupsresponse.h \
     describestalesecuritygroupsresponse_p.h \
-    describestreamrequest.h \
-    describestreamrequest_p.h \
-    describestreamresponse.h \
-    describestreamresponse_p.h \
-    describesubnetgroupsrequest.h \
-    describesubnetgroupsrequest_p.h \
-    describesubnetgroupsresponse.h \
-    describesubnetgroupsresponse_p.h \
     describesubnetsrequest.h \
     describesubnetsrequest_p.h \
     describesubnetsresponse.h \
     describesubnetsresponse_p.h \
-    describesubscribersfornotificationrequest.h \
-    describesubscribersfornotificationrequest_p.h \
-    describesubscribersfornotificationresponse.h \
-    describesubscribersfornotificationresponse_p.h \
-    describesuggestersrequest.h \
-    describesuggestersrequest_p.h \
-    describesuggestersresponse.h \
-    describesuggestersresponse_p.h \
-    describetablerequest.h \
-    describetablerequest_p.h \
-    describetableresponse.h \
-    describetableresponse_p.h \
-    describetablestatisticsrequest.h \
-    describetablestatisticsrequest_p.h \
-    describetablestatisticsresponse.h \
-    describetablestatisticsresponse_p.h \
-    describetagsrequest.h \
-    describetagsrequest.h \
-    describetagsrequest.h \
     describetagsrequest.h \
     describetagsrequest_p.h \
-    describetagsrequest_p.h \
-    describetagsrequest_p.h \
-    describetagsrequest_p.h \
-    describetagsresponse.h \
-    describetagsresponse.h \
-    describetagsresponse.h \
     describetagsresponse.h \
     describetagsresponse_p.h \
-    describetagsresponse_p.h \
-    describetagsresponse_p.h \
-    describetagsresponse_p.h \
-    describeterminationpolicytypesresponse.h \
-    describeterminationpolicytypesresponse_p.h \
-    describetimetoliverequest.h \
-    describetimetoliverequest_p.h \
-    describetimetoliveresponse.h \
-    describetimetoliveresponse_p.h \
-    describetopicsdetectionjobrequest.h \
-    describetopicsdetectionjobrequest_p.h \
-    describetopicsdetectionjobresponse.h \
-    describetopicsdetectionjobresponse_p.h \
-    describetrailsrequest.h \
-    describetrailsrequest_p.h \
-    describetrailsresponse.h \
-    describetrailsresponse_p.h \
-    describetrustsrequest.h \
-    describetrustsrequest_p.h \
-    describetrustsresponse.h \
-    describetrustsresponse_p.h \
-    describeuserimportjobrequest.h \
-    describeuserimportjobrequest_p.h \
-    describeuserimportjobresponse.h \
-    describeuserimportjobresponse_p.h \
-    describeuserpoolclientrequest.h \
-    describeuserpoolclientrequest_p.h \
-    describeuserpoolclientresponse.h \
-    describeuserpoolclientresponse_p.h \
-    describeuserpooldomainrequest.h \
-    describeuserpooldomainrequest_p.h \
-    describeuserpooldomainresponse.h \
-    describeuserpooldomainresponse_p.h \
-    describeuserpoolrequest.h \
-    describeuserpoolrequest_p.h \
-    describeuserpoolresponse.h \
-    describeuserpoolresponse_p.h \
-    describeuserprofilerequest.h \
-    describeuserprofilerequest_p.h \
-    describeuserprofileresponse.h \
-    describeuserprofileresponse_p.h \
-    describevirtualgatewaysresponse.h \
-    describevirtualgatewaysresponse_p.h \
-    describevirtualinterfacesrequest.h \
-    describevirtualinterfacesrequest_p.h \
-    describevirtualinterfacesresponse.h \
-    describevirtualinterfacesresponse_p.h \
     describevolumeattributerequest.h \
     describevolumeattributerequest_p.h \
     describevolumeattributeresponse.h \
@@ -2872,42 +734,14 @@ HEADERS += \
     detachclassiclinkvpcrequest_p.h \
     detachclassiclinkvpcresponse.h \
     detachclassiclinkvpcresponse_p.h \
-    detachfromindexrequest.h \
-    detachfromindexrequest_p.h \
-    detachfromindexresponse.h \
-    detachfromindexresponse_p.h \
-    detachinstancesrequest.h \
-    detachinstancesrequest_p.h \
-    detachinstancesresponse.h \
-    detachinstancesresponse_p.h \
     detachinternetgatewayrequest.h \
     detachinternetgatewayrequest_p.h \
     detachinternetgatewayresponse.h \
     detachinternetgatewayresponse_p.h \
-    detachloadbalancersrequest.h \
-    detachloadbalancersrequest_p.h \
-    detachloadbalancersresponse.h \
-    detachloadbalancersresponse_p.h \
-    detachloadbalancertargetgroupsrequest.h \
-    detachloadbalancertargetgroupsrequest_p.h \
-    detachloadbalancertargetgroupsresponse.h \
-    detachloadbalancertargetgroupsresponse_p.h \
     detachnetworkinterfacerequest.h \
     detachnetworkinterfacerequest_p.h \
     detachnetworkinterfaceresponse.h \
     detachnetworkinterfaceresponse_p.h \
-    detachobjectrequest.h \
-    detachobjectrequest_p.h \
-    detachobjectresponse.h \
-    detachobjectresponse_p.h \
-    detachpolicyrequest.h \
-    detachpolicyrequest_p.h \
-    detachpolicyresponse.h \
-    detachpolicyresponse_p.h \
-    detachtypedlinkrequest.h \
-    detachtypedlinkrequest_p.h \
-    detachtypedlinkresponse.h \
-    detachtypedlinkresponse_p.h \
     detachvolumerequest.h \
     detachvolumerequest_p.h \
     detachvolumeresponse.h \
@@ -2916,48 +750,6 @@ HEADERS += \
     detachvpngatewayrequest_p.h \
     detachvpngatewayresponse.h \
     detachvpngatewayresponse_p.h \
-    detectdominantlanguagerequest.h \
-    detectdominantlanguagerequest_p.h \
-    detectdominantlanguageresponse.h \
-    detectdominantlanguageresponse_p.h \
-    detectentitiesrequest.h \
-    detectentitiesrequest_p.h \
-    detectentitiesresponse.h \
-    detectentitiesresponse_p.h \
-    detectkeyphrasesrequest.h \
-    detectkeyphrasesrequest_p.h \
-    detectkeyphrasesresponse.h \
-    detectkeyphrasesresponse_p.h \
-    detectsentimentrequest.h \
-    detectsentimentrequest_p.h \
-    detectsentimentresponse.h \
-    detectsentimentresponse_p.h \
-    devicefarmclient.h \
-    devicefarmclient_p.h \
-    directconnectclient.h \
-    directconnectclient_p.h \
-    directoryserviceclient.h \
-    directoryserviceclient_p.h \
-    disabledirectoryrequest.h \
-    disabledirectoryrequest_p.h \
-    disabledirectoryresponse.h \
-    disabledirectoryresponse_p.h \
-    disablemetricscollectionrequest.h \
-    disablemetricscollectionrequest_p.h \
-    disablemetricscollectionresponse.h \
-    disablemetricscollectionresponse_p.h \
-    disableradiusrequest.h \
-    disableradiusrequest_p.h \
-    disableradiusresponse.h \
-    disableradiusresponse_p.h \
-    disablessorequest.h \
-    disablessorequest_p.h \
-    disablessoresponse.h \
-    disablessoresponse_p.h \
-    disablestagetransitionrequest.h \
-    disablestagetransitionrequest_p.h \
-    disablestagetransitionresponse.h \
-    disablestagetransitionresponse_p.h \
     disablevgwroutepropagationrequest.h \
     disablevgwroutepropagationrequest_p.h \
     disablevgwroutepropagationresponse.h \
@@ -2974,30 +766,6 @@ HEADERS += \
     disassociateaddressrequest_p.h \
     disassociateaddressresponse.h \
     disassociateaddressresponse_p.h \
-    disassociateconfigurationitemsfromapplicationrequest.h \
-    disassociateconfigurationitemsfromapplicationrequest_p.h \
-    disassociateconfigurationitemsfromapplicationresponse.h \
-    disassociateconfigurationitemsfromapplicationresponse_p.h \
-    disassociateconnectionfromlagrequest.h \
-    disassociateconnectionfromlagrequest_p.h \
-    disassociateconnectionfromlagresponse.h \
-    disassociateconnectionfromlagresponse_p.h \
-    disassociatecreatedartifactrequest.h \
-    disassociatecreatedartifactrequest_p.h \
-    disassociatecreatedartifactresponse.h \
-    disassociatecreatedartifactresponse_p.h \
-    disassociatedevicefromroomrequest.h \
-    disassociatedevicefromroomrequest_p.h \
-    disassociatedevicefromroomresponse.h \
-    disassociatedevicefromroomresponse_p.h \
-    disassociatediscoveredresourcerequest.h \
-    disassociatediscoveredresourcerequest_p.h \
-    disassociatediscoveredresourceresponse.h \
-    disassociatediscoveredresourceresponse_p.h \
-    disassociatefleetrequest.h \
-    disassociatefleetrequest_p.h \
-    disassociatefleetresponse.h \
-    disassociatefleetresponse_p.h \
     disassociateiaminstanceprofilerequest.h \
     disassociateiaminstanceprofilerequest_p.h \
     disassociateiaminstanceprofileresponse.h \
@@ -3006,48 +774,16 @@ HEADERS += \
     disassociateroutetablerequest_p.h \
     disassociateroutetableresponse.h \
     disassociateroutetableresponse_p.h \
-    disassociateskillgroupfromroomrequest.h \
-    disassociateskillgroupfromroomrequest_p.h \
-    disassociateskillgroupfromroomresponse.h \
-    disassociateskillgroupfromroomresponse_p.h \
     disassociatesubnetcidrblockrequest.h \
     disassociatesubnetcidrblockrequest_p.h \
     disassociatesubnetcidrblockresponse.h \
     disassociatesubnetcidrblockresponse_p.h \
-    disassociateteammemberrequest.h \
-    disassociateteammemberrequest_p.h \
-    disassociateteammemberresponse.h \
-    disassociateteammemberresponse_p.h \
     disassociatevpccidrblockrequest.h \
     disassociatevpccidrblockrequest_p.h \
     disassociatevpccidrblockresponse.h \
     disassociatevpccidrblockresponse_p.h \
-    dynamodbclient.h \
-    dynamodbclient_p.h \
-    dynamodbstreamsclient.h \
-    dynamodbstreamsclient_p.h \
     ec2client.h \
     ec2client_p.h \
-    enabledirectoryrequest.h \
-    enabledirectoryrequest_p.h \
-    enabledirectoryresponse.h \
-    enabledirectoryresponse_p.h \
-    enablemetricscollectionrequest.h \
-    enablemetricscollectionrequest_p.h \
-    enablemetricscollectionresponse.h \
-    enablemetricscollectionresponse_p.h \
-    enableradiusrequest.h \
-    enableradiusrequest_p.h \
-    enableradiusresponse.h \
-    enableradiusresponse_p.h \
-    enablessorequest.h \
-    enablessorequest_p.h \
-    enablessoresponse.h \
-    enablessoresponse_p.h \
-    enablestagetransitionrequest.h \
-    enablestagetransitionrequest_p.h \
-    enablestagetransitionresponse.h \
-    enablestagetransitionresponse_p.h \
     enablevgwroutepropagationrequest.h \
     enablevgwroutepropagationrequest_p.h \
     enablevgwroutepropagationresponse.h \
@@ -3064,170 +800,6 @@ HEADERS += \
     enablevpcclassiclinkrequest_p.h \
     enablevpcclassiclinkresponse.h \
     enablevpcclassiclinkresponse_p.h \
-    enterstandbyrequest.h \
-    enterstandbyrequest_p.h \
-    enterstandbyresponse.h \
-    enterstandbyresponse_p.h \
-    estimatetemplatecostrequest.h \
-    estimatetemplatecostrequest_p.h \
-    estimatetemplatecostresponse.h \
-    estimatetemplatecostresponse_p.h \
-    evaluateexpressionrequest.h \
-    evaluateexpressionrequest_p.h \
-    evaluateexpressionresponse.h \
-    evaluateexpressionresponse_p.h \
-    executechangesetrequest.h \
-    executechangesetrequest_p.h \
-    executechangesetresponse.h \
-    executechangesetresponse_p.h \
-    executepolicyrequest.h \
-    executepolicyrequest_p.h \
-    executepolicyresponse.h \
-    executepolicyresponse_p.h \
-    exitstandbyrequest.h \
-    exitstandbyrequest_p.h \
-    exitstandbyresponse.h \
-    exitstandbyresponse_p.h \
-    expiresessionrequest.h \
-    expiresessionrequest_p.h \
-    expiresessionresponse.h \
-    expiresessionresponse_p.h \
-    exportconfigurationsresponse.h \
-    exportconfigurationsresponse_p.h \
-    flushstageauthorizerscacherequest.h \
-    flushstageauthorizerscacherequest_p.h \
-    flushstageauthorizerscacheresponse.h \
-    flushstageauthorizerscacheresponse_p.h \
-    flushstagecacherequest.h \
-    flushstagecacherequest_p.h \
-    flushstagecacheresponse.h \
-    flushstagecacheresponse_p.h \
-    forgetdevicerequest.h \
-    forgetdevicerequest_p.h \
-    forgetdeviceresponse.h \
-    forgetdeviceresponse_p.h \
-    forgotpasswordrequest.h \
-    forgotpasswordrequest_p.h \
-    forgotpasswordresponse.h \
-    forgotpasswordresponse_p.h \
-    generateclientcertificaterequest.h \
-    generateclientcertificaterequest_p.h \
-    generateclientcertificateresponse.h \
-    generateclientcertificateresponse_p.h \
-    getaccountrequest.h \
-    getaccountrequest_p.h \
-    getaccountresponse.h \
-    getaccountresponse_p.h \
-    getaccountsettingsrequest.h \
-    getaccountsettingsrequest_p.h \
-    getaccountsettingsresponse.h \
-    getaccountsettingsresponse_p.h \
-    getapikeyrequest.h \
-    getapikeyrequest_p.h \
-    getapikeyresponse.h \
-    getapikeyresponse_p.h \
-    getapikeysrequest.h \
-    getapikeysrequest_p.h \
-    getapikeysresponse.h \
-    getapikeysresponse_p.h \
-    getapplicationrequest.h \
-    getapplicationrequest_p.h \
-    getapplicationresponse.h \
-    getapplicationresponse_p.h \
-    getapplicationrevisionrequest.h \
-    getapplicationrevisionrequest_p.h \
-    getapplicationrevisionresponse.h \
-    getapplicationrevisionresponse_p.h \
-    getappliedschemaversionrequest.h \
-    getappliedschemaversionrequest_p.h \
-    getappliedschemaversionresponse.h \
-    getappliedschemaversionresponse_p.h \
-    getauthorizerrequest.h \
-    getauthorizerrequest_p.h \
-    getauthorizerresponse.h \
-    getauthorizerresponse_p.h \
-    getauthorizersrequest.h \
-    getauthorizersrequest_p.h \
-    getauthorizersresponse.h \
-    getauthorizersresponse_p.h \
-    getbasepathmappingrequest.h \
-    getbasepathmappingrequest_p.h \
-    getbasepathmappingresponse.h \
-    getbasepathmappingresponse_p.h \
-    getbasepathmappingsrequest.h \
-    getbasepathmappingsrequest_p.h \
-    getbasepathmappingsresponse.h \
-    getbasepathmappingsresponse_p.h \
-    getblobrequest.h \
-    getblobrequest_p.h \
-    getblobresponse.h \
-    getblobresponse_p.h \
-    getbranchrequest.h \
-    getbranchrequest_p.h \
-    getbranchresponse.h \
-    getbranchresponse_p.h \
-    getbulkpublishdetailsrequest.h \
-    getbulkpublishdetailsrequest_p.h \
-    getbulkpublishdetailsresponse.h \
-    getbulkpublishdetailsresponse_p.h \
-    getcertificaterequest.h \
-    getcertificaterequest_p.h \
-    getcertificateresponse.h \
-    getcertificateresponse_p.h \
-    getclientcertificaterequest.h \
-    getclientcertificaterequest_p.h \
-    getclientcertificateresponse.h \
-    getclientcertificateresponse_p.h \
-    getclientcertificatesrequest.h \
-    getclientcertificatesrequest_p.h \
-    getclientcertificatesresponse.h \
-    getclientcertificatesresponse_p.h \
-    getcloudfrontoriginaccessidentityconfigrequest.h \
-    getcloudfrontoriginaccessidentityconfigrequest_p.h \
-    getcloudfrontoriginaccessidentityconfigresponse.h \
-    getcloudfrontoriginaccessidentityconfigresponse_p.h \
-    getcloudfrontoriginaccessidentityrequest.h \
-    getcloudfrontoriginaccessidentityrequest_p.h \
-    getcloudfrontoriginaccessidentityresponse.h \
-    getcloudfrontoriginaccessidentityresponse_p.h \
-    getcognitoeventsrequest.h \
-    getcognitoeventsrequest_p.h \
-    getcognitoeventsresponse.h \
-    getcognitoeventsresponse_p.h \
-    getcommentrequest.h \
-    getcommentrequest_p.h \
-    getcommentresponse.h \
-    getcommentresponse_p.h \
-    getcommentsforcomparedcommitrequest.h \
-    getcommentsforcomparedcommitrequest_p.h \
-    getcommentsforcomparedcommitresponse.h \
-    getcommentsforcomparedcommitresponse_p.h \
-    getcommentsforpullrequestrequest.h \
-    getcommentsforpullrequestrequest_p.h \
-    getcommentsforpullrequestresponse.h \
-    getcommentsforpullrequestresponse_p.h \
-    getcommitrequest.h \
-    getcommitrequest_p.h \
-    getcommitresponse.h \
-    getcommitresponse_p.h \
-    getcompliancedetailsbyconfigrulerequest.h \
-    getcompliancedetailsbyconfigrulerequest_p.h \
-    getcompliancedetailsbyconfigruleresponse.h \
-    getcompliancedetailsbyconfigruleresponse_p.h \
-    getcompliancedetailsbyresourcerequest.h \
-    getcompliancedetailsbyresourcerequest_p.h \
-    getcompliancedetailsbyresourceresponse.h \
-    getcompliancedetailsbyresourceresponse_p.h \
-    getcompliancesummarybyconfigruleresponse.h \
-    getcompliancesummarybyconfigruleresponse_p.h \
-    getcompliancesummarybyresourcetyperequest.h \
-    getcompliancesummarybyresourcetyperequest_p.h \
-    getcompliancesummarybyresourcetyperesponse.h \
-    getcompliancesummarybyresourcetyperesponse_p.h \
-    getconfigrequest.h \
-    getconfigrequest_p.h \
-    getconfigresponse.h \
-    getconfigresponse_p.h \
     getconsoleoutputrequest.h \
     getconsoleoutputrequest_p.h \
     getconsoleoutputresponse.h \
@@ -3236,530 +808,22 @@ HEADERS += \
     getconsolescreenshotrequest_p.h \
     getconsolescreenshotresponse.h \
     getconsolescreenshotresponse_p.h \
-    getcostandusagerequest.h \
-    getcostandusagerequest_p.h \
-    getcostandusageresponse.h \
-    getcostandusageresponse_p.h \
-    getcredentialsforidentityrequest.h \
-    getcredentialsforidentityrequest_p.h \
-    getcredentialsforidentityresponse.h \
-    getcredentialsforidentityresponse_p.h \
-    getcsvheaderrequest.h \
-    getcsvheaderrequest_p.h \
-    getcsvheaderresponse.h \
-    getcsvheaderresponse_p.h \
-    getdatasourcerequest.h \
-    getdatasourcerequest_p.h \
-    getdatasourceresponse.h \
-    getdatasourceresponse_p.h \
-    getdeploymentconfigrequest.h \
-    getdeploymentconfigrequest_p.h \
-    getdeploymentconfigresponse.h \
-    getdeploymentconfigresponse_p.h \
-    getdeploymentgrouprequest.h \
-    getdeploymentgrouprequest_p.h \
-    getdeploymentgroupresponse.h \
-    getdeploymentgroupresponse_p.h \
-    getdeploymentinstancerequest.h \
-    getdeploymentinstancerequest_p.h \
-    getdeploymentinstanceresponse.h \
-    getdeploymentinstanceresponse_p.h \
-    getdeploymentrequest.h \
-    getdeploymentrequest.h \
-    getdeploymentrequest_p.h \
-    getdeploymentrequest_p.h \
-    getdeploymentresponse.h \
-    getdeploymentresponse.h \
-    getdeploymentresponse_p.h \
-    getdeploymentresponse_p.h \
-    getdeploymentsrequest.h \
-    getdeploymentsrequest_p.h \
-    getdeploymentsresponse.h \
-    getdeploymentsresponse_p.h \
-    getdevicepoolcompatibilityrequest.h \
-    getdevicepoolcompatibilityrequest_p.h \
-    getdevicepoolcompatibilityresponse.h \
-    getdevicepoolcompatibilityresponse_p.h \
-    getdevicepoolrequest.h \
-    getdevicepoolrequest_p.h \
-    getdevicepoolresponse.h \
-    getdevicepoolresponse_p.h \
-    getdevicerequest.h \
-    getdevicerequest.h \
-    getdevicerequest.h \
-    getdevicerequest_p.h \
-    getdevicerequest_p.h \
-    getdevicerequest_p.h \
-    getdeviceresponse.h \
-    getdeviceresponse.h \
-    getdeviceresponse.h \
-    getdeviceresponse_p.h \
-    getdeviceresponse_p.h \
-    getdeviceresponse_p.h \
-    getdifferencesrequest.h \
-    getdifferencesrequest_p.h \
-    getdifferencesresponse.h \
-    getdifferencesresponse_p.h \
-    getdimensionvaluesrequest.h \
-    getdimensionvaluesrequest_p.h \
-    getdimensionvaluesresponse.h \
-    getdimensionvaluesresponse_p.h \
-    getdirectorylimitsrequest.h \
-    getdirectorylimitsrequest_p.h \
-    getdirectorylimitsresponse.h \
-    getdirectorylimitsresponse_p.h \
-    getdirectoryrequest.h \
-    getdirectoryrequest_p.h \
-    getdirectoryresponse.h \
-    getdirectoryresponse_p.h \
-    getdiscoveredresourcecountsrequest.h \
-    getdiscoveredresourcecountsrequest_p.h \
-    getdiscoveredresourcecountsresponse.h \
-    getdiscoveredresourcecountsresponse_p.h \
-    getdiscoverysummaryrequest.h \
-    getdiscoverysummaryrequest_p.h \
-    getdiscoverysummaryresponse.h \
-    getdiscoverysummaryresponse_p.h \
-    getdistributionconfigrequest.h \
-    getdistributionconfigrequest_p.h \
-    getdistributionconfigresponse.h \
-    getdistributionconfigresponse_p.h \
-    getdistributionrequest.h \
-    getdistributionrequest_p.h \
-    getdistributionresponse.h \
-    getdistributionresponse_p.h \
-    getdocumentationpartrequest.h \
-    getdocumentationpartrequest_p.h \
-    getdocumentationpartresponse.h \
-    getdocumentationpartresponse_p.h \
-    getdocumentationpartsrequest.h \
-    getdocumentationpartsrequest_p.h \
-    getdocumentationpartsresponse.h \
-    getdocumentationpartsresponse_p.h \
-    getdocumentationversionrequest.h \
-    getdocumentationversionrequest_p.h \
-    getdocumentationversionresponse.h \
-    getdocumentationversionresponse_p.h \
-    getdocumentationversionsrequest.h \
-    getdocumentationversionsrequest_p.h \
-    getdocumentationversionsresponse.h \
-    getdocumentationversionsresponse_p.h \
-    getdomainnamerequest.h \
-    getdomainnamerequest_p.h \
-    getdomainnameresponse.h \
-    getdomainnameresponse_p.h \
-    getdomainnamesrequest.h \
-    getdomainnamesrequest_p.h \
-    getdomainnamesresponse.h \
-    getdomainnamesresponse_p.h \
-    geteventselectorsrequest.h \
-    geteventselectorsrequest_p.h \
-    geteventselectorsresponse.h \
-    geteventselectorsresponse_p.h \
-    getexportrequest.h \
-    getexportrequest_p.h \
-    getexportresponse.h \
-    getexportresponse_p.h \
-    getfacetrequest.h \
-    getfacetrequest_p.h \
-    getfacetresponse.h \
-    getfacetresponse_p.h \
-    getgatewayresponserequest.h \
-    getgatewayresponserequest_p.h \
-    getgatewayresponseresponse.h \
-    getgatewayresponseresponse_p.h \
-    getgatewayresponsesrequest.h \
-    getgatewayresponsesrequest_p.h \
-    getgatewayresponsesresponse.h \
-    getgatewayresponsesresponse_p.h \
-    getgraphqlapirequest.h \
-    getgraphqlapirequest_p.h \
-    getgraphqlapiresponse.h \
-    getgraphqlapiresponse_p.h \
-    getgrouprequest.h \
-    getgrouprequest_p.h \
-    getgroupresponse.h \
-    getgroupresponse_p.h \
     gethostreservationpurchasepreviewrequest.h \
     gethostreservationpurchasepreviewrequest_p.h \
     gethostreservationpurchasepreviewresponse.h \
     gethostreservationpurchasepreviewresponse_p.h \
-    getidentitypoolconfigurationrequest.h \
-    getidentitypoolconfigurationrequest_p.h \
-    getidentitypoolconfigurationresponse.h \
-    getidentitypoolconfigurationresponse_p.h \
-    getidentitypoolrolesrequest.h \
-    getidentitypoolrolesrequest_p.h \
-    getidentitypoolrolesresponse.h \
-    getidentitypoolrolesresponse_p.h \
-    getidentityproviderbyidentifierrequest.h \
-    getidentityproviderbyidentifierrequest_p.h \
-    getidentityproviderbyidentifierresponse.h \
-    getidentityproviderbyidentifierresponse_p.h \
-    getidrequest.h \
-    getidrequest_p.h \
-    getidresponse.h \
-    getidresponse_p.h \
-    getintegrationrequest.h \
-    getintegrationrequest_p.h \
-    getintegrationresponse.h \
-    getintegrationresponse_p.h \
-    getintegrationresponserequest.h \
-    getintegrationresponserequest_p.h \
-    getintegrationresponseresponse.h \
-    getintegrationresponseresponse_p.h \
-    getintrospectionschemarequest.h \
-    getintrospectionschemarequest_p.h \
-    getintrospectionschemaresponse.h \
-    getintrospectionschemaresponse_p.h \
-    getinvalidationrequest.h \
-    getinvalidationrequest_p.h \
-    getinvalidationresponse.h \
-    getinvalidationresponse_p.h \
-    getitemrequest.h \
-    getitemrequest_p.h \
-    getitemresponse.h \
-    getitemresponse_p.h \
-    getjobdetailsrequest.h \
-    getjobdetailsrequest_p.h \
-    getjobdetailsresponse.h \
-    getjobdetailsresponse_p.h \
-    getjobrequest.h \
-    getjobrequest_p.h \
-    getjobresponse.h \
-    getjobresponse_p.h \
     getlaunchtemplatedatarequest.h \
     getlaunchtemplatedatarequest_p.h \
     getlaunchtemplatedataresponse.h \
     getlaunchtemplatedataresponse_p.h \
-    getmergeconflictsrequest.h \
-    getmergeconflictsrequest_p.h \
-    getmergeconflictsresponse.h \
-    getmergeconflictsresponse_p.h \
-    getmethodrequest.h \
-    getmethodrequest_p.h \
-    getmethodresponse.h \
-    getmethodresponse_p.h \
-    getmethodresponserequest.h \
-    getmethodresponserequest_p.h \
-    getmethodresponseresponse.h \
-    getmethodresponseresponse_p.h \
-    getmodelrequest.h \
-    getmodelrequest_p.h \
-    getmodelresponse.h \
-    getmodelresponse_p.h \
-    getmodelsrequest.h \
-    getmodelsrequest_p.h \
-    getmodelsresponse.h \
-    getmodelsresponse_p.h \
-    getmodeltemplaterequest.h \
-    getmodeltemplaterequest_p.h \
-    getmodeltemplateresponse.h \
-    getmodeltemplateresponse_p.h \
-    getnamedqueryrequest.h \
-    getnamedqueryrequest_p.h \
-    getnamedqueryresponse.h \
-    getnamedqueryresponse_p.h \
-    getnetworkprofilerequest.h \
-    getnetworkprofilerequest_p.h \
-    getnetworkprofileresponse.h \
-    getnetworkprofileresponse_p.h \
-    getobjectinformationrequest.h \
-    getobjectinformationrequest_p.h \
-    getobjectinformationresponse.h \
-    getobjectinformationresponse_p.h \
-    getofferingstatusrequest.h \
-    getofferingstatusrequest_p.h \
-    getofferingstatusresponse.h \
-    getofferingstatusresponse_p.h \
-    getonpremisesinstancerequest.h \
-    getonpremisesinstancerequest_p.h \
-    getonpremisesinstanceresponse.h \
-    getonpremisesinstanceresponse_p.h \
-    getopenidtokenfordeveloperidentityrequest.h \
-    getopenidtokenfordeveloperidentityrequest_p.h \
-    getopenidtokenfordeveloperidentityresponse.h \
-    getopenidtokenfordeveloperidentityresponse_p.h \
-    getopenidtokenrequest.h \
-    getopenidtokenrequest_p.h \
-    getopenidtokenresponse.h \
-    getopenidtokenresponse_p.h \
     getpassworddatarequest.h \
     getpassworddatarequest_p.h \
     getpassworddataresponse.h \
     getpassworddataresponse_p.h \
-    getpipelinedefinitionrequest.h \
-    getpipelinedefinitionrequest_p.h \
-    getpipelinedefinitionresponse.h \
-    getpipelinedefinitionresponse_p.h \
-    getpipelineexecutionrequest.h \
-    getpipelineexecutionrequest_p.h \
-    getpipelineexecutionresponse.h \
-    getpipelineexecutionresponse_p.h \
-    getpipelinerequest.h \
-    getpipelinerequest_p.h \
-    getpipelineresponse.h \
-    getpipelineresponse_p.h \
-    getpipelinestaterequest.h \
-    getpipelinestaterequest_p.h \
-    getpipelinestateresponse.h \
-    getpipelinestateresponse_p.h \
-    getprofilerequest.h \
-    getprofilerequest_p.h \
-    getprofileresponse.h \
-    getprofileresponse_p.h \
-    getprojectrequest.h \
-    getprojectrequest_p.h \
-    getprojectresponse.h \
-    getprojectresponse_p.h \
-    getpullrequestrequest.h \
-    getpullrequestrequest_p.h \
-    getpullrequestresponse.h \
-    getpullrequestresponse_p.h \
-    getqueryexecutionrequest.h \
-    getqueryexecutionrequest_p.h \
-    getqueryexecutionresponse.h \
-    getqueryexecutionresponse_p.h \
-    getqueryresultsrequest.h \
-    getqueryresultsrequest_p.h \
-    getqueryresultsresponse.h \
-    getqueryresultsresponse_p.h \
-    getrecordsrequest.h \
-    getrecordsrequest_p.h \
-    getrecordsresponse.h \
-    getrecordsresponse_p.h \
-    getremoteaccesssessionrequest.h \
-    getremoteaccesssessionrequest_p.h \
-    getremoteaccesssessionresponse.h \
-    getremoteaccesssessionresponse_p.h \
-    getrepositoryrequest.h \
-    getrepositoryrequest_p.h \
-    getrepositoryresponse.h \
-    getrepositoryresponse_p.h \
-    getrepositorytriggersrequest.h \
-    getrepositorytriggersrequest_p.h \
-    getrepositorytriggersresponse.h \
-    getrepositorytriggersresponse_p.h \
-    getrequestvalidatorrequest.h \
-    getrequestvalidatorrequest_p.h \
-    getrequestvalidatorresponse.h \
-    getrequestvalidatorresponse_p.h \
-    getrequestvalidatorsrequest.h \
-    getrequestvalidatorsrequest_p.h \
-    getrequestvalidatorsresponse.h \
-    getrequestvalidatorsresponse_p.h \
-    getreservationcoveragerequest.h \
-    getreservationcoveragerequest_p.h \
-    getreservationcoverageresponse.h \
-    getreservationcoverageresponse_p.h \
-    getreservationutilizationrequest.h \
-    getreservationutilizationrequest_p.h \
-    getreservationutilizationresponse.h \
-    getreservationutilizationresponse_p.h \
     getreservedinstancesexchangequoterequest.h \
     getreservedinstancesexchangequoterequest_p.h \
     getreservedinstancesexchangequoteresponse.h \
     getreservedinstancesexchangequoteresponse_p.h \
-    getresolverrequest.h \
-    getresolverrequest_p.h \
-    getresolverresponse.h \
-    getresolverresponse_p.h \
-    getresourceconfighistoryrequest.h \
-    getresourceconfighistoryrequest_p.h \
-    getresourceconfighistoryresponse.h \
-    getresourceconfighistoryresponse_p.h \
-    getresourcerequest.h \
-    getresourcerequest_p.h \
-    getresourceresponse.h \
-    getresourceresponse_p.h \
-    getresourcesrequest.h \
-    getresourcesrequest_p.h \
-    getresourcesresponse.h \
-    getresourcesresponse_p.h \
-    getrestapirequest.h \
-    getrestapirequest_p.h \
-    getrestapiresponse.h \
-    getrestapiresponse_p.h \
-    getrestapisrequest.h \
-    getrestapisrequest_p.h \
-    getrestapisresponse.h \
-    getrestapisresponse_p.h \
-    getroomrequest.h \
-    getroomrequest_p.h \
-    getroomresponse.h \
-    getroomresponse_p.h \
-    getroomskillparameterrequest.h \
-    getroomskillparameterrequest_p.h \
-    getroomskillparameterresponse.h \
-    getroomskillparameterresponse_p.h \
-    getrunrequest.h \
-    getrunrequest_p.h \
-    getrunresponse.h \
-    getrunresponse_p.h \
-    getschemaasjsonrequest.h \
-    getschemaasjsonrequest_p.h \
-    getschemaasjsonresponse.h \
-    getschemaasjsonresponse_p.h \
-    getschemacreationstatusrequest.h \
-    getschemacreationstatusrequest_p.h \
-    getschemacreationstatusresponse.h \
-    getschemacreationstatusresponse_p.h \
-    getsdkrequest.h \
-    getsdkrequest_p.h \
-    getsdkresponse.h \
-    getsdkresponse_p.h \
-    getsdktyperequest.h \
-    getsdktyperequest_p.h \
-    getsdktyperesponse.h \
-    getsdktyperesponse_p.h \
-    getsdktypesrequest.h \
-    getsdktypesrequest_p.h \
-    getsdktypesresponse.h \
-    getsdktypesresponse_p.h \
-    getsharditeratorrequest.h \
-    getsharditeratorrequest_p.h \
-    getsharditeratorresponse.h \
-    getsharditeratorresponse_p.h \
-    getsigningcertificaterequest.h \
-    getsigningcertificaterequest_p.h \
-    getsigningcertificateresponse.h \
-    getsigningcertificateresponse_p.h \
-    getskillgrouprequest.h \
-    getskillgrouprequest_p.h \
-    getskillgroupresponse.h \
-    getskillgroupresponse_p.h \
-    getsnapshotlimitsrequest.h \
-    getsnapshotlimitsrequest_p.h \
-    getsnapshotlimitsresponse.h \
-    getsnapshotlimitsresponse_p.h \
-    getstackpolicyrequest.h \
-    getstackpolicyrequest_p.h \
-    getstackpolicyresponse.h \
-    getstackpolicyresponse_p.h \
-    getstagerequest.h \
-    getstagerequest_p.h \
-    getstageresponse.h \
-    getstageresponse_p.h \
-    getstagesrequest.h \
-    getstagesrequest_p.h \
-    getstagesresponse.h \
-    getstagesresponse_p.h \
-    getstreamingdistributionconfigrequest.h \
-    getstreamingdistributionconfigrequest_p.h \
-    getstreamingdistributionconfigresponse.h \
-    getstreamingdistributionconfigresponse_p.h \
-    getstreamingdistributionrequest.h \
-    getstreamingdistributionrequest_p.h \
-    getstreamingdistributionresponse.h \
-    getstreamingdistributionresponse_p.h \
-    getsuiterequest.h \
-    getsuiterequest_p.h \
-    getsuiteresponse.h \
-    getsuiteresponse_p.h \
-    gettagsrequest.h \
-    gettagsrequest.h \
-    gettagsrequest_p.h \
-    gettagsrequest_p.h \
-    gettagsresponse.h \
-    gettagsresponse.h \
-    gettagsresponse_p.h \
-    gettagsresponse_p.h \
-    gettemplaterequest.h \
-    gettemplaterequest_p.h \
-    gettemplateresponse.h \
-    gettemplateresponse_p.h \
-    gettemplatesummaryrequest.h \
-    gettemplatesummaryrequest_p.h \
-    gettemplatesummaryresponse.h \
-    gettemplatesummaryresponse_p.h \
-    gettestrequest.h \
-    gettestrequest_p.h \
-    gettestresponse.h \
-    gettestresponse_p.h \
-    getthirdpartyjobdetailsrequest.h \
-    getthirdpartyjobdetailsrequest_p.h \
-    getthirdpartyjobdetailsresponse.h \
-    getthirdpartyjobdetailsresponse_p.h \
-    gettrailstatusrequest.h \
-    gettrailstatusrequest_p.h \
-    gettrailstatusresponse.h \
-    gettrailstatusresponse_p.h \
-    gettypedlinkfacetinformationrequest.h \
-    gettypedlinkfacetinformationrequest_p.h \
-    gettypedlinkfacetinformationresponse.h \
-    gettypedlinkfacetinformationresponse_p.h \
-    gettyperequest.h \
-    gettyperequest_p.h \
-    gettyperesponse.h \
-    gettyperesponse_p.h \
-    getuicustomizationrequest.h \
-    getuicustomizationrequest_p.h \
-    getuicustomizationresponse.h \
-    getuicustomizationresponse_p.h \
-    getuploadrequest.h \
-    getuploadrequest_p.h \
-    getuploadresponse.h \
-    getuploadresponse_p.h \
-    getusageplankeyrequest.h \
-    getusageplankeyrequest_p.h \
-    getusageplankeyresponse.h \
-    getusageplankeyresponse_p.h \
-    getusageplankeysrequest.h \
-    getusageplankeysrequest_p.h \
-    getusageplankeysresponse.h \
-    getusageplankeysresponse_p.h \
-    getusageplanrequest.h \
-    getusageplanrequest_p.h \
-    getusageplanresponse.h \
-    getusageplanresponse_p.h \
-    getusageplansrequest.h \
-    getusageplansrequest_p.h \
-    getusageplansresponse.h \
-    getusageplansresponse_p.h \
-    getusagerequest.h \
-    getusagerequest_p.h \
-    getusageresponse.h \
-    getusageresponse_p.h \
-    getuserattributeverificationcoderequest.h \
-    getuserattributeverificationcoderequest_p.h \
-    getuserattributeverificationcoderesponse.h \
-    getuserattributeverificationcoderesponse_p.h \
-    getuserpoolmfaconfigrequest.h \
-    getuserpoolmfaconfigrequest_p.h \
-    getuserpoolmfaconfigresponse.h \
-    getuserpoolmfaconfigresponse_p.h \
-    getuserrequest.h \
-    getuserrequest_p.h \
-    getuserresponse.h \
-    getuserresponse_p.h \
-    getvpclinkrequest.h \
-    getvpclinkrequest_p.h \
-    getvpclinkresponse.h \
-    getvpclinkresponse_p.h \
-    getvpclinksrequest.h \
-    getvpclinksrequest_p.h \
-    getvpclinksresponse.h \
-    getvpclinksresponse_p.h \
-    globalsignoutrequest.h \
-    globalsignoutrequest_p.h \
-    globalsignoutresponse.h \
-    globalsignoutresponse_p.h \
-    importapikeysrequest.h \
-    importapikeysrequest_p.h \
-    importapikeysresponse.h \
-    importapikeysresponse_p.h \
-    importcertificaterequest.h \
-    importcertificaterequest.h \
-    importcertificaterequest_p.h \
-    importcertificaterequest_p.h \
-    importcertificateresponse.h \
-    importcertificateresponse.h \
-    importcertificateresponse_p.h \
-    importcertificateresponse_p.h \
-    importdocumentationpartsrequest.h \
-    importdocumentationpartsrequest_p.h \
-    importdocumentationpartsresponse.h \
-    importdocumentationpartsresponse_p.h \
     importimagerequest.h \
     importimagerequest_p.h \
     importimageresponse.h \
@@ -3772,14 +836,6 @@ HEADERS += \
     importkeypairrequest_p.h \
     importkeypairresponse.h \
     importkeypairresponse_p.h \
-    importmigrationtaskrequest.h \
-    importmigrationtaskrequest_p.h \
-    importmigrationtaskresponse.h \
-    importmigrationtaskresponse_p.h \
-    importrestapirequest.h \
-    importrestapirequest_p.h \
-    importrestapiresponse.h \
-    importrestapiresponse_p.h \
     importsnapshotrequest.h \
     importsnapshotrequest_p.h \
     importsnapshotresponse.h \
@@ -3788,598 +844,14 @@ HEADERS += \
     importvolumerequest_p.h \
     importvolumeresponse.h \
     importvolumeresponse_p.h \
-    increasereplicationfactorrequest.h \
-    increasereplicationfactorrequest_p.h \
-    increasereplicationfactorresponse.h \
-    increasereplicationfactorresponse_p.h \
-    indexdocumentsrequest.h \
-    indexdocumentsrequest_p.h \
-    indexdocumentsresponse.h \
-    indexdocumentsresponse_p.h \
-    initializeclusterrequest.h \
-    initializeclusterrequest_p.h \
-    initializeclusterresponse.h \
-    initializeclusterresponse_p.h \
-    initiateauthrequest.h \
-    initiateauthrequest_p.h \
-    initiateauthresponse.h \
-    initiateauthresponse_p.h \
-    installtoremoteaccesssessionrequest.h \
-    installtoremoteaccesssessionrequest_p.h \
-    installtoremoteaccesssessionresponse.h \
-    installtoremoteaccesssessionresponse_p.h \
-    invalidateprojectcacherequest.h \
-    invalidateprojectcacherequest_p.h \
-    invalidateprojectcacheresponse.h \
-    invalidateprojectcacheresponse_p.h \
-    listactiontypesrequest.h \
-    listactiontypesrequest_p.h \
-    listactiontypesresponse.h \
-    listactiontypesresponse_p.h \
-    listapikeysrequest.h \
-    listapikeysrequest_p.h \
-    listapikeysresponse.h \
-    listapikeysresponse_p.h \
-    listapplicationrevisionsrequest.h \
-    listapplicationrevisionsrequest_p.h \
-    listapplicationrevisionsresponse.h \
-    listapplicationrevisionsresponse_p.h \
-    listapplicationsrequest.h \
-    listapplicationsrequest_p.h \
-    listapplicationsresponse.h \
-    listapplicationsresponse_p.h \
-    listappliedschemaarnsrequest.h \
-    listappliedschemaarnsrequest_p.h \
-    listappliedschemaarnsresponse.h \
-    listappliedschemaarnsresponse_p.h \
-    listartifactsrequest.h \
-    listartifactsrequest_p.h \
-    listartifactsresponse.h \
-    listartifactsresponse_p.h \
-    listassociatedfleetsrequest.h \
-    listassociatedfleetsrequest_p.h \
-    listassociatedfleetsresponse.h \
-    listassociatedfleetsresponse_p.h \
-    listassociatedstacksrequest.h \
-    listassociatedstacksrequest_p.h \
-    listassociatedstacksresponse.h \
-    listassociatedstacksresponse_p.h \
-    listattachedindicesrequest.h \
-    listattachedindicesrequest_p.h \
-    listattachedindicesresponse.h \
-    listattachedindicesresponse_p.h \
-    listavailablezonesrequest.h \
-    listavailablezonesrequest_p.h \
-    listavailablezonesresponse.h \
-    listavailablezonesresponse_p.h \
-    listbackupsrequest.h \
-    listbackupsrequest_p.h \
-    listbackupsresponse.h \
-    listbackupsresponse_p.h \
-    listbranchesrequest.h \
-    listbranchesrequest_p.h \
-    listbranchesresponse.h \
-    listbranchesresponse_p.h \
-    listbuildsforprojectrequest.h \
-    listbuildsforprojectrequest_p.h \
-    listbuildsforprojectresponse.h \
-    listbuildsforprojectresponse_p.h \
-    listbuildsrequest.h \
-    listbuildsrequest_p.h \
-    listbuildsresponse.h \
-    listbuildsresponse_p.h \
-    listcertificatesrequest.h \
-    listcertificatesrequest_p.h \
-    listcertificatesresponse.h \
-    listcertificatesresponse_p.h \
-    listchangesetsrequest.h \
-    listchangesetsrequest_p.h \
-    listchangesetsresponse.h \
-    listchangesetsresponse_p.h \
-    listcloudfrontoriginaccessidentitiesrequest.h \
-    listcloudfrontoriginaccessidentitiesrequest_p.h \
-    listcloudfrontoriginaccessidentitiesresponse.h \
-    listcloudfrontoriginaccessidentitiesresponse_p.h \
-    listconfigurationsrequest.h \
-    listconfigurationsrequest_p.h \
-    listconfigurationsresponse.h \
-    listconfigurationsresponse_p.h \
-    listcreatedartifactsrequest.h \
-    listcreatedartifactsrequest_p.h \
-    listcreatedartifactsresponse.h \
-    listcreatedartifactsresponse_p.h \
-    listcuratedenvironmentimagesrequest.h \
-    listcuratedenvironmentimagesrequest_p.h \
-    listcuratedenvironmentimagesresponse.h \
-    listcuratedenvironmentimagesresponse_p.h \
-    listdatasetsrequest.h \
-    listdatasetsrequest_p.h \
-    listdatasetsresponse.h \
-    listdatasetsresponse_p.h \
-    listdatasourcesrequest.h \
-    listdatasourcesrequest_p.h \
-    listdatasourcesresponse.h \
-    listdatasourcesresponse_p.h \
-    listdeploymentconfigsrequest.h \
-    listdeploymentconfigsrequest_p.h \
-    listdeploymentconfigsresponse.h \
-    listdeploymentconfigsresponse_p.h \
-    listdeploymentgroupsrequest.h \
-    listdeploymentgroupsrequest_p.h \
-    listdeploymentgroupsresponse.h \
-    listdeploymentgroupsresponse_p.h \
-    listdeploymentinstancesrequest.h \
-    listdeploymentinstancesrequest_p.h \
-    listdeploymentinstancesresponse.h \
-    listdeploymentinstancesresponse_p.h \
-    listdeploymentsrequest.h \
-    listdeploymentsrequest_p.h \
-    listdeploymentsresponse.h \
-    listdeploymentsresponse_p.h \
-    listdevelopmentschemaarnsrequest.h \
-    listdevelopmentschemaarnsrequest_p.h \
-    listdevelopmentschemaarnsresponse.h \
-    listdevelopmentschemaarnsresponse_p.h \
-    listdevicepoolsrequest.h \
-    listdevicepoolsrequest_p.h \
-    listdevicepoolsresponse.h \
-    listdevicepoolsresponse_p.h \
-    listdevicesrequest.h \
-    listdevicesrequest.h \
-    listdevicesrequest_p.h \
-    listdevicesrequest_p.h \
-    listdevicesresponse.h \
-    listdevicesresponse.h \
-    listdevicesresponse_p.h \
-    listdevicesresponse_p.h \
-    listdirectoriesrequest.h \
-    listdirectoriesrequest_p.h \
-    listdirectoriesresponse.h \
-    listdirectoriesresponse_p.h \
-    listdiscoveredresourcesrequest.h \
-    listdiscoveredresourcesrequest.h \
-    listdiscoveredresourcesrequest_p.h \
-    listdiscoveredresourcesrequest_p.h \
-    listdiscoveredresourcesresponse.h \
-    listdiscoveredresourcesresponse.h \
-    listdiscoveredresourcesresponse_p.h \
-    listdiscoveredresourcesresponse_p.h \
-    listdistributionsbywebaclidrequest.h \
-    listdistributionsbywebaclidrequest_p.h \
-    listdistributionsbywebaclidresponse.h \
-    listdistributionsbywebaclidresponse_p.h \
-    listdistributionsrequest.h \
-    listdistributionsrequest_p.h \
-    listdistributionsresponse.h \
-    listdistributionsresponse_p.h \
-    listdomainnamesresponse.h \
-    listdomainnamesresponse_p.h \
-    listenvironmentsrequest.h \
-    listenvironmentsrequest_p.h \
-    listenvironmentsresponse.h \
-    listenvironmentsresponse_p.h \
-    listexportsrequest.h \
-    listexportsrequest_p.h \
-    listexportsresponse.h \
-    listexportsresponse_p.h \
-    listfacetattributesrequest.h \
-    listfacetattributesrequest_p.h \
-    listfacetattributesresponse.h \
-    listfacetattributesresponse_p.h \
-    listfacetnamesrequest.h \
-    listfacetnamesrequest_p.h \
-    listfacetnamesresponse.h \
-    listfacetnamesresponse_p.h \
-    listgithubaccounttokennamesrequest.h \
-    listgithubaccounttokennamesrequest_p.h \
-    listgithubaccounttokennamesresponse.h \
-    listgithubaccounttokennamesresponse_p.h \
-    listglobaltablesrequest.h \
-    listglobaltablesrequest_p.h \
-    listglobaltablesresponse.h \
-    listglobaltablesresponse_p.h \
-    listgraphqlapisrequest.h \
-    listgraphqlapisrequest_p.h \
-    listgraphqlapisresponse.h \
-    listgraphqlapisresponse_p.h \
-    listgroupsrequest.h \
-    listgroupsrequest_p.h \
-    listgroupsresponse.h \
-    listgroupsresponse_p.h \
-    listhapgsrequest.h \
-    listhapgsrequest_p.h \
-    listhapgsresponse.h \
-    listhapgsresponse_p.h \
-    listhsmsrequest.h \
-    listhsmsrequest_p.h \
-    listhsmsresponse.h \
-    listhsmsresponse_p.h \
-    listidentitiesrequest.h \
-    listidentitiesrequest_p.h \
-    listidentitiesresponse.h \
-    listidentitiesresponse_p.h \
-    listidentitypoolsrequest.h \
-    listidentitypoolsrequest_p.h \
-    listidentitypoolsresponse.h \
-    listidentitypoolsresponse_p.h \
-    listidentitypoolusagerequest.h \
-    listidentitypoolusagerequest_p.h \
-    listidentitypoolusageresponse.h \
-    listidentitypoolusageresponse_p.h \
-    listidentityprovidersrequest.h \
-    listidentityprovidersrequest_p.h \
-    listidentityprovidersresponse.h \
-    listidentityprovidersresponse_p.h \
-    listimportsrequest.h \
-    listimportsrequest_p.h \
-    listimportsresponse.h \
-    listimportsresponse_p.h \
-    listincomingtypedlinksrequest.h \
-    listincomingtypedlinksrequest_p.h \
-    listincomingtypedlinksresponse.h \
-    listincomingtypedlinksresponse_p.h \
-    listindexrequest.h \
-    listindexrequest_p.h \
-    listindexresponse.h \
-    listindexresponse_p.h \
-    listinvalidationsrequest.h \
-    listinvalidationsrequest_p.h \
-    listinvalidationsresponse.h \
-    listinvalidationsresponse_p.h \
-    listiproutesrequest.h \
-    listiproutesrequest_p.h \
-    listiproutesresponse.h \
-    listiproutesresponse_p.h \
-    listjobsrequest.h \
-    listjobsrequest.h \
-    listjobsrequest_p.h \
-    listjobsrequest_p.h \
-    listjobsresponse.h \
-    listjobsresponse.h \
-    listjobsresponse_p.h \
-    listjobsresponse_p.h \
-    listlunaclientsrequest.h \
-    listlunaclientsrequest_p.h \
-    listlunaclientsresponse.h \
-    listlunaclientsresponse_p.h \
-    listmigrationtasksrequest.h \
-    listmigrationtasksrequest_p.h \
-    listmigrationtasksresponse.h \
-    listmigrationtasksresponse_p.h \
-    listnamedqueriesrequest.h \
-    listnamedqueriesrequest_p.h \
-    listnamedqueriesresponse.h \
-    listnamedqueriesresponse_p.h \
-    listnetworkprofilesrequest.h \
-    listnetworkprofilesrequest_p.h \
-    listnetworkprofilesresponse.h \
-    listnetworkprofilesresponse_p.h \
-    listobjectattributesrequest.h \
-    listobjectattributesrequest_p.h \
-    listobjectattributesresponse.h \
-    listobjectattributesresponse_p.h \
-    listobjectchildrenrequest.h \
-    listobjectchildrenrequest_p.h \
-    listobjectchildrenresponse.h \
-    listobjectchildrenresponse_p.h \
-    listobjectparentpathsrequest.h \
-    listobjectparentpathsrequest_p.h \
-    listobjectparentpathsresponse.h \
-    listobjectparentpathsresponse_p.h \
-    listobjectparentsrequest.h \
-    listobjectparentsrequest_p.h \
-    listobjectparentsresponse.h \
-    listobjectparentsresponse_p.h \
-    listobjectpoliciesrequest.h \
-    listobjectpoliciesrequest_p.h \
-    listobjectpoliciesresponse.h \
-    listobjectpoliciesresponse_p.h \
-    listofferingpromotionsrequest.h \
-    listofferingpromotionsrequest_p.h \
-    listofferingpromotionsresponse.h \
-    listofferingpromotionsresponse_p.h \
-    listofferingsrequest.h \
-    listofferingsrequest_p.h \
-    listofferingsresponse.h \
-    listofferingsresponse_p.h \
-    listofferingtransactionsrequest.h \
-    listofferingtransactionsrequest_p.h \
-    listofferingtransactionsresponse.h \
-    listofferingtransactionsresponse_p.h \
-    listonpremisesinstancesrequest.h \
-    listonpremisesinstancesrequest_p.h \
-    listonpremisesinstancesresponse.h \
-    listonpremisesinstancesresponse_p.h \
-    listoutgoingtypedlinksrequest.h \
-    listoutgoingtypedlinksrequest_p.h \
-    listoutgoingtypedlinksresponse.h \
-    listoutgoingtypedlinksresponse_p.h \
-    listpipelineexecutionsrequest.h \
-    listpipelineexecutionsrequest_p.h \
-    listpipelineexecutionsresponse.h \
-    listpipelineexecutionsresponse_p.h \
-    listpipelinesrequest.h \
-    listpipelinesrequest.h \
-    listpipelinesrequest_p.h \
-    listpipelinesrequest_p.h \
-    listpipelinesresponse.h \
-    listpipelinesresponse.h \
-    listpipelinesresponse_p.h \
-    listpipelinesresponse_p.h \
-    listpolicyattachmentsrequest.h \
-    listpolicyattachmentsrequest_p.h \
-    listpolicyattachmentsresponse.h \
-    listpolicyattachmentsresponse_p.h \
-    listprogressupdatestreamsrequest.h \
-    listprogressupdatestreamsrequest_p.h \
-    listprogressupdatestreamsresponse.h \
-    listprogressupdatestreamsresponse_p.h \
-    listprojectsrequest.h \
-    listprojectsrequest.h \
-    listprojectsrequest.h \
-    listprojectsrequest_p.h \
-    listprojectsrequest_p.h \
-    listprojectsrequest_p.h \
-    listprojectsresponse.h \
-    listprojectsresponse.h \
-    listprojectsresponse.h \
-    listprojectsresponse_p.h \
-    listprojectsresponse_p.h \
-    listprojectsresponse_p.h \
-    listpublickeysrequest.h \
-    listpublickeysrequest_p.h \
-    listpublickeysresponse.h \
-    listpublickeysresponse_p.h \
-    listpublishedschemaarnsrequest.h \
-    listpublishedschemaarnsrequest_p.h \
-    listpublishedschemaarnsresponse.h \
-    listpublishedschemaarnsresponse_p.h \
-    listpullrequestsrequest.h \
-    listpullrequestsrequest_p.h \
-    listpullrequestsresponse.h \
-    listpullrequestsresponse_p.h \
-    listqueryexecutionsrequest.h \
-    listqueryexecutionsrequest_p.h \
-    listqueryexecutionsresponse.h \
-    listqueryexecutionsresponse_p.h \
-    listrecordsrequest.h \
-    listrecordsrequest_p.h \
-    listrecordsresponse.h \
-    listrecordsresponse_p.h \
-    listremoteaccesssessionsrequest.h \
-    listremoteaccesssessionsrequest_p.h \
-    listremoteaccesssessionsresponse.h \
-    listremoteaccesssessionsresponse_p.h \
-    listrepositoriesrequest.h \
-    listrepositoriesrequest_p.h \
-    listrepositoriesresponse.h \
-    listrepositoriesresponse_p.h \
-    listresolversrequest.h \
-    listresolversrequest_p.h \
-    listresolversresponse.h \
-    listresolversresponse_p.h \
-    listresourceserversrequest.h \
-    listresourceserversrequest_p.h \
-    listresourceserversresponse.h \
-    listresourceserversresponse_p.h \
-    listresourcesrequest.h \
-    listresourcesrequest_p.h \
-    listresourcesresponse.h \
-    listresourcesresponse_p.h \
-    listrunsrequest.h \
-    listrunsrequest_p.h \
-    listrunsresponse.h \
-    listrunsresponse_p.h \
-    listsamplesrequest.h \
-    listsamplesrequest_p.h \
-    listsamplesresponse.h \
-    listsamplesresponse_p.h \
-    listschemaextensionsrequest.h \
-    listschemaextensionsrequest_p.h \
-    listschemaextensionsresponse.h \
-    listschemaextensionsresponse_p.h \
-    listserverneighborsrequest.h \
-    listserverneighborsrequest_p.h \
-    listserverneighborsresponse.h \
-    listserverneighborsresponse_p.h \
-    listskillsrequest.h \
-    listskillsrequest_p.h \
-    listskillsresponse.h \
-    listskillsresponse_p.h \
-    liststackinstancesrequest.h \
-    liststackinstancesrequest_p.h \
-    liststackinstancesresponse.h \
-    liststackinstancesresponse_p.h \
-    liststackresourcesrequest.h \
-    liststackresourcesrequest_p.h \
-    liststackresourcesresponse.h \
-    liststackresourcesresponse_p.h \
-    liststacksetoperationresultsrequest.h \
-    liststacksetoperationresultsrequest_p.h \
-    liststacksetoperationresultsresponse.h \
-    liststacksetoperationresultsresponse_p.h \
-    liststacksetoperationsrequest.h \
-    liststacksetoperationsrequest_p.h \
-    liststacksetoperationsresponse.h \
-    liststacksetoperationsresponse_p.h \
-    liststacksetsrequest.h \
-    liststacksetsrequest_p.h \
-    liststacksetsresponse.h \
-    liststacksetsresponse_p.h \
-    liststacksrequest.h \
-    liststacksrequest_p.h \
-    liststacksresponse.h \
-    liststacksresponse_p.h \
-    liststreamingdistributionsrequest.h \
-    liststreamingdistributionsrequest_p.h \
-    liststreamingdistributionsresponse.h \
-    liststreamingdistributionsresponse_p.h \
-    liststreamsrequest.h \
-    liststreamsrequest_p.h \
-    liststreamsresponse.h \
-    liststreamsresponse_p.h \
-    listsuitesrequest.h \
-    listsuitesrequest_p.h \
-    listsuitesresponse.h \
-    listsuitesresponse_p.h \
-    listtablesrequest.h \
-    listtablesrequest_p.h \
-    listtablesresponse.h \
-    listtablesresponse_p.h \
-    listtagsforcertificaterequest.h \
-    listtagsforcertificaterequest_p.h \
-    listtagsforcertificateresponse.h \
-    listtagsforcertificateresponse_p.h \
-    listtagsforprojectrequest.h \
-    listtagsforprojectrequest_p.h \
-    listtagsforprojectresponse.h \
-    listtagsforprojectresponse_p.h \
-    listtagsforresourcerequest.h \
-    listtagsforresourcerequest.h \
-    listtagsforresourcerequest.h \
-    listtagsforresourcerequest.h \
-    listtagsforresourcerequest.h \
-    listtagsforresourcerequest.h \
-    listtagsforresourcerequest_p.h \
-    listtagsforresourcerequest_p.h \
-    listtagsforresourcerequest_p.h \
-    listtagsforresourcerequest_p.h \
-    listtagsforresourcerequest_p.h \
-    listtagsforresourcerequest_p.h \
-    listtagsforresourceresponse.h \
-    listtagsforresourceresponse.h \
-    listtagsforresourceresponse.h \
-    listtagsforresourceresponse.h \
-    listtagsforresourceresponse.h \
-    listtagsforresourceresponse.h \
-    listtagsforresourceresponse_p.h \
-    listtagsforresourceresponse_p.h \
-    listtagsforresourceresponse_p.h \
-    listtagsforresourceresponse_p.h \
-    listtagsforresourceresponse_p.h \
-    listtagsforresourceresponse_p.h \
-    listtagsofresourcerequest.h \
-    listtagsofresourcerequest_p.h \
-    listtagsofresourceresponse.h \
-    listtagsofresourceresponse_p.h \
-    listtagsrequest.h \
-    listtagsrequest.h \
-    listtagsrequest.h \
-    listtagsrequest.h \
-    listtagsrequest_p.h \
-    listtagsrequest_p.h \
-    listtagsrequest_p.h \
-    listtagsrequest_p.h \
-    listtagsresponse.h \
-    listtagsresponse.h \
-    listtagsresponse.h \
-    listtagsresponse.h \
-    listtagsresponse_p.h \
-    listtagsresponse_p.h \
-    listtagsresponse_p.h \
-    listtagsresponse_p.h \
-    listteammembersrequest.h \
-    listteammembersrequest_p.h \
-    listteammembersresponse.h \
-    listteammembersresponse_p.h \
-    listtestsrequest.h \
-    listtestsrequest_p.h \
-    listtestsresponse.h \
-    listtestsresponse_p.h \
-    listtopicsdetectionjobsrequest.h \
-    listtopicsdetectionjobsrequest_p.h \
-    listtopicsdetectionjobsresponse.h \
-    listtopicsdetectionjobsresponse_p.h \
-    listtypedlinkfacetattributesrequest.h \
-    listtypedlinkfacetattributesrequest_p.h \
-    listtypedlinkfacetattributesresponse.h \
-    listtypedlinkfacetattributesresponse_p.h \
-    listtypedlinkfacetnamesrequest.h \
-    listtypedlinkfacetnamesrequest_p.h \
-    listtypedlinkfacetnamesresponse.h \
-    listtypedlinkfacetnamesresponse_p.h \
-    listtypesrequest.h \
-    listtypesrequest_p.h \
-    listtypesresponse.h \
-    listtypesresponse_p.h \
-    listuniqueproblemsrequest.h \
-    listuniqueproblemsrequest_p.h \
-    listuniqueproblemsresponse.h \
-    listuniqueproblemsresponse_p.h \
-    listuploadsrequest.h \
-    listuploadsrequest_p.h \
-    listuploadsresponse.h \
-    listuploadsresponse_p.h \
-    listuserimportjobsrequest.h \
-    listuserimportjobsrequest_p.h \
-    listuserimportjobsresponse.h \
-    listuserimportjobsresponse_p.h \
-    listuserpoolclientsrequest.h \
-    listuserpoolclientsrequest_p.h \
-    listuserpoolclientsresponse.h \
-    listuserpoolclientsresponse_p.h \
-    listuserpoolsrequest.h \
-    listuserpoolsrequest_p.h \
-    listuserpoolsresponse.h \
-    listuserpoolsresponse_p.h \
-    listuserprofilesrequest.h \
-    listuserprofilesrequest_p.h \
-    listuserprofilesresponse.h \
-    listuserprofilesresponse_p.h \
-    listusersingrouprequest.h \
-    listusersingrouprequest_p.h \
-    listusersingroupresponse.h \
-    listusersingroupresponse_p.h \
-    listusersrequest.h \
-    listusersrequest_p.h \
-    listusersresponse.h \
-    listusersresponse_p.h \
-    lookupdeveloperidentityrequest.h \
-    lookupdeveloperidentityrequest_p.h \
-    lookupdeveloperidentityresponse.h \
-    lookupdeveloperidentityresponse_p.h \
-    lookupeventsrequest.h \
-    lookupeventsrequest_p.h \
-    lookupeventsresponse.h \
-    lookupeventsresponse_p.h \
-    lookuppolicyrequest.h \
-    lookuppolicyrequest_p.h \
-    lookuppolicyresponse.h \
-    lookuppolicyresponse_p.h \
-    mergedeveloperidentitiesrequest.h \
-    mergedeveloperidentitiesrequest_p.h \
-    mergedeveloperidentitiesresponse.h \
-    mergedeveloperidentitiesresponse_p.h \
-    mergepullrequestbyfastforwardrequest.h \
-    mergepullrequestbyfastforwardrequest_p.h \
-    mergepullrequestbyfastforwardresponse.h \
-    mergepullrequestbyfastforwardresponse_p.h \
-    migrationhubclient.h \
-    migrationhubclient_p.h \
-    modifyendpointrequest.h \
-    modifyendpointrequest_p.h \
-    modifyendpointresponse.h \
-    modifyendpointresponse_p.h \
-    modifyeventsubscriptionrequest.h \
-    modifyeventsubscriptionrequest_p.h \
-    modifyeventsubscriptionresponse.h \
-    modifyeventsubscriptionresponse_p.h \
     modifyfpgaimageattributerequest.h \
     modifyfpgaimageattributerequest_p.h \
     modifyfpgaimageattributeresponse.h \
     modifyfpgaimageattributeresponse_p.h \
-    modifyhapgrequest.h \
-    modifyhapgrequest_p.h \
-    modifyhapgresponse.h \
-    modifyhapgresponse_p.h \
     modifyhostsrequest.h \
     modifyhostsrequest_p.h \
     modifyhostsresponse.h \
     modifyhostsresponse_p.h \
-    modifyhsmrequest.h \
-    modifyhsmrequest_p.h \
-    modifyhsmresponse.h \
-    modifyhsmresponse_p.h \
     modifyidentityidformatrequest.h \
     modifyidentityidformatrequest_p.h \
     modifyidentityidformatresponse.h \
@@ -4408,26 +880,10 @@ HEADERS += \
     modifylaunchtemplaterequest_p.h \
     modifylaunchtemplateresponse.h \
     modifylaunchtemplateresponse_p.h \
-    modifylunaclientrequest.h \
-    modifylunaclientrequest_p.h \
-    modifylunaclientresponse.h \
-    modifylunaclientresponse_p.h \
     modifynetworkinterfaceattributerequest.h \
     modifynetworkinterfaceattributerequest_p.h \
     modifynetworkinterfaceattributeresponse.h \
     modifynetworkinterfaceattributeresponse_p.h \
-    modifyreplicationinstancerequest.h \
-    modifyreplicationinstancerequest_p.h \
-    modifyreplicationinstanceresponse.h \
-    modifyreplicationinstanceresponse_p.h \
-    modifyreplicationsubnetgrouprequest.h \
-    modifyreplicationsubnetgrouprequest_p.h \
-    modifyreplicationsubnetgroupresponse.h \
-    modifyreplicationsubnetgroupresponse_p.h \
-    modifyreplicationtaskrequest.h \
-    modifyreplicationtaskrequest_p.h \
-    modifyreplicationtaskresponse.h \
-    modifyreplicationtaskresponse_p.h \
     modifyreservedinstancesrequest.h \
     modifyreservedinstancesrequest_p.h \
     modifyreservedinstancesresponse.h \
@@ -4488,50 +944,10 @@ HEADERS += \
     moveaddresstovpcrequest_p.h \
     moveaddresstovpcresponse.h \
     moveaddresstovpcresponse_p.h \
-    notifyapplicationstaterequest.h \
-    notifyapplicationstaterequest_p.h \
-    notifyapplicationstateresponse.h \
-    notifyapplicationstateresponse_p.h \
-    notifymigrationtaskstaterequest.h \
-    notifymigrationtaskstaterequest_p.h \
-    notifymigrationtaskstateresponse.h \
-    notifymigrationtaskstateresponse_p.h \
-    pollforjobsrequest.h \
-    pollforjobsrequest_p.h \
-    pollforjobsresponse.h \
-    pollforjobsresponse_p.h \
-    pollfortaskrequest.h \
-    pollfortaskrequest_p.h \
-    pollfortaskresponse.h \
-    pollfortaskresponse_p.h \
-    pollforthirdpartyjobsrequest.h \
-    pollforthirdpartyjobsrequest_p.h \
-    pollforthirdpartyjobsresponse.h \
-    pollforthirdpartyjobsresponse_p.h \
-    postcommentforcomparedcommitrequest.h \
-    postcommentforcomparedcommitrequest_p.h \
-    postcommentforcomparedcommitresponse.h \
-    postcommentforcomparedcommitresponse_p.h \
-    postcommentforpullrequestrequest.h \
-    postcommentforpullrequestrequest_p.h \
-    postcommentforpullrequestresponse.h \
-    postcommentforpullrequestresponse_p.h \
-    postcommentreplyrequest.h \
-    postcommentreplyrequest_p.h \
-    postcommentreplyresponse.h \
-    postcommentreplyresponse_p.h \
-    publishschemarequest.h \
-    publishschemarequest_p.h \
-    publishschemaresponse.h \
-    publishschemaresponse_p.h \
     purchasehostreservationrequest.h \
     purchasehostreservationrequest_p.h \
     purchasehostreservationresponse.h \
     purchasehostreservationresponse_p.h \
-    purchaseofferingrequest.h \
-    purchaseofferingrequest_p.h \
-    purchaseofferingresponse.h \
-    purchaseofferingresponse_p.h \
     purchasereservedinstancesofferingrequest.h \
     purchasereservedinstancesofferingrequest_p.h \
     purchasereservedinstancesofferingresponse.h \
@@ -4540,190 +956,14 @@ HEADERS += \
     purchasescheduledinstancesrequest_p.h \
     purchasescheduledinstancesresponse.h \
     purchasescheduledinstancesresponse_p.h \
-    putactionrevisionrequest.h \
-    putactionrevisionrequest_p.h \
-    putactionrevisionresponse.h \
-    putactionrevisionresponse_p.h \
-    putapprovalresultrequest.h \
-    putapprovalresultrequest_p.h \
-    putapprovalresultresponse.h \
-    putapprovalresultresponse_p.h \
-    putconfigrulerequest.h \
-    putconfigrulerequest_p.h \
-    putconfigruleresponse.h \
-    putconfigruleresponse_p.h \
-    putconfigurationrecorderrequest.h \
-    putconfigurationrecorderrequest_p.h \
-    putconfigurationrecorderresponse.h \
-    putconfigurationrecorderresponse_p.h \
-    putdeliverychannelrequest.h \
-    putdeliverychannelrequest_p.h \
-    putdeliverychannelresponse.h \
-    putdeliverychannelresponse_p.h \
-    putevaluationsrequest.h \
-    putevaluationsrequest_p.h \
-    putevaluationsresponse.h \
-    putevaluationsresponse_p.h \
-    puteventselectorsrequest.h \
-    puteventselectorsrequest_p.h \
-    puteventselectorsresponse.h \
-    puteventselectorsresponse_p.h \
-    putfilerequest.h \
-    putfilerequest_p.h \
-    putfileresponse.h \
-    putfileresponse_p.h \
-    putgatewayresponserequest.h \
-    putgatewayresponserequest_p.h \
-    putgatewayresponseresponse.h \
-    putgatewayresponseresponse_p.h \
-    putintegrationrequest.h \
-    putintegrationrequest_p.h \
-    putintegrationresponse.h \
-    putintegrationresponse_p.h \
-    putintegrationresponserequest.h \
-    putintegrationresponserequest_p.h \
-    putintegrationresponseresponse.h \
-    putintegrationresponseresponse_p.h \
-    putitemrequest.h \
-    putitemrequest_p.h \
-    putitemresponse.h \
-    putitemresponse_p.h \
-    putjobfailureresultrequest.h \
-    putjobfailureresultrequest_p.h \
-    putjobfailureresultresponse.h \
-    putjobfailureresultresponse_p.h \
-    putjobsuccessresultrequest.h \
-    putjobsuccessresultrequest_p.h \
-    putjobsuccessresultresponse.h \
-    putjobsuccessresultresponse_p.h \
-    putlifecycleeventhookexecutionstatusrequest.h \
-    putlifecycleeventhookexecutionstatusrequest_p.h \
-    putlifecycleeventhookexecutionstatusresponse.h \
-    putlifecycleeventhookexecutionstatusresponse_p.h \
-    putlifecyclehookrequest.h \
-    putlifecyclehookrequest_p.h \
-    putlifecyclehookresponse.h \
-    putlifecyclehookresponse_p.h \
-    putmethodrequest.h \
-    putmethodrequest_p.h \
-    putmethodresponse.h \
-    putmethodresponse_p.h \
-    putmethodresponserequest.h \
-    putmethodresponserequest_p.h \
-    putmethodresponseresponse.h \
-    putmethodresponseresponse_p.h \
-    putnotificationconfigurationrequest.h \
-    putnotificationconfigurationrequest_p.h \
-    putnotificationconfigurationresponse.h \
-    putnotificationconfigurationresponse_p.h \
-    putpipelinedefinitionrequest.h \
-    putpipelinedefinitionrequest_p.h \
-    putpipelinedefinitionresponse.h \
-    putpipelinedefinitionresponse_p.h \
-    putreportdefinitionrequest.h \
-    putreportdefinitionrequest_p.h \
-    putreportdefinitionresponse.h \
-    putreportdefinitionresponse_p.h \
-    putrepositorytriggersrequest.h \
-    putrepositorytriggersrequest_p.h \
-    putrepositorytriggersresponse.h \
-    putrepositorytriggersresponse_p.h \
-    putresourceattributesrequest.h \
-    putresourceattributesrequest_p.h \
-    putresourceattributesresponse.h \
-    putresourceattributesresponse_p.h \
-    putrestapirequest.h \
-    putrestapirequest_p.h \
-    putrestapiresponse.h \
-    putrestapiresponse_p.h \
-    putroomskillparameterrequest.h \
-    putroomskillparameterrequest_p.h \
-    putroomskillparameterresponse.h \
-    putroomskillparameterresponse_p.h \
-    putscalingpolicyrequest.h \
-    putscalingpolicyrequest.h \
-    putscalingpolicyrequest_p.h \
-    putscalingpolicyrequest_p.h \
-    putscalingpolicyresponse.h \
-    putscalingpolicyresponse.h \
-    putscalingpolicyresponse_p.h \
-    putscalingpolicyresponse_p.h \
-    putscheduledactionrequest.h \
-    putscheduledactionrequest_p.h \
-    putscheduledactionresponse.h \
-    putscheduledactionresponse_p.h \
-    putscheduledupdategroupactionrequest.h \
-    putscheduledupdategroupactionrequest_p.h \
-    putscheduledupdategroupactionresponse.h \
-    putscheduledupdategroupactionresponse_p.h \
-    putschemafromjsonrequest.h \
-    putschemafromjsonrequest_p.h \
-    putschemafromjsonresponse.h \
-    putschemafromjsonresponse_p.h \
-    putthirdpartyjobfailureresultrequest.h \
-    putthirdpartyjobfailureresultrequest_p.h \
-    putthirdpartyjobfailureresultresponse.h \
-    putthirdpartyjobfailureresultresponse_p.h \
-    putthirdpartyjobsuccessresultrequest.h \
-    putthirdpartyjobsuccessresultrequest_p.h \
-    putthirdpartyjobsuccessresultresponse.h \
-    putthirdpartyjobsuccessresultresponse_p.h \
-    queryobjectsrequest.h \
-    queryobjectsrequest_p.h \
-    queryobjectsresponse.h \
-    queryobjectsresponse_p.h \
-    queryrequest.h \
-    queryrequest_p.h \
-    queryresponse.h \
-    queryresponse_p.h \
     rebootinstancesrequest.h \
     rebootinstancesrequest_p.h \
     rebootinstancesresponse.h \
     rebootinstancesresponse_p.h \
-    rebootnoderequest.h \
-    rebootnoderequest_p.h \
-    rebootnoderesponse.h \
-    rebootnoderesponse_p.h \
-    rebootreplicationinstancerequest.h \
-    rebootreplicationinstancerequest_p.h \
-    rebootreplicationinstanceresponse.h \
-    rebootreplicationinstanceresponse_p.h \
-    recordlifecycleactionheartbeatrequest.h \
-    recordlifecycleactionheartbeatrequest_p.h \
-    recordlifecycleactionheartbeatresponse.h \
-    recordlifecycleactionheartbeatresponse_p.h \
-    refreshschemasrequest.h \
-    refreshschemasrequest_p.h \
-    refreshschemasresponse.h \
-    refreshschemasresponse_p.h \
-    registerapplicationrevisionrequest.h \
-    registerapplicationrevisionrequest_p.h \
-    registerapplicationrevisionresponse.h \
-    registerapplicationrevisionresponse_p.h \
-    registerdevicerequest.h \
-    registerdevicerequest_p.h \
-    registerdeviceresponse.h \
-    registerdeviceresponse_p.h \
-    registereventtopicrequest.h \
-    registereventtopicrequest_p.h \
-    registereventtopicresponse.h \
-    registereventtopicresponse_p.h \
     registerimagerequest.h \
     registerimagerequest_p.h \
     registerimageresponse.h \
     registerimageresponse_p.h \
-    registerjobdefinitionrequest.h \
-    registerjobdefinitionrequest_p.h \
-    registerjobdefinitionresponse.h \
-    registerjobdefinitionresponse_p.h \
-    registeronpremisesinstancerequest.h \
-    registeronpremisesinstancerequest_p.h \
-    registeronpremisesinstanceresponse.h \
-    registeronpremisesinstanceresponse_p.h \
-    registerscalabletargetrequest.h \
-    registerscalabletargetrequest_p.h \
-    registerscalabletargetresponse.h \
-    registerscalabletargetresponse_p.h \
     rejectvpcendpointconnectionsrequest.h \
     rejectvpcendpointconnectionsrequest_p.h \
     rejectvpcendpointconnectionsresponse.h \
@@ -4740,50 +980,6 @@ HEADERS += \
     releasehostsrequest_p.h \
     releasehostsresponse.h \
     releasehostsresponse_p.h \
-    reloadtablesrequest.h \
-    reloadtablesrequest_p.h \
-    reloadtablesresponse.h \
-    reloadtablesresponse_p.h \
-    removefacetfromobjectrequest.h \
-    removefacetfromobjectrequest_p.h \
-    removefacetfromobjectresponse.h \
-    removefacetfromobjectresponse_p.h \
-    removeiproutesrequest.h \
-    removeiproutesrequest_p.h \
-    removeiproutesresponse.h \
-    removeiproutesresponse_p.h \
-    removetagsfromcertificaterequest.h \
-    removetagsfromcertificaterequest_p.h \
-    removetagsfromcertificateresponse.h \
-    removetagsfromcertificateresponse_p.h \
-    removetagsfromonpremisesinstancesrequest.h \
-    removetagsfromonpremisesinstancesrequest_p.h \
-    removetagsfromonpremisesinstancesresponse.h \
-    removetagsfromonpremisesinstancesresponse_p.h \
-    removetagsfromresourcerequest.h \
-    removetagsfromresourcerequest.h \
-    removetagsfromresourcerequest.h \
-    removetagsfromresourcerequest_p.h \
-    removetagsfromresourcerequest_p.h \
-    removetagsfromresourcerequest_p.h \
-    removetagsfromresourceresponse.h \
-    removetagsfromresourceresponse.h \
-    removetagsfromresourceresponse.h \
-    removetagsfromresourceresponse_p.h \
-    removetagsfromresourceresponse_p.h \
-    removetagsfromresourceresponse_p.h \
-    removetagsrequest.h \
-    removetagsrequest.h \
-    removetagsrequest_p.h \
-    removetagsrequest_p.h \
-    removetagsresponse.h \
-    removetagsresponse.h \
-    removetagsresponse_p.h \
-    removetagsresponse_p.h \
-    renewofferingrequest.h \
-    renewofferingrequest_p.h \
-    renewofferingresponse.h \
-    renewofferingresponse_p.h \
     replaceiaminstanceprofileassociationrequest.h \
     replaceiaminstanceprofileassociationrequest_p.h \
     replaceiaminstanceprofileassociationresponse.h \
@@ -4808,18 +1004,6 @@ HEADERS += \
     reportinstancestatusrequest_p.h \
     reportinstancestatusresponse.h \
     reportinstancestatusresponse_p.h \
-    reporttaskprogressrequest.h \
-    reporttaskprogressrequest_p.h \
-    reporttaskprogressresponse.h \
-    reporttaskprogressresponse_p.h \
-    reporttaskrunnerheartbeatrequest.h \
-    reporttaskrunnerheartbeatrequest_p.h \
-    reporttaskrunnerheartbeatresponse.h \
-    reporttaskrunnerheartbeatresponse_p.h \
-    requestcertificaterequest.h \
-    requestcertificaterequest_p.h \
-    requestcertificateresponse.h \
-    requestcertificateresponse_p.h \
     requestspotfleetrequest.h \
     requestspotfleetrequest_p.h \
     requestspotfleetresponse.h \
@@ -4828,14 +1012,6 @@ HEADERS += \
     requestspotinstancesrequest_p.h \
     requestspotinstancesresponse.h \
     requestspotinstancesresponse_p.h \
-    resendconfirmationcoderequest.h \
-    resendconfirmationcoderequest_p.h \
-    resendconfirmationcoderesponse.h \
-    resendconfirmationcoderesponse_p.h \
-    resendvalidationemailrequest.h \
-    resendvalidationemailrequest_p.h \
-    resendvalidationemailresponse.h \
-    resendvalidationemailresponse_p.h \
     resetfpgaimageattributerequest.h \
     resetfpgaimageattributerequest_p.h \
     resetfpgaimageattributeresponse.h \
@@ -4856,38 +1032,10 @@ HEADERS += \
     resetsnapshotattributerequest_p.h \
     resetsnapshotattributeresponse.h \
     resetsnapshotattributeresponse_p.h \
-    resolveroomrequest.h \
-    resolveroomrequest_p.h \
-    resolveroomresponse.h \
-    resolveroomresponse_p.h \
-    respondtoauthchallengerequest.h \
-    respondtoauthchallengerequest_p.h \
-    respondtoauthchallengeresponse.h \
-    respondtoauthchallengeresponse_p.h \
     restoreaddresstoclassicrequest.h \
     restoreaddresstoclassicrequest_p.h \
     restoreaddresstoclassicresponse.h \
     restoreaddresstoclassicresponse_p.h \
-    restorefromsnapshotrequest.h \
-    restorefromsnapshotrequest_p.h \
-    restorefromsnapshotresponse.h \
-    restorefromsnapshotresponse_p.h \
-    restoretablefrombackuprequest.h \
-    restoretablefrombackuprequest_p.h \
-    restoretablefrombackupresponse.h \
-    restoretablefrombackupresponse_p.h \
-    resumeprocessesrequest.h \
-    resumeprocessesrequest_p.h \
-    resumeprocessesresponse.h \
-    resumeprocessesresponse_p.h \
-    retrystageexecutionrequest.h \
-    retrystageexecutionrequest_p.h \
-    retrystageexecutionresponse.h \
-    retrystageexecutionresponse_p.h \
-    revokeinvitationrequest.h \
-    revokeinvitationrequest_p.h \
-    revokeinvitationresponse.h \
-    revokeinvitationresponse_p.h \
     revokesecuritygroupegressrequest.h \
     revokesecuritygroupegressrequest_p.h \
     revokesecuritygroupegressresponse.h \
@@ -4904,322 +1052,18 @@ HEADERS += \
     runscheduledinstancesrequest_p.h \
     runscheduledinstancesresponse.h \
     runscheduledinstancesresponse_p.h \
-    scanrequest.h \
-    scanrequest_p.h \
-    scanresponse.h \
-    scanresponse_p.h \
-    schedulerunrequest.h \
-    schedulerunrequest_p.h \
-    schedulerunresponse.h \
-    schedulerunresponse_p.h \
-    searchdevicesrequest.h \
-    searchdevicesrequest_p.h \
-    searchdevicesresponse.h \
-    searchdevicesresponse_p.h \
-    searchprofilesrequest.h \
-    searchprofilesrequest_p.h \
-    searchprofilesresponse.h \
-    searchprofilesresponse_p.h \
-    searchrequest.h \
-    searchrequest_p.h \
-    searchresponse.h \
-    searchresponse_p.h \
-    searchroomsrequest.h \
-    searchroomsrequest_p.h \
-    searchroomsresponse.h \
-    searchroomsresponse_p.h \
-    searchskillgroupsrequest.h \
-    searchskillgroupsrequest_p.h \
-    searchskillgroupsresponse.h \
-    searchskillgroupsresponse_p.h \
-    searchusersrequest.h \
-    searchusersrequest_p.h \
-    searchusersresponse.h \
-    searchusersresponse_p.h \
-    sendinvitationrequest.h \
-    sendinvitationrequest_p.h \
-    sendinvitationresponse.h \
-    sendinvitationresponse_p.h \
-    setcognitoeventsrequest.h \
-    setcognitoeventsrequest_p.h \
-    setcognitoeventsresponse.h \
-    setcognitoeventsresponse_p.h \
-    setdesiredcapacityrequest.h \
-    setdesiredcapacityrequest_p.h \
-    setdesiredcapacityresponse.h \
-    setdesiredcapacityresponse_p.h \
-    setidentitypoolconfigurationrequest.h \
-    setidentitypoolconfigurationrequest_p.h \
-    setidentitypoolconfigurationresponse.h \
-    setidentitypoolconfigurationresponse_p.h \
-    setidentitypoolrolesrequest.h \
-    setidentitypoolrolesrequest_p.h \
-    setidentitypoolrolesresponse.h \
-    setidentitypoolrolesresponse_p.h \
-    setinstancehealthrequest.h \
-    setinstancehealthrequest_p.h \
-    setinstancehealthresponse.h \
-    setinstancehealthresponse_p.h \
-    setinstanceprotectionrequest.h \
-    setinstanceprotectionrequest_p.h \
-    setinstanceprotectionresponse.h \
-    setinstanceprotectionresponse_p.h \
-    setriskconfigurationrequest.h \
-    setriskconfigurationrequest_p.h \
-    setriskconfigurationresponse.h \
-    setriskconfigurationresponse_p.h \
-    setstackpolicyrequest.h \
-    setstackpolicyrequest_p.h \
-    setstackpolicyresponse.h \
-    setstackpolicyresponse_p.h \
-    setstatusrequest.h \
-    setstatusrequest_p.h \
-    setstatusresponse.h \
-    setstatusresponse_p.h \
-    settaskstatusrequest.h \
-    settaskstatusrequest_p.h \
-    settaskstatusresponse.h \
-    settaskstatusresponse_p.h \
-    setuicustomizationrequest.h \
-    setuicustomizationrequest_p.h \
-    setuicustomizationresponse.h \
-    setuicustomizationresponse_p.h \
-    setusermfapreferencerequest.h \
-    setusermfapreferencerequest_p.h \
-    setusermfapreferenceresponse.h \
-    setusermfapreferenceresponse_p.h \
-    setuserpoolmfaconfigrequest.h \
-    setuserpoolmfaconfigrequest_p.h \
-    setuserpoolmfaconfigresponse.h \
-    setuserpoolmfaconfigresponse_p.h \
-    setusersettingsrequest.h \
-    setusersettingsrequest_p.h \
-    setusersettingsresponse.h \
-    setusersettingsresponse_p.h \
-    signalresourcerequest.h \
-    signalresourcerequest_p.h \
-    signalresourceresponse.h \
-    signalresourceresponse_p.h \
-    signuprequest.h \
-    signuprequest_p.h \
-    signupresponse.h \
-    signupresponse_p.h \
-    skipwaittimeforinstanceterminationrequest.h \
-    skipwaittimeforinstanceterminationrequest_p.h \
-    skipwaittimeforinstanceterminationresponse.h \
-    skipwaittimeforinstanceterminationresponse_p.h \
-    startbuildrequest.h \
-    startbuildrequest_p.h \
-    startbuildresponse.h \
-    startbuildresponse_p.h \
-    startconfigrulesevaluationrequest.h \
-    startconfigrulesevaluationrequest_p.h \
-    startconfigrulesevaluationresponse.h \
-    startconfigrulesevaluationresponse_p.h \
-    startconfigurationrecorderrequest.h \
-    startconfigurationrecorderrequest_p.h \
-    startconfigurationrecorderresponse.h \
-    startconfigurationrecorderresponse_p.h \
-    startdatacollectionbyagentidsrequest.h \
-    startdatacollectionbyagentidsrequest_p.h \
-    startdatacollectionbyagentidsresponse.h \
-    startdatacollectionbyagentidsresponse_p.h \
-    startdevicesyncrequest.h \
-    startdevicesyncrequest_p.h \
-    startdevicesyncresponse.h \
-    startdevicesyncresponse_p.h \
-    startexporttaskrequest.h \
-    startexporttaskrequest_p.h \
-    startexporttaskresponse.h \
-    startexporttaskresponse_p.h \
-    startfleetrequest.h \
-    startfleetrequest_p.h \
-    startfleetresponse.h \
-    startfleetresponse_p.h \
-    startimagebuilderrequest.h \
-    startimagebuilderrequest_p.h \
-    startimagebuilderresponse.h \
-    startimagebuilderresponse_p.h \
     startinstancesrequest.h \
     startinstancesrequest_p.h \
     startinstancesresponse.h \
     startinstancesresponse_p.h \
-    startloggingrequest.h \
-    startloggingrequest_p.h \
-    startloggingresponse.h \
-    startloggingresponse_p.h \
-    startpipelineexecutionrequest.h \
-    startpipelineexecutionrequest_p.h \
-    startpipelineexecutionresponse.h \
-    startpipelineexecutionresponse_p.h \
-    startqueryexecutionrequest.h \
-    startqueryexecutionrequest_p.h \
-    startqueryexecutionresponse.h \
-    startqueryexecutionresponse_p.h \
-    startreplicationtaskassessmentrequest.h \
-    startreplicationtaskassessmentrequest_p.h \
-    startreplicationtaskassessmentresponse.h \
-    startreplicationtaskassessmentresponse_p.h \
-    startreplicationtaskrequest.h \
-    startreplicationtaskrequest_p.h \
-    startreplicationtaskresponse.h \
-    startreplicationtaskresponse_p.h \
-    startschemacreationrequest.h \
-    startschemacreationrequest_p.h \
-    startschemacreationresponse.h \
-    startschemacreationresponse_p.h \
-    startschemaextensionrequest.h \
-    startschemaextensionrequest_p.h \
-    startschemaextensionresponse.h \
-    startschemaextensionresponse_p.h \
-    starttopicsdetectionjobrequest.h \
-    starttopicsdetectionjobrequest_p.h \
-    starttopicsdetectionjobresponse.h \
-    starttopicsdetectionjobresponse_p.h \
-    startuserimportjobrequest.h \
-    startuserimportjobrequest_p.h \
-    startuserimportjobresponse.h \
-    startuserimportjobresponse_p.h \
-    stopbuildrequest.h \
-    stopbuildrequest_p.h \
-    stopbuildresponse.h \
-    stopbuildresponse_p.h \
-    stopconfigurationrecorderrequest.h \
-    stopconfigurationrecorderrequest_p.h \
-    stopconfigurationrecorderresponse.h \
-    stopconfigurationrecorderresponse_p.h \
-    stopdatacollectionbyagentidsrequest.h \
-    stopdatacollectionbyagentidsrequest_p.h \
-    stopdatacollectionbyagentidsresponse.h \
-    stopdatacollectionbyagentidsresponse_p.h \
-    stopdeploymentrequest.h \
-    stopdeploymentrequest_p.h \
-    stopdeploymentresponse.h \
-    stopdeploymentresponse_p.h \
-    stopfleetrequest.h \
-    stopfleetrequest_p.h \
-    stopfleetresponse.h \
-    stopfleetresponse_p.h \
-    stopimagebuilderrequest.h \
-    stopimagebuilderrequest_p.h \
-    stopimagebuilderresponse.h \
-    stopimagebuilderresponse_p.h \
     stopinstancesrequest.h \
     stopinstancesrequest_p.h \
     stopinstancesresponse.h \
     stopinstancesresponse_p.h \
-    stoploggingrequest.h \
-    stoploggingrequest_p.h \
-    stoploggingresponse.h \
-    stoploggingresponse_p.h \
-    stopqueryexecutionrequest.h \
-    stopqueryexecutionrequest_p.h \
-    stopqueryexecutionresponse.h \
-    stopqueryexecutionresponse_p.h \
-    stopremoteaccesssessionrequest.h \
-    stopremoteaccesssessionrequest_p.h \
-    stopremoteaccesssessionresponse.h \
-    stopremoteaccesssessionresponse_p.h \
-    stopreplicationtaskrequest.h \
-    stopreplicationtaskrequest_p.h \
-    stopreplicationtaskresponse.h \
-    stopreplicationtaskresponse_p.h \
-    stoprunrequest.h \
-    stoprunrequest_p.h \
-    stoprunresponse.h \
-    stoprunresponse_p.h \
-    stopstacksetoperationrequest.h \
-    stopstacksetoperationrequest_p.h \
-    stopstacksetoperationresponse.h \
-    stopstacksetoperationresponse_p.h \
-    stopuserimportjobrequest.h \
-    stopuserimportjobrequest_p.h \
-    stopuserimportjobresponse.h \
-    stopuserimportjobresponse_p.h \
-    submitjobrequest.h \
-    submitjobrequest_p.h \
-    submitjobresponse.h \
-    submitjobresponse_p.h \
-    subscribetodatasetrequest.h \
-    subscribetodatasetrequest_p.h \
-    subscribetodatasetresponse.h \
-    subscribetodatasetresponse_p.h \
-    suggestrequest.h \
-    suggestrequest_p.h \
-    suggestresponse.h \
-    suggestresponse_p.h \
-    suspendprocessesrequest.h \
-    suspendprocessesrequest_p.h \
-    suspendprocessesresponse.h \
-    suspendprocessesresponse_p.h \
-    tagprojectrequest.h \
-    tagprojectrequest_p.h \
-    tagprojectresponse.h \
-    tagprojectresponse_p.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourcerequest_p.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    tagresourceresponse_p.h \
-    terminateinstanceinautoscalinggrouprequest.h \
-    terminateinstanceinautoscalinggrouprequest_p.h \
-    terminateinstanceinautoscalinggroupresponse.h \
-    terminateinstanceinautoscalinggroupresponse_p.h \
     terminateinstancesrequest.h \
     terminateinstancesrequest_p.h \
     terminateinstancesresponse.h \
     terminateinstancesresponse_p.h \
-    terminatejobrequest.h \
-    terminatejobrequest_p.h \
-    terminatejobresponse.h \
-    terminatejobresponse_p.h \
-    testconnectionrequest.h \
-    testconnectionrequest_p.h \
-    testconnectionresponse.h \
-    testconnectionresponse_p.h \
-    testinvokeauthorizerrequest.h \
-    testinvokeauthorizerrequest_p.h \
-    testinvokeauthorizerresponse.h \
-    testinvokeauthorizerresponse_p.h \
-    testinvokemethodrequest.h \
-    testinvokemethodrequest_p.h \
-    testinvokemethodresponse.h \
-    testinvokemethodresponse_p.h \
-    testrepositorytriggersrequest.h \
-    testrepositorytriggersrequest_p.h \
-    testrepositorytriggersresponse.h \
-    testrepositorytriggersresponse_p.h \
     unassignipv6addressesrequest.h \
     unassignipv6addressesrequest_p.h \
     unassignipv6addressesresponse.h \
@@ -5228,350 +1072,10 @@ HEADERS += \
     unassignprivateipaddressesrequest_p.h \
     unassignprivateipaddressesresponse.h \
     unassignprivateipaddressesresponse_p.h \
-    unlinkdeveloperidentityrequest.h \
-    unlinkdeveloperidentityrequest_p.h \
-    unlinkdeveloperidentityresponse.h \
-    unlinkdeveloperidentityresponse_p.h \
-    unlinkidentityrequest.h \
-    unlinkidentityrequest_p.h \
-    unlinkidentityresponse.h \
-    unlinkidentityresponse_p.h \
     unmonitorinstancesrequest.h \
     unmonitorinstancesrequest_p.h \
     unmonitorinstancesresponse.h \
     unmonitorinstancesresponse_p.h \
-    unsubscribefromdatasetrequest.h \
-    unsubscribefromdatasetrequest_p.h \
-    unsubscribefromdatasetresponse.h \
-    unsubscribefromdatasetresponse_p.h \
-    untagprojectrequest.h \
-    untagprojectrequest_p.h \
-    untagprojectresponse.h \
-    untagprojectresponse_p.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourcerequest_p.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    untagresourceresponse_p.h \
-    updateaccountrequest.h \
-    updateaccountrequest_p.h \
-    updateaccountresponse.h \
-    updateaccountresponse_p.h \
-    updateapikeyrequest.h \
-    updateapikeyrequest.h \
-    updateapikeyrequest_p.h \
-    updateapikeyrequest_p.h \
-    updateapikeyresponse.h \
-    updateapikeyresponse.h \
-    updateapikeyresponse_p.h \
-    updateapikeyresponse_p.h \
-    updateapplicationrequest.h \
-    updateapplicationrequest.h \
-    updateapplicationrequest_p.h \
-    updateapplicationrequest_p.h \
-    updateapplicationresponse.h \
-    updateapplicationresponse.h \
-    updateapplicationresponse_p.h \
-    updateapplicationresponse_p.h \
-    updateautheventfeedbackrequest.h \
-    updateautheventfeedbackrequest_p.h \
-    updateautheventfeedbackresponse.h \
-    updateautheventfeedbackresponse_p.h \
-    updateauthorizerrequest.h \
-    updateauthorizerrequest_p.h \
-    updateauthorizerresponse.h \
-    updateauthorizerresponse_p.h \
-    updateautoscalinggrouprequest.h \
-    updateautoscalinggrouprequest_p.h \
-    updateautoscalinggroupresponse.h \
-    updateautoscalinggroupresponse_p.h \
-    updateavailabilityoptionsrequest.h \
-    updateavailabilityoptionsrequest_p.h \
-    updateavailabilityoptionsresponse.h \
-    updateavailabilityoptionsresponse_p.h \
-    updatebasepathmappingrequest.h \
-    updatebasepathmappingrequest_p.h \
-    updatebasepathmappingresponse.h \
-    updatebasepathmappingresponse_p.h \
-    updatebudgetrequest.h \
-    updatebudgetrequest_p.h \
-    updatebudgetresponse.h \
-    updatebudgetresponse_p.h \
-    updateclientcertificaterequest.h \
-    updateclientcertificaterequest_p.h \
-    updateclientcertificateresponse.h \
-    updateclientcertificateresponse_p.h \
-    updatecloudfrontoriginaccessidentityrequest.h \
-    updatecloudfrontoriginaccessidentityrequest_p.h \
-    updatecloudfrontoriginaccessidentityresponse.h \
-    updatecloudfrontoriginaccessidentityresponse_p.h \
-    updateclusterrequest.h \
-    updateclusterrequest_p.h \
-    updateclusterresponse.h \
-    updateclusterresponse_p.h \
-    updatecommentrequest.h \
-    updatecommentrequest_p.h \
-    updatecommentresponse.h \
-    updatecommentresponse_p.h \
-    updatecomputeenvironmentrequest.h \
-    updatecomputeenvironmentrequest_p.h \
-    updatecomputeenvironmentresponse.h \
-    updatecomputeenvironmentresponse_p.h \
-    updateconditionalforwarderrequest.h \
-    updateconditionalforwarderrequest_p.h \
-    updateconditionalforwarderresponse.h \
-    updateconditionalforwarderresponse_p.h \
-    updatedatasourcerequest.h \
-    updatedatasourcerequest_p.h \
-    updatedatasourceresponse.h \
-    updatedatasourceresponse_p.h \
-    updatedefaultbranchrequest.h \
-    updatedefaultbranchrequest_p.h \
-    updatedefaultbranchresponse.h \
-    updatedefaultbranchresponse_p.h \
-    updatedeploymentgrouprequest.h \
-    updatedeploymentgrouprequest_p.h \
-    updatedeploymentgroupresponse.h \
-    updatedeploymentgroupresponse_p.h \
-    updatedeploymentrequest.h \
-    updatedeploymentrequest_p.h \
-    updatedeploymentresponse.h \
-    updatedeploymentresponse_p.h \
-    updatedevicepoolrequest.h \
-    updatedevicepoolrequest_p.h \
-    updatedevicepoolresponse.h \
-    updatedevicepoolresponse_p.h \
-    updatedevicerequest.h \
-    updatedevicerequest_p.h \
-    updatedeviceresponse.h \
-    updatedeviceresponse_p.h \
-    updatedevicestatusrequest.h \
-    updatedevicestatusrequest_p.h \
-    updatedevicestatusresponse.h \
-    updatedevicestatusresponse_p.h \
-    updatedirectoryconfigrequest.h \
-    updatedirectoryconfigrequest_p.h \
-    updatedirectoryconfigresponse.h \
-    updatedirectoryconfigresponse_p.h \
-    updatedistributionrequest.h \
-    updatedistributionrequest_p.h \
-    updatedistributionresponse.h \
-    updatedistributionresponse_p.h \
-    updatedocumentationpartrequest.h \
-    updatedocumentationpartrequest_p.h \
-    updatedocumentationpartresponse.h \
-    updatedocumentationpartresponse_p.h \
-    updatedocumentationversionrequest.h \
-    updatedocumentationversionrequest_p.h \
-    updatedocumentationversionresponse.h \
-    updatedocumentationversionresponse_p.h \
-    updatedomainnamerequest.h \
-    updatedomainnamerequest_p.h \
-    updatedomainnameresponse.h \
-    updatedomainnameresponse_p.h \
-    updateenvironmentmembershiprequest.h \
-    updateenvironmentmembershiprequest_p.h \
-    updateenvironmentmembershipresponse.h \
-    updateenvironmentmembershipresponse_p.h \
-    updateenvironmentrequest.h \
-    updateenvironmentrequest_p.h \
-    updateenvironmentresponse.h \
-    updateenvironmentresponse_p.h \
-    updatefacetrequest.h \
-    updatefacetrequest_p.h \
-    updatefacetresponse.h \
-    updatefacetresponse_p.h \
-    updatefleetrequest.h \
-    updatefleetrequest_p.h \
-    updatefleetresponse.h \
-    updatefleetresponse_p.h \
-    updategatewayresponserequest.h \
-    updategatewayresponserequest_p.h \
-    updategatewayresponseresponse.h \
-    updategatewayresponseresponse_p.h \
-    updateglobaltablerequest.h \
-    updateglobaltablerequest_p.h \
-    updateglobaltableresponse.h \
-    updateglobaltableresponse_p.h \
-    updategraphqlapirequest.h \
-    updategraphqlapirequest_p.h \
-    updategraphqlapiresponse.h \
-    updategraphqlapiresponse_p.h \
-    updategrouprequest.h \
-    updategrouprequest_p.h \
-    updategroupresponse.h \
-    updategroupresponse_p.h \
-    updateidentitypoolrequest.h \
-    updateidentitypoolrequest_p.h \
-    updateidentitypoolresponse.h \
-    updateidentitypoolresponse_p.h \
-    updateidentityproviderrequest.h \
-    updateidentityproviderrequest_p.h \
-    updateidentityproviderresponse.h \
-    updateidentityproviderresponse_p.h \
-    updateintegrationrequest.h \
-    updateintegrationrequest_p.h \
-    updateintegrationresponse.h \
-    updateintegrationresponse_p.h \
-    updateintegrationresponserequest.h \
-    updateintegrationresponserequest_p.h \
-    updateintegrationresponseresponse.h \
-    updateintegrationresponseresponse_p.h \
-    updateitemrequest.h \
-    updateitemrequest_p.h \
-    updateitemresponse.h \
-    updateitemresponse_p.h \
-    updatejobqueuerequest.h \
-    updatejobqueuerequest_p.h \
-    updatejobqueueresponse.h \
-    updatejobqueueresponse_p.h \
-    updatelagrequest.h \
-    updatelagrequest_p.h \
-    updatelagresponse.h \
-    updatelagresponse_p.h \
-    updatemethodrequest.h \
-    updatemethodrequest_p.h \
-    updatemethodresponse.h \
-    updatemethodresponse_p.h \
-    updatemethodresponserequest.h \
-    updatemethodresponserequest_p.h \
-    updatemethodresponseresponse.h \
-    updatemethodresponseresponse_p.h \
-    updatemodelrequest.h \
-    updatemodelrequest_p.h \
-    updatemodelresponse.h \
-    updatemodelresponse_p.h \
-    updatenetworkprofilerequest.h \
-    updatenetworkprofilerequest_p.h \
-    updatenetworkprofileresponse.h \
-    updatenetworkprofileresponse_p.h \
-    updatenotificationrequest.h \
-    updatenotificationrequest_p.h \
-    updatenotificationresponse.h \
-    updatenotificationresponse_p.h \
-    updatenumberofdomaincontrollersrequest.h \
-    updatenumberofdomaincontrollersrequest_p.h \
-    updatenumberofdomaincontrollersresponse.h \
-    updatenumberofdomaincontrollersresponse_p.h \
-    updateobjectattributesrequest.h \
-    updateobjectattributesrequest_p.h \
-    updateobjectattributesresponse.h \
-    updateobjectattributesresponse_p.h \
-    updateparametergrouprequest.h \
-    updateparametergrouprequest_p.h \
-    updateparametergroupresponse.h \
-    updateparametergroupresponse_p.h \
-    updatepipelinerequest.h \
-    updatepipelinerequest_p.h \
-    updatepipelineresponse.h \
-    updatepipelineresponse_p.h \
-    updateprofilerequest.h \
-    updateprofilerequest_p.h \
-    updateprofileresponse.h \
-    updateprofileresponse_p.h \
-    updateprojectrequest.h \
-    updateprojectrequest.h \
-    updateprojectrequest.h \
-    updateprojectrequest_p.h \
-    updateprojectrequest_p.h \
-    updateprojectrequest_p.h \
-    updateprojectresponse.h \
-    updateprojectresponse.h \
-    updateprojectresponse.h \
-    updateprojectresponse_p.h \
-    updateprojectresponse_p.h \
-    updateprojectresponse_p.h \
-    updatepullrequestdescriptionrequest.h \
-    updatepullrequestdescriptionrequest_p.h \
-    updatepullrequestdescriptionresponse.h \
-    updatepullrequestdescriptionresponse_p.h \
-    updatepullrequeststatusrequest.h \
-    updatepullrequeststatusrequest_p.h \
-    updatepullrequeststatusresponse.h \
-    updatepullrequeststatusresponse_p.h \
-    updatepullrequesttitlerequest.h \
-    updatepullrequesttitlerequest_p.h \
-    updatepullrequesttitleresponse.h \
-    updatepullrequesttitleresponse_p.h \
-    updateradiusrequest.h \
-    updateradiusrequest_p.h \
-    updateradiusresponse.h \
-    updateradiusresponse_p.h \
-    updaterecordsrequest.h \
-    updaterecordsrequest_p.h \
-    updaterecordsresponse.h \
-    updaterecordsresponse_p.h \
-    updaterepositorydescriptionrequest.h \
-    updaterepositorydescriptionrequest_p.h \
-    updaterepositorydescriptionresponse.h \
-    updaterepositorydescriptionresponse_p.h \
-    updaterepositorynamerequest.h \
-    updaterepositorynamerequest_p.h \
-    updaterepositorynameresponse.h \
-    updaterepositorynameresponse_p.h \
-    updaterequestvalidatorrequest.h \
-    updaterequestvalidatorrequest_p.h \
-    updaterequestvalidatorresponse.h \
-    updaterequestvalidatorresponse_p.h \
-    updateresolverrequest.h \
-    updateresolverrequest_p.h \
-    updateresolverresponse.h \
-    updateresolverresponse_p.h \
-    updateresourcerequest.h \
-    updateresourcerequest_p.h \
-    updateresourceresponse.h \
-    updateresourceresponse_p.h \
-    updateresourceserverrequest.h \
-    updateresourceserverrequest_p.h \
-    updateresourceserverresponse.h \
-    updateresourceserverresponse_p.h \
-    updaterestapirequest.h \
-    updaterestapirequest_p.h \
-    updaterestapiresponse.h \
-    updaterestapiresponse_p.h \
-    updateroomrequest.h \
-    updateroomrequest_p.h \
-    updateroomresponse.h \
-    updateroomresponse_p.h \
-    updatescalingparametersrequest.h \
-    updatescalingparametersrequest_p.h \
-    updatescalingparametersresponse.h \
-    updatescalingparametersresponse_p.h \
-    updateschemarequest.h \
-    updateschemarequest_p.h \
-    updateschemaresponse.h \
-    updateschemaresponse_p.h \
     updatesecuritygroupruledescriptionsegressrequest.h \
     updatesecuritygroupruledescriptionsegressrequest_p.h \
     updatesecuritygroupruledescriptionsegressresponse.h \
@@ -5580,134 +1084,6 @@ HEADERS += \
     updatesecuritygroupruledescriptionsingressrequest_p.h \
     updatesecuritygroupruledescriptionsingressresponse.h \
     updatesecuritygroupruledescriptionsingressresponse_p.h \
-    updateserviceaccesspoliciesrequest.h \
-    updateserviceaccesspoliciesrequest_p.h \
-    updateserviceaccesspoliciesresponse.h \
-    updateserviceaccesspoliciesresponse_p.h \
-    updateskillgrouprequest.h \
-    updateskillgrouprequest_p.h \
-    updateskillgroupresponse.h \
-    updateskillgroupresponse_p.h \
-    updatestackinstancesrequest.h \
-    updatestackinstancesrequest_p.h \
-    updatestackinstancesresponse.h \
-    updatestackinstancesresponse_p.h \
-    updatestackrequest.h \
-    updatestackrequest.h \
-    updatestackrequest_p.h \
-    updatestackrequest_p.h \
-    updatestackresponse.h \
-    updatestackresponse.h \
-    updatestackresponse_p.h \
-    updatestackresponse_p.h \
-    updatestacksetrequest.h \
-    updatestacksetrequest_p.h \
-    updatestacksetresponse.h \
-    updatestacksetresponse_p.h \
-    updatestagerequest.h \
-    updatestagerequest_p.h \
-    updatestageresponse.h \
-    updatestageresponse_p.h \
-    updatestreamingdistributionrequest.h \
-    updatestreamingdistributionrequest_p.h \
-    updatestreamingdistributionresponse.h \
-    updatestreamingdistributionresponse_p.h \
-    updatesubnetgrouprequest.h \
-    updatesubnetgrouprequest_p.h \
-    updatesubnetgroupresponse.h \
-    updatesubnetgroupresponse_p.h \
-    updatesubscriberrequest.h \
-    updatesubscriberrequest_p.h \
-    updatesubscriberresponse.h \
-    updatesubscriberresponse_p.h \
-    updatetablerequest.h \
-    updatetablerequest_p.h \
-    updatetableresponse.h \
-    updatetableresponse_p.h \
-    updateteammemberrequest.h \
-    updateteammemberrequest_p.h \
-    updateteammemberresponse.h \
-    updateteammemberresponse_p.h \
-    updateterminationprotectionrequest.h \
-    updateterminationprotectionrequest_p.h \
-    updateterminationprotectionresponse.h \
-    updateterminationprotectionresponse_p.h \
-    updatetimetoliverequest.h \
-    updatetimetoliverequest_p.h \
-    updatetimetoliveresponse.h \
-    updatetimetoliveresponse_p.h \
-    updatetrailrequest.h \
-    updatetrailrequest_p.h \
-    updatetrailresponse.h \
-    updatetrailresponse_p.h \
-    updatetypedlinkfacetrequest.h \
-    updatetypedlinkfacetrequest_p.h \
-    updatetypedlinkfacetresponse.h \
-    updatetypedlinkfacetresponse_p.h \
-    updatetyperequest.h \
-    updatetyperequest_p.h \
-    updatetyperesponse.h \
-    updatetyperesponse_p.h \
-    updateusageplanrequest.h \
-    updateusageplanrequest_p.h \
-    updateusageplanresponse.h \
-    updateusageplanresponse_p.h \
-    updateusagerequest.h \
-    updateusagerequest_p.h \
-    updateusageresponse.h \
-    updateusageresponse_p.h \
-    updateuserattributesrequest.h \
-    updateuserattributesrequest_p.h \
-    updateuserattributesresponse.h \
-    updateuserattributesresponse_p.h \
-    updateuserpoolclientrequest.h \
-    updateuserpoolclientrequest_p.h \
-    updateuserpoolclientresponse.h \
-    updateuserpoolclientresponse_p.h \
-    updateuserpoolrequest.h \
-    updateuserpoolrequest_p.h \
-    updateuserpoolresponse.h \
-    updateuserpoolresponse_p.h \
-    updateuserprofilerequest.h \
-    updateuserprofilerequest_p.h \
-    updateuserprofileresponse.h \
-    updateuserprofileresponse_p.h \
-    updatevpclinkrequest.h \
-    updatevpclinkrequest_p.h \
-    updatevpclinkresponse.h \
-    updatevpclinkresponse_p.h \
-    upgradeappliedschemarequest.h \
-    upgradeappliedschemarequest_p.h \
-    upgradeappliedschemaresponse.h \
-    upgradeappliedschemaresponse_p.h \
-    upgradepublishedschemarequest.h \
-    upgradepublishedschemarequest_p.h \
-    upgradepublishedschemaresponse.h \
-    upgradepublishedschemaresponse_p.h \
-    uploaddocumentsrequest.h \
-    uploaddocumentsrequest_p.h \
-    uploaddocumentsresponse.h \
-    uploaddocumentsresponse_p.h \
-    validatepipelinedefinitionrequest.h \
-    validatepipelinedefinitionrequest_p.h \
-    validatepipelinedefinitionresponse.h \
-    validatepipelinedefinitionresponse_p.h \
-    validatetemplaterequest.h \
-    validatetemplaterequest_p.h \
-    validatetemplateresponse.h \
-    validatetemplateresponse_p.h \
-    verifysoftwaretokenrequest.h \
-    verifysoftwaretokenrequest_p.h \
-    verifysoftwaretokenresponse.h \
-    verifysoftwaretokenresponse_p.h \
-    verifytrustrequest.h \
-    verifytrustrequest_p.h \
-    verifytrustresponse.h \
-    verifytrustresponse_p.h \
-    verifyuserattributerequest.h \
-    verifyuserattributerequest_p.h \
-    verifyuserattributeresponse.h \
-    verifyuserattributeresponse_p.h \
 
 SOURCES += \
     acceptreservedinstancesexchangequoterequest.cpp \
@@ -5716,162 +1092,32 @@ SOURCES += \
     acceptvpcendpointconnectionsresponse.cpp \
     acceptvpcpeeringconnectionrequest.cpp \
     acceptvpcpeeringconnectionresponse.cpp \
-    acknowledgejobrequest.cpp \
-    acknowledgejobresponse.cpp \
-    acknowledgethirdpartyjobrequest.cpp \
-    acknowledgethirdpartyjobresponse.cpp \
-    acmclient.cpp \
-    activatepipelinerequest.cpp \
-    activatepipelineresponse.cpp \
-    addcustomattributesrequest.cpp \
-    addcustomattributesresponse.cpp \
-    addfacettoobjectrequest.cpp \
-    addfacettoobjectresponse.cpp \
-    addiproutesrequest.cpp \
-    addiproutesresponse.cpp \
-    addtagsrequest.cpp \
-    addtagsrequest.cpp \
-    addtagsresponse.cpp \
-    addtagsresponse.cpp \
-    addtagstocertificaterequest.cpp \
-    addtagstocertificateresponse.cpp \
-    addtagstoonpremisesinstancesrequest.cpp \
-    addtagstoonpremisesinstancesresponse.cpp \
-    addtagstoresourcerequest.cpp \
-    addtagstoresourcerequest.cpp \
-    addtagstoresourcerequest.cpp \
-    addtagstoresourceresponse.cpp \
-    addtagstoresourceresponse.cpp \
-    addtagstoresourceresponse.cpp \
-    adminaddusertogrouprequest.cpp \
-    adminaddusertogroupresponse.cpp \
-    adminconfirmsignuprequest.cpp \
-    adminconfirmsignupresponse.cpp \
-    admincreateuserrequest.cpp \
-    admincreateuserresponse.cpp \
-    admindeleteuserattributesrequest.cpp \
-    admindeleteuserattributesresponse.cpp \
-    admindeleteuserrequest.cpp \
-    admindeleteuserresponse.cpp \
-    admindisableproviderforuserrequest.cpp \
-    admindisableproviderforuserresponse.cpp \
-    admindisableuserrequest.cpp \
-    admindisableuserresponse.cpp \
-    adminenableuserrequest.cpp \
-    adminenableuserresponse.cpp \
-    adminforgetdevicerequest.cpp \
-    adminforgetdeviceresponse.cpp \
-    admingetdevicerequest.cpp \
-    admingetdeviceresponse.cpp \
-    admingetuserrequest.cpp \
-    admingetuserresponse.cpp \
-    admininitiateauthrequest.cpp \
-    admininitiateauthresponse.cpp \
-    adminlinkproviderforuserrequest.cpp \
-    adminlinkproviderforuserresponse.cpp \
-    adminlistdevicesrequest.cpp \
-    adminlistdevicesresponse.cpp \
-    adminlistgroupsforuserrequest.cpp \
-    adminlistgroupsforuserresponse.cpp \
-    adminlistuserautheventsrequest.cpp \
-    adminlistuserautheventsresponse.cpp \
-    adminremoveuserfromgrouprequest.cpp \
-    adminremoveuserfromgroupresponse.cpp \
-    adminresetuserpasswordrequest.cpp \
-    adminresetuserpasswordresponse.cpp \
-    adminrespondtoauthchallengerequest.cpp \
-    adminrespondtoauthchallengeresponse.cpp \
-    adminsetusermfapreferencerequest.cpp \
-    adminsetusermfapreferenceresponse.cpp \
-    adminsetusersettingsrequest.cpp \
-    adminsetusersettingsresponse.cpp \
-    adminupdateautheventfeedbackrequest.cpp \
-    adminupdateautheventfeedbackresponse.cpp \
-    adminupdatedevicestatusrequest.cpp \
-    adminupdatedevicestatusresponse.cpp \
-    adminupdateuserattributesrequest.cpp \
-    adminupdateuserattributesresponse.cpp \
-    adminuserglobalsignoutrequest.cpp \
-    adminuserglobalsignoutresponse.cpp \
-    alexaforbusinessclient.cpp \
     allocateaddressrequest.cpp \
     allocateaddressresponse.cpp \
-    allocateconnectiononinterconnectrequest.cpp \
-    allocateconnectiononinterconnectresponse.cpp \
-    allocatehostedconnectionrequest.cpp \
-    allocatehostedconnectionresponse.cpp \
     allocatehostsrequest.cpp \
     allocatehostsresponse.cpp \
-    allocateprivatevirtualinterfacerequest.cpp \
-    allocateprivatevirtualinterfaceresponse.cpp \
-    allocatepublicvirtualinterfacerequest.cpp \
-    allocatepublicvirtualinterfaceresponse.cpp \
-    apigatewayclient.cpp \
-    applicationautoscalingclient.cpp \
-    applicationdiscoveryserviceclient.cpp \
-    applyschemarequest.cpp \
-    applyschemaresponse.cpp \
-    appstreamclient.cpp \
-    appsyncclient.cpp \
     assignipv6addressesrequest.cpp \
     assignipv6addressesresponse.cpp \
     assignprivateipaddressesrequest.cpp \
     assignprivateipaddressesresponse.cpp \
     associateaddressrequest.cpp \
     associateaddressresponse.cpp \
-    associateconfigurationitemstoapplicationrequest.cpp \
-    associateconfigurationitemstoapplicationresponse.cpp \
-    associateconnectionwithlagrequest.cpp \
-    associateconnectionwithlagresponse.cpp \
-    associatecreatedartifactrequest.cpp \
-    associatecreatedartifactresponse.cpp \
-    associatedevicewithroomrequest.cpp \
-    associatedevicewithroomresponse.cpp \
     associatedhcpoptionsrequest.cpp \
     associatedhcpoptionsresponse.cpp \
-    associatediscoveredresourcerequest.cpp \
-    associatediscoveredresourceresponse.cpp \
-    associatefleetrequest.cpp \
-    associatefleetresponse.cpp \
-    associatehostedconnectionrequest.cpp \
-    associatehostedconnectionresponse.cpp \
     associateiaminstanceprofilerequest.cpp \
     associateiaminstanceprofileresponse.cpp \
     associateroutetablerequest.cpp \
     associateroutetableresponse.cpp \
-    associateskillgroupwithroomrequest.cpp \
-    associateskillgroupwithroomresponse.cpp \
-    associatesoftwaretokenrequest.cpp \
-    associatesoftwaretokenresponse.cpp \
     associatesubnetcidrblockrequest.cpp \
     associatesubnetcidrblockresponse.cpp \
-    associateteammemberrequest.cpp \
-    associateteammemberresponse.cpp \
-    associatevirtualinterfacerequest.cpp \
-    associatevirtualinterfaceresponse.cpp \
     associatevpccidrblockrequest.cpp \
     associatevpccidrblockresponse.cpp \
-    athenaclient.cpp \
     attachclassiclinkvpcrequest.cpp \
     attachclassiclinkvpcresponse.cpp \
-    attachinstancesrequest.cpp \
-    attachinstancesresponse.cpp \
     attachinternetgatewayrequest.cpp \
     attachinternetgatewayresponse.cpp \
-    attachloadbalancersrequest.cpp \
-    attachloadbalancersresponse.cpp \
-    attachloadbalancertargetgroupsrequest.cpp \
-    attachloadbalancertargetgroupsresponse.cpp \
     attachnetworkinterfacerequest.cpp \
     attachnetworkinterfaceresponse.cpp \
-    attachobjectrequest.cpp \
-    attachobjectresponse.cpp \
-    attachpolicyrequest.cpp \
-    attachpolicyresponse.cpp \
-    attachtoindexrequest.cpp \
-    attachtoindexresponse.cpp \
-    attachtypedlinkrequest.cpp \
-    attachtypedlinkresponse.cpp \
     attachvolumerequest.cpp \
     attachvolumeresponse.cpp \
     attachvpngatewayrequest.cpp \
@@ -5880,54 +1126,6 @@ SOURCES += \
     authorizesecuritygroupegressresponse.cpp \
     authorizesecuritygroupingressrequest.cpp \
     authorizesecuritygroupingressresponse.cpp \
-    autoscalingclient.cpp \
-    autoscalingplansclient.cpp \
-    batchclient.cpp \
-    batchdeletebuildsrequest.cpp \
-    batchdeletebuildsresponse.cpp \
-    batchdetectdominantlanguagerequest.cpp \
-    batchdetectdominantlanguageresponse.cpp \
-    batchdetectentitiesrequest.cpp \
-    batchdetectentitiesresponse.cpp \
-    batchdetectkeyphrasesrequest.cpp \
-    batchdetectkeyphrasesresponse.cpp \
-    batchdetectsentimentrequest.cpp \
-    batchdetectsentimentresponse.cpp \
-    batchgetapplicationrevisionsrequest.cpp \
-    batchgetapplicationrevisionsresponse.cpp \
-    batchgetapplicationsrequest.cpp \
-    batchgetapplicationsresponse.cpp \
-    batchgetbuildsrequest.cpp \
-    batchgetbuildsresponse.cpp \
-    batchgetdeploymentgroupsrequest.cpp \
-    batchgetdeploymentgroupsresponse.cpp \
-    batchgetdeploymentinstancesrequest.cpp \
-    batchgetdeploymentinstancesresponse.cpp \
-    batchgetdeploymentsrequest.cpp \
-    batchgetdeploymentsresponse.cpp \
-    batchgetitemrequest.cpp \
-    batchgetitemresponse.cpp \
-    batchgetnamedqueryrequest.cpp \
-    batchgetnamedqueryresponse.cpp \
-    batchgetonpremisesinstancesrequest.cpp \
-    batchgetonpremisesinstancesresponse.cpp \
-    batchgetprojectsrequest.cpp \
-    batchgetprojectsresponse.cpp \
-    batchgetqueryexecutionrequest.cpp \
-    batchgetqueryexecutionresponse.cpp \
-    batchgetrepositoriesrequest.cpp \
-    batchgetrepositoriesresponse.cpp \
-    batchreadrequest.cpp \
-    batchreadresponse.cpp \
-    batchwriteitemrequest.cpp \
-    batchwriteitemresponse.cpp \
-    batchwriterequest.cpp \
-    batchwriteresponse.cpp \
-    budgetsclient.cpp \
-    buildsuggestersrequest.cpp \
-    buildsuggestersresponse.cpp \
-    bulkpublishrequest.cpp \
-    bulkpublishresponse.cpp \
     bundleinstancerequest.cpp \
     bundleinstanceresponse.cpp \
     cancelbundletaskrequest.cpp \
@@ -5938,225 +1136,46 @@ SOURCES += \
     cancelexporttaskresponse.cpp \
     cancelimporttaskrequest.cpp \
     cancelimporttaskresponse.cpp \
-    canceljobrequest.cpp \
-    canceljobresponse.cpp \
     cancelreservedinstanceslistingrequest.cpp \
     cancelreservedinstanceslistingresponse.cpp \
-    cancelschemaextensionrequest.cpp \
-    cancelschemaextensionresponse.cpp \
     cancelspotfleetrequestsrequest.cpp \
     cancelspotfleetrequestsresponse.cpp \
     cancelspotinstancerequestsrequest.cpp \
     cancelspotinstancerequestsresponse.cpp \
-    cancelupdatestackrequest.cpp \
-    cancelupdatestackresponse.cpp \
-    changepasswordrequest.cpp \
-    changepasswordresponse.cpp \
-    cloud9client.cpp \
-    clouddirectoryclient.cpp \
-    cloudformationclient.cpp \
-    cloudfrontclient.cpp \
-    cloudhsmclient.cpp \
-    cloudhsmv2client.cpp \
-    cloudsearchclient.cpp \
-    cloudsearchdomainclient.cpp \
-    cloudtrailclient.cpp \
-    codebuildclient.cpp \
-    codecommitclient.cpp \
-    codedeployclient.cpp \
-    codepipelineclient.cpp \
-    codestarclient.cpp \
-    cognitoidentityclient.cpp \
-    cognitoidentityproviderclient.cpp \
-    cognitosyncclient.cpp \
-    completelifecycleactionrequest.cpp \
-    completelifecycleactionresponse.cpp \
-    comprehendclient.cpp \
-    configserviceclient.cpp \
-    confirmconnectionrequest.cpp \
-    confirmconnectionresponse.cpp \
-    confirmdevicerequest.cpp \
-    confirmdeviceresponse.cpp \
-    confirmforgotpasswordrequest.cpp \
-    confirmforgotpasswordresponse.cpp \
-    confirmprivatevirtualinterfacerequest.cpp \
-    confirmprivatevirtualinterfaceresponse.cpp \
     confirmproductinstancerequest.cpp \
     confirmproductinstanceresponse.cpp \
-    confirmpublicvirtualinterfacerequest.cpp \
-    confirmpublicvirtualinterfaceresponse.cpp \
-    confirmsignuprequest.cpp \
-    confirmsignupresponse.cpp \
-    connectdirectoryrequest.cpp \
-    connectdirectoryresponse.cpp \
-    continuedeploymentrequest.cpp \
-    continuedeploymentresponse.cpp \
-    continueupdaterollbackrequest.cpp \
-    continueupdaterollbackresponse.cpp \
     copyfpgaimagerequest.cpp \
     copyfpgaimageresponse.cpp \
     copyimagerequest.cpp \
-    copyimagerequest.cpp \
-    copyimageresponse.cpp \
     copyimageresponse.cpp \
     copysnapshotrequest.cpp \
     copysnapshotresponse.cpp \
-    costandusagereportserviceclient.cpp \
-    costexplorerclient.cpp \
-    createaliasrequest.cpp \
-    createaliasresponse.cpp \
-    createapikeyrequest.cpp \
-    createapikeyrequest.cpp \
-    createapikeyresponse.cpp \
-    createapikeyresponse.cpp \
-    createapplicationrequest.cpp \
-    createapplicationrequest.cpp \
-    createapplicationresponse.cpp \
-    createapplicationresponse.cpp \
-    createauthorizerrequest.cpp \
-    createauthorizerresponse.cpp \
-    createautoscalinggrouprequest.cpp \
-    createautoscalinggroupresponse.cpp \
-    createbackuprequest.cpp \
-    createbackupresponse.cpp \
-    createbasepathmappingrequest.cpp \
-    createbasepathmappingresponse.cpp \
-    createbgppeerrequest.cpp \
-    createbgppeerresponse.cpp \
-    createbranchrequest.cpp \
-    createbranchresponse.cpp \
-    createbudgetrequest.cpp \
-    createbudgetresponse.cpp \
-    createchangesetrequest.cpp \
-    createchangesetresponse.cpp \
-    createcloudfrontoriginaccessidentityrequest.cpp \
-    createcloudfrontoriginaccessidentityresponse.cpp \
-    createclusterrequest.cpp \
-    createclusterrequest.cpp \
-    createclusterresponse.cpp \
-    createclusterresponse.cpp \
-    createcomputeenvironmentrequest.cpp \
-    createcomputeenvironmentresponse.cpp \
-    createcomputerrequest.cpp \
-    createcomputerresponse.cpp \
-    createconditionalforwarderrequest.cpp \
-    createconditionalforwarderresponse.cpp \
-    createconnectionrequest.cpp \
-    createconnectionresponse.cpp \
-    createcustomactiontyperequest.cpp \
-    createcustomactiontyperesponse.cpp \
     createcustomergatewayrequest.cpp \
     createcustomergatewayresponse.cpp \
-    createdatasourcerequest.cpp \
-    createdatasourceresponse.cpp \
     createdefaultsubnetrequest.cpp \
     createdefaultsubnetresponse.cpp \
     createdefaultvpcrequest.cpp \
     createdefaultvpcresponse.cpp \
-    createdeploymentconfigrequest.cpp \
-    createdeploymentconfigresponse.cpp \
-    createdeploymentgrouprequest.cpp \
-    createdeploymentgroupresponse.cpp \
-    createdeploymentrequest.cpp \
-    createdeploymentrequest.cpp \
-    createdeploymentresponse.cpp \
-    createdeploymentresponse.cpp \
-    createdevicepoolrequest.cpp \
-    createdevicepoolresponse.cpp \
     createdhcpoptionsrequest.cpp \
     createdhcpoptionsresponse.cpp \
-    createdirectconnectgatewayassociationrequest.cpp \
-    createdirectconnectgatewayassociationresponse.cpp \
-    createdirectconnectgatewayrequest.cpp \
-    createdirectconnectgatewayresponse.cpp \
-    createdirectoryconfigrequest.cpp \
-    createdirectoryconfigresponse.cpp \
-    createdirectoryrequest.cpp \
-    createdirectoryrequest.cpp \
-    createdirectoryresponse.cpp \
-    createdirectoryresponse.cpp \
-    createdistributionrequest.cpp \
-    createdistributionresponse.cpp \
-    createdistributionwithtagsrequest.cpp \
-    createdistributionwithtagsresponse.cpp \
-    createdocumentationpartrequest.cpp \
-    createdocumentationpartresponse.cpp \
-    createdocumentationversionrequest.cpp \
-    createdocumentationversionresponse.cpp \
-    createdomainnamerequest.cpp \
-    createdomainnameresponse.cpp \
-    createdomainrequest.cpp \
-    createdomainresponse.cpp \
     createegressonlyinternetgatewayrequest.cpp \
     createegressonlyinternetgatewayresponse.cpp \
-    createendpointrequest.cpp \
-    createendpointresponse.cpp \
-    createenvironmentec2request.cpp \
-    createenvironmentec2response.cpp \
-    createenvironmentmembershiprequest.cpp \
-    createenvironmentmembershipresponse.cpp \
-    createeventsubscriptionrequest.cpp \
-    createeventsubscriptionresponse.cpp \
-    createfacetrequest.cpp \
-    createfacetresponse.cpp \
-    createfleetrequest.cpp \
-    createfleetresponse.cpp \
     createflowlogsrequest.cpp \
     createflowlogsresponse.cpp \
     createfpgaimagerequest.cpp \
     createfpgaimageresponse.cpp \
-    createglobaltablerequest.cpp \
-    createglobaltableresponse.cpp \
-    creategraphqlapirequest.cpp \
-    creategraphqlapiresponse.cpp \
-    creategrouprequest.cpp \
-    creategroupresponse.cpp \
-    createhapgrequest.cpp \
-    createhapgresponse.cpp \
-    createhsmrequest.cpp \
-    createhsmrequest.cpp \
-    createhsmresponse.cpp \
-    createhsmresponse.cpp \
-    createidentitypoolrequest.cpp \
-    createidentitypoolresponse.cpp \
-    createidentityproviderrequest.cpp \
-    createidentityproviderresponse.cpp \
-    createimagebuilderrequest.cpp \
-    createimagebuilderresponse.cpp \
-    createimagebuilderstreamingurlrequest.cpp \
-    createimagebuilderstreamingurlresponse.cpp \
     createimagerequest.cpp \
     createimageresponse.cpp \
-    createindexrequest.cpp \
-    createindexresponse.cpp \
     createinstanceexporttaskrequest.cpp \
     createinstanceexporttaskresponse.cpp \
-    createinterconnectrequest.cpp \
-    createinterconnectresponse.cpp \
     createinternetgatewayrequest.cpp \
     createinternetgatewayresponse.cpp \
-    createinvalidationrequest.cpp \
-    createinvalidationresponse.cpp \
-    createjobqueuerequest.cpp \
-    createjobqueueresponse.cpp \
     createkeypairrequest.cpp \
     createkeypairresponse.cpp \
-    createlagrequest.cpp \
-    createlagresponse.cpp \
-    createlaunchconfigurationrequest.cpp \
-    createlaunchconfigurationresponse.cpp \
     createlaunchtemplaterequest.cpp \
     createlaunchtemplateresponse.cpp \
     createlaunchtemplateversionrequest.cpp \
     createlaunchtemplateversionresponse.cpp \
-    createlunaclientrequest.cpp \
-    createlunaclientresponse.cpp \
-    createmicrosoftadrequest.cpp \
-    createmicrosoftadresponse.cpp \
-    createmodelrequest.cpp \
-    createmodelresponse.cpp \
-    createnamedqueryrequest.cpp \
-    createnamedqueryresponse.cpp \
     createnatgatewayrequest.cpp \
     createnatgatewayresponse.cpp \
     createnetworkaclentryrequest.cpp \
@@ -6167,134 +1186,24 @@ SOURCES += \
     createnetworkinterfacepermissionresponse.cpp \
     createnetworkinterfacerequest.cpp \
     createnetworkinterfaceresponse.cpp \
-    createnetworkprofilerequest.cpp \
-    createnetworkprofileresponse.cpp \
-    createnotificationrequest.cpp \
-    createnotificationresponse.cpp \
-    createobjectrequest.cpp \
-    createobjectresponse.cpp \
-    createorupdatetagsrequest.cpp \
-    createorupdatetagsresponse.cpp \
-    createparametergrouprequest.cpp \
-    createparametergroupresponse.cpp \
-    createpipelinerequest.cpp \
-    createpipelinerequest.cpp \
-    createpipelineresponse.cpp \
-    createpipelineresponse.cpp \
     createplacementgrouprequest.cpp \
     createplacementgroupresponse.cpp \
-    createprivatevirtualinterfacerequest.cpp \
-    createprivatevirtualinterfaceresponse.cpp \
-    createprofilerequest.cpp \
-    createprofileresponse.cpp \
-    createprogressupdatestreamrequest.cpp \
-    createprogressupdatestreamresponse.cpp \
-    createprojectrequest.cpp \
-    createprojectrequest.cpp \
-    createprojectrequest.cpp \
-    createprojectresponse.cpp \
-    createprojectresponse.cpp \
-    createprojectresponse.cpp \
-    createpublicvirtualinterfacerequest.cpp \
-    createpublicvirtualinterfaceresponse.cpp \
-    createpullrequestrequest.cpp \
-    createpullrequestresponse.cpp \
-    createremoteaccesssessionrequest.cpp \
-    createremoteaccesssessionresponse.cpp \
-    createreplicationinstancerequest.cpp \
-    createreplicationinstanceresponse.cpp \
-    createreplicationsubnetgrouprequest.cpp \
-    createreplicationsubnetgroupresponse.cpp \
-    createreplicationtaskrequest.cpp \
-    createreplicationtaskresponse.cpp \
-    createrepositoryrequest.cpp \
-    createrepositoryresponse.cpp \
-    createrequestvalidatorrequest.cpp \
-    createrequestvalidatorresponse.cpp \
     createreservedinstanceslistingrequest.cpp \
     createreservedinstanceslistingresponse.cpp \
-    createresolverrequest.cpp \
-    createresolverresponse.cpp \
-    createresourcerequest.cpp \
-    createresourceresponse.cpp \
-    createresourceserverrequest.cpp \
-    createresourceserverresponse.cpp \
-    createrestapirequest.cpp \
-    createrestapiresponse.cpp \
-    createroomrequest.cpp \
-    createroomresponse.cpp \
     createrouterequest.cpp \
     createrouteresponse.cpp \
     createroutetablerequest.cpp \
     createroutetableresponse.cpp \
-    createscalingplanrequest.cpp \
-    createscalingplanresponse.cpp \
-    createschemarequest.cpp \
-    createschemaresponse.cpp \
     createsecuritygrouprequest.cpp \
     createsecuritygroupresponse.cpp \
-    createskillgrouprequest.cpp \
-    createskillgroupresponse.cpp \
     createsnapshotrequest.cpp \
-    createsnapshotrequest.cpp \
-    createsnapshotresponse.cpp \
     createsnapshotresponse.cpp \
     createspotdatafeedsubscriptionrequest.cpp \
     createspotdatafeedsubscriptionresponse.cpp \
-    createstackinstancesrequest.cpp \
-    createstackinstancesresponse.cpp \
-    createstackrequest.cpp \
-    createstackrequest.cpp \
-    createstackresponse.cpp \
-    createstackresponse.cpp \
-    createstacksetrequest.cpp \
-    createstacksetresponse.cpp \
-    createstagerequest.cpp \
-    createstageresponse.cpp \
-    createstreamingdistributionrequest.cpp \
-    createstreamingdistributionresponse.cpp \
-    createstreamingdistributionwithtagsrequest.cpp \
-    createstreamingdistributionwithtagsresponse.cpp \
-    createstreamingurlrequest.cpp \
-    createstreamingurlresponse.cpp \
-    createsubnetgrouprequest.cpp \
-    createsubnetgroupresponse.cpp \
     createsubnetrequest.cpp \
     createsubnetresponse.cpp \
-    createsubscriberrequest.cpp \
-    createsubscriberresponse.cpp \
-    createtablerequest.cpp \
-    createtableresponse.cpp \
-    createtagsrequest.cpp \
     createtagsrequest.cpp \
     createtagsresponse.cpp \
-    createtagsresponse.cpp \
-    createtrailrequest.cpp \
-    createtrailresponse.cpp \
-    createtrustrequest.cpp \
-    createtrustresponse.cpp \
-    createtypedlinkfacetrequest.cpp \
-    createtypedlinkfacetresponse.cpp \
-    createtyperequest.cpp \
-    createtyperesponse.cpp \
-    createuploadrequest.cpp \
-    createuploadresponse.cpp \
-    createusageplankeyrequest.cpp \
-    createusageplankeyresponse.cpp \
-    createusageplanrequest.cpp \
-    createusageplanresponse.cpp \
-    createuserimportjobrequest.cpp \
-    createuserimportjobresponse.cpp \
-    createuserpoolclientrequest.cpp \
-    createuserpoolclientresponse.cpp \
-    createuserpooldomainrequest.cpp \
-    createuserpooldomainresponse.cpp \
-    createuserpoolrequest.cpp \
-    createuserpoolresponse.cpp \
-    createuserprofilerequest.cpp \
-    createuserprofileresponse.cpp \
-    createuserrequest.cpp \
-    createuserresponse.cpp \
     createvolumerequest.cpp \
     createvolumeresponse.cpp \
     createvpcendpointconnectionnotificationrequest.cpp \
@@ -6303,8 +1212,6 @@ SOURCES += \
     createvpcendpointresponse.cpp \
     createvpcendpointserviceconfigurationrequest.cpp \
     createvpcendpointserviceconfigurationresponse.cpp \
-    createvpclinkrequest.cpp \
-    createvpclinkresponse.cpp \
     createvpcpeeringconnectionrequest.cpp \
     createvpcpeeringconnectionresponse.cpp \
     createvpcrequest.cpp \
@@ -6315,195 +1222,24 @@ SOURCES += \
     createvpnconnectionrouteresponse.cpp \
     createvpngatewayrequest.cpp \
     createvpngatewayresponse.cpp \
-    createwebhookrequest.cpp \
-    createwebhookresponse.cpp \
-    databasemigrationserviceclient.cpp \
-    datapipelineclient.cpp \
-    daxclient.cpp \
-    deactivatepipelinerequest.cpp \
-    deactivatepipelineresponse.cpp \
-    decreasereplicationfactorrequest.cpp \
-    decreasereplicationfactorresponse.cpp \
-    defineanalysisschemerequest.cpp \
-    defineanalysisschemeresponse.cpp \
-    defineexpressionrequest.cpp \
-    defineexpressionresponse.cpp \
-    defineindexfieldrequest.cpp \
-    defineindexfieldresponse.cpp \
-    definesuggesterrequest.cpp \
-    definesuggesterresponse.cpp \
-    deleteanalysisschemerequest.cpp \
-    deleteanalysisschemeresponse.cpp \
-    deleteapikeyrequest.cpp \
-    deleteapikeyrequest.cpp \
-    deleteapikeyresponse.cpp \
-    deleteapikeyresponse.cpp \
-    deleteapplicationrequest.cpp \
-    deleteapplicationresponse.cpp \
-    deleteapplicationsrequest.cpp \
-    deleteapplicationsresponse.cpp \
-    deleteauthorizerrequest.cpp \
-    deleteauthorizerresponse.cpp \
-    deleteautoscalinggrouprequest.cpp \
-    deleteautoscalinggroupresponse.cpp \
-    deletebackuprequest.cpp \
-    deletebackupresponse.cpp \
-    deletebasepathmappingrequest.cpp \
-    deletebasepathmappingresponse.cpp \
-    deletebgppeerrequest.cpp \
-    deletebgppeerresponse.cpp \
-    deletebranchrequest.cpp \
-    deletebranchresponse.cpp \
-    deletebudgetrequest.cpp \
-    deletebudgetresponse.cpp \
-    deletecertificaterequest.cpp \
-    deletecertificaterequest.cpp \
-    deletecertificateresponse.cpp \
-    deletecertificateresponse.cpp \
-    deletechangesetrequest.cpp \
-    deletechangesetresponse.cpp \
-    deleteclientcertificaterequest.cpp \
-    deleteclientcertificateresponse.cpp \
-    deletecloudfrontoriginaccessidentityrequest.cpp \
-    deletecloudfrontoriginaccessidentityresponse.cpp \
-    deleteclusterrequest.cpp \
-    deleteclusterrequest.cpp \
-    deleteclusterresponse.cpp \
-    deleteclusterresponse.cpp \
-    deletecommentcontentrequest.cpp \
-    deletecommentcontentresponse.cpp \
-    deletecomputeenvironmentrequest.cpp \
-    deletecomputeenvironmentresponse.cpp \
-    deleteconditionalforwarderrequest.cpp \
-    deleteconditionalforwarderresponse.cpp \
-    deleteconfigrulerequest.cpp \
-    deleteconfigruleresponse.cpp \
-    deleteconfigurationrecorderrequest.cpp \
-    deleteconfigurationrecorderresponse.cpp \
-    deleteconnectionrequest.cpp \
-    deleteconnectionresponse.cpp \
-    deletecustomactiontyperequest.cpp \
-    deletecustomactiontyperesponse.cpp \
     deletecustomergatewayrequest.cpp \
     deletecustomergatewayresponse.cpp \
-    deletedatasetrequest.cpp \
-    deletedatasetresponse.cpp \
-    deletedatasourcerequest.cpp \
-    deletedatasourceresponse.cpp \
-    deletedeliverychannelrequest.cpp \
-    deletedeliverychannelresponse.cpp \
-    deletedeploymentconfigrequest.cpp \
-    deletedeploymentconfigresponse.cpp \
-    deletedeploymentgrouprequest.cpp \
-    deletedeploymentgroupresponse.cpp \
-    deletedeploymentrequest.cpp \
-    deletedeploymentresponse.cpp \
-    deletedevicepoolrequest.cpp \
-    deletedevicepoolresponse.cpp \
     deletedhcpoptionsrequest.cpp \
     deletedhcpoptionsresponse.cpp \
-    deletedirectconnectgatewayassociationrequest.cpp \
-    deletedirectconnectgatewayassociationresponse.cpp \
-    deletedirectconnectgatewayrequest.cpp \
-    deletedirectconnectgatewayresponse.cpp \
-    deletedirectoryconfigrequest.cpp \
-    deletedirectoryconfigresponse.cpp \
-    deletedirectoryrequest.cpp \
-    deletedirectoryrequest.cpp \
-    deletedirectoryresponse.cpp \
-    deletedirectoryresponse.cpp \
-    deletedistributionrequest.cpp \
-    deletedistributionresponse.cpp \
-    deletedocumentationpartrequest.cpp \
-    deletedocumentationpartresponse.cpp \
-    deletedocumentationversionrequest.cpp \
-    deletedocumentationversionresponse.cpp \
-    deletedomainnamerequest.cpp \
-    deletedomainnameresponse.cpp \
-    deletedomainrequest.cpp \
-    deletedomainresponse.cpp \
     deleteegressonlyinternetgatewayrequest.cpp \
     deleteegressonlyinternetgatewayresponse.cpp \
-    deleteendpointrequest.cpp \
-    deleteendpointresponse.cpp \
-    deleteenvironmentmembershiprequest.cpp \
-    deleteenvironmentmembershipresponse.cpp \
-    deleteenvironmentrequest.cpp \
-    deleteenvironmentresponse.cpp \
-    deleteevaluationresultsrequest.cpp \
-    deleteevaluationresultsresponse.cpp \
-    deleteeventsubscriptionrequest.cpp \
-    deleteeventsubscriptionresponse.cpp \
-    deleteexpressionrequest.cpp \
-    deleteexpressionresponse.cpp \
-    deletefacetrequest.cpp \
-    deletefacetresponse.cpp \
-    deletefleetrequest.cpp \
-    deletefleetresponse.cpp \
     deleteflowlogsrequest.cpp \
     deleteflowlogsresponse.cpp \
     deletefpgaimagerequest.cpp \
     deletefpgaimageresponse.cpp \
-    deletegatewayresponserequest.cpp \
-    deletegatewayresponseresponse.cpp \
-    deletegithubaccounttokenrequest.cpp \
-    deletegithubaccounttokenresponse.cpp \
-    deletegraphqlapirequest.cpp \
-    deletegraphqlapiresponse.cpp \
-    deletegrouprequest.cpp \
-    deletegroupresponse.cpp \
-    deletehapgrequest.cpp \
-    deletehapgresponse.cpp \
-    deletehsmrequest.cpp \
-    deletehsmrequest.cpp \
-    deletehsmresponse.cpp \
-    deletehsmresponse.cpp \
-    deleteidentitiesrequest.cpp \
-    deleteidentitiesresponse.cpp \
-    deleteidentitypoolrequest.cpp \
-    deleteidentitypoolresponse.cpp \
-    deleteidentityproviderrequest.cpp \
-    deleteidentityproviderresponse.cpp \
-    deleteimagebuilderrequest.cpp \
-    deleteimagebuilderresponse.cpp \
-    deleteimagerequest.cpp \
-    deleteimageresponse.cpp \
-    deleteindexfieldrequest.cpp \
-    deleteindexfieldresponse.cpp \
-    deleteintegrationrequest.cpp \
-    deleteintegrationresponse.cpp \
-    deleteintegrationresponserequest.cpp \
-    deleteintegrationresponseresponse.cpp \
-    deleteinterconnectrequest.cpp \
-    deleteinterconnectresponse.cpp \
     deleteinternetgatewayrequest.cpp \
     deleteinternetgatewayresponse.cpp \
-    deleteitemrequest.cpp \
-    deleteitemresponse.cpp \
-    deletejobqueuerequest.cpp \
-    deletejobqueueresponse.cpp \
     deletekeypairrequest.cpp \
     deletekeypairresponse.cpp \
-    deletelagrequest.cpp \
-    deletelagresponse.cpp \
-    deletelaunchconfigurationrequest.cpp \
-    deletelaunchconfigurationresponse.cpp \
     deletelaunchtemplaterequest.cpp \
     deletelaunchtemplateresponse.cpp \
     deletelaunchtemplateversionsrequest.cpp \
     deletelaunchtemplateversionsresponse.cpp \
-    deletelifecyclehookrequest.cpp \
-    deletelifecyclehookresponse.cpp \
-    deletelunaclientrequest.cpp \
-    deletelunaclientresponse.cpp \
-    deletemethodrequest.cpp \
-    deletemethodresponse.cpp \
-    deletemethodresponserequest.cpp \
-    deletemethodresponseresponse.cpp \
-    deletemodelrequest.cpp \
-    deletemodelresponse.cpp \
-    deletenamedqueryrequest.cpp \
-    deletenamedqueryresponse.cpp \
     deletenatgatewayrequest.cpp \
     deletenatgatewayresponse.cpp \
     deletenetworkaclentryrequest.cpp \
@@ -6514,146 +1250,22 @@ SOURCES += \
     deletenetworkinterfacepermissionresponse.cpp \
     deletenetworkinterfacerequest.cpp \
     deletenetworkinterfaceresponse.cpp \
-    deletenetworkprofilerequest.cpp \
-    deletenetworkprofileresponse.cpp \
-    deletenotificationconfigurationrequest.cpp \
-    deletenotificationconfigurationresponse.cpp \
-    deletenotificationrequest.cpp \
-    deletenotificationresponse.cpp \
-    deleteobjectrequest.cpp \
-    deleteobjectresponse.cpp \
-    deleteparametergrouprequest.cpp \
-    deleteparametergroupresponse.cpp \
-    deletepipelinerequest.cpp \
-    deletepipelinerequest.cpp \
-    deletepipelineresponse.cpp \
-    deletepipelineresponse.cpp \
     deleteplacementgrouprequest.cpp \
     deleteplacementgroupresponse.cpp \
-    deletepolicyrequest.cpp \
-    deletepolicyresponse.cpp \
-    deleteprofilerequest.cpp \
-    deleteprofileresponse.cpp \
-    deleteprogressupdatestreamrequest.cpp \
-    deleteprogressupdatestreamresponse.cpp \
-    deleteprojectrequest.cpp \
-    deleteprojectrequest.cpp \
-    deleteprojectrequest.cpp \
-    deleteprojectresponse.cpp \
-    deleteprojectresponse.cpp \
-    deleteprojectresponse.cpp \
-    deleteremoteaccesssessionrequest.cpp \
-    deleteremoteaccesssessionresponse.cpp \
-    deletereplicationinstancerequest.cpp \
-    deletereplicationinstanceresponse.cpp \
-    deletereplicationsubnetgrouprequest.cpp \
-    deletereplicationsubnetgroupresponse.cpp \
-    deletereplicationtaskrequest.cpp \
-    deletereplicationtaskresponse.cpp \
-    deletereportdefinitionrequest.cpp \
-    deletereportdefinitionresponse.cpp \
-    deleterepositoryrequest.cpp \
-    deleterepositoryresponse.cpp \
-    deleterequestvalidatorrequest.cpp \
-    deleterequestvalidatorresponse.cpp \
-    deleteresolverrequest.cpp \
-    deleteresolverresponse.cpp \
-    deleteresourcerequest.cpp \
-    deleteresourceresponse.cpp \
-    deleteresourceserverrequest.cpp \
-    deleteresourceserverresponse.cpp \
-    deleterestapirequest.cpp \
-    deleterestapiresponse.cpp \
-    deleteroomrequest.cpp \
-    deleteroomresponse.cpp \
-    deleteroomskillparameterrequest.cpp \
-    deleteroomskillparameterresponse.cpp \
     deleterouterequest.cpp \
     deleterouteresponse.cpp \
     deleteroutetablerequest.cpp \
     deleteroutetableresponse.cpp \
-    deleterunrequest.cpp \
-    deleterunresponse.cpp \
-    deletescalingplanrequest.cpp \
-    deletescalingplanresponse.cpp \
-    deletescalingpolicyrequest.cpp \
-    deletescalingpolicyresponse.cpp \
-    deletescheduledactionrequest.cpp \
-    deletescheduledactionrequest.cpp \
-    deletescheduledactionresponse.cpp \
-    deletescheduledactionresponse.cpp \
-    deleteschemarequest.cpp \
-    deleteschemaresponse.cpp \
     deletesecuritygrouprequest.cpp \
     deletesecuritygroupresponse.cpp \
-    deleteservicelinkedrolerequest.cpp \
-    deleteservicelinkedroleresponse.cpp \
-    deleteskillgrouprequest.cpp \
-    deleteskillgroupresponse.cpp \
     deletesnapshotrequest.cpp \
-    deletesnapshotrequest.cpp \
-    deletesnapshotresponse.cpp \
     deletesnapshotresponse.cpp \
     deletespotdatafeedsubscriptionrequest.cpp \
     deletespotdatafeedsubscriptionresponse.cpp \
-    deletestackinstancesrequest.cpp \
-    deletestackinstancesresponse.cpp \
-    deletestackrequest.cpp \
-    deletestackrequest.cpp \
-    deletestackresponse.cpp \
-    deletestackresponse.cpp \
-    deletestacksetrequest.cpp \
-    deletestacksetresponse.cpp \
-    deletestagerequest.cpp \
-    deletestageresponse.cpp \
-    deletestreamingdistributionrequest.cpp \
-    deletestreamingdistributionresponse.cpp \
-    deletesubnetgrouprequest.cpp \
-    deletesubnetgroupresponse.cpp \
     deletesubnetrequest.cpp \
     deletesubnetresponse.cpp \
-    deletesubscriberrequest.cpp \
-    deletesubscriberresponse.cpp \
-    deletesuggesterrequest.cpp \
-    deletesuggesterresponse.cpp \
-    deletetablerequest.cpp \
-    deletetableresponse.cpp \
-    deletetagsrequest.cpp \
-    deletetagsrequest.cpp \
     deletetagsrequest.cpp \
     deletetagsresponse.cpp \
-    deletetagsresponse.cpp \
-    deletetagsresponse.cpp \
-    deletetrailrequest.cpp \
-    deletetrailresponse.cpp \
-    deletetrustrequest.cpp \
-    deletetrustresponse.cpp \
-    deletetypedlinkfacetrequest.cpp \
-    deletetypedlinkfacetresponse.cpp \
-    deletetyperequest.cpp \
-    deletetyperesponse.cpp \
-    deleteuploadrequest.cpp \
-    deleteuploadresponse.cpp \
-    deleteusageplankeyrequest.cpp \
-    deleteusageplankeyresponse.cpp \
-    deleteusageplanrequest.cpp \
-    deleteusageplanresponse.cpp \
-    deleteuserattributesrequest.cpp \
-    deleteuserattributesresponse.cpp \
-    deleteuserpoolclientrequest.cpp \
-    deleteuserpoolclientresponse.cpp \
-    deleteuserpooldomainrequest.cpp \
-    deleteuserpooldomainresponse.cpp \
-    deleteuserpoolrequest.cpp \
-    deleteuserpoolresponse.cpp \
-    deleteuserprofilerequest.cpp \
-    deleteuserprofileresponse.cpp \
-    deleteuserrequest.cpp \
-    deleteuserrequest.cpp \
-    deleteuserresponse.cpp \
-    deleteuserresponse.cpp \
-    deletevirtualinterfacerequest.cpp \
-    deletevirtualinterfaceresponse.cpp \
     deletevolumerequest.cpp \
     deletevolumeresponse.cpp \
     deletevpcendpointconnectionnotificationsrequest.cpp \
@@ -6662,8 +1274,6 @@ SOURCES += \
     deletevpcendpointserviceconfigurationsresponse.cpp \
     deletevpcendpointsrequest.cpp \
     deletevpcendpointsresponse.cpp \
-    deletevpclinkrequest.cpp \
-    deletevpclinkresponse.cpp \
     deletevpcpeeringconnectionrequest.cpp \
     deletevpcpeeringconnectionresponse.cpp \
     deletevpcrequest.cpp \
@@ -6674,209 +1284,58 @@ SOURCES += \
     deletevpnconnectionrouteresponse.cpp \
     deletevpngatewayrequest.cpp \
     deletevpngatewayresponse.cpp \
-    deletewebhookrequest.cpp \
-    deletewebhookresponse.cpp \
-    deliverconfigsnapshotrequest.cpp \
-    deliverconfigsnapshotresponse.cpp \
-    deregistereventtopicrequest.cpp \
-    deregistereventtopicresponse.cpp \
     deregisterimagerequest.cpp \
     deregisterimageresponse.cpp \
-    deregisterjobdefinitionrequest.cpp \
-    deregisterjobdefinitionresponse.cpp \
-    deregisteronpremisesinstancerequest.cpp \
-    deregisteronpremisesinstanceresponse.cpp \
-    deregisterscalabletargetrequest.cpp \
-    deregisterscalabletargetresponse.cpp \
-    describeaccountattributesrequest.cpp \
     describeaccountattributesrequest.cpp \
     describeaccountattributesresponse.cpp \
-    describeaccountattributesresponse.cpp \
-    describeaccountlimitsrequest.cpp \
-    describeaccountlimitsresponse.cpp \
-    describeaccountlimitsresponse.cpp \
     describeaddressesrequest.cpp \
     describeaddressesresponse.cpp \
-    describeadjustmenttypesresponse.cpp \
-    describeagentsrequest.cpp \
-    describeagentsresponse.cpp \
     describeaggregateidformatrequest.cpp \
     describeaggregateidformatresponse.cpp \
-    describeanalysisschemesrequest.cpp \
-    describeanalysisschemesresponse.cpp \
-    describeapplicationstaterequest.cpp \
-    describeapplicationstateresponse.cpp \
-    describeautoscalinggroupsrequest.cpp \
-    describeautoscalinggroupsresponse.cpp \
-    describeautoscalinginstancesrequest.cpp \
-    describeautoscalinginstancesresponse.cpp \
-    describeautoscalingnotificationtypesresponse.cpp \
-    describeavailabilityoptionsrequest.cpp \
-    describeavailabilityoptionsresponse.cpp \
     describeavailabilityzonesrequest.cpp \
     describeavailabilityzonesresponse.cpp \
-    describebackuprequest.cpp \
-    describebackupresponse.cpp \
-    describebackupsrequest.cpp \
-    describebackupsresponse.cpp \
-    describebudgetrequest.cpp \
-    describebudgetresponse.cpp \
-    describebudgetsrequest.cpp \
-    describebudgetsresponse.cpp \
     describebundletasksrequest.cpp \
     describebundletasksresponse.cpp \
-    describecertificaterequest.cpp \
-    describecertificateresponse.cpp \
-    describecertificatesrequest.cpp \
-    describecertificatesresponse.cpp \
-    describechangesetrequest.cpp \
-    describechangesetresponse.cpp \
     describeclassiclinkinstancesrequest.cpp \
     describeclassiclinkinstancesresponse.cpp \
-    describeclustersrequest.cpp \
-    describeclustersrequest.cpp \
-    describeclustersresponse.cpp \
-    describeclustersresponse.cpp \
-    describecompliancebyconfigrulerequest.cpp \
-    describecompliancebyconfigruleresponse.cpp \
-    describecompliancebyresourcerequest.cpp \
-    describecompliancebyresourceresponse.cpp \
-    describecomputeenvironmentsrequest.cpp \
-    describecomputeenvironmentsresponse.cpp \
-    describeconditionalforwardersrequest.cpp \
-    describeconditionalforwardersresponse.cpp \
-    describeconfigruleevaluationstatusrequest.cpp \
-    describeconfigruleevaluationstatusresponse.cpp \
-    describeconfigrulesrequest.cpp \
-    describeconfigrulesresponse.cpp \
-    describeconfigurationrecordersrequest.cpp \
-    describeconfigurationrecordersresponse.cpp \
-    describeconfigurationrecorderstatusrequest.cpp \
-    describeconfigurationrecorderstatusresponse.cpp \
-    describeconfigurationsrequest.cpp \
-    describeconfigurationsresponse.cpp \
-    describeconnectionloarequest.cpp \
-    describeconnectionloaresponse.cpp \
-    describeconnectionsoninterconnectrequest.cpp \
-    describeconnectionsoninterconnectresponse.cpp \
-    describeconnectionsrequest.cpp \
-    describeconnectionsrequest.cpp \
-    describeconnectionsresponse.cpp \
-    describeconnectionsresponse.cpp \
-    describecontinuousbackupsrequest.cpp \
-    describecontinuousbackupsresponse.cpp \
     describeconversiontasksrequest.cpp \
     describeconversiontasksresponse.cpp \
     describecustomergatewaysrequest.cpp \
     describecustomergatewaysresponse.cpp \
-    describedatasetrequest.cpp \
-    describedatasetresponse.cpp \
-    describedefaultparametersrequest.cpp \
-    describedefaultparametersresponse.cpp \
-    describedeliverychannelsrequest.cpp \
-    describedeliverychannelsresponse.cpp \
-    describedeliverychannelstatusrequest.cpp \
-    describedeliverychannelstatusresponse.cpp \
     describedhcpoptionsrequest.cpp \
     describedhcpoptionsresponse.cpp \
-    describedirectconnectgatewayassociationsrequest.cpp \
-    describedirectconnectgatewayassociationsresponse.cpp \
-    describedirectconnectgatewayattachmentsrequest.cpp \
-    describedirectconnectgatewayattachmentsresponse.cpp \
-    describedirectconnectgatewaysrequest.cpp \
-    describedirectconnectgatewaysresponse.cpp \
-    describedirectoriesrequest.cpp \
-    describedirectoriesresponse.cpp \
-    describedirectoryconfigsrequest.cpp \
-    describedirectoryconfigsresponse.cpp \
-    describedomaincontrollersrequest.cpp \
-    describedomaincontrollersresponse.cpp \
-    describedomainsrequest.cpp \
-    describedomainsresponse.cpp \
     describeegressonlyinternetgatewaysrequest.cpp \
     describeegressonlyinternetgatewaysresponse.cpp \
     describeelasticgpusrequest.cpp \
     describeelasticgpusresponse.cpp \
-    describeendpointsrequest.cpp \
-    describeendpointsresponse.cpp \
-    describeendpointtypesrequest.cpp \
-    describeendpointtypesresponse.cpp \
-    describeenvironmentmembershipsrequest.cpp \
-    describeenvironmentmembershipsresponse.cpp \
-    describeenvironmentsrequest.cpp \
-    describeenvironmentsresponse.cpp \
-    describeenvironmentstatusrequest.cpp \
-    describeenvironmentstatusresponse.cpp \
-    describeeventcategoriesrequest.cpp \
-    describeeventcategoriesresponse.cpp \
-    describeeventsrequest.cpp \
-    describeeventsrequest.cpp \
-    describeeventsresponse.cpp \
-    describeeventsresponse.cpp \
-    describeeventsubscriptionsrequest.cpp \
-    describeeventsubscriptionsresponse.cpp \
-    describeeventtopicsrequest.cpp \
-    describeeventtopicsresponse.cpp \
-    describeexportconfigurationsrequest.cpp \
-    describeexportconfigurationsresponse.cpp \
-    describeexporttasksrequest.cpp \
     describeexporttasksrequest.cpp \
     describeexporttasksresponse.cpp \
-    describeexporttasksresponse.cpp \
-    describeexpressionsrequest.cpp \
-    describeexpressionsresponse.cpp \
-    describefleetsrequest.cpp \
-    describefleetsresponse.cpp \
     describeflowlogsrequest.cpp \
     describeflowlogsresponse.cpp \
     describefpgaimageattributerequest.cpp \
     describefpgaimageattributeresponse.cpp \
     describefpgaimagesrequest.cpp \
     describefpgaimagesresponse.cpp \
-    describeglobaltablerequest.cpp \
-    describeglobaltableresponse.cpp \
-    describehapgrequest.cpp \
-    describehapgresponse.cpp \
-    describehostedconnectionsrequest.cpp \
-    describehostedconnectionsresponse.cpp \
     describehostreservationofferingsrequest.cpp \
     describehostreservationofferingsresponse.cpp \
     describehostreservationsrequest.cpp \
     describehostreservationsresponse.cpp \
     describehostsrequest.cpp \
     describehostsresponse.cpp \
-    describehsmrequest.cpp \
-    describehsmresponse.cpp \
     describeiaminstanceprofileassociationsrequest.cpp \
     describeiaminstanceprofileassociationsresponse.cpp \
     describeidentityidformatrequest.cpp \
     describeidentityidformatresponse.cpp \
-    describeidentitypoolrequest.cpp \
-    describeidentitypoolresponse.cpp \
-    describeidentitypoolusagerequest.cpp \
-    describeidentitypoolusageresponse.cpp \
-    describeidentityproviderrequest.cpp \
-    describeidentityproviderresponse.cpp \
-    describeidentityrequest.cpp \
-    describeidentityresponse.cpp \
-    describeidentityusagerequest.cpp \
-    describeidentityusageresponse.cpp \
     describeidformatrequest.cpp \
     describeidformatresponse.cpp \
     describeimageattributerequest.cpp \
     describeimageattributeresponse.cpp \
-    describeimagebuildersrequest.cpp \
-    describeimagebuildersresponse.cpp \
     describeimagesrequest.cpp \
-    describeimagesrequest.cpp \
-    describeimagesresponse.cpp \
     describeimagesresponse.cpp \
     describeimportimagetasksrequest.cpp \
     describeimportimagetasksresponse.cpp \
     describeimportsnapshottasksrequest.cpp \
     describeimportsnapshottasksresponse.cpp \
-    describeindexfieldsrequest.cpp \
-    describeindexfieldsresponse.cpp \
     describeinstanceattributerequest.cpp \
     describeinstanceattributeresponse.cpp \
     describeinstancecreditspecificationsrequest.cpp \
@@ -6885,45 +1344,14 @@ SOURCES += \
     describeinstancesresponse.cpp \
     describeinstancestatusrequest.cpp \
     describeinstancestatusresponse.cpp \
-    describeinterconnectloarequest.cpp \
-    describeinterconnectloaresponse.cpp \
-    describeinterconnectsrequest.cpp \
-    describeinterconnectsresponse.cpp \
     describeinternetgatewaysrequest.cpp \
     describeinternetgatewaysresponse.cpp \
-    describejobdefinitionsrequest.cpp \
-    describejobdefinitionsresponse.cpp \
-    describejobqueuesrequest.cpp \
-    describejobqueuesresponse.cpp \
-    describejobsrequest.cpp \
-    describejobsresponse.cpp \
     describekeypairsrequest.cpp \
     describekeypairsresponse.cpp \
-    describelagsrequest.cpp \
-    describelagsresponse.cpp \
-    describelaunchconfigurationsrequest.cpp \
-    describelaunchconfigurationsresponse.cpp \
     describelaunchtemplatesrequest.cpp \
     describelaunchtemplatesresponse.cpp \
     describelaunchtemplateversionsrequest.cpp \
     describelaunchtemplateversionsresponse.cpp \
-    describelifecyclehooksrequest.cpp \
-    describelifecyclehooksresponse.cpp \
-    describelifecyclehooktypesresponse.cpp \
-    describelimitsrequest.cpp \
-    describelimitsresponse.cpp \
-    describeloadbalancersrequest.cpp \
-    describeloadbalancersresponse.cpp \
-    describeloadbalancertargetgroupsrequest.cpp \
-    describeloadbalancertargetgroupsresponse.cpp \
-    describeloarequest.cpp \
-    describeloaresponse.cpp \
-    describelocationsresponse.cpp \
-    describelunaclientrequest.cpp \
-    describelunaclientresponse.cpp \
-    describemetriccollectiontypesresponse.cpp \
-    describemigrationtaskrequest.cpp \
-    describemigrationtaskresponse.cpp \
     describemovingaddressesrequest.cpp \
     describemovingaddressesresponse.cpp \
     describenatgatewaysrequest.cpp \
@@ -6936,48 +1364,14 @@ SOURCES += \
     describenetworkinterfacepermissionsresponse.cpp \
     describenetworkinterfacesrequest.cpp \
     describenetworkinterfacesresponse.cpp \
-    describenotificationconfigurationsrequest.cpp \
-    describenotificationconfigurationsresponse.cpp \
-    describenotificationsforbudgetrequest.cpp \
-    describenotificationsforbudgetresponse.cpp \
-    describeobjectsrequest.cpp \
-    describeobjectsresponse.cpp \
-    describeorderablereplicationinstancesrequest.cpp \
-    describeorderablereplicationinstancesresponse.cpp \
-    describeparametergroupsrequest.cpp \
-    describeparametergroupsresponse.cpp \
-    describeparametersrequest.cpp \
-    describeparametersresponse.cpp \
-    describepipelinesrequest.cpp \
-    describepipelinesresponse.cpp \
     describeplacementgroupsrequest.cpp \
     describeplacementgroupsresponse.cpp \
-    describepoliciesrequest.cpp \
-    describepoliciesresponse.cpp \
     describeprefixlistsrequest.cpp \
     describeprefixlistsresponse.cpp \
     describeprincipalidformatrequest.cpp \
     describeprincipalidformatresponse.cpp \
-    describeprojectrequest.cpp \
-    describeprojectresponse.cpp \
-    describepullrequesteventsrequest.cpp \
-    describepullrequesteventsresponse.cpp \
-    describerefreshschemasstatusrequest.cpp \
-    describerefreshschemasstatusresponse.cpp \
     describeregionsrequest.cpp \
     describeregionsresponse.cpp \
-    describereplicationinstancesrequest.cpp \
-    describereplicationinstancesresponse.cpp \
-    describereplicationinstancetasklogsrequest.cpp \
-    describereplicationinstancetasklogsresponse.cpp \
-    describereplicationsubnetgroupsrequest.cpp \
-    describereplicationsubnetgroupsresponse.cpp \
-    describereplicationtaskassessmentresultsrequest.cpp \
-    describereplicationtaskassessmentresultsresponse.cpp \
-    describereplicationtasksrequest.cpp \
-    describereplicationtasksresponse.cpp \
-    describereportdefinitionsrequest.cpp \
-    describereportdefinitionsresponse.cpp \
     describereservedinstanceslistingsrequest.cpp \
     describereservedinstanceslistingsresponse.cpp \
     describereservedinstancesmodificationsrequest.cpp \
@@ -6986,50 +1380,19 @@ SOURCES += \
     describereservedinstancesofferingsresponse.cpp \
     describereservedinstancesrequest.cpp \
     describereservedinstancesresponse.cpp \
-    describeresourceserverrequest.cpp \
-    describeresourceserverresponse.cpp \
-    describeriskconfigurationrequest.cpp \
-    describeriskconfigurationresponse.cpp \
     describeroutetablesrequest.cpp \
     describeroutetablesresponse.cpp \
-    describescalabletargetsrequest.cpp \
-    describescalabletargetsresponse.cpp \
-    describescalingactivitiesrequest.cpp \
-    describescalingactivitiesrequest.cpp \
-    describescalingactivitiesresponse.cpp \
-    describescalingactivitiesresponse.cpp \
-    describescalingparametersrequest.cpp \
-    describescalingparametersresponse.cpp \
-    describescalingplanresourcesrequest.cpp \
-    describescalingplanresourcesresponse.cpp \
-    describescalingplansrequest.cpp \
-    describescalingplansresponse.cpp \
-    describescalingpoliciesrequest.cpp \
-    describescalingpoliciesresponse.cpp \
-    describescalingprocesstypesresponse.cpp \
-    describescheduledactionsrequest.cpp \
-    describescheduledactionsrequest.cpp \
-    describescheduledactionsresponse.cpp \
-    describescheduledactionsresponse.cpp \
     describescheduledinstanceavailabilityrequest.cpp \
     describescheduledinstanceavailabilityresponse.cpp \
     describescheduledinstancesrequest.cpp \
     describescheduledinstancesresponse.cpp \
-    describeschemasrequest.cpp \
-    describeschemasresponse.cpp \
     describesecuritygroupreferencesrequest.cpp \
     describesecuritygroupreferencesresponse.cpp \
     describesecuritygroupsrequest.cpp \
     describesecuritygroupsresponse.cpp \
-    describeserviceaccesspoliciesrequest.cpp \
-    describeserviceaccesspoliciesresponse.cpp \
-    describesessionsrequest.cpp \
-    describesessionsresponse.cpp \
     describesnapshotattributerequest.cpp \
     describesnapshotattributeresponse.cpp \
     describesnapshotsrequest.cpp \
-    describesnapshotsrequest.cpp \
-    describesnapshotsresponse.cpp \
     describesnapshotsresponse.cpp \
     describespotdatafeedsubscriptionrequest.cpp \
     describespotdatafeedsubscriptionresponse.cpp \
@@ -7043,68 +1406,12 @@ SOURCES += \
     describespotinstancerequestsresponse.cpp \
     describespotpricehistoryrequest.cpp \
     describespotpricehistoryresponse.cpp \
-    describestackeventsrequest.cpp \
-    describestackeventsresponse.cpp \
-    describestackinstancerequest.cpp \
-    describestackinstanceresponse.cpp \
-    describestackresourcerequest.cpp \
-    describestackresourceresponse.cpp \
-    describestackresourcesrequest.cpp \
-    describestackresourcesresponse.cpp \
-    describestacksetoperationrequest.cpp \
-    describestacksetoperationresponse.cpp \
-    describestacksetrequest.cpp \
-    describestacksetresponse.cpp \
-    describestacksrequest.cpp \
-    describestacksrequest.cpp \
-    describestacksresponse.cpp \
-    describestacksresponse.cpp \
     describestalesecuritygroupsrequest.cpp \
     describestalesecuritygroupsresponse.cpp \
-    describestreamrequest.cpp \
-    describestreamresponse.cpp \
-    describesubnetgroupsrequest.cpp \
-    describesubnetgroupsresponse.cpp \
     describesubnetsrequest.cpp \
     describesubnetsresponse.cpp \
-    describesubscribersfornotificationrequest.cpp \
-    describesubscribersfornotificationresponse.cpp \
-    describesuggestersrequest.cpp \
-    describesuggestersresponse.cpp \
-    describetablerequest.cpp \
-    describetableresponse.cpp \
-    describetablestatisticsrequest.cpp \
-    describetablestatisticsresponse.cpp \
-    describetagsrequest.cpp \
-    describetagsrequest.cpp \
-    describetagsrequest.cpp \
     describetagsrequest.cpp \
     describetagsresponse.cpp \
-    describetagsresponse.cpp \
-    describetagsresponse.cpp \
-    describetagsresponse.cpp \
-    describeterminationpolicytypesresponse.cpp \
-    describetimetoliverequest.cpp \
-    describetimetoliveresponse.cpp \
-    describetopicsdetectionjobrequest.cpp \
-    describetopicsdetectionjobresponse.cpp \
-    describetrailsrequest.cpp \
-    describetrailsresponse.cpp \
-    describetrustsrequest.cpp \
-    describetrustsresponse.cpp \
-    describeuserimportjobrequest.cpp \
-    describeuserimportjobresponse.cpp \
-    describeuserpoolclientrequest.cpp \
-    describeuserpoolclientresponse.cpp \
-    describeuserpooldomainrequest.cpp \
-    describeuserpooldomainresponse.cpp \
-    describeuserpoolrequest.cpp \
-    describeuserpoolresponse.cpp \
-    describeuserprofilerequest.cpp \
-    describeuserprofileresponse.cpp \
-    describevirtualgatewaysresponse.cpp \
-    describevirtualinterfacesrequest.cpp \
-    describevirtualinterfacesresponse.cpp \
     describevolumeattributerequest.cpp \
     describevolumeattributeresponse.cpp \
     describevolumesmodificationsrequest.cpp \
@@ -7141,49 +1448,14 @@ SOURCES += \
     describevpngatewaysresponse.cpp \
     detachclassiclinkvpcrequest.cpp \
     detachclassiclinkvpcresponse.cpp \
-    detachfromindexrequest.cpp \
-    detachfromindexresponse.cpp \
-    detachinstancesrequest.cpp \
-    detachinstancesresponse.cpp \
     detachinternetgatewayrequest.cpp \
     detachinternetgatewayresponse.cpp \
-    detachloadbalancersrequest.cpp \
-    detachloadbalancersresponse.cpp \
-    detachloadbalancertargetgroupsrequest.cpp \
-    detachloadbalancertargetgroupsresponse.cpp \
     detachnetworkinterfacerequest.cpp \
     detachnetworkinterfaceresponse.cpp \
-    detachobjectrequest.cpp \
-    detachobjectresponse.cpp \
-    detachpolicyrequest.cpp \
-    detachpolicyresponse.cpp \
-    detachtypedlinkrequest.cpp \
-    detachtypedlinkresponse.cpp \
     detachvolumerequest.cpp \
     detachvolumeresponse.cpp \
     detachvpngatewayrequest.cpp \
     detachvpngatewayresponse.cpp \
-    detectdominantlanguagerequest.cpp \
-    detectdominantlanguageresponse.cpp \
-    detectentitiesrequest.cpp \
-    detectentitiesresponse.cpp \
-    detectkeyphrasesrequest.cpp \
-    detectkeyphrasesresponse.cpp \
-    detectsentimentrequest.cpp \
-    detectsentimentresponse.cpp \
-    devicefarmclient.cpp \
-    directconnectclient.cpp \
-    directoryserviceclient.cpp \
-    disabledirectoryrequest.cpp \
-    disabledirectoryresponse.cpp \
-    disablemetricscollectionrequest.cpp \
-    disablemetricscollectionresponse.cpp \
-    disableradiusrequest.cpp \
-    disableradiusresponse.cpp \
-    disablessorequest.cpp \
-    disablessoresponse.cpp \
-    disablestagetransitionrequest.cpp \
-    disablestagetransitionresponse.cpp \
     disablevgwroutepropagationrequest.cpp \
     disablevgwroutepropagationresponse.cpp \
     disablevpcclassiclinkdnssupportrequest.cpp \
@@ -7192,43 +1464,15 @@ SOURCES += \
     disablevpcclassiclinkresponse.cpp \
     disassociateaddressrequest.cpp \
     disassociateaddressresponse.cpp \
-    disassociateconfigurationitemsfromapplicationrequest.cpp \
-    disassociateconfigurationitemsfromapplicationresponse.cpp \
-    disassociateconnectionfromlagrequest.cpp \
-    disassociateconnectionfromlagresponse.cpp \
-    disassociatecreatedartifactrequest.cpp \
-    disassociatecreatedartifactresponse.cpp \
-    disassociatedevicefromroomrequest.cpp \
-    disassociatedevicefromroomresponse.cpp \
-    disassociatediscoveredresourcerequest.cpp \
-    disassociatediscoveredresourceresponse.cpp \
-    disassociatefleetrequest.cpp \
-    disassociatefleetresponse.cpp \
     disassociateiaminstanceprofilerequest.cpp \
     disassociateiaminstanceprofileresponse.cpp \
     disassociateroutetablerequest.cpp \
     disassociateroutetableresponse.cpp \
-    disassociateskillgroupfromroomrequest.cpp \
-    disassociateskillgroupfromroomresponse.cpp \
     disassociatesubnetcidrblockrequest.cpp \
     disassociatesubnetcidrblockresponse.cpp \
-    disassociateteammemberrequest.cpp \
-    disassociateteammemberresponse.cpp \
     disassociatevpccidrblockrequest.cpp \
     disassociatevpccidrblockresponse.cpp \
-    dynamodbclient.cpp \
-    dynamodbstreamsclient.cpp \
     ec2client.cpp \
-    enabledirectoryrequest.cpp \
-    enabledirectoryresponse.cpp \
-    enablemetricscollectionrequest.cpp \
-    enablemetricscollectionresponse.cpp \
-    enableradiusrequest.cpp \
-    enableradiusresponse.cpp \
-    enablessorequest.cpp \
-    enablessoresponse.cpp \
-    enablestagetransitionrequest.cpp \
-    enablestagetransitionresponse.cpp \
     enablevgwroutepropagationrequest.cpp \
     enablevgwroutepropagationresponse.cpp \
     enablevolumeiorequest.cpp \
@@ -7237,664 +1481,32 @@ SOURCES += \
     enablevpcclassiclinkdnssupportresponse.cpp \
     enablevpcclassiclinkrequest.cpp \
     enablevpcclassiclinkresponse.cpp \
-    enterstandbyrequest.cpp \
-    enterstandbyresponse.cpp \
-    estimatetemplatecostrequest.cpp \
-    estimatetemplatecostresponse.cpp \
-    evaluateexpressionrequest.cpp \
-    evaluateexpressionresponse.cpp \
-    executechangesetrequest.cpp \
-    executechangesetresponse.cpp \
-    executepolicyrequest.cpp \
-    executepolicyresponse.cpp \
-    exitstandbyrequest.cpp \
-    exitstandbyresponse.cpp \
-    expiresessionrequest.cpp \
-    expiresessionresponse.cpp \
-    exportconfigurationsresponse.cpp \
-    flushstageauthorizerscacherequest.cpp \
-    flushstageauthorizerscacheresponse.cpp \
-    flushstagecacherequest.cpp \
-    flushstagecacheresponse.cpp \
-    forgetdevicerequest.cpp \
-    forgetdeviceresponse.cpp \
-    forgotpasswordrequest.cpp \
-    forgotpasswordresponse.cpp \
-    generateclientcertificaterequest.cpp \
-    generateclientcertificateresponse.cpp \
-    getaccountrequest.cpp \
-    getaccountresponse.cpp \
-    getaccountsettingsrequest.cpp \
-    getaccountsettingsresponse.cpp \
-    getapikeyrequest.cpp \
-    getapikeyresponse.cpp \
-    getapikeysrequest.cpp \
-    getapikeysresponse.cpp \
-    getapplicationrequest.cpp \
-    getapplicationresponse.cpp \
-    getapplicationrevisionrequest.cpp \
-    getapplicationrevisionresponse.cpp \
-    getappliedschemaversionrequest.cpp \
-    getappliedschemaversionresponse.cpp \
-    getauthorizerrequest.cpp \
-    getauthorizerresponse.cpp \
-    getauthorizersrequest.cpp \
-    getauthorizersresponse.cpp \
-    getbasepathmappingrequest.cpp \
-    getbasepathmappingresponse.cpp \
-    getbasepathmappingsrequest.cpp \
-    getbasepathmappingsresponse.cpp \
-    getblobrequest.cpp \
-    getblobresponse.cpp \
-    getbranchrequest.cpp \
-    getbranchresponse.cpp \
-    getbulkpublishdetailsrequest.cpp \
-    getbulkpublishdetailsresponse.cpp \
-    getcertificaterequest.cpp \
-    getcertificateresponse.cpp \
-    getclientcertificaterequest.cpp \
-    getclientcertificateresponse.cpp \
-    getclientcertificatesrequest.cpp \
-    getclientcertificatesresponse.cpp \
-    getcloudfrontoriginaccessidentityconfigrequest.cpp \
-    getcloudfrontoriginaccessidentityconfigresponse.cpp \
-    getcloudfrontoriginaccessidentityrequest.cpp \
-    getcloudfrontoriginaccessidentityresponse.cpp \
-    getcognitoeventsrequest.cpp \
-    getcognitoeventsresponse.cpp \
-    getcommentrequest.cpp \
-    getcommentresponse.cpp \
-    getcommentsforcomparedcommitrequest.cpp \
-    getcommentsforcomparedcommitresponse.cpp \
-    getcommentsforpullrequestrequest.cpp \
-    getcommentsforpullrequestresponse.cpp \
-    getcommitrequest.cpp \
-    getcommitresponse.cpp \
-    getcompliancedetailsbyconfigrulerequest.cpp \
-    getcompliancedetailsbyconfigruleresponse.cpp \
-    getcompliancedetailsbyresourcerequest.cpp \
-    getcompliancedetailsbyresourceresponse.cpp \
-    getcompliancesummarybyconfigruleresponse.cpp \
-    getcompliancesummarybyresourcetyperequest.cpp \
-    getcompliancesummarybyresourcetyperesponse.cpp \
-    getconfigrequest.cpp \
-    getconfigresponse.cpp \
     getconsoleoutputrequest.cpp \
     getconsoleoutputresponse.cpp \
     getconsolescreenshotrequest.cpp \
     getconsolescreenshotresponse.cpp \
-    getcostandusagerequest.cpp \
-    getcostandusageresponse.cpp \
-    getcredentialsforidentityrequest.cpp \
-    getcredentialsforidentityresponse.cpp \
-    getcsvheaderrequest.cpp \
-    getcsvheaderresponse.cpp \
-    getdatasourcerequest.cpp \
-    getdatasourceresponse.cpp \
-    getdeploymentconfigrequest.cpp \
-    getdeploymentconfigresponse.cpp \
-    getdeploymentgrouprequest.cpp \
-    getdeploymentgroupresponse.cpp \
-    getdeploymentinstancerequest.cpp \
-    getdeploymentinstanceresponse.cpp \
-    getdeploymentrequest.cpp \
-    getdeploymentrequest.cpp \
-    getdeploymentresponse.cpp \
-    getdeploymentresponse.cpp \
-    getdeploymentsrequest.cpp \
-    getdeploymentsresponse.cpp \
-    getdevicepoolcompatibilityrequest.cpp \
-    getdevicepoolcompatibilityresponse.cpp \
-    getdevicepoolrequest.cpp \
-    getdevicepoolresponse.cpp \
-    getdevicerequest.cpp \
-    getdevicerequest.cpp \
-    getdevicerequest.cpp \
-    getdeviceresponse.cpp \
-    getdeviceresponse.cpp \
-    getdeviceresponse.cpp \
-    getdifferencesrequest.cpp \
-    getdifferencesresponse.cpp \
-    getdimensionvaluesrequest.cpp \
-    getdimensionvaluesresponse.cpp \
-    getdirectorylimitsrequest.cpp \
-    getdirectorylimitsresponse.cpp \
-    getdirectoryrequest.cpp \
-    getdirectoryresponse.cpp \
-    getdiscoveredresourcecountsrequest.cpp \
-    getdiscoveredresourcecountsresponse.cpp \
-    getdiscoverysummaryrequest.cpp \
-    getdiscoverysummaryresponse.cpp \
-    getdistributionconfigrequest.cpp \
-    getdistributionconfigresponse.cpp \
-    getdistributionrequest.cpp \
-    getdistributionresponse.cpp \
-    getdocumentationpartrequest.cpp \
-    getdocumentationpartresponse.cpp \
-    getdocumentationpartsrequest.cpp \
-    getdocumentationpartsresponse.cpp \
-    getdocumentationversionrequest.cpp \
-    getdocumentationversionresponse.cpp \
-    getdocumentationversionsrequest.cpp \
-    getdocumentationversionsresponse.cpp \
-    getdomainnamerequest.cpp \
-    getdomainnameresponse.cpp \
-    getdomainnamesrequest.cpp \
-    getdomainnamesresponse.cpp \
-    geteventselectorsrequest.cpp \
-    geteventselectorsresponse.cpp \
-    getexportrequest.cpp \
-    getexportresponse.cpp \
-    getfacetrequest.cpp \
-    getfacetresponse.cpp \
-    getgatewayresponserequest.cpp \
-    getgatewayresponseresponse.cpp \
-    getgatewayresponsesrequest.cpp \
-    getgatewayresponsesresponse.cpp \
-    getgraphqlapirequest.cpp \
-    getgraphqlapiresponse.cpp \
-    getgrouprequest.cpp \
-    getgroupresponse.cpp \
     gethostreservationpurchasepreviewrequest.cpp \
     gethostreservationpurchasepreviewresponse.cpp \
-    getidentitypoolconfigurationrequest.cpp \
-    getidentitypoolconfigurationresponse.cpp \
-    getidentitypoolrolesrequest.cpp \
-    getidentitypoolrolesresponse.cpp \
-    getidentityproviderbyidentifierrequest.cpp \
-    getidentityproviderbyidentifierresponse.cpp \
-    getidrequest.cpp \
-    getidresponse.cpp \
-    getintegrationrequest.cpp \
-    getintegrationresponse.cpp \
-    getintegrationresponserequest.cpp \
-    getintegrationresponseresponse.cpp \
-    getintrospectionschemarequest.cpp \
-    getintrospectionschemaresponse.cpp \
-    getinvalidationrequest.cpp \
-    getinvalidationresponse.cpp \
-    getitemrequest.cpp \
-    getitemresponse.cpp \
-    getjobdetailsrequest.cpp \
-    getjobdetailsresponse.cpp \
-    getjobrequest.cpp \
-    getjobresponse.cpp \
     getlaunchtemplatedatarequest.cpp \
     getlaunchtemplatedataresponse.cpp \
-    getmergeconflictsrequest.cpp \
-    getmergeconflictsresponse.cpp \
-    getmethodrequest.cpp \
-    getmethodresponse.cpp \
-    getmethodresponserequest.cpp \
-    getmethodresponseresponse.cpp \
-    getmodelrequest.cpp \
-    getmodelresponse.cpp \
-    getmodelsrequest.cpp \
-    getmodelsresponse.cpp \
-    getmodeltemplaterequest.cpp \
-    getmodeltemplateresponse.cpp \
-    getnamedqueryrequest.cpp \
-    getnamedqueryresponse.cpp \
-    getnetworkprofilerequest.cpp \
-    getnetworkprofileresponse.cpp \
-    getobjectinformationrequest.cpp \
-    getobjectinformationresponse.cpp \
-    getofferingstatusrequest.cpp \
-    getofferingstatusresponse.cpp \
-    getonpremisesinstancerequest.cpp \
-    getonpremisesinstanceresponse.cpp \
-    getopenidtokenfordeveloperidentityrequest.cpp \
-    getopenidtokenfordeveloperidentityresponse.cpp \
-    getopenidtokenrequest.cpp \
-    getopenidtokenresponse.cpp \
     getpassworddatarequest.cpp \
     getpassworddataresponse.cpp \
-    getpipelinedefinitionrequest.cpp \
-    getpipelinedefinitionresponse.cpp \
-    getpipelineexecutionrequest.cpp \
-    getpipelineexecutionresponse.cpp \
-    getpipelinerequest.cpp \
-    getpipelineresponse.cpp \
-    getpipelinestaterequest.cpp \
-    getpipelinestateresponse.cpp \
-    getprofilerequest.cpp \
-    getprofileresponse.cpp \
-    getprojectrequest.cpp \
-    getprojectresponse.cpp \
-    getpullrequestrequest.cpp \
-    getpullrequestresponse.cpp \
-    getqueryexecutionrequest.cpp \
-    getqueryexecutionresponse.cpp \
-    getqueryresultsrequest.cpp \
-    getqueryresultsresponse.cpp \
-    getrecordsrequest.cpp \
-    getrecordsresponse.cpp \
-    getremoteaccesssessionrequest.cpp \
-    getremoteaccesssessionresponse.cpp \
-    getrepositoryrequest.cpp \
-    getrepositoryresponse.cpp \
-    getrepositorytriggersrequest.cpp \
-    getrepositorytriggersresponse.cpp \
-    getrequestvalidatorrequest.cpp \
-    getrequestvalidatorresponse.cpp \
-    getrequestvalidatorsrequest.cpp \
-    getrequestvalidatorsresponse.cpp \
-    getreservationcoveragerequest.cpp \
-    getreservationcoverageresponse.cpp \
-    getreservationutilizationrequest.cpp \
-    getreservationutilizationresponse.cpp \
     getreservedinstancesexchangequoterequest.cpp \
     getreservedinstancesexchangequoteresponse.cpp \
-    getresolverrequest.cpp \
-    getresolverresponse.cpp \
-    getresourceconfighistoryrequest.cpp \
-    getresourceconfighistoryresponse.cpp \
-    getresourcerequest.cpp \
-    getresourceresponse.cpp \
-    getresourcesrequest.cpp \
-    getresourcesresponse.cpp \
-    getrestapirequest.cpp \
-    getrestapiresponse.cpp \
-    getrestapisrequest.cpp \
-    getrestapisresponse.cpp \
-    getroomrequest.cpp \
-    getroomresponse.cpp \
-    getroomskillparameterrequest.cpp \
-    getroomskillparameterresponse.cpp \
-    getrunrequest.cpp \
-    getrunresponse.cpp \
-    getschemaasjsonrequest.cpp \
-    getschemaasjsonresponse.cpp \
-    getschemacreationstatusrequest.cpp \
-    getschemacreationstatusresponse.cpp \
-    getsdkrequest.cpp \
-    getsdkresponse.cpp \
-    getsdktyperequest.cpp \
-    getsdktyperesponse.cpp \
-    getsdktypesrequest.cpp \
-    getsdktypesresponse.cpp \
-    getsharditeratorrequest.cpp \
-    getsharditeratorresponse.cpp \
-    getsigningcertificaterequest.cpp \
-    getsigningcertificateresponse.cpp \
-    getskillgrouprequest.cpp \
-    getskillgroupresponse.cpp \
-    getsnapshotlimitsrequest.cpp \
-    getsnapshotlimitsresponse.cpp \
-    getstackpolicyrequest.cpp \
-    getstackpolicyresponse.cpp \
-    getstagerequest.cpp \
-    getstageresponse.cpp \
-    getstagesrequest.cpp \
-    getstagesresponse.cpp \
-    getstreamingdistributionconfigrequest.cpp \
-    getstreamingdistributionconfigresponse.cpp \
-    getstreamingdistributionrequest.cpp \
-    getstreamingdistributionresponse.cpp \
-    getsuiterequest.cpp \
-    getsuiteresponse.cpp \
-    gettagsrequest.cpp \
-    gettagsrequest.cpp \
-    gettagsresponse.cpp \
-    gettagsresponse.cpp \
-    gettemplaterequest.cpp \
-    gettemplateresponse.cpp \
-    gettemplatesummaryrequest.cpp \
-    gettemplatesummaryresponse.cpp \
-    gettestrequest.cpp \
-    gettestresponse.cpp \
-    getthirdpartyjobdetailsrequest.cpp \
-    getthirdpartyjobdetailsresponse.cpp \
-    gettrailstatusrequest.cpp \
-    gettrailstatusresponse.cpp \
-    gettypedlinkfacetinformationrequest.cpp \
-    gettypedlinkfacetinformationresponse.cpp \
-    gettyperequest.cpp \
-    gettyperesponse.cpp \
-    getuicustomizationrequest.cpp \
-    getuicustomizationresponse.cpp \
-    getuploadrequest.cpp \
-    getuploadresponse.cpp \
-    getusageplankeyrequest.cpp \
-    getusageplankeyresponse.cpp \
-    getusageplankeysrequest.cpp \
-    getusageplankeysresponse.cpp \
-    getusageplanrequest.cpp \
-    getusageplanresponse.cpp \
-    getusageplansrequest.cpp \
-    getusageplansresponse.cpp \
-    getusagerequest.cpp \
-    getusageresponse.cpp \
-    getuserattributeverificationcoderequest.cpp \
-    getuserattributeverificationcoderesponse.cpp \
-    getuserpoolmfaconfigrequest.cpp \
-    getuserpoolmfaconfigresponse.cpp \
-    getuserrequest.cpp \
-    getuserresponse.cpp \
-    getvpclinkrequest.cpp \
-    getvpclinkresponse.cpp \
-    getvpclinksrequest.cpp \
-    getvpclinksresponse.cpp \
-    globalsignoutrequest.cpp \
-    globalsignoutresponse.cpp \
-    importapikeysrequest.cpp \
-    importapikeysresponse.cpp \
-    importcertificaterequest.cpp \
-    importcertificaterequest.cpp \
-    importcertificateresponse.cpp \
-    importcertificateresponse.cpp \
-    importdocumentationpartsrequest.cpp \
-    importdocumentationpartsresponse.cpp \
     importimagerequest.cpp \
     importimageresponse.cpp \
     importinstancerequest.cpp \
     importinstanceresponse.cpp \
     importkeypairrequest.cpp \
     importkeypairresponse.cpp \
-    importmigrationtaskrequest.cpp \
-    importmigrationtaskresponse.cpp \
-    importrestapirequest.cpp \
-    importrestapiresponse.cpp \
     importsnapshotrequest.cpp \
     importsnapshotresponse.cpp \
     importvolumerequest.cpp \
     importvolumeresponse.cpp \
-    increasereplicationfactorrequest.cpp \
-    increasereplicationfactorresponse.cpp \
-    indexdocumentsrequest.cpp \
-    indexdocumentsresponse.cpp \
-    initializeclusterrequest.cpp \
-    initializeclusterresponse.cpp \
-    initiateauthrequest.cpp \
-    initiateauthresponse.cpp \
-    installtoremoteaccesssessionrequest.cpp \
-    installtoremoteaccesssessionresponse.cpp \
-    invalidateprojectcacherequest.cpp \
-    invalidateprojectcacheresponse.cpp \
-    listactiontypesrequest.cpp \
-    listactiontypesresponse.cpp \
-    listapikeysrequest.cpp \
-    listapikeysresponse.cpp \
-    listapplicationrevisionsrequest.cpp \
-    listapplicationrevisionsresponse.cpp \
-    listapplicationsrequest.cpp \
-    listapplicationsresponse.cpp \
-    listappliedschemaarnsrequest.cpp \
-    listappliedschemaarnsresponse.cpp \
-    listartifactsrequest.cpp \
-    listartifactsresponse.cpp \
-    listassociatedfleetsrequest.cpp \
-    listassociatedfleetsresponse.cpp \
-    listassociatedstacksrequest.cpp \
-    listassociatedstacksresponse.cpp \
-    listattachedindicesrequest.cpp \
-    listattachedindicesresponse.cpp \
-    listavailablezonesrequest.cpp \
-    listavailablezonesresponse.cpp \
-    listbackupsrequest.cpp \
-    listbackupsresponse.cpp \
-    listbranchesrequest.cpp \
-    listbranchesresponse.cpp \
-    listbuildsforprojectrequest.cpp \
-    listbuildsforprojectresponse.cpp \
-    listbuildsrequest.cpp \
-    listbuildsresponse.cpp \
-    listcertificatesrequest.cpp \
-    listcertificatesresponse.cpp \
-    listchangesetsrequest.cpp \
-    listchangesetsresponse.cpp \
-    listcloudfrontoriginaccessidentitiesrequest.cpp \
-    listcloudfrontoriginaccessidentitiesresponse.cpp \
-    listconfigurationsrequest.cpp \
-    listconfigurationsresponse.cpp \
-    listcreatedartifactsrequest.cpp \
-    listcreatedartifactsresponse.cpp \
-    listcuratedenvironmentimagesrequest.cpp \
-    listcuratedenvironmentimagesresponse.cpp \
-    listdatasetsrequest.cpp \
-    listdatasetsresponse.cpp \
-    listdatasourcesrequest.cpp \
-    listdatasourcesresponse.cpp \
-    listdeploymentconfigsrequest.cpp \
-    listdeploymentconfigsresponse.cpp \
-    listdeploymentgroupsrequest.cpp \
-    listdeploymentgroupsresponse.cpp \
-    listdeploymentinstancesrequest.cpp \
-    listdeploymentinstancesresponse.cpp \
-    listdeploymentsrequest.cpp \
-    listdeploymentsresponse.cpp \
-    listdevelopmentschemaarnsrequest.cpp \
-    listdevelopmentschemaarnsresponse.cpp \
-    listdevicepoolsrequest.cpp \
-    listdevicepoolsresponse.cpp \
-    listdevicesrequest.cpp \
-    listdevicesrequest.cpp \
-    listdevicesresponse.cpp \
-    listdevicesresponse.cpp \
-    listdirectoriesrequest.cpp \
-    listdirectoriesresponse.cpp \
-    listdiscoveredresourcesrequest.cpp \
-    listdiscoveredresourcesrequest.cpp \
-    listdiscoveredresourcesresponse.cpp \
-    listdiscoveredresourcesresponse.cpp \
-    listdistributionsbywebaclidrequest.cpp \
-    listdistributionsbywebaclidresponse.cpp \
-    listdistributionsrequest.cpp \
-    listdistributionsresponse.cpp \
-    listdomainnamesresponse.cpp \
-    listenvironmentsrequest.cpp \
-    listenvironmentsresponse.cpp \
-    listexportsrequest.cpp \
-    listexportsresponse.cpp \
-    listfacetattributesrequest.cpp \
-    listfacetattributesresponse.cpp \
-    listfacetnamesrequest.cpp \
-    listfacetnamesresponse.cpp \
-    listgithubaccounttokennamesrequest.cpp \
-    listgithubaccounttokennamesresponse.cpp \
-    listglobaltablesrequest.cpp \
-    listglobaltablesresponse.cpp \
-    listgraphqlapisrequest.cpp \
-    listgraphqlapisresponse.cpp \
-    listgroupsrequest.cpp \
-    listgroupsresponse.cpp \
-    listhapgsrequest.cpp \
-    listhapgsresponse.cpp \
-    listhsmsrequest.cpp \
-    listhsmsresponse.cpp \
-    listidentitiesrequest.cpp \
-    listidentitiesresponse.cpp \
-    listidentitypoolsrequest.cpp \
-    listidentitypoolsresponse.cpp \
-    listidentitypoolusagerequest.cpp \
-    listidentitypoolusageresponse.cpp \
-    listidentityprovidersrequest.cpp \
-    listidentityprovidersresponse.cpp \
-    listimportsrequest.cpp \
-    listimportsresponse.cpp \
-    listincomingtypedlinksrequest.cpp \
-    listincomingtypedlinksresponse.cpp \
-    listindexrequest.cpp \
-    listindexresponse.cpp \
-    listinvalidationsrequest.cpp \
-    listinvalidationsresponse.cpp \
-    listiproutesrequest.cpp \
-    listiproutesresponse.cpp \
-    listjobsrequest.cpp \
-    listjobsrequest.cpp \
-    listjobsresponse.cpp \
-    listjobsresponse.cpp \
-    listlunaclientsrequest.cpp \
-    listlunaclientsresponse.cpp \
-    listmigrationtasksrequest.cpp \
-    listmigrationtasksresponse.cpp \
-    listnamedqueriesrequest.cpp \
-    listnamedqueriesresponse.cpp \
-    listnetworkprofilesrequest.cpp \
-    listnetworkprofilesresponse.cpp \
-    listobjectattributesrequest.cpp \
-    listobjectattributesresponse.cpp \
-    listobjectchildrenrequest.cpp \
-    listobjectchildrenresponse.cpp \
-    listobjectparentpathsrequest.cpp \
-    listobjectparentpathsresponse.cpp \
-    listobjectparentsrequest.cpp \
-    listobjectparentsresponse.cpp \
-    listobjectpoliciesrequest.cpp \
-    listobjectpoliciesresponse.cpp \
-    listofferingpromotionsrequest.cpp \
-    listofferingpromotionsresponse.cpp \
-    listofferingsrequest.cpp \
-    listofferingsresponse.cpp \
-    listofferingtransactionsrequest.cpp \
-    listofferingtransactionsresponse.cpp \
-    listonpremisesinstancesrequest.cpp \
-    listonpremisesinstancesresponse.cpp \
-    listoutgoingtypedlinksrequest.cpp \
-    listoutgoingtypedlinksresponse.cpp \
-    listpipelineexecutionsrequest.cpp \
-    listpipelineexecutionsresponse.cpp \
-    listpipelinesrequest.cpp \
-    listpipelinesrequest.cpp \
-    listpipelinesresponse.cpp \
-    listpipelinesresponse.cpp \
-    listpolicyattachmentsrequest.cpp \
-    listpolicyattachmentsresponse.cpp \
-    listprogressupdatestreamsrequest.cpp \
-    listprogressupdatestreamsresponse.cpp \
-    listprojectsrequest.cpp \
-    listprojectsrequest.cpp \
-    listprojectsrequest.cpp \
-    listprojectsresponse.cpp \
-    listprojectsresponse.cpp \
-    listprojectsresponse.cpp \
-    listpublickeysrequest.cpp \
-    listpublickeysresponse.cpp \
-    listpublishedschemaarnsrequest.cpp \
-    listpublishedschemaarnsresponse.cpp \
-    listpullrequestsrequest.cpp \
-    listpullrequestsresponse.cpp \
-    listqueryexecutionsrequest.cpp \
-    listqueryexecutionsresponse.cpp \
-    listrecordsrequest.cpp \
-    listrecordsresponse.cpp \
-    listremoteaccesssessionsrequest.cpp \
-    listremoteaccesssessionsresponse.cpp \
-    listrepositoriesrequest.cpp \
-    listrepositoriesresponse.cpp \
-    listresolversrequest.cpp \
-    listresolversresponse.cpp \
-    listresourceserversrequest.cpp \
-    listresourceserversresponse.cpp \
-    listresourcesrequest.cpp \
-    listresourcesresponse.cpp \
-    listrunsrequest.cpp \
-    listrunsresponse.cpp \
-    listsamplesrequest.cpp \
-    listsamplesresponse.cpp \
-    listschemaextensionsrequest.cpp \
-    listschemaextensionsresponse.cpp \
-    listserverneighborsrequest.cpp \
-    listserverneighborsresponse.cpp \
-    listskillsrequest.cpp \
-    listskillsresponse.cpp \
-    liststackinstancesrequest.cpp \
-    liststackinstancesresponse.cpp \
-    liststackresourcesrequest.cpp \
-    liststackresourcesresponse.cpp \
-    liststacksetoperationresultsrequest.cpp \
-    liststacksetoperationresultsresponse.cpp \
-    liststacksetoperationsrequest.cpp \
-    liststacksetoperationsresponse.cpp \
-    liststacksetsrequest.cpp \
-    liststacksetsresponse.cpp \
-    liststacksrequest.cpp \
-    liststacksresponse.cpp \
-    liststreamingdistributionsrequest.cpp \
-    liststreamingdistributionsresponse.cpp \
-    liststreamsrequest.cpp \
-    liststreamsresponse.cpp \
-    listsuitesrequest.cpp \
-    listsuitesresponse.cpp \
-    listtablesrequest.cpp \
-    listtablesresponse.cpp \
-    listtagsforcertificaterequest.cpp \
-    listtagsforcertificateresponse.cpp \
-    listtagsforprojectrequest.cpp \
-    listtagsforprojectresponse.cpp \
-    listtagsforresourcerequest.cpp \
-    listtagsforresourcerequest.cpp \
-    listtagsforresourcerequest.cpp \
-    listtagsforresourcerequest.cpp \
-    listtagsforresourcerequest.cpp \
-    listtagsforresourcerequest.cpp \
-    listtagsforresourceresponse.cpp \
-    listtagsforresourceresponse.cpp \
-    listtagsforresourceresponse.cpp \
-    listtagsforresourceresponse.cpp \
-    listtagsforresourceresponse.cpp \
-    listtagsforresourceresponse.cpp \
-    listtagsofresourcerequest.cpp \
-    listtagsofresourceresponse.cpp \
-    listtagsrequest.cpp \
-    listtagsrequest.cpp \
-    listtagsrequest.cpp \
-    listtagsrequest.cpp \
-    listtagsresponse.cpp \
-    listtagsresponse.cpp \
-    listtagsresponse.cpp \
-    listtagsresponse.cpp \
-    listteammembersrequest.cpp \
-    listteammembersresponse.cpp \
-    listtestsrequest.cpp \
-    listtestsresponse.cpp \
-    listtopicsdetectionjobsrequest.cpp \
-    listtopicsdetectionjobsresponse.cpp \
-    listtypedlinkfacetattributesrequest.cpp \
-    listtypedlinkfacetattributesresponse.cpp \
-    listtypedlinkfacetnamesrequest.cpp \
-    listtypedlinkfacetnamesresponse.cpp \
-    listtypesrequest.cpp \
-    listtypesresponse.cpp \
-    listuniqueproblemsrequest.cpp \
-    listuniqueproblemsresponse.cpp \
-    listuploadsrequest.cpp \
-    listuploadsresponse.cpp \
-    listuserimportjobsrequest.cpp \
-    listuserimportjobsresponse.cpp \
-    listuserpoolclientsrequest.cpp \
-    listuserpoolclientsresponse.cpp \
-    listuserpoolsrequest.cpp \
-    listuserpoolsresponse.cpp \
-    listuserprofilesrequest.cpp \
-    listuserprofilesresponse.cpp \
-    listusersingrouprequest.cpp \
-    listusersingroupresponse.cpp \
-    listusersrequest.cpp \
-    listusersresponse.cpp \
-    lookupdeveloperidentityrequest.cpp \
-    lookupdeveloperidentityresponse.cpp \
-    lookupeventsrequest.cpp \
-    lookupeventsresponse.cpp \
-    lookuppolicyrequest.cpp \
-    lookuppolicyresponse.cpp \
-    mergedeveloperidentitiesrequest.cpp \
-    mergedeveloperidentitiesresponse.cpp \
-    mergepullrequestbyfastforwardrequest.cpp \
-    mergepullrequestbyfastforwardresponse.cpp \
-    migrationhubclient.cpp \
-    modifyendpointrequest.cpp \
-    modifyendpointresponse.cpp \
-    modifyeventsubscriptionrequest.cpp \
-    modifyeventsubscriptionresponse.cpp \
     modifyfpgaimageattributerequest.cpp \
     modifyfpgaimageattributeresponse.cpp \
-    modifyhapgrequest.cpp \
-    modifyhapgresponse.cpp \
     modifyhostsrequest.cpp \
     modifyhostsresponse.cpp \
-    modifyhsmrequest.cpp \
-    modifyhsmresponse.cpp \
     modifyidentityidformatrequest.cpp \
     modifyidentityidformatresponse.cpp \
     modifyidformatrequest.cpp \
@@ -7909,16 +1521,8 @@ SOURCES += \
     modifyinstanceplacementresponse.cpp \
     modifylaunchtemplaterequest.cpp \
     modifylaunchtemplateresponse.cpp \
-    modifylunaclientrequest.cpp \
-    modifylunaclientresponse.cpp \
     modifynetworkinterfaceattributerequest.cpp \
     modifynetworkinterfaceattributeresponse.cpp \
-    modifyreplicationinstancerequest.cpp \
-    modifyreplicationinstanceresponse.cpp \
-    modifyreplicationsubnetgrouprequest.cpp \
-    modifyreplicationsubnetgroupresponse.cpp \
-    modifyreplicationtaskrequest.cpp \
-    modifyreplicationtaskresponse.cpp \
     modifyreservedinstancesrequest.cpp \
     modifyreservedinstancesresponse.cpp \
     modifysnapshotattributerequest.cpp \
@@ -7949,124 +1553,16 @@ SOURCES += \
     monitorinstancesresponse.cpp \
     moveaddresstovpcrequest.cpp \
     moveaddresstovpcresponse.cpp \
-    notifyapplicationstaterequest.cpp \
-    notifyapplicationstateresponse.cpp \
-    notifymigrationtaskstaterequest.cpp \
-    notifymigrationtaskstateresponse.cpp \
-    pollforjobsrequest.cpp \
-    pollforjobsresponse.cpp \
-    pollfortaskrequest.cpp \
-    pollfortaskresponse.cpp \
-    pollforthirdpartyjobsrequest.cpp \
-    pollforthirdpartyjobsresponse.cpp \
-    postcommentforcomparedcommitrequest.cpp \
-    postcommentforcomparedcommitresponse.cpp \
-    postcommentforpullrequestrequest.cpp \
-    postcommentforpullrequestresponse.cpp \
-    postcommentreplyrequest.cpp \
-    postcommentreplyresponse.cpp \
-    publishschemarequest.cpp \
-    publishschemaresponse.cpp \
     purchasehostreservationrequest.cpp \
     purchasehostreservationresponse.cpp \
-    purchaseofferingrequest.cpp \
-    purchaseofferingresponse.cpp \
     purchasereservedinstancesofferingrequest.cpp \
     purchasereservedinstancesofferingresponse.cpp \
     purchasescheduledinstancesrequest.cpp \
     purchasescheduledinstancesresponse.cpp \
-    putactionrevisionrequest.cpp \
-    putactionrevisionresponse.cpp \
-    putapprovalresultrequest.cpp \
-    putapprovalresultresponse.cpp \
-    putconfigrulerequest.cpp \
-    putconfigruleresponse.cpp \
-    putconfigurationrecorderrequest.cpp \
-    putconfigurationrecorderresponse.cpp \
-    putdeliverychannelrequest.cpp \
-    putdeliverychannelresponse.cpp \
-    putevaluationsrequest.cpp \
-    putevaluationsresponse.cpp \
-    puteventselectorsrequest.cpp \
-    puteventselectorsresponse.cpp \
-    putfilerequest.cpp \
-    putfileresponse.cpp \
-    putgatewayresponserequest.cpp \
-    putgatewayresponseresponse.cpp \
-    putintegrationrequest.cpp \
-    putintegrationresponse.cpp \
-    putintegrationresponserequest.cpp \
-    putintegrationresponseresponse.cpp \
-    putitemrequest.cpp \
-    putitemresponse.cpp \
-    putjobfailureresultrequest.cpp \
-    putjobfailureresultresponse.cpp \
-    putjobsuccessresultrequest.cpp \
-    putjobsuccessresultresponse.cpp \
-    putlifecycleeventhookexecutionstatusrequest.cpp \
-    putlifecycleeventhookexecutionstatusresponse.cpp \
-    putlifecyclehookrequest.cpp \
-    putlifecyclehookresponse.cpp \
-    putmethodrequest.cpp \
-    putmethodresponse.cpp \
-    putmethodresponserequest.cpp \
-    putmethodresponseresponse.cpp \
-    putnotificationconfigurationrequest.cpp \
-    putnotificationconfigurationresponse.cpp \
-    putpipelinedefinitionrequest.cpp \
-    putpipelinedefinitionresponse.cpp \
-    putreportdefinitionrequest.cpp \
-    putreportdefinitionresponse.cpp \
-    putrepositorytriggersrequest.cpp \
-    putrepositorytriggersresponse.cpp \
-    putresourceattributesrequest.cpp \
-    putresourceattributesresponse.cpp \
-    putrestapirequest.cpp \
-    putrestapiresponse.cpp \
-    putroomskillparameterrequest.cpp \
-    putroomskillparameterresponse.cpp \
-    putscalingpolicyrequest.cpp \
-    putscalingpolicyrequest.cpp \
-    putscalingpolicyresponse.cpp \
-    putscalingpolicyresponse.cpp \
-    putscheduledactionrequest.cpp \
-    putscheduledactionresponse.cpp \
-    putscheduledupdategroupactionrequest.cpp \
-    putscheduledupdategroupactionresponse.cpp \
-    putschemafromjsonrequest.cpp \
-    putschemafromjsonresponse.cpp \
-    putthirdpartyjobfailureresultrequest.cpp \
-    putthirdpartyjobfailureresultresponse.cpp \
-    putthirdpartyjobsuccessresultrequest.cpp \
-    putthirdpartyjobsuccessresultresponse.cpp \
-    queryobjectsrequest.cpp \
-    queryobjectsresponse.cpp \
-    queryrequest.cpp \
-    queryresponse.cpp \
     rebootinstancesrequest.cpp \
     rebootinstancesresponse.cpp \
-    rebootnoderequest.cpp \
-    rebootnoderesponse.cpp \
-    rebootreplicationinstancerequest.cpp \
-    rebootreplicationinstanceresponse.cpp \
-    recordlifecycleactionheartbeatrequest.cpp \
-    recordlifecycleactionheartbeatresponse.cpp \
-    refreshschemasrequest.cpp \
-    refreshschemasresponse.cpp \
-    registerapplicationrevisionrequest.cpp \
-    registerapplicationrevisionresponse.cpp \
-    registerdevicerequest.cpp \
-    registerdeviceresponse.cpp \
-    registereventtopicrequest.cpp \
-    registereventtopicresponse.cpp \
     registerimagerequest.cpp \
     registerimageresponse.cpp \
-    registerjobdefinitionrequest.cpp \
-    registerjobdefinitionresponse.cpp \
-    registeronpremisesinstancerequest.cpp \
-    registeronpremisesinstanceresponse.cpp \
-    registerscalabletargetrequest.cpp \
-    registerscalabletargetresponse.cpp \
     rejectvpcendpointconnectionsrequest.cpp \
     rejectvpcendpointconnectionsresponse.cpp \
     rejectvpcpeeringconnectionrequest.cpp \
@@ -8075,28 +1571,6 @@ SOURCES += \
     releaseaddressresponse.cpp \
     releasehostsrequest.cpp \
     releasehostsresponse.cpp \
-    reloadtablesrequest.cpp \
-    reloadtablesresponse.cpp \
-    removefacetfromobjectrequest.cpp \
-    removefacetfromobjectresponse.cpp \
-    removeiproutesrequest.cpp \
-    removeiproutesresponse.cpp \
-    removetagsfromcertificaterequest.cpp \
-    removetagsfromcertificateresponse.cpp \
-    removetagsfromonpremisesinstancesrequest.cpp \
-    removetagsfromonpremisesinstancesresponse.cpp \
-    removetagsfromresourcerequest.cpp \
-    removetagsfromresourcerequest.cpp \
-    removetagsfromresourcerequest.cpp \
-    removetagsfromresourceresponse.cpp \
-    removetagsfromresourceresponse.cpp \
-    removetagsfromresourceresponse.cpp \
-    removetagsrequest.cpp \
-    removetagsrequest.cpp \
-    removetagsresponse.cpp \
-    removetagsresponse.cpp \
-    renewofferingrequest.cpp \
-    renewofferingresponse.cpp \
     replaceiaminstanceprofileassociationrequest.cpp \
     replaceiaminstanceprofileassociationresponse.cpp \
     replacenetworkaclassociationrequest.cpp \
@@ -8109,20 +1583,10 @@ SOURCES += \
     replaceroutetableassociationresponse.cpp \
     reportinstancestatusrequest.cpp \
     reportinstancestatusresponse.cpp \
-    reporttaskprogressrequest.cpp \
-    reporttaskprogressresponse.cpp \
-    reporttaskrunnerheartbeatrequest.cpp \
-    reporttaskrunnerheartbeatresponse.cpp \
-    requestcertificaterequest.cpp \
-    requestcertificateresponse.cpp \
     requestspotfleetrequest.cpp \
     requestspotfleetresponse.cpp \
     requestspotinstancesrequest.cpp \
     requestspotinstancesresponse.cpp \
-    resendconfirmationcoderequest.cpp \
-    resendconfirmationcoderesponse.cpp \
-    resendvalidationemailrequest.cpp \
-    resendvalidationemailresponse.cpp \
     resetfpgaimageattributerequest.cpp \
     resetfpgaimageattributeresponse.cpp \
     resetimageattributerequest.cpp \
@@ -8133,22 +1597,8 @@ SOURCES += \
     resetnetworkinterfaceattributeresponse.cpp \
     resetsnapshotattributerequest.cpp \
     resetsnapshotattributeresponse.cpp \
-    resolveroomrequest.cpp \
-    resolveroomresponse.cpp \
-    respondtoauthchallengerequest.cpp \
-    respondtoauthchallengeresponse.cpp \
     restoreaddresstoclassicrequest.cpp \
     restoreaddresstoclassicresponse.cpp \
-    restorefromsnapshotrequest.cpp \
-    restorefromsnapshotresponse.cpp \
-    restoretablefrombackuprequest.cpp \
-    restoretablefrombackupresponse.cpp \
-    resumeprocessesrequest.cpp \
-    resumeprocessesresponse.cpp \
-    retrystageexecutionrequest.cpp \
-    retrystageexecutionresponse.cpp \
-    revokeinvitationrequest.cpp \
-    revokeinvitationresponse.cpp \
     revokesecuritygroupegressrequest.cpp \
     revokesecuritygroupegressresponse.cpp \
     revokesecuritygroupingressrequest.cpp \
@@ -8157,407 +1607,21 @@ SOURCES += \
     runinstancesresponse.cpp \
     runscheduledinstancesrequest.cpp \
     runscheduledinstancesresponse.cpp \
-    scanrequest.cpp \
-    scanresponse.cpp \
-    schedulerunrequest.cpp \
-    schedulerunresponse.cpp \
-    searchdevicesrequest.cpp \
-    searchdevicesresponse.cpp \
-    searchprofilesrequest.cpp \
-    searchprofilesresponse.cpp \
-    searchrequest.cpp \
-    searchresponse.cpp \
-    searchroomsrequest.cpp \
-    searchroomsresponse.cpp \
-    searchskillgroupsrequest.cpp \
-    searchskillgroupsresponse.cpp \
-    searchusersrequest.cpp \
-    searchusersresponse.cpp \
-    sendinvitationrequest.cpp \
-    sendinvitationresponse.cpp \
-    setcognitoeventsrequest.cpp \
-    setcognitoeventsresponse.cpp \
-    setdesiredcapacityrequest.cpp \
-    setdesiredcapacityresponse.cpp \
-    setidentitypoolconfigurationrequest.cpp \
-    setidentitypoolconfigurationresponse.cpp \
-    setidentitypoolrolesrequest.cpp \
-    setidentitypoolrolesresponse.cpp \
-    setinstancehealthrequest.cpp \
-    setinstancehealthresponse.cpp \
-    setinstanceprotectionrequest.cpp \
-    setinstanceprotectionresponse.cpp \
-    setriskconfigurationrequest.cpp \
-    setriskconfigurationresponse.cpp \
-    setstackpolicyrequest.cpp \
-    setstackpolicyresponse.cpp \
-    setstatusrequest.cpp \
-    setstatusresponse.cpp \
-    settaskstatusrequest.cpp \
-    settaskstatusresponse.cpp \
-    setuicustomizationrequest.cpp \
-    setuicustomizationresponse.cpp \
-    setusermfapreferencerequest.cpp \
-    setusermfapreferenceresponse.cpp \
-    setuserpoolmfaconfigrequest.cpp \
-    setuserpoolmfaconfigresponse.cpp \
-    setusersettingsrequest.cpp \
-    setusersettingsresponse.cpp \
-    signalresourcerequest.cpp \
-    signalresourceresponse.cpp \
-    signuprequest.cpp \
-    signupresponse.cpp \
-    skipwaittimeforinstanceterminationrequest.cpp \
-    skipwaittimeforinstanceterminationresponse.cpp \
-    startbuildrequest.cpp \
-    startbuildresponse.cpp \
-    startconfigrulesevaluationrequest.cpp \
-    startconfigrulesevaluationresponse.cpp \
-    startconfigurationrecorderrequest.cpp \
-    startconfigurationrecorderresponse.cpp \
-    startdatacollectionbyagentidsrequest.cpp \
-    startdatacollectionbyagentidsresponse.cpp \
-    startdevicesyncrequest.cpp \
-    startdevicesyncresponse.cpp \
-    startexporttaskrequest.cpp \
-    startexporttaskresponse.cpp \
-    startfleetrequest.cpp \
-    startfleetresponse.cpp \
-    startimagebuilderrequest.cpp \
-    startimagebuilderresponse.cpp \
     startinstancesrequest.cpp \
     startinstancesresponse.cpp \
-    startloggingrequest.cpp \
-    startloggingresponse.cpp \
-    startpipelineexecutionrequest.cpp \
-    startpipelineexecutionresponse.cpp \
-    startqueryexecutionrequest.cpp \
-    startqueryexecutionresponse.cpp \
-    startreplicationtaskassessmentrequest.cpp \
-    startreplicationtaskassessmentresponse.cpp \
-    startreplicationtaskrequest.cpp \
-    startreplicationtaskresponse.cpp \
-    startschemacreationrequest.cpp \
-    startschemacreationresponse.cpp \
-    startschemaextensionrequest.cpp \
-    startschemaextensionresponse.cpp \
-    starttopicsdetectionjobrequest.cpp \
-    starttopicsdetectionjobresponse.cpp \
-    startuserimportjobrequest.cpp \
-    startuserimportjobresponse.cpp \
-    stopbuildrequest.cpp \
-    stopbuildresponse.cpp \
-    stopconfigurationrecorderrequest.cpp \
-    stopconfigurationrecorderresponse.cpp \
-    stopdatacollectionbyagentidsrequest.cpp \
-    stopdatacollectionbyagentidsresponse.cpp \
-    stopdeploymentrequest.cpp \
-    stopdeploymentresponse.cpp \
-    stopfleetrequest.cpp \
-    stopfleetresponse.cpp \
-    stopimagebuilderrequest.cpp \
-    stopimagebuilderresponse.cpp \
     stopinstancesrequest.cpp \
     stopinstancesresponse.cpp \
-    stoploggingrequest.cpp \
-    stoploggingresponse.cpp \
-    stopqueryexecutionrequest.cpp \
-    stopqueryexecutionresponse.cpp \
-    stopremoteaccesssessionrequest.cpp \
-    stopremoteaccesssessionresponse.cpp \
-    stopreplicationtaskrequest.cpp \
-    stopreplicationtaskresponse.cpp \
-    stoprunrequest.cpp \
-    stoprunresponse.cpp \
-    stopstacksetoperationrequest.cpp \
-    stopstacksetoperationresponse.cpp \
-    stopuserimportjobrequest.cpp \
-    stopuserimportjobresponse.cpp \
-    submitjobrequest.cpp \
-    submitjobresponse.cpp \
-    subscribetodatasetrequest.cpp \
-    subscribetodatasetresponse.cpp \
-    suggestrequest.cpp \
-    suggestresponse.cpp \
-    suspendprocessesrequest.cpp \
-    suspendprocessesresponse.cpp \
-    tagprojectrequest.cpp \
-    tagprojectresponse.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourcerequest.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    tagresourceresponse.cpp \
-    terminateinstanceinautoscalinggrouprequest.cpp \
-    terminateinstanceinautoscalinggroupresponse.cpp \
     terminateinstancesrequest.cpp \
     terminateinstancesresponse.cpp \
-    terminatejobrequest.cpp \
-    terminatejobresponse.cpp \
-    testconnectionrequest.cpp \
-    testconnectionresponse.cpp \
-    testinvokeauthorizerrequest.cpp \
-    testinvokeauthorizerresponse.cpp \
-    testinvokemethodrequest.cpp \
-    testinvokemethodresponse.cpp \
-    testrepositorytriggersrequest.cpp \
-    testrepositorytriggersresponse.cpp \
     unassignipv6addressesrequest.cpp \
     unassignipv6addressesresponse.cpp \
     unassignprivateipaddressesrequest.cpp \
     unassignprivateipaddressesresponse.cpp \
-    unlinkdeveloperidentityrequest.cpp \
-    unlinkdeveloperidentityresponse.cpp \
-    unlinkidentityrequest.cpp \
-    unlinkidentityresponse.cpp \
     unmonitorinstancesrequest.cpp \
     unmonitorinstancesresponse.cpp \
-    unsubscribefromdatasetrequest.cpp \
-    unsubscribefromdatasetresponse.cpp \
-    untagprojectrequest.cpp \
-    untagprojectresponse.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourcerequest.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    untagresourceresponse.cpp \
-    updateaccountrequest.cpp \
-    updateaccountresponse.cpp \
-    updateapikeyrequest.cpp \
-    updateapikeyrequest.cpp \
-    updateapikeyresponse.cpp \
-    updateapikeyresponse.cpp \
-    updateapplicationrequest.cpp \
-    updateapplicationrequest.cpp \
-    updateapplicationresponse.cpp \
-    updateapplicationresponse.cpp \
-    updateautheventfeedbackrequest.cpp \
-    updateautheventfeedbackresponse.cpp \
-    updateauthorizerrequest.cpp \
-    updateauthorizerresponse.cpp \
-    updateautoscalinggrouprequest.cpp \
-    updateautoscalinggroupresponse.cpp \
-    updateavailabilityoptionsrequest.cpp \
-    updateavailabilityoptionsresponse.cpp \
-    updatebasepathmappingrequest.cpp \
-    updatebasepathmappingresponse.cpp \
-    updatebudgetrequest.cpp \
-    updatebudgetresponse.cpp \
-    updateclientcertificaterequest.cpp \
-    updateclientcertificateresponse.cpp \
-    updatecloudfrontoriginaccessidentityrequest.cpp \
-    updatecloudfrontoriginaccessidentityresponse.cpp \
-    updateclusterrequest.cpp \
-    updateclusterresponse.cpp \
-    updatecommentrequest.cpp \
-    updatecommentresponse.cpp \
-    updatecomputeenvironmentrequest.cpp \
-    updatecomputeenvironmentresponse.cpp \
-    updateconditionalforwarderrequest.cpp \
-    updateconditionalforwarderresponse.cpp \
-    updatedatasourcerequest.cpp \
-    updatedatasourceresponse.cpp \
-    updatedefaultbranchrequest.cpp \
-    updatedefaultbranchresponse.cpp \
-    updatedeploymentgrouprequest.cpp \
-    updatedeploymentgroupresponse.cpp \
-    updatedeploymentrequest.cpp \
-    updatedeploymentresponse.cpp \
-    updatedevicepoolrequest.cpp \
-    updatedevicepoolresponse.cpp \
-    updatedevicerequest.cpp \
-    updatedeviceresponse.cpp \
-    updatedevicestatusrequest.cpp \
-    updatedevicestatusresponse.cpp \
-    updatedirectoryconfigrequest.cpp \
-    updatedirectoryconfigresponse.cpp \
-    updatedistributionrequest.cpp \
-    updatedistributionresponse.cpp \
-    updatedocumentationpartrequest.cpp \
-    updatedocumentationpartresponse.cpp \
-    updatedocumentationversionrequest.cpp \
-    updatedocumentationversionresponse.cpp \
-    updatedomainnamerequest.cpp \
-    updatedomainnameresponse.cpp \
-    updateenvironmentmembershiprequest.cpp \
-    updateenvironmentmembershipresponse.cpp \
-    updateenvironmentrequest.cpp \
-    updateenvironmentresponse.cpp \
-    updatefacetrequest.cpp \
-    updatefacetresponse.cpp \
-    updatefleetrequest.cpp \
-    updatefleetresponse.cpp \
-    updategatewayresponserequest.cpp \
-    updategatewayresponseresponse.cpp \
-    updateglobaltablerequest.cpp \
-    updateglobaltableresponse.cpp \
-    updategraphqlapirequest.cpp \
-    updategraphqlapiresponse.cpp \
-    updategrouprequest.cpp \
-    updategroupresponse.cpp \
-    updateidentitypoolrequest.cpp \
-    updateidentitypoolresponse.cpp \
-    updateidentityproviderrequest.cpp \
-    updateidentityproviderresponse.cpp \
-    updateintegrationrequest.cpp \
-    updateintegrationresponse.cpp \
-    updateintegrationresponserequest.cpp \
-    updateintegrationresponseresponse.cpp \
-    updateitemrequest.cpp \
-    updateitemresponse.cpp \
-    updatejobqueuerequest.cpp \
-    updatejobqueueresponse.cpp \
-    updatelagrequest.cpp \
-    updatelagresponse.cpp \
-    updatemethodrequest.cpp \
-    updatemethodresponse.cpp \
-    updatemethodresponserequest.cpp \
-    updatemethodresponseresponse.cpp \
-    updatemodelrequest.cpp \
-    updatemodelresponse.cpp \
-    updatenetworkprofilerequest.cpp \
-    updatenetworkprofileresponse.cpp \
-    updatenotificationrequest.cpp \
-    updatenotificationresponse.cpp \
-    updatenumberofdomaincontrollersrequest.cpp \
-    updatenumberofdomaincontrollersresponse.cpp \
-    updateobjectattributesrequest.cpp \
-    updateobjectattributesresponse.cpp \
-    updateparametergrouprequest.cpp \
-    updateparametergroupresponse.cpp \
-    updatepipelinerequest.cpp \
-    updatepipelineresponse.cpp \
-    updateprofilerequest.cpp \
-    updateprofileresponse.cpp \
-    updateprojectrequest.cpp \
-    updateprojectrequest.cpp \
-    updateprojectrequest.cpp \
-    updateprojectresponse.cpp \
-    updateprojectresponse.cpp \
-    updateprojectresponse.cpp \
-    updatepullrequestdescriptionrequest.cpp \
-    updatepullrequestdescriptionresponse.cpp \
-    updatepullrequeststatusrequest.cpp \
-    updatepullrequeststatusresponse.cpp \
-    updatepullrequesttitlerequest.cpp \
-    updatepullrequesttitleresponse.cpp \
-    updateradiusrequest.cpp \
-    updateradiusresponse.cpp \
-    updaterecordsrequest.cpp \
-    updaterecordsresponse.cpp \
-    updaterepositorydescriptionrequest.cpp \
-    updaterepositorydescriptionresponse.cpp \
-    updaterepositorynamerequest.cpp \
-    updaterepositorynameresponse.cpp \
-    updaterequestvalidatorrequest.cpp \
-    updaterequestvalidatorresponse.cpp \
-    updateresolverrequest.cpp \
-    updateresolverresponse.cpp \
-    updateresourcerequest.cpp \
-    updateresourceresponse.cpp \
-    updateresourceserverrequest.cpp \
-    updateresourceserverresponse.cpp \
-    updaterestapirequest.cpp \
-    updaterestapiresponse.cpp \
-    updateroomrequest.cpp \
-    updateroomresponse.cpp \
-    updatescalingparametersrequest.cpp \
-    updatescalingparametersresponse.cpp \
-    updateschemarequest.cpp \
-    updateschemaresponse.cpp \
     updatesecuritygroupruledescriptionsegressrequest.cpp \
     updatesecuritygroupruledescriptionsegressresponse.cpp \
     updatesecuritygroupruledescriptionsingressrequest.cpp \
     updatesecuritygroupruledescriptionsingressresponse.cpp \
-    updateserviceaccesspoliciesrequest.cpp \
-    updateserviceaccesspoliciesresponse.cpp \
-    updateskillgrouprequest.cpp \
-    updateskillgroupresponse.cpp \
-    updatestackinstancesrequest.cpp \
-    updatestackinstancesresponse.cpp \
-    updatestackrequest.cpp \
-    updatestackrequest.cpp \
-    updatestackresponse.cpp \
-    updatestackresponse.cpp \
-    updatestacksetrequest.cpp \
-    updatestacksetresponse.cpp \
-    updatestagerequest.cpp \
-    updatestageresponse.cpp \
-    updatestreamingdistributionrequest.cpp \
-    updatestreamingdistributionresponse.cpp \
-    updatesubnetgrouprequest.cpp \
-    updatesubnetgroupresponse.cpp \
-    updatesubscriberrequest.cpp \
-    updatesubscriberresponse.cpp \
-    updatetablerequest.cpp \
-    updatetableresponse.cpp \
-    updateteammemberrequest.cpp \
-    updateteammemberresponse.cpp \
-    updateterminationprotectionrequest.cpp \
-    updateterminationprotectionresponse.cpp \
-    updatetimetoliverequest.cpp \
-    updatetimetoliveresponse.cpp \
-    updatetrailrequest.cpp \
-    updatetrailresponse.cpp \
-    updatetypedlinkfacetrequest.cpp \
-    updatetypedlinkfacetresponse.cpp \
-    updatetyperequest.cpp \
-    updatetyperesponse.cpp \
-    updateusageplanrequest.cpp \
-    updateusageplanresponse.cpp \
-    updateusagerequest.cpp \
-    updateusageresponse.cpp \
-    updateuserattributesrequest.cpp \
-    updateuserattributesresponse.cpp \
-    updateuserpoolclientrequest.cpp \
-    updateuserpoolclientresponse.cpp \
-    updateuserpoolrequest.cpp \
-    updateuserpoolresponse.cpp \
-    updateuserprofilerequest.cpp \
-    updateuserprofileresponse.cpp \
-    updatevpclinkrequest.cpp \
-    updatevpclinkresponse.cpp \
-    upgradeappliedschemarequest.cpp \
-    upgradeappliedschemaresponse.cpp \
-    upgradepublishedschemarequest.cpp \
-    upgradepublishedschemaresponse.cpp \
-    uploaddocumentsrequest.cpp \
-    uploaddocumentsresponse.cpp \
-    validatepipelinedefinitionrequest.cpp \
-    validatepipelinedefinitionresponse.cpp \
-    validatetemplaterequest.cpp \
-    validatetemplateresponse.cpp \
-    verifysoftwaretokenrequest.cpp \
-    verifysoftwaretokenresponse.cpp \
-    verifytrustrequest.cpp \
-    verifytrustresponse.cpp \
-    verifyuserattributerequest.cpp \
-    verifyuserattributeresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext
