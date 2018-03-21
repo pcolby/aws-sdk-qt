@@ -186,18 +186,14 @@ bool Generator::generateModelClasses(const QString &projectDir, const QString &s
     /// @todo Generate request class.
     if (operation.contains(QLatin1String("input"))) {
         context.push();
-        const QString requestClassName = operationName + QSL("Request"); /// @todo drop this
-        context.insert(QSL("ClassName"), requestClassName);
-        renderClassFiles(QSL("request"), context, projectDir, requestClassName);
+        renderClassFiles(QSL("request"), context, projectDir, operationName + QSL("Request"));
         context.pop();
     }
 
     /// @todo Generate response class.
     /// @todo Generate the base response class.
     context.push();
-    const QString responseClassName = operationName + QSL("Response"); /// @todo drop this
-    context.insert(QSL("ClassName"), responseClassName);
-    renderClassFiles(QSL("response"), context, projectDir, responseClassName);
+    renderClassFiles(QSL("response"), context, projectDir, operationName + QSL("Response"));
     context.pop();
     return true;
 }

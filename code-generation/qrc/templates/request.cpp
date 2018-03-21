@@ -1,3 +1,3 @@
 {% include "license.txt" %}
-#include "{{ClassName|lower}}.h"
-#include "{{ClassName|lower}}_p.h"
+#include "{{OperationName|lower}}request.h"
+#include "{{OperationName|lower}}request_p.h"

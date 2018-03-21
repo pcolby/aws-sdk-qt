@@ -1,5 +1,5 @@
 {% include "license.txt" %}
-#ifndef QTAWS_{{ClassName|upper}}_P_H
-#define QTAWS_{{ClassName|upper}}_P_H
+#ifndef QTAWS_{{OperationName|upper}}RESPONSE_P_H
+#define QTAWS_{{OperationName|upper}}RESPONSE_P_H
 
 #endif

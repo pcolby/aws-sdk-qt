@@ -1,6 +1,6 @@
 {% include "license.txt" %}
-#ifndef QTAWS_{{ClassName|upper}}_H
-#define QTAWS_{{ClassName|upper}}_H
+#ifndef QTAWS_{{OperationName|upper}}RESPONSE_H
+#define QTAWS_{{OperationName|upper}}RESPONSE_H
 
 #include "{{ServiceName|lower}}response.h"
 #include "{{OperationName|lower}}request.h"
@@ -15,7 +15,7 @@ class QTAWS_EXPORT {{OperationName}}Response : public {{OperationName}}Response 
     Q_OBJECT
 
 public:
-    {{ClassName}}(const {{OperationName}}Request &request, QNetworkReply * const reply, QObject * const parent = 0);
+    {{OperationName}}Response(const {{OperationName}}Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
     virtual const {{OperationName}}Request * request() const;
 
