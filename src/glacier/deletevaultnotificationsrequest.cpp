@@ -123,3 +123,6 @@ DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

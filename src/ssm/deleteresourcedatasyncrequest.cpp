@@ -123,3 +123,6 @@ DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

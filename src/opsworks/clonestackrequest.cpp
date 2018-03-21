@@ -123,3 +123,6 @@ CloneStackRequestPrivate::CloneStackRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

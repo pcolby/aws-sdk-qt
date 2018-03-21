@@ -123,3 +123,6 @@ DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

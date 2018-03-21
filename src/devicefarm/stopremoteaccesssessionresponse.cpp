@@ -101,3 +101,6 @@ void StopRemoteAccessSessionResponsePrivate::StopRemoteAccessSessionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("StopRemoteAccessSessionResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

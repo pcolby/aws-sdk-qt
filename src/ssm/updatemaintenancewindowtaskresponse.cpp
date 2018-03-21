@@ -101,3 +101,6 @@ void UpdateMaintenanceWindowTaskResponsePrivate::UpdateMaintenanceWindowTaskResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateMaintenanceWindowTaskResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

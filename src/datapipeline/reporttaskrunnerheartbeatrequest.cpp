@@ -123,3 +123,6 @@ ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

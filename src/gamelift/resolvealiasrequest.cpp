@@ -123,3 +123,6 @@ ResolveAliasRequestPrivate::ResolveAliasRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

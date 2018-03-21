@@ -101,3 +101,6 @@ void DeleteSecurityConfigurationResponsePrivate::DeleteSecurityConfigurationResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteSecurityConfigurationResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

@@ -101,3 +101,6 @@ void RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromResourceResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

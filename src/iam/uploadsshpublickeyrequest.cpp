@@ -123,3 +123,6 @@ UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeAutomationStepExecutionsResponsePrivate::DescribeAutomationStepExec
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutomationStepExecutionsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

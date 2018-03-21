@@ -101,3 +101,6 @@ void ListGroupResourcesResponsePrivate::ListGroupResourcesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListGroupResourcesResponse"));
     /// @todo
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

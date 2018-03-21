@@ -101,3 +101,6 @@ void PutImageResponsePrivate::PutImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutImageResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

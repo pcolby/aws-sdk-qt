@@ -123,3 +123,6 @@ GetObjectTaggingRequestPrivate::GetObjectTaggingRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteLagResponsePrivate::DeleteLagResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteLagResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

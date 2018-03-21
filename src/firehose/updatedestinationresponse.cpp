@@ -101,3 +101,6 @@ void UpdateDestinationResponsePrivate::UpdateDestinationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateDestinationResponse"));
     /// @todo
 }
+
+} // namespace Firehose
+} // namespace AWS

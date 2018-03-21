@@ -123,3 +123,6 @@ DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteClusterParameterGroupResponsePrivate::DeleteClusterParameterGroupResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

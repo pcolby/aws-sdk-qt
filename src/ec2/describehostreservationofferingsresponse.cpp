@@ -101,3 +101,6 @@ void DescribeHostReservationOfferingsResponsePrivate::DescribeHostReservationOff
     Q_ASSERT(xml.name() == QLatin1String("DescribeHostReservationOfferingsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

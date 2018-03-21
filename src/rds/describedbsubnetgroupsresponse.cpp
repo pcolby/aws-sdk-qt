@@ -101,3 +101,6 @@ void DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBSubnetGroupsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

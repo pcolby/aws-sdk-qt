@@ -101,3 +101,6 @@ void StartFaceDetectionResponsePrivate::StartFaceDetectionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("StartFaceDetectionResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

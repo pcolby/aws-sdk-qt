@@ -123,3 +123,6 @@ GetQueueRequestPrivate::GetQueueRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

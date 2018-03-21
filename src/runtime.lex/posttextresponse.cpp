@@ -101,3 +101,6 @@ void PostTextResponsePrivate::PostTextResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PostTextResponse"));
     /// @todo
 }
+
+} // namespace LexRuntimeService
+} // namespace AWS

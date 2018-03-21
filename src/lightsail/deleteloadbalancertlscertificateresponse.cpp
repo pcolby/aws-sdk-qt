@@ -101,3 +101,6 @@ void DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCerti
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerTlsCertificateResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -101,3 +101,6 @@ void AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGr
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeCacheSecurityGroupIngressResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

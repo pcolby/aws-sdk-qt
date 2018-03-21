@@ -123,3 +123,6 @@ DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

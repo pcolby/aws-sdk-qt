@@ -123,3 +123,6 @@ RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

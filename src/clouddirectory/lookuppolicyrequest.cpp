@@ -123,3 +123,6 @@ LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

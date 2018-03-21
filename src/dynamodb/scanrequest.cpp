@@ -123,3 +123,6 @@ ScanRequestPrivate::ScanRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

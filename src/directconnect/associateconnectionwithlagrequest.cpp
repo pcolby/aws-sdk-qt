@@ -123,3 +123,6 @@ AssociateConnectionWithLagRequestPrivate::AssociateConnectionWithLagRequestPriva
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

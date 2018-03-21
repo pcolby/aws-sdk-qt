@@ -123,3 +123,6 @@ SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

@@ -123,3 +123,6 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

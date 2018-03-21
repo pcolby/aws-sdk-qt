@@ -101,3 +101,6 @@ void ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListV2LoggingLevelsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void EnableRadiusResponsePrivate::EnableRadiusResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("EnableRadiusResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

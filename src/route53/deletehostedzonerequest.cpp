@@ -123,3 +123,6 @@ DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetProjectResponsePrivate::GetProjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetProjectResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

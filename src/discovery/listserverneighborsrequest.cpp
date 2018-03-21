@@ -123,3 +123,6 @@ ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

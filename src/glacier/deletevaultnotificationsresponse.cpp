@@ -101,3 +101,6 @@ void DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultNotificationsResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

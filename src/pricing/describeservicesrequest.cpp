@@ -123,3 +123,6 @@ DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
 {
 
 }
+
+} // namespace Pricing
+} // namespace AWS

@@ -123,3 +123,6 @@ AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ ListOperationsRequestPrivate::ListOperationsRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

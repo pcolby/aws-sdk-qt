@@ -101,3 +101,6 @@ void UntagStreamResponsePrivate::UntagStreamResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UntagStreamResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

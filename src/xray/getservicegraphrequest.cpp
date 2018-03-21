@@ -123,3 +123,6 @@ GetServiceGraphRequestPrivate::GetServiceGraphRequestPrivate(
 {
 
 }
+
+} // namespace XRay
+} // namespace AWS

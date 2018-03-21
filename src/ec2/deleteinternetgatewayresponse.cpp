@@ -101,3 +101,6 @@ void DeleteInternetGatewayResponsePrivate::DeleteInternetGatewayResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteInternetGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

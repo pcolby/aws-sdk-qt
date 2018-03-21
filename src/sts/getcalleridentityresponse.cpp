@@ -101,3 +101,6 @@ void GetCallerIdentityResponsePrivate::GetCallerIdentityResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetCallerIdentityResponse"));
     /// @todo
 }
+
+} // namespace STS
+} // namespace AWS

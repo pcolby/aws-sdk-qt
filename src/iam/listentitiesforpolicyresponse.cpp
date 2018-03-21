@@ -101,3 +101,6 @@ void ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListEntitiesForPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

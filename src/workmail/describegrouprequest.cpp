@@ -123,3 +123,6 @@ DescribeGroupRequestPrivate::DescribeGroupRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

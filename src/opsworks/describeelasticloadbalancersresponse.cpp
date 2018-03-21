@@ -101,3 +101,6 @@ void DescribeElasticLoadBalancersResponsePrivate::DescribeElasticLoadBalancersRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticLoadBalancersResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

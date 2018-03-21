@@ -101,3 +101,6 @@ void DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

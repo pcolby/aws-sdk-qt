@@ -101,3 +101,6 @@ void DeleteTagsForDomainResponsePrivate::DeleteTagsForDomainResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteTagsForDomainResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

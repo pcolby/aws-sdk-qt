@@ -123,3 +123,6 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

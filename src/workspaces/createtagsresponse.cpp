@@ -101,3 +101,6 @@ void CreateTagsResponsePrivate::CreateTagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateTagsResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

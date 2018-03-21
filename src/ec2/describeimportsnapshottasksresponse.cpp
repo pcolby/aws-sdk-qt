@@ -101,3 +101,6 @@ void DescribeImportSnapshotTasksResponsePrivate::DescribeImportSnapshotTasksResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeImportSnapshotTasksResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

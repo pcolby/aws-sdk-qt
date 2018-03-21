@@ -101,3 +101,6 @@ void AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionRespon
     Q_ASSERT(xml.name() == QLatin1String("AcceptVpcPeeringConnectionResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteProjectResponsePrivate::DeleteProjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteProjectResponse"));
     /// @todo
 }
+
+} // namespace Mobile
+} // namespace AWS

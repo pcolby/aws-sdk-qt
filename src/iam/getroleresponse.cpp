@@ -101,3 +101,6 @@ void GetRoleResponsePrivate::GetRoleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetRoleResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

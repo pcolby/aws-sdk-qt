@@ -101,3 +101,6 @@ void ListOfferingsResponsePrivate::ListOfferingsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListOfferingsResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

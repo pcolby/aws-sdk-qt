@@ -101,3 +101,6 @@ void TestInvokeMethodResponsePrivate::TestInvokeMethodResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("TestInvokeMethodResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

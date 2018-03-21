@@ -123,3 +123,6 @@ DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

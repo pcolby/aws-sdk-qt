@@ -101,3 +101,6 @@ void RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3Response(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterFromS3Response"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

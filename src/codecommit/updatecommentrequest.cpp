@@ -123,3 +123,6 @@ UpdateCommentRequestPrivate::UpdateCommentRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

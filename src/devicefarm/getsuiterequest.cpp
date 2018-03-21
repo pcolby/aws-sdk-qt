@@ -123,3 +123,6 @@ GetSuiteRequestPrivate::GetSuiteRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

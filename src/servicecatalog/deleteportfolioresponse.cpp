@@ -101,3 +101,6 @@ void DeletePortfolioResponsePrivate::DeletePortfolioResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeletePortfolioResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

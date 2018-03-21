@@ -123,3 +123,6 @@ AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPri
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

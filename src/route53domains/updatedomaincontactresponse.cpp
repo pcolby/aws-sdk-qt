@@ -101,3 +101,6 @@ void UpdateDomainContactResponsePrivate::UpdateDomainContactResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainContactResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

@@ -101,3 +101,6 @@ void CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CopyDBParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

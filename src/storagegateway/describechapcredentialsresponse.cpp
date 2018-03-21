@@ -101,3 +101,6 @@ void DescribeChapCredentialsResponsePrivate::DescribeChapCredentialsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeChapCredentialsResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

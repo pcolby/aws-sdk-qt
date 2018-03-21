@@ -123,3 +123,6 @@ DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

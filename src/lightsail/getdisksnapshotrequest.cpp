@@ -123,3 +123,6 @@ GetDiskSnapshotRequestPrivate::GetDiskSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

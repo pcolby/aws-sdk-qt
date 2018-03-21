@@ -101,3 +101,6 @@ void ListTrafficPolicyInstancesResponsePrivate::ListTrafficPolicyInstancesRespon
     Q_ASSERT(xml.name() == QLatin1String("ListTrafficPolicyInstancesResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

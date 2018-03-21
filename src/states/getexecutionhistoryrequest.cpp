@@ -123,3 +123,6 @@ GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

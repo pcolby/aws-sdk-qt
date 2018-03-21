@@ -123,3 +123,6 @@ DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequ
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

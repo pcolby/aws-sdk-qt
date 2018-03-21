@@ -123,3 +123,6 @@ ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

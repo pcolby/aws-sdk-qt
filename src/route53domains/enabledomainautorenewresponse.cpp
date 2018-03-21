@@ -101,3 +101,6 @@ void EnableDomainAutoRenewResponsePrivate::EnableDomainAutoRenewResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("EnableDomainAutoRenewResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

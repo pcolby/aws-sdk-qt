@@ -123,3 +123,6 @@ DescribeScalableTargetsRequestPrivate::DescribeScalableTargetsRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

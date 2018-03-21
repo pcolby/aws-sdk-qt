@@ -101,3 +101,6 @@ void ListServerCertificatesResponsePrivate::ListServerCertificatesResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListServerCertificatesResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

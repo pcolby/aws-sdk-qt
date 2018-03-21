@@ -123,3 +123,6 @@ UpdateServerRequestPrivate::UpdateServerRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

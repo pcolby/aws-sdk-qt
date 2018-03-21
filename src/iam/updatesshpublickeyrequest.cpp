@@ -123,3 +123,6 @@ UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribePortfolioResponsePrivate::DescribePortfolioResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribePortfolioResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

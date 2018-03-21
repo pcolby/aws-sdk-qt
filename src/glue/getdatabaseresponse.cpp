@@ -101,3 +101,6 @@ void GetDatabaseResponsePrivate::GetDatabaseResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetDatabaseResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

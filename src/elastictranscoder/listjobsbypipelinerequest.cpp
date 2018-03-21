@@ -123,3 +123,6 @@ ListJobsByPipelineRequestPrivate::ListJobsByPipelineRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

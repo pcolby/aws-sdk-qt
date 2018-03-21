@@ -123,3 +123,6 @@ GetBucketWebsiteRequestPrivate::GetBucketWebsiteRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

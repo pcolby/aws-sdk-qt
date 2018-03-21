@@ -123,3 +123,6 @@ CreateReplicationGroupRequestPrivate::CreateReplicationGroupRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

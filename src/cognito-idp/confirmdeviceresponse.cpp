@@ -101,3 +101,6 @@ void ConfirmDeviceResponsePrivate::ConfirmDeviceResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ConfirmDeviceResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

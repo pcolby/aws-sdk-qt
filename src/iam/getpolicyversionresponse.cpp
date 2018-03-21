@@ -101,3 +101,6 @@ void GetPolicyVersionResponsePrivate::GetPolicyVersionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetPolicyVersionResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

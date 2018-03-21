@@ -123,3 +123,6 @@ DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

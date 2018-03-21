@@ -123,3 +123,6 @@ GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

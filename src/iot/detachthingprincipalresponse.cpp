@@ -101,3 +101,6 @@ void DetachThingPrincipalResponsePrivate::DetachThingPrincipalResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DetachThingPrincipalResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEven
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

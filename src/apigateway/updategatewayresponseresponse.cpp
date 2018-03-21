@@ -101,3 +101,6 @@ void UpdateGatewayResponseResponsePrivate::UpdateGatewayResponseResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateGatewayResponseResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

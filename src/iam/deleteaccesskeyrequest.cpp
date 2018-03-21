@@ -123,3 +123,6 @@ DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

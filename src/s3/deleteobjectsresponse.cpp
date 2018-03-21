@@ -101,3 +101,6 @@ void DeleteObjectsResponsePrivate::DeleteObjectsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteObjectsResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

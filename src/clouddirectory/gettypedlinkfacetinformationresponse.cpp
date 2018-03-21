@@ -101,3 +101,6 @@ void GetTypedLinkFacetInformationResponsePrivate::GetTypedLinkFacetInformationRe
     Q_ASSERT(xml.name() == QLatin1String("GetTypedLinkFacetInformationResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

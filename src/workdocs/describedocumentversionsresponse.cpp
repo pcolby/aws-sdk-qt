@@ -101,3 +101,6 @@ void DescribeDocumentVersionsResponsePrivate::DescribeDocumentVersionsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentVersionsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

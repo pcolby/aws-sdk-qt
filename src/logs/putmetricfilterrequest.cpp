@@ -123,3 +123,6 @@ PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

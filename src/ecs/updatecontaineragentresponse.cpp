@@ -101,3 +101,6 @@ void UpdateContainerAgentResponsePrivate::UpdateContainerAgentResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UpdateContainerAgentResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

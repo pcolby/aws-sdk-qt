@@ -123,3 +123,6 @@ ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRe
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

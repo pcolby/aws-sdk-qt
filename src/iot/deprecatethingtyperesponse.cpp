@@ -101,3 +101,6 @@ void DeprecateThingTypeResponsePrivate::DeprecateThingTypeResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeprecateThingTypeResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

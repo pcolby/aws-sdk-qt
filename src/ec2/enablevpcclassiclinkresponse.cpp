@@ -101,3 +101,6 @@ void EnableVpcClassicLinkResponsePrivate::EnableVpcClassicLinkResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("EnableVpcClassicLinkResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

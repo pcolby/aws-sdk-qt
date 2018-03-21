@@ -101,3 +101,6 @@ void UpdateAvailabilityOptionsResponsePrivate::UpdateAvailabilityOptionsResponse
     Q_ASSERT(xml.name() == QLatin1String("UpdateAvailabilityOptionsResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

@@ -101,3 +101,6 @@ void QueryObjectsResponsePrivate::QueryObjectsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("QueryObjectsResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

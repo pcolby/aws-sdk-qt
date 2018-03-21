@@ -123,3 +123,6 @@ RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

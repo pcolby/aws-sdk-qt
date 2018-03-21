@@ -123,3 +123,6 @@ ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

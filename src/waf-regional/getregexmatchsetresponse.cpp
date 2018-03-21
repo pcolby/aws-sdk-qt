@@ -101,3 +101,6 @@ void GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetRegexMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

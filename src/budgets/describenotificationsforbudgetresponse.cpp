@@ -101,3 +101,6 @@ void DescribeNotificationsForBudgetResponsePrivate::DescribeNotificationsForBudg
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotificationsForBudgetResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

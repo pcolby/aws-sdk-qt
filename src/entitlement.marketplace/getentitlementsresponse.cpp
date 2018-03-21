@@ -101,3 +101,6 @@ void GetEntitlementsResponsePrivate::GetEntitlementsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetEntitlementsResponse"));
     /// @todo
 }
+
+} // namespace MarketplaceEntitlementService
+} // namespace AWS

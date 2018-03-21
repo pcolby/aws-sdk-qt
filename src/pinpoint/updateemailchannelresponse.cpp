@@ -101,3 +101,6 @@ void UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateEmailChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeInterconnectLoaRequestPrivate::DescribeInterconnectLoaRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

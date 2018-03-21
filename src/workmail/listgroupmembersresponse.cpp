@@ -101,3 +101,6 @@ void ListGroupMembersResponsePrivate::ListGroupMembersResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListGroupMembersResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationReques
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

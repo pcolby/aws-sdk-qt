@@ -123,3 +123,6 @@ GetLoggerDefinitionVersionRequestPrivate::GetLoggerDefinitionVersionRequestPriva
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

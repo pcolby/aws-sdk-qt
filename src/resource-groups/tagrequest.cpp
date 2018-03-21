@@ -123,3 +123,6 @@ TagRequestPrivate::TagRequestPrivate(
 {
 
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

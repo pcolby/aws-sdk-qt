@@ -101,3 +101,6 @@ void SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("SimulateCustomPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

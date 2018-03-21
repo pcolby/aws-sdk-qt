@@ -123,3 +123,6 @@ StartTaskRequestPrivate::StartTaskRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

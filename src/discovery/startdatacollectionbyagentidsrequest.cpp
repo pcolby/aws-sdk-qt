@@ -123,3 +123,6 @@ StartDataCollectionByAgentIdsRequestPrivate::StartDataCollectionByAgentIdsReques
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

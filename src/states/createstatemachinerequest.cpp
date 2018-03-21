@@ -123,3 +123,6 @@ CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

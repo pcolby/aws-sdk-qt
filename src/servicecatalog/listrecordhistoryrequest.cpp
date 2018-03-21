@@ -123,3 +123,6 @@ ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -123,3 +123,6 @@ ListDatasetsRequestPrivate::ListDatasetsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

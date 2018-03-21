@@ -101,3 +101,6 @@ void ListSkillsResponsePrivate::ListSkillsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListSkillsResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

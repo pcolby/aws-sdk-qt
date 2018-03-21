@@ -123,3 +123,6 @@ ListFunctionDefinitionVersionsRequestPrivate::ListFunctionDefinitionVersionsRequ
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

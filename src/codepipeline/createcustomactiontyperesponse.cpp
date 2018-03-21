@@ -101,3 +101,6 @@ void CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomActionTypeResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

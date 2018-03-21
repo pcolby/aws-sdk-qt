@@ -101,3 +101,6 @@ void RemoveFacetFromObjectResponsePrivate::RemoveFacetFromObjectResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("RemoveFacetFromObjectResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

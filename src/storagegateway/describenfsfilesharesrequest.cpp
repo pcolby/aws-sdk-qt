@@ -123,3 +123,6 @@ DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

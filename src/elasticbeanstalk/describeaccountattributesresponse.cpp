@@ -101,3 +101,6 @@ void DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeAccountAttributesResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

@@ -123,3 +123,6 @@ StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListLoggerDefinitionsResponsePrivate::ListLoggerDefinitionsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListLoggerDefinitionsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

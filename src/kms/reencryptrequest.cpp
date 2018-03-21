@@ -123,3 +123,6 @@ ReEncryptRequestPrivate::ReEncryptRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

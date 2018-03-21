@@ -123,3 +123,6 @@ CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

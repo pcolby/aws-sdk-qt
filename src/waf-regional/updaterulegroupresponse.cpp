@@ -101,3 +101,6 @@ void UpdateRuleGroupResponsePrivate::UpdateRuleGroupResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("UpdateRuleGroupResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

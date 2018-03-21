@@ -101,3 +101,6 @@ void CreateCachediSCSIVolumeResponsePrivate::CreateCachediSCSIVolumeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateCachediSCSIVolumeResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

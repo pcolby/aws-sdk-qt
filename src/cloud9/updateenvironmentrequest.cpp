@@ -123,3 +123,6 @@ UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

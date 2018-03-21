@@ -101,3 +101,6 @@ void TagQueueResponsePrivate::TagQueueResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TagQueueResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

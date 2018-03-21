@@ -123,3 +123,6 @@ DescribeConfigRulesRequestPrivate::DescribeConfigRulesRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

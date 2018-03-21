@@ -123,3 +123,6 @@ AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

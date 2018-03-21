@@ -101,3 +101,6 @@ void RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoad
     Q_ASSERT(xml.name() == QLatin1String("RegisterInstancesWithLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

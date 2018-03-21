@@ -101,3 +101,6 @@ void DeleteIntentResponsePrivate::DeleteIntentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteIntentResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

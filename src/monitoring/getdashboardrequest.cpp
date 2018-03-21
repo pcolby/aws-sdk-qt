@@ -123,3 +123,6 @@ GetDashboardRequestPrivate::GetDashboardRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

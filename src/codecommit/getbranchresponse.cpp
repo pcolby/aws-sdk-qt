@@ -101,3 +101,6 @@ void GetBranchResponsePrivate::GetBranchResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetBranchResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

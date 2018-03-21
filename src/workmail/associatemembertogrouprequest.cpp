@@ -123,3 +123,6 @@ AssociateMemberToGroupRequestPrivate::AssociateMemberToGroupRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

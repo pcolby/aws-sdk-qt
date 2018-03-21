@@ -123,3 +123,6 @@ StartMonitoringMembersRequestPrivate::StartMonitoringMembersRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

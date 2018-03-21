@@ -123,3 +123,6 @@ EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

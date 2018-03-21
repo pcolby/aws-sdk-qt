@@ -101,3 +101,6 @@ void DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeSeverityLevelsResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomActionTypeResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

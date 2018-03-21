@@ -123,3 +123,6 @@ DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

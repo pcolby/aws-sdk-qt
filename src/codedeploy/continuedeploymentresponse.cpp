@@ -101,3 +101,6 @@ void ContinueDeploymentResponsePrivate::ContinueDeploymentResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ContinueDeploymentResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

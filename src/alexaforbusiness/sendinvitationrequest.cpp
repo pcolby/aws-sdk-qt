@@ -123,3 +123,6 @@ SendInvitationRequestPrivate::SendInvitationRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

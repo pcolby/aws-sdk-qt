@@ -101,3 +101,6 @@ void StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponse
     Q_ASSERT(xml.name() == QLatin1String("StopConfigurationRecorderResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteApnsSandboxChannelResponsePrivate::DeleteApnsSandboxChannelResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteApnsSandboxChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

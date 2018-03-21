@@ -123,3 +123,6 @@ ListInputsRequestPrivate::ListInputsRequestPrivate(
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

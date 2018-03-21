@@ -101,3 +101,6 @@ void DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponse
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserDefinedFunctionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

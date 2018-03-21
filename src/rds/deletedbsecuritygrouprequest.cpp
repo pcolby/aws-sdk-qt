@@ -123,3 +123,6 @@ DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

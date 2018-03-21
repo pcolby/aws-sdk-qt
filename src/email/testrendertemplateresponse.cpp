@@ -101,3 +101,6 @@ void TestRenderTemplateResponsePrivate::TestRenderTemplateResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("TestRenderTemplateResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

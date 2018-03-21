@@ -123,3 +123,6 @@ CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

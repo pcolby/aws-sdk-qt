@@ -123,3 +123,6 @@ UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPri
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

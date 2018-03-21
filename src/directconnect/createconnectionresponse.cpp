@@ -101,3 +101,6 @@ void CreateConnectionResponsePrivate::CreateConnectionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateConnectionResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

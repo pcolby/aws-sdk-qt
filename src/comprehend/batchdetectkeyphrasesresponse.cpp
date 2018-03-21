@@ -101,3 +101,6 @@ void BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectKeyPhrasesResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

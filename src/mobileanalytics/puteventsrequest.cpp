@@ -123,3 +123,6 @@ PutEventsRequestPrivate::PutEventsRequestPrivate(
 {
 
 }
+
+} // namespace MobileAnalytics
+} // namespace AWS

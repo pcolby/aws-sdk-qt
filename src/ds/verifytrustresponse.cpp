@@ -101,3 +101,6 @@ void VerifyTrustResponsePrivate::VerifyTrustResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("VerifyTrustResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

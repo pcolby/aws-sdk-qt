@@ -101,3 +101,6 @@ void DeleteIdentityResponsePrivate::DeleteIdentityResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteIdentityResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -101,3 +101,6 @@ void AdminUpdateUserAttributesResponsePrivate::AdminUpdateUserAttributesResponse
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateUserAttributesResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

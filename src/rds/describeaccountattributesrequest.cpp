@@ -123,3 +123,6 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

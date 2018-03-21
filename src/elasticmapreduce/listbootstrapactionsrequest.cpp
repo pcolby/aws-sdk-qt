@@ -123,3 +123,6 @@ ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

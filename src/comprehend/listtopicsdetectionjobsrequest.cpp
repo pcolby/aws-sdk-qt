@@ -123,3 +123,6 @@ ListTopicsDetectionJobsRequestPrivate::ListTopicsDetectionJobsRequestPrivate(
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

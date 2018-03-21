@@ -123,3 +123,6 @@ UpdateBuildRequestPrivate::UpdateBuildRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

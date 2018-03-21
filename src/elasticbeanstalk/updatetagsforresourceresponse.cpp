@@ -101,3 +101,6 @@ void UpdateTagsForResourceResponsePrivate::UpdateTagsForResourceResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateTagsForResourceResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

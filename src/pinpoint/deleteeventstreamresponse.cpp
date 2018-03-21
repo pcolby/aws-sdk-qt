@@ -101,3 +101,6 @@ void DeleteEventStreamResponsePrivate::DeleteEventStreamResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteEventStreamResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

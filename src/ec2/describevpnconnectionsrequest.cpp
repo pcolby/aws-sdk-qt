@@ -123,3 +123,6 @@ DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

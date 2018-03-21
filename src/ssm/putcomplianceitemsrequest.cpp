@@ -123,3 +123,6 @@ PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

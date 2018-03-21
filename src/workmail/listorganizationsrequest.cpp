@@ -123,3 +123,6 @@ ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

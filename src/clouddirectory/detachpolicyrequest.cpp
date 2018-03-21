@@ -123,3 +123,6 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

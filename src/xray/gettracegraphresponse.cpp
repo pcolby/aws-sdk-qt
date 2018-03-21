@@ -101,3 +101,6 @@ void GetTraceGraphResponsePrivate::GetTraceGraphResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetTraceGraphResponse"));
     /// @todo
 }
+
+} // namespace XRay
+} // namespace AWS

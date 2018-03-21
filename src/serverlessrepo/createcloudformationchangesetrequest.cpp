@@ -123,3 +123,6 @@ CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetReques
 {
 
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

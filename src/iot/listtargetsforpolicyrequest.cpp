@@ -123,3 +123,6 @@ ListTargetsForPolicyRequestPrivate::ListTargetsForPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

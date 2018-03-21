@@ -123,3 +123,6 @@ GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

@@ -123,3 +123,6 @@ ListArtifactsRequestPrivate::ListArtifactsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -101,3 +101,6 @@ void DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFrom
     Q_ASSERT(xml.name() == QLatin1String("DisassociateTagOptionFromResourceResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

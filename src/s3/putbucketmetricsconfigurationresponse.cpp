@@ -101,3 +101,6 @@ void PutBucketMetricsConfigurationResponsePrivate::PutBucketMetricsConfiguration
     Q_ASSERT(xml.name() == QLatin1String("PutBucketMetricsConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

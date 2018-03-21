@@ -101,3 +101,6 @@ void DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselin
     Q_ASSERT(xml.name() == QLatin1String("DeregisterPatchBaselineForPatchGroupResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

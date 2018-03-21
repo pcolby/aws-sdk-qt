@@ -101,3 +101,6 @@ void CreateGroupVersionResponsePrivate::CreateGroupVersionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateGroupVersionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

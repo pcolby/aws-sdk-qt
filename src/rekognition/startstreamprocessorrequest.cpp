@@ -123,3 +123,6 @@ StartStreamProcessorRequestPrivate::StartStreamProcessorRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

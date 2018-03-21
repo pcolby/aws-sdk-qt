@@ -101,3 +101,6 @@ void InstallToRemoteAccessSessionResponsePrivate::InstallToRemoteAccessSessionRe
     Q_ASSERT(xml.name() == QLatin1String("InstallToRemoteAccessSessionResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -123,3 +123,6 @@ DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

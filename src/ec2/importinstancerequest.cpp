@@ -123,3 +123,6 @@ ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

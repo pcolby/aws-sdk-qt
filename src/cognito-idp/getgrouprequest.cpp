@@ -123,3 +123,6 @@ GetGroupRequestPrivate::GetGroupRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

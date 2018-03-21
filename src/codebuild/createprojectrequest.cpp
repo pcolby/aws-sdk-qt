@@ -123,3 +123,6 @@ CreateProjectRequestPrivate::CreateProjectRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

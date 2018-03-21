@@ -123,3 +123,6 @@ CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

@@ -101,3 +101,6 @@ void FlushStageCacheResponsePrivate::FlushStageCacheResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("FlushStageCacheResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -123,3 +123,6 @@ ListJobsByStatusRequestPrivate::ListJobsByStatusRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

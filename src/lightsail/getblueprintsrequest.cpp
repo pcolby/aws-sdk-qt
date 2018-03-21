@@ -123,3 +123,6 @@ GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

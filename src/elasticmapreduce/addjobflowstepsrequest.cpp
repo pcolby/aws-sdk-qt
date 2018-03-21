@@ -123,3 +123,6 @@ AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

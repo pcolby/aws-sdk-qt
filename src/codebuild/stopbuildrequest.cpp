@@ -123,3 +123,6 @@ StopBuildRequestPrivate::StopBuildRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

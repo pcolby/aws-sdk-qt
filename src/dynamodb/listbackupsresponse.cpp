@@ -101,3 +101,6 @@ void ListBackupsResponsePrivate::ListBackupsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListBackupsResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

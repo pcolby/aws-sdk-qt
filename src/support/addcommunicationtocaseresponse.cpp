@@ -101,3 +101,6 @@ void AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AddCommunicationToCaseResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

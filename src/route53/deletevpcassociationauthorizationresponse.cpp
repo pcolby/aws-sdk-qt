@@ -101,3 +101,6 @@ void DeleteVPCAssociationAuthorizationResponsePrivate::DeleteVPCAssociationAutho
     Q_ASSERT(xml.name() == QLatin1String("DeleteVPCAssociationAuthorizationResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

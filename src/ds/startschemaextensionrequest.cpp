@@ -123,3 +123,6 @@ StartSchemaExtensionRequestPrivate::StartSchemaExtensionRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

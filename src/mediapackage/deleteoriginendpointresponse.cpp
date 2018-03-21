@@ -101,3 +101,6 @@ void DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteOriginEndpointResponse"));
     /// @todo
 }
+
+} // namespace MediaPackage
+} // namespace AWS

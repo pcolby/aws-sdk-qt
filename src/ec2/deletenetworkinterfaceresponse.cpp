@@ -101,3 +101,6 @@ void DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkInterfaceResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

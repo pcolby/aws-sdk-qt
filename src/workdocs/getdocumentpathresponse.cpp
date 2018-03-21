@@ -101,3 +101,6 @@ void GetDocumentPathResponsePrivate::GetDocumentPathResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentPathResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

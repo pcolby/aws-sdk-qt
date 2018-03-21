@@ -123,3 +123,6 @@ StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

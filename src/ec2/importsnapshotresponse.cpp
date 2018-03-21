@@ -101,3 +101,6 @@ void ImportSnapshotResponsePrivate::ImportSnapshotResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ImportSnapshotResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

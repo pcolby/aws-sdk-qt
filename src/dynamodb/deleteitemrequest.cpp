@@ -123,3 +123,6 @@ DeleteItemRequestPrivate::DeleteItemRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

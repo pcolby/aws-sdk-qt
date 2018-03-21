@@ -123,3 +123,6 @@ GetBucketNotificationRequestPrivate::GetBucketNotificationRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

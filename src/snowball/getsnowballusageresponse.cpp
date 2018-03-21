@@ -101,3 +101,6 @@ void GetSnowballUsageResponsePrivate::GetSnowballUsageResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetSnowballUsageResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

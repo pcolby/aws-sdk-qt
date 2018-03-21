@@ -123,3 +123,6 @@ GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

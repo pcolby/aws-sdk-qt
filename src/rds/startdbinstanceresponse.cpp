@@ -101,3 +101,6 @@ void StartDBInstanceResponsePrivate::StartDBInstanceResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("StartDBInstanceResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

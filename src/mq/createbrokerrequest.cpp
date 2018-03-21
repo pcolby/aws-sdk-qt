@@ -123,3 +123,6 @@ CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

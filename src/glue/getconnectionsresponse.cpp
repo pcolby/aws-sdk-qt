@@ -101,3 +101,6 @@ void GetConnectionsResponsePrivate::GetConnectionsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetConnectionsResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

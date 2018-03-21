@@ -123,3 +123,6 @@ CreateReplicationInstanceRequestPrivate::CreateReplicationInstanceRequestPrivate
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

@@ -123,3 +123,6 @@ GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
 {
 
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

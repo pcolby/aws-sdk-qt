@@ -123,3 +123,6 @@ CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -123,3 +123,6 @@ GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

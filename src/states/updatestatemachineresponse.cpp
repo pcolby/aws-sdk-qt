@@ -101,3 +101,6 @@ void UpdateStateMachineResponsePrivate::UpdateStateMachineResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateStateMachineResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

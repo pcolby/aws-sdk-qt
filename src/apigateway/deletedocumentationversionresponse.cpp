@@ -101,3 +101,6 @@ void DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteDocumentationVersionResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

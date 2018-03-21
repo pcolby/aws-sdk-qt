@@ -123,3 +123,6 @@ CreateNotebookInstanceLifecycleConfigRequestPrivate::CreateNotebookInstanceLifec
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

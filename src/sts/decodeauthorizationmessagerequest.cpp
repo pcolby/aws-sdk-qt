@@ -123,3 +123,6 @@ DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPriva
 {
 
 }
+
+} // namespace STS
+} // namespace AWS

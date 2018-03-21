@@ -123,3 +123,6 @@ UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

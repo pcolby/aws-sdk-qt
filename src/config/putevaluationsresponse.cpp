@@ -101,3 +101,6 @@ void PutEvaluationsResponsePrivate::PutEvaluationsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("PutEvaluationsResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

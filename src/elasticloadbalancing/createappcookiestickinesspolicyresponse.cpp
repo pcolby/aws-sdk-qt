@@ -101,3 +101,6 @@ void CreateAppCookieStickinessPolicyResponsePrivate::CreateAppCookieStickinessPo
     Q_ASSERT(xml.name() == QLatin1String("CreateAppCookieStickinessPolicyResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

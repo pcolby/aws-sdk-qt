@@ -123,3 +123,6 @@ ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

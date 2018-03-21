@@ -101,3 +101,6 @@ void DescribeVpcPeeringConnectionsResponsePrivate::DescribeVpcPeeringConnections
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcPeeringConnectionsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

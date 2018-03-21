@@ -101,3 +101,6 @@ void UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateDirectoryConfigResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

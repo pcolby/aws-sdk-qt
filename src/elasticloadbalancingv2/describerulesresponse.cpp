@@ -101,3 +101,6 @@ void DescribeRulesResponsePrivate::DescribeRulesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeRulesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

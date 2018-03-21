@@ -123,3 +123,6 @@ StartBuildRequestPrivate::StartBuildRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

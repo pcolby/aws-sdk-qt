@@ -101,3 +101,6 @@ void StopDeploymentResponsePrivate::StopDeploymentResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("StopDeploymentResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

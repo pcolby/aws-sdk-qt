@@ -101,3 +101,6 @@ void SearchSkillGroupsResponsePrivate::SearchSkillGroupsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("SearchSkillGroupsResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

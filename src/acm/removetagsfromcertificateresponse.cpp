@@ -101,3 +101,6 @@ void RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponse
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromCertificateResponse"));
     /// @todo
 }
+
+} // namespace ACM
+} // namespace AWS

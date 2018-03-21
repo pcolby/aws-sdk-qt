@@ -123,3 +123,6 @@ DescribeEntityAggregatesRequestPrivate::DescribeEntityAggregatesRequestPrivate(
 {
 
 }
+
+} // namespace Health
+} // namespace AWS

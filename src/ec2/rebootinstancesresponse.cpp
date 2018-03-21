@@ -101,3 +101,6 @@ void RebootInstancesResponsePrivate::RebootInstancesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("RebootInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateTapeWithBarcodeResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

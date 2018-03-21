@@ -123,3 +123,6 @@ CreateServerRequestPrivate::CreateServerRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

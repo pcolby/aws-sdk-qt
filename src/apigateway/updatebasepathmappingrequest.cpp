@@ -123,3 +123,6 @@ UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

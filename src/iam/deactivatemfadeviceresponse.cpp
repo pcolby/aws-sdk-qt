@@ -101,3 +101,6 @@ void DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeactivateMFADeviceResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

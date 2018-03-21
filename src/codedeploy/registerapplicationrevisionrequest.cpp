@@ -123,3 +123,6 @@ RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPri
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

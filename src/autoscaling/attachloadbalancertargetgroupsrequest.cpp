@@ -123,3 +123,6 @@ AttachLoadBalancerTargetGroupsRequestPrivate::AttachLoadBalancerTargetGroupsRequ
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

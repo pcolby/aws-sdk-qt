@@ -123,3 +123,6 @@ DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

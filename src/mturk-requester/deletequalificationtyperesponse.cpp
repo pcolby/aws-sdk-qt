@@ -101,3 +101,6 @@ void DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteQualificationTypeResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

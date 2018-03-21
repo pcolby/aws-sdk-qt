@@ -101,3 +101,6 @@ void ListStreamsResponsePrivate::ListStreamsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListStreamsResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

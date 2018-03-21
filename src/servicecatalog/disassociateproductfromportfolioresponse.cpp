@@ -101,3 +101,6 @@ void DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPor
     Q_ASSERT(xml.name() == QLatin1String("DisassociateProductFromPortfolioResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

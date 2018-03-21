@@ -123,3 +123,6 @@ StopStackRequestPrivate::StopStackRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

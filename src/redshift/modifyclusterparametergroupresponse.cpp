@@ -101,3 +101,6 @@ void ModifyClusterParameterGroupResponsePrivate::ModifyClusterParameterGroupResp
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -123,3 +123,6 @@ ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReports
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

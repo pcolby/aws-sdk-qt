@@ -101,3 +101,6 @@ void DeleteClassifierResponsePrivate::DeleteClassifierResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteClassifierResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

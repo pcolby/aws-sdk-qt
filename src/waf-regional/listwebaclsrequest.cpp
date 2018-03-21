@@ -123,3 +123,6 @@ ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

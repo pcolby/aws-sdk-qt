@@ -101,3 +101,6 @@ void DescribeInstancesHealthResponsePrivate::DescribeInstancesHealthResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstancesHealthResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

@@ -123,3 +123,6 @@ StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestP
 {
 
 }
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS

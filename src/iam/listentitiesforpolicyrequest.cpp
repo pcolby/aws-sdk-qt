@@ -123,3 +123,6 @@ ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

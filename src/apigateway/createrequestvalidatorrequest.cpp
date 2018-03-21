@@ -123,3 +123,6 @@ CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

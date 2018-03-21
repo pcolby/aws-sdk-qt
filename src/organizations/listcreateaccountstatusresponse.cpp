@@ -101,3 +101,6 @@ void ListCreateAccountStatusResponsePrivate::ListCreateAccountStatusResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListCreateAccountStatusResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

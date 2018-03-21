@@ -101,3 +101,6 @@ void DescribeCommandsResponsePrivate::DescribeCommandsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeCommandsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

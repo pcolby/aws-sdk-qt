@@ -123,3 +123,6 @@ GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

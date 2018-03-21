@@ -101,3 +101,6 @@ void LeaveOrganizationResponsePrivate::LeaveOrganizationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("LeaveOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

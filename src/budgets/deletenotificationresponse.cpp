@@ -101,3 +101,6 @@ void DeleteNotificationResponsePrivate::DeleteNotificationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

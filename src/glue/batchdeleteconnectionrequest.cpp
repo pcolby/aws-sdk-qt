@@ -123,3 +123,6 @@ BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

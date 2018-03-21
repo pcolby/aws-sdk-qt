@@ -101,3 +101,6 @@ void DeleteRepositoryResponsePrivate::DeleteRepositoryResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteRepositoryResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

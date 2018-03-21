@@ -101,3 +101,6 @@ void GetShardIteratorResponsePrivate::GetShardIteratorResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetShardIteratorResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

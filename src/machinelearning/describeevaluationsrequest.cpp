@@ -123,3 +123,6 @@ DescribeEvaluationsRequestPrivate::DescribeEvaluationsRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

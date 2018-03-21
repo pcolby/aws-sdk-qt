@@ -101,3 +101,6 @@ void AdminListGroupsForUserResponsePrivate::AdminListGroupsForUserResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AdminListGroupsForUserResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

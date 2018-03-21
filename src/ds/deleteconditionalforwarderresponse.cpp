@@ -101,3 +101,6 @@ void DeleteConditionalForwarderResponsePrivate::DeleteConditionalForwarderRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteConditionalForwarderResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

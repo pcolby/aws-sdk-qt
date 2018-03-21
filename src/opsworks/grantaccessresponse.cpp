@@ -101,3 +101,6 @@ void GrantAccessResponsePrivate::GrantAccessResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GrantAccessResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

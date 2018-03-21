@@ -123,3 +123,6 @@ TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

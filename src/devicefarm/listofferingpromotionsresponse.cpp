@@ -101,3 +101,6 @@ void ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListOfferingPromotionsResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

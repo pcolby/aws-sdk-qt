@@ -123,3 +123,6 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateCommentResponsePrivate::UpdateCommentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateCommentResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

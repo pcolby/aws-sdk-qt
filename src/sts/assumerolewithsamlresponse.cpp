@@ -101,3 +101,6 @@ void AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleWithSAMLResponse"));
     /// @todo
 }
+
+} // namespace STS
+} // namespace AWS

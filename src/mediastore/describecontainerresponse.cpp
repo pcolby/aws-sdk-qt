@@ -101,3 +101,6 @@ void DescribeContainerResponsePrivate::DescribeContainerResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeContainerResponse"));
     /// @todo
 }
+
+} // namespace MediaStore
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateServerEngineAttributesResponsePrivate::UpdateServerEngineAttributesRe
     Q_ASSERT(xml.name() == QLatin1String("UpdateServerEngineAttributesResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

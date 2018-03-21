@@ -123,3 +123,6 @@ CopyProductRequestPrivate::CopyProductRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

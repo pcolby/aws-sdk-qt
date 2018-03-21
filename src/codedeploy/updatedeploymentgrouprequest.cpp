@@ -123,3 +123,6 @@ UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

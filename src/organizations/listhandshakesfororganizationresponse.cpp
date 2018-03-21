@@ -101,3 +101,6 @@ void ListHandshakesForOrganizationResponsePrivate::ListHandshakesForOrganization
     Q_ASSERT(xml.name() == QLatin1String("ListHandshakesForOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

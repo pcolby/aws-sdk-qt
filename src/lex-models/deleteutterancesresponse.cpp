@@ -101,3 +101,6 @@ void DeleteUtterancesResponsePrivate::DeleteUtterancesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteUtterancesResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

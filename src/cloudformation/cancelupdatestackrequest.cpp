@@ -123,3 +123,6 @@ CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

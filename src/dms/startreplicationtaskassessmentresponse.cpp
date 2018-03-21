@@ -101,3 +101,6 @@ void StartReplicationTaskAssessmentResponsePrivate::StartReplicationTaskAssessme
     Q_ASSERT(xml.name() == QLatin1String("StartReplicationTaskAssessmentResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

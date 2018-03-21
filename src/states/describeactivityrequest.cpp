@@ -123,3 +123,6 @@ DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

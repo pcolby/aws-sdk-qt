@@ -101,3 +101,6 @@ void DescribeInterconnectsResponsePrivate::DescribeInterconnectsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeInterconnectsResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteOTAUpdateResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

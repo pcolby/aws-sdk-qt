@@ -123,3 +123,6 @@ DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

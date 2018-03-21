@@ -101,3 +101,6 @@ void AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponse
     Q_ASSERT(xml.name() == QLatin1String("AdminSetUserMFAPreferenceResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

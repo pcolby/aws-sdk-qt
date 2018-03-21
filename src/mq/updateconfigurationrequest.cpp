@@ -123,3 +123,6 @@ UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

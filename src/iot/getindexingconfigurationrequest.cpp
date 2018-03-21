@@ -123,3 +123,6 @@ GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateNFSFileShareResponsePrivate::CreateNFSFileShareResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateNFSFileShareResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

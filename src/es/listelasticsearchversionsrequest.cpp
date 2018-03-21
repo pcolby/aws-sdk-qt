@@ -123,3 +123,6 @@ ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

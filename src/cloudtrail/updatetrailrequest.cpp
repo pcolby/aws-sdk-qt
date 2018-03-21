@@ -123,3 +123,6 @@ UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

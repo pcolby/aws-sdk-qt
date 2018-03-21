@@ -123,3 +123,6 @@ ListAttachedIndicesRequestPrivate::ListAttachedIndicesRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

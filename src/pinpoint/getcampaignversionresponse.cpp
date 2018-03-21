@@ -101,3 +101,6 @@ void GetCampaignVersionResponsePrivate::GetCampaignVersionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetCampaignVersionResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

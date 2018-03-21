@@ -101,3 +101,6 @@ void DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate::DescribeTrustedA
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrustedAdvisorCheckRefreshStatusesResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

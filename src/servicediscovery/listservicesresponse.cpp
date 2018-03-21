@@ -101,3 +101,6 @@ void ListServicesResponsePrivate::ListServicesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListServicesResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

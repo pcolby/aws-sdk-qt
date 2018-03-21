@@ -101,3 +101,6 @@ void UpdateServiceResponsePrivate::UpdateServiceResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

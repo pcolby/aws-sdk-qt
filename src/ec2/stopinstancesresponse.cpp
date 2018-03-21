@@ -101,3 +101,6 @@ void StopInstancesResponsePrivate::StopInstancesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

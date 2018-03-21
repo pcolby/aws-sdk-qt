@@ -101,3 +101,6 @@ void PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("PutAutoScalingPolicyResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

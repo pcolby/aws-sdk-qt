@@ -101,3 +101,6 @@ void GetParametersResponsePrivate::GetParametersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetParametersResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

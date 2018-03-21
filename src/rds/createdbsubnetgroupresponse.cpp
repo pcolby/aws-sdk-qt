@@ -101,3 +101,6 @@ void CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateDBSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

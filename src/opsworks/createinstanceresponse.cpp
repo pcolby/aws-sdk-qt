@@ -101,3 +101,6 @@ void CreateInstanceResponsePrivate::CreateInstanceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

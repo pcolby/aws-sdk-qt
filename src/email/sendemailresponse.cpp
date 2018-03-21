@@ -101,3 +101,6 @@ void SendEmailResponsePrivate::SendEmailResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SendEmailResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

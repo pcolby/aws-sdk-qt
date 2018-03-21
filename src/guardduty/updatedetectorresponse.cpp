@@ -101,3 +101,6 @@ void UpdateDetectorResponsePrivate::UpdateDetectorResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateDetectorResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

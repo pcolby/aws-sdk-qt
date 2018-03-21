@@ -123,3 +123,6 @@ AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListThingGroupsResponsePrivate::ListThingGroupsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListThingGroupsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

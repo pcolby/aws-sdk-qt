@@ -101,3 +101,6 @@ void ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListRegexPatternSetsResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

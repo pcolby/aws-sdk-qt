@@ -101,3 +101,6 @@ void DetachLoadBalancerTargetGroupsResponsePrivate::DetachLoadBalancerTargetGrou
     Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancerTargetGroupsResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

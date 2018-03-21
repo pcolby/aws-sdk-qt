@@ -123,3 +123,6 @@ PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

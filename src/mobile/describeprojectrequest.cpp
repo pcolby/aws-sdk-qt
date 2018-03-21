@@ -123,3 +123,6 @@ DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
 {
 
 }
+
+} // namespace Mobile
+} // namespace AWS

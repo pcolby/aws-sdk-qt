@@ -101,3 +101,6 @@ void DeleteClusterSubnetGroupResponsePrivate::DeleteClusterSubnetGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void StopImageBuilderResponsePrivate::StopImageBuilderResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("StopImageBuilderResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

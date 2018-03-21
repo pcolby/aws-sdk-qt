@@ -101,3 +101,6 @@ void PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("PurchaseHostReservationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

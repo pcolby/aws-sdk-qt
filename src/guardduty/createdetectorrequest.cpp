@@ -123,3 +123,6 @@ CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

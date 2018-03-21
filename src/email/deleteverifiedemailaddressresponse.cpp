@@ -101,3 +101,6 @@ void DeleteVerifiedEmailAddressResponsePrivate::DeleteVerifiedEmailAddressRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteVerifiedEmailAddressResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

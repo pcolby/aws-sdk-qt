@@ -123,3 +123,6 @@ SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
 {
 
 }
+
+} // namespace Polly
+} // namespace AWS

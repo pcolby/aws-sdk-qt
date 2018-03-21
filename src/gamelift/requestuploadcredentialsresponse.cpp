@@ -101,3 +101,6 @@ void RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("RequestUploadCredentialsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

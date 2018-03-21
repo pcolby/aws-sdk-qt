@@ -101,3 +101,6 @@ void DescribeLayersResponsePrivate::DescribeLayersResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeLayersResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

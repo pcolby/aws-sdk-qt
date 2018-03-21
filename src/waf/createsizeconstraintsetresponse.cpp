@@ -101,3 +101,6 @@ void CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateSizeConstraintSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

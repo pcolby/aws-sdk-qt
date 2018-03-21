@@ -101,3 +101,6 @@ void DescribeSecurityConfigurationResponsePrivate::DescribeSecurityConfiguration
     Q_ASSERT(xml.name() == QLatin1String("DescribeSecurityConfigurationResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

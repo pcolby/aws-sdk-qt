@@ -123,3 +123,6 @@ ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificati
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

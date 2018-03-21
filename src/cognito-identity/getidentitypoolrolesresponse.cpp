@@ -101,3 +101,6 @@ void GetIdentityPoolRolesResponsePrivate::GetIdentityPoolRolesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityPoolRolesResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

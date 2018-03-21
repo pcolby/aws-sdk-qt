@@ -101,3 +101,6 @@ void PutBucketTaggingResponsePrivate::PutBucketTaggingResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PutBucketTaggingResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

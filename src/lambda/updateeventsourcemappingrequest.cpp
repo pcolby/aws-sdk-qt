@@ -123,3 +123,6 @@ UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

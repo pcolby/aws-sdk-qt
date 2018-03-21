@@ -123,3 +123,6 @@ CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

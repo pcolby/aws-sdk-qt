@@ -101,3 +101,6 @@ void DescribeLoadBalancerPolicyTypesResponsePrivate::DescribeLoadBalancerPolicyT
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBalancerPolicyTypesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

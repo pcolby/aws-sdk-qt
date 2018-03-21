@@ -101,3 +101,6 @@ void GetBucketVersioningResponsePrivate::GetBucketVersioningResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetBucketVersioningResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

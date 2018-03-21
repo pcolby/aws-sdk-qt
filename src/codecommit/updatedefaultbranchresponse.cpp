@@ -101,3 +101,6 @@ void UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("UpdateDefaultBranchResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -123,3 +123,6 @@ ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

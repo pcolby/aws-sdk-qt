@@ -101,3 +101,6 @@ void RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbe
     Q_ASSERT(xml.name() == QLatin1String("RecordLifecycleActionHeartbeatResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

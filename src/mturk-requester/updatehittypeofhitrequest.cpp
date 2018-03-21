@@ -123,3 +123,6 @@ UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

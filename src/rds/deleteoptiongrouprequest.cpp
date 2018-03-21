@@ -123,3 +123,6 @@ DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

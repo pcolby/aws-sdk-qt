@@ -101,3 +101,6 @@ void DeleteGatewayResponsePrivate::DeleteGatewayResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteGatewayResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

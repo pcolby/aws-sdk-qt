@@ -123,3 +123,6 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -123,3 +123,6 @@ ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

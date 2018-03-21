@@ -123,3 +123,6 @@ UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatus
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

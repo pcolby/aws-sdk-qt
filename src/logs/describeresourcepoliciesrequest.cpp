@@ -123,3 +123,6 @@ DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

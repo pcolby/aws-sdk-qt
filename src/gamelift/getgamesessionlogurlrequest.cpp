@@ -123,3 +123,6 @@ GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

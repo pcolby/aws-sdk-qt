@@ -101,3 +101,6 @@ void GetCSVHeaderResponsePrivate::GetCSVHeaderResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetCSVHeaderResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

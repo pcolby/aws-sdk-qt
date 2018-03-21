@@ -123,3 +123,6 @@ ListAssessmentRunAgentsRequestPrivate::ListAssessmentRunAgentsRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

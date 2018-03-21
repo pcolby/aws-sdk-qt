@@ -123,3 +123,6 @@ DeleteRolePolicyRequestPrivate::DeleteRolePolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

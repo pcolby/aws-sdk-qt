@@ -123,3 +123,6 @@ GetDataRetrievalPolicyRequestPrivate::GetDataRetrievalPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

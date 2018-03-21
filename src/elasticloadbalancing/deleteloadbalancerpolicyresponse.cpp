@@ -101,3 +101,6 @@ void DeleteLoadBalancerPolicyResponsePrivate::DeleteLoadBalancerPolicyResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerPolicyResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

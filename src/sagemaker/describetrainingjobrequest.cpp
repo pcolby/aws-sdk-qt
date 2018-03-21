@@ -123,3 +123,6 @@ DescribeTrainingJobRequestPrivate::DescribeTrainingJobRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

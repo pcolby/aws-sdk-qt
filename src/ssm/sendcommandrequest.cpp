@@ -123,3 +123,6 @@ SendCommandRequestPrivate::SendCommandRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

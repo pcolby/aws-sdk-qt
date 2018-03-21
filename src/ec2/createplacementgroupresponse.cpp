@@ -101,3 +101,6 @@ void CreatePlacementGroupResponsePrivate::CreatePlacementGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreatePlacementGroupResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

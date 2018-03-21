@@ -101,3 +101,6 @@ void DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeliverConfigSnapshotResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

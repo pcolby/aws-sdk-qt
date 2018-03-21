@@ -101,3 +101,6 @@ void DescribeAddressesResponsePrivate::DescribeAddressesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeAddressesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

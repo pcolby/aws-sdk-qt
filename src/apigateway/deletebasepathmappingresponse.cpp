@@ -101,3 +101,6 @@ void DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteBasePathMappingResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

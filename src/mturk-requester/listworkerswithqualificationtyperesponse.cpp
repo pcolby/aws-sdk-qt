@@ -101,3 +101,6 @@ void ListWorkersWithQualificationTypeResponsePrivate::ListWorkersWithQualificati
     Q_ASSERT(xml.name() == QLatin1String("ListWorkersWithQualificationTypeResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceRe
     Q_ASSERT(xml.name() == QLatin1String("DeregisterOnPremisesInstanceResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

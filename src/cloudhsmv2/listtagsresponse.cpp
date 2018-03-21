@@ -101,3 +101,6 @@ void ListTagsResponsePrivate::ListTagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListTagsResponse"));
     /// @todo
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

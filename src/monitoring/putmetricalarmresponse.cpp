@@ -101,3 +101,6 @@ void PutMetricAlarmResponsePrivate::PutMetricAlarmResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("PutMetricAlarmResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

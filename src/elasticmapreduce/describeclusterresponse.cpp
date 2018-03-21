@@ -101,3 +101,6 @@ void DescribeClusterResponsePrivate::DescribeClusterResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

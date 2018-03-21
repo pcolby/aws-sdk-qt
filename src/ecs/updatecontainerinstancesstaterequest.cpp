@@ -123,3 +123,6 @@ UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateReques
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

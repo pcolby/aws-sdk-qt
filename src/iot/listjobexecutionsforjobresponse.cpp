@@ -101,3 +101,6 @@ void ListJobExecutionsForJobResponsePrivate::ListJobExecutionsForJobResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListJobExecutionsForJobResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

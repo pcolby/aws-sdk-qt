@@ -123,3 +123,6 @@ ModifyReplicationSubnetGroupRequestPrivate::ModifyReplicationSubnetGroupRequestP
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

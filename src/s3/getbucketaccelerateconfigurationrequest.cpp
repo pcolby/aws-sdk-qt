@@ -123,3 +123,6 @@ GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfiguration
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

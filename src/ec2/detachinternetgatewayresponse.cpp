@@ -101,3 +101,6 @@ void DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DetachInternetGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

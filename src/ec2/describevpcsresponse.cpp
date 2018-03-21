@@ -101,3 +101,6 @@ void DescribeVpcsResponsePrivate::DescribeVpcsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

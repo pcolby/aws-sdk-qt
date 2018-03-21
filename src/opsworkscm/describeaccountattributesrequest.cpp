@@ -123,3 +123,6 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

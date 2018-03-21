@@ -123,3 +123,6 @@ ListParentsRequestPrivate::ListParentsRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

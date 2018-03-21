@@ -101,3 +101,6 @@ void CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsRespon
     Q_ASSERT(xml.name() == QLatin1String("CreateDistributionWithTagsResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

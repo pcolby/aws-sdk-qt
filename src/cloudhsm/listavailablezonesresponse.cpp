@@ -101,3 +101,6 @@ void ListAvailableZonesResponsePrivate::ListAvailableZonesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListAvailableZonesResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void StopStackResponsePrivate::StopStackResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopStackResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

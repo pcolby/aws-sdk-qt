@@ -101,3 +101,6 @@ void CreateOrganizationResponsePrivate::CreateOrganizationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

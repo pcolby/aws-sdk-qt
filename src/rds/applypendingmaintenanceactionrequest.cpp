@@ -123,3 +123,6 @@ ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionReques
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

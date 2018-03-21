@@ -101,3 +101,6 @@ void BatchGetProjectsResponsePrivate::BatchGetProjectsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("BatchGetProjectsResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateDomainEntryResponsePrivate::CreateDomainEntryResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateDomainEntryResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

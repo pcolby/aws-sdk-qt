@@ -123,3 +123,6 @@ AcceptVpcEndpointConnectionsRequestPrivate::AcceptVpcEndpointConnectionsRequestP
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

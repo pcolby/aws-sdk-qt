@@ -123,3 +123,6 @@ BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
 {
 
 }
+
+} // namespace MarketplaceMetering
+} // namespace AWS

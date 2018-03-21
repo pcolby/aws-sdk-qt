@@ -101,3 +101,6 @@ void RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("RotateChannelCredentialsResponse"));
     /// @todo
 }
+
+} // namespace MediaPackage
+} // namespace AWS

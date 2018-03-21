@@ -101,3 +101,6 @@ void GetActiveNamesResponsePrivate::GetActiveNamesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetActiveNamesResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

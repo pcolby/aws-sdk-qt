@@ -101,3 +101,6 @@ void RemoveAutoScalingPolicyResponsePrivate::RemoveAutoScalingPolicyResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("RemoveAutoScalingPolicyResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

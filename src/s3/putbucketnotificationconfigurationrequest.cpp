@@ -123,3 +123,6 @@ PutBucketNotificationConfigurationRequestPrivate::PutBucketNotificationConfigura
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

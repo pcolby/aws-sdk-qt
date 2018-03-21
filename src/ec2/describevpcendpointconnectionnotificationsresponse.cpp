@@ -101,3 +101,6 @@ void DescribeVpcEndpointConnectionNotificationsResponsePrivate::DescribeVpcEndpo
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcEndpointConnectionNotificationsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

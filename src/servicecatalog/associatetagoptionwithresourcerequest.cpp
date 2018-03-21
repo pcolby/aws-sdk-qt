@@ -123,3 +123,6 @@ AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequ
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

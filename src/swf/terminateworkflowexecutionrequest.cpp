@@ -123,3 +123,6 @@ TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPriva
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

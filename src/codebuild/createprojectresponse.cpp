@@ -101,3 +101,6 @@ void CreateProjectResponsePrivate::CreateProjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateProjectResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetHostedZoneCountResponsePrivate::GetHostedZoneCountResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetHostedZoneCountResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

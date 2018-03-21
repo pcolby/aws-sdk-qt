@@ -123,3 +123,6 @@ ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequ
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

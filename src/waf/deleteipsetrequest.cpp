@@ -123,3 +123,6 @@ DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

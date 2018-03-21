@@ -101,3 +101,6 @@ void SelectResponsePrivate::SelectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SelectResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

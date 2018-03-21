@@ -101,3 +101,6 @@ void DescribeDataSourcesResponsePrivate::DescribeDataSourcesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeDataSourcesResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

@@ -101,3 +101,6 @@ void EnableAlarmActionsResponsePrivate::EnableAlarmActionsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("EnableAlarmActionsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

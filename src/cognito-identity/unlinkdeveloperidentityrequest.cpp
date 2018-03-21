@@ -123,3 +123,6 @@ UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeUserResponsePrivate::DescribeUserResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeUserResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

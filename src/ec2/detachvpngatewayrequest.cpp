@@ -123,3 +123,6 @@ DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListJobsByPipelineResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

@@ -101,3 +101,6 @@ void UnassignPrivateIpAddressesResponsePrivate::UnassignPrivateIpAddressesRespon
     Q_ASSERT(xml.name() == QLatin1String("UnassignPrivateIpAddressesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

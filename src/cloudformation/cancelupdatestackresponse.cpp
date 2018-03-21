@@ -101,3 +101,6 @@ void CancelUpdateStackResponsePrivate::CancelUpdateStackResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CancelUpdateStackResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

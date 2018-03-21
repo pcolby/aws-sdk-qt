@@ -123,3 +123,6 @@ ListGroupPoliciesRequestPrivate::ListGroupPoliciesRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

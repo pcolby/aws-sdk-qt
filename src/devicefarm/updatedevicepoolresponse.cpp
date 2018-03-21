@@ -101,3 +101,6 @@ void UpdateDevicePoolResponsePrivate::UpdateDevicePoolResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateDevicePoolResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

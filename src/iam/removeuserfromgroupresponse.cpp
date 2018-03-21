@@ -101,3 +101,6 @@ void RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("RemoveUserFromGroupResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

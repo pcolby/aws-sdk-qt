@@ -101,3 +101,6 @@ void UntagLogGroupResponsePrivate::UntagLogGroupResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UntagLogGroupResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

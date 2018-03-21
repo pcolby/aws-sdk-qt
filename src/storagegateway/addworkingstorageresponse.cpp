@@ -101,3 +101,6 @@ void AddWorkingStorageResponsePrivate::AddWorkingStorageResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("AddWorkingStorageResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

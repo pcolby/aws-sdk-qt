@@ -101,3 +101,6 @@ void UpdateUserResponsePrivate::UpdateUserResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateUserResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

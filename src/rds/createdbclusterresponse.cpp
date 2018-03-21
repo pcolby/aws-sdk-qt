@@ -101,3 +101,6 @@ void CreateDBClusterResponsePrivate::CreateDBClusterResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateDBClusterResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

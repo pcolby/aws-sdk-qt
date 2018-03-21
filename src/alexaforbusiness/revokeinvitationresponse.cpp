@@ -101,3 +101,6 @@ void RevokeInvitationResponsePrivate::RevokeInvitationResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("RevokeInvitationResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

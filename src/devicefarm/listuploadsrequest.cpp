@@ -123,3 +123,6 @@ ListUploadsRequestPrivate::ListUploadsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -123,3 +123,6 @@ GetQualificationTypeRequestPrivate::GetQualificationTypeRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

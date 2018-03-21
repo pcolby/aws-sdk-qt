@@ -123,3 +123,6 @@ ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

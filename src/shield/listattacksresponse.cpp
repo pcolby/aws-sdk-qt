@@ -101,3 +101,6 @@ void ListAttacksResponsePrivate::ListAttacksResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListAttacksResponse"));
     /// @todo
 }
+
+} // namespace Shield
+} // namespace AWS

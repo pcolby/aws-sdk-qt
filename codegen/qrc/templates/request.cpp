@@ -106,3 +106,6 @@ AwsAbstractResponse * {{OperationName}}Request::response(QNetworkReply * const r
 {
 
 }
+
+} // namespace {{ServiceName}}
+} // namespace AWS

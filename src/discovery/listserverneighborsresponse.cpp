@@ -101,3 +101,6 @@ void ListServerNeighborsResponsePrivate::ListServerNeighborsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListServerNeighborsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

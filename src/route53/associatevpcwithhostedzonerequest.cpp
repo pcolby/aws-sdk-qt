@@ -123,3 +123,6 @@ AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPriva
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

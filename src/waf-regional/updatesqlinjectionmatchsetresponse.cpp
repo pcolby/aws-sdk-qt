@@ -101,3 +101,6 @@ void UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetRespon
     Q_ASSERT(xml.name() == QLatin1String("UpdateSqlInjectionMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

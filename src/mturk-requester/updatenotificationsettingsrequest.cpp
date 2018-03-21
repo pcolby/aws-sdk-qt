@@ -123,3 +123,6 @@ UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPriva
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

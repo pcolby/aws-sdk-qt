@@ -123,3 +123,6 @@ DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

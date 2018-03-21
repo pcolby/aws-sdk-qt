@@ -123,3 +123,6 @@ GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

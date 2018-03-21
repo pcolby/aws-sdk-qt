@@ -101,3 +101,6 @@ void GetSegmentImportJobsResponsePrivate::GetSegmentImportJobsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentImportJobsResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

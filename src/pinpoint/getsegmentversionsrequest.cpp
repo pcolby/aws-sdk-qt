@@ -123,3 +123,6 @@ GetSegmentVersionsRequestPrivate::GetSegmentVersionsRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

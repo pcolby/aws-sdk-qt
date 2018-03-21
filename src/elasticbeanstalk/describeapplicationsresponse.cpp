@@ -101,3 +101,6 @@ void DescribeApplicationsResponsePrivate::DescribeApplicationsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationsResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

@@ -123,3 +123,6 @@ ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

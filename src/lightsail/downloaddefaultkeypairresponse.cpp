@@ -101,3 +101,6 @@ void DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DownloadDefaultKeyPairResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

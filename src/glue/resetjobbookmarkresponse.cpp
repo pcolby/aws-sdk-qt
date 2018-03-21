@@ -101,3 +101,6 @@ void ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ResetJobBookmarkResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

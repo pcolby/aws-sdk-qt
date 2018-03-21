@@ -101,3 +101,6 @@ void CreateGroupCertificateAuthorityResponsePrivate::CreateGroupCertificateAutho
     Q_ASSERT(xml.name() == QLatin1String("CreateGroupCertificateAuthorityResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

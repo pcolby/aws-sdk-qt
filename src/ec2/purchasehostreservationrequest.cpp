@@ -123,3 +123,6 @@ PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

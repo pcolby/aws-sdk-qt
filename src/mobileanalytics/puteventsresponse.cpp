@@ -101,3 +101,6 @@ void PutEventsResponsePrivate::PutEventsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutEventsResponse"));
     /// @todo
 }
+
+} // namespace MobileAnalytics
+} // namespace AWS

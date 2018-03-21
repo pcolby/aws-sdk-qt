@@ -123,3 +123,6 @@ CancelCommandRequestPrivate::CancelCommandRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteGcmChannelResponsePrivate::DeleteGcmChannelResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteGcmChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

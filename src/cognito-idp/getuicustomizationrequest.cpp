@@ -123,3 +123,6 @@ GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

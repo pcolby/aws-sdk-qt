@@ -123,3 +123,6 @@ CreateSampleFindingsRequestPrivate::CreateSampleFindingsRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

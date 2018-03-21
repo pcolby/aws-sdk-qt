@@ -101,3 +101,6 @@ void DescribeIamInstanceProfileAssociationsResponsePrivate::DescribeIamInstanceP
     Q_ASSERT(xml.name() == QLatin1String("DescribeIamInstanceProfileAssociationsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

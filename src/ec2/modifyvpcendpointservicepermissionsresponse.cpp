@@ -101,3 +101,6 @@ void ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServic
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointServicePermissionsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

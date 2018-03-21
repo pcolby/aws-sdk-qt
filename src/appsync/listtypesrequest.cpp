@@ -123,3 +123,6 @@ ListTypesRequestPrivate::ListTypesRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

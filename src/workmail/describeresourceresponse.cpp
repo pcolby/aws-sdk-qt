@@ -101,3 +101,6 @@ void DescribeResourceResponsePrivate::DescribeResourceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourceResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

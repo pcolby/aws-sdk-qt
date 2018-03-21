@@ -101,3 +101,6 @@ void ExportConfigurationsResponsePrivate::ExportConfigurationsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ExportConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

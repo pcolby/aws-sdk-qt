@@ -101,3 +101,6 @@ void CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CheckDNSAvailabilityResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

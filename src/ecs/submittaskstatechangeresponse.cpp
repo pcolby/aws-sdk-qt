@@ -101,3 +101,6 @@ void SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("SubmitTaskStateChangeResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

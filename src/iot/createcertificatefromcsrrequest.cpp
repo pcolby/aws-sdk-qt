@@ -123,3 +123,6 @@ CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

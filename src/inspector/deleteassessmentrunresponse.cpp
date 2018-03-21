@@ -101,3 +101,6 @@ void DeleteAssessmentRunResponsePrivate::DeleteAssessmentRunResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteAssessmentRunResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

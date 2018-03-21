@@ -123,3 +123,6 @@ GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

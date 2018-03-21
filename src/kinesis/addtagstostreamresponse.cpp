@@ -101,3 +101,6 @@ void AddTagsToStreamResponsePrivate::AddTagsToStreamResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToStreamResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

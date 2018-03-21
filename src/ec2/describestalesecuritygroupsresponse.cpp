@@ -101,3 +101,6 @@ void DescribeStaleSecurityGroupsResponsePrivate::DescribeStaleSecurityGroupsResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeStaleSecurityGroupsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void SendTaskHeartbeatResponsePrivate::SendTaskHeartbeatResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("SendTaskHeartbeatResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

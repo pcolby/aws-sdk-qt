@@ -123,3 +123,6 @@ CreateFolderRequestPrivate::CreateFolderRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

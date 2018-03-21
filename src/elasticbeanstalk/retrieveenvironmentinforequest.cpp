@@ -123,3 +123,6 @@ RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

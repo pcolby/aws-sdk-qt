@@ -123,3 +123,6 @@ StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

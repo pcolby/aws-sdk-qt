@@ -101,3 +101,6 @@ void ListLaunchPathsResponsePrivate::ListLaunchPathsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListLaunchPathsResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

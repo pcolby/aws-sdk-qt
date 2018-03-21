@@ -101,3 +101,6 @@ void ReportTaskProgressResponsePrivate::ReportTaskProgressResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ReportTaskProgressResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

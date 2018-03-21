@@ -101,3 +101,6 @@ void CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromRDSResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

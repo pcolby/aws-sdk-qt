@@ -123,3 +123,6 @@ ListTranscriptionJobsRequestPrivate::ListTranscriptionJobsRequestPrivate(
 {
 
 }
+
+} // namespace TranscribeService
+} // namespace AWS

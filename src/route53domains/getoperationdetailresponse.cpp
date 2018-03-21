@@ -101,3 +101,6 @@ void GetOperationDetailResponsePrivate::GetOperationDetailResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetOperationDetailResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

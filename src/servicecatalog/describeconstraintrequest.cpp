@@ -123,3 +123,6 @@ DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

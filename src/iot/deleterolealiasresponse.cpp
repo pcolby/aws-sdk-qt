@@ -101,3 +101,6 @@ void DeleteRoleAliasResponsePrivate::DeleteRoleAliasResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoleAliasResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

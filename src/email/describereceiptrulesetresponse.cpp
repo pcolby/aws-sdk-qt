@@ -101,3 +101,6 @@ void DescribeReceiptRuleSetResponsePrivate::DescribeReceiptRuleSetResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeReceiptRuleSetResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

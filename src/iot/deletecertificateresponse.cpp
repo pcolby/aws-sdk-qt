@@ -101,3 +101,6 @@ void DeleteCertificateResponsePrivate::DeleteCertificateResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteCertificateResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

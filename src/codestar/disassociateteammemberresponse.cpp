@@ -101,3 +101,6 @@ void DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DisassociateTeamMemberResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

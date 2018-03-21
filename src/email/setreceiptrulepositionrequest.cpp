@@ -123,3 +123,6 @@ SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

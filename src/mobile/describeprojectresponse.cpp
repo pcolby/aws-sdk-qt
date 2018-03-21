@@ -101,3 +101,6 @@ void DescribeProjectResponsePrivate::DescribeProjectResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeProjectResponse"));
     /// @todo
 }
+
+} // namespace Mobile
+} // namespace AWS

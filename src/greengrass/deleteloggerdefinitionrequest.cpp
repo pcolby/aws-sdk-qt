@@ -123,3 +123,6 @@ DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

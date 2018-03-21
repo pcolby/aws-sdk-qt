@@ -101,3 +101,6 @@ void UpdateDeviceResponsePrivate::UpdateDeviceResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateDeviceResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

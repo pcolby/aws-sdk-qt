@@ -101,3 +101,6 @@ void CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CancelSpotFleetRequestsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

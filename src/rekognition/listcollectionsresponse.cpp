@@ -101,3 +101,6 @@ void ListCollectionsResponsePrivate::ListCollectionsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListCollectionsResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

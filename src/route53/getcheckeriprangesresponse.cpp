@@ -101,3 +101,6 @@ void GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetCheckerIpRangesResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

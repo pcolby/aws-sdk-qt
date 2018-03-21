@@ -101,3 +101,6 @@ void ListRecordHistoryResponsePrivate::ListRecordHistoryResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListRecordHistoryResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

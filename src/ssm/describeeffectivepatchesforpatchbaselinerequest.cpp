@@ -123,3 +123,6 @@ DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatches
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

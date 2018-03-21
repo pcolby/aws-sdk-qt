@@ -101,3 +101,6 @@ void CreateConfigurationResponsePrivate::CreateConfigurationResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

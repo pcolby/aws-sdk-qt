@@ -123,3 +123,6 @@ ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPriva
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

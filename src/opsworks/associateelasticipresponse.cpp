@@ -101,3 +101,6 @@ void AssociateElasticIpResponsePrivate::AssociateElasticIpResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("AssociateElasticIpResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

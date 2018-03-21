@@ -123,3 +123,6 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

@@ -123,3 +123,6 @@ ExecuteChangeSetRequestPrivate::ExecuteChangeSetRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -123,3 +123,6 @@ GetJobRequestPrivate::GetJobRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

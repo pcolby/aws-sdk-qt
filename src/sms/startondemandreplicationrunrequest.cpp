@@ -123,3 +123,6 @@ StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPri
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

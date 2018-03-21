@@ -101,3 +101,6 @@ void MonitorInstancesResponsePrivate::MonitorInstancesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("MonitorInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

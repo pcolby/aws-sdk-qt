@@ -101,3 +101,6 @@ void CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateDocumentationPartResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

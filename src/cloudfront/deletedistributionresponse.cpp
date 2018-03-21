@@ -101,3 +101,6 @@ void DeleteDistributionResponsePrivate::DeleteDistributionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteDistributionResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

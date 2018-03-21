@@ -101,3 +101,6 @@ void AllocateHostedConnectionResponsePrivate::AllocateHostedConnectionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("AllocateHostedConnectionResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

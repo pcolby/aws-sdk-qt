@@ -101,3 +101,6 @@ void DeleteRunResponsePrivate::DeleteRunResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteRunResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

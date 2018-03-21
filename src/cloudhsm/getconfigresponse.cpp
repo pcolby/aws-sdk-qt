@@ -101,3 +101,6 @@ void GetConfigResponsePrivate::GetConfigResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetConfigResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

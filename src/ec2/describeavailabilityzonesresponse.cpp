@@ -101,3 +101,6 @@ void DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailabilityZonesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

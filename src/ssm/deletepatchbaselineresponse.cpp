@@ -101,3 +101,6 @@ void DeletePatchBaselineResponsePrivate::DeletePatchBaselineResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeletePatchBaselineResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

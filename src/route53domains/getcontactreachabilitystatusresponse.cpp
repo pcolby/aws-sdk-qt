@@ -101,3 +101,6 @@ void GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusRe
     Q_ASSERT(xml.name() == QLatin1String("GetContactReachabilityStatusResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

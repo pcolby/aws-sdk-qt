@@ -123,3 +123,6 @@ ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAs
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

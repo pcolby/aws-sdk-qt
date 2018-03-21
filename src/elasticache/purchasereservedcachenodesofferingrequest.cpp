@@ -123,3 +123,6 @@ PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOffe
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

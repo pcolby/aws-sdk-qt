@@ -123,3 +123,6 @@ GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

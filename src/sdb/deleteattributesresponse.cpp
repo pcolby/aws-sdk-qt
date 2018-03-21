@@ -101,3 +101,6 @@ void DeleteAttributesResponsePrivate::DeleteAttributesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteAttributesResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

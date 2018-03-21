@@ -101,3 +101,6 @@ void DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

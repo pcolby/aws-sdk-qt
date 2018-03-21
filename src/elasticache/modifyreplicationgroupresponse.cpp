@@ -101,3 +101,6 @@ void ModifyReplicationGroupResponsePrivate::ModifyReplicationGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

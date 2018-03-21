@@ -123,3 +123,6 @@ UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

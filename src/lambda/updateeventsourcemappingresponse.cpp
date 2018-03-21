@@ -101,3 +101,6 @@ void UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("UpdateEventSourceMappingResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

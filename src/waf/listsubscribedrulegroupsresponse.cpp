@@ -101,3 +101,6 @@ void ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListSubscribedRuleGroupsResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

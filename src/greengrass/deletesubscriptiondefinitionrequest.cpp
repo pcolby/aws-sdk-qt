@@ -123,3 +123,6 @@ DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestP
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

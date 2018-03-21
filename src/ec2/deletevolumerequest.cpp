@@ -123,3 +123,6 @@ DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

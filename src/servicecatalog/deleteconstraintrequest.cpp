@@ -123,3 +123,6 @@ DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

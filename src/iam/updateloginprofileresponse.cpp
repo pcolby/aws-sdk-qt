@@ -101,3 +101,6 @@ void UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoginProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

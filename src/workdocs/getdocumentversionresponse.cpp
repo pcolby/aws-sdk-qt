@@ -101,3 +101,6 @@ void GetDocumentVersionResponsePrivate::GetDocumentVersionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentVersionResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

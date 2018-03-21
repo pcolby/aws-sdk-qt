@@ -123,3 +123,6 @@ CreateNamedQueryRequestPrivate::CreateNamedQueryRequestPrivate(
 {
 
 }
+
+} // namespace Athena
+} // namespace AWS

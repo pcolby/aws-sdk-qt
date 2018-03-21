@@ -123,3 +123,6 @@ ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

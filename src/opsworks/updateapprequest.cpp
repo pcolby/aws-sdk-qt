@@ -123,3 +123,6 @@ UpdateAppRequestPrivate::UpdateAppRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

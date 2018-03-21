@@ -123,3 +123,6 @@ ListReceiptFiltersRequestPrivate::ListReceiptFiltersRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

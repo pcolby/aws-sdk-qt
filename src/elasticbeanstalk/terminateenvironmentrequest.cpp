@@ -123,3 +123,6 @@ TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

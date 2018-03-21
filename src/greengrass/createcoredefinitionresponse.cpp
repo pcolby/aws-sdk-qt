@@ -101,3 +101,6 @@ void CreateCoreDefinitionResponsePrivate::CreateCoreDefinitionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateCoreDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

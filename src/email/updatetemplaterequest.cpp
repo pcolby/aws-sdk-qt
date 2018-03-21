@@ -123,3 +123,6 @@ UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

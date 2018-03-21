@@ -123,3 +123,6 @@ UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendin
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

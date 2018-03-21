@@ -123,3 +123,6 @@ ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

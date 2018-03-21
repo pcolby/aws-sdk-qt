@@ -101,3 +101,6 @@ void DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBEngineVersionsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

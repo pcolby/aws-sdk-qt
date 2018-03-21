@@ -123,3 +123,6 @@ GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
 {
 
 }
+
+} // namespace XRay
+} // namespace AWS

@@ -101,3 +101,6 @@ void ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredenti
     Q_ASSERT(xml.name() == QLatin1String("ResetServiceSpecificCredentialResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

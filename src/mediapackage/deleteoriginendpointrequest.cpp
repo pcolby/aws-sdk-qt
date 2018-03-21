@@ -123,3 +123,6 @@ DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
 {
 
 }
+
+} // namespace MediaPackage
+} // namespace AWS

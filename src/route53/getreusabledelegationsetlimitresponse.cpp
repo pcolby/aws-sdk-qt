@@ -101,3 +101,6 @@ void GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimit
     Q_ASSERT(xml.name() == QLatin1String("GetReusableDelegationSetLimitResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteIPSetResponsePrivate::DeleteIPSetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteIPSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

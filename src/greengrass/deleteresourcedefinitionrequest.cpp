@@ -123,3 +123,6 @@ DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

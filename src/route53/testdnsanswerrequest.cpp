@@ -123,3 +123,6 @@ TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

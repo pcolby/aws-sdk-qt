@@ -101,3 +101,6 @@ void DescribeSuggestersResponsePrivate::DescribeSuggestersResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeSuggestersResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

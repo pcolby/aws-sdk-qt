@@ -123,3 +123,6 @@ PutFileRequestPrivate::PutFileRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

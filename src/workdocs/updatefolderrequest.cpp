@@ -123,3 +123,6 @@ UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

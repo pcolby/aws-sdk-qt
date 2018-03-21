@@ -101,3 +101,6 @@ void DescribeJobQueuesResponsePrivate::DescribeJobQueuesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobQueuesResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

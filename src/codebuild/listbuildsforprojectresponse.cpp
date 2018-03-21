@@ -101,3 +101,6 @@ void ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListBuildsForProjectResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

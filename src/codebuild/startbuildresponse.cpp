@@ -101,3 +101,6 @@ void StartBuildResponsePrivate::StartBuildResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StartBuildResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

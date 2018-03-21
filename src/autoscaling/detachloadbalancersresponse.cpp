@@ -101,3 +101,6 @@ void DetachLoadBalancersResponsePrivate::DetachLoadBalancersResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancersResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

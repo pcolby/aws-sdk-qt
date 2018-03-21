@@ -123,3 +123,6 @@ AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void BatchPutAttributesResponsePrivate::BatchPutAttributesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("BatchPutAttributesResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

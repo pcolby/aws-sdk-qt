@@ -101,3 +101,6 @@ void PublishVersionResponsePrivate::PublishVersionResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("PublishVersionResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

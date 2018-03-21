@@ -123,3 +123,6 @@ DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteVpcLinkResponsePrivate::DeleteVpcLinkResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcLinkResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

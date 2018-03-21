@@ -101,3 +101,6 @@ void UpdateDocumentResponsePrivate::UpdateDocumentResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

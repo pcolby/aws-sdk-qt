@@ -101,3 +101,6 @@ void GetOfferingStatusResponsePrivate::GetOfferingStatusResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetOfferingStatusResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

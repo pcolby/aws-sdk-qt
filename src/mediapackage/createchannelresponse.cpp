@@ -101,3 +101,6 @@ void CreateChannelResponsePrivate::CreateChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateChannelResponse"));
     /// @todo
 }
+
+} // namespace MediaPackage
+} // namespace AWS

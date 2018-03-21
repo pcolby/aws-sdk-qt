@@ -101,3 +101,6 @@ void DescribeDomainResponsePrivate::DescribeDomainResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeDomainResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

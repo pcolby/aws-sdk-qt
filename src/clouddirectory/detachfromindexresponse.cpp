@@ -101,3 +101,6 @@ void DetachFromIndexResponsePrivate::DetachFromIndexResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DetachFromIndexResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

@@ -101,3 +101,6 @@ void AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AttachThingPrincipalResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

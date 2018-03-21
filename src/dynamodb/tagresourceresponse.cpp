@@ -101,3 +101,6 @@ void TagResourceResponsePrivate::TagResourceResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TagResourceResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

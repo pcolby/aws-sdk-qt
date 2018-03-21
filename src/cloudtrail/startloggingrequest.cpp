@@ -123,3 +123,6 @@ StartLoggingRequestPrivate::StartLoggingRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

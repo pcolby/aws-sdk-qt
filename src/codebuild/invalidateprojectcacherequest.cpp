@@ -123,3 +123,6 @@ InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

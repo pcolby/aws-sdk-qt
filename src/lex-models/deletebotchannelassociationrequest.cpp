@@ -123,3 +123,6 @@ DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPri
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

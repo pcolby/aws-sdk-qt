@@ -101,3 +101,6 @@ void UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponse
     Q_ASSERT(xml.name() == QLatin1String("UpdateUserDefinedFunctionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

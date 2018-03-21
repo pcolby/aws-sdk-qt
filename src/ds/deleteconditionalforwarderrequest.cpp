@@ -123,3 +123,6 @@ DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPriva
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

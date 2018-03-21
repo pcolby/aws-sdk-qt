@@ -101,3 +101,6 @@ void GetConnectorsResponsePrivate::GetConnectorsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetConnectorsResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

@@ -101,3 +101,6 @@ void AssociateMemberToGroupResponsePrivate::AssociateMemberToGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AssociateMemberToGroupResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

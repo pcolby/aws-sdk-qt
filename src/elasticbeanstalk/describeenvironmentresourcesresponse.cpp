@@ -101,3 +101,6 @@ void DescribeEnvironmentResourcesResponsePrivate::DescribeEnvironmentResourcesRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentResourcesResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

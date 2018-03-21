@@ -123,3 +123,6 @@ ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

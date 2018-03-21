@@ -101,3 +101,6 @@ void ListActionTypesResponsePrivate::ListActionTypesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListActionTypesResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

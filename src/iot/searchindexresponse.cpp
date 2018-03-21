@@ -101,3 +101,6 @@ void SearchIndexResponsePrivate::SearchIndexResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SearchIndexResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

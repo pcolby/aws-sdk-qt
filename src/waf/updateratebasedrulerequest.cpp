@@ -123,3 +123,6 @@ UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

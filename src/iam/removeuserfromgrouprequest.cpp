@@ -123,3 +123,6 @@ RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteStackRequestPrivate::DeleteStackRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

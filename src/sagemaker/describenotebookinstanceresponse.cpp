@@ -101,3 +101,6 @@ void DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotebookInstanceResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

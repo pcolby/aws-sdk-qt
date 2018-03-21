@@ -101,3 +101,6 @@ void AddClientIDToOpenIDConnectProviderResponsePrivate::AddClientIDToOpenIDConne
     Q_ASSERT(xml.name() == QLatin1String("AddClientIDToOpenIDConnectProviderResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

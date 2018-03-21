@@ -123,3 +123,6 @@ GetEvaluationRequestPrivate::GetEvaluationRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

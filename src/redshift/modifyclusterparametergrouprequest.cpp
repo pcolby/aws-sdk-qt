@@ -123,3 +123,6 @@ ModifyClusterParameterGroupRequestPrivate::ModifyClusterParameterGroupRequestPri
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListAppliedSchemaArnsResponsePrivate::ListAppliedSchemaArnsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListAppliedSchemaArnsResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

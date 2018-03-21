@@ -123,3 +123,6 @@ AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPri
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

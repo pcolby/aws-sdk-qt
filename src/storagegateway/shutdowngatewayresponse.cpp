@@ -101,3 +101,6 @@ void ShutdownGatewayResponsePrivate::ShutdownGatewayResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ShutdownGatewayResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

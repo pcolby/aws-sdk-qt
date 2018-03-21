@@ -123,3 +123,6 @@ DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

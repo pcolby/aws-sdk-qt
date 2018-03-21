@@ -123,3 +123,6 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
 {
 
 }
+
+} // namespace Mobile
+} // namespace AWS

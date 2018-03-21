@@ -123,3 +123,6 @@ CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequ
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

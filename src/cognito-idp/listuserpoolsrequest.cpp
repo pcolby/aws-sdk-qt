@@ -123,3 +123,6 @@ ListUserPoolsRequestPrivate::ListUserPoolsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

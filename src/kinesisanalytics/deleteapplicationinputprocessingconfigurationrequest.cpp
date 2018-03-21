@@ -123,3 +123,6 @@ DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationIn
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

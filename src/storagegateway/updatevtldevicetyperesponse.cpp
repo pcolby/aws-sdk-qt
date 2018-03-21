@@ -101,3 +101,6 @@ void UpdateVTLDeviceTypeResponsePrivate::UpdateVTLDeviceTypeResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("UpdateVTLDeviceTypeResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriod
     Q_ASSERT(xml.name() == QLatin1String("IncreaseStreamRetentionPeriodResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

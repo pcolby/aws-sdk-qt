@@ -123,3 +123,6 @@ CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

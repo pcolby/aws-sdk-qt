@@ -123,3 +123,6 @@ DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

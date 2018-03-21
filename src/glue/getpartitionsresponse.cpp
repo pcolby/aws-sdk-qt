@@ -101,3 +101,6 @@ void GetPartitionsResponsePrivate::GetPartitionsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetPartitionsResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

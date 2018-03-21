@@ -101,3 +101,6 @@ void DeleteBucketPolicyResponsePrivate::DeleteBucketPolicyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketPolicyResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

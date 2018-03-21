@@ -101,3 +101,6 @@ void UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateSAMLProviderResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

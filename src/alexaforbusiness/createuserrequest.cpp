@@ -123,3 +123,6 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

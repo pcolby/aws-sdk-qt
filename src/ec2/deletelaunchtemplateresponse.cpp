@@ -101,3 +101,6 @@ void DeleteLaunchTemplateResponsePrivate::DeleteLaunchTemplateResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteLaunchTemplateResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

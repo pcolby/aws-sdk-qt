@@ -101,3 +101,6 @@ void PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookE
     Q_ASSERT(xml.name() == QLatin1String("PutLifecycleEventHookExecutionStatusResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

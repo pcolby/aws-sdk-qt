@@ -123,3 +123,6 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

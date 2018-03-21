@@ -123,3 +123,6 @@ UntagRequestPrivate::UntagRequestPrivate(
 {
 
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateJobQueueRequestPrivate::UpdateJobQueueRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

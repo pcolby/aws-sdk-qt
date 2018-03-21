@@ -123,3 +123,6 @@ PutObjectRequestPrivate::PutObjectRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPri
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

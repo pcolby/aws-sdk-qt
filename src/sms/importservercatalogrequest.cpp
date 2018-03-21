@@ -123,3 +123,6 @@ ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

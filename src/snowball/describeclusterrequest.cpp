@@ -123,3 +123,6 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

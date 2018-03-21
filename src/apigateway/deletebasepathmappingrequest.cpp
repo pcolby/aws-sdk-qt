@@ -123,3 +123,6 @@ DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

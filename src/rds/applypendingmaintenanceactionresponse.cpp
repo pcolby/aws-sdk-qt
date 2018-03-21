@@ -101,3 +101,6 @@ void ApplyPendingMaintenanceActionResponsePrivate::ApplyPendingMaintenanceAction
     Q_ASSERT(xml.name() == QLatin1String("ApplyPendingMaintenanceActionResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

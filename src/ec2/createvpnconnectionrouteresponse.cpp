@@ -101,3 +101,6 @@ void CreateVpnConnectionRouteResponsePrivate::CreateVpnConnectionRouteResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateVpnConnectionRouteResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

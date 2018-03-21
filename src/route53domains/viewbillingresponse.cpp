@@ -101,3 +101,6 @@ void ViewBillingResponsePrivate::ViewBillingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ViewBillingResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

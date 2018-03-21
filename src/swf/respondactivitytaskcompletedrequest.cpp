@@ -123,3 +123,6 @@ RespondActivityTaskCompletedRequestPrivate::RespondActivityTaskCompletedRequestP
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

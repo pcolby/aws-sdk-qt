@@ -123,3 +123,6 @@ DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

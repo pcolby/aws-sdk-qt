@@ -101,3 +101,6 @@ void CreateStackResponsePrivate::CreateStackResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateStackResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

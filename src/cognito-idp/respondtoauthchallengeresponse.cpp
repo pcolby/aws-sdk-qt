@@ -101,3 +101,6 @@ void RespondToAuthChallengeResponsePrivate::RespondToAuthChallengeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("RespondToAuthChallengeResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

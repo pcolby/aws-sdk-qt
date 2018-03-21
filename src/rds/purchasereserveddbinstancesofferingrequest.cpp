@@ -123,3 +123,6 @@ PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOf
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

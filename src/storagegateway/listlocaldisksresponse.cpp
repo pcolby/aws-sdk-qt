@@ -101,3 +101,6 @@ void ListLocalDisksResponsePrivate::ListLocalDisksResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListLocalDisksResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -123,3 +123,6 @@ PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfiguration
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

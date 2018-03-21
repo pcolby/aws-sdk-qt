@@ -123,3 +123,6 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

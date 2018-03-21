@@ -123,3 +123,6 @@ EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

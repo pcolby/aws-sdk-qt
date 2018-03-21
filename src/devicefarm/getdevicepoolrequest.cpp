@@ -123,3 +123,6 @@ GetDevicePoolRequestPrivate::GetDevicePoolRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

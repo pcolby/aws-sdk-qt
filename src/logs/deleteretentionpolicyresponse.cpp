@@ -101,3 +101,6 @@ void DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteRetentionPolicyResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

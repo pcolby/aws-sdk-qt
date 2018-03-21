@@ -123,3 +123,6 @@ PollForTaskRequestPrivate::PollForTaskRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

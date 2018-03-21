@@ -101,3 +101,6 @@ void AbortVaultLockResponsePrivate::AbortVaultLockResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("AbortVaultLockResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

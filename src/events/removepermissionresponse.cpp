@@ -101,3 +101,6 @@ void RemovePermissionResponsePrivate::RemovePermissionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("RemovePermissionResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

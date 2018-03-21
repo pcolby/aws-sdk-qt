@@ -123,3 +123,6 @@ DeleteDiskRequestPrivate::DeleteDiskRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

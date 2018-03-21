@@ -123,3 +123,6 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

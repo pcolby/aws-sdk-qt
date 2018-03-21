@@ -123,3 +123,6 @@ QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

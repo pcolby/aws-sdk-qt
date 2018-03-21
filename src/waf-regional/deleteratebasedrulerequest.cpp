@@ -123,3 +123,6 @@ DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

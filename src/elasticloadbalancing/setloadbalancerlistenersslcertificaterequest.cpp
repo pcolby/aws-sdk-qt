@@ -123,3 +123,6 @@ SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLC
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

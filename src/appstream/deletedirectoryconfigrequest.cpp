@@ -123,3 +123,6 @@ DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

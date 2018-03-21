@@ -101,3 +101,6 @@ void DescribePrefixListsResponsePrivate::DescribePrefixListsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribePrefixListsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

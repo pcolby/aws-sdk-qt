@@ -101,3 +101,6 @@ void BatchGetItemResponsePrivate::BatchGetItemResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("BatchGetItemResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

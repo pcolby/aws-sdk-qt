@@ -101,3 +101,6 @@ void UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateGraphqlApiResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

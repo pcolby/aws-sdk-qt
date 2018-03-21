@@ -123,3 +123,6 @@ DescribeScalingPlansRequestPrivate::DescribeScalingPlansRequestPrivate(
 {
 
 }
+
+} // namespace AutoScalingPlans
+} // namespace AWS

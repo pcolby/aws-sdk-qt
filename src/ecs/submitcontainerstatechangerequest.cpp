@@ -123,3 +123,6 @@ SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPriva
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

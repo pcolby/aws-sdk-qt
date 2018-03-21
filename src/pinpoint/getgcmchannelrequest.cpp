@@ -123,3 +123,6 @@ GetGcmChannelRequestPrivate::GetGcmChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -101,3 +101,6 @@ void VerifyUserAttributeResponsePrivate::VerifyUserAttributeResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("VerifyUserAttributeResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

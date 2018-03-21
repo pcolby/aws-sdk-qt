@@ -101,3 +101,6 @@ void CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutRe
     Q_ASSERT(xml.name() == QLatin1String("CheckIfPhoneNumberIsOptedOutResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteCommentContentRequestPrivate::DeleteCommentContentRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

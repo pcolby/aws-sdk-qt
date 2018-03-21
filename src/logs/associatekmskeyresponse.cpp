@@ -101,3 +101,6 @@ void AssociateKmsKeyResponsePrivate::AssociateKmsKeyResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AssociateKmsKeyResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

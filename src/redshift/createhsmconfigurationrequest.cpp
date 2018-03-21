@@ -123,3 +123,6 @@ CreateHsmConfigurationRequestPrivate::CreateHsmConfigurationRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

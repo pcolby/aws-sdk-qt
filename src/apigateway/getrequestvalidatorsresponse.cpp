@@ -101,3 +101,6 @@ void GetRequestValidatorsResponsePrivate::GetRequestValidatorsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetRequestValidatorsResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

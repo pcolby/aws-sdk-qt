@@ -101,3 +101,6 @@ void DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRo
     Q_ASSERT(xml.name() == QLatin1String("DisassociateSkillGroupFromRoomResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

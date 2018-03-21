@@ -123,3 +123,6 @@ ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

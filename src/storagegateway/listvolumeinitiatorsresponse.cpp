@@ -101,3 +101,6 @@ void ListVolumeInitiatorsResponsePrivate::ListVolumeInitiatorsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListVolumeInitiatorsResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

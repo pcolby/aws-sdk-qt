@@ -123,3 +123,6 @@ DescribeMLModelsRequestPrivate::DescribeMLModelsRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

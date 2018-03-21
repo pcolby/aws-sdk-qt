@@ -123,3 +123,6 @@ UpdatePullRequestStatusRequestPrivate::UpdatePullRequestStatusRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

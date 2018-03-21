@@ -101,3 +101,6 @@ void GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetKeyRotationStatusResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

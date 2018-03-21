@@ -123,3 +123,6 @@ CreateTopicRequestPrivate::CreateTopicRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

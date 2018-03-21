@@ -101,3 +101,6 @@ void GetBulkPublishDetailsResponsePrivate::GetBulkPublishDetailsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetBulkPublishDetailsResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

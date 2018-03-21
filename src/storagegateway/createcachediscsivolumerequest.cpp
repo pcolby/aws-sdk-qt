@@ -123,3 +123,6 @@ CreateCachediSCSIVolumeRequestPrivate::CreateCachediSCSIVolumeRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

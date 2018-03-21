@@ -123,3 +123,6 @@ RunInstancesRequestPrivate::RunInstancesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

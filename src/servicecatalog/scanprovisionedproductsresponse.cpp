@@ -101,3 +101,6 @@ void ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ScanProvisionedProductsResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

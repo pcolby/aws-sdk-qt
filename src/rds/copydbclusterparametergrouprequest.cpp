@@ -123,3 +123,6 @@ CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPri
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

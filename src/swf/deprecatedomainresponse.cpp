@@ -101,3 +101,6 @@ void DeprecateDomainResponsePrivate::DeprecateDomainResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeprecateDomainResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

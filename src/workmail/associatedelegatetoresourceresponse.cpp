@@ -101,3 +101,6 @@ void AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResp
     Q_ASSERT(xml.name() == QLatin1String("AssociateDelegateToResourceResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

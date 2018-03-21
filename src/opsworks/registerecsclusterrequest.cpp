@@ -123,3 +123,6 @@ RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

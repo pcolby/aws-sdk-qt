@@ -123,3 +123,6 @@ DisableSsoRequestPrivate::DisableSsoRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

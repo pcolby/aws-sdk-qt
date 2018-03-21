@@ -101,3 +101,6 @@ void SimulatePrincipalPolicyResponsePrivate::SimulatePrincipalPolicyResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("SimulatePrincipalPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

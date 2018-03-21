@@ -101,3 +101,6 @@ void DescribeObjectsResponsePrivate::DescribeObjectsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeObjectsResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdatePipelineStatusRequestPrivate::UpdatePipelineStatusRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

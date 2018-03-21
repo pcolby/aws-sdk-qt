@@ -123,3 +123,6 @@ UpdateThingRequestPrivate::UpdateThingRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

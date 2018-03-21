@@ -101,3 +101,6 @@ void RegisterCrossAccountAccessRoleResponsePrivate::RegisterCrossAccountAccessRo
     Q_ASSERT(xml.name() == QLatin1String("RegisterCrossAccountAccessRoleResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

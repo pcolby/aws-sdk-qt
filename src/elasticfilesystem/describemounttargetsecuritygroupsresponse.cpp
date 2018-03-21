@@ -101,3 +101,6 @@ void DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecuri
     Q_ASSERT(xml.name() == QLatin1String("DescribeMountTargetSecurityGroupsResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

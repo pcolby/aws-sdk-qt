@@ -123,3 +123,6 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

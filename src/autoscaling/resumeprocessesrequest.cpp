@@ -123,3 +123,6 @@ ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

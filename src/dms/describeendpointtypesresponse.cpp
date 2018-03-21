@@ -101,3 +101,6 @@ void DescribeEndpointTypesResponsePrivate::DescribeEndpointTypesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeEndpointTypesResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

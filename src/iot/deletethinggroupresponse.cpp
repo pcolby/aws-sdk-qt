@@ -101,3 +101,6 @@ void DeleteThingGroupResponsePrivate::DeleteThingGroupResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingGroupResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

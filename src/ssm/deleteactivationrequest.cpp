@@ -123,3 +123,6 @@ DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

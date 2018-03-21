@@ -101,3 +101,6 @@ void ListKeysResponsePrivate::ListKeysResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListKeysResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

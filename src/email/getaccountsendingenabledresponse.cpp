@@ -101,3 +101,6 @@ void GetAccountSendingEnabledResponsePrivate::GetAccountSendingEnabledResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetAccountSendingEnabledResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

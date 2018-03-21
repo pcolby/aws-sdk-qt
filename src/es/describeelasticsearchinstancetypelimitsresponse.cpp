@@ -101,3 +101,6 @@ void DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsear
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticsearchInstanceTypeLimitsResponse"));
     /// @todo
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

@@ -123,3 +123,6 @@ DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFrom
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

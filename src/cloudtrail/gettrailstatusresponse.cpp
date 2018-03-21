@@ -101,3 +101,6 @@ void GetTrailStatusResponsePrivate::GetTrailStatusResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetTrailStatusResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

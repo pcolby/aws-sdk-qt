@@ -101,3 +101,6 @@ void CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamProcessorResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

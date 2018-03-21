@@ -123,3 +123,6 @@ RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileReques
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

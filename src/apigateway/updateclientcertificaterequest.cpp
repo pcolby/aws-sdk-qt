@@ -123,3 +123,6 @@ UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

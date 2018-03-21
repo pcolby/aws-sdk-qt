@@ -123,3 +123,6 @@ LookupEventsRequestPrivate::LookupEventsRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

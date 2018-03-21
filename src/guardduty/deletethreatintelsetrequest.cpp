@@ -123,3 +123,6 @@ DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

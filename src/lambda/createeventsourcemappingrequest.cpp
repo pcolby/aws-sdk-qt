@@ -123,3 +123,6 @@ CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

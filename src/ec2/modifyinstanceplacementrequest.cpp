@@ -123,3 +123,6 @@ ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

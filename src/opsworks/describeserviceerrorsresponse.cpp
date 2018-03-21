@@ -101,3 +101,6 @@ void DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeServiceErrorsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

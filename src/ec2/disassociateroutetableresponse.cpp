@@ -101,3 +101,6 @@ void DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DisassociateRouteTableResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

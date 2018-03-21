@@ -123,3 +123,6 @@ PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

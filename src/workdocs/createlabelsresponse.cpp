@@ -101,3 +101,6 @@ void CreateLabelsResponsePrivate::CreateLabelsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateLabelsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

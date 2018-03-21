@@ -101,3 +101,6 @@ void RebuildWorkspacesResponsePrivate::RebuildWorkspacesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("RebuildWorkspacesResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

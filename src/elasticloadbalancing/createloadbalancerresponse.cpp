@@ -101,3 +101,6 @@ void CreateLoadBalancerResponsePrivate::CreateLoadBalancerResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

@@ -123,3 +123,6 @@ ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestP
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

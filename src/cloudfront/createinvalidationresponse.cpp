@@ -101,3 +101,6 @@ void CreateInvalidationResponsePrivate::CreateInvalidationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateInvalidationResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

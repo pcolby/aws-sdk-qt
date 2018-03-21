@@ -123,3 +123,6 @@ DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

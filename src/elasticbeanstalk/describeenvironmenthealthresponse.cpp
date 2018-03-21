@@ -101,3 +101,6 @@ void DescribeEnvironmentHealthResponsePrivate::DescribeEnvironmentHealthResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentHealthResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

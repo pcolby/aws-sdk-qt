@@ -101,3 +101,6 @@ void DeleteLayerResponsePrivate::DeleteLayerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteLayerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

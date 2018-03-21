@@ -123,3 +123,6 @@ MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

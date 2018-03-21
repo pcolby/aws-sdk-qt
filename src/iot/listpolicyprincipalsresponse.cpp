@@ -101,3 +101,6 @@ void ListPolicyPrincipalsResponsePrivate::ListPolicyPrincipalsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListPolicyPrincipalsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

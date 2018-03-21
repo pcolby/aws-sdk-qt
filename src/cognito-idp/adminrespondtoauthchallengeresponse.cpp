@@ -101,3 +101,6 @@ void AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResp
     Q_ASSERT(xml.name() == QLatin1String("AdminRespondToAuthChallengeResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

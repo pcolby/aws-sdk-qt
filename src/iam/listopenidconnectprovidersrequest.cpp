@@ -123,3 +123,6 @@ ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPriva
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

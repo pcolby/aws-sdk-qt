@@ -101,3 +101,6 @@ void ListConfigurationsResponsePrivate::ListConfigurationsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

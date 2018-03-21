@@ -101,3 +101,6 @@ void CancelImportTaskResponsePrivate::CancelImportTaskResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CancelImportTaskResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRe
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

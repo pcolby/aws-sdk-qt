@@ -101,3 +101,6 @@ void DescribeFleetCapacityResponsePrivate::DescribeFleetCapacityResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetCapacityResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

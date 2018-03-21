@@ -101,3 +101,6 @@ void GetPasswordDataResponsePrivate::GetPasswordDataResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetPasswordDataResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

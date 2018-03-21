@@ -101,3 +101,6 @@ void ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResp
     Q_ASSERT(xml.name() == QLatin1String("ListGitHubAccountTokenNamesResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

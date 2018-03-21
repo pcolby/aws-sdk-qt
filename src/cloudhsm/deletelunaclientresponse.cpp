@@ -101,3 +101,6 @@ void DeleteLunaClientResponsePrivate::DeleteLunaClientResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteLunaClientResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

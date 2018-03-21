@@ -123,3 +123,6 @@ ListRuleNamesByTargetRequestPrivate::ListRuleNamesByTargetRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

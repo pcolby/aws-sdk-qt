@@ -101,3 +101,6 @@ void ListMembersResponsePrivate::ListMembersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListMembersResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

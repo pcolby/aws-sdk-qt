@@ -101,3 +101,6 @@ void SearchFacesByImageResponsePrivate::SearchFacesByImageResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("SearchFacesByImageResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

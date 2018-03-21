@@ -123,3 +123,6 @@ DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

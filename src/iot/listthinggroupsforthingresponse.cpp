@@ -101,3 +101,6 @@ void ListThingGroupsForThingResponsePrivate::ListThingGroupsForThingResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListThingGroupsForThingResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void AttachInstancesToLoadBalancerResponsePrivate::AttachInstancesToLoadBalancer
     Q_ASSERT(xml.name() == QLatin1String("AttachInstancesToLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

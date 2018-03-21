@@ -123,3 +123,6 @@ StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

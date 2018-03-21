@@ -101,3 +101,6 @@ void UpdateLoadBalancerAttributeResponsePrivate::UpdateLoadBalancerAttributeResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoadBalancerAttributeResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

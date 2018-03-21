@@ -123,3 +123,6 @@ GetAliasRequestPrivate::GetAliasRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

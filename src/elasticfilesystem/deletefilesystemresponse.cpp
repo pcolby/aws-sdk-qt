@@ -101,3 +101,6 @@ void DeleteFileSystemResponsePrivate::DeleteFileSystemResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteFileSystemResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

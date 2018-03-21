@@ -101,3 +101,6 @@ void DeleteCommentContentResponsePrivate::DeleteCommentContentResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteCommentContentResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

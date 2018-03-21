@@ -123,3 +123,6 @@ GetPersonTrackingRequestPrivate::GetPersonTrackingRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

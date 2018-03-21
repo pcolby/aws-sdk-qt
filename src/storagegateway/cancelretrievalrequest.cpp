@@ -123,3 +123,6 @@ CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

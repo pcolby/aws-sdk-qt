@@ -101,3 +101,6 @@ void ModifyVolumeResponsePrivate::ModifyVolumeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ModifyVolumeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateEnvironmentResponsePrivate::CreateEnvironmentResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

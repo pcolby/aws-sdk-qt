@@ -101,3 +101,6 @@ void DeleteHapgResponsePrivate::DeleteHapgResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteHapgResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

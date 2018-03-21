@@ -101,3 +101,6 @@ void GetSegmentExportJobsResponsePrivate::GetSegmentExportJobsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentExportJobsResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateRealtimeEndpointResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

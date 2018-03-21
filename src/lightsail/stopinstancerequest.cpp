@@ -123,3 +123,6 @@ StopInstanceRequestPrivate::StopInstanceRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

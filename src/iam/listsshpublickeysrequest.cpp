@@ -123,3 +123,6 @@ ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

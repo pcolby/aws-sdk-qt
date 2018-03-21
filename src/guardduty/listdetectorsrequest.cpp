@@ -123,3 +123,6 @@ ListDetectorsRequestPrivate::ListDetectorsRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

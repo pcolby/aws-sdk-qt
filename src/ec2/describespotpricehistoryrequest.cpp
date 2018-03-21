@@ -123,3 +123,6 @@ DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ GetEndpointRequestPrivate::GetEndpointRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

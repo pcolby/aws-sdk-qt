@@ -101,3 +101,6 @@ void DescribeTargetHealthResponsePrivate::DescribeTargetHealthResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeTargetHealthResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

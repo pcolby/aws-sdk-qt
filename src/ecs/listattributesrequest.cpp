@@ -123,3 +123,6 @@ ListAttributesRequestPrivate::ListAttributesRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

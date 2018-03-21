@@ -123,3 +123,6 @@ DeleteBucketMetricsConfigurationRequestPrivate::DeleteBucketMetricsConfiguration
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

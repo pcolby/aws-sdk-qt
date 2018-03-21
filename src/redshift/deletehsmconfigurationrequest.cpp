@@ -123,3 +123,6 @@ DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

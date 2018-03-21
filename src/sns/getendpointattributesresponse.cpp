@@ -101,3 +101,6 @@ void GetEndpointAttributesResponsePrivate::GetEndpointAttributesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetEndpointAttributesResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

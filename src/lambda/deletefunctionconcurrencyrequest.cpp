@@ -123,3 +123,6 @@ DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

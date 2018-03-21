@@ -123,3 +123,6 @@ BatchDetectEntitiesRequestPrivate::BatchDetectEntitiesRequestPrivate(
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

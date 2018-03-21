@@ -123,3 +123,6 @@ GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate
 {
 
 }
+
+} // namespace CostExplorer
+} // namespace AWS

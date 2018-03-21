@@ -101,3 +101,6 @@ void DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteCorsPolicyResponse"));
     /// @todo
 }
+
+} // namespace MediaStore
+} // namespace AWS

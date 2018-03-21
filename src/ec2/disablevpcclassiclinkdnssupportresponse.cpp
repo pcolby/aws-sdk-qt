@@ -101,3 +101,6 @@ void DisableVpcClassicLinkDnsSupportResponsePrivate::DisableVpcClassicLinkDnsSup
     Q_ASSERT(xml.name() == QLatin1String("DisableVpcClassicLinkDnsSupportResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ GetKeyPairsRequestPrivate::GetKeyPairsRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -123,3 +123,6 @@ PutEventStreamRequestPrivate::PutEventStreamRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

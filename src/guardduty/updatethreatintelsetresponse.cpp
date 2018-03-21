@@ -101,3 +101,6 @@ void UpdateThreatIntelSetResponsePrivate::UpdateThreatIntelSetResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UpdateThreatIntelSetResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

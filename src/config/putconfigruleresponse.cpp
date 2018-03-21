@@ -101,3 +101,6 @@ void PutConfigRuleResponsePrivate::PutConfigRuleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutConfigRuleResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

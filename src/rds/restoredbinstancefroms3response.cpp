@@ -101,3 +101,6 @@ void RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3Response(QXm
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceFromS3Response"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

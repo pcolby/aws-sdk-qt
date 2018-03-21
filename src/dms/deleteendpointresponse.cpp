@@ -101,3 +101,6 @@ void DeleteEndpointResponsePrivate::DeleteEndpointResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteEndpointResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

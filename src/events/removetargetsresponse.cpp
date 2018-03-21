@@ -101,3 +101,6 @@ void RemoveTargetsResponsePrivate::RemoveTargetsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RemoveTargetsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

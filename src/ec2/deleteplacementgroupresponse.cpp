@@ -101,3 +101,6 @@ void DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeletePlacementGroupResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

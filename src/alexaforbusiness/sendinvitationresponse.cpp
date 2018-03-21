@@ -101,3 +101,6 @@ void SendInvitationResponsePrivate::SendInvitationResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("SendInvitationResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

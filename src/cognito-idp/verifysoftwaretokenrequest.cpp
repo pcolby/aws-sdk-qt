@@ -123,3 +123,6 @@ VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ GetStreamingDistributionConfigRequestPrivate::GetStreamingDistributionConfigRequ
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

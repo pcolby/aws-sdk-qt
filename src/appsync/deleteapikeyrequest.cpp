@@ -123,3 +123,6 @@ DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

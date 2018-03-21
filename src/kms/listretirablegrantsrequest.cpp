@@ -123,3 +123,6 @@ ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

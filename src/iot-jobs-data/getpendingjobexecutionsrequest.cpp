@@ -123,3 +123,6 @@ GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
 {
 
 }
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS

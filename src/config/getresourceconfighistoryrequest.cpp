@@ -123,3 +123,6 @@ GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

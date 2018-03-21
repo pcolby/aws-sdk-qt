@@ -101,3 +101,6 @@ void DisassociateVpcCidrBlockResponsePrivate::DisassociateVpcCidrBlockResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DisassociateVpcCidrBlockResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

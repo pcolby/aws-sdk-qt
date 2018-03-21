@@ -123,3 +123,6 @@ CreateDomainRequestPrivate::CreateDomainRequestPrivate(
 {
 
 }
+
+} // namespace SimpleDB
+} // namespace AWS

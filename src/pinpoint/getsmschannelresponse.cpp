@@ -101,3 +101,6 @@ void GetSmsChannelResponsePrivate::GetSmsChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetSmsChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

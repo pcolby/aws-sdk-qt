@@ -101,3 +101,6 @@ void DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeOperatingSystemsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

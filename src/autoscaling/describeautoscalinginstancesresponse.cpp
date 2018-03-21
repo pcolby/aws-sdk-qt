@@ -101,3 +101,6 @@ void DescribeAutoScalingInstancesResponsePrivate::DescribeAutoScalingInstancesRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutoScalingInstancesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

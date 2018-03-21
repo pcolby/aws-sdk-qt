@@ -123,3 +123,6 @@ DescribeFleetPortSettingsRequestPrivate::DescribeFleetPortSettingsRequestPrivate
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModific
     Q_ASSERT(xml.name() == QLatin1String("ListAllowedNodeTypeModificationsResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

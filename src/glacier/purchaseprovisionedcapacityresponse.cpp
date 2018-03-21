@@ -101,3 +101,6 @@ void PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResp
     Q_ASSERT(xml.name() == QLatin1String("PurchaseProvisionedCapacityResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

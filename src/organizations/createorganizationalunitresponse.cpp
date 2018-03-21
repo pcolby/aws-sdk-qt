@@ -101,3 +101,6 @@ void CreateOrganizationalUnitResponsePrivate::CreateOrganizationalUnitResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateOrganizationalUnitResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

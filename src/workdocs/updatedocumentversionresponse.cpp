@@ -101,3 +101,6 @@ void UpdateDocumentVersionResponsePrivate::UpdateDocumentVersionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentVersionResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

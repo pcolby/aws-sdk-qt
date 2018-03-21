@@ -123,3 +123,6 @@ ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

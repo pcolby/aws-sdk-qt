@@ -123,3 +123,6 @@ GetConfigRequestPrivate::GetConfigRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void IndexDocumentsResponsePrivate::IndexDocumentsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("IndexDocumentsResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

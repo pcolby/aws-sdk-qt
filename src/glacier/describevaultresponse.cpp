@@ -101,3 +101,6 @@ void DescribeVaultResponsePrivate::DescribeVaultResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeVaultResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

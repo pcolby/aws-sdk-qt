@@ -123,3 +123,6 @@ DeleteParametersRequestPrivate::DeleteParametersRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

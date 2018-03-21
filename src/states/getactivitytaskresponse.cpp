@@ -101,3 +101,6 @@ void GetActivityTaskResponsePrivate::GetActivityTaskResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetActivityTaskResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

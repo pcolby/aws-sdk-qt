@@ -123,3 +123,6 @@ EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

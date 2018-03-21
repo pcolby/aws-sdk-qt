@@ -123,3 +123,6 @@ ListProtectionsRequestPrivate::ListProtectionsRequestPrivate(
 {
 
 }
+
+} // namespace Shield
+} // namespace AWS

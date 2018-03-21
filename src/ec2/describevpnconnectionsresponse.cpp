@@ -101,3 +101,6 @@ void DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpnConnectionsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

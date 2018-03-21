@@ -101,3 +101,6 @@ void DeleteEvaluationResultsResponsePrivate::DeleteEvaluationResultsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteEvaluationResultsResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

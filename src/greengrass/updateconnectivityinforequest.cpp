@@ -123,3 +123,6 @@ UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

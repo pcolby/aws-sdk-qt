@@ -123,3 +123,6 @@ DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

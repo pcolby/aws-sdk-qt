@@ -123,3 +123,6 @@ DescribeWorkingStorageRequestPrivate::DescribeWorkingStorageRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

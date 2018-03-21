@@ -123,3 +123,6 @@ DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

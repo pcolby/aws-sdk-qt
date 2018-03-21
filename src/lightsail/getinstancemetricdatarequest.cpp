@@ -123,3 +123,6 @@ GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

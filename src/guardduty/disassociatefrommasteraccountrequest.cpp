@@ -123,3 +123,6 @@ DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountReques
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

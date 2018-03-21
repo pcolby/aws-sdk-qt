@@ -123,3 +123,6 @@ RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

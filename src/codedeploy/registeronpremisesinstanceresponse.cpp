@@ -101,3 +101,6 @@ void RegisterOnPremisesInstanceResponsePrivate::RegisterOnPremisesInstanceRespon
     Q_ASSERT(xml.name() == QLatin1String("RegisterOnPremisesInstanceResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

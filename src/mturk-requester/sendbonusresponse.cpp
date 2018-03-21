@@ -101,3 +101,6 @@ void SendBonusResponsePrivate::SendBonusResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SendBonusResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

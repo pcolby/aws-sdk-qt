@@ -101,3 +101,6 @@ void PutIntegrationResponseResponsePrivate::PutIntegrationResponseResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("PutIntegrationResponseResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

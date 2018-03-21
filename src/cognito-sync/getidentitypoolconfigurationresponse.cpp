@@ -101,3 +101,6 @@ void GetIdentityPoolConfigurationResponsePrivate::GetIdentityPoolConfigurationRe
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityPoolConfigurationResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

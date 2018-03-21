@@ -101,3 +101,6 @@ void DescribeConfigurationRecordersResponsePrivate::DescribeConfigurationRecorde
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationRecordersResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

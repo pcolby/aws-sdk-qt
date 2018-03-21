@@ -101,3 +101,6 @@ void DeleteReplicationGroupResponsePrivate::DeleteReplicationGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

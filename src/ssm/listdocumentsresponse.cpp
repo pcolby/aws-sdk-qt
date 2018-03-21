@@ -101,3 +101,6 @@ void ListDocumentsResponsePrivate::ListDocumentsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListDocumentsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

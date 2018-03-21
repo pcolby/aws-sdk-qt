@@ -123,3 +123,6 @@ DescribeVpcEndpointConnectionsRequestPrivate::DescribeVpcEndpointConnectionsRequ
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

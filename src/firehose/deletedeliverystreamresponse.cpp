@@ -101,3 +101,6 @@ void DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeliveryStreamResponse"));
     /// @todo
 }
+
+} // namespace Firehose
+} // namespace AWS

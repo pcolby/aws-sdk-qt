@@ -101,3 +101,6 @@ void DefineSuggesterResponsePrivate::DefineSuggesterResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DefineSuggesterResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

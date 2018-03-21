@@ -123,3 +123,6 @@ ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

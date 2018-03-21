@@ -101,3 +101,6 @@ void DeleteVpcResponsePrivate::DeleteVpcResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

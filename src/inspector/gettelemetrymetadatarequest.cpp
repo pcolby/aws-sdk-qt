@@ -123,3 +123,6 @@ GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

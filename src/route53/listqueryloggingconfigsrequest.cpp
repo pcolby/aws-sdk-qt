@@ -123,3 +123,6 @@ ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

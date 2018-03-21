@@ -123,3 +123,6 @@ UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

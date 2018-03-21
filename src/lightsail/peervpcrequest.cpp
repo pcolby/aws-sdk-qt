@@ -123,3 +123,6 @@ PeerVpcRequestPrivate::PeerVpcRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeSSLPoliciesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

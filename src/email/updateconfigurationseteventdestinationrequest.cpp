@@ -123,3 +123,6 @@ UpdateConfigurationSetEventDestinationRequestPrivate::UpdateConfigurationSetEven
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

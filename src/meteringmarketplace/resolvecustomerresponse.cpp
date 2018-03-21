@@ -101,3 +101,6 @@ void ResolveCustomerResponsePrivate::ResolveCustomerResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ResolveCustomerResponse"));
     /// @todo
 }
+
+} // namespace MarketplaceMetering
+} // namespace AWS

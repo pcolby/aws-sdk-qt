@@ -123,3 +123,6 @@ DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

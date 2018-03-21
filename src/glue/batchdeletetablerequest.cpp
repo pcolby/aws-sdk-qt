@@ -123,3 +123,6 @@ BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

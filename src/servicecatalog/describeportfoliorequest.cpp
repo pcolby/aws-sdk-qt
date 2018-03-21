@@ -123,3 +123,6 @@ DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

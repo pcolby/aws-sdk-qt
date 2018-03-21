@@ -101,3 +101,6 @@ void DeleteInvitationsResponsePrivate::DeleteInvitationsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteInvitationsResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

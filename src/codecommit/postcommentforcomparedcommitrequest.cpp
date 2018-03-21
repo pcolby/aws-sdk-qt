@@ -123,3 +123,6 @@ PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestP
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

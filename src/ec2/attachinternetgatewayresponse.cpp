@@ -101,3 +101,6 @@ void AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("AttachInternetGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

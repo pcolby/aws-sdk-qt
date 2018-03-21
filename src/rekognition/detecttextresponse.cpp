@@ -101,3 +101,6 @@ void DetectTextResponsePrivate::DetectTextResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DetectTextResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

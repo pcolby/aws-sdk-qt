@@ -101,3 +101,6 @@ void UpdateAutoScalingGroupResponsePrivate::UpdateAutoScalingGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateAutoScalingGroupResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

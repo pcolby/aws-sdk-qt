@@ -123,3 +123,6 @@ DetectTextRequestPrivate::DetectTextRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

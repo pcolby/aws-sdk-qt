@@ -123,3 +123,6 @@ ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

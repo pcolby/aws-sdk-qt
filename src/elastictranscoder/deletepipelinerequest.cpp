@@ -123,3 +123,6 @@ DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

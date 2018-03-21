@@ -123,3 +123,6 @@ ListGatewaysRequestPrivate::ListGatewaysRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

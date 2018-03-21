@@ -101,3 +101,6 @@ void BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteAttributesResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

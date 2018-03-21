@@ -123,3 +123,6 @@ CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

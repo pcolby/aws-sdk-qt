@@ -123,3 +123,6 @@ EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

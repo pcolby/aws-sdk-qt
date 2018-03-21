@@ -101,3 +101,6 @@ void AttachVolumeResponsePrivate::AttachVolumeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AttachVolumeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

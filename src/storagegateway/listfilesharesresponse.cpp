@@ -101,3 +101,6 @@ void ListFileSharesResponsePrivate::ListFileSharesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListFileSharesResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

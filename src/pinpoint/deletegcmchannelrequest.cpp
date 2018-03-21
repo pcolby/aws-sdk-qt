@@ -123,3 +123,6 @@ DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

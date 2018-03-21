@@ -101,3 +101,6 @@ void UploadPartCopyResponsePrivate::UploadPartCopyResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UploadPartCopyResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListTargetsByRuleResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

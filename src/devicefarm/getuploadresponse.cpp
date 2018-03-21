@@ -101,3 +101,6 @@ void GetUploadResponsePrivate::GetUploadResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetUploadResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

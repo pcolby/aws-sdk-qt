@@ -101,3 +101,6 @@ void PutDestinationResponsePrivate::PutDestinationResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("PutDestinationResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

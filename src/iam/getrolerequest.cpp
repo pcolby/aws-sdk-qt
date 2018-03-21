@@ -123,3 +123,6 @@ GetRoleRequestPrivate::GetRoleRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

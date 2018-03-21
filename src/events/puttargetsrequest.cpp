@@ -123,3 +123,6 @@ PutTargetsRequestPrivate::PutTargetsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

@@ -123,3 +123,6 @@ BatchGetNamedQueryRequestPrivate::BatchGetNamedQueryRequestPrivate(
 {
 
 }
+
+} // namespace Athena
+} // namespace AWS

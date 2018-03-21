@@ -101,3 +101,6 @@ void GetPendingJobExecutionsResponsePrivate::GetPendingJobExecutionsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetPendingJobExecutionsResponse"));
     /// @todo
 }
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS

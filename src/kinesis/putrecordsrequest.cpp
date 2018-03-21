@@ -123,3 +123,6 @@ PutRecordsRequestPrivate::PutRecordsRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

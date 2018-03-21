@@ -123,3 +123,6 @@ ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

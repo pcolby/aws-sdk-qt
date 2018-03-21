@@ -123,3 +123,6 @@ GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

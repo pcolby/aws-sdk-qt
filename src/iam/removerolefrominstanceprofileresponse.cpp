@@ -101,3 +101,6 @@ void RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfile
     Q_ASSERT(xml.name() == QLatin1String("RemoveRoleFromInstanceProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

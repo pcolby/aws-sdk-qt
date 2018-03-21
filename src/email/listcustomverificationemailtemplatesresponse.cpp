@@ -101,3 +101,6 @@ void ListCustomVerificationEmailTemplatesResponsePrivate::ListCustomVerification
     Q_ASSERT(xml.name() == QLatin1String("ListCustomVerificationEmailTemplatesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

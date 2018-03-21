@@ -123,3 +123,6 @@ UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

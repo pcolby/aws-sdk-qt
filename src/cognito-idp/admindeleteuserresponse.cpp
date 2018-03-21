@@ -101,3 +101,6 @@ void AdminDeleteUserResponsePrivate::AdminDeleteUserResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AdminDeleteUserResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

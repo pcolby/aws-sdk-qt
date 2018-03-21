@@ -101,3 +101,6 @@ void UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

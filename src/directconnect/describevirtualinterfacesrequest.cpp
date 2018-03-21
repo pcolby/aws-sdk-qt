@@ -123,3 +123,6 @@ DescribeVirtualInterfacesRequestPrivate::DescribeVirtualInterfacesRequestPrivate
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteSlotTypeVersionResponsePrivate::DeleteSlotTypeVersionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteSlotTypeVersionResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

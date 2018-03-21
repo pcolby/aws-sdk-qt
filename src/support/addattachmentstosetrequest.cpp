@@ -123,3 +123,6 @@ AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

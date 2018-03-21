@@ -101,3 +101,6 @@ void DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSe
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetTrackingOptionsResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

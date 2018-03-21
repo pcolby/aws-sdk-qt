@@ -123,3 +123,6 @@ PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestP
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

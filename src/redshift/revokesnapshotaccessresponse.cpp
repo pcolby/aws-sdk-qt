@@ -101,3 +101,6 @@ void RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("RevokeSnapshotAccessResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

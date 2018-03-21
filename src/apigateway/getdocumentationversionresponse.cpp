@@ -101,3 +101,6 @@ void GetDocumentationVersionResponsePrivate::GetDocumentationVersionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentationVersionResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

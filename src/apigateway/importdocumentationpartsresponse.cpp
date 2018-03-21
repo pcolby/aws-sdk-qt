@@ -101,3 +101,6 @@ void ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ImportDocumentationPartsResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

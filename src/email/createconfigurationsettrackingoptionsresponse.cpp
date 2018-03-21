@@ -101,3 +101,6 @@ void CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSe
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationSetTrackingOptionsResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

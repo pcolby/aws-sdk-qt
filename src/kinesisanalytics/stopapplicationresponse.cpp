@@ -101,3 +101,6 @@ void StopApplicationResponsePrivate::StopApplicationResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("StopApplicationResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

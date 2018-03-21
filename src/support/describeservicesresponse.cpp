@@ -101,3 +101,6 @@ void DescribeServicesResponsePrivate::DescribeServicesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeServicesResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

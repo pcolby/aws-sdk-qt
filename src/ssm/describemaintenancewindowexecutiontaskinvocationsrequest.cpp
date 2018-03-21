@@ -123,3 +123,6 @@ DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMainten
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

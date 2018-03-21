@@ -101,3 +101,6 @@ void DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePerm
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkInterfacePermissionResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

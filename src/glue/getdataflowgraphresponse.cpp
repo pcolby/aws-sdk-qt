@@ -101,3 +101,6 @@ void GetDataflowGraphResponsePrivate::GetDataflowGraphResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetDataflowGraphResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

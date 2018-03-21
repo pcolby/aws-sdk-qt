@@ -123,3 +123,6 @@ RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPri
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

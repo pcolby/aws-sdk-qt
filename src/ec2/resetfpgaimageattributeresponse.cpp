@@ -101,3 +101,6 @@ void ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ResetFpgaImageAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

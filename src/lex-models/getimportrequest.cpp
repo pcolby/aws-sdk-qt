@@ -123,3 +123,6 @@ GetImportRequestPrivate::GetImportRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

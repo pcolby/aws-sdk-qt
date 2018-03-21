@@ -123,3 +123,6 @@ DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

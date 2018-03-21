@@ -101,3 +101,6 @@ void DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanc
     Q_ASSERT(xml.name() == QLatin1String("DescribePendingMaintenanceActionsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

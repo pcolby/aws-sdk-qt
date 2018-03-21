@@ -101,3 +101,6 @@ void DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheParametersResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ResetSnapshotAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

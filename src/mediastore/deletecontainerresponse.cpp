@@ -101,3 +101,6 @@ void DeleteContainerResponsePrivate::DeleteContainerResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteContainerResponse"));
     /// @todo
 }
+
+} // namespace MediaStore
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateDistributionResponsePrivate::UpdateDistributionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateDistributionResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobFlowsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

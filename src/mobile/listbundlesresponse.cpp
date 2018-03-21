@@ -101,3 +101,6 @@ void ListBundlesResponsePrivate::ListBundlesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListBundlesResponse"));
     /// @todo
 }
+
+} // namespace Mobile
+} // namespace AWS

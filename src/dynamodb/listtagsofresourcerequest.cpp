@@ -123,3 +123,6 @@ ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

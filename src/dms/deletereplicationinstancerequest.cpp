@@ -123,3 +123,6 @@ DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

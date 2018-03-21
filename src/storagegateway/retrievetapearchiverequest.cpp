@@ -123,3 +123,6 @@ RetrieveTapeArchiveRequestPrivate::RetrieveTapeArchiveRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

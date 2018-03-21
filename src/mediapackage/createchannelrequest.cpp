@@ -123,3 +123,6 @@ CreateChannelRequestPrivate::CreateChannelRequestPrivate(
 {
 
 }
+
+} // namespace MediaPackage
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetLoadBalancerResponsePrivate::GetLoadBalancerResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

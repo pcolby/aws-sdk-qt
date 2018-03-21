@@ -101,3 +101,6 @@ void CreateResourceResponsePrivate::CreateResourceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

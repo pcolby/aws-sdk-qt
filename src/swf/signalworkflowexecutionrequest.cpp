@@ -123,3 +123,6 @@ SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

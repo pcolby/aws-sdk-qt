@@ -101,3 +101,6 @@ void ListCloudFrontOriginAccessIdentitiesResponsePrivate::ListCloudFrontOriginAc
     Q_ASSERT(xml.name() == QLatin1String("ListCloudFrontOriginAccessIdentitiesResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

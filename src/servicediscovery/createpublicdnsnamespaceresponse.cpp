@@ -101,3 +101,6 @@ void CreatePublicDnsNamespaceResponsePrivate::CreatePublicDnsNamespaceResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreatePublicDnsNamespaceResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

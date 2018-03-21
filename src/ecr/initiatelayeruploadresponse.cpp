@@ -101,3 +101,6 @@ void InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("InitiateLayerUploadResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

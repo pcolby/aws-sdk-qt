@@ -101,3 +101,6 @@ void DisassociateFromMasterAccountResponsePrivate::DisassociateFromMasterAccount
     Q_ASSERT(xml.name() == QLatin1String("DisassociateFromMasterAccountResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

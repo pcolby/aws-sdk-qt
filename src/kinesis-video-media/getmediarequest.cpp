@@ -123,3 +123,6 @@ GetMediaRequestPrivate::GetMediaRequestPrivate(
 {
 
 }
+
+} // namespace KinesisVideoMedia
+} // namespace AWS

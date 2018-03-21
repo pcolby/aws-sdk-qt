@@ -101,3 +101,6 @@ void BatchGetRepositoriesResponsePrivate::BatchGetRepositoriesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("BatchGetRepositoriesResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

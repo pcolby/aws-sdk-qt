@@ -101,3 +101,6 @@ void PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupAction
     Q_ASSERT(xml.name() == QLatin1String("PutScheduledUpdateGroupActionResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

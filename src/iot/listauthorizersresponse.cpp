@@ -101,3 +101,6 @@ void ListAuthorizersResponsePrivate::ListAuthorizersResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListAuthorizersResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

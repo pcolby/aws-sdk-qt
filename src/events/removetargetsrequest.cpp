@@ -123,3 +123,6 @@ RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

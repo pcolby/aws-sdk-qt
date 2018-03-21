@@ -123,3 +123,6 @@ GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

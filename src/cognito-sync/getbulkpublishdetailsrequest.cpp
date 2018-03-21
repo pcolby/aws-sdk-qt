@@ -123,3 +123,6 @@ GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

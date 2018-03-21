@@ -123,3 +123,6 @@ OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

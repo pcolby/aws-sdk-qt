@@ -101,3 +101,6 @@ void AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterc
     Q_ASSERT(xml.name() == QLatin1String("AllocateConnectionOnInterconnectResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

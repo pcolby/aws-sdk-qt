@@ -101,3 +101,6 @@ void ResetClusterParameterGroupResponsePrivate::ResetClusterParameterGroupRespon
     Q_ASSERT(xml.name() == QLatin1String("ResetClusterParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

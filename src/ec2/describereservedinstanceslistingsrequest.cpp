@@ -123,3 +123,6 @@ DescribeReservedInstancesListingsRequestPrivate::DescribeReservedInstancesListin
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

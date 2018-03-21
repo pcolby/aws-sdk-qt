@@ -123,3 +123,6 @@ DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

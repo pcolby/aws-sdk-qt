@@ -101,3 +101,6 @@ void ListBucketInventoryConfigurationsResponsePrivate::ListBucketInventoryConfig
     Q_ASSERT(xml.name() == QLatin1String("ListBucketInventoryConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

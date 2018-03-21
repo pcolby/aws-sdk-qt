@@ -123,3 +123,6 @@ RegisterTargetWithMaintenanceWindowRequestPrivate::RegisterTargetWithMaintenance
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

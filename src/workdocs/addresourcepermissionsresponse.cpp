@@ -101,3 +101,6 @@ void AddResourcePermissionsResponsePrivate::AddResourcePermissionsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AddResourcePermissionsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListIPSetsResponsePrivate::ListIPSetsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListIPSetsResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

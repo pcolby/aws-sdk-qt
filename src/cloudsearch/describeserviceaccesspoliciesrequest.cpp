@@ -123,3 +123,6 @@ DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesReques
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetQueueResponsePrivate::GetQueueResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetQueueResponse"));
     /// @todo
 }
+
+} // namespace MediaConvert
+} // namespace AWS

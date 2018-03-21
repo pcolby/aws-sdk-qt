@@ -123,3 +123,6 @@ ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

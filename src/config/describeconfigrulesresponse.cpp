@@ -101,3 +101,6 @@ void DescribeConfigRulesResponsePrivate::DescribeConfigRulesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigRulesResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

@@ -123,3 +123,6 @@ DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPri
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

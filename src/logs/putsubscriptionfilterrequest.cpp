@@ -123,3 +123,6 @@ PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

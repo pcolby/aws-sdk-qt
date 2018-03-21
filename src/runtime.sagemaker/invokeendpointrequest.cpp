@@ -123,3 +123,6 @@ InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
 {
 
 }
+
+} // namespace SageMakerRuntime
+} // namespace AWS

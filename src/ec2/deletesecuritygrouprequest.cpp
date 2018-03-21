@@ -123,3 +123,6 @@ DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

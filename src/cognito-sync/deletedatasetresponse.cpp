@@ -101,3 +101,6 @@ void DeleteDatasetResponsePrivate::DeleteDatasetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteDatasetResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

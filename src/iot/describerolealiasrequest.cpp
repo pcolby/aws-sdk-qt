@@ -123,3 +123,6 @@ DescribeRoleAliasRequestPrivate::DescribeRoleAliasRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

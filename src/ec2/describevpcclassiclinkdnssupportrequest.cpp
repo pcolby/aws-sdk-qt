@@ -123,3 +123,6 @@ DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupport
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

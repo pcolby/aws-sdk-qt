@@ -123,3 +123,6 @@ RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalanc
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

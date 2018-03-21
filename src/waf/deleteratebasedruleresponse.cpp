@@ -101,3 +101,6 @@ void DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteRateBasedRuleResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

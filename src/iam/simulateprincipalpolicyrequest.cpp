@@ -123,3 +123,6 @@ SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

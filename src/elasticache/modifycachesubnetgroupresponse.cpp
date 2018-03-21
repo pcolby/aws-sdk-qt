@@ -101,3 +101,6 @@ void ModifyCacheSubnetGroupResponsePrivate::ModifyCacheSubnetGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ModifyCacheSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

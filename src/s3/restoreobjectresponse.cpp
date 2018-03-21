@@ -101,3 +101,6 @@ void RestoreObjectResponsePrivate::RestoreObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RestoreObjectResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

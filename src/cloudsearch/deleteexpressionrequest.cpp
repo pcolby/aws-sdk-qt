@@ -123,3 +123,6 @@ DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

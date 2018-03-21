@@ -101,3 +101,6 @@ void CreateEgressOnlyInternetGatewayResponsePrivate::CreateEgressOnlyInternetGat
     Q_ASSERT(xml.name() == QLatin1String("CreateEgressOnlyInternetGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

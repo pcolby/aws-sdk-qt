@@ -101,3 +101,6 @@ void ListRunsResponsePrivate::ListRunsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListRunsResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

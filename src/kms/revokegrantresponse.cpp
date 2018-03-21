@@ -101,3 +101,6 @@ void RevokeGrantResponsePrivate::RevokeGrantResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RevokeGrantResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

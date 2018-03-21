@@ -101,3 +101,6 @@ void DeregisterTargetsResponsePrivate::DeregisterTargetsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTargetsResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

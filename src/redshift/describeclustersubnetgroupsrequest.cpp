@@ -123,3 +123,6 @@ DescribeClusterSubnetGroupsRequestPrivate::DescribeClusterSubnetGroupsRequestPri
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

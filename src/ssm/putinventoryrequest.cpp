@@ -123,3 +123,6 @@ PutInventoryRequestPrivate::PutInventoryRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

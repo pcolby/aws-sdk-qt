@@ -101,3 +101,6 @@ void CreateDiskFromSnapshotResponsePrivate::CreateDiskFromSnapshotResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateDiskFromSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

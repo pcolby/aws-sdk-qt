@@ -123,3 +123,6 @@ DescribeRuntimeConfigurationRequestPrivate::DescribeRuntimeConfigurationRequestP
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

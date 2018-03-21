@@ -101,3 +101,6 @@ void RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedRe
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskCompletedResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

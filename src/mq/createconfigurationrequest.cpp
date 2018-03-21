@@ -123,3 +123,6 @@ CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

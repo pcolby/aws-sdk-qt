@@ -101,3 +101,6 @@ void DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteDevicePoolResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

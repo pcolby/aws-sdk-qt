@@ -123,3 +123,6 @@ UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -101,3 +101,6 @@ void EnableLoggingResponsePrivate::EnableLoggingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("EnableLoggingResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

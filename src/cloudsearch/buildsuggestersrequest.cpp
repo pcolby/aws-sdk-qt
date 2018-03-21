@@ -123,3 +123,6 @@ BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

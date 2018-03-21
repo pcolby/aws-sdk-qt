@@ -101,3 +101,6 @@ void UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateC
     Q_ASSERT(xml.name() == QLatin1String("UpdateGroupCertificateConfigurationResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

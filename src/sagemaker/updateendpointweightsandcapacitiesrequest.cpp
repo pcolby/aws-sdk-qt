@@ -123,3 +123,6 @@ UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapaci
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

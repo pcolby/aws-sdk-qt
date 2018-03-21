@@ -101,3 +101,6 @@ void GetByteMatchSetResponsePrivate::GetByteMatchSetResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetByteMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

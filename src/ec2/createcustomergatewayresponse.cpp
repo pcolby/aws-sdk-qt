@@ -101,3 +101,6 @@ void CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomerGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

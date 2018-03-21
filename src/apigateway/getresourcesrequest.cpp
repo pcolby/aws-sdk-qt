@@ -123,3 +123,6 @@ GetResourcesRequestPrivate::GetResourcesRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateSchemaResponsePrivate::UpdateSchemaResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateSchemaResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

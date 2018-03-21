@@ -101,3 +101,6 @@ void CreateTargetGroupResponsePrivate::CreateTargetGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateTargetGroupResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

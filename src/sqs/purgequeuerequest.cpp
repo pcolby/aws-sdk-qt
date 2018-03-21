@@ -123,3 +123,6 @@ PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

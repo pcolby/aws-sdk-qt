@@ -123,3 +123,6 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

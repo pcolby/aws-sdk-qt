@@ -123,3 +123,6 @@ AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

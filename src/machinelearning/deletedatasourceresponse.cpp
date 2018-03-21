@@ -101,3 +101,6 @@ void DeleteDataSourceResponsePrivate::DeleteDataSourceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteDataSourceResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

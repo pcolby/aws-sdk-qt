@@ -123,3 +123,6 @@ PutMetricAlarmRequestPrivate::PutMetricAlarmRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

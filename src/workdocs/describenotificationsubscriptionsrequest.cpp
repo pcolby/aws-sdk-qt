@@ -123,3 +123,6 @@ DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptio
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

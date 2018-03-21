@@ -101,3 +101,6 @@ void DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteOpenIDConnectProviderResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

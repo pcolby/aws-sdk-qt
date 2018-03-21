@@ -123,3 +123,6 @@ GetProductsRequestPrivate::GetProductsRequestPrivate(
 {
 
 }
+
+} // namespace Pricing
+} // namespace AWS

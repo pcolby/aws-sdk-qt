@@ -101,3 +101,6 @@ void DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteApnsVoipChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

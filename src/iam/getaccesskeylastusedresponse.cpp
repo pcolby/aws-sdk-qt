@@ -101,3 +101,6 @@ void GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetAccessKeyLastUsedResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

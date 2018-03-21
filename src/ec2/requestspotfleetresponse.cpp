@@ -101,3 +101,6 @@ void RequestSpotFleetResponsePrivate::RequestSpotFleetResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("RequestSpotFleetResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

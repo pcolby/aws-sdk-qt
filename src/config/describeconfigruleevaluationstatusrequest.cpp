@@ -123,3 +123,6 @@ DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationSt
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

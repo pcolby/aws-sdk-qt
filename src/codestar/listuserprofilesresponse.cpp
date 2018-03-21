@@ -101,3 +101,6 @@ void ListUserProfilesResponsePrivate::ListUserProfilesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListUserProfilesResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

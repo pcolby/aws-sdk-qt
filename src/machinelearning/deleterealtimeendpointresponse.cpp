@@ -101,3 +101,6 @@ void DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteRealtimeEndpointResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

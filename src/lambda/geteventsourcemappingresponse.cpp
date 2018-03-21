@@ -101,3 +101,6 @@ void GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetEventSourceMappingResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

@@ -101,3 +101,6 @@ void AttachUserPolicyResponsePrivate::AttachUserPolicyResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("AttachUserPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

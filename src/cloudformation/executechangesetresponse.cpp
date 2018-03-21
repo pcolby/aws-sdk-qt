@@ -101,3 +101,6 @@ void ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ExecuteChangeSetResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

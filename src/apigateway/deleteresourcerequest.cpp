@@ -123,3 +123,6 @@ DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

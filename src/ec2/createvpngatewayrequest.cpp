@@ -123,3 +123,6 @@ CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

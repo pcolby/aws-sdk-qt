@@ -123,3 +123,6 @@ UpdateCACertificateRequestPrivate::UpdateCACertificateRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

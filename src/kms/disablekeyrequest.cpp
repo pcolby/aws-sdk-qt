@@ -123,3 +123,6 @@ DisableKeyRequestPrivate::DisableKeyRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

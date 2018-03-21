@@ -123,3 +123,6 @@ ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrgani
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

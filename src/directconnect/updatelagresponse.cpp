@@ -101,3 +101,6 @@ void UpdateLagResponsePrivate::UpdateLagResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateLagResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

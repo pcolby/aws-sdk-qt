@@ -123,3 +123,6 @@ GetServerCertificateRequestPrivate::GetServerCertificateRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

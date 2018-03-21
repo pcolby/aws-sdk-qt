@@ -101,3 +101,6 @@ void RebootInstanceResponsePrivate::RebootInstanceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("RebootInstanceResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

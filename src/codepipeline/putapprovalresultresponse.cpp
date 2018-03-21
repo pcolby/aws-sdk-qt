@@ -101,3 +101,6 @@ void PutApprovalResultResponsePrivate::PutApprovalResultResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("PutApprovalResultResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

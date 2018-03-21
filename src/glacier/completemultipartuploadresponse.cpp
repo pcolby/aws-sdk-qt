@@ -101,3 +101,6 @@ void CompleteMultipartUploadResponsePrivate::CompleteMultipartUploadResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CompleteMultipartUploadResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateKeyPairRequestPrivate::CreateKeyPairRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

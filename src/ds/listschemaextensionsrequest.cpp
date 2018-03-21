@@ -123,3 +123,6 @@ ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

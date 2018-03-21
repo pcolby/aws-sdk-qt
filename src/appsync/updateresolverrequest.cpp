@@ -123,3 +123,6 @@ UpdateResolverRequestPrivate::UpdateResolverRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

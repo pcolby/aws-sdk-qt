@@ -123,3 +123,6 @@ StopLoggingRequestPrivate::StopLoggingRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

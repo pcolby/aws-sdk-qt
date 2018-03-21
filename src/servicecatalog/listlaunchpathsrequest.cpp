@@ -123,3 +123,6 @@ ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

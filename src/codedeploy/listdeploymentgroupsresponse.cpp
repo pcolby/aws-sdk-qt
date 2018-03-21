@@ -101,3 +101,6 @@ void ListDeploymentGroupsResponsePrivate::ListDeploymentGroupsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListDeploymentGroupsResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

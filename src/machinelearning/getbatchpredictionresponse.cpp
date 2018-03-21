@@ -101,3 +101,6 @@ void GetBatchPredictionResponsePrivate::GetBatchPredictionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetBatchPredictionResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

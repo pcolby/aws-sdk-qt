@@ -123,3 +123,6 @@ CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

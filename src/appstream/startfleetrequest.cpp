@@ -123,3 +123,6 @@ StartFleetRequestPrivate::StartFleetRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

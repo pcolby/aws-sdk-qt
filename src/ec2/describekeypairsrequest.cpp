@@ -123,3 +123,6 @@ DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

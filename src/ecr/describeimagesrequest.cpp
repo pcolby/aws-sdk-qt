@@ -123,3 +123,6 @@ DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

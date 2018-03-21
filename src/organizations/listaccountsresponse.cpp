@@ -101,3 +101,6 @@ void ListAccountsResponsePrivate::ListAccountsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListAccountsResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateAssociationRequestPrivate::CreateAssociationRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

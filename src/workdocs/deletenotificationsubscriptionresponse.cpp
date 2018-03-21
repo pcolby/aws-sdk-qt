@@ -101,3 +101,6 @@ void DeleteNotificationSubscriptionResponsePrivate::DeleteNotificationSubscripti
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

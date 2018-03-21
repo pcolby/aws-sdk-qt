@@ -123,3 +123,6 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

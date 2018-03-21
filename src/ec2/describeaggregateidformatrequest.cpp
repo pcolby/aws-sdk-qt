@@ -123,3 +123,6 @@ DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

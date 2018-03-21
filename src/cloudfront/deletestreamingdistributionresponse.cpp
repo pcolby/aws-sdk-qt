@@ -101,3 +101,6 @@ void DeleteStreamingDistributionResponsePrivate::DeleteStreamingDistributionResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteStreamingDistributionResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

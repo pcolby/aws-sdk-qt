@@ -101,3 +101,6 @@ void UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate::UpdateSecurityGr
     Q_ASSERT(xml.name() == QLatin1String("UpdateSecurityGroupRuleDescriptionsIngressResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeClustersResponsePrivate::DescribeClustersResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeClustersResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

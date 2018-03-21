@@ -123,3 +123,6 @@ DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

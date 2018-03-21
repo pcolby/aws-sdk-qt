@@ -123,3 +123,6 @@ CreatePublicDnsNamespaceRequestPrivate::CreatePublicDnsNamespaceRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

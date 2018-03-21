@@ -101,3 +101,6 @@ void FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheRespon
     Q_ASSERT(xml.name() == QLatin1String("FlushStageAuthorizersCacheResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

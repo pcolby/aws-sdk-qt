@@ -123,3 +123,6 @@ CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsReques
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

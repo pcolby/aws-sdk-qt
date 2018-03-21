@@ -123,3 +123,6 @@ CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

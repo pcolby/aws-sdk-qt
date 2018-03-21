@@ -123,3 +123,6 @@ AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPriva
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

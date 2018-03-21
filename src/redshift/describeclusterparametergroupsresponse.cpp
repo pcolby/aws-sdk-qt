@@ -101,3 +101,6 @@ void DescribeClusterParameterGroupsResponsePrivate::DescribeClusterParameterGrou
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterParameterGroupsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

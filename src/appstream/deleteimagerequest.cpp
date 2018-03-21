@@ -123,3 +123,6 @@ DeleteImageRequestPrivate::DeleteImageRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

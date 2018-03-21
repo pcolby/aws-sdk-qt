@@ -101,3 +101,6 @@ void DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteEventSourceMappingResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

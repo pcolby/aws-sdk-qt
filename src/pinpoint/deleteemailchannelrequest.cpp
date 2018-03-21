@@ -123,3 +123,6 @@ DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

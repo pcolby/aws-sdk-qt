@@ -101,3 +101,6 @@ void RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("RemoveRoleFromDBClusterResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

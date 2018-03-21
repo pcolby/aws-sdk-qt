@@ -101,3 +101,6 @@ void StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("StopCrawlerScheduleResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

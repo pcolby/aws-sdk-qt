@@ -101,3 +101,6 @@ void ListDomainNamesResponsePrivate::ListDomainNamesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListDomainNamesResponse"));
     /// @todo
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

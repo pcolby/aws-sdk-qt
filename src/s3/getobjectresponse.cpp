@@ -101,3 +101,6 @@ void GetObjectResponsePrivate::GetObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetObjectResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

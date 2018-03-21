@@ -123,3 +123,6 @@ RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

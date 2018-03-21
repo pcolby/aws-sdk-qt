@@ -101,3 +101,6 @@ void DescribeDomainControllersResponsePrivate::DescribeDomainControllersResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeDomainControllersResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

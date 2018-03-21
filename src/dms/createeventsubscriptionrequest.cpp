@@ -123,3 +123,6 @@ CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

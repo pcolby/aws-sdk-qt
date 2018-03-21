@@ -101,3 +101,6 @@ void ListStepsResponsePrivate::ListStepsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListStepsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

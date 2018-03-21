@@ -101,3 +101,6 @@ void DescribeGroupResponsePrivate::DescribeGroupResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeGroupResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

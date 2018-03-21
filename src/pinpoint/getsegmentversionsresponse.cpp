@@ -101,3 +101,6 @@ void GetSegmentVersionsResponsePrivate::GetSegmentVersionsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentVersionsResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

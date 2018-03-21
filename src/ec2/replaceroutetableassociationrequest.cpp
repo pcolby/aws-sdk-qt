@@ -123,3 +123,6 @@ ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestP
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

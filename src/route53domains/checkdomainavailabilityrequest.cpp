@@ -123,3 +123,6 @@ CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

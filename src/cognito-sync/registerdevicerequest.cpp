@@ -123,3 +123,6 @@ RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

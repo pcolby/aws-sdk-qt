@@ -101,3 +101,6 @@ void ListImportsResponsePrivate::ListImportsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListImportsResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

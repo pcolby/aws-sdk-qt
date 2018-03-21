@@ -101,3 +101,6 @@ void SwapEnvironmentCNAMEsResponsePrivate::SwapEnvironmentCNAMEsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("SwapEnvironmentCNAMEsResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

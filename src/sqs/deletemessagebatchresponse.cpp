@@ -101,3 +101,6 @@ void DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteMessageBatchResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

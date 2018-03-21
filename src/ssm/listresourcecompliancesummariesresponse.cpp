@@ -101,3 +101,6 @@ void ListResourceComplianceSummariesResponsePrivate::ListResourceComplianceSumma
     Q_ASSERT(xml.name() == QLatin1String("ListResourceComplianceSummariesResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

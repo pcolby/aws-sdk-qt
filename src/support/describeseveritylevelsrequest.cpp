@@ -123,3 +123,6 @@ DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

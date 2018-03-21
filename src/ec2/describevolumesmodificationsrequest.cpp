@@ -123,3 +123,6 @@ DescribeVolumesModificationsRequestPrivate::DescribeVolumesModificationsRequestP
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

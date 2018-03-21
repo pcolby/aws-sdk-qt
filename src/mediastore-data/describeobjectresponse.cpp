@@ -101,3 +101,6 @@ void DescribeObjectResponsePrivate::DescribeObjectResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeObjectResponse"));
     /// @todo
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

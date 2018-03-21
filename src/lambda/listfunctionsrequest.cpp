@@ -123,3 +123,6 @@ ListFunctionsRequestPrivate::ListFunctionsRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

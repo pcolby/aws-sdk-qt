@@ -123,3 +123,6 @@ ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnecti
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

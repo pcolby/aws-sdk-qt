@@ -101,3 +101,6 @@ void PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PromoteReadReplicaResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

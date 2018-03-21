@@ -101,3 +101,6 @@ void DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteSAMLProviderResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

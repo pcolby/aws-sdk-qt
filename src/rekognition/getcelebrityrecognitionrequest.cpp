@@ -123,3 +123,6 @@ GetCelebrityRecognitionRequestPrivate::GetCelebrityRecognitionRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

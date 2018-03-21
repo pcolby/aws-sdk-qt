@@ -101,3 +101,6 @@ void RegisterDeviceResponsePrivate::RegisterDeviceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("RegisterDeviceResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

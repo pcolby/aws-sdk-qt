@@ -123,3 +123,6 @@ DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPri
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

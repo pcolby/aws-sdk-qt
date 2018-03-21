@@ -101,3 +101,6 @@ void AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResp
     Q_ASSERT(xml.name() == QLatin1String("AdminDisableProviderForUserResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

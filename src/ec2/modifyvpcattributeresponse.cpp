@@ -101,3 +101,6 @@ void ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

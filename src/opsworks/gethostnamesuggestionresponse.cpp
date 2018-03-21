@@ -101,3 +101,6 @@ void GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetHostnameSuggestionResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

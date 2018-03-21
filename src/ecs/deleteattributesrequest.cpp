@@ -123,3 +123,6 @@ DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetBotsResponsePrivate::GetBotsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetBotsResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

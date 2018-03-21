@@ -123,3 +123,6 @@ ListRuleGroupsRequestPrivate::ListRuleGroupsRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

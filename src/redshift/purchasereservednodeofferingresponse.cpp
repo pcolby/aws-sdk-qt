@@ -101,3 +101,6 @@ void PurchaseReservedNodeOfferingResponsePrivate::PurchaseReservedNodeOfferingRe
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedNodeOfferingResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

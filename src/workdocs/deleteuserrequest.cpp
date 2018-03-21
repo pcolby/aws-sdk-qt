@@ -123,3 +123,6 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeHsmConfigurationsResponsePrivate::DescribeHsmConfigurationsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeHsmConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

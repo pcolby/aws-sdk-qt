@@ -123,3 +123,6 @@ AddResourcePermissionsRequestPrivate::AddResourcePermissionsRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

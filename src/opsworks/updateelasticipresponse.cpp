@@ -101,3 +101,6 @@ void UpdateElasticIpResponsePrivate::UpdateElasticIpResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("UpdateElasticIpResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

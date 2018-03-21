@@ -101,3 +101,6 @@ void CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListi
     Q_ASSERT(xml.name() == QLatin1String("CancelReservedInstancesListingResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

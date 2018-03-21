@@ -101,3 +101,6 @@ void DisassociateDelegateFromResourceResponsePrivate::DisassociateDelegateFromRe
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDelegateFromResourceResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

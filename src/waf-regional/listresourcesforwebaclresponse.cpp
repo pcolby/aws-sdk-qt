@@ -101,3 +101,6 @@ void ListResourcesForWebACLResponsePrivate::ListResourcesForWebACLResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListResourcesForWebACLResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

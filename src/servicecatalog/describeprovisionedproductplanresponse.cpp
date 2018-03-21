@@ -101,3 +101,6 @@ void DescribeProvisionedProductPlanResponsePrivate::DescribeProvisionedProductPl
     Q_ASSERT(xml.name() == QLatin1String("DescribeProvisionedProductPlanResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

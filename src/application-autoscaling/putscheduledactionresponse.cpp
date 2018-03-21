@@ -101,3 +101,6 @@ void PutScheduledActionResponsePrivate::PutScheduledActionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PutScheduledActionResponse"));
     /// @todo
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

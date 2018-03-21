@@ -123,3 +123,6 @@ CreateVpcPeeringAuthorizationRequestPrivate::CreateVpcPeeringAuthorizationReques
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -123,3 +123,6 @@ GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRe
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

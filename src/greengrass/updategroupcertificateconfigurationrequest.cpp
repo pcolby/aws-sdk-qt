@@ -123,3 +123,6 @@ UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigu
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

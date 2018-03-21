@@ -123,3 +123,6 @@ UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

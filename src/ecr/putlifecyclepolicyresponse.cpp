@@ -101,3 +101,6 @@ void PutLifecyclePolicyResponsePrivate::PutLifecyclePolicyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PutLifecyclePolicyResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

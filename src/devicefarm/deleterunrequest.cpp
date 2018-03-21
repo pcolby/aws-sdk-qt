@@ -123,3 +123,6 @@ DeleteRunRequestPrivate::DeleteRunRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -123,3 +123,6 @@ GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

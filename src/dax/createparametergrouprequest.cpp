@@ -123,3 +123,6 @@ CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

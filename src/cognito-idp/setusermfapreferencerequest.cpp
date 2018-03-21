@@ -123,3 +123,6 @@ SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

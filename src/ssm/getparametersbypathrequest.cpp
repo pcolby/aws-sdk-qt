@@ -123,3 +123,6 @@ GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

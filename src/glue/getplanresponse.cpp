@@ -101,3 +101,6 @@ void GetPlanResponsePrivate::GetPlanResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetPlanResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

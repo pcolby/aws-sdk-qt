@@ -123,3 +123,6 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

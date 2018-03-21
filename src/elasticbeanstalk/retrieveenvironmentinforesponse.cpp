@@ -101,3 +101,6 @@ void RetrieveEnvironmentInfoResponsePrivate::RetrieveEnvironmentInfoResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("RetrieveEnvironmentInfoResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

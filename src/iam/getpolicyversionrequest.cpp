@@ -123,3 +123,6 @@ GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

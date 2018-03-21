@@ -123,3 +123,6 @@ GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

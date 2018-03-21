@@ -101,3 +101,6 @@ void CreateSchemaResponsePrivate::CreateSchemaResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateSchemaResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

@@ -101,3 +101,6 @@ void RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponse
     Q_ASSERT(xml.name() == QLatin1String("RegisterContainerInstanceResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

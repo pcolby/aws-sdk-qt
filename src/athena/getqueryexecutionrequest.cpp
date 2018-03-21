@@ -123,3 +123,6 @@ GetQueryExecutionRequestPrivate::GetQueryExecutionRequestPrivate(
 {
 
 }
+
+} // namespace Athena
+} // namespace AWS

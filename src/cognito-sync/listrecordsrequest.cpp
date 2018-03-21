@@ -123,3 +123,6 @@ ListRecordsRequestPrivate::ListRecordsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

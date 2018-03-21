@@ -123,3 +123,6 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeMountTargetsResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

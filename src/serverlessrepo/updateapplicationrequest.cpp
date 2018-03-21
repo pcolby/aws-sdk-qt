@@ -123,3 +123,6 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
 {
 
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

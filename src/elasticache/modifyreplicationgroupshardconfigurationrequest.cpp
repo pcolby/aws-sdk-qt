@@ -123,3 +123,6 @@ ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupSh
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

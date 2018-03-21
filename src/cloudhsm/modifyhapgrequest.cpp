@@ -123,3 +123,6 @@ ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

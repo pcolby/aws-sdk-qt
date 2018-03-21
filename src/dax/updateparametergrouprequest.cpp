@@ -123,3 +123,6 @@ UpdateParameterGroupRequestPrivate::UpdateParameterGroupRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

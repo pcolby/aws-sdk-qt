@@ -101,3 +101,6 @@ void ModifySpotFleetRequestResponsePrivate::ModifySpotFleetRequestResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ModifySpotFleetRequestResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

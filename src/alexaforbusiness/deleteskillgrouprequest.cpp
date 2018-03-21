@@ -123,3 +123,6 @@ DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

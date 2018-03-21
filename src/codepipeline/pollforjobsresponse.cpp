@@ -101,3 +101,6 @@ void PollForJobsResponsePrivate::PollForJobsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PollForJobsResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

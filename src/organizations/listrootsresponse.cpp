@@ -101,3 +101,6 @@ void ListRootsResponsePrivate::ListRootsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListRootsResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

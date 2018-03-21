@@ -101,3 +101,6 @@ void DeleteBucketReplicationResponsePrivate::DeleteBucketReplicationResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketReplicationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

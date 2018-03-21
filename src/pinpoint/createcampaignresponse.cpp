@@ -101,3 +101,6 @@ void CreateCampaignResponsePrivate::CreateCampaignResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateCampaignResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

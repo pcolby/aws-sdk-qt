@@ -101,3 +101,6 @@ void ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListStreamProcessorsResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

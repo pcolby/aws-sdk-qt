@@ -123,3 +123,6 @@ DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

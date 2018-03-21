@@ -101,3 +101,6 @@ void DeregisterElasticIpResponsePrivate::DeregisterElasticIpResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeregisterElasticIpResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void PreviewAgentsResponsePrivate::PreviewAgentsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PreviewAgentsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

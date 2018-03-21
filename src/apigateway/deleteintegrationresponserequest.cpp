@@ -123,3 +123,6 @@ DeleteIntegrationResponseRequestPrivate::DeleteIntegrationResponseRequestPrivate
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

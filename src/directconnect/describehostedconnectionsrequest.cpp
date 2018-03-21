@@ -123,3 +123,6 @@ DescribeHostedConnectionsRequestPrivate::DescribeHostedConnectionsRequestPrivate
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

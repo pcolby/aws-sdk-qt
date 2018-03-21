@@ -123,3 +123,6 @@ DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

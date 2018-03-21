@@ -101,3 +101,6 @@ void ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstancePlacementResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

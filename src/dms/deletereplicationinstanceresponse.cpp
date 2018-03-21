@@ -101,3 +101,6 @@ void DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponse
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationInstanceResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

@@ -101,3 +101,6 @@ void StartGatewayResponsePrivate::StartGatewayResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StartGatewayResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

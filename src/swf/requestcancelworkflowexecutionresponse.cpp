@@ -101,3 +101,6 @@ void RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecuti
     Q_ASSERT(xml.name() == QLatin1String("RequestCancelWorkflowExecutionResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

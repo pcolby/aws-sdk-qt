@@ -101,3 +101,6 @@ void ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterIamRolesResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

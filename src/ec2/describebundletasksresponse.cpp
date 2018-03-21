@@ -101,3 +101,6 @@ void DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeBundleTasksResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

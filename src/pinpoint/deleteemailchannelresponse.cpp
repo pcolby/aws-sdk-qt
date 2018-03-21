@@ -101,3 +101,6 @@ void DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteEmailChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

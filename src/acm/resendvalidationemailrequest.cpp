@@ -123,3 +123,6 @@ ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
 {
 
 }
+
+} // namespace ACM
+} // namespace AWS

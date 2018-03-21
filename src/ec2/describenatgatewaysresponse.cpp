@@ -101,3 +101,6 @@ void DescribeNatGatewaysResponsePrivate::DescribeNatGatewaysResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeNatGatewaysResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

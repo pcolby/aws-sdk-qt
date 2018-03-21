@@ -101,3 +101,6 @@ void SetUserSettingsResponsePrivate::SetUserSettingsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("SetUserSettingsResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

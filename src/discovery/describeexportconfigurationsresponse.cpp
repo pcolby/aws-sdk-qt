@@ -101,3 +101,6 @@ void DescribeExportConfigurationsResponsePrivate::DescribeExportConfigurationsRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeExportConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

@@ -101,3 +101,6 @@ void ExportProjectResponsePrivate::ExportProjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ExportProjectResponse"));
     /// @todo
 }
+
+} // namespace Mobile
+} // namespace AWS

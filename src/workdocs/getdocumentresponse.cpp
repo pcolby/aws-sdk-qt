@@ -101,3 +101,6 @@ void GetDocumentResponsePrivate::GetDocumentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

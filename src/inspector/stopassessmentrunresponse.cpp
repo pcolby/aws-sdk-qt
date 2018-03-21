@@ -101,3 +101,6 @@ void StopAssessmentRunResponsePrivate::StopAssessmentRunResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("StopAssessmentRunResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

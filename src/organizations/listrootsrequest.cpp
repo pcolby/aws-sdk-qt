@@ -123,3 +123,6 @@ ListRootsRequestPrivate::ListRootsRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

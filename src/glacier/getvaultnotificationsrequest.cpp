@@ -123,3 +123,6 @@ GetVaultNotificationsRequestPrivate::GetVaultNotificationsRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

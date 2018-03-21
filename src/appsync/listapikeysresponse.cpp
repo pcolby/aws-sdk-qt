@@ -101,3 +101,6 @@ void ListApiKeysResponsePrivate::ListApiKeysResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListApiKeysResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

@@ -123,3 +123,6 @@ AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProv
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

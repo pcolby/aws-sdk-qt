@@ -123,3 +123,6 @@ DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

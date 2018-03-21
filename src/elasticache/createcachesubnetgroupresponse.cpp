@@ -101,3 +101,6 @@ void CreateCacheSubnetGroupResponsePrivate::CreateCacheSubnetGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateCacheSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

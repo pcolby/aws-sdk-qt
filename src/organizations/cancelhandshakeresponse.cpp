@@ -101,3 +101,6 @@ void CancelHandshakeResponsePrivate::CancelHandshakeResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CancelHandshakeResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateActivationRequestPrivate::CreateActivationRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesRe
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToOnPremisesInstancesResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

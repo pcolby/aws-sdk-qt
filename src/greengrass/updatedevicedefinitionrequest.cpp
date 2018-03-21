@@ -123,3 +123,6 @@ UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

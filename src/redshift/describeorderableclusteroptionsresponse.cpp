@@ -101,3 +101,6 @@ void DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOpt
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableClusterOptionsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

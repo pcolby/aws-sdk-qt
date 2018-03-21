@@ -123,3 +123,6 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

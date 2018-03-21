@@ -123,3 +123,6 @@ ListGraphqlApisRequestPrivate::ListGraphqlApisRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

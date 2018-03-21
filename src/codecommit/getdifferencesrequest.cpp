@@ -123,3 +123,6 @@ GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

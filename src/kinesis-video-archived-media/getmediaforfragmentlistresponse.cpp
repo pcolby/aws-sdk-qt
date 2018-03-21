@@ -101,3 +101,6 @@ void GetMediaForFragmentListResponsePrivate::GetMediaForFragmentListResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetMediaForFragmentListResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideoArchivedMedia
+} // namespace AWS

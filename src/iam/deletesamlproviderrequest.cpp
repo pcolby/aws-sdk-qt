@@ -123,3 +123,6 @@ DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

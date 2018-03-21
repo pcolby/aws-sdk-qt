@@ -123,3 +123,6 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

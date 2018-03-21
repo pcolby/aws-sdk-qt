@@ -123,3 +123,6 @@ AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestP
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInst
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

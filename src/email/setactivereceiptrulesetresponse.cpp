@@ -101,3 +101,6 @@ void SetActiveReceiptRuleSetResponsePrivate::SetActiveReceiptRuleSetResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("SetActiveReceiptRuleSetResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

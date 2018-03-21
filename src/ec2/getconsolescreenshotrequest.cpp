@@ -123,3 +123,6 @@ GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

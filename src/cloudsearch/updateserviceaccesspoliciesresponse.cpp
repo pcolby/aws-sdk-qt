@@ -101,3 +101,6 @@ void UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceAccessPoliciesResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

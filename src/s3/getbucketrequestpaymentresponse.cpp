@@ -101,3 +101,6 @@ void GetBucketRequestPaymentResponsePrivate::GetBucketRequestPaymentResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetBucketRequestPaymentResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

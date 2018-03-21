@@ -101,3 +101,6 @@ void ValidateMatchmakingRuleSetResponsePrivate::ValidateMatchmakingRuleSetRespon
     Q_ASSERT(xml.name() == QLatin1String("ValidateMatchmakingRuleSetResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

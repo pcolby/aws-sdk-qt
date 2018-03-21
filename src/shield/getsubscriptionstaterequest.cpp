@@ -123,3 +123,6 @@ GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
 {
 
 }
+
+} // namespace Shield
+} // namespace AWS

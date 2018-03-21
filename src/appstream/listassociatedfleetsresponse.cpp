@@ -101,3 +101,6 @@ void ListAssociatedFleetsResponsePrivate::ListAssociatedFleetsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListAssociatedFleetsResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

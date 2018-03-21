@@ -123,3 +123,6 @@ DescribeJobsRequestPrivate::DescribeJobsRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

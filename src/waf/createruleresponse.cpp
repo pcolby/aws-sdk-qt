@@ -101,3 +101,6 @@ void CreateRuleResponsePrivate::CreateRuleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateRuleResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

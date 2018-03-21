@@ -123,3 +123,6 @@ UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

@@ -123,3 +123,6 @@ DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

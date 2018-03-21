@@ -123,3 +123,6 @@ DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigu
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

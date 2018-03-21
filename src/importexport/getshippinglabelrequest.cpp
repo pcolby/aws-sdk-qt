@@ -123,3 +123,6 @@ GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
 {
 
 }
+
+} // namespace ImportExport
+} // namespace AWS

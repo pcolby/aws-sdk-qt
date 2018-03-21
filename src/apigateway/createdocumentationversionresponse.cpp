@@ -101,3 +101,6 @@ void CreateDocumentationVersionResponsePrivate::CreateDocumentationVersionRespon
     Q_ASSERT(xml.name() == QLatin1String("CreateDocumentationVersionResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

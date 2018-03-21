@@ -101,3 +101,6 @@ void ListTagOptionsResponsePrivate::ListTagOptionsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListTagOptionsResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

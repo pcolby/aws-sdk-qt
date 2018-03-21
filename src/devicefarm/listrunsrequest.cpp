@@ -123,3 +123,6 @@ ListRunsRequestPrivate::ListRunsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

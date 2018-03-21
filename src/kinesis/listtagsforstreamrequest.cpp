@@ -123,3 +123,6 @@ ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

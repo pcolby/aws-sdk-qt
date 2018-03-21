@@ -123,3 +123,6 @@ AcceptReservedInstancesExchangeQuoteRequestPrivate::AcceptReservedInstancesExcha
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

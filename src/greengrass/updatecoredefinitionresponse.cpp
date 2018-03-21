@@ -101,3 +101,6 @@ void UpdateCoreDefinitionResponsePrivate::UpdateCoreDefinitionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UpdateCoreDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

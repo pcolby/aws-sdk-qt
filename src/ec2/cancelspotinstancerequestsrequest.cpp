@@ -123,3 +123,6 @@ CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPriva
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeVolumeStatusResponsePrivate::DescribeVolumeStatusResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumeStatusResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

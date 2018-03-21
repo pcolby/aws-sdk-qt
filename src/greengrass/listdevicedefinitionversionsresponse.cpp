@@ -101,3 +101,6 @@ void ListDeviceDefinitionVersionsResponsePrivate::ListDeviceDefinitionVersionsRe
     Q_ASSERT(xml.name() == QLatin1String("ListDeviceDefinitionVersionsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

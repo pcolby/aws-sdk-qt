@@ -123,3 +123,6 @@ DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

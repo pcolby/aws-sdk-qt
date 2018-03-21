@@ -101,3 +101,6 @@ void CreateSnapshotResponsePrivate::CreateSnapshotResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

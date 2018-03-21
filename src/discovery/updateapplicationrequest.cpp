@@ -123,3 +123,6 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

@@ -123,3 +123,6 @@ GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -101,3 +101,6 @@ void AssociateNodeResponsePrivate::AssociateNodeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AssociateNodeResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

@@ -123,3 +123,6 @@ VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

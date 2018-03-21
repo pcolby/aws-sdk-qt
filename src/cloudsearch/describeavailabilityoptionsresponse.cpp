@@ -101,3 +101,6 @@ void DescribeAvailabilityOptionsResponsePrivate::DescribeAvailabilityOptionsResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeAvailabilityOptionsResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

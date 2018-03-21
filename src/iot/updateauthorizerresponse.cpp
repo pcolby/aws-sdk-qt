@@ -101,3 +101,6 @@ void UpdateAuthorizerResponsePrivate::UpdateAuthorizerResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateAuthorizerResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

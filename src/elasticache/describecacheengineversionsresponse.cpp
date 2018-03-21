@@ -101,3 +101,6 @@ void DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheEngineVersionsResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutScalingPolicyResponsePrivate::PutScalingPolicyResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PutScalingPolicyResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

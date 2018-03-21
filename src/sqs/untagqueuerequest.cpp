@@ -123,3 +123,6 @@ UntagQueueRequestPrivate::UntagQueueRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

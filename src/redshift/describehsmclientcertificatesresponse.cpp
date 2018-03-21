@@ -101,3 +101,6 @@ void DescribeHsmClientCertificatesResponsePrivate::DescribeHsmClientCertificates
     Q_ASSERT(xml.name() == QLatin1String("DescribeHsmClientCertificatesResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateInstancesResponsePrivate::CreateInstancesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateInstancesResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -101,3 +101,6 @@ void ModifyLoadBalancerAttributesResponsePrivate::ModifyLoadBalancerAttributesRe
     Q_ASSERT(xml.name() == QLatin1String("ModifyLoadBalancerAttributesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

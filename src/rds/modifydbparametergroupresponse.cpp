@@ -101,3 +101,6 @@ void ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

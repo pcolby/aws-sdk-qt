@@ -123,3 +123,6 @@ ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

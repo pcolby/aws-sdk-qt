@@ -123,3 +123,6 @@ PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

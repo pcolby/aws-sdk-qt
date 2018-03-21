@@ -101,3 +101,6 @@ void RequestCertificateResponsePrivate::RequestCertificateResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("RequestCertificateResponse"));
     /// @todo
 }
+
+} // namespace ACM
+} // namespace AWS

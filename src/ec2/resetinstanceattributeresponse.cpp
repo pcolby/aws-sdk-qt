@@ -101,3 +101,6 @@ void ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ResetInstanceAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

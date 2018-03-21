@@ -101,3 +101,6 @@ void GetConsoleOutputResponsePrivate::GetConsoleOutputResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetConsoleOutputResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

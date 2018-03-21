@@ -123,3 +123,6 @@ SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTermina
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeApplicationResponsePrivate::DescribeApplicationResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

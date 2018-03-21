@@ -101,3 +101,6 @@ void DescribeBuildResponsePrivate::DescribeBuildResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeBuildResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

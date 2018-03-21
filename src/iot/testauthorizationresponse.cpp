@@ -101,3 +101,6 @@ void TestAuthorizationResponsePrivate::TestAuthorizationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("TestAuthorizationResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

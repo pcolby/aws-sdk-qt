@@ -123,3 +123,6 @@ DeleteGatewayResponseRequestPrivate::DeleteGatewayResponseRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

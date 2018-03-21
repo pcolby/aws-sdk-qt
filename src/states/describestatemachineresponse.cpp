@@ -101,3 +101,6 @@ void DescribeStateMachineResponsePrivate::DescribeStateMachineResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeStateMachineResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

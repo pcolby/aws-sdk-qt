@@ -101,3 +101,6 @@ void ListPullRequestsResponsePrivate::ListPullRequestsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListPullRequestsResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

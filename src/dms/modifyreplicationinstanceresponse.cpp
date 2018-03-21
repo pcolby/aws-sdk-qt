@@ -101,3 +101,6 @@ void ModifyReplicationInstanceResponsePrivate::ModifyReplicationInstanceResponse
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationInstanceResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

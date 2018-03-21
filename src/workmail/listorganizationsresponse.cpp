@@ -101,3 +101,6 @@ void ListOrganizationsResponsePrivate::ListOrganizationsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListOrganizationsResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

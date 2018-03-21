@@ -101,3 +101,6 @@ void RotateEncryptionKeyResponsePrivate::RotateEncryptionKeyResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("RotateEncryptionKeyResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

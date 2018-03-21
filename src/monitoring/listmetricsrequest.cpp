@@ -123,3 +123,6 @@ ListMetricsRequestPrivate::ListMetricsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateBrokerResponsePrivate::CreateBrokerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateBrokerResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

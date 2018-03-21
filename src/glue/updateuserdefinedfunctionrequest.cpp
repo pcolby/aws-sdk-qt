@@ -123,3 +123,6 @@ UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

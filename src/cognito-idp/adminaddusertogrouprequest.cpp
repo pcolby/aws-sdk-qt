@@ -123,3 +123,6 @@ AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

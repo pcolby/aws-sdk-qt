@@ -123,3 +123,6 @@ UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPriva
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

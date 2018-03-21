@@ -101,3 +101,6 @@ void UpdateFleetResponsePrivate::UpdateFleetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateFleetResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

@@ -101,3 +101,6 @@ void AssociateRoleToGroupResponsePrivate::AssociateRoleToGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AssociateRoleToGroupResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

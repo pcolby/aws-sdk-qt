@@ -123,3 +123,6 @@ GetLoggingOptionsRequestPrivate::GetLoggingOptionsRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

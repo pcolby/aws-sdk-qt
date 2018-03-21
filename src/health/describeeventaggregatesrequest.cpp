@@ -123,3 +123,6 @@ DescribeEventAggregatesRequestPrivate::DescribeEventAggregatesRequestPrivate(
 {
 
 }
+
+} // namespace Health
+} // namespace AWS

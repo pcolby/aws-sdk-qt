@@ -123,3 +123,6 @@ GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPri
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

@@ -101,3 +101,6 @@ void AttachLoadBalancerTargetGroupsResponsePrivate::AttachLoadBalancerTargetGrou
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancerTargetGroupsResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

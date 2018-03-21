@@ -101,3 +101,6 @@ void CreateConstraintResponsePrivate::CreateConstraintResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateConstraintResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

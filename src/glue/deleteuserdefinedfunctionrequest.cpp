@@ -123,3 +123,6 @@ DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

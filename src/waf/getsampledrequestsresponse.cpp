@@ -101,3 +101,6 @@ void GetSampledRequestsResponsePrivate::GetSampledRequestsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetSampledRequestsResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

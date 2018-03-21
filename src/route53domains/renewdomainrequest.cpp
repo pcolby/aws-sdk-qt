@@ -123,3 +123,6 @@ RenewDomainRequestPrivate::RenewDomainRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

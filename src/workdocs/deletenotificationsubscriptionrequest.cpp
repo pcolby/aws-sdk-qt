@@ -123,3 +123,6 @@ DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequ
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

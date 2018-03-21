@@ -123,3 +123,6 @@ DeleteObjectTaggingRequestPrivate::DeleteObjectTaggingRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -101,3 +101,6 @@ void InvokeEndpointResponsePrivate::InvokeEndpointResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("InvokeEndpointResponse"));
     /// @todo
 }
+
+} // namespace SageMakerRuntime
+} // namespace AWS

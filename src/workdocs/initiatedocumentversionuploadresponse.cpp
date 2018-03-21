@@ -101,3 +101,6 @@ void InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUpload
     Q_ASSERT(xml.name() == QLatin1String("InitiateDocumentVersionUploadResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

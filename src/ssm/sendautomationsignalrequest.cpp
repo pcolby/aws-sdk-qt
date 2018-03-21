@@ -123,3 +123,6 @@ SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -123,3 +123,6 @@ ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPriva
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

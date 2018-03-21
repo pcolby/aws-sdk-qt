@@ -101,3 +101,6 @@ void GetCoreDefinitionResponsePrivate::GetCoreDefinitionResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetCoreDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

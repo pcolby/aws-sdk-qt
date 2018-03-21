@@ -101,3 +101,6 @@ void RejectQualificationRequestResponsePrivate::RejectQualificationRequestRespon
     Q_ASSERT(xml.name() == QLatin1String("RejectQualificationRequestResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetAdmChannelResponsePrivate::GetAdmChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetAdmChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateDatabaseRequestPrivate::CreateDatabaseRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
 {
 
 }
+
+} // namespace Firehose
+} // namespace AWS

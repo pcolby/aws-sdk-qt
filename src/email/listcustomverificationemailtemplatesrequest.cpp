@@ -123,3 +123,6 @@ ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailT
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

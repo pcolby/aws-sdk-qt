@@ -123,3 +123,6 @@ CancelStepsRequestPrivate::CancelStepsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

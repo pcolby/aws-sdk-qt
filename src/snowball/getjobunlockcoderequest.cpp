@@ -123,3 +123,6 @@ GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

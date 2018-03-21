@@ -123,3 +123,6 @@ PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
 {
 
 }
+
+} // namespace XRay
+} // namespace AWS

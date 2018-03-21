@@ -123,3 +123,6 @@ DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

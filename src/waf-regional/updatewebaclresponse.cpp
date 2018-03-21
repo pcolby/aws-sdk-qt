@@ -101,3 +101,6 @@ void UpdateWebACLResponsePrivate::UpdateWebACLResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateWebACLResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

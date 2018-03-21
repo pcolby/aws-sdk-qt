@@ -123,3 +123,6 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPri
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

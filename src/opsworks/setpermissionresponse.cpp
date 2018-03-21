@@ -101,3 +101,6 @@ void SetPermissionResponsePrivate::SetPermissionResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SetPermissionResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

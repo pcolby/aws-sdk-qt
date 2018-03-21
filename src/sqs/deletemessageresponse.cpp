@@ -101,3 +101,6 @@ void DeleteMessageResponsePrivate::DeleteMessageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteMessageResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

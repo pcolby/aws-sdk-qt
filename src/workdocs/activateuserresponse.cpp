@@ -101,3 +101,6 @@ void ActivateUserResponsePrivate::ActivateUserResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ActivateUserResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

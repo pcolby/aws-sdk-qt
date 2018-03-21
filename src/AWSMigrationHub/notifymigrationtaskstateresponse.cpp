@@ -101,3 +101,6 @@ void NotifyMigrationTaskStateResponsePrivate::NotifyMigrationTaskStateResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("NotifyMigrationTaskStateResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

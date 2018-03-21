@@ -101,3 +101,6 @@ void DescribeSubnetsResponsePrivate::DescribeSubnetsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubnetsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetMethodResponsePrivate::GetMethodResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetMethodResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

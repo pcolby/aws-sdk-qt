@@ -101,3 +101,6 @@ void DeleteAccountAliasResponsePrivate::DeleteAccountAliasResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccountAliasResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateClusterSubnetGroupResponsePrivate::CreateClusterSubnetGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

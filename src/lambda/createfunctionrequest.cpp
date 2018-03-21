@@ -123,3 +123,6 @@ CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

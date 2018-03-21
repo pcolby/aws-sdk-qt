@@ -101,3 +101,6 @@ void ListWebACLsResponsePrivate::ListWebACLsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListWebACLsResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

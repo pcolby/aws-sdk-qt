@@ -101,3 +101,6 @@ void UpdatePullRequestTitleResponsePrivate::UpdatePullRequestTitleResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdatePullRequestTitleResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

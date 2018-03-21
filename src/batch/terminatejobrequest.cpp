@@ -123,3 +123,6 @@ TerminateJobRequestPrivate::TerminateJobRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

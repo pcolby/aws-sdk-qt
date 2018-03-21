@@ -123,3 +123,6 @@ AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscripti
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

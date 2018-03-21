@@ -101,3 +101,6 @@ void CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmen
     Q_ASSERT(xml.name() == QLatin1String("CreateAdditionalAssignmentsForHITResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

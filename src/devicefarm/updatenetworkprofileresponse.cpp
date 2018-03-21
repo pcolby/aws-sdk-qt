@@ -101,3 +101,6 @@ void UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UpdateNetworkProfileResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

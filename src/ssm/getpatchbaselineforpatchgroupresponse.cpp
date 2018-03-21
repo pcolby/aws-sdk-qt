@@ -101,3 +101,6 @@ void GetPatchBaselineForPatchGroupResponsePrivate::GetPatchBaselineForPatchGroup
     Q_ASSERT(xml.name() == QLatin1String("GetPatchBaselineForPatchGroupResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

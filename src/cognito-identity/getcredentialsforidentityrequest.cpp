@@ -123,3 +123,6 @@ GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

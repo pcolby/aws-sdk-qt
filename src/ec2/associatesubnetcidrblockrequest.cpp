@@ -123,3 +123,6 @@ AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

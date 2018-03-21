@@ -101,3 +101,6 @@ void UpdateDomainEntryResponsePrivate::UpdateDomainEntryResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainEntryResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

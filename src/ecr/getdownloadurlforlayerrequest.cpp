@@ -123,3 +123,6 @@ GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

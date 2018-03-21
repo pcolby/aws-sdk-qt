@@ -101,3 +101,6 @@ void SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("SetIpAddressTypeResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetTableVersionResponsePrivate::GetTableVersionResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetTableVersionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

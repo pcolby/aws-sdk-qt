@@ -101,3 +101,6 @@ void ListBrokersResponsePrivate::ListBrokersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListBrokersResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

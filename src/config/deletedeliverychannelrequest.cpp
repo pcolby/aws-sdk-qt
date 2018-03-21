@@ -123,3 +123,6 @@ DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

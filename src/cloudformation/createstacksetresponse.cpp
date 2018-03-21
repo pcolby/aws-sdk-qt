@@ -101,3 +101,6 @@ void CreateStackSetResponsePrivate::CreateStackSetResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateStackSetResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

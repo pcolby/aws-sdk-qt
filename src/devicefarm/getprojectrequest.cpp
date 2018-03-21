@@ -123,3 +123,6 @@ GetProjectRequestPrivate::GetProjectRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

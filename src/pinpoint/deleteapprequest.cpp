@@ -123,3 +123,6 @@ DeleteAppRequestPrivate::DeleteAppRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

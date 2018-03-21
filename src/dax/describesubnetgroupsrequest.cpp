@@ -123,3 +123,6 @@ DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

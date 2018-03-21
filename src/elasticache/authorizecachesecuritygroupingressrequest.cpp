@@ -123,3 +123,6 @@ AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIng
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListComplianceItemsResponsePrivate::ListComplianceItemsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListComplianceItemsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

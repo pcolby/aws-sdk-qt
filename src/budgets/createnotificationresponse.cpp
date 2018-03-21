@@ -101,3 +101,6 @@ void CreateNotificationResponsePrivate::CreateNotificationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateNotificationResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

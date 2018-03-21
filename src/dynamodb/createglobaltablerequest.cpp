@@ -123,3 +123,6 @@ CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

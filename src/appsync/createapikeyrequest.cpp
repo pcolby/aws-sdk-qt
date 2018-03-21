@@ -123,3 +123,6 @@ CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

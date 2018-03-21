@@ -123,3 +123,6 @@ UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

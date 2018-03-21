@@ -123,3 +123,6 @@ DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

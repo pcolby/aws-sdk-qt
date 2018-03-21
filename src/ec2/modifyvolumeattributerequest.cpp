@@ -123,3 +123,6 @@ ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

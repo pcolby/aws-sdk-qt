@@ -101,3 +101,6 @@ void AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AddThingToThingGroupResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

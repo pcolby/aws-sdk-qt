@@ -123,3 +123,6 @@ RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

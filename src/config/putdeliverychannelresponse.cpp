@@ -101,3 +101,6 @@ void PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PutDeliveryChannelResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

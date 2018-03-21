@@ -101,3 +101,6 @@ void CreatePatchBaselineResponsePrivate::CreatePatchBaselineResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreatePatchBaselineResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

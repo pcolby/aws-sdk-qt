@@ -123,3 +123,6 @@ PublishVersionRequestPrivate::PublishVersionRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

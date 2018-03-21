@@ -101,3 +101,6 @@ void DescribeVpcAttributeResponsePrivate::DescribeVpcAttributeResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

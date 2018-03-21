@@ -123,3 +123,6 @@ DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

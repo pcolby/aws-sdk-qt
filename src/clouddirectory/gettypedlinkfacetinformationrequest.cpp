@@ -123,3 +123,6 @@ GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestP
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

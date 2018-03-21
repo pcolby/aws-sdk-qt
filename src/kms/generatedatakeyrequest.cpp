@@ -123,3 +123,6 @@ GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

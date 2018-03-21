@@ -101,3 +101,6 @@ void AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("AddAttributesToFindingsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

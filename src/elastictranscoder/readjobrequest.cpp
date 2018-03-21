@@ -123,3 +123,6 @@ ReadJobRequestPrivate::ReadJobRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

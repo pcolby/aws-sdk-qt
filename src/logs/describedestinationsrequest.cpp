@@ -123,3 +123,6 @@ DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

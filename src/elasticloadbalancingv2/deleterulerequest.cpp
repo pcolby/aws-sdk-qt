@@ -123,3 +123,6 @@ DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

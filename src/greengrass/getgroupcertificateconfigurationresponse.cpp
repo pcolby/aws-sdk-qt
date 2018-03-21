@@ -101,3 +101,6 @@ void GetGroupCertificateConfigurationResponsePrivate::GetGroupCertificateConfigu
     Q_ASSERT(xml.name() == QLatin1String("GetGroupCertificateConfigurationResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

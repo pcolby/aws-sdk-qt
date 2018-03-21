@@ -101,3 +101,6 @@ void TagResourcesResponsePrivate::TagResourcesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TagResourcesResponse"));
     /// @todo
 }
+
+} // namespace ResourceGroupsTaggingAPI
+} // namespace AWS

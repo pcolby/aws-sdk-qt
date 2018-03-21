@@ -101,3 +101,6 @@ void DeleteDetectorResponsePrivate::DeleteDetectorResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteDetectorResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

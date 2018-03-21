@@ -101,3 +101,6 @@ void UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainCo
     Q_ASSERT(xml.name() == QLatin1String("UpdateElasticsearchDomainConfigResponse"));
     /// @todo
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

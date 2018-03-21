@@ -123,3 +123,6 @@ DescribeReplicationInstancesRequestPrivate::DescribeReplicationInstancesRequestP
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

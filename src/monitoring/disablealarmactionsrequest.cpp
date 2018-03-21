@@ -123,3 +123,6 @@ DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

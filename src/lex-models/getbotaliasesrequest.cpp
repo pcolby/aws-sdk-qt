@@ -123,3 +123,6 @@ GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

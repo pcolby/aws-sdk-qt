@@ -101,3 +101,6 @@ void CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutions
     Q_ASSERT(xml.name() == QLatin1String("CountClosedWorkflowExecutionsResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

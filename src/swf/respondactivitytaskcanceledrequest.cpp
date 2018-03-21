@@ -123,3 +123,6 @@ RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPri
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

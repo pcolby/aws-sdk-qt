@@ -101,3 +101,6 @@ void ModifyNetworkInterfaceAttributeResponsePrivate::ModifyNetworkInterfaceAttri
     Q_ASSERT(xml.name() == QLatin1String("ModifyNetworkInterfaceAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

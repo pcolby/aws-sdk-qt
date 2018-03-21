@@ -123,3 +123,6 @@ DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolio
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

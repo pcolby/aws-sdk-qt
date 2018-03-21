@@ -101,3 +101,6 @@ void PutPipelineDefinitionResponsePrivate::PutPipelineDefinitionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("PutPipelineDefinitionResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

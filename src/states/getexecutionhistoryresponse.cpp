@@ -101,3 +101,6 @@ void GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetExecutionHistoryResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

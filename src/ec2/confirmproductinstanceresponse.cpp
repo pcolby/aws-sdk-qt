@@ -101,3 +101,6 @@ void ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ConfirmProductInstanceResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

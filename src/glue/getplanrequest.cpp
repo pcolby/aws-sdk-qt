@@ -123,3 +123,6 @@ GetPlanRequestPrivate::GetPlanRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

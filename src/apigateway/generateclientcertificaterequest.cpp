@@ -123,3 +123,6 @@ GenerateClientCertificateRequestPrivate::GenerateClientCertificateRequestPrivate
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

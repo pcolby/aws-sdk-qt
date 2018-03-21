@@ -123,3 +123,6 @@ DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

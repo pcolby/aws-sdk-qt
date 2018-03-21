@@ -101,3 +101,6 @@ void AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResour
     Q_ASSERT(xml.name() == QLatin1String("AssociateTagOptionWithResourceResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

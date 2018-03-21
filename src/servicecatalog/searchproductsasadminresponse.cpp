@@ -101,3 +101,6 @@ void SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("SearchProductsAsAdminResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

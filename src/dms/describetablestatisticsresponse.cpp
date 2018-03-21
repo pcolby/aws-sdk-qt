@@ -101,3 +101,6 @@ void DescribeTableStatisticsResponsePrivate::DescribeTableStatisticsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeTableStatisticsResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

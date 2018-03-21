@@ -101,3 +101,6 @@ void DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeParameterGroupsResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

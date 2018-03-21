@@ -123,3 +123,6 @@ GetTriggerRequestPrivate::GetTriggerRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

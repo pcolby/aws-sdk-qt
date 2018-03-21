@@ -101,3 +101,6 @@ void SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("SetTerminationProtectionResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

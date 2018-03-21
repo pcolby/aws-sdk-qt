@@ -101,3 +101,6 @@ void MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("MoveAddressToVpcResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

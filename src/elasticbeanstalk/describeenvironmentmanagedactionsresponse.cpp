@@ -101,3 +101,6 @@ void DescribeEnvironmentManagedActionsResponsePrivate::DescribeEnvironmentManage
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentManagedActionsResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

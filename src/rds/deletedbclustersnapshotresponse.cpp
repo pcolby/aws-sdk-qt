@@ -101,3 +101,6 @@ void DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBClusterSnapshotResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

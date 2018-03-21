@@ -123,3 +123,6 @@ ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

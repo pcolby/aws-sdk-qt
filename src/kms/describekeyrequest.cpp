@@ -123,3 +123,6 @@ DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

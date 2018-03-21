@@ -123,3 +123,6 @@ DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

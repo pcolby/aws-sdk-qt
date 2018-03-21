@@ -123,3 +123,6 @@ ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermi
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

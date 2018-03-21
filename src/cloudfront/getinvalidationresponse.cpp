@@ -101,3 +101,6 @@ void GetInvalidationResponsePrivate::GetInvalidationResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetInvalidationResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

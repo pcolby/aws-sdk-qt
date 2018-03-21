@@ -101,3 +101,6 @@ void DeleteDocumentationPartResponsePrivate::DeleteDocumentationPartResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteDocumentationPartResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

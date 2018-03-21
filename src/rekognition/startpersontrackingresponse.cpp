@@ -101,3 +101,6 @@ void StartPersonTrackingResponsePrivate::StartPersonTrackingResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("StartPersonTrackingResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

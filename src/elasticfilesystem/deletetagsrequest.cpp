@@ -123,3 +123,6 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 {
 
 }
+
+} // namespace EFS
+} // namespace AWS

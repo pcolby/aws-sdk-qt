@@ -123,3 +123,6 @@ ListBuildsRequestPrivate::ListBuildsRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

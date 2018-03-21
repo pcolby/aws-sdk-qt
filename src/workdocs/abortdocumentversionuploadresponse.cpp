@@ -101,3 +101,6 @@ void AbortDocumentVersionUploadResponsePrivate::AbortDocumentVersionUploadRespon
     Q_ASSERT(xml.name() == QLatin1String("AbortDocumentVersionUploadResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeAliasRequestPrivate::DescribeAliasRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

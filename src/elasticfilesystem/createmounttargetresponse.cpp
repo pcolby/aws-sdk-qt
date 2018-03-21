@@ -101,3 +101,6 @@ void CreateMountTargetResponsePrivate::CreateMountTargetResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateMountTargetResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

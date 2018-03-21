@@ -123,3 +123,6 @@ SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

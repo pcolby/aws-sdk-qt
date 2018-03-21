@@ -123,3 +123,6 @@ ReadPresetRequestPrivate::ReadPresetRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

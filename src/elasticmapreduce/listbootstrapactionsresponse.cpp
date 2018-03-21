@@ -101,3 +101,6 @@ void ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListBootstrapActionsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

@@ -101,3 +101,6 @@ void InitiateJobResponsePrivate::InitiateJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("InitiateJobResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

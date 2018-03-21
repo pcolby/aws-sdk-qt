@@ -123,3 +123,6 @@ DescribeTargetGroupAttributesRequestPrivate::DescribeTargetGroupAttributesReques
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

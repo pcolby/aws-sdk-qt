@@ -101,3 +101,6 @@ void ListRolePoliciesResponsePrivate::ListRolePoliciesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListRolePoliciesResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

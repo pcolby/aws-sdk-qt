@@ -101,3 +101,6 @@ void ReplaceRouteResponsePrivate::ReplaceRouteResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ReplaceRouteResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

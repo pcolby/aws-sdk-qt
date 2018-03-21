@@ -123,3 +123,6 @@ TestRoleRequestPrivate::TestRoleRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

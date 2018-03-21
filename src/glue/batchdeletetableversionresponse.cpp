@@ -101,3 +101,6 @@ void BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteTableVersionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

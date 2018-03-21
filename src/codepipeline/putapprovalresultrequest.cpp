@@ -123,3 +123,6 @@ PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

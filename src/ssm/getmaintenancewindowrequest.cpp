@@ -123,3 +123,6 @@ GetMaintenanceWindowRequestPrivate::GetMaintenanceWindowRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

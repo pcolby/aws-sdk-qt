@@ -123,3 +123,6 @@ RebootClusterRequestPrivate::RebootClusterRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

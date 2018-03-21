@@ -123,3 +123,6 @@ GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

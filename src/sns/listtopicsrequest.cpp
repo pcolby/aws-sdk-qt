@@ -123,3 +123,6 @@ ListTopicsRequestPrivate::ListTopicsRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

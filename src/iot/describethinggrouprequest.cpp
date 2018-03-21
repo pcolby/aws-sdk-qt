@@ -123,3 +123,6 @@ DescribeThingGroupRequestPrivate::DescribeThingGroupRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

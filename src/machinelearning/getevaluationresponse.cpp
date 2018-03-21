@@ -101,3 +101,6 @@ void GetEvaluationResponsePrivate::GetEvaluationResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetEvaluationResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

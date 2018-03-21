@@ -101,3 +101,6 @@ void EstimateTemplateCostResponsePrivate::EstimateTemplateCostResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("EstimateTemplateCostResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

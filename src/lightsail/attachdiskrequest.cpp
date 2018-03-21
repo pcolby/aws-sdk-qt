@@ -123,3 +123,6 @@ AttachDiskRequestPrivate::AttachDiskRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

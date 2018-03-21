@@ -101,3 +101,6 @@ void SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("SetDefaultPolicyVersionResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

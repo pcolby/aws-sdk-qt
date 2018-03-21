@@ -123,3 +123,6 @@ GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
 {
 
 }
+
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS

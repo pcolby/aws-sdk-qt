@@ -123,3 +123,6 @@ CreateGroupRequestPrivate::CreateGroupRequestPrivate(
 {
 
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

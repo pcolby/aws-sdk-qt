@@ -101,3 +101,6 @@ void DescribeInputResponsePrivate::DescribeInputResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeInputResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

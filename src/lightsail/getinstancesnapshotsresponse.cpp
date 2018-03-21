@@ -101,3 +101,6 @@ void GetInstanceSnapshotsResponsePrivate::GetInstanceSnapshotsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceSnapshotsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

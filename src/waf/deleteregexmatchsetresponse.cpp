@@ -101,3 +101,6 @@ void DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteRegexMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

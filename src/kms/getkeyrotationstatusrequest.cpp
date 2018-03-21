@@ -123,3 +123,6 @@ GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

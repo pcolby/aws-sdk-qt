@@ -101,3 +101,6 @@ void RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsRe
     Q_ASSERT(xml.name() == QLatin1String("RemoveAttributesFromFindingsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

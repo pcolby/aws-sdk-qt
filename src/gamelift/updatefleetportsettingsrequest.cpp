@@ -123,3 +123,6 @@ UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

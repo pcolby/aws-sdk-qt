@@ -123,3 +123,6 @@ UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
 {
 
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

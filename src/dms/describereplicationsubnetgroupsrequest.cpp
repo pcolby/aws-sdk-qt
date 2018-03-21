@@ -123,3 +123,6 @@ DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRe
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

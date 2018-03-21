@@ -123,3 +123,6 @@ StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

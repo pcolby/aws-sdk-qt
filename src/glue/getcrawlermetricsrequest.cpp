@@ -123,3 +123,6 @@ GetCrawlerMetricsRequestPrivate::GetCrawlerMetricsRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

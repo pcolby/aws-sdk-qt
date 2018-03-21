@@ -123,3 +123,6 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteHostedZoneResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

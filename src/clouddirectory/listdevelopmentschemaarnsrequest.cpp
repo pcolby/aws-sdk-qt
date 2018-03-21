@@ -123,3 +123,6 @@ ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

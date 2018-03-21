@@ -101,3 +101,6 @@ void GetBucketNotificationConfigurationResponsePrivate::GetBucketNotificationCon
     Q_ASSERT(xml.name() == QLatin1String("GetBucketNotificationConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

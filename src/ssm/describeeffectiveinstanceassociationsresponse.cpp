@@ -101,3 +101,6 @@ void DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInst
     Q_ASSERT(xml.name() == QLatin1String("DescribeEffectiveInstanceAssociationsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

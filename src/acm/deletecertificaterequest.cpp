@@ -123,3 +123,6 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 {
 
 }
+
+} // namespace ACM
+} // namespace AWS

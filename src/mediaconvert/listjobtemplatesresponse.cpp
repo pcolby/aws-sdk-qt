@@ -101,3 +101,6 @@ void ListJobTemplatesResponsePrivate::ListJobTemplatesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListJobTemplatesResponse"));
     /// @todo
 }
+
+} // namespace MediaConvert
+} // namespace AWS

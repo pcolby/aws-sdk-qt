@@ -101,3 +101,6 @@ void ScheduleRunResponsePrivate::ScheduleRunResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ScheduleRunResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

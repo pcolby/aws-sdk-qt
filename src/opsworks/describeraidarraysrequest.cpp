@@ -123,3 +123,6 @@ DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

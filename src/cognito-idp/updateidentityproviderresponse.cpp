@@ -101,3 +101,6 @@ void UpdateIdentityProviderResponsePrivate::UpdateIdentityProviderResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateIdentityProviderResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

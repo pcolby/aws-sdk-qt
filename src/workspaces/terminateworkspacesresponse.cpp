@@ -101,3 +101,6 @@ void TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("TerminateWorkspacesResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

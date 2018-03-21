@@ -123,3 +123,6 @@ PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

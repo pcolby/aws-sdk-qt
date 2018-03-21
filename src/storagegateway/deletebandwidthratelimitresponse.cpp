@@ -101,3 +101,6 @@ void DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteBandwidthRateLimitResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteServiceLinkedRoleResponsePrivate::DeleteServiceLinkedRoleResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteServiceLinkedRoleResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

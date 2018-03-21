@@ -101,3 +101,6 @@ void ListJobsByStatusResponsePrivate::ListJobsByStatusResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListJobsByStatusResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

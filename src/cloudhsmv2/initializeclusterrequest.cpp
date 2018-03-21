@@ -123,3 +123,6 @@ InitializeClusterRequestPrivate::InitializeClusterRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

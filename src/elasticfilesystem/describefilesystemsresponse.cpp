@@ -101,3 +101,6 @@ void DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeFileSystemsResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

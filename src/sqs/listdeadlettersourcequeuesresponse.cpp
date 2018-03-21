@@ -101,3 +101,6 @@ void ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesRespon
     Q_ASSERT(xml.name() == QLatin1String("ListDeadLetterSourceQueuesResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

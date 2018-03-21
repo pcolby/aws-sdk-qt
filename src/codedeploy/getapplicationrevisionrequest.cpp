@@ -123,3 +123,6 @@ GetApplicationRevisionRequestPrivate::GetApplicationRevisionRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

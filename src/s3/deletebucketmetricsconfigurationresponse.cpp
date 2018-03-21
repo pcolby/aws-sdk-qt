@@ -101,3 +101,6 @@ void DeleteBucketMetricsConfigurationResponsePrivate::DeleteBucketMetricsConfigu
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketMetricsConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

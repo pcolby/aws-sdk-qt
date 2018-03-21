@@ -101,3 +101,6 @@ void DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomRespon
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDeviceFromRoomResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

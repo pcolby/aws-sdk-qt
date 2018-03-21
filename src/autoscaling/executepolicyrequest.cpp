@@ -123,3 +123,6 @@ ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

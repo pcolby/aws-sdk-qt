@@ -101,3 +101,6 @@ void CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponse
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformApplicationResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

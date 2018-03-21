@@ -101,3 +101,6 @@ void UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControl
     Q_ASSERT(xml.name() == QLatin1String("UpdateNumberOfDomainControllersResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

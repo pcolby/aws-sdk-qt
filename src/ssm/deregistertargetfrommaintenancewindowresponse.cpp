@@ -101,3 +101,6 @@ void DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromM
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTargetFromMaintenanceWindowResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

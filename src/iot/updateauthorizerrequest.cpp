@@ -123,3 +123,6 @@ UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

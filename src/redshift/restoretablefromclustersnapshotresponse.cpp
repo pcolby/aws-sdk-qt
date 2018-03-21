@@ -101,3 +101,6 @@ void RestoreTableFromClusterSnapshotResponsePrivate::RestoreTableFromClusterSnap
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableFromClusterSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

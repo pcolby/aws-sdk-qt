@@ -123,3 +123,6 @@ DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

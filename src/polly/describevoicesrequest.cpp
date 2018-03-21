@@ -123,3 +123,6 @@ DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
 {
 
 }
+
+} // namespace Polly
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateLoggerDefinitionRequestPrivate::CreateLoggerDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

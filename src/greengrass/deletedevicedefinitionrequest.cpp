@@ -123,3 +123,6 @@ DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

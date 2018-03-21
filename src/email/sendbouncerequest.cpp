@@ -123,3 +123,6 @@ SendBounceRequestPrivate::SendBounceRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

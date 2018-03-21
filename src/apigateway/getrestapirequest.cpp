@@ -123,3 +123,6 @@ GetRestApiRequestPrivate::GetRestApiRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

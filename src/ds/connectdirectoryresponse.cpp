@@ -101,3 +101,6 @@ void ConnectDirectoryResponsePrivate::ConnectDirectoryResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ConnectDirectoryResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

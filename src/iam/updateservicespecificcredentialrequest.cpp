@@ -123,3 +123,6 @@ UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRe
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void UploadDocumentsResponsePrivate::UploadDocumentsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("UploadDocumentsResponse"));
     /// @todo
 }
+
+} // namespace CloudSearchDomain
+} // namespace AWS

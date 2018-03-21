@@ -123,3 +123,6 @@ StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

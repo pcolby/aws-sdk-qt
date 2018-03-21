@@ -101,3 +101,6 @@ void DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedDBInstancesResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeThingResponsePrivate::DescribeThingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeThingResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

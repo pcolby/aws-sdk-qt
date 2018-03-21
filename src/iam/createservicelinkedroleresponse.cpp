@@ -101,3 +101,6 @@ void CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateServiceLinkedRoleResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

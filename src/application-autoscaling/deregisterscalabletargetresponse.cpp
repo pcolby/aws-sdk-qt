@@ -101,3 +101,6 @@ void DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeregisterScalableTargetResponse"));
     /// @todo
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

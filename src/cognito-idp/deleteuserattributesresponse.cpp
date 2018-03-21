@@ -101,3 +101,6 @@ void DeleteUserAttributesResponsePrivate::DeleteUserAttributesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserAttributesResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

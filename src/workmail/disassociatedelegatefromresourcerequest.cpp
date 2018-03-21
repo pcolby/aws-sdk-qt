@@ -123,3 +123,6 @@ DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResource
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

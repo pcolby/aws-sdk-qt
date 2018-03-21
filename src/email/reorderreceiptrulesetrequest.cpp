@@ -123,3 +123,6 @@ ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

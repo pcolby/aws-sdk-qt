@@ -101,3 +101,6 @@ void DescribeDestinationsResponsePrivate::DescribeDestinationsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeDestinationsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

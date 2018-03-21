@@ -101,3 +101,6 @@ void DisableStageTransitionResponsePrivate::DisableStageTransitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DisableStageTransitionResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

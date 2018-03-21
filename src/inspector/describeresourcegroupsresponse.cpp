@@ -101,3 +101,6 @@ void DescribeResourceGroupsResponsePrivate::DescribeResourceGroupsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourceGroupsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

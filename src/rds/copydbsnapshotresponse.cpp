@@ -101,3 +101,6 @@ void CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CopyDBSnapshotResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

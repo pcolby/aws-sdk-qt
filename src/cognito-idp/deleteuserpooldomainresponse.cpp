@@ -101,3 +101,6 @@ void DeleteUserPoolDomainResponsePrivate::DeleteUserPoolDomainResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserPoolDomainResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

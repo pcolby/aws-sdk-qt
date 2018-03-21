@@ -123,3 +123,6 @@ DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

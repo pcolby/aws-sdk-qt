@@ -123,3 +123,6 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDBStreams
+} // namespace AWS

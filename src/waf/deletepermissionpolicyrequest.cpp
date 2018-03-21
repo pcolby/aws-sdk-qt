@@ -123,3 +123,6 @@ DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

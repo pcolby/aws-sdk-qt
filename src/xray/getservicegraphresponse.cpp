@@ -101,3 +101,6 @@ void GetServiceGraphResponsePrivate::GetServiceGraphResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetServiceGraphResponse"));
     /// @todo
 }
+
+} // namespace XRay
+} // namespace AWS

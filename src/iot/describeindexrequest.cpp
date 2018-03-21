@@ -123,3 +123,6 @@ DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

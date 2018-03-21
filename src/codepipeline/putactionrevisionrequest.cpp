@@ -123,3 +123,6 @@ PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

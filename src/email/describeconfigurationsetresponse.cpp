@@ -101,3 +101,6 @@ void DescribeConfigurationSetResponsePrivate::DescribeConfigurationSetResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationSetResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

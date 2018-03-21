@@ -101,3 +101,6 @@ void GetBucketReplicationResponsePrivate::GetBucketReplicationResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetBucketReplicationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

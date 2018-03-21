@@ -123,3 +123,6 @@ GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

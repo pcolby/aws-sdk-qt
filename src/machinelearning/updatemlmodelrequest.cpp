@@ -123,3 +123,6 @@ UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

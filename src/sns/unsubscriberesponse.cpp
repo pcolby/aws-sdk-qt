@@ -101,3 +101,6 @@ void UnsubscribeResponsePrivate::UnsubscribeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

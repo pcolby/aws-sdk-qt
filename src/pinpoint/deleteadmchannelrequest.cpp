@@ -123,3 +123,6 @@ DeleteAdmChannelRequestPrivate::DeleteAdmChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

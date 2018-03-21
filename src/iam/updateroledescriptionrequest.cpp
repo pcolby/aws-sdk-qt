@@ -123,3 +123,6 @@ UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

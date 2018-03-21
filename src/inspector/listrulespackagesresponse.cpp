@@ -101,3 +101,6 @@ void ListRulesPackagesResponsePrivate::ListRulesPackagesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListRulesPackagesResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

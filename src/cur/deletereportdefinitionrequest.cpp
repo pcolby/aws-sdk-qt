@@ -123,3 +123,6 @@ DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace CostandUsageReportService
+} // namespace AWS

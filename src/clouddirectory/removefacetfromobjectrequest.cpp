@@ -123,3 +123,6 @@ RemoveFacetFromObjectRequestPrivate::RemoveFacetFromObjectRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

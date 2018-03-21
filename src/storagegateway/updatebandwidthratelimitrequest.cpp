@@ -123,3 +123,6 @@ UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

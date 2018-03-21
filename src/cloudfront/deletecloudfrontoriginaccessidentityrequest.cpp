@@ -123,3 +123,6 @@ DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccess
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

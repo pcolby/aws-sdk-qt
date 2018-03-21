@@ -101,3 +101,6 @@ void CopyFpgaImageResponsePrivate::CopyFpgaImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CopyFpgaImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void StartSchemaCreationResponsePrivate::StartSchemaCreationResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("StartSchemaCreationResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

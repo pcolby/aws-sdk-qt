@@ -101,3 +101,6 @@ void DeleteLoginProfileResponsePrivate::DeleteLoginProfileResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoginProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

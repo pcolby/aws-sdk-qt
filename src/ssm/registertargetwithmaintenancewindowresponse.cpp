@@ -101,3 +101,6 @@ void RegisterTargetWithMaintenanceWindowResponsePrivate::RegisterTargetWithMaint
     Q_ASSERT(xml.name() == QLatin1String("RegisterTargetWithMaintenanceWindowResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

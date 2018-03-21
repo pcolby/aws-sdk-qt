@@ -123,3 +123,6 @@ DeleteLagRequestPrivate::DeleteLagRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

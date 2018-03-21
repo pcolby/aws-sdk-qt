@@ -101,3 +101,6 @@ void GetSubscriptionStateResponsePrivate::GetSubscriptionStateResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetSubscriptionStateResponse"));
     /// @todo
 }
+
+} // namespace Shield
+} // namespace AWS

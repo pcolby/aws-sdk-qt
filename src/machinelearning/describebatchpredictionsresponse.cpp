@@ -101,3 +101,6 @@ void DescribeBatchPredictionsResponsePrivate::DescribeBatchPredictionsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeBatchPredictionsResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

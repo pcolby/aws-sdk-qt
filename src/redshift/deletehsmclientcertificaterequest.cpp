@@ -123,3 +123,6 @@ DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPriva
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -123,3 +123,6 @@ SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

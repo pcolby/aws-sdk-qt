@@ -101,3 +101,6 @@ void UpdateAliasResponsePrivate::UpdateAliasResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateAliasResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

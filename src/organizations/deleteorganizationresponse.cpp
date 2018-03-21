@@ -101,3 +101,6 @@ void DeleteOrganizationResponsePrivate::DeleteOrganizationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

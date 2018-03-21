@@ -123,3 +123,6 @@ GetBucketAclRequestPrivate::GetBucketAclRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

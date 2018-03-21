@@ -123,3 +123,6 @@ AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

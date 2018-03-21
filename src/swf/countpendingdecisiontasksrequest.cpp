@@ -123,3 +123,6 @@ CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

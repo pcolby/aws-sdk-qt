@@ -123,3 +123,6 @@ CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

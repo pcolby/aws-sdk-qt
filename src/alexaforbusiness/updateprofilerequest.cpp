@@ -123,3 +123,6 @@ UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

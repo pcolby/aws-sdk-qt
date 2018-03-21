@@ -101,3 +101,6 @@ void TagStreamResponsePrivate::TagStreamResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TagStreamResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

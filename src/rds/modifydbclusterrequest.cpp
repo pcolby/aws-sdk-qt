@@ -123,3 +123,6 @@ ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetParametersForImportResponsePrivate::GetParametersForImportResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetParametersForImportResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

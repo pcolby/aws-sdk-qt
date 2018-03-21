@@ -101,3 +101,6 @@ void DetachVolumeResponsePrivate::DetachVolumeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DetachVolumeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

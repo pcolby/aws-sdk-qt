@@ -101,3 +101,6 @@ void SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("SubscribeToDatasetResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

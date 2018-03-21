@@ -101,3 +101,6 @@ void GetBlueprintsResponsePrivate::GetBlueprintsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetBlueprintsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

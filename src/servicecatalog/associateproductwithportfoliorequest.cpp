@@ -123,3 +123,6 @@ AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioReques
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

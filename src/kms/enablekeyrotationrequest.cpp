@@ -123,3 +123,6 @@ EnableKeyRotationRequestPrivate::EnableKeyRotationRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

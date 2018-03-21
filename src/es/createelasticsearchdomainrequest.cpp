@@ -123,3 +123,6 @@ CreateElasticsearchDomainRequestPrivate::CreateElasticsearchDomainRequestPrivate
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

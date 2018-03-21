@@ -123,3 +123,6 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

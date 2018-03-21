@@ -101,3 +101,6 @@ void DeleteBotChannelAssociationResponsePrivate::DeleteBotChannelAssociationResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteBotChannelAssociationResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

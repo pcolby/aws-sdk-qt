@@ -123,3 +123,6 @@ BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

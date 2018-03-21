@@ -123,3 +123,6 @@ SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

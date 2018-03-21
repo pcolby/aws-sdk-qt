@@ -101,3 +101,6 @@ void ListStackResourcesResponsePrivate::ListStackResourcesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListStackResourcesResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

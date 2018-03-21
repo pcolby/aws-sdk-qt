@@ -101,3 +101,6 @@ void DescribeInstancePatchStatesResponsePrivate::DescribeInstancePatchStatesResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstancePatchStatesResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

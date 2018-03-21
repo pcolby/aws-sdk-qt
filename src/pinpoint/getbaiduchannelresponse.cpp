@@ -101,3 +101,6 @@ void GetBaiduChannelResponsePrivate::GetBaiduChannelResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetBaiduChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

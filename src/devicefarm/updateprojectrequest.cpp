@@ -123,3 +123,6 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

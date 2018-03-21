@@ -123,3 +123,6 @@ DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

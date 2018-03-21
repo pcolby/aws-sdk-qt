@@ -101,3 +101,6 @@ void ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationRe
     Q_ASSERT(xml.name() == QLatin1String("ReplaceNetworkAclAssociationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

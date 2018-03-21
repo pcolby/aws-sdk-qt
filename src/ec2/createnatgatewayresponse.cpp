@@ -101,3 +101,6 @@ void CreateNatGatewayResponsePrivate::CreateNatGatewayResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateNatGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

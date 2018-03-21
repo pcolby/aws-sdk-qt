@@ -101,3 +101,6 @@ void GetDataRetrievalPolicyResponsePrivate::GetDataRetrievalPolicyResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetDataRetrievalPolicyResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

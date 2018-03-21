@@ -123,3 +123,6 @@ CreateTypedLinkFacetRequestPrivate::CreateTypedLinkFacetRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

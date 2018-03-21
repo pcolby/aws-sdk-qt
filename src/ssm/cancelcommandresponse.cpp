@@ -101,3 +101,6 @@ void CancelCommandResponsePrivate::CancelCommandResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CancelCommandResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateSchemaRequestPrivate::UpdateSchemaRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

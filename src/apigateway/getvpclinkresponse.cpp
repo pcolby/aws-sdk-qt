@@ -101,3 +101,6 @@ void GetVpcLinkResponsePrivate::GetVpcLinkResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetVpcLinkResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

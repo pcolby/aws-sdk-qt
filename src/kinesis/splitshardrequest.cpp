@@ -123,3 +123,6 @@ SplitShardRequestPrivate::SplitShardRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

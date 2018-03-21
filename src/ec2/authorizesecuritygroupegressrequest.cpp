@@ -123,3 +123,6 @@ AuthorizeSecurityGroupEgressRequestPrivate::AuthorizeSecurityGroupEgressRequestP
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

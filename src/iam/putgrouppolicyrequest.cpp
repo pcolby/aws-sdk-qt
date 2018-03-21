@@ -123,3 +123,6 @@ PutGroupPolicyRequestPrivate::PutGroupPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

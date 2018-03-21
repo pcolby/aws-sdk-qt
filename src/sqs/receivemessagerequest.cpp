@@ -123,3 +123,6 @@ ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

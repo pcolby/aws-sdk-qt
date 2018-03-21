@@ -101,3 +101,6 @@ void DescribeEventAggregatesResponsePrivate::DescribeEventAggregatesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventAggregatesResponse"));
     /// @todo
 }
+
+} // namespace Health
+} // namespace AWS

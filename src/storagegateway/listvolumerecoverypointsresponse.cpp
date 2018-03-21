@@ -101,3 +101,6 @@ void ListVolumeRecoveryPointsResponsePrivate::ListVolumeRecoveryPointsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListVolumeRecoveryPointsResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

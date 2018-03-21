@@ -123,3 +123,6 @@ StopExecutionRequestPrivate::StopExecutionRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

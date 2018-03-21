@@ -123,3 +123,6 @@ ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

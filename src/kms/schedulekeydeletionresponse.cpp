@@ -101,3 +101,6 @@ void ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ScheduleKeyDeletionResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

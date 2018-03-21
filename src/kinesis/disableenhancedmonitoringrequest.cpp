@@ -123,3 +123,6 @@ DisableEnhancedMonitoringRequestPrivate::DisableEnhancedMonitoringRequestPrivate
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskA
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

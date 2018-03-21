@@ -123,3 +123,6 @@ ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

@@ -101,3 +101,6 @@ void StartExportTaskResponsePrivate::StartExportTaskResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("StartExportTaskResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListProvisionedCapacityResponsePrivate::ListProvisionedCapacityResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListProvisionedCapacityResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

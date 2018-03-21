@@ -101,3 +101,6 @@ void StopStreamEncryptionResponsePrivate::StopStreamEncryptionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("StopStreamEncryptionResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

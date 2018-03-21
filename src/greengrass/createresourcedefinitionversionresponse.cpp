@@ -101,3 +101,6 @@ void CreateResourceDefinitionVersionResponsePrivate::CreateResourceDefinitionVer
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceDefinitionVersionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

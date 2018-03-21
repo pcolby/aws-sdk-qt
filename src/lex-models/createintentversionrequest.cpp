@@ -123,3 +123,6 @@ CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

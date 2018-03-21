@@ -123,3 +123,6 @@ UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -123,3 +123,6 @@ GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

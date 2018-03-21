@@ -101,3 +101,6 @@ void ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListVersionsByFunctionResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

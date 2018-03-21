@@ -123,3 +123,6 @@ DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

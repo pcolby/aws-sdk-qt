@@ -101,3 +101,6 @@ void AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AdminSetUserSettingsResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

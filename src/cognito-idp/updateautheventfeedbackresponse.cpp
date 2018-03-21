@@ -101,3 +101,6 @@ void UpdateAuthEventFeedbackResponsePrivate::UpdateAuthEventFeedbackResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UpdateAuthEventFeedbackResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

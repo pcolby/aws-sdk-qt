@@ -123,3 +123,6 @@ AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

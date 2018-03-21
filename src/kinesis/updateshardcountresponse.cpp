@@ -101,3 +101,6 @@ void UpdateShardCountResponsePrivate::UpdateShardCountResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateShardCountResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

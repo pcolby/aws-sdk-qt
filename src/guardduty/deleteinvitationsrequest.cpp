@@ -123,3 +123,6 @@ DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

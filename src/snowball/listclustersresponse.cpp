@@ -101,3 +101,6 @@ void ListClustersResponsePrivate::ListClustersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListClustersResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

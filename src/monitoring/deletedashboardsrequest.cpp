@@ -123,3 +123,6 @@ DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

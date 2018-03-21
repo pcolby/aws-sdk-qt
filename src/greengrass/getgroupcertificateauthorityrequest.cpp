@@ -123,3 +123,6 @@ GetGroupCertificateAuthorityRequestPrivate::GetGroupCertificateAuthorityRequestP
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

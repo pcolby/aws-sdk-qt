@@ -101,3 +101,6 @@ void GetDomainsResponsePrivate::GetDomainsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetDomainsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

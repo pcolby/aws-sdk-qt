@@ -123,3 +123,6 @@ AttachObjectRequestPrivate::AttachObjectRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

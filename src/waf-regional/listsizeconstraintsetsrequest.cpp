@@ -123,3 +123,6 @@ ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

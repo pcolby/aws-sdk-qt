@@ -101,3 +101,6 @@ void DeleteRuleGroupResponsePrivate::DeleteRuleGroupResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteRuleGroupResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

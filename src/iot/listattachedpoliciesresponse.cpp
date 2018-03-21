@@ -101,3 +101,6 @@ void ListAttachedPoliciesResponsePrivate::ListAttachedPoliciesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListAttachedPoliciesResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

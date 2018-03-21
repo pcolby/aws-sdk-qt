@@ -101,3 +101,6 @@ void DisableDirectoryResponsePrivate::DisableDirectoryResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DisableDirectoryResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

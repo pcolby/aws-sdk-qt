@@ -101,3 +101,6 @@ void PutBucketRequestPaymentResponsePrivate::PutBucketRequestPaymentResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("PutBucketRequestPaymentResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

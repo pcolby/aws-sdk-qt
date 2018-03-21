@@ -123,3 +123,6 @@ PutBucketReplicationRequestPrivate::PutBucketReplicationRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

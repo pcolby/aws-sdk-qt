@@ -101,3 +101,6 @@ void DeleteBudgetResponsePrivate::DeleteBudgetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteBudgetResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

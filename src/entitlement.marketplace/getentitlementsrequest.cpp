@@ -123,3 +123,6 @@ GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
 {
 
 }
+
+} // namespace MarketplaceEntitlementService
+} // namespace AWS

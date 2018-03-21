@@ -101,3 +101,6 @@ void DescribeMovingAddressesResponsePrivate::DescribeMovingAddressesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeMovingAddressesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

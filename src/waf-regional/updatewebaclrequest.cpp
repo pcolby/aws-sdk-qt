@@ -123,3 +123,6 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -123,3 +123,6 @@ DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

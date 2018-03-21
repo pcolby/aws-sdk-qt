@@ -101,3 +101,6 @@ void GetKeyPolicyResponsePrivate::GetKeyPolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetKeyPolicyResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

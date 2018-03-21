@@ -123,3 +123,6 @@ RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationReques
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

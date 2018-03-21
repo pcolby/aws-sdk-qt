@@ -123,3 +123,6 @@ DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

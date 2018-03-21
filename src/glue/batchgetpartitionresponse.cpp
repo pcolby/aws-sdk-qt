@@ -101,3 +101,6 @@ void BatchGetPartitionResponsePrivate::BatchGetPartitionResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("BatchGetPartitionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

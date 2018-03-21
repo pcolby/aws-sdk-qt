@@ -101,3 +101,6 @@ void ListItemsResponsePrivate::ListItemsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListItemsResponse"));
     /// @todo
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

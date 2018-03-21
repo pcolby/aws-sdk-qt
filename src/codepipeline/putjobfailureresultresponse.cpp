@@ -101,3 +101,6 @@ void PutJobFailureResultResponsePrivate::PutJobFailureResultResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("PutJobFailureResultResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

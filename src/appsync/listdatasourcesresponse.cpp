@@ -101,3 +101,6 @@ void ListDataSourcesResponsePrivate::ListDataSourcesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListDataSourcesResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

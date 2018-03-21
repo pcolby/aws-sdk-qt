@@ -101,3 +101,6 @@ void CreateClusterSecurityGroupResponsePrivate::CreateClusterSecurityGroupRespon
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeRulesPackagesResponsePrivate::DescribeRulesPackagesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeRulesPackagesResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

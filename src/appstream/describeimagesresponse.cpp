@@ -101,3 +101,6 @@ void DescribeImagesResponsePrivate::DescribeImagesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeImagesResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

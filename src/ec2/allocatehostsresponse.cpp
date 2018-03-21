@@ -101,3 +101,6 @@ void AllocateHostsResponsePrivate::AllocateHostsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AllocateHostsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

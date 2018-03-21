@@ -123,3 +123,6 @@ GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

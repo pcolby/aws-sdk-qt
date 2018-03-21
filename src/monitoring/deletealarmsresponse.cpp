@@ -101,3 +101,6 @@ void DeleteAlarmsResponsePrivate::DeleteAlarmsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteAlarmsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

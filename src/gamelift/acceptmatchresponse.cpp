@@ -101,3 +101,6 @@ void AcceptMatchResponsePrivate::AcceptMatchResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AcceptMatchResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteDashboardsResponsePrivate::DeleteDashboardsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteDashboardsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

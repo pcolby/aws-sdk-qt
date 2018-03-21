@@ -101,3 +101,6 @@ void DescribeAutoScalingNotificationTypesResponsePrivate::DescribeAutoScalingNot
     Q_ASSERT(xml.name() == QLatin1String("DescribeAutoScalingNotificationTypesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

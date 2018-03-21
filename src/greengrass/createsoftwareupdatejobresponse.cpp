@@ -101,3 +101,6 @@ void CreateSoftwareUpdateJobResponsePrivate::CreateSoftwareUpdateJobResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateSoftwareUpdateJobResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

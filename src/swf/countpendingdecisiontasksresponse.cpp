@@ -101,3 +101,6 @@ void CountPendingDecisionTasksResponsePrivate::CountPendingDecisionTasksResponse
     Q_ASSERT(xml.name() == QLatin1String("CountPendingDecisionTasksResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

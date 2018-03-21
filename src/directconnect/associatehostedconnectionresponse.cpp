@@ -101,3 +101,6 @@ void AssociateHostedConnectionResponsePrivate::AssociateHostedConnectionResponse
     Q_ASSERT(xml.name() == QLatin1String("AssociateHostedConnectionResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

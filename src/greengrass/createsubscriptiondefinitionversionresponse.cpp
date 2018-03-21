@@ -101,3 +101,6 @@ void CreateSubscriptionDefinitionVersionResponsePrivate::CreateSubscriptionDefin
     Q_ASSERT(xml.name() == QLatin1String("CreateSubscriptionDefinitionVersionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

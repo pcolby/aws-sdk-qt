@@ -101,3 +101,6 @@ void DescribeHapgResponsePrivate::DescribeHapgResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeHapgResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

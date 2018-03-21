@@ -101,3 +101,6 @@ void DeleteSecurityGroupResponsePrivate::DeleteSecurityGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

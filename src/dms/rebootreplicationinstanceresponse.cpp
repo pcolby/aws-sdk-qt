@@ -101,3 +101,6 @@ void RebootReplicationInstanceResponsePrivate::RebootReplicationInstanceResponse
     Q_ASSERT(xml.name() == QLatin1String("RebootReplicationInstanceResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

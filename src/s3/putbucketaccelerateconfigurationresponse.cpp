@@ -101,3 +101,6 @@ void PutBucketAccelerateConfigurationResponsePrivate::PutBucketAccelerateConfigu
     Q_ASSERT(xml.name() == QLatin1String("PutBucketAccelerateConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

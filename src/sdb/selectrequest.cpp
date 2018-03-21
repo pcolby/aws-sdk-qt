@@ -123,3 +123,6 @@ SelectRequestPrivate::SelectRequestPrivate(
 {
 
 }
+
+} // namespace SimpleDB
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateConfigurationResponsePrivate::UpdateConfigurationResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

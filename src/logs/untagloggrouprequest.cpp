@@ -123,3 +123,6 @@ UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

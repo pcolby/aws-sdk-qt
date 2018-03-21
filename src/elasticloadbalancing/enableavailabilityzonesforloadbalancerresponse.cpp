@@ -101,3 +101,6 @@ void EnableAvailabilityZonesForLoadBalancerResponsePrivate::EnableAvailabilityZo
     Q_ASSERT(xml.name() == QLatin1String("EnableAvailabilityZonesForLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

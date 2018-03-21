@@ -123,3 +123,6 @@ AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLog
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

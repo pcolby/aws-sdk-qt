@@ -123,3 +123,6 @@ StopRunRequestPrivate::StopRunRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

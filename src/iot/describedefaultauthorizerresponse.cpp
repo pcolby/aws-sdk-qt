@@ -101,3 +101,6 @@ void DescribeDefaultAuthorizerResponsePrivate::DescribeDefaultAuthorizerResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeDefaultAuthorizerResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

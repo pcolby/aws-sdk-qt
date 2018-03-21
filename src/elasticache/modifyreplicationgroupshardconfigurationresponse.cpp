@@ -101,3 +101,6 @@ void ModifyReplicationGroupShardConfigurationResponsePrivate::ModifyReplicationG
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationGroupShardConfigurationResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

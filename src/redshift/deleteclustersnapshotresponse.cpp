@@ -101,3 +101,6 @@ void DeleteClusterSnapshotResponsePrivate::DeleteClusterSnapshotResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

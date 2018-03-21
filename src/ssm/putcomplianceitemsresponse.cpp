@@ -101,3 +101,6 @@ void PutComplianceItemsResponsePrivate::PutComplianceItemsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PutComplianceItemsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

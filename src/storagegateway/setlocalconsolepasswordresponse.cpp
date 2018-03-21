@@ -101,3 +101,6 @@ void SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("SetLocalConsolePasswordResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

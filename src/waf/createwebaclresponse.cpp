@@ -101,3 +101,6 @@ void CreateWebACLResponsePrivate::CreateWebACLResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateWebACLResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

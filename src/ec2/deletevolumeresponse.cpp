@@ -101,3 +101,6 @@ void DeleteVolumeResponsePrivate::DeleteVolumeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteVolumeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

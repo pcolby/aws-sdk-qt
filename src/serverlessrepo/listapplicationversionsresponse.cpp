@@ -101,3 +101,6 @@ void ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListApplicationVersionsResponse"));
     /// @todo
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

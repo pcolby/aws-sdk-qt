@@ -123,3 +123,6 @@ DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

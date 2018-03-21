@@ -101,3 +101,6 @@ void GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAt
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityVerificationAttributesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

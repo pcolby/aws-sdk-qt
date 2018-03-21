@@ -123,3 +123,6 @@ MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

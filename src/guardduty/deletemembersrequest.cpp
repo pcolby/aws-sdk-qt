@@ -123,3 +123,6 @@ DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

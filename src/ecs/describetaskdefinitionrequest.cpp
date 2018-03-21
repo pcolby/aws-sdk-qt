@@ -123,3 +123,6 @@ DescribeTaskDefinitionRequestPrivate::DescribeTaskDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

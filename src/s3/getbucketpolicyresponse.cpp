@@ -101,3 +101,6 @@ void GetBucketPolicyResponsePrivate::GetBucketPolicyResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetBucketPolicyResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

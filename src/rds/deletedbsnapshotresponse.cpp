@@ -101,3 +101,6 @@ void DeleteDBSnapshotResponsePrivate::DeleteDBSnapshotResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBSnapshotResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

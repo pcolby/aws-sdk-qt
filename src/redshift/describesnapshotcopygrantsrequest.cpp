@@ -123,3 +123,6 @@ DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPriva
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

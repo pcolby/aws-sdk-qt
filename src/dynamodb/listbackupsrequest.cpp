@@ -123,3 +123,6 @@ ListBackupsRequestPrivate::ListBackupsRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

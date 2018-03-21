@@ -123,3 +123,6 @@ GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCode
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

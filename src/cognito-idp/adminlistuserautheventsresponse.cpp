@@ -101,3 +101,6 @@ void AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("AdminListUserAuthEventsResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

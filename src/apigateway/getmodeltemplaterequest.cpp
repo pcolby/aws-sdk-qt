@@ -123,3 +123,6 @@ GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

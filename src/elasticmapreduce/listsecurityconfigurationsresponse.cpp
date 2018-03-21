@@ -101,3 +101,6 @@ void ListSecurityConfigurationsResponsePrivate::ListSecurityConfigurationsRespon
     Q_ASSERT(xml.name() == QLatin1String("ListSecurityConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

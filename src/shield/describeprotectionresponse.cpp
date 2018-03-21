@@ -101,3 +101,6 @@ void DescribeProtectionResponsePrivate::DescribeProtectionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeProtectionResponse"));
     /// @todo
 }
+
+} // namespace Shield
+} // namespace AWS

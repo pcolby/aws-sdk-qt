@@ -101,3 +101,6 @@ void PurchaseOfferingResponsePrivate::PurchaseOfferingResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PurchaseOfferingResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

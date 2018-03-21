@@ -123,3 +123,6 @@ DetectEntitiesRequestPrivate::DetectEntitiesRequestPrivate(
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

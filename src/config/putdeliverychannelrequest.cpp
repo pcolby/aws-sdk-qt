@@ -123,3 +123,6 @@ PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

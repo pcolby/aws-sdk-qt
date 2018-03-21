@@ -101,3 +101,6 @@ void RestoreDBInstanceToPointInTimeResponsePrivate::RestoreDBInstanceToPointInTi
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceToPointInTimeResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

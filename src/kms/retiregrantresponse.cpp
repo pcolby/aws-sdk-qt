@@ -101,3 +101,6 @@ void RetireGrantResponsePrivate::RetireGrantResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RetireGrantResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

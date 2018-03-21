@@ -101,3 +101,6 @@ void DeleteXssMatchSetResponsePrivate::DeleteXssMatchSetResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteXssMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

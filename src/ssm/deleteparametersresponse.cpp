@@ -101,3 +101,6 @@ void DeleteParametersResponsePrivate::DeleteParametersResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteParametersResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

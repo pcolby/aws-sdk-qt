@@ -123,3 +123,6 @@ UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

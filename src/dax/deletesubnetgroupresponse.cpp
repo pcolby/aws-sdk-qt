@@ -101,3 +101,6 @@ void DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

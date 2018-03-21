@@ -123,3 +123,6 @@ UpdateLayerRequestPrivate::UpdateLayerRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

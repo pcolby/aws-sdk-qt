@@ -101,3 +101,6 @@ void GetIntentVersionsResponsePrivate::GetIntentVersionsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetIntentVersionsResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

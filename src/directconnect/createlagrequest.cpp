@@ -123,3 +123,6 @@ CreateLagRequestPrivate::CreateLagRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

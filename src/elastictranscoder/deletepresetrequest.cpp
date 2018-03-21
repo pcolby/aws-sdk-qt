@@ -123,3 +123,6 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

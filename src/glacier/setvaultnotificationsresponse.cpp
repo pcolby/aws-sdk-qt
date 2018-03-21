@@ -101,3 +101,6 @@ void SetVaultNotificationsResponsePrivate::SetVaultNotificationsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("SetVaultNotificationsResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

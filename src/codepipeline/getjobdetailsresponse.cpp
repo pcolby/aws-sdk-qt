@@ -101,3 +101,6 @@ void GetJobDetailsResponsePrivate::GetJobDetailsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetJobDetailsResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

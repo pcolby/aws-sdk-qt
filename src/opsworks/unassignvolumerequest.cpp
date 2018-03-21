@@ -123,3 +123,6 @@ UnassignVolumeRequestPrivate::UnassignVolumeRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void RestoreFromClusterSnapshotResponsePrivate::RestoreFromClusterSnapshotRespon
     Q_ASSERT(xml.name() == QLatin1String("RestoreFromClusterSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

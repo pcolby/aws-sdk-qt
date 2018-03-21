@@ -123,3 +123,6 @@ PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRe
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

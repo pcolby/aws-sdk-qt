@@ -101,3 +101,6 @@ void CreateAssociationResponsePrivate::CreateAssociationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateAssociationResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

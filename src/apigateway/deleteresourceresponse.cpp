@@ -101,3 +101,6 @@ void DeleteResourceResponsePrivate::DeleteResourceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void ExitStandbyResponsePrivate::ExitStandbyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ExitStandbyResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

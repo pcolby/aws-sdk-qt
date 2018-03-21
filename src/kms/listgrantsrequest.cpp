@@ -123,3 +123,6 @@ ListGrantsRequestPrivate::ListGrantsRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

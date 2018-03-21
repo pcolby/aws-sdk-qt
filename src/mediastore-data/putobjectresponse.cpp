@@ -101,3 +101,6 @@ void PutObjectResponsePrivate::PutObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutObjectResponse"));
     /// @todo
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

@@ -123,3 +123,6 @@ ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

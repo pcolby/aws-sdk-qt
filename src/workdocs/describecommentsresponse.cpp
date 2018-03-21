@@ -101,3 +101,6 @@ void DescribeCommentsResponsePrivate::DescribeCommentsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeCommentsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

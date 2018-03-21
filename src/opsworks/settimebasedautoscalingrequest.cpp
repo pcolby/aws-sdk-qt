@@ -123,3 +123,6 @@ SetTimeBasedAutoScalingRequestPrivate::SetTimeBasedAutoScalingRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

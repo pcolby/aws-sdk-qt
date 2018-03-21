@@ -101,3 +101,6 @@ void GetAssociatedRoleResponsePrivate::GetAssociatedRoleResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetAssociatedRoleResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

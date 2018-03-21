@@ -101,3 +101,6 @@ void GetPersonTrackingResponsePrivate::GetPersonTrackingResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetPersonTrackingResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

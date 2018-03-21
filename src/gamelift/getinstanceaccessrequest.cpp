@@ -123,3 +123,6 @@ GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

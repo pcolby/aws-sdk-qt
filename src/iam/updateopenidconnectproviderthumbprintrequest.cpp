@@ -123,3 +123,6 @@ UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProvider
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

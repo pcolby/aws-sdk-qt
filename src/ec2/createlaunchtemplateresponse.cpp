@@ -101,3 +101,6 @@ void CreateLaunchTemplateResponsePrivate::CreateLaunchTemplateResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateLaunchTemplateResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

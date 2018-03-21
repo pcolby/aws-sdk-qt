@@ -123,3 +123,6 @@ DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

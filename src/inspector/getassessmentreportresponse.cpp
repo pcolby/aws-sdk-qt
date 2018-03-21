@@ -101,3 +101,6 @@ void GetAssessmentReportResponsePrivate::GetAssessmentReportResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetAssessmentReportResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

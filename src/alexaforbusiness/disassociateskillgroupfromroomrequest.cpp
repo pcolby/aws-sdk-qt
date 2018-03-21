@@ -123,3 +123,6 @@ DisassociateSkillGroupFromRoomRequestPrivate::DisassociateSkillGroupFromRoomRequ
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

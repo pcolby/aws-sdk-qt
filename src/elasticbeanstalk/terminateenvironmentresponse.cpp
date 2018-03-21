@@ -101,3 +101,6 @@ void TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("TerminateEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

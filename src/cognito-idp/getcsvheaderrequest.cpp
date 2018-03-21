@@ -123,3 +123,6 @@ GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPri
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

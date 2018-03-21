@@ -101,3 +101,6 @@ void DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificati
     Q_ASSERT(xml.name() == QLatin1String("DisassociateQualificationFromWorkerResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

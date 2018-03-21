@@ -101,3 +101,6 @@ void ListReviewableHITsResponsePrivate::ListReviewableHITsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListReviewableHITsResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

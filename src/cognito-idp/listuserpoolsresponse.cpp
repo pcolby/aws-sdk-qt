@@ -101,3 +101,6 @@ void ListUserPoolsResponsePrivate::ListUserPoolsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListUserPoolsResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

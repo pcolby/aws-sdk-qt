@@ -101,3 +101,6 @@ void AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWith
     Q_ASSERT(xml.name() == QLatin1String("AssociateQualificationWithWorkerResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

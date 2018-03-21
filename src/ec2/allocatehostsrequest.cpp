@@ -123,3 +123,6 @@ AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

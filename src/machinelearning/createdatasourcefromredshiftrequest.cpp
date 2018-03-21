@@ -123,3 +123,6 @@ CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestP
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

@@ -101,3 +101,6 @@ void SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("SetInstanceProtectionResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

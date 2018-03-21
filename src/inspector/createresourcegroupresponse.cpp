@@ -101,3 +101,6 @@ void CreateResourceGroupResponsePrivate::CreateResourceGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateResourceGroupResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

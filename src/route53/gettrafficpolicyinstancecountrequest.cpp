@@ -123,3 +123,6 @@ GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountReques
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

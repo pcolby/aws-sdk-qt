@@ -123,3 +123,6 @@ RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

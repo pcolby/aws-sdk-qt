@@ -101,3 +101,6 @@ void SetSubscriptionAttributesResponsePrivate::SetSubscriptionAttributesResponse
     Q_ASSERT(xml.name() == QLatin1String("SetSubscriptionAttributesResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

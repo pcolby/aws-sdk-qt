@@ -123,3 +123,6 @@ GetSlotTypeRequestPrivate::GetSlotTypeRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

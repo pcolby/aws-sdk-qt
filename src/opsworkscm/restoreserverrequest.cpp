@@ -123,3 +123,6 @@ RestoreServerRequestPrivate::RestoreServerRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

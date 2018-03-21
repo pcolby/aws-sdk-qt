@@ -101,3 +101,6 @@ void GetCognitoEventsResponsePrivate::GetCognitoEventsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetCognitoEventsResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

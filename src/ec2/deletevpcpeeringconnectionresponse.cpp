@@ -101,3 +101,6 @@ void DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcPeeringConnectionResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

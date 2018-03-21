@@ -101,3 +101,6 @@ void ModifyReplicationTaskResponsePrivate::ModifyReplicationTaskResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationTaskResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

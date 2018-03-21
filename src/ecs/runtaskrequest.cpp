@@ -123,3 +123,6 @@ RunTaskRequestPrivate::RunTaskRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

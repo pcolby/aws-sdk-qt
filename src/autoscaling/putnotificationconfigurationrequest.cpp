@@ -123,3 +123,6 @@ PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestP
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

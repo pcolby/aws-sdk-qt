@@ -123,3 +123,6 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPriva
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeEventBusResponsePrivate::DescribeEventBusResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventBusResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

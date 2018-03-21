@@ -101,3 +101,6 @@ void DescribeConversionTasksResponsePrivate::DescribeConversionTasksResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeConversionTasksResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListInventoryEntriesResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

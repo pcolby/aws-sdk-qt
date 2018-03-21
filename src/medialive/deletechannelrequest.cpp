@@ -123,3 +123,6 @@ DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

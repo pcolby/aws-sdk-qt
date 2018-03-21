@@ -123,3 +123,6 @@ PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

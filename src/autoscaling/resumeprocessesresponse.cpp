@@ -101,3 +101,6 @@ void ResumeProcessesResponsePrivate::ResumeProcessesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ResumeProcessesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

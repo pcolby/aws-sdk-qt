@@ -123,3 +123,6 @@ GetAppRequestPrivate::GetAppRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

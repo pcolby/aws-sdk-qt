@@ -123,3 +123,6 @@ DeleteBucketLifecycleRequestPrivate::DeleteBucketLifecycleRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

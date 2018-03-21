@@ -123,3 +123,6 @@ GetFolderPathRequestPrivate::GetFolderPathRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

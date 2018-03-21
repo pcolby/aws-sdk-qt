@@ -123,3 +123,6 @@ DetachDiskRequestPrivate::DetachDiskRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

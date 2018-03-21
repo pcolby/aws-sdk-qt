@@ -123,3 +123,6 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

@@ -123,3 +123,6 @@ ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

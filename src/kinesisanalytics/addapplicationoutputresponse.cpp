@@ -101,3 +101,6 @@ void AddApplicationOutputResponsePrivate::AddApplicationOutputResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationOutputResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

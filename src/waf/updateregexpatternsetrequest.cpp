@@ -123,3 +123,6 @@ UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

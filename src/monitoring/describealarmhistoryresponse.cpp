@@ -101,3 +101,6 @@ void DescribeAlarmHistoryResponsePrivate::DescribeAlarmHistoryResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmHistoryResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

@@ -123,3 +123,6 @@ ListObjectVersionsRequestPrivate::ListObjectVersionsRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

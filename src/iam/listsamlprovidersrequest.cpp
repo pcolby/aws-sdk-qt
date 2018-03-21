@@ -123,3 +123,6 @@ ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("RestoreAddressToClassicResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

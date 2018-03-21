@@ -101,3 +101,6 @@ void GetClassifiersResponsePrivate::GetClassifiersResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetClassifiersResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

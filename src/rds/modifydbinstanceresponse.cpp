@@ -101,3 +101,6 @@ void ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBInstanceResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void CancelBundleTaskResponsePrivate::CancelBundleTaskResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CancelBundleTaskResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

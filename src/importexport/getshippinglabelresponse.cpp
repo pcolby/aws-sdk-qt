@@ -101,3 +101,6 @@ void GetShippingLabelResponsePrivate::GetShippingLabelResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetShippingLabelResponse"));
     /// @todo
 }
+
+} // namespace ImportExport
+} // namespace AWS

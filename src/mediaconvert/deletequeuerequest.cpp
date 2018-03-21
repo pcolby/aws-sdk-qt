@@ -123,3 +123,6 @@ DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

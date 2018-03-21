@@ -123,3 +123,6 @@ DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResour
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

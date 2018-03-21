@@ -123,3 +123,6 @@ DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

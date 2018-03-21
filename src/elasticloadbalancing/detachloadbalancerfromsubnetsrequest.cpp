@@ -123,3 +123,6 @@ DetachLoadBalancerFromSubnetsRequestPrivate::DetachLoadBalancerFromSubnetsReques
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

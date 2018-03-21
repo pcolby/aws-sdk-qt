@@ -123,3 +123,6 @@ UpdateNetworkProfileRequestPrivate::UpdateNetworkProfileRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeInstanceAttributeResponsePrivate::DescribeInstanceAttributeResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ CloseInstancePublicPortsRequestPrivate::CloseInstancePublicPortsRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

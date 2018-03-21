@@ -101,3 +101,6 @@ void StartMonitoringMembersResponsePrivate::StartMonitoringMembersResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("StartMonitoringMembersResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

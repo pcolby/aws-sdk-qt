@@ -123,3 +123,6 @@ UpdateTrafficPolicyCommentRequestPrivate::UpdateTrafficPolicyCommentRequestPriva
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

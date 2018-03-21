@@ -101,3 +101,6 @@ void DeleteNotebookInstanceLifecycleConfigResponsePrivate::DeleteNotebookInstanc
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotebookInstanceLifecycleConfigResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

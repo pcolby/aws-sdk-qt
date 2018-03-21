@@ -101,3 +101,6 @@ void DeleteListenerResponsePrivate::DeleteListenerResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteListenerResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

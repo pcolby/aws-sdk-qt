@@ -101,3 +101,6 @@ void AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateDeviceStatusResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

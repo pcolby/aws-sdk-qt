@@ -123,3 +123,6 @@ DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

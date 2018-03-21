@@ -123,3 +123,6 @@ DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

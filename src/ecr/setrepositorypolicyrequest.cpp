@@ -123,3 +123,6 @@ SetRepositoryPolicyRequestPrivate::SetRepositoryPolicyRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

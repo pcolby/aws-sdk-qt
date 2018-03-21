@@ -123,3 +123,6 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

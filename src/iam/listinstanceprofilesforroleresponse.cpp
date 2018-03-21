@@ -101,3 +101,6 @@ void ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResp
     Q_ASSERT(xml.name() == QLatin1String("ListInstanceProfilesForRoleResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

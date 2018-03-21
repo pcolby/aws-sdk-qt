@@ -123,3 +123,6 @@ CreateAppRequestPrivate::CreateAppRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

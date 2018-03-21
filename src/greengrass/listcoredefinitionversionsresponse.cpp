@@ -101,3 +101,6 @@ void ListCoreDefinitionVersionsResponsePrivate::ListCoreDefinitionVersionsRespon
     Q_ASSERT(xml.name() == QLatin1String("ListCoreDefinitionVersionsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

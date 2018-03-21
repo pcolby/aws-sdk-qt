@@ -101,3 +101,6 @@ void CreateInterconnectResponsePrivate::CreateInterconnectResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateInterconnectResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

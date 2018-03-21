@@ -123,3 +123,6 @@ ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

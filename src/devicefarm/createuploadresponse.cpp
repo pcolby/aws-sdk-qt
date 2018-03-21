@@ -101,3 +101,6 @@ void CreateUploadResponsePrivate::CreateUploadResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateUploadResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

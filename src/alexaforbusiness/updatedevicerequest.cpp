@@ -123,3 +123,6 @@ UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

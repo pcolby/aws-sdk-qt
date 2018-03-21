@@ -123,3 +123,6 @@ ListGroupsRequestPrivate::ListGroupsRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

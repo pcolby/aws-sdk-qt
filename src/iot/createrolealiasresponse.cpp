@@ -101,3 +101,6 @@ void CreateRoleAliasResponsePrivate::CreateRoleAliasResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateRoleAliasResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

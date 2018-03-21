@@ -101,3 +101,6 @@ void GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetTelemetryMetadataResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

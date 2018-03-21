@@ -101,3 +101,6 @@ void UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealth
     Q_ASSERT(xml.name() == QLatin1String("UpdateInstanceCustomHealthStatusResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

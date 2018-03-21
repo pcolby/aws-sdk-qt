@@ -101,3 +101,6 @@ void CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateInstanceExportTaskResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

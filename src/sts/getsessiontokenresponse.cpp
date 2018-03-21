@@ -101,3 +101,6 @@ void GetSessionTokenResponsePrivate::GetSessionTokenResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetSessionTokenResponse"));
     /// @todo
 }
+
+} // namespace STS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteCrawlerResponsePrivate::DeleteCrawlerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteCrawlerResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

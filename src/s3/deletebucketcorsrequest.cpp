@@ -123,3 +123,6 @@ DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -101,3 +101,6 @@ void ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ContinueUpdateRollbackResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

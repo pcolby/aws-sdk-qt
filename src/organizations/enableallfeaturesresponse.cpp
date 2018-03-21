@@ -101,3 +101,6 @@ void EnableAllFeaturesResponsePrivate::EnableAllFeaturesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("EnableAllFeaturesResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

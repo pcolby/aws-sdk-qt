@@ -123,3 +123,6 @@ DescribeAutoScalingInstancesRequestPrivate::DescribeAutoScalingInstancesRequestP
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

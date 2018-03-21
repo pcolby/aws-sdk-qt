@@ -123,3 +123,6 @@ GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

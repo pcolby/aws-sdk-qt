@@ -101,3 +101,6 @@ void GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResp
     Q_ASSERT(xml.name() == QLatin1String("GetWorkflowExecutionHistoryResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

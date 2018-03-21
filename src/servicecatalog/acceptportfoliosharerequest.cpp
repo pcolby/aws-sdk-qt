@@ -123,3 +123,6 @@ AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

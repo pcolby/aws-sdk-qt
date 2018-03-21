@@ -101,3 +101,6 @@ void ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListVirtualMFADevicesResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

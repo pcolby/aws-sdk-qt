@@ -101,3 +101,6 @@ void AllocateAddressResponsePrivate::AllocateAddressResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AllocateAddressResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

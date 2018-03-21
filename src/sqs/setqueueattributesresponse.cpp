@@ -101,3 +101,6 @@ void SetQueueAttributesResponsePrivate::SetQueueAttributesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("SetQueueAttributesResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

@@ -101,3 +101,6 @@ void SplitShardResponsePrivate::SplitShardResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SplitShardResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

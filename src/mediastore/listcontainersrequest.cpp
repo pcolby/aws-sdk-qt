@@ -123,3 +123,6 @@ ListContainersRequestPrivate::ListContainersRequestPrivate(
 {
 
 }
+
+} // namespace MediaStore
+} // namespace AWS

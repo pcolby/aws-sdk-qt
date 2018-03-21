@@ -101,3 +101,6 @@ void ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListSizeConstraintSetsResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

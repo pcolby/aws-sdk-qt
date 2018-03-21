@@ -123,3 +123,6 @@ CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

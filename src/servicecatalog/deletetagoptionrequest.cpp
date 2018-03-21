@@ -123,3 +123,6 @@ DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

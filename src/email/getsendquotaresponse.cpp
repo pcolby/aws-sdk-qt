@@ -101,3 +101,6 @@ void GetSendQuotaResponsePrivate::GetSendQuotaResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetSendQuotaResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

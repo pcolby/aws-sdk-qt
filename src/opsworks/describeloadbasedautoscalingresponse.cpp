@@ -101,3 +101,6 @@ void DescribeLoadBasedAutoScalingResponsePrivate::DescribeLoadBasedAutoScalingRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBasedAutoScalingResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

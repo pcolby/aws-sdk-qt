@@ -101,3 +101,6 @@ void GetReservationCoverageResponsePrivate::GetReservationCoverageResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetReservationCoverageResponse"));
     /// @todo
 }
+
+} // namespace CostExplorer
+} // namespace AWS

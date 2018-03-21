@@ -101,3 +101,6 @@ void ListQueryExecutionsResponsePrivate::ListQueryExecutionsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListQueryExecutionsResponse"));
     /// @todo
 }
+
+} // namespace Athena
+} // namespace AWS

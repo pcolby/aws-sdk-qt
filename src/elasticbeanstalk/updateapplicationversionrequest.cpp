@@ -123,3 +123,6 @@ UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

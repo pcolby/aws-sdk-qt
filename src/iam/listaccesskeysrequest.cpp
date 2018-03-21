@@ -123,3 +123,6 @@ ListAccessKeysRequestPrivate::ListAccessKeysRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteBucketAnalyticsConfigurationResponsePrivate::DeleteBucketAnalyticsCon
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketAnalyticsConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

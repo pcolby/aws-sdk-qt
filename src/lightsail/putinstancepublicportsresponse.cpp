@@ -101,3 +101,6 @@ void PutInstancePublicPortsResponsePrivate::PutInstancePublicPortsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("PutInstancePublicPortsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

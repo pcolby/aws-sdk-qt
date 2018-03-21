@@ -101,3 +101,6 @@ void CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSet
     Q_ASSERT(xml.name() == QLatin1String("CreateCloudFormationChangeSetResponse"));
     /// @todo
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

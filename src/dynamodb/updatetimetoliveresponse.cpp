@@ -101,3 +101,6 @@ void UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateTimeToLiveResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

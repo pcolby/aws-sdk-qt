@@ -123,3 +123,6 @@ CreateIdentityPoolRequestPrivate::CreateIdentityPoolRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

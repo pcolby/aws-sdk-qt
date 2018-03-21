@@ -123,3 +123,6 @@ UpdateGraphqlApiRequestPrivate::UpdateGraphqlApiRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

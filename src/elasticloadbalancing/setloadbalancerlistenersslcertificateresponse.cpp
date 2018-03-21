@@ -101,3 +101,6 @@ void SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListen
     Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerListenerSSLCertificateResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

@@ -123,3 +123,6 @@ DefineSuggesterRequestPrivate::DefineSuggesterRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEma
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

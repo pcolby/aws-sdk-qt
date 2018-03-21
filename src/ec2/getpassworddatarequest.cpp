@@ -123,3 +123,6 @@ GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

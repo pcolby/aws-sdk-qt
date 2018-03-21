@@ -101,3 +101,6 @@ void ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListNotebookInstancesResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

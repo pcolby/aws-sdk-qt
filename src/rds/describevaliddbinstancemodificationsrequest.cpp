@@ -123,3 +123,6 @@ DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModif
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteProvisioningArtifactResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

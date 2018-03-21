@@ -123,3 +123,6 @@ ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

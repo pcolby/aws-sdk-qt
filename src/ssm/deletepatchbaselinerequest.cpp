@@ -123,3 +123,6 @@ DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

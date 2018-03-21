@@ -123,3 +123,6 @@ UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

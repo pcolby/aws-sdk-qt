@@ -101,3 +101,6 @@ void DescribeDatasetResponsePrivate::DescribeDatasetResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeDatasetResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

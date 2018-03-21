@@ -101,3 +101,6 @@ void CreateThingGroupResponsePrivate::CreateThingGroupResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateThingGroupResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("SendBulkTemplatedEmailResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

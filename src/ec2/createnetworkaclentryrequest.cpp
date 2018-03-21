@@ -123,3 +123,6 @@ CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

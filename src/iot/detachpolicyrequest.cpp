@@ -123,3 +123,6 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

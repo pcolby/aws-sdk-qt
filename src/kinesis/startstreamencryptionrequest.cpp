@@ -123,3 +123,6 @@ StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

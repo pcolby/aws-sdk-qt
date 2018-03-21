@@ -123,3 +123,6 @@ SetUserPoolMfaConfigRequestPrivate::SetUserPoolMfaConfigRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

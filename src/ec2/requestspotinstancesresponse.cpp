@@ -101,3 +101,6 @@ void RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("RequestSpotInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

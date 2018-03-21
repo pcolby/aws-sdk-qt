@@ -101,3 +101,6 @@ void CreateCaseResponsePrivate::CreateCaseResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateCaseResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

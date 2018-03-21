@@ -101,3 +101,6 @@ void PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigura
     Q_ASSERT(xml.name() == QLatin1String("PutBucketInventoryConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

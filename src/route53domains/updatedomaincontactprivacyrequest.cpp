@@ -123,3 +123,6 @@ UpdateDomainContactPrivacyRequestPrivate::UpdateDomainContactPrivacyRequestPriva
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

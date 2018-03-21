@@ -123,3 +123,6 @@ RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

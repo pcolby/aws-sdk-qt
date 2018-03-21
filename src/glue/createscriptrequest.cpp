@@ -123,3 +123,6 @@ CreateScriptRequestPrivate::CreateScriptRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

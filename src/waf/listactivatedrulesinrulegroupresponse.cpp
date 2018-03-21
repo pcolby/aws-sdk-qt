@@ -101,3 +101,6 @@ void ListActivatedRulesInRuleGroupResponsePrivate::ListActivatedRulesInRuleGroup
     Q_ASSERT(xml.name() == QLatin1String("ListActivatedRulesInRuleGroupResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

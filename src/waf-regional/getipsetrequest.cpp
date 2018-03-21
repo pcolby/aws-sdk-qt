@@ -123,3 +123,6 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -123,3 +123,6 @@ CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

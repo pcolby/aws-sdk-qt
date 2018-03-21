@@ -101,3 +101,6 @@ void PutResourcePolicyResponsePrivate::PutResourcePolicyResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("PutResourcePolicyResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetDirectoryResponsePrivate::GetDirectoryResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetDirectoryResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

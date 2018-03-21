@@ -101,3 +101,6 @@ void GetReplicationJobsResponsePrivate::GetReplicationJobsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetReplicationJobsResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

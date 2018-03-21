@@ -101,3 +101,6 @@ void ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ImportKeyMaterialResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

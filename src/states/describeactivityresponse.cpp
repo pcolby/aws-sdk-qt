@@ -101,3 +101,6 @@ void DescribeActivityResponsePrivate::DescribeActivityResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeActivityResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateFleetPortSettingsResponsePrivate::UpdateFleetPortSettingsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UpdateFleetPortSettingsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

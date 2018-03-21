@@ -101,3 +101,6 @@ void ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentia
     Q_ASSERT(xml.name() == QLatin1String("ListServiceSpecificCredentialsResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

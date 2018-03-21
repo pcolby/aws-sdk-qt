@@ -123,3 +123,6 @@ DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

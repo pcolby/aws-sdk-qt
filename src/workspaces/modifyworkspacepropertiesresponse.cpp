@@ -101,3 +101,6 @@ void ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponse
     Q_ASSERT(xml.name() == QLatin1String("ModifyWorkspacePropertiesResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

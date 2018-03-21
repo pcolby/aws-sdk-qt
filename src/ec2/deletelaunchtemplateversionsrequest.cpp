@@ -123,3 +123,6 @@ DeleteLaunchTemplateVersionsRequestPrivate::DeleteLaunchTemplateVersionsRequestP
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

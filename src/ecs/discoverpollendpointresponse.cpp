@@ -101,3 +101,6 @@ void DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DiscoverPollEndpointResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

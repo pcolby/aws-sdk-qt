@@ -123,3 +123,6 @@ ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

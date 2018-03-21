@@ -101,3 +101,6 @@ void UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateReceiptRuleResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdatePrimaryEmailAddressResponsePrivate::UpdatePrimaryEmailAddressResponse
     Q_ASSERT(xml.name() == QLatin1String("UpdatePrimaryEmailAddressResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

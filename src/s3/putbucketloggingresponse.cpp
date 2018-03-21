@@ -101,3 +101,6 @@ void PutBucketLoggingResponsePrivate::PutBucketLoggingResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PutBucketLoggingResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

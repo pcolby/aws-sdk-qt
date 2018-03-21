@@ -123,3 +123,6 @@ ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void CancelClusterResponsePrivate::CancelClusterResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CancelClusterResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

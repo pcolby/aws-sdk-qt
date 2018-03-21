@@ -101,3 +101,6 @@ void ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListRetirableGrantsResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

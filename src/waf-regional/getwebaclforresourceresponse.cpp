@@ -101,3 +101,6 @@ void GetWebACLForResourceResponsePrivate::GetWebACLForResourceResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetWebACLForResourceResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

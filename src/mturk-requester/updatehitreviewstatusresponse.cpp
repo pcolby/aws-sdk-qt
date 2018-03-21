@@ -101,3 +101,6 @@ void UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateHITReviewStatusResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

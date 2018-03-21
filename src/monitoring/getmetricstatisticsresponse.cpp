@@ -101,3 +101,6 @@ void GetMetricStatisticsResponsePrivate::GetMetricStatisticsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetMetricStatisticsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

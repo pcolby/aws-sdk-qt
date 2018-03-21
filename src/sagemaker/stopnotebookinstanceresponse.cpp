@@ -101,3 +101,6 @@ void StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("StopNotebookInstanceResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

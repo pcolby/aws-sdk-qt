@@ -123,3 +123,6 @@ GetIdRequestPrivate::GetIdRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

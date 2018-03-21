@@ -123,3 +123,6 @@ AddCacheRequestPrivate::AddCacheRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

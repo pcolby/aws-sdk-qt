@@ -123,3 +123,6 @@ DeleteVpcRequestPrivate::DeleteVpcRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

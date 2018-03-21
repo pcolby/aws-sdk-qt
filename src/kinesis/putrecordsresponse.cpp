@@ -101,3 +101,6 @@ void PutRecordsResponsePrivate::PutRecordsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutRecordsResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

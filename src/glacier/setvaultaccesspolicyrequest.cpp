@@ -123,3 +123,6 @@ SetVaultAccessPolicyRequestPrivate::SetVaultAccessPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

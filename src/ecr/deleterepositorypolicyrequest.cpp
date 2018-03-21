@@ -123,3 +123,6 @@ DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

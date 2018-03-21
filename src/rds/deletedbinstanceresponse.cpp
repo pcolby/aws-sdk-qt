@@ -101,3 +101,6 @@ void DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBInstanceResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

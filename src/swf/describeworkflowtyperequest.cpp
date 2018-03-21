@@ -123,3 +123,6 @@ DescribeWorkflowTypeRequestPrivate::DescribeWorkflowTypeRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

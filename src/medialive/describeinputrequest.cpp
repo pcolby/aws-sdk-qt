@@ -123,3 +123,6 @@ DescribeInputRequestPrivate::DescribeInputRequestPrivate(
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

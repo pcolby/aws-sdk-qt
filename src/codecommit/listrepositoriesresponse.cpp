@@ -101,3 +101,6 @@ void ListRepositoriesResponsePrivate::ListRepositoriesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListRepositoriesResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

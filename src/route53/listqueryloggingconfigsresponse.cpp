@@ -101,3 +101,6 @@ void ListQueryLoggingConfigsResponsePrivate::ListQueryLoggingConfigsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListQueryLoggingConfigsResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

@@ -101,3 +101,6 @@ void SetTagsForResourceResponsePrivate::SetTagsForResourceResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("SetTagsForResourceResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

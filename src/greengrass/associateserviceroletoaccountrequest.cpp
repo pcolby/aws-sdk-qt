@@ -123,3 +123,6 @@ AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountReques
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

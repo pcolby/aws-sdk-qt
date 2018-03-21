@@ -101,3 +101,6 @@ void CreateUserImportJobResponsePrivate::CreateUserImportJobResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateUserImportJobResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -101,3 +101,6 @@ void BulkPublishResponsePrivate::BulkPublishResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("BulkPublishResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

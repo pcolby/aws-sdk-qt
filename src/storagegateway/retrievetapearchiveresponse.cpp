@@ -101,3 +101,6 @@ void RetrieveTapeArchiveResponsePrivate::RetrieveTapeArchiveResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("RetrieveTapeArchiveResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

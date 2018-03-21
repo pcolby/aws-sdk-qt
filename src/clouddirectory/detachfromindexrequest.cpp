@@ -123,3 +123,6 @@ DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

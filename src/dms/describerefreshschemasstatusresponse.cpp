@@ -101,3 +101,6 @@ void DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeRefreshSchemasStatusResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

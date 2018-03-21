@@ -123,3 +123,6 @@ UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPri
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

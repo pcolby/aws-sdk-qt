@@ -123,3 +123,6 @@ CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequ
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

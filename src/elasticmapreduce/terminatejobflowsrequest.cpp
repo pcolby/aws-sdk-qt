@@ -123,3 +123,6 @@ TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

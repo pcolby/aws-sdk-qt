@@ -101,3 +101,6 @@ void DeleteMembersResponsePrivate::DeleteMembersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteMembersResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

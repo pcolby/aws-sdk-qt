@@ -123,3 +123,6 @@ StopTaskRequestPrivate::StopTaskRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

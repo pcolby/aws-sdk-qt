@@ -123,3 +123,6 @@ AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

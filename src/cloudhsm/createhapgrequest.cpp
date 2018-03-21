@@ -123,3 +123,6 @@ CreateHapgRequestPrivate::CreateHapgRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

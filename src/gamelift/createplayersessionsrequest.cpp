@@ -123,3 +123,6 @@ CreatePlayerSessionsRequestPrivate::CreatePlayerSessionsRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

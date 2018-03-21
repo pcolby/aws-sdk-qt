@@ -123,3 +123,6 @@ GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

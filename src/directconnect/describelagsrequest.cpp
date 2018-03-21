@@ -123,3 +123,6 @@ DescribeLagsRequestPrivate::DescribeLagsRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

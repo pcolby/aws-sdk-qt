@@ -101,3 +101,6 @@ void DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfi
     Q_ASSERT(xml.name() == QLatin1String("DisassociateIamInstanceProfileResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

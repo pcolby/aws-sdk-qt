@@ -101,3 +101,6 @@ void GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponse
     Q_ASSERT(xml.name() == QLatin1String("GetReservationUtilizationResponse"));
     /// @todo
 }
+
+} // namespace CostExplorer
+} // namespace AWS

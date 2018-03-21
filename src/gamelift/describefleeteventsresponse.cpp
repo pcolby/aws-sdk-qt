@@ -101,3 +101,6 @@ void DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetEventsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

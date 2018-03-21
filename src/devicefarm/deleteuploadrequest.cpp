@@ -123,3 +123,6 @@ DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

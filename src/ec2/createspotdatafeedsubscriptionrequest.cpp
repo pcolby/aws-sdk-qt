@@ -123,3 +123,6 @@ CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequ
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

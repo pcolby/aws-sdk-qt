@@ -101,3 +101,6 @@ void DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInsta
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableDBInstanceOptionsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

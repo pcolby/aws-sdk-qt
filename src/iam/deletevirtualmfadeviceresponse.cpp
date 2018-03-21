@@ -101,3 +101,6 @@ void DeleteVirtualMFADeviceResponsePrivate::DeleteVirtualMFADeviceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteVirtualMFADeviceResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

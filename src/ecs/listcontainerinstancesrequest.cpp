@@ -123,3 +123,6 @@ ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

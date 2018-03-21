@@ -123,3 +123,6 @@ CreatePresetRequestPrivate::CreatePresetRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

@@ -123,3 +123,6 @@ UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

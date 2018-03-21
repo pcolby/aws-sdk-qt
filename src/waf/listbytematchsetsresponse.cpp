@@ -101,3 +101,6 @@ void ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListByteMatchSetsResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargets
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void StartChannelResponsePrivate::StartChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StartChannelResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

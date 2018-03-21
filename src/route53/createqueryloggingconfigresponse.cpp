@@ -101,3 +101,6 @@ void CreateQueryLoggingConfigResponsePrivate::CreateQueryLoggingConfigResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateQueryLoggingConfigResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

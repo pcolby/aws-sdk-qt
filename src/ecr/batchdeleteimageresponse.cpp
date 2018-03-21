@@ -101,3 +101,6 @@ void BatchDeleteImageResponsePrivate::BatchDeleteImageResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteImageResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListRemoteAccessSessionsResponsePrivate::ListRemoteAccessSessionsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListRemoteAccessSessionsResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

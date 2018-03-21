@@ -101,3 +101,6 @@ void DomainMetadataResponsePrivate::DomainMetadataResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DomainMetadataResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

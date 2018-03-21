@@ -101,3 +101,6 @@ void DescribeEnvironmentsResponsePrivate::DescribeEnvironmentsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentsResponse"));
     /// @todo
 }
+
+} // namespace Cloud9
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponse
     Q_ASSERT(xml.name() == QLatin1String("DeregisterManagedInstanceResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

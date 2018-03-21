@@ -123,3 +123,6 @@ CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

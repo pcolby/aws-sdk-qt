@@ -123,3 +123,6 @@ DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

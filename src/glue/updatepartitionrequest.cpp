@@ -123,3 +123,6 @@ UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

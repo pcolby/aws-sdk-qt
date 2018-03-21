@@ -101,3 +101,6 @@ void CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkInterfaceResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateTemplateResponsePrivate::CreateTemplateResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateTemplateResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

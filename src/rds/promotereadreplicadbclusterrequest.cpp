@@ -123,3 +123,6 @@ PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPri
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -123,3 +123,6 @@ ListInstanceGroupsRequestPrivate::ListInstanceGroupsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetOpenIdTokenForDeveloperIdentityResponsePrivate::GetOpenIdTokenForDevelop
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIdTokenForDeveloperIdentityResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

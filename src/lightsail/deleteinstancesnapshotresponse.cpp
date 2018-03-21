@@ -101,3 +101,6 @@ void DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

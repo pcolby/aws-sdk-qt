@@ -123,3 +123,6 @@ ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

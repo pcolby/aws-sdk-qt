@@ -123,3 +123,6 @@ GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

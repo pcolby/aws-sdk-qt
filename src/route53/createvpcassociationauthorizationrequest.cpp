@@ -123,3 +123,6 @@ CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizati
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

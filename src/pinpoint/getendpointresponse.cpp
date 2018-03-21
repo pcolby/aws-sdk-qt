@@ -101,3 +101,6 @@ void GetEndpointResponsePrivate::GetEndpointResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetEndpointResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

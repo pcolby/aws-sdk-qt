@@ -101,3 +101,6 @@ void GetBlobResponsePrivate::GetBlobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetBlobResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeCopyProductStatusResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

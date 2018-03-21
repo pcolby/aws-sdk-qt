@@ -101,3 +101,6 @@ void DescribeEndpointConfigResponsePrivate::DescribeEndpointConfigResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeEndpointConfigResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

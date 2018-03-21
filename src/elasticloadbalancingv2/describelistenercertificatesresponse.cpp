@@ -101,3 +101,6 @@ void DescribeListenerCertificatesResponsePrivate::DescribeListenerCertificatesRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeListenerCertificatesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

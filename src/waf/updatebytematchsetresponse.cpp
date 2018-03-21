@@ -101,3 +101,6 @@ void UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateByteMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

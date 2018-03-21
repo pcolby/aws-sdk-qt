@@ -123,3 +123,6 @@ GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
 {
 
 }
+
+} // namespace CostExplorer
+} // namespace AWS

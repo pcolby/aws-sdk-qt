@@ -101,3 +101,6 @@ void DeleteMountTargetResponsePrivate::DeleteMountTargetResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteMountTargetResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

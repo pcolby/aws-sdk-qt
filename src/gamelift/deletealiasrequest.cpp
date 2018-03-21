@@ -123,3 +123,6 @@ DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

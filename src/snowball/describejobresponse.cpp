@@ -101,3 +101,6 @@ void DescribeJobResponsePrivate::DescribeJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

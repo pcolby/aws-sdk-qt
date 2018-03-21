@@ -101,3 +101,6 @@ void DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteScheduledActionResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

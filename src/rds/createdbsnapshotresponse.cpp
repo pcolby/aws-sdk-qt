@@ -101,3 +101,6 @@ void CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateDBSnapshotResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

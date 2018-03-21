@@ -123,3 +123,6 @@ GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -123,3 +123,6 @@ RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

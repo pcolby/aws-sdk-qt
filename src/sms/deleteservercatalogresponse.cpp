@@ -101,3 +101,6 @@ void DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteServerCatalogResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

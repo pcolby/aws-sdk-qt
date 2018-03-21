@@ -123,3 +123,6 @@ ListPrincipalsForPortfolioRequestPrivate::ListPrincipalsForPortfolioRequestPriva
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

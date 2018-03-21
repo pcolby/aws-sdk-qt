@@ -123,3 +123,6 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

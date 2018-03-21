@@ -123,3 +123,6 @@ UpdateItemRequestPrivate::UpdateItemRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

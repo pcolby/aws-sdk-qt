@@ -101,3 +101,6 @@ void SearchGameSessionsResponsePrivate::SearchGameSessionsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("SearchGameSessionsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

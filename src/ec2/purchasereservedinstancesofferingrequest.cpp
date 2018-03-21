@@ -123,3 +123,6 @@ PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferi
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

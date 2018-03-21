@@ -101,3 +101,6 @@ void ListUserImportJobsResponsePrivate::ListUserImportJobsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListUserImportJobsResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

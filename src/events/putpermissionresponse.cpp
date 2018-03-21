@@ -101,3 +101,6 @@ void PutPermissionResponsePrivate::PutPermissionResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutPermissionResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

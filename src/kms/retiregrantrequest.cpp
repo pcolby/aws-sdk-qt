@@ -123,3 +123,6 @@ RetireGrantRequestPrivate::RetireGrantRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

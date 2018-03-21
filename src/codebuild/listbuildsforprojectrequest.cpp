@@ -123,3 +123,6 @@ ListBuildsForProjectRequestPrivate::ListBuildsForProjectRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

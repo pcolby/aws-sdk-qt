@@ -123,3 +123,6 @@ UpdateReceiptRuleRequestPrivate::UpdateReceiptRuleRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

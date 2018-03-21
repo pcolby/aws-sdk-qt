@@ -101,3 +101,6 @@ void AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagRespon
     Q_ASSERT(xml.name() == QLatin1String("AssociateConnectionWithLagResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

@@ -123,3 +123,6 @@ AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

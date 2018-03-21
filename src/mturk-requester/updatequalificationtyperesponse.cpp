@@ -101,3 +101,6 @@ void UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UpdateQualificationTypeResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

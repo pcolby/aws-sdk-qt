@@ -101,3 +101,6 @@ void CreateFileSystemResponsePrivate::CreateFileSystemResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateFileSystemResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

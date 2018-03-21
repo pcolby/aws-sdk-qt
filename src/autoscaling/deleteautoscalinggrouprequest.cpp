@@ -123,3 +123,6 @@ DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

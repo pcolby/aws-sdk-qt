@@ -123,3 +123,6 @@ AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

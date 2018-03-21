@@ -123,3 +123,6 @@ AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

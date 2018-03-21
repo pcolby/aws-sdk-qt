@@ -101,3 +101,6 @@ void RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTime
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBClusterToPointInTimeResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

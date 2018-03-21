@@ -101,3 +101,6 @@ void DeleteContainerPolicyResponsePrivate::DeleteContainerPolicyResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteContainerPolicyResponse"));
     /// @todo
 }
+
+} // namespace MediaStore
+} // namespace AWS

@@ -123,3 +123,6 @@ GetCorsPolicyRequestPrivate::GetCorsPolicyRequestPrivate(
 {
 
 }
+
+} // namespace MediaStore
+} // namespace AWS

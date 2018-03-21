@@ -123,3 +123,6 @@ GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
 {
 
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

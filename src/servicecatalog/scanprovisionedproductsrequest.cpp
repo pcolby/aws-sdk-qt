@@ -123,3 +123,6 @@ ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

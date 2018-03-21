@@ -101,3 +101,6 @@ void DescribeIdFormatResponsePrivate::DescribeIdFormatResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeIdFormatResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

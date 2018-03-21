@@ -101,3 +101,6 @@ void ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ModifyImageAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

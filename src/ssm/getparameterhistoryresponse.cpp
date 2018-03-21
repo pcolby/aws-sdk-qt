@@ -101,3 +101,6 @@ void GetParameterHistoryResponsePrivate::GetParameterHistoryResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetParameterHistoryResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

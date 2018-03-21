@@ -101,3 +101,6 @@ void CreateTrustResponsePrivate::CreateTrustResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateTrustResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

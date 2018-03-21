@@ -101,3 +101,6 @@ void DetachStaticIpResponsePrivate::DetachStaticIpResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DetachStaticIpResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

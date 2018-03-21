@@ -101,3 +101,6 @@ void DisableVgwRoutePropagationResponsePrivate::DisableVgwRoutePropagationRespon
     Q_ASSERT(xml.name() == QLatin1String("DisableVgwRoutePropagationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

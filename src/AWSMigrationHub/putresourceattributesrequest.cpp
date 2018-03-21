@@ -123,3 +123,6 @@ PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

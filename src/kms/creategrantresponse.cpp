@@ -101,3 +101,6 @@ void CreateGrantResponsePrivate::CreateGrantResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateGrantResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

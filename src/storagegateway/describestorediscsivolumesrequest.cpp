@@ -123,3 +123,6 @@ DescribeStorediSCSIVolumesRequestPrivate::DescribeStorediSCSIVolumesRequestPriva
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteVaultResponsePrivate::DeleteVaultResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

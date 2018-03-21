@@ -101,3 +101,6 @@ void TestMetricFilterResponsePrivate::TestMetricFilterResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("TestMetricFilterResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

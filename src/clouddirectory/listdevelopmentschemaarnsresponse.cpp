@@ -101,3 +101,6 @@ void ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponse
     Q_ASSERT(xml.name() == QLatin1String("ListDevelopmentSchemaArnsResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

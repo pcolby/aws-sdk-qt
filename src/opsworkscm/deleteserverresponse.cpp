@@ -101,3 +101,6 @@ void DeleteServerResponsePrivate::DeleteServerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteServerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

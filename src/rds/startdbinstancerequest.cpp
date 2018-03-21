@@ -123,3 +123,6 @@ StartDBInstanceRequestPrivate::StartDBInstanceRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

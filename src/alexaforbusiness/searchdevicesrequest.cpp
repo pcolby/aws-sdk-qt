@@ -123,3 +123,6 @@ SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

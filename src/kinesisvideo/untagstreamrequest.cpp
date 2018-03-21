@@ -123,3 +123,6 @@ UntagStreamRequestPrivate::UntagStreamRequestPrivate(
 {
 
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

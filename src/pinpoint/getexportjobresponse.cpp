@@ -101,3 +101,6 @@ void GetExportJobResponsePrivate::GetExportJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetExportJobResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteSSHPublicKeyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

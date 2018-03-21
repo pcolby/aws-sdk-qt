@@ -101,3 +101,6 @@ void GetSlotTypeVersionsResponsePrivate::GetSlotTypeVersionsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetSlotTypeVersionsResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

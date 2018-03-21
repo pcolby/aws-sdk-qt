@@ -101,3 +101,6 @@ void ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ConfirmForgotPasswordResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

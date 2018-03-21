@@ -101,3 +101,6 @@ void DisableDomainTransferLockResponsePrivate::DisableDomainTransferLockResponse
     Q_ASSERT(xml.name() == QLatin1String("DisableDomainTransferLockResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

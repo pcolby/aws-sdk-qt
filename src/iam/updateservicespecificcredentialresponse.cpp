@@ -101,3 +101,6 @@ void UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCreden
     Q_ASSERT(xml.name() == QLatin1String("UpdateServiceSpecificCredentialResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

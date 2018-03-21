@@ -123,3 +123,6 @@ AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
 {
 
 }
+
+} // namespace STS
+} // namespace AWS

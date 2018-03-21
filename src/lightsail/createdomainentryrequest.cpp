@@ -123,3 +123,6 @@ CreateDomainEntryRequestPrivate::CreateDomainEntryRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

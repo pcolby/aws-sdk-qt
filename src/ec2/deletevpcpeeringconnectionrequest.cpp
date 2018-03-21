@@ -123,3 +123,6 @@ DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPriva
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

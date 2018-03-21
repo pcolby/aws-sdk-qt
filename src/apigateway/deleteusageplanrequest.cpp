@@ -123,3 +123,6 @@ DeleteUsagePlanRequestPrivate::DeleteUsagePlanRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

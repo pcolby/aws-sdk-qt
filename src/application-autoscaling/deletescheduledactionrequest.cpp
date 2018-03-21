@@ -123,3 +123,6 @@ DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDele
     Q_ASSERT(xml.name() == QLatin1String("GetServiceLinkedRoleDeletionStatusResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

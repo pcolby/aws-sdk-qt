@@ -101,3 +101,6 @@ void RemoveListenerCertificatesResponsePrivate::RemoveListenerCertificatesRespon
     Q_ASSERT(xml.name() == QLatin1String("RemoveListenerCertificatesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

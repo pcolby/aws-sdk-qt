@@ -123,3 +123,6 @@ CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

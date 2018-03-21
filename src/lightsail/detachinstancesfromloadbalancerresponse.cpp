@@ -101,3 +101,6 @@ void DetachInstancesFromLoadBalancerResponsePrivate::DetachInstancesFromLoadBala
     Q_ASSERT(xml.name() == QLatin1String("DetachInstancesFromLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

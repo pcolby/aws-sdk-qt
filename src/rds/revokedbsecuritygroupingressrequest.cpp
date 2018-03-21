@@ -123,3 +123,6 @@ RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestP
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

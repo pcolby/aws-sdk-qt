@@ -123,3 +123,6 @@ DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

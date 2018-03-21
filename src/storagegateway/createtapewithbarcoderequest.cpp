@@ -123,3 +123,6 @@ CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

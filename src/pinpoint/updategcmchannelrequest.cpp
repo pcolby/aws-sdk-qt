@@ -123,3 +123,6 @@ UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

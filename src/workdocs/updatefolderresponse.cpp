@@ -101,3 +101,6 @@ void UpdateFolderResponsePrivate::UpdateFolderResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateFolderResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

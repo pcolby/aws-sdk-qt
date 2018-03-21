@@ -101,3 +101,6 @@ void DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteBatchPredictionResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

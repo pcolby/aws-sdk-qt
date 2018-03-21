@@ -123,3 +123,6 @@ StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

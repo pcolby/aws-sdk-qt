@@ -123,3 +123,6 @@ ListSkillsRequestPrivate::ListSkillsRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

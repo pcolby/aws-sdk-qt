@@ -123,3 +123,6 @@ CreateExportTaskRequestPrivate::CreateExportTaskRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

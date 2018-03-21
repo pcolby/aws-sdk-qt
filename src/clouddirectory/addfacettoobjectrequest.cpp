@@ -123,3 +123,6 @@ AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

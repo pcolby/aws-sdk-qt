@@ -101,3 +101,6 @@ void RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("RegisterTaskDefinitionResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

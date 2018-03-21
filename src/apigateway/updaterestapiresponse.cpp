@@ -101,3 +101,6 @@ void UpdateRestApiResponsePrivate::UpdateRestApiResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateRestApiResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

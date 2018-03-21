@@ -101,3 +101,6 @@ void InitializeClusterResponsePrivate::InitializeClusterResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("InitializeClusterResponse"));
     /// @todo
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeBrokerResponsePrivate::DescribeBrokerResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeBrokerResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

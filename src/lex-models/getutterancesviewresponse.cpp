@@ -101,3 +101,6 @@ void GetUtterancesViewResponsePrivate::GetUtterancesViewResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetUtterancesViewResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

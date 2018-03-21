@@ -123,3 +123,6 @@ UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

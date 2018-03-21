@@ -101,3 +101,6 @@ void ResendContactReachabilityEmailResponsePrivate::ResendContactReachabilityEma
     Q_ASSERT(xml.name() == QLatin1String("ResendContactReachabilityEmailResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

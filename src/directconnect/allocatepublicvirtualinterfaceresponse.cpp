@@ -101,3 +101,6 @@ void AllocatePublicVirtualInterfaceResponsePrivate::AllocatePublicVirtualInterfa
     Q_ASSERT(xml.name() == QLatin1String("AllocatePublicVirtualInterfaceResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

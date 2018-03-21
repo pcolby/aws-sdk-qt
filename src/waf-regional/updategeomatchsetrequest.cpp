@@ -123,3 +123,6 @@ UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

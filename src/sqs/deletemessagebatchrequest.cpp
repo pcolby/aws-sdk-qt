@@ -123,3 +123,6 @@ DeleteMessageBatchRequestPrivate::DeleteMessageBatchRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

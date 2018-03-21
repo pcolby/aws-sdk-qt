@@ -101,3 +101,6 @@ void GetJobOutputResponsePrivate::GetJobOutputResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetJobOutputResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

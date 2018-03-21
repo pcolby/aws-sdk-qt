@@ -123,3 +123,6 @@ UpdateFunctionDefinitionRequestPrivate::UpdateFunctionDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

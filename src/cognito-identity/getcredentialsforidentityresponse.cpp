@@ -101,3 +101,6 @@ void GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponse
     Q_ASSERT(xml.name() == QLatin1String("GetCredentialsForIdentityResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

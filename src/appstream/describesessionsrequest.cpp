@@ -123,3 +123,6 @@ DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

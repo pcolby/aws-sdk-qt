@@ -123,3 +123,6 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

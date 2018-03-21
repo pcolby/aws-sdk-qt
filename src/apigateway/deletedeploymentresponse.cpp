@@ -101,3 +101,6 @@ void DeleteDeploymentResponsePrivate::DeleteDeploymentResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

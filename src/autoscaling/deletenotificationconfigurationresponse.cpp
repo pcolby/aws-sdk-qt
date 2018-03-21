@@ -101,3 +101,6 @@ void DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigura
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotificationConfigurationResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

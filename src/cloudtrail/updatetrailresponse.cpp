@@ -101,3 +101,6 @@ void UpdateTrailResponsePrivate::UpdateTrailResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateTrailResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

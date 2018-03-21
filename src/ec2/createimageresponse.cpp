@@ -101,3 +101,6 @@ void CreateImageResponsePrivate::CreateImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

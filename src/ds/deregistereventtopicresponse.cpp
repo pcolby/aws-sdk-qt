@@ -101,3 +101,6 @@ void DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeregisterEventTopicResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

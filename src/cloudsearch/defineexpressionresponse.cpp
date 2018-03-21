@@ -101,3 +101,6 @@ void DefineExpressionResponsePrivate::DefineExpressionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DefineExpressionResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

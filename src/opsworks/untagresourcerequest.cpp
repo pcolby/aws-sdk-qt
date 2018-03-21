@@ -123,3 +123,6 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

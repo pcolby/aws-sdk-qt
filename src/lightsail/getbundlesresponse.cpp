@@ -101,3 +101,6 @@ void GetBundlesResponsePrivate::GetBundlesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetBundlesResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

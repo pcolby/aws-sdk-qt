@@ -101,3 +101,6 @@ void GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetHostedZoneLimitResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

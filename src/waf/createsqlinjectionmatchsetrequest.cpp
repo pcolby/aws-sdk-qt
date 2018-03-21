@@ -123,3 +123,6 @@ CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPriva
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

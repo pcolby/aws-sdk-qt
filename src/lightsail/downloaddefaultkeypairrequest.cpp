@@ -123,3 +123,6 @@ DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

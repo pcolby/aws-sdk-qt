@@ -101,3 +101,6 @@ void StopQueryExecutionResponsePrivate::StopQueryExecutionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("StopQueryExecutionResponse"));
     /// @todo
 }
+
+} // namespace Athena
+} // namespace AWS

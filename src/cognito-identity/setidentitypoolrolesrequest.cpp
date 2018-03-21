@@ -123,3 +123,6 @@ SetIdentityPoolRolesRequestPrivate::SetIdentityPoolRolesRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

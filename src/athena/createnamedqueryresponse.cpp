@@ -101,3 +101,6 @@ void CreateNamedQueryResponsePrivate::CreateNamedQueryResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateNamedQueryResponse"));
     /// @todo
 }
+
+} // namespace Athena
+} // namespace AWS

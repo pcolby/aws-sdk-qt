@@ -123,3 +123,6 @@ CreateHITTypeRequestPrivate::CreateHITTypeRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

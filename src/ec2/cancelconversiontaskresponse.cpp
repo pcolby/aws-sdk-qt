@@ -101,3 +101,6 @@ void CancelConversionTaskResponsePrivate::CancelConversionTaskResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CancelConversionTaskResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

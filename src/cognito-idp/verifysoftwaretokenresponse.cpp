@@ -101,3 +101,6 @@ void VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("VerifySoftwareTokenResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

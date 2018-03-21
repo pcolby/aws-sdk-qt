@@ -123,3 +123,6 @@ GetMethodResponseRequestPrivate::GetMethodResponseRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

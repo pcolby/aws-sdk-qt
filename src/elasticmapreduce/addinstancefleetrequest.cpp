@@ -123,3 +123,6 @@ AddInstanceFleetRequestPrivate::AddInstanceFleetRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

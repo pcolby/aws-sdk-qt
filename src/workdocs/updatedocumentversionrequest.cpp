@@ -123,3 +123,6 @@ UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

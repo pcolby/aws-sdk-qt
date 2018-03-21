@@ -101,3 +101,6 @@ void DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeClassicLinkInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

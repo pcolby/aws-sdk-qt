@@ -123,3 +123,6 @@ DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

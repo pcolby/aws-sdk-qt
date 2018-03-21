@@ -123,3 +123,6 @@ ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

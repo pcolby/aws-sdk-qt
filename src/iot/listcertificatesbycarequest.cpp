@@ -123,3 +123,6 @@ ListCertificatesByCARequestPrivate::ListCertificatesByCARequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

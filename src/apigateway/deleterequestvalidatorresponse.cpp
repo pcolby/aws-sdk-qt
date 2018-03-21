@@ -101,3 +101,6 @@ void DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteRequestValidatorResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

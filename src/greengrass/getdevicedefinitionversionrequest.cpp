@@ -123,3 +123,6 @@ GetDeviceDefinitionVersionRequestPrivate::GetDeviceDefinitionVersionRequestPriva
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

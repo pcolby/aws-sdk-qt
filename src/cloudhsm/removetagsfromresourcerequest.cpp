@@ -123,3 +123,6 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

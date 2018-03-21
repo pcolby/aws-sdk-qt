@@ -101,3 +101,6 @@ void GetDiscoveredResourceCountsResponsePrivate::GetDiscoveredResourceCountsResp
     Q_ASSERT(xml.name() == QLatin1String("GetDiscoveredResourceCountsResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

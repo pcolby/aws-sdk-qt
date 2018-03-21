@@ -123,3 +123,6 @@ DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

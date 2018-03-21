@@ -123,3 +123,6 @@ UpdateProvisioningArtifactRequestPrivate::UpdateProvisioningArtifactRequestPriva
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

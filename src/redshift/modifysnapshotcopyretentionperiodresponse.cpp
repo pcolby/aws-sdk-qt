@@ -101,3 +101,6 @@ void ModifySnapshotCopyRetentionPeriodResponsePrivate::ModifySnapshotCopyRetenti
     Q_ASSERT(xml.name() == QLatin1String("ModifySnapshotCopyRetentionPeriodResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

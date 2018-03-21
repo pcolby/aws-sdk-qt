@@ -123,3 +123,6 @@ RevokeSecurityGroupEgressRequestPrivate::RevokeSecurityGroupEgressRequestPrivate
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

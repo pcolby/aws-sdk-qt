@@ -123,3 +123,6 @@ ListNamespacesRequestPrivate::ListNamespacesRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

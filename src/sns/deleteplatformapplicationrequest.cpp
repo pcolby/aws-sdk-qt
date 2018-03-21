@@ -123,3 +123,6 @@ DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

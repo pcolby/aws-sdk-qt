@@ -101,3 +101,6 @@ void FailoverDBClusterResponsePrivate::FailoverDBClusterResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("FailoverDBClusterResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

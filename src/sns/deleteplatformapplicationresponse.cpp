@@ -101,3 +101,6 @@ void DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponse
     Q_ASSERT(xml.name() == QLatin1String("DeletePlatformApplicationResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

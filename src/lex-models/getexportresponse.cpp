@@ -101,3 +101,6 @@ void GetExportResponsePrivate::GetExportResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetExportResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

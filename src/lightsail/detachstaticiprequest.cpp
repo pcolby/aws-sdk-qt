@@ -123,3 +123,6 @@ DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetAccountResponsePrivate::GetAccountResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetAccountResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

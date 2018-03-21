@@ -123,3 +123,6 @@ DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

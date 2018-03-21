@@ -101,3 +101,6 @@ void RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("RegisterScalableTargetResponse"));
     /// @todo
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

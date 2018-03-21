@@ -101,3 +101,6 @@ void CreateDomainNameResponsePrivate::CreateDomainNameResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateDomainNameResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

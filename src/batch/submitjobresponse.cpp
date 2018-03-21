@@ -101,3 +101,6 @@ void SubmitJobResponsePrivate::SubmitJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SubmitJobResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

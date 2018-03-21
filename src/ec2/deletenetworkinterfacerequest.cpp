@@ -123,3 +123,6 @@ DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

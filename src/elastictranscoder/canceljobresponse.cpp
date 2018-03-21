@@ -101,3 +101,6 @@ void CancelJobResponsePrivate::CancelJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CancelJobResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

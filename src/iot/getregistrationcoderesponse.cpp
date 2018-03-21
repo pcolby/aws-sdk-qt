@@ -101,3 +101,6 @@ void GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetRegistrationCodeResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

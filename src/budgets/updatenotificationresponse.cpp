@@ -101,3 +101,6 @@ void UpdateNotificationResponsePrivate::UpdateNotificationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotificationResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

@@ -123,3 +123,6 @@ UntagProjectRequestPrivate::UntagProjectRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

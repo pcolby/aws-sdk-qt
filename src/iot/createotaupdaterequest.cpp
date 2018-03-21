@@ -123,3 +123,6 @@ CreateOTAUpdateRequestPrivate::CreateOTAUpdateRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

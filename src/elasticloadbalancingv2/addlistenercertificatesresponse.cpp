@@ -101,3 +101,6 @@ void AddListenerCertificatesResponsePrivate::AddListenerCertificatesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("AddListenerCertificatesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

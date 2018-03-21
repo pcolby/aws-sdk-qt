@@ -123,3 +123,6 @@ ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

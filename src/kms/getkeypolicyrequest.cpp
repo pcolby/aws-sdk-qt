@@ -123,3 +123,6 @@ GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

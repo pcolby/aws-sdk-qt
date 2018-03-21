@@ -123,3 +123,6 @@ UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifec
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

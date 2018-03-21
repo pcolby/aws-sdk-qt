@@ -101,3 +101,6 @@ void UploadPartResponsePrivate::UploadPartResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UploadPartResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

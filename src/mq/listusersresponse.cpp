@@ -101,3 +101,6 @@ void ListUsersResponsePrivate::ListUsersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListUsersResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

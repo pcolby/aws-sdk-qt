@@ -123,3 +123,6 @@ ListStepsRequestPrivate::ListStepsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

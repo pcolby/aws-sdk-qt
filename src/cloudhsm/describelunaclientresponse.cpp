@@ -101,3 +101,6 @@ void DescribeLunaClientResponsePrivate::DescribeLunaClientResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeLunaClientResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

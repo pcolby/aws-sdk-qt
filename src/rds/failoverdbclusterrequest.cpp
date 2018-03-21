@@ -123,3 +123,6 @@ FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

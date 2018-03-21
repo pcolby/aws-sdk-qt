@@ -101,3 +101,6 @@ void DeclineHandshakeResponsePrivate::DeclineHandshakeResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeclineHandshakeResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

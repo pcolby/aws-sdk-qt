@@ -101,3 +101,6 @@ void DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInst
     Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledInstanceAvailabilityResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

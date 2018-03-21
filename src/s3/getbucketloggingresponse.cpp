@@ -101,3 +101,6 @@ void GetBucketLoggingResponsePrivate::GetBucketLoggingResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLoggingResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

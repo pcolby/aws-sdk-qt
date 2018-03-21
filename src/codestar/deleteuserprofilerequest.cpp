@@ -123,3 +123,6 @@ DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

@@ -101,3 +101,6 @@ void ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

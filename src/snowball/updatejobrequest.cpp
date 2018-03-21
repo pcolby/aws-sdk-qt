@@ -123,3 +123,6 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

@@ -123,3 +123,6 @@ ListObjectAttributesRequestPrivate::ListObjectAttributesRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

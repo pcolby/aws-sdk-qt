@@ -101,3 +101,6 @@ void DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeContainerInstancesResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

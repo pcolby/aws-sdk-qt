@@ -123,3 +123,6 @@ ApplyEnvironmentManagedActionRequestPrivate::ApplyEnvironmentManagedActionReques
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

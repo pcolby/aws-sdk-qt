@@ -101,3 +101,6 @@ void DescribeOptionGroupsResponsePrivate::DescribeOptionGroupsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeOptionGroupsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

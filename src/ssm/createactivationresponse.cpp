@@ -101,3 +101,6 @@ void CreateActivationResponsePrivate::CreateActivationResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateActivationResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

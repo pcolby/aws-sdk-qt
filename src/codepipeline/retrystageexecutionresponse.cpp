@@ -101,3 +101,6 @@ void RetryStageExecutionResponsePrivate::RetryStageExecutionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("RetryStageExecutionResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

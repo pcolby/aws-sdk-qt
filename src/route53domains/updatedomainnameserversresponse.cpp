@@ -101,3 +101,6 @@ void UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UpdateDomainNameserversResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

@@ -123,3 +123,6 @@ ListResourcesRequestPrivate::ListResourcesRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

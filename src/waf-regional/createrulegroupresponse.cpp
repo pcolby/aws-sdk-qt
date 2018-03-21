@@ -101,3 +101,6 @@ void CreateRuleGroupResponsePrivate::CreateRuleGroupResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateRuleGroupResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

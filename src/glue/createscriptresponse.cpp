@@ -101,3 +101,6 @@ void CreateScriptResponsePrivate::CreateScriptResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateScriptResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

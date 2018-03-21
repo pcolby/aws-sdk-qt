@@ -123,3 +123,6 @@ ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate
 {
 
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

@@ -123,3 +123,6 @@ DeletePresetRequestPrivate::DeletePresetRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

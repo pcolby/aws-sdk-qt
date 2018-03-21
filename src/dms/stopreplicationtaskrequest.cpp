@@ -123,3 +123,6 @@ StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

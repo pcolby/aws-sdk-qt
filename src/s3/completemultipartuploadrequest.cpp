@@ -123,3 +123,6 @@ CompleteMultipartUploadRequestPrivate::CompleteMultipartUploadRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

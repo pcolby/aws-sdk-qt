@@ -101,3 +101,6 @@ void DescribeVolumeAttributeResponsePrivate::DescribeVolumeAttributeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumeAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

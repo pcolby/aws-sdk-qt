@@ -101,3 +101,6 @@ void DescribePoliciesResponsePrivate::DescribePoliciesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribePoliciesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

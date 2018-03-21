@@ -101,3 +101,6 @@ void DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteEndpointConfigResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

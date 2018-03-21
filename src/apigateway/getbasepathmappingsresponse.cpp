@@ -101,3 +101,6 @@ void GetBasePathMappingsResponsePrivate::GetBasePathMappingsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetBasePathMappingsResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

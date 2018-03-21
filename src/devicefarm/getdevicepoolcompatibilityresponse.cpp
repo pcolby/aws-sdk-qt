@@ -101,3 +101,6 @@ void GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityRespon
     Q_ASSERT(xml.name() == QLatin1String("GetDevicePoolCompatibilityResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

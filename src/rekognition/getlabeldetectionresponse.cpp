@@ -101,3 +101,6 @@ void GetLabelDetectionResponsePrivate::GetLabelDetectionResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetLabelDetectionResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

@@ -123,3 +123,6 @@ GetDomainsRequestPrivate::GetDomainsRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

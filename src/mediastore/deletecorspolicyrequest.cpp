@@ -123,3 +123,6 @@ DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
 {
 
 }
+
+} // namespace MediaStore
+} // namespace AWS

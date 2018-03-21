@@ -101,3 +101,6 @@ void AddApplicationInputProcessingConfigurationResponsePrivate::AddApplicationIn
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationInputProcessingConfigurationResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

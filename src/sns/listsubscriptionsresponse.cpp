@@ -101,3 +101,6 @@ void ListSubscriptionsResponsePrivate::ListSubscriptionsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionsResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

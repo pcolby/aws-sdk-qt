@@ -101,3 +101,6 @@ void ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessFor
     Q_ASSERT(xml.name() == QLatin1String("ListAWSServiceAccessForOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

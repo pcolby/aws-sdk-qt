@@ -123,3 +123,6 @@ ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

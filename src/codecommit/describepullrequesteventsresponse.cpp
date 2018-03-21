@@ -101,3 +101,6 @@ void DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribePullRequestEventsResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPri
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

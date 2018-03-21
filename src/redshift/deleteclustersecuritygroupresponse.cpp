@@ -101,3 +101,6 @@ void DeleteClusterSecurityGroupResponsePrivate::DeleteClusterSecurityGroupRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateC
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConfigurationItemsFromApplicationResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

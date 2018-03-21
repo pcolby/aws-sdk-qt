@@ -123,3 +123,6 @@ HeadBucketRequestPrivate::HeadBucketRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

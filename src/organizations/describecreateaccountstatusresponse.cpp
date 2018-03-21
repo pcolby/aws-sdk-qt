@@ -101,3 +101,6 @@ void DescribeCreateAccountStatusResponsePrivate::DescribeCreateAccountStatusResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeCreateAccountStatusResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateGraphqlApiResponsePrivate::CreateGraphqlApiResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateGraphqlApiResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

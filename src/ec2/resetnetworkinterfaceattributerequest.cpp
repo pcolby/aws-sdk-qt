@@ -123,3 +123,6 @@ ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequ
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

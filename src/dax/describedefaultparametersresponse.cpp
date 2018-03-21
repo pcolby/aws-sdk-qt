@@ -101,3 +101,6 @@ void DescribeDefaultParametersResponsePrivate::DescribeDefaultParametersResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeDefaultParametersResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

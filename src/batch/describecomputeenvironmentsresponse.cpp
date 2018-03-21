@@ -101,3 +101,6 @@ void DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeComputeEnvironmentsResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

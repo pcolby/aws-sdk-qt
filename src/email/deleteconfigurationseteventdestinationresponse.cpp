@@ -101,3 +101,6 @@ void DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationS
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationSetEventDestinationResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -101,3 +101,6 @@ void UnlinkDeveloperIdentityResponsePrivate::UnlinkDeveloperIdentityResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UnlinkDeveloperIdentityResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

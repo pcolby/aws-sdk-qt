@@ -101,3 +101,6 @@ void DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponse
     Q_ASSERT(xml.name() == QLatin1String("DeleteLaunchConfigurationResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

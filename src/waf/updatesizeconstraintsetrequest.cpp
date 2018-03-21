@@ -123,3 +123,6 @@ UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

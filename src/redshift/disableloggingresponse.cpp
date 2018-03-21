@@ -101,3 +101,6 @@ void DisableLoggingResponsePrivate::DisableLoggingResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DisableLoggingResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

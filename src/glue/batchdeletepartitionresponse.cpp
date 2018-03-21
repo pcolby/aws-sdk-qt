@@ -101,3 +101,6 @@ void BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("BatchDeletePartitionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

@@ -123,3 +123,6 @@ PutBucketPolicyRequestPrivate::PutBucketPolicyRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

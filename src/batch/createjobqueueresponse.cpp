@@ -101,3 +101,6 @@ void CreateJobQueueResponsePrivate::CreateJobQueueResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateJobQueueResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

@@ -123,3 +123,6 @@ ListUserImportJobsRequestPrivate::ListUserImportJobsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

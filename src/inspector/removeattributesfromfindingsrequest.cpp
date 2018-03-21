@@ -123,3 +123,6 @@ RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestP
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

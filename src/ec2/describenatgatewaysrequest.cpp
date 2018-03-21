@@ -123,3 +123,6 @@ DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

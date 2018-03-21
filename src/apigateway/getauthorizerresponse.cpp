@@ -101,3 +101,6 @@ void GetAuthorizerResponsePrivate::GetAuthorizerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetAuthorizerResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AdminResetUserPasswordResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

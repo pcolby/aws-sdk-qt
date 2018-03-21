@@ -101,3 +101,6 @@ void DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGat
     Q_ASSERT(xml.name() == QLatin1String("DeleteEgressOnlyInternetGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

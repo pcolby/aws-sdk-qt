@@ -123,3 +123,6 @@ GetSegmentExportJobsRequestPrivate::GetSegmentExportJobsRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

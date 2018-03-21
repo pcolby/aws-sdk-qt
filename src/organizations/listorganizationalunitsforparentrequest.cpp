@@ -123,3 +123,6 @@ ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParent
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

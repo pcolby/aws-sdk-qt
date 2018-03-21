@@ -101,3 +101,6 @@ void ValidateTemplateResponsePrivate::ValidateTemplateResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ValidateTemplateResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

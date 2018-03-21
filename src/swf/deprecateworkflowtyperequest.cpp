@@ -123,3 +123,6 @@ DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

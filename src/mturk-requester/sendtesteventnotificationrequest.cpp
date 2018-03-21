@@ -123,3 +123,6 @@ SendTestEventNotificationRequestPrivate::SendTestEventNotificationRequestPrivate
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

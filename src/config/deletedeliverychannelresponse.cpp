@@ -101,3 +101,6 @@ void DeleteDeliveryChannelResponsePrivate::DeleteDeliveryChannelResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeliveryChannelResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

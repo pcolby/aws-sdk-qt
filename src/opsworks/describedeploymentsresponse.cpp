@@ -101,3 +101,6 @@ void DescribeDeploymentsResponsePrivate::DescribeDeploymentsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeDeploymentsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

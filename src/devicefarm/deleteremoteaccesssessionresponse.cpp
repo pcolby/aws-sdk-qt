@@ -101,3 +101,6 @@ void DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponse
     Q_ASSERT(xml.name() == QLatin1String("DeleteRemoteAccessSessionResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

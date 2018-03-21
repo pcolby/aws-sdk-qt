@@ -101,3 +101,6 @@ void DeleteMLModelResponsePrivate::DeleteMLModelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteMLModelResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

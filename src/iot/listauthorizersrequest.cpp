@@ -123,3 +123,6 @@ ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

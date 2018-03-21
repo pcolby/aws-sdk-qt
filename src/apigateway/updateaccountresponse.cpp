@@ -101,3 +101,6 @@ void UpdateAccountResponsePrivate::UpdateAccountResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccountResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

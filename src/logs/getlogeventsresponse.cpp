@@ -101,3 +101,6 @@ void GetLogEventsResponsePrivate::GetLogEventsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetLogEventsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

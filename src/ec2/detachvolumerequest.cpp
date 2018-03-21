@@ -123,3 +123,6 @@ DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

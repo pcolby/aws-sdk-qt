@@ -123,3 +123,6 @@ CreateLayerRequestPrivate::CreateLayerRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

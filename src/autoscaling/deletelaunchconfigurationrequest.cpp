@@ -123,3 +123,6 @@ DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

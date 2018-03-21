@@ -101,3 +101,6 @@ void QueryResponsePrivate::QueryResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("QueryResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

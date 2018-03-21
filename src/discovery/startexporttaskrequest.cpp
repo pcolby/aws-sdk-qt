@@ -123,3 +123,6 @@ StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

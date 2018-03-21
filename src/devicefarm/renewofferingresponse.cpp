@@ -101,3 +101,6 @@ void RenewOfferingResponsePrivate::RenewOfferingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RenewOfferingResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

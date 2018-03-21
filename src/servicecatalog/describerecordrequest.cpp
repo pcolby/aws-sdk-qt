@@ -123,3 +123,6 @@ DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

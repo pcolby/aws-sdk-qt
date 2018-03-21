@@ -123,3 +123,6 @@ ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPriva
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

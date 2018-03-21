@@ -101,3 +101,6 @@ void GetReusableDelegationSetResponsePrivate::GetReusableDelegationSetResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetReusableDelegationSetResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

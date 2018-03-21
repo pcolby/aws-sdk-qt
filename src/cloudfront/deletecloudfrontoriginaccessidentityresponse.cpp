@@ -101,3 +101,6 @@ void DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOrigin
     Q_ASSERT(xml.name() == QLatin1String("DeleteCloudFrontOriginAccessIdentityResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

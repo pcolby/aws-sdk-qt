@@ -101,3 +101,6 @@ void GetBucketAccelerateConfigurationResponsePrivate::GetBucketAccelerateConfigu
     Q_ASSERT(xml.name() == QLatin1String("GetBucketAccelerateConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

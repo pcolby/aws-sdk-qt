@@ -123,3 +123,6 @@ DeleteVpcPeeringAuthorizationRequestPrivate::DeleteVpcPeeringAuthorizationReques
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

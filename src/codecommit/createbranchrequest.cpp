@@ -123,3 +123,6 @@ CreateBranchRequestPrivate::CreateBranchRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

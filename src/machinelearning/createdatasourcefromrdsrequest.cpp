@@ -123,3 +123,6 @@ CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

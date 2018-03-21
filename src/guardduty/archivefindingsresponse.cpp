@@ -101,3 +101,6 @@ void ArchiveFindingsResponsePrivate::ArchiveFindingsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ArchiveFindingsResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

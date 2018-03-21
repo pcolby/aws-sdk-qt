@@ -123,3 +123,6 @@ ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

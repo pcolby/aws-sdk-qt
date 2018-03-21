@@ -101,3 +101,6 @@ void DeleteFunctionResponsePrivate::DeleteFunctionResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

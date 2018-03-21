@@ -101,3 +101,6 @@ void DeleteWebhookResponsePrivate::DeleteWebhookResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteWebhookResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteRuleResponsePrivate::DeleteRuleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteRuleResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

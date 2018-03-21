@@ -123,3 +123,6 @@ AddTagsRequestPrivate::AddTagsRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

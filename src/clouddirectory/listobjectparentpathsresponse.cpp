@@ -101,3 +101,6 @@ void ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListObjectParentPathsResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

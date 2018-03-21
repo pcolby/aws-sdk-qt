@@ -123,3 +123,6 @@ RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

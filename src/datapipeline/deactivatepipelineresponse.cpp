@@ -101,3 +101,6 @@ void DeactivatePipelineResponsePrivate::DeactivatePipelineResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeactivatePipelineResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

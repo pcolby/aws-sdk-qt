@@ -123,3 +123,6 @@ UpdateMaintenanceWindowTaskRequestPrivate::UpdateMaintenanceWindowTaskRequestPri
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

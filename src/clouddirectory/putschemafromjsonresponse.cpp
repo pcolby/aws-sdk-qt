@@ -101,3 +101,6 @@ void PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("PutSchemaFromJsonResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

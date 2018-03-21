@@ -101,3 +101,6 @@ void DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeTimeToLiveResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

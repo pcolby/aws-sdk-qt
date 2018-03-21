@@ -101,3 +101,6 @@ void GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetFunctionConfigurationResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

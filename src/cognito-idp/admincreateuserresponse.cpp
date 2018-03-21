@@ -101,3 +101,6 @@ void AdminCreateUserResponsePrivate::AdminCreateUserResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AdminCreateUserResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

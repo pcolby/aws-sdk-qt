@@ -101,3 +101,6 @@ void ListDiscoveredResourcesResponsePrivate::ListDiscoveredResourcesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListDiscoveredResourcesResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

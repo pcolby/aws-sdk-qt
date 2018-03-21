@@ -101,3 +101,6 @@ void DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeRouteTablesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

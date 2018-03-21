@@ -123,3 +123,6 @@ ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModifications
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

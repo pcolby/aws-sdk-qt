@@ -123,3 +123,6 @@ DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

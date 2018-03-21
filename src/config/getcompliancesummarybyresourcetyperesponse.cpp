@@ -101,3 +101,6 @@ void GetComplianceSummaryByResourceTypeResponsePrivate::GetComplianceSummaryByRe
     Q_ASSERT(xml.name() == QLatin1String("GetComplianceSummaryByResourceTypeResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

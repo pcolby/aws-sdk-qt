@@ -101,3 +101,6 @@ void GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchas
     Q_ASSERT(xml.name() == QLatin1String("GetHostReservationPurchasePreviewResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsReques
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

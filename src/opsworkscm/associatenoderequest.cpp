@@ -123,3 +123,6 @@ AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

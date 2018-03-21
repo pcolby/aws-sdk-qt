@@ -101,3 +101,6 @@ void AttachStaticIpResponsePrivate::AttachStaticIpResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("AttachStaticIpResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

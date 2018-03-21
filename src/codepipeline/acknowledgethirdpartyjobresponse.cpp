@@ -101,3 +101,6 @@ void AcknowledgeThirdPartyJobResponsePrivate::AcknowledgeThirdPartyJobResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("AcknowledgeThirdPartyJobResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

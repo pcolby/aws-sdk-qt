@@ -101,3 +101,6 @@ void DeleteClusterResponsePrivate::DeleteClusterResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteClusterResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

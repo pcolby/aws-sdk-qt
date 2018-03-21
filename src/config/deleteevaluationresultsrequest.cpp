@@ -123,3 +123,6 @@ DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

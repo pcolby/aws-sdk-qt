@@ -101,3 +101,6 @@ void AddTagsResponsePrivate::AddTagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AddTagsResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

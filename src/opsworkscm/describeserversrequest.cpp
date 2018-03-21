@@ -123,3 +123,6 @@ DescribeServersRequestPrivate::DescribeServersRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

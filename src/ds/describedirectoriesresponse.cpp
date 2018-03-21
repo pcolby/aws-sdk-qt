@@ -101,3 +101,6 @@ void DescribeDirectoriesResponsePrivate::DescribeDirectoriesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeDirectoriesResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

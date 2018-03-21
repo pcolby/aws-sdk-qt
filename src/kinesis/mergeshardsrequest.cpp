@@ -123,3 +123,6 @@ MergeShardsRequestPrivate::MergeShardsRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

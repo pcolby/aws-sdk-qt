@@ -123,3 +123,6 @@ GetBucketInventoryConfigurationRequestPrivate::GetBucketInventoryConfigurationRe
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

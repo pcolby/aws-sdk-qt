@@ -123,3 +123,6 @@ CreateVpcEndpointConnectionNotificationRequestPrivate::CreateVpcEndpointConnecti
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

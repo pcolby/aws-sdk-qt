@@ -123,3 +123,6 @@ DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestP
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

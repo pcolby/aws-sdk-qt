@@ -123,3 +123,6 @@ UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

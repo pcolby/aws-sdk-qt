@@ -123,3 +123,6 @@ DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

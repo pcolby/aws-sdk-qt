@@ -123,3 +123,6 @@ CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

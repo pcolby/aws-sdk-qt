@@ -101,3 +101,6 @@ void DescribeComplianceByResourceResponsePrivate::DescribeComplianceByResourceRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeComplianceByResourceResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateLayerResponsePrivate::UpdateLayerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateLayerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListFunctionDefinitionVersionsResponsePrivate::ListFunctionDefinitionVersio
     Q_ASSERT(xml.name() == QLatin1String("ListFunctionDefinitionVersionsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

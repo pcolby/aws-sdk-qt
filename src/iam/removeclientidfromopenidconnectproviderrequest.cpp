@@ -123,3 +123,6 @@ RemoveClientIDFromOpenIDConnectProviderRequestPrivate::RemoveClientIDFromOpenIDC
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

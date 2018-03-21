@@ -101,3 +101,6 @@ void DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

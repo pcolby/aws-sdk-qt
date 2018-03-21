@@ -123,3 +123,6 @@ PutDestinationPolicyRequestPrivate::PutDestinationPolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

@@ -123,3 +123,6 @@ DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

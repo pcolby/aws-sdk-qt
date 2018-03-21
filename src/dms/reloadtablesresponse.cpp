@@ -101,3 +101,6 @@ void ReloadTablesResponsePrivate::ReloadTablesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ReloadTablesResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListTemplatesResponsePrivate::ListTemplatesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListTemplatesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

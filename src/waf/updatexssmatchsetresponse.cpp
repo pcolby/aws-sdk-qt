@@ -101,3 +101,6 @@ void UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateXssMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

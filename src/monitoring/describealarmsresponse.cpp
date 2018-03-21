@@ -101,3 +101,6 @@ void DescribeAlarmsResponsePrivate::DescribeAlarmsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

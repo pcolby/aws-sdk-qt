@@ -101,3 +101,6 @@ void AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDa
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationReferenceDataSourceResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

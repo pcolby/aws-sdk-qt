@@ -101,3 +101,6 @@ void CreateAppResponsePrivate::CreateAppResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateAppResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

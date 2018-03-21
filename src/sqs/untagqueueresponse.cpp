@@ -101,3 +101,6 @@ void UntagQueueResponsePrivate::UntagQueueResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UntagQueueResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftRe
     Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromRedshiftResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

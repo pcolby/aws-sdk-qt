@@ -123,3 +123,6 @@ ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupReques
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

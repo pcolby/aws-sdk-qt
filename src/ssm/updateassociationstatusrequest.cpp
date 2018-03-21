@@ -123,3 +123,6 @@ UpdateAssociationStatusRequestPrivate::UpdateAssociationStatusRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -123,3 +123,6 @@ ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

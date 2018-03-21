@@ -101,3 +101,6 @@ void RegisterEcsClusterResponsePrivate::RegisterEcsClusterResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("RegisterEcsClusterResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

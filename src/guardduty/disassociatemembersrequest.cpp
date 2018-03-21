@@ -123,3 +123,6 @@ DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

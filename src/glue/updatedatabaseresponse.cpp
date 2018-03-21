@@ -101,3 +101,6 @@ void UpdateDatabaseResponsePrivate::UpdateDatabaseResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateDatabaseResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

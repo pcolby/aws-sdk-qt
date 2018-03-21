@@ -123,3 +123,6 @@ AbortEnvironmentUpdateRequestPrivate::AbortEnvironmentUpdateRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

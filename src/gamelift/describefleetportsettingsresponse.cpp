@@ -101,3 +101,6 @@ void DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeFleetPortSettingsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -101,3 +101,6 @@ void ModifyTargetGroupResponsePrivate::ModifyTargetGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ModifyTargetGroupResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

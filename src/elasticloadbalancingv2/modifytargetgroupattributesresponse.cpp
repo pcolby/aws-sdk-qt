@@ -101,3 +101,6 @@ void ModifyTargetGroupAttributesResponsePrivate::ModifyTargetGroupAttributesResp
     Q_ASSERT(xml.name() == QLatin1String("ModifyTargetGroupAttributesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

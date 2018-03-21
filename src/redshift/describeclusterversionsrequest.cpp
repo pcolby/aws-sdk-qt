@@ -123,3 +123,6 @@ DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

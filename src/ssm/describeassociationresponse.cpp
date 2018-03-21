@@ -101,3 +101,6 @@ void DescribeAssociationResponsePrivate::DescribeAssociationResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeAssociationResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

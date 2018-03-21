@@ -101,3 +101,6 @@ void ResetCacheResponsePrivate::ResetCacheResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ResetCacheResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

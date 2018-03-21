@@ -101,3 +101,6 @@ void DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteAutoScalingGroupResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

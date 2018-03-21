@@ -101,3 +101,6 @@ void UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateAssumeRolePolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

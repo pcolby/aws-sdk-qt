@@ -101,3 +101,6 @@ void RegisterJobDefinitionResponsePrivate::RegisterJobDefinitionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("RegisterJobDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

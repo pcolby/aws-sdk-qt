@@ -101,3 +101,6 @@ void GetInvitationsCountResponsePrivate::GetInvitationsCountResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetInvitationsCountResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

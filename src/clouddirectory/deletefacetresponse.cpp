@@ -101,3 +101,6 @@ void DeleteFacetResponsePrivate::DeleteFacetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteFacetResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

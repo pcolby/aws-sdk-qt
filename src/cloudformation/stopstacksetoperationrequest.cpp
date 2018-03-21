@@ -123,3 +123,6 @@ StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

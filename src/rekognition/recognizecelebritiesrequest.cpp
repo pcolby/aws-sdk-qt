@@ -123,3 +123,6 @@ RecognizeCelebritiesRequestPrivate::RecognizeCelebritiesRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

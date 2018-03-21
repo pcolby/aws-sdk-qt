@@ -123,3 +123,6 @@ DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeregisterEcsClusterResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -123,3 +123,6 @@ DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

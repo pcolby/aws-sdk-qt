@@ -123,3 +123,6 @@ UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPri
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

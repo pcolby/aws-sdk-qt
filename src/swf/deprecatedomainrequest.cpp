@@ -123,3 +123,6 @@ DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

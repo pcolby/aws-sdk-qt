@@ -123,3 +123,6 @@ StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

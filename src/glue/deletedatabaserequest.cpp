@@ -123,3 +123,6 @@ DeleteDatabaseRequestPrivate::DeleteDatabaseRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

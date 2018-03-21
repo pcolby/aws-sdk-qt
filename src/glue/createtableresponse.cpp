@@ -101,3 +101,6 @@ void CreateTableResponsePrivate::CreateTableResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateTableResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

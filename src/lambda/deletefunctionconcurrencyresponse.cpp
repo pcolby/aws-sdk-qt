@@ -101,3 +101,6 @@ void DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponse
     Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionConcurrencyResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateRuleRequestPrivate::CreateRuleRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

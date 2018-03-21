@@ -123,3 +123,6 @@ PutKeyPolicyRequestPrivate::PutKeyPolicyRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

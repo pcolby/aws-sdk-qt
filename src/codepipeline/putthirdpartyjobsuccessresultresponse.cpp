@@ -101,3 +101,6 @@ void PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResult
     Q_ASSERT(xml.name() == QLatin1String("PutThirdPartyJobSuccessResultResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

@@ -123,3 +123,6 @@ SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

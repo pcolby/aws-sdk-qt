@@ -101,3 +101,6 @@ void GetInstanceAccessDetailsResponsePrivate::GetInstanceAccessDetailsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceAccessDetailsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

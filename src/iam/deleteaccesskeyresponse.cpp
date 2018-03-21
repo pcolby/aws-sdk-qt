@@ -101,3 +101,6 @@ void DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccessKeyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ StartJobRunRequestPrivate::StartJobRunRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

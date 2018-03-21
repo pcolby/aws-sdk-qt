@@ -101,3 +101,6 @@ void AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResp
     Q_ASSERT(xml.name() == QLatin1String("AssociateSkillGroupWithRoomResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

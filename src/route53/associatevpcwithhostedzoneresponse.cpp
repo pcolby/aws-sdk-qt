@@ -101,3 +101,6 @@ void AssociateVPCWithHostedZoneResponsePrivate::AssociateVPCWithHostedZoneRespon
     Q_ASSERT(xml.name() == QLatin1String("AssociateVPCWithHostedZoneResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

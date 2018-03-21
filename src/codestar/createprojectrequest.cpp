@@ -123,3 +123,6 @@ CreateProjectRequestPrivate::CreateProjectRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

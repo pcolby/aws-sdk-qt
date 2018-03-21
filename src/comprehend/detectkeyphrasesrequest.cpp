@@ -123,3 +123,6 @@ DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

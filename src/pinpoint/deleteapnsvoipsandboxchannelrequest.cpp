@@ -123,3 +123,6 @@ DeleteApnsVoipSandboxChannelRequestPrivate::DeleteApnsVoipSandboxChannelRequestP
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

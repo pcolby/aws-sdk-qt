@@ -123,3 +123,6 @@ SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

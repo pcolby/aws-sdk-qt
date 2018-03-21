@@ -101,3 +101,6 @@ void RevokeSecurityGroupIngressResponsePrivate::RevokeSecurityGroupIngressRespon
     Q_ASSERT(xml.name() == QLatin1String("RevokeSecurityGroupIngressResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

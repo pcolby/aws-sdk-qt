@@ -101,3 +101,6 @@ void UpdateClusterResponsePrivate::UpdateClusterResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateClusterResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateUsagePlanKeyResponsePrivate::CreateUsagePlanKeyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateUsagePlanKeyResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

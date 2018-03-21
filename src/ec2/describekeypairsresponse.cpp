@@ -101,3 +101,6 @@ void DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeKeyPairsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

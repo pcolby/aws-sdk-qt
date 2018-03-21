@@ -123,3 +123,6 @@ DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotifica
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

@@ -123,3 +123,6 @@ GrantAccessRequestPrivate::GrantAccessRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

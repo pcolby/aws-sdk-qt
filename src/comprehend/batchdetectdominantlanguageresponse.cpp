@@ -101,3 +101,6 @@ void BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResp
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectDominantLanguageResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

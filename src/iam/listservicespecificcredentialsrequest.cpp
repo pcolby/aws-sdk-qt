@@ -123,3 +123,6 @@ ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequ
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

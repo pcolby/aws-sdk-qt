@@ -123,3 +123,6 @@ RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRe
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

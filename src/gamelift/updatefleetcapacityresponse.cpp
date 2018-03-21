@@ -101,3 +101,6 @@ void UpdateFleetCapacityResponsePrivate::UpdateFleetCapacityResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("UpdateFleetCapacityResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

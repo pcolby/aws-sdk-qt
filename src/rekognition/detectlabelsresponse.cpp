@@ -101,3 +101,6 @@ void DetectLabelsResponsePrivate::DetectLabelsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DetectLabelsResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

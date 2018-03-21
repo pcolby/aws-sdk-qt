@@ -101,3 +101,6 @@ void CreateDirectConnectGatewayAssociationResponsePrivate::CreateDirectConnectGa
     Q_ASSERT(xml.name() == QLatin1String("CreateDirectConnectGatewayAssociationResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeMyUserProfileResponsePrivate::DescribeMyUserProfileResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeMyUserProfileResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

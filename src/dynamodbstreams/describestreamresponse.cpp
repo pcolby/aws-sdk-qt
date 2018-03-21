@@ -101,3 +101,6 @@ void DescribeStreamResponsePrivate::DescribeStreamResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeStreamResponse"));
     /// @todo
 }
+
+} // namespace DynamoDBStreams
+} // namespace AWS

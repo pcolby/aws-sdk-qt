@@ -123,3 +123,6 @@ UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEma
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

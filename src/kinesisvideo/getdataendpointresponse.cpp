@@ -101,3 +101,6 @@ void GetDataEndpointResponsePrivate::GetDataEndpointResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetDataEndpointResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

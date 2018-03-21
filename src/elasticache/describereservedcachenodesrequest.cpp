@@ -123,3 +123,6 @@ DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPriva
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromDatasetResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

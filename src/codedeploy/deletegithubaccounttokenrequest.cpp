@@ -123,3 +123,6 @@ DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

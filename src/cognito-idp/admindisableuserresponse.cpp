@@ -101,3 +101,6 @@ void AdminDisableUserResponsePrivate::AdminDisableUserResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("AdminDisableUserResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

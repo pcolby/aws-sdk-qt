@@ -101,3 +101,6 @@ void CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateOrUpdateTagsResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

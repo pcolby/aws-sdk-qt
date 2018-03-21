@@ -101,3 +101,6 @@ void ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListConfigurationSetsResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

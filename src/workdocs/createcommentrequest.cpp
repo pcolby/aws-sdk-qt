@@ -123,3 +123,6 @@ CreateCommentRequestPrivate::CreateCommentRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

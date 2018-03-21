@@ -101,3 +101,6 @@ void GetDeploymentStatusResponsePrivate::GetDeploymentStatusResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetDeploymentStatusResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

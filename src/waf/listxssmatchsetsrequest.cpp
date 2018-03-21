@@ -123,3 +123,6 @@ ListXssMatchSetsRequestPrivate::ListXssMatchSetsRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

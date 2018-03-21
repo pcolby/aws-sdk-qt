@@ -123,3 +123,6 @@ TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalin
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

@@ -123,3 +123,6 @@ AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

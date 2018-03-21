@@ -101,3 +101,6 @@ void DisassociateKmsKeyResponsePrivate::DisassociateKmsKeyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DisassociateKmsKeyResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

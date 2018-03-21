@@ -123,3 +123,6 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

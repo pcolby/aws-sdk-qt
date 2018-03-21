@@ -123,3 +123,6 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

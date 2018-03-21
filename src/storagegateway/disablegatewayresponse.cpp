@@ -101,3 +101,6 @@ void DisableGatewayResponsePrivate::DisableGatewayResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DisableGatewayResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

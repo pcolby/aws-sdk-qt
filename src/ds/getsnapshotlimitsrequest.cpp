@@ -123,3 +123,6 @@ GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

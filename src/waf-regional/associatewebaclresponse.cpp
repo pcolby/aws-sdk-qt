@@ -101,3 +101,6 @@ void AssociateWebACLResponsePrivate::AssociateWebACLResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AssociateWebACLResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

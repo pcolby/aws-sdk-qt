@@ -101,3 +101,6 @@ void DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeAgentVersionsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

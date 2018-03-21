@@ -101,3 +101,6 @@ void CopyImageResponsePrivate::CopyImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CopyImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

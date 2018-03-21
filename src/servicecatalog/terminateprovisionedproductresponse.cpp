@@ -101,3 +101,6 @@ void TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResp
     Q_ASSERT(xml.name() == QLatin1String("TerminateProvisionedProductResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

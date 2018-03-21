@@ -123,3 +123,6 @@ CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanc
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

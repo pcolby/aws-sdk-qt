@@ -101,3 +101,6 @@ void DeleteVirtualInterfaceResponsePrivate::DeleteVirtualInterfaceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteVirtualInterfaceResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

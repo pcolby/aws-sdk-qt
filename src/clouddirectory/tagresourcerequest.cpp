@@ -123,3 +123,6 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

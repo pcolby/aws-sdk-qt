@@ -123,3 +123,6 @@ GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

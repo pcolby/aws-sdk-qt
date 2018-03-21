@@ -123,3 +123,6 @@ DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

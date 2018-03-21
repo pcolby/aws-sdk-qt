@@ -123,3 +123,6 @@ UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

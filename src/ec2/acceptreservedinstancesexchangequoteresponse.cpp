@@ -101,3 +101,6 @@ void AcceptReservedInstancesExchangeQuoteResponsePrivate::AcceptReservedInstance
     Q_ASSERT(xml.name() == QLatin1String("AcceptReservedInstancesExchangeQuoteResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

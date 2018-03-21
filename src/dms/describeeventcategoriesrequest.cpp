@@ -123,3 +123,6 @@ DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

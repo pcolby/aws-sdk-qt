@@ -123,3 +123,6 @@ DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

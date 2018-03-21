@@ -101,3 +101,6 @@ void SearchResourcesResponsePrivate::SearchResourcesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("SearchResourcesResponse"));
     /// @todo
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

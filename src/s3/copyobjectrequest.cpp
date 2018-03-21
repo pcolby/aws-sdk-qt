@@ -123,3 +123,6 @@ CopyObjectRequestPrivate::CopyObjectRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

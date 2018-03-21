@@ -101,3 +101,6 @@ void TagLogGroupResponsePrivate::TagLogGroupResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TagLogGroupResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

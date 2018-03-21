@@ -101,3 +101,6 @@ void UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectPr
     Q_ASSERT(xml.name() == QLatin1String("UpdateOpenIDConnectProviderThumbprintResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

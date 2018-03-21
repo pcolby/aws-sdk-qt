@@ -101,3 +101,6 @@ void ModifyMountTargetSecurityGroupsResponsePrivate::ModifyMountTargetSecurityGr
     Q_ASSERT(xml.name() == QLatin1String("ModifyMountTargetSecurityGroupsResponse"));
     /// @todo
 }
+
+} // namespace EFS
+} // namespace AWS

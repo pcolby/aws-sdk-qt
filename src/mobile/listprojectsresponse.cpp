@@ -101,3 +101,6 @@ void ListProjectsResponsePrivate::ListProjectsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListProjectsResponse"));
     /// @todo
 }
+
+} // namespace Mobile
+} // namespace AWS

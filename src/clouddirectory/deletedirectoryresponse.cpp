@@ -101,3 +101,6 @@ void DeleteDirectoryResponsePrivate::DeleteDirectoryResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteDirectoryResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

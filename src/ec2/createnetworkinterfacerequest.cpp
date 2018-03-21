@@ -123,3 +123,6 @@ CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

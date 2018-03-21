@@ -101,3 +101,6 @@ void PredictResponsePrivate::PredictResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PredictResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

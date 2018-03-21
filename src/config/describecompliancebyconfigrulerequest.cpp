@@ -123,3 +123,6 @@ DescribeComplianceByConfigRuleRequestPrivate::DescribeComplianceByConfigRuleRequ
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

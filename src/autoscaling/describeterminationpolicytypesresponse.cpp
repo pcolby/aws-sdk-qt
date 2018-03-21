@@ -101,3 +101,6 @@ void DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTyp
     Q_ASSERT(xml.name() == QLatin1String("DescribeTerminationPolicyTypesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

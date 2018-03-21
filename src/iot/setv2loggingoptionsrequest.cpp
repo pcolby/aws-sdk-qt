@@ -123,3 +123,6 @@ SetV2LoggingOptionsRequestPrivate::SetV2LoggingOptionsRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

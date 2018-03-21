@@ -101,3 +101,6 @@ void UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfig
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetReputationMetricsEnabledResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

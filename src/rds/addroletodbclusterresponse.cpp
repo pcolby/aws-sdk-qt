@@ -101,3 +101,6 @@ void AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("AddRoleToDBClusterResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

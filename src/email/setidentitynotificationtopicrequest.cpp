@@ -123,3 +123,6 @@ SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestP
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

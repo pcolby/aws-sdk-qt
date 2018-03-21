@@ -101,3 +101,6 @@ void ListTagsForResourceResponsePrivate::ListTagsForResourceResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForResourceResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

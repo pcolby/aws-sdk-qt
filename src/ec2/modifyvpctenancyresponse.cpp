@@ -101,3 +101,6 @@ void ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcTenancyResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

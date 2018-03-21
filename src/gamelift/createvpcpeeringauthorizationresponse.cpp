@@ -101,3 +101,6 @@ void CreateVpcPeeringAuthorizationResponsePrivate::CreateVpcPeeringAuthorization
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcPeeringAuthorizationResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -123,3 +123,6 @@ AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

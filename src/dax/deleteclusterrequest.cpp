@@ -123,3 +123,6 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

@@ -101,3 +101,6 @@ void TransferDomainResponsePrivate::TransferDomainResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("TransferDomainResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

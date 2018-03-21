@@ -123,3 +123,6 @@ SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetBucketWebsiteResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

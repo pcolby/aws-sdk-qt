@@ -123,3 +123,6 @@ DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecif
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

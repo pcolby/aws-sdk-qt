@@ -101,3 +101,6 @@ void DescribeOriginEndpointResponsePrivate::DescribeOriginEndpointResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeOriginEndpointResponse"));
     /// @todo
 }
+
+} // namespace MediaPackage
+} // namespace AWS

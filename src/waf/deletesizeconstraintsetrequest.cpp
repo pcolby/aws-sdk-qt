@@ -123,3 +123,6 @@ DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

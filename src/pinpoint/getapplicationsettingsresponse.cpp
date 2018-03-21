@@ -101,3 +101,6 @@ void GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetApplicationSettingsResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

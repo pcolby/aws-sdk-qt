@@ -123,3 +123,6 @@ UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

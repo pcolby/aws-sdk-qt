@@ -123,3 +123,6 @@ RespondToAuthChallengeRequestPrivate::RespondToAuthChallengeRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

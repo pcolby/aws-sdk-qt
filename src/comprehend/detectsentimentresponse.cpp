@@ -101,3 +101,6 @@ void DetectSentimentResponsePrivate::DetectSentimentResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DetectSentimentResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

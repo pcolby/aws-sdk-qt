@@ -123,3 +123,6 @@ UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

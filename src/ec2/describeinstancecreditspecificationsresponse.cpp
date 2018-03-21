@@ -101,3 +101,6 @@ void DescribeInstanceCreditSpecificationsResponsePrivate::DescribeInstanceCredit
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceCreditSpecificationsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

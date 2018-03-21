@@ -123,3 +123,6 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -101,3 +101,6 @@ void SetStatusResponsePrivate::SetStatusResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SetStatusResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

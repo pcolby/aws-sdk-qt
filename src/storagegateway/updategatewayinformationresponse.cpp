@@ -101,3 +101,6 @@ void UpdateGatewayInformationResponsePrivate::UpdateGatewayInformationResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("UpdateGatewayInformationResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

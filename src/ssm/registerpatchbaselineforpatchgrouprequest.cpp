@@ -123,3 +123,6 @@ RegisterPatchBaselineForPatchGroupRequestPrivate::RegisterPatchBaselineForPatchG
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

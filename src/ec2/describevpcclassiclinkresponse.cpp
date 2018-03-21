@@ -101,3 +101,6 @@ void DescribeVpcClassicLinkResponsePrivate::DescribeVpcClassicLinkResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcClassicLinkResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

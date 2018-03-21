@@ -123,3 +123,6 @@ BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestP
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

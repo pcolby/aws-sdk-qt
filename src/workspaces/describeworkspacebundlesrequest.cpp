@@ -123,3 +123,6 @@ DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
 {
 
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

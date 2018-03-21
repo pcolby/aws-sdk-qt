@@ -123,3 +123,6 @@ GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionSt
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

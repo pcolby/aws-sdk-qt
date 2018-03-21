@@ -101,3 +101,6 @@ void SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("SynthesizeSpeechResponse"));
     /// @todo
 }
+
+} // namespace Polly
+} // namespace AWS

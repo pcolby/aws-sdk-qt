@@ -123,3 +123,6 @@ SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

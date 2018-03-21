@@ -123,3 +123,6 @@ CreateJobRequestPrivate::CreateJobRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

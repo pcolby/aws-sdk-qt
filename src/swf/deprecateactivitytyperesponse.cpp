@@ -101,3 +101,6 @@ void DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeprecateActivityTypeResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

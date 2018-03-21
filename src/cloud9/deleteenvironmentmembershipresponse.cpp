@@ -101,3 +101,6 @@ void DeleteEnvironmentMembershipResponsePrivate::DeleteEnvironmentMembershipResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentMembershipResponse"));
     /// @todo
 }
+
+} // namespace Cloud9
+} // namespace AWS

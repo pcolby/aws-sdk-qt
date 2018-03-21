@@ -101,3 +101,6 @@ void DescribeSnapshotScheduleResponsePrivate::DescribeSnapshotScheduleResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotScheduleResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

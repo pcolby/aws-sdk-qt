@@ -123,3 +123,6 @@ UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

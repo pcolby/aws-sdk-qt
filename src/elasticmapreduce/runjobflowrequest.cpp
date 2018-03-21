@@ -123,3 +123,6 @@ RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

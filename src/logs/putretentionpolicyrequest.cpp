@@ -123,3 +123,6 @@ PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

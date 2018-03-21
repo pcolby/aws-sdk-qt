@@ -101,3 +101,6 @@ void GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetDiscoverySummaryResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

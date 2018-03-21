@@ -123,3 +123,6 @@ DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

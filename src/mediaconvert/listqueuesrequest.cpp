@@ -123,3 +123,6 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

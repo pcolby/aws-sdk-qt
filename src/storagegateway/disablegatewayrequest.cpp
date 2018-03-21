@@ -123,3 +123,6 @@ DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

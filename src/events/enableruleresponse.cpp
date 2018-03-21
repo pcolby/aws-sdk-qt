@@ -101,3 +101,6 @@ void EnableRuleResponsePrivate::EnableRuleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("EnableRuleResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

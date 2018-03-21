@@ -101,3 +101,6 @@ void DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeletePermissionPolicyResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

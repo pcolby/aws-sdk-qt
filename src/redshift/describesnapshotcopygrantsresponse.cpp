@@ -101,3 +101,6 @@ void DescribeSnapshotCopyGrantsResponsePrivate::DescribeSnapshotCopyGrantsRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotCopyGrantsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

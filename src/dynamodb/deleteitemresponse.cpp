@@ -101,3 +101,6 @@ void DeleteItemResponsePrivate::DeleteItemResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteItemResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

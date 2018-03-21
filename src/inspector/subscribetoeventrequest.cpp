@@ -123,3 +123,6 @@ SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

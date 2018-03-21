@@ -123,3 +123,6 @@ GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

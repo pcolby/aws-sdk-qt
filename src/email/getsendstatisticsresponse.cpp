@@ -101,3 +101,6 @@ void GetSendStatisticsResponsePrivate::GetSendStatisticsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetSendStatisticsResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetCorsPolicyResponsePrivate::GetCorsPolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetCorsPolicyResponse"));
     /// @todo
 }
+
+} // namespace MediaStore
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

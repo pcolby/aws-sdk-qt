@@ -101,3 +101,6 @@ void ListEventSubscriptionsResponsePrivate::ListEventSubscriptionsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListEventSubscriptionsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

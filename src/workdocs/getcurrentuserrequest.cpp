@@ -123,3 +123,6 @@ GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteTrailResponsePrivate::DeleteTrailResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrailResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

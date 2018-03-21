@@ -123,3 +123,6 @@ ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

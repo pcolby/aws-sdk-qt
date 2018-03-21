@@ -123,3 +123,6 @@ DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

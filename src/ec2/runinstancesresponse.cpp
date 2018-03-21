@@ -101,3 +101,6 @@ void RunInstancesResponsePrivate::RunInstancesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RunInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

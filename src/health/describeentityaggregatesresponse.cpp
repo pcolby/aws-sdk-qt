@@ -101,3 +101,6 @@ void DescribeEntityAggregatesResponsePrivate::DescribeEntityAggregatesResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeEntityAggregatesResponse"));
     /// @todo
 }
+
+} // namespace Health
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

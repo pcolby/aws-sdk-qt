@@ -101,3 +101,6 @@ void DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteMaintenanceWindowResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

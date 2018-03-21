@@ -123,3 +123,6 @@ ListPartsRequestPrivate::ListPartsRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

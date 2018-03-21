@@ -101,3 +101,6 @@ void ExecutePolicyResponsePrivate::ExecutePolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ExecutePolicyResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

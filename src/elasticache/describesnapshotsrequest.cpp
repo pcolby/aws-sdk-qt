@@ -123,3 +123,6 @@ DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ComposeEnvironmentsResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

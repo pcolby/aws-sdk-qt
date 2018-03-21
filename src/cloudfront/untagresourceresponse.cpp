@@ -101,3 +101,6 @@ void UntagResourceResponsePrivate::UntagResourceResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UntagResourceResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

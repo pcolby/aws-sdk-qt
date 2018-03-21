@@ -101,3 +101,6 @@ void DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteMetricFilterResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

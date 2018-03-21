@@ -123,3 +123,6 @@ ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

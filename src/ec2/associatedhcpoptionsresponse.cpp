@@ -101,3 +101,6 @@ void AssociateDhcpOptionsResponsePrivate::AssociateDhcpOptionsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AssociateDhcpOptionsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

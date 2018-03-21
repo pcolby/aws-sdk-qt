@@ -101,3 +101,6 @@ void GetGcmChannelResponsePrivate::GetGcmChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetGcmChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

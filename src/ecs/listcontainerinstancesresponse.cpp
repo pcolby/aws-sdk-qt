@@ -101,3 +101,6 @@ void ListContainerInstancesResponsePrivate::ListContainerInstancesResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListContainerInstancesResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

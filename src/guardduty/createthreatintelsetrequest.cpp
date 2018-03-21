@@ -123,3 +123,6 @@ CreateThreatIntelSetRequestPrivate::CreateThreatIntelSetRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

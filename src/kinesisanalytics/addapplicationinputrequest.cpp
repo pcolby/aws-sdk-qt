@@ -123,3 +123,6 @@ AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

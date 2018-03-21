@@ -101,3 +101,6 @@ void DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

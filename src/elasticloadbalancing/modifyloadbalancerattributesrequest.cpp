@@ -123,3 +123,6 @@ ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestP
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

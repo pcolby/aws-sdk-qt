@@ -123,3 +123,6 @@ ListStackInstancesRequestPrivate::ListStackInstancesRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -101,3 +101,6 @@ void ForgetDeviceResponsePrivate::ForgetDeviceResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ForgetDeviceResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

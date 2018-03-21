@@ -123,3 +123,6 @@ DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeInstancePatchStatesRequestPrivate::DescribeInstancePatchStatesRequestPri
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

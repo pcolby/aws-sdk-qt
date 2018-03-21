@@ -101,3 +101,6 @@ void CreatePlatformVersionResponsePrivate::CreatePlatformVersionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformVersionResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

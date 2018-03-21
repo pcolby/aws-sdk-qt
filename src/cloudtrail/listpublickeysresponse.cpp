@@ -101,3 +101,6 @@ void ListPublicKeysResponsePrivate::ListPublicKeysResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListPublicKeysResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

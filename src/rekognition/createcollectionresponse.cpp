@@ -101,3 +101,6 @@ void CreateCollectionResponsePrivate::CreateCollectionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateCollectionResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

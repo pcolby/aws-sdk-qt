@@ -101,3 +101,6 @@ void PutResourceAttributesResponsePrivate::PutResourceAttributesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("PutResourceAttributesResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

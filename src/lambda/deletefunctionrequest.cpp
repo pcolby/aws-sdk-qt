@@ -123,3 +123,6 @@ DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

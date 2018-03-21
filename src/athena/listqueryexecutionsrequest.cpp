@@ -123,3 +123,6 @@ ListQueryExecutionsRequestPrivate::ListQueryExecutionsRequestPrivate(
 {
 
 }
+
+} // namespace Athena
+} // namespace AWS

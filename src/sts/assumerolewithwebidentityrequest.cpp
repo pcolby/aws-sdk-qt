@@ -123,3 +123,6 @@ AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate
 {
 
 }
+
+} // namespace STS
+} // namespace AWS

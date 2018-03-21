@@ -101,3 +101,6 @@ void SetSubnetsResponsePrivate::SetSubnetsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SetSubnetsResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

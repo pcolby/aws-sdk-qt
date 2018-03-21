@@ -101,3 +101,6 @@ void AttachTypedLinkResponsePrivate::AttachTypedLinkResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AttachTypedLinkResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

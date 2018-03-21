@@ -101,3 +101,6 @@ void DescribeAgentsResponsePrivate::DescribeAgentsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeAgentsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

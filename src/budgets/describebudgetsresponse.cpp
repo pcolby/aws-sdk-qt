@@ -101,3 +101,6 @@ void DescribeBudgetsResponsePrivate::DescribeBudgetsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeBudgetsResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

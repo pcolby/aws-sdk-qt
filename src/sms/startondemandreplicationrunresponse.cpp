@@ -101,3 +101,6 @@ void StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResp
     Q_ASSERT(xml.name() == QLatin1String("StartOnDemandReplicationRunResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

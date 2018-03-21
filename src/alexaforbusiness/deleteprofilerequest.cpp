@@ -123,3 +123,6 @@ DeleteProfileRequestPrivate::DeleteProfileRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

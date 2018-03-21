@@ -101,3 +101,6 @@ void StartSupportDataExportResponsePrivate::StartSupportDataExportResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("StartSupportDataExportResponse"));
     /// @todo
 }
+
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS

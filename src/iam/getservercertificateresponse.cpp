@@ -101,3 +101,6 @@ void GetServerCertificateResponsePrivate::GetServerCertificateResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetServerCertificateResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

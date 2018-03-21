@@ -101,3 +101,6 @@ void DescribeLimitsResponsePrivate::DescribeLimitsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeLimitsResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

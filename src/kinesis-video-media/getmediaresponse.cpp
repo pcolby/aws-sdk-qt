@@ -101,3 +101,6 @@ void GetMediaResponsePrivate::GetMediaResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetMediaResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideoMedia
+} // namespace AWS

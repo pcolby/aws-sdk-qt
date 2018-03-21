@@ -101,3 +101,6 @@ void UploadLayerPartResponsePrivate::UploadLayerPartResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("UploadLayerPartResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

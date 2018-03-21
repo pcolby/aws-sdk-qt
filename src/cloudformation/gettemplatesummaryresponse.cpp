@@ -101,3 +101,6 @@ void GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetTemplateSummaryResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

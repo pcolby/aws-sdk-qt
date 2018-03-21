@@ -123,3 +123,6 @@ LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

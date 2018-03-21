@@ -101,3 +101,6 @@ void CreateStreamingDistributionResponsePrivate::CreateStreamingDistributionResp
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamingDistributionResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

@@ -123,3 +123,6 @@ EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

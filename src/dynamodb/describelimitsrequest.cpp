@@ -123,3 +123,6 @@ DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

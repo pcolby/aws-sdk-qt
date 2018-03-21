@@ -101,3 +101,6 @@ void ListTagsForProjectResponsePrivate::ListTagsForProjectResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForProjectResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

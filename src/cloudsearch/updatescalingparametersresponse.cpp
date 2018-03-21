@@ -101,3 +101,6 @@ void UpdateScalingParametersResponsePrivate::UpdateScalingParametersResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UpdateScalingParametersResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

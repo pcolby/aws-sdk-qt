@@ -101,3 +101,6 @@ void DeleteInputResponsePrivate::DeleteInputResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteInputResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

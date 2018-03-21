@@ -101,3 +101,6 @@ void MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("MergeDeveloperIdentitiesResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

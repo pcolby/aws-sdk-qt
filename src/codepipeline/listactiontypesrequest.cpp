@@ -123,3 +123,6 @@ ListActionTypesRequestPrivate::ListActionTypesRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

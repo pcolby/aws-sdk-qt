@@ -123,3 +123,6 @@ CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

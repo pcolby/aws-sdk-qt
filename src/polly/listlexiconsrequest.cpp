@@ -123,3 +123,6 @@ ListLexiconsRequestPrivate::ListLexiconsRequestPrivate(
 {
 
 }
+
+} // namespace Polly
+} // namespace AWS

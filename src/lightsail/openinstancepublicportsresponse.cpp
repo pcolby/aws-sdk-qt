@@ -101,3 +101,6 @@ void OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("OpenInstancePublicPortsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

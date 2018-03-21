@@ -123,3 +123,6 @@ UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

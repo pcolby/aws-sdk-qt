@@ -101,3 +101,6 @@ void DescribeTagsResponsePrivate::DescribeTagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeTagsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

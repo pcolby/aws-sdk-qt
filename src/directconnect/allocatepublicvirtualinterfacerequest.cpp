@@ -123,3 +123,6 @@ AllocatePublicVirtualInterfaceRequestPrivate::AllocatePublicVirtualInterfaceRequ
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

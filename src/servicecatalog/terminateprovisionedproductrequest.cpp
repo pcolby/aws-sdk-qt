@@ -123,3 +123,6 @@ TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPri
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

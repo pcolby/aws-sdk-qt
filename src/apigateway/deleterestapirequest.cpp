@@ -123,3 +123,6 @@ DeleteRestApiRequestPrivate::DeleteRestApiRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

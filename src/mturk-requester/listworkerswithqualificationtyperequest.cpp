@@ -123,3 +123,6 @@ ListWorkersWithQualificationTypeRequestPrivate::ListWorkersWithQualificationType
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

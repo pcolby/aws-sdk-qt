@@ -123,3 +123,6 @@ ListBrokersRequestPrivate::ListBrokersRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

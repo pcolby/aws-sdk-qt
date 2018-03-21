@@ -101,3 +101,6 @@ void UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateExpirationForHITResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

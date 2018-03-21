@@ -101,3 +101,6 @@ void ListAccessKeysResponsePrivate::ListAccessKeysResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListAccessKeysResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("AddAttachmentsToSetResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

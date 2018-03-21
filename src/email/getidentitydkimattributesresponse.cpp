@@ -101,3 +101,6 @@ void GetIdentityDkimAttributesResponsePrivate::GetIdentityDkimAttributesResponse
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityDkimAttributesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

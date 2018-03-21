@@ -101,3 +101,6 @@ void DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeAdjustmentTypesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

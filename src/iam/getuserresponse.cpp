@@ -101,3 +101,6 @@ void GetUserResponsePrivate::GetUserResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetUserResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

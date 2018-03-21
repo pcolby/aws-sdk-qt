@@ -101,3 +101,6 @@ void DescribeNotificationSubscriptionsResponsePrivate::DescribeNotificationSubsc
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotificationSubscriptionsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

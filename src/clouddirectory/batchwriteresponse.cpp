@@ -101,3 +101,6 @@ void BatchWriteResponsePrivate::BatchWriteResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("BatchWriteResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

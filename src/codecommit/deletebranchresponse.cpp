@@ -101,3 +101,6 @@ void DeleteBranchResponsePrivate::DeleteBranchResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteBranchResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

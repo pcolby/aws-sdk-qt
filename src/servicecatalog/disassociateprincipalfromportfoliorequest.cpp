@@ -123,3 +123,6 @@ DisassociatePrincipalFromPortfolioRequestPrivate::DisassociatePrincipalFromPortf
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

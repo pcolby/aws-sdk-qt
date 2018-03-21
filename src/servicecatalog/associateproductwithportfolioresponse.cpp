@@ -101,3 +101,6 @@ void AssociateProductWithPortfolioResponsePrivate::AssociateProductWithPortfolio
     Q_ASSERT(xml.name() == QLatin1String("AssociateProductWithPortfolioResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

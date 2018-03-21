@@ -101,3 +101,6 @@ void CancelCertificateTransferResponsePrivate::CancelCertificateTransferResponse
     Q_ASSERT(xml.name() == QLatin1String("CancelCertificateTransferResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

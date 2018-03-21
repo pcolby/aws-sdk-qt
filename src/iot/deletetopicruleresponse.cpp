@@ -101,3 +101,6 @@ void DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteTopicRuleResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

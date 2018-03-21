@@ -101,3 +101,6 @@ void DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketEncryptionResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

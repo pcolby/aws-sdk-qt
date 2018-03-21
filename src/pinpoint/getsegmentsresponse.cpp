@@ -101,3 +101,6 @@ void GetSegmentsResponsePrivate::GetSegmentsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetSegmentsResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -101,3 +101,6 @@ void BatchGetDeploymentInstancesResponsePrivate::BatchGetDeploymentInstancesResp
     Q_ASSERT(xml.name() == QLatin1String("BatchGetDeploymentInstancesResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

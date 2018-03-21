@@ -123,3 +123,6 @@ ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequ
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteVpnConnectionRouteRequestPrivate::DeleteVpnConnectionRouteRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

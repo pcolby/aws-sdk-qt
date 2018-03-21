@@ -101,3 +101,6 @@ void UpdateProfileResponsePrivate::UpdateProfileResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateProfileResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

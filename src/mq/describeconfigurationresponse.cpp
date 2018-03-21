@@ -101,3 +101,6 @@ void DescribeConfigurationResponsePrivate::DescribeConfigurationResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

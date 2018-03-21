@@ -101,3 +101,6 @@ void DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoggerDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

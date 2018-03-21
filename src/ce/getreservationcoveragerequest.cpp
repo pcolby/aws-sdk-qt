@@ -123,3 +123,6 @@ GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
 {
 
 }
+
+} // namespace CostExplorer
+} // namespace AWS

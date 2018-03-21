@@ -101,3 +101,6 @@ void SetStackPolicyResponsePrivate::SetStackPolicyResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("SetStackPolicyResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

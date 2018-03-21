@@ -101,3 +101,6 @@ void ResendValidationEmailResponsePrivate::ResendValidationEmailResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ResendValidationEmailResponse"));
     /// @todo
 }
+
+} // namespace ACM
+} // namespace AWS

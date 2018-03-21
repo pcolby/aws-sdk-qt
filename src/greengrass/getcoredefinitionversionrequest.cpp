@@ -123,3 +123,6 @@ GetCoreDefinitionVersionRequestPrivate::GetCoreDefinitionVersionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

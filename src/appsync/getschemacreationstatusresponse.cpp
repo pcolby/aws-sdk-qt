@@ -101,3 +101,6 @@ void GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetSchemaCreationStatusResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

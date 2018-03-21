@@ -101,3 +101,6 @@ void CreateStorageLocationResponsePrivate::CreateStorageLocationResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateStorageLocationResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

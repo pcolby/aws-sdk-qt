@@ -123,3 +123,6 @@ RebootNodeRequestPrivate::RebootNodeRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

@@ -101,3 +101,6 @@ void SendTemplatedEmailResponsePrivate::SendTemplatedEmailResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("SendTemplatedEmailResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

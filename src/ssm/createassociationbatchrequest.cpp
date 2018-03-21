@@ -123,3 +123,6 @@ CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

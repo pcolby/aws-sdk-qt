@@ -101,3 +101,6 @@ void AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("AddRoleToInstanceProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

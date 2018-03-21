@@ -123,3 +123,6 @@ UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

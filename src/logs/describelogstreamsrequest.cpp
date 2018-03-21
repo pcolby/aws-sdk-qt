@@ -123,3 +123,6 @@ DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

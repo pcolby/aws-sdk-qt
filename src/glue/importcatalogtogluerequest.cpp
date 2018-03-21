@@ -123,3 +123,6 @@ ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

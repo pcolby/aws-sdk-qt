@@ -101,3 +101,6 @@ void GetDiskSnapshotResponsePrivate::GetDiskSnapshotResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetDiskSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

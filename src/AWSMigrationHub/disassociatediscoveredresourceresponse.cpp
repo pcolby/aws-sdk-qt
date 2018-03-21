@@ -101,3 +101,6 @@ void DisassociateDiscoveredResourceResponsePrivate::DisassociateDiscoveredResour
     Q_ASSERT(xml.name() == QLatin1String("DisassociateDiscoveredResourceResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

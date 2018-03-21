@@ -101,3 +101,6 @@ void GetSAMLProviderResponsePrivate::GetSAMLProviderResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetSAMLProviderResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

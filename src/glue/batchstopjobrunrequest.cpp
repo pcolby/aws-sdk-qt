@@ -123,3 +123,6 @@ BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

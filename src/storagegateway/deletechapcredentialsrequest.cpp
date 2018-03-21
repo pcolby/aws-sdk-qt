@@ -123,3 +123,6 @@ DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

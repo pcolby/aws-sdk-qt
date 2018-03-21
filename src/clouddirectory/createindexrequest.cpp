@@ -123,3 +123,6 @@ CreateIndexRequestPrivate::CreateIndexRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

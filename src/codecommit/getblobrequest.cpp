@@ -123,3 +123,6 @@ GetBlobRequestPrivate::GetBlobRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

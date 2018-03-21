@@ -123,3 +123,6 @@ DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

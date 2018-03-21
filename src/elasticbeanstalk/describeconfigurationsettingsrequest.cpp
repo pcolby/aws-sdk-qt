@@ -123,3 +123,6 @@ DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsReques
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

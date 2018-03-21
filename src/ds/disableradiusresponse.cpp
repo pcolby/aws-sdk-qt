@@ -101,3 +101,6 @@ void DisableRadiusResponsePrivate::DisableRadiusResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DisableRadiusResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

@@ -123,3 +123,6 @@ GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

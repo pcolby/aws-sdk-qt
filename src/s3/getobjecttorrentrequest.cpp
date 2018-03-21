@@ -123,3 +123,6 @@ GetObjectTorrentRequestPrivate::GetObjectTorrentRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

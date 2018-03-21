@@ -123,3 +123,6 @@ UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

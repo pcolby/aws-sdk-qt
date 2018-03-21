@@ -101,3 +101,6 @@ void PutGroupPolicyResponsePrivate::PutGroupPolicyResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("PutGroupPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

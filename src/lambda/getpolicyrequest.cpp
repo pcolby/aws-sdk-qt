@@ -123,3 +123,6 @@ GetPolicyRequestPrivate::GetPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

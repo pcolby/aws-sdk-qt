@@ -101,3 +101,6 @@ void GetBucketLifecycleConfigurationResponsePrivate::GetBucketLifecycleConfigura
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLifecycleConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

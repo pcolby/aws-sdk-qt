@@ -123,3 +123,6 @@ DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

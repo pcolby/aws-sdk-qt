@@ -101,3 +101,6 @@ void SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeaders
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityHeadersInNotificationsEnabledResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

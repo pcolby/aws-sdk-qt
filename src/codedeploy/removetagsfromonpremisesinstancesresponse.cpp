@@ -101,3 +101,6 @@ void RemoveTagsFromOnPremisesInstancesResponsePrivate::RemoveTagsFromOnPremisesI
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromOnPremisesInstancesResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

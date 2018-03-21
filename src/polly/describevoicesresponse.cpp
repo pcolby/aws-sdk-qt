@@ -101,3 +101,6 @@ void DescribeVoicesResponsePrivate::DescribeVoicesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeVoicesResponse"));
     /// @todo
 }
+
+} // namespace Polly
+} // namespace AWS

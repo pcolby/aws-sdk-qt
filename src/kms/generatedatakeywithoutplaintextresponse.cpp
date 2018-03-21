@@ -101,3 +101,6 @@ void GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlain
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataKeyWithoutPlaintextResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

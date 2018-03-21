@@ -123,3 +123,6 @@ ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

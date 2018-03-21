@@ -101,3 +101,6 @@ void ExpireSessionResponsePrivate::ExpireSessionResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ExpireSessionResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

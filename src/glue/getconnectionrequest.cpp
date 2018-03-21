@@ -123,3 +123,6 @@ GetConnectionRequestPrivate::GetConnectionRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

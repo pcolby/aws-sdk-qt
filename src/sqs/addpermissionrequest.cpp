@@ -123,3 +123,6 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

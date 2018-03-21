@@ -101,3 +101,6 @@ void GetAccountBalanceResponsePrivate::GetAccountBalanceResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetAccountBalanceResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

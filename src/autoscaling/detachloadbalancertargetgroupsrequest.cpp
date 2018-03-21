@@ -123,3 +123,6 @@ DetachLoadBalancerTargetGroupsRequestPrivate::DetachLoadBalancerTargetGroupsRequ
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

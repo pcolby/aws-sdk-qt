@@ -101,3 +101,6 @@ void UploadServerCertificateResponsePrivate::UploadServerCertificateResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UploadServerCertificateResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

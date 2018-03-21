@@ -123,3 +123,6 @@ DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPri
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutSubscriptionFilterResponsePrivate::PutSubscriptionFilterResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("PutSubscriptionFilterResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

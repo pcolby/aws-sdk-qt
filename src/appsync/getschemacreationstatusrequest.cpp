@@ -123,3 +123,6 @@ GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

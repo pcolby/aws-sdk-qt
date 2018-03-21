@@ -101,3 +101,6 @@ void UpdateAssessmentTargetResponsePrivate::UpdateAssessmentTargetResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateAssessmentTargetResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

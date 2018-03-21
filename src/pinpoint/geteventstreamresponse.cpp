@@ -101,3 +101,6 @@ void GetEventStreamResponsePrivate::GetEventStreamResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetEventStreamResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateLagRequestPrivate::UpdateLagRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

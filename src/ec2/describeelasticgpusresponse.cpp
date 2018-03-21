@@ -101,3 +101,6 @@ void DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticGpusResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

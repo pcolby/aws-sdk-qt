@@ -101,3 +101,6 @@ void BatchGetApplicationsResponsePrivate::BatchGetApplicationsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("BatchGetApplicationsResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

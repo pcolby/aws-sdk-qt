@@ -123,3 +123,6 @@ DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

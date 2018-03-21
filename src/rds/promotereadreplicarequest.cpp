@@ -123,3 +123,6 @@ PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

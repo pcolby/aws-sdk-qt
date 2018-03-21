@@ -123,3 +123,6 @@ AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetCredentialReportResponsePrivate::GetCredentialReportResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetCredentialReportResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

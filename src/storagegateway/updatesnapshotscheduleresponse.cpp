@@ -101,3 +101,6 @@ void UpdateSnapshotScheduleResponsePrivate::UpdateSnapshotScheduleResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateSnapshotScheduleResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

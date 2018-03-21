@@ -123,3 +123,6 @@ PutItemRequestPrivate::PutItemRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

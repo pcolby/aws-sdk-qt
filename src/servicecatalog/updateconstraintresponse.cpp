@@ -101,3 +101,6 @@ void UpdateConstraintResponsePrivate::UpdateConstraintResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateConstraintResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

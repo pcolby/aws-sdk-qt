@@ -101,3 +101,6 @@ void DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteDhcpOptionsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeDBClusterSnapshotAttributesRequestPrivate::DescribeDBClusterSnapshotAttr
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

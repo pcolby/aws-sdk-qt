@@ -101,3 +101,6 @@ void ConfirmSubscriptionResponsePrivate::ConfirmSubscriptionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ConfirmSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

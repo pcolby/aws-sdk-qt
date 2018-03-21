@@ -101,3 +101,6 @@ void ListGroupVersionsResponsePrivate::ListGroupVersionsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListGroupVersionsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

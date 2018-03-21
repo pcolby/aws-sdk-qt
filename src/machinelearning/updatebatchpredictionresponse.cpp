@@ -101,3 +101,6 @@ void UpdateBatchPredictionResponsePrivate::UpdateBatchPredictionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateBatchPredictionResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

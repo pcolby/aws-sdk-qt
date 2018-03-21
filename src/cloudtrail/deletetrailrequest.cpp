@@ -123,3 +123,6 @@ DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

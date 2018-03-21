@@ -101,3 +101,6 @@ void AdminConfirmSignUpResponsePrivate::AdminConfirmSignUpResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("AdminConfirmSignUpResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteInterconnectRequestPrivate::DeleteInterconnectRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

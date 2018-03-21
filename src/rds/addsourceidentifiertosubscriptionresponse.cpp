@@ -101,3 +101,6 @@ void AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubs
     Q_ASSERT(xml.name() == QLatin1String("AddSourceIdentifierToSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

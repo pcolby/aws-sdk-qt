@@ -101,3 +101,6 @@ void RefreshCacheResponsePrivate::RefreshCacheResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RefreshCacheResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

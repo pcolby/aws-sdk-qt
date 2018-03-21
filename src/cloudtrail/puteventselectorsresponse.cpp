@@ -101,3 +101,6 @@ void PutEventSelectorsResponsePrivate::PutEventSelectorsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("PutEventSelectorsResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

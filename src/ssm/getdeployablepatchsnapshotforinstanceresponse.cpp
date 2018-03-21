@@ -101,3 +101,6 @@ void GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSna
     Q_ASSERT(xml.name() == QLatin1String("GetDeployablePatchSnapshotForInstanceResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

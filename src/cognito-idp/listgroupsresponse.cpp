@@ -101,3 +101,6 @@ void ListGroupsResponsePrivate::ListGroupsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListGroupsResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

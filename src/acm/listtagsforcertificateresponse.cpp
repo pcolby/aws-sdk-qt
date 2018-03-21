@@ -101,3 +101,6 @@ void ListTagsForCertificateResponsePrivate::ListTagsForCertificateResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForCertificateResponse"));
     /// @todo
 }
+
+} // namespace ACM
+} // namespace AWS

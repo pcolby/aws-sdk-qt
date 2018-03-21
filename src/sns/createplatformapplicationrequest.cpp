@@ -123,3 +123,6 @@ CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeAddressResponsePrivate::DescribeAddressResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeAddressResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

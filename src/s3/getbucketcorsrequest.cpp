@@ -123,3 +123,6 @@ GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

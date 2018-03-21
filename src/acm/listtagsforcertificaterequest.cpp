@@ -123,3 +123,6 @@ ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
 {
 
 }
+
+} // namespace ACM
+} // namespace AWS

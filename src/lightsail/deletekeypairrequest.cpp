@@ -123,3 +123,6 @@ DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

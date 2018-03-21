@@ -101,3 +101,6 @@ void DeleteUploadResponsePrivate::DeleteUploadResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteUploadResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

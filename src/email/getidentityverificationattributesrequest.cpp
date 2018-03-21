@@ -123,3 +123,6 @@ GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttribut
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

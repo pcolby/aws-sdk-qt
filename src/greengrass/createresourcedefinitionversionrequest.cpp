@@ -123,3 +123,6 @@ CreateResourceDefinitionVersionRequestPrivate::CreateResourceDefinitionVersionRe
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

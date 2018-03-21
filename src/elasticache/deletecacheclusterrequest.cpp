@@ -123,3 +123,6 @@ DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

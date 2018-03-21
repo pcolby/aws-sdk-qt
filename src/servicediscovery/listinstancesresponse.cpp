@@ -101,3 +101,6 @@ void ListInstancesResponsePrivate::ListInstancesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListInstancesResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

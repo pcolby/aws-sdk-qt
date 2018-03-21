@@ -123,3 +123,6 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

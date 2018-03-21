@@ -123,3 +123,6 @@ CreateAliasRequestPrivate::CreateAliasRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

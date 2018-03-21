@@ -123,3 +123,6 @@ DescribeProvisioningArtifactRequestPrivate::DescribeProvisioningArtifactRequestP
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

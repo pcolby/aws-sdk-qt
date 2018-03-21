@@ -101,3 +101,6 @@ void DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeStreamSummaryResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

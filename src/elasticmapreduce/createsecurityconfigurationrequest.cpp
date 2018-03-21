@@ -123,3 +123,6 @@ CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPri
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

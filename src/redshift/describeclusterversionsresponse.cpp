@@ -101,3 +101,6 @@ void DescribeClusterVersionsResponsePrivate::DescribeClusterVersionsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterVersionsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

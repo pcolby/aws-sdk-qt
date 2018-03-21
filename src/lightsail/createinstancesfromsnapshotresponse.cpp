@@ -101,3 +101,6 @@ void CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResp
     Q_ASSERT(xml.name() == QLatin1String("CreateInstancesFromSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

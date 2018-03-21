@@ -123,3 +123,6 @@ DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

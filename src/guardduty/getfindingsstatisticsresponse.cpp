@@ -101,3 +101,6 @@ void GetFindingsStatisticsResponsePrivate::GetFindingsStatisticsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetFindingsStatisticsResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteFpgaImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

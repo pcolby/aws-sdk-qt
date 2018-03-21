@@ -123,3 +123,6 @@ RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

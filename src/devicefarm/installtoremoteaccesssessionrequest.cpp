@@ -123,3 +123,6 @@ InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestP
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

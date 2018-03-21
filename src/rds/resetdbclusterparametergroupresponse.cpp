@@ -101,3 +101,6 @@ void ResetDBClusterParameterGroupResponsePrivate::ResetDBClusterParameterGroupRe
     Q_ASSERT(xml.name() == QLatin1String("ResetDBClusterParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

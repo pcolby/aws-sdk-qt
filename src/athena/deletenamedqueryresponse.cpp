@@ -101,3 +101,6 @@ void DeleteNamedQueryResponsePrivate::DeleteNamedQueryResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteNamedQueryResponse"));
     /// @todo
 }
+
+} // namespace Athena
+} // namespace AWS

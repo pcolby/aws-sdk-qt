@@ -101,3 +101,6 @@ void DescribeNodeAssociationStatusResponsePrivate::DescribeNodeAssociationStatus
     Q_ASSERT(xml.name() == QLatin1String("DescribeNodeAssociationStatusResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

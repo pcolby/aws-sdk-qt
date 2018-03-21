@@ -101,3 +101,6 @@ void ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTyp
     Q_ASSERT(xml.name() == QLatin1String("ListElasticsearchInstanceTypesResponse"));
     /// @todo
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

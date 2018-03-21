@@ -101,3 +101,6 @@ void PutAttributesResponsePrivate::PutAttributesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutAttributesResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

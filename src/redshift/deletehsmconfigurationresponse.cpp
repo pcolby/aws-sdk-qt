@@ -101,3 +101,6 @@ void DeleteHsmConfigurationResponsePrivate::DeleteHsmConfigurationResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteHsmConfigurationResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

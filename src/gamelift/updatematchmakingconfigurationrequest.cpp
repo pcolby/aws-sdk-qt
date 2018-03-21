@@ -123,3 +123,6 @@ UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequ
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutInventoryResponsePrivate::PutInventoryResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutInventoryResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

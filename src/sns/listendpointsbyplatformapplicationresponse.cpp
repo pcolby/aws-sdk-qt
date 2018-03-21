@@ -101,3 +101,6 @@ void ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformA
     Q_ASSERT(xml.name() == QLatin1String("ListEndpointsByPlatformApplicationResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

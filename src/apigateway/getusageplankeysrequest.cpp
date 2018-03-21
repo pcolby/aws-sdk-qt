@@ -123,3 +123,6 @@ GetUsagePlanKeysRequestPrivate::GetUsagePlanKeysRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

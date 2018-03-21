@@ -123,3 +123,6 @@ GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

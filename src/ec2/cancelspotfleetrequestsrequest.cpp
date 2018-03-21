@@ -123,3 +123,6 @@ CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRul
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

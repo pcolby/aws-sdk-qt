@@ -101,3 +101,6 @@ void DisassociateMemberFromGroupResponsePrivate::DisassociateMemberFromGroupResp
     Q_ASSERT(xml.name() == QLatin1String("DisassociateMemberFromGroupResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

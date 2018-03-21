@@ -123,3 +123,6 @@ DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

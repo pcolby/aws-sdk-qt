@@ -101,3 +101,6 @@ void StopTaskResponsePrivate::StopTaskResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopTaskResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

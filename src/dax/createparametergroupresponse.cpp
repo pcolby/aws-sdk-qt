@@ -101,3 +101,6 @@ void CreateParameterGroupResponsePrivate::CreateParameterGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

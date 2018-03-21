@@ -101,3 +101,6 @@ void SearchUsersResponsePrivate::SearchUsersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SearchUsersResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

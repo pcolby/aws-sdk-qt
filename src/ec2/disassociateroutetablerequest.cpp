@@ -123,3 +123,6 @@ DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetRateBasedRuleResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -123,3 +123,6 @@ DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

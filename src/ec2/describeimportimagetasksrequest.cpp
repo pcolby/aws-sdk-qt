@@ -123,3 +123,6 @@ DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

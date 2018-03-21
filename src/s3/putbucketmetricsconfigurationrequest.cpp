@@ -123,3 +123,6 @@ PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationReques
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

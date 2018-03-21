@@ -123,3 +123,6 @@ DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

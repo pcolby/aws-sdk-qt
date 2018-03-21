@@ -101,3 +101,6 @@ void DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigRuleResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

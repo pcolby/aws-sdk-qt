@@ -123,3 +123,6 @@ SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

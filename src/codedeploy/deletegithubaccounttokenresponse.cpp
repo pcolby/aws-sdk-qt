@@ -101,3 +101,6 @@ void DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteGitHubAccountTokenResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

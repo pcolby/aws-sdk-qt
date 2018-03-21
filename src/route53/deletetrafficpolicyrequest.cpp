@@ -123,3 +123,6 @@ DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

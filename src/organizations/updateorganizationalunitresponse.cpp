@@ -101,3 +101,6 @@ void UpdateOrganizationalUnitResponsePrivate::UpdateOrganizationalUnitResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("UpdateOrganizationalUnitResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

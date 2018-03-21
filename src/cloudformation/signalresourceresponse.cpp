@@ -101,3 +101,6 @@ void SignalResourceResponsePrivate::SignalResourceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("SignalResourceResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -123,3 +123,6 @@ EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

@@ -123,3 +123,6 @@ ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

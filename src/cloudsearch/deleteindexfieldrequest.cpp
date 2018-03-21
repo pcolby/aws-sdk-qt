@@ -123,3 +123,6 @@ DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListi
     Q_ASSERT(xml.name() == QLatin1String("CreateReservedInstancesListingResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

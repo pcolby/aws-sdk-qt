@@ -101,3 +101,6 @@ void GetCommentsForComparedCommitResponsePrivate::GetCommentsForComparedCommitRe
     Q_ASSERT(xml.name() == QLatin1String("GetCommentsForComparedCommitResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

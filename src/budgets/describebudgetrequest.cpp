@@ -123,3 +123,6 @@ DescribeBudgetRequestPrivate::DescribeBudgetRequestPrivate(
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

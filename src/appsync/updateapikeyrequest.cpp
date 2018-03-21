@@ -123,3 +123,6 @@ UpdateApiKeyRequestPrivate::UpdateApiKeyRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

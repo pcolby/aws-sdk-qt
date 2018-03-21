@@ -101,3 +101,6 @@ void DeleteSizeConstraintSetResponsePrivate::DeleteSizeConstraintSetResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteSizeConstraintSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

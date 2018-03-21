@@ -123,3 +123,6 @@ DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionSt
 {
 
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

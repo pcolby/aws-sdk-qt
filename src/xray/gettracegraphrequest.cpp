@@ -123,3 +123,6 @@ GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
 {
 
 }
+
+} // namespace XRay
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateWorkerBlockResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

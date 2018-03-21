@@ -101,3 +101,6 @@ void DeleteMethodResponsePrivate::DeleteMethodResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteMethodResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

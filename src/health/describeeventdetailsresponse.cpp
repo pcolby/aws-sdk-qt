@@ -101,3 +101,6 @@ void DescribeEventDetailsResponsePrivate::DescribeEventDetailsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventDetailsResponse"));
     /// @todo
 }
+
+} // namespace Health
+} // namespace AWS

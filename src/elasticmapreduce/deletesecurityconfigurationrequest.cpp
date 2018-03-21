@@ -123,3 +123,6 @@ DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPri
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

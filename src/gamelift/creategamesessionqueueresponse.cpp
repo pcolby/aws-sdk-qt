@@ -101,3 +101,6 @@ void CreateGameSessionQueueResponsePrivate::CreateGameSessionQueueResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateGameSessionQueueResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

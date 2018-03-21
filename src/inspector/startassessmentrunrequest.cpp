@@ -123,3 +123,6 @@ StartAssessmentRunRequestPrivate::StartAssessmentRunRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponse
     Q_ASSERT(xml.name() == QLatin1String("ListResourcesForTagOptionResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

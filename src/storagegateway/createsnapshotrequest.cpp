@@ -123,3 +123,6 @@ CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

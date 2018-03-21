@@ -101,3 +101,6 @@ void CreateInstanceProfileResponsePrivate::CreateInstanceProfileResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateInstanceProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

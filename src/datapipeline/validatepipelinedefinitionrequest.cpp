@@ -123,3 +123,6 @@ ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPriva
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

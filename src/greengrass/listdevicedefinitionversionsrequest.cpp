@@ -123,3 +123,6 @@ ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestP
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

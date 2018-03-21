@@ -123,3 +123,6 @@ ListImagesRequestPrivate::ListImagesRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

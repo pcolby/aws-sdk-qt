@@ -101,3 +101,6 @@ void DescribeSnapshotAttributeResponsePrivate::DescribeSnapshotAttributeResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

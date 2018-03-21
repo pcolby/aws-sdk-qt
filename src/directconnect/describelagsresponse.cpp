@@ -101,3 +101,6 @@ void DescribeLagsResponsePrivate::DescribeLagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeLagsResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

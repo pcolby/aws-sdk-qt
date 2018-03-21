@@ -123,3 +123,6 @@ ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

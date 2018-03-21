@@ -101,3 +101,6 @@ void CreateTypeResponsePrivate::CreateTypeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateTypeResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

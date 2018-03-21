@@ -101,3 +101,6 @@ void DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteEventSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

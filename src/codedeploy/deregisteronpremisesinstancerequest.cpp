@@ -123,3 +123,6 @@ DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestP
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

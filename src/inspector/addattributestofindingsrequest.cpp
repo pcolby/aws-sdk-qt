@@ -123,3 +123,6 @@ AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

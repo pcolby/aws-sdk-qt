@@ -101,3 +101,6 @@ void GetResolverResponsePrivate::GetResolverResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetResolverResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

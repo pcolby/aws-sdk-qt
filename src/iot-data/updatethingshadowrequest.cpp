@@ -123,3 +123,6 @@ UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
 {
 
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

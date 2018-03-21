@@ -123,3 +123,6 @@ StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

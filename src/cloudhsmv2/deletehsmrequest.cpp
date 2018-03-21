@@ -123,3 +123,6 @@ DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

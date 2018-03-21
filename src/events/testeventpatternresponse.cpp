@@ -101,3 +101,6 @@ void TestEventPatternResponsePrivate::TestEventPatternResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("TestEventPatternResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

@@ -123,3 +123,6 @@ GetGroupRequestPrivate::GetGroupRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

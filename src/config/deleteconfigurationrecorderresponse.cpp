@@ -101,3 +101,6 @@ void DeleteConfigurationRecorderResponsePrivate::DeleteConfigurationRecorderResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationRecorderResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

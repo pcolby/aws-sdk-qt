@@ -101,3 +101,6 @@ void EnableVgwRoutePropagationResponsePrivate::EnableVgwRoutePropagationResponse
     Q_ASSERT(xml.name() == QLatin1String("EnableVgwRoutePropagationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

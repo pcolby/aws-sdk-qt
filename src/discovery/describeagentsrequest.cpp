@@ -123,3 +123,6 @@ DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeTableRestoreStatusResponsePrivate::DescribeTableRestoreStatusRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeTableRestoreStatusResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

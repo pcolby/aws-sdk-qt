@@ -101,3 +101,6 @@ void GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetConnectivityInfoResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

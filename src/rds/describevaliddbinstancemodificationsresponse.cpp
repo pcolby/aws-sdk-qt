@@ -101,3 +101,6 @@ void DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanc
     Q_ASSERT(xml.name() == QLatin1String("DescribeValidDBInstanceModificationsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

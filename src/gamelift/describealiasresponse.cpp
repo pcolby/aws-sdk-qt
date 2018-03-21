@@ -101,3 +101,6 @@ void DescribeAliasResponsePrivate::DescribeAliasResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeAliasResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

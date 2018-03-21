@@ -123,3 +123,6 @@ DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

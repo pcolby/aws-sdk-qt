@@ -123,3 +123,6 @@ DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRe
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

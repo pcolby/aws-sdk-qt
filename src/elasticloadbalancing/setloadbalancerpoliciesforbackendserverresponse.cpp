@@ -101,3 +101,6 @@ void SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoli
     Q_ASSERT(xml.name() == QLatin1String("SetLoadBalancerPoliciesForBackendServerResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

@@ -123,3 +123,6 @@ ListOperationsRequestPrivate::ListOperationsRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

@@ -123,3 +123,6 @@ ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPri
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

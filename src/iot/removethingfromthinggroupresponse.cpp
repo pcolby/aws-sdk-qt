@@ -101,3 +101,6 @@ void RemoveThingFromThingGroupResponsePrivate::RemoveThingFromThingGroupResponse
     Q_ASSERT(xml.name() == QLatin1String("RemoveThingFromThingGroupResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

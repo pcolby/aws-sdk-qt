@@ -101,3 +101,6 @@ void PutContainerPolicyResponsePrivate::PutContainerPolicyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PutContainerPolicyResponse"));
     /// @todo
 }
+
+} // namespace MediaStore
+} // namespace AWS

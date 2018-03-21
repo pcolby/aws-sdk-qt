@@ -123,3 +123,6 @@ DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointsBatchResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

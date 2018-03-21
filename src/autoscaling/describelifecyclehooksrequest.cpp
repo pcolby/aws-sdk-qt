@@ -123,3 +123,6 @@ DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

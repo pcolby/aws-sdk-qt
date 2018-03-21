@@ -101,3 +101,6 @@ void CancelArchivalResponsePrivate::CancelArchivalResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CancelArchivalResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

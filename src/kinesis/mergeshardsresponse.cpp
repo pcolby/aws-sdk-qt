@@ -101,3 +101,6 @@ void MergeShardsResponsePrivate::MergeShardsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("MergeShardsResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeSecurityGroupReferencesRequestPrivate::DescribeSecurityGroupReferencesRe
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

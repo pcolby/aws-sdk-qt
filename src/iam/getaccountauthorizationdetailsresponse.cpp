@@ -101,3 +101,6 @@ void GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetai
     Q_ASSERT(xml.name() == QLatin1String("GetAccountAuthorizationDetailsResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

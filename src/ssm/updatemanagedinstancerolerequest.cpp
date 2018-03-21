@@ -123,3 +123,6 @@ UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

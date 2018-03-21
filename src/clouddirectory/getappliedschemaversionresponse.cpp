@@ -101,3 +101,6 @@ void GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetAppliedSchemaVersionResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

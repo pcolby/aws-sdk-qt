@@ -123,3 +123,6 @@ DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

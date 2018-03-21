@@ -101,3 +101,6 @@ void CreateBranchResponsePrivate::CreateBranchResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateBranchResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

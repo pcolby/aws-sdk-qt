@@ -101,3 +101,6 @@ void BatchStopJobRunResponsePrivate::BatchStopJobRunResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("BatchStopJobRunResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

@@ -123,3 +123,6 @@ ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

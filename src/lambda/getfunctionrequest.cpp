@@ -123,3 +123,6 @@ GetFunctionRequestPrivate::GetFunctionRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

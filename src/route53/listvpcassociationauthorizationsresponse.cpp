@@ -101,3 +101,6 @@ void ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthoriz
     Q_ASSERT(xml.name() == QLatin1String("ListVPCAssociationAuthorizationsResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

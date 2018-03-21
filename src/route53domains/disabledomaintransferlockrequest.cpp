@@ -123,3 +123,6 @@ DisableDomainTransferLockRequestPrivate::DisableDomainTransferLockRequestPrivate
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

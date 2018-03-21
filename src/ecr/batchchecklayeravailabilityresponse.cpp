@@ -101,3 +101,6 @@ void BatchCheckLayerAvailabilityResponsePrivate::BatchCheckLayerAvailabilityResp
     Q_ASSERT(xml.name() == QLatin1String("BatchCheckLayerAvailabilityResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

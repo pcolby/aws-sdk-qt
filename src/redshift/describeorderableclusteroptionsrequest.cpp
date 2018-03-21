@@ -123,3 +123,6 @@ DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRe
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteIntegrationResponsePrivate::DeleteIntegrationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteIntegrationResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void AttachInstancesResponsePrivate::AttachInstancesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AttachInstancesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

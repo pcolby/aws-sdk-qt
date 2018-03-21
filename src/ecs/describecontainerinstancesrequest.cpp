@@ -123,3 +123,6 @@ DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPriva
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

@@ -123,3 +123,6 @@ AdminGetUserRequestPrivate::AdminGetUserRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

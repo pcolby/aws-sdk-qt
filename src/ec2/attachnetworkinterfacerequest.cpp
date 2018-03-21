@@ -123,3 +123,6 @@ AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

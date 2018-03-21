@@ -123,3 +123,6 @@ RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPriva
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -123,3 +123,6 @@ ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

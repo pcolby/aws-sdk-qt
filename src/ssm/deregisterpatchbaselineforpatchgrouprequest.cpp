@@ -123,3 +123,6 @@ DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPa
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

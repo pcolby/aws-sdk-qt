@@ -101,3 +101,6 @@ void ListIdentityPoolUsageResponsePrivate::ListIdentityPoolUsageResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListIdentityPoolUsageResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteUsagePlanResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

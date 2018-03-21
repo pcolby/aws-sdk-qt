@@ -123,3 +123,6 @@ UpdateElasticIpRequestPrivate::UpdateElasticIpRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -123,3 +123,6 @@ GetTableVersionsRequestPrivate::GetTableVersionsRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

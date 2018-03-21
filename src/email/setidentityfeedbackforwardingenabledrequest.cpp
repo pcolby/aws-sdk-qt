@@ -123,3 +123,6 @@ SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardin
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

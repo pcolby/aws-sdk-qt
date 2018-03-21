@@ -101,3 +101,6 @@ void DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeFpgaImagesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

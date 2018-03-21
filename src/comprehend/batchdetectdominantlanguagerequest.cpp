@@ -123,3 +123,6 @@ BatchDetectDominantLanguageRequestPrivate::BatchDetectDominantLanguageRequestPri
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

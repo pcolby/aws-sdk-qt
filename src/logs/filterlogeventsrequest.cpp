@@ -123,3 +123,6 @@ FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

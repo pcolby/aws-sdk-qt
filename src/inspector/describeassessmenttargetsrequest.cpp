@@ -123,3 +123,6 @@ DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

@@ -123,3 +123,6 @@ ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPri
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

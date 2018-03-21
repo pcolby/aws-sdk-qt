@@ -123,3 +123,6 @@ DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

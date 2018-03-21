@@ -123,3 +123,6 @@ PostTextRequestPrivate::PostTextRequestPrivate(
 {
 
 }
+
+} // namespace LexRuntimeService
+} // namespace AWS

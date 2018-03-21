@@ -123,3 +123,6 @@ ListTrafficPolicyInstancesByHostedZoneRequestPrivate::ListTrafficPolicyInstances
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

@@ -101,3 +101,6 @@ void AddUploadBufferResponsePrivate::AddUploadBufferResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AddUploadBufferResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

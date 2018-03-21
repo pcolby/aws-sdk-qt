@@ -123,3 +123,6 @@ ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

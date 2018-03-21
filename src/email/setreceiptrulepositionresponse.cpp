@@ -101,3 +101,6 @@ void SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("SetReceiptRulePositionResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -123,3 +123,6 @@ ListCoreDefinitionsRequestPrivate::ListCoreDefinitionsRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

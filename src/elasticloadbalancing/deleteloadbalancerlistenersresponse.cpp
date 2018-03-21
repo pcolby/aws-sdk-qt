@@ -101,3 +101,6 @@ void DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerListenersResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

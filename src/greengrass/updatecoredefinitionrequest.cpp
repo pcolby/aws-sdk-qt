@@ -123,3 +123,6 @@ UpdateCoreDefinitionRequestPrivate::UpdateCoreDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

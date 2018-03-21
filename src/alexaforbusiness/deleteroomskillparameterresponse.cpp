@@ -101,3 +101,6 @@ void DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoomSkillParameterResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

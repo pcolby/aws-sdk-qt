@@ -123,3 +123,6 @@ UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

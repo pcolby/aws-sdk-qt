@@ -101,3 +101,6 @@ void DescribeVpnGatewaysResponsePrivate::DescribeVpnGatewaysResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpnGatewaysResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

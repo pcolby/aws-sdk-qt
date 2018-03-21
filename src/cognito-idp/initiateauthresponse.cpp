@@ -101,3 +101,6 @@ void InitiateAuthResponsePrivate::InitiateAuthResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("InitiateAuthResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

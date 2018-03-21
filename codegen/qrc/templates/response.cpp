@@ -83,3 +83,6 @@ void {{OperationName}}ResponsePrivate::{{OperationName}}Response(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("{{OperationName}}Response"));
     /// @todo
 }
+
+} // namespace {{ServiceName}}
+} // namespace AWS

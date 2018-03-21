@@ -101,3 +101,6 @@ void DeleteVaultAccessPolicyResponsePrivate::DeleteVaultAccessPolicyResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteVaultAccessPolicyResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateGlobalTableResponsePrivate::UpdateGlobalTableResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateGlobalTableResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

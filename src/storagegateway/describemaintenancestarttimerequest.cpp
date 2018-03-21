@@ -123,3 +123,6 @@ DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestP
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

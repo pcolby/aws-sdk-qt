@@ -101,3 +101,6 @@ void UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("UploadSigningCertificateResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

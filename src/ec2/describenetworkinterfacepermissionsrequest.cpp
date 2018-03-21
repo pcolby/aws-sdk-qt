@@ -123,3 +123,6 @@ DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermi
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

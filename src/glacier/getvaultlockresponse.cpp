@@ -101,3 +101,6 @@ void GetVaultLockResponsePrivate::GetVaultLockResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetVaultLockResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

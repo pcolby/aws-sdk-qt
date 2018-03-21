@@ -101,3 +101,6 @@ void DescribeBackupsResponsePrivate::DescribeBackupsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeBackupsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

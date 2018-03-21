@@ -101,3 +101,6 @@ void StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("StartSchemaExtensionResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

@@ -101,3 +101,6 @@ void ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettings
     Q_ASSERT(xml.name() == QLatin1String("ValidateConfigurationSettingsResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

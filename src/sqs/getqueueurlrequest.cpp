@@ -123,3 +123,6 @@ GetQueueUrlRequestPrivate::GetQueueUrlRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

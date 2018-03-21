@@ -123,3 +123,6 @@ DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrack
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

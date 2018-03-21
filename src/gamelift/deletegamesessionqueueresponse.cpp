@@ -101,3 +101,6 @@ void DeleteGameSessionQueueResponsePrivate::DeleteGameSessionQueueResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteGameSessionQueueResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

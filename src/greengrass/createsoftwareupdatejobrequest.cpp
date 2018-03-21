@@ -123,3 +123,6 @@ CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

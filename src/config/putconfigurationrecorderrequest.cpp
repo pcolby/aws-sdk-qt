@@ -123,3 +123,6 @@ PutConfigurationRecorderRequestPrivate::PutConfigurationRecorderRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

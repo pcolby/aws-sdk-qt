@@ -123,3 +123,6 @@ UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPriva
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

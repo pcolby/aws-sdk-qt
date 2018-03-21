@@ -123,3 +123,6 @@ UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

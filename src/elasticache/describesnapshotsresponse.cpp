@@ -101,3 +101,6 @@ void DescribeSnapshotsResponsePrivate::DescribeSnapshotsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeSnapshotsResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

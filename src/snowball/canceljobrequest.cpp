@@ -123,3 +123,6 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

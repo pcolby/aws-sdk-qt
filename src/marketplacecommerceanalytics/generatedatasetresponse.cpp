@@ -101,3 +101,6 @@ void GenerateDataSetResponsePrivate::GenerateDataSetResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataSetResponse"));
     /// @todo
 }
+
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS

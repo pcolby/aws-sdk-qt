@@ -123,3 +123,6 @@ SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

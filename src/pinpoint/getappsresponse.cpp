@@ -101,3 +101,6 @@ void GetAppsResponsePrivate::GetAppsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetAppsResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

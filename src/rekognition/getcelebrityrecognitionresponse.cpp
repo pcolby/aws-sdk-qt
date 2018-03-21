@@ -101,3 +101,6 @@ void GetCelebrityRecognitionResponsePrivate::GetCelebrityRecognitionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetCelebrityRecognitionResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

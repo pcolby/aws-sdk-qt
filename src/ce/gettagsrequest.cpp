@@ -123,3 +123,6 @@ GetTagsRequestPrivate::GetTagsRequestPrivate(
 {
 
 }
+
+} // namespace CostExplorer
+} // namespace AWS

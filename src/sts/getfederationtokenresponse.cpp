@@ -101,3 +101,6 @@ void GetFederationTokenResponsePrivate::GetFederationTokenResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetFederationTokenResponse"));
     /// @todo
 }
+
+} // namespace STS
+} // namespace AWS

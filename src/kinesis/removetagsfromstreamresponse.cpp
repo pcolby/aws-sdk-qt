@@ -101,3 +101,6 @@ void RemoveTagsFromStreamResponsePrivate::RemoveTagsFromStreamResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromStreamResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

@@ -101,3 +101,6 @@ void SendRawEmailResponsePrivate::SendRawEmailResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SendRawEmailResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

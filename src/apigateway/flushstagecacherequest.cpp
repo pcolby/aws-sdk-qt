@@ -123,3 +123,6 @@ FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

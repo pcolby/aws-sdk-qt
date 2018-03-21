@@ -101,3 +101,6 @@ void DescribeMatchmakingResponsePrivate::DescribeMatchmakingResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeMatchmakingResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

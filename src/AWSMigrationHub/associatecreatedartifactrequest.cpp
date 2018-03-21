@@ -123,3 +123,6 @@ AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

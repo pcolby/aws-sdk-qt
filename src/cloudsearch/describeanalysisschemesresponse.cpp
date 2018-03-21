@@ -101,3 +101,6 @@ void DescribeAnalysisSchemesResponsePrivate::DescribeAnalysisSchemesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeAnalysisSchemesResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

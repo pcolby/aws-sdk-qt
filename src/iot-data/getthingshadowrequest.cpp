@@ -123,3 +123,6 @@ GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
 {
 
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

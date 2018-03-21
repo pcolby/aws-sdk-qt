@@ -123,3 +123,6 @@ UpdateUserAttributesRequestPrivate::UpdateUserAttributesRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

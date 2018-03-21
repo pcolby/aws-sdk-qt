@@ -101,3 +101,6 @@ void DescribeConfigurationSettingsResponsePrivate::DescribeConfigurationSettings
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationSettingsResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

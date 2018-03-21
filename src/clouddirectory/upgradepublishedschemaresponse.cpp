@@ -101,3 +101,6 @@ void UpgradePublishedSchemaResponsePrivate::UpgradePublishedSchemaResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpgradePublishedSchemaResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

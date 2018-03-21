@@ -101,3 +101,6 @@ void DescribePermissionsResponsePrivate::DescribePermissionsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribePermissionsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

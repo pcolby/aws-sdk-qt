@@ -101,3 +101,6 @@ void DescribeSessionsResponsePrivate::DescribeSessionsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeSessionsResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

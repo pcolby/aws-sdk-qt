@@ -101,3 +101,6 @@ void StopStackSetOperationResponsePrivate::StopStackSetOperationResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("StopStackSetOperationResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

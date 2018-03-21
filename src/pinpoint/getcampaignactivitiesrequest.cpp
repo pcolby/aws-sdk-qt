@@ -123,3 +123,6 @@ GetCampaignActivitiesRequestPrivate::GetCampaignActivitiesRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

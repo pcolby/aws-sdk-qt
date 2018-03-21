@@ -101,3 +101,6 @@ void ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListPlatformApplicationsResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

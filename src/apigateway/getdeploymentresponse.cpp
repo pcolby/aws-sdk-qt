@@ -101,3 +101,6 @@ void GetDeploymentResponsePrivate::GetDeploymentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetDeploymentResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

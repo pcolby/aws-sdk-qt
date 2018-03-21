@@ -123,3 +123,6 @@ PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

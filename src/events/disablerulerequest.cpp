@@ -123,3 +123,6 @@ DisableRuleRequestPrivate::DisableRuleRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

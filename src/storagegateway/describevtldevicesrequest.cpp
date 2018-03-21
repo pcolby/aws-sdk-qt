@@ -123,3 +123,6 @@ DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

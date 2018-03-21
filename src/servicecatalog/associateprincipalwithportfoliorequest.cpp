@@ -123,3 +123,6 @@ AssociatePrincipalWithPortfolioRequestPrivate::AssociatePrincipalWithPortfolioRe
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPri
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

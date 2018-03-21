@@ -101,3 +101,6 @@ void DescribeProvisioningArtifactResponsePrivate::DescribeProvisioningArtifactRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeProvisioningArtifactResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

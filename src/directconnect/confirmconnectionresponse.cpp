@@ -101,3 +101,6 @@ void ConfirmConnectionResponsePrivate::ConfirmConnectionResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ConfirmConnectionResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

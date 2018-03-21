@@ -101,3 +101,6 @@ void ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ReorderReceiptRuleSetResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

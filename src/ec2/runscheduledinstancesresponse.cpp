@@ -101,3 +101,6 @@ void RunScheduledInstancesResponsePrivate::RunScheduledInstancesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("RunScheduledInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
 {
 
 }
+
+} // namespace EFS
+} // namespace AWS

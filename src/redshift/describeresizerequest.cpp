@@ -123,3 +123,6 @@ DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

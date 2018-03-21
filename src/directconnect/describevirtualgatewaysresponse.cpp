@@ -101,3 +101,6 @@ void DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeVirtualGatewaysResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

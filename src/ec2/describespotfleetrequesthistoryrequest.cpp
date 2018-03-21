@@ -123,3 +123,6 @@ DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRe
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

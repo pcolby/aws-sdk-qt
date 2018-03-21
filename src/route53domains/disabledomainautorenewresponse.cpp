@@ -101,3 +101,6 @@ void DisableDomainAutoRenewResponsePrivate::DisableDomainAutoRenewResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DisableDomainAutoRenewResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

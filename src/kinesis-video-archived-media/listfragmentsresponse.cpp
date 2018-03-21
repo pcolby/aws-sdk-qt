@@ -101,3 +101,6 @@ void ListFragmentsResponsePrivate::ListFragmentsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListFragmentsResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideoArchivedMedia
+} // namespace AWS

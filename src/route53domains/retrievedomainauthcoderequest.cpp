@@ -123,3 +123,6 @@ RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

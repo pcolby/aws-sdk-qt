@@ -101,3 +101,6 @@ void ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesRe
     Q_ASSERT(xml.name() == QLatin1String("ListCuratedEnvironmentImagesResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

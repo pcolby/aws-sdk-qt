@@ -123,3 +123,6 @@ RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequ
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

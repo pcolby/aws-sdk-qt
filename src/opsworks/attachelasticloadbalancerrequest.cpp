@@ -123,3 +123,6 @@ AttachElasticLoadBalancerRequestPrivate::AttachElasticLoadBalancerRequestPrivate
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

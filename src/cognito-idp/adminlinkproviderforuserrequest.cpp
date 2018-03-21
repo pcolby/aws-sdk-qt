@@ -123,3 +123,6 @@ AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

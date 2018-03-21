@@ -101,3 +101,6 @@ void ListDocumentVersionsResponsePrivate::ListDocumentVersionsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListDocumentVersionsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

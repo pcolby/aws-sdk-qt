@@ -101,3 +101,6 @@ void AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AbortMultipartUploadResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

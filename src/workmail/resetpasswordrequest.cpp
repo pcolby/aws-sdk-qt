@@ -123,3 +123,6 @@ ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

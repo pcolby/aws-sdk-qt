@@ -123,3 +123,6 @@ ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestP
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

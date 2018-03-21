@@ -123,3 +123,6 @@ DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
 {
 
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

@@ -101,3 +101,6 @@ void TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionRespon
     Q_ASSERT(xml.name() == QLatin1String("TerminateWorkflowExecutionResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

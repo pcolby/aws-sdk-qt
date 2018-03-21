@@ -123,3 +123,6 @@ RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteCacheSubnetGroupResponsePrivate::DeleteCacheSubnetGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteCacheSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

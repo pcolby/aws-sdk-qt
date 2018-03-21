@@ -101,3 +101,6 @@ void UpdateJobQueueResponsePrivate::UpdateJobQueueResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateJobQueueResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

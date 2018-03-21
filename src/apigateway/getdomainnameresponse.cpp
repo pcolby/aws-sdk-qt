@@ -101,3 +101,6 @@ void GetDomainNameResponsePrivate::GetDomainNameResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetDomainNameResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

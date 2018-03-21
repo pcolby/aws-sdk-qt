@@ -101,3 +101,6 @@ void StopBuildResponsePrivate::StopBuildResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopBuildResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

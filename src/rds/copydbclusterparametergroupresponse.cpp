@@ -101,3 +101,6 @@ void CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResp
     Q_ASSERT(xml.name() == QLatin1String("CopyDBClusterParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

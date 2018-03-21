@@ -101,3 +101,6 @@ void UpdateMLModelResponsePrivate::UpdateMLModelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateMLModelResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

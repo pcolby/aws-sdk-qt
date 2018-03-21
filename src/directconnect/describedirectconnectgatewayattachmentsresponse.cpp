@@ -101,3 +101,6 @@ void DescribeDirectConnectGatewayAttachmentsResponsePrivate::DescribeDirectConne
     Q_ASSERT(xml.name() == QLatin1String("DescribeDirectConnectGatewayAttachmentsResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

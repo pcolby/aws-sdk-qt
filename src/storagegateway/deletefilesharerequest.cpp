@@ -123,3 +123,6 @@ DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -123,3 +123,6 @@ DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

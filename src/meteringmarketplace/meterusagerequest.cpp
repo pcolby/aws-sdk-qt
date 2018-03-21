@@ -123,3 +123,6 @@ MeterUsageRequestPrivate::MeterUsageRequestPrivate(
 {
 
 }
+
+} // namespace MarketplaceMetering
+} // namespace AWS

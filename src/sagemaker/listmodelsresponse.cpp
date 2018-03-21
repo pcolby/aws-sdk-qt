@@ -101,3 +101,6 @@ void ListModelsResponsePrivate::ListModelsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListModelsResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

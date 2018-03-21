@@ -123,3 +123,6 @@ DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

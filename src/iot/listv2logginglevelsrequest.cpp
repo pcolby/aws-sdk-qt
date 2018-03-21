@@ -123,3 +123,6 @@ ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

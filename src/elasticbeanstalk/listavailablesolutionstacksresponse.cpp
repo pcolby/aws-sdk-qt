@@ -101,3 +101,6 @@ void ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResp
     Q_ASSERT(xml.name() == QLatin1String("ListAvailableSolutionStacksResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

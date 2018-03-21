@@ -101,3 +101,6 @@ void ListStackSetOperationsResponsePrivate::ListStackSetOperationsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListStackSetOperationsResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

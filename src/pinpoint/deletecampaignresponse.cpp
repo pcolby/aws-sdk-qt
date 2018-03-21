@@ -101,3 +101,6 @@ void DeleteCampaignResponsePrivate::DeleteCampaignResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteCampaignResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

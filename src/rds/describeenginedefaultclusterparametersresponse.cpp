@@ -101,3 +101,6 @@ void DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaul
     Q_ASSERT(xml.name() == QLatin1String("DescribeEngineDefaultClusterParametersResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

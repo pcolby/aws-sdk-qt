@@ -101,3 +101,6 @@ void CreateProgressUpdateStreamResponsePrivate::CreateProgressUpdateStreamRespon
     Q_ASSERT(xml.name() == QLatin1String("CreateProgressUpdateStreamResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

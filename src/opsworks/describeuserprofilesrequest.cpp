@@ -123,3 +123,6 @@ DescribeUserProfilesRequestPrivate::DescribeUserProfilesRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

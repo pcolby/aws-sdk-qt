@@ -123,3 +123,6 @@ GetStatusRequestPrivate::GetStatusRequestPrivate(
 {
 
 }
+
+} // namespace ImportExport
+} // namespace AWS

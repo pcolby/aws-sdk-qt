@@ -101,3 +101,6 @@ void GetTablesResponsePrivate::GetTablesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetTablesResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

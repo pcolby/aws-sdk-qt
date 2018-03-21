@@ -123,3 +123,6 @@ NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

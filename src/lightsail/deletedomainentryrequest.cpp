@@ -123,3 +123,6 @@ DeleteDomainEntryRequestPrivate::DeleteDomainEntryRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

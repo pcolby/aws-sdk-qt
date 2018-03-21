@@ -123,3 +123,6 @@ GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

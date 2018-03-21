@@ -123,3 +123,6 @@ DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

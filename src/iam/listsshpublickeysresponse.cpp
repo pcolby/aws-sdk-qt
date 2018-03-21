@@ -101,3 +101,6 @@ void ListSSHPublicKeysResponsePrivate::ListSSHPublicKeysResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListSSHPublicKeysResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListTablesResponsePrivate::ListTablesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListTablesResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

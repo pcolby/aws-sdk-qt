@@ -101,3 +101,6 @@ void DescribeReservedCacheNodesOfferingsResponsePrivate::DescribeReservedCacheNo
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedCacheNodesOfferingsResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

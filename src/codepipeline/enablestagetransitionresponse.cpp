@@ -101,3 +101,6 @@ void EnableStageTransitionResponsePrivate::EnableStageTransitionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("EnableStageTransitionResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

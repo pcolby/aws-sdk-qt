@@ -123,3 +123,6 @@ CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

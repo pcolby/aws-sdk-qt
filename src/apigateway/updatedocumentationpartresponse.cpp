@@ -101,3 +101,6 @@ void UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentationPartResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

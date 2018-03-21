@@ -101,3 +101,6 @@ void StartApplicationResponsePrivate::StartApplicationResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("StartApplicationResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

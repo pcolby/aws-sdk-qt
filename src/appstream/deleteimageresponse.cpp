@@ -101,3 +101,6 @@ void DeleteImageResponsePrivate::DeleteImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteImageResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

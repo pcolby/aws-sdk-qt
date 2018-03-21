@@ -101,3 +101,6 @@ void DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeEC2InstanceLimitsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

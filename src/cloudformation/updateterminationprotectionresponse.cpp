@@ -101,3 +101,6 @@ void UpdateTerminationProtectionResponsePrivate::UpdateTerminationProtectionResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateTerminationProtectionResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateThingShadowResponsePrivate::UpdateThingShadowResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateThingShadowResponse"));
     /// @todo
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

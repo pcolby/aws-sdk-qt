@@ -101,3 +101,6 @@ void EnableMFADeviceResponsePrivate::EnableMFADeviceResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("EnableMFADeviceResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

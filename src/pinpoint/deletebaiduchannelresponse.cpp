@@ -101,3 +101,6 @@ void DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteBaiduChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetChangeTokenResponsePrivate::GetChangeTokenResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetChangeTokenResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

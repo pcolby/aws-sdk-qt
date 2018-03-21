@@ -101,3 +101,6 @@ void DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeRiskConfigurationResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

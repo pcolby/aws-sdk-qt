@@ -101,3 +101,6 @@ void BatchGetTracesResponsePrivate::BatchGetTracesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("BatchGetTracesResponse"));
     /// @todo
 }
+
+} // namespace XRay
+} // namespace AWS

@@ -123,3 +123,6 @@ SignUpRequestPrivate::SignUpRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

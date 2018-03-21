@@ -101,3 +101,6 @@ void CreateReplicationGroupResponsePrivate::CreateReplicationGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

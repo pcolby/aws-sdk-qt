@@ -101,3 +101,6 @@ void StartAssessmentRunResponsePrivate::StartAssessmentRunResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("StartAssessmentRunResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

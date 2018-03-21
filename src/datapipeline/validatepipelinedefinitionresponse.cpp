@@ -101,3 +101,6 @@ void ValidatePipelineDefinitionResponsePrivate::ValidatePipelineDefinitionRespon
     Q_ASSERT(xml.name() == QLatin1String("ValidatePipelineDefinitionResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

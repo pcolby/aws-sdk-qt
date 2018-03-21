@@ -123,3 +123,6 @@ VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

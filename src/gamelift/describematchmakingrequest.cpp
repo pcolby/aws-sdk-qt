@@ -123,3 +123,6 @@ DescribeMatchmakingRequestPrivate::DescribeMatchmakingRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreatePublicVirtualInterfaceResponsePrivate::CreatePublicVirtualInterfaceRe
     Q_ASSERT(xml.name() == QLatin1String("CreatePublicVirtualInterfaceResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

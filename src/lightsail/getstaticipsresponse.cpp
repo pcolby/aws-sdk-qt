@@ -101,3 +101,6 @@ void GetStaticIpsResponsePrivate::GetStaticIpsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetStaticIpsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

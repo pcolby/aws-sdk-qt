@@ -101,3 +101,6 @@ void SendMessageBatchResponsePrivate::SendMessageBatchResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("SendMessageBatchResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeLoadBalancersRequestPrivate::DescribeLoadBalancersRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

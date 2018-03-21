@@ -123,3 +123,6 @@ ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

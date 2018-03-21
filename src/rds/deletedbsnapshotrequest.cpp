@@ -123,3 +123,6 @@ DeleteDBSnapshotRequestPrivate::DeleteDBSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

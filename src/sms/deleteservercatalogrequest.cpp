@@ -123,3 +123,6 @@ DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

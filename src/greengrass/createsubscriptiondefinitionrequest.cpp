@@ -123,3 +123,6 @@ CreateSubscriptionDefinitionRequestPrivate::CreateSubscriptionDefinitionRequestP
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

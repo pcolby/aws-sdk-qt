@@ -101,3 +101,6 @@ void ConfigureHealthCheckResponsePrivate::ConfigureHealthCheckResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ConfigureHealthCheckResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

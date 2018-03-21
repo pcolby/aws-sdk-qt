@@ -123,3 +123,6 @@ DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

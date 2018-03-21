@@ -123,3 +123,6 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -123,3 +123,6 @@ ReplaceTopicRuleRequestPrivate::ReplaceTopicRuleRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateQueueRequestPrivate::UpdateQueueRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

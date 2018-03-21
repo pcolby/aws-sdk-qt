@@ -123,3 +123,6 @@ RegisterTaskWithMaintenanceWindowRequestPrivate::RegisterTaskWithMaintenanceWind
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

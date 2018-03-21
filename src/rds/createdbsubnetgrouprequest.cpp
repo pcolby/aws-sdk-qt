@@ -123,3 +123,6 @@ CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -123,3 +123,6 @@ CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

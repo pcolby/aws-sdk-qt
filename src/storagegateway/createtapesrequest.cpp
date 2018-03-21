@@ -123,3 +123,6 @@ CreateTapesRequestPrivate::CreateTapesRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

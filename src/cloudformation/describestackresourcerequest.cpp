@@ -123,3 +123,6 @@ DescribeStackResourceRequestPrivate::DescribeStackResourceRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

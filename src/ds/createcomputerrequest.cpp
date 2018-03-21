@@ -123,3 +123,6 @@ CreateComputerRequestPrivate::CreateComputerRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

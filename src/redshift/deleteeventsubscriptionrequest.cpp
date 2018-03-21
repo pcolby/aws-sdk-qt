@@ -123,3 +123,6 @@ DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

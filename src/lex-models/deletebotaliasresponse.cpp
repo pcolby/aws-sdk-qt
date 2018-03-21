@@ -101,3 +101,6 @@ void DeleteBotAliasResponsePrivate::DeleteBotAliasResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteBotAliasResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

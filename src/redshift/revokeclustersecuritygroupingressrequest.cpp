@@ -123,3 +123,6 @@ RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngre
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

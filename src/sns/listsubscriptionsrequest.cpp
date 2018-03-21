@@ -123,3 +123,6 @@ ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

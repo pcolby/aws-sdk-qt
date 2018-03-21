@@ -101,3 +101,6 @@ void UpdateThingGroupResponsePrivate::UpdateThingGroupResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateThingGroupResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

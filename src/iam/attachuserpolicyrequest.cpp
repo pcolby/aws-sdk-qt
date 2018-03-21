@@ -123,3 +123,6 @@ AttachUserPolicyRequestPrivate::AttachUserPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

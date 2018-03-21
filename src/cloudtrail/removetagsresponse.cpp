@@ -101,3 +101,6 @@ void RemoveTagsResponsePrivate::RemoveTagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

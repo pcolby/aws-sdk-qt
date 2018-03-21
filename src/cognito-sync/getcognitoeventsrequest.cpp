@@ -123,3 +123,6 @@ GetCognitoEventsRequestPrivate::GetCognitoEventsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

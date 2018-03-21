@@ -123,3 +123,6 @@ CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

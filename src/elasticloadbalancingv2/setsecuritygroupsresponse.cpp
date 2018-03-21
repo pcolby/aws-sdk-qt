@@ -101,3 +101,6 @@ void SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("SetSecurityGroupsResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

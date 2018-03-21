@@ -123,3 +123,6 @@ DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

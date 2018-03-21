@@ -123,3 +123,6 @@ DescribeIdentityRequestPrivate::DescribeIdentityRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

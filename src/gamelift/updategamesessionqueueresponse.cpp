@@ -101,3 +101,6 @@ void UpdateGameSessionQueueResponsePrivate::UpdateGameSessionQueueResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateGameSessionQueueResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

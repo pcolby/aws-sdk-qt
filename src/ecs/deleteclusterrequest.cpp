@@ -123,3 +123,6 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

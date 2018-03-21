@@ -101,3 +101,6 @@ void RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("RemoveIpRoutesResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

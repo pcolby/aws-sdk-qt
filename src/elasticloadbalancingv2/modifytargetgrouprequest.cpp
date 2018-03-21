@@ -123,3 +123,6 @@ ModifyTargetGroupRequestPrivate::ModifyTargetGroupRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

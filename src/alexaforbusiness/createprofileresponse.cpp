@@ -101,3 +101,6 @@ void CreateProfileResponsePrivate::CreateProfileResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateProfileResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

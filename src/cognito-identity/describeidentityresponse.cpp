@@ -101,3 +101,6 @@ void DescribeIdentityResponsePrivate::DescribeIdentityResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeIdentityResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateDataSourceFromS3ResponsePrivate::CreateDataSourceFromS3Response(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateDataSourceFromS3Response"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

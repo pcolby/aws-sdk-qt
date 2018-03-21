@@ -101,3 +101,6 @@ void CreateMLModelResponsePrivate::CreateMLModelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateMLModelResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

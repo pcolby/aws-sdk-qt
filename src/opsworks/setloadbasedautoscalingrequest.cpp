@@ -123,3 +123,6 @@ SetLoadBasedAutoScalingRequestPrivate::SetLoadBasedAutoScalingRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

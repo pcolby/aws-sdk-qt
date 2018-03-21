@@ -101,3 +101,6 @@ void CreateJobResponsePrivate::CreateJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateJobResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

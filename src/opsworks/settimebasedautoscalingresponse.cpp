@@ -101,3 +101,6 @@ void SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("SetTimeBasedAutoScalingResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

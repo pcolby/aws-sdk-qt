@@ -123,3 +123,6 @@ AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteInputSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

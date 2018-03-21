@@ -123,3 +123,6 @@ SignalResourceRequestPrivate::SignalResourceRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

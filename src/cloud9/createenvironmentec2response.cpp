@@ -101,3 +101,6 @@ void CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2Response(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateEnvironmentEC2Response"));
     /// @todo
 }
+
+} // namespace Cloud9
+} // namespace AWS

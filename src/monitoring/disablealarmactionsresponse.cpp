@@ -101,3 +101,6 @@ void DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DisableAlarmActionsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

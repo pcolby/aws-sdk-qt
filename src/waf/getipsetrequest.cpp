@@ -123,3 +123,6 @@ GetIPSetRequestPrivate::GetIPSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

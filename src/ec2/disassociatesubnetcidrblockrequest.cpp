@@ -123,3 +123,6 @@ DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPri
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

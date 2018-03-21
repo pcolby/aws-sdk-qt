@@ -123,3 +123,6 @@ UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

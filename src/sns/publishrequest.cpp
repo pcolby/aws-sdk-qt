@@ -123,3 +123,6 @@ PublishRequestPrivate::PublishRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

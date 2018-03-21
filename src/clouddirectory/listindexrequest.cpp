@@ -123,3 +123,6 @@ ListIndexRequestPrivate::ListIndexRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

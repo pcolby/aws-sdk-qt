@@ -101,3 +101,6 @@ void ListDashboardsResponsePrivate::ListDashboardsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListDashboardsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

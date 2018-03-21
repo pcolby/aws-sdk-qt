@@ -123,3 +123,6 @@ DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

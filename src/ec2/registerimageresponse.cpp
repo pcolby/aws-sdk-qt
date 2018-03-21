@@ -101,3 +101,6 @@ void RegisterImageResponsePrivate::RegisterImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RegisterImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void ImportVolumeResponsePrivate::ImportVolumeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ImportVolumeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

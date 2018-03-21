@@ -123,3 +123,6 @@ GetRecordsRequestPrivate::GetRecordsRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDBStreams
+} // namespace AWS

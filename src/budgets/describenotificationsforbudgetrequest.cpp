@@ -123,3 +123,6 @@ DescribeNotificationsForBudgetRequestPrivate::DescribeNotificationsForBudgetRequ
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

@@ -123,3 +123,6 @@ TagStreamRequestPrivate::TagStreamRequestPrivate(
 {
 
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

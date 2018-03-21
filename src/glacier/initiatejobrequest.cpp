@@ -123,3 +123,6 @@ InitiateJobRequestPrivate::InitiateJobRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

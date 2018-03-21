@@ -123,3 +123,6 @@ CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

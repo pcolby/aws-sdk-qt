@@ -123,3 +123,6 @@ UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

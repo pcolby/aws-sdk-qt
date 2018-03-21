@@ -101,3 +101,6 @@ void GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetDomainSuggestionsResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

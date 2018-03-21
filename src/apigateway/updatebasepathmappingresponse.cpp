@@ -101,3 +101,6 @@ void UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateBasePathMappingResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

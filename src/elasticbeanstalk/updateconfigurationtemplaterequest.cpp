@@ -123,3 +123,6 @@ UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPri
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

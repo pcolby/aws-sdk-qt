@@ -101,3 +101,6 @@ void AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigura
     Q_ASSERT(xml.name() == QLatin1String("AssociateConfigurationItemsToApplicationResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

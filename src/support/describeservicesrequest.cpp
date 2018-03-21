@@ -123,3 +123,6 @@ DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

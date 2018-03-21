@@ -101,3 +101,6 @@ void GetUserDefinedFunctionsResponsePrivate::GetUserDefinedFunctionsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetUserDefinedFunctionsResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

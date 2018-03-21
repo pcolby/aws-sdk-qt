@@ -101,3 +101,6 @@ void CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CheckDomainAvailabilityResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

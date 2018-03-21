@@ -123,3 +123,6 @@ SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

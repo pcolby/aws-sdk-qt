@@ -101,3 +101,6 @@ void UpdateSubscriberResponsePrivate::UpdateSubscriberResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateSubscriberResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

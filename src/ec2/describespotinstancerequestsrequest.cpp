@@ -123,3 +123,6 @@ DescribeSpotInstanceRequestsRequestPrivate::DescribeSpotInstanceRequestsRequestP
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

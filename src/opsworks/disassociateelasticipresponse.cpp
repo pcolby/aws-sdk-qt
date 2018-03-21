@@ -101,3 +101,6 @@ void DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DisassociateElasticIpResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

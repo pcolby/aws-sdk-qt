@@ -123,3 +123,6 @@ ListTagsRequestPrivate::ListTagsRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

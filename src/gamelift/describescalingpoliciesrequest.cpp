@@ -123,3 +123,6 @@ DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

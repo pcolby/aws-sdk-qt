@@ -123,3 +123,6 @@ ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestP
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

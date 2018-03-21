@@ -101,3 +101,6 @@ void PublishResponsePrivate::PublishResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PublishResponse"));
     /// @todo
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace Shield
+} // namespace AWS

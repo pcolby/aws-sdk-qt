@@ -101,3 +101,6 @@ void RegisterCACertificateResponsePrivate::RegisterCACertificateResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("RegisterCACertificateResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

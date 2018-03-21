@@ -101,3 +101,6 @@ void DescribeTrainingJobResponsePrivate::DescribeTrainingJobResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrainingJobResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

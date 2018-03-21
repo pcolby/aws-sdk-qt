@@ -101,3 +101,6 @@ void DeleteTriggerResponsePrivate::DeleteTriggerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteTriggerResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

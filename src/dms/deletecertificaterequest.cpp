@@ -123,3 +123,6 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

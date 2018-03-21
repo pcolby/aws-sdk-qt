@@ -101,3 +101,6 @@ void CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateFunctionDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

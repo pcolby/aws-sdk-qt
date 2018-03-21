@@ -101,3 +101,6 @@ void DeletePlatformVersionResponsePrivate::DeletePlatformVersionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeletePlatformVersionResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

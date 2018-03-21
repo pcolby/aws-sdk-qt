@@ -123,3 +123,6 @@ ConfigureHealthCheckRequestPrivate::ConfigureHealthCheckRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

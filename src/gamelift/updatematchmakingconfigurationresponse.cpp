@@ -101,3 +101,6 @@ void UpdateMatchmakingConfigurationResponsePrivate::UpdateMatchmakingConfigurati
     Q_ASSERT(xml.name() == QLatin1String("UpdateMatchmakingConfigurationResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

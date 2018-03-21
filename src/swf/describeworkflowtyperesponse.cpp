@@ -101,3 +101,6 @@ void DescribeWorkflowTypeResponsePrivate::DescribeWorkflowTypeResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkflowTypeResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

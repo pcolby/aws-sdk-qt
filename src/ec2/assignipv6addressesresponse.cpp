@@ -101,3 +101,6 @@ void AssignIpv6AddressesResponsePrivate::AssignIpv6AddressesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("AssignIpv6AddressesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetLexiconResponsePrivate::GetLexiconResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetLexiconResponse"));
     /// @todo
 }
+
+} // namespace Polly
+} // namespace AWS

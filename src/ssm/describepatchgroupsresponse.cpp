@@ -101,3 +101,6 @@ void DescribePatchGroupsResponsePrivate::DescribePatchGroupsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribePatchGroupsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

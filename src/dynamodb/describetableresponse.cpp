@@ -101,3 +101,6 @@ void DescribeTableResponsePrivate::DescribeTableResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeTableResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

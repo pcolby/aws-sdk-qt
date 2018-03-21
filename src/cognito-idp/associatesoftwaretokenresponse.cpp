@@ -101,3 +101,6 @@ void AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AssociateSoftwareTokenResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

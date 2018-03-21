@@ -123,3 +123,6 @@ UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

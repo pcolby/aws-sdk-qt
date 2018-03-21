@@ -101,3 +101,6 @@ void ListQualificationRequestsResponsePrivate::ListQualificationRequestsResponse
     Q_ASSERT(xml.name() == QLatin1String("ListQualificationRequestsResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

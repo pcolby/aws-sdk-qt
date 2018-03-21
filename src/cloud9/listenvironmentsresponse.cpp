@@ -101,3 +101,6 @@ void ListEnvironmentsResponsePrivate::ListEnvironmentsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListEnvironmentsResponse"));
     /// @todo
 }
+
+} // namespace Cloud9
+} // namespace AWS

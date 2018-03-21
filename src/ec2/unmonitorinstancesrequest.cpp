@@ -123,3 +123,6 @@ UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
 {
 
 }
+
+} // namespace MediaStore
+} // namespace AWS

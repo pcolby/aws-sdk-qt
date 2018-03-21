@@ -123,3 +123,6 @@ PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
 {
 
 }
+
+} // namespace Firehose
+} // namespace AWS

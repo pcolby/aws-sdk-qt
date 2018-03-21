@@ -101,3 +101,6 @@ void UpdateApplicationResponsePrivate::UpdateApplicationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

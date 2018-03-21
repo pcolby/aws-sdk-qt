@@ -101,3 +101,6 @@ void CreateConfigurationSetEventDestinationResponsePrivate::CreateConfigurationS
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationSetEventDestinationResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

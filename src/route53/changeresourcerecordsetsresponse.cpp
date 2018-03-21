@@ -101,3 +101,6 @@ void ChangeResourceRecordSetsResponsePrivate::ChangeResourceRecordSetsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ChangeResourceRecordSetsResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

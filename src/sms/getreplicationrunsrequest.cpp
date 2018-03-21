@@ -123,3 +123,6 @@ GetReplicationRunsRequestPrivate::GetReplicationRunsRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

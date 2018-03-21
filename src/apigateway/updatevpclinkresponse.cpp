@@ -101,3 +101,6 @@ void UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateVpcLinkResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

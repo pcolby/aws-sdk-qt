@@ -101,3 +101,6 @@ void ListObjectChildrenResponsePrivate::ListObjectChildrenResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListObjectChildrenResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

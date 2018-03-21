@@ -123,3 +123,6 @@ GetRegionsRequestPrivate::GetRegionsRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

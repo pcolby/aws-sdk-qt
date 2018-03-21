@@ -123,3 +123,6 @@ DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTa
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteOrganizationalUnitResponsePrivate::DeleteOrganizationalUnitResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteOrganizationalUnitResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

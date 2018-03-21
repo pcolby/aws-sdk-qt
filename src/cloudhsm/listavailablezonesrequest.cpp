@@ -123,3 +123,6 @@ ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

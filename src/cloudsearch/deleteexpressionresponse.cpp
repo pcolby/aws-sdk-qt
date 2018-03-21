@@ -101,3 +101,6 @@ void DeleteExpressionResponsePrivate::DeleteExpressionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteExpressionResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

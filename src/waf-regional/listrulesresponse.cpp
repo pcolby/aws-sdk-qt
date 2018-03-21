@@ -101,3 +101,6 @@ void ListRulesResponsePrivate::ListRulesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListRulesResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -123,3 +123,6 @@ SetEndpointAttributesRequestPrivate::SetEndpointAttributesRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

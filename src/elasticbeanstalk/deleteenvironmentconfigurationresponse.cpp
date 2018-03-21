@@ -101,3 +101,6 @@ void DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurati
     Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentConfigurationResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

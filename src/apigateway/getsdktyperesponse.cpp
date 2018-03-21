@@ -101,3 +101,6 @@ void GetSdkTypeResponsePrivate::GetSdkTypeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetSdkTypeResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

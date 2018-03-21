@@ -101,3 +101,6 @@ void ListRoleAliasesResponsePrivate::ListRoleAliasesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListRoleAliasesResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

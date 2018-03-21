@@ -101,3 +101,6 @@ void ListDeploymentsResponsePrivate::ListDeploymentsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListDeploymentsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

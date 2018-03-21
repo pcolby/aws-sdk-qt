@@ -101,3 +101,6 @@ void DeregisterImageResponsePrivate::DeregisterImageResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeregisterImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

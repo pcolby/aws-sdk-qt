@@ -123,3 +123,6 @@ UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

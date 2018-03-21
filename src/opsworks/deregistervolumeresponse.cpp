@@ -101,3 +101,6 @@ void DeregisterVolumeResponsePrivate::DeregisterVolumeResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeregisterVolumeResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

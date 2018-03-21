@@ -101,3 +101,6 @@ void UnpeerVpcResponsePrivate::UnpeerVpcResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UnpeerVpcResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

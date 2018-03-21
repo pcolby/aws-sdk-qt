@@ -123,3 +123,6 @@ DescribeFleetAttributesRequestPrivate::DescribeFleetAttributesRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

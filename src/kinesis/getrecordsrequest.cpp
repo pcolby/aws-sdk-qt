@@ -123,3 +123,6 @@ GetRecordsRequestPrivate::GetRecordsRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

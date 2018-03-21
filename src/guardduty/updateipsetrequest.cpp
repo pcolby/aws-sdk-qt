@@ -123,3 +123,6 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

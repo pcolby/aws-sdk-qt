@@ -101,3 +101,6 @@ void GetOperationsForResourceResponsePrivate::GetOperationsForResourceResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetOperationsForResourceResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

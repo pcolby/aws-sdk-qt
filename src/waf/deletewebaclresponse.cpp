@@ -101,3 +101,6 @@ void DeleteWebACLResponsePrivate::DeleteWebACLResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteWebACLResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

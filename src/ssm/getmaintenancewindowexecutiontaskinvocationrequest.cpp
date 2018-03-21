@@ -123,3 +123,6 @@ GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowE
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

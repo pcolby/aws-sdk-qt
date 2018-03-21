@@ -101,3 +101,6 @@ void ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListOutgoingCertificatesResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

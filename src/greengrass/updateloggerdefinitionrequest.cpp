@@ -123,3 +123,6 @@ UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

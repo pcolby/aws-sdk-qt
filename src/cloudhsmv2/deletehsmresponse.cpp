@@ -101,3 +101,6 @@ void DeleteHsmResponsePrivate::DeleteHsmResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteHsmResponse"));
     /// @todo
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

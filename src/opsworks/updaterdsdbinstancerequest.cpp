@@ -123,3 +123,6 @@ UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

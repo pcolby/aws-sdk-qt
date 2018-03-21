@@ -101,3 +101,6 @@ void UpdateComputeEnvironmentResponsePrivate::UpdateComputeEnvironmentResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("UpdateComputeEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

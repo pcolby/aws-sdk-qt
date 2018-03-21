@@ -123,3 +123,6 @@ SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

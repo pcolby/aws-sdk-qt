@@ -123,3 +123,6 @@ DeleteInputSecurityGroupRequestPrivate::DeleteInputSecurityGroupRequestPrivate(
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

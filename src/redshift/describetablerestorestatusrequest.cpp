@@ -123,3 +123,6 @@ DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPriva
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

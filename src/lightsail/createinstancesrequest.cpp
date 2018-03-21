@@ -123,3 +123,6 @@ CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

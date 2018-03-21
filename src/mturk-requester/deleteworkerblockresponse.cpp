@@ -101,3 +101,6 @@ void DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteWorkerBlockResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -123,3 +123,6 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

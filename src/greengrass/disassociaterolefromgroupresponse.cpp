@@ -101,3 +101,6 @@ void DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponse
     Q_ASSERT(xml.name() == QLatin1String("DisassociateRoleFromGroupResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

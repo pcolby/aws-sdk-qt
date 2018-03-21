@@ -123,3 +123,6 @@ ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

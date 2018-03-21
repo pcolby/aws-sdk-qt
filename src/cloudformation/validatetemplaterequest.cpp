@@ -123,3 +123,6 @@ ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

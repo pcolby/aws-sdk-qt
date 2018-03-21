@@ -101,3 +101,6 @@ void VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("VerifyEmailAddressResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

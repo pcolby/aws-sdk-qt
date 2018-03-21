@@ -123,3 +123,6 @@ StartCrawlerRequestPrivate::StartCrawlerRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

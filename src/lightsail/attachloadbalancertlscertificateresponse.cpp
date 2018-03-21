@@ -101,3 +101,6 @@ void AttachLoadBalancerTlsCertificateResponsePrivate::AttachLoadBalancerTlsCerti
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancerTlsCertificateResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

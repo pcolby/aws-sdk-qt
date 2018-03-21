@@ -123,3 +123,6 @@ GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDBStreams
+} // namespace AWS

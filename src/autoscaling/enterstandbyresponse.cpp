@@ -101,3 +101,6 @@ void EnterStandbyResponsePrivate::EnterStandbyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("EnterStandbyResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

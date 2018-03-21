@@ -123,3 +123,6 @@ ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

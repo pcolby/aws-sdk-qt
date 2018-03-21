@@ -101,3 +101,6 @@ void CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

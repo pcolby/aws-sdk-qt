@@ -123,3 +123,6 @@ ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

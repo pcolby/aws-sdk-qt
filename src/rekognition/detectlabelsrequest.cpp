@@ -123,3 +123,6 @@ DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

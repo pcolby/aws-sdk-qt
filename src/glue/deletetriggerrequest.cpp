@@ -123,3 +123,6 @@ DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

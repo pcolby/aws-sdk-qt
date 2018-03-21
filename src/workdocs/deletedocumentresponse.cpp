@@ -101,3 +101,6 @@ void DeleteDocumentResponsePrivate::DeleteDocumentResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteDocumentResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

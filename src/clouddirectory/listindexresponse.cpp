@@ -101,3 +101,6 @@ void ListIndexResponsePrivate::ListIndexResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListIndexResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

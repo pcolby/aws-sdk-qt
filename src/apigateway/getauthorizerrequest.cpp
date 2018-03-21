@@ -123,3 +123,6 @@ GetAuthorizerRequestPrivate::GetAuthorizerRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

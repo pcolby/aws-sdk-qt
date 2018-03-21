@@ -123,3 +123,6 @@ ListItemsRequestPrivate::ListItemsRequestPrivate(
 {
 
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

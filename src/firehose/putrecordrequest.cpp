@@ -123,3 +123,6 @@ PutRecordRequestPrivate::PutRecordRequestPrivate(
 {
 
 }
+
+} // namespace Firehose
+} // namespace AWS

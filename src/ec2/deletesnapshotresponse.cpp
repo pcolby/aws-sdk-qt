@@ -101,3 +101,6 @@ void DeleteSnapshotResponsePrivate::DeleteSnapshotResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteSnapshotResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteScalingPlanResponsePrivate::DeleteScalingPlanResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteScalingPlanResponse"));
     /// @todo
 }
+
+} // namespace AutoScalingPlans
+} // namespace AWS

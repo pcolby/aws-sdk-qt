@@ -123,3 +123,6 @@ DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

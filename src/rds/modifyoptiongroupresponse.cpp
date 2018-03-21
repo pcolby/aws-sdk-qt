@@ -101,3 +101,6 @@ void ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ModifyOptionGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

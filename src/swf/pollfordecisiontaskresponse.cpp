@@ -101,3 +101,6 @@ void PollForDecisionTaskResponsePrivate::PollForDecisionTaskResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("PollForDecisionTaskResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

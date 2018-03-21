@@ -123,3 +123,6 @@ ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
 {
 
 }
+
+} // namespace MediaPackage
+} // namespace AWS

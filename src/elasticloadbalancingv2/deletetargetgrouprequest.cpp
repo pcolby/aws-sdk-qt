@@ -123,3 +123,6 @@ DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

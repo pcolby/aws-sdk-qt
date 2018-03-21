@@ -101,3 +101,6 @@ void DescribeStackSummaryResponsePrivate::DescribeStackSummaryResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackSummaryResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetDimensionValuesResponsePrivate::GetDimensionValuesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetDimensionValuesResponse"));
     /// @todo
 }
+
+} // namespace CostExplorer
+} // namespace AWS

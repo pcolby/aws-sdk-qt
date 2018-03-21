@@ -123,3 +123,6 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

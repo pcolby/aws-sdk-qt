@@ -101,3 +101,6 @@ void DescribeEventsResponsePrivate::DescribeEventsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

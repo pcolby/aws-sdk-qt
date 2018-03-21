@@ -101,3 +101,6 @@ void DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DownloadDBLogFilePortionResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestP
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

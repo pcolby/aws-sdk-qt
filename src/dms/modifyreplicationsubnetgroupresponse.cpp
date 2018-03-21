@@ -101,3 +101,6 @@ void ModifyReplicationSubnetGroupResponsePrivate::ModifyReplicationSubnetGroupRe
     Q_ASSERT(xml.name() == QLatin1String("ModifyReplicationSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

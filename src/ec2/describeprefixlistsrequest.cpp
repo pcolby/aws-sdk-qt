@@ -123,3 +123,6 @@ DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

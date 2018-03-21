@@ -101,3 +101,6 @@ void DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteGraphqlApiResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

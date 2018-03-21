@@ -123,3 +123,6 @@ GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttr
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

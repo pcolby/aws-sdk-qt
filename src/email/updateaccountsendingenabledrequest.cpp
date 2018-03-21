@@ -123,3 +123,6 @@ UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPri
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

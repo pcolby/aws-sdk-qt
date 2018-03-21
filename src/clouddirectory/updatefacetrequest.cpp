@@ -123,3 +123,6 @@ UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

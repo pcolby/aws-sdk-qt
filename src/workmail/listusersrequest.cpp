@@ -123,3 +123,6 @@ ListUsersRequestPrivate::ListUsersRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

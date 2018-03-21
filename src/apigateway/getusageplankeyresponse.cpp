@@ -101,3 +101,6 @@ void GetUsagePlanKeyResponsePrivate::GetUsagePlanKeyResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetUsagePlanKeyResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

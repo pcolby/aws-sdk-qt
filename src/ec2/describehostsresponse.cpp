@@ -101,3 +101,6 @@ void DescribeHostsResponsePrivate::DescribeHostsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeHostsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutRolePolicyResponsePrivate::PutRolePolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutRolePolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteSubscriptionDefinitionResponsePrivate::DeleteSubscriptionDefinitionRe
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriptionDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

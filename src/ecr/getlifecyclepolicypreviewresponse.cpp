@@ -101,3 +101,6 @@ void GetLifecyclePolicyPreviewResponsePrivate::GetLifecyclePolicyPreviewResponse
     Q_ASSERT(xml.name() == QLatin1String("GetLifecyclePolicyPreviewResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

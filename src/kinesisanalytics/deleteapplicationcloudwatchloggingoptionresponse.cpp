@@ -101,3 +101,6 @@ void DeleteApplicationCloudWatchLoggingOptionResponsePrivate::DeleteApplicationC
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationCloudWatchLoggingOptionResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

@@ -123,3 +123,6 @@ GetDocumentationPartsRequestPrivate::GetDocumentationPartsRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

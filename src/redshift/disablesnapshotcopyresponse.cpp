@@ -101,3 +101,6 @@ void DisableSnapshotCopyResponsePrivate::DisableSnapshotCopyResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DisableSnapshotCopyResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

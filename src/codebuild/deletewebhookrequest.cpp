@@ -123,3 +123,6 @@ DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

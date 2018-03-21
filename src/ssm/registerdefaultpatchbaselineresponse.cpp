@@ -101,3 +101,6 @@ void RegisterDefaultPatchBaselineResponsePrivate::RegisterDefaultPatchBaselineRe
     Q_ASSERT(xml.name() == QLatin1String("RegisterDefaultPatchBaselineResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

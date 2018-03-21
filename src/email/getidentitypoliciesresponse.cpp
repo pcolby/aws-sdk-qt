@@ -101,3 +101,6 @@ void GetIdentityPoliciesResponsePrivate::GetIdentityPoliciesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityPoliciesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

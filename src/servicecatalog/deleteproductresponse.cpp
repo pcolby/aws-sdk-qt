@@ -101,3 +101,6 @@ void DeleteProductResponsePrivate::DeleteProductResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteProductResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

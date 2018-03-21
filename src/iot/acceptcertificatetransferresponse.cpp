@@ -101,3 +101,6 @@ void AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponse
     Q_ASSERT(xml.name() == QLatin1String("AcceptCertificateTransferResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeStackEventsResponsePrivate::DescribeStackEventsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackEventsResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

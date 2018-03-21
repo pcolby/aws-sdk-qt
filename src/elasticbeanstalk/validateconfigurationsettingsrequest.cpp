@@ -123,3 +123,6 @@ ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsReques
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

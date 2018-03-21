@@ -123,3 +123,6 @@ DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

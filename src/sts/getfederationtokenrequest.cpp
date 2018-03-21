@@ -123,3 +123,6 @@ GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
 {
 
 }
+
+} // namespace STS
+} // namespace AWS

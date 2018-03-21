@@ -123,3 +123,6 @@ DescribeMaintenanceWindowsRequestPrivate::DescribeMaintenanceWindowsRequestPriva
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

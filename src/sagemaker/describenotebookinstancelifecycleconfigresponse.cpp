@@ -101,3 +101,6 @@ void DescribeNotebookInstanceLifecycleConfigResponsePrivate::DescribeNotebookIns
     Q_ASSERT(xml.name() == QLatin1String("DescribeNotebookInstanceLifecycleConfigResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

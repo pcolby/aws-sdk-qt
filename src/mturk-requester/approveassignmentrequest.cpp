@@ -123,3 +123,6 @@ ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

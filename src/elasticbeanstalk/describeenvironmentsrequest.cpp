@@ -123,3 +123,6 @@ DescribeEnvironmentsRequestPrivate::DescribeEnvironmentsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

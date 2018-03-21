@@ -101,3 +101,6 @@ void NotifyWorkersResponsePrivate::NotifyWorkersResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("NotifyWorkersResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

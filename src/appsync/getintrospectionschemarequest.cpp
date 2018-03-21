@@ -123,3 +123,6 @@ GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListPrincipalThingsResponsePrivate::ListPrincipalThingsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListPrincipalThingsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

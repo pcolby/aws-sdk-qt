@@ -101,3 +101,6 @@ void DeleteFunctionDefinitionResponsePrivate::DeleteFunctionDefinitionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteFunctionDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

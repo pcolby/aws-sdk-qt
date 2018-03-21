@@ -123,3 +123,6 @@ StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

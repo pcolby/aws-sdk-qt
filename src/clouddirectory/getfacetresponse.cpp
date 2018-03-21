@@ -101,3 +101,6 @@ void GetFacetResponsePrivate::GetFacetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetFacetResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

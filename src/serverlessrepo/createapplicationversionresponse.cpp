@@ -101,3 +101,6 @@ void CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateApplicationVersionResponse"));
     /// @todo
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

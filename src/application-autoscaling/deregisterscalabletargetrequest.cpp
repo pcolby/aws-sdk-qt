@@ -123,3 +123,6 @@ DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteProfileResponsePrivate::DeleteProfileResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteProfileResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

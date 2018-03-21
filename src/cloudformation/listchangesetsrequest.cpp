@@ -123,3 +123,6 @@ ListChangeSetsRequestPrivate::ListChangeSetsRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

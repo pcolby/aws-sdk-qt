@@ -101,3 +101,6 @@ void PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PutTraceSegmentsResponse"));
     /// @todo
 }
+
+} // namespace XRay
+} // namespace AWS

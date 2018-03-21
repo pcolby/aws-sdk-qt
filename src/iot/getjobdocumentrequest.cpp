@@ -123,3 +123,6 @@ GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

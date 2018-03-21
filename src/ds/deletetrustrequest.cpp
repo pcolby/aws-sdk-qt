@@ -123,3 +123,6 @@ DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

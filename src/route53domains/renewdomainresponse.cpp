@@ -101,3 +101,6 @@ void RenewDomainResponsePrivate::RenewDomainResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RenewDomainResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

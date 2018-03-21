@@ -123,3 +123,6 @@ GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

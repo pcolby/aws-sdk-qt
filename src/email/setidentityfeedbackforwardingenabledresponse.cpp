@@ -101,3 +101,6 @@ void SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackFor
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityFeedbackForwardingEnabledResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

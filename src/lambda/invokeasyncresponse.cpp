@@ -101,3 +101,6 @@ void InvokeAsyncResponsePrivate::InvokeAsyncResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("InvokeAsyncResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

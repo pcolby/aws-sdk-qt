@@ -101,3 +101,6 @@ void CreateAccountResponsePrivate::CreateAccountResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateAccountResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

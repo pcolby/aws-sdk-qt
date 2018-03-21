@@ -101,3 +101,6 @@ void PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNod
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedCacheNodesOfferingResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

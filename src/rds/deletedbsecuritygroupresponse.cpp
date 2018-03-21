@@ -101,3 +101,6 @@ void DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

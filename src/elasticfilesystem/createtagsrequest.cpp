@@ -123,3 +123,6 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 {
 
 }
+
+} // namespace EFS
+} // namespace AWS

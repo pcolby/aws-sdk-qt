@@ -123,3 +123,6 @@ AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

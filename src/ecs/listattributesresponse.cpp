@@ -101,3 +101,6 @@ void ListAttributesResponsePrivate::ListAttributesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListAttributesResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

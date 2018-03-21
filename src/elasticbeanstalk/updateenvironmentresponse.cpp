@@ -101,3 +101,6 @@ void UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

@@ -123,3 +123,6 @@ BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

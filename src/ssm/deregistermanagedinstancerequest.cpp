@@ -123,3 +123,6 @@ DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

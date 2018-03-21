@@ -123,3 +123,6 @@ DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequ
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

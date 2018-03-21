@@ -101,3 +101,6 @@ void RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifi
     Q_ASSERT(xml.name() == QLatin1String("RemoveSourceIdentifierFromSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

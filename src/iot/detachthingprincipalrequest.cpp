@@ -123,3 +123,6 @@ DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

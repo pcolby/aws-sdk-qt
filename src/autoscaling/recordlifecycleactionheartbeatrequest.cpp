@@ -123,3 +123,6 @@ RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequ
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

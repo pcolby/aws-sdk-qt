@@ -123,3 +123,6 @@ GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

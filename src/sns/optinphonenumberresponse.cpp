@@ -101,3 +101,6 @@ void OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("OptInPhoneNumberResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

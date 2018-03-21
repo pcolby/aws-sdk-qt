@@ -101,3 +101,6 @@ void AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("AddJobFlowStepsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

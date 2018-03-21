@@ -123,3 +123,6 @@ ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

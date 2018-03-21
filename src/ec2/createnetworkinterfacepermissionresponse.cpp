@@ -101,3 +101,6 @@ void CreateNetworkInterfacePermissionResponsePrivate::CreateNetworkInterfacePerm
     Q_ASSERT(xml.name() == QLatin1String("CreateNetworkInterfacePermissionResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

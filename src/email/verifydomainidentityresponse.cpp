@@ -101,3 +101,6 @@ void VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("VerifyDomainIdentityResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

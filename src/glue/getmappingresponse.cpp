@@ -101,3 +101,6 @@ void GetMappingResponsePrivate::GetMappingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetMappingResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

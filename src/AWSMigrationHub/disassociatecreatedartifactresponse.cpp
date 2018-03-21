@@ -101,3 +101,6 @@ void DisassociateCreatedArtifactResponsePrivate::DisassociateCreatedArtifactResp
     Q_ASSERT(xml.name() == QLatin1String("DisassociateCreatedArtifactResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

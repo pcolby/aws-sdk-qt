@@ -123,3 +123,6 @@ RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

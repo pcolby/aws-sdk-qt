@@ -101,3 +101,6 @@ void DeleteDatabaseResponsePrivate::DeleteDatabaseResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteDatabaseResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

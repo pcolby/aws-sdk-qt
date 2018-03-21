@@ -101,3 +101,6 @@ void CreateMultipartUploadResponsePrivate::CreateMultipartUploadResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateMultipartUploadResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

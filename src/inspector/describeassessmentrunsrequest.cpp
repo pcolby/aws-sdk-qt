@@ -123,3 +123,6 @@ DescribeAssessmentRunsRequestPrivate::DescribeAssessmentRunsRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

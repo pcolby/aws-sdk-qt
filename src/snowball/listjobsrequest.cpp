@@ -123,3 +123,6 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

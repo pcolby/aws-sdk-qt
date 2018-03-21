@@ -101,3 +101,6 @@ void ListObjectPoliciesResponsePrivate::ListObjectPoliciesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListObjectPoliciesResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

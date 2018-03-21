@@ -101,3 +101,6 @@ void DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageRespon
     Q_ASSERT(xml.name() == QLatin1String("DecodeAuthorizationMessageResponse"));
     /// @todo
 }
+
+} // namespace STS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteActivityResponsePrivate::DeleteActivityResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteActivityResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

@@ -123,3 +123,6 @@ GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

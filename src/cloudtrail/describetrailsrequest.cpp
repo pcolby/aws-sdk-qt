@@ -123,3 +123,6 @@ DescribeTrailsRequestPrivate::DescribeTrailsRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

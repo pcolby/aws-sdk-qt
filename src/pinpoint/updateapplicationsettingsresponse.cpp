@@ -101,3 +101,6 @@ void UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponse
     Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationSettingsResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPriva
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

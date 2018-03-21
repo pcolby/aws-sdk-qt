@@ -123,3 +123,6 @@ StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

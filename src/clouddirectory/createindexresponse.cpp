@@ -101,3 +101,6 @@ void CreateIndexResponsePrivate::CreateIndexResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateIndexResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

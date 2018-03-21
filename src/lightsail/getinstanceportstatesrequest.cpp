@@ -123,3 +123,6 @@ GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

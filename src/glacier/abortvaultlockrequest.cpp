@@ -123,3 +123,6 @@ AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

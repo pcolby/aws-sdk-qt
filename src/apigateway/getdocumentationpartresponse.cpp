@@ -101,3 +101,6 @@ void GetDocumentationPartResponsePrivate::GetDocumentationPartResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetDocumentationPartResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

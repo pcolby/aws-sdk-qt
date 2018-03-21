@@ -101,3 +101,6 @@ void DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanRe
     Q_ASSERT(xml.name() == QLatin1String("DeleteProvisionedProductPlanResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

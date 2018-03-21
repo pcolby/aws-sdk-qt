@@ -101,3 +101,6 @@ void CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateDirectoryConfigResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

@@ -101,3 +101,6 @@ void StartMaintenanceResponsePrivate::StartMaintenanceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("StartMaintenanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

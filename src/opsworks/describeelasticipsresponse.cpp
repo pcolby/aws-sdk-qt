@@ -101,3 +101,6 @@ void DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticIpsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

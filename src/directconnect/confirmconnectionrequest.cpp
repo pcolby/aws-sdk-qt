@@ -123,3 +123,6 @@ ConfirmConnectionRequestPrivate::ConfirmConnectionRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

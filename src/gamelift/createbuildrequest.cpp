@@ -123,3 +123,6 @@ CreateBuildRequestPrivate::CreateBuildRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

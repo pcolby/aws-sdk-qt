@@ -101,3 +101,6 @@ void DescribeAttachmentResponsePrivate::DescribeAttachmentResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeAttachmentResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

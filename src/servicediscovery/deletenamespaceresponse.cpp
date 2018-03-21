@@ -101,3 +101,6 @@ void DeleteNamespaceResponsePrivate::DeleteNamespaceResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteNamespaceResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeScalableTargetsResponsePrivate::DescribeScalableTargetsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalableTargetsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

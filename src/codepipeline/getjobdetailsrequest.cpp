@@ -123,3 +123,6 @@ GetJobDetailsRequestPrivate::GetJobDetailsRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

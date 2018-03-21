@@ -101,3 +101,6 @@ void DescribeProvisioningParametersResponsePrivate::DescribeProvisioningParamete
     Q_ASSERT(xml.name() == QLatin1String("DescribeProvisioningParametersResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

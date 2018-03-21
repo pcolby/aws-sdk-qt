@@ -123,3 +123,6 @@ DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

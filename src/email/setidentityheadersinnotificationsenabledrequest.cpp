@@ -123,3 +123,6 @@ SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNoti
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

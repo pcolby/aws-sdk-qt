@@ -123,3 +123,6 @@ ListPrincipalPoliciesRequestPrivate::ListPrincipalPoliciesRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

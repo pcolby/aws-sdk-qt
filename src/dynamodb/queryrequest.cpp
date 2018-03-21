@@ -123,3 +123,6 @@ QueryRequestPrivate::QueryRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

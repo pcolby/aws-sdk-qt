@@ -101,3 +101,6 @@ void CreateLayerResponsePrivate::CreateLayerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateLayerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void EnableDomainTransferLockResponsePrivate::EnableDomainTransferLockResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("EnableDomainTransferLockResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

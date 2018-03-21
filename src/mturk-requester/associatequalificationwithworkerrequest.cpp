@@ -123,3 +123,6 @@ AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorker
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

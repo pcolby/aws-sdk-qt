@@ -101,3 +101,6 @@ void GetPatchBaselineResponsePrivate::GetPatchBaselineResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetPatchBaselineResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

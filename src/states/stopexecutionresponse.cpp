@@ -101,3 +101,6 @@ void StopExecutionResponsePrivate::StopExecutionResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopExecutionResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

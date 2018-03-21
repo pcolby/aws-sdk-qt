@@ -101,3 +101,6 @@ void PutMethodResponseResponsePrivate::PutMethodResponseResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("PutMethodResponseResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

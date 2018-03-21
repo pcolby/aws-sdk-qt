@@ -101,3 +101,6 @@ void GenerateRandomResponsePrivate::GenerateRandomResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GenerateRandomResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

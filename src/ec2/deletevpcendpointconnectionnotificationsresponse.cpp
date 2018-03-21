@@ -101,3 +101,6 @@ void DeleteVpcEndpointConnectionNotificationsResponsePrivate::DeleteVpcEndpointC
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointConnectionNotificationsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

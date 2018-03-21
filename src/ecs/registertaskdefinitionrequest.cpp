@@ -123,3 +123,6 @@ RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

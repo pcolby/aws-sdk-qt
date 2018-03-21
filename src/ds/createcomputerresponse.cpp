@@ -101,3 +101,6 @@ void CreateComputerResponsePrivate::CreateComputerResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateComputerResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

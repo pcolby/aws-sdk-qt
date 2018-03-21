@@ -101,3 +101,6 @@ void DeletePresetResponsePrivate::DeletePresetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeletePresetResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

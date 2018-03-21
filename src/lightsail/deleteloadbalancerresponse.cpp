@@ -101,3 +101,6 @@ void DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -123,3 +123,6 @@ RestoreTableFromClusterSnapshotRequestPrivate::RestoreTableFromClusterSnapshotRe
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

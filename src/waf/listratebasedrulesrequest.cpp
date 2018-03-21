@@ -123,3 +123,6 @@ ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

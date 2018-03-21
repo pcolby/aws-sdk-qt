@@ -101,3 +101,6 @@ void DescribeMaintenanceWindowExecutionTasksResponsePrivate::DescribeMaintenance
     Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceWindowExecutionTasksResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

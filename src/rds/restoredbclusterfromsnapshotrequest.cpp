@@ -123,3 +123,6 @@ RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestP
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

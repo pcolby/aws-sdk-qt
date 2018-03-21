@@ -123,3 +123,6 @@ ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

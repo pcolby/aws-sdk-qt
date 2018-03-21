@@ -123,3 +123,6 @@ UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

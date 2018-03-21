@@ -101,3 +101,6 @@ void CreateClusterResponsePrivate::CreateClusterResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateClusterResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

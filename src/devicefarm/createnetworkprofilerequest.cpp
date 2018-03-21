@@ -123,3 +123,6 @@ CreateNetworkProfileRequestPrivate::CreateNetworkProfileRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

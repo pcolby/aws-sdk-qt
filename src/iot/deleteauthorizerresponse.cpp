@@ -101,3 +101,6 @@ void DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteAuthorizerResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

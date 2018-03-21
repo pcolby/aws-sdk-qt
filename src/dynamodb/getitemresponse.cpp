@@ -101,3 +101,6 @@ void GetItemResponsePrivate::GetItemResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetItemResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

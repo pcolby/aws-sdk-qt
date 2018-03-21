@@ -101,3 +101,6 @@ void DescribeExecutionResponsePrivate::DescribeExecutionResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeExecutionResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

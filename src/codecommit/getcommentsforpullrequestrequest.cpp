@@ -123,3 +123,6 @@ GetCommentsForPullRequestRequestPrivate::GetCommentsForPullRequestRequestPrivate
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

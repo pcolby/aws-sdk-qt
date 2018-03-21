@@ -101,3 +101,6 @@ void DeleteScalingPolicyResponsePrivate::DeleteScalingPolicyResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteScalingPolicyResponse"));
     /// @todo
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

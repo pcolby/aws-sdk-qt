@@ -123,3 +123,6 @@ CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForH
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsRe
     Q_ASSERT(xml.name() == QLatin1String("ListClosedWorkflowExecutionsResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

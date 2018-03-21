@@ -123,3 +123,6 @@ UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

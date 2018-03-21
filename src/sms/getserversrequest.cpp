@@ -123,3 +123,6 @@ GetServersRequestPrivate::GetServersRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

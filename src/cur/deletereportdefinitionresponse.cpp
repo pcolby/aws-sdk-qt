@@ -101,3 +101,6 @@ void DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteReportDefinitionResponse"));
     /// @todo
 }
+
+} // namespace CostandUsageReportService
+} // namespace AWS

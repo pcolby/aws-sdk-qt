@@ -101,3 +101,6 @@ void InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResp
     Q_ASSERT(xml.name() == QLatin1String("InviteAccountToOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

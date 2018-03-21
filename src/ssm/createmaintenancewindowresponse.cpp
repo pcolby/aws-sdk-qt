@@ -101,3 +101,6 @@ void CreateMaintenanceWindowResponsePrivate::CreateMaintenanceWindowResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateMaintenanceWindowResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

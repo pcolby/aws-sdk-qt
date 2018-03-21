@@ -123,3 +123,6 @@ DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

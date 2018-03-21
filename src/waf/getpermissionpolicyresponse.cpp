@@ -101,3 +101,6 @@ void GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetPermissionPolicyResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

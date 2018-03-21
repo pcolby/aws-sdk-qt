@@ -101,3 +101,6 @@ void AddTagsToResourceResponsePrivate::AddTagsToResourceResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToResourceResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

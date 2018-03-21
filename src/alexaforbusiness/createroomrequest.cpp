@@ -123,3 +123,6 @@ CreateRoomRequestPrivate::CreateRoomRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

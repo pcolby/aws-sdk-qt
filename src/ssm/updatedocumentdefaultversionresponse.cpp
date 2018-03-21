@@ -101,3 +101,6 @@ void UpdateDocumentDefaultVersionResponsePrivate::UpdateDocumentDefaultVersionRe
     Q_ASSERT(xml.name() == QLatin1String("UpdateDocumentDefaultVersionResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

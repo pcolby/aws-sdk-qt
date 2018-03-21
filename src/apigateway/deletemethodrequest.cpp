@@ -123,3 +123,6 @@ DeleteMethodRequestPrivate::DeleteMethodRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

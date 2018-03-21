@@ -101,3 +101,6 @@ void DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteOptionGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

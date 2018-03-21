@@ -123,3 +123,6 @@ DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

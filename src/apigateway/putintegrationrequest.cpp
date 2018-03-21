@@ -123,3 +123,6 @@ PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

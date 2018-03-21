@@ -101,3 +101,6 @@ void StopChannelResponsePrivate::StopChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopChannelResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

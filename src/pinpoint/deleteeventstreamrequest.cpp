@@ -123,3 +123,6 @@ DeleteEventStreamRequestPrivate::DeleteEventStreamRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

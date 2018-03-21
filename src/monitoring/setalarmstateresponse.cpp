@@ -101,3 +101,6 @@ void SetAlarmStateResponsePrivate::SetAlarmStateResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SetAlarmStateResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

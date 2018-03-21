@@ -101,3 +101,6 @@ void DeleteDirectConnectGatewayResponsePrivate::DeleteDirectConnectGatewayRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteDirectConnectGatewayResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

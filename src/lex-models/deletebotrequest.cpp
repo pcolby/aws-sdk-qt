@@ -123,3 +123,6 @@ DeleteBotRequestPrivate::DeleteBotRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

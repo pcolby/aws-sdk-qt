@@ -101,3 +101,6 @@ void DeleteKeyPairResponsePrivate::DeleteKeyPairResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteKeyPairResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

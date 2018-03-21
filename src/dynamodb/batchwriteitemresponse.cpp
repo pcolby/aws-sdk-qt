@@ -101,3 +101,6 @@ void BatchWriteItemResponsePrivate::BatchWriteItemResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("BatchWriteItemResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

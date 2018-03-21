@@ -101,3 +101,6 @@ void CreateDefaultSubnetResponsePrivate::CreateDefaultSubnetResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateDefaultSubnetResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

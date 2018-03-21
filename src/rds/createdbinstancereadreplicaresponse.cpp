@@ -101,3 +101,6 @@ void CreateDBInstanceReadReplicaResponsePrivate::CreateDBInstanceReadReplicaResp
     Q_ASSERT(xml.name() == QLatin1String("CreateDBInstanceReadReplicaResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -123,3 +123,6 @@ GetContainerPolicyRequestPrivate::GetContainerPolicyRequestPrivate(
 {
 
 }
+
+} // namespace MediaStore
+} // namespace AWS

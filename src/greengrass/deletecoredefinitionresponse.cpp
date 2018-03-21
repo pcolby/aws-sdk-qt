@@ -101,3 +101,6 @@ void DeleteCoreDefinitionResponsePrivate::DeleteCoreDefinitionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteCoreDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

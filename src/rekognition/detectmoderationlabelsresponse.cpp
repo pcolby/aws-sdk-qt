@@ -101,3 +101,6 @@ void DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DetectModerationLabelsResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

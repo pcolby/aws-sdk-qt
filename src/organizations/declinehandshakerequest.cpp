@@ -123,3 +123,6 @@ DeclineHandshakeRequestPrivate::DeclineHandshakeRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

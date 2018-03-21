@@ -123,3 +123,6 @@ DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicatio
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

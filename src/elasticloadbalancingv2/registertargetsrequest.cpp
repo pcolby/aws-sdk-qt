@@ -123,3 +123,6 @@ RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

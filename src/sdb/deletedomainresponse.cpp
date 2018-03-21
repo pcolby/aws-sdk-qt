@@ -101,3 +101,6 @@ void DeleteDomainResponsePrivate::DeleteDomainResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteDomainResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

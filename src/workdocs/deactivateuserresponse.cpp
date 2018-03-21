@@ -101,3 +101,6 @@ void DeactivateUserResponsePrivate::DeactivateUserResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeactivateUserResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

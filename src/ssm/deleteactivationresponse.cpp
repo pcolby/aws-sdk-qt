@@ -101,3 +101,6 @@ void DeleteActivationResponsePrivate::DeleteActivationResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteActivationResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeReportDefinitionsResponse"));
     /// @todo
 }
+
+} // namespace CostandUsageReportService
+} // namespace AWS

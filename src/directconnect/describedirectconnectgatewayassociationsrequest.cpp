@@ -123,3 +123,6 @@ DescribeDirectConnectGatewayAssociationsRequestPrivate::DescribeDirectConnectGat
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribePatchGroupStateRequestPrivate::DescribePatchGroupStateRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

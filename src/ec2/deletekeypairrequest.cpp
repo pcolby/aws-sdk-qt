@@ -123,3 +123,6 @@ DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

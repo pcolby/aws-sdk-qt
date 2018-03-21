@@ -101,3 +101,6 @@ void DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeregisterRdsDbInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

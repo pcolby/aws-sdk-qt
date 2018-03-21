@@ -123,3 +123,6 @@ DescribeCacheClustersRequestPrivate::DescribeCacheClustersRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeCommunicationsResponsePrivate::DescribeCommunicationsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeCommunicationsResponse"));
     /// @todo
 }
+
+} // namespace Support
+} // namespace AWS

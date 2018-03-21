@@ -123,3 +123,6 @@ RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

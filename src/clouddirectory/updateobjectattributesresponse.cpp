@@ -101,3 +101,6 @@ void UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateObjectAttributesResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

@@ -123,3 +123,6 @@ GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

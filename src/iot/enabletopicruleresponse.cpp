@@ -101,3 +101,6 @@ void EnableTopicRuleResponsePrivate::EnableTopicRuleResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("EnableTopicRuleResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

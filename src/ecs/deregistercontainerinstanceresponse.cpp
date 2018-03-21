@@ -101,3 +101,6 @@ void DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResp
     Q_ASSERT(xml.name() == QLatin1String("DeregisterContainerInstanceResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

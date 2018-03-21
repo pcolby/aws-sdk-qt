@@ -123,3 +123,6 @@ ViewBillingRequestPrivate::ViewBillingRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

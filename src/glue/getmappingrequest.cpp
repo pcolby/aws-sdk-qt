@@ -123,3 +123,6 @@ GetMappingRequestPrivate::GetMappingRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

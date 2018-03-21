@@ -123,3 +123,6 @@ DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

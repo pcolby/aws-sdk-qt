@@ -101,3 +101,6 @@ void ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceGroupsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

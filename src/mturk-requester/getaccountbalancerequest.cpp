@@ -123,3 +123,6 @@ GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeGatewayInformationResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

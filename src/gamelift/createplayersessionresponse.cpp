@@ -101,3 +101,6 @@ void CreatePlayerSessionResponsePrivate::CreatePlayerSessionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreatePlayerSessionResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

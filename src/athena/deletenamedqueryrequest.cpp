@@ -123,3 +123,6 @@ DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
 {
 
 }
+
+} // namespace Athena
+} // namespace AWS

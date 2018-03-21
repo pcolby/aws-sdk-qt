@@ -101,3 +101,6 @@ void UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("UpdateRdsDbInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

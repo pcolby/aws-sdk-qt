@@ -101,3 +101,6 @@ void EnableVolumeIOResponsePrivate::EnableVolumeIOResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("EnableVolumeIOResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("SetRepositoryPolicyResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

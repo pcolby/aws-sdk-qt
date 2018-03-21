@@ -123,3 +123,6 @@ ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

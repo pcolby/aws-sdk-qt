@@ -101,3 +101,6 @@ void ResetCacheParameterGroupResponsePrivate::ResetCacheParameterGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ResetCacheParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

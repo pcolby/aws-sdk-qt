@@ -123,3 +123,6 @@ DescribeOriginEndpointRequestPrivate::DescribeOriginEndpointRequestPrivate(
 {
 
 }
+
+} // namespace MediaPackage
+} // namespace AWS

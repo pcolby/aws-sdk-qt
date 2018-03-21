@@ -123,3 +123,6 @@ AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

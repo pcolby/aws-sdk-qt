@@ -123,3 +123,6 @@ GetComplianceSummaryByResourceTypeRequestPrivate::GetComplianceSummaryByResource
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

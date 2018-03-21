@@ -101,3 +101,6 @@ void DescribeTimeBasedAutoScalingResponsePrivate::DescribeTimeBasedAutoScalingRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeTimeBasedAutoScalingResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UnsubscribeFromEventResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

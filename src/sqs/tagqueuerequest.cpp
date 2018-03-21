@@ -123,3 +123,6 @@ TagQueueRequestPrivate::TagQueueRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

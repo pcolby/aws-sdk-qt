@@ -123,3 +123,6 @@ RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

@@ -123,3 +123,6 @@ ListTaskDefinitionsRequestPrivate::ListTaskDefinitionsRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

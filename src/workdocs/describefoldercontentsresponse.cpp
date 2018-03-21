@@ -101,3 +101,6 @@ void DescribeFolderContentsResponsePrivate::DescribeFolderContentsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeFolderContentsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

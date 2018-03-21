@@ -123,3 +123,6 @@ UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

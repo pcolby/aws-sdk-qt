@@ -123,3 +123,6 @@ UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifec
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

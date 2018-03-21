@@ -101,3 +101,6 @@ void PutDestinationPolicyResponsePrivate::PutDestinationPolicyResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("PutDestinationPolicyResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

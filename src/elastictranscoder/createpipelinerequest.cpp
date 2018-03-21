@@ -123,3 +123,6 @@ CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

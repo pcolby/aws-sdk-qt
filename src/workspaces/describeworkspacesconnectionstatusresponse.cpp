@@ -101,3 +101,6 @@ void DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnec
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspacesConnectionStatusResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

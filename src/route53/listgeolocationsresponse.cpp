@@ -101,3 +101,6 @@ void ListGeoLocationsResponsePrivate::ListGeoLocationsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListGeoLocationsResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

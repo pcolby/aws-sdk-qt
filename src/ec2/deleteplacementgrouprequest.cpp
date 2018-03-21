@@ -123,3 +123,6 @@ DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

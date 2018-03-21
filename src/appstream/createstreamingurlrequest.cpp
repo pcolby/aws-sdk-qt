@@ -123,3 +123,6 @@ CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

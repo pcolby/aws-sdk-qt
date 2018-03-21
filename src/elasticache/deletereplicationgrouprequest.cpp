@@ -123,3 +123,6 @@ DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

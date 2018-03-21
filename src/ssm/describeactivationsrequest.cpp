@@ -123,3 +123,6 @@ DescribeActivationsRequestPrivate::DescribeActivationsRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

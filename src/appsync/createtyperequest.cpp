@@ -123,3 +123,6 @@ CreateTypeRequestPrivate::CreateTypeRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

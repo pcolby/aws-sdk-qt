@@ -101,3 +101,6 @@ void DescribeLogGroupsResponsePrivate::DescribeLogGroupsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeLogGroupsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

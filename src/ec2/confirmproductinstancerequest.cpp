@@ -123,3 +123,6 @@ ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
 {
 
 }
+
+} // namespace KinesisVideoArchivedMedia
+} // namespace AWS

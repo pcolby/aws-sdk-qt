@@ -101,3 +101,6 @@ void ListAssessmentRunAgentsResponsePrivate::ListAssessmentRunAgentsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListAssessmentRunAgentsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

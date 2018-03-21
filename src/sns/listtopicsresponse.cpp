@@ -101,3 +101,6 @@ void ListTopicsResponsePrivate::ListTopicsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListTopicsResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

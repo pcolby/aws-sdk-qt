@@ -123,3 +123,6 @@ GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

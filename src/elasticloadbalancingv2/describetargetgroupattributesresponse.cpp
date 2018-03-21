@@ -101,3 +101,6 @@ void DescribeTargetGroupAttributesResponsePrivate::DescribeTargetGroupAttributes
     Q_ASSERT(xml.name() == QLatin1String("DescribeTargetGroupAttributesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

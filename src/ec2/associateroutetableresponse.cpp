@@ -101,3 +101,6 @@ void AssociateRouteTableResponsePrivate::AssociateRouteTableResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("AssociateRouteTableResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListOfferingTransactionsResponsePrivate::ListOfferingTransactionsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListOfferingTransactionsResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

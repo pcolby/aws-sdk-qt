@@ -123,3 +123,6 @@ DeleteStackInstancesRequestPrivate::DeleteStackInstancesRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -123,3 +123,6 @@ SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

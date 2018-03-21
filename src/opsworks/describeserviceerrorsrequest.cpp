@@ -123,3 +123,6 @@ DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

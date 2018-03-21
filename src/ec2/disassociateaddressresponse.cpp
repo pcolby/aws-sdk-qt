@@ -101,3 +101,6 @@ void DisassociateAddressResponsePrivate::DisassociateAddressResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DisassociateAddressResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

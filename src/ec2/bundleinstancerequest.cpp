@@ -123,3 +123,6 @@ BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

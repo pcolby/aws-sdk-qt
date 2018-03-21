@@ -123,3 +123,6 @@ UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

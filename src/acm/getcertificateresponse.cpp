@@ -101,3 +101,6 @@ void GetCertificateResponsePrivate::GetCertificateResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetCertificateResponse"));
     /// @todo
 }
+
+} // namespace ACM
+} // namespace AWS

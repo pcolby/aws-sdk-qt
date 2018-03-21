@@ -101,3 +101,6 @@ void GetNamedQueryResponsePrivate::GetNamedQueryResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetNamedQueryResponse"));
     /// @todo
 }
+
+} // namespace Athena
+} // namespace AWS

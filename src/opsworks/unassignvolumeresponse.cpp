@@ -101,3 +101,6 @@ void UnassignVolumeResponsePrivate::UnassignVolumeResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UnassignVolumeResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

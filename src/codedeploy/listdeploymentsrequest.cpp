@@ -123,3 +123,6 @@ ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

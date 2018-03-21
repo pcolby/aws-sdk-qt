@@ -101,3 +101,6 @@ void DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCreden
     Q_ASSERT(xml.name() == QLatin1String("DeleteServiceSpecificCredentialResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

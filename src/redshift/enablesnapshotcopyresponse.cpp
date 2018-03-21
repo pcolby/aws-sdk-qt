@@ -101,3 +101,6 @@ void EnableSnapshotCopyResponsePrivate::EnableSnapshotCopyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("EnableSnapshotCopyResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

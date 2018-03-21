@@ -101,3 +101,6 @@ void CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateSampleFindingsResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

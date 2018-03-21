@@ -123,3 +123,6 @@ UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

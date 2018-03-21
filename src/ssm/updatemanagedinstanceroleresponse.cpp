@@ -101,3 +101,6 @@ void UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponse
     Q_ASSERT(xml.name() == QLatin1String("UpdateManagedInstanceRoleResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

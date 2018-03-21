@@ -101,3 +101,6 @@ void DescribePolicyResponsePrivate::DescribePolicyResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribePolicyResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVol
     Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotFromVolumeRecoveryPointResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

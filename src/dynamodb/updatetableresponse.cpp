@@ -101,3 +101,6 @@ void UpdateTableResponsePrivate::UpdateTableResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateTableResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

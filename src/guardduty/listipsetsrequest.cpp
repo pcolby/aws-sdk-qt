@@ -123,3 +123,6 @@ ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

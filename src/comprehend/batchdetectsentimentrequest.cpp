@@ -123,3 +123,6 @@ BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

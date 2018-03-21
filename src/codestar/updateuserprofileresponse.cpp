@@ -101,3 +101,6 @@ void UpdateUserProfileResponsePrivate::UpdateUserProfileResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateUserProfileResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

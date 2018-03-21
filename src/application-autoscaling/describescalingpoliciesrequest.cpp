@@ -123,3 +123,6 @@ DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

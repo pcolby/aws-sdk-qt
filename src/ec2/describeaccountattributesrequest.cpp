@@ -123,3 +123,6 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

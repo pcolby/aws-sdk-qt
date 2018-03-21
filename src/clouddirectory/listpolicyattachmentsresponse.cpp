@@ -101,3 +101,6 @@ void ListPolicyAttachmentsResponsePrivate::ListPolicyAttachmentsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListPolicyAttachmentsResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

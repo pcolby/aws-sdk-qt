@@ -123,3 +123,6 @@ ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

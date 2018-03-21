@@ -101,3 +101,6 @@ void BatchGetDeploymentGroupsResponsePrivate::BatchGetDeploymentGroupsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("BatchGetDeploymentGroupsResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

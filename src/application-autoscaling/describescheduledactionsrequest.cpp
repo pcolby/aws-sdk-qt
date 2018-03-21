@@ -123,3 +123,6 @@ DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

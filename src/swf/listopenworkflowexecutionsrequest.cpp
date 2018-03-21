@@ -123,3 +123,6 @@ ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPriva
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

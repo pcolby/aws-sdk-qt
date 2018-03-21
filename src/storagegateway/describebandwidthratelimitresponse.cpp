@@ -101,3 +101,6 @@ void DescribeBandwidthRateLimitResponsePrivate::DescribeBandwidthRateLimitRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeBandwidthRateLimitResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

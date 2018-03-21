@@ -101,3 +101,6 @@ void GetNetworkProfileResponsePrivate::GetNetworkProfileResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetNetworkProfileResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateCacheSecurityGroupRequestPrivate::CreateCacheSecurityGroupRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

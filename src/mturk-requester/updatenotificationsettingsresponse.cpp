@@ -101,3 +101,6 @@ void UpdateNotificationSettingsResponsePrivate::UpdateNotificationSettingsRespon
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotificationSettingsResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

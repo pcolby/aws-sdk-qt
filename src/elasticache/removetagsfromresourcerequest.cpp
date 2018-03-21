@@ -123,3 +123,6 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

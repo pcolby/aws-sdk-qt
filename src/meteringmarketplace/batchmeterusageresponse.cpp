@@ -101,3 +101,6 @@ void BatchMeterUsageResponsePrivate::BatchMeterUsageResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("BatchMeterUsageResponse"));
     /// @todo
 }
+
+} // namespace MarketplaceMetering
+} // namespace AWS

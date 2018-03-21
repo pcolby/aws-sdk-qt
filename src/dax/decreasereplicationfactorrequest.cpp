@@ -123,3 +123,6 @@ DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

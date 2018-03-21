@@ -101,3 +101,6 @@ void CreateQualificationTypeResponsePrivate::CreateQualificationTypeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateQualificationTypeResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

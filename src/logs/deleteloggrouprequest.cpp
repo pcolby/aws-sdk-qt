@@ -123,3 +123,6 @@ DeleteLogGroupRequestPrivate::DeleteLogGroupRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

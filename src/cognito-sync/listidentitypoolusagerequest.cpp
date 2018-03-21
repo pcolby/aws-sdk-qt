@@ -123,3 +123,6 @@ ListIdentityPoolUsageRequestPrivate::ListIdentityPoolUsageRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

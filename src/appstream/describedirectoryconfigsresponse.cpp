@@ -101,3 +101,6 @@ void DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeDirectoryConfigsResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

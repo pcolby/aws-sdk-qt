@@ -101,3 +101,6 @@ void GetFileUploadURLResponsePrivate::GetFileUploadURLResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetFileUploadURLResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwarders
     Q_ASSERT(xml.name() == QLatin1String("DescribeConditionalForwardersResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

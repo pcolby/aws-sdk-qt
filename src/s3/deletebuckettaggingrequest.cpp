@@ -123,3 +123,6 @@ DeleteBucketTaggingRequestPrivate::DeleteBucketTaggingRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

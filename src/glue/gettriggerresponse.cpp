@@ -101,3 +101,6 @@ void GetTriggerResponsePrivate::GetTriggerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetTriggerResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

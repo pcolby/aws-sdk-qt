@@ -123,3 +123,6 @@ TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

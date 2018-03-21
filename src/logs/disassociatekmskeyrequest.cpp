@@ -123,3 +123,6 @@ DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

@@ -123,3 +123,6 @@ AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

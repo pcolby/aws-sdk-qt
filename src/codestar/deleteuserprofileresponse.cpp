@@ -101,3 +101,6 @@ void DeleteUserProfileResponsePrivate::DeleteUserProfileResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserProfileResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

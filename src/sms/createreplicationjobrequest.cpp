@@ -123,3 +123,6 @@ CreateReplicationJobRequestPrivate::CreateReplicationJobRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

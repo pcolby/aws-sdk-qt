@@ -123,3 +123,6 @@ AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

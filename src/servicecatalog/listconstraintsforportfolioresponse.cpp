@@ -101,3 +101,6 @@ void ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResp
     Q_ASSERT(xml.name() == QLatin1String("ListConstraintsForPortfolioResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -123,3 +123,6 @@ RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

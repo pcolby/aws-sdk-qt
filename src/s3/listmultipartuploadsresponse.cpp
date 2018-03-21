@@ -101,3 +101,6 @@ void ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListMultipartUploadsResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

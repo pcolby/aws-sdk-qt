@@ -123,3 +123,6 @@ UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

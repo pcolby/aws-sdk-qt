@@ -101,3 +101,6 @@ void PutBucketLifecycleResponsePrivate::PutBucketLifecycleResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PutBucketLifecycleResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

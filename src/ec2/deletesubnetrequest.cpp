@@ -123,3 +123,6 @@ DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

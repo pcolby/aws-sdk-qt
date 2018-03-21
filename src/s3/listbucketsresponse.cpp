@@ -101,3 +101,6 @@ void ListBucketsResponsePrivate::ListBucketsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListBucketsResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

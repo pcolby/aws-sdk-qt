@@ -123,3 +123,6 @@ ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
 {
 
 }
+
+} // namespace ACM
+} // namespace AWS

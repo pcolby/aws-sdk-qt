@@ -101,3 +101,6 @@ void DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeMigrationTaskResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

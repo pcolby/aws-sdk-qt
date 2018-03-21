@@ -101,3 +101,6 @@ void DecryptResponsePrivate::DecryptResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DecryptResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

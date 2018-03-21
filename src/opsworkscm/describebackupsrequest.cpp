@@ -123,3 +123,6 @@ DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

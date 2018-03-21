@@ -101,3 +101,6 @@ void DescribePipelinesResponsePrivate::DescribePipelinesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribePipelinesResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

@@ -123,3 +123,6 @@ BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

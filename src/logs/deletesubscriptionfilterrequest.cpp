@@ -123,3 +123,6 @@ DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

@@ -123,3 +123,6 @@ ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

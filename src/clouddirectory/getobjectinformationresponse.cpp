@@ -101,3 +101,6 @@ void GetObjectInformationResponsePrivate::GetObjectInformationResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetObjectInformationResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

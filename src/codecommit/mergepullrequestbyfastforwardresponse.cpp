@@ -101,3 +101,6 @@ void MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForward
     Q_ASSERT(xml.name() == QLatin1String("MergePullRequestByFastForwardResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

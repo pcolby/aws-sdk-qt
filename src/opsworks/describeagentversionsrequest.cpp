@@ -123,3 +123,6 @@ DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteBucketTaggingResponsePrivate::DeleteBucketTaggingResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketTaggingResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

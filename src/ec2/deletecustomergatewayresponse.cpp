@@ -101,3 +101,6 @@ void DeleteCustomerGatewayResponsePrivate::DeleteCustomerGatewayResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomerGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

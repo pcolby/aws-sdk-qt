@@ -101,3 +101,6 @@ void DefineIndexFieldResponsePrivate::DefineIndexFieldResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DefineIndexFieldResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

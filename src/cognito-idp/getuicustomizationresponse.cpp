@@ -101,3 +101,6 @@ void GetUICustomizationResponsePrivate::GetUICustomizationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetUICustomizationResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

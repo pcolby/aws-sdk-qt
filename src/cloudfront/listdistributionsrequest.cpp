@@ -123,3 +123,6 @@ ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

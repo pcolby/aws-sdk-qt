@@ -123,3 +123,6 @@ BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
 {
 
 }
+
+} // namespace XRay
+} // namespace AWS

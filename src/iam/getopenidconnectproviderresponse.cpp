@@ -101,3 +101,6 @@ void GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIDConnectProviderResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

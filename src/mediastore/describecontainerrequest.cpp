@@ -123,3 +123,6 @@ DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
 {
 
 }
+
+} // namespace MediaStore
+} // namespace AWS

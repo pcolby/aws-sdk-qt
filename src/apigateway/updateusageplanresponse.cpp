@@ -101,3 +101,6 @@ void UpdateUsagePlanResponsePrivate::UpdateUsagePlanResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("UpdateUsagePlanResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

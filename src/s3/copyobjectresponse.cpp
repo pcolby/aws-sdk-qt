@@ -101,3 +101,6 @@ void CopyObjectResponsePrivate::CopyObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CopyObjectResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

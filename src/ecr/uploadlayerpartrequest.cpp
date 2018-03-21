@@ -123,3 +123,6 @@ UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

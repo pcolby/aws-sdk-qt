@@ -123,3 +123,6 @@ ListStackSetOperationsRequestPrivate::ListStackSetOperationsRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

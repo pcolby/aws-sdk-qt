@@ -101,3 +101,6 @@ void ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationRe
     Q_ASSERT(xml.name() == QLatin1String("ReplaceRouteTableAssociationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

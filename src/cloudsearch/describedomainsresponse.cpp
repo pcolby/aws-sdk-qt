@@ -101,3 +101,6 @@ void DescribeDomainsResponsePrivate::DescribeDomainsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeDomainsResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

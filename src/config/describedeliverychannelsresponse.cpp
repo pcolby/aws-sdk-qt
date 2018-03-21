@@ -101,3 +101,6 @@ void DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeDeliveryChannelsResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

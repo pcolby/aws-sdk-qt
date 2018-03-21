@@ -101,3 +101,6 @@ void StopReplicationTaskResponsePrivate::StopReplicationTaskResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("StopReplicationTaskResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

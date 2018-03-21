@@ -123,3 +123,6 @@ DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

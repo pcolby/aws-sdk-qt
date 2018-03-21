@@ -123,3 +123,6 @@ GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

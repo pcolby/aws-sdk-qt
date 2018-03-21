@@ -123,3 +123,6 @@ DeleteTapeArchiveRequestPrivate::DeleteTapeArchiveRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

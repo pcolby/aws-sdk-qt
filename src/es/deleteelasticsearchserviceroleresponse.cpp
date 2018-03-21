@@ -101,3 +101,6 @@ void DeleteElasticsearchServiceRoleResponsePrivate::DeleteElasticsearchServiceRo
     Q_ASSERT(xml.name() == QLatin1String("DeleteElasticsearchServiceRoleResponse"));
     /// @todo
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

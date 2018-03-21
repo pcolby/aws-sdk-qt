@@ -101,3 +101,6 @@ void DeleteRoleResponsePrivate::DeleteRoleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteRoleResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

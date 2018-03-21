@@ -101,3 +101,6 @@ void DeleteObjectResponsePrivate::DeleteObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteObjectResponse"));
     /// @todo
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

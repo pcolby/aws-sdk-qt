@@ -123,3 +123,6 @@ ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

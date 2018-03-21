@@ -123,3 +123,6 @@ TestFailoverRequestPrivate::TestFailoverRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPri
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

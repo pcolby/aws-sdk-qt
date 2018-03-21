@@ -123,3 +123,6 @@ CreateDBSnapshotRequestPrivate::CreateDBSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

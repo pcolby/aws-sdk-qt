@@ -101,3 +101,6 @@ void DescribeWorkingStorageResponsePrivate::DescribeWorkingStorageResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkingStorageResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

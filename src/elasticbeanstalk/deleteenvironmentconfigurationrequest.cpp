@@ -123,3 +123,6 @@ DeleteEnvironmentConfigurationRequestPrivate::DeleteEnvironmentConfigurationRequ
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

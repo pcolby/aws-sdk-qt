@@ -123,3 +123,6 @@ GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

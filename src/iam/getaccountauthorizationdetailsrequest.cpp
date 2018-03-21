@@ -123,3 +123,6 @@ GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequ
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

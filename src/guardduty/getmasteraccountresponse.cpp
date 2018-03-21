@@ -101,3 +101,6 @@ void GetMasterAccountResponsePrivate::GetMasterAccountResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetMasterAccountResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

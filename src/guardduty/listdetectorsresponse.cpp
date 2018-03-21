@@ -101,3 +101,6 @@ void ListDetectorsResponsePrivate::ListDetectorsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListDetectorsResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

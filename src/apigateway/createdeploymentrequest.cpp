@@ -123,3 +123,6 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

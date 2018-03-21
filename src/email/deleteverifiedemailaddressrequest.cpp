@@ -123,3 +123,6 @@ DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPriva
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

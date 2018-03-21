@@ -101,3 +101,6 @@ void GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetServiceRoleForAccountResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

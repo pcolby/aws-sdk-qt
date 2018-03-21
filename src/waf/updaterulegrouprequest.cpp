@@ -123,3 +123,6 @@ UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeIdentityUsageResponsePrivate::DescribeIdentityUsageResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeIdentityUsageResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

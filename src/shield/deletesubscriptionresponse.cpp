@@ -101,3 +101,6 @@ void DeleteSubscriptionResponsePrivate::DeleteSubscriptionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace Shield
+} // namespace AWS

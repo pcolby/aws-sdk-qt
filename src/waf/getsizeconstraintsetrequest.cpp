@@ -123,3 +123,6 @@ GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestP
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

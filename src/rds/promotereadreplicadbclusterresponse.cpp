@@ -101,3 +101,6 @@ void PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResp
     Q_ASSERT(xml.name() == QLatin1String("PromoteReadReplicaDBClusterResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

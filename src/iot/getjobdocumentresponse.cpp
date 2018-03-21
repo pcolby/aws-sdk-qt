@@ -101,3 +101,6 @@ void GetJobDocumentResponsePrivate::GetJobDocumentResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetJobDocumentResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

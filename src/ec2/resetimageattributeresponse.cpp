@@ -101,3 +101,6 @@ void ResetImageAttributeResponsePrivate::ResetImageAttributeResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ResetImageAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

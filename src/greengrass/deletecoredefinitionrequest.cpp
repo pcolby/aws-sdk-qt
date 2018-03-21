@@ -123,3 +123,6 @@ DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeSubnetGroupsResponsePrivate::DescribeSubnetGroupsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeSubnetGroupsResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

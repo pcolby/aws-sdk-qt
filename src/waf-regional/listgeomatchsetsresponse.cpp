@@ -101,3 +101,6 @@ void ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListGeoMatchSetsResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeElasticIpsRequestPrivate::DescribeElasticIpsRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

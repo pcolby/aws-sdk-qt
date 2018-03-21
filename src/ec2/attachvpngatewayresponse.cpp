@@ -101,3 +101,6 @@ void AttachVpnGatewayResponsePrivate::AttachVpnGatewayResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("AttachVpnGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

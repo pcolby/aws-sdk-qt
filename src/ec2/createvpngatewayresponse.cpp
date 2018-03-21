@@ -101,3 +101,6 @@ void CreateVpnGatewayResponsePrivate::CreateVpnGatewayResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateVpnGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

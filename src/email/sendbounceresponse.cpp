@@ -101,3 +101,6 @@ void SendBounceResponsePrivate::SendBounceResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SendBounceResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

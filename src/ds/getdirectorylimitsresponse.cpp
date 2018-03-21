@@ -101,3 +101,6 @@ void GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetDirectoryLimitsResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

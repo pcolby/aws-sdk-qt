@@ -123,3 +123,6 @@ RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

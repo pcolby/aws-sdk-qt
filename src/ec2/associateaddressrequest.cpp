@@ -123,3 +123,6 @@ AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

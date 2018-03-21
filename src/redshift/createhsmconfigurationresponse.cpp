@@ -101,3 +101,6 @@ void CreateHsmConfigurationResponsePrivate::CreateHsmConfigurationResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateHsmConfigurationResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

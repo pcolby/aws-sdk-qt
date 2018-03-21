@@ -123,3 +123,6 @@ UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

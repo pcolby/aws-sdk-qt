@@ -123,3 +123,6 @@ SetDataRetrievalPolicyRequestPrivate::SetDataRetrievalPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

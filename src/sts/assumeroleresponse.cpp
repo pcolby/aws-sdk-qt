@@ -101,3 +101,6 @@ void AssumeRoleResponsePrivate::AssumeRoleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleResponse"));
     /// @todo
 }
+
+} // namespace STS
+} // namespace AWS

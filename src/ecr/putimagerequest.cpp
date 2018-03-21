@@ -123,3 +123,6 @@ PutImageRequestPrivate::PutImageRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

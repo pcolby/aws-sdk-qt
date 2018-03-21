@@ -101,3 +101,6 @@ void TestRoleResponsePrivate::TestRoleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TestRoleResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

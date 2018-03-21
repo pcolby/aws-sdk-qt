@@ -123,3 +123,6 @@ CreateJobRequestPrivate::CreateJobRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

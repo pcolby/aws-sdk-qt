@@ -101,3 +101,6 @@ void CancelSpotInstanceRequestsResponsePrivate::CancelSpotInstanceRequestsRespon
     Q_ASSERT(xml.name() == QLatin1String("CancelSpotInstanceRequestsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

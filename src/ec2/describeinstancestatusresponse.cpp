@@ -101,3 +101,6 @@ void DescribeInstanceStatusResponsePrivate::DescribeInstanceStatusResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceStatusResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

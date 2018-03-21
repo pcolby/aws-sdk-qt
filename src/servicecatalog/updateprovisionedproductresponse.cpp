@@ -101,3 +101,6 @@ void UpdateProvisionedProductResponsePrivate::UpdateProvisionedProductResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("UpdateProvisionedProductResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

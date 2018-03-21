@@ -123,3 +123,6 @@ DeleteThingRequestPrivate::DeleteThingRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

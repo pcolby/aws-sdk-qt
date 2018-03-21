@@ -123,3 +123,6 @@ ListAssociatedStacksRequestPrivate::ListAssociatedStacksRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

@@ -101,3 +101,6 @@ void SearchProductsResponsePrivate::SearchProductsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("SearchProductsResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

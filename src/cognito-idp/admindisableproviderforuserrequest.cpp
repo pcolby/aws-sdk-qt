@@ -123,3 +123,6 @@ AdminDisableProviderForUserRequestPrivate::AdminDisableProviderForUserRequestPri
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

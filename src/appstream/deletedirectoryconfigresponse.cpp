@@ -101,3 +101,6 @@ void DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteDirectoryConfigResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

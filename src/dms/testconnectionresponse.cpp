@@ -101,3 +101,6 @@ void TestConnectionResponsePrivate::TestConnectionResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("TestConnectionResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

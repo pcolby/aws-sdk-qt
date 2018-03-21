@@ -101,3 +101,6 @@ void UpdateRepositoryDescriptionResponsePrivate::UpdateRepositoryDescriptionResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateRepositoryDescriptionResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

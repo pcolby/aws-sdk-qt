@@ -123,3 +123,6 @@ ListLoggerDefinitionsRequestPrivate::ListLoggerDefinitionsRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

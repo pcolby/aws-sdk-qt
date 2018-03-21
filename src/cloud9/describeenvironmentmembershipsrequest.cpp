@@ -123,3 +123,6 @@ DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequ
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

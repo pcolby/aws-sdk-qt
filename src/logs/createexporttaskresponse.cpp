@@ -101,3 +101,6 @@ void CreateExportTaskResponsePrivate::CreateExportTaskResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateExportTaskResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

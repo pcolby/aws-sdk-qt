@@ -101,3 +101,6 @@ void ListNetworkProfilesResponsePrivate::ListNetworkProfilesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListNetworkProfilesResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

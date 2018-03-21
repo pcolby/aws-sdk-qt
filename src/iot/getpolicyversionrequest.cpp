@@ -123,3 +123,6 @@ GetPolicyVersionRequestPrivate::GetPolicyVersionRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -123,3 +123,6 @@ GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestP
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

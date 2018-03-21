@@ -123,3 +123,6 @@ CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeSpotFleetInstancesResponsePrivate::DescribeSpotFleetInstancesRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotFleetInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

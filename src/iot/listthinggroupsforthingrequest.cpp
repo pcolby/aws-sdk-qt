@@ -123,3 +123,6 @@ ListThingGroupsForThingRequestPrivate::ListThingGroupsForThingRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

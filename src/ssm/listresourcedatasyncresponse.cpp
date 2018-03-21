@@ -101,3 +101,6 @@ void ListResourceDataSyncResponsePrivate::ListResourceDataSyncResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListResourceDataSyncResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

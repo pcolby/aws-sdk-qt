@@ -101,3 +101,6 @@ void PutBucketAnalyticsConfigurationResponsePrivate::PutBucketAnalyticsConfigura
     Q_ASSERT(xml.name() == QLatin1String("PutBucketAnalyticsConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

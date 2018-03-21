@@ -101,3 +101,6 @@ void DeleteRouteResponsePrivate::DeleteRouteResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteRouteResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

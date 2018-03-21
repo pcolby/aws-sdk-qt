@@ -101,3 +101,6 @@ void DeleteResourceServerResponsePrivate::DeleteResourceServerResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceServerResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

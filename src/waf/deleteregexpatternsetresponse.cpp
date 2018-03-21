@@ -101,3 +101,6 @@ void DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteRegexPatternSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

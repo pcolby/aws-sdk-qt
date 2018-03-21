@@ -101,3 +101,6 @@ void GetTagsResponsePrivate::GetTagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetTagsResponse"));
     /// @todo
 }
+
+} // namespace CostExplorer
+} // namespace AWS

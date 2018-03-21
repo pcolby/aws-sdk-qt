@@ -101,3 +101,6 @@ void DetachElasticLoadBalancerResponsePrivate::DetachElasticLoadBalancerResponse
     Q_ASSERT(xml.name() == QLatin1String("DetachElasticLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -123,3 +123,6 @@ GetLifecyclePolicyPreviewRequestPrivate::GetLifecyclePolicyPreviewRequestPrivate
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

@@ -101,3 +101,6 @@ void ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ModifySubnetAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

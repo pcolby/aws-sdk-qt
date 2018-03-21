@@ -101,3 +101,6 @@ void SendMessagesResponsePrivate::SendMessagesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SendMessagesResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

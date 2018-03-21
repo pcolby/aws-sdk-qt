@@ -123,3 +123,6 @@ EnableVgwRoutePropagationRequestPrivate::EnableVgwRoutePropagationRequestPrivate
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

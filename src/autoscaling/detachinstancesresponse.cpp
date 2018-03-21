@@ -101,3 +101,6 @@ void DetachInstancesResponsePrivate::DetachInstancesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DetachInstancesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

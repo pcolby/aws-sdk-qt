@@ -123,3 +123,6 @@ DetachObjectRequestPrivate::DetachObjectRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

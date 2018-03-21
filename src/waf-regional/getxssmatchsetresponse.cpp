@@ -101,3 +101,6 @@ void GetXssMatchSetResponsePrivate::GetXssMatchSetResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetXssMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

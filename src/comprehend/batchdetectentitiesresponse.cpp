@@ -101,3 +101,6 @@ void BatchDetectEntitiesResponsePrivate::BatchDetectEntitiesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectEntitiesResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

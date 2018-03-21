@@ -123,3 +123,6 @@ DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

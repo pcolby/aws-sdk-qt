@@ -123,3 +123,6 @@ DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

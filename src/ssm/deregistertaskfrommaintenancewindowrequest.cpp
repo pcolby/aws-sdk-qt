@@ -123,3 +123,6 @@ DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenance
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

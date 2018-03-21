@@ -101,3 +101,6 @@ void DescribeSourceRegionsResponsePrivate::DescribeSourceRegionsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeSourceRegionsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

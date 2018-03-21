@@ -101,3 +101,6 @@ void CreateRepositoryResponsePrivate::CreateRepositoryResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateRepositoryResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

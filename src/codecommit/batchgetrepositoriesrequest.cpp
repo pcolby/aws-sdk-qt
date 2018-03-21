@@ -123,3 +123,6 @@ BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

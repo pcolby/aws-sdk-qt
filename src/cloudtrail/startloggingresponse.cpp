@@ -101,3 +101,6 @@ void StartLoggingResponsePrivate::StartLoggingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StartLoggingResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteGroupPolicyResponsePrivate::DeleteGroupPolicyResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteGroupPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

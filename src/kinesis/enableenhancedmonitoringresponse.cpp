@@ -101,3 +101,6 @@ void EnableEnhancedMonitoringResponsePrivate::EnableEnhancedMonitoringResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("EnableEnhancedMonitoringResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

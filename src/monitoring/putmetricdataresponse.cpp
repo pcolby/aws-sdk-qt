@@ -101,3 +101,6 @@ void PutMetricDataResponsePrivate::PutMetricDataResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutMetricDataResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

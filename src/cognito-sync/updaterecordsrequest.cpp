@@ -123,3 +123,6 @@ UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

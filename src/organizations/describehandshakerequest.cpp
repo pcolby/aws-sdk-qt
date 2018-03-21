@@ -123,3 +123,6 @@ DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -101,3 +101,6 @@ void RebootDBInstanceResponsePrivate::RebootDBInstanceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("RebootDBInstanceResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

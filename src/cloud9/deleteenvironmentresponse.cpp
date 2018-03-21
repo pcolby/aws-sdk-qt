@@ -101,3 +101,6 @@ void DeleteEnvironmentResponsePrivate::DeleteEnvironmentResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace Cloud9
+} // namespace AWS

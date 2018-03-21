@@ -101,3 +101,6 @@ void UnassignInstanceResponsePrivate::UnassignInstanceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UnassignInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

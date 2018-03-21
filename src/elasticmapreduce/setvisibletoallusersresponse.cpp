@@ -101,3 +101,6 @@ void SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("SetVisibleToAllUsersResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

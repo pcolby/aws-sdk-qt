@@ -101,3 +101,6 @@ void DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParame
     Q_ASSERT(xml.name() == QLatin1String("DescribeEngineDefaultParametersResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListDeploymentInstancesResponsePrivate::ListDeploymentInstancesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListDeploymentInstancesResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

@@ -101,3 +101,6 @@ void ImportServerCatalogResponsePrivate::ImportServerCatalogResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ImportServerCatalogResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

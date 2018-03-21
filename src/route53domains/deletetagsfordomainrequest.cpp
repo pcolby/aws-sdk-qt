@@ -123,3 +123,6 @@ DeleteTagsForDomainRequestPrivate::DeleteTagsForDomainRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

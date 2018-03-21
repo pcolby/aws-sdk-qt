@@ -101,3 +101,6 @@ void AttachPolicyResponsePrivate::AttachPolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AttachPolicyResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

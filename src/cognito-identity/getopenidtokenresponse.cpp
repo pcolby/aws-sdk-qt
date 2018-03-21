@@ -101,3 +101,6 @@ void GetOpenIdTokenResponsePrivate::GetOpenIdTokenResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetOpenIdTokenResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

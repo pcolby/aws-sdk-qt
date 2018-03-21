@@ -101,3 +101,6 @@ void GetFunctionDefinitionResponsePrivate::GetFunctionDefinitionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetFunctionDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

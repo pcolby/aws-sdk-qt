@@ -123,3 +123,6 @@ DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

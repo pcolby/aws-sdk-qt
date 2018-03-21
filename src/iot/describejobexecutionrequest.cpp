@@ -123,3 +123,6 @@ DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

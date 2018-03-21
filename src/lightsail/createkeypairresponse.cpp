@@ -101,3 +101,6 @@ void CreateKeyPairResponsePrivate::CreateKeyPairResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateKeyPairResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

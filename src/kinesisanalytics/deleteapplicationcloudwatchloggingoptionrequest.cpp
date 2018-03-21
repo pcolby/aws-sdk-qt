@@ -123,3 +123,6 @@ DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWa
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

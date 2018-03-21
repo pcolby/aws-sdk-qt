@@ -123,3 +123,6 @@ ListSamplesRequestPrivate::ListSamplesRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

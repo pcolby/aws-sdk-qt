@@ -123,3 +123,6 @@ DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

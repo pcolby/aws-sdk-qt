@@ -101,3 +101,6 @@ void DisassociateMembersResponsePrivate::DisassociateMembersResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DisassociateMembersResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

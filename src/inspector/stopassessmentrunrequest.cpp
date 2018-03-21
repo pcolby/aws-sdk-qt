@@ -123,3 +123,6 @@ StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

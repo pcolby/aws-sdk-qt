@@ -101,3 +101,6 @@ void GetObjectTorrentResponsePrivate::GetObjectTorrentResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetObjectTorrentResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

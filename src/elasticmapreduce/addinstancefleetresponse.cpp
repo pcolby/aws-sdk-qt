@@ -101,3 +101,6 @@ void AddInstanceFleetResponsePrivate::AddInstanceFleetResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("AddInstanceFleetResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

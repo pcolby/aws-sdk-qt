@@ -123,3 +123,6 @@ BatchGetApplicationsRequestPrivate::BatchGetApplicationsRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

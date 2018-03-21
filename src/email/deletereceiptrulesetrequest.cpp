@@ -123,3 +123,6 @@ DeleteReceiptRuleSetRequestPrivate::DeleteReceiptRuleSetRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

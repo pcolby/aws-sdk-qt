@@ -101,3 +101,6 @@ void UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateLoggerDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

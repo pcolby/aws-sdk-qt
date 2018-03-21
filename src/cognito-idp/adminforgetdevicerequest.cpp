@@ -123,3 +123,6 @@ AdminForgetDeviceRequestPrivate::AdminForgetDeviceRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

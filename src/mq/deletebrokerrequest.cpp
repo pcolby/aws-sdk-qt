@@ -123,3 +123,6 @@ DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

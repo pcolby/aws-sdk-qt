@@ -101,3 +101,6 @@ void DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeJobExecutionResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

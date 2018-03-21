@@ -101,3 +101,6 @@ void DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeAlarmsForMetricResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

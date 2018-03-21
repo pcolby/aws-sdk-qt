@@ -101,3 +101,6 @@ void UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesState
     Q_ASSERT(xml.name() == QLatin1String("UpdateContainerInstancesStateResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

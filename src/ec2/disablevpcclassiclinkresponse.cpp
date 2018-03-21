@@ -101,3 +101,6 @@ void DisableVpcClassicLinkResponsePrivate::DisableVpcClassicLinkResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DisableVpcClassicLinkResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

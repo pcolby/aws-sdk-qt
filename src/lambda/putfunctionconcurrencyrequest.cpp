@@ -123,3 +123,6 @@ PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

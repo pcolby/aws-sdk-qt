@@ -123,3 +123,6 @@ ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

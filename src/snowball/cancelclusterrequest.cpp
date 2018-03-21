@@ -123,3 +123,6 @@ CancelClusterRequestPrivate::CancelClusterRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

@@ -123,3 +123,6 @@ ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

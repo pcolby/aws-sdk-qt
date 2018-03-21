@@ -101,3 +101,6 @@ void ListAssociationVersionsResponsePrivate::ListAssociationVersionsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListAssociationVersionsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateCustomMetadataResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -123,3 +123,6 @@ ListSecurityConfigurationsRequestPrivate::ListSecurityConfigurationsRequestPriva
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

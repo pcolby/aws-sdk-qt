@@ -101,3 +101,6 @@ void DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteAnalysisSchemeResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

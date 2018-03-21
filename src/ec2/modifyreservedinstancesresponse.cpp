@@ -101,3 +101,6 @@ void ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ModifyReservedInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

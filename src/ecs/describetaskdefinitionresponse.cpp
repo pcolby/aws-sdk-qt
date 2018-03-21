@@ -101,3 +101,6 @@ void DescribeTaskDefinitionResponsePrivate::DescribeTaskDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeTaskDefinitionResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

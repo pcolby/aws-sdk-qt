@@ -101,3 +101,6 @@ void DescribeConstraintResponsePrivate::DescribeConstraintResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeConstraintResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

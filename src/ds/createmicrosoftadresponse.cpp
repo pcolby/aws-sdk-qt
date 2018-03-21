@@ -101,3 +101,6 @@ void CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateMicrosoftADResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

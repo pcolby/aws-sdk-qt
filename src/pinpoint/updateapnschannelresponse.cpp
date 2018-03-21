@@ -101,3 +101,6 @@ void UpdateApnsChannelResponsePrivate::UpdateApnsChannelResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateApnsChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

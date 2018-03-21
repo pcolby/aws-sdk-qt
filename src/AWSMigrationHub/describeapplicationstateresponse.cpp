@@ -101,3 +101,6 @@ void DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeApplicationStateResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteProtectionResponsePrivate::DeleteProtectionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteProtectionResponse"));
     /// @todo
 }
+
+} // namespace Shield
+} // namespace AWS

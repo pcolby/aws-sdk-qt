@@ -101,3 +101,6 @@ void DeleteEvaluationResponsePrivate::DeleteEvaluationResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteEvaluationResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListGroupsForUserResponsePrivate::ListGroupsForUserResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListGroupsForUserResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

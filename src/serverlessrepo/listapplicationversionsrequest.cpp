@@ -123,3 +123,6 @@ ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
 {
 
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

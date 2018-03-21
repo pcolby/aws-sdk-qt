@@ -101,3 +101,6 @@ void GetEffectivePoliciesResponsePrivate::GetEffectivePoliciesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetEffectivePoliciesResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

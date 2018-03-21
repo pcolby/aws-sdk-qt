@@ -123,3 +123,6 @@ CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

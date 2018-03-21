@@ -101,3 +101,6 @@ void ListDistributionsResponsePrivate::ListDistributionsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListDistributionsResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

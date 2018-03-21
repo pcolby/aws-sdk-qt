@@ -123,3 +123,6 @@ GetBucketEncryptionRequestPrivate::GetBucketEncryptionRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

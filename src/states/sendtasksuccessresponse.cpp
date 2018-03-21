@@ -101,3 +101,6 @@ void SendTaskSuccessResponsePrivate::SendTaskSuccessResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("SendTaskSuccessResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

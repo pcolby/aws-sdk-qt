@@ -101,3 +101,6 @@ void UploadArchiveResponsePrivate::UploadArchiveResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UploadArchiveResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

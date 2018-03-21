@@ -123,3 +123,6 @@ UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

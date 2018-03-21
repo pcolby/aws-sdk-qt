@@ -123,3 +123,6 @@ ListRulesRequestPrivate::ListRulesRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

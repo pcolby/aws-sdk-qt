@@ -101,3 +101,6 @@ void DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteJobTemplateResponse"));
     /// @todo
 }
+
+} // namespace MediaConvert
+} // namespace AWS

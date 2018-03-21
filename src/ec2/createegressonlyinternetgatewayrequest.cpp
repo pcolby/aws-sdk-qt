@@ -123,3 +123,6 @@ CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRe
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

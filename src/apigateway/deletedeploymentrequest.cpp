@@ -123,3 +123,6 @@ DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

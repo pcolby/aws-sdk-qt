@@ -123,3 +123,6 @@ PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPri
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

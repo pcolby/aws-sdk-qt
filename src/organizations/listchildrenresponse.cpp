@@ -101,3 +101,6 @@ void ListChildrenResponsePrivate::ListChildrenResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListChildrenResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

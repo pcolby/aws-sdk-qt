@@ -101,3 +101,6 @@ void ListUniqueProblemsResponsePrivate::ListUniqueProblemsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListUniqueProblemsResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

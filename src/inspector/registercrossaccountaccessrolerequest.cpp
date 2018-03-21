@@ -123,3 +123,6 @@ RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequ
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

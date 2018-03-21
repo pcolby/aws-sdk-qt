@@ -123,3 +123,6 @@ GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

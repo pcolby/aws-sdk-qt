@@ -101,3 +101,6 @@ void ListCoreDefinitionsResponsePrivate::ListCoreDefinitionsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListCoreDefinitionsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

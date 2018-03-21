@@ -101,3 +101,6 @@ void CreateStageResponsePrivate::CreateStageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateStageResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

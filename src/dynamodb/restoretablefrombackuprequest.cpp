@@ -123,3 +123,6 @@ RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

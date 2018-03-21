@@ -101,3 +101,6 @@ void DeleteApplicationsResponsePrivate::DeleteApplicationsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

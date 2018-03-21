@@ -123,3 +123,6 @@ DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPriva
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

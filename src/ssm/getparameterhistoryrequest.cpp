@@ -123,3 +123,6 @@ GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

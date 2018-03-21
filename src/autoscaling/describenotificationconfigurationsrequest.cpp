@@ -123,3 +123,6 @@ DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurat
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

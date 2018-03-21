@@ -123,3 +123,6 @@ SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPri
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

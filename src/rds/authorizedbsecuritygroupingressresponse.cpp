@@ -101,3 +101,6 @@ void AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIng
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeDBSecurityGroupIngressResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

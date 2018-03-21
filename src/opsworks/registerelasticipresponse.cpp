@@ -101,3 +101,6 @@ void RegisterElasticIpResponsePrivate::RegisterElasticIpResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("RegisterElasticIpResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

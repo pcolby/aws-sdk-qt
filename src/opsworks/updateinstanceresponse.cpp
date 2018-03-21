@@ -101,3 +101,6 @@ void UpdateInstanceResponsePrivate::UpdateInstanceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

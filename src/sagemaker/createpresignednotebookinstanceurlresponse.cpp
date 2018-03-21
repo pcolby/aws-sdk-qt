@@ -101,3 +101,6 @@ void CreatePresignedNotebookInstanceUrlResponsePrivate::CreatePresignedNotebookI
     Q_ASSERT(xml.name() == QLatin1String("CreatePresignedNotebookInstanceUrlResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

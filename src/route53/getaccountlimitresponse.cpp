@@ -101,3 +101,6 @@ void GetAccountLimitResponsePrivate::GetAccountLimitResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetAccountLimitResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

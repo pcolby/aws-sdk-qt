@@ -101,3 +101,6 @@ void PutFileResponsePrivate::PutFileResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutFileResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

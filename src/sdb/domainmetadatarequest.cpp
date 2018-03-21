@@ -123,3 +123,6 @@ DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
 {
 
 }
+
+} // namespace SimpleDB
+} // namespace AWS

@@ -123,3 +123,6 @@ ResetCacheRequestPrivate::ResetCacheRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

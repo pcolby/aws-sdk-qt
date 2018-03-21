@@ -123,3 +123,6 @@ RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

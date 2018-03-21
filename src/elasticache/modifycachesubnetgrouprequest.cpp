@@ -123,3 +123,6 @@ ModifyCacheSubnetGroupRequestPrivate::ModifyCacheSubnetGroupRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

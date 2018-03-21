@@ -101,3 +101,6 @@ void GetHITResponsePrivate::GetHITResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetHITResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

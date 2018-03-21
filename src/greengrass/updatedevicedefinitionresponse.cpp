@@ -101,3 +101,6 @@ void UpdateDeviceDefinitionResponsePrivate::UpdateDeviceDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateDeviceDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

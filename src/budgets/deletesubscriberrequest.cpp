@@ -123,3 +123,6 @@ DeleteSubscriberRequestPrivate::DeleteSubscriberRequestPrivate(
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

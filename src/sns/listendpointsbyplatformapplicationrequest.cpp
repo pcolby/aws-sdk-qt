@@ -123,3 +123,6 @@ ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplica
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

@@ -123,3 +123,6 @@ RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

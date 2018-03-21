@@ -101,3 +101,6 @@ void PutNotificationConfigurationResponsePrivate::PutNotificationConfigurationRe
     Q_ASSERT(xml.name() == QLatin1String("PutNotificationConfigurationResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

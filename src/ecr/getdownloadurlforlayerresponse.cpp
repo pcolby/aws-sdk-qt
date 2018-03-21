@@ -101,3 +101,6 @@ void GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetDownloadUrlForLayerResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

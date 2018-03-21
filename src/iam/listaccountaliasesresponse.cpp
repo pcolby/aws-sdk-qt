@@ -101,3 +101,6 @@ void ListAccountAliasesResponsePrivate::ListAccountAliasesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListAccountAliasesResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

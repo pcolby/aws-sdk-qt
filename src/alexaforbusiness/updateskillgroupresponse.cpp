@@ -101,3 +101,6 @@ void UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateSkillGroupResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

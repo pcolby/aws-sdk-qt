@@ -123,3 +123,6 @@ ConfirmPublicVirtualInterfaceRequestPrivate::ConfirmPublicVirtualInterfaceReques
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

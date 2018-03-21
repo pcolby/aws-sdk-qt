@@ -101,3 +101,6 @@ void UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateHITTypeOfHITResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

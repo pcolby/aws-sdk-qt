@@ -101,3 +101,6 @@ void DeregisterInstanceResponsePrivate::DeregisterInstanceResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeregisterInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void GenerateClientCertificateResponsePrivate::GenerateClientCertificateResponse
     Q_ASSERT(xml.name() == QLatin1String("GenerateClientCertificateResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

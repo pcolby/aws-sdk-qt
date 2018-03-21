@@ -101,3 +101,6 @@ void CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityRespon
     Q_ASSERT(xml.name() == QLatin1String("CheckDomainTransferabilityResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

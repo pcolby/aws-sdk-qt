@@ -101,3 +101,6 @@ void DescribeIndexResponsePrivate::DescribeIndexResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeIndexResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteStateMachineResponsePrivate::DeleteStateMachineResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteStateMachineResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

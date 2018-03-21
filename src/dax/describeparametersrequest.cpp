@@ -123,3 +123,6 @@ DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

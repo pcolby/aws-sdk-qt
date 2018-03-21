@@ -101,3 +101,6 @@ void StopRunResponsePrivate::StopRunResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopRunResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

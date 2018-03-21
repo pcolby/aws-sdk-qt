@@ -101,3 +101,6 @@ void ListFleetsResponsePrivate::ListFleetsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListFleetsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

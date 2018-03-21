@@ -123,3 +123,6 @@ UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

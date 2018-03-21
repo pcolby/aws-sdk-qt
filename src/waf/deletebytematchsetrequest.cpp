@@ -123,3 +123,6 @@ DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -123,3 +123,6 @@ ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

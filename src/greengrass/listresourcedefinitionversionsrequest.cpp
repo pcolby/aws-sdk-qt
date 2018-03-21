@@ -123,3 +123,6 @@ ListResourceDefinitionVersionsRequestPrivate::ListResourceDefinitionVersionsRequ
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

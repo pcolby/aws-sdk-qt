@@ -101,3 +101,6 @@ void ListFacetNamesResponsePrivate::ListFacetNamesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListFacetNamesResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

@@ -101,3 +101,6 @@ void DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DetectDominantLanguageResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

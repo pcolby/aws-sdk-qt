@@ -101,3 +101,6 @@ void DeleteClientCertificateResponsePrivate::DeleteClientCertificateResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteClientCertificateResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

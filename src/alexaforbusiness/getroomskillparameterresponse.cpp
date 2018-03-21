@@ -101,3 +101,6 @@ void GetRoomSkillParameterResponsePrivate::GetRoomSkillParameterResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetRoomSkillParameterResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

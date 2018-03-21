@@ -101,3 +101,6 @@ void ListIdentityPoliciesResponsePrivate::ListIdentityPoliciesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListIdentityPoliciesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

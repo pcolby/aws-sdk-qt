@@ -123,3 +123,6 @@ DescribeLoadBalancerTargetGroupsRequestPrivate::DescribeLoadBalancerTargetGroups
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

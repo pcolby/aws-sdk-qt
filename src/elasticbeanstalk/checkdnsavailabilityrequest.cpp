@@ -123,3 +123,6 @@ CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

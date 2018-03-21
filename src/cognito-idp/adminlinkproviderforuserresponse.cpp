@@ -101,3 +101,6 @@ void AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("AdminLinkProviderForUserResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

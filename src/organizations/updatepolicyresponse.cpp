@@ -101,3 +101,6 @@ void UpdatePolicyResponsePrivate::UpdatePolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdatePolicyResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

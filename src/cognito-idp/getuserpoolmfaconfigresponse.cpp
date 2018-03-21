@@ -101,3 +101,6 @@ void GetUserPoolMfaConfigResponsePrivate::GetUserPoolMfaConfigResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetUserPoolMfaConfigResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

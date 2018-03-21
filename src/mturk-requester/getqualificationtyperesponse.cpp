@@ -101,3 +101,6 @@ void GetQualificationTypeResponsePrivate::GetQualificationTypeResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetQualificationTypeResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

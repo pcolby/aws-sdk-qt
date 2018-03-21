@@ -101,3 +101,6 @@ void DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponse
     Q_ASSERT(xml.name() == QLatin1String("DeleteImportedKeyMaterialResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeDhcpOptionsResponsePrivate::DescribeDhcpOptionsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeDhcpOptionsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

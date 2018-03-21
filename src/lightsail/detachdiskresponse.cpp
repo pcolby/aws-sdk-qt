@@ -101,3 +101,6 @@ void DetachDiskResponsePrivate::DetachDiskResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DetachDiskResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

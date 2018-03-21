@@ -123,3 +123,6 @@ DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

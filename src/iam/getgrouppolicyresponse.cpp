@@ -101,3 +101,6 @@ void GetGroupPolicyResponsePrivate::GetGroupPolicyResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetGroupPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

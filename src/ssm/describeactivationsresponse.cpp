@@ -101,3 +101,6 @@ void DescribeActivationsResponsePrivate::DescribeActivationsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeActivationsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetDomainDetailResponsePrivate::GetDomainDetailResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetDomainDetailResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

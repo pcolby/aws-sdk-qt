@@ -101,3 +101,6 @@ void DescribeLocationsResponsePrivate::DescribeLocationsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeLocationsResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

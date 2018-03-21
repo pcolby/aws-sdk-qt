@@ -101,3 +101,6 @@ void BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResp
     Q_ASSERT(xml.name() == QLatin1String("BatchGetOnPremisesInstancesResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

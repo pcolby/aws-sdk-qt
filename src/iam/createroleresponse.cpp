@@ -101,3 +101,6 @@ void CreateRoleResponsePrivate::CreateRoleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateRoleResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

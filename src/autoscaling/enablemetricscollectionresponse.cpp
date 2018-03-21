@@ -101,3 +101,6 @@ void EnableMetricsCollectionResponsePrivate::EnableMetricsCollectionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("EnableMetricsCollectionResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

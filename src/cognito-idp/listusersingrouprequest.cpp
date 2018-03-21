@@ -123,3 +123,6 @@ ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

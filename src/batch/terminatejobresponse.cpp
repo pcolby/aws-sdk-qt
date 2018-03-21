@@ -101,3 +101,6 @@ void TerminateJobResponsePrivate::TerminateJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TerminateJobResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

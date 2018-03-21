@@ -101,3 +101,6 @@ void UpdateClientCertificateResponsePrivate::UpdateClientCertificateResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("UpdateClientCertificateResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

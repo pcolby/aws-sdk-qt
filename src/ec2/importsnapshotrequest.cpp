@@ -123,3 +123,6 @@ ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteGeoMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

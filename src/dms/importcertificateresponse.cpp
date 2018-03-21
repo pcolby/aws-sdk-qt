@@ -101,3 +101,6 @@ void ImportCertificateResponsePrivate::ImportCertificateResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ImportCertificateResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

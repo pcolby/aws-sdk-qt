@@ -101,3 +101,6 @@ void UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccessKeyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

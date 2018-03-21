@@ -101,3 +101,6 @@ void DeleteTapeArchiveResponsePrivate::DeleteTapeArchiveResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteTapeArchiveResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

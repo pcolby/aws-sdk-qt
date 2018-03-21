@@ -101,3 +101,6 @@ void ExportBundleResponsePrivate::ExportBundleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ExportBundleResponse"));
     /// @todo
 }
+
+} // namespace Mobile
+} // namespace AWS

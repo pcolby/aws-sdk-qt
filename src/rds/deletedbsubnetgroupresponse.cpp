@@ -101,3 +101,6 @@ void DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

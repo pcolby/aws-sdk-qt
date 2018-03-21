@@ -123,3 +123,6 @@ DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

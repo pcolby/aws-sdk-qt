@@ -123,3 +123,6 @@ ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

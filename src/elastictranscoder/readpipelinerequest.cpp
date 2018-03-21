@@ -123,3 +123,6 @@ ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

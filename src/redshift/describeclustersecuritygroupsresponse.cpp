@@ -101,3 +101,6 @@ void DescribeClusterSecurityGroupsResponsePrivate::DescribeClusterSecurityGroups
     Q_ASSERT(xml.name() == QLatin1String("DescribeClusterSecurityGroupsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

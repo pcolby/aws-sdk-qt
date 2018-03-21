@@ -101,3 +101,6 @@ void AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("AssignPrivateIpAddressesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

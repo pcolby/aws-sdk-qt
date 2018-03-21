@@ -123,3 +123,6 @@ GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
 {
 
 }
+
+} // namespace Pricing
+} // namespace AWS

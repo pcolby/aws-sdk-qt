@@ -123,3 +123,6 @@ UpdateSubscriberRequestPrivate::UpdateSubscriberRequestPrivate(
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

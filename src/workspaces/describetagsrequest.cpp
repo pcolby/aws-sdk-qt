@@ -123,3 +123,6 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 {
 
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

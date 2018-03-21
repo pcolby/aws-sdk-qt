@@ -123,3 +123,6 @@ DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPri
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -123,3 +123,6 @@ NotifyMigrationTaskStateRequestPrivate::NotifyMigrationTaskStateRequestPrivate(
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

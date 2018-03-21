@@ -101,3 +101,6 @@ void StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIds
     Q_ASSERT(xml.name() == QLatin1String("StartDataCollectionByAgentIdsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

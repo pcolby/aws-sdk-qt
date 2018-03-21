@@ -123,3 +123,6 @@ UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateLoadBalancerListenersResponsePrivate::CreateLoadBalancerListenersResp
     Q_ASSERT(xml.name() == QLatin1String("CreateLoadBalancerListenersResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

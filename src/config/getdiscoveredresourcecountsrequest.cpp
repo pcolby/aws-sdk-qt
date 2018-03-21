@@ -123,3 +123,6 @@ GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPri
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

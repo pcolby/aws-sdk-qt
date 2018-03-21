@@ -101,3 +101,6 @@ void DeleteAssessmentTargetResponsePrivate::DeleteAssessmentTargetResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteAssessmentTargetResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

@@ -123,3 +123,6 @@ ListObjectChildrenRequestPrivate::ListObjectChildrenRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

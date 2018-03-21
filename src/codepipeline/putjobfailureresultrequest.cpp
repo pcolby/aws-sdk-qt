@@ -123,3 +123,6 @@ PutJobFailureResultRequestPrivate::PutJobFailureResultRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

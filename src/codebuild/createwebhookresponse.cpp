@@ -101,3 +101,6 @@ void CreateWebhookResponsePrivate::CreateWebhookResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateWebhookResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequ
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

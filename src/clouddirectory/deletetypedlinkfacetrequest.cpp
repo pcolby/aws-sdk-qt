@@ -123,3 +123,6 @@ DeleteTypedLinkFacetRequestPrivate::DeleteTypedLinkFacetRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateFunctionResponsePrivate::CreateFunctionResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateFunctionResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

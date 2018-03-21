@@ -101,3 +101,6 @@ void LookupPolicyResponsePrivate::LookupPolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("LookupPolicyResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

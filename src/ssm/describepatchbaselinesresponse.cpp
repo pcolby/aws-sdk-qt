@@ -101,3 +101,6 @@ void DescribePatchBaselinesResponsePrivate::DescribePatchBaselinesResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribePatchBaselinesResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

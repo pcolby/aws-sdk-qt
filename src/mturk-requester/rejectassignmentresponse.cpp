@@ -101,3 +101,6 @@ void RejectAssignmentResponsePrivate::RejectAssignmentResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("RejectAssignmentResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

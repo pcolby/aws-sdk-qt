@@ -123,3 +123,6 @@ ListBundlesRequestPrivate::ListBundlesRequestPrivate(
 {
 
 }
+
+} // namespace Mobile
+} // namespace AWS

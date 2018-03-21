@@ -101,3 +101,6 @@ void CreateStreamResponsePrivate::CreateStreamResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteTypedLinkFacetResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

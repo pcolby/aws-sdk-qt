@@ -123,3 +123,6 @@ ListAppliedSchemaArnsRequestPrivate::ListAppliedSchemaArnsRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

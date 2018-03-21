@@ -123,3 +123,6 @@ DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestP
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

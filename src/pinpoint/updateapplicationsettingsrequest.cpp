@@ -123,3 +123,6 @@ UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

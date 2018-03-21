@@ -101,3 +101,6 @@ void ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponse
     Q_ASSERT(xml.name() == QLatin1String("ListElasticsearchVersionsResponse"));
     /// @todo
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPriva
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

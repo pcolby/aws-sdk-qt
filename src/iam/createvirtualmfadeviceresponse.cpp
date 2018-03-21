@@ -101,3 +101,6 @@ void CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateVirtualMFADeviceResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

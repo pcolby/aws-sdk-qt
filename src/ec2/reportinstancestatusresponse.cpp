@@ -101,3 +101,6 @@ void ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ReportInstanceStatusResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

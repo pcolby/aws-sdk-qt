@@ -101,3 +101,6 @@ void GetEventSelectorsResponsePrivate::GetEventSelectorsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetEventSelectorsResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

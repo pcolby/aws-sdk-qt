@@ -123,3 +123,6 @@ CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

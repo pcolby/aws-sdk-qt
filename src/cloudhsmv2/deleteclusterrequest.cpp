@@ -123,3 +123,6 @@ DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSMV2
+} // namespace AWS

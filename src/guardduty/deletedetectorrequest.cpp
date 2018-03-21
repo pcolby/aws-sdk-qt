@@ -123,3 +123,6 @@ DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

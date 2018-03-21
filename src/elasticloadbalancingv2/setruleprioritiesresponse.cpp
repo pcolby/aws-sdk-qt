@@ -101,3 +101,6 @@ void SetRulePrioritiesResponsePrivate::SetRulePrioritiesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("SetRulePrioritiesResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

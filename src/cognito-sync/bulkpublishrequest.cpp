@@ -123,3 +123,6 @@ BulkPublishRequestPrivate::BulkPublishRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

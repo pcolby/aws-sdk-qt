@@ -101,3 +101,6 @@ void CreateDeploymentGroupResponsePrivate::CreateDeploymentGroupResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentGroupResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

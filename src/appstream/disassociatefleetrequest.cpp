@@ -123,3 +123,6 @@ DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

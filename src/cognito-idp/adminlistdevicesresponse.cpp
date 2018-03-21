@@ -101,3 +101,6 @@ void AdminListDevicesResponsePrivate::AdminListDevicesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("AdminListDevicesResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

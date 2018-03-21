@@ -123,3 +123,6 @@ GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
 {
 
 }
+
+} // namespace STS
+} // namespace AWS

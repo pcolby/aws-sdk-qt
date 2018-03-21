@@ -101,3 +101,6 @@ void DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteComputeEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceCon
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

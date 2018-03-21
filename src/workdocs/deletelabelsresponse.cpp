@@ -101,3 +101,6 @@ void DeleteLabelsResponsePrivate::DeleteLabelsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteLabelsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

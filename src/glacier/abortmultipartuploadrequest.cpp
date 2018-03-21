@@ -123,3 +123,6 @@ AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

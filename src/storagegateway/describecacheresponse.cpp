@@ -101,3 +101,6 @@ void DescribeCacheResponsePrivate::DescribeCacheResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

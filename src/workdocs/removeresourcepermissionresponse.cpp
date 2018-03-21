@@ -101,3 +101,6 @@ void RemoveResourcePermissionResponsePrivate::RemoveResourcePermissionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("RemoveResourcePermissionResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

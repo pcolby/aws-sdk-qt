@@ -123,3 +123,6 @@ CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

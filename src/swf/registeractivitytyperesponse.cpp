@@ -101,3 +101,6 @@ void RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("RegisterActivityTypeResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

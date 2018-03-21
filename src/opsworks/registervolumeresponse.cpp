@@ -101,3 +101,6 @@ void RegisterVolumeResponsePrivate::RegisterVolumeResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("RegisterVolumeResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

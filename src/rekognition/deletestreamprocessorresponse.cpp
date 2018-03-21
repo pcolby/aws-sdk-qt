@@ -101,3 +101,6 @@ void DeleteStreamProcessorResponsePrivate::DeleteStreamProcessorResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteStreamProcessorResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

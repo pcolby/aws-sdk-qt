@@ -101,3 +101,6 @@ void DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DefineAnalysisSchemeResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

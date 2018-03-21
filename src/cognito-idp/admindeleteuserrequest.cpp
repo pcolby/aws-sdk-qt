@@ -123,3 +123,6 @@ AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

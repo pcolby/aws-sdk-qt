@@ -123,3 +123,6 @@ BatchGetProjectsRequestPrivate::BatchGetProjectsRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

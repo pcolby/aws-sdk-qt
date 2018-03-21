@@ -123,3 +123,6 @@ DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

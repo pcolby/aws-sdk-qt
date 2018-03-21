@@ -101,3 +101,6 @@ void GetCommitResponsePrivate::GetCommitResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetCommitResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeModelResponsePrivate::DescribeModelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeModelResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

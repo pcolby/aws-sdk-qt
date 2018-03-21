@@ -101,3 +101,6 @@ void RefreshSchemasResponsePrivate::RefreshSchemasResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("RefreshSchemasResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateTypedLinkFacetResponsePrivate::CreateTypedLinkFacetResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateTypedLinkFacetResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

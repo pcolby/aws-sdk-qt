@@ -101,3 +101,6 @@ void AddApplicationCloudWatchLoggingOptionResponsePrivate::AddApplicationCloudWa
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationCloudWatchLoggingOptionResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

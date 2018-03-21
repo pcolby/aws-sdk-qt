@@ -123,3 +123,6 @@ DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

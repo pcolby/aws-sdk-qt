@@ -123,3 +123,6 @@ UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

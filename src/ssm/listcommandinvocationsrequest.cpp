@@ -123,3 +123,6 @@ ListCommandInvocationsRequestPrivate::ListCommandInvocationsRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

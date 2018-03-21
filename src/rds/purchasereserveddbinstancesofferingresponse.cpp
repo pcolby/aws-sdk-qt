@@ -101,3 +101,6 @@ void PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInsta
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedDBInstancesOfferingResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

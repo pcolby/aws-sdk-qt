@@ -123,3 +123,6 @@ GetApnsVoipSandboxChannelRequestPrivate::GetApnsVoipSandboxChannelRequestPrivate
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -101,3 +101,6 @@ void StopStreamProcessorResponsePrivate::StopStreamProcessorResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("StopStreamProcessorResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

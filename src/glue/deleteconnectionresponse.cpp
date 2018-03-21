@@ -101,3 +101,6 @@ void DeleteConnectionResponsePrivate::DeleteConnectionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteConnectionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

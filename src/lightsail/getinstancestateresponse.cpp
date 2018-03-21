@@ -101,3 +101,6 @@ void GetInstanceStateResponsePrivate::GetInstanceStateResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceStateResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

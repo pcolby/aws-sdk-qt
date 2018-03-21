@@ -123,3 +123,6 @@ GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ GetResourceDefinitionRequestPrivate::GetResourceDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

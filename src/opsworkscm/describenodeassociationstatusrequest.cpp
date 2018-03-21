@@ -123,3 +123,6 @@ DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusReques
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

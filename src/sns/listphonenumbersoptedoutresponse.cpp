@@ -101,3 +101,6 @@ void ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListPhoneNumbersOptedOutResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

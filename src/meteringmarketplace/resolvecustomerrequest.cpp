@@ -123,3 +123,6 @@ ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
 {
 
 }
+
+} // namespace MarketplaceMetering
+} // namespace AWS

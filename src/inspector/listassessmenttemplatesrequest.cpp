@@ -123,3 +123,6 @@ ListAssessmentTemplatesRequestPrivate::ListAssessmentTemplatesRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

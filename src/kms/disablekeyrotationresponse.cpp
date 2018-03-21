@@ -101,3 +101,6 @@ void DisableKeyRotationResponsePrivate::DisableKeyRotationResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DisableKeyRotationResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

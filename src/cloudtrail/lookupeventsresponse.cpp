@@ -101,3 +101,6 @@ void LookupEventsResponsePrivate::LookupEventsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("LookupEventsResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

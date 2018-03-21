@@ -101,3 +101,6 @@ void ListPartsResponsePrivate::ListPartsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListPartsResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

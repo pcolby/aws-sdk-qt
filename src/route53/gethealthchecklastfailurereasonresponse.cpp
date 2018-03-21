@@ -101,3 +101,6 @@ void GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureRe
     Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckLastFailureReasonResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

@@ -123,3 +123,6 @@ CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

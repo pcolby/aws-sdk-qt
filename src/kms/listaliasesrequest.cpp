@@ -123,3 +123,6 @@ ListAliasesRequestPrivate::ListAliasesRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

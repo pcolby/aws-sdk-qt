@@ -101,3 +101,6 @@ void GetOperationsResponsePrivate::GetOperationsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetOperationsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

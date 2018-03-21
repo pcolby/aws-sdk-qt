@@ -123,3 +123,6 @@ CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

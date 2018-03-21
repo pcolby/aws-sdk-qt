@@ -123,3 +123,6 @@ PutBucketLifecycleConfigurationRequestPrivate::PutBucketLifecycleConfigurationRe
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

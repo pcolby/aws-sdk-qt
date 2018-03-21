@@ -101,3 +101,6 @@ void UpdateConnectivityInfoResponsePrivate::UpdateConnectivityInfoResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateConnectivityInfoResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

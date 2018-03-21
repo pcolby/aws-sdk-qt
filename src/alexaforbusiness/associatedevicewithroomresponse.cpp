@@ -101,3 +101,6 @@ void AssociateDeviceWithRoomResponsePrivate::AssociateDeviceWithRoomResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("AssociateDeviceWithRoomResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

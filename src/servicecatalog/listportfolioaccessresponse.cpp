@@ -101,3 +101,6 @@ void ListPortfolioAccessResponsePrivate::ListPortfolioAccessResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListPortfolioAccessResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

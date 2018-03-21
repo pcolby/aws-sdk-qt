@@ -123,3 +123,6 @@ PutObjectRequestPrivate::PutObjectRequestPrivate(
 {
 
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

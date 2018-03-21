@@ -123,3 +123,6 @@ UpdateProductRequestPrivate::UpdateProductRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

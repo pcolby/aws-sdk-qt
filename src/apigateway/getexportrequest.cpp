@@ -123,3 +123,6 @@ GetExportRequestPrivate::GetExportRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

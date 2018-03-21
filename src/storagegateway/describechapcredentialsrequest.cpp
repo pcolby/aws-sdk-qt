@@ -123,3 +123,6 @@ DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

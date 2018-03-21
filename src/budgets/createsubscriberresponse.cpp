@@ -101,3 +101,6 @@ void CreateSubscriberResponsePrivate::CreateSubscriberResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateSubscriberResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

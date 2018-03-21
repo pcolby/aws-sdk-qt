@@ -101,3 +101,6 @@ void PostCommentReplyResponsePrivate::PostCommentReplyResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PostCommentReplyResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

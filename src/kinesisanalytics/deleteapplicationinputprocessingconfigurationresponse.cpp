@@ -101,3 +101,6 @@ void DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplica
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationInputProcessingConfigurationResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

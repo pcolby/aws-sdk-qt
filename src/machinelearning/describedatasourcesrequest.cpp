@@ -123,3 +123,6 @@ DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

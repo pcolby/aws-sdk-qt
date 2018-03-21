@@ -101,3 +101,6 @@ void RevokeCacheSecurityGroupIngressResponsePrivate::RevokeCacheSecurityGroupIng
     Q_ASSERT(xml.name() == QLatin1String("RevokeCacheSecurityGroupIngressResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateUserProfileResponsePrivate::CreateUserProfileResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateUserProfileResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

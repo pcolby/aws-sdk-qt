@@ -101,3 +101,6 @@ void ListOnPremisesInstancesResponsePrivate::ListOnPremisesInstancesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListOnPremisesInstancesResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

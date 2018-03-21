@@ -123,3 +123,6 @@ DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

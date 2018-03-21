@@ -123,3 +123,6 @@ CreateResolverRequestPrivate::CreateResolverRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

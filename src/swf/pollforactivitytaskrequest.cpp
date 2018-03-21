@@ -123,3 +123,6 @@ PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

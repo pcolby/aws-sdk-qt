@@ -123,3 +123,6 @@ DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

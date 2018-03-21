@@ -123,3 +123,6 @@ AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeEndpointConfigRequestPrivate::DescribeEndpointConfigRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

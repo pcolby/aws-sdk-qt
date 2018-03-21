@@ -101,3 +101,6 @@ void ListObjectVersionsResponsePrivate::ListObjectVersionsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListObjectVersionsResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

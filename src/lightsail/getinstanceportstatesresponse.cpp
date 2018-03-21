@@ -101,3 +101,6 @@ void GetInstancePortStatesResponsePrivate::GetInstancePortStatesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetInstancePortStatesResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeStacksResponsePrivate::DescribeStacksResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeStacksResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

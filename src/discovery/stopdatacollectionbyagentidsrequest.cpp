@@ -123,3 +123,6 @@ StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestP
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

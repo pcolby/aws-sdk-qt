@@ -123,3 +123,6 @@ CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

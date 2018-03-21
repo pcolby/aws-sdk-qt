@@ -101,3 +101,6 @@ void ListPoliciesForTargetResponsePrivate::ListPoliciesForTargetResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListPoliciesForTargetResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -101,3 +101,6 @@ void RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("RestoreTableFromBackupResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

@@ -101,3 +101,6 @@ void StopUserImportJobResponsePrivate::StopUserImportJobResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("StopUserImportJobResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

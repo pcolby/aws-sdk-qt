@@ -123,3 +123,6 @@ UpdateConfigurationSetTrackingOptionsRequestPrivate::UpdateConfigurationSetTrack
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

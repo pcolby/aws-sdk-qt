@@ -123,3 +123,6 @@ DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

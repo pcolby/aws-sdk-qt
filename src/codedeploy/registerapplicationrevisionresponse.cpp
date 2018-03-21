@@ -101,3 +101,6 @@ void RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResp
     Q_ASSERT(xml.name() == QLatin1String("RegisterApplicationRevisionResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

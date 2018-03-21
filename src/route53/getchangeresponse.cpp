@@ -101,3 +101,6 @@ void GetChangeResponsePrivate::GetChangeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetChangeResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

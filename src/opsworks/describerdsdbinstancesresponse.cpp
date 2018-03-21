@@ -101,3 +101,6 @@ void DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeRdsDbInstancesResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

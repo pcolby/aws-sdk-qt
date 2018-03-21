@@ -101,3 +101,6 @@ void UpdateEndpointResponsePrivate::UpdateEndpointResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

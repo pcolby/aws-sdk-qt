@@ -123,3 +123,6 @@ DeleteNatGatewayRequestPrivate::DeleteNatGatewayRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

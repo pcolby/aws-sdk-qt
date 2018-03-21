@@ -101,3 +101,6 @@ void GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetGameSessionLogUrlResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteClusterSnapshotRequestPrivate::DeleteClusterSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateSpotDatafeedSubscriptionResponsePrivate::CreateSpotDatafeedSubscripti
     Q_ASSERT(xml.name() == QLatin1String("CreateSpotDatafeedSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

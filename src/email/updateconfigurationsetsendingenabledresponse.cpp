@@ -101,3 +101,6 @@ void UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSet
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetSendingEnabledResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

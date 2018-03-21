@@ -123,3 +123,6 @@ CreateConditionalForwarderRequestPrivate::CreateConditionalForwarderRequestPriva
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

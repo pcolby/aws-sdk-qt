@@ -101,3 +101,6 @@ void DeleteIdentityPolicyResponsePrivate::DeleteIdentityPolicyResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteIdentityPolicyResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

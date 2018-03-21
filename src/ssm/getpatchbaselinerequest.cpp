@@ -123,3 +123,6 @@ GetPatchBaselineRequestPrivate::GetPatchBaselineRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

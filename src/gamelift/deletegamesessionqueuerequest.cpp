@@ -123,3 +123,6 @@ DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

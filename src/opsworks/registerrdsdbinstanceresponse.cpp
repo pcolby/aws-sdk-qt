@@ -101,3 +101,6 @@ void RegisterRdsDbInstanceResponsePrivate::RegisterRdsDbInstanceResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("RegisterRdsDbInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

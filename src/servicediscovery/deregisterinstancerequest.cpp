@@ -123,3 +123,6 @@ DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

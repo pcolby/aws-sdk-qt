@@ -101,3 +101,6 @@ void SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponse
     Q_ASSERT(xml.name() == QLatin1String("SendTestEventNotificationResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

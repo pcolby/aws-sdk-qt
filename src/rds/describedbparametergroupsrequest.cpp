@@ -123,3 +123,6 @@ DescribeDBParameterGroupsRequestPrivate::DescribeDBParameterGroupsRequestPrivate
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

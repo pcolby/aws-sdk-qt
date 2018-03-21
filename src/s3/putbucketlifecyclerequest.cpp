@@ -123,3 +123,6 @@ PutBucketLifecycleRequestPrivate::PutBucketLifecycleRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

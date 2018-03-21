@@ -123,3 +123,6 @@ TranslateTextRequestPrivate::TranslateTextRequestPrivate(
 {
 
 }
+
+} // namespace Translate
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

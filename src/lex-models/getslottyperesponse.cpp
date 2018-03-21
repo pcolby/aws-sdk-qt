@@ -101,3 +101,6 @@ void GetSlotTypeResponsePrivate::GetSlotTypeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetSlotTypeResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

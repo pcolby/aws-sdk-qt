@@ -123,3 +123,6 @@ DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ ListFacetNamesRequestPrivate::ListFacetNamesRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

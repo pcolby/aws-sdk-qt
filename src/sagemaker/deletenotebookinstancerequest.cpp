@@ -123,3 +123,6 @@ DeleteNotebookInstanceRequestPrivate::DeleteNotebookInstanceRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

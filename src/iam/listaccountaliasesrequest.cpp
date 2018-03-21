@@ -123,3 +123,6 @@ ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

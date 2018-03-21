@@ -101,3 +101,6 @@ void UpdateBudgetResponsePrivate::UpdateBudgetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateBudgetResponse"));
     /// @todo
 }
+
+} // namespace Budgets
+} // namespace AWS

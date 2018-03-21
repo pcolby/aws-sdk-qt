@@ -101,3 +101,6 @@ void AttachPrincipalPolicyResponsePrivate::AttachPrincipalPolicyResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("AttachPrincipalPolicyResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

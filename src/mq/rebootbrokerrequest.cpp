@@ -123,3 +123,6 @@ RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

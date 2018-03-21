@@ -101,3 +101,6 @@ void PutRetentionPolicyResponsePrivate::PutRetentionPolicyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("PutRetentionPolicyResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

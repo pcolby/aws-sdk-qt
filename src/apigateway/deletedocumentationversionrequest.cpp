@@ -123,3 +123,6 @@ DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPriva
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

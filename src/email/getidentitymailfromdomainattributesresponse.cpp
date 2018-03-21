@@ -101,3 +101,6 @@ void GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDoma
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityMailFromDomainAttributesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -123,3 +123,6 @@ StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

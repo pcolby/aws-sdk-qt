@@ -123,3 +123,6 @@ GetIntegrationResponseRequestPrivate::GetIntegrationResponseRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

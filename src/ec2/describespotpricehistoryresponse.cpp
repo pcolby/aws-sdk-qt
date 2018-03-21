@@ -101,3 +101,6 @@ void DescribeSpotPriceHistoryResponsePrivate::DescribeSpotPriceHistoryResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeSpotPriceHistoryResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

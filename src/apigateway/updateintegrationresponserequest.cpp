@@ -123,3 +123,6 @@ UpdateIntegrationResponseRequestPrivate::UpdateIntegrationResponseRequestPrivate
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetCurrentUserResponsePrivate::GetCurrentUserResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetCurrentUserResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

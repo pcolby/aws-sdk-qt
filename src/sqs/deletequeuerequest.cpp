@@ -123,3 +123,6 @@ DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

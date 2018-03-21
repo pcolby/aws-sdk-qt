@@ -101,3 +101,6 @@ void CreateFlowLogsResponsePrivate::CreateFlowLogsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateFlowLogsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

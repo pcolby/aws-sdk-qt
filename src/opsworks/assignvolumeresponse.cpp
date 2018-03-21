@@ -101,3 +101,6 @@ void AssignVolumeResponsePrivate::AssignVolumeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AssignVolumeResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

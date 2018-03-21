@@ -123,3 +123,6 @@ UpdateStageRequestPrivate::UpdateStageRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

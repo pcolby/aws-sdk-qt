@@ -123,3 +123,6 @@ DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

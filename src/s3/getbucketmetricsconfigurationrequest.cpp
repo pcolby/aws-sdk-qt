@@ -123,3 +123,6 @@ GetBucketMetricsConfigurationRequestPrivate::GetBucketMetricsConfigurationReques
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

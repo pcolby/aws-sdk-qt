@@ -123,3 +123,6 @@ GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotF
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

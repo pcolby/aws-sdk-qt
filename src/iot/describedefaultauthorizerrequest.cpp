@@ -123,3 +123,6 @@ DescribeDefaultAuthorizerRequestPrivate::DescribeDefaultAuthorizerRequestPrivate
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

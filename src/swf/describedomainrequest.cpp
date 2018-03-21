@@ -123,3 +123,6 @@ DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

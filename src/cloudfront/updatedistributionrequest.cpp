@@ -123,3 +123,6 @@ UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

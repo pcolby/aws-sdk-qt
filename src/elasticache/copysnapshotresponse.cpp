@@ -101,3 +101,6 @@ void CopySnapshotResponsePrivate::CopySnapshotResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CopySnapshotResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

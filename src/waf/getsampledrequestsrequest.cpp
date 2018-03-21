@@ -123,3 +123,6 @@ GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

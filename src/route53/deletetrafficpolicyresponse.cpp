@@ -101,3 +101,6 @@ void DeleteTrafficPolicyResponsePrivate::DeleteTrafficPolicyResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrafficPolicyResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

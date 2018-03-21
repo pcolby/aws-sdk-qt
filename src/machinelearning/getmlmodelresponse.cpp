@@ -101,3 +101,6 @@ void GetMLModelResponsePrivate::GetMLModelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetMLModelResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

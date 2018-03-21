@@ -123,3 +123,6 @@ DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

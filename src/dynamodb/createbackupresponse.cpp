@@ -101,3 +101,6 @@ void CreateBackupResponsePrivate::CreateBackupResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateBackupResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

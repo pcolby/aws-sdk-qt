@@ -101,3 +101,6 @@ void DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBLogFilesResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

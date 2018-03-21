@@ -101,3 +101,6 @@ void CreateXssMatchSetResponsePrivate::CreateXssMatchSetResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateXssMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

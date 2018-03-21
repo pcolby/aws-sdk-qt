@@ -101,3 +101,6 @@ void ListUserPoliciesResponsePrivate::ListUserPoliciesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListUserPoliciesResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

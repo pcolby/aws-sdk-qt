@@ -101,3 +101,6 @@ void DisassociateConnectionFromLagResponsePrivate::DisassociateConnectionFromLag
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConnectionFromLagResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

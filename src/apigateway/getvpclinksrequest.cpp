@@ -123,3 +123,6 @@ GetVpcLinksRequestPrivate::GetVpcLinksRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

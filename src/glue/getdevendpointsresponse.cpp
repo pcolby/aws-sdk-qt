@@ -101,3 +101,6 @@ void GetDevEndpointsResponsePrivate::GetDevEndpointsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetDevEndpointsResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

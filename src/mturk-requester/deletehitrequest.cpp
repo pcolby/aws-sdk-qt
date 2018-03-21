@@ -123,3 +123,6 @@ DeleteHITRequestPrivate::DeleteHITRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

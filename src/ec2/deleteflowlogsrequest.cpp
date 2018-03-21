@@ -123,3 +123,6 @@ DeleteFlowLogsRequestPrivate::DeleteFlowLogsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

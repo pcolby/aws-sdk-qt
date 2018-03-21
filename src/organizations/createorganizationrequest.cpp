@@ -123,3 +123,6 @@ CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

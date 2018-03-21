@@ -123,3 +123,6 @@ DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
 {
 
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

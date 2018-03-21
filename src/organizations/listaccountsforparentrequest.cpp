@@ -123,3 +123,6 @@ ListAccountsForParentRequestPrivate::ListAccountsForParentRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

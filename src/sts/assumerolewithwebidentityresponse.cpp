@@ -101,3 +101,6 @@ void AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponse
     Q_ASSERT(xml.name() == QLatin1String("AssumeRoleWithWebIdentityResponse"));
     /// @todo
 }
+
+} // namespace STS
+} // namespace AWS

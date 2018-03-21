@@ -123,3 +123,6 @@ UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfiguratio
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

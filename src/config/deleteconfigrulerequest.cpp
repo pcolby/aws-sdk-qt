@@ -123,3 +123,6 @@ DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

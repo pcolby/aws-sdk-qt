@@ -101,3 +101,6 @@ void GetBucketEncryptionResponsePrivate::GetBucketEncryptionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetBucketEncryptionResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

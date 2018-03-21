@@ -101,3 +101,6 @@ void DeleteModelResponsePrivate::DeleteModelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteModelResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

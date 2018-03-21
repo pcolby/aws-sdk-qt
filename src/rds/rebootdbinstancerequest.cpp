@@ -123,3 +123,6 @@ RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

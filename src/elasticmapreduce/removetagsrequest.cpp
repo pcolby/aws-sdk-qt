@@ -123,3 +123,6 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

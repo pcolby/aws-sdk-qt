@@ -123,3 +123,6 @@ UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPri
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

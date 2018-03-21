@@ -101,3 +101,6 @@ void CreateUserPoolDomainResponsePrivate::CreateUserPoolDomainResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateUserPoolDomainResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

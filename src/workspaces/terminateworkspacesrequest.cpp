@@ -123,3 +123,6 @@ TerminateWorkspacesRequestPrivate::TerminateWorkspacesRequestPrivate(
 {
 
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

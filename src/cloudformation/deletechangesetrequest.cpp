@@ -123,3 +123,6 @@ DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -123,3 +123,6 @@ AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

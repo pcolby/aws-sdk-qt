@@ -101,3 +101,6 @@ void DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DisableAWSServiceAccessResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

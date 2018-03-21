@@ -123,3 +123,6 @@ DescribeJobRequestPrivate::DescribeJobRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

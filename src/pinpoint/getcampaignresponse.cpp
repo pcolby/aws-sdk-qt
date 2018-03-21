@@ -101,3 +101,6 @@ void GetCampaignResponsePrivate::GetCampaignResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetCampaignResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

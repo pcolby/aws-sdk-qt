@@ -101,3 +101,6 @@ void UpdateRecordsResponsePrivate::UpdateRecordsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateRecordsResponse"));
     /// @todo
 }
+
+} // namespace CognitoSync
+} // namespace AWS

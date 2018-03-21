@@ -101,3 +101,6 @@ void DescribeReservedInstancesModificationsResponsePrivate::DescribeReservedInst
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedInstancesModificationsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

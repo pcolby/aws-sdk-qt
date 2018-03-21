@@ -123,3 +123,6 @@ DescribeComplianceByResourceRequestPrivate::DescribeComplianceByResourceRequestP
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

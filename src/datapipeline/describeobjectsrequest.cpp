@@ -123,3 +123,6 @@ DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

@@ -123,3 +123,6 @@ GetTemplateRequestPrivate::GetTemplateRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

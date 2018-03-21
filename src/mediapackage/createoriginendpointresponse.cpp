@@ -101,3 +101,6 @@ void CreateOriginEndpointResponsePrivate::CreateOriginEndpointResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateOriginEndpointResponse"));
     /// @todo
 }
+
+} // namespace MediaPackage
+} // namespace AWS

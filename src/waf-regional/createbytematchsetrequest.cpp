@@ -123,3 +123,6 @@ CreateByteMatchSetRequestPrivate::CreateByteMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteReceiptFilterResponsePrivate::DeleteReceiptFilterResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteReceiptFilterResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -123,3 +123,6 @@ AssociateKmsKeyRequestPrivate::AssociateKmsKeyRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

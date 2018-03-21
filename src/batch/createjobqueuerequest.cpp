@@ -123,3 +123,6 @@ CreateJobQueueRequestPrivate::CreateJobQueueRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

@@ -123,3 +123,6 @@ InvokeRequestPrivate::InvokeRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

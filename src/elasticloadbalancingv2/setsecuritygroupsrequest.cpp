@@ -123,3 +123,6 @@ SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

@@ -101,3 +101,6 @@ void AttachNetworkInterfaceResponsePrivate::AttachNetworkInterfaceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AttachNetworkInterfaceResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

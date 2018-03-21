@@ -101,3 +101,6 @@ void DeleteLogStreamResponsePrivate::DeleteLogStreamResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteLogStreamResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

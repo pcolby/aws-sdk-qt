@@ -123,3 +123,6 @@ DescribeProtectionRequestPrivate::DescribeProtectionRequestPrivate(
 {
 
 }
+
+} // namespace Shield
+} // namespace AWS

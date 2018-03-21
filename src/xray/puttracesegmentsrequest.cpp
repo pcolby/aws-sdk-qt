@@ -123,3 +123,6 @@ PutTraceSegmentsRequestPrivate::PutTraceSegmentsRequestPrivate(
 {
 
 }
+
+} // namespace XRay
+} // namespace AWS

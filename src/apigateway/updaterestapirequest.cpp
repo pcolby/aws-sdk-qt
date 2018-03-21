@@ -123,3 +123,6 @@ UpdateRestApiRequestPrivate::UpdateRestApiRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

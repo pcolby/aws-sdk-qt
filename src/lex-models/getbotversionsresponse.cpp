@@ -101,3 +101,6 @@ void GetBotVersionsResponsePrivate::GetBotVersionsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetBotVersionsResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

@@ -123,3 +123,6 @@ SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

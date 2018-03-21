@@ -123,3 +123,6 @@ CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteTagOptionResponsePrivate::DeleteTagOptionResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteTagOptionResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

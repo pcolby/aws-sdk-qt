@@ -101,3 +101,6 @@ void DeletePartitionResponsePrivate::DeletePartitionResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeletePartitionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

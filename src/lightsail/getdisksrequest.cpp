@@ -123,3 +123,6 @@ GetDisksRequestPrivate::GetDisksRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

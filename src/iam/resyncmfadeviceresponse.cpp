@@ -101,3 +101,6 @@ void ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ResyncMFADeviceResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

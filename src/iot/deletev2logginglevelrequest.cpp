@@ -123,3 +123,6 @@ DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

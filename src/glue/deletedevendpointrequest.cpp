@@ -123,3 +123,6 @@ DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

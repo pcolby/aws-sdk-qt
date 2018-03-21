@@ -123,3 +123,6 @@ TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

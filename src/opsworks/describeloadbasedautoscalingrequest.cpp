@@ -123,3 +123,6 @@ DescribeLoadBasedAutoScalingRequestPrivate::DescribeLoadBasedAutoScalingRequestP
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

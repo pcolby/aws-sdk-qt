@@ -101,3 +101,6 @@ void DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteQueryLoggingConfigResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

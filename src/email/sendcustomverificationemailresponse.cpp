@@ -101,3 +101,6 @@ void SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResp
     Q_ASSERT(xml.name() == QLatin1String("SendCustomVerificationEmailResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

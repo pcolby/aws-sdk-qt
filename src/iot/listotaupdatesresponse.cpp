@@ -101,3 +101,6 @@ void ListOTAUpdatesResponsePrivate::ListOTAUpdatesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListOTAUpdatesResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

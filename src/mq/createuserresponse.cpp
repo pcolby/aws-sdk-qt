@@ -101,3 +101,6 @@ void CreateUserResponsePrivate::CreateUserResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateUserResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListHostedZonesByNameResponsePrivate::ListHostedZonesByNameResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListHostedZonesByNameResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

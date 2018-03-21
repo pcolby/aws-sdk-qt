@@ -123,3 +123,6 @@ GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

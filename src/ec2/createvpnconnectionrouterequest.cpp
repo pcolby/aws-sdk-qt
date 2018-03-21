@@ -123,3 +123,6 @@ CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

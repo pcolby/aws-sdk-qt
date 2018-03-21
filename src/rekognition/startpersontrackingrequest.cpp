@@ -123,3 +123,6 @@ StartPersonTrackingRequestPrivate::StartPersonTrackingRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

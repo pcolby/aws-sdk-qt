@@ -101,3 +101,6 @@ void AbortEnvironmentUpdateResponsePrivate::AbortEnvironmentUpdateResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("AbortEnvironmentUpdateResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

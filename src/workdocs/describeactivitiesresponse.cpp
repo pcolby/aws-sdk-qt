@@ -101,3 +101,6 @@ void DescribeActivitiesResponsePrivate::DescribeActivitiesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeActivitiesResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

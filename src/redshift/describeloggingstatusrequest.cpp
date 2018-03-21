@@ -123,3 +123,6 @@ DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeNetworkInterfaceAttributeResponsePrivate::DescribeNetworkInterfaceA
     Q_ASSERT(xml.name() == QLatin1String("DescribeNetworkInterfaceAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

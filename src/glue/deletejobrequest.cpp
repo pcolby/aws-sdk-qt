@@ -123,3 +123,6 @@ DeleteJobRequestPrivate::DeleteJobRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

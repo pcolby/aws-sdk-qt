@@ -101,3 +101,6 @@ void DeleteChapCredentialsResponsePrivate::DeleteChapCredentialsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteChapCredentialsResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

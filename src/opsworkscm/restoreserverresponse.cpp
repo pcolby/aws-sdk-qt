@@ -101,3 +101,6 @@ void RestoreServerResponsePrivate::RestoreServerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RestoreServerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

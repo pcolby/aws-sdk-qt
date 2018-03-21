@@ -123,3 +123,6 @@ StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

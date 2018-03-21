@@ -123,3 +123,6 @@ DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

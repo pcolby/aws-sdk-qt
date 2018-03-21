@@ -123,3 +123,6 @@ CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

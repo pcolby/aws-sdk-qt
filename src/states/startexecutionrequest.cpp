@@ -123,3 +123,6 @@ StartExecutionRequestPrivate::StartExecutionRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

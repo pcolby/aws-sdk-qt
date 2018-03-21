@@ -123,3 +123,6 @@ RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

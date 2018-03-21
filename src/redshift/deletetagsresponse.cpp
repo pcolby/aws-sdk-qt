@@ -101,3 +101,6 @@ void DeleteTagsResponsePrivate::DeleteTagsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteTagsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateDataSourceResponsePrivate::UpdateDataSourceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateDataSourceResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

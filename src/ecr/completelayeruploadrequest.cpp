@@ -123,3 +123,6 @@ CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

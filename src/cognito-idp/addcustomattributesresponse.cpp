@@ -101,3 +101,6 @@ void AddCustomAttributesResponsePrivate::AddCustomAttributesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("AddCustomAttributesResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

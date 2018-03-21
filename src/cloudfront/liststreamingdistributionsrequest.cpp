@@ -123,3 +123,6 @@ ListStreamingDistributionsRequestPrivate::ListStreamingDistributionsRequestPriva
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

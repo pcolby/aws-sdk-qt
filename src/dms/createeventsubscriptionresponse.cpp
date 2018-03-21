@@ -101,3 +101,6 @@ void CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateEventSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

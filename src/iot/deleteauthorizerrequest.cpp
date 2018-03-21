@@ -123,3 +123,6 @@ DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

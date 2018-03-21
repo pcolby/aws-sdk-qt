@@ -123,3 +123,6 @@ DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningPara
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

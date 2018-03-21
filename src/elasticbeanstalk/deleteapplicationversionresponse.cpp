@@ -101,3 +101,6 @@ void DeleteApplicationVersionResponsePrivate::DeleteApplicationVersionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationVersionResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

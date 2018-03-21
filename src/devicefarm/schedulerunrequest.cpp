@@ -123,3 +123,6 @@ ScheduleRunRequestPrivate::ScheduleRunRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

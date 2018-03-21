@@ -123,3 +123,6 @@ DeletePartitionRequestPrivate::DeletePartitionRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

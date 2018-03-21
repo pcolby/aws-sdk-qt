@@ -123,3 +123,6 @@ UpdateRadiusRequestPrivate::UpdateRadiusRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

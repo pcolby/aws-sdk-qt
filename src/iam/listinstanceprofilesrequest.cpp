@@ -123,3 +123,6 @@ ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

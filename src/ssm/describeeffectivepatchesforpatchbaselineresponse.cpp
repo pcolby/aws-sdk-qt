@@ -101,3 +101,6 @@ void DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectiveP
     Q_ASSERT(xml.name() == QLatin1String("DescribeEffectivePatchesForPatchBaselineResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

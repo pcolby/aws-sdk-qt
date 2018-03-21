@@ -101,3 +101,6 @@ void CancelStepsResponsePrivate::CancelStepsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CancelStepsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

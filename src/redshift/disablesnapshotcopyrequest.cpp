@@ -123,3 +123,6 @@ DisableSnapshotCopyRequestPrivate::DisableSnapshotCopyRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

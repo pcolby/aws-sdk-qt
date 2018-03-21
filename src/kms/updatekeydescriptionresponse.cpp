@@ -101,3 +101,6 @@ void UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UpdateKeyDescriptionResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

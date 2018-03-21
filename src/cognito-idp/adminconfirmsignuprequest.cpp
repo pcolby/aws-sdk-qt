@@ -123,3 +123,6 @@ AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

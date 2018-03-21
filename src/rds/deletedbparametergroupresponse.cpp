@@ -101,3 +101,6 @@ void DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

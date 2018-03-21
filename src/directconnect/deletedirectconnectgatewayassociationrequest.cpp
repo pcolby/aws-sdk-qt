@@ -123,3 +123,6 @@ DeleteDirectConnectGatewayAssociationRequestPrivate::DeleteDirectConnectGatewayA
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

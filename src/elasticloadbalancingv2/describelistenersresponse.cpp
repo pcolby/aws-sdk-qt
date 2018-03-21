@@ -101,3 +101,6 @@ void DescribeListenersResponsePrivate::DescribeListenersResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeListenersResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

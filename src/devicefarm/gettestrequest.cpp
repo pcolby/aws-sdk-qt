@@ -123,3 +123,6 @@ GetTestRequestPrivate::GetTestRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

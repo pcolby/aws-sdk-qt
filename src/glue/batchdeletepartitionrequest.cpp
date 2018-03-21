@@ -123,3 +123,6 @@ BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

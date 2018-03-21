@@ -101,3 +101,6 @@ void DeletePolicyResponsePrivate::DeletePolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeletePolicyResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

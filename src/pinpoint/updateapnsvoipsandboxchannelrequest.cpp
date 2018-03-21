@@ -123,3 +123,6 @@ UpdateApnsVoipSandboxChannelRequestPrivate::UpdateApnsVoipSandboxChannelRequestP
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

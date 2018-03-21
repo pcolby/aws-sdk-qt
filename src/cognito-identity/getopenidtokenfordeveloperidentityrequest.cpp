@@ -123,3 +123,6 @@ GetOpenIdTokenForDeveloperIdentityRequestPrivate::GetOpenIdTokenForDeveloperIden
 {
 
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

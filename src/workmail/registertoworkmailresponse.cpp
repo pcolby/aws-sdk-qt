@@ -101,3 +101,6 @@ void RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("RegisterToWorkMailResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

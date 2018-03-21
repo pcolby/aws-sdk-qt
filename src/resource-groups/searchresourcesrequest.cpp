@@ -123,3 +123,6 @@ SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
 {
 
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

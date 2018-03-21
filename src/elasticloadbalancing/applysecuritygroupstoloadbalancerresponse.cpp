@@ -101,3 +101,6 @@ void ApplySecurityGroupsToLoadBalancerResponsePrivate::ApplySecurityGroupsToLoad
     Q_ASSERT(xml.name() == QLatin1String("ApplySecurityGroupsToLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

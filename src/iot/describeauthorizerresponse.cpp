@@ -101,3 +101,6 @@ void DescribeAuthorizerResponsePrivate::DescribeAuthorizerResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeAuthorizerResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

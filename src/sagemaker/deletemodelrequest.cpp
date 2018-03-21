@@ -123,3 +123,6 @@ DeleteModelRequestPrivate::DeleteModelRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListTypesResponsePrivate::ListTypesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListTypesResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

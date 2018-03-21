@@ -123,3 +123,6 @@ DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

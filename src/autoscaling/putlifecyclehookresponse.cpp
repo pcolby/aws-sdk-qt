@@ -101,3 +101,6 @@ void PutLifecycleHookResponsePrivate::PutLifecycleHookResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PutLifecycleHookResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

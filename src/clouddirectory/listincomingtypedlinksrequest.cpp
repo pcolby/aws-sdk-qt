@@ -123,3 +123,6 @@ ListIncomingTypedLinksRequestPrivate::ListIncomingTypedLinksRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

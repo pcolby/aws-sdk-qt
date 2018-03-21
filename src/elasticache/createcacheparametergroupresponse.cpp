@@ -101,3 +101,6 @@ void CreateCacheParameterGroupResponsePrivate::CreateCacheParameterGroupResponse
     Q_ASSERT(xml.name() == QLatin1String("CreateCacheParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -101,3 +101,6 @@ void RebootClusterResponsePrivate::RebootClusterResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RebootClusterResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
 {
 
 }
+
+} // namespace MediaPackage
+} // namespace AWS

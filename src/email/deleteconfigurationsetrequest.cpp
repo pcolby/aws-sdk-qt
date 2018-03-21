@@ -123,3 +123,6 @@ DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

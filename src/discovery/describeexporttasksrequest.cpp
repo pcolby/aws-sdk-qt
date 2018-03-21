@@ -123,3 +123,6 @@ DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

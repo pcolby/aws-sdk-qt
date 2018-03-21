@@ -101,3 +101,6 @@ void DescribeEventCategoriesResponsePrivate::DescribeEventCategoriesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventCategoriesResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

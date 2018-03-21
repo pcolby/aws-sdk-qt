@@ -123,3 +123,6 @@ CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

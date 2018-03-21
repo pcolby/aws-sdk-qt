@@ -123,3 +123,6 @@ AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

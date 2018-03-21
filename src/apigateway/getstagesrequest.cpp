@@ -123,3 +123,6 @@ GetStagesRequestPrivate::GetStagesRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteVpcPeeringAuthorizationResponsePrivate::DeleteVpcPeeringAuthorization
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcPeeringAuthorizationResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

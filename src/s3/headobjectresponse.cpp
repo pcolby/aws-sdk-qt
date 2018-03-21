@@ -101,3 +101,6 @@ void HeadObjectResponsePrivate::HeadObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("HeadObjectResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

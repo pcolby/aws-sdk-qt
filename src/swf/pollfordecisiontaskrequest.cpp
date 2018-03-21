@@ -123,3 +123,6 @@ PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

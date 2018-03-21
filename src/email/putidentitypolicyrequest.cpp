@@ -123,3 +123,6 @@ PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

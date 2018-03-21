@@ -101,3 +101,6 @@ void SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicRe
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityNotificationTopicResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

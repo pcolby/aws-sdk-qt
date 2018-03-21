@@ -101,3 +101,6 @@ void GetAttributeValuesResponsePrivate::GetAttributeValuesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetAttributeValuesResponse"));
     /// @todo
 }
+
+} // namespace Pricing
+} // namespace AWS

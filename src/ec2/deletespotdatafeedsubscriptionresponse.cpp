@@ -101,3 +101,6 @@ void DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscripti
     Q_ASSERT(xml.name() == QLatin1String("DeleteSpotDatafeedSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

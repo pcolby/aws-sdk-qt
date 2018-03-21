@@ -123,3 +123,6 @@ DescribeOptionGroupsRequestPrivate::DescribeOptionGroupsRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

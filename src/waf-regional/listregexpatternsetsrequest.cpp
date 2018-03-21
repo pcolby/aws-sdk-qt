@@ -123,3 +123,6 @@ ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

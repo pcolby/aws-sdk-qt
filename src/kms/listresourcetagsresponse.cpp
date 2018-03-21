@@ -101,3 +101,6 @@ void ListResourceTagsResponsePrivate::ListResourceTagsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListResourceTagsResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

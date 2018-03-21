@@ -123,3 +123,6 @@ IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

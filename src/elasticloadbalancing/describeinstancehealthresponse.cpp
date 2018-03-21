@@ -101,3 +101,6 @@ void DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceHealthResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

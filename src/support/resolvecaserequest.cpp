@@ -123,3 +123,6 @@ ResolveCaseRequestPrivate::ResolveCaseRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

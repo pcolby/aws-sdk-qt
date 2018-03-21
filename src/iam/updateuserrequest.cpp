@@ -123,3 +123,6 @@ UpdateUserRequestPrivate::UpdateUserRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

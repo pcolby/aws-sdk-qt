@@ -101,3 +101,6 @@ void ImportImageResponsePrivate::ImportImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ImportImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

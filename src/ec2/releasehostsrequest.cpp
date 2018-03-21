@@ -123,3 +123,6 @@ ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

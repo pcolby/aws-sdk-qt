@@ -123,3 +123,6 @@ ListBucketMetricsConfigurationsRequestPrivate::ListBucketMetricsConfigurationsRe
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

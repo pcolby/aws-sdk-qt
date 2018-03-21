@@ -101,3 +101,6 @@ void PutDashboardResponsePrivate::PutDashboardResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutDashboardResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

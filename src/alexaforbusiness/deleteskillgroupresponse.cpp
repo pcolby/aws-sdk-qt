@@ -101,3 +101,6 @@ void DeleteSkillGroupResponsePrivate::DeleteSkillGroupResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteSkillGroupResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

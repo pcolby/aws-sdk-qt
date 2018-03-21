@@ -123,3 +123,6 @@ GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

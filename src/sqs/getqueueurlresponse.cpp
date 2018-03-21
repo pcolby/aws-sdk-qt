@@ -101,3 +101,6 @@ void GetQueueUrlResponsePrivate::GetQueueUrlResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetQueueUrlResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

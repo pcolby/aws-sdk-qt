@@ -101,3 +101,6 @@ void StartMatchBackfillResponsePrivate::StartMatchBackfillResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("StartMatchBackfillResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

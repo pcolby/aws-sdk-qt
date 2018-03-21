@@ -101,3 +101,6 @@ void UntagResponsePrivate::UntagResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UntagResponse"));
     /// @todo
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetThirdPartyJobDetailsResponsePrivate::GetThirdPartyJobDetailsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("GetThirdPartyJobDetailsResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

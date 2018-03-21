@@ -123,3 +123,6 @@ DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

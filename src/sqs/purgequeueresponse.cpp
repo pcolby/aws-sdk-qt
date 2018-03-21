@@ -101,3 +101,6 @@ void PurgeQueueResponsePrivate::PurgeQueueResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PurgeQueueResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

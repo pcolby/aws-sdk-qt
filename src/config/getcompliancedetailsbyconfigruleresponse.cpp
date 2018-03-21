@@ -101,3 +101,6 @@ void GetComplianceDetailsByConfigRuleResponsePrivate::GetComplianceDetailsByConf
     Q_ASSERT(xml.name() == QLatin1String("GetComplianceDetailsByConfigRuleResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

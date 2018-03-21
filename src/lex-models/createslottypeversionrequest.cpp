@@ -123,3 +123,6 @@ CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

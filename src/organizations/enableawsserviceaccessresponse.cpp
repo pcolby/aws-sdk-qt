@@ -101,3 +101,6 @@ void EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("EnableAWSServiceAccessResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

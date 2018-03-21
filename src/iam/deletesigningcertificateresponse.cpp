@@ -101,3 +101,6 @@ void DeleteSigningCertificateResponsePrivate::DeleteSigningCertificateResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteSigningCertificateResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

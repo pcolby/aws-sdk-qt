@@ -123,3 +123,6 @@ DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifec
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

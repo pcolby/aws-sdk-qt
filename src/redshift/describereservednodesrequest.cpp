@@ -123,3 +123,6 @@ DescribeReservedNodesRequestPrivate::DescribeReservedNodesRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteStackResponsePrivate::DeleteStackResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteStackResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

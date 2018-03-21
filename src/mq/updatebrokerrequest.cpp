@@ -123,3 +123,6 @@ UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

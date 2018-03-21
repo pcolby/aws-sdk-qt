@@ -101,3 +101,6 @@ void DescribeTapeRecoveryPointsResponsePrivate::DescribeTapeRecoveryPointsRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeTapeRecoveryPointsResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

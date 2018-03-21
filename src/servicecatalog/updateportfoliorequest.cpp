@@ -123,3 +123,6 @@ UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

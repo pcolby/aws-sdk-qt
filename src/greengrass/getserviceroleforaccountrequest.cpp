@@ -123,3 +123,6 @@ GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

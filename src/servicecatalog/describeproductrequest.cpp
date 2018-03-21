@@ -123,3 +123,6 @@ DescribeProductRequestPrivate::DescribeProductRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -123,3 +123,6 @@ ListBucketAnalyticsConfigurationsRequestPrivate::ListBucketAnalyticsConfiguratio
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

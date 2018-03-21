@@ -101,3 +101,6 @@ void ListAccountsForParentResponsePrivate::ListAccountsForParentResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListAccountsForParentResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

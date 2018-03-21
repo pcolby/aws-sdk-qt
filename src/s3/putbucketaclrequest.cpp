@@ -123,3 +123,6 @@ PutBucketAclRequestPrivate::PutBucketAclRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

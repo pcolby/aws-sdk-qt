@@ -123,3 +123,6 @@ RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

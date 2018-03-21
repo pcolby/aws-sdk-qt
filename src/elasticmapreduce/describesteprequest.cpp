@@ -123,3 +123,6 @@ DescribeStepRequestPrivate::DescribeStepRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

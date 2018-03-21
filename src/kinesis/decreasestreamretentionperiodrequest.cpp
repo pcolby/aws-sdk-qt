@@ -123,3 +123,6 @@ DecreaseStreamRetentionPeriodRequestPrivate::DecreaseStreamRetentionPeriodReques
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

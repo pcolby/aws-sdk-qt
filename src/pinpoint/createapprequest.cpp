@@ -123,3 +123,6 @@ CreateAppRequestPrivate::CreateAppRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

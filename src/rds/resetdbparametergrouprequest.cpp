@@ -123,3 +123,6 @@ ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -123,3 +123,6 @@ StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

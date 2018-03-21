@@ -101,3 +101,6 @@ void DeleteFileShareResponsePrivate::DeleteFileShareResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteFileShareResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

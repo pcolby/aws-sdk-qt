@@ -123,3 +123,6 @@ ListIndicesRequestPrivate::ListIndicesRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

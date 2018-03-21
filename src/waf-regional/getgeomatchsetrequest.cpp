@@ -123,3 +123,6 @@ GetGeoMatchSetRequestPrivate::GetGeoMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

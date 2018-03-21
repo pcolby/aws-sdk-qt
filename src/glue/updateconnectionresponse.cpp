@@ -101,3 +101,6 @@ void UpdateConnectionResponsePrivate::UpdateConnectionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateConnectionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

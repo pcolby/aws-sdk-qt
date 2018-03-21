@@ -123,3 +123,6 @@ DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPri
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

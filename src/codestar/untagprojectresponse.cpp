@@ -101,3 +101,6 @@ void UntagProjectResponsePrivate::UntagProjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UntagProjectResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

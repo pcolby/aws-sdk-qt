@@ -123,3 +123,6 @@ ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestP
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

@@ -101,3 +101,6 @@ void SuspendProcessesResponsePrivate::SuspendProcessesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("SuspendProcessesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

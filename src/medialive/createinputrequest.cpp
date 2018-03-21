@@ -123,3 +123,6 @@ CreateInputRequestPrivate::CreateInputRequestPrivate(
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

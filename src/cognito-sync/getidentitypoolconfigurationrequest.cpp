@@ -123,3 +123,6 @@ GetIdentityPoolConfigurationRequestPrivate::GetIdentityPoolConfigurationRequestP
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

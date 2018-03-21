@@ -101,3 +101,6 @@ void DeleteDeviceDefinitionResponsePrivate::DeleteDeviceDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeviceDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

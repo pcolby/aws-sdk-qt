@@ -123,3 +123,6 @@ DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigura
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

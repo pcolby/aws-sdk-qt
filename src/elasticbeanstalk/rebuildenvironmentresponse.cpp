@@ -101,3 +101,6 @@ void RebuildEnvironmentResponsePrivate::RebuildEnvironmentResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("RebuildEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

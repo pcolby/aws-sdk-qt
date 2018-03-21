@@ -123,3 +123,6 @@ SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

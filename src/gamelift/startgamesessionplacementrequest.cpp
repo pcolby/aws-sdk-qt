@@ -123,3 +123,6 @@ StartGameSessionPlacementRequestPrivate::StartGameSessionPlacementRequestPrivate
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

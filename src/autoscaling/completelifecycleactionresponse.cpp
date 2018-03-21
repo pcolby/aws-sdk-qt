@@ -101,3 +101,6 @@ void CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CompleteLifecycleActionResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

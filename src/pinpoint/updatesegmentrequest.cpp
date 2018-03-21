@@ -123,3 +123,6 @@ UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

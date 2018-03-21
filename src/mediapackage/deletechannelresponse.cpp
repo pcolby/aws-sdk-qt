@@ -101,3 +101,6 @@ void DeleteChannelResponsePrivate::DeleteChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteChannelResponse"));
     /// @todo
 }
+
+} // namespace MediaPackage
+} // namespace AWS

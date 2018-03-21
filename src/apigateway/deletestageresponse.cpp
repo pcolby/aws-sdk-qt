@@ -101,3 +101,6 @@ void DeleteStageResponsePrivate::DeleteStageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteStageResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

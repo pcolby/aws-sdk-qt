@@ -123,3 +123,6 @@ AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

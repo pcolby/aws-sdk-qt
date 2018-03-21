@@ -101,3 +101,6 @@ void DeleteVpcEndpointServiceConfigurationsResponsePrivate::DeleteVpcEndpointSer
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpcEndpointServiceConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

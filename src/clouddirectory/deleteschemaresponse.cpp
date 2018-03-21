@@ -101,3 +101,6 @@ void DeleteSchemaResponsePrivate::DeleteSchemaResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteSchemaResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

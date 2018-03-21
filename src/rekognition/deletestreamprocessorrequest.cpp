@@ -123,3 +123,6 @@ DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

@@ -123,3 +123,6 @@ TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

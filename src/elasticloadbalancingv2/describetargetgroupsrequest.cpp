@@ -123,3 +123,6 @@ DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

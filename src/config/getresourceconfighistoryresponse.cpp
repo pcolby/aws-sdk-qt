@@ -101,3 +101,6 @@ void GetResourceConfigHistoryResponsePrivate::GetResourceConfigHistoryResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetResourceConfigHistoryResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

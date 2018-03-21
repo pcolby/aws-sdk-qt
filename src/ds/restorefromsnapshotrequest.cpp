@@ -123,3 +123,6 @@ RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

@@ -101,3 +101,6 @@ void FilterLogEventsResponsePrivate::FilterLogEventsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("FilterLogEventsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

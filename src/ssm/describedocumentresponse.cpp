@@ -101,3 +101,6 @@ void DescribeDocumentResponsePrivate::DescribeDocumentResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

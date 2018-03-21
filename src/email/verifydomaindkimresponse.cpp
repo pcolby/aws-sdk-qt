@@ -101,3 +101,6 @@ void VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("VerifyDomainDkimResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

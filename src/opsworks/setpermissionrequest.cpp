@@ -123,3 +123,6 @@ SetPermissionRequestPrivate::SetPermissionRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

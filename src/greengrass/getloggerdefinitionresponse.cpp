@@ -101,3 +101,6 @@ void GetLoggerDefinitionResponsePrivate::GetLoggerDefinitionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetLoggerDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

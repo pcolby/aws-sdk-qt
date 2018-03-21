@@ -101,3 +101,6 @@ void RegisterTargetsResponsePrivate::RegisterTargetsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("RegisterTargetsResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

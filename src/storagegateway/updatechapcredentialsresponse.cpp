@@ -101,3 +101,6 @@ void UpdateChapCredentialsResponsePrivate::UpdateChapCredentialsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateChapCredentialsResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

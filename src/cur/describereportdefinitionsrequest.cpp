@@ -123,3 +123,6 @@ DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate
 {
 
 }
+
+} // namespace CostandUsageReportService
+} // namespace AWS

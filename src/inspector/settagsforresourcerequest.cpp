@@ -123,3 +123,6 @@ SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

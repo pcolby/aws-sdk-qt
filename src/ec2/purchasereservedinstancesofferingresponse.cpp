@@ -101,3 +101,6 @@ void PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstances
     Q_ASSERT(xml.name() == QLatin1String("PurchaseReservedInstancesOfferingResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

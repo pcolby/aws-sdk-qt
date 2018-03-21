@@ -123,3 +123,6 @@ ListThingTypesRequestPrivate::ListThingTypesRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

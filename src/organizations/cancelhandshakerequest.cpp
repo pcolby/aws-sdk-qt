@@ -123,3 +123,6 @@ CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

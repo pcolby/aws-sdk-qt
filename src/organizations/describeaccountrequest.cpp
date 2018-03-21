@@ -123,3 +123,6 @@ DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

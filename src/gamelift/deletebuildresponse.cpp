@@ -101,3 +101,6 @@ void DeleteBuildResponsePrivate::DeleteBuildResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteBuildResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

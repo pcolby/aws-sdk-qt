@@ -101,3 +101,6 @@ void ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesRespon
     Q_ASSERT(xml.name() == QLatin1String("ListVerifiedEmailAddressesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

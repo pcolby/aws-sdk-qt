@@ -101,3 +101,6 @@ void DescribeCachediSCSIVolumesResponsePrivate::DescribeCachediSCSIVolumesRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeCachediSCSIVolumesResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

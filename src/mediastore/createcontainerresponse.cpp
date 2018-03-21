@@ -101,3 +101,6 @@ void CreateContainerResponsePrivate::CreateContainerResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateContainerResponse"));
     /// @todo
 }
+
+} // namespace MediaStore
+} // namespace AWS

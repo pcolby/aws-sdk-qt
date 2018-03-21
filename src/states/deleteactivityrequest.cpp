@@ -123,3 +123,6 @@ DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

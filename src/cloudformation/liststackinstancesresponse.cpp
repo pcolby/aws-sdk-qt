@@ -101,3 +101,6 @@ void ListStackInstancesResponsePrivate::ListStackInstancesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListStackInstancesResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

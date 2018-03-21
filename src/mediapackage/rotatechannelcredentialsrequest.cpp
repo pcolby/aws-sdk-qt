@@ -123,3 +123,6 @@ RotateChannelCredentialsRequestPrivate::RotateChannelCredentialsRequestPrivate(
 {
 
 }
+
+} // namespace MediaPackage
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutRecordBatchResponsePrivate::PutRecordBatchResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("PutRecordBatchResponse"));
     /// @todo
 }
+
+} // namespace Firehose
+} // namespace AWS

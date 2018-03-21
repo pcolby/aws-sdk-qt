@@ -123,3 +123,6 @@ DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfile
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

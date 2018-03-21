@@ -123,3 +123,6 @@ DescribeLayersRequestPrivate::DescribeLayersRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

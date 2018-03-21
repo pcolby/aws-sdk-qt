@@ -101,3 +101,6 @@ void DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleF
     Q_ASSERT(xml.name() == QLatin1String("DisassociateServiceRoleFromAccountResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

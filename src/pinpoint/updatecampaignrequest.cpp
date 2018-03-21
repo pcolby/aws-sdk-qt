@@ -123,3 +123,6 @@ UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

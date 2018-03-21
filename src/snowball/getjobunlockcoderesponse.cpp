@@ -101,3 +101,6 @@ void GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetJobUnlockCodeResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

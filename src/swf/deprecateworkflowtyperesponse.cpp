@@ -101,3 +101,6 @@ void DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeprecateWorkflowTypeResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

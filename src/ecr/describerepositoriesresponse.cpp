@@ -101,3 +101,6 @@ void DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeRepositoriesResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

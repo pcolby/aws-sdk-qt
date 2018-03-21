@@ -101,3 +101,6 @@ void DescribeResourcePoliciesResponsePrivate::DescribeResourcePoliciesResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourcePoliciesResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

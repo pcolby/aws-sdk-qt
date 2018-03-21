@@ -123,3 +123,6 @@ GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

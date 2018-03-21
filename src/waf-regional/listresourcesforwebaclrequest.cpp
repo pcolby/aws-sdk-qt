@@ -123,3 +123,6 @@ ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

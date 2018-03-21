@@ -123,3 +123,6 @@ CopyImageRequestPrivate::CopyImageRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

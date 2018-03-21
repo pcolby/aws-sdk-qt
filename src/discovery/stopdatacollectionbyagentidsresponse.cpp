@@ -101,3 +101,6 @@ void StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsRe
     Q_ASSERT(xml.name() == QLatin1String("StopDataCollectionByAgentIdsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateInstancesFromSnapshotRequestPrivate::CreateInstancesFromSnapshotRequestPri
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

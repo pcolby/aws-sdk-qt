@@ -101,3 +101,6 @@ void UpdateAccountSendingEnabledResponsePrivate::UpdateAccountSendingEnabledResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccountSendingEnabledResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

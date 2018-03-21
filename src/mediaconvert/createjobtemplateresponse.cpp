@@ -101,3 +101,6 @@ void CreateJobTemplateResponsePrivate::CreateJobTemplateResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateJobTemplateResponse"));
     /// @todo
 }
+
+} // namespace MediaConvert
+} // namespace AWS

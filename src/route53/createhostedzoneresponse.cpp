@@ -101,3 +101,6 @@ void CreateHostedZoneResponsePrivate::CreateHostedZoneResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateHostedZoneResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

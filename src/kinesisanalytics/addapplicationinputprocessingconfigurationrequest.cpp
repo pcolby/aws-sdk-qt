@@ -123,3 +123,6 @@ AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputPro
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

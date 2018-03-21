@@ -123,3 +123,6 @@ DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

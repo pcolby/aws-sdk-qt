@@ -123,3 +123,6 @@ RebootWorkspacesRequestPrivate::RebootWorkspacesRequestPrivate(
 {
 
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

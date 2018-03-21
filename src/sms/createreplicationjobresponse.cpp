@@ -101,3 +101,6 @@ void CreateReplicationJobResponsePrivate::CreateReplicationJobResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationJobResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

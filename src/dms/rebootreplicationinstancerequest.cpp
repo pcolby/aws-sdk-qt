@@ -123,3 +123,6 @@ RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

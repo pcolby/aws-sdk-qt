@@ -101,3 +101,6 @@ void ListHsmsResponsePrivate::ListHsmsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListHsmsResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

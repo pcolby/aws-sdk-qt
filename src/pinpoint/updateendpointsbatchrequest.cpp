@@ -123,3 +123,6 @@ UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

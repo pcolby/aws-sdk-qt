@@ -101,3 +101,6 @@ void AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccount
     Q_ASSERT(xml.name() == QLatin1String("AssociateServiceRoleToAccountResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

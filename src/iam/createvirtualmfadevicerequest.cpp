@@ -123,3 +123,6 @@ CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

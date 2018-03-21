@@ -101,3 +101,6 @@ void SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeRespon
     Q_ASSERT(xml.name() == QLatin1String("SubmitContainerStateChangeResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

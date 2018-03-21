@@ -101,3 +101,6 @@ void AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponse
     Q_ASSERT(xml.name() == QLatin1String("AssociateVirtualInterfaceResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

@@ -101,3 +101,6 @@ void ResolveRoomResponsePrivate::ResolveRoomResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ResolveRoomResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

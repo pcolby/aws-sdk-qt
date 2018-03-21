@@ -123,3 +123,6 @@ DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPri
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

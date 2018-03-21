@@ -123,3 +123,6 @@ ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

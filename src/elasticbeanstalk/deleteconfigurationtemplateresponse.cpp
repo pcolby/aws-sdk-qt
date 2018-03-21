@@ -101,3 +101,6 @@ void DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteConfigurationTemplateResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

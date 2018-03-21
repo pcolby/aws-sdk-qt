@@ -123,3 +123,6 @@ VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

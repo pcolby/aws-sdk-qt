@@ -123,3 +123,6 @@ UpdateRuleRequestPrivate::UpdateRuleRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

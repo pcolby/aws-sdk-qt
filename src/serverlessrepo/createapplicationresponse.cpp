@@ -101,3 +101,6 @@ void CreateApplicationResponsePrivate::CreateApplicationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateApplicationResponse"));
     /// @todo
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

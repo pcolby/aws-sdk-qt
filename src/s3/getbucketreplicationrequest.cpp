@@ -123,3 +123,6 @@ GetBucketReplicationRequestPrivate::GetBucketReplicationRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

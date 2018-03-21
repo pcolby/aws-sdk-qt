@@ -101,3 +101,6 @@ void DeleteBotVersionResponsePrivate::DeleteBotVersionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteBotVersionResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

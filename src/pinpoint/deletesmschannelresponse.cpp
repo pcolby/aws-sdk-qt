@@ -101,3 +101,6 @@ void DeleteSmsChannelResponsePrivate::DeleteSmsChannelResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteSmsChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

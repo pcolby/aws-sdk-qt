@@ -101,3 +101,6 @@ void DescribeAssessmentRunsResponsePrivate::DescribeAssessmentRunsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeAssessmentRunsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

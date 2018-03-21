@@ -101,3 +101,6 @@ void DescribeEventConfigurationsResponsePrivate::DescribeEventConfigurationsResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

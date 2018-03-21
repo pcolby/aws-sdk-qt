@@ -101,3 +101,6 @@ void DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteIndexFieldResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

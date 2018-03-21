@@ -101,3 +101,6 @@ void GetApnsVoipSandboxChannelResponsePrivate::GetApnsVoipSandboxChannelResponse
     Q_ASSERT(xml.name() == QLatin1String("GetApnsVoipSandboxChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

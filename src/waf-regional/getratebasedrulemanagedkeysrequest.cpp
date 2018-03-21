@@ -123,3 +123,6 @@ GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPri
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

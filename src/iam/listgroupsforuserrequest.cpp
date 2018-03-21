@@ -123,3 +123,6 @@ ListGroupsForUserRequestPrivate::ListGroupsForUserRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

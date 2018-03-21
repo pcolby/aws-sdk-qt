@@ -123,3 +123,6 @@ GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
 {
 
 }
+
+} // namespace CostExplorer
+} // namespace AWS

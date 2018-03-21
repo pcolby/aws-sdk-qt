@@ -101,3 +101,6 @@ void DeleteTemplateResponsePrivate::DeleteTemplateResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteTemplateResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

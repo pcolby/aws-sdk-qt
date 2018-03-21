@@ -101,3 +101,6 @@ void DescribeConfigurationsResponsePrivate::DescribeConfigurationsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

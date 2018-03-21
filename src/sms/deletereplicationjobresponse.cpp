@@ -101,3 +101,6 @@ void DeleteReplicationJobResponsePrivate::DeleteReplicationJobResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationJobResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

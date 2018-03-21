@@ -101,3 +101,6 @@ void GetVaultAccessPolicyResponsePrivate::GetVaultAccessPolicyResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetVaultAccessPolicyResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

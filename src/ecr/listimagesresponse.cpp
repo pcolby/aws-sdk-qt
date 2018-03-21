@@ -101,3 +101,6 @@ void ListImagesResponsePrivate::ListImagesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListImagesResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

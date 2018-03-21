@@ -123,3 +123,6 @@ ListGroupVersionsRequestPrivate::ListGroupVersionsRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

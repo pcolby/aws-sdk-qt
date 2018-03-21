@@ -123,3 +123,6 @@ DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

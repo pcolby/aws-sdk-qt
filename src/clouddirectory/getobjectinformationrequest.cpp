@@ -123,3 +123,6 @@ GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

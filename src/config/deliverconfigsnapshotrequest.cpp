@@ -123,3 +123,6 @@ DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

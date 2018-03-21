@@ -101,3 +101,6 @@ void AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecuri
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeClusterSecurityGroupIngressResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

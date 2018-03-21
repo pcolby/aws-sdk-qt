@@ -101,3 +101,6 @@ void CreateServerResponsePrivate::CreateServerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateServerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

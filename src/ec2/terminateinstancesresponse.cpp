@@ -101,3 +101,6 @@ void TerminateInstancesResponsePrivate::TerminateInstancesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("TerminateInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

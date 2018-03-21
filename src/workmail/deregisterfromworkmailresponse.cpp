@@ -101,3 +101,6 @@ void DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeregisterFromWorkMailResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

@@ -123,3 +123,6 @@ DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

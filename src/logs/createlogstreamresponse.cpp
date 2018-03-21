@@ -101,3 +101,6 @@ void CreateLogStreamResponsePrivate::CreateLogStreamResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateLogStreamResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

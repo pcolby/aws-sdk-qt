@@ -101,3 +101,6 @@ void ListPresetsResponsePrivate::ListPresetsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListPresetsResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

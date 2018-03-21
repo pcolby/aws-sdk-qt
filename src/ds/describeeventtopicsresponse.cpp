@@ -101,3 +101,6 @@ void DescribeEventTopicsResponsePrivate::DescribeEventTopicsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventTopicsResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
 {
 
 }
+
+} // namespace Firehose
+} // namespace AWS

@@ -123,3 +123,6 @@ BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPri
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

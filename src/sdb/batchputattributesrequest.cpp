@@ -123,3 +123,6 @@ BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
 {
 
 }
+
+} // namespace SimpleDB
+} // namespace AWS

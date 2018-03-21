@@ -101,3 +101,6 @@ void ListJobsResponsePrivate::ListJobsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListJobsResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

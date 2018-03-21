@@ -101,3 +101,6 @@ void CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreatePlatformEndpointResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

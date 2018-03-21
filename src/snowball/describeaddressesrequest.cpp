@@ -123,3 +123,6 @@ DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
 {
 
 }
+
+} // namespace Snowball
+} // namespace AWS

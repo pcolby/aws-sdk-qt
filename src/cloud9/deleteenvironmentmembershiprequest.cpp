@@ -123,3 +123,6 @@ DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPri
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

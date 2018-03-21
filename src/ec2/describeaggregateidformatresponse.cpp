@@ -101,3 +101,6 @@ void DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeAggregateIdFormatResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

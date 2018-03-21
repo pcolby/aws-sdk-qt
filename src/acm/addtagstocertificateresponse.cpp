@@ -101,3 +101,6 @@ void AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("AddTagsToCertificateResponse"));
     /// @todo
 }
+
+} // namespace ACM
+} // namespace AWS

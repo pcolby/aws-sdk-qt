@@ -123,3 +123,6 @@ SetPlatformApplicationAttributesRequestPrivate::SetPlatformApplicationAttributes
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

@@ -123,3 +123,6 @@ ConfirmForgotPasswordRequestPrivate::ConfirmForgotPasswordRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

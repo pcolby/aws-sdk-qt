@@ -123,3 +123,6 @@ AssociateVirtualInterfaceRequestPrivate::AssociateVirtualInterfaceRequestPrivate
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

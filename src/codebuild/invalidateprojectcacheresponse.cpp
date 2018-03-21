@@ -101,3 +101,6 @@ void InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("InvalidateProjectCacheResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

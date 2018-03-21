@@ -123,3 +123,6 @@ DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

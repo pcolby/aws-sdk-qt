@@ -123,3 +123,6 @@ PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecuti
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

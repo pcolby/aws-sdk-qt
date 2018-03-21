@@ -123,3 +123,6 @@ DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

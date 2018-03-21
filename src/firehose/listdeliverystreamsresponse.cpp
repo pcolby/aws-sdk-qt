@@ -101,3 +101,6 @@ void ListDeliveryStreamsResponsePrivate::ListDeliveryStreamsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListDeliveryStreamsResponse"));
     /// @todo
 }
+
+} // namespace Firehose
+} // namespace AWS

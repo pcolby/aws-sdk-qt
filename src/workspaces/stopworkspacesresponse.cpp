@@ -101,3 +101,6 @@ void StopWorkspacesResponsePrivate::StopWorkspacesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("StopWorkspacesResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

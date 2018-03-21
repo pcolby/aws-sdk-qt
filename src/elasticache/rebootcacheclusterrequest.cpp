@@ -123,3 +123,6 @@ RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

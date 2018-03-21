@@ -123,3 +123,6 @@ DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
 {
 
 }
+
+} // namespace CodeBuild
+} // namespace AWS

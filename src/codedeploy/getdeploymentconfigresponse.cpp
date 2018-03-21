@@ -101,3 +101,6 @@ void GetDeploymentConfigResponsePrivate::GetDeploymentConfigResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetDeploymentConfigResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

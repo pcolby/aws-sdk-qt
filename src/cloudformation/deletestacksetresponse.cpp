@@ -101,3 +101,6 @@ void DeleteStackSetResponsePrivate::DeleteStackSetResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteStackSetResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

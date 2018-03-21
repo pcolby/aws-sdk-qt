@@ -123,3 +123,6 @@ ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

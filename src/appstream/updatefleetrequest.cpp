@@ -123,3 +123,6 @@ UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

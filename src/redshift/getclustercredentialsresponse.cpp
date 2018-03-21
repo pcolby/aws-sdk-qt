@@ -101,3 +101,6 @@ void GetClusterCredentialsResponsePrivate::GetClusterCredentialsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetClusterCredentialsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

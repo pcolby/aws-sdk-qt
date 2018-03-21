@@ -101,3 +101,6 @@ void ListPlatformVersionsResponsePrivate::ListPlatformVersionsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListPlatformVersionsResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

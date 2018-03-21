@@ -123,3 +123,6 @@ PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

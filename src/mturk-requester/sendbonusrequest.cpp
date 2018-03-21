@@ -123,3 +123,6 @@ SendBonusRequestPrivate::SendBonusRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequ
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

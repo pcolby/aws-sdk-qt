@@ -123,3 +123,6 @@ ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

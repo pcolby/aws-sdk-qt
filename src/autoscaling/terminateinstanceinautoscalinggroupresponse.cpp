@@ -101,3 +101,6 @@ void TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAuto
     Q_ASSERT(xml.name() == QLatin1String("TerminateInstanceInAutoScalingGroupResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

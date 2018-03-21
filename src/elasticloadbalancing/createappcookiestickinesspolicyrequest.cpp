@@ -123,3 +123,6 @@ CreateAppCookieStickinessPolicyRequestPrivate::CreateAppCookieStickinessPolicyRe
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

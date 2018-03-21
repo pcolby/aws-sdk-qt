@@ -101,3 +101,6 @@ void CreateCloudFrontOriginAccessIdentityResponsePrivate::CreateCloudFrontOrigin
     Q_ASSERT(xml.name() == QLatin1String("CreateCloudFrontOriginAccessIdentityResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

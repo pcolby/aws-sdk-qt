@@ -123,3 +123,6 @@ DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

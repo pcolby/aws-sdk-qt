@@ -123,3 +123,6 @@ PutConfigRuleRequestPrivate::PutConfigRuleRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

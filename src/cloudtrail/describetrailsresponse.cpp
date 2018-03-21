@@ -101,3 +101,6 @@ void DescribeTrailsResponsePrivate::DescribeTrailsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrailsResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

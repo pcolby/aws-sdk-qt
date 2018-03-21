@@ -101,3 +101,6 @@ void CreateFpgaImageResponsePrivate::CreateFpgaImageResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateFpgaImageResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

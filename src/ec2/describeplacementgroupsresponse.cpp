@@ -101,3 +101,6 @@ void DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribePlacementGroupsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ GetSdkRequestPrivate::GetSdkRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

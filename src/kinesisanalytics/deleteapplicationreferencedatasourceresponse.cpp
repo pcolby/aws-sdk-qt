@@ -101,3 +101,6 @@ void DeleteApplicationReferenceDataSourceResponsePrivate::DeleteApplicationRefer
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationReferenceDataSourceResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

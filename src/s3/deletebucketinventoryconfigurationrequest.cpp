@@ -123,3 +123,6 @@ DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigura
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

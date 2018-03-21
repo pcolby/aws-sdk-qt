@@ -123,3 +123,6 @@ DescribeIdentityUsageRequestPrivate::DescribeIdentityUsageRequestPrivate(
 {
 
 }
+
+} // namespace CognitoSync
+} // namespace AWS

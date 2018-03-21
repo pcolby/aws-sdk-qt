@@ -101,3 +101,6 @@ void PutActionRevisionResponsePrivate::PutActionRevisionResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("PutActionRevisionResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

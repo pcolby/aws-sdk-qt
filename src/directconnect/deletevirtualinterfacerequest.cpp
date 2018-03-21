@@ -123,3 +123,6 @@ DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

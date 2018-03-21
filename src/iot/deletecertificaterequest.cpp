@@ -123,3 +123,6 @@ DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

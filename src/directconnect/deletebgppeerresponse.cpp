@@ -101,3 +101,6 @@ void DeleteBGPPeerResponsePrivate::DeleteBGPPeerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteBGPPeerResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

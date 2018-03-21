@@ -123,3 +123,6 @@ DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPri
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

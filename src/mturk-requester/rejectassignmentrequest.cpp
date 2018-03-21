@@ -123,3 +123,6 @@ RejectAssignmentRequestPrivate::RejectAssignmentRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

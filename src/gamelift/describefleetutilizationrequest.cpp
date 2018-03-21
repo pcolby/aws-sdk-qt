@@ -123,3 +123,6 @@ DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

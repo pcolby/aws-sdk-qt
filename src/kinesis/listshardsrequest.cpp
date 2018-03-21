@@ -123,3 +123,6 @@ ListShardsRequestPrivate::ListShardsRequestPrivate(
 {
 
 }
+
+} // namespace Kinesis
+} // namespace AWS

@@ -123,3 +123,6 @@ GetTagValuesRequestPrivate::GetTagValuesRequestPrivate(
 {
 
 }
+
+} // namespace ResourceGroupsTaggingAPI
+} // namespace AWS

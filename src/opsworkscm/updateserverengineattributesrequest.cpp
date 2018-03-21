@@ -123,3 +123,6 @@ UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestP
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

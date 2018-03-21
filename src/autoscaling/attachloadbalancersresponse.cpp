@@ -101,3 +101,6 @@ void AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancersResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

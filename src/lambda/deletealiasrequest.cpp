@@ -123,3 +123,6 @@ DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
 {
 
 }
+
+} // namespace Lambda
+} // namespace AWS

@@ -123,3 +123,6 @@ ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

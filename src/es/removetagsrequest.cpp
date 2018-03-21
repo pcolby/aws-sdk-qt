@@ -123,3 +123,6 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

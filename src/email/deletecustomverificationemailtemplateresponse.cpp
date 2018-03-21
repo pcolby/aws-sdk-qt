@@ -101,3 +101,6 @@ void DeleteCustomVerificationEmailTemplateResponsePrivate::DeleteCustomVerificat
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomVerificationEmailTemplateResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

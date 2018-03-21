@@ -123,3 +123,6 @@ EnableStageTransitionRequestPrivate::EnableStageTransitionRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

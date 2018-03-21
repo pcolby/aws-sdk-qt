@@ -123,3 +123,6 @@ ListVolumesRequestPrivate::ListVolumesRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

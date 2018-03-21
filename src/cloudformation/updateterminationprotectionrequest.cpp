@@ -123,3 +123,6 @@ UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPri
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

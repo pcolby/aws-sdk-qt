@@ -101,3 +101,6 @@ void DeleteChangeSetResponsePrivate::DeleteChangeSetResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteChangeSetResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

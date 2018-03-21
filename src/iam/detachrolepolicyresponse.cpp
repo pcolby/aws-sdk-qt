@@ -101,3 +101,6 @@ void DetachRolePolicyResponsePrivate::DetachRolePolicyResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DetachRolePolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

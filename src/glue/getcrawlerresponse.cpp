@@ -101,3 +101,6 @@ void GetCrawlerResponsePrivate::GetCrawlerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetCrawlerResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

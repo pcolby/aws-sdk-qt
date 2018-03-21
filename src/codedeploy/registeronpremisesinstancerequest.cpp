@@ -123,3 +123,6 @@ RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPriva
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

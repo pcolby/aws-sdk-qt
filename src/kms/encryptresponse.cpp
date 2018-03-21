@@ -101,3 +101,6 @@ void EncryptResponsePrivate::EncryptResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("EncryptResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

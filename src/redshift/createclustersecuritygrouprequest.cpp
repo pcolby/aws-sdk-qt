@@ -123,3 +123,6 @@ CreateClusterSecurityGroupRequestPrivate::CreateClusterSecurityGroupRequestPriva
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void ModifyVolumeAttributeResponsePrivate::ModifyVolumeAttributeResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ModifyVolumeAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

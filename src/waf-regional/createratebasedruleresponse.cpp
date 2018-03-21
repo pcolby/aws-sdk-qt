@@ -101,3 +101,6 @@ void CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateRateBasedRuleResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

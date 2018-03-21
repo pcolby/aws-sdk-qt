@@ -123,3 +123,6 @@ SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

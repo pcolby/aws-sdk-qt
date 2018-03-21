@@ -101,3 +101,6 @@ void GenerateDataKeyResponsePrivate::GenerateDataKeyResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GenerateDataKeyResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

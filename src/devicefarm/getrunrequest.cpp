@@ -123,3 +123,6 @@ GetRunRequestPrivate::GetRunRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

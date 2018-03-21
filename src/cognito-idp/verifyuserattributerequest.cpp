@@ -123,3 +123,6 @@ VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

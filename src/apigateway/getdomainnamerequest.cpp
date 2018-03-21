@@ -123,3 +123,6 @@ GetDomainNameRequestPrivate::GetDomainNameRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

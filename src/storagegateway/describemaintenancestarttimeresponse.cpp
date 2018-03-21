@@ -101,3 +101,6 @@ void DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeMaintenanceStartTimeResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

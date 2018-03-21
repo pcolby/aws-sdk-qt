@@ -123,3 +123,6 @@ SearchFacesByImageRequestPrivate::SearchFacesByImageRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

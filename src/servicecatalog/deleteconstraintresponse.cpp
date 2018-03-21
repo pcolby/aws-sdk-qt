@@ -101,3 +101,6 @@ void DeleteConstraintResponsePrivate::DeleteConstraintResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteConstraintResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

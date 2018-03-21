@@ -101,3 +101,6 @@ void RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnap
     Q_ASSERT(xml.name() == QLatin1String("RestoreDBInstanceFromDBSnapshotResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

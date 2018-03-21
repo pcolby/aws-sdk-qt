@@ -123,3 +123,6 @@ DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

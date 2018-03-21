@@ -101,3 +101,6 @@ void EvaluateExpressionResponsePrivate::EvaluateExpressionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("EvaluateExpressionResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

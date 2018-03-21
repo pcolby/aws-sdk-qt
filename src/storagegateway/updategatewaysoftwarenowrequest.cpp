@@ -123,3 +123,6 @@ UpdateGatewaySoftwareNowRequestPrivate::UpdateGatewaySoftwareNowRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

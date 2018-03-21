@@ -123,3 +123,6 @@ GetDeviceRequestPrivate::GetDeviceRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBa
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

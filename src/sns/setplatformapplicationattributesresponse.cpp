@@ -101,3 +101,6 @@ void SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttr
     Q_ASSERT(xml.name() == QLatin1String("SetPlatformApplicationAttributesResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DisassociateFleetResponsePrivate::DisassociateFleetResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DisassociateFleetResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

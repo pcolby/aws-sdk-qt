@@ -123,3 +123,6 @@ DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPri
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

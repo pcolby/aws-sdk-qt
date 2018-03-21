@@ -123,3 +123,6 @@ GetRateBasedRuleRequestPrivate::GetRateBasedRuleRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

@@ -123,3 +123,6 @@ ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

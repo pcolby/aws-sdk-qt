@@ -123,3 +123,6 @@ PredictRequestPrivate::PredictRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

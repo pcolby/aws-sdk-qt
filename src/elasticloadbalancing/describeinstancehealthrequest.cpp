@@ -123,3 +123,6 @@ DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

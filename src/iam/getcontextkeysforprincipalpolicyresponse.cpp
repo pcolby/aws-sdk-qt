@@ -101,3 +101,6 @@ void GetContextKeysForPrincipalPolicyResponsePrivate::GetContextKeysForPrincipal
     Q_ASSERT(xml.name() == QLatin1String("GetContextKeysForPrincipalPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

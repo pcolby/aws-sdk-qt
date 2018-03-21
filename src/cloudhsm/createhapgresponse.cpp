@@ -101,3 +101,6 @@ void CreateHapgResponsePrivate::CreateHapgResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateHapgResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdenti
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityProviderByIdentifierResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

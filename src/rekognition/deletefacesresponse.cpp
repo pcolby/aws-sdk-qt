@@ -101,3 +101,6 @@ void DeleteFacesResponsePrivate::DeleteFacesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteFacesResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

@@ -101,3 +101,6 @@ void SetV2LoggingOptionsResponsePrivate::SetV2LoggingOptionsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("SetV2LoggingOptionsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

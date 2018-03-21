@@ -123,3 +123,6 @@ ListPresetsRequestPrivate::ListPresetsRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

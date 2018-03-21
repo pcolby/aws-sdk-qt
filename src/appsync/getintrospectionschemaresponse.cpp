@@ -101,3 +101,6 @@ void GetIntrospectionSchemaResponsePrivate::GetIntrospectionSchemaResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetIntrospectionSchemaResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

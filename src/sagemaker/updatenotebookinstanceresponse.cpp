@@ -101,3 +101,6 @@ void UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateNotebookInstanceResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeTapesResponsePrivate::DescribeTapesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeTapesResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void RevokeDBSecurityGroupIngressResponsePrivate::RevokeDBSecurityGroupIngressRe
     Q_ASSERT(xml.name() == QLatin1String("RevokeDBSecurityGroupIngressResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

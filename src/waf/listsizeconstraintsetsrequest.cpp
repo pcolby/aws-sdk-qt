@@ -123,3 +123,6 @@ ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

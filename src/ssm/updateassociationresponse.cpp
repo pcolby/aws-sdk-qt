@@ -101,3 +101,6 @@ void UpdateAssociationResponsePrivate::UpdateAssociationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateAssociationResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetParametersByPathResponsePrivate::GetParametersByPathResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("GetParametersByPathResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

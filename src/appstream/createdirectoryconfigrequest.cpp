@@ -123,3 +123,6 @@ CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

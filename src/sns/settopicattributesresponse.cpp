@@ -101,3 +101,6 @@ void SetTopicAttributesResponsePrivate::SetTopicAttributesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("SetTopicAttributesResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

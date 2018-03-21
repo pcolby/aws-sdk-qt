@@ -101,3 +101,6 @@ void DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingProcessTypesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

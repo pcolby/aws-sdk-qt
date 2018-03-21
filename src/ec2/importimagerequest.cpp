@@ -123,3 +123,6 @@ ImportImageRequestPrivate::ImportImageRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

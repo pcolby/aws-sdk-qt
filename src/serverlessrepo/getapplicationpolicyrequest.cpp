@@ -123,3 +123,6 @@ GetApplicationPolicyRequestPrivate::GetApplicationPolicyRequestPrivate(
 {
 
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

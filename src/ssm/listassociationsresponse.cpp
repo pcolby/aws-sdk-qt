@@ -101,3 +101,6 @@ void ListAssociationsResponsePrivate::ListAssociationsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListAssociationsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

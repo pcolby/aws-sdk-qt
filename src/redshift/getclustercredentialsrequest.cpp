@@ -123,3 +123,6 @@ GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

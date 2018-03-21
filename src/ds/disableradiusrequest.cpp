@@ -123,3 +123,6 @@ DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

@@ -101,3 +101,6 @@ void BatchDeleteBuildsResponsePrivate::BatchDeleteBuildsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteBuildsResponse"));
     /// @todo
 }
+
+} // namespace CodeBuild
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateScalingPlanResponsePrivate::CreateScalingPlanResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateScalingPlanResponse"));
     /// @todo
 }
+
+} // namespace AutoScalingPlans
+} // namespace AWS

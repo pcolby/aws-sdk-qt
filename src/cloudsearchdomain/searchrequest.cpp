@@ -123,3 +123,6 @@ SearchRequestPrivate::SearchRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearchDomain
+} // namespace AWS

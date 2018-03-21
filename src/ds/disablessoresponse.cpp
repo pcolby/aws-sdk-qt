@@ -101,3 +101,6 @@ void DisableSsoResponsePrivate::DisableSsoResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DisableSsoResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHIT
     Q_ASSERT(xml.name() == QLatin1String("ListReviewPolicyResultsForHITResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -101,3 +101,6 @@ void ResendConfirmationCodeResponsePrivate::ResendConfirmationCodeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ResendConfirmationCodeResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

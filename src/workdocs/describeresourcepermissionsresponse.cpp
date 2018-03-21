@@ -101,3 +101,6 @@ void DescribeResourcePermissionsResponsePrivate::DescribeResourcePermissionsResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourcePermissionsResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

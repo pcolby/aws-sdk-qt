@@ -101,3 +101,6 @@ void DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeProductAsAdminResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

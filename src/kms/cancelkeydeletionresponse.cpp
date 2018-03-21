@@ -101,3 +101,6 @@ void CancelKeyDeletionResponsePrivate::CancelKeyDeletionResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CancelKeyDeletionResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

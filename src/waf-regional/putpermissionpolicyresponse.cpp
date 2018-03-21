@@ -101,3 +101,6 @@ void PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("PutPermissionPolicyResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

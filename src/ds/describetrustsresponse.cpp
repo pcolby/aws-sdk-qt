@@ -101,3 +101,6 @@ void DescribeTrustsResponsePrivate::DescribeTrustsResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeTrustsResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

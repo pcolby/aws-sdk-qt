@@ -123,3 +123,6 @@ DescribeVolumeStatusRequestPrivate::DescribeVolumeStatusRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

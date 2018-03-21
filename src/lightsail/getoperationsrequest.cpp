@@ -123,3 +123,6 @@ GetOperationsRequestPrivate::GetOperationsRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

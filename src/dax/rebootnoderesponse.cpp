@@ -101,3 +101,6 @@ void RebootNodeResponsePrivate::RebootNodeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RebootNodeResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

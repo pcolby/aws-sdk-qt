@@ -123,3 +123,6 @@ CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

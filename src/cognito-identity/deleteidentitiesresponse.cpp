@@ -101,3 +101,6 @@ void DeleteIdentitiesResponsePrivate::DeleteIdentitiesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteIdentitiesResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

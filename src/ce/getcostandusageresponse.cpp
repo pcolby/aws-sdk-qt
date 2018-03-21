@@ -101,3 +101,6 @@ void GetCostAndUsageResponsePrivate::GetCostAndUsageResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetCostAndUsageResponse"));
     /// @todo
 }
+
+} // namespace CostExplorer
+} // namespace AWS

@@ -123,3 +123,6 @@ ListJobExecutionsForThingRequestPrivate::ListJobExecutionsForThingRequestPrivate
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

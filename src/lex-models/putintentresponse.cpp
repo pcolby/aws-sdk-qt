@@ -101,3 +101,6 @@ void PutIntentResponsePrivate::PutIntentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutIntentResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

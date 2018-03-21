@@ -123,3 +123,6 @@ CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

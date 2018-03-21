@@ -101,3 +101,6 @@ void ModifyEndpointResponsePrivate::ModifyEndpointResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ModifyEndpointResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

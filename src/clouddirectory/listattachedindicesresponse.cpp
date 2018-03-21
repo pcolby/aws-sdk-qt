@@ -101,3 +101,6 @@ void ListAttachedIndicesResponsePrivate::ListAttachedIndicesResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListAttachedIndicesResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

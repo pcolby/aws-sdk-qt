@@ -101,3 +101,6 @@ void ListLunaClientsResponsePrivate::ListLunaClientsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListLunaClientsResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

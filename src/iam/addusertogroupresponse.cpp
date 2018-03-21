@@ -101,3 +101,6 @@ void AddUserToGroupResponsePrivate::AddUserToGroupResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("AddUserToGroupResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

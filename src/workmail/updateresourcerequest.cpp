@@ -123,3 +123,6 @@ UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

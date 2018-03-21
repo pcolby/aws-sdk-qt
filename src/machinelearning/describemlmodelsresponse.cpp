@@ -101,3 +101,6 @@ void DescribeMLModelsResponsePrivate::DescribeMLModelsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeMLModelsResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

@@ -123,3 +123,6 @@ AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSour
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

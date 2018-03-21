@@ -123,3 +123,6 @@ GetBucketPolicyRequestPrivate::GetBucketPolicyRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

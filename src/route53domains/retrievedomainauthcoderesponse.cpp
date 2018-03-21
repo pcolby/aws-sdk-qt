@@ -101,3 +101,6 @@ void RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("RetrieveDomainAuthCodeResponse"));
     /// @todo
 }
+
+} // namespace Route53Domains
+} // namespace AWS

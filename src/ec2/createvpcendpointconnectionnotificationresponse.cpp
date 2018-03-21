@@ -101,3 +101,6 @@ void CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointCo
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcEndpointConnectionNotificationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetDashboardResponsePrivate::GetDashboardResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetDashboardResponse"));
     /// @todo
 }
+
+} // namespace CloudWatch
+} // namespace AWS

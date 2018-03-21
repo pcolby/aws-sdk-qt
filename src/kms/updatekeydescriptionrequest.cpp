@@ -123,3 +123,6 @@ UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

@@ -123,3 +123,6 @@ ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateSubnetGroupResponsePrivate::CreateSubnetGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("CreateSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

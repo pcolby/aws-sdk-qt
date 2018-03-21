@@ -101,3 +101,6 @@ void GetPipelineExecutionResponsePrivate::GetPipelineExecutionResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetPipelineExecutionResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

@@ -123,3 +123,6 @@ ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

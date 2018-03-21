@@ -101,3 +101,6 @@ void GetModelsResponsePrivate::GetModelsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetModelsResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

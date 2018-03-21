@@ -101,3 +101,6 @@ void DeleteThingResponsePrivate::DeleteThingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

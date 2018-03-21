@@ -101,3 +101,6 @@ void PutRepositoryTriggersResponsePrivate::PutRepositoryTriggersResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("PutRepositoryTriggersResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

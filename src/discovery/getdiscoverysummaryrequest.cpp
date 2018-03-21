@@ -123,3 +123,6 @@ GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

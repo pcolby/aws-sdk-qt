@@ -101,3 +101,6 @@ void GetCommentResponsePrivate::GetCommentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetCommentResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

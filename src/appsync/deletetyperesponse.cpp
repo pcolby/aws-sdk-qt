@@ -101,3 +101,6 @@ void DeleteTypeResponsePrivate::DeleteTypeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteTypeResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

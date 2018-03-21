@@ -123,3 +123,6 @@ CreateStackSetRequestPrivate::CreateStackSetRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

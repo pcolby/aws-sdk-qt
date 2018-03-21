@@ -101,3 +101,6 @@ void GetLoginProfileResponsePrivate::GetLoginProfileResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("GetLoginProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

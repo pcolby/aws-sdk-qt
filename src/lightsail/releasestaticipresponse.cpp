@@ -101,3 +101,6 @@ void ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ReleaseStaticIpResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

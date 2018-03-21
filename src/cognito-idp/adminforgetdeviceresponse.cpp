@@ -101,3 +101,6 @@ void AdminForgetDeviceResponsePrivate::AdminForgetDeviceResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("AdminForgetDeviceResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

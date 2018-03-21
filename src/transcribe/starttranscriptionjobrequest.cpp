@@ -123,3 +123,6 @@ StartTranscriptionJobRequestPrivate::StartTranscriptionJobRequestPrivate(
 {
 
 }
+
+} // namespace TranscribeService
+} // namespace AWS

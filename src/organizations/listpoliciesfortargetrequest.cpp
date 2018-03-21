@@ -123,3 +123,6 @@ ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

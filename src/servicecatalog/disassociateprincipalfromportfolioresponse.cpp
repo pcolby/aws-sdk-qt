@@ -101,3 +101,6 @@ void DisassociatePrincipalFromPortfolioResponsePrivate::DisassociatePrincipalFro
     Q_ASSERT(xml.name() == QLatin1String("DisassociatePrincipalFromPortfolioResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

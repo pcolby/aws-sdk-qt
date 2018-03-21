@@ -101,3 +101,6 @@ void BuildSuggestersResponsePrivate::BuildSuggestersResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("BuildSuggestersResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

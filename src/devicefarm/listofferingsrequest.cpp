@@ -123,3 +123,6 @@ ListOfferingsRequestPrivate::ListOfferingsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

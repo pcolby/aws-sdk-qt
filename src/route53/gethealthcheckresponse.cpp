@@ -101,3 +101,6 @@ void GetHealthCheckResponsePrivate::GetHealthCheckResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetHealthCheckResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

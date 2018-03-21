@@ -123,3 +123,6 @@ GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

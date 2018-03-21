@@ -101,3 +101,6 @@ void DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeregisterJobDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

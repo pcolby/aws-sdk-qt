@@ -123,3 +123,6 @@ DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
 {
 
 }
+
+} // namespace DAX
+} // namespace AWS

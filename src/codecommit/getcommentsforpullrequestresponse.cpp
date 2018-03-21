@@ -101,3 +101,6 @@ void GetCommentsForPullRequestResponsePrivate::GetCommentsForPullRequestResponse
     Q_ASSERT(xml.name() == QLatin1String("GetCommentsForPullRequestResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

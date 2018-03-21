@@ -123,3 +123,6 @@ GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
 {
 
 }
+
+} // namespace STS
+} // namespace AWS

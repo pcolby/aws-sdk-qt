@@ -123,3 +123,6 @@ GetRepositoryRequestPrivate::GetRepositoryRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

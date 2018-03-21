@@ -123,3 +123,6 @@ DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

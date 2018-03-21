@@ -101,3 +101,6 @@ void UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("UpdateFindingsFeedbackResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

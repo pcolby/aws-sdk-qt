@@ -123,3 +123,6 @@ ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

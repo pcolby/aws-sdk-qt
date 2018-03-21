@@ -101,3 +101,6 @@ void DeleteBucketInventoryConfigurationResponsePrivate::DeleteBucketInventoryCon
     Q_ASSERT(xml.name() == QLatin1String("DeleteBucketInventoryConfigurationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

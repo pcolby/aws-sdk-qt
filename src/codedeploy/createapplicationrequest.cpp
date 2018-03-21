@@ -123,3 +123,6 @@ CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

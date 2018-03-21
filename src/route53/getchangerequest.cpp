@@ -123,3 +123,6 @@ GetChangeRequestPrivate::GetChangeRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

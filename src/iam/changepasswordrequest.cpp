@@ -123,3 +123,6 @@ ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

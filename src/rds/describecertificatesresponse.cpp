@@ -101,3 +101,6 @@ void DescribeCertificatesResponsePrivate::DescribeCertificatesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeCertificatesResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

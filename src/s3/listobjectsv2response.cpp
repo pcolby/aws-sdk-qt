@@ -101,3 +101,6 @@ void ListObjectsV2ResponsePrivate::ListObjectsV2Response(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListObjectsV2Response"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

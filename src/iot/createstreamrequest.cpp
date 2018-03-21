@@ -123,3 +123,6 @@ CreateStreamRequestPrivate::CreateStreamRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

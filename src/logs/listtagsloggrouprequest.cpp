@@ -123,3 +123,6 @@ ListTagsLogGroupRequestPrivate::ListTagsLogGroupRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

@@ -123,3 +123,6 @@ MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardReques
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

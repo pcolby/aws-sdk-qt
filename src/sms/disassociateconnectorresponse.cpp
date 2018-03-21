@@ -101,3 +101,6 @@ void DisassociateConnectorResponsePrivate::DisassociateConnectorResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DisassociateConnectorResponse"));
     /// @todo
 }
+
+} // namespace SMS
+} // namespace AWS

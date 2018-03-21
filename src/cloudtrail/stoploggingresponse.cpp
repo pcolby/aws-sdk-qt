@@ -101,3 +101,6 @@ void StopLoggingResponsePrivate::StopLoggingResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopLoggingResponse"));
     /// @todo
 }
+
+} // namespace CloudTrail
+} // namespace AWS

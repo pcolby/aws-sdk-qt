@@ -123,3 +123,6 @@ AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

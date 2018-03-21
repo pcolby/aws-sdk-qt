@@ -101,3 +101,6 @@ void CreateDBClusterParameterGroupResponsePrivate::CreateDBClusterParameterGroup
     Q_ASSERT(xml.name() == QLatin1String("CreateDBClusterParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

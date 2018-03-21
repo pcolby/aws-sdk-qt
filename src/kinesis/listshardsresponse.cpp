@@ -101,3 +101,6 @@ void ListShardsResponsePrivate::ListShardsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListShardsResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

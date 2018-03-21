@@ -123,3 +123,6 @@ AttachTypedLinkRequestPrivate::AttachTypedLinkRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

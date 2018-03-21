@@ -101,3 +101,6 @@ void DeleteThreatIntelSetResponsePrivate::DeleteThreatIntelSetResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteThreatIntelSetResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

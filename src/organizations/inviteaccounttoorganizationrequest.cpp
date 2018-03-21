@@ -123,3 +123,6 @@ InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPri
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

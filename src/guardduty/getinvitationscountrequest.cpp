@@ -123,3 +123,6 @@ GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

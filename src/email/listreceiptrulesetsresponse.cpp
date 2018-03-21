@@ -101,3 +101,6 @@ void ListReceiptRuleSetsResponsePrivate::ListReceiptRuleSetsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ListReceiptRuleSetsResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

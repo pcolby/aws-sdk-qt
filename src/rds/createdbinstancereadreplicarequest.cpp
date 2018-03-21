@@ -123,3 +123,6 @@ CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPri
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

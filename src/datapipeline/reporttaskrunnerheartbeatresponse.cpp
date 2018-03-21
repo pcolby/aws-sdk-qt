@@ -101,3 +101,6 @@ void ReportTaskRunnerHeartbeatResponsePrivate::ReportTaskRunnerHeartbeatResponse
     Q_ASSERT(xml.name() == QLatin1String("ReportTaskRunnerHeartbeatResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

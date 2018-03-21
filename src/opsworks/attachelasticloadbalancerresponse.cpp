@@ -101,3 +101,6 @@ void AttachElasticLoadBalancerResponsePrivate::AttachElasticLoadBalancerResponse
     Q_ASSERT(xml.name() == QLatin1String("AttachElasticLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -123,3 +123,6 @@ SearchRoomsRequestPrivate::SearchRoomsRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

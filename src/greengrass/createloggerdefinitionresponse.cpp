@@ -101,3 +101,6 @@ void CreateLoggerDefinitionResponsePrivate::CreateLoggerDefinitionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateLoggerDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

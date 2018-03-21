@@ -101,3 +101,6 @@ void CreateLaunchConfigurationResponsePrivate::CreateLaunchConfigurationResponse
     Q_ASSERT(xml.name() == QLatin1String("CreateLaunchConfigurationResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

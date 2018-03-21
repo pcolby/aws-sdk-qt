@@ -101,3 +101,6 @@ void CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CreateReceiptFilterResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

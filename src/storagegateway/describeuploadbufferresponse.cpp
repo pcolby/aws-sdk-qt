@@ -101,3 +101,6 @@ void DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeUploadBufferResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

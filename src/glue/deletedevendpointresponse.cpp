@@ -101,3 +101,6 @@ void DeleteDevEndpointResponsePrivate::DeleteDevEndpointResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteDevEndpointResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

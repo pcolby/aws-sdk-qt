@@ -123,3 +123,6 @@ GetLoadBalancerRequestPrivate::GetLoadBalancerRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

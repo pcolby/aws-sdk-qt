@@ -123,3 +123,6 @@ ListOfferingPromotionsRequestPrivate::ListOfferingPromotionsRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

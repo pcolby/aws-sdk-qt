@@ -101,3 +101,6 @@ void ListApplicationsResponsePrivate::ListApplicationsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListApplicationsResponse"));
     /// @todo
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

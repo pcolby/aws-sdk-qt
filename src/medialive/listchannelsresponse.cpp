@@ -101,3 +101,6 @@ void ListChannelsResponsePrivate::ListChannelsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListChannelsResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

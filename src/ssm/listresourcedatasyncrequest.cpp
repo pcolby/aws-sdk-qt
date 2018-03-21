@@ -123,3 +123,6 @@ ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

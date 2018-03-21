@@ -101,3 +101,6 @@ void SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("SignalWorkflowExecutionResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

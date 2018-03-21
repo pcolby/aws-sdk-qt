@@ -101,3 +101,6 @@ void StopTrainingJobResponsePrivate::StopTrainingJobResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("StopTrainingJobResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

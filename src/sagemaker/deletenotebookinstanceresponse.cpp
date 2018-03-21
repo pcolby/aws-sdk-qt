@@ -101,3 +101,6 @@ void DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteNotebookInstanceResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

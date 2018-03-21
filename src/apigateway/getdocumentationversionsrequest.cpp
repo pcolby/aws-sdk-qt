@@ -123,3 +123,6 @@ GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

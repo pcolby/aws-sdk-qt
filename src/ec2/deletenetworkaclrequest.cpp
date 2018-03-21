@@ -123,3 +123,6 @@ DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

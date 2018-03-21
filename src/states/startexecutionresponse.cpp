@@ -101,3 +101,6 @@ void StartExecutionResponsePrivate::StartExecutionResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("StartExecutionResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

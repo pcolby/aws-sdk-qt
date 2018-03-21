@@ -123,3 +123,6 @@ TestMetricFilterRequestPrivate::TestMetricFilterRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

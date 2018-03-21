@@ -101,3 +101,6 @@ void GetChangeTokenStatusResponsePrivate::GetChangeTokenStatusResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetChangeTokenStatusResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

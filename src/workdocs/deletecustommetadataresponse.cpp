@@ -101,3 +101,6 @@ void DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteCustomMetadataResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

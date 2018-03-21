@@ -123,3 +123,6 @@ DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
 {
 
 }
+
+} // namespace SimpleDB
+} // namespace AWS

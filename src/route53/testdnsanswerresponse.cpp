@@ -101,3 +101,6 @@ void TestDNSAnswerResponsePrivate::TestDNSAnswerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TestDNSAnswerResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

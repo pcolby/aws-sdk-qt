@@ -101,3 +101,6 @@ void DescribeDBClusterParametersResponsePrivate::DescribeDBClusterParametersResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBClusterParametersResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

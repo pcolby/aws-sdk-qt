@@ -123,3 +123,6 @@ GetHealthCheckStatusRequestPrivate::GetHealthCheckStatusRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

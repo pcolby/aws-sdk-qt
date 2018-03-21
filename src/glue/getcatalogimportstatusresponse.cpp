@@ -101,3 +101,6 @@ void GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetCatalogImportStatusResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

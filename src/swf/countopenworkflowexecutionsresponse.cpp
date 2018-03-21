@@ -101,3 +101,6 @@ void CountOpenWorkflowExecutionsResponsePrivate::CountOpenWorkflowExecutionsResp
     Q_ASSERT(xml.name() == QLatin1String("CountOpenWorkflowExecutionsResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

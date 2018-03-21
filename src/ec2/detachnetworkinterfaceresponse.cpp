@@ -101,3 +101,6 @@ void DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DetachNetworkInterfaceResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

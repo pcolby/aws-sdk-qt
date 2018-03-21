@@ -123,3 +123,6 @@ DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

@@ -101,3 +101,6 @@ void DisassociateVPCFromHostedZoneResponsePrivate::DisassociateVPCFromHostedZone
     Q_ASSERT(xml.name() == QLatin1String("DisassociateVPCFromHostedZoneResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

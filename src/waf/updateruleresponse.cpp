@@ -101,3 +101,6 @@ void UpdateRuleResponsePrivate::UpdateRuleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateRuleResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

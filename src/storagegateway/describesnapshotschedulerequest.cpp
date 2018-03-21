@@ -123,3 +123,6 @@ DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateTopicResponsePrivate::CreateTopicResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateTopicResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteBrokerResponsePrivate::DeleteBrokerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteBrokerResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

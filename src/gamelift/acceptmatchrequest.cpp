@@ -123,3 +123,6 @@ AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

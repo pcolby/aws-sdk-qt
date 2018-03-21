@@ -101,3 +101,6 @@ void CopyClusterSnapshotResponsePrivate::CopyClusterSnapshotResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CopyClusterSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

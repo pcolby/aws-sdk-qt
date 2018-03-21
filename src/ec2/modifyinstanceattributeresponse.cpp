@@ -101,3 +101,6 @@ void ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ModifyInstanceAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

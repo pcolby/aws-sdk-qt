@@ -101,3 +101,6 @@ void UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourc
     Q_ASSERT(xml.name() == QLatin1String("UpdateApplicationResourceLifecycleResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

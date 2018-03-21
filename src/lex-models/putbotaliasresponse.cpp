@@ -101,3 +101,6 @@ void PutBotAliasResponsePrivate::PutBotAliasResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutBotAliasResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

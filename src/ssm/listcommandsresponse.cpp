@@ -101,3 +101,6 @@ void ListCommandsResponsePrivate::ListCommandsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListCommandsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

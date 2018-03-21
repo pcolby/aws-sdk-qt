@@ -123,3 +123,6 @@ SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

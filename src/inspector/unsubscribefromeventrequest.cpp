@@ -123,3 +123,6 @@ UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

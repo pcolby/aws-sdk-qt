@@ -101,3 +101,6 @@ void GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetAuthorizationTokenResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

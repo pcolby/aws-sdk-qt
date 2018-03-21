@@ -123,3 +123,6 @@ ListServicesRequestPrivate::ListServicesRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

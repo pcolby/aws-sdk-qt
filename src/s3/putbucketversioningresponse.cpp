@@ -101,3 +101,6 @@ void PutBucketVersioningResponsePrivate::PutBucketVersioningResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("PutBucketVersioningResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

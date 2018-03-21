@@ -123,3 +123,6 @@ CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

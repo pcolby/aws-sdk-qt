@@ -101,3 +101,6 @@ void DescribeReservedNodeOfferingsResponsePrivate::DescribeReservedNodeOfferings
     Q_ASSERT(xml.name() == QLatin1String("DescribeReservedNodeOfferingsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

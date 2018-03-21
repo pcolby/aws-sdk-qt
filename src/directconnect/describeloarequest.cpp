@@ -123,3 +123,6 @@ DescribeLoaRequestPrivate::DescribeLoaRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

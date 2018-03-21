@@ -101,3 +101,6 @@ void CreateCacheSecurityGroupResponsePrivate::CreateCacheSecurityGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateCacheSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

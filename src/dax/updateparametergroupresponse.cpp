@@ -101,3 +101,6 @@ void UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("UpdateParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

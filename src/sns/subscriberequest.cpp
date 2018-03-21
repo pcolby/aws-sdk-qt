@@ -123,3 +123,6 @@ SubscribeRequestPrivate::SubscribeRequestPrivate(
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

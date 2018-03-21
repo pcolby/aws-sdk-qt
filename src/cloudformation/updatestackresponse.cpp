@@ -101,3 +101,6 @@ void UpdateStackResponsePrivate::UpdateStackResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateStackResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

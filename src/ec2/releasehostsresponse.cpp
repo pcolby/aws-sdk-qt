@@ -101,3 +101,6 @@ void ReleaseHostsResponsePrivate::ReleaseHostsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ReleaseHostsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteFolderContentsRequestPrivate::DeleteFolderContentsRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

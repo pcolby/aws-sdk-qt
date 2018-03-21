@@ -101,3 +101,6 @@ void GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetSnapshotLimitsResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

@@ -123,3 +123,6 @@ StartChannelRequestPrivate::StartChannelRequestPrivate(
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

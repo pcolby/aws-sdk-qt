@@ -101,3 +101,6 @@ void ListCertificatesByCAResponsePrivate::ListCertificatesByCAResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListCertificatesByCAResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

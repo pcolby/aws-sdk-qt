@@ -101,3 +101,6 @@ void DisableKeyResponsePrivate::DisableKeyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DisableKeyResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

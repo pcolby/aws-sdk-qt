@@ -101,3 +101,6 @@ void DeleteThingShadowResponsePrivate::DeleteThingShadowResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteThingShadowResponse"));
     /// @todo
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

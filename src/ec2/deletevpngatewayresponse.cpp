@@ -101,3 +101,6 @@ void DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteVpnGatewayResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

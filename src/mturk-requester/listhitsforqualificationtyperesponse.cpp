@@ -101,3 +101,6 @@ void ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeRe
     Q_ASSERT(xml.name() == QLatin1String("ListHITsForQualificationTypeResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

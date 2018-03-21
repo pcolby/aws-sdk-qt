@@ -101,3 +101,6 @@ void DetectEntitiesResponsePrivate::DetectEntitiesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DetectEntitiesResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

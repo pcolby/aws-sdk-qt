@@ -101,3 +101,6 @@ void PutTargetsResponsePrivate::PutTargetsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutTargetsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchEvents
+} // namespace AWS

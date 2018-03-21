@@ -123,3 +123,6 @@ CreateUserDefinedFunctionRequestPrivate::CreateUserDefinedFunctionRequestPrivate
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

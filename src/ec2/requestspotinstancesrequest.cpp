@@ -123,3 +123,6 @@ RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

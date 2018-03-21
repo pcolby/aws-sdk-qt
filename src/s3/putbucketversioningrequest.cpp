@@ -123,3 +123,6 @@ PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

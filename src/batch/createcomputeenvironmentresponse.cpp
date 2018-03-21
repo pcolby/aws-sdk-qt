@@ -101,3 +101,6 @@ void CreateComputeEnvironmentResponsePrivate::CreateComputeEnvironmentResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateComputeEnvironmentResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

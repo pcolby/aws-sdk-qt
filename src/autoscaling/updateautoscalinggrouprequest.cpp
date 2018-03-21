@@ -123,3 +123,6 @@ UpdateAutoScalingGroupRequestPrivate::UpdateAutoScalingGroupRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

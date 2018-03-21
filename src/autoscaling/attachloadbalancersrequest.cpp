@@ -123,3 +123,6 @@ AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

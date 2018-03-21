@@ -101,3 +101,6 @@ void DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteAccountPasswordPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

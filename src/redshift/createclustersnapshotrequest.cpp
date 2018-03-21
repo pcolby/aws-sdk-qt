@@ -123,3 +123,6 @@ CreateClusterSnapshotRequestPrivate::CreateClusterSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

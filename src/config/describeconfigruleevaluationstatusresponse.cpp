@@ -101,3 +101,6 @@ void DescribeConfigRuleEvaluationStatusResponsePrivate::DescribeConfigRuleEvalua
     Q_ASSERT(xml.name() == QLatin1String("DescribeConfigRuleEvaluationStatusResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

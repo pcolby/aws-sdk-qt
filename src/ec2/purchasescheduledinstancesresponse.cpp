@@ -101,3 +101,6 @@ void PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesRespon
     Q_ASSERT(xml.name() == QLatin1String("PurchaseScheduledInstancesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

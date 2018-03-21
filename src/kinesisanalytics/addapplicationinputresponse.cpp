@@ -101,3 +101,6 @@ void AddApplicationInputResponsePrivate::AddApplicationInputResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("AddApplicationInputResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

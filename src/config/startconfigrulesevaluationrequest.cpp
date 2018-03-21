@@ -123,3 +123,6 @@ StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPriva
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

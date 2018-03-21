@@ -123,3 +123,6 @@ DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

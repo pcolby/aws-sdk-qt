@@ -123,3 +123,6 @@ DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDa
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

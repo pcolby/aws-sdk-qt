@@ -101,3 +101,6 @@ void RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganization
     Q_ASSERT(xml.name() == QLatin1String("RemoveAccountFromOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

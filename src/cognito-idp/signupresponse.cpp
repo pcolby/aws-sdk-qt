@@ -101,3 +101,6 @@ void SignUpResponsePrivate::SignUpResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SignUpResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

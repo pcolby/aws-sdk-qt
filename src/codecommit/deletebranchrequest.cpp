@@ -123,3 +123,6 @@ DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

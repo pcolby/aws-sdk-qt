@@ -101,3 +101,6 @@ void ListArtifactsResponsePrivate::ListArtifactsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListArtifactsResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

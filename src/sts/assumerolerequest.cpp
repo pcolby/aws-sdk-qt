@@ -123,3 +123,6 @@ AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
 {
 
 }
+
+} // namespace STS
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

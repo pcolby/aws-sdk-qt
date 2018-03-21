@@ -123,3 +123,6 @@ DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
 {
 
 }
+
+} // namespace Polly
+} // namespace AWS

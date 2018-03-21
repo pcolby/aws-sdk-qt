@@ -101,3 +101,6 @@ void DeleteAssociationResponsePrivate::DeleteAssociationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteAssociationResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

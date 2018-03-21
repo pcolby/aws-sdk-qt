@@ -101,3 +101,6 @@ void DeleteJobQueueResponsePrivate::DeleteJobQueueResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteJobQueueResponse"));
     /// @todo
 }
+
+} // namespace Batch
+} // namespace AWS

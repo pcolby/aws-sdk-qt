@@ -123,3 +123,6 @@ DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

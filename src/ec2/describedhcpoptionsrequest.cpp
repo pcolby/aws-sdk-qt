@@ -123,3 +123,6 @@ DescribeDhcpOptionsRequestPrivate::DescribeDhcpOptionsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

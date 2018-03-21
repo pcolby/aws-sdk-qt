@@ -123,3 +123,6 @@ DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsReques
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

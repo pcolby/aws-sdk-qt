@@ -123,3 +123,6 @@ DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateConfigurationTemplateResponsePrivate::CreateConfigurationTemplateResp
     Q_ASSERT(xml.name() == QLatin1String("CreateConfigurationTemplateResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

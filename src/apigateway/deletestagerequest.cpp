@@ -123,3 +123,6 @@ DeleteStageRequestPrivate::DeleteStageRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteDBClusterParameterGroupResponsePrivate::DeleteDBClusterParameterGroup
     Q_ASSERT(xml.name() == QLatin1String("DeleteDBClusterParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

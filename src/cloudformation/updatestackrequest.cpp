@@ -123,3 +123,6 @@ UpdateStackRequestPrivate::UpdateStackRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

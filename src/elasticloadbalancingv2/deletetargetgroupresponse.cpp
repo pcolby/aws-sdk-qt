@@ -101,3 +101,6 @@ void DeleteTargetGroupResponsePrivate::DeleteTargetGroupResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteTargetGroupResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

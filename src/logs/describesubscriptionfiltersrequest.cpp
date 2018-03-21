@@ -123,3 +123,6 @@ DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPri
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetContentModerationResponsePrivate::GetContentModerationResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetContentModerationResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

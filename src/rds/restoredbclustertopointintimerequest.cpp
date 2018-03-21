@@ -123,3 +123,6 @@ RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeReques
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

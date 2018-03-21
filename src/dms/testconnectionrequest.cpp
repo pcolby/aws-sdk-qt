@@ -123,3 +123,6 @@ TestConnectionRequestPrivate::TestConnectionRequestPrivate(
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

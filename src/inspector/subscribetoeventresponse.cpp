@@ -101,3 +101,6 @@ void SubscribeToEventResponsePrivate::SubscribeToEventResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("SubscribeToEventResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

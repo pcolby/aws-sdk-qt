@@ -123,3 +123,6 @@ RemoveListenerCertificatesRequestPrivate::RemoveListenerCertificatesRequestPriva
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

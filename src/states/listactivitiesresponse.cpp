@@ -101,3 +101,6 @@ void ListActivitiesResponsePrivate::ListActivitiesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ListActivitiesResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

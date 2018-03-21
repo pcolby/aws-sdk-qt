@@ -123,3 +123,6 @@ DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
 {
 
 }
+
+} // namespace ACM
+} // namespace AWS

@@ -123,3 +123,6 @@ ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

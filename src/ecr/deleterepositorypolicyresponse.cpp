@@ -101,3 +101,6 @@ void DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteRepositoryPolicyResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

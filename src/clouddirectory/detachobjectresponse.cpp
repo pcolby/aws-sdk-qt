@@ -101,3 +101,6 @@ void DetachObjectResponsePrivate::DetachObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DetachObjectResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

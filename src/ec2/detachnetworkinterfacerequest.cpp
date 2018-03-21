@@ -123,3 +123,6 @@ DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

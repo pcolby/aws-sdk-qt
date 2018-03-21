@@ -123,3 +123,6 @@ CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

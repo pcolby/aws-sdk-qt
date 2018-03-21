@@ -123,3 +123,6 @@ AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnect
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

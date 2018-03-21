@@ -101,3 +101,6 @@ void NotifyWhenUploadedResponsePrivate::NotifyWhenUploadedResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("NotifyWhenUploadedResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

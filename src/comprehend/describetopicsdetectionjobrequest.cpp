@@ -123,3 +123,6 @@ DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPriva
 {
 
 }
+
+} // namespace Comprehend
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateRoleDescriptionResponsePrivate::UpdateRoleDescriptionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateRoleDescriptionResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

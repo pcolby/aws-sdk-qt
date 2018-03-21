@@ -101,3 +101,6 @@ void UpdateJobExecutionResponsePrivate::UpdateJobExecutionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateJobExecutionResponse"));
     /// @todo
 }
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS

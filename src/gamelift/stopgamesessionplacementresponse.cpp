@@ -101,3 +101,6 @@ void StopGameSessionPlacementResponsePrivate::StopGameSessionPlacementResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("StopGameSessionPlacementResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListTagsForStreamResponsePrivate::ListTagsForStreamResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForStreamResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

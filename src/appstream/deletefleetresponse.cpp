@@ -101,3 +101,6 @@ void DeleteFleetResponsePrivate::DeleteFleetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteFleetResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListTeamMembersResponsePrivate::ListTeamMembersResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ListTeamMembersResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

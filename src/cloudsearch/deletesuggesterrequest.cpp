@@ -123,3 +123,6 @@ DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

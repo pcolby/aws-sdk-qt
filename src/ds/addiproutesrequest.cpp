@@ -123,3 +123,6 @@ AddIpRoutesRequestPrivate::AddIpRoutesRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

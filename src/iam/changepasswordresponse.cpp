@@ -101,3 +101,6 @@ void ChangePasswordResponsePrivate::ChangePasswordResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ChangePasswordResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

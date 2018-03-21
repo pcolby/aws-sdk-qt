@@ -123,3 +123,6 @@ ListBucketInventoryConfigurationsRequestPrivate::ListBucketInventoryConfiguratio
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

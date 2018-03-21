@@ -101,3 +101,6 @@ void DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeAffectedEntitiesResponse"));
     /// @todo
 }
+
+} // namespace Health
+} // namespace AWS

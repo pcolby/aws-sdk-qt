@@ -123,3 +123,6 @@ AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

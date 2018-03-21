@@ -123,3 +123,6 @@ DetachElasticLoadBalancerRequestPrivate::DetachElasticLoadBalancerRequestPrivate
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

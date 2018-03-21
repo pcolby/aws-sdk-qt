@@ -123,3 +123,6 @@ StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

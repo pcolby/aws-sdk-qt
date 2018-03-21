@@ -123,3 +123,6 @@ DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

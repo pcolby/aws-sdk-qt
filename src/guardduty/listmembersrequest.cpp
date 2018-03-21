@@ -123,3 +123,6 @@ ListMembersRequestPrivate::ListMembersRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

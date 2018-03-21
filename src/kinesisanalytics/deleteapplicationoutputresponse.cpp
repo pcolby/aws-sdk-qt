@@ -101,3 +101,6 @@ void DeleteApplicationOutputResponsePrivate::DeleteApplicationOutputResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteApplicationOutputResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

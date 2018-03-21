@@ -123,3 +123,6 @@ RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate
 {
 
 }
+
+} // namespace ACM
+} // namespace AWS

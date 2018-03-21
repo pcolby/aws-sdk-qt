@@ -101,3 +101,6 @@ void AttachToIndexResponsePrivate::AttachToIndexResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AttachToIndexResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

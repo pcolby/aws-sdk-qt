@@ -123,3 +123,6 @@ CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPri
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

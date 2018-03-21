@@ -123,3 +123,6 @@ AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

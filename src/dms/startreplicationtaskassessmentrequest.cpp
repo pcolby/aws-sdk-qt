@@ -123,3 +123,6 @@ StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequ
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

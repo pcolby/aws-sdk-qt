@@ -101,3 +101,6 @@ void UpdatePortfolioResponsePrivate::UpdatePortfolioResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("UpdatePortfolioResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

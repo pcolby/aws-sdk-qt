@@ -101,3 +101,6 @@ void DescribeWorkspaceDirectoriesResponsePrivate::DescribeWorkspaceDirectoriesRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeWorkspaceDirectoriesResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

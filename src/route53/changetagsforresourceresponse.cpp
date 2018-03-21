@@ -101,3 +101,6 @@ void ChangeTagsForResourceResponsePrivate::ChangeTagsForResourceResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ChangeTagsForResourceResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

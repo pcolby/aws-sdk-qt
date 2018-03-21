@@ -123,3 +123,6 @@ ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessId
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

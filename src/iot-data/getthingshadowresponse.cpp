@@ -101,3 +101,6 @@ void GetThingShadowResponsePrivate::GetThingShadowResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetThingShadowResponse"));
     /// @todo
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

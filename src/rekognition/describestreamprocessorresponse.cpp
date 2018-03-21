@@ -101,3 +101,6 @@ void DescribeStreamProcessorResponsePrivate::DescribeStreamProcessorResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeStreamProcessorResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

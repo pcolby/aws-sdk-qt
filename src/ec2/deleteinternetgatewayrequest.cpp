@@ -123,3 +123,6 @@ DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

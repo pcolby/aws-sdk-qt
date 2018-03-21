@@ -123,3 +123,6 @@ RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestP
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

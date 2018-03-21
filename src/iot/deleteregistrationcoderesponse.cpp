@@ -101,3 +101,6 @@ void DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteRegistrationCodeResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

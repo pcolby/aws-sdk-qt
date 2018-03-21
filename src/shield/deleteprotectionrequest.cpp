@@ -123,3 +123,6 @@ DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
 {
 
 }
+
+} // namespace Shield
+} // namespace AWS

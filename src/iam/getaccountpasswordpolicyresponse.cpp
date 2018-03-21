@@ -101,3 +101,6 @@ void GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetAccountPasswordPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

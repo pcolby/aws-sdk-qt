@@ -101,3 +101,6 @@ void GetBucketLocationResponsePrivate::GetBucketLocationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetBucketLocationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

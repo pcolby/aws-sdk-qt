@@ -101,3 +101,6 @@ void ModifyRuleResponsePrivate::ModifyRuleResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ModifyRuleResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

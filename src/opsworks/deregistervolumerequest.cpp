@@ -123,3 +123,6 @@ DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

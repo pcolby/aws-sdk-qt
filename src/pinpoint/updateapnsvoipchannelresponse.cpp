@@ -101,3 +101,6 @@ void UpdateApnsVoipChannelResponsePrivate::UpdateApnsVoipChannelResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UpdateApnsVoipChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

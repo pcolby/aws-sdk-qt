@@ -123,3 +123,6 @@ CreateNotificationSubscriptionRequestPrivate::CreateNotificationSubscriptionRequ
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

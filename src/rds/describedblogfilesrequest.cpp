@@ -123,3 +123,6 @@ DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

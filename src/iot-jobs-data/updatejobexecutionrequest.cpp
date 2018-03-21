@@ -123,3 +123,6 @@ UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
 {
 
 }
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS

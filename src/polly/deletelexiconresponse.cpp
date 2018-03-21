@@ -101,3 +101,6 @@ void DeleteLexiconResponsePrivate::DeleteLexiconResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteLexiconResponse"));
     /// @todo
 }
+
+} // namespace Polly
+} // namespace AWS

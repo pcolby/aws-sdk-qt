@@ -123,3 +123,6 @@ GetGatewayResponseRequestPrivate::GetGatewayResponseRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

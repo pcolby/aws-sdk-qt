@@ -123,3 +123,6 @@ UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

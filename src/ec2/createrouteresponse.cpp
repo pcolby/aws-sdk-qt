@@ -101,3 +101,6 @@ void CreateRouteResponsePrivate::CreateRouteResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateRouteResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

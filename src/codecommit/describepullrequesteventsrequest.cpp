@@ -123,3 +123,6 @@ DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

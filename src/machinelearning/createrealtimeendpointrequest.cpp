@@ -123,3 +123,6 @@ CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

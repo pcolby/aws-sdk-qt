@@ -123,3 +123,6 @@ DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

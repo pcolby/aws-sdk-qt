@@ -101,3 +101,6 @@ void BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteConnectionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

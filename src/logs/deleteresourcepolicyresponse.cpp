@@ -101,3 +101,6 @@ void DeleteResourcePolicyResponsePrivate::DeleteResourcePolicyResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourcePolicyResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

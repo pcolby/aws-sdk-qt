@@ -123,3 +123,6 @@ ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeri
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteServerRequestPrivate::DeleteServerRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

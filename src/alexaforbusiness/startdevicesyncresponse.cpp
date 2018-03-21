@@ -101,3 +101,6 @@ void StartDeviceSyncResponsePrivate::StartDeviceSyncResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("StartDeviceSyncResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

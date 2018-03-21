@@ -101,3 +101,6 @@ void ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListWorkflowTypesResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

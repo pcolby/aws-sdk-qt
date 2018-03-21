@@ -123,3 +123,6 @@ DescribeAlarmHistoryRequestPrivate::DescribeAlarmHistoryRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("PutBucketEncryptionResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

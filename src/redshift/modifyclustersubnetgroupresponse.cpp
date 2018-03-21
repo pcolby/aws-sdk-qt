@@ -101,3 +101,6 @@ void ModifyClusterSubnetGroupResponsePrivate::ModifyClusterSubnetGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

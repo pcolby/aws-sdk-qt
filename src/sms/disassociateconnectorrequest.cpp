@@ -123,3 +123,6 @@ DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteCacheParameterGroupResponsePrivate::DeleteCacheParameterGroupResponse
     Q_ASSERT(xml.name() == QLatin1String("DeleteCacheParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

@@ -123,3 +123,6 @@ AdminRespondToAuthChallengeRequestPrivate::AdminRespondToAuthChallengeRequestPri
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

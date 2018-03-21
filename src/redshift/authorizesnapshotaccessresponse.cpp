@@ -101,3 +101,6 @@ void AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeSnapshotAccessResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

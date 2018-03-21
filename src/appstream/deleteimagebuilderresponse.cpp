@@ -101,3 +101,6 @@ void DeleteImageBuilderResponsePrivate::DeleteImageBuilderResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteImageBuilderResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

@@ -123,3 +123,6 @@ GetStaticIpsRequestPrivate::GetStaticIpsRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

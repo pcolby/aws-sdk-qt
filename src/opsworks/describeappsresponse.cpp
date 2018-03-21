@@ -101,3 +101,6 @@ void DescribeAppsResponsePrivate::DescribeAppsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeAppsResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

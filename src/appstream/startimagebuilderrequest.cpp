@@ -123,3 +123,6 @@ StartImageBuilderRequestPrivate::StartImageBuilderRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

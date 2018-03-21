@@ -123,3 +123,6 @@ PutBucketAnalyticsConfigurationRequestPrivate::PutBucketAnalyticsConfigurationRe
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeletePolicyVersionResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

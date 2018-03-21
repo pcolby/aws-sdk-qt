@@ -101,3 +101,6 @@ void DescribeLaunchConfigurationsResponsePrivate::DescribeLaunchConfigurationsRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeLaunchConfigurationsResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteModelRequestPrivate::DeleteModelRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

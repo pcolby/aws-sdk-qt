@@ -123,3 +123,6 @@ BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

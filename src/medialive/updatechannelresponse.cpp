@@ -101,3 +101,6 @@ void UpdateChannelResponsePrivate::UpdateChannelResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateChannelResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

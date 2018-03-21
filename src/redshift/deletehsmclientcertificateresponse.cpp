@@ -101,3 +101,6 @@ void DeleteHsmClientCertificateResponsePrivate::DeleteHsmClientCertificateRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteHsmClientCertificateResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

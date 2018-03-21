@@ -123,3 +123,6 @@ UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

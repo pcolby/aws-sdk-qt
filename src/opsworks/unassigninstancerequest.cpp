@@ -123,3 +123,6 @@ UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutBucketCorsResponsePrivate::PutBucketCorsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutBucketCorsResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

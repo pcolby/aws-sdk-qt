@@ -123,3 +123,6 @@ UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

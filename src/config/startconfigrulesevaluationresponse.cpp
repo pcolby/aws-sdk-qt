@@ -101,3 +101,6 @@ void StartConfigRulesEvaluationResponsePrivate::StartConfigRulesEvaluationRespon
     Q_ASSERT(xml.name() == QLatin1String("StartConfigRulesEvaluationResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

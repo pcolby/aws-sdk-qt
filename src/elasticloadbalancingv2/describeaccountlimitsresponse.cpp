@@ -101,3 +101,6 @@ void DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeAccountLimitsResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeLifecycleHookTypesResponsePrivate::DescribeLifecycleHookTypesRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeLifecycleHookTypesResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

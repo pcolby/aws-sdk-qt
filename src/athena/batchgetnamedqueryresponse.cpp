@@ -101,3 +101,6 @@ void BatchGetNamedQueryResponsePrivate::BatchGetNamedQueryResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("BatchGetNamedQueryResponse"));
     /// @todo
 }
+
+} // namespace Athena
+} // namespace AWS

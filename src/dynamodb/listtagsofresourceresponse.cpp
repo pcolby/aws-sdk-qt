@@ -101,3 +101,6 @@ void ListTagsOfResourceResponsePrivate::ListTagsOfResourceResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListTagsOfResourceResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

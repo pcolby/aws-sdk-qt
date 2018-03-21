@@ -101,3 +101,6 @@ void CreateAccountAliasResponsePrivate::CreateAccountAliasResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateAccountAliasResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

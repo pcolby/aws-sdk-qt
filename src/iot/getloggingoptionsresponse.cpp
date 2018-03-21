@@ -101,3 +101,6 @@ void GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetLoggingOptionsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

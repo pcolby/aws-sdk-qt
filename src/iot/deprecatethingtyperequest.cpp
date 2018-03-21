@@ -123,3 +123,6 @@ DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

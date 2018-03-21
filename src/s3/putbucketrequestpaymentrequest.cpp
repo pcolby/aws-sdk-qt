@@ -123,3 +123,6 @@ PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

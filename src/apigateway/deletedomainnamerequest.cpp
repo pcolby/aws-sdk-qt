@@ -123,3 +123,6 @@ DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

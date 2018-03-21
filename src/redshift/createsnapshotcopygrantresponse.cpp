@@ -101,3 +101,6 @@ void CreateSnapshotCopyGrantResponsePrivate::CreateSnapshotCopyGrantResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateSnapshotCopyGrantResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void CloneStackResponsePrivate::CloneStackResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CloneStackResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

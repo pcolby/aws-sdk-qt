@@ -101,3 +101,6 @@ void SetInstanceHealthResponsePrivate::SetInstanceHealthResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("SetInstanceHealthResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

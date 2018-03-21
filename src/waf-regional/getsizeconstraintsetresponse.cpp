@@ -101,3 +101,6 @@ void GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetSizeConstraintSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

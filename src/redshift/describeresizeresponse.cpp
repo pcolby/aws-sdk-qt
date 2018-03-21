@@ -101,3 +101,6 @@ void DescribeResizeResponsePrivate::DescribeResizeResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeResizeResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

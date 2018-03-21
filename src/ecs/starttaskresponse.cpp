@@ -101,3 +101,6 @@ void StartTaskResponsePrivate::StartTaskResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StartTaskResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

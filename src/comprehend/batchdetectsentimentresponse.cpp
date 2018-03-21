@@ -101,3 +101,6 @@ void BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("BatchDetectSentimentResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

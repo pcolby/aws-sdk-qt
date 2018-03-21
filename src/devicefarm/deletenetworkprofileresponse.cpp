@@ -101,3 +101,6 @@ void DeleteNetworkProfileResponsePrivate::DeleteNetworkProfileResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteNetworkProfileResponse"));
     /// @todo
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

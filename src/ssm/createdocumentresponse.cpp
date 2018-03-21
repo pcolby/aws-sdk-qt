@@ -101,3 +101,6 @@ void CreateDocumentResponsePrivate::CreateDocumentResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateDocumentResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

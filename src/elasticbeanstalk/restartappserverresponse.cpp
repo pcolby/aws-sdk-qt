@@ -101,3 +101,6 @@ void RestartAppServerResponsePrivate::RestartAppServerResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("RestartAppServerResponse"));
     /// @todo
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

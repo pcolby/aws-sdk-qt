@@ -101,3 +101,6 @@ void SetIdentityDkimEnabledResponsePrivate::SetIdentityDkimEnabledResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("SetIdentityDkimEnabledResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

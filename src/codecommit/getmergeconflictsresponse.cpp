@@ -101,3 +101,6 @@ void GetMergeConflictsResponsePrivate::GetMergeConflictsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetMergeConflictsResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

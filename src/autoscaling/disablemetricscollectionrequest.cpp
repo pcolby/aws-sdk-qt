@@ -123,3 +123,6 @@ DisableMetricsCollectionRequestPrivate::DisableMetricsCollectionRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

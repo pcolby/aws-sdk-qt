@@ -123,3 +123,6 @@ GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRe
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

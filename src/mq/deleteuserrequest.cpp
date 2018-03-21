@@ -123,3 +123,6 @@ DeleteUserRequestPrivate::DeleteUserRequestPrivate(
 {
 
 }
+
+} // namespace MQ
+} // namespace AWS

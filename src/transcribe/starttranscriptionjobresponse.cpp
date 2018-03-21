@@ -101,3 +101,6 @@ void StartTranscriptionJobResponsePrivate::StartTranscriptionJobResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("StartTranscriptionJobResponse"));
     /// @todo
 }
+
+} // namespace TranscribeService
+} // namespace AWS

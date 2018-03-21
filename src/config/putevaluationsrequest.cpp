@@ -123,3 +123,6 @@ PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

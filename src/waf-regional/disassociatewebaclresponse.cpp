@@ -101,3 +101,6 @@ void DisassociateWebACLResponsePrivate::DisassociateWebACLResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DisassociateWebACLResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

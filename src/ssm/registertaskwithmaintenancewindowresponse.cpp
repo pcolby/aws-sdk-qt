@@ -101,3 +101,6 @@ void RegisterTaskWithMaintenanceWindowResponsePrivate::RegisterTaskWithMaintenan
     Q_ASSERT(xml.name() == QLatin1String("RegisterTaskWithMaintenanceWindowResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

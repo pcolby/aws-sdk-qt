@@ -101,3 +101,6 @@ void PollForTaskResponsePrivate::PollForTaskResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PollForTaskResponse"));
     /// @todo
 }
+
+} // namespace DataPipeline
+} // namespace AWS

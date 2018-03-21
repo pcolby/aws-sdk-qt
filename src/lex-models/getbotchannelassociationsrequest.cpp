@@ -123,3 +123,6 @@ GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

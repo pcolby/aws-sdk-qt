@@ -101,3 +101,6 @@ void MoveAccountResponsePrivate::MoveAccountResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("MoveAccountResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

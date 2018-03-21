@@ -123,3 +123,6 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

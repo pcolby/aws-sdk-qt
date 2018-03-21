@@ -101,3 +101,6 @@ void SendAutomationSignalResponsePrivate::SendAutomationSignalResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("SendAutomationSignalResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAtt
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterSnapshotAttributeResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

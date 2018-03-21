@@ -101,3 +101,6 @@ void UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateSSHPublicKeyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ ListModelsRequestPrivate::ListModelsRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

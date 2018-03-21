@@ -123,3 +123,6 @@ TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

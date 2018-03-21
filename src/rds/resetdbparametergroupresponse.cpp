@@ -101,3 +101,6 @@ void ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ResetDBParameterGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

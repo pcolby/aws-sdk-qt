@@ -123,3 +123,6 @@ GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicy
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
 {
 
 }
+
+} // namespace Budgets
+} // namespace AWS

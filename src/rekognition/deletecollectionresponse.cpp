@@ -101,3 +101,6 @@ void DeleteCollectionResponsePrivate::DeleteCollectionResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteCollectionResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

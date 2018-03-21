@@ -123,3 +123,6 @@ UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

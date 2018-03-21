@@ -123,3 +123,6 @@ DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
 {
 
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

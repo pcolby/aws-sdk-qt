@@ -123,3 +123,6 @@ DeleteAssessmentRunRequestPrivate::DeleteAssessmentRunRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

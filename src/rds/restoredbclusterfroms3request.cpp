@@ -123,3 +123,6 @@ RestoreDBClusterFromS3RequestPrivate::RestoreDBClusterFromS3RequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

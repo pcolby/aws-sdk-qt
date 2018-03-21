@@ -123,3 +123,6 @@ SendMessagesRequestPrivate::SendMessagesRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

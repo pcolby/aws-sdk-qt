@@ -123,3 +123,6 @@ RegisterRdsDbInstanceRequestPrivate::RegisterRdsDbInstanceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

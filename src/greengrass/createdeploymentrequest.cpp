@@ -123,3 +123,6 @@ CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

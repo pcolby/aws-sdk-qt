@@ -123,3 +123,6 @@ CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

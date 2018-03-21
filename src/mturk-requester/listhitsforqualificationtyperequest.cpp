@@ -123,3 +123,6 @@ ListHITsForQualificationTypeRequestPrivate::ListHITsForQualificationTypeRequestP
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

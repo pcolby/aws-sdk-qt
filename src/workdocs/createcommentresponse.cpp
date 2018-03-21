@@ -101,3 +101,6 @@ void CreateCommentResponsePrivate::CreateCommentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateCommentResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

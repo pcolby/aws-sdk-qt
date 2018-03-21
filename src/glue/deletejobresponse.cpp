@@ -101,3 +101,6 @@ void DeleteJobResponsePrivate::DeleteJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteJobResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

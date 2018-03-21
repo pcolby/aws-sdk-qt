@@ -123,3 +123,6 @@ PutEventSelectorsRequestPrivate::PutEventSelectorsRequestPrivate(
 {
 
 }
+
+} // namespace CloudTrail
+} // namespace AWS

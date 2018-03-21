@@ -101,3 +101,6 @@ void AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("AddInstanceGroupsResponse"));
     /// @todo
 }
+
+} // namespace EMR
+} // namespace AWS

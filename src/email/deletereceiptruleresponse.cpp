@@ -101,3 +101,6 @@ void DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteReceiptRuleResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

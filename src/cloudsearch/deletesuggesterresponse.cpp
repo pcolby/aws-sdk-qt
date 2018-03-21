@@ -101,3 +101,6 @@ void DeleteSuggesterResponsePrivate::DeleteSuggesterResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DeleteSuggesterResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

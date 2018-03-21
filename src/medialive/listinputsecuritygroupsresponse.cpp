@@ -101,3 +101,6 @@ void ListInputSecurityGroupsResponsePrivate::ListInputSecurityGroupsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListInputSecurityGroupsResponse"));
     /// @todo
 }
+
+} // namespace MediaLive
+} // namespace AWS

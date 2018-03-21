@@ -101,3 +101,6 @@ void ModifyClusterResponsePrivate::ModifyClusterResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ModifyClusterResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeStaleSecurityGroupsRequestPrivate::DescribeStaleSecurityGroupsRequestPri
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

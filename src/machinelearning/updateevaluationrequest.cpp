@@ -123,3 +123,6 @@ UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeTrustedAdvisorChecksRequestPrivate::DescribeTrustedAdvisorChecksRequestP
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

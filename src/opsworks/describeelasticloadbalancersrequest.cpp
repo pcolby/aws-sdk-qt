@@ -123,3 +123,6 @@ DescribeElasticLoadBalancersRequestPrivate::DescribeElasticLoadBalancersRequestP
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

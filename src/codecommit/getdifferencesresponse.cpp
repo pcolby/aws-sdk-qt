@@ -101,3 +101,6 @@ void GetDifferencesResponsePrivate::GetDifferencesResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetDifferencesResponse"));
     /// @todo
 }
+
+} // namespace CodeCommit
+} // namespace AWS

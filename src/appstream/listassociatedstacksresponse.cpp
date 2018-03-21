@@ -101,3 +101,6 @@ void ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListAssociatedStacksResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

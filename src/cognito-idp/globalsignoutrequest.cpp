@@ -123,3 +123,6 @@ GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

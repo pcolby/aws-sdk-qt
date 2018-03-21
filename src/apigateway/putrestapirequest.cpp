@@ -123,3 +123,6 @@ PutRestApiRequestPrivate::PutRestApiRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

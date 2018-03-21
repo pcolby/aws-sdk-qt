@@ -101,3 +101,6 @@ void DeleteProgressUpdateStreamResponsePrivate::DeleteProgressUpdateStreamRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteProgressUpdateStreamResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

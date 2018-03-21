@@ -123,3 +123,6 @@ UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

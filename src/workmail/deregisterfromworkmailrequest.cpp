@@ -123,3 +123,6 @@ DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

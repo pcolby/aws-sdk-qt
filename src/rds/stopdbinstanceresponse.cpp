@@ -101,3 +101,6 @@ void StopDBInstanceResponsePrivate::StopDBInstanceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("StopDBInstanceResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

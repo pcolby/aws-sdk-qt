@@ -101,3 +101,6 @@ void DeleteDomainEntryResponsePrivate::DeleteDomainEntryResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteDomainEntryResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

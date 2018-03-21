@@ -123,3 +123,6 @@ UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRe
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

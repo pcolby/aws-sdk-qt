@@ -101,3 +101,6 @@ void CreateActivityResponsePrivate::CreateActivityResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("CreateActivityResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

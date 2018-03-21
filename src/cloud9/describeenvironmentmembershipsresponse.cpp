@@ -101,3 +101,6 @@ void DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershi
     Q_ASSERT(xml.name() == QLatin1String("DescribeEnvironmentMembershipsResponse"));
     /// @todo
 }
+
+} // namespace Cloud9
+} // namespace AWS

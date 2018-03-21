@@ -101,3 +101,6 @@ void DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DescribeScheduledActionsResponse"));
     /// @todo
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

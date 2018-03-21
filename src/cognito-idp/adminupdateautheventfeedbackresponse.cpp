@@ -101,3 +101,6 @@ void AdminUpdateAuthEventFeedbackResponsePrivate::AdminUpdateAuthEventFeedbackRe
     Q_ASSERT(xml.name() == QLatin1String("AdminUpdateAuthEventFeedbackResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

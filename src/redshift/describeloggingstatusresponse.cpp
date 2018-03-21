@@ -101,3 +101,6 @@ void DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoggingStatusResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

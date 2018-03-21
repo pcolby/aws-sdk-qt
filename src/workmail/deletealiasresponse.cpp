@@ -101,3 +101,6 @@ void DeleteAliasResponsePrivate::DeleteAliasResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteAliasResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

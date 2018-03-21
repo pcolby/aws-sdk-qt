@@ -101,3 +101,6 @@ void ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServ
     Q_ASSERT(xml.name() == QLatin1String("ModifyVpcEndpointServiceConfigurationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

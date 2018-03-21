@@ -101,3 +101,6 @@ void GetBotChannelAssociationsResponsePrivate::GetBotChannelAssociationsResponse
     Q_ASSERT(xml.name() == QLatin1String("GetBotChannelAssociationsResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

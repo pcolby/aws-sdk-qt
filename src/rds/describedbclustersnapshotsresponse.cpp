@@ -101,3 +101,6 @@ void DescribeDBClusterSnapshotsResponsePrivate::DescribeDBClusterSnapshotsRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBClusterSnapshotsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

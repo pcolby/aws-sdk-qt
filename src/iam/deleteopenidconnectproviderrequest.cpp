@@ -123,3 +123,6 @@ DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPri
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

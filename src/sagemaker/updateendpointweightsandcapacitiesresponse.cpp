@@ -101,3 +101,6 @@ void UpdateEndpointWeightsAndCapacitiesResponsePrivate::UpdateEndpointWeightsAnd
     Q_ASSERT(xml.name() == QLatin1String("UpdateEndpointWeightsAndCapacitiesResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

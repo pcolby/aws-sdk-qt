@@ -101,3 +101,6 @@ void ListStateMachinesResponsePrivate::ListStateMachinesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListStateMachinesResponse"));
     /// @todo
 }
+
+} // namespace SFN
+} // namespace AWS

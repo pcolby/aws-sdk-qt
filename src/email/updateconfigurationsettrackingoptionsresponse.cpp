@@ -101,3 +101,6 @@ void UpdateConfigurationSetTrackingOptionsResponsePrivate::UpdateConfigurationSe
     Q_ASSERT(xml.name() == QLatin1String("UpdateConfigurationSetTrackingOptionsResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

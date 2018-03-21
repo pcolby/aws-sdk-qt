@@ -101,3 +101,6 @@ void GetStagesResponsePrivate::GetStagesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetStagesResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

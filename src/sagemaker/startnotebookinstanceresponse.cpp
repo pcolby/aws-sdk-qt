@@ -101,3 +101,6 @@ void StartNotebookInstanceResponsePrivate::StartNotebookInstanceResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("StartNotebookInstanceResponse"));
     /// @todo
 }
+
+} // namespace SageMaker
+} // namespace AWS

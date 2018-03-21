@@ -101,3 +101,6 @@ void ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("ListRateBasedRulesResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

@@ -123,3 +123,6 @@ BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

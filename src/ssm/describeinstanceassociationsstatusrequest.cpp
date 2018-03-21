@@ -123,3 +123,6 @@ DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsSt
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

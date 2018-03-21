@@ -123,3 +123,6 @@ ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

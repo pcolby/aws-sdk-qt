@@ -101,3 +101,6 @@ void RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("RemoveTagsFromVaultResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

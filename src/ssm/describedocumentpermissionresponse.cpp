@@ -101,3 +101,6 @@ void DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeDocumentPermissionResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteVPCAssociationAuthorizationRequestPrivate::DeleteVPCAssociationAuthorizati
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

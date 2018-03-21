@@ -101,3 +101,6 @@ void ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsFor
     Q_ASSERT(xml.name() == QLatin1String("ListOrganizationalUnitsForParentResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -123,3 +123,6 @@ CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestP
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

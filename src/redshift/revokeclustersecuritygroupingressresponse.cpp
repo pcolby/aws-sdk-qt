@@ -101,3 +101,6 @@ void RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGrou
     Q_ASSERT(xml.name() == QLatin1String("RevokeClusterSecurityGroupIngressResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

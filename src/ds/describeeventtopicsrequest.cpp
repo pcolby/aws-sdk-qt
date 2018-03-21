@@ -123,3 +123,6 @@ DescribeEventTopicsRequestPrivate::DescribeEventTopicsRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

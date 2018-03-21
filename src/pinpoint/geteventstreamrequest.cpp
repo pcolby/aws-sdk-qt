@@ -123,3 +123,6 @@ GetEventStreamRequestPrivate::GetEventStreamRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

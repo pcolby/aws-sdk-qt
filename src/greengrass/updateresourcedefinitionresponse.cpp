@@ -101,3 +101,6 @@ void UpdateResourceDefinitionResponsePrivate::UpdateResourceDefinitionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("UpdateResourceDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

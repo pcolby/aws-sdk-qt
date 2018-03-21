@@ -123,3 +123,6 @@ CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
 {
 
 }
+
+} // namespace ECR
+} // namespace AWS

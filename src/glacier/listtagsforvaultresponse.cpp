@@ -101,3 +101,6 @@ void ListTagsForVaultResponsePrivate::ListTagsForVaultResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ListTagsForVaultResponse"));
     /// @todo
 }
+
+} // namespace Glacier
+} // namespace AWS

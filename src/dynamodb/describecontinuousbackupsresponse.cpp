@@ -101,3 +101,6 @@ void DescribeContinuousBackupsResponsePrivate::DescribeContinuousBackupsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeContinuousBackupsResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

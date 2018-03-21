@@ -123,3 +123,6 @@ GetHostedZoneRequestPrivate::GetHostedZoneRequestPrivate(
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

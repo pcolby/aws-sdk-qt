@@ -101,3 +101,6 @@ void UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UnarchiveFindingsResponse"));
     /// @todo
 }
+
+} // namespace GuardDuty
+} // namespace AWS

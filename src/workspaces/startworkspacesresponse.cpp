@@ -101,3 +101,6 @@ void StartWorkspacesResponsePrivate::StartWorkspacesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("StartWorkspacesResponse"));
     /// @todo
 }
+
+} // namespace WorkSpaces
+} // namespace AWS

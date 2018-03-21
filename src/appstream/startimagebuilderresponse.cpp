@@ -101,3 +101,6 @@ void StartImageBuilderResponsePrivate::StartImageBuilderResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("StartImageBuilderResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

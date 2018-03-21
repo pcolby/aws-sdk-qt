@@ -123,3 +123,6 @@ GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
 {
 
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

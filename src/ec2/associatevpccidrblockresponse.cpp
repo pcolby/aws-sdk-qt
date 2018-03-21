@@ -101,3 +101,6 @@ void AssociateVpcCidrBlockResponsePrivate::AssociateVpcCidrBlockResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("AssociateVpcCidrBlockResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

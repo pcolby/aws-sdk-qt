@@ -123,3 +123,6 @@ DeleteObjectRequestPrivate::DeleteObjectRequestPrivate(
 {
 
 }
+
+} // namespace MediaStoreData
+} // namespace AWS

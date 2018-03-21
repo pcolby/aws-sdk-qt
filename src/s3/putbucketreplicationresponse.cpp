@@ -101,3 +101,6 @@ void PutBucketReplicationResponsePrivate::PutBucketReplicationResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("PutBucketReplicationResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

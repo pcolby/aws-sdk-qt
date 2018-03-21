@@ -101,3 +101,6 @@ void DeleteGroupResponsePrivate::DeleteGroupResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteGroupResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

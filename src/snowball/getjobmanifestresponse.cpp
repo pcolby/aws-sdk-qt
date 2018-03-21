@@ -101,3 +101,6 @@ void GetJobManifestResponsePrivate::GetJobManifestResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("GetJobManifestResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

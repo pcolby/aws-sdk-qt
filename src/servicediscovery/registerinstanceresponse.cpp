@@ -101,3 +101,6 @@ void RegisterInstanceResponsePrivate::RegisterInstanceResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("RegisterInstanceResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

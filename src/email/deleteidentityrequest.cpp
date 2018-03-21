@@ -123,3 +123,6 @@ DeleteIdentityRequestPrivate::DeleteIdentityRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

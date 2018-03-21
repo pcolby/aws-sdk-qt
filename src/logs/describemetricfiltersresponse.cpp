@@ -101,3 +101,6 @@ void DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeMetricFiltersResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

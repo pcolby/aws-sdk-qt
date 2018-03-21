@@ -101,3 +101,6 @@ void DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteCacheClusterResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

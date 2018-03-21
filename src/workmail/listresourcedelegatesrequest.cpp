@@ -123,3 +123,6 @@ ListResourceDelegatesRequestPrivate::ListResourceDelegatesRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

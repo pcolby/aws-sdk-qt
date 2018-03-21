@@ -123,3 +123,6 @@ ListPipelinesRequestPrivate::ListPipelinesRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

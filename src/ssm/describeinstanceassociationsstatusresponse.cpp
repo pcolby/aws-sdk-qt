@@ -101,3 +101,6 @@ void DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociat
     Q_ASSERT(xml.name() == QLatin1String("DescribeInstanceAssociationsStatusResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

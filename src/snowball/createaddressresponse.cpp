@@ -101,3 +101,6 @@ void CreateAddressResponsePrivate::CreateAddressResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateAddressResponse"));
     /// @todo
 }
+
+} // namespace Snowball
+} // namespace AWS

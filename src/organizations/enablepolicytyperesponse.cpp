@@ -101,3 +101,6 @@ void EnablePolicyTypeResponsePrivate::EnablePolicyTypeResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("EnablePolicyTypeResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

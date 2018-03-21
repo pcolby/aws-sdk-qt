@@ -101,3 +101,6 @@ void DeleteUserResponsePrivate::DeleteUserResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteUserResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

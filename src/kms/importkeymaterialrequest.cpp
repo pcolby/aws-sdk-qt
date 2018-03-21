@@ -123,3 +123,6 @@ ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

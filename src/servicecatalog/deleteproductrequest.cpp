@@ -123,3 +123,6 @@ DeleteProductRequestPrivate::DeleteProductRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -101,3 +101,6 @@ void DetachLoadBalancerFromSubnetsResponsePrivate::DetachLoadBalancerFromSubnets
     Q_ASSERT(xml.name() == QLatin1String("DetachLoadBalancerFromSubnetsResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

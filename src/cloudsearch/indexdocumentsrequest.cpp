@@ -123,3 +123,6 @@ IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

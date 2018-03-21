@@ -123,3 +123,6 @@ CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequ
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

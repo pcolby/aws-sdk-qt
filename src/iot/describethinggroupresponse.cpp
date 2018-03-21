@@ -101,3 +101,6 @@ void DescribeThingGroupResponsePrivate::DescribeThingGroupResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeThingGroupResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

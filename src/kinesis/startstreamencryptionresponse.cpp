@@ -101,3 +101,6 @@ void StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("StartStreamEncryptionResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

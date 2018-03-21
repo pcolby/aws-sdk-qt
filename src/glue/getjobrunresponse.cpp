@@ -101,3 +101,6 @@ void GetJobRunResponsePrivate::GetJobRunResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetJobRunResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteLogGroupResponsePrivate::DeleteLogGroupResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteLogGroupResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

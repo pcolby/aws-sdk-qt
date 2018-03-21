@@ -101,3 +101,6 @@ void CopyOptionGroupResponsePrivate::CopyOptionGroupResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CopyOptionGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

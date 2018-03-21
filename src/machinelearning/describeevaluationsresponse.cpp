@@ -101,3 +101,6 @@ void DescribeEvaluationsResponsePrivate::DescribeEvaluationsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeEvaluationsResponse"));
     /// @todo
 }
+
+} // namespace MachineLearning
+} // namespace AWS

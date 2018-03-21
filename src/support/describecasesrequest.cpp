@@ -123,3 +123,6 @@ DescribeCasesRequestPrivate::DescribeCasesRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

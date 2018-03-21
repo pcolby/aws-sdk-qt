@@ -101,3 +101,6 @@ void UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("UpdateDataRetentionResponse"));
     /// @todo
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

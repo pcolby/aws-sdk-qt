@@ -123,3 +123,6 @@ ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

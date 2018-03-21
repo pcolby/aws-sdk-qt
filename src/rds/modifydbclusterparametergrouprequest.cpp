@@ -123,3 +123,6 @@ ModifyDBClusterParameterGroupRequestPrivate::ModifyDBClusterParameterGroupReques
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableRepl
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrderableReplicationInstancesResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

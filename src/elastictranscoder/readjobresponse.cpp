@@ -101,3 +101,6 @@ void ReadJobResponsePrivate::ReadJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ReadJobResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

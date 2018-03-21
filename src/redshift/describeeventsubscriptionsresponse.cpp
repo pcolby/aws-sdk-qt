@@ -101,3 +101,6 @@ void DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsRespon
     Q_ASSERT(xml.name() == QLatin1String("DescribeEventSubscriptionsResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

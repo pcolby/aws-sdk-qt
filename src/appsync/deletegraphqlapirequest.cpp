@@ -123,3 +123,6 @@ DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
 {
 
 }
+
+} // namespace AppSync
+} // namespace AWS

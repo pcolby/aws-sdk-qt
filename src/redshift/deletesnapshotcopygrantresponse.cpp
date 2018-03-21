@@ -101,3 +101,6 @@ void DeleteSnapshotCopyGrantResponsePrivate::DeleteSnapshotCopyGrantResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteSnapshotCopyGrantResponse"));
     /// @todo
 }
+
+} // namespace Redshift
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeHandshakeResponsePrivate::DescribeHandshakeResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DescribeHandshakeResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

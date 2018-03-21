@@ -123,3 +123,6 @@ GetRuleRequestPrivate::GetRuleRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

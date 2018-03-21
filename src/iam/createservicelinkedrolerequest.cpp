@@ -123,3 +123,6 @@ CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

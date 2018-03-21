@@ -101,3 +101,6 @@ void DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeVTLDevicesResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

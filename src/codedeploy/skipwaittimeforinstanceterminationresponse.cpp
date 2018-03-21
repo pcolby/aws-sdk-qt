@@ -101,3 +101,6 @@ void SkipWaitTimeForInstanceTerminationResponsePrivate::SkipWaitTimeForInstanceT
     Q_ASSERT(xml.name() == QLatin1String("SkipWaitTimeForInstanceTerminationResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

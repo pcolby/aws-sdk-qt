@@ -101,3 +101,6 @@ void GetApplicationPolicyResponsePrivate::GetApplicationPolicyResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetApplicationPolicyResponse"));
     /// @todo
 }
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS

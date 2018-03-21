@@ -123,3 +123,6 @@ ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

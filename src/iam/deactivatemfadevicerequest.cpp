@@ -123,3 +123,6 @@ DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

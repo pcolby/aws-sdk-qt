@@ -101,3 +101,6 @@ void UpdateCertificateResponsePrivate::UpdateCertificateResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateCertificateResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

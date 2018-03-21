@@ -123,3 +123,6 @@ CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

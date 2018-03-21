@@ -123,3 +123,6 @@ GetJobRequestPrivate::GetJobRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

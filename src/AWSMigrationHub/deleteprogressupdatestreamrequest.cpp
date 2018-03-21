@@ -123,3 +123,6 @@ DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPriva
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DeleteV2LoggingLevelResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

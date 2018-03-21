@@ -101,3 +101,6 @@ void DescribeBackupResponsePrivate::DescribeBackupResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DescribeBackupResponse"));
     /// @todo
 }
+
+} // namespace DynamoDB
+} // namespace AWS

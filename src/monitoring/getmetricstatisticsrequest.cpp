@@ -123,3 +123,6 @@ GetMetricStatisticsRequestPrivate::GetMetricStatisticsRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatch
+} // namespace AWS

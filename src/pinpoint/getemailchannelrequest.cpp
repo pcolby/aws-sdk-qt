@@ -123,3 +123,6 @@ GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

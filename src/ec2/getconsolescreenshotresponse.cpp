@@ -101,3 +101,6 @@ void GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("GetConsoleScreenshotResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

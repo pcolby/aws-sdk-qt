@@ -123,3 +123,6 @@ UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

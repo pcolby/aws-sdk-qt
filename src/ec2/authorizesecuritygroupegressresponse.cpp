@@ -101,3 +101,6 @@ void AuthorizeSecurityGroupEgressResponsePrivate::AuthorizeSecurityGroupEgressRe
     Q_ASSERT(xml.name() == QLatin1String("AuthorizeSecurityGroupEgressResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

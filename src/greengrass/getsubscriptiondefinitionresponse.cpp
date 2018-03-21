@@ -101,3 +101,6 @@ void GetSubscriptionDefinitionResponsePrivate::GetSubscriptionDefinitionResponse
     Q_ASSERT(xml.name() == QLatin1String("GetSubscriptionDefinitionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

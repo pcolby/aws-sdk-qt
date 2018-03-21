@@ -123,3 +123,6 @@ DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

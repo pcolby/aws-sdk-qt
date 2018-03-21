@@ -123,3 +123,6 @@ DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPriva
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

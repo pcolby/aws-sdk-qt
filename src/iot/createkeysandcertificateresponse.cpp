@@ -101,3 +101,6 @@ void CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateKeysAndCertificateResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

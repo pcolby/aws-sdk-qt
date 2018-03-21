@@ -123,3 +123,6 @@ CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRec
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

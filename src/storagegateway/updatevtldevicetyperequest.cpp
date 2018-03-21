@@ -123,3 +123,6 @@ UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

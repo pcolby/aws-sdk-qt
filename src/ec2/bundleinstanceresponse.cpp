@@ -101,3 +101,6 @@ void BundleInstanceResponsePrivate::BundleInstanceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("BundleInstanceResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

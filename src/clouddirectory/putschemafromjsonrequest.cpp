@@ -123,3 +123,6 @@ PutSchemaFromJsonRequestPrivate::PutSchemaFromJsonRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

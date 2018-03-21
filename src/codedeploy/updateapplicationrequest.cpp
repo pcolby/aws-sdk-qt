@@ -123,3 +123,6 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

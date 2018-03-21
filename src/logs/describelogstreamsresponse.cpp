@@ -101,3 +101,6 @@ void DescribeLogStreamsResponsePrivate::DescribeLogStreamsResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeLogStreamsResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

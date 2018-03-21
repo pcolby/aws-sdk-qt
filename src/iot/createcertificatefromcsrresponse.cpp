@@ -101,3 +101,6 @@ void CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CreateCertificateFromCsrResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

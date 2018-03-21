@@ -123,3 +123,6 @@ InitiateVaultLockRequestPrivate::InitiateVaultLockRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

@@ -123,3 +123,6 @@ UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

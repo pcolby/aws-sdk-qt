@@ -101,3 +101,6 @@ void GetInventorySchemaResponsePrivate::GetInventorySchemaResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetInventorySchemaResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

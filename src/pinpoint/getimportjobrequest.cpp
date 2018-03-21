@@ -123,3 +123,6 @@ GetImportJobRequestPrivate::GetImportJobRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

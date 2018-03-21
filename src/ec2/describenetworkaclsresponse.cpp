@@ -101,3 +101,6 @@ void DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeNetworkAclsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ GetFindingsRequestPrivate::GetFindingsRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

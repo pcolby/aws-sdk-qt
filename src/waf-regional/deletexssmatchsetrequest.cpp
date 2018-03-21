@@ -123,3 +123,6 @@ DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

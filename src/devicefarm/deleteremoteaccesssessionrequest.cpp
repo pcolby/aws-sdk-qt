@@ -123,3 +123,6 @@ DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

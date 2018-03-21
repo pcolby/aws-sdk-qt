@@ -123,3 +123,6 @@ CreateUserImportJobRequestPrivate::CreateUserImportJobRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

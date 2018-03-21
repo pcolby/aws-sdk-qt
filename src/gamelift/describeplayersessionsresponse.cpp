@@ -101,3 +101,6 @@ void DescribePlayerSessionsResponsePrivate::DescribePlayerSessionsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribePlayerSessionsResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

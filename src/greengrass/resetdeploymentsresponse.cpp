@@ -101,3 +101,6 @@ void ResetDeploymentsResponsePrivate::ResetDeploymentsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ResetDeploymentsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

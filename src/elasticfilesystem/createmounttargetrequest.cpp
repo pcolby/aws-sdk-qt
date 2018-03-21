@@ -123,3 +123,6 @@ CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
 {
 
 }
+
+} // namespace EFS
+} // namespace AWS

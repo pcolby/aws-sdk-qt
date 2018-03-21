@@ -101,3 +101,6 @@ void DeleteResolverResponsePrivate::DeleteResolverResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteResolverResponse"));
     /// @todo
 }
+
+} // namespace AppSync
+} // namespace AWS

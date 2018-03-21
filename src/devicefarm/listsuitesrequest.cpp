@@ -123,3 +123,6 @@ ListSuitesRequestPrivate::ListSuitesRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

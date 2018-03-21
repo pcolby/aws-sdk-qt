@@ -123,3 +123,6 @@ ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

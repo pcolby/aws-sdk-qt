@@ -123,3 +123,6 @@ DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteFacetRequestPrivate::DeleteFacetRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

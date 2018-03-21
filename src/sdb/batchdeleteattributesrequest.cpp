@@ -123,3 +123,6 @@ BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
 {
 
 }
+
+} // namespace SimpleDB
+} // namespace AWS

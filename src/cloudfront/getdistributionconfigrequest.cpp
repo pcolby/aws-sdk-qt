@@ -123,3 +123,6 @@ GetDistributionConfigRequestPrivate::GetDistributionConfigRequestPrivate(
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

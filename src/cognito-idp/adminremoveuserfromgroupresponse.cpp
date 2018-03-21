@@ -101,3 +101,6 @@ void AdminRemoveUserFromGroupResponsePrivate::AdminRemoveUserFromGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("AdminRemoveUserFromGroupResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

@@ -123,3 +123,6 @@ SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -101,3 +101,6 @@ void DeleteFolderResponsePrivate::DeleteFolderResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteFolderResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

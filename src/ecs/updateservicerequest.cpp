@@ -123,3 +123,6 @@ UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

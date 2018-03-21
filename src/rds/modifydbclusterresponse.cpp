@@ -101,3 +101,6 @@ void ModifyDBClusterResponsePrivate::ModifyDBClusterResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("ModifyDBClusterResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

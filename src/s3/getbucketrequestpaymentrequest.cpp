@@ -123,3 +123,6 @@ GetBucketRequestPaymentRequestPrivate::GetBucketRequestPaymentRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

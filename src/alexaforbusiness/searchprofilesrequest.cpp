@@ -123,3 +123,6 @@ SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

@@ -123,3 +123,6 @@ DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPriva
 {
 
 }
+
+} // namespace MediaLive
+} // namespace AWS

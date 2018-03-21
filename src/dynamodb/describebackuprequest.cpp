@@ -123,3 +123,6 @@ DescribeBackupRequestPrivate::DescribeBackupRequestPrivate(
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

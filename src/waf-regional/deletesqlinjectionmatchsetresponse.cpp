@@ -101,3 +101,6 @@ void DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetRespon
     Q_ASSERT(xml.name() == QLatin1String("DeleteSqlInjectionMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

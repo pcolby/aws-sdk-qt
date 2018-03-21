@@ -101,3 +101,6 @@ void DescribeEgressOnlyInternetGatewaysResponsePrivate::DescribeEgressOnlyIntern
     Q_ASSERT(xml.name() == QLatin1String("DescribeEgressOnlyInternetGatewaysResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

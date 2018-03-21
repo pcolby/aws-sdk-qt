@@ -123,3 +123,6 @@ MoveAccountRequestPrivate::MoveAccountRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

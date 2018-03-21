@@ -101,3 +101,6 @@ void DescribeVpcEndpointServicesResponsePrivate::DescribeVpcEndpointServicesResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeVpcEndpointServicesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

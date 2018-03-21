@@ -123,3 +123,6 @@ GetDeploymentInstanceRequestPrivate::GetDeploymentInstanceRequestPrivate(
 {
 
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

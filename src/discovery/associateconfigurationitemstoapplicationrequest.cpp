@@ -123,3 +123,6 @@ AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationIt
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

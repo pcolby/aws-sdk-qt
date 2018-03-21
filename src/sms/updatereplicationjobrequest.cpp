@@ -123,3 +123,6 @@ UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
 {
 
 }
+
+} // namespace SMS
+} // namespace AWS

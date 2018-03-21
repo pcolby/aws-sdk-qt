@@ -101,3 +101,6 @@ void DeleteTableVersionResponsePrivate::DeleteTableVersionResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteTableVersionResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

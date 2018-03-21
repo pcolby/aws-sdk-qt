@@ -123,3 +123,6 @@ DescribeNetworkInterfaceAttributeRequestPrivate::DescribeNetworkInterfaceAttribu
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

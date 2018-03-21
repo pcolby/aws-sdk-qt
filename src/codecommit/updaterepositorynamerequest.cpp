@@ -123,3 +123,6 @@ UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

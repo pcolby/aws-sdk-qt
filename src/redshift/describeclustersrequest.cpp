@@ -123,3 +123,6 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

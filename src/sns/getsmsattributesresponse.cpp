@@ -101,3 +101,6 @@ void GetSMSAttributesResponsePrivate::GetSMSAttributesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetSMSAttributesResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

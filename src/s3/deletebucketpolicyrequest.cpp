@@ -123,3 +123,6 @@ DeleteBucketPolicyRequestPrivate::DeleteBucketPolicyRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

@@ -123,3 +123,6 @@ SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
 {
 
 }
+
+} // namespace EMR
+} // namespace AWS

@@ -101,3 +101,6 @@ void RestoreFromSnapshotResponsePrivate::RestoreFromSnapshotResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("RestoreFromSnapshotResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

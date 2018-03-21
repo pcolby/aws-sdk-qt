@@ -123,3 +123,6 @@ DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

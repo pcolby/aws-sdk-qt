@@ -123,3 +123,6 @@ CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
 {
 
 }
+
+} // namespace Batch
+} // namespace AWS

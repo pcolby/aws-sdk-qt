@@ -101,3 +101,6 @@ void AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("AssociateTargetsWithJobResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateFunctionConfigurationResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateTrafficPolicyInstanceRequestPrivate::CreateTrafficPolicyInstanceRequestPri
 {
 
 }
+
+} // namespace Route53
+} // namespace AWS

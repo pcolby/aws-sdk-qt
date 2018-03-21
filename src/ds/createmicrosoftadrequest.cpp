@@ -123,3 +123,6 @@ CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

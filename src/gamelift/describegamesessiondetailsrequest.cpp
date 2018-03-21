@@ -123,3 +123,6 @@ DescribeGameSessionDetailsRequestPrivate::DescribeGameSessionDetailsRequestPriva
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

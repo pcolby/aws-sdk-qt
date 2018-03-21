@@ -123,3 +123,6 @@ GetAttributesRequestPrivate::GetAttributesRequestPrivate(
 {
 
 }
+
+} // namespace SimpleDB
+} // namespace AWS

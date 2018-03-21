@@ -123,3 +123,6 @@ AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRe
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

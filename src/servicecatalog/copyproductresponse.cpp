@@ -101,3 +101,6 @@ void CopyProductResponsePrivate::CopyProductResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CopyProductResponse"));
     /// @todo
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

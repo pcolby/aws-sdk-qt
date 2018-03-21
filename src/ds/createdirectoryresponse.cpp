@@ -101,3 +101,6 @@ void CreateDirectoryResponsePrivate::CreateDirectoryResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("CreateDirectoryResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

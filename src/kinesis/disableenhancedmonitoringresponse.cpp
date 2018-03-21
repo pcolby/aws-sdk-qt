@@ -101,3 +101,6 @@ void DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponse
     Q_ASSERT(xml.name() == QLatin1String("DisableEnhancedMonitoringResponse"));
     /// @todo
 }
+
+} // namespace Kinesis
+} // namespace AWS

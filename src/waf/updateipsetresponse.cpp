@@ -101,3 +101,6 @@ void UpdateIPSetResponsePrivate::UpdateIPSetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateIPSetResponse"));
     /// @todo
 }
+
+} // namespace WAF
+} // namespace AWS

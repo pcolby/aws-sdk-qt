@@ -101,3 +101,6 @@ void AttachDiskResponsePrivate::AttachDiskResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AttachDiskResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

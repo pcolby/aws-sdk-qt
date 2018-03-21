@@ -123,3 +123,6 @@ ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

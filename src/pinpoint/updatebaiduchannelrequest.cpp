@@ -123,3 +123,6 @@ UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

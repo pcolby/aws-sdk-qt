@@ -101,3 +101,6 @@ void AttachObjectResponsePrivate::AttachObjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("AttachObjectResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

@@ -123,3 +123,6 @@ GetBucketLifecycleRequestPrivate::GetBucketLifecycleRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

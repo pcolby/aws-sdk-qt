@@ -101,3 +101,6 @@ void DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioni
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackProvisioningParametersResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

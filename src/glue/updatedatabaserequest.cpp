@@ -123,3 +123,6 @@ UpdateDatabaseRequestPrivate::UpdateDatabaseRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

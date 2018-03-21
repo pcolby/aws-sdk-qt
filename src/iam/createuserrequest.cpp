@@ -123,3 +123,6 @@ CreateUserRequestPrivate::CreateUserRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

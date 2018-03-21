@@ -123,3 +123,6 @@ GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
 {
 
 }
+
+} // namespace Pinpoint
+} // namespace AWS

@@ -123,3 +123,6 @@ CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPriva
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

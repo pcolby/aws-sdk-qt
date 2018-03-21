@@ -101,3 +101,6 @@ void CloneReceiptRuleSetResponsePrivate::CloneReceiptRuleSetResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("CloneReceiptRuleSetResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeRegionsResponsePrivate::DescribeRegionsResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeRegionsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

@@ -123,3 +123,6 @@ BatchGetPartitionRequestPrivate::BatchGetPartitionRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

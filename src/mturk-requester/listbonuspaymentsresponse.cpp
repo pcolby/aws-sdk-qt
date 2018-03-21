@@ -101,3 +101,6 @@ void ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListBonusPaymentsResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

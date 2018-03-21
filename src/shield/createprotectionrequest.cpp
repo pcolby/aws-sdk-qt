@@ -123,3 +123,6 @@ CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
 {
 
 }
+
+} // namespace Shield
+} // namespace AWS

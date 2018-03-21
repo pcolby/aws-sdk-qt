@@ -101,3 +101,6 @@ void StopFleetResponsePrivate::StopFleetResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopFleetResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

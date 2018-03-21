@@ -101,3 +101,6 @@ void DescribeOrganizationResponsePrivate::DescribeOrganizationResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeOrganizationResponse"));
     /// @todo
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -123,3 +123,6 @@ PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

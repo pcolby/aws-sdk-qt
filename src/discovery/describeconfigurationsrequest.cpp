@@ -123,3 +123,6 @@ DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
 {
 
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

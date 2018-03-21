@@ -101,3 +101,6 @@ void TestFailoverResponsePrivate::TestFailoverResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TestFailoverResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

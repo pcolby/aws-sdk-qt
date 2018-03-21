@@ -101,3 +101,6 @@ void RebootBrokerResponsePrivate::RebootBrokerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("RebootBrokerResponse"));
     /// @todo
 }
+
+} // namespace MQ
+} // namespace AWS

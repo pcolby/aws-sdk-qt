@@ -101,3 +101,6 @@ void DeleteResourceDataSyncResponsePrivate::DeleteResourceDataSyncResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteResourceDataSyncResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -123,3 +123,6 @@ GetBundlesRequestPrivate::GetBundlesRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

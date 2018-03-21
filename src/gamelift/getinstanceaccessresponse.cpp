@@ -101,3 +101,6 @@ void GetInstanceAccessResponsePrivate::GetInstanceAccessResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceAccessResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

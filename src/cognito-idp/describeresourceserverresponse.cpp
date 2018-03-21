@@ -101,3 +101,6 @@ void DescribeResourceServerResponsePrivate::DescribeResourceServerResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DescribeResourceServerResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

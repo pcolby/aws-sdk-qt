@@ -123,3 +123,6 @@ DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

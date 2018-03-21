@@ -101,3 +101,6 @@ void DescribeHostedConnectionsResponsePrivate::DescribeHostedConnectionsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeHostedConnectionsResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

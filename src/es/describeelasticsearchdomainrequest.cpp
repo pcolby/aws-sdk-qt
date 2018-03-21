@@ -123,3 +123,6 @@ DescribeElasticsearchDomainRequestPrivate::DescribeElasticsearchDomainRequestPri
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

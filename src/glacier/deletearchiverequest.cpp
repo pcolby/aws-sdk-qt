@@ -123,3 +123,6 @@ DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

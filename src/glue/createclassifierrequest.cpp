@@ -123,3 +123,6 @@ CreateClassifierRequestPrivate::CreateClassifierRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

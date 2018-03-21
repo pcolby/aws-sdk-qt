@@ -101,3 +101,6 @@ void ReleaseAddressResponsePrivate::ReleaseAddressResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("ReleaseAddressResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

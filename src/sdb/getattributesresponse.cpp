@@ -101,3 +101,6 @@ void GetAttributesResponsePrivate::GetAttributesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetAttributesResponse"));
     /// @todo
 }
+
+} // namespace SimpleDB
+} // namespace AWS

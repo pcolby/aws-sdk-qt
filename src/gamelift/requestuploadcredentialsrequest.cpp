@@ -123,3 +123,6 @@ RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

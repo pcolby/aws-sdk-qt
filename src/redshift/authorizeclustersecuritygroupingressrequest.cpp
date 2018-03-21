@@ -123,3 +123,6 @@ AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGrou
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

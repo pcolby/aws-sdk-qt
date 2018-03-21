@@ -101,3 +101,6 @@ void DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingPoliciesResponse"));
     /// @todo
 }
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS

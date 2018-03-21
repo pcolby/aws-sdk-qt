@@ -101,3 +101,6 @@ void CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("CloseInstancePublicPortsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

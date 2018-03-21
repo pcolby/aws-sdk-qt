@@ -123,3 +123,6 @@ AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
 {
 
 }
+
+} // namespace CodeStar
+} // namespace AWS

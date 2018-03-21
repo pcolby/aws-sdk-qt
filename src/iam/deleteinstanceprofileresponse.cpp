@@ -101,3 +101,6 @@ void DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

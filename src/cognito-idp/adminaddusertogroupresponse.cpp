@@ -101,3 +101,6 @@ void AdminAddUserToGroupResponsePrivate::AdminAddUserToGroupResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("AdminAddUserToGroupResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

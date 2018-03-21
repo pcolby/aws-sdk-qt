@@ -101,3 +101,6 @@ void ListIncomingTypedLinksResponsePrivate::ListIncomingTypedLinksResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListIncomingTypedLinksResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

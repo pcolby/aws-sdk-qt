@@ -123,3 +123,6 @@ CreateTemplateRequestPrivate::CreateTemplateRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

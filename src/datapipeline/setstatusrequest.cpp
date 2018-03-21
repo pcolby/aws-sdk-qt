@@ -123,3 +123,6 @@ SetStatusRequestPrivate::SetStatusRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

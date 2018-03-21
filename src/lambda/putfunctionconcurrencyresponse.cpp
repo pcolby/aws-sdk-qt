@@ -101,3 +101,6 @@ void PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("PutFunctionConcurrencyResponse"));
     /// @todo
 }
+
+} // namespace Lambda
+} // namespace AWS

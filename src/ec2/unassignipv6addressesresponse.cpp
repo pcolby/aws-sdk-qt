@@ -101,3 +101,6 @@ void UnassignIpv6AddressesResponsePrivate::UnassignIpv6AddressesResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("UnassignIpv6AddressesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

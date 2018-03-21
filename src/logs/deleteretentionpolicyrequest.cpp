@@ -123,3 +123,6 @@ DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

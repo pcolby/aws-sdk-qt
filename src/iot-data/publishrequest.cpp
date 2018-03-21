@@ -123,3 +123,6 @@ PublishRequestPrivate::PublishRequestPrivate(
 {
 
 }
+
+} // namespace IoTDataPlane
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListPipelinesResponsePrivate::ListPipelinesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListPipelinesResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

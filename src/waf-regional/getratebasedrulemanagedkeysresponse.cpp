@@ -101,3 +101,6 @@ void GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResp
     Q_ASSERT(xml.name() == QLatin1String("GetRateBasedRuleManagedKeysResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

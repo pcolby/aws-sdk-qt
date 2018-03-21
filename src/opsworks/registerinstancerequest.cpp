@@ -123,3 +123,6 @@ RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

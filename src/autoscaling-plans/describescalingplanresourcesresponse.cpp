@@ -101,3 +101,6 @@ void DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeScalingPlanResourcesResponse"));
     /// @todo
 }
+
+} // namespace AutoScalingPlans
+} // namespace AWS

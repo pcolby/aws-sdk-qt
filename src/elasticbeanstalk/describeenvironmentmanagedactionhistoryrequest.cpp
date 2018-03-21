@@ -123,3 +123,6 @@ DescribeEnvironmentManagedActionHistoryRequestPrivate::DescribeEnvironmentManage
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetInstancesHealthStatusResponse"));
     /// @todo
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

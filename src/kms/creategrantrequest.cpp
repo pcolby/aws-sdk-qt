@@ -123,3 +123,6 @@ CreateGrantRequestPrivate::CreateGrantRequestPrivate(
 {
 
 }
+
+} // namespace KMS
+} // namespace AWS

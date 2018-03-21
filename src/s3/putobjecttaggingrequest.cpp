@@ -123,3 +123,6 @@ PutObjectTaggingRequestPrivate::PutObjectTaggingRequestPrivate(
 {
 
 }
+
+} // namespace S3
+} // namespace AWS

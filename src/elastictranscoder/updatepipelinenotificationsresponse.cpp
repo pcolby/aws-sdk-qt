@@ -101,3 +101,6 @@ void UpdatePipelineNotificationsResponsePrivate::UpdatePipelineNotificationsResp
     Q_ASSERT(xml.name() == QLatin1String("UpdatePipelineNotificationsResponse"));
     /// @todo
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

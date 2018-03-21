@@ -123,3 +123,6 @@ PollForThirdPartyJobsRequestPrivate::PollForThirdPartyJobsRequestPrivate(
 {
 
 }
+
+} // namespace CodePipeline
+} // namespace AWS

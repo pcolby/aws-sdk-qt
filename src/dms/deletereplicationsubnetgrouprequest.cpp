@@ -123,3 +123,6 @@ DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestP
 {
 
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

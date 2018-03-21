@@ -123,3 +123,6 @@ UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
 {
 
 }
+
+} // namespace CloudSearchDomain
+} // namespace AWS

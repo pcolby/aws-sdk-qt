@@ -101,3 +101,6 @@ void DeleteAppResponsePrivate::DeleteAppResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteAppResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

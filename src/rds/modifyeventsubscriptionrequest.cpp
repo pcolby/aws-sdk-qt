@@ -123,3 +123,6 @@ ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateStreamingURLResponsePrivate::CreateStreamingURLResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateStreamingURLResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

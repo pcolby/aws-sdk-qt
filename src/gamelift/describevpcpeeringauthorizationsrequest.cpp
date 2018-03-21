@@ -123,3 +123,6 @@ DescribeVpcPeeringAuthorizationsRequestPrivate::DescribeVpcPeeringAuthorizations
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

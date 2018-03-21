@@ -123,3 +123,6 @@ ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

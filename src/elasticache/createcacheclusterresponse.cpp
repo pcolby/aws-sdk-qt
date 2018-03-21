@@ -101,3 +101,6 @@ void CreateCacheClusterResponsePrivate::CreateCacheClusterResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("CreateCacheClusterResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

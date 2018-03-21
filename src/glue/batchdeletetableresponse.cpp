@@ -101,3 +101,6 @@ void BatchDeleteTableResponsePrivate::BatchDeleteTableResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("BatchDeleteTableResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

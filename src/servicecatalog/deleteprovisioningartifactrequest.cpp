@@ -123,3 +123,6 @@ DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPriva
 {
 
 }
+
+} // namespace ServiceCatalog
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

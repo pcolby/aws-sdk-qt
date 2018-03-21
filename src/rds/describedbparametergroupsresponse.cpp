@@ -101,3 +101,6 @@ void DescribeDBParameterGroupsResponsePrivate::DescribeDBParameterGroupsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeDBParameterGroupsResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

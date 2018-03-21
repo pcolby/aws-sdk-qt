@@ -123,3 +123,6 @@ UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

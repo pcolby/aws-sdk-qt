@@ -101,3 +101,6 @@ void UpdateTemplateResponsePrivate::UpdateTemplateResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateTemplateResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

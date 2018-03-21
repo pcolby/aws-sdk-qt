@@ -101,3 +101,6 @@ void DescribeFindingsResponsePrivate::DescribeFindingsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeFindingsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

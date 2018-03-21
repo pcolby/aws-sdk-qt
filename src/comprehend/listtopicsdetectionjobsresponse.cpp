@@ -101,3 +101,6 @@ void ListTopicsDetectionJobsResponsePrivate::ListTopicsDetectionJobsResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ListTopicsDetectionJobsResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

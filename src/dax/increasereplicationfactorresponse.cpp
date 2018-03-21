@@ -101,3 +101,6 @@ void IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponse
     Q_ASSERT(xml.name() == QLatin1String("IncreaseReplicationFactorResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

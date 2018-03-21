@@ -123,3 +123,6 @@ CreatePresetRequestPrivate::CreatePresetRequestPrivate(
 {
 
 }
+
+} // namespace MediaConvert
+} // namespace AWS

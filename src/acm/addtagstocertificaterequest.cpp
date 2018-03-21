@@ -123,3 +123,6 @@ AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
 {
 
 }
+
+} // namespace ACM
+} // namespace AWS

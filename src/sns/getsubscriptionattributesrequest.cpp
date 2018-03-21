@@ -123,3 +123,6 @@ GetSubscriptionAttributesRequestPrivate::GetSubscriptionAttributesRequestPrivate
 {
 
 }
+
+} // namespace SNS
+} // namespace AWS

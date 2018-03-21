@@ -123,3 +123,6 @@ CompareFacesRequestPrivate::CompareFacesRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

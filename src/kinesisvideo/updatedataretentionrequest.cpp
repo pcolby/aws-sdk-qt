@@ -123,3 +123,6 @@ UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
 {
 
 }
+
+} // namespace KinesisVideo
+} // namespace AWS

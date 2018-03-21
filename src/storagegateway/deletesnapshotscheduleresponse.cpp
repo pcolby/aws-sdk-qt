@@ -101,3 +101,6 @@ void DeleteSnapshotScheduleResponsePrivate::DeleteSnapshotScheduleResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteSnapshotScheduleResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

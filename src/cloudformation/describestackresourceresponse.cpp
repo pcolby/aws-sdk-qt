@@ -101,3 +101,6 @@ void DescribeStackResourceResponsePrivate::DescribeStackResourceResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeStackResourceResponse"));
     /// @todo
 }
+
+} // namespace CloudFormation
+} // namespace AWS

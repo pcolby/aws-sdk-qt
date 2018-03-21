@@ -101,3 +101,6 @@ void CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingU
     Q_ASSERT(xml.name() == QLatin1String("CreateImageBuilderStreamingURLResponse"));
     /// @todo
 }
+
+} // namespace AppStream
+} // namespace AWS

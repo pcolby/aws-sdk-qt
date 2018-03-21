@@ -101,3 +101,6 @@ void DeleteDiskSnapshotResponsePrivate::DeleteDiskSnapshotResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteDiskSnapshotResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

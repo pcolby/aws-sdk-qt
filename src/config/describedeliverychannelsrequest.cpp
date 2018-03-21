@@ -123,3 +123,6 @@ DescribeDeliveryChannelsRequestPrivate::DescribeDeliveryChannelsRequestPrivate(
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

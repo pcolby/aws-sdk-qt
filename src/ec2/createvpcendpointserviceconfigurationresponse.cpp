@@ -101,3 +101,6 @@ void CreateVpcEndpointServiceConfigurationResponsePrivate::CreateVpcEndpointServ
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcEndpointServiceConfigurationResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

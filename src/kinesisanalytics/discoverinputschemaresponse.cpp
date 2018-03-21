@@ -101,3 +101,6 @@ void DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DiscoverInputSchemaResponse"));
     /// @todo
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

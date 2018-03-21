@@ -101,3 +101,6 @@ void DescribeReplicationGroupsResponsePrivate::DescribeReplicationGroupsResponse
     Q_ASSERT(xml.name() == QLatin1String("DescribeReplicationGroupsResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

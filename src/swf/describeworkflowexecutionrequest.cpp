@@ -123,3 +123,6 @@ DescribeWorkflowExecutionRequestPrivate::DescribeWorkflowExecutionRequestPrivate
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

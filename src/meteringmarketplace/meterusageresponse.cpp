@@ -101,3 +101,6 @@ void MeterUsageResponsePrivate::MeterUsageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("MeterUsageResponse"));
     /// @todo
 }
+
+} // namespace MarketplaceMetering
+} // namespace AWS

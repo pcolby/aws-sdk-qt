@@ -101,3 +101,6 @@ void DeleteHITResponsePrivate::DeleteHITResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteHITResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

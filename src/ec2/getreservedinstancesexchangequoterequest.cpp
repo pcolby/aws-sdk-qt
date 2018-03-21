@@ -123,3 +123,6 @@ GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuo
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

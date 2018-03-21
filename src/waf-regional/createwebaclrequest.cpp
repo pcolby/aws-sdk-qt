@@ -123,3 +123,6 @@ CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

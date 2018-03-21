@@ -101,3 +101,6 @@ void DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentGroupResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

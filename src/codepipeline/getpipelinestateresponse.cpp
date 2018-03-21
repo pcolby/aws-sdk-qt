@@ -101,3 +101,6 @@ void GetPipelineStateResponsePrivate::GetPipelineStateResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("GetPipelineStateResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

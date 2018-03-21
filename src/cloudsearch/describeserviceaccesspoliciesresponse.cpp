@@ -101,3 +101,6 @@ void DescribeServiceAccessPoliciesResponsePrivate::DescribeServiceAccessPolicies
     Q_ASSERT(xml.name() == QLatin1String("DescribeServiceAccessPoliciesResponse"));
     /// @todo
 }
+
+} // namespace CloudSearch
+} // namespace AWS

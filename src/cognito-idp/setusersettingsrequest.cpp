@@ -123,3 +123,6 @@ SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

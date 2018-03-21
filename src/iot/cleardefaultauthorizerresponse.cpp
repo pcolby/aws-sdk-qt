@@ -101,3 +101,6 @@ void ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ClearDefaultAuthorizerResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

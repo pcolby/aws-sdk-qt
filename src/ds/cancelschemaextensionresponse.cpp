@@ -101,3 +101,6 @@ void CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CancelSchemaExtensionResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

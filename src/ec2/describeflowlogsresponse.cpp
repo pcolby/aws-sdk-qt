@@ -101,3 +101,6 @@ void DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DescribeFlowLogsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

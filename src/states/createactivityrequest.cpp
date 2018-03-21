@@ -123,3 +123,6 @@ CreateActivityRequestPrivate::CreateActivityRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

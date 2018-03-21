@@ -123,3 +123,6 @@ DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferings
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

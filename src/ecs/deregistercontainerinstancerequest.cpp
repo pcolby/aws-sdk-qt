@@ -123,3 +123,6 @@ DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPri
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

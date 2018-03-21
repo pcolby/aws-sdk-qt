@@ -101,3 +101,6 @@ void ChangeMessageVisibilityResponsePrivate::ChangeMessageVisibilityResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ChangeMessageVisibilityResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

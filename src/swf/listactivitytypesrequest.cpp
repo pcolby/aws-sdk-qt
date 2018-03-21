@@ -123,3 +123,6 @@ ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
 {
 
 }
+
+} // namespace SWF
+} // namespace AWS

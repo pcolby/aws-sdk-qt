@@ -123,3 +123,6 @@ UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRe
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

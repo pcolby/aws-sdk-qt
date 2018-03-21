@@ -101,3 +101,6 @@ void UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("UpdateJobTemplateResponse"));
     /// @todo
 }
+
+} // namespace MediaConvert
+} // namespace AWS

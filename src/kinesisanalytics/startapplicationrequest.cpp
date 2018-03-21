@@ -123,3 +123,6 @@ StartApplicationRequestPrivate::StartApplicationRequestPrivate(
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

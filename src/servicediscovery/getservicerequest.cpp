@@ -123,3 +123,6 @@ GetServiceRequestPrivate::GetServiceRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

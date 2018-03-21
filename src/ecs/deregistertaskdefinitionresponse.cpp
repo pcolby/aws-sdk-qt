@@ -101,3 +101,6 @@ void DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeregisterTaskDefinitionResponse"));
     /// @todo
 }
+
+} // namespace ECS
+} // namespace AWS

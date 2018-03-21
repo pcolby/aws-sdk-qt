@@ -123,3 +123,6 @@ DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

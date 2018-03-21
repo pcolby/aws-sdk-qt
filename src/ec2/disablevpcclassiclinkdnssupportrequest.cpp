@@ -123,3 +123,6 @@ DisableVpcClassicLinkDnsSupportRequestPrivate::DisableVpcClassicLinkDnsSupportRe
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

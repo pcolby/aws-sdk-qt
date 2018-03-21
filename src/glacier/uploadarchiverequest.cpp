@@ -123,3 +123,6 @@ UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

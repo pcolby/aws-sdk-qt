@@ -101,3 +101,6 @@ void ConfirmPublicVirtualInterfaceResponsePrivate::ConfirmPublicVirtualInterface
     Q_ASSERT(xml.name() == QLatin1String("ConfirmPublicVirtualInterfaceResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

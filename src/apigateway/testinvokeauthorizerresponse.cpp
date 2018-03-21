@@ -101,3 +101,6 @@ void TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("TestInvokeAuthorizerResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetRestApiResponsePrivate::GetRestApiResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetRestApiResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

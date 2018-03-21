@@ -123,3 +123,6 @@ CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPri
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

@@ -123,3 +123,6 @@ RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

@@ -101,3 +101,6 @@ void IndexFacesResponsePrivate::IndexFacesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("IndexFacesResponse"));
     /// @todo
 }
+
+} // namespace Rekognition
+} // namespace AWS

@@ -101,3 +101,6 @@ void CreateNotificationSubscriptionResponsePrivate::CreateNotificationSubscripti
     Q_ASSERT(xml.name() == QLatin1String("CreateNotificationSubscriptionResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

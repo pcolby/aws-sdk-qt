@@ -101,3 +101,6 @@ void CreateDeploymentResponsePrivate::CreateDeploymentResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("CreateDeploymentResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

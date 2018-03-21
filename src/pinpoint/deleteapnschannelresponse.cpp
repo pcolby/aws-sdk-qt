@@ -101,3 +101,6 @@ void DeleteApnsChannelResponsePrivate::DeleteApnsChannelResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteApnsChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

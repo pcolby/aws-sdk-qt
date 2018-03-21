@@ -123,3 +123,6 @@ GetXssMatchSetRequestPrivate::GetXssMatchSetRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

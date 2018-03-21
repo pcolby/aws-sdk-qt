@@ -101,3 +101,6 @@ void StopMatchmakingResponsePrivate::StopMatchmakingResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("StopMatchmakingResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

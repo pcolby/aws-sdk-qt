@@ -123,3 +123,6 @@ ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

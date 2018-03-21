@@ -101,3 +101,6 @@ void DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResp
     Q_ASSERT(xml.name() == QLatin1String("DeleteReusableDelegationSetResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

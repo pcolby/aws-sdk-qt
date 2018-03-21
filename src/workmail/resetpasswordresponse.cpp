@@ -101,3 +101,6 @@ void ResetPasswordResponsePrivate::ResetPasswordResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ResetPasswordResponse"));
     /// @todo
 }
+
+} // namespace WorkMail
+} // namespace AWS

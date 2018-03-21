@@ -101,3 +101,6 @@ void DetachPolicyResponsePrivate::DetachPolicyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DetachPolicyResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

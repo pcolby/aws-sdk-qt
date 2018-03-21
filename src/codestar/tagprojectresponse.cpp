@@ -101,3 +101,6 @@ void TagProjectResponsePrivate::TagProjectResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TagProjectResponse"));
     /// @todo
 }
+
+} // namespace CodeStar
+} // namespace AWS

@@ -101,3 +101,6 @@ void ImportCatalogToGlueResponsePrivate::ImportCatalogToGlueResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("ImportCatalogToGlueResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

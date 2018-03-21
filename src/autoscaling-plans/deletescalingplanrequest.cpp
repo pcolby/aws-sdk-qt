@@ -123,3 +123,6 @@ DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
 {
 
 }
+
+} // namespace AutoScalingPlans
+} // namespace AWS

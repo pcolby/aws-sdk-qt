@@ -101,3 +101,6 @@ void DeleteServerCertificateResponsePrivate::DeleteServerCertificateResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DeleteServerCertificateResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

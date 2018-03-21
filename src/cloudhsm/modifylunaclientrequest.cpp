@@ -123,3 +123,6 @@ ModifyLunaClientRequestPrivate::ModifyLunaClientRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

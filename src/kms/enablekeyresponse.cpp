@@ -101,3 +101,6 @@ void EnableKeyResponsePrivate::EnableKeyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("EnableKeyResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

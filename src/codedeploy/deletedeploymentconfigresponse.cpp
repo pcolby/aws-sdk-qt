@@ -101,3 +101,6 @@ void DeleteDeploymentConfigResponsePrivate::DeleteDeploymentConfigResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("DeleteDeploymentConfigResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

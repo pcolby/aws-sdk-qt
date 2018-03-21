@@ -123,3 +123,6 @@ UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccess
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

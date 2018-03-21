@@ -123,3 +123,6 @@ DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

@@ -101,3 +101,6 @@ void RebootCacheClusterResponsePrivate::RebootCacheClusterResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("RebootCacheClusterResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

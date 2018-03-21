@@ -123,3 +123,6 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
 {
 
 }
+
+} // namespace SQS
+} // namespace AWS

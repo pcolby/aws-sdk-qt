@@ -123,3 +123,6 @@ ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

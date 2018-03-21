@@ -123,3 +123,6 @@ DescribeUsersRequestPrivate::DescribeUsersRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

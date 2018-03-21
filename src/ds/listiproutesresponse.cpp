@@ -101,3 +101,6 @@ void ListIpRoutesResponsePrivate::ListIpRoutesResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListIpRoutesResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

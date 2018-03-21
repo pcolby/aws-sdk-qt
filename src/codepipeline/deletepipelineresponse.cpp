@@ -101,3 +101,6 @@ void DeletePipelineResponsePrivate::DeletePipelineResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeletePipelineResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

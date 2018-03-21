@@ -123,3 +123,6 @@ PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
 {
 
 }
+
+} // namespace CodeCommit
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTarget
     Q_ASSERT(xml.name() == QLatin1String("DescribeLoadBalancerTargetGroupsResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

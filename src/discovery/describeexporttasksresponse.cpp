@@ -101,3 +101,6 @@ void DescribeExportTasksResponsePrivate::DescribeExportTasksResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeExportTasksResponse"));
     /// @todo
 }
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS

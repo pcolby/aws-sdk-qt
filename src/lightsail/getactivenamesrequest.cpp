@@ -123,3 +123,6 @@ GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

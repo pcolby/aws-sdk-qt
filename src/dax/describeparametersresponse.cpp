@@ -101,3 +101,6 @@ void DescribeParametersResponsePrivate::DescribeParametersResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeParametersResponse"));
     /// @todo
 }
+
+} // namespace DAX
+} // namespace AWS

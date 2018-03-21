@@ -123,3 +123,6 @@ DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

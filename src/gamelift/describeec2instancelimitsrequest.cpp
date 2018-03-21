@@ -123,3 +123,6 @@ DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate
 {
 
 }
+
+} // namespace GameLift
+} // namespace AWS

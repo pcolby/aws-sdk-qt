@@ -123,3 +123,6 @@ SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

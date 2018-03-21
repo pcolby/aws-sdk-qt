@@ -101,3 +101,6 @@ void DescribeVolumesResponsePrivate::DescribeVolumesResponse(QXmlStreamReader &x
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumesResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

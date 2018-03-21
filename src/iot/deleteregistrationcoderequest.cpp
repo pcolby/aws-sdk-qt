@@ -123,3 +123,6 @@ DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

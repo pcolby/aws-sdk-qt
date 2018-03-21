@@ -101,3 +101,6 @@ void PutReportDefinitionResponsePrivate::PutReportDefinitionResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("PutReportDefinitionResponse"));
     /// @todo
 }
+
+} // namespace CostandUsageReportService
+} // namespace AWS

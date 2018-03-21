@@ -123,3 +123,6 @@ ListImportsRequestPrivate::ListImportsRequestPrivate(
 {
 
 }
+
+} // namespace CloudFormation
+} // namespace AWS

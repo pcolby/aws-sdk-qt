@@ -101,3 +101,6 @@ void ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("ModifySnapshotAttributeResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

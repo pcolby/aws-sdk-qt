@@ -101,3 +101,6 @@ void DeleteByteMatchSetResponsePrivate::DeleteByteMatchSetResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteByteMatchSetResponse"));
     /// @todo
 }
+
+} // namespace WAFRegional
+} // namespace AWS

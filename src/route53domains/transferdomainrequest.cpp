@@ -123,3 +123,6 @@ TransferDomainRequestPrivate::TransferDomainRequestPrivate(
 {
 
 }
+
+} // namespace Route53Domains
+} // namespace AWS

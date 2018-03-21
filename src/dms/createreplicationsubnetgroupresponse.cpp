@@ -101,3 +101,6 @@ void CreateReplicationSubnetGroupResponsePrivate::CreateReplicationSubnetGroupRe
     Q_ASSERT(xml.name() == QLatin1String("CreateReplicationSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

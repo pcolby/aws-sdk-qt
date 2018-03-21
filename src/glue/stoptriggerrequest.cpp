@@ -123,3 +123,6 @@ StopTriggerRequestPrivate::StopTriggerRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

@@ -101,3 +101,6 @@ void UpdateUserPoolResponsePrivate::UpdateUserPoolResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UpdateUserPoolResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

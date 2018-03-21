@@ -101,3 +101,6 @@ void ListActivityTypesResponsePrivate::ListActivityTypesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("ListActivityTypesResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

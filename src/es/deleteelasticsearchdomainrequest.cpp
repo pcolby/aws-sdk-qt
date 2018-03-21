@@ -123,3 +123,6 @@ DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

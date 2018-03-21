@@ -123,3 +123,6 @@ ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITReques
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

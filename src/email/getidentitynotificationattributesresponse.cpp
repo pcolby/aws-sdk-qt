@@ -101,3 +101,6 @@ void GetIdentityNotificationAttributesResponsePrivate::GetIdentityNotificationAt
     Q_ASSERT(xml.name() == QLatin1String("GetIdentityNotificationAttributesResponse"));
     /// @todo
 }
+
+} // namespace SES
+} // namespace AWS

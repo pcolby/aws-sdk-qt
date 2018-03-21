@@ -101,3 +101,6 @@ void ListThingRegistrationTaskReportsResponsePrivate::ListThingRegistrationTaskR
     Q_ASSERT(xml.name() == QLatin1String("ListThingRegistrationTaskReportsResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

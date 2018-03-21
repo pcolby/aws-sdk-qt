@@ -101,3 +101,6 @@ void GetImportResponsePrivate::GetImportResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetImportResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

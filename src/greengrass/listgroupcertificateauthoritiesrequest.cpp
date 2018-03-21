@@ -123,3 +123,6 @@ ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRe
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

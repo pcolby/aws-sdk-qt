@@ -101,3 +101,6 @@ void DetachGroupPolicyResponsePrivate::DetachGroupPolicyResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DetachGroupPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

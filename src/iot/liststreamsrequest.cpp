@@ -123,3 +123,6 @@ ListStreamsRequestPrivate::ListStreamsRequestPrivate(
 {
 
 }
+
+} // namespace IoT
+} // namespace AWS

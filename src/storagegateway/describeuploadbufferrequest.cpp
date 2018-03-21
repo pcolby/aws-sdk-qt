@@ -123,3 +123,6 @@ DescribeUploadBufferRequestPrivate::DescribeUploadBufferRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

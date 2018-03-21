@@ -123,3 +123,6 @@ DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

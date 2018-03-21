@@ -101,3 +101,6 @@ void DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteHealthCheckResponse"));
     /// @todo
 }
+
+} // namespace Route53
+} // namespace AWS

@@ -123,3 +123,6 @@ AcceptInvitationRequestPrivate::AcceptInvitationRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

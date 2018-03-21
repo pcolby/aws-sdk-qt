@@ -123,3 +123,6 @@ DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

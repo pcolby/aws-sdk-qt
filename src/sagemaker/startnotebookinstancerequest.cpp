@@ -123,3 +123,6 @@ StartNotebookInstanceRequestPrivate::StartNotebookInstanceRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

@@ -123,3 +123,6 @@ DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

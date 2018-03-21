@@ -101,3 +101,6 @@ void CreateVpcResponsePrivate::CreateVpcResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateVpcResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

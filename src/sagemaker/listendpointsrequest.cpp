@@ -123,3 +123,6 @@ ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

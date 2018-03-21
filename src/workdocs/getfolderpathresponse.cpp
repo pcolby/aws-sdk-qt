@@ -101,3 +101,6 @@ void GetFolderPathResponsePrivate::GetFolderPathResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetFolderPathResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

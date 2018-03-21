@@ -101,3 +101,6 @@ void LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("LookupDeveloperIdentityResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

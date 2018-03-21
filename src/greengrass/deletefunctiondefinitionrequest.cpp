@@ -123,3 +123,6 @@ DeleteFunctionDefinitionRequestPrivate::DeleteFunctionDefinitionRequestPrivate(
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

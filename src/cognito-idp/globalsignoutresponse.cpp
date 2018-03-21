@@ -101,3 +101,6 @@ void GlobalSignOutResponsePrivate::GlobalSignOutResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GlobalSignOutResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

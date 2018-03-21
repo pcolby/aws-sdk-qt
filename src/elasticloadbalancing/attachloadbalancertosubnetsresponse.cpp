@@ -101,3 +101,6 @@ void AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResp
     Q_ASSERT(xml.name() == QLatin1String("AttachLoadBalancerToSubnetsResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

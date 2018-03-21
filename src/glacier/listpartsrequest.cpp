@@ -123,3 +123,6 @@ ListPartsRequestPrivate::ListPartsRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

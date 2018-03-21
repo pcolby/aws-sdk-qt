@@ -101,3 +101,6 @@ void ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListAssignmentsForHITResponse"));
     /// @todo
 }
+
+} // namespace MTurk
+} // namespace AWS

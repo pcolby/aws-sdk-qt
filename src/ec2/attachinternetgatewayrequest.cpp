@@ -123,3 +123,6 @@ AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

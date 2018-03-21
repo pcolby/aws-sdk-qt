@@ -123,3 +123,6 @@ DescribeJobRequestPrivate::DescribeJobRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

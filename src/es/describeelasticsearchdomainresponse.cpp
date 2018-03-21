@@ -101,3 +101,6 @@ void DescribeElasticsearchDomainResponsePrivate::DescribeElasticsearchDomainResp
     Q_ASSERT(xml.name() == QLatin1String("DescribeElasticsearchDomainResponse"));
     /// @todo
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

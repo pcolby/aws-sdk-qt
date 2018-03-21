@@ -123,3 +123,6 @@ RegisterImageRequestPrivate::RegisterImageRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

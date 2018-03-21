@@ -101,3 +101,6 @@ void UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResp
     Q_ASSERT(xml.name() == QLatin1String("UpdateAccountPasswordPolicyResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

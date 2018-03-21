@@ -101,3 +101,6 @@ void IsVpcPeeredResponsePrivate::IsVpcPeeredResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("IsVpcPeeredResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

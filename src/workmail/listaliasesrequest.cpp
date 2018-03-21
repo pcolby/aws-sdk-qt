@@ -123,3 +123,6 @@ ListAliasesRequestPrivate::ListAliasesRequestPrivate(
 {
 
 }
+
+} // namespace WorkMail
+} // namespace AWS

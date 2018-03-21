@@ -101,3 +101,6 @@ void CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("CreateDBSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace RDS
+} // namespace AWS

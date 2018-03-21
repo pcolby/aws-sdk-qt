@@ -123,3 +123,6 @@ DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

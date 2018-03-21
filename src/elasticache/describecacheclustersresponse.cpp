@@ -101,3 +101,6 @@ void DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DescribeCacheClustersResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

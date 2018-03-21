@@ -123,3 +123,6 @@ DescribeEcsClustersRequestPrivate::DescribeEcsClustersRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

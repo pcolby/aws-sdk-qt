@@ -123,3 +123,6 @@ CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
 {
 
 }
+
+} // namespace Rekognition
+} // namespace AWS

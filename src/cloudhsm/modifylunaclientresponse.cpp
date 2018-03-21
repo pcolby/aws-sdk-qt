@@ -101,3 +101,6 @@ void ModifyLunaClientResponsePrivate::ModifyLunaClientResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("ModifyLunaClientResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

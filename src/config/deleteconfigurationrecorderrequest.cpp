@@ -123,3 +123,6 @@ DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPri
 {
 
 }
+
+} // namespace ConfigService
+} // namespace AWS

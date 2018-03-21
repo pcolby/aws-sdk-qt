@@ -101,3 +101,6 @@ void UnlinkIdentityResponsePrivate::UnlinkIdentityResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("UnlinkIdentityResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

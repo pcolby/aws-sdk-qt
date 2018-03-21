@@ -123,3 +123,6 @@ ActivateUserRequestPrivate::ActivateUserRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

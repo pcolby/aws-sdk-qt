@@ -101,3 +101,6 @@ void GetDistributionConfigResponsePrivate::GetDistributionConfigResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetDistributionConfigResponse"));
     /// @todo
 }
+
+} // namespace CloudFront
+} // namespace AWS

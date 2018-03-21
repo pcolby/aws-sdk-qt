@@ -123,3 +123,6 @@ ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
 {
 
 }
+
+} // namespace SSM
+} // namespace AWS

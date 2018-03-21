@@ -101,3 +101,6 @@ void CreateDiskResponsePrivate::CreateDiskResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateDiskResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

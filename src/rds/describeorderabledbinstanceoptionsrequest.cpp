@@ -123,3 +123,6 @@ DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOpt
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

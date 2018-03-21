@@ -123,3 +123,6 @@ RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

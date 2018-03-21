@@ -123,3 +123,6 @@ DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
 {
 
 }
+
+} // namespace Firehose
+} // namespace AWS

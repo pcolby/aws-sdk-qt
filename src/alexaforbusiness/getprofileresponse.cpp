@@ -101,3 +101,6 @@ void GetProfileResponsePrivate::GetProfileResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetProfileResponse"));
     /// @todo
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

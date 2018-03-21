@@ -123,3 +123,6 @@ GetWebACLRequestPrivate::GetWebACLRequestPrivate(
 {
 
 }
+
+} // namespace WAF
+} // namespace AWS

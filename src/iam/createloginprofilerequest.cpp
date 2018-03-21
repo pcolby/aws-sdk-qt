@@ -123,3 +123,6 @@ CreateLoginProfileRequestPrivate::CreateLoginProfileRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

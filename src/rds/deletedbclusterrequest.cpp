@@ -123,3 +123,6 @@ DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

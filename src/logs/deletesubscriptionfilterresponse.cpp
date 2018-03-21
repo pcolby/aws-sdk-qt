@@ -101,3 +101,6 @@ void DeleteSubscriptionFilterResponsePrivate::DeleteSubscriptionFilterResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteSubscriptionFilterResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

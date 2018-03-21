@@ -123,3 +123,6 @@ DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

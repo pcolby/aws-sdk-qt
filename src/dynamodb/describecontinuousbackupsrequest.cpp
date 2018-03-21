@@ -123,3 +123,6 @@ DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate
 {
 
 }
+
+} // namespace DynamoDB
+} // namespace AWS

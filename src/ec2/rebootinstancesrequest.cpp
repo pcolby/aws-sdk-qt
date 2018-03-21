@@ -123,3 +123,6 @@ RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

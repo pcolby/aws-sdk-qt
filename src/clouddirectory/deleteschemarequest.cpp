@@ -123,3 +123,6 @@ DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

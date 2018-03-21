@@ -101,3 +101,6 @@ void GetRegionsResponsePrivate::GetRegionsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetRegionsResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

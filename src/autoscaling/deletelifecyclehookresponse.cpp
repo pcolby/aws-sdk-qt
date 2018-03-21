@@ -101,3 +101,6 @@ void DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DeleteLifecycleHookResponse"));
     /// @todo
 }
+
+} // namespace AutoScaling
+} // namespace AWS

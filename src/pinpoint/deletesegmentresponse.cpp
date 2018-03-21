@@ -101,3 +101,6 @@ void DeleteSegmentResponsePrivate::DeleteSegmentResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteSegmentResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

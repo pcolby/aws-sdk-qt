@@ -101,3 +101,6 @@ void DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("DescribeLaunchTemplatesResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

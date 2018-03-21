@@ -123,3 +123,6 @@ DetachInstancesFromLoadBalancerRequestPrivate::DetachInstancesFromLoadBalancerRe
 {
 
 }
+
+} // namespace Lightsail
+} // namespace AWS

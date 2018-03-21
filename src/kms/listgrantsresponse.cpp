@@ -101,3 +101,6 @@ void ListGrantsResponsePrivate::ListGrantsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListGrantsResponse"));
     /// @todo
 }
+
+} // namespace KMS
+} // namespace AWS

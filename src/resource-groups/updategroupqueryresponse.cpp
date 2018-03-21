@@ -101,3 +101,6 @@ void UpdateGroupQueryResponsePrivate::UpdateGroupQueryResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("UpdateGroupQueryResponse"));
     /// @todo
 }
+
+} // namespace ResourceGroups
+} // namespace AWS

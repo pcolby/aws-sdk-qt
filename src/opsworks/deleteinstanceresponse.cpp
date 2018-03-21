@@ -101,3 +101,6 @@ void DeleteInstanceResponsePrivate::DeleteInstanceResponse(QXmlStreamReader &xml
     Q_ASSERT(xml.name() == QLatin1String("DeleteInstanceResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

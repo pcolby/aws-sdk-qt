@@ -101,3 +101,6 @@ void ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionsByTopicResponse"));
     /// @todo
 }
+
+} // namespace SNS
+} // namespace AWS

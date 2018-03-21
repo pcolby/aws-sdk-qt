@@ -123,3 +123,6 @@ AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
 {
 
 }
+
+} // namespace AlexaForBusiness
+} // namespace AWS

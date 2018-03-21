@@ -123,3 +123,6 @@ SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
 {
 
 }
+
+} // namespace StorageGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void ReplaceNetworkAclEntryResponsePrivate::ReplaceNetworkAclEntryResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ReplaceNetworkAclEntryResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

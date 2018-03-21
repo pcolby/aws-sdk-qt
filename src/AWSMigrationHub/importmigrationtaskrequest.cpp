@@ -123,3 +123,6 @@ ImportMigrationTaskRequestPrivate::ImportMigrationTaskRequestPrivate(
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

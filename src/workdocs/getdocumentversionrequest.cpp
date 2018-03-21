@@ -123,3 +123,6 @@ GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
 {
 
 }
+
+} // namespace WorkDocs
+} // namespace AWS

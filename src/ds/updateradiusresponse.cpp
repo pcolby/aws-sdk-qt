@@ -101,3 +101,6 @@ void UpdateRadiusResponsePrivate::UpdateRadiusResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateRadiusResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

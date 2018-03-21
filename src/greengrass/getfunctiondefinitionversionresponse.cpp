@@ -101,3 +101,6 @@ void GetFunctionDefinitionVersionResponsePrivate::GetFunctionDefinitionVersionRe
     Q_ASSERT(xml.name() == QLatin1String("GetFunctionDefinitionVersionResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

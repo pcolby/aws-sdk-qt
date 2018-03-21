@@ -101,3 +101,6 @@ void DescribeHsmResponsePrivate::DescribeHsmResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DescribeHsmResponse"));
     /// @todo
 }
+
+} // namespace CloudHSM
+} // namespace AWS

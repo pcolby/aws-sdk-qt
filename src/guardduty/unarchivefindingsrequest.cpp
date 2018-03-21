@@ -123,3 +123,6 @@ UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

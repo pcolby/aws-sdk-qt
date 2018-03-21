@@ -123,3 +123,6 @@ CreatePublicVirtualInterfaceRequestPrivate::CreatePublicVirtualInterfaceRequestP
 {
 
 }
+
+} // namespace DirectConnect
+} // namespace AWS

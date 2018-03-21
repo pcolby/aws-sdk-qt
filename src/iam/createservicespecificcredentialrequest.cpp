@@ -123,3 +123,6 @@ CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRe
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

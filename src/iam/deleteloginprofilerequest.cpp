@@ -123,3 +123,6 @@ DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
 {
 
 }
+
+} // namespace IAM
+} // namespace AWS

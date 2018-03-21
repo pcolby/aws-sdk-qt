@@ -123,3 +123,6 @@ ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequ
 {
 
 }
+
+} // namespace ElasticsearchService
+} // namespace AWS

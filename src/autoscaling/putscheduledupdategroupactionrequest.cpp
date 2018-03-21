@@ -123,3 +123,6 @@ PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionReques
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

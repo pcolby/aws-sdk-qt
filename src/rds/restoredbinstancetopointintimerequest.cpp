@@ -123,3 +123,6 @@ RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequ
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

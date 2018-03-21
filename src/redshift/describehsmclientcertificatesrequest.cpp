@@ -123,3 +123,6 @@ DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesReques
 {
 
 }
+
+} // namespace Redshift
+} // namespace AWS

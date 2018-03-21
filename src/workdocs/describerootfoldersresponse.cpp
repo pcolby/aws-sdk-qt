@@ -101,3 +101,6 @@ void DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeRootFoldersResponse"));
     /// @todo
 }
+
+} // namespace WorkDocs
+} // namespace AWS

@@ -101,3 +101,6 @@ void RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponse
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskFailedResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

@@ -101,3 +101,6 @@ void PutSlotTypeResponsePrivate::PutSlotTypeResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("PutSlotTypeResponse"));
     /// @todo
 }
+
+} // namespace LexModelBuildingService
+} // namespace AWS

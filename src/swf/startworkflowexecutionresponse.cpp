@@ -101,3 +101,6 @@ void StartWorkflowExecutionResponsePrivate::StartWorkflowExecutionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("StartWorkflowExecutionResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

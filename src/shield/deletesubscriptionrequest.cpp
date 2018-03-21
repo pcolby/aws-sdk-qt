@@ -123,3 +123,6 @@ DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
 {
 
 }
+
+} // namespace Shield
+} // namespace AWS

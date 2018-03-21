@@ -123,3 +123,6 @@ CreateCaseRequestPrivate::CreateCaseRequestPrivate(
 {
 
 }
+
+} // namespace Support
+} // namespace AWS

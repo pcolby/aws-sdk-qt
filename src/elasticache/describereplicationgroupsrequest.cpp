@@ -123,3 +123,6 @@ DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate
 {
 
 }
+
+} // namespace ElastiCache
+} // namespace AWS

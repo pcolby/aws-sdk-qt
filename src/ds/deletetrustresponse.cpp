@@ -101,3 +101,6 @@ void DeleteTrustResponsePrivate::DeleteTrustResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteTrustResponse"));
     /// @todo
 }
+
+} // namespace DirectoryService
+} // namespace AWS

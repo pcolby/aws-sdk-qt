@@ -123,3 +123,6 @@ DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

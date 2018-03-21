@@ -101,3 +101,6 @@ void GetAutomationExecutionResponsePrivate::GetAutomationExecutionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetAutomationExecutionResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

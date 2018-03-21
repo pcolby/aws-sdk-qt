@@ -123,3 +123,6 @@ DeleteEndpointConfigRequestPrivate::DeleteEndpointConfigRequestPrivate(
 {
 
 }
+
+} // namespace SageMaker
+} // namespace AWS

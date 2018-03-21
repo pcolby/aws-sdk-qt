@@ -101,3 +101,6 @@ void UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("UpdateBaiduChannelResponse"));
     /// @todo
 }
+
+} // namespace Pinpoint
+} // namespace AWS

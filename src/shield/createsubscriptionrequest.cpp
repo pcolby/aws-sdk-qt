@@ -123,3 +123,6 @@ CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
 {
 
 }
+
+} // namespace Shield
+} // namespace AWS

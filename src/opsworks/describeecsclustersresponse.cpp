@@ -101,3 +101,6 @@ void DescribeEcsClustersResponsePrivate::DescribeEcsClustersResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("DescribeEcsClustersResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

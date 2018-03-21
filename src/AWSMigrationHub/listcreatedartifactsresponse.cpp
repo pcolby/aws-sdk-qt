@@ -101,3 +101,6 @@ void ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListCreatedArtifactsResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

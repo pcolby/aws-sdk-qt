@@ -101,3 +101,6 @@ void UpdateJobResponsePrivate::UpdateJobResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("UpdateJobResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

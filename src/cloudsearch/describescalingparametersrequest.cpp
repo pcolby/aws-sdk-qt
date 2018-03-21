@@ -123,3 +123,6 @@ DescribeScalingParametersRequestPrivate::DescribeScalingParametersRequestPrivate
 {
 
 }
+
+} // namespace CloudSearch
+} // namespace AWS

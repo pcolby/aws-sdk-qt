@@ -101,3 +101,6 @@ void DeleteInterconnectResponsePrivate::DeleteInterconnectResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DeleteInterconnectResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

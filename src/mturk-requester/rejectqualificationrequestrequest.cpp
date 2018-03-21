@@ -123,3 +123,6 @@ RejectQualificationRequestRequestPrivate::RejectQualificationRequestRequestPriva
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

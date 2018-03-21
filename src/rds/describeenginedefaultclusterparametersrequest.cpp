@@ -123,3 +123,6 @@ DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClust
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

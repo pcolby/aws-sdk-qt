@@ -123,3 +123,6 @@ GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
 {
 
 }
+
+} // namespace ServiceDiscovery
+} // namespace AWS

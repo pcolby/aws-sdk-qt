@@ -101,3 +101,6 @@ void DescribeIdentityPoolResponsePrivate::DescribeIdentityPoolResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("DescribeIdentityPoolResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentity
+} // namespace AWS

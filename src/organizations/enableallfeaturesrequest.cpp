@@ -123,3 +123,6 @@ EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
 {
 
 }
+
+} // namespace Organizations
+} // namespace AWS

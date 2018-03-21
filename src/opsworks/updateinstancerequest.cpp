@@ -123,3 +123,6 @@ UpdateInstanceRequestPrivate::UpdateInstanceRequestPrivate(
 {
 
 }
+
+} // namespace OpsWorks
+} // namespace AWS

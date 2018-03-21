@@ -123,3 +123,6 @@ DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

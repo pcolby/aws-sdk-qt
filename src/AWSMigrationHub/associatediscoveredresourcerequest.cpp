@@ -123,3 +123,6 @@ AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPri
 {
 
 }
+
+} // namespace MigrationHub
+} // namespace AWS

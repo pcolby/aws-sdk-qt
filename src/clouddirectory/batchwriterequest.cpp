@@ -123,3 +123,6 @@ BatchWriteRequestPrivate::BatchWriteRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

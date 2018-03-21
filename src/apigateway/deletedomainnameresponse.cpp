@@ -101,3 +101,6 @@ void DeleteDomainNameResponsePrivate::DeleteDomainNameResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DeleteDomainNameResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

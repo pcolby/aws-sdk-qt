@@ -123,3 +123,6 @@ ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
 {
 
 }
+
+} // namespace Glue
+} // namespace AWS

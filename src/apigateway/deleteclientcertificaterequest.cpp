@@ -123,3 +123,6 @@ DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

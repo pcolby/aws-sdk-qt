@@ -123,3 +123,6 @@ DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

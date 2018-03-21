@@ -101,3 +101,6 @@ void GetApplicationRevisionResponsePrivate::GetApplicationRevisionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("GetApplicationRevisionResponse"));
     /// @todo
 }
+
+} // namespace CodeDeploy
+} // namespace AWS

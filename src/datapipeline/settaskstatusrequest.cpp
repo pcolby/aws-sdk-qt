@@ -123,3 +123,6 @@ SetTaskStatusRequestPrivate::SetTaskStatusRequestPrivate(
 {
 
 }
+
+} // namespace DataPipeline
+} // namespace AWS

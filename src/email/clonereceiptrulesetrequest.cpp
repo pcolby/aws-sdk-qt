@@ -123,3 +123,6 @@ CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

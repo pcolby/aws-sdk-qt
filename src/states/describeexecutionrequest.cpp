@@ -123,3 +123,6 @@ DescribeExecutionRequestPrivate::DescribeExecutionRequestPrivate(
 {
 
 }
+
+} // namespace SFN
+} // namespace AWS

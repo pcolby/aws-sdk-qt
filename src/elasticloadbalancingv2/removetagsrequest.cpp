@@ -123,3 +123,6 @@ RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

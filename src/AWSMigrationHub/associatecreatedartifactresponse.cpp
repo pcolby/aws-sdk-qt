@@ -101,3 +101,6 @@ void AssociateCreatedArtifactResponsePrivate::AssociateCreatedArtifactResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("AssociateCreatedArtifactResponse"));
     /// @todo
 }
+
+} // namespace MigrationHub
+} // namespace AWS

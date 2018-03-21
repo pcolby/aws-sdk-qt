@@ -101,3 +101,6 @@ void GetInstanceProfileResponsePrivate::GetInstanceProfileResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceProfileResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

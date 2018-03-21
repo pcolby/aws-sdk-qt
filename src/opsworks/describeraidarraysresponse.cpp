@@ -101,3 +101,6 @@ void DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponse(QXmlStreamRea
     Q_ASSERT(xml.name() == QLatin1String("DescribeRaidArraysResponse"));
     /// @todo
 }
+
+} // namespace OpsWorks
+} // namespace AWS

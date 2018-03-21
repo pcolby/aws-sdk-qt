@@ -123,3 +123,6 @@ GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

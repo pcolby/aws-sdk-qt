@@ -101,3 +101,6 @@ void GetAccountSummaryResponsePrivate::GetAccountSummaryResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetAccountSummaryResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

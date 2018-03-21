@@ -123,3 +123,6 @@ GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
 {
 
 }
+
+} // namespace DirectoryService
+} // namespace AWS

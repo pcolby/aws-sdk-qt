@@ -123,3 +123,6 @@ CreateCloudFrontOriginAccessIdentityRequestPrivate::CreateCloudFrontOriginAccess
 {
 
 }
+
+} // namespace CloudFront
+} // namespace AWS

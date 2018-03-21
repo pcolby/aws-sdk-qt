@@ -101,3 +101,6 @@ void DeleteReplicationSubnetGroupResponsePrivate::DeleteReplicationSubnetGroupRe
     Q_ASSERT(xml.name() == QLatin1String("DeleteReplicationSubnetGroupResponse"));
     /// @todo
 }
+
+} // namespace DatabaseMigrationService
+} // namespace AWS

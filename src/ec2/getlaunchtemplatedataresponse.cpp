@@ -101,3 +101,6 @@ void GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetLaunchTemplateDataResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

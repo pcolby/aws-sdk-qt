@@ -123,3 +123,6 @@ DisableVpcClassicLinkRequestPrivate::DisableVpcClassicLinkRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

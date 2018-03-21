@@ -101,3 +101,6 @@ void CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponse(QXm
     Q_ASSERT(xml.name() == QLatin1String("CreateStorediSCSIVolumeResponse"));
     /// @todo
 }
+
+} // namespace StorageGateway
+} // namespace AWS

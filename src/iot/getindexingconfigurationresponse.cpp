@@ -101,3 +101,6 @@ void GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("GetIndexingConfigurationResponse"));
     /// @todo
 }
+
+} // namespace IoT
+} // namespace AWS

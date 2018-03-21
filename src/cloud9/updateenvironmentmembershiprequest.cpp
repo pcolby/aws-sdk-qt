@@ -123,3 +123,6 @@ UpdateEnvironmentMembershipRequestPrivate::UpdateEnvironmentMembershipRequestPri
 {
 
 }
+
+} // namespace Cloud9
+} // namespace AWS

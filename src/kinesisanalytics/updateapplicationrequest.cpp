@@ -123,3 +123,6 @@ UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
 {
 
 }
+
+} // namespace KinesisAnalytics
+} // namespace AWS

@@ -123,3 +123,6 @@ SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

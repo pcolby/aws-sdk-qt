@@ -101,3 +101,6 @@ void BatchGetQueryExecutionResponsePrivate::BatchGetQueryExecutionResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("BatchGetQueryExecutionResponse"));
     /// @todo
 }
+
+} // namespace Athena
+} // namespace AWS

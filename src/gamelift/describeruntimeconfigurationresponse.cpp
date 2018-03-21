@@ -101,3 +101,6 @@ void DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeRuntimeConfigurationResponse"));
     /// @todo
 }
+
+} // namespace GameLift
+} // namespace AWS

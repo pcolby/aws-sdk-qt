@@ -123,3 +123,6 @@ GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
 {
 
 }
+
+} // namespace Inspector
+} // namespace AWS

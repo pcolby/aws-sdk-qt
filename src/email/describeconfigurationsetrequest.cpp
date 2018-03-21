@@ -123,3 +123,6 @@ DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

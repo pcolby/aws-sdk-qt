@@ -123,3 +123,6 @@ CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

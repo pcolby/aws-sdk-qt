@@ -101,3 +101,6 @@ void ListAssessmentTargetsResponsePrivate::ListAssessmentTargetsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("ListAssessmentTargetsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

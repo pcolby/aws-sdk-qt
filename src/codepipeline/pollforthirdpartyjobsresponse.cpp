@@ -101,3 +101,6 @@ void PollForThirdPartyJobsResponsePrivate::PollForThirdPartyJobsResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("PollForThirdPartyJobsResponse"));
     /// @todo
 }
+
+} // namespace CodePipeline
+} // namespace AWS

@@ -101,3 +101,6 @@ void DescribeVolumesModificationsResponsePrivate::DescribeVolumesModificationsRe
     Q_ASSERT(xml.name() == QLatin1String("DescribeVolumesModificationsResponse"));
     /// @todo
 }
+
+} // namespace EC2
+} // namespace AWS

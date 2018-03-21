@@ -101,3 +101,6 @@ void DeregisterInstancesFromLoadBalancerResponsePrivate::DeregisterInstancesFrom
     Q_ASSERT(xml.name() == QLatin1String("DeregisterInstancesFromLoadBalancerResponse"));
     /// @todo
 }
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS

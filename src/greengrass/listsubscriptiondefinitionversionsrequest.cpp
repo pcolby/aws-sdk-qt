@@ -123,3 +123,6 @@ ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVers
 {
 
 }
+
+} // namespace Greengrass
+} // namespace AWS

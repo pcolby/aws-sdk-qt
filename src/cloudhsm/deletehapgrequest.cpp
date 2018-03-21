@@ -123,3 +123,6 @@ DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
 {
 
 }
+
+} // namespace CloudHSM
+} // namespace AWS

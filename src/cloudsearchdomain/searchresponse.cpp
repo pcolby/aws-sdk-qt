@@ -101,3 +101,6 @@ void SearchResponsePrivate::SearchResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("SearchResponse"));
     /// @todo
 }
+
+} // namespace CloudSearchDomain
+} // namespace AWS

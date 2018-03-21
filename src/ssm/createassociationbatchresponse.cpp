@@ -101,3 +101,6 @@ void CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("CreateAssociationBatchResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

@@ -101,3 +101,6 @@ void GetTraceSummariesResponsePrivate::GetTraceSummariesResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("GetTraceSummariesResponse"));
     /// @todo
 }
+
+} // namespace XRay
+} // namespace AWS

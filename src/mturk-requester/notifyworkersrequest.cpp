@@ -123,3 +123,6 @@ NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
 {
 
 }
+
+} // namespace MTurk
+} // namespace AWS

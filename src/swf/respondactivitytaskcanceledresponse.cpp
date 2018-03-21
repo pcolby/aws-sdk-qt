@@ -101,3 +101,6 @@ void RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResp
     Q_ASSERT(xml.name() == QLatin1String("RespondActivityTaskCanceledResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

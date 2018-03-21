@@ -101,3 +101,6 @@ void StopTriggerResponsePrivate::StopTriggerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("StopTriggerResponse"));
     /// @todo
 }
+
+} // namespace Glue
+} // namespace AWS

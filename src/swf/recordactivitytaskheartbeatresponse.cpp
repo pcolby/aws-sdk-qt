@@ -101,3 +101,6 @@ void RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResp
     Q_ASSERT(xml.name() == QLatin1String("RecordActivityTaskHeartbeatResponse"));
     /// @todo
 }
+
+} // namespace SWF
+} // namespace AWS

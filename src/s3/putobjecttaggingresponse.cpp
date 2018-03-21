@@ -101,3 +101,6 @@ void PutObjectTaggingResponsePrivate::PutObjectTaggingResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("PutObjectTaggingResponse"));
     /// @todo
 }
+
+} // namespace S3
+} // namespace AWS

@@ -101,3 +101,6 @@ void DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DetectKeyPhrasesResponse"));
     /// @todo
 }
+
+} // namespace Comprehend
+} // namespace AWS

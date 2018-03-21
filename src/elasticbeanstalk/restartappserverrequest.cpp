@@ -123,3 +123,6 @@ RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
 {
 
 }
+
+} // namespace ElasticBeanstalk
+} // namespace AWS

@@ -123,3 +123,6 @@ ListClustersRequestPrivate::ListClustersRequestPrivate(
 {
 
 }
+
+} // namespace ECS
+} // namespace AWS

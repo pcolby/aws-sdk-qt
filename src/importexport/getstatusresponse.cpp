@@ -101,3 +101,6 @@ void GetStatusResponsePrivate::GetStatusResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("GetStatusResponse"));
     /// @todo
 }
+
+} // namespace ImportExport
+} // namespace AWS

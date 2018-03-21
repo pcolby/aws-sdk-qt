@@ -101,3 +101,6 @@ void ListFindingsResponsePrivate::ListFindingsResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("ListFindingsResponse"));
     /// @todo
 }
+
+} // namespace Inspector
+} // namespace AWS

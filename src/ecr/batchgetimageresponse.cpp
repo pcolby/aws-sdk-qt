@@ -101,3 +101,6 @@ void BatchGetImageResponsePrivate::BatchGetImageResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("BatchGetImageResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

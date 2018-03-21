@@ -101,3 +101,6 @@ void DeleteCacheSecurityGroupResponsePrivate::DeleteCacheSecurityGroupResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("DeleteCacheSecurityGroupResponse"));
     /// @todo
 }
+
+} // namespace ElastiCache
+} // namespace AWS

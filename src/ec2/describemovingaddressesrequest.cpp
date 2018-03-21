@@ -123,3 +123,6 @@ DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

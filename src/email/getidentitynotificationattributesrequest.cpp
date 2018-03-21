@@ -123,3 +123,6 @@ GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttribut
 {
 
 }
+
+} // namespace SES
+} // namespace AWS

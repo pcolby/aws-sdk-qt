@@ -101,3 +101,6 @@ void ChangeMessageVisibilityBatchResponsePrivate::ChangeMessageVisibilityBatchRe
     Q_ASSERT(xml.name() == QLatin1String("ChangeMessageVisibilityBatchResponse"));
     /// @todo
 }
+
+} // namespace SQS
+} // namespace AWS

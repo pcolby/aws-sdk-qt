@@ -101,3 +101,6 @@ void DeleteDestinationResponsePrivate::DeleteDestinationResponse(QXmlStreamReade
     Q_ASSERT(xml.name() == QLatin1String("DeleteDestinationResponse"));
     /// @todo
 }
+
+} // namespace CloudWatchLogs
+} // namespace AWS

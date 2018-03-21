@@ -123,3 +123,6 @@ UpdateModelRequestPrivate::UpdateModelRequestPrivate(
 {
 
 }
+
+} // namespace APIGateway
+} // namespace AWS

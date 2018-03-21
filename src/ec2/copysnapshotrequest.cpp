@@ -123,3 +123,6 @@ CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

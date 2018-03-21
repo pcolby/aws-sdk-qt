@@ -123,3 +123,6 @@ SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
 {
 
 }
+
+} // namespace AutoScaling
+} // namespace AWS

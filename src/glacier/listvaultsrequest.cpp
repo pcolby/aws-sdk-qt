@@ -123,3 +123,6 @@ ListVaultsRequestPrivate::ListVaultsRequestPrivate(
 {
 
 }
+
+} // namespace Glacier
+} // namespace AWS

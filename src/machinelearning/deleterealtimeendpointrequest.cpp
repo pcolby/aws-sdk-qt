@@ -123,3 +123,6 @@ DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
 {
 
 }
+
+} // namespace MachineLearning
+} // namespace AWS

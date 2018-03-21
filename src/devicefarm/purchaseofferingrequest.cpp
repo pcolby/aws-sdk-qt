@@ -123,3 +123,6 @@ PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
 {
 
 }
+
+} // namespace DeviceFarm
+} // namespace AWS

@@ -123,3 +123,6 @@ GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
 {
 
 }
+
+} // namespace CloudDirectory
+} // namespace AWS

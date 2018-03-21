@@ -101,3 +101,6 @@ void DeleteApiKeyResponsePrivate::DeleteApiKeyResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("DeleteApiKeyResponse"));
     /// @todo
 }
+
+} // namespace APIGateway
+} // namespace AWS

@@ -101,3 +101,6 @@ void TranslateTextResponsePrivate::TranslateTextResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("TranslateTextResponse"));
     /// @todo
 }
+
+} // namespace Translate
+} // namespace AWS

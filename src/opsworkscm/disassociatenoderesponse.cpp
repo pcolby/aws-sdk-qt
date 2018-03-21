@@ -101,3 +101,6 @@ void DisassociateNodeResponsePrivate::DisassociateNodeResponse(QXmlStreamReader 
     Q_ASSERT(xml.name() == QLatin1String("DisassociateNodeResponse"));
     /// @todo
 }
+
+} // namespace OpsWorksCM
+} // namespace AWS

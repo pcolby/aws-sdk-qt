@@ -123,3 +123,6 @@ GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
 {
 
 }
+
+} // namespace GuardDuty
+} // namespace AWS

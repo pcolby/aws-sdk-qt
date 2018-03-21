@@ -123,3 +123,6 @@ StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
 {
 
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

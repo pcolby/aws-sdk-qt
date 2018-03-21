@@ -101,3 +101,6 @@ void StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionRe
     Q_ASSERT(xml.name() == QLatin1String("StartNextPendingJobExecutionResponse"));
     /// @todo
 }
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS

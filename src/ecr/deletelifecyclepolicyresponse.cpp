@@ -101,3 +101,6 @@ void DeleteLifecyclePolicyResponsePrivate::DeleteLifecyclePolicyResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("DeleteLifecyclePolicyResponse"));
     /// @todo
 }
+
+} // namespace ECR
+} // namespace AWS

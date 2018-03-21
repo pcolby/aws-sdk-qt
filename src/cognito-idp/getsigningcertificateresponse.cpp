@@ -101,3 +101,6 @@ void GetSigningCertificateResponsePrivate::GetSigningCertificateResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetSigningCertificateResponse"));
     /// @todo
 }
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS

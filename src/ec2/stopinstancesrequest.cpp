@@ -123,3 +123,6 @@ StopInstancesRequestPrivate::StopInstancesRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

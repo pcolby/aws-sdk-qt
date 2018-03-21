@@ -101,3 +101,6 @@ void GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponse(QXmlStr
     Q_ASSERT(xml.name() == QLatin1String("GetInstanceMetricDataResponse"));
     /// @todo
 }
+
+} // namespace Lightsail
+} // namespace AWS

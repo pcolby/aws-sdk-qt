@@ -123,3 +123,6 @@ UpdateStackRequestPrivate::UpdateStackRequestPrivate(
 {
 
 }
+
+} // namespace AppStream
+} // namespace AWS

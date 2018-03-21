@@ -101,3 +101,6 @@ void StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderRespon
     Q_ASSERT(xml.name() == QLatin1String("StartConfigurationRecorderResponse"));
     /// @todo
 }
+
+} // namespace ConfigService
+} // namespace AWS

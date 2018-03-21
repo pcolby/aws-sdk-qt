@@ -123,3 +123,6 @@ GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
 {
 
 }
+
+} // namespace WAFRegional
+} // namespace AWS

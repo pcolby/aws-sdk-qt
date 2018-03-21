@@ -101,3 +101,6 @@ void ListCommandInvocationsResponsePrivate::ListCommandInvocationsResponse(QXmlS
     Q_ASSERT(xml.name() == QLatin1String("ListCommandInvocationsResponse"));
     /// @todo
 }
+
+} // namespace SSM
+} // namespace AWS

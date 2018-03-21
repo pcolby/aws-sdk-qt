@@ -101,3 +101,6 @@ void CreateBGPPeerResponsePrivate::CreateBGPPeerResponse(QXmlStreamReader &xml)
     Q_ASSERT(xml.name() == QLatin1String("CreateBGPPeerResponse"));
     /// @todo
 }
+
+} // namespace DirectConnect
+} // namespace AWS

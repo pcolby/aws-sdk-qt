@@ -123,3 +123,6 @@ DeleteListenerRequestPrivate::DeleteListenerRequestPrivate(
 {
 
 }
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS

@@ -123,3 +123,6 @@ RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFrom
 {
 
 }
+
+} // namespace RDS
+} // namespace AWS

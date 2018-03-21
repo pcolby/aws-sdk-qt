@@ -101,3 +101,6 @@ void PutTelemetryRecordsResponsePrivate::PutTelemetryRecordsResponse(QXmlStreamR
     Q_ASSERT(xml.name() == QLatin1String("PutTelemetryRecordsResponse"));
     /// @todo
 }
+
+} // namespace XRay
+} // namespace AWS

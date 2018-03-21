@@ -101,3 +101,6 @@ void ListAttachedUserPoliciesResponsePrivate::ListAttachedUserPoliciesResponse(Q
     Q_ASSERT(xml.name() == QLatin1String("ListAttachedUserPoliciesResponse"));
     /// @todo
 }
+
+} // namespace IAM
+} // namespace AWS

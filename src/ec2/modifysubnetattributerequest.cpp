@@ -123,3 +123,6 @@ ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
 {
 
 }
+
+} // namespace EC2
+} // namespace AWS

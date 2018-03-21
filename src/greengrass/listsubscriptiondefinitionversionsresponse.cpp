@@ -101,3 +101,6 @@ void ListSubscriptionDefinitionVersionsResponsePrivate::ListSubscriptionDefiniti
     Q_ASSERT(xml.name() == QLatin1String("ListSubscriptionDefinitionVersionsResponse"));
     /// @todo
 }
+
+} // namespace Greengrass
+} // namespace AWS

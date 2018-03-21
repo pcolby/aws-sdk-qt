@@ -123,3 +123,6 @@ ListPresetsRequestPrivate::ListPresetsRequestPrivate(
 {
 
 }
+
+} // namespace ElasticTranscoder
+} // namespace AWS

@@ -101,3 +101,6 @@ void ListObjectAttributesResponsePrivate::ListObjectAttributesResponse(QXmlStrea
     Q_ASSERT(xml.name() == QLatin1String("ListObjectAttributesResponse"));
     /// @todo
 }
+
+} // namespace CloudDirectory
+} // namespace AWS
