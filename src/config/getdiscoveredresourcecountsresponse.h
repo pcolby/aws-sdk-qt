@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class GetDiscoveredResourceCountsResponsePrivate;
 
-class QTAWS_EXPORT GetDiscoveredResourceCountsResponse : public GetDiscoveredResourceCountsResponse {
+class QTAWS_EXPORT GetDiscoveredResourceCountsResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

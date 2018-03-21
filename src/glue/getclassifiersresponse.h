@@ -29,7 +29,7 @@ namespace Glue {
 
 class GetClassifiersResponsePrivate;
 
-class QTAWS_EXPORT GetClassifiersResponse : public GetClassifiersResponse {
+class QTAWS_EXPORT GetClassifiersResponse : public GlueResponse {
     Q_OBJECT
 
 public:

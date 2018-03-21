@@ -29,7 +29,7 @@ namespace ECS {
 
 class DeregisterContainerInstanceResponsePrivate;
 
-class QTAWS_EXPORT DeregisterContainerInstanceResponse : public DeregisterContainerInstanceResponse {
+class QTAWS_EXPORT DeregisterContainerInstanceResponse : public ECSResponse {
     Q_OBJECT
 
 public:

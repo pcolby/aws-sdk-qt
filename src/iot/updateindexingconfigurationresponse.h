@@ -29,7 +29,7 @@ namespace IoT {
 
 class UpdateIndexingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT UpdateIndexingConfigurationResponse : public UpdateIndexingConfigurationResponse {
+class QTAWS_EXPORT UpdateIndexingConfigurationResponse : public IoTResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class GetEmailChannelResponsePrivate;
 
-class QTAWS_EXPORT GetEmailChannelResponse : public GetEmailChannelResponse {
+class QTAWS_EXPORT GetEmailChannelResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

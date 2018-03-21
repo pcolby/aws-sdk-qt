@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class DeleteAutoScalingGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteAutoScalingGroupResponse : public DeleteAutoScalingGroupResponse {
+class QTAWS_EXPORT DeleteAutoScalingGroupResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

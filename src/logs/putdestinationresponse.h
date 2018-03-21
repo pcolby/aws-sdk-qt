@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 
 class PutDestinationResponsePrivate;
 
-class QTAWS_EXPORT PutDestinationResponse : public PutDestinationResponse {
+class QTAWS_EXPORT PutDestinationResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

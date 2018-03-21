@@ -29,7 +29,7 @@ namespace Route53 {
 
 class ChangeResourceRecordSetsResponsePrivate;
 
-class QTAWS_EXPORT ChangeResourceRecordSetsResponse : public ChangeResourceRecordSetsResponse {
+class QTAWS_EXPORT ChangeResourceRecordSetsResponse : public Route53Response {
     Q_OBJECT
 
 public:

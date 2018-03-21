@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class UpdateTagsForDomainResponsePrivate;
 
-class QTAWS_EXPORT UpdateTagsForDomainResponse : public UpdateTagsForDomainResponse {
+class QTAWS_EXPORT UpdateTagsForDomainResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

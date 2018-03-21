@@ -29,7 +29,7 @@ namespace SWF {
 
 class RecordActivityTaskHeartbeatResponsePrivate;
 
-class QTAWS_EXPORT RecordActivityTaskHeartbeatResponse : public RecordActivityTaskHeartbeatResponse {
+class QTAWS_EXPORT RecordActivityTaskHeartbeatResponse : public SWFResponse {
     Q_OBJECT
 
 public:

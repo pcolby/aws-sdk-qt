@@ -29,7 +29,7 @@ namespace CloudWatchEvents {
 
 class DisableRuleResponsePrivate;
 
-class QTAWS_EXPORT DisableRuleResponse : public DisableRuleResponse {
+class QTAWS_EXPORT DisableRuleResponse : public CloudWatchEventsResponse {
     Q_OBJECT
 
 public:

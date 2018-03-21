@@ -29,7 +29,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetRulePrioritiesResponsePrivate;
 
-class QTAWS_EXPORT SetRulePrioritiesResponse : public SetRulePrioritiesResponse {
+class QTAWS_EXPORT SetRulePrioritiesResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

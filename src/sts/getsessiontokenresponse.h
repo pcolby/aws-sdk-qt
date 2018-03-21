@@ -29,7 +29,7 @@ namespace STS {
 
 class GetSessionTokenResponsePrivate;
 
-class QTAWS_EXPORT GetSessionTokenResponse : public GetSessionTokenResponse {
+class QTAWS_EXPORT GetSessionTokenResponse : public STSResponse {
     Q_OBJECT
 
 public:

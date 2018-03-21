@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class DeleteVpcLinkResponsePrivate;
 
-class QTAWS_EXPORT DeleteVpcLinkResponse : public DeleteVpcLinkResponse {
+class QTAWS_EXPORT DeleteVpcLinkResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

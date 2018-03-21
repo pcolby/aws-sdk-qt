@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class ApplyEnvironmentManagedActionResponsePrivate;
 
-class QTAWS_EXPORT ApplyEnvironmentManagedActionResponse : public ApplyEnvironmentManagedActionResponse {
+class QTAWS_EXPORT ApplyEnvironmentManagedActionResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

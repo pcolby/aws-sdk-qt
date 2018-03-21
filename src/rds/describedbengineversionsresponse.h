@@ -29,7 +29,7 @@ namespace RDS {
 
 class DescribeDBEngineVersionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBEngineVersionsResponse : public DescribeDBEngineVersionsResponse {
+class QTAWS_EXPORT DescribeDBEngineVersionsResponse : public RDSResponse {
     Q_OBJECT
 
 public:

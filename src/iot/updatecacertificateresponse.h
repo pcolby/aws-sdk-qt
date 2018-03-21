@@ -29,7 +29,7 @@ namespace IoT {
 
 class UpdateCACertificateResponsePrivate;
 
-class QTAWS_EXPORT UpdateCACertificateResponse : public UpdateCACertificateResponse {
+class QTAWS_EXPORT UpdateCACertificateResponse : public IoTResponse {
     Q_OBJECT
 
 public:

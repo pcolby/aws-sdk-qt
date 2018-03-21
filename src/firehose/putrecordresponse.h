@@ -29,7 +29,7 @@ namespace Firehose {
 
 class PutRecordResponsePrivate;
 
-class QTAWS_EXPORT PutRecordResponse : public PutRecordResponse {
+class QTAWS_EXPORT PutRecordResponse : public FirehoseResponse {
     Q_OBJECT
 
 public:

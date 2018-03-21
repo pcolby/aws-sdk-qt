@@ -29,7 +29,7 @@ namespace SSM {
 
 class ListResourceDataSyncResponsePrivate;
 
-class QTAWS_EXPORT ListResourceDataSyncResponse : public ListResourceDataSyncResponse {
+class QTAWS_EXPORT ListResourceDataSyncResponse : public SSMResponse {
     Q_OBJECT
 
 public:

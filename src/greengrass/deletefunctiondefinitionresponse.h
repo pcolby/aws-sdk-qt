@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class DeleteFunctionDefinitionResponsePrivate;
 
-class QTAWS_EXPORT DeleteFunctionDefinitionResponse : public DeleteFunctionDefinitionResponse {
+class QTAWS_EXPORT DeleteFunctionDefinitionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

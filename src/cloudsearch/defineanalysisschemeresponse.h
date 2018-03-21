@@ -29,7 +29,7 @@ namespace CloudSearch {
 
 class DefineAnalysisSchemeResponsePrivate;
 
-class QTAWS_EXPORT DefineAnalysisSchemeResponse : public DefineAnalysisSchemeResponse {
+class QTAWS_EXPORT DefineAnalysisSchemeResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace SNS {
 
 class ListSubscriptionsByTopicResponsePrivate;
 
-class QTAWS_EXPORT ListSubscriptionsByTopicResponse : public ListSubscriptionsByTopicResponse {
+class QTAWS_EXPORT ListSubscriptionsByTopicResponse : public SNSResponse {
     Q_OBJECT
 
 public:

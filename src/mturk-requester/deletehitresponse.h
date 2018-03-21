@@ -29,7 +29,7 @@ namespace MTurk {
 
 class DeleteHITResponsePrivate;
 
-class QTAWS_EXPORT DeleteHITResponse : public DeleteHITResponse {
+class QTAWS_EXPORT DeleteHITResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CloudTrail {
 
 class DeleteTrailResponsePrivate;
 
-class QTAWS_EXPORT DeleteTrailResponse : public DeleteTrailResponse {
+class QTAWS_EXPORT DeleteTrailResponse : public CloudTrailResponse {
     Q_OBJECT
 
 public:

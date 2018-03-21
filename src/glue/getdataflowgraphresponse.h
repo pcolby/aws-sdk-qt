@@ -29,7 +29,7 @@ namespace Glue {
 
 class GetDataflowGraphResponsePrivate;
 
-class QTAWS_EXPORT GetDataflowGraphResponse : public GetDataflowGraphResponse {
+class QTAWS_EXPORT GetDataflowGraphResponse : public GlueResponse {
     Q_OBJECT
 
 public:

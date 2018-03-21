@@ -29,7 +29,7 @@ namespace Route53 {
 
 class CreateVPCAssociationAuthorizationResponsePrivate;
 
-class QTAWS_EXPORT CreateVPCAssociationAuthorizationResponse : public CreateVPCAssociationAuthorizationResponse {
+class QTAWS_EXPORT CreateVPCAssociationAuthorizationResponse : public Route53Response {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace MediaLive {
 
 class StopChannelResponsePrivate;
 
-class QTAWS_EXPORT StopChannelResponse : public StopChannelResponse {
+class QTAWS_EXPORT StopChannelResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

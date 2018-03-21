@@ -29,7 +29,7 @@ namespace Glue {
 
 class StartCrawlerResponsePrivate;
 
-class QTAWS_EXPORT StartCrawlerResponse : public StartCrawlerResponse {
+class QTAWS_EXPORT StartCrawlerResponse : public GlueResponse {
     Q_OBJECT
 
 public:

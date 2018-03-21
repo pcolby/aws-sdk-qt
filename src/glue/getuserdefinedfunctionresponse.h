@@ -29,7 +29,7 @@ namespace Glue {
 
 class GetUserDefinedFunctionResponsePrivate;
 
-class QTAWS_EXPORT GetUserDefinedFunctionResponse : public GetUserDefinedFunctionResponse {
+class QTAWS_EXPORT GetUserDefinedFunctionResponse : public GlueResponse {
     Q_OBJECT
 
 public:

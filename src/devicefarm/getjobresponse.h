@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class GetJobResponsePrivate;
 
-class QTAWS_EXPORT GetJobResponse : public GetJobResponse {
+class QTAWS_EXPORT GetJobResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class GetKeyPairResponsePrivate;
 
-class QTAWS_EXPORT GetKeyPairResponse : public GetKeyPairResponse {
+class QTAWS_EXPORT GetKeyPairResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

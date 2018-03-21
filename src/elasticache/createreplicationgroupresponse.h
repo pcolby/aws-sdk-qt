@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class CreateReplicationGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateReplicationGroupResponse : public CreateReplicationGroupResponse {
+class QTAWS_EXPORT CreateReplicationGroupResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

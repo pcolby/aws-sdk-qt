@@ -29,7 +29,7 @@ namespace Glacier {
 
 class GetVaultLockResponsePrivate;
 
-class QTAWS_EXPORT GetVaultLockResponse : public GetVaultLockResponse {
+class QTAWS_EXPORT GetVaultLockResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

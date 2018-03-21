@@ -29,7 +29,7 @@ namespace GameLift {
 
 class DescribeGameSessionQueuesResponsePrivate;
 
-class QTAWS_EXPORT DescribeGameSessionQueuesResponse : public DescribeGameSessionQueuesResponse {
+class QTAWS_EXPORT DescribeGameSessionQueuesResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

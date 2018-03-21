@@ -29,7 +29,7 @@ namespace ECS {
 
 class CreateServiceResponsePrivate;
 
-class QTAWS_EXPORT CreateServiceResponse : public CreateServiceResponse {
+class QTAWS_EXPORT CreateServiceResponse : public ECSResponse {
     Q_OBJECT
 
 public:

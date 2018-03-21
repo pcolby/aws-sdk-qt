@@ -29,7 +29,7 @@ namespace Kinesis {
 
 class RemoveTagsFromStreamResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsFromStreamResponse : public RemoveTagsFromStreamResponse {
+class QTAWS_EXPORT RemoveTagsFromStreamResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetSecurityGroupsResponsePrivate;
 
-class QTAWS_EXPORT SetSecurityGroupsResponse : public SetSecurityGroupsResponse {
+class QTAWS_EXPORT SetSecurityGroupsResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

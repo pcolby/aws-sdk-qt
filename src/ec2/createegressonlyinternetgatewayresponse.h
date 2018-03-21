@@ -29,7 +29,7 @@ namespace EC2 {
 
 class CreateEgressOnlyInternetGatewayResponsePrivate;
 
-class QTAWS_EXPORT CreateEgressOnlyInternetGatewayResponse : public CreateEgressOnlyInternetGatewayResponse {
+class QTAWS_EXPORT CreateEgressOnlyInternetGatewayResponse : public EC2Response {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Redshift {
 
 class DescribeTableRestoreStatusResponsePrivate;
 
-class QTAWS_EXPORT DescribeTableRestoreStatusResponse : public DescribeTableRestoreStatusResponse {
+class QTAWS_EXPORT DescribeTableRestoreStatusResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

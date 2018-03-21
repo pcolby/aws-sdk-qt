@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class GetSuiteResponsePrivate;
 
-class QTAWS_EXPORT GetSuiteResponse : public GetSuiteResponse {
+class QTAWS_EXPORT GetSuiteResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

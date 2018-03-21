@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public ListTagsForResourceResponse {
+class QTAWS_EXPORT ListTagsForResourceResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

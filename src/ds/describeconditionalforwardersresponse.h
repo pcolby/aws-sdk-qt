@@ -29,7 +29,7 @@ namespace DirectoryService {
 
 class DescribeConditionalForwardersResponsePrivate;
 
-class QTAWS_EXPORT DescribeConditionalForwardersResponse : public DescribeConditionalForwardersResponse {
+class QTAWS_EXPORT DescribeConditionalForwardersResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

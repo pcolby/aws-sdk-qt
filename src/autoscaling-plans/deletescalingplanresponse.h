@@ -29,7 +29,7 @@ namespace AutoScalingPlans {
 
 class DeleteScalingPlanResponsePrivate;
 
-class QTAWS_EXPORT DeleteScalingPlanResponse : public DeleteScalingPlanResponse {
+class QTAWS_EXPORT DeleteScalingPlanResponse : public AutoScalingPlansResponse {
     Q_OBJECT
 
 public:

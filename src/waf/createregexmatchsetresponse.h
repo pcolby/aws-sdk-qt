@@ -29,7 +29,7 @@ namespace WAF {
 
 class CreateRegexMatchSetResponsePrivate;
 
-class QTAWS_EXPORT CreateRegexMatchSetResponse : public CreateRegexMatchSetResponse {
+class QTAWS_EXPORT CreateRegexMatchSetResponse : public WAFResponse {
     Q_OBJECT
 
 public:

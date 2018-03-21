@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class RenewDomainResponsePrivate;
 
-class QTAWS_EXPORT RenewDomainResponse : public RenewDomainResponse {
+class QTAWS_EXPORT RenewDomainResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

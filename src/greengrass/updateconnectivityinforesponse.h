@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class UpdateConnectivityInfoResponsePrivate;
 
-class QTAWS_EXPORT UpdateConnectivityInfoResponse : public UpdateConnectivityInfoResponse {
+class QTAWS_EXPORT UpdateConnectivityInfoResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

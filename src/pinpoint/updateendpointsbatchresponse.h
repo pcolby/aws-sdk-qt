@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class UpdateEndpointsBatchResponsePrivate;
 
-class QTAWS_EXPORT UpdateEndpointsBatchResponse : public UpdateEndpointsBatchResponse {
+class QTAWS_EXPORT UpdateEndpointsBatchResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

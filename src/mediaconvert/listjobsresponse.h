@@ -29,7 +29,7 @@ namespace MediaConvert {
 
 class ListJobsResponsePrivate;
 
-class QTAWS_EXPORT ListJobsResponse : public ListJobsResponse {
+class QTAWS_EXPORT ListJobsResponse : public MediaConvertResponse {
     Q_OBJECT
 
 public:

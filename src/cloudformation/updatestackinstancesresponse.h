@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class UpdateStackInstancesResponsePrivate;
 
-class QTAWS_EXPORT UpdateStackInstancesResponse : public UpdateStackInstancesResponse {
+class QTAWS_EXPORT UpdateStackInstancesResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

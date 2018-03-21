@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class UpdateApplicationSettingsResponsePrivate;
 
-class QTAWS_EXPORT UpdateApplicationSettingsResponse : public UpdateApplicationSettingsResponse {
+class QTAWS_EXPORT UpdateApplicationSettingsResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

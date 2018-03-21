@@ -29,7 +29,7 @@ namespace Lambda {
 
 class DeleteFunctionConcurrencyResponsePrivate;
 
-class QTAWS_EXPORT DeleteFunctionConcurrencyResponse : public DeleteFunctionConcurrencyResponse {
+class QTAWS_EXPORT DeleteFunctionConcurrencyResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace KinesisVideoMedia {
 
 class GetMediaResponsePrivate;
 
-class QTAWS_EXPORT GetMediaResponse : public GetMediaResponse {
+class QTAWS_EXPORT GetMediaResponse : public KinesisVideoMediaResponse {
     Q_OBJECT
 
 public:

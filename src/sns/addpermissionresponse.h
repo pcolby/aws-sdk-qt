@@ -29,7 +29,7 @@ namespace SNS {
 
 class AddPermissionResponsePrivate;
 
-class QTAWS_EXPORT AddPermissionResponse : public AddPermissionResponse {
+class QTAWS_EXPORT AddPermissionResponse : public SNSResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace DynamoDB {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public UntagResourceResponse {
+class QTAWS_EXPORT UntagResourceResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

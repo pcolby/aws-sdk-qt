@@ -29,7 +29,7 @@ namespace Rekognition {
 
 class StartPersonTrackingResponsePrivate;
 
-class QTAWS_EXPORT StartPersonTrackingResponse : public StartPersonTrackingResponse {
+class QTAWS_EXPORT StartPersonTrackingResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

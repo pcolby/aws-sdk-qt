@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class GetBranchResponsePrivate;
 
-class QTAWS_EXPORT GetBranchResponse : public GetBranchResponse {
+class QTAWS_EXPORT GetBranchResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

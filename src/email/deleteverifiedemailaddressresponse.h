@@ -29,7 +29,7 @@ namespace SES {
 
 class DeleteVerifiedEmailAddressResponsePrivate;
 
-class QTAWS_EXPORT DeleteVerifiedEmailAddressResponse : public DeleteVerifiedEmailAddressResponse {
+class QTAWS_EXPORT DeleteVerifiedEmailAddressResponse : public SESResponse {
     Q_OBJECT
 
 public:

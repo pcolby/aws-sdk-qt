@@ -29,7 +29,7 @@ namespace Lambda {
 
 class UpdateFunctionConfigurationResponsePrivate;
 
-class QTAWS_EXPORT UpdateFunctionConfigurationResponse : public UpdateFunctionConfigurationResponse {
+class QTAWS_EXPORT UpdateFunctionConfigurationResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

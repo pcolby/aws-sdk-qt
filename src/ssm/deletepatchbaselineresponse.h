@@ -29,7 +29,7 @@ namespace SSM {
 
 class DeletePatchBaselineResponsePrivate;
 
-class QTAWS_EXPORT DeletePatchBaselineResponse : public DeletePatchBaselineResponse {
+class QTAWS_EXPORT DeletePatchBaselineResponse : public SSMResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace WorkSpaces {
 
 class DeleteTagsResponsePrivate;
 
-class QTAWS_EXPORT DeleteTagsResponse : public DeleteTagsResponse {
+class QTAWS_EXPORT DeleteTagsResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

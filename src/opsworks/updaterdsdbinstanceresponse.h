@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class UpdateRdsDbInstanceResponsePrivate;
 
-class QTAWS_EXPORT UpdateRdsDbInstanceResponse : public UpdateRdsDbInstanceResponse {
+class QTAWS_EXPORT UpdateRdsDbInstanceResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

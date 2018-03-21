@@ -29,7 +29,7 @@ namespace STS {
 
 class GetCallerIdentityResponsePrivate;
 
-class QTAWS_EXPORT GetCallerIdentityResponse : public GetCallerIdentityResponse {
+class QTAWS_EXPORT GetCallerIdentityResponse : public STSResponse {
     Q_OBJECT
 
 public:

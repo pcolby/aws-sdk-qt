@@ -29,7 +29,7 @@ namespace Redshift {
 
 class CreateClusterParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateClusterParameterGroupResponse : public CreateClusterParameterGroupResponse {
+class QTAWS_EXPORT CreateClusterParameterGroupResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

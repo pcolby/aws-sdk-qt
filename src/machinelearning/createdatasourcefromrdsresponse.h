@@ -29,7 +29,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromRDSResponsePrivate;
 
-class QTAWS_EXPORT CreateDataSourceFromRDSResponse : public CreateDataSourceFromRDSResponse {
+class QTAWS_EXPORT CreateDataSourceFromRDSResponse : public MachineLearningResponse {
     Q_OBJECT
 
 public:

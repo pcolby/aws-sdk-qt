@@ -29,7 +29,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyTargetGroupAttributesResponsePrivate;
 
-class QTAWS_EXPORT ModifyTargetGroupAttributesResponse : public ModifyTargetGroupAttributesResponse {
+class QTAWS_EXPORT ModifyTargetGroupAttributesResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

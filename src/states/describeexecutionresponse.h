@@ -29,7 +29,7 @@ namespace SFN {
 
 class DescribeExecutionResponsePrivate;
 
-class QTAWS_EXPORT DescribeExecutionResponse : public DescribeExecutionResponse {
+class QTAWS_EXPORT DescribeExecutionResponse : public SFNResponse {
     Q_OBJECT
 
 public:

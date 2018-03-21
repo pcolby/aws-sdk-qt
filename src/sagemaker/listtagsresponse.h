@@ -29,7 +29,7 @@ namespace SageMaker {
 
 class ListTagsResponsePrivate;
 
-class QTAWS_EXPORT ListTagsResponse : public ListTagsResponse {
+class QTAWS_EXPORT ListTagsResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

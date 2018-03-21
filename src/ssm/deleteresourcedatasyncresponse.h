@@ -29,7 +29,7 @@ namespace SSM {
 
 class DeleteResourceDataSyncResponsePrivate;
 
-class QTAWS_EXPORT DeleteResourceDataSyncResponse : public DeleteResourceDataSyncResponse {
+class QTAWS_EXPORT DeleteResourceDataSyncResponse : public SSMResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace ElasticsearchService {
 
 class DescribeElasticsearchInstanceTypeLimitsResponsePrivate;
 
-class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsResponse : public DescribeElasticsearchInstanceTypeLimitsResponse {
+class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

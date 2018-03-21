@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DisassociateAddressResponsePrivate;
 
-class QTAWS_EXPORT DisassociateAddressResponse : public DisassociateAddressResponse {
+class QTAWS_EXPORT DisassociateAddressResponse : public EC2Response {
     Q_OBJECT
 
 public:

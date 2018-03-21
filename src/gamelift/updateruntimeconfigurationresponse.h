@@ -29,7 +29,7 @@ namespace GameLift {
 
 class UpdateRuntimeConfigurationResponsePrivate;
 
-class QTAWS_EXPORT UpdateRuntimeConfigurationResponse : public UpdateRuntimeConfigurationResponse {
+class QTAWS_EXPORT UpdateRuntimeConfigurationResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

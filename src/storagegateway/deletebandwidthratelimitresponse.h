@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class DeleteBandwidthRateLimitResponsePrivate;
 
-class QTAWS_EXPORT DeleteBandwidthRateLimitResponse : public DeleteBandwidthRateLimitResponse {
+class QTAWS_EXPORT DeleteBandwidthRateLimitResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

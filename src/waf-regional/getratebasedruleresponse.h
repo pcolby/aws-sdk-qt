@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class GetRateBasedRuleResponsePrivate;
 
-class QTAWS_EXPORT GetRateBasedRuleResponse : public GetRateBasedRuleResponse {
+class QTAWS_EXPORT GetRateBasedRuleResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

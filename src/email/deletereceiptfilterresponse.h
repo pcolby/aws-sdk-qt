@@ -29,7 +29,7 @@ namespace SES {
 
 class DeleteReceiptFilterResponsePrivate;
 
-class QTAWS_EXPORT DeleteReceiptFilterResponse : public DeleteReceiptFilterResponse {
+class QTAWS_EXPORT DeleteReceiptFilterResponse : public SESResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace SSM {
 
 class DeleteMaintenanceWindowResponsePrivate;
 
-class QTAWS_EXPORT DeleteMaintenanceWindowResponse : public DeleteMaintenanceWindowResponse {
+class QTAWS_EXPORT DeleteMaintenanceWindowResponse : public SSMResponse {
     Q_OBJECT
 
 public:

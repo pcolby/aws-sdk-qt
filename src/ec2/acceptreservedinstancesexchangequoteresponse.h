@@ -29,7 +29,7 @@ namespace EC2 {
 
 class AcceptReservedInstancesExchangeQuoteResponsePrivate;
 
-class QTAWS_EXPORT AcceptReservedInstancesExchangeQuoteResponse : public AcceptReservedInstancesExchangeQuoteResponse {
+class QTAWS_EXPORT AcceptReservedInstancesExchangeQuoteResponse : public EC2Response {
     Q_OBJECT
 
 public:

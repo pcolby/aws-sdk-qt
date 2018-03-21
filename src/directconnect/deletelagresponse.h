@@ -29,7 +29,7 @@ namespace DirectConnect {
 
 class DeleteLagResponsePrivate;
 
-class QTAWS_EXPORT DeleteLagResponse : public DeleteLagResponse {
+class QTAWS_EXPORT DeleteLagResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

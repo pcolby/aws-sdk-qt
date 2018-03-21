@@ -29,7 +29,7 @@ namespace MediaPackage {
 
 class RotateChannelCredentialsResponsePrivate;
 
-class QTAWS_EXPORT RotateChannelCredentialsResponse : public RotateChannelCredentialsResponse {
+class QTAWS_EXPORT RotateChannelCredentialsResponse : public MediaPackageResponse {
     Q_OBJECT
 
 public:

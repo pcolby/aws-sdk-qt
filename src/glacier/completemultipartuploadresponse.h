@@ -29,7 +29,7 @@ namespace Glacier {
 
 class CompleteMultipartUploadResponsePrivate;
 
-class QTAWS_EXPORT CompleteMultipartUploadResponse : public CompleteMultipartUploadResponse {
+class QTAWS_EXPORT CompleteMultipartUploadResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

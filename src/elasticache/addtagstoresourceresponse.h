@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class AddTagsToResourceResponsePrivate;
 
-class QTAWS_EXPORT AddTagsToResourceResponse : public AddTagsToResourceResponse {
+class QTAWS_EXPORT AddTagsToResourceResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

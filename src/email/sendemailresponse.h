@@ -29,7 +29,7 @@ namespace SES {
 
 class SendEmailResponsePrivate;
 
-class QTAWS_EXPORT SendEmailResponse : public SendEmailResponse {
+class QTAWS_EXPORT SendEmailResponse : public SESResponse {
     Q_OBJECT
 
 public:

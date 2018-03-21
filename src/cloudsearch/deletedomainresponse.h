@@ -29,7 +29,7 @@ namespace CloudSearch {
 
 class DeleteDomainResponsePrivate;
 
-class QTAWS_EXPORT DeleteDomainResponse : public DeleteDomainResponse {
+class QTAWS_EXPORT DeleteDomainResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:

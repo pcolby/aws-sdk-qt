@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class SetUserPoolMfaConfigResponsePrivate;
 
-class QTAWS_EXPORT SetUserPoolMfaConfigResponse : public SetUserPoolMfaConfigResponse {
+class QTAWS_EXPORT SetUserPoolMfaConfigResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace WorkMail {
 
 class AssociateDelegateToResourceResponsePrivate;
 
-class QTAWS_EXPORT AssociateDelegateToResourceResponse : public AssociateDelegateToResourceResponse {
+class QTAWS_EXPORT AssociateDelegateToResourceResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

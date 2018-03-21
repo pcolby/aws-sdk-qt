@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DisableVpcClassicLinkResponsePrivate;
 
-class QTAWS_EXPORT DisableVpcClassicLinkResponse : public DisableVpcClassicLinkResponse {
+class QTAWS_EXPORT DisableVpcClassicLinkResponse : public EC2Response {
     Q_OBJECT
 
 public:

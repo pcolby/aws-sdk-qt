@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class CreateDeviceDefinitionVersionResponsePrivate;
 
-class QTAWS_EXPORT CreateDeviceDefinitionVersionResponse : public CreateDeviceDefinitionVersionResponse {
+class QTAWS_EXPORT CreateDeviceDefinitionVersionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

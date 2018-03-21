@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DescribeElasticGpusResponsePrivate;
 
-class QTAWS_EXPORT DescribeElasticGpusResponse : public DescribeElasticGpusResponse {
+class QTAWS_EXPORT DescribeElasticGpusResponse : public EC2Response {
     Q_OBJECT
 
 public:

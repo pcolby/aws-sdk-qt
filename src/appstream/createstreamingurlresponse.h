@@ -29,7 +29,7 @@ namespace AppStream {
 
 class CreateStreamingURLResponsePrivate;
 
-class QTAWS_EXPORT CreateStreamingURLResponse : public CreateStreamingURLResponse {
+class QTAWS_EXPORT CreateStreamingURLResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

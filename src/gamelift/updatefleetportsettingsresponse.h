@@ -29,7 +29,7 @@ namespace GameLift {
 
 class UpdateFleetPortSettingsResponsePrivate;
 
-class QTAWS_EXPORT UpdateFleetPortSettingsResponse : public UpdateFleetPortSettingsResponse {
+class QTAWS_EXPORT UpdateFleetPortSettingsResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

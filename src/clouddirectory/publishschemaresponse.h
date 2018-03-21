@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class PublishSchemaResponsePrivate;
 
-class QTAWS_EXPORT PublishSchemaResponse : public PublishSchemaResponse {
+class QTAWS_EXPORT PublishSchemaResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

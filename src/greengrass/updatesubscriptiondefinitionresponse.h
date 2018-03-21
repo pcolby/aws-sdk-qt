@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class UpdateSubscriptionDefinitionResponsePrivate;
 
-class QTAWS_EXPORT UpdateSubscriptionDefinitionResponse : public UpdateSubscriptionDefinitionResponse {
+class QTAWS_EXPORT UpdateSubscriptionDefinitionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

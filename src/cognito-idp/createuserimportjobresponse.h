@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class CreateUserImportJobResponsePrivate;
 
-class QTAWS_EXPORT CreateUserImportJobResponse : public CreateUserImportJobResponse {
+class QTAWS_EXPORT CreateUserImportJobResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CodeStar {
 
 class ListTeamMembersResponsePrivate;
 
-class QTAWS_EXPORT ListTeamMembersResponse : public ListTeamMembersResponse {
+class QTAWS_EXPORT ListTeamMembersResponse : public CodeStarResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace RDS {
 
 class StopDBInstanceResponsePrivate;
 
-class QTAWS_EXPORT StopDBInstanceResponse : public StopDBInstanceResponse {
+class QTAWS_EXPORT StopDBInstanceResponse : public RDSResponse {
     Q_OBJECT
 
 public:

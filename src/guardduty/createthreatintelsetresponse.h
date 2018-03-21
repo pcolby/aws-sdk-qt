@@ -29,7 +29,7 @@ namespace GuardDuty {
 
 class CreateThreatIntelSetResponsePrivate;
 
-class QTAWS_EXPORT CreateThreatIntelSetResponse : public CreateThreatIntelSetResponse {
+class QTAWS_EXPORT CreateThreatIntelSetResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

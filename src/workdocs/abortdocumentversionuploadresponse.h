@@ -29,7 +29,7 @@ namespace WorkDocs {
 
 class AbortDocumentVersionUploadResponsePrivate;
 
-class QTAWS_EXPORT AbortDocumentVersionUploadResponse : public AbortDocumentVersionUploadResponse {
+class QTAWS_EXPORT AbortDocumentVersionUploadResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

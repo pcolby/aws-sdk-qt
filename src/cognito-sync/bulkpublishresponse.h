@@ -29,7 +29,7 @@ namespace CognitoSync {
 
 class BulkPublishResponsePrivate;
 
-class QTAWS_EXPORT BulkPublishResponse : public BulkPublishResponse {
+class QTAWS_EXPORT BulkPublishResponse : public CognitoSyncResponse {
     Q_OBJECT
 
 public:

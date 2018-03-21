@@ -29,7 +29,7 @@ namespace CodeDeploy {
 
 class GetOnPremisesInstanceResponsePrivate;
 
-class QTAWS_EXPORT GetOnPremisesInstanceResponse : public GetOnPremisesInstanceResponse {
+class QTAWS_EXPORT GetOnPremisesInstanceResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

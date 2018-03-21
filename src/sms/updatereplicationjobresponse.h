@@ -29,7 +29,7 @@ namespace SMS {
 
 class UpdateReplicationJobResponsePrivate;
 
-class QTAWS_EXPORT UpdateReplicationJobResponse : public UpdateReplicationJobResponse {
+class QTAWS_EXPORT UpdateReplicationJobResponse : public SMSResponse {
     Q_OBJECT
 
 public:

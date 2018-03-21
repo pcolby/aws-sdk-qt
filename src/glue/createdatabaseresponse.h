@@ -29,7 +29,7 @@ namespace Glue {
 
 class CreateDatabaseResponsePrivate;
 
-class QTAWS_EXPORT CreateDatabaseResponse : public CreateDatabaseResponse {
+class QTAWS_EXPORT CreateDatabaseResponse : public GlueResponse {
     Q_OBJECT
 
 public:

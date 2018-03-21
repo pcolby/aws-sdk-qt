@@ -29,7 +29,7 @@ namespace EC2 {
 
 class ModifyVpcPeeringConnectionOptionsResponsePrivate;
 
-class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsResponse : public ModifyVpcPeeringConnectionOptionsResponse {
+class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsResponse : public EC2Response {
     Q_OBJECT
 
 public:

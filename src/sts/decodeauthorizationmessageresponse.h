@@ -29,7 +29,7 @@ namespace STS {
 
 class DecodeAuthorizationMessageResponsePrivate;
 
-class QTAWS_EXPORT DecodeAuthorizationMessageResponse : public DecodeAuthorizationMessageResponse {
+class QTAWS_EXPORT DecodeAuthorizationMessageResponse : public STSResponse {
     Q_OBJECT
 
 public:

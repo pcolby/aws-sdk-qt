@@ -29,7 +29,7 @@ namespace ServiceDiscovery {
 
 class GetNamespaceResponsePrivate;
 
-class QTAWS_EXPORT GetNamespaceResponse : public GetNamespaceResponse {
+class QTAWS_EXPORT GetNamespaceResponse : public ServiceDiscoveryResponse {
     Q_OBJECT
 
 public:

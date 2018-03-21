@@ -29,7 +29,7 @@ namespace CodePipeline {
 
 class CreateCustomActionTypeResponsePrivate;
 
-class QTAWS_EXPORT CreateCustomActionTypeResponse : public CreateCustomActionTypeResponse {
+class QTAWS_EXPORT CreateCustomActionTypeResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

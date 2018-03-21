@@ -29,7 +29,7 @@ namespace CognitoSync {
 
 class UpdateRecordsResponsePrivate;
 
-class QTAWS_EXPORT UpdateRecordsResponse : public UpdateRecordsResponse {
+class QTAWS_EXPORT UpdateRecordsResponse : public CognitoSyncResponse {
     Q_OBJECT
 
 public:

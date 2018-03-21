@@ -29,7 +29,7 @@ namespace ImportExport {
 
 class GetStatusResponsePrivate;
 
-class QTAWS_EXPORT GetStatusResponse : public GetStatusResponse {
+class QTAWS_EXPORT GetStatusResponse : public ImportExportResponse {
     Q_OBJECT
 
 public:

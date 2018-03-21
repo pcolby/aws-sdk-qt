@@ -29,7 +29,7 @@ namespace IoTJobsDataPlane {
 
 class GetPendingJobExecutionsResponsePrivate;
 
-class QTAWS_EXPORT GetPendingJobExecutionsResponse : public GetPendingJobExecutionsResponse {
+class QTAWS_EXPORT GetPendingJobExecutionsResponse : public IoTJobsDataPlaneResponse {
     Q_OBJECT
 
 public:

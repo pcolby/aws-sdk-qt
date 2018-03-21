@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class StopInstanceResponsePrivate;
 
-class QTAWS_EXPORT StopInstanceResponse : public StopInstanceResponse {
+class QTAWS_EXPORT StopInstanceResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

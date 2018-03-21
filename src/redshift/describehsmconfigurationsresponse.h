@@ -29,7 +29,7 @@ namespace Redshift {
 
 class DescribeHsmConfigurationsResponsePrivate;
 
-class QTAWS_EXPORT DescribeHsmConfigurationsResponse : public DescribeHsmConfigurationsResponse {
+class QTAWS_EXPORT DescribeHsmConfigurationsResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace AlexaForBusiness {
 
 class SendInvitationResponsePrivate;
 
-class QTAWS_EXPORT SendInvitationResponse : public SendInvitationResponse {
+class QTAWS_EXPORT SendInvitationResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

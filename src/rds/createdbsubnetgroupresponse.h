@@ -29,7 +29,7 @@ namespace RDS {
 
 class CreateDBSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateDBSubnetGroupResponse : public CreateDBSubnetGroupResponse {
+class QTAWS_EXPORT CreateDBSubnetGroupResponse : public RDSResponse {
     Q_OBJECT
 
 public:

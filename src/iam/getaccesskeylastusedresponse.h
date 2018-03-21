@@ -29,7 +29,7 @@ namespace IAM {
 
 class GetAccessKeyLastUsedResponsePrivate;
 
-class QTAWS_EXPORT GetAccessKeyLastUsedResponse : public GetAccessKeyLastUsedResponse {
+class QTAWS_EXPORT GetAccessKeyLastUsedResponse : public IAMResponse {
     Q_OBJECT
 
 public:

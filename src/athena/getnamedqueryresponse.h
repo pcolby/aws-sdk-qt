@@ -29,7 +29,7 @@ namespace Athena {
 
 class GetNamedQueryResponsePrivate;
 
-class QTAWS_EXPORT GetNamedQueryResponse : public GetNamedQueryResponse {
+class QTAWS_EXPORT GetNamedQueryResponse : public AthenaResponse {
     Q_OBJECT
 
 public:

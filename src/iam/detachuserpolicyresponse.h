@@ -29,7 +29,7 @@ namespace IAM {
 
 class DetachUserPolicyResponsePrivate;
 
-class QTAWS_EXPORT DetachUserPolicyResponse : public DetachUserPolicyResponse {
+class QTAWS_EXPORT DetachUserPolicyResponse : public IAMResponse {
     Q_OBJECT
 
 public:

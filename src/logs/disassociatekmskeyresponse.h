@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 
 class DisassociateKmsKeyResponsePrivate;
 
-class QTAWS_EXPORT DisassociateKmsKeyResponse : public DisassociateKmsKeyResponse {
+class QTAWS_EXPORT DisassociateKmsKeyResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

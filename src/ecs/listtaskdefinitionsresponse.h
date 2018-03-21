@@ -29,7 +29,7 @@ namespace ECS {
 
 class ListTaskDefinitionsResponsePrivate;
 
-class QTAWS_EXPORT ListTaskDefinitionsResponse : public ListTaskDefinitionsResponse {
+class QTAWS_EXPORT ListTaskDefinitionsResponse : public ECSResponse {
     Q_OBJECT
 
 public:

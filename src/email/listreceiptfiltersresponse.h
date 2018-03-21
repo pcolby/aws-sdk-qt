@@ -29,7 +29,7 @@ namespace SES {
 
 class ListReceiptFiltersResponsePrivate;
 
-class QTAWS_EXPORT ListReceiptFiltersResponse : public ListReceiptFiltersResponse {
+class QTAWS_EXPORT ListReceiptFiltersResponse : public SESResponse {
     Q_OBJECT
 
 public:

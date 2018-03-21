@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class CreateCloudFrontOriginAccessIdentityResponsePrivate;
 
-class QTAWS_EXPORT CreateCloudFrontOriginAccessIdentityResponse : public CreateCloudFrontOriginAccessIdentityResponse {
+class QTAWS_EXPORT CreateCloudFrontOriginAccessIdentityResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

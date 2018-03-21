@@ -29,7 +29,7 @@ namespace RDS {
 
 class DeleteOptionGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteOptionGroupResponse : public DeleteOptionGroupResponse {
+class QTAWS_EXPORT DeleteOptionGroupResponse : public RDSResponse {
     Q_OBJECT
 
 public:

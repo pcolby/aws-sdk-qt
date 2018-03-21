@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class DeleteServiceLinkedRoleResponsePrivate;
 
-class QTAWS_EXPORT DeleteServiceLinkedRoleResponse : public DeleteServiceLinkedRoleResponse {
+class QTAWS_EXPORT DeleteServiceLinkedRoleResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

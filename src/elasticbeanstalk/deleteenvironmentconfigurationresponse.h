@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class DeleteEnvironmentConfigurationResponsePrivate;
 
-class QTAWS_EXPORT DeleteEnvironmentConfigurationResponse : public DeleteEnvironmentConfigurationResponse {
+class QTAWS_EXPORT DeleteEnvironmentConfigurationResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

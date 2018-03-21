@@ -29,7 +29,7 @@ namespace SSM {
 
 class DeregisterManagedInstanceResponsePrivate;
 
-class QTAWS_EXPORT DeregisterManagedInstanceResponse : public DeregisterManagedInstanceResponse {
+class QTAWS_EXPORT DeregisterManagedInstanceResponse : public SSMResponse {
     Q_OBJECT
 
 public:

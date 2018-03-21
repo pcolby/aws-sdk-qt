@@ -29,7 +29,7 @@ namespace ElasticLoadBalancing {
 
 class ApplySecurityGroupsToLoadBalancerResponsePrivate;
 
-class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerResponse : public ApplySecurityGroupsToLoadBalancerResponse {
+class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerResponse : public ElasticLoadBalancingResponse {
     Q_OBJECT
 
 public:

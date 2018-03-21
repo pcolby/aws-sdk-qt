@@ -29,7 +29,7 @@ namespace LexModelBuildingService {
 
 class StartImportResponsePrivate;
 
-class QTAWS_EXPORT StartImportResponse : public StartImportResponse {
+class QTAWS_EXPORT StartImportResponse : public LexModelBuildingServiceResponse {
     Q_OBJECT
 
 public:

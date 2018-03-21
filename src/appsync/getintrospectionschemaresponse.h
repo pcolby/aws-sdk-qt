@@ -29,7 +29,7 @@ namespace AppSync {
 
 class GetIntrospectionSchemaResponsePrivate;
 
-class QTAWS_EXPORT GetIntrospectionSchemaResponse : public GetIntrospectionSchemaResponse {
+class QTAWS_EXPORT GetIntrospectionSchemaResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

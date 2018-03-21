@@ -29,7 +29,7 @@ namespace RDS {
 
 class ModifyDBClusterParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT ModifyDBClusterParameterGroupResponse : public ModifyDBClusterParameterGroupResponse {
+class QTAWS_EXPORT ModifyDBClusterParameterGroupResponse : public RDSResponse {
     Q_OBJECT
 
 public:

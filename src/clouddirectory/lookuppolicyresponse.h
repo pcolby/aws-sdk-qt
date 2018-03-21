@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class LookupPolicyResponsePrivate;
 
-class QTAWS_EXPORT LookupPolicyResponse : public LookupPolicyResponse {
+class QTAWS_EXPORT LookupPolicyResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

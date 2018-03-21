@@ -29,7 +29,7 @@ namespace KinesisVideo {
 
 class DeleteStreamResponsePrivate;
 
-class QTAWS_EXPORT DeleteStreamResponse : public DeleteStreamResponse {
+class QTAWS_EXPORT DeleteStreamResponse : public KinesisVideoResponse {
     Q_OBJECT
 
 public:

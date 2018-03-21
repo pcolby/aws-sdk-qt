@@ -29,7 +29,7 @@ namespace Redshift {
 
 class EnableSnapshotCopyResponsePrivate;
 
-class QTAWS_EXPORT EnableSnapshotCopyResponse : public EnableSnapshotCopyResponse {
+class QTAWS_EXPORT EnableSnapshotCopyResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

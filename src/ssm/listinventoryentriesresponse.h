@@ -29,7 +29,7 @@ namespace SSM {
 
 class ListInventoryEntriesResponsePrivate;
 
-class QTAWS_EXPORT ListInventoryEntriesResponse : public ListInventoryEntriesResponse {
+class QTAWS_EXPORT ListInventoryEntriesResponse : public SSMResponse {
     Q_OBJECT
 
 public:

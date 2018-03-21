@@ -29,7 +29,7 @@ namespace Organizations {
 
 class CreatePolicyResponsePrivate;
 
-class QTAWS_EXPORT CreatePolicyResponse : public CreatePolicyResponse {
+class QTAWS_EXPORT CreatePolicyResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

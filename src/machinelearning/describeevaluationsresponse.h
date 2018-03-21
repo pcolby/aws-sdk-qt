@@ -29,7 +29,7 @@ namespace MachineLearning {
 
 class DescribeEvaluationsResponsePrivate;
 
-class QTAWS_EXPORT DescribeEvaluationsResponse : public DescribeEvaluationsResponse {
+class QTAWS_EXPORT DescribeEvaluationsResponse : public MachineLearningResponse {
     Q_OBJECT
 
 public:

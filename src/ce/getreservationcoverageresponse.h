@@ -29,7 +29,7 @@ namespace CostExplorer {
 
 class GetReservationCoverageResponsePrivate;
 
-class QTAWS_EXPORT GetReservationCoverageResponse : public GetReservationCoverageResponse {
+class QTAWS_EXPORT GetReservationCoverageResponse : public CostExplorerResponse {
     Q_OBJECT
 
 public:

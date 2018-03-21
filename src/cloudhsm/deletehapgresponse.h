@@ -29,7 +29,7 @@ namespace CloudHSM {
 
 class DeleteHapgResponsePrivate;
 
-class QTAWS_EXPORT DeleteHapgResponse : public DeleteHapgResponse {
+class QTAWS_EXPORT DeleteHapgResponse : public CloudHSMResponse {
     Q_OBJECT
 
 public:

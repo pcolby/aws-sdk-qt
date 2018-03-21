@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class PurchaseOfferingResponsePrivate;
 
-class QTAWS_EXPORT PurchaseOfferingResponse : public PurchaseOfferingResponse {
+class QTAWS_EXPORT PurchaseOfferingResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

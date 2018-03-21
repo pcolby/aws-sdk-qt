@@ -29,7 +29,7 @@ namespace ECR {
 
 class InitiateLayerUploadResponsePrivate;
 
-class QTAWS_EXPORT InitiateLayerUploadResponse : public InitiateLayerUploadResponse {
+class QTAWS_EXPORT InitiateLayerUploadResponse : public ECRResponse {
     Q_OBJECT
 
 public:

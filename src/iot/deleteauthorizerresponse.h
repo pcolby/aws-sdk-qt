@@ -29,7 +29,7 @@ namespace IoT {
 
 class DeleteAuthorizerResponsePrivate;
 
-class QTAWS_EXPORT DeleteAuthorizerResponse : public DeleteAuthorizerResponse {
+class QTAWS_EXPORT DeleteAuthorizerResponse : public IoTResponse {
     Q_OBJECT
 
 public:

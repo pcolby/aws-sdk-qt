@@ -29,7 +29,7 @@ namespace MediaLive {
 
 class DescribeChannelResponsePrivate;
 
-class QTAWS_EXPORT DescribeChannelResponse : public DescribeChannelResponse {
+class QTAWS_EXPORT DescribeChannelResponse : public MediaLiveResponse {
     Q_OBJECT
 
 public:

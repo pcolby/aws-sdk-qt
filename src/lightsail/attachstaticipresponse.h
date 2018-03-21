@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class AttachStaticIpResponsePrivate;
 
-class QTAWS_EXPORT AttachStaticIpResponse : public AttachStaticIpResponse {
+class QTAWS_EXPORT AttachStaticIpResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

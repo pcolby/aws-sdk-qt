@@ -29,7 +29,7 @@ namespace Redshift {
 
 class DeleteClusterSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteClusterSubnetGroupResponse : public DeleteClusterSubnetGroupResponse {
+class QTAWS_EXPORT DeleteClusterSubnetGroupResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

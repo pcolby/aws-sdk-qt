@@ -29,7 +29,7 @@ namespace SSM {
 
 class PutComplianceItemsResponsePrivate;
 
-class QTAWS_EXPORT PutComplianceItemsResponse : public PutComplianceItemsResponse {
+class QTAWS_EXPORT PutComplianceItemsResponse : public SSMResponse {
     Q_OBJECT
 
 public:

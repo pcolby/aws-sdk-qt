@@ -29,7 +29,7 @@ namespace GameLift {
 
 class DeleteFleetResponsePrivate;
 
-class QTAWS_EXPORT DeleteFleetResponse : public DeleteFleetResponse {
+class QTAWS_EXPORT DeleteFleetResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

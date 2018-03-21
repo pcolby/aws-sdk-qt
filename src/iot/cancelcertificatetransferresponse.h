@@ -29,7 +29,7 @@ namespace IoT {
 
 class CancelCertificateTransferResponsePrivate;
 
-class QTAWS_EXPORT CancelCertificateTransferResponse : public CancelCertificateTransferResponse {
+class QTAWS_EXPORT CancelCertificateTransferResponse : public IoTResponse {
     Q_OBJECT
 
 public:

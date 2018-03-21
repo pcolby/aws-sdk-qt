@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class DisassociateRoleFromGroupResponsePrivate;
 
-class QTAWS_EXPORT DisassociateRoleFromGroupResponse : public DisassociateRoleFromGroupResponse {
+class QTAWS_EXPORT DisassociateRoleFromGroupResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

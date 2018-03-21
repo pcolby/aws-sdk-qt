@@ -29,7 +29,7 @@ namespace KinesisVideo {
 
 class TagStreamResponsePrivate;
 
-class QTAWS_EXPORT TagStreamResponse : public TagStreamResponse {
+class QTAWS_EXPORT TagStreamResponse : public KinesisVideoResponse {
     Q_OBJECT
 
 public:

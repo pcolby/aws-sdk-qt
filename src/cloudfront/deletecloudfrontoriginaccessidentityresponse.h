@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class DeleteCloudFrontOriginAccessIdentityResponsePrivate;
 
-class QTAWS_EXPORT DeleteCloudFrontOriginAccessIdentityResponse : public DeleteCloudFrontOriginAccessIdentityResponse {
+class QTAWS_EXPORT DeleteCloudFrontOriginAccessIdentityResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace WorkDocs {
 
 class GetCurrentUserResponsePrivate;
 
-class QTAWS_EXPORT GetCurrentUserResponse : public GetCurrentUserResponse {
+class QTAWS_EXPORT GetCurrentUserResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

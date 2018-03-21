@@ -29,7 +29,7 @@ namespace SQS {
 
 class AddPermissionResponsePrivate;
 
-class QTAWS_EXPORT AddPermissionResponse : public AddPermissionResponse {
+class QTAWS_EXPORT AddPermissionResponse : public SQSResponse {
     Q_OBJECT
 
 public:

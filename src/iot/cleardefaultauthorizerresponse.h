@@ -29,7 +29,7 @@ namespace IoT {
 
 class ClearDefaultAuthorizerResponsePrivate;
 
-class QTAWS_EXPORT ClearDefaultAuthorizerResponse : public ClearDefaultAuthorizerResponse {
+class QTAWS_EXPORT ClearDefaultAuthorizerResponse : public IoTResponse {
     Q_OBJECT
 
 public:

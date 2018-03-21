@@ -29,7 +29,7 @@ namespace Rekognition {
 
 class GetCelebrityRecognitionResponsePrivate;
 
-class QTAWS_EXPORT GetCelebrityRecognitionResponse : public GetCelebrityRecognitionResponse {
+class QTAWS_EXPORT GetCelebrityRecognitionResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

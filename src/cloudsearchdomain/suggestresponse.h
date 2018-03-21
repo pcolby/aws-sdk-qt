@@ -29,7 +29,7 @@ namespace CloudSearchDomain {
 
 class SuggestResponsePrivate;
 
-class QTAWS_EXPORT SuggestResponse : public SuggestResponse {
+class QTAWS_EXPORT SuggestResponse : public CloudSearchDomainResponse {
     Q_OBJECT
 
 public:

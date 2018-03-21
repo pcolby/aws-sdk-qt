@@ -29,7 +29,7 @@ namespace CodeDeploy {
 
 class ContinueDeploymentResponsePrivate;
 
-class QTAWS_EXPORT ContinueDeploymentResponse : public ContinueDeploymentResponse {
+class QTAWS_EXPORT ContinueDeploymentResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

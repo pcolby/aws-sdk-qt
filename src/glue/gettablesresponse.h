@@ -29,7 +29,7 @@ namespace Glue {
 
 class GetTablesResponsePrivate;
 
-class QTAWS_EXPORT GetTablesResponse : public GetTablesResponse {
+class QTAWS_EXPORT GetTablesResponse : public GlueResponse {
     Q_OBJECT
 
 public:

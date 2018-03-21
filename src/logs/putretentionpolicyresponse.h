@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 
 class PutRetentionPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutRetentionPolicyResponse : public PutRetentionPolicyResponse {
+class QTAWS_EXPORT PutRetentionPolicyResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

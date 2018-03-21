@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class DeleteDomainEntryResponsePrivate;
 
-class QTAWS_EXPORT DeleteDomainEntryResponse : public DeleteDomainEntryResponse {
+class QTAWS_EXPORT DeleteDomainEntryResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

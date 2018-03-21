@@ -29,7 +29,7 @@ namespace RDS {
 
 class RemoveRoleFromDBClusterResponsePrivate;
 
-class QTAWS_EXPORT RemoveRoleFromDBClusterResponse : public RemoveRoleFromDBClusterResponse {
+class QTAWS_EXPORT RemoveRoleFromDBClusterResponse : public RDSResponse {
     Q_OBJECT
 
 public:

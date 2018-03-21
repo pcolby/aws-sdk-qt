@@ -29,7 +29,7 @@ namespace SSM {
 
 class UpdatePatchBaselineResponsePrivate;
 
-class QTAWS_EXPORT UpdatePatchBaselineResponse : public UpdatePatchBaselineResponse {
+class QTAWS_EXPORT UpdatePatchBaselineResponse : public SSMResponse {
     Q_OBJECT
 
 public:

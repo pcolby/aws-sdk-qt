@@ -29,7 +29,7 @@ namespace LexRuntimeService {
 
 class PostContentResponsePrivate;
 
-class QTAWS_EXPORT PostContentResponse : public PostContentResponse {
+class QTAWS_EXPORT PostContentResponse : public LexRuntimeServiceResponse {
     Q_OBJECT
 
 public:

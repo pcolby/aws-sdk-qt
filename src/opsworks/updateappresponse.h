@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class UpdateAppResponsePrivate;
 
-class QTAWS_EXPORT UpdateAppResponse : public UpdateAppResponse {
+class QTAWS_EXPORT UpdateAppResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

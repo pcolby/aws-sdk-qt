@@ -29,7 +29,7 @@ namespace MQ {
 
 class ListBrokersResponsePrivate;
 
-class QTAWS_EXPORT ListBrokersResponse : public ListBrokersResponse {
+class QTAWS_EXPORT ListBrokersResponse : public MQResponse {
     Q_OBJECT
 
 public:

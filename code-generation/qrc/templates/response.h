@@ -11,7 +11,7 @@ namespace {{ServiceName}} {
 
 class {{OperationName}}ResponsePrivate;
 
-class QTAWS_EXPORT {{OperationName}}Response : public {{OperationName}}Response {
+class QTAWS_EXPORT {{OperationName}}Response : public {{ServiceName}}Response {
     Q_OBJECT
 
 public:

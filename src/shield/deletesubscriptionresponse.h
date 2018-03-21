@@ -29,7 +29,7 @@ namespace Shield {
 
 class DeleteSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT DeleteSubscriptionResponse : public DeleteSubscriptionResponse {
+class QTAWS_EXPORT DeleteSubscriptionResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

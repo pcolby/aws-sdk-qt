@@ -29,7 +29,7 @@ namespace GameLift {
 
 class PutScalingPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutScalingPolicyResponse : public PutScalingPolicyResponse {
+class QTAWS_EXPORT PutScalingPolicyResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

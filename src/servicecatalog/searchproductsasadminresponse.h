@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class SearchProductsAsAdminResponsePrivate;
 
-class QTAWS_EXPORT SearchProductsAsAdminResponse : public SearchProductsAsAdminResponse {
+class QTAWS_EXPORT SearchProductsAsAdminResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

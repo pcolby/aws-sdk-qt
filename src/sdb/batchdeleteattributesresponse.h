@@ -29,7 +29,7 @@ namespace SimpleDB {
 
 class BatchDeleteAttributesResponsePrivate;
 
-class QTAWS_EXPORT BatchDeleteAttributesResponse : public BatchDeleteAttributesResponse {
+class QTAWS_EXPORT BatchDeleteAttributesResponse : public SimpleDBResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class AssociateElasticIpResponsePrivate;
 
-class QTAWS_EXPORT AssociateElasticIpResponse : public AssociateElasticIpResponse {
+class QTAWS_EXPORT AssociateElasticIpResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

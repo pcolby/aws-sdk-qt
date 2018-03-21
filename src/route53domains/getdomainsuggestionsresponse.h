@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class GetDomainSuggestionsResponsePrivate;
 
-class QTAWS_EXPORT GetDomainSuggestionsResponse : public GetDomainSuggestionsResponse {
+class QTAWS_EXPORT GetDomainSuggestionsResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

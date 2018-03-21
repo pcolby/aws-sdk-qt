@@ -29,7 +29,7 @@ namespace IAM {
 
 class GetRoleResponsePrivate;
 
-class QTAWS_EXPORT GetRoleResponse : public GetRoleResponse {
+class QTAWS_EXPORT GetRoleResponse : public IAMResponse {
     Q_OBJECT
 
 public:

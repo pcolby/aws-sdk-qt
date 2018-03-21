@@ -29,7 +29,7 @@ namespace AppSync {
 
 class ListApiKeysResponsePrivate;
 
-class QTAWS_EXPORT ListApiKeysResponse : public ListApiKeysResponse {
+class QTAWS_EXPORT ListApiKeysResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class DescribeNotificationConfigurationsResponsePrivate;
 
-class QTAWS_EXPORT DescribeNotificationConfigurationsResponse : public DescribeNotificationConfigurationsResponse {
+class QTAWS_EXPORT DescribeNotificationConfigurationsResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

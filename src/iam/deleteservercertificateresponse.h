@@ -29,7 +29,7 @@ namespace IAM {
 
 class DeleteServerCertificateResponsePrivate;
 
-class QTAWS_EXPORT DeleteServerCertificateResponse : public DeleteServerCertificateResponse {
+class QTAWS_EXPORT DeleteServerCertificateResponse : public IAMResponse {
     Q_OBJECT
 
 public:

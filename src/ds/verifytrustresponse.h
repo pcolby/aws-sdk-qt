@@ -29,7 +29,7 @@ namespace DirectoryService {
 
 class VerifyTrustResponsePrivate;
 
-class QTAWS_EXPORT VerifyTrustResponse : public VerifyTrustResponse {
+class QTAWS_EXPORT VerifyTrustResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

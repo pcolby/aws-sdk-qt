@@ -29,7 +29,7 @@ namespace SES {
 
 class DescribeConfigurationSetResponsePrivate;
 
-class QTAWS_EXPORT DescribeConfigurationSetResponse : public DescribeConfigurationSetResponse {
+class QTAWS_EXPORT DescribeConfigurationSetResponse : public SESResponse {
     Q_OBJECT
 
 public:

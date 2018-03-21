@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class PutEventStreamResponsePrivate;
 
-class QTAWS_EXPORT PutEventStreamResponse : public PutEventStreamResponse {
+class QTAWS_EXPORT PutEventStreamResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

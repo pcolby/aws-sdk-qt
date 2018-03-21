@@ -29,7 +29,7 @@ namespace Route53 {
 
 class GetChangeResponsePrivate;
 
-class QTAWS_EXPORT GetChangeResponse : public GetChangeResponse {
+class QTAWS_EXPORT GetChangeResponse : public Route53Response {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace WorkSpaces {
 
 class DescribeWorkspacesResponsePrivate;
 
-class QTAWS_EXPORT DescribeWorkspacesResponse : public DescribeWorkspacesResponse {
+class QTAWS_EXPORT DescribeWorkspacesResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

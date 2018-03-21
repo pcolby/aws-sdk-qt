@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class CancelUpdateStackResponsePrivate;
 
-class QTAWS_EXPORT CancelUpdateStackResponse : public CancelUpdateStackResponse {
+class QTAWS_EXPORT CancelUpdateStackResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

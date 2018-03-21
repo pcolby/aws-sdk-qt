@@ -29,7 +29,7 @@ namespace ECS {
 
 class DeregisterTaskDefinitionResponsePrivate;
 
-class QTAWS_EXPORT DeregisterTaskDefinitionResponse : public DeregisterTaskDefinitionResponse {
+class QTAWS_EXPORT DeregisterTaskDefinitionResponse : public ECSResponse {
     Q_OBJECT
 
 public:

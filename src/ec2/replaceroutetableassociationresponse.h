@@ -29,7 +29,7 @@ namespace EC2 {
 
 class ReplaceRouteTableAssociationResponsePrivate;
 
-class QTAWS_EXPORT ReplaceRouteTableAssociationResponse : public ReplaceRouteTableAssociationResponse {
+class QTAWS_EXPORT ReplaceRouteTableAssociationResponse : public EC2Response {
     Q_OBJECT
 
 public:

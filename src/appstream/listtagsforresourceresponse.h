@@ -29,7 +29,7 @@ namespace AppStream {
 
 class ListTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT ListTagsForResourceResponse : public ListTagsForResourceResponse {
+class QTAWS_EXPORT ListTagsForResourceResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

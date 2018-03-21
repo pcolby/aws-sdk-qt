@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class DescribeCacheResponsePrivate;
 
-class QTAWS_EXPORT DescribeCacheResponse : public DescribeCacheResponse {
+class QTAWS_EXPORT DescribeCacheResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

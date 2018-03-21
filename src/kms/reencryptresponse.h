@@ -29,7 +29,7 @@ namespace KMS {
 
 class ReEncryptResponsePrivate;
 
-class QTAWS_EXPORT ReEncryptResponse : public ReEncryptResponse {
+class QTAWS_EXPORT ReEncryptResponse : public KMSResponse {
     Q_OBJECT
 
 public:

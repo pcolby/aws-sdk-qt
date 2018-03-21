@@ -29,7 +29,7 @@ namespace SSM {
 
 class CreateDocumentResponsePrivate;
 
-class QTAWS_EXPORT CreateDocumentResponse : public CreateDocumentResponse {
+class QTAWS_EXPORT CreateDocumentResponse : public SSMResponse {
     Q_OBJECT
 
 public:

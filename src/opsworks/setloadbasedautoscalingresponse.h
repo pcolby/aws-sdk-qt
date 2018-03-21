@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class SetLoadBasedAutoScalingResponsePrivate;
 
-class QTAWS_EXPORT SetLoadBasedAutoScalingResponse : public SetLoadBasedAutoScalingResponse {
+class QTAWS_EXPORT SetLoadBasedAutoScalingResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

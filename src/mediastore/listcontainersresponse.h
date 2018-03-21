@@ -29,7 +29,7 @@ namespace MediaStore {
 
 class ListContainersResponsePrivate;
 
-class QTAWS_EXPORT ListContainersResponse : public ListContainersResponse {
+class QTAWS_EXPORT ListContainersResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

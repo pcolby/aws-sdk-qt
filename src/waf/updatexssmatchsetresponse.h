@@ -29,7 +29,7 @@ namespace WAF {
 
 class UpdateXssMatchSetResponsePrivate;
 
-class QTAWS_EXPORT UpdateXssMatchSetResponse : public UpdateXssMatchSetResponse {
+class QTAWS_EXPORT UpdateXssMatchSetResponse : public WAFResponse {
     Q_OBJECT
 
 public:

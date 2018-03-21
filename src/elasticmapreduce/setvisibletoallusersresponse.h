@@ -29,7 +29,7 @@ namespace EMR {
 
 class SetVisibleToAllUsersResponsePrivate;
 
-class QTAWS_EXPORT SetVisibleToAllUsersResponse : public SetVisibleToAllUsersResponse {
+class QTAWS_EXPORT SetVisibleToAllUsersResponse : public EMRResponse {
     Q_OBJECT
 
 public:

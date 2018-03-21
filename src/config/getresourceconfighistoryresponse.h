@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class GetResourceConfigHistoryResponsePrivate;
 
-class QTAWS_EXPORT GetResourceConfigHistoryResponse : public GetResourceConfigHistoryResponse {
+class QTAWS_EXPORT GetResourceConfigHistoryResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

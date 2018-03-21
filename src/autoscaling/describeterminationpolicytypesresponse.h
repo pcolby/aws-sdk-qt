@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class DescribeTerminationPolicyTypesResponsePrivate;
 
-class QTAWS_EXPORT DescribeTerminationPolicyTypesResponse : public DescribeTerminationPolicyTypesResponse {
+class QTAWS_EXPORT DescribeTerminationPolicyTypesResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

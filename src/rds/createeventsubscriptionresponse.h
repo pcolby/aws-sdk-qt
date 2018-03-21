@@ -29,7 +29,7 @@ namespace RDS {
 
 class CreateEventSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT CreateEventSubscriptionResponse : public CreateEventSubscriptionResponse {
+class QTAWS_EXPORT CreateEventSubscriptionResponse : public RDSResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Firehose {
 
 class DeleteDeliveryStreamResponsePrivate;
 
-class QTAWS_EXPORT DeleteDeliveryStreamResponse : public DeleteDeliveryStreamResponse {
+class QTAWS_EXPORT DeleteDeliveryStreamResponse : public FirehoseResponse {
     Q_OBJECT
 
 public:

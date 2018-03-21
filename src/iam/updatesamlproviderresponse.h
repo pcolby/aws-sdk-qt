@@ -29,7 +29,7 @@ namespace IAM {
 
 class UpdateSAMLProviderResponsePrivate;
 
-class QTAWS_EXPORT UpdateSAMLProviderResponse : public UpdateSAMLProviderResponse {
+class QTAWS_EXPORT UpdateSAMLProviderResponse : public IAMResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class ListInvalidationsResponsePrivate;
 
-class QTAWS_EXPORT ListInvalidationsResponse : public ListInvalidationsResponse {
+class QTAWS_EXPORT ListInvalidationsResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

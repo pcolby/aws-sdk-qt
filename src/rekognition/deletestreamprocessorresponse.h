@@ -29,7 +29,7 @@ namespace Rekognition {
 
 class DeleteStreamProcessorResponsePrivate;
 
-class QTAWS_EXPORT DeleteStreamProcessorResponse : public DeleteStreamProcessorResponse {
+class QTAWS_EXPORT DeleteStreamProcessorResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

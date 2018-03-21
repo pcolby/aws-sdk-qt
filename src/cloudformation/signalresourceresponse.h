@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class SignalResourceResponsePrivate;
 
-class QTAWS_EXPORT SignalResourceResponse : public SignalResourceResponse {
+class QTAWS_EXPORT SignalResourceResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

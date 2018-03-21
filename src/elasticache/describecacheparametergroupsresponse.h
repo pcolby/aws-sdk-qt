@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class DescribeCacheParameterGroupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeCacheParameterGroupsResponse : public DescribeCacheParameterGroupsResponse {
+class QTAWS_EXPORT DescribeCacheParameterGroupsResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

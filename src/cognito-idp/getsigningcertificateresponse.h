@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class GetSigningCertificateResponsePrivate;
 
-class QTAWS_EXPORT GetSigningCertificateResponse : public GetSigningCertificateResponse {
+class QTAWS_EXPORT GetSigningCertificateResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

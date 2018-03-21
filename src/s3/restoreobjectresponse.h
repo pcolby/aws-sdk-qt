@@ -29,7 +29,7 @@ namespace S3 {
 
 class RestoreObjectResponsePrivate;
 
-class QTAWS_EXPORT RestoreObjectResponse : public RestoreObjectResponse {
+class QTAWS_EXPORT RestoreObjectResponse : public S3Response {
     Q_OBJECT
 
 public:

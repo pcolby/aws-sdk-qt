@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class EstimateTemplateCostResponsePrivate;
 
-class QTAWS_EXPORT EstimateTemplateCostResponse : public EstimateTemplateCostResponse {
+class QTAWS_EXPORT EstimateTemplateCostResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

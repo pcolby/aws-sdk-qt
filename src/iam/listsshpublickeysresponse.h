@@ -29,7 +29,7 @@ namespace IAM {
 
 class ListSSHPublicKeysResponsePrivate;
 
-class QTAWS_EXPORT ListSSHPublicKeysResponse : public ListSSHPublicKeysResponse {
+class QTAWS_EXPORT ListSSHPublicKeysResponse : public IAMResponse {
     Q_OBJECT
 
 public:

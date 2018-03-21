@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class DeleteCampaignResponsePrivate;
 
-class QTAWS_EXPORT DeleteCampaignResponse : public DeleteCampaignResponse {
+class QTAWS_EXPORT DeleteCampaignResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

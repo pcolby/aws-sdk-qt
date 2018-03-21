@@ -29,7 +29,7 @@ namespace IoT {
 
 class GetJobDocumentResponsePrivate;
 
-class QTAWS_EXPORT GetJobDocumentResponse : public GetJobDocumentResponse {
+class QTAWS_EXPORT GetJobDocumentResponse : public IoTResponse {
     Q_OBJECT
 
 public:

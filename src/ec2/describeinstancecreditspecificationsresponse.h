@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DescribeInstanceCreditSpecificationsResponsePrivate;
 
-class QTAWS_EXPORT DescribeInstanceCreditSpecificationsResponse : public DescribeInstanceCreditSpecificationsResponse {
+class QTAWS_EXPORT DescribeInstanceCreditSpecificationsResponse : public EC2Response {
     Q_OBJECT
 
 public:

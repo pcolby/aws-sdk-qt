@@ -29,7 +29,7 @@ namespace Organizations {
 
 class AcceptHandshakeResponsePrivate;
 
-class QTAWS_EXPORT AcceptHandshakeResponse : public AcceptHandshakeResponse {
+class QTAWS_EXPORT AcceptHandshakeResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

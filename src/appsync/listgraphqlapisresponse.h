@@ -29,7 +29,7 @@ namespace AppSync {
 
 class ListGraphqlApisResponsePrivate;
 
-class QTAWS_EXPORT ListGraphqlApisResponse : public ListGraphqlApisResponse {
+class QTAWS_EXPORT ListGraphqlApisResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

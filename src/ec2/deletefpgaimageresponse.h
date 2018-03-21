@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DeleteFpgaImageResponsePrivate;
 
-class QTAWS_EXPORT DeleteFpgaImageResponse : public DeleteFpgaImageResponse {
+class QTAWS_EXPORT DeleteFpgaImageResponse : public EC2Response {
     Q_OBJECT
 
 public:

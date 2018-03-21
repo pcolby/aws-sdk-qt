@@ -29,7 +29,7 @@ namespace KMS {
 
 class GetKeyRotationStatusResponsePrivate;
 
-class QTAWS_EXPORT GetKeyRotationStatusResponse : public GetKeyRotationStatusResponse {
+class QTAWS_EXPORT GetKeyRotationStatusResponse : public KMSResponse {
     Q_OBJECT
 
 public:

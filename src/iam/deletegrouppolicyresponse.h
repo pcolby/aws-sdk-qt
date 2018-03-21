@@ -29,7 +29,7 @@ namespace IAM {
 
 class DeleteGroupPolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteGroupPolicyResponse : public DeleteGroupPolicyResponse {
+class QTAWS_EXPORT DeleteGroupPolicyResponse : public IAMResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace GameLift {
 
 class DescribeEC2InstanceLimitsResponsePrivate;
 
-class QTAWS_EXPORT DescribeEC2InstanceLimitsResponse : public DescribeEC2InstanceLimitsResponse {
+class QTAWS_EXPORT DescribeEC2InstanceLimitsResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

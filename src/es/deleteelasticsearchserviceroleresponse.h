@@ -29,7 +29,7 @@ namespace ElasticsearchService {
 
 class DeleteElasticsearchServiceRoleResponsePrivate;
 
-class QTAWS_EXPORT DeleteElasticsearchServiceRoleResponse : public DeleteElasticsearchServiceRoleResponse {
+class QTAWS_EXPORT DeleteElasticsearchServiceRoleResponse : public ElasticsearchServiceResponse {
     Q_OBJECT
 
 public:

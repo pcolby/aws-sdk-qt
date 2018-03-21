@@ -29,7 +29,7 @@ namespace CognitoIdentity {
 
 class GetIdResponsePrivate;
 
-class QTAWS_EXPORT GetIdResponse : public GetIdResponse {
+class QTAWS_EXPORT GetIdResponse : public CognitoIdentityResponse {
     Q_OBJECT
 
 public:

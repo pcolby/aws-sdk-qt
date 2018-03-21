@@ -29,7 +29,7 @@ namespace Snowball {
 
 class DescribeJobResponsePrivate;
 
-class QTAWS_EXPORT DescribeJobResponse : public DescribeJobResponse {
+class QTAWS_EXPORT DescribeJobResponse : public SnowballResponse {
     Q_OBJECT
 
 public:

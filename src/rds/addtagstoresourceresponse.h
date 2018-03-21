@@ -29,7 +29,7 @@ namespace RDS {
 
 class AddTagsToResourceResponsePrivate;
 
-class QTAWS_EXPORT AddTagsToResourceResponse : public AddTagsToResourceResponse {
+class QTAWS_EXPORT AddTagsToResourceResponse : public RDSResponse {
     Q_OBJECT
 
 public:

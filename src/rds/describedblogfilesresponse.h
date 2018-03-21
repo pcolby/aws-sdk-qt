@@ -29,7 +29,7 @@ namespace RDS {
 
 class DescribeDBLogFilesResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBLogFilesResponse : public DescribeDBLogFilesResponse {
+class QTAWS_EXPORT DescribeDBLogFilesResponse : public RDSResponse {
     Q_OBJECT
 
 public:

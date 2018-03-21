@@ -29,7 +29,7 @@ namespace ServerlessApplicationRepository {
 
 class CreateApplicationVersionResponsePrivate;
 
-class QTAWS_EXPORT CreateApplicationVersionResponse : public CreateApplicationVersionResponse {
+class QTAWS_EXPORT CreateApplicationVersionResponse : public ServerlessApplicationRepositoryResponse {
     Q_OBJECT
 
 public:

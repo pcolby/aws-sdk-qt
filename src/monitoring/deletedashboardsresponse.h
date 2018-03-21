@@ -29,7 +29,7 @@ namespace CloudWatch {
 
 class DeleteDashboardsResponsePrivate;
 
-class QTAWS_EXPORT DeleteDashboardsResponse : public DeleteDashboardsResponse {
+class QTAWS_EXPORT DeleteDashboardsResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

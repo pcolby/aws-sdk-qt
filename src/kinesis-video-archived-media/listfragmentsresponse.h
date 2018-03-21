@@ -29,7 +29,7 @@ namespace KinesisVideoArchivedMedia {
 
 class ListFragmentsResponsePrivate;
 
-class QTAWS_EXPORT ListFragmentsResponse : public ListFragmentsResponse {
+class QTAWS_EXPORT ListFragmentsResponse : public KinesisVideoArchivedMediaResponse {
     Q_OBJECT
 
 public:

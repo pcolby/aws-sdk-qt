@@ -29,7 +29,7 @@ namespace ServerlessApplicationRepository {
 
 class UpdateApplicationResponsePrivate;
 
-class QTAWS_EXPORT UpdateApplicationResponse : public UpdateApplicationResponse {
+class QTAWS_EXPORT UpdateApplicationResponse : public ServerlessApplicationRepositoryResponse {
     Q_OBJECT
 
 public:

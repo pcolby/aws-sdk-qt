@@ -29,7 +29,7 @@ namespace WorkDocs {
 
 class DescribeResourcePermissionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeResourcePermissionsResponse : public DescribeResourcePermissionsResponse {
+class QTAWS_EXPORT DescribeResourcePermissionsResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

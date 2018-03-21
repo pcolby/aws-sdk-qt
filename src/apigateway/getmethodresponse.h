@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class GetMethodResponsePrivate;
 
-class QTAWS_EXPORT GetMethodResponse : public GetMethodResponse {
+class QTAWS_EXPORT GetMethodResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

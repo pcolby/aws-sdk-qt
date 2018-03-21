@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class PutInstancePublicPortsResponsePrivate;
 
-class QTAWS_EXPORT PutInstancePublicPortsResponse : public PutInstancePublicPortsResponse {
+class QTAWS_EXPORT PutInstancePublicPortsResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

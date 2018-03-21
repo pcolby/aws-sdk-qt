@@ -29,7 +29,7 @@ namespace IAM {
 
 class DeleteAccessKeyResponsePrivate;
 
-class QTAWS_EXPORT DeleteAccessKeyResponse : public DeleteAccessKeyResponse {
+class QTAWS_EXPORT DeleteAccessKeyResponse : public IAMResponse {
     Q_OBJECT
 
 public:

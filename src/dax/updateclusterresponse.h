@@ -29,7 +29,7 @@ namespace DAX {
 
 class UpdateClusterResponsePrivate;
 
-class QTAWS_EXPORT UpdateClusterResponse : public UpdateClusterResponse {
+class QTAWS_EXPORT UpdateClusterResponse : public DAXResponse {
     Q_OBJECT
 
 public:

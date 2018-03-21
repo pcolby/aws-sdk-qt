@@ -29,7 +29,7 @@ namespace Redshift {
 
 class ResetClusterParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT ResetClusterParameterGroupResponse : public ResetClusterParameterGroupResponse {
+class QTAWS_EXPORT ResetClusterParameterGroupResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

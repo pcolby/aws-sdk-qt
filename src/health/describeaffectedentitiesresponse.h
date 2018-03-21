@@ -29,7 +29,7 @@ namespace Health {
 
 class DescribeAffectedEntitiesResponsePrivate;
 
-class QTAWS_EXPORT DescribeAffectedEntitiesResponse : public DescribeAffectedEntitiesResponse {
+class QTAWS_EXPORT DescribeAffectedEntitiesResponse : public HealthResponse {
     Q_OBJECT
 
 public:

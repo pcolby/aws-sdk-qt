@@ -29,7 +29,7 @@ namespace MigrationHub {
 
 class PutResourceAttributesResponsePrivate;
 
-class QTAWS_EXPORT PutResourceAttributesResponse : public PutResourceAttributesResponse {
+class QTAWS_EXPORT PutResourceAttributesResponse : public MigrationHubResponse {
     Q_OBJECT
 
 public:

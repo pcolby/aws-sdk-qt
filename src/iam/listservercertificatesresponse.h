@@ -29,7 +29,7 @@ namespace IAM {
 
 class ListServerCertificatesResponsePrivate;
 
-class QTAWS_EXPORT ListServerCertificatesResponse : public ListServerCertificatesResponse {
+class QTAWS_EXPORT ListServerCertificatesResponse : public IAMResponse {
     Q_OBJECT
 
 public:

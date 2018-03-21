@@ -29,7 +29,7 @@ namespace DirectConnect {
 
 class DisassociateConnectionFromLagResponsePrivate;
 
-class QTAWS_EXPORT DisassociateConnectionFromLagResponse : public DisassociateConnectionFromLagResponse {
+class QTAWS_EXPORT DisassociateConnectionFromLagResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

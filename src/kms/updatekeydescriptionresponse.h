@@ -29,7 +29,7 @@ namespace KMS {
 
 class UpdateKeyDescriptionResponsePrivate;
 
-class QTAWS_EXPORT UpdateKeyDescriptionResponse : public UpdateKeyDescriptionResponse {
+class QTAWS_EXPORT UpdateKeyDescriptionResponse : public KMSResponse {
     Q_OBJECT
 
 public:

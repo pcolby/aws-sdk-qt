@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class DetachInstancesResponsePrivate;
 
-class QTAWS_EXPORT DetachInstancesResponse : public DetachInstancesResponse {
+class QTAWS_EXPORT DetachInstancesResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

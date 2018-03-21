@@ -29,7 +29,7 @@ namespace Rekognition {
 
 class DeleteFacesResponsePrivate;
 
-class QTAWS_EXPORT DeleteFacesResponse : public DeleteFacesResponse {
+class QTAWS_EXPORT DeleteFacesResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

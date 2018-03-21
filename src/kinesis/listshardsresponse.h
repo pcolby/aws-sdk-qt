@@ -29,7 +29,7 @@ namespace Kinesis {
 
 class ListShardsResponsePrivate;
 
-class QTAWS_EXPORT ListShardsResponse : public ListShardsResponse {
+class QTAWS_EXPORT ListShardsResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

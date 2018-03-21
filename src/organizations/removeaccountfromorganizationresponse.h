@@ -29,7 +29,7 @@ namespace Organizations {
 
 class RemoveAccountFromOrganizationResponsePrivate;
 
-class QTAWS_EXPORT RemoveAccountFromOrganizationResponse : public RemoveAccountFromOrganizationResponse {
+class QTAWS_EXPORT RemoveAccountFromOrganizationResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

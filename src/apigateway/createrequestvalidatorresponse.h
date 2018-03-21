@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class CreateRequestValidatorResponsePrivate;
 
-class QTAWS_EXPORT CreateRequestValidatorResponse : public CreateRequestValidatorResponse {
+class QTAWS_EXPORT CreateRequestValidatorResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

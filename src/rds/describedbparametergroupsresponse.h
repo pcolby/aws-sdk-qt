@@ -29,7 +29,7 @@ namespace RDS {
 
 class DescribeDBParameterGroupsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDBParameterGroupsResponse : public DescribeDBParameterGroupsResponse {
+class QTAWS_EXPORT DescribeDBParameterGroupsResponse : public RDSResponse {
     Q_OBJECT
 
 public:

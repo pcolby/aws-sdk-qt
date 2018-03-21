@@ -29,7 +29,7 @@ namespace DirectoryService {
 
 class ListIpRoutesResponsePrivate;
 
-class QTAWS_EXPORT ListIpRoutesResponse : public ListIpRoutesResponse {
+class QTAWS_EXPORT ListIpRoutesResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

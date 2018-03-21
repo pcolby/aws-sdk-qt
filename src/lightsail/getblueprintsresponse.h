@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class GetBlueprintsResponsePrivate;
 
-class QTAWS_EXPORT GetBlueprintsResponse : public GetBlueprintsResponse {
+class QTAWS_EXPORT GetBlueprintsResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

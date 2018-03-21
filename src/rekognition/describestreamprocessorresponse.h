@@ -29,7 +29,7 @@ namespace Rekognition {
 
 class DescribeStreamProcessorResponsePrivate;
 
-class QTAWS_EXPORT DescribeStreamProcessorResponse : public DescribeStreamProcessorResponse {
+class QTAWS_EXPORT DescribeStreamProcessorResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 
 class DescribeSubscriptionFiltersResponsePrivate;
 
-class QTAWS_EXPORT DescribeSubscriptionFiltersResponse : public DescribeSubscriptionFiltersResponse {
+class QTAWS_EXPORT DescribeSubscriptionFiltersResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

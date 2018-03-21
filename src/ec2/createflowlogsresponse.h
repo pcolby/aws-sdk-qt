@@ -29,7 +29,7 @@ namespace EC2 {
 
 class CreateFlowLogsResponsePrivate;
 
-class QTAWS_EXPORT CreateFlowLogsResponse : public CreateFlowLogsResponse {
+class QTAWS_EXPORT CreateFlowLogsResponse : public EC2Response {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Route53 {
 
 class CreateQueryLoggingConfigResponsePrivate;
 
-class QTAWS_EXPORT CreateQueryLoggingConfigResponse : public CreateQueryLoggingConfigResponse {
+class QTAWS_EXPORT CreateQueryLoggingConfigResponse : public Route53Response {
     Q_OBJECT
 
 public:

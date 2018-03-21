@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DeleteSpotDatafeedSubscriptionResponsePrivate;
 
-class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionResponse : public DeleteSpotDatafeedSubscriptionResponse {
+class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionResponse : public EC2Response {
     Q_OBJECT
 
 public:

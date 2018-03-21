@@ -29,7 +29,7 @@ namespace Snowball {
 
 class CreateClusterResponsePrivate;
 
-class QTAWS_EXPORT CreateClusterResponse : public CreateClusterResponse {
+class QTAWS_EXPORT CreateClusterResponse : public SnowballResponse {
     Q_OBJECT
 
 public:

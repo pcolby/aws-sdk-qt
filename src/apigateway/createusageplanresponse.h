@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class CreateUsagePlanResponsePrivate;
 
-class QTAWS_EXPORT CreateUsagePlanResponse : public CreateUsagePlanResponse {
+class QTAWS_EXPORT CreateUsagePlanResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

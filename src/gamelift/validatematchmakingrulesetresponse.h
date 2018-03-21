@@ -29,7 +29,7 @@ namespace GameLift {
 
 class ValidateMatchmakingRuleSetResponsePrivate;
 
-class QTAWS_EXPORT ValidateMatchmakingRuleSetResponse : public ValidateMatchmakingRuleSetResponse {
+class QTAWS_EXPORT ValidateMatchmakingRuleSetResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

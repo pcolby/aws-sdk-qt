@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class ListPortfolioAccessResponsePrivate;
 
-class QTAWS_EXPORT ListPortfolioAccessResponse : public ListPortfolioAccessResponse {
+class QTAWS_EXPORT ListPortfolioAccessResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

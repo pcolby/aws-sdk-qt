@@ -29,7 +29,7 @@ namespace RDS {
 
 class DescribeEventCategoriesResponsePrivate;
 
-class QTAWS_EXPORT DescribeEventCategoriesResponse : public DescribeEventCategoriesResponse {
+class QTAWS_EXPORT DescribeEventCategoriesResponse : public RDSResponse {
     Q_OBJECT
 
 public:

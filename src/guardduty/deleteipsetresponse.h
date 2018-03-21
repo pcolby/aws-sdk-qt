@@ -29,7 +29,7 @@ namespace GuardDuty {
 
 class DeleteIPSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteIPSetResponse : public DeleteIPSetResponse {
+class QTAWS_EXPORT DeleteIPSetResponse : public GuardDutyResponse {
     Q_OBJECT
 
 public:

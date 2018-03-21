@@ -29,7 +29,7 @@ namespace CodePipeline {
 
 class GetJobDetailsResponsePrivate;
 
-class QTAWS_EXPORT GetJobDetailsResponse : public GetJobDetailsResponse {
+class QTAWS_EXPORT GetJobDetailsResponse : public CodePipelineResponse {
     Q_OBJECT
 
 public:

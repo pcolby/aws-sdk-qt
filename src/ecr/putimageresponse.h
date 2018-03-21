@@ -29,7 +29,7 @@ namespace ECR {
 
 class PutImageResponsePrivate;
 
-class QTAWS_EXPORT PutImageResponse : public PutImageResponse {
+class QTAWS_EXPORT PutImageResponse : public ECRResponse {
     Q_OBJECT
 
 public:

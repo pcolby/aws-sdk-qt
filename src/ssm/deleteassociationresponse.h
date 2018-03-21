@@ -29,7 +29,7 @@ namespace SSM {
 
 class DeleteAssociationResponsePrivate;
 
-class QTAWS_EXPORT DeleteAssociationResponse : public DeleteAssociationResponse {
+class QTAWS_EXPORT DeleteAssociationResponse : public SSMResponse {
     Q_OBJECT
 
 public:

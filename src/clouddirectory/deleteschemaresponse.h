@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class DeleteSchemaResponsePrivate;
 
-class QTAWS_EXPORT DeleteSchemaResponse : public DeleteSchemaResponse {
+class QTAWS_EXPORT DeleteSchemaResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

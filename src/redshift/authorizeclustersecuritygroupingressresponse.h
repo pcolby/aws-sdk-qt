@@ -29,7 +29,7 @@ namespace Redshift {
 
 class AuthorizeClusterSecurityGroupIngressResponsePrivate;
 
-class QTAWS_EXPORT AuthorizeClusterSecurityGroupIngressResponse : public AuthorizeClusterSecurityGroupIngressResponse {
+class QTAWS_EXPORT AuthorizeClusterSecurityGroupIngressResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

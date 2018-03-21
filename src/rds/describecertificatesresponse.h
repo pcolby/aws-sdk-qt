@@ -29,7 +29,7 @@ namespace RDS {
 
 class DescribeCertificatesResponsePrivate;
 
-class QTAWS_EXPORT DescribeCertificatesResponse : public DescribeCertificatesResponse {
+class QTAWS_EXPORT DescribeCertificatesResponse : public RDSResponse {
     Q_OBJECT
 
 public:

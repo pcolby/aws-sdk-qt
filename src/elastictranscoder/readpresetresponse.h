@@ -29,7 +29,7 @@ namespace ElasticTranscoder {
 
 class ReadPresetResponsePrivate;
 
-class QTAWS_EXPORT ReadPresetResponse : public ReadPresetResponse {
+class QTAWS_EXPORT ReadPresetResponse : public ElasticTranscoderResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Budgets {
 
 class DeleteNotificationResponsePrivate;
 
-class QTAWS_EXPORT DeleteNotificationResponse : public DeleteNotificationResponse {
+class QTAWS_EXPORT DeleteNotificationResponse : public BudgetsResponse {
     Q_OBJECT
 
 public:

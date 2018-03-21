@@ -29,7 +29,7 @@ namespace WAF {
 
 class CreateGeoMatchSetResponsePrivate;
 
-class QTAWS_EXPORT CreateGeoMatchSetResponse : public CreateGeoMatchSetResponse {
+class QTAWS_EXPORT CreateGeoMatchSetResponse : public WAFResponse {
     Q_OBJECT
 
 public:

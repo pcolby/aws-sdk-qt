@@ -29,7 +29,7 @@ namespace ElasticLoadBalancingv2 {
 
 class AddListenerCertificatesResponsePrivate;
 
-class QTAWS_EXPORT AddListenerCertificatesResponse : public AddListenerCertificatesResponse {
+class QTAWS_EXPORT AddListenerCertificatesResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

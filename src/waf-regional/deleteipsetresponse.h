@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class DeleteIPSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteIPSetResponse : public DeleteIPSetResponse {
+class QTAWS_EXPORT DeleteIPSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

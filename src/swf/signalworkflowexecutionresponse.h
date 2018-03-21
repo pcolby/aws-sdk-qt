@@ -29,7 +29,7 @@ namespace SWF {
 
 class SignalWorkflowExecutionResponsePrivate;
 
-class QTAWS_EXPORT SignalWorkflowExecutionResponse : public SignalWorkflowExecutionResponse {
+class QTAWS_EXPORT SignalWorkflowExecutionResponse : public SWFResponse {
     Q_OBJECT
 
 public:

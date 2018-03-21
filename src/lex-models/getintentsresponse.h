@@ -29,7 +29,7 @@ namespace LexModelBuildingService {
 
 class GetIntentsResponsePrivate;
 
-class QTAWS_EXPORT GetIntentsResponse : public GetIntentsResponse {
+class QTAWS_EXPORT GetIntentsResponse : public LexModelBuildingServiceResponse {
     Q_OBJECT
 
 public:

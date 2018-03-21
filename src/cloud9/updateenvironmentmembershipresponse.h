@@ -29,7 +29,7 @@ namespace Cloud9 {
 
 class UpdateEnvironmentMembershipResponsePrivate;
 
-class QTAWS_EXPORT UpdateEnvironmentMembershipResponse : public UpdateEnvironmentMembershipResponse {
+class QTAWS_EXPORT UpdateEnvironmentMembershipResponse : public Cloud9Response {
     Q_OBJECT
 
 public:

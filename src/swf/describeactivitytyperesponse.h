@@ -29,7 +29,7 @@ namespace SWF {
 
 class DescribeActivityTypeResponsePrivate;
 
-class QTAWS_EXPORT DescribeActivityTypeResponse : public DescribeActivityTypeResponse {
+class QTAWS_EXPORT DescribeActivityTypeResponse : public SWFResponse {
     Q_OBJECT
 
 public:

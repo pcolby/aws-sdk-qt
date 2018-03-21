@@ -29,7 +29,7 @@ namespace Support {
 
 class DescribeCasesResponsePrivate;
 
-class QTAWS_EXPORT DescribeCasesResponse : public DescribeCasesResponse {
+class QTAWS_EXPORT DescribeCasesResponse : public SupportResponse {
     Q_OBJECT
 
 public:

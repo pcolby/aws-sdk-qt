@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class GetStreamingDistributionConfigResponsePrivate;
 
-class QTAWS_EXPORT GetStreamingDistributionConfigResponse : public GetStreamingDistributionConfigResponse {
+class QTAWS_EXPORT GetStreamingDistributionConfigResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace KMS {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public TagResourceResponse {
+class QTAWS_EXPORT TagResourceResponse : public KMSResponse {
     Q_OBJECT
 
 public:

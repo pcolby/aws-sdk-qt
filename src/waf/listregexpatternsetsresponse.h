@@ -29,7 +29,7 @@ namespace WAF {
 
 class ListRegexPatternSetsResponsePrivate;
 
-class QTAWS_EXPORT ListRegexPatternSetsResponse : public ListRegexPatternSetsResponse {
+class QTAWS_EXPORT ListRegexPatternSetsResponse : public WAFResponse {
     Q_OBJECT
 
 public:

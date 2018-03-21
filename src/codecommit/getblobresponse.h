@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class GetBlobResponsePrivate;
 
-class QTAWS_EXPORT GetBlobResponse : public GetBlobResponse {
+class QTAWS_EXPORT GetBlobResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

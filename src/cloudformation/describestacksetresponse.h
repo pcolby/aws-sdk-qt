@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class DescribeStackSetResponsePrivate;
 
-class QTAWS_EXPORT DescribeStackSetResponse : public DescribeStackSetResponse {
+class QTAWS_EXPORT DescribeStackSetResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

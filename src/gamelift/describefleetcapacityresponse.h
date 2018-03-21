@@ -29,7 +29,7 @@ namespace GameLift {
 
 class DescribeFleetCapacityResponsePrivate;
 
-class QTAWS_EXPORT DescribeFleetCapacityResponse : public DescribeFleetCapacityResponse {
+class QTAWS_EXPORT DescribeFleetCapacityResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

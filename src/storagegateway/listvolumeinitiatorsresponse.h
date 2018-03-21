@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class ListVolumeInitiatorsResponsePrivate;
 
-class QTAWS_EXPORT ListVolumeInitiatorsResponse : public ListVolumeInitiatorsResponse {
+class QTAWS_EXPORT ListVolumeInitiatorsResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

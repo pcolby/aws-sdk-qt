@@ -29,7 +29,7 @@ namespace GameLift {
 
 class CreateMatchmakingConfigurationResponsePrivate;
 
-class QTAWS_EXPORT CreateMatchmakingConfigurationResponse : public CreateMatchmakingConfigurationResponse {
+class QTAWS_EXPORT CreateMatchmakingConfigurationResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

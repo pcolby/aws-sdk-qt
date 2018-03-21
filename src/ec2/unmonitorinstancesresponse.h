@@ -29,7 +29,7 @@ namespace EC2 {
 
 class UnmonitorInstancesResponsePrivate;
 
-class QTAWS_EXPORT UnmonitorInstancesResponse : public UnmonitorInstancesResponse {
+class QTAWS_EXPORT UnmonitorInstancesResponse : public EC2Response {
     Q_OBJECT
 
 public:

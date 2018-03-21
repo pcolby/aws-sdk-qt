@@ -29,7 +29,7 @@ namespace WorkSpaces {
 
 class DescribeTagsResponsePrivate;
 
-class QTAWS_EXPORT DescribeTagsResponse : public DescribeTagsResponse {
+class QTAWS_EXPORT DescribeTagsResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

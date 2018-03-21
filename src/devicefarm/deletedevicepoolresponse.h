@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class DeleteDevicePoolResponsePrivate;
 
-class QTAWS_EXPORT DeleteDevicePoolResponse : public DeleteDevicePoolResponse {
+class QTAWS_EXPORT DeleteDevicePoolResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

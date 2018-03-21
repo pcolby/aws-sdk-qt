@@ -29,7 +29,7 @@ namespace AppStream {
 
 class StopFleetResponsePrivate;
 
-class QTAWS_EXPORT StopFleetResponse : public StopFleetResponse {
+class QTAWS_EXPORT StopFleetResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

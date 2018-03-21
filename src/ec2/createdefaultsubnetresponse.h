@@ -29,7 +29,7 @@ namespace EC2 {
 
 class CreateDefaultSubnetResponsePrivate;
 
-class QTAWS_EXPORT CreateDefaultSubnetResponse : public CreateDefaultSubnetResponse {
+class QTAWS_EXPORT CreateDefaultSubnetResponse : public EC2Response {
     Q_OBJECT
 
 public:

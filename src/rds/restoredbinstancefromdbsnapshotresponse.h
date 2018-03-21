@@ -29,7 +29,7 @@ namespace RDS {
 
 class RestoreDBInstanceFromDBSnapshotResponsePrivate;
 
-class QTAWS_EXPORT RestoreDBInstanceFromDBSnapshotResponse : public RestoreDBInstanceFromDBSnapshotResponse {
+class QTAWS_EXPORT RestoreDBInstanceFromDBSnapshotResponse : public RDSResponse {
     Q_OBJECT
 
 public:

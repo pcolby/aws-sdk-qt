@@ -29,7 +29,7 @@ namespace ECR {
 
 class SetRepositoryPolicyResponsePrivate;
 
-class QTAWS_EXPORT SetRepositoryPolicyResponse : public SetRepositoryPolicyResponse {
+class QTAWS_EXPORT SetRepositoryPolicyResponse : public ECRResponse {
     Q_OBJECT
 
 public:

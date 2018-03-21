@@ -29,7 +29,7 @@ namespace CognitoSync {
 
 class DeleteDatasetResponsePrivate;
 
-class QTAWS_EXPORT DeleteDatasetResponse : public DeleteDatasetResponse {
+class QTAWS_EXPORT DeleteDatasetResponse : public CognitoSyncResponse {
     Q_OBJECT
 
 public:

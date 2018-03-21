@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class ViewBillingResponsePrivate;
 
-class QTAWS_EXPORT ViewBillingResponse : public ViewBillingResponse {
+class QTAWS_EXPORT ViewBillingResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

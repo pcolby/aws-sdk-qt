@@ -29,7 +29,7 @@ namespace WAF {
 
 class CreateIPSetResponsePrivate;
 
-class QTAWS_EXPORT CreateIPSetResponse : public CreateIPSetResponse {
+class QTAWS_EXPORT CreateIPSetResponse : public WAFResponse {
     Q_OBJECT
 
 public:

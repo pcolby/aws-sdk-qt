@@ -29,7 +29,7 @@ namespace EC2 {
 
 class ModifyHostsResponsePrivate;
 
-class QTAWS_EXPORT ModifyHostsResponse : public ModifyHostsResponse {
+class QTAWS_EXPORT ModifyHostsResponse : public EC2Response {
     Q_OBJECT
 
 public:

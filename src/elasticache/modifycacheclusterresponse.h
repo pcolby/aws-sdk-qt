@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class ModifyCacheClusterResponsePrivate;
 
-class QTAWS_EXPORT ModifyCacheClusterResponse : public ModifyCacheClusterResponse {
+class QTAWS_EXPORT ModifyCacheClusterResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

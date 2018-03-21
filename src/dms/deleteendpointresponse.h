@@ -29,7 +29,7 @@ namespace DatabaseMigrationService {
 
 class DeleteEndpointResponsePrivate;
 
-class QTAWS_EXPORT DeleteEndpointResponse : public DeleteEndpointResponse {
+class QTAWS_EXPORT DeleteEndpointResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

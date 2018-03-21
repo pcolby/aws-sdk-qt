@@ -29,7 +29,7 @@ namespace CloudTrail {
 
 class StartLoggingResponsePrivate;
 
-class QTAWS_EXPORT StartLoggingResponse : public StartLoggingResponse {
+class QTAWS_EXPORT StartLoggingResponse : public CloudTrailResponse {
     Q_OBJECT
 
 public:

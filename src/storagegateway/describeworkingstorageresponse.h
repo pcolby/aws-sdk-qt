@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class DescribeWorkingStorageResponsePrivate;
 
-class QTAWS_EXPORT DescribeWorkingStorageResponse : public DescribeWorkingStorageResponse {
+class QTAWS_EXPORT DescribeWorkingStorageResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

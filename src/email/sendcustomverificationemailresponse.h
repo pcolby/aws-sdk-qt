@@ -29,7 +29,7 @@ namespace SES {
 
 class SendCustomVerificationEmailResponsePrivate;
 
-class QTAWS_EXPORT SendCustomVerificationEmailResponse : public SendCustomVerificationEmailResponse {
+class QTAWS_EXPORT SendCustomVerificationEmailResponse : public SESResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeTagsResponsePrivate;
 
-class QTAWS_EXPORT DescribeTagsResponse : public DescribeTagsResponse {
+class QTAWS_EXPORT DescribeTagsResponse : public ApplicationDiscoveryServiceResponse {
     Q_OBJECT
 
 public:

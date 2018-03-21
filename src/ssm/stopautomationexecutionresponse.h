@@ -29,7 +29,7 @@ namespace SSM {
 
 class StopAutomationExecutionResponsePrivate;
 
-class QTAWS_EXPORT StopAutomationExecutionResponse : public StopAutomationExecutionResponse {
+class QTAWS_EXPORT StopAutomationExecutionResponse : public SSMResponse {
     Q_OBJECT
 
 public:

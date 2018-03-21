@@ -29,7 +29,7 @@ namespace WorkDocs {
 
 class DeleteFolderContentsResponsePrivate;
 
-class QTAWS_EXPORT DeleteFolderContentsResponse : public DeleteFolderContentsResponse {
+class QTAWS_EXPORT DeleteFolderContentsResponse : public WorkDocsResponse {
     Q_OBJECT
 
 public:

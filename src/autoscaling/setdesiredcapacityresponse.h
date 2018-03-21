@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class SetDesiredCapacityResponsePrivate;
 
-class QTAWS_EXPORT SetDesiredCapacityResponse : public SetDesiredCapacityResponse {
+class QTAWS_EXPORT SetDesiredCapacityResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

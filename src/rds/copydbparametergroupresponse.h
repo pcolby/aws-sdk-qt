@@ -29,7 +29,7 @@ namespace RDS {
 
 class CopyDBParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT CopyDBParameterGroupResponse : public CopyDBParameterGroupResponse {
+class QTAWS_EXPORT CopyDBParameterGroupResponse : public RDSResponse {
     Q_OBJECT
 
 public:

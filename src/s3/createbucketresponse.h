@@ -29,7 +29,7 @@ namespace S3 {
 
 class CreateBucketResponsePrivate;
 
-class QTAWS_EXPORT CreateBucketResponse : public CreateBucketResponse {
+class QTAWS_EXPORT CreateBucketResponse : public S3Response {
     Q_OBJECT
 
 public:

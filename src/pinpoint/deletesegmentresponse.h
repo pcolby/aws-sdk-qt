@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class DeleteSegmentResponsePrivate;
 
-class QTAWS_EXPORT DeleteSegmentResponse : public DeleteSegmentResponse {
+class QTAWS_EXPORT DeleteSegmentResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

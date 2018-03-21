@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DeleteVolumeResponsePrivate;
 
-class QTAWS_EXPORT DeleteVolumeResponse : public DeleteVolumeResponse {
+class QTAWS_EXPORT DeleteVolumeResponse : public EC2Response {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CognitoIdentity {
 
 class UnlinkDeveloperIdentityResponsePrivate;
 
-class QTAWS_EXPORT UnlinkDeveloperIdentityResponse : public UnlinkDeveloperIdentityResponse {
+class QTAWS_EXPORT UnlinkDeveloperIdentityResponse : public CognitoIdentityResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class DeleteRegexPatternSetResponsePrivate;
 
-class QTAWS_EXPORT DeleteRegexPatternSetResponse : public DeleteRegexPatternSetResponse {
+class QTAWS_EXPORT DeleteRegexPatternSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace IoT {
 
 class StopThingRegistrationTaskResponsePrivate;
 
-class QTAWS_EXPORT StopThingRegistrationTaskResponse : public StopThingRegistrationTaskResponse {
+class QTAWS_EXPORT StopThingRegistrationTaskResponse : public IoTResponse {
     Q_OBJECT
 
 public:

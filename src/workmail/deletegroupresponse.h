@@ -29,7 +29,7 @@ namespace WorkMail {
 
 class DeleteGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteGroupResponse : public DeleteGroupResponse {
+class QTAWS_EXPORT DeleteGroupResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

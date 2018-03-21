@@ -29,7 +29,7 @@ namespace AlexaForBusiness {
 
 class DeleteRoomSkillParameterResponsePrivate;
 
-class QTAWS_EXPORT DeleteRoomSkillParameterResponse : public DeleteRoomSkillParameterResponse {
+class QTAWS_EXPORT DeleteRoomSkillParameterResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

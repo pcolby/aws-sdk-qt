@@ -29,7 +29,7 @@ namespace SNS {
 
 class UnsubscribeResponsePrivate;
 
-class QTAWS_EXPORT UnsubscribeResponse : public UnsubscribeResponse {
+class QTAWS_EXPORT UnsubscribeResponse : public SNSResponse {
     Q_OBJECT
 
 public:

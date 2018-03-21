@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class TagResourceResponsePrivate;
 
-class QTAWS_EXPORT TagResourceResponse : public TagResourceResponse {
+class QTAWS_EXPORT TagResourceResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

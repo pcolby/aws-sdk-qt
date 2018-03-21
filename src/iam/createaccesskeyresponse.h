@@ -29,7 +29,7 @@ namespace IAM {
 
 class CreateAccessKeyResponsePrivate;
 
-class QTAWS_EXPORT CreateAccessKeyResponse : public CreateAccessKeyResponse {
+class QTAWS_EXPORT CreateAccessKeyResponse : public IAMResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Shield {
 
 class DescribeAttackResponsePrivate;
 
-class QTAWS_EXPORT DescribeAttackResponse : public DescribeAttackResponse {
+class QTAWS_EXPORT DescribeAttackResponse : public ShieldResponse {
     Q_OBJECT
 
 public:

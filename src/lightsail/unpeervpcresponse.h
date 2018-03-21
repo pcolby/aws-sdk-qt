@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class UnpeerVpcResponsePrivate;
 
-class QTAWS_EXPORT UnpeerVpcResponse : public UnpeerVpcResponse {
+class QTAWS_EXPORT UnpeerVpcResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

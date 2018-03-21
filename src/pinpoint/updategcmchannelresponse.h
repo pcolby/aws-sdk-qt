@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class UpdateGcmChannelResponsePrivate;
 
-class QTAWS_EXPORT UpdateGcmChannelResponse : public UpdateGcmChannelResponse {
+class QTAWS_EXPORT UpdateGcmChannelResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

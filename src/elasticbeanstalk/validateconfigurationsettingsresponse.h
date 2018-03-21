@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class ValidateConfigurationSettingsResponsePrivate;
 
-class QTAWS_EXPORT ValidateConfigurationSettingsResponse : public ValidateConfigurationSettingsResponse {
+class QTAWS_EXPORT ValidateConfigurationSettingsResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DeregisterImageResponsePrivate;
 
-class QTAWS_EXPORT DeregisterImageResponse : public DeregisterImageResponse {
+class QTAWS_EXPORT DeregisterImageResponse : public EC2Response {
     Q_OBJECT
 
 public:

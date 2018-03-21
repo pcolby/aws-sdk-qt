@@ -29,7 +29,7 @@ namespace Glue {
 
 class GetPartitionsResponsePrivate;
 
-class QTAWS_EXPORT GetPartitionsResponse : public GetPartitionsResponse {
+class QTAWS_EXPORT GetPartitionsResponse : public GlueResponse {
     Q_OBJECT
 
 public:

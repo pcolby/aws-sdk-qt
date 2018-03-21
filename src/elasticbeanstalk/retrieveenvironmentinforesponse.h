@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class RetrieveEnvironmentInfoResponsePrivate;
 
-class QTAWS_EXPORT RetrieveEnvironmentInfoResponse : public RetrieveEnvironmentInfoResponse {
+class QTAWS_EXPORT RetrieveEnvironmentInfoResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

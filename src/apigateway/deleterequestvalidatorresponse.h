@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class DeleteRequestValidatorResponsePrivate;
 
-class QTAWS_EXPORT DeleteRequestValidatorResponse : public DeleteRequestValidatorResponse {
+class QTAWS_EXPORT DeleteRequestValidatorResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

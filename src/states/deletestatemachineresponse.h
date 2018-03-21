@@ -29,7 +29,7 @@ namespace SFN {
 
 class DeleteStateMachineResponsePrivate;
 
-class QTAWS_EXPORT DeleteStateMachineResponse : public DeleteStateMachineResponse {
+class QTAWS_EXPORT DeleteStateMachineResponse : public SFNResponse {
     Q_OBJECT
 
 public:

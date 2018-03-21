@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class RenewOfferingResponsePrivate;
 
-class QTAWS_EXPORT RenewOfferingResponse : public RenewOfferingResponse {
+class QTAWS_EXPORT RenewOfferingResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

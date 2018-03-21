@@ -29,7 +29,7 @@ namespace MediaStore {
 
 class GetContainerPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetContainerPolicyResponse : public GetContainerPolicyResponse {
+class QTAWS_EXPORT GetContainerPolicyResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

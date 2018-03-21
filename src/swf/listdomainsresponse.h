@@ -29,7 +29,7 @@ namespace SWF {
 
 class ListDomainsResponsePrivate;
 
-class QTAWS_EXPORT ListDomainsResponse : public ListDomainsResponse {
+class QTAWS_EXPORT ListDomainsResponse : public SWFResponse {
     Q_OBJECT
 
 public:

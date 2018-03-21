@@ -29,7 +29,7 @@ namespace CodeDeploy {
 
 class BatchGetApplicationsResponsePrivate;
 
-class QTAWS_EXPORT BatchGetApplicationsResponse : public BatchGetApplicationsResponse {
+class QTAWS_EXPORT BatchGetApplicationsResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

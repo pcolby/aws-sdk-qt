@@ -29,7 +29,7 @@ namespace ECS {
 
 class DescribeContainerInstancesResponsePrivate;
 
-class QTAWS_EXPORT DescribeContainerInstancesResponse : public DescribeContainerInstancesResponse {
+class QTAWS_EXPORT DescribeContainerInstancesResponse : public ECSResponse {
     Q_OBJECT
 
 public:

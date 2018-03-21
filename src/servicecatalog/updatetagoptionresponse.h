@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class UpdateTagOptionResponsePrivate;
 
-class QTAWS_EXPORT UpdateTagOptionResponse : public UpdateTagOptionResponse {
+class QTAWS_EXPORT UpdateTagOptionResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

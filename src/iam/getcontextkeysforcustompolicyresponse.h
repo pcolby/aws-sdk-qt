@@ -29,7 +29,7 @@ namespace IAM {
 
 class GetContextKeysForCustomPolicyResponsePrivate;
 
-class QTAWS_EXPORT GetContextKeysForCustomPolicyResponse : public GetContextKeysForCustomPolicyResponse {
+class QTAWS_EXPORT GetContextKeysForCustomPolicyResponse : public IAMResponse {
     Q_OBJECT
 
 public:

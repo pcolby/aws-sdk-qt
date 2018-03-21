@@ -29,7 +29,7 @@ namespace EMR {
 
 class AddInstanceFleetResponsePrivate;
 
-class QTAWS_EXPORT AddInstanceFleetResponse : public AddInstanceFleetResponse {
+class QTAWS_EXPORT AddInstanceFleetResponse : public EMRResponse {
     Q_OBJECT
 
 public:

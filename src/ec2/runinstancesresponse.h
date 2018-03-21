@@ -29,7 +29,7 @@ namespace EC2 {
 
 class RunInstancesResponsePrivate;
 
-class QTAWS_EXPORT RunInstancesResponse : public RunInstancesResponse {
+class QTAWS_EXPORT RunInstancesResponse : public EC2Response {
     Q_OBJECT
 
 public:

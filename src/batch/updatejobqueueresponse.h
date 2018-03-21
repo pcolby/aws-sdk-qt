@@ -29,7 +29,7 @@ namespace Batch {
 
 class UpdateJobQueueResponsePrivate;
 
-class QTAWS_EXPORT UpdateJobQueueResponse : public UpdateJobQueueResponse {
+class QTAWS_EXPORT UpdateJobQueueResponse : public BatchResponse {
     Q_OBJECT
 
 public:

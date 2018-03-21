@@ -29,7 +29,7 @@ namespace Inspector {
 
 class CreateResourceGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateResourceGroupResponse : public CreateResourceGroupResponse {
+class QTAWS_EXPORT CreateResourceGroupResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

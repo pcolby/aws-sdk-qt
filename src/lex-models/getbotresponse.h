@@ -29,7 +29,7 @@ namespace LexModelBuildingService {
 
 class GetBotResponsePrivate;
 
-class QTAWS_EXPORT GetBotResponse : public GetBotResponse {
+class QTAWS_EXPORT GetBotResponse : public LexModelBuildingServiceResponse {
     Q_OBJECT
 
 public:

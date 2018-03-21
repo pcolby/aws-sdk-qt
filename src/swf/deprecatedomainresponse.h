@@ -29,7 +29,7 @@ namespace SWF {
 
 class DeprecateDomainResponsePrivate;
 
-class QTAWS_EXPORT DeprecateDomainResponse : public DeprecateDomainResponse {
+class QTAWS_EXPORT DeprecateDomainResponse : public SWFResponse {
     Q_OBJECT
 
 public:

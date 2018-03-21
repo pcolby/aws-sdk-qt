@@ -29,7 +29,7 @@ namespace Glue {
 
 class GetCatalogImportStatusResponsePrivate;
 
-class QTAWS_EXPORT GetCatalogImportStatusResponse : public GetCatalogImportStatusResponse {
+class QTAWS_EXPORT GetCatalogImportStatusResponse : public GlueResponse {
     Q_OBJECT
 
 public:

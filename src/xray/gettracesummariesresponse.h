@@ -29,7 +29,7 @@ namespace XRay {
 
 class GetTraceSummariesResponsePrivate;
 
-class QTAWS_EXPORT GetTraceSummariesResponse : public GetTraceSummariesResponse {
+class QTAWS_EXPORT GetTraceSummariesResponse : public XRayResponse {
     Q_OBJECT
 
 public:

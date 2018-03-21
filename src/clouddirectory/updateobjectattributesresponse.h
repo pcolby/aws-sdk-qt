@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class UpdateObjectAttributesResponsePrivate;
 
-class QTAWS_EXPORT UpdateObjectAttributesResponse : public UpdateObjectAttributesResponse {
+class QTAWS_EXPORT UpdateObjectAttributesResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

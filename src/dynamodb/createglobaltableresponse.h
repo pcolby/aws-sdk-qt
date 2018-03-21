@@ -29,7 +29,7 @@ namespace DynamoDB {
 
 class CreateGlobalTableResponsePrivate;
 
-class QTAWS_EXPORT CreateGlobalTableResponse : public CreateGlobalTableResponse {
+class QTAWS_EXPORT CreateGlobalTableResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

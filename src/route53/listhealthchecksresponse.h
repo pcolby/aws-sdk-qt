@@ -29,7 +29,7 @@ namespace Route53 {
 
 class ListHealthChecksResponsePrivate;
 
-class QTAWS_EXPORT ListHealthChecksResponse : public ListHealthChecksResponse {
+class QTAWS_EXPORT ListHealthChecksResponse : public Route53Response {
     Q_OBJECT
 
 public:

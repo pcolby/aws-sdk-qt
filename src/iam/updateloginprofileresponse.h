@@ -29,7 +29,7 @@ namespace IAM {
 
 class UpdateLoginProfileResponsePrivate;
 
-class QTAWS_EXPORT UpdateLoginProfileResponse : public UpdateLoginProfileResponse {
+class QTAWS_EXPORT UpdateLoginProfileResponse : public IAMResponse {
     Q_OBJECT
 
 public:

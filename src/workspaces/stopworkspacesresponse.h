@@ -29,7 +29,7 @@ namespace WorkSpaces {
 
 class StopWorkspacesResponsePrivate;
 
-class QTAWS_EXPORT StopWorkspacesResponse : public StopWorkspacesResponse {
+class QTAWS_EXPORT StopWorkspacesResponse : public WorkSpacesResponse {
     Q_OBJECT
 
 public:

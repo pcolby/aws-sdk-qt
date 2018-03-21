@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class SetLocalConsolePasswordResponsePrivate;
 
-class QTAWS_EXPORT SetLocalConsolePasswordResponse : public SetLocalConsolePasswordResponse {
+class QTAWS_EXPORT SetLocalConsolePasswordResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

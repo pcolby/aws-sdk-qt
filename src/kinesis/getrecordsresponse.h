@@ -29,7 +29,7 @@ namespace Kinesis {
 
 class GetRecordsResponsePrivate;
 
-class QTAWS_EXPORT GetRecordsResponse : public GetRecordsResponse {
+class QTAWS_EXPORT GetRecordsResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

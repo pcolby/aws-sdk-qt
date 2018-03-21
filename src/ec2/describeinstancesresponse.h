@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DescribeInstancesResponsePrivate;
 
-class QTAWS_EXPORT DescribeInstancesResponse : public DescribeInstancesResponse {
+class QTAWS_EXPORT DescribeInstancesResponse : public EC2Response {
     Q_OBJECT
 
 public:

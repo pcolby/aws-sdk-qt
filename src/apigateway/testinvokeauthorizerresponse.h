@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class TestInvokeAuthorizerResponsePrivate;
 
-class QTAWS_EXPORT TestInvokeAuthorizerResponse : public TestInvokeAuthorizerResponse {
+class QTAWS_EXPORT TestInvokeAuthorizerResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

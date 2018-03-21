@@ -29,7 +29,7 @@ namespace EMR {
 
 class CancelStepsResponsePrivate;
 
-class QTAWS_EXPORT CancelStepsResponse : public CancelStepsResponse {
+class QTAWS_EXPORT CancelStepsResponse : public EMRResponse {
     Q_OBJECT
 
 public:

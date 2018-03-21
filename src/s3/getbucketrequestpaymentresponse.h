@@ -29,7 +29,7 @@ namespace S3 {
 
 class GetBucketRequestPaymentResponsePrivate;
 
-class QTAWS_EXPORT GetBucketRequestPaymentResponse : public GetBucketRequestPaymentResponse {
+class QTAWS_EXPORT GetBucketRequestPaymentResponse : public S3Response {
     Q_OBJECT
 
 public:

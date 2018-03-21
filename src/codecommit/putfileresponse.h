@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class PutFileResponsePrivate;
 
-class QTAWS_EXPORT PutFileResponse : public PutFileResponse {
+class QTAWS_EXPORT PutFileResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

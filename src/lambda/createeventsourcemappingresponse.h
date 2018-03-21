@@ -29,7 +29,7 @@ namespace Lambda {
 
 class CreateEventSourceMappingResponsePrivate;
 
-class QTAWS_EXPORT CreateEventSourceMappingResponse : public CreateEventSourceMappingResponse {
+class QTAWS_EXPORT CreateEventSourceMappingResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

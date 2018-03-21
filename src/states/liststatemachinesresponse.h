@@ -29,7 +29,7 @@ namespace SFN {
 
 class ListStateMachinesResponsePrivate;
 
-class QTAWS_EXPORT ListStateMachinesResponse : public ListStateMachinesResponse {
+class QTAWS_EXPORT ListStateMachinesResponse : public SFNResponse {
     Q_OBJECT
 
 public:

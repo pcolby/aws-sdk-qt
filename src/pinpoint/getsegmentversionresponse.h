@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class GetSegmentVersionResponsePrivate;
 
-class QTAWS_EXPORT GetSegmentVersionResponse : public GetSegmentVersionResponse {
+class QTAWS_EXPORT GetSegmentVersionResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace SSM {
 
 class GetParameterResponsePrivate;
 
-class QTAWS_EXPORT GetParameterResponse : public GetParameterResponse {
+class QTAWS_EXPORT GetParameterResponse : public SSMResponse {
     Q_OBJECT
 
 public:

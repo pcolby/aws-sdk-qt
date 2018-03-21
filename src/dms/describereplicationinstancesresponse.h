@@ -29,7 +29,7 @@ namespace DatabaseMigrationService {
 
 class DescribeReplicationInstancesResponsePrivate;
 
-class QTAWS_EXPORT DescribeReplicationInstancesResponse : public DescribeReplicationInstancesResponse {
+class QTAWS_EXPORT DescribeReplicationInstancesResponse : public DatabaseMigrationServiceResponse {
     Q_OBJECT
 
 public:

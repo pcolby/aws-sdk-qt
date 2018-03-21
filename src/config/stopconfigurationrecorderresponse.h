@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class StopConfigurationRecorderResponsePrivate;
 
-class QTAWS_EXPORT StopConfigurationRecorderResponse : public StopConfigurationRecorderResponse {
+class QTAWS_EXPORT StopConfigurationRecorderResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

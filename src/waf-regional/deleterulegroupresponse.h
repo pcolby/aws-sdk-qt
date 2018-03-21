@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class DeleteRuleGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteRuleGroupResponse : public DeleteRuleGroupResponse {
+class QTAWS_EXPORT DeleteRuleGroupResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

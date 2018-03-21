@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class DeleteAppResponsePrivate;
 
-class QTAWS_EXPORT DeleteAppResponse : public DeleteAppResponse {
+class QTAWS_EXPORT DeleteAppResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

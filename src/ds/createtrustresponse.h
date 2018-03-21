@@ -29,7 +29,7 @@ namespace DirectoryService {
 
 class CreateTrustResponsePrivate;
 
-class QTAWS_EXPORT CreateTrustResponse : public CreateTrustResponse {
+class QTAWS_EXPORT CreateTrustResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

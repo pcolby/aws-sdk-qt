@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class GrantAccessResponsePrivate;
 
-class QTAWS_EXPORT GrantAccessResponse : public GrantAccessResponse {
+class QTAWS_EXPORT GrantAccessResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

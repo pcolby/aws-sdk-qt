@@ -29,7 +29,7 @@ namespace DirectoryService {
 
 class DisableSsoResponsePrivate;
 
-class QTAWS_EXPORT DisableSsoResponse : public DisableSsoResponse {
+class QTAWS_EXPORT DisableSsoResponse : public DirectoryServiceResponse {
     Q_OBJECT
 
 public:

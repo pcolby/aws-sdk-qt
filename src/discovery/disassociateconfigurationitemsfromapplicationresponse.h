@@ -29,7 +29,7 @@ namespace ApplicationDiscoveryService {
 
 class DisassociateConfigurationItemsFromApplicationResponsePrivate;
 
-class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationResponse : public DisassociateConfigurationItemsFromApplicationResponse {
+class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationResponse : public ApplicationDiscoveryServiceResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DisassociateSubnetCidrBlockResponsePrivate;
 
-class QTAWS_EXPORT DisassociateSubnetCidrBlockResponse : public DisassociateSubnetCidrBlockResponse {
+class QTAWS_EXPORT DisassociateSubnetCidrBlockResponse : public EC2Response {
     Q_OBJECT
 
 public:

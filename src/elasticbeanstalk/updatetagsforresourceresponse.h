@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class UpdateTagsForResourceResponsePrivate;
 
-class QTAWS_EXPORT UpdateTagsForResourceResponse : public UpdateTagsForResourceResponse {
+class QTAWS_EXPORT UpdateTagsForResourceResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

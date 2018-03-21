@@ -29,7 +29,7 @@ namespace CodeDeploy {
 
 class AddTagsToOnPremisesInstancesResponsePrivate;
 
-class QTAWS_EXPORT AddTagsToOnPremisesInstancesResponse : public AddTagsToOnPremisesInstancesResponse {
+class QTAWS_EXPORT AddTagsToOnPremisesInstancesResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

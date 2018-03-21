@@ -29,7 +29,7 @@ namespace RDS {
 
 class DescribeEngineDefaultParametersResponsePrivate;
 
-class QTAWS_EXPORT DescribeEngineDefaultParametersResponse : public DescribeEngineDefaultParametersResponse {
+class QTAWS_EXPORT DescribeEngineDefaultParametersResponse : public RDSResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class DescribeDeliveryChannelsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDeliveryChannelsResponse : public DescribeDeliveryChannelsResponse {
+class QTAWS_EXPORT DescribeDeliveryChannelsResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

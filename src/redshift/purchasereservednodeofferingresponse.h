@@ -29,7 +29,7 @@ namespace Redshift {
 
 class PurchaseReservedNodeOfferingResponsePrivate;
 
-class QTAWS_EXPORT PurchaseReservedNodeOfferingResponse : public PurchaseReservedNodeOfferingResponse {
+class QTAWS_EXPORT PurchaseReservedNodeOfferingResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

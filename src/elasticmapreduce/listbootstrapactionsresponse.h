@@ -29,7 +29,7 @@ namespace EMR {
 
 class ListBootstrapActionsResponsePrivate;
 
-class QTAWS_EXPORT ListBootstrapActionsResponse : public ListBootstrapActionsResponse {
+class QTAWS_EXPORT ListBootstrapActionsResponse : public EMRResponse {
     Q_OBJECT
 
 public:

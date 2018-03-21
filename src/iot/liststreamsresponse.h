@@ -29,7 +29,7 @@ namespace IoT {
 
 class ListStreamsResponsePrivate;
 
-class QTAWS_EXPORT ListStreamsResponse : public ListStreamsResponse {
+class QTAWS_EXPORT ListStreamsResponse : public IoTResponse {
     Q_OBJECT
 
 public:

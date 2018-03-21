@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class AttachInstancesToLoadBalancerResponsePrivate;
 
-class QTAWS_EXPORT AttachInstancesToLoadBalancerResponse : public AttachInstancesToLoadBalancerResponse {
+class QTAWS_EXPORT AttachInstancesToLoadBalancerResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

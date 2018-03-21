@@ -29,7 +29,7 @@ namespace AppStream {
 
 class ListAssociatedStacksResponsePrivate;
 
-class QTAWS_EXPORT ListAssociatedStacksResponse : public ListAssociatedStacksResponse {
+class QTAWS_EXPORT ListAssociatedStacksResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

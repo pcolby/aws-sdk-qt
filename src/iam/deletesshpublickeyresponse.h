@@ -29,7 +29,7 @@ namespace IAM {
 
 class DeleteSSHPublicKeyResponsePrivate;
 
-class QTAWS_EXPORT DeleteSSHPublicKeyResponse : public DeleteSSHPublicKeyResponse {
+class QTAWS_EXPORT DeleteSSHPublicKeyResponse : public IAMResponse {
     Q_OBJECT
 
 public:

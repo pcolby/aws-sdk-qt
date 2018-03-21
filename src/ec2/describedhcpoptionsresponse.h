@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DescribeDhcpOptionsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDhcpOptionsResponse : public DescribeDhcpOptionsResponse {
+class QTAWS_EXPORT DescribeDhcpOptionsResponse : public EC2Response {
     Q_OBJECT
 
 public:

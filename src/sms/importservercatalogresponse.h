@@ -29,7 +29,7 @@ namespace SMS {
 
 class ImportServerCatalogResponsePrivate;
 
-class QTAWS_EXPORT ImportServerCatalogResponse : public ImportServerCatalogResponse {
+class QTAWS_EXPORT ImportServerCatalogResponse : public SMSResponse {
     Q_OBJECT
 
 public:

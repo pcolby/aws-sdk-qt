@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class DescribeConstraintResponsePrivate;
 
-class QTAWS_EXPORT DescribeConstraintResponse : public DescribeConstraintResponse {
+class QTAWS_EXPORT DescribeConstraintResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

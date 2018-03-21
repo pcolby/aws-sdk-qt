@@ -29,7 +29,7 @@ namespace SES {
 
 class CreateTemplateResponsePrivate;
 
-class QTAWS_EXPORT CreateTemplateResponse : public CreateTemplateResponse {
+class QTAWS_EXPORT CreateTemplateResponse : public SESResponse {
     Q_OBJECT
 
 public:

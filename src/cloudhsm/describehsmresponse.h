@@ -29,7 +29,7 @@ namespace CloudHSM {
 
 class DescribeHsmResponsePrivate;
 
-class QTAWS_EXPORT DescribeHsmResponse : public DescribeHsmResponse {
+class QTAWS_EXPORT DescribeHsmResponse : public CloudHSMResponse {
     Q_OBJECT
 
 public:

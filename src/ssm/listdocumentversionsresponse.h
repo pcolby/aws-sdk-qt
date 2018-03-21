@@ -29,7 +29,7 @@ namespace SSM {
 
 class ListDocumentVersionsResponsePrivate;
 
-class QTAWS_EXPORT ListDocumentVersionsResponse : public ListDocumentVersionsResponse {
+class QTAWS_EXPORT ListDocumentVersionsResponse : public SSMResponse {
     Q_OBJECT
 
 public:

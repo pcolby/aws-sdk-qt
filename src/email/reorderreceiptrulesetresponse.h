@@ -29,7 +29,7 @@ namespace SES {
 
 class ReorderReceiptRuleSetResponsePrivate;
 
-class QTAWS_EXPORT ReorderReceiptRuleSetResponse : public ReorderReceiptRuleSetResponse {
+class QTAWS_EXPORT ReorderReceiptRuleSetResponse : public SESResponse {
     Q_OBJECT
 
 public:

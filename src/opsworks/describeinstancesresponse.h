@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class DescribeInstancesResponsePrivate;
 
-class QTAWS_EXPORT DescribeInstancesResponse : public DescribeInstancesResponse {
+class QTAWS_EXPORT DescribeInstancesResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

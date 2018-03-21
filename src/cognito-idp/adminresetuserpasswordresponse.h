@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class AdminResetUserPasswordResponsePrivate;
 
-class QTAWS_EXPORT AdminResetUserPasswordResponse : public AdminResetUserPasswordResponse {
+class QTAWS_EXPORT AdminResetUserPasswordResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

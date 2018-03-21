@@ -29,7 +29,7 @@ namespace Budgets {
 
 class UpdateNotificationResponsePrivate;
 
-class QTAWS_EXPORT UpdateNotificationResponse : public UpdateNotificationResponse {
+class QTAWS_EXPORT UpdateNotificationResponse : public BudgetsResponse {
     Q_OBJECT
 
 public:

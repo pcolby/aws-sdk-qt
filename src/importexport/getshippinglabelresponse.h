@@ -29,7 +29,7 @@ namespace ImportExport {
 
 class GetShippingLabelResponsePrivate;
 
-class QTAWS_EXPORT GetShippingLabelResponse : public GetShippingLabelResponse {
+class QTAWS_EXPORT GetShippingLabelResponse : public ImportExportResponse {
     Q_OBJECT
 
 public:

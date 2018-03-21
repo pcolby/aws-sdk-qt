@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class BatchGetRepositoriesResponsePrivate;
 
-class QTAWS_EXPORT BatchGetRepositoriesResponse : public BatchGetRepositoriesResponse {
+class QTAWS_EXPORT BatchGetRepositoriesResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

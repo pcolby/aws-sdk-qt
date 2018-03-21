@@ -29,7 +29,7 @@ namespace EC2 {
 
 class AllocateHostsResponsePrivate;
 
-class QTAWS_EXPORT AllocateHostsResponse : public AllocateHostsResponse {
+class QTAWS_EXPORT AllocateHostsResponse : public EC2Response {
     Q_OBJECT
 
 public:

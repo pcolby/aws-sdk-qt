@@ -29,7 +29,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DeleteTargetGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteTargetGroupResponse : public DeleteTargetGroupResponse {
+class QTAWS_EXPORT DeleteTargetGroupResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

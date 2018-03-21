@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class UpdateAutoScalingGroupResponsePrivate;
 
-class QTAWS_EXPORT UpdateAutoScalingGroupResponse : public UpdateAutoScalingGroupResponse {
+class QTAWS_EXPORT UpdateAutoScalingGroupResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

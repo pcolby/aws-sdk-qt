@@ -29,7 +29,7 @@ namespace WorkMail {
 
 class UpdatePrimaryEmailAddressResponsePrivate;
 
-class QTAWS_EXPORT UpdatePrimaryEmailAddressResponse : public UpdatePrimaryEmailAddressResponse {
+class QTAWS_EXPORT UpdatePrimaryEmailAddressResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

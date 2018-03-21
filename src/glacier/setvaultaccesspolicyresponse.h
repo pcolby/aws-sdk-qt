@@ -29,7 +29,7 @@ namespace Glacier {
 
 class SetVaultAccessPolicyResponsePrivate;
 
-class QTAWS_EXPORT SetVaultAccessPolicyResponse : public SetVaultAccessPolicyResponse {
+class QTAWS_EXPORT SetVaultAccessPolicyResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

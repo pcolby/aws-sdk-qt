@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class ListTestsResponsePrivate;
 
-class QTAWS_EXPORT ListTestsResponse : public ListTestsResponse {
+class QTAWS_EXPORT ListTestsResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

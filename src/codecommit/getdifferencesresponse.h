@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class GetDifferencesResponsePrivate;
 
-class QTAWS_EXPORT GetDifferencesResponse : public GetDifferencesResponse {
+class QTAWS_EXPORT GetDifferencesResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

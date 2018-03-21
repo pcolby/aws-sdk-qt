@@ -29,7 +29,7 @@ namespace AppStream {
 
 class ExpireSessionResponsePrivate;
 
-class QTAWS_EXPORT ExpireSessionResponse : public ExpireSessionResponse {
+class QTAWS_EXPORT ExpireSessionResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

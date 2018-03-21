@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class ListConstraintsForPortfolioResponsePrivate;
 
-class QTAWS_EXPORT ListConstraintsForPortfolioResponse : public ListConstraintsForPortfolioResponse {
+class QTAWS_EXPORT ListConstraintsForPortfolioResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

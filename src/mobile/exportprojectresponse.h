@@ -29,7 +29,7 @@ namespace Mobile {
 
 class ExportProjectResponsePrivate;
 
-class QTAWS_EXPORT ExportProjectResponse : public ExportProjectResponse {
+class QTAWS_EXPORT ExportProjectResponse : public MobileResponse {
     Q_OBJECT
 
 public:

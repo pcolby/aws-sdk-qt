@@ -29,7 +29,7 @@ namespace IAM {
 
 class DeactivateMFADeviceResponsePrivate;
 
-class QTAWS_EXPORT DeactivateMFADeviceResponse : public DeactivateMFADeviceResponse {
+class QTAWS_EXPORT DeactivateMFADeviceResponse : public IAMResponse {
     Q_OBJECT
 
 public:

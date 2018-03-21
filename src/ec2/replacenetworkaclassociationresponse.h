@@ -29,7 +29,7 @@ namespace EC2 {
 
 class ReplaceNetworkAclAssociationResponsePrivate;
 
-class QTAWS_EXPORT ReplaceNetworkAclAssociationResponse : public ReplaceNetworkAclAssociationResponse {
+class QTAWS_EXPORT ReplaceNetworkAclAssociationResponse : public EC2Response {
     Q_OBJECT
 
 public:

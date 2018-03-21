@@ -29,7 +29,7 @@ namespace EC2 {
 
 class AttachClassicLinkVpcResponsePrivate;
 
-class QTAWS_EXPORT AttachClassicLinkVpcResponse : public AttachClassicLinkVpcResponse {
+class QTAWS_EXPORT AttachClassicLinkVpcResponse : public EC2Response {
     Q_OBJECT
 
 public:

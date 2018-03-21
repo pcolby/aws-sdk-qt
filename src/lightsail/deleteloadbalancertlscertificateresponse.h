@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class DeleteLoadBalancerTlsCertificateResponsePrivate;
 
-class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateResponse : public DeleteLoadBalancerTlsCertificateResponse {
+class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

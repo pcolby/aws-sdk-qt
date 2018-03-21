@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class VerifyUserAttributeResponsePrivate;
 
-class QTAWS_EXPORT VerifyUserAttributeResponse : public VerifyUserAttributeResponse {
+class QTAWS_EXPORT VerifyUserAttributeResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

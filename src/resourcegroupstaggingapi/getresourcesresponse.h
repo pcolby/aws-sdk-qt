@@ -29,7 +29,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class GetResourcesResponsePrivate;
 
-class QTAWS_EXPORT GetResourcesResponse : public GetResourcesResponse {
+class QTAWS_EXPORT GetResourcesResponse : public ResourceGroupsTaggingAPIResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class UpdateMaintenanceStartTimeResponsePrivate;
 
-class QTAWS_EXPORT UpdateMaintenanceStartTimeResponse : public UpdateMaintenanceStartTimeResponse {
+class QTAWS_EXPORT UpdateMaintenanceStartTimeResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

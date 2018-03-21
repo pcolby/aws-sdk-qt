@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class UpdateChapCredentialsResponsePrivate;
 
-class QTAWS_EXPORT UpdateChapCredentialsResponse : public UpdateChapCredentialsResponse {
+class QTAWS_EXPORT UpdateChapCredentialsResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

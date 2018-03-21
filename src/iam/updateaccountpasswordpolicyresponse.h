@@ -29,7 +29,7 @@ namespace IAM {
 
 class UpdateAccountPasswordPolicyResponsePrivate;
 
-class QTAWS_EXPORT UpdateAccountPasswordPolicyResponse : public UpdateAccountPasswordPolicyResponse {
+class QTAWS_EXPORT UpdateAccountPasswordPolicyResponse : public IAMResponse {
     Q_OBJECT
 
 public:

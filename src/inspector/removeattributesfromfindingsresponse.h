@@ -29,7 +29,7 @@ namespace Inspector {
 
 class RemoveAttributesFromFindingsResponsePrivate;
 
-class QTAWS_EXPORT RemoveAttributesFromFindingsResponse : public RemoveAttributesFromFindingsResponse {
+class QTAWS_EXPORT RemoveAttributesFromFindingsResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Organizations {
 
 class EnableAllFeaturesResponsePrivate;
 
-class QTAWS_EXPORT EnableAllFeaturesResponse : public EnableAllFeaturesResponse {
+class QTAWS_EXPORT EnableAllFeaturesResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

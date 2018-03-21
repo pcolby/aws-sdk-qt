@@ -29,7 +29,7 @@ namespace Kinesis {
 
 class MergeShardsResponsePrivate;
 
-class QTAWS_EXPORT MergeShardsResponse : public MergeShardsResponse {
+class QTAWS_EXPORT MergeShardsResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

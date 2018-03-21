@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class CreateSnapshotResponsePrivate;
 
-class QTAWS_EXPORT CreateSnapshotResponse : public CreateSnapshotResponse {
+class QTAWS_EXPORT CreateSnapshotResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

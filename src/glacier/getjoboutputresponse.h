@@ -29,7 +29,7 @@ namespace Glacier {
 
 class GetJobOutputResponsePrivate;
 
-class QTAWS_EXPORT GetJobOutputResponse : public GetJobOutputResponse {
+class QTAWS_EXPORT GetJobOutputResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

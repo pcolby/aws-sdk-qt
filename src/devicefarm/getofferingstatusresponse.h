@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class GetOfferingStatusResponsePrivate;
 
-class QTAWS_EXPORT GetOfferingStatusResponse : public GetOfferingStatusResponse {
+class QTAWS_EXPORT GetOfferingStatusResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

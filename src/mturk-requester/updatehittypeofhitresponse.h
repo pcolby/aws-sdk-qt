@@ -29,7 +29,7 @@ namespace MTurk {
 
 class UpdateHITTypeOfHITResponsePrivate;
 
-class QTAWS_EXPORT UpdateHITTypeOfHITResponse : public UpdateHITTypeOfHITResponse {
+class QTAWS_EXPORT UpdateHITTypeOfHITResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

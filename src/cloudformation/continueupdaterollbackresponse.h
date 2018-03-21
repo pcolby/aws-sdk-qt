@@ -29,7 +29,7 @@ namespace CloudFormation {
 
 class ContinueUpdateRollbackResponsePrivate;
 
-class QTAWS_EXPORT ContinueUpdateRollbackResponse : public ContinueUpdateRollbackResponse {
+class QTAWS_EXPORT ContinueUpdateRollbackResponse : public CloudFormationResponse {
     Q_OBJECT
 
 public:

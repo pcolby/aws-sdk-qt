@@ -29,7 +29,7 @@ namespace OpsWorksCM {
 
 class CreateServerResponsePrivate;
 
-class QTAWS_EXPORT CreateServerResponse : public CreateServerResponse {
+class QTAWS_EXPORT CreateServerResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

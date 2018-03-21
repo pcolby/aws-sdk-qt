@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class CompleteLifecycleActionResponsePrivate;
 
-class QTAWS_EXPORT CompleteLifecycleActionResponse : public CompleteLifecycleActionResponse {
+class QTAWS_EXPORT CompleteLifecycleActionResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class EnableDomainTransferLockResponsePrivate;
 
-class QTAWS_EXPORT EnableDomainTransferLockResponse : public EnableDomainTransferLockResponse {
+class QTAWS_EXPORT EnableDomainTransferLockResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

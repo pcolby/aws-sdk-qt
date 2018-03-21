@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class DeleteConstraintResponsePrivate;
 
-class QTAWS_EXPORT DeleteConstraintResponse : public DeleteConstraintResponse {
+class QTAWS_EXPORT DeleteConstraintResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class GlobalSignOutResponsePrivate;
 
-class QTAWS_EXPORT GlobalSignOutResponse : public GlobalSignOutResponse {
+class QTAWS_EXPORT GlobalSignOutResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

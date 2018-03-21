@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class CreateWebACLResponsePrivate;
 
-class QTAWS_EXPORT CreateWebACLResponse : public CreateWebACLResponse {
+class QTAWS_EXPORT CreateWebACLResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

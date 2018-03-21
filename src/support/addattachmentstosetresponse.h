@@ -29,7 +29,7 @@ namespace Support {
 
 class AddAttachmentsToSetResponsePrivate;
 
-class QTAWS_EXPORT AddAttachmentsToSetResponse : public AddAttachmentsToSetResponse {
+class QTAWS_EXPORT AddAttachmentsToSetResponse : public SupportResponse {
     Q_OBJECT
 
 public:

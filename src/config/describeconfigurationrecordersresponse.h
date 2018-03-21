@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class DescribeConfigurationRecordersResponsePrivate;
 
-class QTAWS_EXPORT DescribeConfigurationRecordersResponse : public DescribeConfigurationRecordersResponse {
+class QTAWS_EXPORT DescribeConfigurationRecordersResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

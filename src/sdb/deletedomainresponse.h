@@ -29,7 +29,7 @@ namespace SimpleDB {
 
 class DeleteDomainResponsePrivate;
 
-class QTAWS_EXPORT DeleteDomainResponse : public DeleteDomainResponse {
+class QTAWS_EXPORT DeleteDomainResponse : public SimpleDBResponse {
     Q_OBJECT
 
 public:

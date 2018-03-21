@@ -29,7 +29,7 @@ namespace MTurk {
 
 class NotifyWorkersResponsePrivate;
 
-class QTAWS_EXPORT NotifyWorkersResponse : public NotifyWorkersResponse {
+class QTAWS_EXPORT NotifyWorkersResponse : public MTurkResponse {
     Q_OBJECT
 
 public:

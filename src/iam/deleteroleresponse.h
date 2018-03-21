@@ -29,7 +29,7 @@ namespace IAM {
 
 class DeleteRoleResponsePrivate;
 
-class QTAWS_EXPORT DeleteRoleResponse : public DeleteRoleResponse {
+class QTAWS_EXPORT DeleteRoleResponse : public IAMResponse {
     Q_OBJECT
 
 public:

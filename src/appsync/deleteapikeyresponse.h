@@ -29,7 +29,7 @@ namespace AppSync {
 
 class DeleteApiKeyResponsePrivate;
 
-class QTAWS_EXPORT DeleteApiKeyResponse : public DeleteApiKeyResponse {
+class QTAWS_EXPORT DeleteApiKeyResponse : public AppSyncResponse {
     Q_OBJECT
 
 public:

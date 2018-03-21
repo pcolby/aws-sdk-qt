@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class DescribeConfigRuleEvaluationStatusResponsePrivate;
 
-class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusResponse : public DescribeConfigRuleEvaluationStatusResponse {
+class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class ListRecordHistoryResponsePrivate;
 
-class QTAWS_EXPORT ListRecordHistoryResponse : public ListRecordHistoryResponse {
+class QTAWS_EXPORT ListRecordHistoryResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

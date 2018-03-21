@@ -29,7 +29,7 @@ namespace IoT {
 
 class GetRegistrationCodeResponsePrivate;
 
-class QTAWS_EXPORT GetRegistrationCodeResponse : public GetRegistrationCodeResponse {
+class QTAWS_EXPORT GetRegistrationCodeResponse : public IoTResponse {
     Q_OBJECT
 
 public:

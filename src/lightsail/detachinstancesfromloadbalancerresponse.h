@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class DetachInstancesFromLoadBalancerResponsePrivate;
 
-class QTAWS_EXPORT DetachInstancesFromLoadBalancerResponse : public DetachInstancesFromLoadBalancerResponse {
+class QTAWS_EXPORT DetachInstancesFromLoadBalancerResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

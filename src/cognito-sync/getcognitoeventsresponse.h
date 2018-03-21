@@ -29,7 +29,7 @@ namespace CognitoSync {
 
 class GetCognitoEventsResponsePrivate;
 
-class QTAWS_EXPORT GetCognitoEventsResponse : public GetCognitoEventsResponse {
+class QTAWS_EXPORT GetCognitoEventsResponse : public CognitoSyncResponse {
     Q_OBJECT
 
 public:

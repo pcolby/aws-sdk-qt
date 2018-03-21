@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class CreateResourceDefinitionResponsePrivate;
 
-class QTAWS_EXPORT CreateResourceDefinitionResponse : public CreateResourceDefinitionResponse {
+class QTAWS_EXPORT CreateResourceDefinitionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

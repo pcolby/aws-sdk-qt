@@ -29,7 +29,7 @@ namespace Glue {
 
 class StopTriggerResponsePrivate;
 
-class QTAWS_EXPORT StopTriggerResponse : public StopTriggerResponse {
+class QTAWS_EXPORT StopTriggerResponse : public GlueResponse {
     Q_OBJECT
 
 public:

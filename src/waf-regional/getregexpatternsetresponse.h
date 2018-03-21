@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class GetRegexPatternSetResponsePrivate;
 
-class QTAWS_EXPORT GetRegexPatternSetResponse : public GetRegexPatternSetResponse {
+class QTAWS_EXPORT GetRegexPatternSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

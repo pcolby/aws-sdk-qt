@@ -29,7 +29,7 @@ namespace Inspector {
 
 class SubscribeToEventResponsePrivate;
 
-class QTAWS_EXPORT SubscribeToEventResponse : public SubscribeToEventResponse {
+class QTAWS_EXPORT SubscribeToEventResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

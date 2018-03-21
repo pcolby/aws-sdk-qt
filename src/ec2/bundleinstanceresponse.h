@@ -29,7 +29,7 @@ namespace EC2 {
 
 class BundleInstanceResponsePrivate;
 
-class QTAWS_EXPORT BundleInstanceResponse : public BundleInstanceResponse {
+class QTAWS_EXPORT BundleInstanceResponse : public EC2Response {
     Q_OBJECT
 
 public:

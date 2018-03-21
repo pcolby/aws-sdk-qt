@@ -29,7 +29,7 @@ namespace CodeDeploy {
 
 class DeleteDeploymentConfigResponsePrivate;
 
-class QTAWS_EXPORT DeleteDeploymentConfigResponse : public DeleteDeploymentConfigResponse {
+class QTAWS_EXPORT DeleteDeploymentConfigResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

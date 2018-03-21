@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class StopRunResponsePrivate;
 
-class QTAWS_EXPORT StopRunResponse : public StopRunResponse {
+class QTAWS_EXPORT StopRunResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

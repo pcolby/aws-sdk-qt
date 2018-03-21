@@ -29,7 +29,7 @@ namespace EMR {
 
 class AddJobFlowStepsResponsePrivate;
 
-class QTAWS_EXPORT AddJobFlowStepsResponse : public AddJobFlowStepsResponse {
+class QTAWS_EXPORT AddJobFlowStepsResponse : public EMRResponse {
     Q_OBJECT
 
 public:

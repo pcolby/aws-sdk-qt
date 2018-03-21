@@ -29,7 +29,7 @@ namespace DynamoDB {
 
 class ScanResponsePrivate;
 
-class QTAWS_EXPORT ScanResponse : public ScanResponse {
+class QTAWS_EXPORT ScanResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

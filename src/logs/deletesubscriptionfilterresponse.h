@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 
 class DeleteSubscriptionFilterResponsePrivate;
 
-class QTAWS_EXPORT DeleteSubscriptionFilterResponse : public DeleteSubscriptionFilterResponse {
+class QTAWS_EXPORT DeleteSubscriptionFilterResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class DeleteRepositoryResponsePrivate;
 
-class QTAWS_EXPORT DeleteRepositoryResponse : public DeleteRepositoryResponse {
+class QTAWS_EXPORT DeleteRepositoryResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

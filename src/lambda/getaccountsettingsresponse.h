@@ -29,7 +29,7 @@ namespace Lambda {
 
 class GetAccountSettingsResponsePrivate;
 
-class QTAWS_EXPORT GetAccountSettingsResponse : public GetAccountSettingsResponse {
+class QTAWS_EXPORT GetAccountSettingsResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace IoT {
 
 class ListJobExecutionsForThingResponsePrivate;
 
-class QTAWS_EXPORT ListJobExecutionsForThingResponse : public ListJobExecutionsForThingResponse {
+class QTAWS_EXPORT ListJobExecutionsForThingResponse : public IoTResponse {
     Q_OBJECT
 
 public:

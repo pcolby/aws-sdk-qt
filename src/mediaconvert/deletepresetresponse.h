@@ -29,7 +29,7 @@ namespace MediaConvert {
 
 class DeletePresetResponsePrivate;
 
-class QTAWS_EXPORT DeletePresetResponse : public DeletePresetResponse {
+class QTAWS_EXPORT DeletePresetResponse : public MediaConvertResponse {
     Q_OBJECT
 
 public:

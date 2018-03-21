@@ -29,7 +29,7 @@ namespace IAM {
 
 class CreateServiceSpecificCredentialResponsePrivate;
 
-class QTAWS_EXPORT CreateServiceSpecificCredentialResponse : public CreateServiceSpecificCredentialResponse {
+class QTAWS_EXPORT CreateServiceSpecificCredentialResponse : public IAMResponse {
     Q_OBJECT
 
 public:

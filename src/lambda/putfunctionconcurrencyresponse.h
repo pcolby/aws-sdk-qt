@@ -29,7 +29,7 @@ namespace Lambda {
 
 class PutFunctionConcurrencyResponsePrivate;
 
-class QTAWS_EXPORT PutFunctionConcurrencyResponse : public PutFunctionConcurrencyResponse {
+class QTAWS_EXPORT PutFunctionConcurrencyResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

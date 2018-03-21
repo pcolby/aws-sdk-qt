@@ -29,7 +29,7 @@ namespace EC2 {
 
 class CancelSpotInstanceRequestsResponsePrivate;
 
-class QTAWS_EXPORT CancelSpotInstanceRequestsResponse : public CancelSpotInstanceRequestsResponse {
+class QTAWS_EXPORT CancelSpotInstanceRequestsResponse : public EC2Response {
     Q_OBJECT
 
 public:

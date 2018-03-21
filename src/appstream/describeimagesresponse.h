@@ -29,7 +29,7 @@ namespace AppStream {
 
 class DescribeImagesResponsePrivate;
 
-class QTAWS_EXPORT DescribeImagesResponse : public DescribeImagesResponse {
+class QTAWS_EXPORT DescribeImagesResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

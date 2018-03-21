@@ -29,7 +29,7 @@ namespace ResourceGroups {
 
 class CreateGroupResponsePrivate;
 
-class QTAWS_EXPORT CreateGroupResponse : public CreateGroupResponse {
+class QTAWS_EXPORT CreateGroupResponse : public ResourceGroupsResponse {
     Q_OBJECT
 
 public:

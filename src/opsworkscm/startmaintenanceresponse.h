@@ -29,7 +29,7 @@ namespace OpsWorksCM {
 
 class StartMaintenanceResponsePrivate;
 
-class QTAWS_EXPORT StartMaintenanceResponse : public StartMaintenanceResponse {
+class QTAWS_EXPORT StartMaintenanceResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class ChangePasswordResponsePrivate;
 
-class QTAWS_EXPORT ChangePasswordResponse : public ChangePasswordResponse {
+class QTAWS_EXPORT ChangePasswordResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

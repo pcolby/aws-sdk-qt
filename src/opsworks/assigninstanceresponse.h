@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class AssignInstanceResponsePrivate;
 
-class QTAWS_EXPORT AssignInstanceResponse : public AssignInstanceResponse {
+class QTAWS_EXPORT AssignInstanceResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

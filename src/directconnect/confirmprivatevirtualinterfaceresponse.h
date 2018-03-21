@@ -29,7 +29,7 @@ namespace DirectConnect {
 
 class ConfirmPrivateVirtualInterfaceResponsePrivate;
 
-class QTAWS_EXPORT ConfirmPrivateVirtualInterfaceResponse : public ConfirmPrivateVirtualInterfaceResponse {
+class QTAWS_EXPORT ConfirmPrivateVirtualInterfaceResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

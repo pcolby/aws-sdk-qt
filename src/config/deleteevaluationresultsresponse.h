@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class DeleteEvaluationResultsResponsePrivate;
 
-class QTAWS_EXPORT DeleteEvaluationResultsResponse : public DeleteEvaluationResultsResponse {
+class QTAWS_EXPORT DeleteEvaluationResultsResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

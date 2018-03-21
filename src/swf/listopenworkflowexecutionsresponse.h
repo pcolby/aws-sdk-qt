@@ -29,7 +29,7 @@ namespace SWF {
 
 class ListOpenWorkflowExecutionsResponsePrivate;
 
-class QTAWS_EXPORT ListOpenWorkflowExecutionsResponse : public ListOpenWorkflowExecutionsResponse {
+class QTAWS_EXPORT ListOpenWorkflowExecutionsResponse : public SWFResponse {
     Q_OBJECT
 
 public:

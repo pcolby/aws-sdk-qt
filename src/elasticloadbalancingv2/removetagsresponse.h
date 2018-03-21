@@ -29,7 +29,7 @@ namespace ElasticLoadBalancingv2 {
 
 class RemoveTagsResponsePrivate;
 
-class QTAWS_EXPORT RemoveTagsResponse : public RemoveTagsResponse {
+class QTAWS_EXPORT RemoveTagsResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

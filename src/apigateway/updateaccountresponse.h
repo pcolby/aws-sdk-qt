@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class UpdateAccountResponsePrivate;
 
-class QTAWS_EXPORT UpdateAccountResponse : public UpdateAccountResponse {
+class QTAWS_EXPORT UpdateAccountResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

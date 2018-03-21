@@ -29,7 +29,7 @@ namespace Comprehend {
 
 class BatchDetectSentimentResponsePrivate;
 
-class QTAWS_EXPORT BatchDetectSentimentResponse : public BatchDetectSentimentResponse {
+class QTAWS_EXPORT BatchDetectSentimentResponse : public ComprehendResponse {
     Q_OBJECT
 
 public:

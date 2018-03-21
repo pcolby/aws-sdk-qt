@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class CreateFunctionDefinitionResponsePrivate;
 
-class QTAWS_EXPORT CreateFunctionDefinitionResponse : public CreateFunctionDefinitionResponse {
+class QTAWS_EXPORT CreateFunctionDefinitionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

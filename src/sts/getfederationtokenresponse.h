@@ -29,7 +29,7 @@ namespace STS {
 
 class GetFederationTokenResponsePrivate;
 
-class QTAWS_EXPORT GetFederationTokenResponse : public GetFederationTokenResponse {
+class QTAWS_EXPORT GetFederationTokenResponse : public STSResponse {
     Q_OBJECT
 
 public:

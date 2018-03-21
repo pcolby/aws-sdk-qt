@@ -29,7 +29,7 @@ namespace Pinpoint {
 
 class GetBaiduChannelResponsePrivate;
 
-class QTAWS_EXPORT GetBaiduChannelResponse : public GetBaiduChannelResponse {
+class QTAWS_EXPORT GetBaiduChannelResponse : public PinpointResponse {
     Q_OBJECT
 
 public:

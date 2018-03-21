@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class GetChangeTokenResponsePrivate;
 
-class QTAWS_EXPORT GetChangeTokenResponse : public GetChangeTokenResponse {
+class QTAWS_EXPORT GetChangeTokenResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class ListObjectPoliciesResponsePrivate;
 
-class QTAWS_EXPORT ListObjectPoliciesResponse : public ListObjectPoliciesResponse {
+class QTAWS_EXPORT ListObjectPoliciesResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

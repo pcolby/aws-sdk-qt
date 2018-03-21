@@ -29,7 +29,7 @@ namespace OpsWorksCM {
 
 class CreateBackupResponsePrivate;
 
-class QTAWS_EXPORT CreateBackupResponse : public CreateBackupResponse {
+class QTAWS_EXPORT CreateBackupResponse : public OpsWorksCMResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace DirectConnect {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public UntagResourceResponse {
+class QTAWS_EXPORT UntagResourceResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

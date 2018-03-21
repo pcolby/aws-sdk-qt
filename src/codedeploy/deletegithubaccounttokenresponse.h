@@ -29,7 +29,7 @@ namespace CodeDeploy {
 
 class DeleteGitHubAccountTokenResponsePrivate;
 
-class QTAWS_EXPORT DeleteGitHubAccountTokenResponse : public DeleteGitHubAccountTokenResponse {
+class QTAWS_EXPORT DeleteGitHubAccountTokenResponse : public CodeDeployResponse {
     Q_OBJECT
 
 public:

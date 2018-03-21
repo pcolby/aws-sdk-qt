@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class RegisterDomainResponsePrivate;
 
-class QTAWS_EXPORT RegisterDomainResponse : public RegisterDomainResponse {
+class QTAWS_EXPORT RegisterDomainResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

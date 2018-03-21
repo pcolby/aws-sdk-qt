@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class ListAllowedNodeTypeModificationsResponsePrivate;
 
-class QTAWS_EXPORT ListAllowedNodeTypeModificationsResponse : public ListAllowedNodeTypeModificationsResponse {
+class QTAWS_EXPORT ListAllowedNodeTypeModificationsResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

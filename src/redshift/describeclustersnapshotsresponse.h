@@ -29,7 +29,7 @@ namespace Redshift {
 
 class DescribeClusterSnapshotsResponsePrivate;
 
-class QTAWS_EXPORT DescribeClusterSnapshotsResponse : public DescribeClusterSnapshotsResponse {
+class QTAWS_EXPORT DescribeClusterSnapshotsResponse : public RedshiftResponse {
     Q_OBJECT
 
 public:

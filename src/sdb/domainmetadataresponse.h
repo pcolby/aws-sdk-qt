@@ -29,7 +29,7 @@ namespace SimpleDB {
 
 class DomainMetadataResponsePrivate;
 
-class QTAWS_EXPORT DomainMetadataResponse : public DomainMetadataResponse {
+class QTAWS_EXPORT DomainMetadataResponse : public SimpleDBResponse {
     Q_OBJECT
 
 public:

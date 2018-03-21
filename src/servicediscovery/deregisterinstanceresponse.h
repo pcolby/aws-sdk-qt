@@ -29,7 +29,7 @@ namespace ServiceDiscovery {
 
 class DeregisterInstanceResponsePrivate;
 
-class QTAWS_EXPORT DeregisterInstanceResponse : public DeregisterInstanceResponse {
+class QTAWS_EXPORT DeregisterInstanceResponse : public ServiceDiscoveryResponse {
     Q_OBJECT
 
 public:

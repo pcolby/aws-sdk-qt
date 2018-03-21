@@ -29,7 +29,7 @@ namespace Budgets {
 
 class UpdateSubscriberResponsePrivate;
 
-class QTAWS_EXPORT UpdateSubscriberResponse : public UpdateSubscriberResponse {
+class QTAWS_EXPORT UpdateSubscriberResponse : public BudgetsResponse {
     Q_OBJECT
 
 public:

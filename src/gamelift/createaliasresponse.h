@@ -29,7 +29,7 @@ namespace GameLift {
 
 class CreateAliasResponsePrivate;
 
-class QTAWS_EXPORT CreateAliasResponse : public CreateAliasResponse {
+class QTAWS_EXPORT CreateAliasResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

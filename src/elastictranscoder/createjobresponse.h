@@ -29,7 +29,7 @@ namespace ElasticTranscoder {
 
 class CreateJobResponsePrivate;
 
-class QTAWS_EXPORT CreateJobResponse : public CreateJobResponse {
+class QTAWS_EXPORT CreateJobResponse : public ElasticTranscoderResponse {
     Q_OBJECT
 
 public:

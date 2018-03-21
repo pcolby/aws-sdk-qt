@@ -29,7 +29,7 @@ namespace Route53 {
 
 class GetHostedZoneCountResponsePrivate;
 
-class QTAWS_EXPORT GetHostedZoneCountResponse : public GetHostedZoneCountResponse {
+class QTAWS_EXPORT GetHostedZoneCountResponse : public Route53Response {
     Q_OBJECT
 
 public:

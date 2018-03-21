@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DescribeSecurityGroupReferencesResponsePrivate;
 
-class QTAWS_EXPORT DescribeSecurityGroupReferencesResponse : public DescribeSecurityGroupReferencesResponse {
+class QTAWS_EXPORT DescribeSecurityGroupReferencesResponse : public EC2Response {
     Q_OBJECT
 
 public:

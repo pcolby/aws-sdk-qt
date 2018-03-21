@@ -29,7 +29,7 @@ namespace DAX {
 
 class DeleteParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT DeleteParameterGroupResponse : public DeleteParameterGroupResponse {
+class QTAWS_EXPORT DeleteParameterGroupResponse : public DAXResponse {
     Q_OBJECT
 
 public:

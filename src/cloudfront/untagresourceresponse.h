@@ -29,7 +29,7 @@ namespace CloudFront {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public UntagResourceResponse {
+class QTAWS_EXPORT UntagResourceResponse : public CloudFrontResponse {
     Q_OBJECT
 
 public:

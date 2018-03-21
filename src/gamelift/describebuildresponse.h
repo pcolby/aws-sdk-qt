@@ -29,7 +29,7 @@ namespace GameLift {
 
 class DescribeBuildResponsePrivate;
 
-class QTAWS_EXPORT DescribeBuildResponse : public DescribeBuildResponse {
+class QTAWS_EXPORT DescribeBuildResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

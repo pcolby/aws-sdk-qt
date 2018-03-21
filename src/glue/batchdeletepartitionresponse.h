@@ -29,7 +29,7 @@ namespace Glue {
 
 class BatchDeletePartitionResponsePrivate;
 
-class QTAWS_EXPORT BatchDeletePartitionResponse : public BatchDeletePartitionResponse {
+class QTAWS_EXPORT BatchDeletePartitionResponse : public GlueResponse {
     Q_OBJECT
 
 public:

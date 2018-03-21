@@ -29,7 +29,7 @@ namespace SWF {
 
 class CountOpenWorkflowExecutionsResponsePrivate;
 
-class QTAWS_EXPORT CountOpenWorkflowExecutionsResponse : public CountOpenWorkflowExecutionsResponse {
+class QTAWS_EXPORT CountOpenWorkflowExecutionsResponse : public SWFResponse {
     Q_OBJECT
 
 public:

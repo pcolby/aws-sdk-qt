@@ -29,7 +29,7 @@ namespace ConfigService {
 
 class ListDiscoveredResourcesResponsePrivate;
 
-class QTAWS_EXPORT ListDiscoveredResourcesResponse : public ListDiscoveredResourcesResponse {
+class QTAWS_EXPORT ListDiscoveredResourcesResponse : public ConfigServiceResponse {
     Q_OBJECT
 
 public:

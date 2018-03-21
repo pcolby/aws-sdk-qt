@@ -29,7 +29,7 @@ namespace Glacier {
 
 class AddTagsToVaultResponsePrivate;
 
-class QTAWS_EXPORT AddTagsToVaultResponse : public AddTagsToVaultResponse {
+class QTAWS_EXPORT AddTagsToVaultResponse : public GlacierResponse {
     Q_OBJECT
 
 public:

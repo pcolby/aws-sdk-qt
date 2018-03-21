@@ -29,7 +29,7 @@ namespace DAX {
 
 class DeleteClusterResponsePrivate;
 
-class QTAWS_EXPORT DeleteClusterResponse : public DeleteClusterResponse {
+class QTAWS_EXPORT DeleteClusterResponse : public DAXResponse {
     Q_OBJECT
 
 public:

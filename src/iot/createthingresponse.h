@@ -29,7 +29,7 @@ namespace IoT {
 
 class CreateThingResponsePrivate;
 
-class QTAWS_EXPORT CreateThingResponse : public CreateThingResponse {
+class QTAWS_EXPORT CreateThingResponse : public IoTResponse {
     Q_OBJECT
 
 public:

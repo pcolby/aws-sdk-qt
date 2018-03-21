@@ -29,7 +29,7 @@ namespace Kinesis {
 
 class DeleteStreamResponsePrivate;
 
-class QTAWS_EXPORT DeleteStreamResponse : public DeleteStreamResponse {
+class QTAWS_EXPORT DeleteStreamResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

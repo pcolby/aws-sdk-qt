@@ -29,7 +29,7 @@ namespace LexModelBuildingService {
 
 class DeleteIntentResponsePrivate;
 
-class QTAWS_EXPORT DeleteIntentResponse : public DeleteIntentResponse {
+class QTAWS_EXPORT DeleteIntentResponse : public LexModelBuildingServiceResponse {
     Q_OBJECT
 
 public:

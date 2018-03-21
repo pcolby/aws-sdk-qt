@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class AttachToIndexResponsePrivate;
 
-class QTAWS_EXPORT AttachToIndexResponse : public AttachToIndexResponse {
+class QTAWS_EXPORT AttachToIndexResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

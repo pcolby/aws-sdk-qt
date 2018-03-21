@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class GetInstancesResponsePrivate;
 
-class QTAWS_EXPORT GetInstancesResponse : public GetInstancesResponse {
+class QTAWS_EXPORT GetInstancesResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

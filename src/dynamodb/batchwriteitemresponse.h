@@ -29,7 +29,7 @@ namespace DynamoDB {
 
 class BatchWriteItemResponsePrivate;
 
-class QTAWS_EXPORT BatchWriteItemResponse : public BatchWriteItemResponse {
+class QTAWS_EXPORT BatchWriteItemResponse : public DynamoDBResponse {
     Q_OBJECT
 
 public:

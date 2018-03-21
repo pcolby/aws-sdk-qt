@@ -29,7 +29,7 @@ namespace XRay {
 
 class PutTraceSegmentsResponsePrivate;
 
-class QTAWS_EXPORT PutTraceSegmentsResponse : public PutTraceSegmentsResponse {
+class QTAWS_EXPORT PutTraceSegmentsResponse : public XRayResponse {
     Q_OBJECT
 
 public:

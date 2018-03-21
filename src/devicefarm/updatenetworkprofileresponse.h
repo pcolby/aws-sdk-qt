@@ -29,7 +29,7 @@ namespace DeviceFarm {
 
 class UpdateNetworkProfileResponsePrivate;
 
-class QTAWS_EXPORT UpdateNetworkProfileResponse : public UpdateNetworkProfileResponse {
+class QTAWS_EXPORT UpdateNetworkProfileResponse : public DeviceFarmResponse {
     Q_OBJECT
 
 public:

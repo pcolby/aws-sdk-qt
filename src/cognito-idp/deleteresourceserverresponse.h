@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 
 class DeleteResourceServerResponsePrivate;
 
-class QTAWS_EXPORT DeleteResourceServerResponse : public DeleteResourceServerResponse {
+class QTAWS_EXPORT DeleteResourceServerResponse : public CognitoIdentityProviderResponse {
     Q_OBJECT
 
 public:

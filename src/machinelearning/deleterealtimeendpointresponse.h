@@ -29,7 +29,7 @@ namespace MachineLearning {
 
 class DeleteRealtimeEndpointResponsePrivate;
 
-class QTAWS_EXPORT DeleteRealtimeEndpointResponse : public DeleteRealtimeEndpointResponse {
+class QTAWS_EXPORT DeleteRealtimeEndpointResponse : public MachineLearningResponse {
     Q_OBJECT
 
 public:

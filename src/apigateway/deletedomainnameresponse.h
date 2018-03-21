@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class DeleteDomainNameResponsePrivate;
 
-class QTAWS_EXPORT DeleteDomainNameResponse : public DeleteDomainNameResponse {
+class QTAWS_EXPORT DeleteDomainNameResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

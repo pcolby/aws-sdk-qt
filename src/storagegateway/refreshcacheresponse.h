@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class RefreshCacheResponsePrivate;
 
-class QTAWS_EXPORT RefreshCacheResponse : public RefreshCacheResponse {
+class QTAWS_EXPORT RefreshCacheResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

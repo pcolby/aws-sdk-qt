@@ -29,7 +29,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetIpAddressTypeResponsePrivate;
 
-class QTAWS_EXPORT SetIpAddressTypeResponse : public SetIpAddressTypeResponse {
+class QTAWS_EXPORT SetIpAddressTypeResponse : public ElasticLoadBalancingv2Response {
     Q_OBJECT
 
 public:

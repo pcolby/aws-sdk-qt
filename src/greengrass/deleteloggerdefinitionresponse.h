@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class DeleteLoggerDefinitionResponsePrivate;
 
-class QTAWS_EXPORT DeleteLoggerDefinitionResponse : public DeleteLoggerDefinitionResponse {
+class QTAWS_EXPORT DeleteLoggerDefinitionResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

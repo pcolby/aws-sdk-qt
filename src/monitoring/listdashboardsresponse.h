@@ -29,7 +29,7 @@ namespace CloudWatch {
 
 class ListDashboardsResponsePrivate;
 
-class QTAWS_EXPORT ListDashboardsResponse : public ListDashboardsResponse {
+class QTAWS_EXPORT ListDashboardsResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

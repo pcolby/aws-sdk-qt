@@ -29,7 +29,7 @@ namespace CloudWatch {
 
 class PutMetricAlarmResponsePrivate;
 
-class QTAWS_EXPORT PutMetricAlarmResponse : public PutMetricAlarmResponse {
+class QTAWS_EXPORT PutMetricAlarmResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

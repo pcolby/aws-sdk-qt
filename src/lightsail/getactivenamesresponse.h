@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class GetActiveNamesResponsePrivate;
 
-class QTAWS_EXPORT GetActiveNamesResponse : public GetActiveNamesResponse {
+class QTAWS_EXPORT GetActiveNamesResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class DeletePolicyResponsePrivate;
 
-class QTAWS_EXPORT DeletePolicyResponse : public DeletePolicyResponse {
+class QTAWS_EXPORT DeletePolicyResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace WorkMail {
 
 class DisassociateMemberFromGroupResponsePrivate;
 
-class QTAWS_EXPORT DisassociateMemberFromGroupResponse : public DisassociateMemberFromGroupResponse {
+class QTAWS_EXPORT DisassociateMemberFromGroupResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace EC2 {
 
 class CancelReservedInstancesListingResponsePrivate;
 
-class QTAWS_EXPORT CancelReservedInstancesListingResponse : public CancelReservedInstancesListingResponse {
+class QTAWS_EXPORT CancelReservedInstancesListingResponse : public EC2Response {
     Q_OBJECT
 
 public:

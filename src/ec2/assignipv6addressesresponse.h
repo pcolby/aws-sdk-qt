@@ -29,7 +29,7 @@ namespace EC2 {
 
 class AssignIpv6AddressesResponsePrivate;
 
-class QTAWS_EXPORT AssignIpv6AddressesResponse : public AssignIpv6AddressesResponse {
+class QTAWS_EXPORT AssignIpv6AddressesResponse : public EC2Response {
     Q_OBJECT
 
 public:

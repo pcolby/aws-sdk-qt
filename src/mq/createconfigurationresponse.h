@@ -29,7 +29,7 @@ namespace MQ {
 
 class CreateConfigurationResponsePrivate;
 
-class QTAWS_EXPORT CreateConfigurationResponse : public CreateConfigurationResponse {
+class QTAWS_EXPORT CreateConfigurationResponse : public MQResponse {
     Q_OBJECT
 
 public:

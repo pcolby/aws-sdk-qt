@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class ListIncomingTypedLinksResponsePrivate;
 
-class QTAWS_EXPORT ListIncomingTypedLinksResponse : public ListIncomingTypedLinksResponse {
+class QTAWS_EXPORT ListIncomingTypedLinksResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

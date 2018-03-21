@@ -29,7 +29,7 @@ namespace AlexaForBusiness {
 
 class GetSkillGroupResponsePrivate;
 
-class QTAWS_EXPORT GetSkillGroupResponse : public GetSkillGroupResponse {
+class QTAWS_EXPORT GetSkillGroupResponse : public AlexaForBusinessResponse {
     Q_OBJECT
 
 public:

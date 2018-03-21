@@ -29,7 +29,7 @@ namespace CloudSearch {
 
 class BuildSuggestersResponsePrivate;
 
-class QTAWS_EXPORT BuildSuggestersResponse : public BuildSuggestersResponse {
+class QTAWS_EXPORT BuildSuggestersResponse : public CloudSearchResponse {
     Q_OBJECT
 
 public:

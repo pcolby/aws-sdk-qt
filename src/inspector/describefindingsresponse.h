@@ -29,7 +29,7 @@ namespace Inspector {
 
 class DescribeFindingsResponsePrivate;
 
-class QTAWS_EXPORT DescribeFindingsResponse : public DescribeFindingsResponse {
+class QTAWS_EXPORT DescribeFindingsResponse : public InspectorResponse {
     Q_OBJECT
 
 public:

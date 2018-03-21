@@ -29,7 +29,7 @@ namespace ECS {
 
 class UpdateContainerAgentResponsePrivate;
 
-class QTAWS_EXPORT UpdateContainerAgentResponse : public UpdateContainerAgentResponse {
+class QTAWS_EXPORT UpdateContainerAgentResponse : public ECSResponse {
     Q_OBJECT
 
 public:

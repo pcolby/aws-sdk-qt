@@ -29,7 +29,7 @@ namespace Health {
 
 class DescribeEventAggregatesResponsePrivate;
 
-class QTAWS_EXPORT DescribeEventAggregatesResponse : public DescribeEventAggregatesResponse {
+class QTAWS_EXPORT DescribeEventAggregatesResponse : public HealthResponse {
     Q_OBJECT
 
 public:

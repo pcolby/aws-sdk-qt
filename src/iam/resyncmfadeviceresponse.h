@@ -29,7 +29,7 @@ namespace IAM {
 
 class ResyncMFADeviceResponsePrivate;
 
-class QTAWS_EXPORT ResyncMFADeviceResponse : public ResyncMFADeviceResponse {
+class QTAWS_EXPORT ResyncMFADeviceResponse : public IAMResponse {
     Q_OBJECT
 
 public:

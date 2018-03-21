@@ -29,7 +29,7 @@ namespace IAM {
 
 class AddUserToGroupResponsePrivate;
 
-class QTAWS_EXPORT AddUserToGroupResponse : public AddUserToGroupResponse {
+class QTAWS_EXPORT AddUserToGroupResponse : public IAMResponse {
     Q_OBJECT
 
 public:

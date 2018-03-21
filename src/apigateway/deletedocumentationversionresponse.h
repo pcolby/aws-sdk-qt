@@ -29,7 +29,7 @@ namespace APIGateway {
 
 class DeleteDocumentationVersionResponsePrivate;
 
-class QTAWS_EXPORT DeleteDocumentationVersionResponse : public DeleteDocumentationVersionResponse {
+class QTAWS_EXPORT DeleteDocumentationVersionResponse : public APIGatewayResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace AppStream {
 
 class CreateDirectoryConfigResponsePrivate;
 
-class QTAWS_EXPORT CreateDirectoryConfigResponse : public CreateDirectoryConfigResponse {
+class QTAWS_EXPORT CreateDirectoryConfigResponse : public AppStreamResponse {
     Q_OBJECT
 
 public:

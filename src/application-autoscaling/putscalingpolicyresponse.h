@@ -29,7 +29,7 @@ namespace ApplicationAutoScaling {
 
 class PutScalingPolicyResponsePrivate;
 
-class QTAWS_EXPORT PutScalingPolicyResponse : public PutScalingPolicyResponse {
+class QTAWS_EXPORT PutScalingPolicyResponse : public ApplicationAutoScalingResponse {
     Q_OBJECT
 
 public:

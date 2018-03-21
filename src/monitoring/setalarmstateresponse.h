@@ -29,7 +29,7 @@ namespace CloudWatch {
 
 class SetAlarmStateResponsePrivate;
 
-class QTAWS_EXPORT SetAlarmStateResponse : public SetAlarmStateResponse {
+class QTAWS_EXPORT SetAlarmStateResponse : public CloudWatchResponse {
     Q_OBJECT
 
 public:

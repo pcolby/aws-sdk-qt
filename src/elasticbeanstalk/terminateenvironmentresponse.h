@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class TerminateEnvironmentResponsePrivate;
 
-class QTAWS_EXPORT TerminateEnvironmentResponse : public TerminateEnvironmentResponse {
+class QTAWS_EXPORT TerminateEnvironmentResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

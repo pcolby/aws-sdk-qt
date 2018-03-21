@@ -29,7 +29,7 @@ namespace S3 {
 
 class HeadObjectResponsePrivate;
 
-class QTAWS_EXPORT HeadObjectResponse : public HeadObjectResponse {
+class QTAWS_EXPORT HeadObjectResponse : public S3Response {
     Q_OBJECT
 
 public:

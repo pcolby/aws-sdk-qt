@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class EnableMetricsCollectionResponsePrivate;
 
-class QTAWS_EXPORT EnableMetricsCollectionResponse : public EnableMetricsCollectionResponse {
+class QTAWS_EXPORT EnableMetricsCollectionResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

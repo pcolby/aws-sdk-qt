@@ -29,7 +29,7 @@ namespace SNS {
 
 class DeletePlatformApplicationResponsePrivate;
 
-class QTAWS_EXPORT DeletePlatformApplicationResponse : public DeletePlatformApplicationResponse {
+class QTAWS_EXPORT DeletePlatformApplicationResponse : public SNSResponse {
     Q_OBJECT
 
 public:

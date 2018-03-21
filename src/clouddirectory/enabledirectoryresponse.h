@@ -29,7 +29,7 @@ namespace CloudDirectory {
 
 class EnableDirectoryResponsePrivate;
 
-class QTAWS_EXPORT EnableDirectoryResponse : public EnableDirectoryResponse {
+class QTAWS_EXPORT EnableDirectoryResponse : public CloudDirectoryResponse {
     Q_OBJECT
 
 public:

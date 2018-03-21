@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class GetRuleGroupResponsePrivate;
 
-class QTAWS_EXPORT GetRuleGroupResponse : public GetRuleGroupResponse {
+class QTAWS_EXPORT GetRuleGroupResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

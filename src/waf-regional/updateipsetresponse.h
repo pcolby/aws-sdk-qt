@@ -29,7 +29,7 @@ namespace WAFRegional {
 
 class UpdateIPSetResponsePrivate;
 
-class QTAWS_EXPORT UpdateIPSetResponse : public UpdateIPSetResponse {
+class QTAWS_EXPORT UpdateIPSetResponse : public WAFRegionalResponse {
     Q_OBJECT
 
 public:

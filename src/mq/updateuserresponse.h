@@ -29,7 +29,7 @@ namespace MQ {
 
 class UpdateUserResponsePrivate;
 
-class QTAWS_EXPORT UpdateUserResponse : public UpdateUserResponse {
+class QTAWS_EXPORT UpdateUserResponse : public MQResponse {
     Q_OBJECT
 
 public:

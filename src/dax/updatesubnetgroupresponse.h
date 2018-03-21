@@ -29,7 +29,7 @@ namespace DAX {
 
 class UpdateSubnetGroupResponsePrivate;
 
-class QTAWS_EXPORT UpdateSubnetGroupResponse : public UpdateSubnetGroupResponse {
+class QTAWS_EXPORT UpdateSubnetGroupResponse : public DAXResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace ApplicationDiscoveryService {
 
 class DeleteTagsResponsePrivate;
 
-class QTAWS_EXPORT DeleteTagsResponse : public DeleteTagsResponse {
+class QTAWS_EXPORT DeleteTagsResponse : public ApplicationDiscoveryServiceResponse {
     Q_OBJECT
 
 public:

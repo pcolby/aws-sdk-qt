@@ -29,7 +29,7 @@ namespace Batch {
 
 class UpdateComputeEnvironmentResponsePrivate;
 
-class QTAWS_EXPORT UpdateComputeEnvironmentResponse : public UpdateComputeEnvironmentResponse {
+class QTAWS_EXPORT UpdateComputeEnvironmentResponse : public BatchResponse {
     Q_OBJECT
 
 public:

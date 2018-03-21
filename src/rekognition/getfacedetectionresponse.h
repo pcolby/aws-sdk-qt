@@ -29,7 +29,7 @@ namespace Rekognition {
 
 class GetFaceDetectionResponsePrivate;
 
-class QTAWS_EXPORT GetFaceDetectionResponse : public GetFaceDetectionResponse {
+class QTAWS_EXPORT GetFaceDetectionResponse : public RekognitionResponse {
     Q_OBJECT
 
 public:

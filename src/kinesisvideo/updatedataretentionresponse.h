@@ -29,7 +29,7 @@ namespace KinesisVideo {
 
 class UpdateDataRetentionResponsePrivate;
 
-class QTAWS_EXPORT UpdateDataRetentionResponse : public UpdateDataRetentionResponse {
+class QTAWS_EXPORT UpdateDataRetentionResponse : public KinesisVideoResponse {
     Q_OBJECT
 
 public:

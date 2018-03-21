@@ -29,7 +29,7 @@ namespace MigrationHub {
 
 class DescribeApplicationStateResponsePrivate;
 
-class QTAWS_EXPORT DescribeApplicationStateResponse : public DescribeApplicationStateResponse {
+class QTAWS_EXPORT DescribeApplicationStateResponse : public MigrationHubResponse {
     Q_OBJECT
 
 public:

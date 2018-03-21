@@ -29,7 +29,7 @@ namespace Route53Domains {
 
 class RetrieveDomainAuthCodeResponsePrivate;
 
-class QTAWS_EXPORT RetrieveDomainAuthCodeResponse : public RetrieveDomainAuthCodeResponse {
+class QTAWS_EXPORT RetrieveDomainAuthCodeResponse : public Route53DomainsResponse {
     Q_OBJECT
 
 public:

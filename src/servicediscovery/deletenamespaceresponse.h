@@ -29,7 +29,7 @@ namespace ServiceDiscovery {
 
 class DeleteNamespaceResponsePrivate;
 
-class QTAWS_EXPORT DeleteNamespaceResponse : public DeleteNamespaceResponse {
+class QTAWS_EXPORT DeleteNamespaceResponse : public ServiceDiscoveryResponse {
     Q_OBJECT
 
 public:

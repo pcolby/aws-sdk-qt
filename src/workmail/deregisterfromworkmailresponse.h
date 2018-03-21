@@ -29,7 +29,7 @@ namespace WorkMail {
 
 class DeregisterFromWorkMailResponsePrivate;
 
-class QTAWS_EXPORT DeregisterFromWorkMailResponse : public DeregisterFromWorkMailResponse {
+class QTAWS_EXPORT DeregisterFromWorkMailResponse : public WorkMailResponse {
     Q_OBJECT
 
 public:

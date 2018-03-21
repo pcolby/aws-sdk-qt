@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class CloneStackResponsePrivate;
 
-class QTAWS_EXPORT CloneStackResponse : public CloneStackResponse {
+class QTAWS_EXPORT CloneStackResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

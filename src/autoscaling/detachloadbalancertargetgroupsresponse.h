@@ -29,7 +29,7 @@ namespace AutoScaling {
 
 class DetachLoadBalancerTargetGroupsResponsePrivate;
 
-class QTAWS_EXPORT DetachLoadBalancerTargetGroupsResponse : public DetachLoadBalancerTargetGroupsResponse {
+class QTAWS_EXPORT DetachLoadBalancerTargetGroupsResponse : public AutoScalingResponse {
     Q_OBJECT
 
 public:

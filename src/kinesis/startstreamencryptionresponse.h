@@ -29,7 +29,7 @@ namespace Kinesis {
 
 class StartStreamEncryptionResponsePrivate;
 
-class QTAWS_EXPORT StartStreamEncryptionResponse : public StartStreamEncryptionResponse {
+class QTAWS_EXPORT StartStreamEncryptionResponse : public KinesisResponse {
     Q_OBJECT
 
 public:

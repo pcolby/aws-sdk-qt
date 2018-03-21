@@ -29,7 +29,7 @@ namespace ServerlessApplicationRepository {
 
 class CreateCloudFormationChangeSetResponsePrivate;
 
-class QTAWS_EXPORT CreateCloudFormationChangeSetResponse : public CreateCloudFormationChangeSetResponse {
+class QTAWS_EXPORT CreateCloudFormationChangeSetResponse : public ServerlessApplicationRepositoryResponse {
     Q_OBJECT
 
 public:

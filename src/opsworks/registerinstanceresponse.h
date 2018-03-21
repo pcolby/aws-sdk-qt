@@ -29,7 +29,7 @@ namespace OpsWorks {
 
 class RegisterInstanceResponsePrivate;
 
-class QTAWS_EXPORT RegisterInstanceResponse : public RegisterInstanceResponse {
+class QTAWS_EXPORT RegisterInstanceResponse : public OpsWorksResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace SWF {
 
 class RespondDecisionTaskCompletedResponsePrivate;
 
-class QTAWS_EXPORT RespondDecisionTaskCompletedResponse : public RespondDecisionTaskCompletedResponse {
+class QTAWS_EXPORT RespondDecisionTaskCompletedResponse : public SWFResponse {
     Q_OBJECT
 
 public:

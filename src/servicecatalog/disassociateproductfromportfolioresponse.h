@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 
 class DisassociateProductFromPortfolioResponsePrivate;
 
-class QTAWS_EXPORT DisassociateProductFromPortfolioResponse : public DisassociateProductFromPortfolioResponse {
+class QTAWS_EXPORT DisassociateProductFromPortfolioResponse : public ServiceCatalogResponse {
     Q_OBJECT
 
 public:

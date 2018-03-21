@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class UpdateLoadBalancerAttributeResponsePrivate;
 
-class QTAWS_EXPORT UpdateLoadBalancerAttributeResponse : public UpdateLoadBalancerAttributeResponse {
+class QTAWS_EXPORT UpdateLoadBalancerAttributeResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

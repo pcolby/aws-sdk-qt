@@ -29,7 +29,7 @@ namespace Lambda {
 
 class UntagResourceResponsePrivate;
 
-class QTAWS_EXPORT UntagResourceResponse : public UntagResourceResponse {
+class QTAWS_EXPORT UntagResourceResponse : public LambdaResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace SES {
 
 class DeleteTemplateResponsePrivate;
 
-class QTAWS_EXPORT DeleteTemplateResponse : public DeleteTemplateResponse {
+class QTAWS_EXPORT DeleteTemplateResponse : public SESResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 
 class CancelExportTaskResponsePrivate;
 
-class QTAWS_EXPORT CancelExportTaskResponse : public CancelExportTaskResponse {
+class QTAWS_EXPORT CancelExportTaskResponse : public CloudWatchLogsResponse {
     Q_OBJECT
 
 public:

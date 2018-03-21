@@ -29,7 +29,7 @@ namespace SSM {
 
 class GetAutomationExecutionResponsePrivate;
 
-class QTAWS_EXPORT GetAutomationExecutionResponse : public GetAutomationExecutionResponse {
+class QTAWS_EXPORT GetAutomationExecutionResponse : public SSMResponse {
     Q_OBJECT
 
 public:

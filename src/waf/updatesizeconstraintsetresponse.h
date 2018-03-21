@@ -29,7 +29,7 @@ namespace WAF {
 
 class UpdateSizeConstraintSetResponsePrivate;
 
-class QTAWS_EXPORT UpdateSizeConstraintSetResponse : public UpdateSizeConstraintSetResponse {
+class QTAWS_EXPORT UpdateSizeConstraintSetResponse : public WAFResponse {
     Q_OBJECT
 
 public:

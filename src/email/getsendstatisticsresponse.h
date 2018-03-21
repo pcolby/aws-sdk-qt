@@ -29,7 +29,7 @@ namespace SES {
 
 class GetSendStatisticsResponsePrivate;
 
-class QTAWS_EXPORT GetSendStatisticsResponse : public GetSendStatisticsResponse {
+class QTAWS_EXPORT GetSendStatisticsResponse : public SESResponse {
     Q_OBJECT
 
 public:

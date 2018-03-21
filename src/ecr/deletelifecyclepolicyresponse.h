@@ -29,7 +29,7 @@ namespace ECR {
 
 class DeleteLifecyclePolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteLifecyclePolicyResponse : public DeleteLifecyclePolicyResponse {
+class QTAWS_EXPORT DeleteLifecyclePolicyResponse : public ECRResponse {
     Q_OBJECT
 
 public:

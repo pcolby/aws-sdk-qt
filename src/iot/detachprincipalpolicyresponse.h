@@ -29,7 +29,7 @@ namespace IoT {
 
 class DetachPrincipalPolicyResponsePrivate;
 
-class QTAWS_EXPORT DetachPrincipalPolicyResponse : public DetachPrincipalPolicyResponse {
+class QTAWS_EXPORT DetachPrincipalPolicyResponse : public IoTResponse {
     Q_OBJECT
 
 public:

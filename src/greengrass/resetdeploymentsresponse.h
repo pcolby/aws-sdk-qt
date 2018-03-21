@@ -29,7 +29,7 @@ namespace Greengrass {
 
 class ResetDeploymentsResponsePrivate;
 
-class QTAWS_EXPORT ResetDeploymentsResponse : public ResetDeploymentsResponse {
+class QTAWS_EXPORT ResetDeploymentsResponse : public GreengrassResponse {
     Q_OBJECT
 
 public:

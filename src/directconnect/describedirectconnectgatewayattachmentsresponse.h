@@ -29,7 +29,7 @@ namespace DirectConnect {
 
 class DescribeDirectConnectGatewayAttachmentsResponsePrivate;
 
-class QTAWS_EXPORT DescribeDirectConnectGatewayAttachmentsResponse : public DescribeDirectConnectGatewayAttachmentsResponse {
+class QTAWS_EXPORT DescribeDirectConnectGatewayAttachmentsResponse : public DirectConnectResponse {
     Q_OBJECT
 
 public:

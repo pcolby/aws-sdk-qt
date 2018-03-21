@@ -29,7 +29,7 @@ namespace MachineLearning {
 
 class CreateMLModelResponsePrivate;
 
-class QTAWS_EXPORT CreateMLModelResponse : public CreateMLModelResponse {
+class QTAWS_EXPORT CreateMLModelResponse : public MachineLearningResponse {
     Q_OBJECT
 
 public:

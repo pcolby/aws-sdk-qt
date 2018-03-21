@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class ResetCacheParameterGroupResponsePrivate;
 
-class QTAWS_EXPORT ResetCacheParameterGroupResponse : public ResetCacheParameterGroupResponse {
+class QTAWS_EXPORT ResetCacheParameterGroupResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace ElasticLoadBalancing {
 
 class RegisterInstancesWithLoadBalancerResponsePrivate;
 
-class QTAWS_EXPORT RegisterInstancesWithLoadBalancerResponse : public RegisterInstancesWithLoadBalancerResponse {
+class QTAWS_EXPORT RegisterInstancesWithLoadBalancerResponse : public ElasticLoadBalancingResponse {
     Q_OBJECT
 
 public:

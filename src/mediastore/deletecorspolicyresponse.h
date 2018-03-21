@@ -29,7 +29,7 @@ namespace MediaStore {
 
 class DeleteCorsPolicyResponsePrivate;
 
-class QTAWS_EXPORT DeleteCorsPolicyResponse : public DeleteCorsPolicyResponse {
+class QTAWS_EXPORT DeleteCorsPolicyResponse : public MediaStoreResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace EC2 {
 
 class CopyImageResponsePrivate;
 
-class QTAWS_EXPORT CopyImageResponse : public CopyImageResponse {
+class QTAWS_EXPORT CopyImageResponse : public EC2Response {
     Q_OBJECT
 
 public:

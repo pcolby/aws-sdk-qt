@@ -29,7 +29,7 @@ namespace EC2 {
 
 class DescribeSpotPriceHistoryResponsePrivate;
 
-class QTAWS_EXPORT DescribeSpotPriceHistoryResponse : public DescribeSpotPriceHistoryResponse {
+class QTAWS_EXPORT DescribeSpotPriceHistoryResponse : public EC2Response {
     Q_OBJECT
 
 public:

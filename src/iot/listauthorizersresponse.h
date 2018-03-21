@@ -29,7 +29,7 @@ namespace IoT {
 
 class ListAuthorizersResponsePrivate;
 
-class QTAWS_EXPORT ListAuthorizersResponse : public ListAuthorizersResponse {
+class QTAWS_EXPORT ListAuthorizersResponse : public IoTResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace SQS {
 
 class CreateQueueResponsePrivate;
 
-class QTAWS_EXPORT CreateQueueResponse : public CreateQueueResponse {
+class QTAWS_EXPORT CreateQueueResponse : public SQSResponse {
     Q_OBJECT
 
 public:

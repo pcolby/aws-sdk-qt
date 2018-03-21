@@ -29,7 +29,7 @@ namespace SSM {
 
 class GetCommandInvocationResponsePrivate;
 
-class QTAWS_EXPORT GetCommandInvocationResponse : public GetCommandInvocationResponse {
+class QTAWS_EXPORT GetCommandInvocationResponse : public SSMResponse {
     Q_OBJECT
 
 public:

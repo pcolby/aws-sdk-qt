@@ -29,7 +29,7 @@ namespace SWF {
 
 class CountPendingActivityTasksResponsePrivate;
 
-class QTAWS_EXPORT CountPendingActivityTasksResponse : public CountPendingActivityTasksResponse {
+class QTAWS_EXPORT CountPendingActivityTasksResponse : public SWFResponse {
     Q_OBJECT
 
 public:

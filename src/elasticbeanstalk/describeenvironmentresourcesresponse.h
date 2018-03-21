@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEnvironmentResourcesResponsePrivate;
 
-class QTAWS_EXPORT DescribeEnvironmentResourcesResponse : public DescribeEnvironmentResourcesResponse {
+class QTAWS_EXPORT DescribeEnvironmentResourcesResponse : public ElasticBeanstalkResponse {
     Q_OBJECT
 
 public:

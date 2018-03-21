@@ -29,7 +29,7 @@ namespace ElastiCache {
 
 class CreateSnapshotResponsePrivate;
 
-class QTAWS_EXPORT CreateSnapshotResponse : public CreateSnapshotResponse {
+class QTAWS_EXPORT CreateSnapshotResponse : public ElastiCacheResponse {
     Q_OBJECT
 
 public:

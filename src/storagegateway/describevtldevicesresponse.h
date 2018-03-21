@@ -29,7 +29,7 @@ namespace StorageGateway {
 
 class DescribeVTLDevicesResponsePrivate;
 
-class QTAWS_EXPORT DescribeVTLDevicesResponse : public DescribeVTLDevicesResponse {
+class QTAWS_EXPORT DescribeVTLDevicesResponse : public StorageGatewayResponse {
     Q_OBJECT
 
 public:

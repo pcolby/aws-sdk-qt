@@ -29,7 +29,7 @@ namespace SageMaker {
 
 class DeleteNotebookInstanceLifecycleConfigResponsePrivate;
 
-class QTAWS_EXPORT DeleteNotebookInstanceLifecycleConfigResponse : public DeleteNotebookInstanceLifecycleConfigResponse {
+class QTAWS_EXPORT DeleteNotebookInstanceLifecycleConfigResponse : public SageMakerResponse {
     Q_OBJECT
 
 public:

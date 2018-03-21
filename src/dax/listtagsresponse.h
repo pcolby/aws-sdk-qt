@@ -29,7 +29,7 @@ namespace DAX {
 
 class ListTagsResponsePrivate;
 
-class QTAWS_EXPORT ListTagsResponse : public ListTagsResponse {
+class QTAWS_EXPORT ListTagsResponse : public DAXResponse {
     Q_OBJECT
 
 public:

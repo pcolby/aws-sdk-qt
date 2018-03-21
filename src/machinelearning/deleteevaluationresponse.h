@@ -29,7 +29,7 @@ namespace MachineLearning {
 
 class DeleteEvaluationResponsePrivate;
 
-class QTAWS_EXPORT DeleteEvaluationResponse : public DeleteEvaluationResponse {
+class QTAWS_EXPORT DeleteEvaluationResponse : public MachineLearningResponse {
     Q_OBJECT
 
 public:

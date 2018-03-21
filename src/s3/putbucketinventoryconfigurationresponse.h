@@ -29,7 +29,7 @@ namespace S3 {
 
 class PutBucketInventoryConfigurationResponsePrivate;
 
-class QTAWS_EXPORT PutBucketInventoryConfigurationResponse : public PutBucketInventoryConfigurationResponse {
+class QTAWS_EXPORT PutBucketInventoryConfigurationResponse : public S3Response {
     Q_OBJECT
 
 public:

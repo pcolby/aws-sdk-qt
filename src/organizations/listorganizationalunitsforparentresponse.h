@@ -29,7 +29,7 @@ namespace Organizations {
 
 class ListOrganizationalUnitsForParentResponsePrivate;
 
-class QTAWS_EXPORT ListOrganizationalUnitsForParentResponse : public ListOrganizationalUnitsForParentResponse {
+class QTAWS_EXPORT ListOrganizationalUnitsForParentResponse : public OrganizationsResponse {
     Q_OBJECT
 
 public:

@@ -29,7 +29,7 @@ namespace GameLift {
 
 class ListFleetsResponsePrivate;
 
-class QTAWS_EXPORT ListFleetsResponse : public ListFleetsResponse {
+class QTAWS_EXPORT ListFleetsResponse : public GameLiftResponse {
     Q_OBJECT
 
 public:

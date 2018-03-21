@@ -29,7 +29,7 @@ namespace KMS {
 
 class ListGrantsResponsePrivate;
 
-class QTAWS_EXPORT ListGrantsResponse : public ListGrantsResponse {
+class QTAWS_EXPORT ListGrantsResponse : public KMSResponse {
     Q_OBJECT
 
 public:

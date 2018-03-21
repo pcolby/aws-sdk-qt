@@ -29,7 +29,7 @@ namespace CodeBuild {
 
 class StartBuildResponsePrivate;
 
-class QTAWS_EXPORT StartBuildResponse : public StartBuildResponse {
+class QTAWS_EXPORT StartBuildResponse : public CodeBuildResponse {
     Q_OBJECT
 
 public:

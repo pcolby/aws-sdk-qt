@@ -29,7 +29,7 @@ namespace CodeBuild {
 
 class BatchGetBuildsResponsePrivate;
 
-class QTAWS_EXPORT BatchGetBuildsResponse : public BatchGetBuildsResponse {
+class QTAWS_EXPORT BatchGetBuildsResponse : public CodeBuildResponse {
     Q_OBJECT
 
 public:

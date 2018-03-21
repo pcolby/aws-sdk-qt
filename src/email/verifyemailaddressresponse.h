@@ -29,7 +29,7 @@ namespace SES {
 
 class VerifyEmailAddressResponsePrivate;
 
-class QTAWS_EXPORT VerifyEmailAddressResponse : public VerifyEmailAddressResponse {
+class QTAWS_EXPORT VerifyEmailAddressResponse : public SESResponse {
     Q_OBJECT
 
 public:

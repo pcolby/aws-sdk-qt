@@ -29,7 +29,7 @@ namespace EC2 {
 
 class GetConsoleOutputResponsePrivate;
 
-class QTAWS_EXPORT GetConsoleOutputResponse : public GetConsoleOutputResponse {
+class QTAWS_EXPORT GetConsoleOutputResponse : public EC2Response {
     Q_OBJECT
 
 public:

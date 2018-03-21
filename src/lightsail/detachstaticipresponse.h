@@ -29,7 +29,7 @@ namespace Lightsail {
 
 class DetachStaticIpResponsePrivate;
 
-class QTAWS_EXPORT DetachStaticIpResponse : public DetachStaticIpResponse {
+class QTAWS_EXPORT DetachStaticIpResponse : public LightsailResponse {
     Q_OBJECT
 
 public:

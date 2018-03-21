@@ -29,7 +29,7 @@ namespace EMR {
 
 class RemoveAutoScalingPolicyResponsePrivate;
 
-class QTAWS_EXPORT RemoveAutoScalingPolicyResponse : public RemoveAutoScalingPolicyResponse {
+class QTAWS_EXPORT RemoveAutoScalingPolicyResponse : public EMRResponse {
     Q_OBJECT
 
 public:

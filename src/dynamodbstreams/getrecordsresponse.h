@@ -29,7 +29,7 @@ namespace DynamoDBStreams {
 
 class GetRecordsResponsePrivate;
 
-class QTAWS_EXPORT GetRecordsResponse : public GetRecordsResponse {
+class QTAWS_EXPORT GetRecordsResponse : public DynamoDBStreamsResponse {
     Q_OBJECT
 
 public:

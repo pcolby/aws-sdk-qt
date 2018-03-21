@@ -29,7 +29,7 @@ namespace CodeCommit {
 
 class DescribePullRequestEventsResponsePrivate;
 
-class QTAWS_EXPORT DescribePullRequestEventsResponse : public DescribePullRequestEventsResponse {
+class QTAWS_EXPORT DescribePullRequestEventsResponse : public CodeCommitResponse {
     Q_OBJECT
 
 public:

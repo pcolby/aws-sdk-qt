@@ -29,7 +29,7 @@ namespace SES {
 
 class SetIdentityFeedbackForwardingEnabledResponsePrivate;
 
-class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledResponse : public SetIdentityFeedbackForwardingEnabledResponse {
+class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledResponse : public SESResponse {
     Q_OBJECT
 
 public:
