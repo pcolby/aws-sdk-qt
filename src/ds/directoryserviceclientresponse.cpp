@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace DirectoryService {
 
 /**
  * @class  DirectoryServiceClientResponse
@@ -66,5 +66,5 @@ DirectoryServiceClientResponsePrivate::DirectoryServiceClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace DirectoryService
 } // namespace AWS

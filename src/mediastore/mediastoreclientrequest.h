@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MediaStoreClient {
+namespace MediaStore {
 
 class AwsAbstractClient;
 class MediaStoreClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MediaStoreClient
+} // namespace MediaStore
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CodeBuildClient {
+namespace CodeBuild {
 
 class AwsAbstractClient;
 class CodeBuildClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CodeBuildClient
+} // namespace CodeBuild
 } // namespace AWS
 
 #endif

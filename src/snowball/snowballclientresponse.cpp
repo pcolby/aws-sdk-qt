@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Snowball {
 
 /**
  * @class  SnowballClientResponse
@@ -66,5 +66,5 @@ SnowballClientResponsePrivate::SnowballClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Snowball
 } // namespace AWS

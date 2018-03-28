@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ECR {
 
 class EcrClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ECR
 } // namespace AWS
 
 #endif

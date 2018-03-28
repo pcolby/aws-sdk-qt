@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace AppStream {
 
 class AppStreamClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace AppStream
 } // namespace AWS
 
 #endif

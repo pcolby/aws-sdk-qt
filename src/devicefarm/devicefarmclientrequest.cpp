@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DeviceFarm {
 
 /**
  * @class  DeviceFarmClientRequest
@@ -338,5 +338,5 @@ QString DeviceFarmClientRequestPrivate::toString(const DeviceFarmClientRequest::
     return QString();
 }
 
-} // namespace 
+} // namespace DeviceFarm
 } // namespace AWS

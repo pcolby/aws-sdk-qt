@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ApplicationDiscoveryService {
 
 /**
  * @class  ApplicationDiscoveryServiceClientResponse
@@ -66,5 +66,5 @@ ApplicationDiscoveryServiceClientResponsePrivate::ApplicationDiscoveryServiceCli
 
 }
 
-} // namespace 
+} // namespace ApplicationDiscoveryService
 } // namespace AWS

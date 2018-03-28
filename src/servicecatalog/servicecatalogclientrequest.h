@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ServiceCatalogClient {
+namespace ServiceCatalog {
 
 class AwsAbstractClient;
 class ServiceCatalogClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ServiceCatalogClient
+} // namespace ServiceCatalog
 } // namespace AWS
 
 #endif

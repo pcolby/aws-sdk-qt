@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ElasticsearchService {
 
 class ElasticsearchServiceClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

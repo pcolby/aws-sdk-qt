@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace DynamoDB {
 
 /**
  * @class  DynamoDBClientResponse
@@ -66,5 +66,5 @@ DynamoDBClientResponsePrivate::DynamoDBClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace DynamoDB
 } // namespace AWS

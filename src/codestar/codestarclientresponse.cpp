@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CodeStar {
 
 /**
  * @class  CodeStarClientResponse
@@ -66,5 +66,5 @@ CodeStarClientResponsePrivate::CodeStarClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CodeStar
 } // namespace AWS

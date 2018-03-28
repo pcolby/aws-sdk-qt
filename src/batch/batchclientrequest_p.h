@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Batch {
 
 class BatchClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Batch
 } // namespace AWS
 
 #endif

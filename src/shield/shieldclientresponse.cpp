@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Shield {
 
 /**
  * @class  ShieldClientResponse
@@ -66,5 +66,5 @@ ShieldClientResponsePrivate::ShieldClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Shield
 } // namespace AWS

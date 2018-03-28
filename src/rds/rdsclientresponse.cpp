@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace RDS {
 
 /**
  * @class  RdsClientResponse
@@ -66,5 +66,5 @@ RdsClientResponsePrivate::RdsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace RDS
 } // namespace AWS

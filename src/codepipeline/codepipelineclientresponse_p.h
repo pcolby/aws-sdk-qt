@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CodePipeline {
 
 class CodePipelineClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CodePipeline
 } // namespace AWS
 
 #endif

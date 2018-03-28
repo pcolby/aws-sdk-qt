@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace LexModelBuildingServiceClient {
+namespace LexModelBuildingService {
 
 class AwsAbstractClient;
 class LexModelBuildingServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace LexModelBuildingServiceClient
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

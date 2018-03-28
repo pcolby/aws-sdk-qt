@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MarketplaceCommerceAnalytics {
 
 /**
  * @class  MarketplaceCommerceAnalyticsClientRequest
@@ -338,5 +338,5 @@ QString MarketplaceCommerceAnalyticsClientRequestPrivate::toString(const Marketp
     return QString();
 }
 
-} // namespace 
+} // namespace MarketplaceCommerceAnalytics
 } // namespace AWS

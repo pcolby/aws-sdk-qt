@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CodeCommit {
 
 /**
  * @class  CodeCommitClientResponse
@@ -66,5 +66,5 @@ CodeCommitClientResponsePrivate::CodeCommitClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CodeCommit
 } // namespace AWS

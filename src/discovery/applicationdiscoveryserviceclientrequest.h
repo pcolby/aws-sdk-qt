@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ApplicationDiscoveryServiceClient {
+namespace ApplicationDiscoveryService {
 
 class AwsAbstractClient;
 class ApplicationDiscoveryServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ApplicationDiscoveryServiceClient
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

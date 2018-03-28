@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace SMS {
 
 /**
  * @class  SmsClientResponse
@@ -66,5 +66,5 @@ SmsClientResponsePrivate::SmsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace SMS
 } // namespace AWS

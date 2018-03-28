@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MobileClient {
+namespace Mobile {
 
 class AwsAbstractClient;
 class MobileClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MobileClient
+} // namespace Mobile
 } // namespace AWS
 
 #endif

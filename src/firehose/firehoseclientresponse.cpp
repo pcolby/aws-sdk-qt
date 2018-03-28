@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Firehose {
 
 /**
  * @class  FirehoseClientResponse
@@ -66,5 +66,5 @@ FirehoseClientResponsePrivate::FirehoseClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Firehose
 } // namespace AWS

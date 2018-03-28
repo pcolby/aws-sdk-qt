@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Route53 {
 
 class Route53ClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Route53
 } // namespace AWS
 
 #endif

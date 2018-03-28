@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace AppStreamClient {
+namespace AppStream {
 
 class AwsAbstractClient;
 class AppStreamClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace AppStreamClient
+} // namespace AppStream
 } // namespace AWS
 
 #endif

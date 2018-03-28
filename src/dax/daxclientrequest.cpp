@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DAX {
 
 /**
  * @class  DaxClientRequest
@@ -338,5 +338,5 @@ QString DaxClientRequestPrivate::toString(const DaxClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace DAX
 } // namespace AWS

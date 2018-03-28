@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Athena {
 
 class AthenaClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Athena
 } // namespace AWS
 
 #endif

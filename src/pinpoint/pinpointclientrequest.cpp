@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Pinpoint {
 
 /**
  * @class  PinpointClientRequest
@@ -338,5 +338,5 @@ QString PinpointClientRequestPrivate::toString(const PinpointClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace Pinpoint
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace AutoScaling {
 
 class AutoScalingClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace AutoScaling
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CloudHSMV2 {
 
 /**
  * @class  CloudHSMV2ClientResponse
@@ -66,5 +66,5 @@ CloudHSMV2ClientResponsePrivate::CloudHSMV2ClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CloudHSMV2
 } // namespace AWS

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace SWF {
 
 /**
  * @class  SwfClientRequest
@@ -338,5 +338,5 @@ QString SwfClientRequestPrivate::toString(const SwfClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace SWF
 } // namespace AWS

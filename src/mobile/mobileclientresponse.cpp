@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Mobile {
 
 /**
  * @class  MobileClientResponse
@@ -66,5 +66,5 @@ MobileClientResponsePrivate::MobileClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Mobile
 } // namespace AWS

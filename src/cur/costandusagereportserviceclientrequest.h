@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CostandUsageReportServiceClient {
+namespace CostandUsageReportService {
 
 class AwsAbstractClient;
 class CostandUsageReportServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CostandUsageReportServiceClient
+} // namespace CostandUsageReportService
 } // namespace AWS
 
 #endif

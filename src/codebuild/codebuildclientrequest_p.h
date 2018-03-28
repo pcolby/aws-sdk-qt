@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CodeBuild {
 
 class CodeBuildClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CodeBuild
 } // namespace AWS
 
 #endif

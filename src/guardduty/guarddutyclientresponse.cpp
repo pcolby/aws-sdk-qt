@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace GuardDuty {
 
 /**
  * @class  GuardDutyClientResponse
@@ -66,5 +66,5 @@ GuardDutyClientResponsePrivate::GuardDutyClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace GuardDuty
 } // namespace AWS

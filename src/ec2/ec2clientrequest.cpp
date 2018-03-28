@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace EC2 {
 
 /**
  * @class  Ec2ClientRequest
@@ -338,5 +338,5 @@ QString Ec2ClientRequestPrivate::toString(const Ec2ClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace EC2
 } // namespace AWS

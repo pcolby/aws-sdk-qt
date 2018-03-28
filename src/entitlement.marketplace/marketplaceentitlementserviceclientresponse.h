@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MarketplaceEntitlementService
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CloudFrontClient {
+namespace CloudFront {
 
 class AwsAbstractClient;
 class CloudFrontClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CloudFrontClient
+} // namespace CloudFront
 } // namespace AWS
 
 #endif

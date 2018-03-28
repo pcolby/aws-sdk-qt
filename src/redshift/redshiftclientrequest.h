@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace RedshiftClient {
+namespace Redshift {
 
 class AwsAbstractClient;
 class RedshiftClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace RedshiftClient
+} // namespace Redshift
 } // namespace AWS
 
 #endif

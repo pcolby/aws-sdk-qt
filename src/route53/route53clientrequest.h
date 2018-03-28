@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace Route53Client {
+namespace Route53 {
 
 class AwsAbstractClient;
 class Route53ClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace Route53Client
+} // namespace Route53
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace IAM {
 
 /**
  * @class  IamClientRequest
@@ -338,5 +338,5 @@ QString IamClientRequestPrivate::toString(const IamClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace IAM
 } // namespace AWS

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace SmsClient {
+namespace SMS {
 
 class AwsAbstractClient;
 class SmsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace SmsClient
+} // namespace SMS
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace LexModelBuildingService {
 
 /**
  * @class  LexModelBuildingServiceClientRequest
@@ -338,5 +338,5 @@ QString LexModelBuildingServiceClientRequestPrivate::toString(const LexModelBuil
     return QString();
 }
 
-} // namespace 
+} // namespace LexModelBuildingService
 } // namespace AWS

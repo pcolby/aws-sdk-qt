@@ -11,7 +11,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace {{ClassName|cut:"Request"}} {
+namespace {{NameSpaceName}} {
 
 class AwsAbstractClient;
 class {{ClassName}}Private;
@@ -59,7 +59,7 @@ private:
 
 }
 
-} // namespace {{ClassName|cut:"Request"}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS
 
 #endif

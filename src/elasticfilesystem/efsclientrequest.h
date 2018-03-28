@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace EfsClient {
+namespace EFS {
 
 class AwsAbstractClient;
 class EfsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace EfsClient
+} // namespace EFS
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace LexModelBuildingService {
 
 /**
  * @class  LexModelBuildingServiceClientResponse
@@ -66,5 +66,5 @@ LexModelBuildingServiceClientResponsePrivate::LexModelBuildingServiceClientRespo
 
 }
 
-} // namespace 
+} // namespace LexModelBuildingService
 } // namespace AWS

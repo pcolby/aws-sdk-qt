@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Support {
 
 /**
  * @class  SupportClientResponse
@@ -66,5 +66,5 @@ SupportClientResponsePrivate::SupportClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Support
 } // namespace AWS

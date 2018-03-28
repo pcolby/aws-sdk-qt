@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace OpsWorksCM {
 
 /**
  * @class  OpsWorksCMClientResponse
@@ -66,5 +66,5 @@ OpsWorksCMClientResponsePrivate::OpsWorksCMClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace OpsWorksCM
 } // namespace AWS

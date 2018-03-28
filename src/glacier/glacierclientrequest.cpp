@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Glacier {
 
 /**
  * @class  GlacierClientRequest
@@ -338,5 +338,5 @@ QString GlacierClientRequestPrivate::toString(const GlacierClientRequest::Action
     return QString();
 }
 
-} // namespace 
+} // namespace Glacier
 } // namespace AWS

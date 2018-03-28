@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Kinesis {
 
 class KinesisClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Kinesis
 } // namespace AWS
 
 #endif

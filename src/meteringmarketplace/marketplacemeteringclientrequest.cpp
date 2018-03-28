@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MarketplaceMetering {
 
 /**
  * @class  MarketplaceMeteringClientRequest
@@ -338,5 +338,5 @@ QString MarketplaceMeteringClientRequestPrivate::toString(const MarketplaceMeter
     return QString();
 }
 
-} // namespace 
+} // namespace MarketplaceMetering
 } // namespace AWS

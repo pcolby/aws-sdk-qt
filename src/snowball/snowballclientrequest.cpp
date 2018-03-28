@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Snowball {
 
 /**
  * @class  SnowballClientRequest
@@ -338,5 +338,5 @@ QString SnowballClientRequestPrivate::toString(const SnowballClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace Snowball
 } // namespace AWS

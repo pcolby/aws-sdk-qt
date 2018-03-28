@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Glacier {
 
 class GlacierClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Glacier
 } // namespace AWS
 
 #endif

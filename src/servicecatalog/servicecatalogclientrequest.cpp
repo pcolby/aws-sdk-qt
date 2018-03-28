@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ServiceCatalog {
 
 /**
  * @class  ServiceCatalogClientRequest
@@ -338,5 +338,5 @@ QString ServiceCatalogClientRequestPrivate::toString(const ServiceCatalogClientR
     return QString();
 }
 
-} // namespace 
+} // namespace ServiceCatalog
 } // namespace AWS

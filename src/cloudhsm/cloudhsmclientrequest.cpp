@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CloudHSM {
 
 /**
  * @class  CloudHSMClientRequest
@@ -338,5 +338,5 @@ QString CloudHSMClientRequestPrivate::toString(const CloudHSMClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace CloudHSM
 } // namespace AWS

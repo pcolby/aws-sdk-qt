@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace WAFRegionalClient {
+namespace WAFRegional {
 
 class AwsAbstractClient;
 class WAFRegionalClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace WAFRegionalClient
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

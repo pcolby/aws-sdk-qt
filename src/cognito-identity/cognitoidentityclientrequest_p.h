@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CognitoIdentity {
 
 class CognitoIdentityClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CognitoIdentity
 } // namespace AWS
 
 #endif

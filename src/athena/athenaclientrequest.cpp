@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Athena {
 
 /**
  * @class  AthenaClientRequest
@@ -338,5 +338,5 @@ QString AthenaClientRequestPrivate::toString(const AthenaClientRequest::Action &
     return QString();
 }
 
-} // namespace 
+} // namespace Athena
 } // namespace AWS

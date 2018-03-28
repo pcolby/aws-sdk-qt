@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace LexRuntimeService {
 
 /**
  * @class  LexRuntimeServiceClientRequest
@@ -338,5 +338,5 @@ QString LexRuntimeServiceClientRequestPrivate::toString(const LexRuntimeServiceC
     return QString();
 }
 
-} // namespace 
+} // namespace LexRuntimeService
 } // namespace AWS

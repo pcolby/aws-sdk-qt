@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SimpleDB {
 
 class SimpleDBClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

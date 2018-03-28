@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace STS {
 
 class StsClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace STS
 } // namespace AWS
 
 #endif

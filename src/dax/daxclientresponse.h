@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace DAX {
 
 class DaxClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace DAX
 } // namespace AWS
 
 #endif

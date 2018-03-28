@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Lightsail {
 
 /**
  * @class  LightsailClientResponse
@@ -66,5 +66,5 @@ LightsailClientResponsePrivate::LightsailClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Lightsail
 } // namespace AWS

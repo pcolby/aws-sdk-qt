@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ResourceGroupsTaggingAPI {
 
 /**
  * @class  ResourceGroupsTaggingAPIClientResponse
@@ -66,5 +66,5 @@ ResourceGroupsTaggingAPIClientResponsePrivate::ResourceGroupsTaggingAPIClientRes
 
 }
 
-} // namespace 
+} // namespace ResourceGroupsTaggingAPI
 } // namespace AWS

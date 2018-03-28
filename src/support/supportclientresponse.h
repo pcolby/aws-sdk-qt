@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Support {
 
 class SupportClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Support
 } // namespace AWS
 
 #endif

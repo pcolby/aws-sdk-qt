@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Pricing {
 
 /**
  * @class  PricingClientResponse
@@ -66,5 +66,5 @@ PricingClientResponsePrivate::PricingClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Pricing
 } // namespace AWS

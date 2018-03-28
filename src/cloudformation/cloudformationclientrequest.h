@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CloudFormationClient {
+namespace CloudFormation {
 
 class AwsAbstractClient;
 class CloudFormationClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CloudFormationClient
+} // namespace CloudFormation
 } // namespace AWS
 
 #endif

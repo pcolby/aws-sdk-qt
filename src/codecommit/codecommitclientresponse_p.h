@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CodeCommit {
 
 class CodeCommitClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CodeCommit
 } // namespace AWS
 
 #endif

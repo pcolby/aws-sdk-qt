@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CodeCommitClient {
+namespace CodeCommit {
 
 class AwsAbstractClient;
 class CodeCommitClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CodeCommitClient
+} // namespace CodeCommit
 } // namespace AWS
 
 #endif

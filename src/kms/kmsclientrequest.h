@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace KmsClient {
+namespace KMS {
 
 class AwsAbstractClient;
 class KmsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace KmsClient
+} // namespace KMS
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CloudWatchLogsClient {
+namespace CloudWatchLogs {
 
 class AwsAbstractClient;
 class CloudWatchLogsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CloudWatchLogsClient
+} // namespace CloudWatchLogs
 } // namespace AWS
 
 #endif

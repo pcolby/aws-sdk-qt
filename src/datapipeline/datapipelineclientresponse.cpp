@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace DataPipeline {
 
 /**
  * @class  DataPipelineClientResponse
@@ -66,5 +66,5 @@ DataPipelineClientResponsePrivate::DataPipelineClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace DataPipeline
 } // namespace AWS

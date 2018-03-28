@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ElasticLoadBalancingv2 {
 
 /**
  * @class  ElasticLoadBalancingv2ClientResponse
@@ -66,5 +66,5 @@ ElasticLoadBalancingv2ClientResponsePrivate::ElasticLoadBalancingv2ClientRespons
 
 }
 
-} // namespace 
+} // namespace ElasticLoadBalancingv2
 } // namespace AWS

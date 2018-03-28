@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MarketplaceMetering {
 
 /**
  * @class  MarketplaceMeteringClientResponse
@@ -66,5 +66,5 @@ MarketplaceMeteringClientResponsePrivate::MarketplaceMeteringClientResponsePriva
 
 }
 
-} // namespace 
+} // namespace MarketplaceMetering
 } // namespace AWS

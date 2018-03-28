@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace XRay {
 
 class XRayClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace XRay
 } // namespace AWS
 
 #endif

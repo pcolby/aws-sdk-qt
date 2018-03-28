@@ -7,7 +7,7 @@
 
 namespace AWS {
 
-namespace {{NameSpaceNameX}} {
+namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
@@ -28,7 +28,7 @@ private:
 
 };
 
-} // namespace {{NameSpaceNameX}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS
 
 #endif

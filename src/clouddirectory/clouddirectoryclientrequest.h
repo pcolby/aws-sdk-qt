@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CloudDirectoryClient {
+namespace CloudDirectory {
 
 class AwsAbstractClient;
 class CloudDirectoryClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CloudDirectoryClient
+} // namespace CloudDirectory
 } // namespace AWS
 
 #endif

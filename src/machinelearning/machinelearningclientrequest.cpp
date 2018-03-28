@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MachineLearning {
 
 /**
  * @class  MachineLearningClientRequest
@@ -338,5 +338,5 @@ QString MachineLearningClientRequestPrivate::toString(const MachineLearningClien
     return QString();
 }
 
-} // namespace 
+} // namespace MachineLearning
 } // namespace AWS

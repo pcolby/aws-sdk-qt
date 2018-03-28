@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace KinesisVideoMedia {
 
 class KinesisVideoMediaClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace KinesisVideoMedia
 } // namespace AWS
 
 #endif

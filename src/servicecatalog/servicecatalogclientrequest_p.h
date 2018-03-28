@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ServiceCatalog {
 
 class ServiceCatalogClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ServiceCatalog
 } // namespace AWS
 
 #endif

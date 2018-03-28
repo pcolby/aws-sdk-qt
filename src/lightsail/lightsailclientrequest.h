@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace LightsailClient {
+namespace Lightsail {
 
 class AwsAbstractClient;
 class LightsailClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace LightsailClient
+} // namespace Lightsail
 } // namespace AWS
 
 #endif

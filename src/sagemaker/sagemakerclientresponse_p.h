@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SageMaker {
 
 class SageMakerClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SageMaker
 } // namespace AWS
 
 #endif

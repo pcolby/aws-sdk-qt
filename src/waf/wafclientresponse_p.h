@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace WAF {
 
 class WafClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace WAF
 } // namespace AWS
 
 #endif

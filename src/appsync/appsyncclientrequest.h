@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace AppSyncClient {
+namespace AppSync {
 
 class AwsAbstractClient;
 class AppSyncClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace AppSyncClient
+} // namespace AppSync
 } // namespace AWS
 
 #endif

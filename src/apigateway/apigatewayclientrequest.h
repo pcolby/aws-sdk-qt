@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace APIGatewayClient {
+namespace APIGateway {
 
 class AwsAbstractClient;
 class APIGatewayClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace APIGatewayClient
+} // namespace APIGateway
 } // namespace AWS
 
 #endif

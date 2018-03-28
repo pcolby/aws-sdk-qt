@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MediaPackage {
 
 /**
  * @class  MediaPackageClientResponse
@@ -66,5 +66,5 @@ MediaPackageClientResponsePrivate::MediaPackageClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace MediaPackage
 } // namespace AWS

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace TranscribeService {
 
 /**
  * @class  TranscribeServiceClientResponse
@@ -66,5 +66,5 @@ TranscribeServiceClientResponsePrivate::TranscribeServiceClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace TranscribeService
 } // namespace AWS

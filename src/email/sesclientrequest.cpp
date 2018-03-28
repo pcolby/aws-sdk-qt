@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace SES {
 
 /**
  * @class  SesClientRequest
@@ -338,5 +338,5 @@ QString SesClientRequestPrivate::toString(const SesClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace SES
 } // namespace AWS

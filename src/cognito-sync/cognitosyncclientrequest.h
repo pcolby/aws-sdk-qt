@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CognitoSyncClient {
+namespace CognitoSync {
 
 class AwsAbstractClient;
 class CognitoSyncClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CognitoSyncClient
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

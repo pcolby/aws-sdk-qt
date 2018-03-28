@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace SfnClient {
+namespace SFN {
 
 class AwsAbstractClient;
 class SfnClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace SfnClient
+} // namespace SFN
 } // namespace AWS
 
 #endif

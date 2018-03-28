@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CognitoIdentityProvider {
 
 /**
  * @class  CognitoIdentityProviderClientRequest
@@ -338,5 +338,5 @@ QString CognitoIdentityProviderClientRequestPrivate::toString(const CognitoIdent
     return QString();
 }
 
-} // namespace 
+} // namespace CognitoIdentityProvider
 } // namespace AWS

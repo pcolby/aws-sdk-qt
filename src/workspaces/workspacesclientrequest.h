@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace WorkSpacesClient {
+namespace WorkSpaces {
 
 class AwsAbstractClient;
 class WorkSpacesClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace WorkSpacesClient
+} // namespace WorkSpaces
 } // namespace AWS
 
 #endif

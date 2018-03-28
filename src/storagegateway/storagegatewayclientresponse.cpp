@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace StorageGateway {
 
 /**
  * @class  StorageGatewayClientResponse
@@ -66,5 +66,5 @@ StorageGatewayClientResponsePrivate::StorageGatewayClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace StorageGateway
 } // namespace AWS

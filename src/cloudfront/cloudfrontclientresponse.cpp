@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CloudFront {
 
 /**
  * @class  CloudFrontClientResponse
@@ -66,5 +66,5 @@ CloudFrontClientResponsePrivate::CloudFrontClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CloudFront
 } // namespace AWS

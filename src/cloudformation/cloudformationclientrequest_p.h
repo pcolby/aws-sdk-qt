@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudFormation {
 
 class CloudFormationClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudFormation
 } // namespace AWS
 
 #endif

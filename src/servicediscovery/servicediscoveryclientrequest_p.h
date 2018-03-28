@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ServiceDiscovery {
 
 class ServiceDiscoveryClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ServiceDiscovery
 } // namespace AWS
 
 #endif

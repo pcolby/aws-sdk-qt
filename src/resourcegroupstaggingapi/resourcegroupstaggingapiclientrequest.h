@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ResourceGroupsTaggingAPIClient {
+namespace ResourceGroupsTaggingAPI {
 
 class AwsAbstractClient;
 class ResourceGroupsTaggingAPIClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ResourceGroupsTaggingAPIClient
+} // namespace ResourceGroupsTaggingAPI
 } // namespace AWS
 
 #endif

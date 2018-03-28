@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MTurk {
 
 /**
  * @class  MTurkClientRequest
@@ -338,5 +338,5 @@ QString MTurkClientRequestPrivate::toString(const MTurkClientRequest::Action &ac
     return QString();
 }
 
-} // namespace 
+} // namespace MTurk
 } // namespace AWS

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace TranslateClient {
+namespace Translate {
 
 class AwsAbstractClient;
 class TranslateClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace TranslateClient
+} // namespace Translate
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Polly {
 
 /**
  * @class  PollyClientResponse
@@ -66,5 +66,5 @@ PollyClientResponsePrivate::PollyClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Polly
 } // namespace AWS

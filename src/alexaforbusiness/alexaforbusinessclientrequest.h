@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace AlexaForBusinessClient {
+namespace AlexaForBusiness {
 
 class AwsAbstractClient;
 class AlexaForBusinessClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace AlexaForBusinessClient
+} // namespace AlexaForBusiness
 } // namespace AWS
 
 #endif

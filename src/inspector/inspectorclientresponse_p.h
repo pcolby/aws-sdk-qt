@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Inspector {
 
 class InspectorClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Inspector
 } // namespace AWS
 
 #endif

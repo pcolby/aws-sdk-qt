@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MobileAnalyticsClient {
+namespace MobileAnalytics {
 
 class AwsAbstractClient;
 class MobileAnalyticsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MobileAnalyticsClient
+} // namespace MobileAnalytics
 } // namespace AWS
 
 #endif

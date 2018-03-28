@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ElasticsearchService {
 
 /**
  * @class  ElasticsearchServiceClientResponse
@@ -66,5 +66,5 @@ ElasticsearchServiceClientResponsePrivate::ElasticsearchServiceClientResponsePri
 
 }
 
-} // namespace 
+} // namespace ElasticsearchService
 } // namespace AWS

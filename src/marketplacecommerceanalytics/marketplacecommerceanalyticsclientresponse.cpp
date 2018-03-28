@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MarketplaceCommerceAnalytics {
 
 /**
  * @class  MarketplaceCommerceAnalyticsClientResponse
@@ -66,5 +66,5 @@ MarketplaceCommerceAnalyticsClientResponsePrivate::MarketplaceCommerceAnalyticsC
 
 }
 
-} // namespace 
+} // namespace MarketplaceCommerceAnalytics
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ElasticLoadBalancing {
 
 class ElasticLoadBalancingClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ElasticLoadBalancing
 } // namespace AWS
 
 #endif

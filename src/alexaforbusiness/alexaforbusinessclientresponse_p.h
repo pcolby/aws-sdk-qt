@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace AlexaForBusiness {
 
 class AlexaForBusinessClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace AlexaForBusiness
 } // namespace AWS
 
 #endif

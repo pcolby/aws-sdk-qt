@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace AppSync {
 
 /**
  * @class  AppSyncClientResponse
@@ -66,5 +66,5 @@ AppSyncClientResponsePrivate::AppSyncClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace AppSync
 } // namespace AWS

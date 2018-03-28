@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MarketplaceCommerceAnalytics
 } // namespace AWS
 
 #endif

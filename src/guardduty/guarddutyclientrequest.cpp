@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace GuardDuty {
 
 /**
  * @class  GuardDutyClientRequest
@@ -338,5 +338,5 @@ QString GuardDutyClientRequestPrivate::toString(const GuardDutyClientRequest::Ac
     return QString();
 }
 
-} // namespace 
+} // namespace GuardDuty
 } // namespace AWS

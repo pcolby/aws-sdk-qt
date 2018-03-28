@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace AutoScalingPlans {
 
 class AutoScalingPlansClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace AutoScalingPlans
 } // namespace AWS
 
 #endif

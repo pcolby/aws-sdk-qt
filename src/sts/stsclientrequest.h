@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace StsClient {
+namespace STS {
 
 class AwsAbstractClient;
 class StsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace StsClient
+} // namespace STS
 } // namespace AWS
 
 #endif

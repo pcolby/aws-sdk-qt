@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DynamoDBStreams {
 
 /**
  * @class  DynamoDBStreamsClientRequest
@@ -338,5 +338,5 @@ QString DynamoDBStreamsClientRequestPrivate::toString(const DynamoDBStreamsClien
     return QString();
 }
 
-} // namespace 
+} // namespace DynamoDBStreams
 } // namespace AWS

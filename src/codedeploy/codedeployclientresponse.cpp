@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CodeDeploy {
 
 /**
  * @class  CodeDeployClientResponse
@@ -66,5 +66,5 @@ CodeDeployClientResponsePrivate::CodeDeployClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CodeDeploy
 } // namespace AWS

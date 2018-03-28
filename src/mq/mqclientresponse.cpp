@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MQ {
 
 /**
  * @class  MqClientResponse
@@ -66,5 +66,5 @@ MqClientResponsePrivate::MqClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace MQ
 } // namespace AWS

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Glue {
 
 /**
  * @class  GlueClientRequest
@@ -338,5 +338,5 @@ QString GlueClientRequestPrivate::toString(const GlueClientRequest::Action &acti
     return QString();
 }
 
-} // namespace 
+} // namespace Glue
 } // namespace AWS

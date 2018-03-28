@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Glacier {
 
 /**
  * @class  GlacierClientResponse
@@ -66,5 +66,5 @@ GlacierClientResponsePrivate::GlacierClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Glacier
 } // namespace AWS

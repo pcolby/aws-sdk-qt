@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Kinesis {
 
 /**
  * @class  KinesisClientRequest
@@ -338,5 +338,5 @@ QString KinesisClientRequestPrivate::toString(const KinesisClientRequest::Action
     return QString();
 }
 
-} // namespace 
+} // namespace Kinesis
 } // namespace AWS

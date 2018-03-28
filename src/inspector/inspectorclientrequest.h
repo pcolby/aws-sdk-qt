@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace InspectorClient {
+namespace Inspector {
 
 class AwsAbstractClient;
 class InspectorClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace InspectorClient
+} // namespace Inspector
 } // namespace AWS
 
 #endif

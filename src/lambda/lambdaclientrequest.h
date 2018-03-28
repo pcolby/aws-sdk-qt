@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace LambdaClient {
+namespace Lambda {
 
 class AwsAbstractClient;
 class LambdaClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace LambdaClient
+} // namespace Lambda
 } // namespace AWS
 
 #endif

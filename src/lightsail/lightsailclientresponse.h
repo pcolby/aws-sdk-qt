@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Lightsail {
 
 class LightsailClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Lightsail
 } // namespace AWS
 
 #endif

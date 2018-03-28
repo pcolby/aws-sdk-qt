@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MediaStore {
 
 /**
  * @class  MediaStoreClientRequest
@@ -338,5 +338,5 @@ QString MediaStoreClientRequestPrivate::toString(const MediaStoreClientRequest::
     return QString();
 }
 
-} // namespace 
+} // namespace MediaStore
 } // namespace AWS

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Greengrass {
 
 /**
  * @class  GreengrassClientResponse
@@ -66,5 +66,5 @@ GreengrassClientResponsePrivate::GreengrassClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Greengrass
 } // namespace AWS

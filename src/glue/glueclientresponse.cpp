@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Glue {
 
 /**
  * @class  GlueClientResponse
@@ -66,5 +66,5 @@ GlueClientResponsePrivate::GlueClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Glue
 } // namespace AWS

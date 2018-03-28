@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SFN {
 
 class SfnClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SFN
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Cloud9 {
 
 /**
  * @class  Cloud9ClientResponse
@@ -66,5 +66,5 @@ Cloud9ClientResponsePrivate::Cloud9ClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Cloud9
 } // namespace AWS

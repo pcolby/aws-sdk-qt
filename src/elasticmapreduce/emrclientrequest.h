@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace EmrClient {
+namespace EMR {
 
 class AwsAbstractClient;
 class EmrClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace EmrClient
+} // namespace EMR
 } // namespace AWS
 
 #endif

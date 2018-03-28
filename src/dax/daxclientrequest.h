@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace DaxClient {
+namespace DAX {
 
 class AwsAbstractClient;
 class DaxClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace DaxClient
+} // namespace DAX
 } // namespace AWS
 
 #endif

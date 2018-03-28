@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CostandUsageReportService
 } // namespace AWS
 
 #endif

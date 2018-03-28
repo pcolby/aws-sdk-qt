@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace TranscribeService {
 
 class TranscribeServiceClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace TranscribeService
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MediaLive {
 
 /**
  * @class  MediaLiveClientRequest
@@ -338,5 +338,5 @@ QString MediaLiveClientRequestPrivate::toString(const MediaLiveClientRequest::Ac
     return QString();
 }
 
-} // namespace 
+} // namespace MediaLive
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace DirectConnect {
 
 class DirectConnectClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace DirectConnect
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace DatabaseMigrationService {
 
 /**
  * @class  DatabaseMigrationServiceClientResponse
@@ -66,5 +66,5 @@ DatabaseMigrationServiceClientResponsePrivate::DatabaseMigrationServiceClientRes
 
 }
 
-} // namespace 
+} // namespace DatabaseMigrationService
 } // namespace AWS

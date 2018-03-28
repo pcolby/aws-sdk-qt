@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Budgets {
 
 /**
  * @class  BudgetsClientRequest
@@ -338,5 +338,5 @@ QString BudgetsClientRequestPrivate::toString(const BudgetsClientRequest::Action
     return QString();
 }
 
-} // namespace 
+} // namespace Budgets
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudHSMV2 {
 
 class CloudHSMV2ClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudHSMV2
 } // namespace AWS
 
 #endif

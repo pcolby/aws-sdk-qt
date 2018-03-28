@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace PollyClient {
+namespace Polly {
 
 class AwsAbstractClient;
 class PollyClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace PollyClient
+} // namespace Polly
 } // namespace AWS
 
 #endif

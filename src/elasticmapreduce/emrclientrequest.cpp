@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace EMR {
 
 /**
  * @class  EmrClientRequest
@@ -338,5 +338,5 @@ QString EmrClientRequestPrivate::toString(const EmrClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace EMR
 } // namespace AWS

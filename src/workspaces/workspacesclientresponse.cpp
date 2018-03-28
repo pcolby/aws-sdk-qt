@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace WorkSpaces {
 
 /**
  * @class  WorkSpacesClientResponse
@@ -66,5 +66,5 @@ WorkSpacesClientResponsePrivate::WorkSpacesClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace WorkSpaces
 } // namespace AWS

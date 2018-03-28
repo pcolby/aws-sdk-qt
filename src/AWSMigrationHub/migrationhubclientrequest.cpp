@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MigrationHub {
 
 /**
  * @class  MigrationHubClientRequest
@@ -338,5 +338,5 @@ QString MigrationHubClientRequestPrivate::toString(const MigrationHubClientReque
     return QString();
 }
 
-} // namespace 
+} // namespace MigrationHub
 } // namespace AWS

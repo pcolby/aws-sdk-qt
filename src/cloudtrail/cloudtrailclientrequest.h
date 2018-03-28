@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CloudTrailClient {
+namespace CloudTrail {
 
 class AwsAbstractClient;
 class CloudTrailClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CloudTrailClient
+} // namespace CloudTrail
 } // namespace AWS
 
 #endif

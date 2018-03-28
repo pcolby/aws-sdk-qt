@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CognitoSync {
 
 /**
  * @class  CognitoSyncClientRequest
@@ -338,5 +338,5 @@ QString CognitoSyncClientRequestPrivate::toString(const CognitoSyncClientRequest
     return QString();
 }
 
-} // namespace 
+} // namespace CognitoSync
 } // namespace AWS

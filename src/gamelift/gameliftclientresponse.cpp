@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace GameLift {
 
 /**
  * @class  GameLiftClientResponse
@@ -66,5 +66,5 @@ GameLiftClientResponsePrivate::GameLiftClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace GameLift
 } // namespace AWS

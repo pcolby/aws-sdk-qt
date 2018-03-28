@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Support {
 
 /**
  * @class  SupportClientRequest
@@ -338,5 +338,5 @@ QString SupportClientRequestPrivate::toString(const SupportClientRequest::Action
     return QString();
 }
 
-} // namespace 
+} // namespace Support
 } // namespace AWS

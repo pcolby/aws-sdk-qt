@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CognitoSync {
 
 /**
  * @class  CognitoSyncClientResponse
@@ -66,5 +66,5 @@ CognitoSyncClientResponsePrivate::CognitoSyncClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CognitoSync
 } // namespace AWS

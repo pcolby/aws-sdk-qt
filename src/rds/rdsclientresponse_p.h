@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace RDS {
 
 class RdsClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace RDS
 } // namespace AWS
 
 #endif

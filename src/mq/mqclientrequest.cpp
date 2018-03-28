@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MQ {
 
 /**
  * @class  MqClientRequest
@@ -338,5 +338,5 @@ QString MqClientRequestPrivate::toString(const MqClientRequest::Action &action)
     return QString();
 }
 
-} // namespace 
+} // namespace MQ
 } // namespace AWS

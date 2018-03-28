@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace DirectConnectClient {
+namespace DirectConnect {
 
 class AwsAbstractClient;
 class DirectConnectClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace DirectConnectClient
+} // namespace DirectConnect
 } // namespace AWS
 
 #endif

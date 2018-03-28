@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CodeStarClient {
+namespace CodeStar {
 
 class AwsAbstractClient;
 class CodeStarClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CodeStarClient
+} // namespace CodeStar
 } // namespace AWS
 
 #endif

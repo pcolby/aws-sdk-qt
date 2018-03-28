@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudTrail {
 
 class CloudTrailClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudTrail
 } // namespace AWS
 
 #endif

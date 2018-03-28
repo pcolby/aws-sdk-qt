@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CognitoIdentity {
 
 /**
  * @class  CognitoIdentityClientResponse
@@ -66,5 +66,5 @@ CognitoIdentityClientResponsePrivate::CognitoIdentityClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CognitoIdentity
 } // namespace AWS

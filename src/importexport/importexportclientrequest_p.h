@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ImportExport {
 
 class ImportExportClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ImportExport
 } // namespace AWS
 
 #endif

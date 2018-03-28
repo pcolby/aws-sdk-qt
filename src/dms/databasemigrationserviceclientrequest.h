@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace DatabaseMigrationServiceClient {
+namespace DatabaseMigrationService {
 
 class AwsAbstractClient;
 class DatabaseMigrationServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace DatabaseMigrationServiceClient
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

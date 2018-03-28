@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace AppStream {
 
 /**
  * @class  AppStreamClientRequest
@@ -338,5 +338,5 @@ QString AppStreamClientRequestPrivate::toString(const AppStreamClientRequest::Ac
     return QString();
 }
 
-} // namespace 
+} // namespace AppStream
 } // namespace AWS

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ElasticTranscoder {
 
 /**
  * @class  ElasticTranscoderClientRequest
@@ -338,5 +338,5 @@ QString ElasticTranscoderClientRequestPrivate::toString(const ElasticTranscoderC
     return QString();
 }
 
-} // namespace 
+} // namespace ElasticTranscoder
 } // namespace AWS

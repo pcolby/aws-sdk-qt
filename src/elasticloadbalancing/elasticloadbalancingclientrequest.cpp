@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ElasticLoadBalancing {
 
 /**
  * @class  ElasticLoadBalancingClientRequest
@@ -338,5 +338,5 @@ QString ElasticLoadBalancingClientRequestPrivate::toString(const ElasticLoadBala
     return QString();
 }
 
-} // namespace 
+} // namespace ElasticLoadBalancing
 } // namespace AWS

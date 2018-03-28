@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Mobile {
 
 /**
  * @class  MobileClientRequest
@@ -338,5 +338,5 @@ QString MobileClientRequestPrivate::toString(const MobileClientRequest::Action &
     return QString();
 }
 
-} // namespace 
+} // namespace Mobile
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MarketplaceMetering {
 
 class MarketplaceMeteringClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MarketplaceMetering
 } // namespace AWS
 
 #endif

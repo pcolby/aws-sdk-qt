@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Firehose {
 
 /**
  * @class  FirehoseClientRequest
@@ -338,5 +338,5 @@ QString FirehoseClientRequestPrivate::toString(const FirehoseClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace Firehose
 } // namespace AWS

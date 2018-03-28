@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MarketplaceCommerceAnalyticsClient {
+namespace MarketplaceCommerceAnalytics {
 
 class AwsAbstractClient;
 class MarketplaceCommerceAnalyticsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MarketplaceCommerceAnalyticsClient
+} // namespace MarketplaceCommerceAnalytics
 } // namespace AWS
 
 #endif

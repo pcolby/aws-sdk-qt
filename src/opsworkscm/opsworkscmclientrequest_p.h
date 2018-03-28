@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace OpsWorksCM {
 
 class OpsWorksCMClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace OpsWorksCM
 } // namespace AWS
 
 #endif

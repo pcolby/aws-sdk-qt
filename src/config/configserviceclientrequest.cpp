@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ConfigService {
 
 /**
  * @class  ConfigServiceClientRequest
@@ -338,5 +338,5 @@ QString ConfigServiceClientRequestPrivate::toString(const ConfigServiceClientReq
     return QString();
 }
 
-} // namespace 
+} // namespace ConfigService
 } // namespace AWS

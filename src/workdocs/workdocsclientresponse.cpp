@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace WorkDocs {
 
 /**
  * @class  WorkDocsClientResponse
@@ -66,5 +66,5 @@ WorkDocsClientResponsePrivate::WorkDocsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace WorkDocs
 } // namespace AWS

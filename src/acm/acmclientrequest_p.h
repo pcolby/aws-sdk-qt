@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ACM {
 
 class AcmClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ACM
 } // namespace AWS
 
 #endif

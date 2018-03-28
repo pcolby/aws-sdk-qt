@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MachineLearning {
 
 /**
  * @class  MachineLearningClientResponse
@@ -66,5 +66,5 @@ MachineLearningClientResponsePrivate::MachineLearningClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace MachineLearning
 } // namespace AWS

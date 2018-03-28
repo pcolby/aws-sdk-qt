@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Health {
 
 /**
  * @class  HealthClientResponse
@@ -66,5 +66,5 @@ HealthClientResponsePrivate::HealthClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Health
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SageMakerRuntime {
 
 class SageMakerRuntimeClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SageMakerRuntime
 } // namespace AWS
 
 #endif

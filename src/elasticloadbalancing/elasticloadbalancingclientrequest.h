@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ElasticLoadBalancingClient {
+namespace ElasticLoadBalancing {
 
 class AwsAbstractClient;
 class ElasticLoadBalancingClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ElasticLoadBalancingClient
+} // namespace ElasticLoadBalancing
 } // namespace AWS
 
 #endif

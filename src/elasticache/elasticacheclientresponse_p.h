@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ElastiCache {
 
 class ElastiCacheClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ElastiCache
 } // namespace AWS
 
 #endif

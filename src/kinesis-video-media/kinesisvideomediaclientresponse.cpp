@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace KinesisVideoMedia {
 
 /**
  * @class  KinesisVideoMediaClientResponse
@@ -66,5 +66,5 @@ KinesisVideoMediaClientResponsePrivate::KinesisVideoMediaClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace KinesisVideoMedia
 } // namespace AWS

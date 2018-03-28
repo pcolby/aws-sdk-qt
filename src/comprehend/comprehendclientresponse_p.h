@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Comprehend {
 
 class ComprehendClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Comprehend
 } // namespace AWS
 
 #endif

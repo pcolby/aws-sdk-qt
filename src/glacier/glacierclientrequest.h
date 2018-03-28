@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace GlacierClient {
+namespace Glacier {
 
 class AwsAbstractClient;
 class GlacierClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace GlacierClient
+} // namespace Glacier
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace OpsWorks {
 
 /**
  * @class  OpsWorksClientRequest
@@ -338,5 +338,5 @@ QString OpsWorksClientRequestPrivate::toString(const OpsWorksClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace OpsWorks
 } // namespace AWS

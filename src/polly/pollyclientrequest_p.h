@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Polly {
 
 class PollyClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Polly
 } // namespace AWS
 
 #endif

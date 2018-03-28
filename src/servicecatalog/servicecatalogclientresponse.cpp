@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ServiceCatalog {
 
 /**
  * @class  ServiceCatalogClientResponse
@@ -66,5 +66,5 @@ ServiceCatalogClientResponsePrivate::ServiceCatalogClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ServiceCatalog
 } // namespace AWS

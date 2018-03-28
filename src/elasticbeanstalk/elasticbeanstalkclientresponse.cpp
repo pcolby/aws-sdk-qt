@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ElasticBeanstalk {
 
 /**
  * @class  ElasticBeanstalkClientResponse
@@ -66,5 +66,5 @@ ElasticBeanstalkClientResponsePrivate::ElasticBeanstalkClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ElasticBeanstalk
 } // namespace AWS

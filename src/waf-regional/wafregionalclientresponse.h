@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace WAFRegional {
 
 class WAFRegionalClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace WAFRegional
 } // namespace AWS
 
 #endif

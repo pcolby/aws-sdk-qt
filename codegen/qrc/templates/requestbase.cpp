@@ -5,7 +5,7 @@
 #include "{{ServiceName|lower}}request_p.h"
 
 namespace AWS {
-namespace {{ServiceNameX}} {
+namespace {{NameSpaceName}} {
 
 /**
  * @class  {{ClassName}}
@@ -320,5 +320,5 @@ QString {{ClassName}}Private::toString(const {{ClassName}}::Action &action)
     return QString();
 }
 
-} // namespace {{ServiceNameX}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS

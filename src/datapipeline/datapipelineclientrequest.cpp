@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DataPipeline {
 
 /**
  * @class  DataPipelineClientRequest
@@ -338,5 +338,5 @@ QString DataPipelineClientRequestPrivate::toString(const DataPipelineClientReque
     return QString();
 }
 
-} // namespace 
+} // namespace DataPipeline
 } // namespace AWS

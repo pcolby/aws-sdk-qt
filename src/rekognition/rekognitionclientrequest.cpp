@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Rekognition {
 
 /**
  * @class  RekognitionClientRequest
@@ -338,5 +338,5 @@ QString RekognitionClientRequestPrivate::toString(const RekognitionClientRequest
     return QString();
 }
 
-} // namespace 
+} // namespace Rekognition
 } // namespace AWS

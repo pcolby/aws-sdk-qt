@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Translate {
 
 /**
  * @class  TranslateClientResponse
@@ -66,5 +66,5 @@ TranslateClientResponsePrivate::TranslateClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Translate
 } // namespace AWS

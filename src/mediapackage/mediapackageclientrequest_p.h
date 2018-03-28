@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MediaPackage {
 
 class MediaPackageClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MediaPackage
 } // namespace AWS
 
 #endif

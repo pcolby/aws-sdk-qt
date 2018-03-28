@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace DirectConnect {
 
 /**
  * @class  DirectConnectClientResponse
@@ -66,5 +66,5 @@ DirectConnectClientResponsePrivate::DirectConnectClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace DirectConnect
 } // namespace AWS

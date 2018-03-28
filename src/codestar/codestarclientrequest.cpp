@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CodeStar {
 
 /**
  * @class  CodeStarClientRequest
@@ -338,5 +338,5 @@ QString CodeStarClientRequestPrivate::toString(const CodeStarClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace CodeStar
 } // namespace AWS

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace HealthClient {
+namespace Health {
 
 class AwsAbstractClient;
 class HealthClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace HealthClient
+} // namespace Health
 } // namespace AWS
 
 #endif

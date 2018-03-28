@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace BatchClient {
+namespace Batch {
 
 class AwsAbstractClient;
 class BatchClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace BatchClient
+} // namespace Batch
 } // namespace AWS
 
 #endif

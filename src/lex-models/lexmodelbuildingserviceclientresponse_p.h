@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace LexModelBuildingService {
 
 class LexModelBuildingServiceClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace LexModelBuildingService
 } // namespace AWS
 
 #endif

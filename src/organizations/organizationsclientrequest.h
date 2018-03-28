@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace OrganizationsClient {
+namespace Organizations {
 
 class AwsAbstractClient;
 class OrganizationsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace OrganizationsClient
+} // namespace Organizations
 } // namespace AWS
 
 #endif

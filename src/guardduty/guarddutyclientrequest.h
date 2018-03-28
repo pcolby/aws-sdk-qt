@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace GuardDutyClient {
+namespace GuardDuty {
 
 class AwsAbstractClient;
 class GuardDutyClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace GuardDutyClient
+} // namespace GuardDuty
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Shield {
 
 class ShieldClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Shield
 } // namespace AWS
 
 #endif

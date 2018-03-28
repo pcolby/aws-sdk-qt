@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ServerlessApplicationRepositoryClient {
+namespace ServerlessApplicationRepository {
 
 class AwsAbstractClient;
 class ServerlessApplicationRepositoryClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ServerlessApplicationRepositoryClient
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

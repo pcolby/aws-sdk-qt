@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace RekognitionClient {
+namespace Rekognition {
 
 class AwsAbstractClient;
 class RekognitionClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace RekognitionClient
+} // namespace Rekognition
 } // namespace AWS
 
 #endif

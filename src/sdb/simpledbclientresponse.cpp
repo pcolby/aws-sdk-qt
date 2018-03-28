@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace SimpleDB {
 
 /**
  * @class  SimpleDBClientResponse
@@ -66,5 +66,5 @@ SimpleDBClientResponsePrivate::SimpleDBClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace SimpleDB
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SWF {
 
 class SwfClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SWF
 } // namespace AWS
 
 #endif

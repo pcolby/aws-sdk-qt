@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Batch {
 
 /**
  * @class  BatchClientResponse
@@ -66,5 +66,5 @@ BatchClientResponsePrivate::BatchClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Batch
 } // namespace AWS

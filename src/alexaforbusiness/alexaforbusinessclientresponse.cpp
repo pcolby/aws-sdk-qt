@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace AlexaForBusiness {
 
 /**
  * @class  AlexaForBusinessClientResponse
@@ -66,5 +66,5 @@ AlexaForBusinessClientResponsePrivate::AlexaForBusinessClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace AlexaForBusiness
 } // namespace AWS

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ECR {
 
 /**
  * @class  EcrClientRequest
@@ -338,5 +338,5 @@ QString EcrClientRequestPrivate::toString(const EcrClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace ECR
 } // namespace AWS

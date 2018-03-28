@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CloudWatchLogs {
 
 /**
  * @class  CloudWatchLogsClientResponse
@@ -66,5 +66,5 @@ CloudWatchLogsClientResponsePrivate::CloudWatchLogsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CloudWatchLogs
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace GameLift {
 
 class GameLiftClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace GameLift
 } // namespace AWS
 
 #endif

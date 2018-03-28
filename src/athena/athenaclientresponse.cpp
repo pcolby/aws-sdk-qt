@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Athena {
 
 /**
  * @class  AthenaClientResponse
@@ -66,5 +66,5 @@ AthenaClientResponsePrivate::AthenaClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Athena
 } // namespace AWS

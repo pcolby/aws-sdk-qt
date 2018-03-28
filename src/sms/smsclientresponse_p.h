@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SMS {
 
 class SmsClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SMS
 } // namespace AWS
 
 #endif

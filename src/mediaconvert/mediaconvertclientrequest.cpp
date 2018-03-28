@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MediaConvert {
 
 /**
  * @class  MediaConvertClientRequest
@@ -338,5 +338,5 @@ QString MediaConvertClientRequestPrivate::toString(const MediaConvertClientReque
     return QString();
 }
 
-} // namespace 
+} // namespace MediaConvert
 } // namespace AWS

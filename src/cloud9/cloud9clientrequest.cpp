@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Cloud9 {
 
 /**
  * @class  Cloud9ClientRequest
@@ -338,5 +338,5 @@ QString Cloud9ClientRequestPrivate::toString(const Cloud9ClientRequest::Action &
     return QString();
 }
 
-} // namespace 
+} // namespace Cloud9
 } // namespace AWS

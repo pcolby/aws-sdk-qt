@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CodePipelineClient {
+namespace CodePipeline {
 
 class AwsAbstractClient;
 class CodePipelineClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CodePipelineClient
+} // namespace CodePipeline
 } // namespace AWS
 
 #endif

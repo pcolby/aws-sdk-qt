@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Inspector {
 
 /**
  * @class  InspectorClientResponse
@@ -66,5 +66,5 @@ InspectorClientResponsePrivate::InspectorClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Inspector
 } // namespace AWS

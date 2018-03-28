@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace SFN {
 
 /**
  * @class  SfnClientResponse
@@ -66,5 +66,5 @@ SfnClientResponsePrivate::SfnClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace SFN
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CognitoSync {
 
 class CognitoSyncClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CognitoSync
 } // namespace AWS
 
 #endif

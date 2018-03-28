@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace GuardDuty {
 
 class GuardDutyClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace GuardDuty
 } // namespace AWS
 
 #endif

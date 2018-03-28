@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CostandUsageReportService {
 
 /**
  * @class  CostandUsageReportServiceClientResponse
@@ -66,5 +66,5 @@ CostandUsageReportServiceClientResponsePrivate::CostandUsageReportServiceClientR
 
 }
 
-} // namespace 
+} // namespace CostandUsageReportService
 } // namespace AWS

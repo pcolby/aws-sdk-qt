@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SNS {
 
 class SnsClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SNS
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace AppSync {
 
 /**
  * @class  AppSyncClientRequest
@@ -338,5 +338,5 @@ QString AppSyncClientRequestPrivate::toString(const AppSyncClientRequest::Action
     return QString();
 }
 
-} // namespace 
+} // namespace AppSync
 } // namespace AWS

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Redshift {
 
 /**
  * @class  RedshiftClientResponse
@@ -66,5 +66,5 @@ RedshiftClientResponsePrivate::RedshiftClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Redshift
 } // namespace AWS

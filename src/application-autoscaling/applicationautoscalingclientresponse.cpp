@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ApplicationAutoScaling {
 
 /**
  * @class  ApplicationAutoScalingClientResponse
@@ -66,5 +66,5 @@ ApplicationAutoScalingClientResponsePrivate::ApplicationAutoScalingClientRespons
 
 }
 
-} // namespace 
+} // namespace ApplicationAutoScaling
 } // namespace AWS

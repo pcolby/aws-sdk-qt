@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ComprehendClient {
+namespace Comprehend {
 
 class AwsAbstractClient;
 class ComprehendClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ComprehendClient
+} // namespace Comprehend
 } // namespace AWS
 
 #endif

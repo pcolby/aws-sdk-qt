@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace SFN {
 
 /**
  * @class  SfnClientRequest
@@ -338,5 +338,5 @@ QString SfnClientRequestPrivate::toString(const SfnClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace SFN
 } // namespace AWS

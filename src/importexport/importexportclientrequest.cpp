@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ImportExport {
 
 /**
  * @class  ImportExportClientRequest
@@ -338,5 +338,5 @@ QString ImportExportClientRequestPrivate::toString(const ImportExportClientReque
     return QString();
 }
 
-} // namespace 
+} // namespace ImportExport
 } // namespace AWS

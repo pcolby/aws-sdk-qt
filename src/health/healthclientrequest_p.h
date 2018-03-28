@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Health {
 
 class HealthClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Health
 } // namespace AWS
 
 #endif

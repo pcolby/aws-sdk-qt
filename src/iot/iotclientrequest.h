@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace IoTClient {
+namespace IoT {
 
 class AwsAbstractClient;
 class IoTClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace IoTClient
+} // namespace IoT
 } // namespace AWS
 
 #endif

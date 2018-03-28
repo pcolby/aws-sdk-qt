@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Organizations {
 
 /**
  * @class  OrganizationsClientRequest
@@ -338,5 +338,5 @@ QString OrganizationsClientRequestPrivate::toString(const OrganizationsClientReq
     return QString();
 }
 
-} // namespace 
+} // namespace Organizations
 } // namespace AWS

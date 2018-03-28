@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace SMS {
 
 /**
  * @class  SmsClientRequest
@@ -338,5 +338,5 @@ QString SmsClientRequestPrivate::toString(const SmsClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace SMS
 } // namespace AWS

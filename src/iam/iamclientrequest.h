@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace IamClient {
+namespace IAM {
 
 class AwsAbstractClient;
 class IamClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace IamClient
+} // namespace IAM
 } // namespace AWS
 
 #endif

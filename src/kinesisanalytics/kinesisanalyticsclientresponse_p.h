@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace KinesisAnalytics {
 
 class KinesisAnalyticsClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace KinesisAnalytics
 } // namespace AWS
 
 #endif

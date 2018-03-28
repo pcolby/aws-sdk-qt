@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace SQS {
 
 /**
  * @class  SqsClientRequest
@@ -338,5 +338,5 @@ QString SqsClientRequestPrivate::toString(const SqsClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace SQS
 } // namespace AWS

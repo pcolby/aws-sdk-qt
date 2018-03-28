@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ImportExportClient {
+namespace ImportExport {
 
 class AwsAbstractClient;
 class ImportExportClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ImportExportClient
+} // namespace ImportExport
 } // namespace AWS
 
 #endif

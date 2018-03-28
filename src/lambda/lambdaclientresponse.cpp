@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Lambda {
 
 /**
  * @class  LambdaClientResponse
@@ -66,5 +66,5 @@ LambdaClientResponsePrivate::LambdaClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Lambda
 } // namespace AWS

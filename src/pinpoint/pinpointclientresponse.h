@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Pinpoint {
 
 class PinpointClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Pinpoint
 } // namespace AWS
 
 #endif

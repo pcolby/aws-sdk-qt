@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Shield {
 
 /**
  * @class  ShieldClientRequest
@@ -338,5 +338,5 @@ QString ShieldClientRequestPrivate::toString(const ShieldClientRequest::Action &
     return QString();
 }
 
-} // namespace 
+} // namespace Shield
 } // namespace AWS

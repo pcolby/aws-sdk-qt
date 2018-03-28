@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace SimpleDBClient {
+namespace SimpleDB {
 
 class AwsAbstractClient;
 class SimpleDBClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace SimpleDBClient
+} // namespace SimpleDB
 } // namespace AWS
 
 #endif

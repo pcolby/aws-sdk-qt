@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ElasticBeanstalkClient {
+namespace ElasticBeanstalk {
 
 class AwsAbstractClient;
 class ElasticBeanstalkClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ElasticBeanstalkClient
+} // namespace ElasticBeanstalk
 } // namespace AWS
 
 #endif

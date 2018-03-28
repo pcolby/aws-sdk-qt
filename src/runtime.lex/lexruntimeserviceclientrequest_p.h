@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace LexRuntimeService {
 
 class LexRuntimeServiceClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace LexRuntimeService
 } // namespace AWS
 
 #endif

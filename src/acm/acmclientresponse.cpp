@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ACM {
 
 /**
  * @class  AcmClientResponse
@@ -66,5 +66,5 @@ AcmClientResponsePrivate::AcmClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ACM
 } // namespace AWS

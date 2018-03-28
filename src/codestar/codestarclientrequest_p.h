@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CodeStar {
 
 class CodeStarClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CodeStar
 } // namespace AWS
 
 #endif

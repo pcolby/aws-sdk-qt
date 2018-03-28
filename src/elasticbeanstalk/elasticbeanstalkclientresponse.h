@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ElasticBeanstalk {
 
 class ElasticBeanstalkClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ElasticBeanstalk
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MediaLiveClient {
+namespace MediaLive {
 
 class AwsAbstractClient;
 class MediaLiveClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MediaLiveClient
+} // namespace MediaLive
 } // namespace AWS
 
 #endif

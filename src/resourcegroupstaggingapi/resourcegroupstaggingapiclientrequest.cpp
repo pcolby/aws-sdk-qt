@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ResourceGroupsTaggingAPI {
 
 /**
  * @class  ResourceGroupsTaggingAPIClientRequest
@@ -338,5 +338,5 @@ QString ResourceGroupsTaggingAPIClientRequestPrivate::toString(const ResourceGro
     return QString();
 }
 
-} // namespace 
+} // namespace ResourceGroupsTaggingAPI
 } // namespace AWS

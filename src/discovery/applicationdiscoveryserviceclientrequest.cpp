@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ApplicationDiscoveryService {
 
 /**
  * @class  ApplicationDiscoveryServiceClientRequest
@@ -338,5 +338,5 @@ QString ApplicationDiscoveryServiceClientRequestPrivate::toString(const Applicat
     return QString();
 }
 
-} // namespace 
+} // namespace ApplicationDiscoveryService
 } // namespace AWS

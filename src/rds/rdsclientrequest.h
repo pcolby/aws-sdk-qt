@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace RdsClient {
+namespace RDS {
 
 class AwsAbstractClient;
 class RdsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace RdsClient
+} // namespace RDS
 } // namespace AWS
 
 #endif

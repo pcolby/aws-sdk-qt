@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace SageMakerRuntime {
 
 /**
  * @class  SageMakerRuntimeClientResponse
@@ -66,5 +66,5 @@ SageMakerRuntimeClientResponsePrivate::SageMakerRuntimeClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace SageMakerRuntime
 } // namespace AWS

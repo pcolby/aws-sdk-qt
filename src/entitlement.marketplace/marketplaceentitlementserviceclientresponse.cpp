@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MarketplaceEntitlementService {
 
 /**
  * @class  MarketplaceEntitlementServiceClientResponse
@@ -66,5 +66,5 @@ MarketplaceEntitlementServiceClientResponsePrivate::MarketplaceEntitlementServic
 
 }
 
-} // namespace 
+} // namespace MarketplaceEntitlementService
 } // namespace AWS

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace KinesisClient {
+namespace Kinesis {
 
 class AwsAbstractClient;
 class KinesisClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace KinesisClient
+} // namespace Kinesis
 } // namespace AWS
 
 #endif

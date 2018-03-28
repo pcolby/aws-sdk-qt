@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace XRay {
 
 /**
  * @class  XRayClientResponse
@@ -66,5 +66,5 @@ XRayClientResponsePrivate::XRayClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace XRay
 } // namespace AWS

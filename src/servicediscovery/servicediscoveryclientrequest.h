@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ServiceDiscoveryClient {
+namespace ServiceDiscovery {
 
 class AwsAbstractClient;
 class ServiceDiscoveryClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ServiceDiscoveryClient
+} // namespace ServiceDiscovery
 } // namespace AWS
 
 #endif

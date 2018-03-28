@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace TranscribeServiceClient {
+namespace TranscribeService {
 
 class AwsAbstractClient;
 class TranscribeServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace TranscribeServiceClient
+} // namespace TranscribeService
 } // namespace AWS
 
 #endif

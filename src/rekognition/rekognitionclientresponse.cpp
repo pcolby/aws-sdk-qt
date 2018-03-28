@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Rekognition {
 
 /**
  * @class  RekognitionClientResponse
@@ -66,5 +66,5 @@ RekognitionClientResponsePrivate::RekognitionClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Rekognition
 } // namespace AWS

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DatabaseMigrationService {
 
 /**
  * @class  DatabaseMigrationServiceClientRequest
@@ -338,5 +338,5 @@ QString DatabaseMigrationServiceClientRequestPrivate::toString(const DatabaseMig
     return QString();
 }
 
-} // namespace 
+} // namespace DatabaseMigrationService
 } // namespace AWS

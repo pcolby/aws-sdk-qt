@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace KMS {
 
 class KmsClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace KMS
 } // namespace AWS
 
 #endif

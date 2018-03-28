@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace KinesisAnalytics {
 
 /**
  * @class  KinesisAnalyticsClientResponse
@@ -66,5 +66,5 @@ KinesisAnalyticsClientResponsePrivate::KinesisAnalyticsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace KinesisAnalytics
 } // namespace AWS

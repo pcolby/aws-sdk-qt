@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace IoTJobsDataPlane
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace SwfClient {
+namespace SWF {
 
 class AwsAbstractClient;
 class SwfClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace SwfClient
+} // namespace SWF
 } // namespace AWS
 
 #endif

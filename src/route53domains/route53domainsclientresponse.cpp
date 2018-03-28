@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Route53Domains {
 
 /**
  * @class  Route53DomainsClientResponse
@@ -66,5 +66,5 @@ Route53DomainsClientResponsePrivate::Route53DomainsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Route53Domains
 } // namespace AWS

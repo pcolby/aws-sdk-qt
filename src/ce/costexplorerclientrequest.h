@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CostExplorerClient {
+namespace CostExplorer {
 
 class AwsAbstractClient;
 class CostExplorerClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CostExplorerClient
+} // namespace CostExplorer
 } // namespace AWS
 
 #endif

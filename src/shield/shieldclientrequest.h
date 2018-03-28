@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ShieldClient {
+namespace Shield {
 
 class AwsAbstractClient;
 class ShieldClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ShieldClient
+} // namespace Shield
 } // namespace AWS
 
 #endif

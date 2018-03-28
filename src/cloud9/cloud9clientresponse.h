@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Cloud9 {
 
 class Cloud9ClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Cloud9
 } // namespace AWS
 
 #endif

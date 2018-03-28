@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace TranscribeService {
 
 /**
  * @class  TranscribeServiceClientRequest
@@ -338,5 +338,5 @@ QString TranscribeServiceClientRequestPrivate::toString(const TranscribeServiceC
     return QString();
 }
 
-} // namespace 
+} // namespace TranscribeService
 } // namespace AWS

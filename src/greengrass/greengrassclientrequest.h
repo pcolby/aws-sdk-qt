@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace GreengrassClient {
+namespace Greengrass {
 
 class AwsAbstractClient;
 class GreengrassClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace GreengrassClient
+} // namespace Greengrass
 } // namespace AWS
 
 #endif

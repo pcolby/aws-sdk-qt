@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace SimpleDB {
 
 /**
  * @class  SimpleDBClientRequest
@@ -338,5 +338,5 @@ QString SimpleDBClientRequestPrivate::toString(const SimpleDBClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace SimpleDB
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudHSM {
 
 class CloudHSMClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudHSM
 } // namespace AWS
 
 #endif

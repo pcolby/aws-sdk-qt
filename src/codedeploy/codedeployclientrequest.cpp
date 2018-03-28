@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CodeDeploy {
 
 /**
  * @class  CodeDeployClientRequest
@@ -338,5 +338,5 @@ QString CodeDeployClientRequestPrivate::toString(const CodeDeployClientRequest::
     return QString();
 }
 
-} // namespace 
+} // namespace CodeDeploy
 } // namespace AWS

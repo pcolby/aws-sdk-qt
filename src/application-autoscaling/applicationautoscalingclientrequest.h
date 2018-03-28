@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ApplicationAutoScalingClient {
+namespace ApplicationAutoScaling {
 
 class AwsAbstractClient;
 class ApplicationAutoScalingClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ApplicationAutoScalingClient
+} // namespace ApplicationAutoScaling
 } // namespace AWS
 
 #endif

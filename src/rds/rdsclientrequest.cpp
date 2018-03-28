@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace RDS {
 
 /**
  * @class  RdsClientRequest
@@ -338,5 +338,5 @@ QString RdsClientRequestPrivate::toString(const RdsClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace RDS
 } // namespace AWS

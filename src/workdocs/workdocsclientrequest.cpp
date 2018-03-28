@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace WorkDocs {
 
 /**
  * @class  WorkDocsClientRequest
@@ -338,5 +338,5 @@ QString WorkDocsClientRequestPrivate::toString(const WorkDocsClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace WorkDocs
 } // namespace AWS

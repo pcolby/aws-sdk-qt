@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CodeBuild {
 
 /**
  * @class  CodeBuildClientRequest
@@ -338,5 +338,5 @@ QString CodeBuildClientRequestPrivate::toString(const CodeBuildClientRequest::Ac
     return QString();
 }
 
-} // namespace 
+} // namespace CodeBuild
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Pricing {
 
 class PricingClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Pricing
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Greengrass {
 
 /**
  * @class  GreengrassClientRequest
@@ -338,5 +338,5 @@ QString GreengrassClientRequestPrivate::toString(const GreengrassClientRequest::
     return QString();
 }
 
-} // namespace 
+} // namespace Greengrass
 } // namespace AWS

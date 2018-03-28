@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Health {
 
 /**
  * @class  HealthClientRequest
@@ -338,5 +338,5 @@ QString HealthClientRequestPrivate::toString(const HealthClientRequest::Action &
     return QString();
 }
 
-} // namespace 
+} // namespace Health
 } // namespace AWS

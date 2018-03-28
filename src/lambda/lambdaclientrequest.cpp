@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Lambda {
 
 /**
  * @class  LambdaClientRequest
@@ -338,5 +338,5 @@ QString LambdaClientRequestPrivate::toString(const LambdaClientRequest::Action &
     return QString();
 }
 
-} // namespace 
+} // namespace Lambda
 } // namespace AWS

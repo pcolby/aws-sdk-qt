@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Budgets {
 
 /**
  * @class  BudgetsClientResponse
@@ -66,5 +66,5 @@ BudgetsClientResponsePrivate::BudgetsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Budgets
 } // namespace AWS

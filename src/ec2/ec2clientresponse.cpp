@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace EC2 {
 
 /**
  * @class  Ec2ClientResponse
@@ -66,5 +66,5 @@ Ec2ClientResponsePrivate::Ec2ClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace EC2
 } // namespace AWS

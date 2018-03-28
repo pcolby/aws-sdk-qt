@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ResourceGroupsClient {
+namespace ResourceGroups {
 
 class AwsAbstractClient;
 class ResourceGroupsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ResourceGroupsClient
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

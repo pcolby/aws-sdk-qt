@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudWatch {
 
 class CloudWatchClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudWatch
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SSM {
 
 class SsmClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SSM
 } // namespace AWS
 
 #endif

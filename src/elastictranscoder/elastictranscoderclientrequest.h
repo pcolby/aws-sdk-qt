@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ElasticTranscoderClient {
+namespace ElasticTranscoder {
 
 class AwsAbstractClient;
 class ElasticTranscoderClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ElasticTranscoderClient
+} // namespace ElasticTranscoder
 } // namespace AWS
 
 #endif

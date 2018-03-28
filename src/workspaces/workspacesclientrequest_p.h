@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace WorkSpaces {
 
 class WorkSpacesClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace WorkSpaces
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace AppSync {
 
 class AppSyncClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace AppSync
 } // namespace AWS
 
 #endif

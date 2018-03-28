@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace EcsClient {
+namespace ECS {
 
 class AwsAbstractClient;
 class EcsClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace EcsClient
+} // namespace ECS
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Pricing {
 
 /**
  * @class  PricingClientRequest
@@ -338,5 +338,5 @@ QString PricingClientRequestPrivate::toString(const PricingClientRequest::Action
     return QString();
 }
 
-} // namespace 
+} // namespace Pricing
 } // namespace AWS

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MTurk {
 
 /**
  * @class  MTurkClientResponse
@@ -66,5 +66,5 @@ MTurkClientResponsePrivate::MTurkClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace MTurk
 } // namespace AWS

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CloudTrail {
 
 /**
  * @class  CloudTrailClientResponse
@@ -66,5 +66,5 @@ CloudTrailClientResponsePrivate::CloudTrailClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CloudTrail
 } // namespace AWS

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Translate {
 
 /**
  * @class  TranslateClientRequest
@@ -338,5 +338,5 @@ QString TranslateClientRequestPrivate::toString(const TranslateClientRequest::Ac
     return QString();
 }
 
-} // namespace 
+} // namespace Translate
 } // namespace AWS

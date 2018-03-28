@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ConfigServiceClient {
+namespace ConfigService {
 
 class AwsAbstractClient;
 class ConfigServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ConfigServiceClient
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

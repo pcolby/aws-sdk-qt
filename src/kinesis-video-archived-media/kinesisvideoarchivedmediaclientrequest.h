@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace KinesisVideoArchivedMediaClient {
+namespace KinesisVideoArchivedMedia {
 
 class AwsAbstractClient;
 class KinesisVideoArchivedMediaClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace KinesisVideoArchivedMediaClient
+} // namespace KinesisVideoArchivedMedia
 } // namespace AWS
 
 #endif

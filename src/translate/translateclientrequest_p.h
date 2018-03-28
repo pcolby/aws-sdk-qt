@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Translate {
 
 class TranslateClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Translate
 } // namespace AWS
 
 #endif

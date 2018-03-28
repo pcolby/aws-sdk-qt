@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MigrationHub {
 
 class MigrationHubClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

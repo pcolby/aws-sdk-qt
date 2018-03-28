@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Route53Domains {
 
 /**
  * @class  Route53DomainsClientRequest
@@ -338,5 +338,5 @@ QString Route53DomainsClientRequestPrivate::toString(const Route53DomainsClientR
     return QString();
 }
 
-} // namespace 
+} // namespace Route53Domains
 } // namespace AWS

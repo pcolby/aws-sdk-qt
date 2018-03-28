@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudFront {
 
 class CloudFrontClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudFront
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace AthenaClient {
+namespace Athena {
 
 class AwsAbstractClient;
 class AthenaClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace AthenaClient
+} // namespace Athena
 } // namespace AWS
 
 #endif

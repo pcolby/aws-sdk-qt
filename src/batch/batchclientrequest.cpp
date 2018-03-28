@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Batch {
 
 /**
  * @class  BatchClientRequest
@@ -338,5 +338,5 @@ QString BatchClientRequestPrivate::toString(const BatchClientRequest::Action &ac
     return QString();
 }
 
-} // namespace 
+} // namespace Batch
 } // namespace AWS

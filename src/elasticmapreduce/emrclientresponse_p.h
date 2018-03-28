@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace EMR {
 
 class EmrClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace EMR
 } // namespace AWS
 
 #endif

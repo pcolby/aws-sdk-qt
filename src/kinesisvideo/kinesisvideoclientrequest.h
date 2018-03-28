@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace KinesisVideoClient {
+namespace KinesisVideo {
 
 class AwsAbstractClient;
 class KinesisVideoClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace KinesisVideoClient
+} // namespace KinesisVideo
 } // namespace AWS
 
 #endif

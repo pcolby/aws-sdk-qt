@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Redshift {
 
 class RedshiftClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Redshift
 } // namespace AWS
 
 #endif

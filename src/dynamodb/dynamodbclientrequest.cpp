@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DynamoDB {
 
 /**
  * @class  DynamoDBClientRequest
@@ -338,5 +338,5 @@ QString DynamoDBClientRequestPrivate::toString(const DynamoDBClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace DynamoDB
 } // namespace AWS

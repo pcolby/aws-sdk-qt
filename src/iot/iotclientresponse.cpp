@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace IoT {
 
 /**
  * @class  IoTClientResponse
@@ -66,5 +66,5 @@ IoTClientResponsePrivate::IoTClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace IoT
 } // namespace AWS

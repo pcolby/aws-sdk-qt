@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ServerlessApplicationRepository {
 
 /**
  * @class  ServerlessApplicationRepositoryClientResponse
@@ -66,5 +66,5 @@ ServerlessApplicationRepositoryClientResponsePrivate::ServerlessApplicationRepos
 
 }
 
-} // namespace 
+} // namespace ServerlessApplicationRepository
 } // namespace AWS

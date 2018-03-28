@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ElastiCache {
 
 /**
  * @class  ElastiCacheClientResponse
@@ -66,5 +66,5 @@ ElastiCacheClientResponsePrivate::ElastiCacheClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ElastiCache
 } // namespace AWS

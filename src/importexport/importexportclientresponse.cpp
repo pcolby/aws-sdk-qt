@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ImportExport {
 
 /**
  * @class  ImportExportClientResponse
@@ -66,5 +66,5 @@ ImportExportClientResponsePrivate::ImportExportClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ImportExport
 } // namespace AWS

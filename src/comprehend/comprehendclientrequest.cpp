@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Comprehend {
 
 /**
  * @class  ComprehendClientRequest
@@ -338,5 +338,5 @@ QString ComprehendClientRequestPrivate::toString(const ComprehendClientRequest::
     return QString();
 }
 
-} // namespace 
+} // namespace Comprehend
 } // namespace AWS

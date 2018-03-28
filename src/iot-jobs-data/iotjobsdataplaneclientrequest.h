@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace IoTJobsDataPlaneClient {
+namespace IoTJobsDataPlane {
 
 class AwsAbstractClient;
 class IoTJobsDataPlaneClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace IoTJobsDataPlaneClient
+} // namespace IoTJobsDataPlane
 } // namespace AWS
 
 #endif

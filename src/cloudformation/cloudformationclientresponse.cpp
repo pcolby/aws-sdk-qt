@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CloudFormation {
 
 /**
  * @class  CloudFormationClientResponse
@@ -66,5 +66,5 @@ CloudFormationClientResponsePrivate::CloudFormationClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CloudFormation
 } // namespace AWS

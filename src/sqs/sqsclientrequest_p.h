@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SQS {
 
 class SqsClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SQS
 } // namespace AWS
 
 #endif

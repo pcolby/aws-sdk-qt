@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Organizations {
 
 class OrganizationsClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Organizations
 } // namespace AWS
 
 #endif

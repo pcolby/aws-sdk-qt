@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MediaConvertClient {
+namespace MediaConvert {
 
 class AwsAbstractClient;
 class MediaConvertClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MediaConvertClient
+} // namespace MediaConvert
 } // namespace AWS
 
 #endif

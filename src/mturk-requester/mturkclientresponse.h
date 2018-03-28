@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MTurk {
 
 class MTurkClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MTurk
 } // namespace AWS
 
 #endif

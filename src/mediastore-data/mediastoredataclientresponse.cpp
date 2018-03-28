@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MediaStoreData {
 
 /**
  * @class  MediaStoreDataClientResponse
@@ -66,5 +66,5 @@ MediaStoreDataClientResponsePrivate::MediaStoreDataClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace MediaStoreData
 } // namespace AWS

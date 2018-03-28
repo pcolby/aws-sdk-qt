@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Inspector {
 
 /**
  * @class  InspectorClientRequest
@@ -338,5 +338,5 @@ QString InspectorClientRequestPrivate::toString(const InspectorClientRequest::Ac
     return QString();
 }
 
-} // namespace 
+} // namespace Inspector
 } // namespace AWS

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Pinpoint {
 
 /**
  * @class  PinpointClientResponse
@@ -66,5 +66,5 @@ PinpointClientResponsePrivate::PinpointClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Pinpoint
 } // namespace AWS

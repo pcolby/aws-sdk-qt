@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace Comprehend {
 
 /**
  * @class  ComprehendClientResponse
@@ -66,5 +66,5 @@ ComprehendClientResponsePrivate::ComprehendClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace Comprehend
 } // namespace AWS

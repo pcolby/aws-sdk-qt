@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MachineLearningClient {
+namespace MachineLearning {
 
 class AwsAbstractClient;
 class MachineLearningClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MachineLearningClient
+} // namespace MachineLearning
 } // namespace AWS
 
 #endif

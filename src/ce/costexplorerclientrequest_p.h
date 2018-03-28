@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CostExplorer {
 
 class CostExplorerClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CostExplorer
 } // namespace AWS
 
 #endif

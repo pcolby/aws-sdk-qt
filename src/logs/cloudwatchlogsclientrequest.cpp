@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CloudWatchLogs {
 
 /**
  * @class  CloudWatchLogsClientRequest
@@ -338,5 +338,5 @@ QString CloudWatchLogsClientRequestPrivate::toString(const CloudWatchLogsClientR
     return QString();
 }
 
-} // namespace 
+} // namespace CloudWatchLogs
 } // namespace AWS

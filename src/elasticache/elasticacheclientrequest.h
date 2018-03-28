@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ElastiCacheClient {
+namespace ElastiCache {
 
 class AwsAbstractClient;
 class ElastiCacheClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ElastiCacheClient
+} // namespace ElastiCache
 } // namespace AWS
 
 #endif

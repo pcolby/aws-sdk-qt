@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ElasticsearchService {
 
 /**
  * @class  ElasticsearchServiceClientRequest
@@ -338,5 +338,5 @@ QString ElasticsearchServiceClientRequestPrivate::toString(const ElasticsearchSe
     return QString();
 }
 
-} // namespace 
+} // namespace ElasticsearchService
 } // namespace AWS

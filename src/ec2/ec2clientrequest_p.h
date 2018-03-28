@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace EC2 {
 
 class Ec2ClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace EC2
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ResourceGroups {
 
 class ResourceGroupsClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ResourceGroups
 } // namespace AWS
 
 #endif

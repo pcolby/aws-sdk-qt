@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace DynamoDBClient {
+namespace DynamoDB {
 
 class AwsAbstractClient;
 class DynamoDBClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace DynamoDBClient
+} // namespace DynamoDB
 } // namespace AWS
 
 #endif

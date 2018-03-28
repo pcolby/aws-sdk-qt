@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace WorkDocs {
 
 class WorkDocsClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace WorkDocs
 } // namespace AWS
 
 #endif

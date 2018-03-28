@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MediaLive {
 
 class MediaLiveClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MediaLive
 } // namespace AWS
 
 #endif

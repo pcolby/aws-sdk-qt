@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ElastiCache {
 
 /**
  * @class  ElastiCacheClientRequest
@@ -338,5 +338,5 @@ QString ElastiCacheClientRequestPrivate::toString(const ElastiCacheClientRequest
     return QString();
 }
 
-} // namespace 
+} // namespace ElastiCache
 } // namespace AWS

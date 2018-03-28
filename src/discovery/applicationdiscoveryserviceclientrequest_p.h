@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ApplicationDiscoveryService
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace EFS {
 
 /**
  * @class  EfsClientResponse
@@ -66,5 +66,5 @@ EfsClientResponsePrivate::EfsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace EFS
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ElasticTranscoder {
 
 class ElasticTranscoderClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ElasticTranscoder
 } // namespace AWS
 
 #endif

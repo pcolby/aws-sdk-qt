@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Firehose {
 
 class FirehoseClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Firehose
 } // namespace AWS
 
 #endif

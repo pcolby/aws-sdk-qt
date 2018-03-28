@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace KMS {
 
 /**
  * @class  KmsClientRequest
@@ -338,5 +338,5 @@ QString KmsClientRequestPrivate::toString(const KmsClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace KMS
 } // namespace AWS

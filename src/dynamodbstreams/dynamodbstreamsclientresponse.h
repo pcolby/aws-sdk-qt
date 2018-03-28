@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace DynamoDBStreams {
 
 class DynamoDBStreamsClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace DynamoDBStreams
 } // namespace AWS
 
 #endif

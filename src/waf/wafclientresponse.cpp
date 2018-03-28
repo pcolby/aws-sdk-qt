@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace WAF {
 
 /**
  * @class  WafClientResponse
@@ -66,5 +66,5 @@ WafClientResponsePrivate::WafClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace WAF
 } // namespace AWS

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MTurkClient {
+namespace MTurk {
 
 class AwsAbstractClient;
 class MTurkClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MTurkClient
+} // namespace MTurk
 } // namespace AWS
 
 #endif

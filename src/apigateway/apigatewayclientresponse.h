@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace APIGateway {
 
 class APIGatewayClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace APIGateway
 } // namespace AWS
 
 #endif

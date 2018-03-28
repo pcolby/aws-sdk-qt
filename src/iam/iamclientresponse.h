@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace IAM {
 
 class IamClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace IAM
 } // namespace AWS
 
 #endif

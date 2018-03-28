@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace Cloud9Client {
+namespace Cloud9 {
 
 class AwsAbstractClient;
 class Cloud9ClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace Cloud9Client
+} // namespace Cloud9
 } // namespace AWS
 
 #endif

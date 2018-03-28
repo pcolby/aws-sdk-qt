@@ -6,7 +6,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace {{NameSpaceNameX}} {
+namespace {{NameSpaceName}} {
 
 /**
  * @class  {{ClassName}}
@@ -48,5 +48,5 @@ namespace {{NameSpaceNameX}} {
 
 }
 
-} // namespace {{NameSpaceNameX}}
+} // namespace {{NameSpaceName}}
 } // namespace AWS

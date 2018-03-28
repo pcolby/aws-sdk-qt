@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MarketplaceMeteringClient {
+namespace MarketplaceMetering {
 
 class AwsAbstractClient;
 class MarketplaceMeteringClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MarketplaceMeteringClient
+} // namespace MarketplaceMetering
 } // namespace AWS
 
 #endif

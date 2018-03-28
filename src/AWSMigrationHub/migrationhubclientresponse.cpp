@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MigrationHub {
 
 /**
  * @class  MigrationHubClientResponse
@@ -66,5 +66,5 @@ MigrationHubClientResponsePrivate::MigrationHubClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace MigrationHub
 } // namespace AWS

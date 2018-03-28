@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Polly {
 
 /**
  * @class  PollyClientRequest
@@ -338,5 +338,5 @@ QString PollyClientRequestPrivate::toString(const PollyClientRequest::Action &ac
     return QString();
 }
 
-} // namespace 
+} // namespace Polly
 } // namespace AWS

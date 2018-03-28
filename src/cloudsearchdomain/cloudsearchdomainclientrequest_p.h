@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudSearchDomain {
 
 class CloudSearchDomainClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudSearchDomain
 } // namespace AWS
 
 #endif

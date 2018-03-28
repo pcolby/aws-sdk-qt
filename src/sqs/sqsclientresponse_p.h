@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SQS {
 
 class SqsClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SQS
 } // namespace AWS
 
 #endif

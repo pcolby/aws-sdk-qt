@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace Lightsail {
 
 /**
  * @class  LightsailClientRequest
@@ -338,5 +338,5 @@ QString LightsailClientRequestPrivate::toString(const LightsailClientRequest::Ac
     return QString();
 }
 
-} // namespace 
+} // namespace Lightsail
 } // namespace AWS

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace FirehoseClient {
+namespace Firehose {
 
 class AwsAbstractClient;
 class FirehoseClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace FirehoseClient
+} // namespace Firehose
 } // namespace AWS
 
 #endif

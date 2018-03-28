@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ApplicationAutoScaling {
 
 /**
  * @class  ApplicationAutoScalingClientRequest
@@ -338,5 +338,5 @@ QString ApplicationAutoScalingClientRequestPrivate::toString(const ApplicationAu
     return QString();
 }
 
-} // namespace 
+} // namespace ApplicationAutoScaling
 } // namespace AWS

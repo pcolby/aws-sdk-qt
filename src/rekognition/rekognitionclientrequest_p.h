@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Rekognition {
 
 class RekognitionClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Rekognition
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MarketplaceEntitlementServiceClient {
+namespace MarketplaceEntitlementService {
 
 class AwsAbstractClient;
 class MarketplaceEntitlementServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MarketplaceEntitlementServiceClient
+} // namespace MarketplaceEntitlementService
 } // namespace AWS
 
 #endif

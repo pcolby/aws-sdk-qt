@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace LexRuntimeService {
 
 /**
  * @class  LexRuntimeServiceClientResponse
@@ -66,5 +66,5 @@ LexRuntimeServiceClientResponsePrivate::LexRuntimeServiceClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace LexRuntimeService
 } // namespace AWS

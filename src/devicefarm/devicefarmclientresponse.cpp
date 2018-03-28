@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace DeviceFarm {
 
 /**
  * @class  DeviceFarmClientResponse
@@ -66,5 +66,5 @@ DeviceFarmClientResponsePrivate::DeviceFarmClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace DeviceFarm
 } // namespace AWS

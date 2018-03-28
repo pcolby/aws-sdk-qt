@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace SesClient {
+namespace SES {
 
 class AwsAbstractClient;
 class SesClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace SesClient
+} // namespace SES
 } // namespace AWS
 
 #endif

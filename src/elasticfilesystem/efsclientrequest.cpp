@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace EFS {
 
 /**
  * @class  EfsClientRequest
@@ -338,5 +338,5 @@ QString EfsClientRequestPrivate::toString(const EfsClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace EFS
 } // namespace AWS

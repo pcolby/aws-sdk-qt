@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MarketplaceEntitlementService {
 
 /**
  * @class  MarketplaceEntitlementServiceClientRequest
@@ -338,5 +338,5 @@ QString MarketplaceEntitlementServiceClientRequestPrivate::toString(const Market
     return QString();
 }
 
-} // namespace 
+} // namespace MarketplaceEntitlementService
 } // namespace AWS

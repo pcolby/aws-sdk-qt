@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CloudSearchDomainClient {
+namespace CloudSearchDomain {
 
 class AwsAbstractClient;
 class CloudSearchDomainClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CloudSearchDomainClient
+} // namespace CloudSearchDomain
 } // namespace AWS
 
 #endif

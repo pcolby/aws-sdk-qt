@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace IoT {
 
 class IoTClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace IoT
 } // namespace AWS
 
 #endif

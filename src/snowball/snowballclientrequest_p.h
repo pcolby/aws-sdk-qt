@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Snowball {
 
 class SnowballClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Snowball
 } // namespace AWS
 
 #endif

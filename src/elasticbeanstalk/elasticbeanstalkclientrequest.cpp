@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ElasticBeanstalk {
 
 /**
  * @class  ElasticBeanstalkClientRequest
@@ -338,5 +338,5 @@ QString ElasticBeanstalkClientRequestPrivate::toString(const ElasticBeanstalkCli
     return QString();
 }
 
-} // namespace 
+} // namespace ElasticBeanstalk
 } // namespace AWS

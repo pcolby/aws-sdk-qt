@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ServerlessApplicationRepository {
 
 /**
  * @class  ServerlessApplicationRepositoryClientRequest
@@ -338,5 +338,5 @@ QString ServerlessApplicationRepositoryClientRequestPrivate::toString(const Serv
     return QString();
 }
 
-} // namespace 
+} // namespace ServerlessApplicationRepository
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace DirectoryService {
 
 class DirectoryServiceClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace DirectoryService
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace GameLiftClient {
+namespace GameLift {
 
 class AwsAbstractClient;
 class GameLiftClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace GameLiftClient
+} // namespace GameLift
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace SWF {
 
 /**
  * @class  SwfClientResponse
@@ -66,5 +66,5 @@ SwfClientResponsePrivate::SwfClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace SWF
 } // namespace AWS

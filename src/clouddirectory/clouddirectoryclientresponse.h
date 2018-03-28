@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CloudDirectory {
 
 class CloudDirectoryClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CloudDirectory
 } // namespace AWS
 
 #endif

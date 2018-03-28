@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Budgets {
 
 class BudgetsClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Budgets
 } // namespace AWS
 
 #endif

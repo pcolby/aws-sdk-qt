@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CloudSearchDomain {
 
 /**
  * @class  CloudSearchDomainClientRequest
@@ -338,5 +338,5 @@ QString CloudSearchDomainClientRequestPrivate::toString(const CloudSearchDomainC
     return QString();
 }
 
-} // namespace 
+} // namespace CloudSearchDomain
 } // namespace AWS

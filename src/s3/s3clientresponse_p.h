@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace S3 {
 
 class S3ClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace S3
 } // namespace AWS
 
 #endif

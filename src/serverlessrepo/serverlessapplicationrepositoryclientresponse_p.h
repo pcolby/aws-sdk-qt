@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ServerlessApplicationRepository
 } // namespace AWS
 
 #endif

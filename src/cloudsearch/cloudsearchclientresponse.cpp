@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CloudSearch {
 
 /**
  * @class  CloudSearchClientResponse
@@ -66,5 +66,5 @@ CloudSearchClientResponsePrivate::CloudSearchClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CloudSearch
 } // namespace AWS

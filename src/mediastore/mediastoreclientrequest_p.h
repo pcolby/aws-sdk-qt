@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MediaStore {
 
 class MediaStoreClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MediaStore
 } // namespace AWS
 
 #endif

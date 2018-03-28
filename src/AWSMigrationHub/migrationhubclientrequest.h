@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace MigrationHubClient {
+namespace MigrationHub {
 
 class AwsAbstractClient;
 class MigrationHubClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace MigrationHubClient
+} // namespace MigrationHub
 } // namespace AWS
 
 #endif

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MediaConvert {
 
 class MediaConvertClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MediaConvert
 } // namespace AWS
 
 #endif

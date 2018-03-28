@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace IoT {
 
 /**
  * @class  IoTClientRequest
@@ -338,5 +338,5 @@ QString IoTClientRequestPrivate::toString(const IoTClientRequest::Action &action
     return QString();
 }
 
-} // namespace 
+} // namespace IoT
 } // namespace AWS

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace WorkMail {
 
 /**
  * @class  WorkMailClientRequest
@@ -338,5 +338,5 @@ QString WorkMailClientRequestPrivate::toString(const WorkMailClientRequest::Acti
     return QString();
 }
 
-} // namespace 
+} // namespace WorkMail
 } // namespace AWS

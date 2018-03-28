@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ECR {
 
 /**
  * @class  EcrClientResponse
@@ -66,5 +66,5 @@ EcrClientResponsePrivate::EcrClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ECR
 } // namespace AWS

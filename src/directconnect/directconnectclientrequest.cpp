@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DirectConnect {
 
 /**
  * @class  DirectConnectClientRequest
@@ -338,5 +338,5 @@ QString DirectConnectClientRequestPrivate::toString(const DirectConnectClientReq
     return QString();
 }
 
-} // namespace 
+} // namespace DirectConnect
 } // namespace AWS

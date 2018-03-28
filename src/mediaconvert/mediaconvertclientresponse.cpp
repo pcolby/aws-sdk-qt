@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace MediaConvert {
 
 /**
  * @class  MediaConvertClientResponse
@@ -66,5 +66,5 @@ MediaConvertClientResponsePrivate::MediaConvertClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace MediaConvert
 } // namespace AWS

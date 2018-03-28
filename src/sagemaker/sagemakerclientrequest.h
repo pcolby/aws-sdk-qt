@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace SageMakerClient {
+namespace SageMaker {
 
 class AwsAbstractClient;
 class SageMakerClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace SageMakerClient
+} // namespace SageMaker
 } // namespace AWS
 
 #endif

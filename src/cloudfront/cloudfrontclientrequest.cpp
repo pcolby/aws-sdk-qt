@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CloudFront {
 
 /**
  * @class  CloudFrontClientRequest
@@ -338,5 +338,5 @@ QString CloudFrontClientRequestPrivate::toString(const CloudFrontClientRequest::
     return QString();
 }
 
-} // namespace 
+} // namespace CloudFront
 } // namespace AWS

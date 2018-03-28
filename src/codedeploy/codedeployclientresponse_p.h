@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace CodeDeploy {
 
 class CodeDeployClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace CodeDeploy
 } // namespace AWS
 
 #endif

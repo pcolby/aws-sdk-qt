@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace StorageGatewayClient {
+namespace StorageGateway {
 
 class AwsAbstractClient;
 class StorageGatewayClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace StorageGatewayClient
+} // namespace StorageGateway
 } // namespace AWS
 
 #endif

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace ElasticsearchServiceClient {
+namespace ElasticsearchService {
 
 class AwsAbstractClient;
 class ElasticsearchServiceClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace ElasticsearchServiceClient
+} // namespace ElasticsearchService
 } // namespace AWS
 
 #endif

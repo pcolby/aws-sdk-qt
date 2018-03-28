@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace XRayClient {
+namespace XRay {
 
 class AwsAbstractClient;
 class XRayClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace XRayClient
+} // namespace XRay
 } // namespace AWS
 
 #endif

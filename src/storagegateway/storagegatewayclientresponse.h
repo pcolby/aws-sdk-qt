@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace StorageGateway {
 
 class StorageGatewayClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace StorageGateway
 } // namespace AWS
 
 #endif

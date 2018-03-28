@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace DeviceFarm {
 
 class DeviceFarmClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace DeviceFarm
 } // namespace AWS
 
 #endif

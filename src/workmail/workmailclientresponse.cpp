@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace WorkMail {
 
 /**
  * @class  WorkMailClientResponse
@@ -66,5 +66,5 @@ WorkMailClientResponsePrivate::WorkMailClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace WorkMail
 } // namespace AWS

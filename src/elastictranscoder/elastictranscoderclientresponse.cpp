@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ElasticTranscoder {
 
 /**
  * @class  ElasticTranscoderClientResponse
@@ -66,5 +66,5 @@ ElasticTranscoderClientResponsePrivate::ElasticTranscoderClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ElasticTranscoder
 } // namespace AWS

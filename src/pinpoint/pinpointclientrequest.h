@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace PinpointClient {
+namespace Pinpoint {
 
 class AwsAbstractClient;
 class PinpointClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace PinpointClient
+} // namespace Pinpoint
 } // namespace AWS
 
 #endif

@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace DirectoryService {
 
 /**
  * @class  DirectoryServiceClientRequest
@@ -338,5 +338,5 @@ QString DirectoryServiceClientRequestPrivate::toString(const DirectoryServiceCli
     return QString();
 }
 
-} // namespace 
+} // namespace DirectoryService
 } // namespace AWS

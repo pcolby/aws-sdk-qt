@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace GlueClient {
+namespace Glue {
 
 class AwsAbstractClient;
 class GlueClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace GlueClient
+} // namespace Glue
 } // namespace AWS
 
 #endif

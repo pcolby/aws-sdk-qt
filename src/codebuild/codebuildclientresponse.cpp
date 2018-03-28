@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CodeBuild {
 
 /**
  * @class  CodeBuildClientResponse
@@ -66,5 +66,5 @@ CodeBuildClientResponsePrivate::CodeBuildClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CodeBuild
 } // namespace AWS

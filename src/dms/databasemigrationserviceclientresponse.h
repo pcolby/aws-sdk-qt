@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace DatabaseMigrationService
 } // namespace AWS
 
 #endif

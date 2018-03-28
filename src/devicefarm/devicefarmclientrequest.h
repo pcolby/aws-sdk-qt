@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace DeviceFarmClient {
+namespace DeviceFarm {
 
 class AwsAbstractClient;
 class DeviceFarmClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace DeviceFarmClient
+} // namespace DeviceFarm
 } // namespace AWS
 
 #endif

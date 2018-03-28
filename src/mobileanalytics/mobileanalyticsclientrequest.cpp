@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace MobileAnalytics {
 
 /**
  * @class  MobileAnalyticsClientRequest
@@ -338,5 +338,5 @@ QString MobileAnalyticsClientRequestPrivate::toString(const MobileAnalyticsClien
     return QString();
 }
 
-} // namespace 
+} // namespace MobileAnalytics
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace DataPipeline {
 
 class DataPipelineClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace DataPipeline
 } // namespace AWS
 
 #endif

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace ConfigService {
 
 /**
  * @class  ConfigServiceClientResponse
@@ -66,5 +66,5 @@ ConfigServiceClientResponsePrivate::ConfigServiceClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace ConfigService
 } // namespace AWS

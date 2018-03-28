@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace APIGateway {
 
 /**
  * @class  APIGatewayClientRequest
@@ -338,5 +338,5 @@ QString APIGatewayClientRequestPrivate::toString(const APIGatewayClientRequest::
     return QString();
 }
 
-} // namespace 
+} // namespace APIGateway
 } // namespace AWS

@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace KMS {
 
 /**
  * @class  KmsClientResponse
@@ -66,5 +66,5 @@ KmsClientResponsePrivate::KmsClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace KMS
 } // namespace AWS

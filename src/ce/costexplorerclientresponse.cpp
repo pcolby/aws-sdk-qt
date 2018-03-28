@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace CostExplorer {
 
 /**
  * @class  CostExplorerClientResponse
@@ -66,5 +66,5 @@ CostExplorerClientResponsePrivate::CostExplorerClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace CostExplorer
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MobileAnalytics {
 
 class MobileAnalyticsClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MobileAnalytics
 } // namespace AWS
 
 #endif

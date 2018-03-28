@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace MQ {
 
 class MqClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace MQ
 } // namespace AWS
 
 #endif

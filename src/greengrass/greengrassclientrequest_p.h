@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Greengrass {
 
 class GreengrassClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Greengrass
 } // namespace AWS
 
 #endif

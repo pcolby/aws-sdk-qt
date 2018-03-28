@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace DAX {
 
 /**
  * @class  DaxClientResponse
@@ -66,5 +66,5 @@ DaxClientResponsePrivate::DaxClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace DAX
 } // namespace AWS

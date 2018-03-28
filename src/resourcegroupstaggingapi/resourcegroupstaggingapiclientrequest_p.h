@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIClientRequest;
 
@@ -46,7 +46,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ResourceGroupsTaggingAPI
 } // namespace AWS
 
 #endif

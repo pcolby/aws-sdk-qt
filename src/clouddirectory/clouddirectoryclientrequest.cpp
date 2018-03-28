@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CloudDirectory {
 
 /**
  * @class  CloudDirectoryClientRequest
@@ -338,5 +338,5 @@ QString CloudDirectoryClientRequestPrivate::toString(const CloudDirectoryClientR
     return QString();
 }
 
-} // namespace 
+} // namespace CloudDirectory
 } // namespace AWS

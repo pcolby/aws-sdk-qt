@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Glue {
 
 class GlueClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Glue
 } // namespace AWS
 
 #endif

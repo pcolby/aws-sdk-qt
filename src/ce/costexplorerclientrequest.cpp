@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace CostExplorer {
 
 /**
  * @class  CostExplorerClientRequest
@@ -338,5 +338,5 @@ QString CostExplorerClientRequestPrivate::toString(const CostExplorerClientReque
     return QString();
 }
 
-} // namespace 
+} // namespace CostExplorer
 } // namespace AWS

@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace Lambda {
 
 class LambdaClientResponse;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace Lambda
 } // namespace AWS
 
 #endif

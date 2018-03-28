@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace ConfigService {
 
 class ConfigServiceClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace ConfigService
 } // namespace AWS
 
 #endif

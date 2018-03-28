@@ -25,7 +25,7 @@
 
 namespace AWS {
 
-namespace  {
+namespace SES {
 
 class SesClientResponsePrivate;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace 
+} // namespace SES
 } // namespace AWS
 
 #endif

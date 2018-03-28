@@ -23,7 +23,7 @@
 #include "request_p.h"
 
 namespace AWS {
-namespace  {
+namespace ServiceDiscovery {
 
 /**
  * @class  ServiceDiscoveryClientRequest
@@ -338,5 +338,5 @@ QString ServiceDiscoveryClientRequestPrivate::toString(const ServiceDiscoveryCli
     return QString();
 }
 
-} // namespace 
+} // namespace ServiceDiscovery
 } // namespace AWS

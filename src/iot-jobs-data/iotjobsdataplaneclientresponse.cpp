@@ -24,7 +24,7 @@
 #include <QXmlStreamReader>
 
 namespace AWS {
-namespace  {
+namespace IoTJobsDataPlane {
 
 /**
  * @class  IoTJobsDataPlaneClientResponse
@@ -66,5 +66,5 @@ IoTJobsDataPlaneClientResponsePrivate::IoTJobsDataPlaneClientResponsePrivate(
 
 }
 
-} // namespace 
+} // namespace IoTJobsDataPlane
 } // namespace AWS

@@ -29,7 +29,7 @@ class QNetworkRequest;
 
 namespace AWS {
 
-namespace CloudHSMClient {
+namespace CloudHSM {
 
 class AwsAbstractClient;
 class CloudHSMClientRequestPrivate;
@@ -76,7 +76,7 @@ private:
 
 }
 
-} // namespace CloudHSMClient
+} // namespace CloudHSM
 } // namespace AWS
 
 #endif
